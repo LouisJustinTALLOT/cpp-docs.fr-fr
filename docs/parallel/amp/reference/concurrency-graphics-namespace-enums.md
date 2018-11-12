@@ -1,24 +1,16 @@
 ---
-title: Énumérations d’espace de noms Concurrency::Graphics | Microsoft Docs
-ms.custom: ''
+title: Énumérations d’espace de noms Concurrency::Graphics
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - amp_graphics/concurrency::graphics::address_mode
 - amp_graphics/concurrency::graphics::filter_mode
-dev_langs:
-- C++
 ms.assetid: 1d2e1859-a3d7-4d3d-8e03-1a877a86b3e0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b5c66771c9b27d568e32f7d4a361586ff5a62da9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9676f87a5eefd36eaf165d10eb66b60d955feffe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384973"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583220"
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Énumérations d’espace de noms Concurrency::Graphics
 
@@ -41,6 +33,7 @@ Type d’énumération permet de désigner des modes de filtre pris en charge po
 ```
 enum filter_mode;
 ```
+
 ## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp_graphics.h **Namespace :** Concurrency::graphics

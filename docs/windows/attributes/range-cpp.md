@@ -1,28 +1,17 @@
 ---
-title: plage (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: plage (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.range
-dev_langs:
-- C++
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 593cfbd4b7430c3f6ac5b4f2ab1053665136ab25
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b75915b901f55ce7ef8d295531ab5148c6535c93
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644967"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -73,11 +62,11 @@ __interface ICustom {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
 [Attributs de paramètres](parameter-attributes.md)<br/>
-[Attributs de membre de données](data-member-attributes.md)  
+[Attributs de membre de données](data-member-attributes.md)

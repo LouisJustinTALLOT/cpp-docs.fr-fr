@@ -1,22 +1,16 @@
 ---
-title: Platform::WeakReference, classe | Microsoft Docs
-ms.custom: ''
+title: Platform::WeakReference, classe
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d411269794e3588f1273844d54f7d5d5f4dbdf88
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 706877843602861d0dcf7f04a18999f30d3b77de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500437"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference, classe
 
@@ -127,6 +121,7 @@ WeakReference(const WeakReference& otherArg);
 WeakReference(WeakReference&& otherArg);
 explicit WeakReference(const volatile ::Platform::Object^ const otherArg);
 ```
+
 ### <a name="example"></a>Exemple
 
 ```cpp

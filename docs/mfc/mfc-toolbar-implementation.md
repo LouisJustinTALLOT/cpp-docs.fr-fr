@@ -1,12 +1,6 @@
 ---
-title: Implémentation de barre d’outils MFC | Microsoft Docs
-ms.custom: ''
+title: Implémentation de la barre d'outils MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbars [MFC], creating
 - buttons [MFC], MFC toolbars
@@ -23,16 +17,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a95b5460ee28894d087d1896cbbac03cfb509166
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93cf2f2a11c34b1bbe2d62e4e4cc6afab16e2fd8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391200"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666789"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implémentation de la barre d'outils MFC
 

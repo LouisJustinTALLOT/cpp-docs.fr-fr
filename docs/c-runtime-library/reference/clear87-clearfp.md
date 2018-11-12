@@ -1,10 +1,6 @@
 ---
-title: _clear87, _clearfp | Microsoft Docs
-ms.custom: ''
+title: _clear87, _clearfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _clearfp
 - _clear87
@@ -26,8 +22,6 @@ f1_keywords:
 - _clearfp
 - _clear87
 - clear87
-dev_langs:
-- C++
 helpviewer_keywords:
 - clearing floating point status word
 - clearfp function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 195bd9f78ed9edfa47ec9ebbd2babbee676e5644
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4148f85d82a4210033686455c73046081832e3c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477257"
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
 
@@ -59,17 +49,17 @@ unsigned int _clearfp( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les bits dans la valeur retournée indiquent l’état à virgule flottante avant l’appel à **_clear87** ou **_clearfp**. Pour une définition complète des bits retournés par **_clear87**, consultez Float.h. Une part importante des fonctions de bibliothèque mathématique modifie le mot d'état 8087/80287, avec des résultats imprévisibles. Valeurs de retour de **_clear87** et **_status87** deviennent plus fiable que moins d’opérations à virgule flottante sont effectuées entre les états connus du mot d’état à virgule flottante.
+Les bits dans la valeur retournée indiquent l’état à virgule flottante avant l’appel à **_clear87** ou **_clearfp**. Pour obtenir une définition complète des bits retournés par **_clear87**, consultez Float.h. Une part importante des fonctions de bibliothèque mathématique modifie le mot d'état 8087/80287, avec des résultats imprévisibles. Valeurs de retour de **_clear87** et **_status87** deviennent plus fiable que moins d’opérations à virgule flottante sont effectuées entre les états connus du mot d’état à virgule flottante.
 
 ## <a name="remarks"></a>Notes
 
 Le **_clear87** fonction efface les indicateurs d’exception dans le mot d’état à virgule flottante, définit le bit occupé à 0 et retourne le mot d’état. Le mot d'état à virgule flottante est une combinaison du mot d'état 8087/80287 et d'autres conditions détectées par le gestionnaire d'exceptions 8087/80287, telles que le dépassement de capacité positif et négatif de pile à virgule flottante.
 
-**_clearfp** est une version portable indépendant de la plateforme de la **_clear87** routine. Il est identique à **_clear87** sur les plateformes Intel (x86) et est également pris en charge par le x64 et les plateformes ARM. Pour vous assurer que votre code à virgule flottante est porté sur x64 et ARM, utilisez **_clearfp**. Si vous ciblez uniquement x86 plateformes, vous pouvez utiliser **_clear87** ou **_clearfp**.
+**_clearfp** est une version portable indépendante de la plateforme de la **_clear87** routine. Il est identique à **_clear87** sur les plateformes Intel (x86) et prend également en charge les x64 et les plateformes ARM. Pour vous assurer que votre code en virgule flottante peut être transféré à x64 et ARM, utilisez **_clearfp**. Si vous ciblez uniquement x86 plateformes, vous pouvez utiliser **_clear87** ou **_clearfp**.
 
-Ces fonctions sont déconseillées lors de la compilation avec [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car le common language runtime prend uniquement en charge la précision en virgule flottante par défaut.
+Ces fonctions sont déconseillées lors de la compilation avec [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car le common language runtime prend uniquement en charge la précision à virgule flottante par défaut.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

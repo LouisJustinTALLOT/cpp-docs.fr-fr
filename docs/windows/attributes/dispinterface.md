@@ -1,28 +1,17 @@
 ---
-title: dispinterface (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: dispinterface (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.dispinterface
-dev_langs:
-- C++
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3b02244e0576f99cc0a6940f2ee4a13511cfbe6f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d0ace76fdbbc1ff930bccb4e6fc203895b4f1637
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677277"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -40,7 +29,7 @@ Quand l’attribut C++ **dispinterface** précède une interface, il fait en sor
 
 Une interface de dispatch dérivent de `IDispatch`, sauf si vous spécifiez une classe de base. Vous devez spécifier un [id](id.md) pour les membres d’une interface de dispatch.
 
-L’exemple d’utilisation [dispinterface](/windows/desktop/Midl/dispinterface) dans la documentation MIDL :
+L’exemple d’utilisation de [dispinterface](/windows/desktop/Midl/dispinterface) dans la documentation MIDL :
 
 ```cpp
 dispinterface helloPro
@@ -51,7 +40,7 @@ n’est pas valide pour l’attribut **dispinterface** .
 
 ## <a name="example"></a>Exemple
 
-Consultez l’exemple de [peut être liée](bindable.md) pour obtenir un exemple montrant comment utiliser **dispinterface**.
+Pour obtenir un exemple montrant comment utiliser [dispinterface](bindable.md) , consultez l’exemple de **bindable**.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -64,7 +53,7 @@ Consultez l’exemple de [peut être liée](bindable.md) pour obtenir un exemple
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -74,4 +63,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [dual](dual.md)<br/>
 [custom](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

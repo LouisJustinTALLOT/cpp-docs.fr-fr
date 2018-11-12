@@ -1,10 +1,6 @@
 ---
-title: CMapWordToPtr, classe | Microsoft Docs
-ms.custom: ''
+title: CMapWordToPtr, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMapWordToPtr
 - AFXCOLL/CMapWordToPtr
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXCOLL/CMapStringToOb::RemoveAll
 - AFXCOLL/CMapStringToOb::RemoveKey
 - AFXCOLL/CMapStringToOb::SetAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMapStringToOb [MFC], CMapStringToOb
 - CMapStringToOb [MFC], GetCount
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b204d87f-6427-43e1-93e3-a4b1bb41099f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 58b998d4e4d15e972b31c468036c28c2ba26f92a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5df8d9e853d934d8c83398cc266c6f49634fa9e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442745"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605138"
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr, classe
 
@@ -125,6 +115,4 @@ Pour plus d’informations sur `CMapWordToPtr`, consultez l’article [Collectio
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

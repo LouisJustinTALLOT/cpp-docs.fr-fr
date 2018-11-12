@@ -1,28 +1,17 @@
 ---
-title: immediatebind (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: immediatebind (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.immediatebind
-dev_langs:
-- C++
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: fb2169adf5bfce3c1a66e382c79b57c8ef53ef04
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 35e8ea4a761fd3cf36da335dc8519ba71772b4e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790993"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647721"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -53,7 +42,7 @@ Consultez [peut être liée](bindable.md) pour obtenir un exemple montrant comme
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -61,4 +50,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [Attributs de méthode](method-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
-[requestedit](requestedit.md)  
+[requestedit](requestedit.md)

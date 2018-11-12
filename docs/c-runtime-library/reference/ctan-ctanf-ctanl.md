@@ -1,11 +1,6 @@
 ---
-title: ctan, ctanf, ctanl | Microsoft Docs
-ms.custom: ''
+title: ctan, ctanf, ctanl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ctan
 - ctanf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ctan
 - complex/ctanf
 - complex/ctanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctan function
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c272e34202f81a9f16eab5b57da35c548790c417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396425"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661745"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -81,16 +70,16 @@ Nombre complexe qui représente l’angle, en radians.
 
 La tangente de *z*.
 
-|Entrée|Exception SEH|**_matherr** (exception)|
+|Entrée|Exception SEH|**_matherr** exception|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|aucun|_DOMAIN|
-|± ∞ (**tan**, **tanf**)|INVALID|_DOMAIN|
+|± ∞, QNAN, IND|none|_DOMAIN|
+|+ ∞ (**tan**, **tanf**)|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ctan** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **ctan** accepte et retourne toujours un **_Dcomplex** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **ctan** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **ctan** accepte et retourne toujours un **_Dcomplex** valeur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

@@ -1,26 +1,16 @@
 ---
-title: Génération de manifeste à la ligne de commande | Microsoft Docs
-ms.custom: ''
+title: Génération de manifeste au niveau de la ligne de commande
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - manifests [C++]
 - manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eaaebf02299f8f3907012ec97e467d137cbd246b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e192122a5b9411f983683c2fa01fab2aded49ffe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315481"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505363"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Génération de manifeste au niveau de la ligne de commande
 
@@ -31,5 +21,5 @@ Lorsque vous générez des applications C/C++ à partir de la ligne de commande 
 [Manifestes](https://msdn.microsoft.com/library/aa375365)<br/>
 [/INCREMENTAL (Lier par incrément)](../build/reference/incremental-link-incrementally.md)<br/>
 [Assemblys de nom fort (signature d’assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)<br/>
-[Modifier & Continuer](/visualstudio/debugger/edit-and-continue)<br/>
+[Modifier & Continuer](/visualstudio/debugger/edit-and-continue)<br/>
 [Présentation de la génération de manifeste pour les programmes C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)<br/>

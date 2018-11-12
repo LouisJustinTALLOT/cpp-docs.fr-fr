@@ -1,10 +1,6 @@
 ---
-title: _execvpe, _wexecvpe | Microsoft Docs
-ms.custom: ''
+title: _execvpe, _wexecvpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvpe
 - _wexecvpe
@@ -26,24 +22,18 @@ f1_keywords:
 - execvpe
 - _wexecvpe
 - _execvpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecvpe function
 - execvpe function
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97020ba4e1b20bfc95f48eaa1afe6fa111a9b769
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401228"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431692"
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -97,9 +87,9 @@ Pour plus d’informations sur ces codes de retour et d’autres, consultez [err
 
 Chacune de ces fonctions charge et exécute un nouveau processus, passe un tableau de pointeurs à des arguments de ligne de commande et un tableau de pointeurs aux paramètres d’environnement. Ces fonctions utilisent la **chemin d’accès** variable d’environnement pour rechercher le fichier à exécuter.
 
-Le **_execvpe** fonctions valident leurs paramètres. Si le *cmdname* est un pointeur null, ou si *argv* est un pointeur null, un pointeur vers un tableau vide ou un pointeur vers un tableau qui contient une chaîne vide comme premier argument, ces fonctions appellent le non valide Gestionnaire de paramètres, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun processus lancé.
+Le **_execvpe** fonctions valident leurs paramètres. Si le *cmdname* est un pointeur null, ou si *argv* est un pointeur null, un pointeur désignant un tableau vide ou un pointeur vers un tableau qui contient une chaîne vide comme premier argument, ces fonctions appellent le non valide Gestionnaire de paramètres, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun processus lancé.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|

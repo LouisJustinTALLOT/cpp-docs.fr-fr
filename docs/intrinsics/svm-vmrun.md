@@ -1,28 +1,18 @@
 ---
-title: __svm_vmrun | Microsoft Docs
-ms.custom: ''
+title: __svm_vmrun
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __svm_vmrun
-dev_langs:
-- C++
 helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 718aba9b5ffe54edd3e9e960bd0530cd7b526b09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffedf366453a800ce420914376b8d9bb441a602a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394831"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603555"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 
@@ -48,7 +38,7 @@ void __svm_vmrun(
 
 Le `__svm_vmrun` fonction utilise une quantité minimale d’informations dans le VMCB pour commencer l’exécution du code d’invité de machine virtuelle. Utilisez le [__svm_vmsave](../intrinsics/svm-vmsave.md) ou [__svm_vmload](../intrinsics/svm-vmload.md) fonctionner si vous avez besoin de plus d’informations pour gérer une interruption complexe ou pour basculer vers un autre invité.
 
-Le `__svm_vmrun` fonction est équivalente à la `VMRUN` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez dans le document, « manuelle Volume AMD64 Architecture pour le programmeur 2 : programmation du système, « numéro 24593, révision 3.11 ou version ultérieure, à la [corporation d’AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+La fonction `__svm_vmrun` est équivalente à l’instruction machine `VMRUN` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez dans le document, « manuelle Volume AMD64 Architecture pour le programmeur 2 : programmation du système, « numéro 24593, révision 3.11 ou version ultérieure, à la [corporation d’AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
 
 ## <a name="requirements"></a>Configuration requise
 

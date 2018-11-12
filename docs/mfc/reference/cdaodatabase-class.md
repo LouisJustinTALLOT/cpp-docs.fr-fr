@@ -1,10 +1,6 @@
 ---
-title: CDaoDatabase, classe | Microsoft Docs
-ms.custom: ''
+title: CDaoDatabase, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDaoDatabase
 - AFXDAO/CDaoDatabase
@@ -34,8 +30,6 @@ f1_keywords:
 - AFXDAO/CDaoDatabase::SetQueryTimeout
 - AFXDAO/CDaoDatabase::m_pDAODatabase
 - AFXDAO/CDaoDatabase::m_pWorkspace
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDaoDatabase [MFC], CDaoDatabase
 - CDaoDatabase [MFC], CanTransact
@@ -64,16 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6cf84b2e5709a4ac31965501005b5260499a3213
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408802"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439276"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase, classe
 
@@ -578,7 +568,6 @@ void GetQueryDefInfo(
     CDaoQueryDefInfo& querydefinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetQueryDefInfo(
     LPCTSTR lpszName,
     CDaoQueryDefInfo& querydefinfo,
@@ -677,7 +666,6 @@ void GetRelationInfo(
     CDaoRelationInfo& relinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetRelationInfo(
     LPCTSTR lpszName,
     CDaoRelationInfo& relinfo,
@@ -736,7 +724,6 @@ void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetTableDefInfo(
     LPCTSTR lpszName,

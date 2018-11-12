@@ -1,28 +1,17 @@
 ---
-title: usesgetlasterror (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: usesgetlasterror (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.usesgetlasterror
-dev_langs:
-- C++
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 501f6b1801ace9f6002cca5d3559dfcb01e994f5
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 44a1a55114bcf2466aa5b084f2b53c5457f1a0aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790684"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487020"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -53,8 +42,8 @@ Consultez le [idl_module](idl-module.md) exemple pour obtenir un exemple montran
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs IDL](idl-attributes.md)  
+[Attributs IDL](idl-attributes.md)

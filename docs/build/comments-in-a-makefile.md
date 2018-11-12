@@ -1,25 +1,15 @@
 ---
-title: Commentaires dans un Makefile | Microsoft Docs
-ms.custom: ''
+title: Commentaires dans un makefile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bff732a0e9becc9b6c829c70a1bc6701e6031bf
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 91fb9001378973c86ffaaf7fd841e3c679444ef9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723948"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625847"
 ---
 # <a name="comments-in-a-makefile"></a>Commentaires dans un makefile
 

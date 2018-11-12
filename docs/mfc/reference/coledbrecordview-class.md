@@ -1,33 +1,23 @@
 ---
-title: COleDBRecordView, classe | Microsoft Docs
-ms.custom: ''
+title: COleDBRecordView (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDBRecordView
 - AFXOLEDB/COleDBRecordView
 - AFXOLEDB/COleDBRecordView::COleDBRecordView
 - AFXOLEDB/COleDBRecordView::OnGetRowset
 - AFXOLEDB/COleDBRecordView::OnMove
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDBRecordView [MFC], COleDBRecordView
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b5494cd21f1385bbd9d89a37725998b521e6452
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b862ce5176a1fd4fa4ac48cabf7830cd8ebf3d92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373881"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599600"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (classe)
 
@@ -175,6 +165,4 @@ Si vous déplacez au-delà du dernier enregistrement dans le jeu d’enregistrem
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

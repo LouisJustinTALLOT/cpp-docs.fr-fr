@@ -1,12 +1,6 @@
 ---
-title: Comment les blocs Catch sont évalués (C++) | Microsoft Docs
-ms.custom: ''
+title: Mode d'évaluation des blocs Catch (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - try-catch keyword [C++], catchable types
 - catch keyword [C++], types of catch handlers
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fe86770692554551b88e1aef9bbddc509e21f0f0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7504439c565d4dfb720bc2fa7e097e3230733423
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475144"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Mode d'évaluation des blocs Catch (C++)
 

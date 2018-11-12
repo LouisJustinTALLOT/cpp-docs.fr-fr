@@ -1,30 +1,20 @@
 ---
-title: Classes de stockage (C++) | Microsoft Docs
-ms.custom: ''
+title: Classes de stockage (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - thread_local_cpp
 - external_cpp
 - static_cpp
 - register_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 31f9ba4e16fa1216db4fb66c7b7faeca333f2c43
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861315"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520310"
 ---
 # <a name="storage-classes-c"></a>Classes de stockage (C++)
 
@@ -35,7 +25,6 @@ Un *classe de stockage* dans le contexte de C++, déclarations de variable est u
 1. Le [mutable](../cpp/mutable-data-members-cpp.md) mot clé peut être considéré comme un spécificateur de classe de stockage. Toutefois, il est uniquement disponible dans la liste des membres d'une définition de classe.
 
 1. **Visual C++ 2010 et versions ultérieures :** le **automatique** mot clé n’est plus un spécificateur de classe de stockage C++ et le **inscrire** mot clé est déconseillé. **Visual Studio 2017 version 15.7 et ultérieure :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : le **inscrire** mot clé est supprimé du langage C++.
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -226,7 +215,7 @@ Choses à noter concernant le `thread_local` spécificateur :
 
 - Vous pouvez spécifier `thread_local` uniquement sur les éléments de données ayant une durée de stockage statique. Cela inclut les objets de données globaux (à la fois **statique** et **extern**), les objets statiques locaux et les données membres statiques des classes. Toute variable locale déclarée `thread_local` est implicitement statique si aucune autre classe de stockage n’est fourni ; en d’autres termes, à la portée de bloc `thread_local` équivaut à `thread_local static`.
 
-- Vous devez spécifier `thread_local` à la fois pour la déclaration et la définition d'un objet local de thread, que la déclaration et la définition se produisent dans le même fichier ou dans des fichiers séparés.
+- Vous devez spécifier `thread_local` à la fois pour la déclaration et la définition d’un objet local de thread, que la déclaration et la définition se produisent dans le même fichier ou dans des fichiers séparés.
 
 Sur Windows, `thread_local` est fonctionnellement équivalent à [__declspec (thread)](../cpp/thread.md) , à ceci près que **__declspec (thread)** peut être appliqué à une définition de type et n’est valide dans le code C. Si possible, utilisez `thread_local`, car il fait partie de la norme C++ et est par conséquent plus portable.
 
@@ -315,7 +304,7 @@ Cet exemple montre comment et quand les objets `I1`, `I2`, et `I3` sont initiali
 
 Il existe plusieurs points à noter concernant le programme :
 
-- D'abord, `I1` et `I2` sont automatiquement détruits lorsque l'ordre d'exécution quitte le bloc dans lequel ils sont définis.
+- D’abord, `I1` et `I2` sont automatiquement détruits lorsque l’ordre d’exécution quitte le bloc dans lequel ils sont définis.
 
 - Ensuite, en C++, il n'est pas nécessaire de déclarer des objets ou des variables au début d'un bloc. En outre, ces objets sont initialisés uniquement lorsque l'ordre d'exécution atteint leurs définitions. (`I2` et `I3` sont des exemples de telles définitions.) La sortie montre exactement quand ils sont initialisés.
 

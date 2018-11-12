@@ -1,12 +1,6 @@
 ---
-title: Transport d’exceptions entre les threads | Microsoft Docs
-ms.custom: ''
+title: Transport des exceptions entre les threads
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::current_exception
 - transporting exceptions between threads
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 46cdf86d431b69704b5a67fea3024365470de945
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464441"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transport des exceptions entre les threads
 
@@ -150,7 +140,7 @@ L'exception extraite est maintenant l'exception actuelle dans le thread principa
 
 ## <a name="makeexceptionptr-function"></a>Fonction make_exception_ptr
 
-La fonction `make_exception_ptr` prend une instance de classe comme argument puis retourne un `exception_ptr` qui référence l'instance. Généralement, vous spécifiez un objet de [classe exception](../standard-library/exception-class.md) comme argument pour la fonction `make_exception_ptr`, bien que tout objet de classe puisse être l’argument.
+La fonction `make_exception_ptr` prend une instance de classe comme argument puis retourne un `exception_ptr` qui référence l’instance. Généralement, vous spécifiez un objet de [classe exception](../standard-library/exception-class.md) comme argument pour la fonction `make_exception_ptr`, bien que tout objet de classe puisse être l’argument.
 
 Appelant le `make_exception_ptr` fonction équivaut à lever une exception C++, intercepter dans un **catch** bloc, puis en appelant le `current_exception` fonction pour retourner une `exception_ptr` objet qui fait référence à l’exception. L'implémentation Microsoft de la fonction `make_exception_ptr` est plus efficace que le fait de lever puis d'intercepter une exception.
 

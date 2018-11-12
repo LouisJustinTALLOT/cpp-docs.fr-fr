@@ -1,8 +1,6 @@
 ---
-title: '&lt;iterator&gt;, opérateurs | Microsoft Docs'
-ms.custom: ''
+title: '&lt;iterator&gt;, opérateurs'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - xutility/std::operator!=
 - xutility/std::operator&gt;
@@ -12,8 +10,6 @@ f1_keywords:
 - xutility/std::operator+
 - xutility/std::operator-
 - xutility/std::operator==
-dev_langs:
-- C++
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
 helpviewer_keywords:
 - std::operator!= (iterator)
@@ -21,18 +17,18 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 5ffd25e7289b4627b0b69e4cfd43b19c176d9e18
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 311710d5614bbc7c24d6b32e89285715476f94da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110589"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510797"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt;, opérateurs
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[!=, opérateur](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|
 |[operator-](#operator-)|[operator==](#op_eq_eq)|
 

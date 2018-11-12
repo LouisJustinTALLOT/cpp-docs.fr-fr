@@ -1,10 +1,6 @@
 ---
-title: COlePasteSpecialDialog, classe | Microsoft Docs
-ms.custom: ''
+title: COlePasteSpecialDialog, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COlePasteSpecialDialog
 - AFXODLGS/COlePasteSpecialDialog
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXODLGS/COlePasteSpecialDialog::GetPasteIndex
 - AFXODLGS/COlePasteSpecialDialog::GetSelectionType
 - AFXODLGS/COlePasteSpecialDialog::m_ps
-dev_langs:
-- C++
 helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], COlePasteSpecialDialog
 - COlePasteSpecialDialog [MFC], AddFormat
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 88f4653369b9692b7192b6a3661a00f5e3665d99
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410376"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530024"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog, classe
 
@@ -121,7 +111,6 @@ void AddFormat(
     LPTSTR lpszFormat,
     LPTSTR lpszResult,
     DWORD flags);
-
 
 void AddFormat(
     UINT cf,

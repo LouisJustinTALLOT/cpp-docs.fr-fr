@@ -1,30 +1,20 @@
 ---
-title: Ccomclassfactoryautothread, classe | Microsoft Docs
-ms.custom: ''
+title: Ccomclassfactoryautothread, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComClassFactoryAutoThread
 - ATLCOM/ATL::CComClassFactoryAutoThread
 - ATLCOM/ATL::CComClassFactoryAutoThread::CreateInstance
 - ATLCOM/ATL::CComClassFactoryAutoThread::LockServer
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 269fd977bf57f1b2daff4ec5550b1d2da97b58d6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 30a9d52ff661fd4fa39344382402aa6ff09d193f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114161"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574822"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Ccomclassfactoryautothread, classe
 
@@ -36,9 +26,9 @@ Cette classe implémente le [IClassFactory](/windows/desktop/api/unknwnbase/nn-u
 ## <a name="syntax"></a>Syntaxe
 
 ```
-class CComClassFactoryAutoThread 
-   : public IClassFactory, 
-     public CComObjectRootEx<CComGlobalsThreadModel>
+class CComClassFactoryAutoThread
+    : public IClassFactory,
+      public CComObjectRootEx<CComGlobalsThreadModel>
 ```
 
 ## <a name="members"></a>Membres

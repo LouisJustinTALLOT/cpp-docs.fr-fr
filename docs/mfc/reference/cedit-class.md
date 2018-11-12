@@ -1,10 +1,6 @@
 ---
-title: Classe CEdit | Microsoft Docs
-ms.custom: ''
+title: CEdit Class
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CEdit
 - AFXWIN/CEdit
@@ -52,8 +48,6 @@ f1_keywords:
 - AFXWIN/CEdit::SetTabStops
 - AFXWIN/CEdit::ShowBalloonTip
 - AFXWIN/CEdit::Undo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CEdit [MFC], CEdit
 - CEdit [MFC], CanUndo
@@ -100,16 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4ae42373ddf70cf4945c540e781397d7d67bd21
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890749"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455807"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -1031,7 +1021,6 @@ Définit le texte qui s’affiche en tant que la pile de texte, ou Conseil, dans
 ```
 BOOL SetCueBanner(LPCWSTR lpszText);
 
-
 BOOL SetCueBanner(
     LPCWSTR lpszText,
     BOOL fDrawWhenFocused = FALSE);
@@ -1322,7 +1311,6 @@ void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
 
-
 void SetSel(
     int nStartChar,
     int nEndChar,
@@ -1358,7 +1346,6 @@ Appelez cette fonction pour définir les taquets de tabulation dans un contrôle
 ```
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
-
 
 BOOL SetTabStops(
     int nTabStops,
@@ -1402,7 +1389,6 @@ Affiche une info-bulle qui est associée avec le contrôle d’édition actuel.
 
 ```
 BOOL ShowBalloonTip(PEDITBALLOONTIP pEditBalloonTip);
-
 
 BOOL ShowBalloonTip(
     LPCWSTR lpszTitle,

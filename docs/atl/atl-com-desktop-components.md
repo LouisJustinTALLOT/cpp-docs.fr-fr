@@ -1,26 +1,16 @@
 ---
-title: Composants de bureau COM ATL | Microsoft Docs
-ms.custom: ''
+title: Composants de bureau COM ATL
 ms.date: 10/19/2018
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 378cd6fd283cd36142e293b51fdb91527afb6f88
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 65b8631560ec1b768521d917256c32c75c531fab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808899"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644182"
 ---
 # <a name="atl-com-desktop-components"></a>Composants de bureau COM ATL
 
@@ -61,4 +51,4 @@ Vous guide à travers la création d’un contrôle et illustre certains princip
 Exemple de code qui montre comment utiliser ATL pour écrire des objets COM.
 
 [Modèles OLE DB](../data/oledb/ole-db-templates.md)<br/>
-Fournit une documentation de référence pour les modèles de consommateur et de fournisseur OLE DB, un ensemble de classes de modèles qui implémentent de nombreuses interfaces OLE DB courantes.  
+Fournit une documentation de référence pour les modèles de consommateur et de fournisseur OLE DB, un ensemble de classes de modèles qui implémentent de nombreuses interfaces OLE DB courantes.

@@ -1,10 +1,6 @@
 ---
-title: Classe CFile | Microsoft Docs
-ms.custom: ''
+title: CFile (classe)
 ms.date: 06/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFile
 - AFX/CFile
@@ -35,8 +31,6 @@ f1_keywords:
 - AFX/CFile::hFileNull
 - AFX/CFile::m_hFile
 - AFX/CFile::m_pTM
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFile [MFC], CFile
 - CFile [MFC], Abort
@@ -66,16 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a61ad47464bc7cb005cfea41049019cfa0202b08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391369"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644143"
 ---
 # <a name="cfile-class"></a>CFile (classe)
 
@@ -193,11 +183,9 @@ CFile();
 CFile(CAtlTransactionManager* pTM);
 CFile(HANDLE hFile);
 
-
 CFile(
 LPCTSTR lpszFileName,
 UINT nOpenFlags);
-
 
 CFile(
 LPCTSTR lpszFileName,
@@ -211,7 +199,7 @@ CAtlTransactionManager* pTM);
 Handle d'un fichier à attacher à l'objet `CFile`.
 
 *lpszFileName*<br/>
-Chemin d'accès relatif ou complet d'un fichier à attacher à l'objet `CFile`.
+Chemin d’accès relatif ou complet d’un fichier à attacher à l’objet `CFile`.
 
 *nOpenFlags*<br/>
 Combinaison de bits (OR) ou options d'accès au fichier pour le fichier spécifié. Consultez la section Notes pour connaître les options possibles.
@@ -576,7 +564,6 @@ virtual BOOL Open(
     LPCTSTR lpszFileName,
     UINT nOpenFlags,
     CFileException* pError = NULL);
-
 
 virtual BOOL Open(
     LPCTSTR lpszFileName,

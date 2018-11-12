@@ -1,10 +1,6 @@
 ---
-title: _status87, _statusfp, _statusfp2 | Microsoft Docs
-ms.custom: ''
+title: _status87, _statusfp, _statusfp2
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _statusfp2
 - _statusfp
@@ -29,8 +25,6 @@ f1_keywords:
 - _status87
 - status87
 - statusfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - floating-point functions, getting status word
 - floating-point numbers, status word
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - floating-point functions
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69297d7ff1e3ec40cfe4fc22dec86c356d1697d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 271c28dd4e267e5b3b702858cc398689e3e35d6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412554"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597518"
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
 
@@ -77,19 +67,19 @@ Cette adresse est complétée avec le mot d’état de l’unité de virgule flo
 
 ## <a name="return-value"></a>Valeur de retour
 
-Pour **_status87** et **_statusfp**, les bits de la valeur retournée indiquent l’état à virgule flottante. Consultez la valeur flottante. H à inclure pour une définition des bits retournés par **_statusfp**. Une part importante des fonctions de bibliothèque mathématique modifie le mot d’état de virgule flottante, avec des résultats imprévisibles. L’optimisation peut réorganiser, combiner et éliminer les opérations à virgule flottante autour des appels à **_status87**, **_statusfp**et des fonctions associées. Utilisez l’option du compilateur [/Od (Désactiver (Déboage))](../../build/reference/od-disable-debug.md) ou la directive pragma [fenv_access](../../preprocessor/fenv-access.md) pour éviter les optimisations qui réorganisent les opérations en virgule flottante. Valeurs de retour de **_clearfp** et **_statusfp**et également les paramètres de retournés de **_statusfp2**, sont plus fiables si moins d’opérations à virgule flottante sont effectuées. entre les états connus du mot d’état à virgule flottante.
+Pour **_status87** et **_statusfp**, les bits dans la valeur retournée indiquent l’état à virgule flottante. Consultez la valeur FLOAT. H à inclure pour une définition des bits retournés par **_statusfp**. Une part importante des fonctions de bibliothèque mathématique modifie le mot d’état de virgule flottante, avec des résultats imprévisibles. L’optimisation peut réorganiser, combiner et éliminer les opérations à virgule flottante autour des appels à **_status87**, **_statusfp**et des fonctions associées. Utilisez l’option du compilateur [/Od (Désactiver (Déboage))](../../build/reference/od-disable-debug.md) ou la directive pragma [fenv_access](../../preprocessor/fenv-access.md) pour éviter les optimisations qui réorganisent les opérations en virgule flottante. Valeurs de retour de **_clearfp** et **_statusfp**et également les paramètres de retour de **_statusfp2**, sont plus fiables si moins d’opérations à virgule flottante sont effectuées. entre les états connus du mot d’état à virgule flottante.
 
 ## <a name="remarks"></a>Notes
 
-Le **_statusfp** fonction obtient le mot d’état à virgule flottante. Le mot d’état est une combinaison de l’état du processeur de virgule flottante et d’autres conditions détectées par le gestionnaire d’exceptions de virgule flottante, par exemple le dépassement de capacité positif et négatif de pile en virgule flottante. Les exceptions démasquées sont vérifiées avant que le contenu du mot d’état soit retourné. Cela signifie que l’appelant est informé des exceptions en attente. Sur x86 plates-formes, **_statusfp** retourne une combinaison de la x87 et l’état de virgule flottante SSE2. Sur les plateformes X64, l’état retourné repose sur l’état MXCSR de SSE. Sur les plateformes ARM, **_statusfp** retourne l’état à partir du Registre fpscr.
+Le **_statusfp** fonction obtient le mot d’état à virgule flottante. Le mot d’état est une combinaison de l’état du processeur de virgule flottante et d’autres conditions détectées par le gestionnaire d’exceptions de virgule flottante, par exemple le dépassement de capacité positif et négatif de pile en virgule flottante. Les exceptions démasquées sont vérifiées avant que le contenu du mot d’état soit retourné. Cela signifie que l’appelant est informé des exceptions en attente. Sur x86 plateformes, **_statusfp** retourne une combinaison de x87 et état de virgule flottante SSE2. Sur les plateformes X64, l’état retourné repose sur l’état MXCSR de SSE. Sur les plateformes ARM, **_statusfp** retourne l’état du Registre fpscr.
 
-**_statusfp** est une version portable indépendante de la plate-forme de **_status87**. Il est identique à **_status87** sur les plateformes Intel (x86) et est également pris en charge par le x64 et les plateformes ARM. Pour vous assurer que votre code à virgule flottante peut être utilisé dans toutes les architectures, utilisez **_statusfp**. Si vous ciblez uniquement x86 plateformes, vous pouvez utiliser **_status87** ou **_statusfp**.
+**_statusfp** est une version portable indépendante de la plateforme de **_status87**. Il est identique à **_status87** sur les plateformes Intel (x86) et prend également en charge les x64 et les plateformes ARM. Pour vous assurer que votre code en virgule flottante peut être transféré à toutes les architectures, utilisez **_statusfp**. Si vous ciblez uniquement x86 plateformes, vous pouvez utiliser **_status87** ou **_statusfp**.
 
-Nous vous recommandons de **_statusfp2** pour les puces (par exemple, le vecteur d’initialisation Pentium) qui ont un x87 et un processeur à virgule flottante SSE2. Pour **_statusfp2**, les adresses sont remplis à l’aide du mot d’état à virgule flottante pour le x87 ou le processeur à virgule flottante SSE2. Pour un processeur qui prend en charge les x87 et les processeurs à virgule flottante SSE2, EM_AMBIGUOUS a la valeur 1 si **_statusfp** ou **_controlfp** est utilisé et l’action est AMBIGUE, car elle peut désigner le x87 ou le SSE2 mot d’état à virgule flottante. Le **_statusfp2** fonction est uniquement pris en charge sur x86 plateformes.
+Nous vous recommandons de **_statusfp2** pour les puces (telles que Pentium IV) qui ont x87 et un processeur à virgule flottante SSE2. Pour **_statusfp2**, les adresses sont complétées en utilisant le mot d’état à virgule flottante pour le x87 ou le processeur à virgule flottante SSE2. Pour un processeur qui prend en charge x87 et processeurs en virgule flottante SSE2, l’indicateur em_ambiguous prend a la valeur 1 si **_statusfp** ou **_controlfp** est utilisé et l’action était ambiguë, car elle peut désigner le x87 ou SSE2 mot d’état à virgule flottante. Le **_statusfp2** fonction est uniquement pris en charge sur x86 plateformes.
 
-Ces fonctions ne sont pas utiles pour [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car le common language runtime (CLR) prend uniquement en charge la précision en virgule flottante par défaut.
+Ces fonctions ne sont pas utiles pour [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car le common language runtime (CLR) prend uniquement en charge la précision à virgule flottante par défaut.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

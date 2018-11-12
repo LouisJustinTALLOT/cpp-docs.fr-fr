@@ -1,10 +1,6 @@
 ---
-title: _cputs, _cputws | Microsoft Docs
-ms.custom: ''
+title: _cputs, _cputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cputws
 - _cputs
@@ -25,8 +21,6 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c192adccb6fe0e0cee66f03b5d85d89fc2e446a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399762"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601173"
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
 
@@ -76,7 +66,7 @@ En cas de réussite, **_cputs** retourne 0. Si la fonction échoue, elle retourn
 
 ## <a name="remarks"></a>Notes
 
-Le **_cputs** fonction écrit la chaîne se terminant par null qui pointe vers *str* directement à la console. Une combinaison de retour chariot-saut de ligne n'est pas ajoutée automatiquement à la chaîne.
+Le **_cputs** fonction écrit la chaîne se terminant par null qui est indiquée par *str* directement à la console. Une combinaison de retour chariot-saut de ligne n'est pas ajoutée automatiquement à la chaîne.
 
 Cette fonction valide son paramètre. Si *str* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et -1 est retourné.
 
@@ -86,7 +76,7 @@ Cette fonction valide son paramètre. Si *str* est **NULL**, le Gestionnaire de 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_cputts**|**_cputs**|**_cputs**|**_cputws**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

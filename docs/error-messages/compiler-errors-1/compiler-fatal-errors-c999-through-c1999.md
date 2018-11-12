@@ -1,10 +1,6 @@
 ---
-title: Erreurs irrécupérables de compilateur C999 à C1999 | Documents Microsoft
-ms.custom: ''
+title: Erreurs irrécupérables du compilateur C999 à C1999
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1012
 - C1013
@@ -165,23 +161,17 @@ helpviewer_keywords:
 - C1901
 - C1903
 - C1904
-dev_langs:
-- C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdd0949d2d76cad636f833a75ea1371246ee3ebf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237261"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677329"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erreurs irrécupérables du compilateur C999 à C1999
 
-Les articles de cette section de la documentation expliquent un sous-ensemble des messages d’erreur générés par le compilateur.
+Les articles de cette section de la documentation expliquent un sous-ensemble des messages d’erreur qui sont générés par le compilateur.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -198,7 +188,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur irrécupérable C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|indicateur '*string*' non reconnu dans '*option*'|
 |[Erreur irrécupérable C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|aucun fichier d'entrée spécifié|
 |[Erreur irrécupérable C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limite du compilateur : macros imbriquées trop profondément|
-|[Erreur irrécupérable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Vous avez oublié d’ajouter ' #include <*fichier*>' à votre source ?|
+|[Erreur irrécupérable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Avez-vous oublié d’ajouter ' #include <*fichier*>' à votre source ?|
 |Erreur irrécupérable C1012|parenthèses non équilibrées : '*character*" manquant(e)|
 |Erreur irrécupérable C1013|limite du compilateur : parenthèses ouvertes trop nombreuses|
 |Erreur irrécupérable C1014|fichiers Include trop nombreux : profondeur = *number*|
@@ -224,7 +214,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur irrécupérable C1048|option '*string*' inconnue dans '*option*'|
 |Erreur irrécupérable C1049|argument numérique non valide '*value*'|
 |[Erreur irrécupérable C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|le fichier '*file*' de la base de données du programme a un format obsolète, supprimez-le et recompilez-le|
-|[Erreur irrécupérable C1052](fatal-error-c1052.md)|fichier de base de données de programme, «*nom de fichier*', a été généré par l’éditeur de liens avec/Debug : Fastlink ; compilateur ne peut pas mettre à jour ces fichiers PDB ; supprimez-le ou utilisez /Fd pour spécifier un autre nom de fichier PDB|
+|[Erreur irrécupérable C1052](fatal-error-c1052.md)|fichier de base de données de programme, «*filename*», a été généré par l’éditeur de liens avec/Debug : Fastlink ; compilateur ne peut pas mettre à jour ces fichiers PDB ; Veuillez le supprimer ou utilisez /Fd pour spécifier un autre nom de fichier PDB|
 |Erreur irrécupérable C1053|'*function*' : fonction trop grande|
 |[Erreur irrécupérable C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|limite du compilateur : initialiseurs imbriqués trop profondément|
 |[Erreur irrécupérable C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|limite du compilateur : clés insuffisantes|

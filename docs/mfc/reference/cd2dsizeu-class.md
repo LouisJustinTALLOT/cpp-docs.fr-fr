@@ -1,31 +1,21 @@
 ---
-title: Classe du CD2DSizeU | Microsoft Docs
-ms.custom: ''
+title: CD2DSizeU, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DSizeU
 - AFXRENDERTARGET/CD2DSizeU
 - AFXRENDERTARGET/CD2DSizeU::CD2DSizeU
 - AFXRENDERTARGET/CD2DSizeU::IsNull
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 06008a2826a2ba2d358fcf3469b8a6b5b107e6be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bad73a53eabe0a4c75483e9871a4fdc4a361449b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412352"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512474"
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU, classe
 
@@ -75,7 +65,6 @@ Construit un objet du CD2DSizeU à partir de l’objet CSize.
 CD2DSizeU(const CSize& size);
 CD2DSizeU(const D2D1_SIZE_U& size);
   CD2DSizeU(const D2D1_SIZE_U* size);
-
 
 CD2DSizeU(
     UINT32 cx = 0,

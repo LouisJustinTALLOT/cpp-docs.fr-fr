@@ -1,10 +1,6 @@
 ---
-title: Cusertool, classe | Microsoft Docs
-ms.custom: ''
+title: Cusertool, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CUserTool
 - AFXUSERTOOL/CUserTool
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXUSERTOOL/CUserTool::m_strArguments
 - AFXUSERTOOL/CUserTool::m_strInitialDirectory
 - AFXUSERTOOL/CUserTool::m_strLabel
-dev_langs:
-- C++
 helpviewer_keywords:
 - CUserTool [MFC], CopyIconToClipboard
 - CUserTool [MFC], DrawToolIcon
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1343040e67dfd31ff7113ad633abcbeaae235510
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6c439ace92a407c8de3a200dedd61428b9bdbc28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390327"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437367"
 ---
 # <a name="cusertool-class"></a>Cusertool, classe
 
@@ -130,7 +120,7 @@ void DrawToolIcon(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectImage*<br/>
@@ -236,7 +226,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *ar*
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Notes
 

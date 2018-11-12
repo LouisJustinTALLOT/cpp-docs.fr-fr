@@ -1,33 +1,23 @@
 ---
-title: basic_stringstream, classe | Microsoft Docs
-ms.custom: ''
+title: basic_stringstream, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - sstream/std::basic_stringstream
 - sstream/std::basic_stringstream::allocator_type
 - sstream/std::basic_stringstream::rdbuf
 - sstream/std::basic_stringstream::str
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::basic_stringstream [C++]
 - std::basic_stringstream [C++], allocator_type
 - std::basic_stringstream [C++], rdbuf
 - std::basic_stringstream [C++], str
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60a12c18ec4e174087900f7386d948ea3ab16a89
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e39d5dabf27ffbe15e519c006592935076a45c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102484"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546526"
 ---
 # <a name="basicstringstream-class"></a>basic_stringstream, classe
 
@@ -134,7 +124,6 @@ Obtient ou définit le texte dans une mémoire tampon de chaîne sans modifier l
 
 ```cpp
 basic_string<Elem, Tr, Alloc> str() const;
-
 
 void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);

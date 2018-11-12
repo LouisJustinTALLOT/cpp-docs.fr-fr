@@ -1,25 +1,15 @@
 ---
-title: Outils définis par l’utilisateur | Microsoft Docs
-ms.custom: ''
+title: Outils définis par l'utilisateur
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8e161ac82a6df238079782768ee44e7bdf359cf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425078"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607075"
 ---
 # <a name="user-defined-tools"></a>Outils définis par l'utilisateur
 
@@ -67,7 +57,4 @@ Si vous souhaitez prédéfinir certains outils au démarrage de l’application,
 [CUserTool, classe](../mfc/reference/cusertool-class.md)<br/>
 [CUserToolsManager, classe](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [CWinAppEx, classe](../mfc/reference/cwinappex-class.md)
-
-
-
 

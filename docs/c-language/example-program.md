@@ -1,23 +1,13 @@
 ---
-title: Exemple de programme | Microsoft Docs
-ms.custom: ''
+title: Exemple de programme
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42bf8199ecb75f6bd4b1a0281d81b7ef2841123a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 31e8f822462dad7b3935548c9c25e7334a82b377
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063383"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608612"
 ---
 # <a name="example-program"></a>Exemple de programme
 

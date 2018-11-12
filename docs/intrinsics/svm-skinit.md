@@ -1,28 +1,18 @@
 ---
-title: __svm_skinit | Microsoft Docs
-ms.custom: ''
+title: __svm_skinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __svm_skinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1fa468fddd24bd622d839bb1882af99d393a3d99
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630d4b9d93802038bd00b65495bb18455b0c61a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426131"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591215"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 
@@ -46,7 +36,7 @@ void __svm_skinit(
 
 ## <a name="remarks"></a>Notes
 
-Le `__svm_skinit` fonction est équivalente à la `SKINIT` instruction machine. Cette fonction fait partie d’un système de sécurité qui utilise le processeur et un Module de plateforme approuvés (TPM) pour vérifier et charger des logiciels approuvés appelé un noyau de sécurité (SK). Un moniteur d’ordinateur virtuel est un exemple d’un noyau de sécurité. Le système de sécurité vérifie les composants du programme chargés pendant le processus d’initialisation et protège les composants contre la falsification par des interruptions, accès des appareils ou un autre programme si l’ordinateur est un multiprocesseur.
+La fonction `__svm_skinit` est équivalente à l’instruction machine `SKINIT` . Cette fonction fait partie d’un système de sécurité qui utilise le processeur et un Module de plateforme approuvés (TPM) pour vérifier et charger des logiciels approuvés appelé un noyau de sécurité (SK). Un moniteur d’ordinateur virtuel est un exemple d’un noyau de sécurité. Le système de sécurité vérifie les composants du programme chargés pendant le processus d’initialisation et protège les composants contre la falsification par des interruptions, accès des appareils ou un autre programme si l’ordinateur est un multiprocesseur.
 
 Le `SLB` paramètre spécifie l’adresse physique d’un bloc de 64 Ko de la mémoire appelée le *bloc de chargeur sécurisé* (SLB). L’équilibreur SLB contient un programme appelé le chargeur sécurisé qui établit l’environnement d’exploitation de l’ordinateur et de charge par la suite le noyau de sécurité.
 

@@ -1,41 +1,31 @@
 ---
-title: Erreur du compilateur C3861 | Documents Microsoft
-ms.custom: ''
+title: Erreur du compilateur C3861
 ms.date: 03/23/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3861
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3861
 ms.assetid: 0a1eee30-b3db-41b1-b1e5-35949c3924d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6dbfbb11184928331b94b7addc747ffb7e44d6d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ebfd3b0129e25cf543cac803a3b33fb074f3d70
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270262"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530804"
 ---
 # <a name="compiler-error-c3861"></a>Erreur du compilateur C3861
 
-> '*identificateur*' : identificateur introuvable
+> «*identificateur*' : identificateur introuvable
 
 Le compilateur n’a pas pu résoudre une référence à un identificateur, même à l’aide d’une recherche dépendante d’un argument.
 
 ## <a name="remarks"></a>Notes
 
-Pour corriger cette erreur, comparez l’utilisation de *identificateur* à la déclaration de l’identificateur de la casse et l’orthographe. Vérifiez que [opérateurs de résolution de portée](../../cpp/scope-resolution-operator.md) et espace de noms [à l’aide de directives](../../cpp/namespaces-cpp.md#using_directives) sont utilisés correctement. Si l’identificateur est déclaré dans un fichier d’en-tête, vérifiez que l’en-tête est inclus avant l’identificateur est référencé. Si l’identificateur est destiné à être visible de l’extérieur, assurez-vous qu’il est déclaré dans un fichier source qui l’utilise. Vérifiez également que la déclaration de l’identificateur ou la définition n’est pas exclue par [directives de compilation conditionnelle](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
+Pour corriger cette erreur, comparez l’utilisation de *identificateur* à la déclaration de l’identificateur de la casse et l’orthographe. Vérifiez que [opérateurs de résolution de portée](../../cpp/scope-resolution-operator.md) et espace de noms [à l’aide de directives](../../cpp/namespaces-cpp.md#using_directives) sont utilisés correctement. Si l’identificateur est déclaré dans un fichier d’en-tête, vérifiez que l’en-tête est inclus avant l’identificateur est référencé. Si l’identificateur est destiné à être visible de l’extérieur, assurez-vous qu’il est déclaré dans n’importe quel fichier source qui l’utilise. Vérifiez également que la définition ou déclaration de l’identificateur n’est pas exclue par [directives de compilation conditionnelle](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
 
-Modifications apportées à supprimer des fonctions obsolètes à partir de la bibliothèque Runtime C dans Visual Studio 2015 peuvent entraîner C3861. Pour résoudre cette erreur, supprimez les références à ces fonctions ou les remplacer avec leurs alternatives sécurisés, le cas échéant. Pour plus d’informations, consultez [fonctions obsolètes](../../c-runtime-library/obsolete-functions.md).
+Modifications apportées à supprimer des fonctions obsolètes à partir de la bibliothèque Runtime C dans Visual Studio 2015 peuvent entraîner C3861. Pour résoudre cette erreur, supprimez les références à ces fonctions ou remplacez-les par leurs alternatives sécurisés, le cas échéant. Pour plus d’informations, consultez [fonctions obsolètes](../../c-runtime-library/obsolete-functions.md).
 
-Si l’erreur C3861 s’affiche après la migration de projet à partir de versions antérieures du compilateur, vous avez peut-être des problèmes liés à des versions de Windows prises en charge. Visual C++ ne prend plus en charge le ciblage de Windows 95, Windows 98, Windows ME, Windows NT ou Windows 2000. Si vos macros **WINVER** ou **_WIN32_WINNT** sont affectées à l'une de ces versions de Windows, vous devez les changer. Pour plus d’informations, consultez [modification de WINVER et _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+Si l’erreur C3861 s’affiche après la migration de projet à partir de versions antérieures du compilateur, vous pouvez avoir des problèmes liés aux versions Windows prises en charge. Visual C++ ne prend plus en charge le ciblage de Windows 95, Windows 98, Windows ME, Windows NT ou Windows 2000. Si vos macros **WINVER** ou **_WIN32_WINNT** sont affectées à l'une de ces versions de Windows, vous devez les changer. Pour plus d’informations, consultez [modification de WINVER et _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
 ## <a name="examples"></a>Exemples
 
@@ -54,7 +44,7 @@ int main() {
 
 ### <a name="identifier-not-in-scope"></a>Identificateur pas dans la portée
 
-L’exemple suivant génère l’erreur C3861 car un identificateur est uniquement visible dans la portée du fichier de définition, sauf si elle est déclarée dans d’autres fichiers de code source qui l’utilisent.
+L’exemple suivant génère l’erreur C3861, car un identificateur est uniquement visible dans la portée du fichier de sa définition, sauf si elle est déclarée dans d’autres fichiers source qui l’utilisent.
 
 ```cpp
 // C3861_a1.cpp
@@ -74,7 +64,7 @@ int f() {  // declared and defined here
 }
 ```
 
-### <a name="namespace-qualification-required"></a>Qualification Namespace requise
+### <a name="namespace-qualification-required"></a>Qualification Namespace requis
 
 Classes d’exceptions dans la bibliothèque Standard C++ nécessitent le `std` espace de noms.
 
@@ -111,7 +101,7 @@ int main() {
 
 ### <a name="adl-and-friend-functions"></a>Fonctions ADL et friend
 
-L’exemple suivant génère l’erreur C3767, car le compilateur ne peut pas utiliser la recherche dépendante d’un argument pour `FriendFunc`:
+L’exemple suivant génère l’erreur C3767, car le compilateur ne peut pas utiliser la recherche dépendante d’argument pour `FriendFunc`:
 
 ```cpp
 namespace N {
@@ -129,7 +119,7 @@ int main() {
 }
 ```
 
-Pour corriger cette erreur, déclarez la fonction friend dans la portée de la classe et la définir dans la portée espace de noms :
+Pour corriger cette erreur, déclarez la fonction friend dans la portée de classe et la définir dans la portée espace de noms :
 
 ```cpp
 class MyClass {

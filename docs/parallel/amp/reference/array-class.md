@@ -1,10 +1,6 @@
 ---
-title: Array, classe | Microsoft Docs
-ms.custom: ''
+title: array, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - array
 - AMP/array
@@ -23,21 +19,15 @@ f1_keywords:
 - AMP/Concurrency::array::associated_accelerator_view
 - AMP/Concurrency::array::cpu_access_type
 - AMP/Concurrency::array::extent
-dev_langs:
-- C++
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e0d0fde53cc7ffb885e8435fc82cbb899a3bc89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5b123eb8d21c7273c41a713de5500df164511dce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537200"
 ---
 # <a name="array-class"></a>array, classe
 
@@ -671,6 +661,7 @@ Stocke le rang de le `array`.
 ```
 static const int rank = _Rank;
 ```
+
 ## <a name="reinterpret_as"></a> reinterpret_as
 
 Réinterprète le tableau via un array_view unidimensionnel, qui peut éventuellement avoir un type de valeur différent du tableau source.

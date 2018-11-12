@@ -1,27 +1,17 @@
 ---
-title: Avertissement LNK4092 des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Avertissement des outils Éditeur de liens LNK4092
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4092
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4092
 ms.assetid: d569ec47-a338-40e1-940b-8a8061459acb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9b47b347e11e640425bc7840a0f78a33e9e3b7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0b18002135d225a90f7e45adc2ff57a64c0a79f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113420"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531023"
 ---
 # <a name="linker-tools-warning-lnk4092"></a>Avertissement des outils Éditeur de liens LNK4092
 

@@ -1,10 +1,6 @@
 ---
-title: Cmfcribbonfontcombobox, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcribbonfontcombobox, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonFontComboBox
 - AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetPitchAndFamily
 - AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::RebuildFonts
 - AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::SetFont
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], CMFCRibbonFontComboBox
 - CMFCRibbonFontComboBox [MFC], BuildFonts
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 50094e9caaf712588c12a259f4886360374e430e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5feb97b274b6547ebc6868e27ead20824ce4e8ba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635676"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Cmfcribbonfontcombobox, classe
 
@@ -167,7 +157,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *iIndex*
+[in] *iIndex*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 

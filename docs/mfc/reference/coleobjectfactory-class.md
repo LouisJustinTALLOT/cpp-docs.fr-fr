@@ -1,10 +1,6 @@
 ---
-title: COleObjectFactory, classe | Microsoft Docs
-ms.custom: ''
+title: COleObjectFactory (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleObjectFactory
 - AFXDISP/COleObjectFactory
@@ -23,8 +19,6 @@ f1_keywords:
 - AFXDISP/COleObjectFactory::OnCreateObject
 - AFXDISP/COleObjectFactory::VerifyLicenseKey
 - AFXDISP/COleObjectFactory::VerifyUserLicense
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleObjectFactory [MFC], COleObjectFactory
 - COleObjectFactory [MFC], GetClassID
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 295749648dd54349c3fa735008ef8c04d51c8e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4aa6d688de59884c7279b441d12dda9dcdf2ff6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476009"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory (classe)
 
@@ -132,7 +122,6 @@ COleObjectFactory(
     BOOL bMultiInstance,
     LPCTSTR lpszProgID);
 
-
 COleObjectFactory(
     REFCLSID clsid,
     CRuntimeClass* pRuntimeClass,
@@ -163,7 +152,7 @@ Contient un ou plusieurs des indicateurs suivants :
 
 - `afxRegFreeThreading` Définit le modèle de thread dans le Registre pour ThreadingModel = gratuit.
 
-     Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = Both. Consultez [InprocServer32](/windows/desktop/com/inprocserver32) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread.
+   Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = Both. Consultez [InprocServer32](/windows/desktop/com/inprocserver32) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread.
 
 *lpszProgID*<br/>
 Pointeur vers une chaîne contenant un identificateur de programme verbale, telles que « Microsoft Excel ».
@@ -349,7 +338,7 @@ Brève discussions des deux formes pour cette fonction de suivi :
 
 - **UpdateRegistry (** `bRegister` **)** cette forme de la fonction est substituable. Si *bRegister* a la valeur TRUE, cette fonction enregistre le contrôle de classe avec le Registre système. Sinon, il annule l’inscription de la classe.
 
-     Si vous utilisez MFC ActiveX ControlWizard pour créer votre projet, ControlWizard fournit un remplacement pour cette fonction virtuelle pure.
+   Si vous utilisez MFC ActiveX ControlWizard pour créer votre projet, ControlWizard fournit un remplacement pour cette fonction virtuelle pure.
 
 ##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll
 

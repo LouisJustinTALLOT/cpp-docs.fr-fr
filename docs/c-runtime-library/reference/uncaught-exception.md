@@ -1,10 +1,6 @@
 ---
-title: __uncaught_exception | Microsoft Docs
-ms.custom: ''
+title: __uncaught_exception
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __uncaught_exception
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - __uncaught_exception
-dev_langs:
-- C++
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fcae75a5d25710866f781d766cfd77eceb977649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19d1e18af27722d6f9da39ebaaf6c9415c281849
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579632"
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
 
-Indique si une ou plusieurs exceptions ont été levées, mais n’ont pas encore été traitées par le correspondant **catch** bloc d’un [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) instruction.
+Indique si une ou plusieurs exceptions ont été levées, mais n’ont pas encore été traitées par le correspondantes **catch** de blocs à un [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) instruction.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,11 +40,11 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>Valeur de retour
 
-**true** à partir de l’heure, une exception est levée un **essayez** blocage jusqu'à la mise en correspondance **catch** bloc est initialisé ; sinon, **false**.
+**true** à partir du moment, une exception est levée un **essayez** bloc jusqu'à ce que la mise en correspondance **catch** bloc est initialisé ; sinon, **false**.
 
 ## <a name="remarks"></a>Notes
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

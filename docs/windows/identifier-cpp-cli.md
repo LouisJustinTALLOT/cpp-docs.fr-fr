@@ -1,29 +1,19 @@
 ---
-title: __identifier (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: __identifier (C++/CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - __identifier
 - __identifier_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 09a8b69402dbe3812bdd49f8944c979300209bff
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: b63b7f6fe83c7761846d1d0c70de8b1665ad2f22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328270"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641036"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -34,7 +24,7 @@ Permet l’utilisation de mots clés C++ comme identificateurs.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-__identifier(C++_keyword)  
+__identifier(C++_keyword)
 ```
 
 ### <a name="remarks"></a>Notes
@@ -106,5 +96,5 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

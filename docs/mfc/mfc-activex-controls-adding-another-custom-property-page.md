@@ -1,28 +1,18 @@
 ---
-title: 'Contrôles ActiveX MFC : Ajout d’une autre propriété personnalisée Page | Microsoft Docs'
-ms.custom: ''
+title: "Contrôles ActiveX MFC : ajout d'une page de propriétés personnalisées"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - property pages [MFC], MFC ActiveX controls
 - custom property pages [MFC]
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ac72258e881d10723a02b5103c602ac5cec6a1f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440054"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465310"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Contrôles ActiveX MFC : ajout d'une page de propriétés personnalisées
 
@@ -65,7 +55,7 @@ Pour plus d’informations sur l’utilisation des pages de propriétés dans un
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une classe**.
 
-     Cette opération ouvre le [ajouter une classe](../ide/add-class-dialog-box.md) boîte de dialogue.
+   Cette opération ouvre le [ajouter une classe](../ide/add-class-dialog-box.md) boîte de dialogue.
 
 1. Double-cliquez sur le **classe MFC** modèle.
 
@@ -95,25 +85,25 @@ L’étape suivante implique la création de deux nouvelles ressources de chaîn
 
 1. Double-cliquez sur le **Table de chaînes** dossier et double-cliquez sur la chaîne existante de table à laquelle vous souhaitez ajouter une chaîne de ressource.
 
-     La table de chaînes s’ouvre dans une fenêtre.
+   La table de chaînes s’ouvre dans une fenêtre.
 
 1. Sélectionnez la ligne vide à la fin de la table de chaînes et tapez le texte, ou la légende, de la chaîne : par exemple, « propriété Page supplémentaire. »
 
-     Cette opération ouvre un **propriétés de chaîne** affichage de page **légende** et **ID** boîtes. Le **légende** zone contient la chaîne que vous avez tapé.
+   Cette opération ouvre un **propriétés de chaîne** affichage de page **légende** et **ID** boîtes. Le **légende** zone contient la chaîne que vous avez tapé.
 
 1. Dans le **ID** zone, sélectionnez ou tapez un ID pour la chaîne. Lorsque vous avez terminé, appuyez sur ENTRÉE.
 
-     Cet exemple utilise **IDS_SAMPLE_ADDPAGE** pour le nom de la nouvelle page de propriété.
+   Cet exemple utilise **IDS_SAMPLE_ADDPAGE** pour le nom de la nouvelle page de propriété.
 
 1. Répétez les étapes 3 et 4 à l’aide de **IDS_SAMPLE_ADDPPG_CAPTION** pour l’ID et la « Page de propriétés supplémentaires » pour la légende.
 
 1. Dans le. Fichier CPP de votre nouvelle classe de page de propriété (dans cet exemple, `CAddtlPropPage`) modifier la `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` afin que IDS_SAMPLE_ADDPAGE est passé par [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), comme dans l’exemple suivant :
 
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
 1. Modifiez le constructeur de `CAddtlPropPage` afin qu’IDS_SAMPLE_ADDPPG_CAPTION au `COlePropertyPage` constructeur, comme suit :
 
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
 Une fois que vous avez effectué les modifications nécessaires pour régénérer votre projet et utiliser un conteneur de Test pour tester la nouvelle page de propriétés. Pour plus d’informations sur la façon d’accéder au conteneur de test, consultez la page [Test des propriétés et des événements avec le conteneur de test](../mfc/testing-properties-and-events-with-test-container.md) .
 

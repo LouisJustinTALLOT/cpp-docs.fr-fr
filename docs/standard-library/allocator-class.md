@@ -1,10 +1,6 @@
 ---
-title: allocator, classe | Microsoft Docs
-ms.custom: ''
+title: allocator, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - memory/std::allocator
 - memory/std::allocator::const_pointer
@@ -21,8 +17,6 @@ f1_keywords:
 - memory/std::allocator::destroy
 - memory/std::allocator::max_size
 - memory/std::allocator::rebind
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::allocator [C++]
 - std::allocator [C++], const_pointer
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eceb6c0b4bb6a43616ceae66701e762e08713bf9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101078"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450672"
 ---
 # <a name="allocator-class"></a>allocator, classe
 
@@ -879,6 +869,7 @@ Structure qui permet à un allocateur d'objets d'un type d'allouer du stockage p
 ```cpp
 struct rebind {    typedef allocator<_Other> other ;    };
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *other*<br/>

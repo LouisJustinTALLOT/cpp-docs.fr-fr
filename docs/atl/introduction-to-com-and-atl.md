@@ -1,27 +1,18 @@
 ---
-title: Introduction à COM et ATL | Microsoft Docs
+title: Introduction à COM et ATL
 ms.custom: index-page
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - COM, and ATL
 - ATL, COM
 - COM objects, ATL
 ms.assetid: 35d6ae9c-abbb-42f0-9344-33f3c19ac3ce
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2d911d200b88191442c7ea04bdb61281cbc6d2d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c733d2f437a3cc8634b77edb8c76ad87a6bfd84e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620738"
 ---
 # <a name="introduction-to-com-and-atl"></a>Introduction à COM et ATL
 
@@ -37,7 +28,7 @@ Explique, en bref, ce que la bibliothèque ATL (Active Template) a été conçu 
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Le modèle d’objet composant](/windows/desktop/com/the-component-object-model)<br/>
+[COM (Component Object Model)](/windows/desktop/com/the-component-object-model)<br/>
 La documentation de Windows SDK sur COM.
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>

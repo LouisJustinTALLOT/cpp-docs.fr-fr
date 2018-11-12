@@ -1,8 +1,6 @@
 ---
-title: Fonctions d’accès concurrentiel de l’espace de noms (AMP) | Microsoft Docs
-ms.custom: ''
+title: Fonctions d’accès concurrentiel de l’espace de noms (AMP)
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - amp/Concurrency::all_memory_fence
 - amp/Concurrency::atomic_compare_exchange
@@ -14,19 +12,13 @@ f1_keywords:
 - amp/Concurrency::direct3d_printf
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
-dev_langs:
-- C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 211005f273500992440c0e95d2c3c4e3adcef581
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481794"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Fonctions d’accès concurrentiel de l’espace de noms (AMP)
 
@@ -386,7 +378,7 @@ void copy(
 template <typename OutputIterator, typename value_type, int _Rank>
 void copy(
     const array<value_type, _Rank>& _Src,
-     OutputIterator _DestIter);
+   OutputIterator _DestIter);
 
 template <typename value_type, int _Rank>
 void copy(
@@ -606,7 +598,7 @@ void parallel_for_each(
 template <int _Dim0, int _Dim1, int _Dim2, typename _Kernel_type>
 void parallel_for_each(
     const tiled_extent<_Dim0, _Dim1, _Dim2>& _Compute_domain,
-     const _Kernel_type& _Kernel);
+   const _Kernel_type& _Kernel);
 
 template <int _Dim0, int _Dim1, typename _Kernel_type>
 void parallel_for_each(

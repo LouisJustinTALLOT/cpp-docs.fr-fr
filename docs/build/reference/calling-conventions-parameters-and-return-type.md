@@ -1,27 +1,17 @@
 ---
-title: Conventions d’appel, paramètres et Type de retour | Microsoft Docs
-ms.custom: ''
+title: Conventions d’appel, paramètres et type de retour
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - calling conventions, helper functions
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 74aa2e58b7285ced1b49efc7f54c1ec11ad606c1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8343c17828040ca36b042cb99e0c51c37548d3b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654426"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Conventions d’appel, paramètres et type de retour
 
@@ -37,7 +27,7 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>Paramètres
 
 *pidd*<br/>
-Pointeur `const` vers un `ImgDelayDescr` (voir delayimp.h) qui contient les décalages de diverses données liées aux importations, un horodatage pour les informations de liaison, ainsi qu'un ensemble d'attributs qui fournissent des informations supplémentaires sur le contenu du descripteur. Actuellement, il n'existe qu'un seul attribut, `dlattrRva`, ce qui indique que les adresses dans le descripteur sont des adresses virtuelles relatives (par opposition à des adresses virtuelles).
+Pointeur `const` vers un `ImgDelayDescr` (voir delayimp.h) qui contient les décalages de diverses données liées aux importations, un horodatage pour les informations de liaison, ainsi qu’un ensemble d’attributs qui fournissent des informations supplémentaires sur le contenu du descripteur. Actuellement, il n’existe qu’un seul attribut, `dlattrRva`, ce qui indique que les adresses dans le descripteur sont des adresses virtuelles relatives (par opposition à des adresses virtuelles).
 
 Pour la définition de la `PCImgDelayDescr` structure, consultez [définitions des structures et constantes](../../build/reference/structure-and-constant-definitions.md).
 

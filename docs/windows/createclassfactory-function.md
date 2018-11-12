@@ -1,28 +1,18 @@
 ---
-title: Createclassfactory, fonction | Microsoft Docs
-ms.custom: ''
+title: CreateClassFactory (fonction)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreateClassFactory
-dev_langs:
-- C++
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c1d7c3741af7f5a0ea3a66d491f4aecc2afc8cb9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa235312e39434e39ea954aa083701fa55f336ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392188"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484030"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory (fonction)
 

@@ -1,32 +1,22 @@
 ---
-title: 'Contrôles ActiveX MFC : Ajout de propriétés personnalisées | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : ajout de propriétés personnalisées'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98cf8a0532c3b1f2044ba0338d3f2f2bf8e73813
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390982"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496419"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Contrôles ActiveX MFC : ajout de propriétés personnalisées
 
 Propriétés personnalisées diffèrent des propriétés stocks, propriétés personnalisées ne sont pas déjà implémentées par le `COleControl` classe. Une propriété personnalisée est utilisée pour exposer un département ou une apparence d’un contrôle ActiveX à un programmeur en utilisant le contrôle.
 
-Cet article décrit comment ajouter une propriété personnalisée au contrôle ActiveX à l’aide de l’Assistant Ajout de propriété et explique les modifications de code qui en résulte. Les rubriques traitées ici sont les suivantes :
+Cet article décrit comment ajouter une propriété personnalisée au contrôle ActiveX à l’aide de l’Assistant Ajout de propriété et explique les modifications de code qui en résulte. Les rubriques traitées ici sont les suivantes :
 
 - [À l’aide de l’Assistant Ajout de propriété pour ajouter une propriété personnalisée](#_core_using_classwizard_to_add_a_custom_property)
 
@@ -36,19 +26,19 @@ Propriétés personnalisées sont fournis en quatre variantes d’implémentatio
 
 - Implémentation des variables membres
 
-     Cette implémentation représente l’état de la propriété sous la forme d’une variable de membre dans la classe du contrôle. Utiliser l’implémentation d’une Variable membre lorsqu’il n’est pas important de savoir quand la valeur de propriété change. Les trois types, cette implémentation crée le moins de code de prise en charge pour la propriété. Pour l’implémentation des variables membres, la macro d’entrée de la table de dispatch est [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
+   Cette implémentation représente l’état de la propriété sous la forme d’une variable de membre dans la classe du contrôle. Utiliser l’implémentation d’une Variable membre lorsqu’il n’est pas important de savoir quand la valeur de propriété change. Les trois types, cette implémentation crée le moins de code de prise en charge pour la propriété. Pour l’implémentation des variables membres, la macro d’entrée de la table de dispatch est [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
 
 - Variable de membre avec l’implémentation de Notification
 
-     Cette implémentation se compose d’une variable de membre et une fonction de notification créée par l’Assistant Ajout de propriété. La fonction de notification est automatiquement appelée par l’infrastructure après la modification de valeur de propriété. Utilise la Variable membre avec l’implémentation de Notification lorsque vous avez besoin d’être averti une fois une valeur de propriété a changé. Cette implémentation nécessite plus de temps, car elle nécessite un appel de fonction. Pour cette implémentation, la macro d’entrée de la table de dispatch est [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
+   Cette implémentation se compose d’une variable de membre et une fonction de notification créée par l’Assistant Ajout de propriété. La fonction de notification est automatiquement appelée par l’infrastructure après la modification de valeur de propriété. Utilise la Variable membre avec l’implémentation de Notification lorsque vous avez besoin d’être averti une fois une valeur de propriété a changé. Cette implémentation nécessite plus de temps, car elle nécessite un appel de fonction. Pour cette implémentation, la macro d’entrée de la table de dispatch est [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
 
 - Obtient ou définit l’implémentation de méthodes
 
-     Cette implémentation se compose d’une paire de fonctions membres de la classe du contrôle. L’implémentation des méthodes Get/Set appelle automatiquement l’obtention de membre (fonction) lorsque l’utilisateur du contrôle demande la valeur actuelle de la propriété et la fonction membre quand l’utilisateur du contrôle demande que de modifier la propriété. Utilisez cette implémentation lorsque vous avez besoin pour calculer la valeur d’une propriété pendant l’exécution, valider une valeur passée par l’utilisateur du contrôle avant de modifier la propriété réelle, ou implémenter un type de propriété en lecture ou écriture-seule. Pour cette implémentation, la macro d’entrée de la table de dispatch est [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). La section suivante, [à l’aide de l’Assistant Ajout de propriété pour ajouter une propriété personnalisée](#_core_using_classwizard_to_add_a_custom_property), utilise la propriété personnalisée CircleOffset pour illustrer cette implémentation.
+   Cette implémentation se compose d’une paire de fonctions membres de la classe du contrôle. L’implémentation des méthodes Get/Set appelle automatiquement l’obtention de membre (fonction) lorsque l’utilisateur du contrôle demande la valeur actuelle de la propriété et la fonction membre quand l’utilisateur du contrôle demande que de modifier la propriété. Utilisez cette implémentation lorsque vous avez besoin pour calculer la valeur d’une propriété pendant l’exécution, valider une valeur passée par l’utilisateur du contrôle avant de modifier la propriété réelle, ou implémenter un type de propriété en lecture ou écriture-seule. Pour cette implémentation, la macro d’entrée de la table de dispatch est [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). La section suivante, [à l’aide de l’Assistant Ajout de propriété pour ajouter une propriété personnalisée](#_core_using_classwizard_to_add_a_custom_property), utilise la propriété personnalisée CircleOffset pour illustrer cette implémentation.
 
 - Implémentation paramétrée
 
-     Implémentation paramétrée est prise en charge par l’Assistant Ajout de propriété. Une propriété paramétrée (parfois appelée un tableau de propriétés) peut être utilisée pour accéder à un ensemble de valeurs via une propriété unique de votre contrôle. Pour cette implémentation, la macro d’entrée de la table de dispatch est DISP_PROPERTY_PARAM. Pour plus d’informations sur l’implémentation de ce type, consultez [implémentation d’une propriété paramétrée](../mfc/mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : rubriques avancées.
+   Implémentation paramétrée est prise en charge par l’Assistant Ajout de propriété. Une propriété paramétrée (parfois appelée un tableau de propriétés) peut être utilisée pour accéder à un ensemble de valeurs via une propriété unique de votre contrôle. Pour cette implémentation, la macro d’entrée de la table de dispatch est DISP_PROPERTY_PARAM. Pour plus d’informations sur l’implémentation de ce type, consultez [implémentation d’une propriété paramétrée](../mfc/mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : rubriques avancées.
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> À l’aide de l’Assistant Ajout de propriété pour ajouter une propriété personnalisée
 
@@ -66,7 +56,7 @@ Cette procédure peut également servir à ajouter d’autres propriétés perso
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
 
-     Cette opération ouvre le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md).
+   Cette opération ouvre le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md).
 
 1. Dans le **nom de la propriété** , tapez *CircleOffset*.
 

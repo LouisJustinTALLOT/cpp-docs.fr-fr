@@ -1,10 +1,6 @@
 ---
-title: CHttpFile, classe | Microsoft Docs
-ms.custom: ''
+title: CHttpFile, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CHttpFile
 - AFXINET/CHttpFile
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXINET/CHttpFile::QueryInfoStatusCode
 - AFXINET/CHttpFile::SendRequest
 - AFXINET/CHttpFile::SendRequestEx
-dev_langs:
-- C++
 helpviewer_keywords:
 - CHttpFile [MFC], CHttpFile
 - CHttpFile [MFC], AddRequestHeaders
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33c7778b37ab11ac2be42f85ce74095d02e8b373
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398597"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564456"
 ---
 # <a name="chttpfile-class"></a>CHttpFile, classe
 
@@ -107,7 +97,6 @@ BOOL AddRequestHeaders(
     DWORD dwFlags = HTTP_ADDREQ_FLAG_ADD_IF_NEW,
     int dwHeadersLen = -1);
 
-
 BOOL AddRequestHeaders(
     CString& str,
     DWORD dwFlags = HTTP_ADDREQ_FLAG_ADD_IF_NEW);
@@ -158,7 +147,6 @@ CHttpFile(
     LPCTSTR pstrServer,
     LPCTSTR pstrVerb,
     DWORD_PTR dwContext);
-
 
 CHttpFile(
     HINTERNET hFile,
@@ -447,7 +435,6 @@ BOOL SendRequest(
     LPVOID lpOptional = NULL,
     DWORD dwOptionalLen = 0);
 
-
 BOOL SendRequest(
     CString& strHeaders,
     LPVOID lpOptional = NULL,
@@ -484,7 +471,6 @@ BOOL SendRequestEx(
     DWORD dwTotalLen,
     DWORD dwFlags = HSR_INITIATE,
     DWORD_PTR dwContext = 1);
-
 
 BOOL SendRequestEx(
     LPINTERNET_BUFFERS lpBuffIn,

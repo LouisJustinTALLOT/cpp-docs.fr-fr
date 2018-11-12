@@ -1,10 +1,6 @@
 ---
-title: strcat_s, wcscat_s, _mbscat_s | Microsoft Docs
-ms.custom: ''
+title: strcat_s, wcscat_s, _mbscat_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcat_s
 - _mbscat_s
@@ -27,8 +23,6 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -37,23 +31,19 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f97152da60697edfcf337f8cceddfd77ed2704c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414007"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621310"
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 
 Ajoute une chaîne. Ces versions de [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -110,12 +100,12 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 |*strDestination*|*numberOfElements*|*strSource*|Valeur de retour|Contenu de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL** ou inachevé|any|any|**EINVAL**|non modifié|
-|any|any|**NULL**|**EINVAL**|*strDestination*[0] a la valeur 0|
-|any|0 ou trop petit|any|**ERANGE**|*strDestination*[0] a la valeur 0|
+|any|any|**NULL**|**EINVAL**|*strDestination*[0] défini sur 0|
+|any|0 ou trop petit|any|**ERANGE**|*strDestination*[0] défini sur 0|
 
 ## <a name="remarks"></a>Notes
 
-Le **strcat_s** fonction ajoute *strSource* à *strDestination* et met fin à la chaîne obtenue par un caractère null. Le caractère initial de *strSource* remplace le caractère null de fin de *strDestination*. Le comportement de **strcat_s** n’est pas défini si les chaînes source et de destination se chevauchent.
+Le **strcat_s** fonction ajoute *strSource* à *strDestination* et termine la chaîne obtenue par un caractère null. Le caractère initial de *strSource* remplace le caractère null de fin de *strDestination*. Le comportement de **strcat_s** n’est pas défini si les chaînes source et de destination se chevauchent.
 
 Notez que le deuxième paramètre est la taille totale de la mémoire tampon, et non la taille restante :
 
@@ -126,9 +116,9 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** et **_mbscat_s** sont des versions à caractères larges et caractères multioctets de **strcat_s**. Les arguments et la valeur de retour de **wcscat_s** sont des caractères larges chaînes ; ceux de **_mbscat_s** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**wcscat_s** et **_mbscat_s** sont des versions à caractères larges et à caractères multioctets de **strcat_s**. Les arguments et la valeur de retour de **wcscat_s** sont des caractères larges chaînes ; ceux de **_mbscat_s** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
-Si *strDestination* est un pointeur null ou n’est pas terminée par null, ou si *strSource* est un **NULL** pointeur, ou si la chaîne de destination est trop petite, le paramètre non valide gestionnaire est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et **errno** à **EINVAL**.
+Si *strDestination* est un pointeur null ou n’est pas nul, ou si *strSource* est un **NULL** pointeur, ou si la chaîne de destination est trop petite, le paramètre non valide gestionnaire est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et définissez **errno** à **EINVAL**.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -140,7 +130,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat_s**|**strcat_s**|**_mbscat_s**|**wcscat_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,27 +1,17 @@
 ---
-title: Chaîne (C + c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Chaîne (C + c++ / CLI et c++ / CX)
 ms.date: 10/08/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b835f1d507c8e577f8b44ca314422dd5b6f2ca46
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 3f803469c7921db97a9b15fe333d00f1b32b11fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327424"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468846"
 ---
 # <a name="string--ccli-and-ccx"></a>Chaîne (C + c++ / CLI et c++ / CX)
 
@@ -114,11 +104,11 @@ int main() {
    a += b;
    Console::WriteLine(a);
    a = b;
-   if (a == b)  
+   if (a == b)
       Console::WriteLine("a and b are equal");
 
    a = "abc";
-   if (a != b)  
+   if (a != b)
       Console::WriteLine("a and b are not equal");
 
    // System:String^ and tracking reference
@@ -127,7 +117,7 @@ int main() {
 
    // testing an empty System::String^
    String^ n;
-   if (n == nullptr)  
+   if (n == nullptr)
       Console::WriteLine("n is empty");
 }
 ```
@@ -227,7 +217,7 @@ L’exemple suivant montre que le compilateur fait la distinction entre les cha�
 // compile with: /clr
 using namespace System;
 int func() {
-   throw "simple string";   // const char *  
+   throw "simple string";   // const char *
 };
 
 int func2() {
@@ -254,7 +244,7 @@ int main() {
       Console::WriteLine("String^ str");
    }
 
-   func3("string");   // const char *  
+   func3("string");   // const char *
    func3("string" + "string");   // returns System::String
 }
 ```
@@ -271,6 +261,6 @@ System.String
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Littéraux de chaîne et de caractère](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

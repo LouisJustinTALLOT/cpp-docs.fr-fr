@@ -1,12 +1,6 @@
 ---
-title: Stockage local des threads | Microsoft Docs
-ms.custom: ''
+title: stockage local des threads
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - thread-local variables
 - TLS (thread local storage)
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2884abbf02c9eb244d6fb446c7158b708c211557
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e13aa9600cd26fba47ce43a318fa7174995d58fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572222"
 ---
 # <a name="thread-local-storage"></a>stockage local des threads
 
@@ -94,7 +84,7 @@ Ces instructions doivent être observées lors de la déclaration de variables e
     Thread int tls_i = sizeof( tls_i )    /* Okay  */
     ```
 
-     Notez qu'une expression sizeof qui inclut la variable initialisée ne constitue pas une référence à elle-même et est autorisée.
+   Notez qu'une expression sizeof qui inclut la variable initialisée ne constitue pas une référence à elle-même et est autorisée.
 
 - L'utilisation de **__declspec(thread)** peut perturber le [chargement différé](../build/reference/linker-support-for-delay-loaded-dlls.md) des importations de DLL **.**
 

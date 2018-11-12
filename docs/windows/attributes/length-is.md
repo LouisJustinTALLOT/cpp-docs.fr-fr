@@ -1,28 +1,17 @@
 ---
-title: length_is (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: length_is (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.length_is
-dev_langs:
-- C++
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d412ac93ec9e89de8c85758d98d67fa2a7c50e92
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 54206dd82a550924169bf7bcccd4f70f9e5a657c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790909"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489557"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -58,7 +47,7 @@ Consultez [first_is](first-is.md) pour obtenir un exemple montrant comment spéc
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -68,4 +57,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>
 [last_is](last-is.md)<br/>
-[size_is](size-is.md)  
+[size_is](size-is.md)

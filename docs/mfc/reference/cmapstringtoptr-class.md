@@ -1,10 +1,6 @@
 ---
-title: CMapStringToPtr, classe | Microsoft Docs
-ms.custom: ''
+title: CMapStringToPtr, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMapStringToPtr
 - AFXCOLL/CMapStringToPtr
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXCOLL/CMapStringToOb::RemoveAll
 - AFXCOLL/CMapStringToOb::RemoveKey
 - AFXCOLL/CMapStringToOb::SetAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMapStringToOb [MFC], CMapStringToOb
 - CMapStringToOb [MFC], GetCount
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 1ac11143-eb0a-4511-a662-2df0d1d9005b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69b4eaf72ac8186723c793d8e4d84658424df76f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e162101b9e3169bc9fff11e0180bbd295403c357
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405851"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564708"
 ---
 # <a name="cmapstringtoptr-class"></a>CMapStringToPtr, classe
 
@@ -123,6 +113,4 @@ Quand un `CMapStringToPtr` objet est supprimé, ou lorsque ses éléments sont s
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

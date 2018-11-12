@@ -1,28 +1,18 @@
 ---
-title: Agileeventsource, classe | Microsoft Docs
-ms.custom: ''
+title: Agileeventsource, classe
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 - event/Microsoft::WRL::InvokeModeOptions
-dev_langs:
-- C++
 helpviewer_keywords:
 - AgileEventSource class
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c5d94b7a3949f0f547c9809d75e22eefbe9f5708
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8e99c5930fa4df5be686a9c738586ecbb21e2855
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789070"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526562"
 ---
 # <a name="agileeventsource-class"></a>Agileeventsource, classe
 
@@ -96,7 +86,6 @@ Lorsque cette opération se termine, un handle qui représente l’événement. 
 ### <a name="return-value"></a>Valeur de retour
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
-
 
 ## <a name="see-also"></a>Voir aussi
 

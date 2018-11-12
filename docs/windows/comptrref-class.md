@@ -1,9 +1,6 @@
 ---
-title: ComPtrRef (classe) | Microsoft Docs
-ms.custom: ''
+title: ComPtrRef (classe)
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRef
@@ -16,8 +13,6 @@ f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRef::operator T*
 - client/Microsoft::WRL::Details::ComPtrRef::operator void**
 - client/Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef class
 - Microsoft::WRL::Details::ComPtrRef::ComPtrRef, constructor
@@ -30,17 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef::operator void** operator
 - Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 85f9498f44f4f1ec2598e6263c003d041f519105
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: adfe7a045e0869c13f48770e03de6de10f978a4b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162215"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502934"
 ---
 # <a name="comptrref-class"></a>ComPtrRef (classe)
 
@@ -147,7 +137,7 @@ bool operator==(
 
 bool operator==(
    const Details::ComPtrRef<ComPtr<T>>& a,
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 bool operator==(
@@ -198,7 +188,7 @@ bool operator!=(
 
 bool operator!=(
    const Details::ComPtrRef<ComPtr<T>>& a,
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 bool operator!=(

@@ -1,10 +1,6 @@
 ---
-title: CSimpleArray, classe | Microsoft Docs
-ms.custom: ''
+title: CSimpleArray, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CSimpleArray
 - ATLSIMPCOLL/ATL::CSimpleArray
@@ -17,21 +13,15 @@ f1_keywords:
 - ATLSIMPCOLL/ATL::CSimpleArray::RemoveAll
 - ATLSIMPCOLL/ATL::CSimpleArray::RemoveAt
 - ATLSIMPCOLL/ATL::CSimpleArray::SetAtIndex
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6395e324d5efdba208a7f77d86ca466fb7cdbb5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054504"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460461"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray, classe
 
@@ -79,7 +69,7 @@ Un objet de trait, en définissant le test d’égalité pour les éléments de 
 |Nom|Description|
 |----------|-----------------|
 |[CSimpleArray::operator\[\]](#operator_at)|Récupère un élément du tableau.|
-|[CSimpleArray::operator =](#operator_eq)|Opérateur d'assignation.|  
+|[CSimpleArray::operator =](#operator_eq)|Opérateur d'assignation.|
 
 ## <a name="remarks"></a>Notes
 

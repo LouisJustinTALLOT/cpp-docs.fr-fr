@@ -1,10 +1,6 @@
 ---
-title: CWinAppEx, classe | Microsoft Docs
-ms.custom: ''
+title: CWinAppEx, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CWinAppEx
 - AFXWINAPPEX/CWinAppEx
@@ -64,8 +60,6 @@ f1_keywords:
 - AFXWINAPPEX/CWinAppEx::SaveCustomState
 - AFXWINAPPEX/CWinAppEx::StoreWindowPlacement
 - AFXWINAPPEX/CWinAppEx::m_bForceImageReset
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWinAppEx [MFC], CWinAppEx
 - CWinAppEx [MFC], CleanState
@@ -124,16 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4bb7d9732751160a89e42857e77b587f79aca010
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440847"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544415"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx, classe
 
@@ -383,7 +373,6 @@ Pour plus d’informations sur les outils utilisateur et à les intégrer à vot
 
 ##  <a name="exitinstance"></a>  CWinAppEx::ExitInstance
 
-
 ```
 virtual int ExitInstance();
 ```
@@ -441,7 +430,6 @@ Un pointeur vers le global `CContextMenuManager` objet.
 Si l’objet CContextMenuManager n’est pas initialisé, cette fonction appelle [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) avant de retourner un pointeur.
 
 ##  <a name="getdataversion"></a>  CWinAppEx::GetDataVersion
-
 
 ```
 int GetDataVersion() const;
@@ -900,7 +888,6 @@ Si votre application a déjà un gestionnaire d’info-bulle et que vous appelez
 
 ##  <a name="isresourcesmartupdate"></a>  CWinAppEx::IsResourceSmartUpdate
 
-
 ```
 BOOL IsResourceSmartUpdate() const;
 ```
@@ -949,16 +936,13 @@ BOOL LoadState(
     CMDIFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
 
-
 BOOL LoadState(
     CFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
 
-
 BOOL LoadState(
     COleIPFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
-
 
 virtual BOOL LoadState(
     LPCTSTR lpszSectionName = NULL,
@@ -1099,14 +1083,13 @@ Pour prendre en charge du comportement de la souris personnalisé, vous devez ap
 
 ##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle
 
-
 ```
 virtual BOOL OnWorkspaceIdle(CWnd*);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *CWnd&#38;*
+[in] *CWnd&#38;*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1178,16 +1161,13 @@ virtual BOOL SaveState(
     LPCTSTR lpszSectionName = NULL,
     CFrameImpl* pFrameImpl = NULL);
 
-
 BOOL SaveState(
     CMDIFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
 
-
 BOOL SaveState(
     CFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
-
 
 BOOL SaveState(
     COleIPFrameWndEx* pFrame,

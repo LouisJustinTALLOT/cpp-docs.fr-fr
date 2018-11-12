@@ -1,10 +1,6 @@
 ---
-title: Cmfcoutlookbartabctrl, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: CMFCOutlookBarTabCtrl Class
+ms.date: 10/18/2018
 f1_keywords:
 - CMFCOutlookBarTabCtrl
 - AFXOUTLOOKBARTABCTRL/CMFCOutlookBarTabCtrl
@@ -27,8 +23,6 @@ f1_keywords:
 - AFXOUTLOOKBARTABCTRL/CMFCOutlookBarTabCtrl::SetPageButtonTextAlign
 - AFXOUTLOOKBARTABCTRL/CMFCOutlookBarTabCtrl::SetToolbarImageList
 - AFXOUTLOOKBARTABCTRL/CMFCOutlookBarTabCtrl::SetVisiblePageButtons
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], AddControl
 - CMFCOutlookBarTabCtrl [MFC], CanShowFewerPageButtons
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c4836a82c829dafee64c74237fa33c6199ace4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e858d5a481add0f3c6e61175a96a5b27133bf125
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396907"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559716"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -322,7 +312,6 @@ La taille de la bordure, en pixels.
 
 ##  <a name="getvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::GetVisiblePageButtons
 
-
 ```
 int GetVisiblePageButtons() const;
 ```
@@ -505,14 +494,13 @@ Cette méthode ne doit pas être appelée si pas en mode de Microsoft Office 200
 
 ##  <a name="setvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::SetVisiblePageButtons
 
-
 ```
 void SetVisiblePageButtons(int nVisiblePageButtons);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *nVisiblePageButtons*
+[in] *nVisiblePageButtons*<br/>
 
 ### <a name="remarks"></a>Notes
 

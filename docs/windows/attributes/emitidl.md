@@ -1,28 +1,17 @@
 ---
-title: emitidl (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: emitidl (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.emitidl
-dev_langs:
-- C++
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5e11e1ce061fcf2e9ce21155dcbeb93b45b66238
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 4270c760c0d9d0ab833ee96dfbbaa9d6205026f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437947"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -49,7 +38,8 @@ Une de ces valeurs possibles : `true`, `false`, `forced`, `restricted`, `push`,
 
 - `push` vous permet d’enregistrer actuel **emitidl** paramètres interne **emitidl** pile, et `pop` vous permet de définir **emitidl** à toute valeur s’affiche en haut de la liste interne **emitidl** pile.
 
-`defaultimports=`*Boolean* \(facultatif)  
+`defaultimports=`*Boolean* \(facultatif)
+
 - Si *booléenne* est **true**, docobj.idl est importé dans le fichier .idl généré. En outre, si un fichier .idl avec le même nom qu’un .h du fichier que vous avez `#include` dans votre source de code se trouve dans le même répertoire que le fichier .h, puis le fichier .idl généré contient une instruction d’importation pour ce fichier .idl.
 
 - Si *booléenne* est **false**, docobj.idl n’est pas importé dans le fichier .idl généré. Vous devez importer explicitement les fichiers .idl avec [importer](import.md).
@@ -73,9 +63,9 @@ Chaque fois que le compilateur rencontre un nouveau fichier, **emitidl** a impli
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs de compilateur](compiler-attributes.md)<br/>
-[Attributs autonomes](stand-alone-attributes.md)  
+[Attributs autonomes](stand-alone-attributes.md)

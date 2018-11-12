@@ -1,23 +1,14 @@
 ---
-title: Intelligente des pointeurs (C++ moderne) | Microsoft Docs
-ms.custom: ''
+title: Pointeurs intelligents (Modern C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f04a4ab23241d63fc1694d419f85d8b694b7fff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616903"
 ---
 # <a name="smart-pointers-modern-c"></a>Pointeurs intelligents (Modern C++)
 
@@ -76,11 +67,14 @@ La section suivante résume les différents genres de pointeurs intelligents dis
 
 Utilisez ces pointeurs intelligents comme premier choix pour encapsuler les pointeurs vers les objets C++ anciens ordinaires (POCO).
 
-- `unique_ptr` Permet à un seul propriétaire du pointeur sous-jacent. À utiliser comme option par défaut pour POCO à moins que vous ne soyez certain d'avoir besoin de `shared_ptr`. Peut être déplacé vers un nouveau propriétaire, mais pas copié ou partagé. Remplace `auto_ptr`, qui est déconseillé. Comparez à `boost::scoped_ptr`. `unique_ptr` est petite et efficace ; la taille est un pointeur, et il prend en charge les références rvalue pour une insertion rapide et l’extraction des collections de la bibliothèque C++ Standard. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) et [unique_ptr, classe](../standard-library/unique-ptr-class.md).
+- `unique_ptr`<br/>
+   Autorise exactement un propriétaire du pointeur sous-jacent. À utiliser comme option par défaut pour POCO à moins que vous ne soyez certain d'avoir besoin de `shared_ptr`. Peut être déplacé vers un nouveau propriétaire, mais pas copié ou partagé. Remplace `auto_ptr`, qui est déconseillé. Comparez à `boost::scoped_ptr`. `unique_ptr` est petite et efficace ; la taille est un pointeur, et il prend en charge les références rvalue pour une insertion rapide et l’extraction des collections de la bibliothèque C++ Standard. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) et [unique_ptr, classe](../standard-library/unique-ptr-class.md).
 
-- `shared_ptr` Pointeur intelligent de références comptabilisées. À utiliser lorsque vous souhaitez affecter un pointeur brut à plusieurs propriétaires, par exemple, lorsque vous retournez la copie d'un pointeur à partir d'un conteneur, mais que vous souhaitez conserver l'original. Le pointeur brut n'est pas supprimé tant que tous les propriétaires `shared_ptr` ne sont pas hors de portée ou n'ont pas abandonné la propriété. La taille contient deux pointeurs ; un pour l'objet et un pour le bloc de contrôle partagé qui contient le nombre de références. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) et [shared_ptr, classe](../standard-library/shared-ptr-class.md).
+- `shared_ptr`<br/>
+   Pointeur intelligent de références comptabilisées. À utiliser lorsque vous souhaitez affecter un pointeur brut à plusieurs propriétaires, par exemple, lorsque vous retournez la copie d'un pointeur à partir d'un conteneur, mais que vous souhaitez conserver l'original. Le pointeur brut n'est pas supprimé tant que tous les propriétaires `shared_ptr` ne sont pas hors de portée ou n'ont pas abandonné la propriété. La taille contient deux pointeurs ; un pour l'objet et un pour le bloc de contrôle partagé qui contient le nombre de références. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) et [shared_ptr, classe](../standard-library/shared-ptr-class.md).
 
-- `weak_ptr` Cas particuliers de pointeur intelligent pour une utilisation en association avec `shared_ptr`. `weak_ptr` fournit l'accès à un objet appartenant à une ou plusieurs instances `shared_ptr`, mais ne participe pas au décompte de références. À utiliser lorsque vous souhaitez observer un objet, mais n'avez pas besoin qu'il demeure actif. Obligatoire dans certains cas pour interrompre les références circulaires entre les instances `shared_ptr`. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) et [weak_ptr, classe](../standard-library/weak-ptr-class.md).
+- `weak_ptr`<br/>
+    Pointeur intelligent spécifique à utiliser en collaboration avec `shared_ptr`. `weak_ptr` fournit l'accès à un objet appartenant à une ou plusieurs instances `shared_ptr`, mais ne participe pas au décompte de références. À utiliser lorsque vous souhaitez observer un objet, mais n'avez pas besoin qu'il demeure actif. Obligatoire dans certains cas pour interrompre les références circulaires entre les instances `shared_ptr`. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) et [weak_ptr, classe](../standard-library/weak-ptr-class.md).
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Pointeurs intelligents pour les objets COM (programmation Windows classique)
 

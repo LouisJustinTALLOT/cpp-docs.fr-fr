@@ -1,33 +1,23 @@
 ---
-title: se conformer | Microsoft Docs
-ms.custom: ''
+title: conform
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - conform_CPP
 - vc-pragma.conform
-dev_langs:
-- C++
 helpviewer_keywords:
 - conform pragma
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb14af38c4bffed4b9f5c60d2d89fd84a892025b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6589fe23359eecd654b23380747fbd3213c54dce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721745"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432901"
 ---
 # <a name="conform"></a>conform
-**Spécifique à C++**  
+**Spécifique à C++**
 
 Spécifie le comportement au moment de l’exécution de la [/Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) option du compilateur.
 
@@ -58,19 +48,19 @@ Spécifie le nom de l'option du compilateur à modifier. Valide uniquement *nom*
 ## <a name="example"></a>Exemple
 
 ```cpp
-// pragma_directive_conform.cpp  
-// compile with: /W1  
-// C4811 expected  
-#pragma conform(forScope, show)  
-#pragma conform(forScope, push, x, on)  
-#pragma conform(forScope, push, x1, off)  
-#pragma conform(forScope, push, x2, off)  
-#pragma conform(forScope, push, x3, off)  
-#pragma conform(forScope, show)  
-#pragma conform(forScope, pop, x1)  
-#pragma conform(forScope, show)  
-  
-int main() {}  
+// pragma_directive_conform.cpp
+// compile with: /W1
+// C4811 expected
+#pragma conform(forScope, show)
+#pragma conform(forScope, push, x, on)
+#pragma conform(forScope, push, x1, off)
+#pragma conform(forScope, push, x2, off)
+#pragma conform(forScope, push, x3, off)
+#pragma conform(forScope, show)
+#pragma conform(forScope, pop, x1)
+#pragma conform(forScope, show)
+
+int main() {}
 ```
 
 ## <a name="see-also"></a>Voir aussi

@@ -1,27 +1,17 @@
 ---
-title: Interfaces génériques (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: Interfaces génériques (C++ / c++ / CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e36a4c1d9604753fd4bff6a51df060e1d26822fb
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 68c5a53d3de38479adbdcb49e823513f295a2095
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328361"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493949"
 ---
 # <a name="generic-interfaces-ccli"></a>Interfaces génériques (C++ / c++ / CLI)
 
@@ -124,7 +114,7 @@ public ref class List1 : public IList<ItemType> {
 
    virtual ItemType MoveFirst() {
       current = first;
-      if (first != nullptr)  
+      if (first != nullptr)
         return first->get_Item();
       else
          return ItemType();
@@ -144,21 +134,21 @@ public ref class List1 : public IList<ItemType> {
    }
 
    virtual bool AtEnd() {
-      if (current == nullptr )  
+      if (current == nullptr )
         return true;
       else
         return false;
    }
 
    virtual ItemType Current() {
-       if (current != nullptr)  
+       if (current != nullptr)
          return current->get_Item();
        else
          throw gcnew ElementNotFoundException();
    }
 
    virtual void MoveNext() {
-      if (current != nullptr)  
+      if (current != nullptr)
        current = current->next;
       else
         throw gcnew ElementNotFoundException();
@@ -187,7 +177,7 @@ ref class List2 : public IList<ItemType> {
    }
 
    virtual bool Add(ItemType item) {
-      if (count < 256)  
+      if (count < 256)
          item_array[count++] = item;
       else
         return false;
@@ -195,21 +185,21 @@ ref class List2 : public IList<ItemType> {
    }
 
    virtual bool AtEnd() {
-      if (current >= count)  
+      if (current >= count)
         return true;
       else
         return false;
    }
 
    virtual ItemType Current() {
-      if (current < count)  
+      if (current < count)
         return item_array[current];
       else
         throw gcnew ElementNotFoundException();
    }
 
    virtual void MoveNext() {
-      if (current < count)  
+      if (current < count)
          ++current;
       else
          throw gcnew ElementNotFoundException();
@@ -221,7 +211,7 @@ generic <typename ItemType>
 void AddStringsAndDisplay(IList<ItemType>^ list, ItemType item1, ItemType item2) {
    list->Add(item1);
    list->Add(item2);
-   for (list->MoveFirst(); ! list->AtEnd(); list->MoveNext())  
+   for (list->MoveFirst(); ! list->AtEnd(); list->MoveNext())
    Console::WriteLine(list->Current());
 }
 
@@ -279,10 +269,10 @@ public:
 
    virtual void Display() {
       Console::WriteLine("The integer field contains: {0}", myField);
-   } 
+   }
 };
 
-public ref struct MyStringClass: IMySpecializedString { 
+public ref struct MyStringClass: IMySpecializedString {
    String^ myField;
 
 public:

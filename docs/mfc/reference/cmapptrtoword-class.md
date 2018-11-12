@@ -1,10 +1,6 @@
 ---
-title: CMapPtrToWord, classe | Microsoft Docs
-ms.custom: ''
+title: CMapPtrToWord, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMapPtrToWord
 - AFXCOLL/CMapPtrToWord
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXCOLL/CMapStringToOb::RemoveAll
 - AFXCOLL/CMapStringToOb::RemoveKey
 - AFXCOLL/CMapStringToOb::SetAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMapStringToOb [MFC], CMapStringToOb
 - CMapStringToOb [MFC], GetCount
@@ -40,20 +34,16 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 027841e3dfd5cea101633c8e3a609ab7e55eac07
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 77ae3c333285c08d4cfd714fae2974133758caed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389263"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663851"
 ---
 # <a name="cmapptrtoword-class"></a>CMapPtrToWord, classe
 
-Prend en charge les mappages de mots 16 bits indexés par des pointeurs void.
+Prend en charge les mappages de mots 16 bits indexés par des pointeurs void.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -117,7 +107,7 @@ Pour plus d’informations sur `CMapPtrToWord`, consultez l’article [Collectio
 
 `CMapPtrToWord`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcoll.h
 
@@ -125,6 +115,4 @@ Pour plus d’informations sur `CMapPtrToWord`, consultez l’article [Collectio
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

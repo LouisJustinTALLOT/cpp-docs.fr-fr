@@ -1,29 +1,19 @@
 ---
-title: Fonctions globales de signalement des erreurs et débogage | Microsoft Docs
-ms.custom: ''
+title: Fonctions globales de signalement des erreurs et débogage
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcomcli/ATL::AtlHresultFromLastError
 - atlcom/ATL::AtlReportError
 - atldef/ATL::AtlThrow
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 626da7b2fd52a93602afa08c416bbbb3a4abdbf7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664649"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Fonctions globales de signalement des erreurs et débogage
 
@@ -47,11 +37,11 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>Notes
 
-`AtlHresultFromLastError` appels `GetLastError` pour obtenir la dernière erreur et retourne l’erreur après l’avoir converti à un HRESULT à l’aide de la macro HRESULT_FROM_WIN32.  
+`AtlHresultFromLastError` appels `GetLastError` pour obtenir la dernière erreur et retourne l’erreur après l’avoir converti à un HRESULT à l’aide de la macro HRESULT_FROM_WIN32.
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlcomcli.h  
+**En-tête :** atlcomcli.h
 
 ##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
 
@@ -71,11 +61,11 @@ La valeur d’erreur à convertir.
 Convertit un code d’erreur Win32 en une valeur HRESULT, à l’aide de la macro HRESULT_FROM_WIN32.
 
 > [!NOTE]
->  Au lieu d’utiliser `HRESULT_FROM_WIN32(GetLastError())`, utilisez la fonction [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).  
+>  Au lieu d’utiliser `HRESULT_FROM_WIN32(GetLastError())`, utilisez la fonction [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlcomcli.h  
+**En-tête :** atlcomcli.h
 
 ##  <a name="atlreporterror"></a>  AtlReportError
 
@@ -166,7 +156,7 @@ La chaîne *lpszDesc* est utilisé comme la description textuelle de l’erreur.
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  N’utilisez pas `AtlReportError` dans C++ gestionnaires catch. Certaines substitutions de ces fonctions d’utiliser les macros de conversion de chaînes ATL en interne, qui à son tour le `_alloca` fonctionnent en interne. À l’aide de `AtlReportError` dans un bloc catch C++ gestionnaire peut provoquer des exceptions dans les gestionnaires catch C++.  
+>  N’utilisez pas `AtlReportError` dans C++ gestionnaires catch. Certaines substitutions de ces fonctions d’utiliser les macros de conversion de chaînes ATL en interne, qui à son tour le `_alloca` fonctionnent en interne. À l’aide de `AtlReportError` dans un bloc catch C++ gestionnaire peut provoquer des exceptions dans les gestionnaires catch C++.
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -203,11 +193,11 @@ Pour les projets ATL, il est possible de fournir votre propre implémentation de
 
 ### <a name="example"></a>Exemple
 
-[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atldef.h  
+**En-tête :** atldef.h
 
 ##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
 
@@ -225,7 +215,7 @@ Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet MFC, cette fonction lè
 
 Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet ATL, la fonction lève un [CAtlException](../../atl/reference/catlexception-class.md).
 
-Si _ATL_NO_EXCEPTIONS est défini, la fonction provoque un échec d’assertion au lieu de lever une exception.  
+Si _ATL_NO_EXCEPTIONS est défini, la fonction provoque un échec d’assertion au lieu de lever une exception.
 
 ## <a name="requirements"></a>Configuration requise
 

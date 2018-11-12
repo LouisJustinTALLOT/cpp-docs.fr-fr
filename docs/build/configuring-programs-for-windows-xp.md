@@ -1,23 +1,13 @@
 ---
-title: Configuration des programmes pour Windows XP | Microsoft Docs
-ms.custom: ''
+title: Configuration des programmes pour Windows XP
 ms.date: 02/02/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c2b1dc80cec8ba18522d8238752857105993074
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 73fc66c358f2bfa390177557da2f114f225cec1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720726"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582739"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configuration des programmes pour Windows XP
 

@@ -1,26 +1,16 @@
 ---
-title: Handle de l’opérateur Object (^) (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Handle de l’opérateur Object (^) (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d7fb74dcff370b314df5da5428ba3e406023acbe
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 6f61a6b95ba8f9a059606376696fd1d8d64030db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327971"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625730"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Handle de l’opérateur Object (^) (C++ / c++ / CLI et c++ / CX)
 
@@ -94,7 +84,7 @@ using namespace System;
 void Test(Object^ o) {
    Int32^ i = dynamic_cast<Int32^>(o);
 
-   if(i)  
+   if(i)
       Console::WriteLine(i);
    else
       Console::WriteLine("Not a boxed int");
@@ -173,12 +163,12 @@ private:
 public:
    DataCollection(int i) : Size(i) {
       x = gcnew array<String^>(Size);
-      for (int i = 0 ; i < Size ; i++)  
+      for (int i = 0 ; i < Size ; i++)
          x[i] = i.ToString();
    }
 
    void f(int Item) {
-      if (Item >= Size)  
+      if (Item >= Size)
       {
          System::Console::WriteLine("Cannot access array element {0}, size is {1}", Item, Size);
          return;
@@ -233,5 +223,5 @@ Option du compilateur : `/clr`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md)

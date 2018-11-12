@@ -1,27 +1,17 @@
 ---
-title: gslice_array, classe | Microsoft Docs
-ms.custom: ''
+title: gslice_array, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - valarray/std::gslice_array
-dev_langs:
-- C++
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff44a91b4916092e319c7acc0520c49aeb9a5fa4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1485b68f29651c0c42048fea02a8320ced8748aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953073"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472161"
 ---
 # <a name="gslicearray-class"></a>gslice_array, classe
 
@@ -36,39 +26,27 @@ public:
     typedef Type value_type;
     void operator=(const valarray<Type>& x) const;
 
-
     void operator=(const Type& x) const;
-
 
     void operator*=(const valarray<Type>& x) const;
 
-
     void operator/=(const valarray<Type>& x) const;
-
 
     void operator%=(const valarray<Type>& x) const;
 
-
     void operator+=(const valarray<Type>& x) const;
-
 
     void operator-=(const valarray<Type>& x) const;
 
-
     void operator^=(const valarray<Type>& x) const;
-
 
     void operator&=(const valarray<Type>& x) const;
 
-
     void operator|=(const valarray<Type>& x) const;
-
 
     void operator<<=(const valarray<Type>& x) const;
 
-
     void operator>>=(const valarray<Type>& x) const;
-
 
 // The rest is private or implementation defined
 }

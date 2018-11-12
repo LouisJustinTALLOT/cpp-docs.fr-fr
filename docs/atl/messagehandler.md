@@ -1,27 +1,18 @@
 ---
-title: MessageHandler | Microsoft Docs
-ms.custom: ''
+title: MessageHandler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - MessageHandler
-dev_langs:
-- C++
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4a2434257290c673ca4e18be2e5ec70877e72e67
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3627dadde60a5ba0ece90497b85e2085f33e0919
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039086"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448397"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -31,9 +22,9 @@ ms.locfileid: "46039086"
 
 ```
 LRESULT MessageHandler(
-    UINT uMsg,  
-    WPARAM wParam,  
-    LPARAM lParam,  
+    UINT uMsg,
+    WPARAM wParam,
+    LPARAM lParam,
     BOOL& bHandled);
 ```
 

@@ -1,25 +1,15 @@
 ---
-title: Traitement de fichier .Xml | Microsoft Docs
-ms.custom: ''
+title: Traitement de fichier.Xml
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7cdbbe704e283177e4e3b4f0767db66e2e284e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: HT
+ms.openlocfilehash: 6592352e2afc02d3689f328ab37db6f289880cec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446317"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522185"
 ---
 # <a name="xml-file-processing"></a>Traitement de fichier.Xml
 

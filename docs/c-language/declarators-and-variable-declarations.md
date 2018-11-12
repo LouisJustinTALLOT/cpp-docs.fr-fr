@@ -1,27 +1,17 @@
 ---
-title: Déclarateurs et déclarations de variable | Microsoft Docs
-ms.custom: ''
+title: Déclarateurs et déclarations de variable
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - declaring variables, declarators
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5bcef865eeaf82415cf1f8f8e1523ee2b783a46b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 711c0eb4e0b652f86de74803d5725c5dc3054b31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759279"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562784"
 ---
 # <a name="declarators-and-variable-declarations"></a>Déclarateurs et déclarations de variable
 

@@ -1,10 +1,6 @@
 ---
-title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l | Microsoft Docs
-ms.custom: ''
+title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cscanf_l
 - _cscanf
@@ -34,8 +30,6 @@ f1_keywords:
 - _cwscanf_l
 - cscanf_l
 - _tcscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cwscanf function
 - data [C++], reading from the console
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468937"
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -97,7 +87,7 @@ int _cwscanf_l(
 *format*<br/>
 Chaîne de contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Paramètres facultatifs.
 
 *locale*<br/>
@@ -109,11 +99,11 @@ Le nombre de champs qui ont été correctement convertis et assignés. La valeur
 
 ## <a name="remarks"></a>Notes
 
-Le **_cscanf** fonction lit les données directement à partir de la console dans les emplacements données par *argument*. La fonction [_getche](getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur vers une variable avec un type qui correspond à un spécificateur de type dans *format*. Les contrôles de format des champs de l’interprétation de l’entrée et a la même forme et fonction que la *format* paramètre pour le [scanf](scanf-scanf-l-wscanf-wscanf-l.md) (fonction). Alors que **_cscanf** normalement reproduit en écho le caractère d’entrée, il ne fera pas si le dernier appel a été **_ungetch**.
+Le **_cscanf** fonction lit les données directement à partir de la console dans les emplacements donnés par *argument*. La fonction [_getche](getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur vers une variable avec un type qui correspond à un spécificateur de type dans *format*. Le format contrôle l’interprétation de l’entrée champs et a la même forme et fonction que le *format* paramètre pour le [scanf](scanf-scanf-l-wscanf-wscanf-l.md) (fonction). Bien que **_cscanf** renvoie normalement le caractère d’entrée, il ne fera pas si le dernier appel était de **_ungetch**.
 
 Cette fonction valide ses paramètres. Si le format est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EOF**.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -122,7 +112,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_tcscanf**|**_cscanf**|**_cscanf**|**_cwscanf**|
 |**_tcscanf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

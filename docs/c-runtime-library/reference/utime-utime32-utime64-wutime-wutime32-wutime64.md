@@ -1,10 +1,6 @@
 ---
-title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64 | Microsoft Docs
-ms.custom: ''
+title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _utime64
 - _utime
@@ -40,8 +36,6 @@ f1_keywords:
 - _utime32
 - _tutime64
 - _wutime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - tutime function
 - utime32 function
@@ -64,16 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd8737d6391ea1effd50e967008520b2d77707e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417709"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471089"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -113,12 +103,12 @@ int _wutime64(
 *filename*<br/>
 Pointeur désignant une chaîne qui contient le chemin ou le nom de fichier.
 
-*Heures*<br/>
+*heures*<br/>
 Pointeur désignant les valeurs d’heure stockées.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne 0 si l’heure de modification de fichier a changé. Une valeur de retour de -1 indique une erreur. Si un paramètre non valide est transmis, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et **errno** est définie à une des valeurs suivantes :
+Chacune de ces fonctions retourne 0 si l’heure de modification de fichier a changé. Une valeur de retour de -1 indique une erreur. Si un paramètre non valide est transmis, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et **errno** est défini sur l’une des valeurs suivantes :
 
 |Valeur de la variable errno|Condition|
 |-|-|
@@ -129,11 +119,11 @@ Chacune de ces fonctions retourne 0 si l’heure de modification de fichier a ch
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-La date d’un fichier peut être modifiée si la date de modification est postérieure au 1er janvier 1970 à minuit et antérieure à la date de fin de la fonction utilisée. **_utime** et **_wutime** utiliser une valeur de temps 64 bits, par conséquent, la date de fin est 23:59:59 le 31 décembre 3000 UTC. Si **_USE_32BIT_TIME_T** est définie pour forcer l’ancien comportement, la date de fin est 23:59:59 le 18 janvier 2038, UTC. **_utime32** ou **_wutime32** utiliser un type de temps 32 bits indépendamment du fait que **_USE_32BIT_TIME_T** est défini, et la date de fin antérieure toujours. **_utime64** ou **_wutime64** utilisent toujours le type de temps 64 bits, ces fonctions toujours prendre en charge que la date de fin ultérieure.
+La date d’un fichier peut être modifiée si la date de modification est postérieure au 1er janvier 1970 à minuit et antérieure à la date de fin de la fonction utilisée. **_utime** et **_wutime** utiliser une valeur d’heure 64 bits, par conséquent, la date de fin est 23:59:59 le 31 décembre 3000, UTC. Si **_USE_32BIT_TIME_T** est définie pour forcer l’ancien comportement, la date de fin est 23:59:59 le 18 janvier 2038, UTC. **_utime32** ou **_wutime32** utiliser un type d’heure 32 bits ait ou non **_USE_32BIT_TIME_T** est défini, et ont toujours la date de fin antérieure. **_utime64** ou **_wutime64** toujours utiliser le type de temps 64 bits, donc ces fonctions prennent toujours en charge la date de fin ultérieure.
 
 ## <a name="remarks"></a>Notes
 
-Le **_utime** fonction définit l’heure de modification pour le fichier spécifié par *filename **.* Pour que la modification de l’heure soit possible, le processus doit avoir un accès en écriture au fichier. Dans le système d’exploitation Windows, vous pouvez modifier le temps d’accès et l’heure de modification dans le **_utimbuf** structure. Si *fois* est un **NULL** pointeur, l’heure de modification est définie à l’heure locale actuelle. Dans le cas contraire, *fois* doit pointer vers une structure de type **_utimbuf**, défini dans SYS\UTIME. H.
+Le **_utime** fonction définit l’heure de modification pour le fichier spécifié par *filename **.* Pour que la modification de l’heure soit possible, le processus doit avoir un accès en écriture au fichier. Dans le système d’exploitation Windows, vous pouvez modifier l’heure d’accès et l’heure de modification dans le **_utimbuf** structure. Si *fois* est un **NULL** pointeur, l’heure de modification est défini sur l’heure locale actuelle. Sinon, *fois* doit pointer vers une structure de type **_utimbuf**, définie dans SYS\UTIME. H.
 
 Le **_utimbuf** structure stocke les heures d’accès et modification de fichier utilisés par **_utime** pour modifier les dates de modification de fichier. La structure a les champs suivants, qui sont tous deux de type **time_t**:
 
@@ -142,11 +132,11 @@ Le **_utimbuf** structure stocke les heures d’accès et modification de fichie
 **actime**|Heure d’accès au fichier.
 **modtime**|Heure de modification du fichier.
 
-Des versions spécifiques de la **_utimbuf** structure (**_utimebuf32** et **__utimbuf64**) sont définies en utilisant les versions 32 bits et 64 bits de type heure. Elles sont utilisées dans les versions spécifiques 32 bits et 64 bits de cette fonction. **_utimbuf** lui-même par défaut utilise un type de temps 64 bits, sauf si **_USE_32BIT_TIME_T** est défini.
+Des versions spécifiques de la **_utimbuf** structure (**_utimebuf32** et **__utimbuf64**) sont définis en utilisant les versions 32 bits et 64 bits du type de temps. Elles sont utilisées dans les versions spécifiques 32 bits et 64 bits de cette fonction. **_utimbuf** lui-même par défaut utilise un type d’heure 64 bits, sauf si **_USE_32BIT_TIME_T** est défini.
 
-**_utime** est identique à **_futime** , sauf que la *nom de fichier* argument de **_utime** est un nom de fichier ou un chemin d’accès à un fichier, plutôt qu’un descripteur de fichier d’un Ouvrez le fichier.
+**_utime** est identique à **_futime** , à ceci près que le *filename* argument de **_utime** est un nom de fichier ou un chemin d’accès à un fichier, plutôt qu’un descripteur de fichier d’un Ouvrez le fichier.
 
-**_wutime** est une version à caractères larges de **_utime**; le *nom de fichier* argument **_wutime** est une chaîne à caractères larges. Ces fonctions se comportent sinon de façon identique.
+**_wutime** est une version à caractères larges de **_utime**; le *filename* l’argument de **_wutime** est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -156,7 +146,7 @@ Des versions spécifiques de la **_utimbuf** structure (**_utimebuf32** et **__u
 |**_tutime32**|**_utime32**|**_utime32**|**_wutime32**|
 |**_tutime64**|**_utime64**|**_utime64**|**_wutime64**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-têtes obligatoires|En-têtes facultatifs|
 |-------------|----------------------|----------------------|

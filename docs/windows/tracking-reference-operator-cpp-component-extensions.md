@@ -1,29 +1,19 @@
 ---
-title: Opérateur de référence de suivi (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Opérateur de référence de suivi (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - '%'
-dev_langs:
-- C++
 helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8ea8cec7a3cc2e24c55c9f8454b421f5488f1c89
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: c6fef4562545b03e212d0e4e58742a1209a6ab81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327919"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437960"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>Opérateur de référence de suivi (C++ / c++ / CLI et c++ / CX)
 
@@ -61,13 +51,13 @@ L'exemple suivant montre comment passer un ^ en fonction qui accepte un %.
 ref class Foo sealed {};
 
     // internal or private
-    void UseFooHelper(Foo% f)  
+    void UseFooHelper(Foo% f)
     {
         auto x = %f;
     }
 
     // public method on ABI boundary
-    void UseFoo(Foo^ f)  
+    void UseFoo(Foo^ f)
     {
         if (f != nullptr) { UseFooHelper(*f); }
     }

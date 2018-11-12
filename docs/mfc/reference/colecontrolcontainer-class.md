@@ -1,10 +1,6 @@
 ---
-title: COleControlContainer, classe | Microsoft Docs
-ms.custom: ''
+title: COleControlContainer, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleControlContainer
 - AFXOCC/COleControlContainer
@@ -41,8 +37,6 @@ f1_keywords:
 - AFXOCC/COleControlContainer::m_pSiteUIActive
 - AFXOCC/COleControlContainer::m_pWnd
 - AFXOCC/COleControlContainer::m_siteMap
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleControlContainer [MFC], COleControlContainer
 - COleControlContainer [MFC], AttachControlSite
@@ -78,16 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f016773102b5989d5272ebb51931e00ff1972ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409103"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603007"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer, classe
 
@@ -176,7 +166,6 @@ virtual void AttachControlSite(
     CWnd* pWnd,
     UINT nIDC = 0);
 
-
 void AttachControlSite(
     CWnd* pWnd,
     UINT nIDC = 0);
@@ -185,7 +174,7 @@ void AttachControlSite(
 ### <a name="parameters"></a>Paramètres
 
 *pWnd*<br/>
-Un pointeur vers un `CWnd` objet.
+Pointeur vers un objet `CWnd` .
 
 *nIDC*<br/>
 L’ID du contrôle à attacher.
@@ -293,7 +282,6 @@ BOOL CreateControl(
     BOOL bStorage =FALSE,
     BSTR bstrLicKey =NULL,
     COleControlSite** ppNewSite =NULL);
-
 
 BOOL CreateControl(
     CWnd* pWndCtrl,
@@ -692,7 +680,7 @@ virtual BOOL OnPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique utilisé par le conteneur.
 
 ### <a name="return-value"></a>Valeur de retour

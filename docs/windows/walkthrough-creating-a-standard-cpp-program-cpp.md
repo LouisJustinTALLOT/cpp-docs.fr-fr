@@ -1,30 +1,20 @@
 ---
-title: 'Procédure pas à pas : Création d’un programme C++ Standard (C++) | Microsoft Docs'
+title: 'Procédure pas à pas : Création d’un programme C++ Standard (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vcfirstapp
 - vccreatefirst
-dev_langs:
-- C++
 helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 78d19a277f8bedcdbd098a662c69d6fc622a7cff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234311"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647466"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procédure pas à pas : Création d’un programme C++ Standard (C++)
 
@@ -45,10 +35,10 @@ Pour compléter cette procédure pas à pas, vous devez comprendre les notions d
 
 1. Créer un projet en pointant sur **New** sur le **fichier** menu, puis en cliquant sur **projet**.
 
-1. Dans le **Visual C++** volet des types de projets, cliquez sur **Windows Desktop**, puis cliquez sur **Application de Console Windows**. 
+1. Dans le **Visual C++** volet des types de projets, cliquez sur **Windows Desktop**, puis cliquez sur **Application de Console Windows**.
 
    > [!NOTE]
-   > Pour les versions de Visual Studio antérieures à 2017, dans le **nouveau projet** boîte de dialogue, développez **installé** > **modèles**  >  **Visual C++**, puis sélectionnez **Win32**. Dans le volet central, sélectionnez **Application console Win32**. 
+   > Pour les versions de Visual Studio antérieures à 2017, dans le **nouveau projet** boîte de dialogue, développez **installé** > **modèles**  >  **Visual C++**, puis sélectionnez **Win32**. Dans le volet central, sélectionnez **Application console Win32**.
 
    Tapez un nom pour le projet.
 

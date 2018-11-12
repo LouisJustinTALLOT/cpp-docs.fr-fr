@@ -1,28 +1,17 @@
 ---
-title: ID (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: ID (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.id
-dev_langs:
-- C++
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a17edd3ec3c35c307ca35a6657c69f3f7fef246a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b7bcbd9229529ec00a3b778cafd5678d47af950c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630031"
 ---
 # <a name="id"></a>ID
 
@@ -58,7 +47,7 @@ Consultez l’exemple de [peut être liée](bindable.md) pour obtenir un exemple
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -67,4 +56,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [Attributs de membre de données](data-member-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
 [in](in-cpp.md)<br/>
-[out](out-cpp.md)  
+[out](out-cpp.md)

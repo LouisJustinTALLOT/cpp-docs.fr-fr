@@ -1,12 +1,6 @@
 ---
-title: Composants de boîte de dialogue dans le Framework | Microsoft Docs
-ms.custom: ''
+title: Composants de boîte de dialogue dans le Framework
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - dialog classes [MFC], dialog box components
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - dialog templates [MFC], MFC framework
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9fb72e2961eec53b2dea8e37cfc39ccbcc0c5f27
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf01e7b881b8f5c9c5ba9847ccf4e15dee3e18d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397167"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518584"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>Composants de boîte de dialogue dans le Framework
 
@@ -31,11 +21,11 @@ Dans l’infrastructure MFC, une boîte de dialogue comporte deux composants :
 
 - Une ressource de modèle de boîte de dialogue qui spécifie les contrôles de la boîte de dialogue et leur emplacement.
 
-     La ressource de boîte de dialogue stocke un modèle de boîte de dialogue à partir duquel Windows crée la fenêtre de la boîte de dialogue et l’affiche. Le modèle spécifie les caractéristiques de la boîte de dialogue, y compris sa taille, emplacement, style et les types et les positions des contrôles de la boîte de dialogue. Vous utiliserez généralement un modèle de boîte de dialogue stocké en tant que ressource, mais vous pouvez également créer votre propre modèle en mémoire.
+   La ressource de boîte de dialogue stocke un modèle de boîte de dialogue à partir duquel Windows crée la fenêtre de la boîte de dialogue et l’affiche. Le modèle spécifie les caractéristiques de la boîte de dialogue, y compris sa taille, emplacement, style et les types et les positions des contrôles de la boîte de dialogue. Vous utiliserez généralement un modèle de boîte de dialogue stocké en tant que ressource, mais vous pouvez également créer votre propre modèle en mémoire.
 
 - Une classe de boîte de dialogue, dérivée de [CDialog](../mfc/reference/cdialog-class.md), fournir une interface de programmation pour la gestion de la boîte de dialogue.
 
-     Une boîte de dialogue est une fenêtre et est attachée à une fenêtre Windows lorsqu’elle est visible. Lorsque la fenêtre de la boîte de dialogue est créée, la ressource de modèle de boîte de dialogue est utilisée comme modèle pour créer des contrôles de fenêtre pour la boîte de dialogue enfants.
+   Une boîte de dialogue est une fenêtre et est attachée à une fenêtre Windows lorsqu’elle est visible. Lorsque la fenêtre de la boîte de dialogue est créée, la ressource de modèle de boîte de dialogue est utilisée comme modèle pour créer des contrôles de fenêtre pour la boîte de dialogue enfants.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,10 +1,6 @@
 ---
-title: Macros de Conversion de chaîne | Microsoft Docs
-ms.custom: ''
+title: Macros de Conversion de chaînes
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
 - atlconv/ATL::TEXTMETRICA2W
@@ -14,23 +10,17 @@ f1_keywords:
 - atlconv/ATL::TEXTMETRICT2OLE
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
-dev_langs:
-- C++
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4df562e693a412ca93720748f929d1bbcefc829
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1cad89fe065c0827169a22cc9699b677323d8594
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544519"
 ---
 # <a name="string-conversion-macros"></a>Macros de Conversion de chaînes
 
-Ces macros fournissent des fonctionnalités de conversion chaîne.  
+Ces macros fournissent des fonctionnalités de conversion chaîne.
 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  Macros de Conversion de chaîne MFC et ATL
 
@@ -78,7 +68,7 @@ Le tableau suivant répertorie les `DEVMODE` et `TEXTMETRIC` macros de conversio
 |DEVMODEA2W|TEXTMETRICA2W|
 |DEVMODEOLE2T|TEXTMETRICOLE2T|
 |DEVMODET2OLE|TEXTMETRICT2OLE|
-|DEVMODEW2A|TEXTMETRICW2A|  
+|DEVMODEW2A|TEXTMETRICW2A|
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,10 +1,6 @@
 ---
-title: Crecentfilelist, classe | Microsoft Docs
-ms.custom: ''
+title: Crecentfilelist, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CRecentFileList
 - AFXADV/CRecentFileList
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXADV/CRecentFileList::Remove
 - AFXADV/CRecentFileList::UpdateMenu
 - AFXADV/CRecentFileList::WriteList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRecentFileList [MFC], CRecentFileList
 - CRecentFileList [MFC], Add
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 996a9052d71df4aed54fa4f922b4d4ffff8f1c14
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453870"
 ---
 # <a name="crecentfilelist-class"></a>Crecentfilelist, classe
 
@@ -94,21 +84,17 @@ Ajoute un fichier à la liste des fichiers récemment utilisée (MRU).
 ```
 virtual void Add(LPCTSTR lpszPathName);
 
-
 virtual void Add(
     LPCTSTR lpszPathName,
     LPCTSTR lpszAppID);
-
 
 void Add(
     IShellItem* pItem,
     LPCTSTR lpszAppID);
 
-
 void Add(
     IShellLink* pLink,
     LPCTSTR lpszAppID);
-
 
 void Add(
     PIDLIST_ABSOLUTE pidl,
@@ -278,6 +264,4 @@ virtual void WriteList();
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

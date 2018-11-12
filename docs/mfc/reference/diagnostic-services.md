@@ -1,14 +1,8 @@
 ---
-title: Services de diagnostic | Microsoft Docs
-ms.custom: ''
+title: Services de diagnostic
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - diagnosi [MFC]s, diagnostic services
 - diagnostic macros [MFC], list of general MFC
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b572af3bdfd444687af98172da9ada0736dac25
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6677d5d265b2de9f94160dae6afaedfb3c8b89f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429511"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644325"
 ---
 # <a name="diagnostic-services"></a>Services de diagnostic
 
@@ -103,7 +93,6 @@ La bibliothèque Runtime C prend également en charge un ensemble de fonctions d
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Supprime les avertissements du compilateur pour l’utilisation de fonctions déconseillées de MFC.|
 
-
 ## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 Supprime les avertissements du compilateur pour l’utilisation de fonctions déconseillées de MFC.
@@ -113,6 +102,7 @@ Supprime les avertissements du compilateur pour l’utilisation de fonctions dé
 ```
 _AFX_SECURE_NO_WARNINGS
 ```
+
 ### <a name="example"></a>Exemple
 
 Cet exemple de code entraîne un avertissement du compilateur si _AFX_SECURE_NO_WARNINGS n’ont pas été définies.
@@ -309,6 +299,7 @@ Utiliser pour valider l’exactitude des données.
 ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *booleanExpression*<br/>
@@ -370,7 +361,6 @@ static char THIS_FILE[] = __FILE__;
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [ASSERT](#assert)<br/>
 [VERIFY](#verify)
-
 
 ##  <a name="trace"></a>  TRACE
 
@@ -450,7 +440,6 @@ Cette variable est définie uniquement dans la version Debug des MFC. Pour plus 
 
 **En-tête :** afx.h
 
-
 ## <a name="afxdump"></a> AfxDump (interne)
 
 Fonction interne qui utilise des MFC pour vider l’état d’un objet pendant le débogage.
@@ -460,6 +449,7 @@ Fonction interne qui utilise des MFC pour vider l’état d’un objet pendant l
 ```
 void AfxDump(const CObject* pOb);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *boîte postale*<br/>
@@ -478,8 +468,6 @@ Code de votre programme ne doit pas appeler `AfxDump`, mais vous devez plutôt a
 ### <a name="see-also"></a>Voir aussi
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -597,8 +585,6 @@ Code de votre programme ne doit pas appeler `AfxDump`, mais vous devez plutôt a
 ### <a name="see-also"></a>Voir aussi
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 

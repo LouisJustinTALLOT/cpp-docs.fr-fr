@@ -1,26 +1,16 @@
 ---
-title: Comparestringordinal, méthode | Microsoft Docs
-ms.custom: ''
+title: CompareStringOrdinal, méthode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
-dev_langs:
-- C++
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9fba5ff2db133d7a510499bd79de8bb77119eb79
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61ca0cb6d8afc07b73e33a2e5bc3dc10daacc210
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593373"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal, méthode
 
@@ -31,7 +21,7 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 ```cpp
 inline INT32 CompareStringOrdinal(
    HSTRING lhs,
-   HSTRING rhs)  
+   HSTRING rhs)
 ```
 
 ### <a name="parameters"></a>Paramètres

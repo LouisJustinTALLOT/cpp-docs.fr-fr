@@ -1,25 +1,16 @@
 ---
-title: Modification du Code de dessin (didacticiel ATL, partie 4) | Microsoft Docs
+title: Changement du code de dessin (Didacticiel ATL, partie 4)
 ms.custom: get-started-article
 ms.date: 09/26/2018
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ad8be0655d43fac063a3551f43e667a04caa27b
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: ce6492eb2e4da04b261c7a88154674d036bb578a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821060"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481417"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Changement du code de dessin (Didacticiel ATL, partie 4)
 
@@ -121,13 +112,13 @@ Régénérez le contrôle. Assurez-vous que le fichier PolyCtl.htm est fermé s�
     > Pour les erreurs impliquant `ATL::CW2AEX`, dans Script.Cpp, remplacez la ligne `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` avec `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`et la ligne `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` avec `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
     > Pour les erreurs impliquant `HMONITOR`, ouvrez StdAfx.h dans le `TCProps` de projet et remplacez :
     > ```
-    > #ifndef WINVER  
-    > #define WINVER 0x0400   
+    > #ifndef WINVER
+    > #define WINVER 0x0400
     > #endif
     > ```
     > par
     > ```
-    > #ifndef WINVER  
+    > #ifndef WINVER
     > #define WINVER 0x0500
     > #define _WIN32_WINNT 0x0500
     > #endif

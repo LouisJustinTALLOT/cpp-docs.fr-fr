@@ -1,27 +1,17 @@
 ---
-title: '&lt;array&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;array&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <array>
-dev_langs:
-- C++
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9dcf61895e884eeb16a6461e91675a3f1688d91d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8915a652fe442af84f2582b9b9d47a243f416eeb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955947"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553294"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
@@ -46,7 +36,7 @@ Définit la classe de modèle de conteneur **tableau** et plusieurs modèles de 
 |Opérateur|Description|
 |-|-|
 |[operator==](../standard-library/array-operators.md#op_eq_eq)|comparaison de tableaux, égal à|
-|[operator!=](../standard-library/array-operators.md#op_neq)|comparaison de tableaux, non égal à|
+|[!=, opérateur](../standard-library/array-operators.md#op_neq)|comparaison de tableaux, non égal à|
 |[operator\<](../standard-library/array-operators.md#op_lt)|comparaison de tableaux, inférieur à|
 |[operator>=](../standard-library/array-operators.md#op_gt_eq)|comparaison de tableaux, supérieur ou égal à|
 |[operator>](../standard-library/array-operators.md#op_gt)|comparaison de tableaux, supérieur à|

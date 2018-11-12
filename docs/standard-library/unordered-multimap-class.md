@@ -1,10 +1,6 @@
 ---
-title: unordered_multimap, classe | Microsoft Docs
-ms.custom: ''
+title: unordered_multimap, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - unordered_map/std::unordered_multimap
 - unordered_map/std::unordered_multimap::allocator_type
@@ -52,8 +48,6 @@ f1_keywords:
 - unordered_map/std::unordered_multimap::unordered_multimap
 - unordered_map/std::unordered_multimap::operator=
 - unordered_map/std::unordered_multimap::hash_function
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::unordered_multimap
 - std::unordered_multimap::allocator_type
@@ -143,16 +137,12 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 289c21fcf1b55db701dcb5365694c78c823bb8a0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: b4c501b651a72fa28d603ec818dcc70989b5302e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622935"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap, classe
 
@@ -297,7 +287,6 @@ Désigne le début de la séquence contrôlée ou un compartiment.
 iterator begin();
 
 const_iterator begin() const;
-
 
 local_iterator begin(size_type nbucket);
 
@@ -1124,7 +1113,6 @@ iterator end();
 
 const_iterator end() const;
 
-
 local_iterator end(size_type nbucket);
 
 const_local_iterator end(size_type nbucket) const;
@@ -1486,19 +1474,16 @@ Insère un élément ou une plage d'éléments dans une classe unordered_multima
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1506,13 +1491,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2004,7 +1987,6 @@ Obtient ou définit le nombre maximal d’éléments par compartiment.
 
 ```cpp
 float max_load_factor() const;
-
 
 void max_load_factor(float factor);
 ```

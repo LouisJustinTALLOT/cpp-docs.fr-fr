@@ -1,12 +1,6 @@
 ---
-title: 'Serveurs : Implémentation de Frame en Place Windows | Microsoft Docs'
-ms.custom: ''
+title: 'Serveurs : implémentations de fenêtres frame sur place'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - frame windows [MFC], implementing
 - OLE server applications [MFC], frame windows
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4973db6274ce800e8e1fc413ffbfd44a107a64b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425013"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637630"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Serveurs : implémentations de fenêtres frame sur place
 
@@ -39,15 +29,15 @@ Cet article explique ce que vous devez effectuer pour implémenter des fenêtres
 
 1. Déclarez un membre `COleResizeBar` dans la classe de fenêtre frame. Cela est nécessaire si vous voulez prendre en charge le redimensionnement en place dans les applications serveur.
 
-     Déclarez un `OnCreate` Gestionnaire de messages (à l’aide de la **propriétés** fenêtre) et appelez `Create` pour votre `COleResizeBar` membre, si vous l’avez défini.
+   Déclarez un `OnCreate` Gestionnaire de messages (à l’aide de la **propriétés** fenêtre) et appelez `Create` pour votre `COleResizeBar` membre, si vous l’avez défini.
 
 1. Si vous avez une barre d'outils, déclarez un membre `CToolBar` dans la classe de fenêtre frame.
 
-     Remplacez la fonction membre `OnCreateControlBars` pour créer une barre d'outils lorsque le serveur en place est actif. Exemple :
+   Remplacez la fonction membre `OnCreateControlBars` pour créer une barre d'outils lorsque le serveur en place est actif. Exemple :
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     Consultez la discussion sur ce code en suivant l'étape 5.
+   Consultez la discussion sur ce code en suivant l'étape 5.
 
 1. Incluez le fichier d'en-tête pour cette classe de fenêtre frame en place dans le fichier .cpp principal.
 

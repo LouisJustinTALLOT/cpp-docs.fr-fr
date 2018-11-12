@@ -1,10 +1,6 @@
 ---
-title: Classe de CD2DBitmapBrush | Microsoft Docs
-ms.custom: ''
+title: CD2DBitmapBrush, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DBitmapBrush
 - AFXRENDERTARGET/CD2DBitmapBrush
@@ -26,8 +22,6 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DBitmapBrush::m_pBitmap
 - AFXRENDERTARGET/CD2DBitmapBrush::m_pBitmapBrush
 - AFXRENDERTARGET/CD2DBitmapBrush::m_pBitmapBrushProperties
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DBitmapBrush [MFC], CD2DBitmapBrush
 - CD2DBitmapBrush [MFC], Attach
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 93ff10a6e702e0250303897c6e52e5ec224d2f87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 59c4e5f4e55947a4eab7a5258d8fe2b943bab3ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501567"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush, classe
 
@@ -162,7 +152,6 @@ CD2DBitmapBrush(
     CD2DBrushProperties* pBrushProperties = NULL,
     BOOL bAutoDestroy = TRUE);
 
-
 CD2DBitmapBrush(
     CRenderTarget* pParentTarget,
     UINT uiResID,
@@ -171,7 +160,6 @@ CD2DBitmapBrush(
     D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties = NULL,
     CD2DBrushProperties* pBrushProperties = NULL,
     BOOL bAutoDestroy = TRUE);
-
 
 CD2DBitmapBrush(
     CRenderTarget* pParentTarget,

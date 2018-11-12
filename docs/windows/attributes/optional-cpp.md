@@ -1,28 +1,17 @@
 ---
-title: (C++ COM attribut facultatif) | Microsoft Docs
-ms.custom: ''
+title: (C++ COM attribut facultatif)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.optional
-dev_langs:
-- C++
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 70e0a2d3f12452a92df3358760a5c5189de78dda
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 440e605b1dfd0b24060965c5ea5dd55424701cf7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790920"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590110"
 ---
 # <a name="optional-c"></a>facultatif (C++)
 
@@ -66,9 +55,9 @@ __interface IFireTabCtrl : IDispatch
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)  
+[Attributs de paramètres](parameter-attributes.md)

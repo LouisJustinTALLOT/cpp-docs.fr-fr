@@ -1,12 +1,6 @@
 ---
-title: Gestion de fichiers et e / S (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: Gestion de fichiers et e / S (C++ / c++ / CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - .NET Framework [C++], file handling
 - files [C++], .NET Framework and
@@ -30,17 +24,12 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 1ee17fe577f30735ca78661394c432519d0a4050
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 697d193f2239d9d22e8d94d479bbf24784e2c6ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396998"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585651"
 ---
 # <a name="file-handling-and-io-ccli"></a>Gestion de fichiers et E/S (C++/CLI)
 Illustre diverses opérations de fichier à l’aide de .NET Framework.
@@ -182,6 +171,7 @@ int main()
    return 0;
 }
 ```
+
 ## <a name="read_text"></a> Lire un fichier texte
 
 L’exemple de code suivant montre comment ouvrir et lire une fichier texte une ligne à la fois, à l’aide de la <xref:System.IO.StreamReader> classe qui est définie dans le <xref:System.IO?displayProperty=fullName> espace de noms. Une instance de cette classe est utilisée pour ouvrir un fichier texte, puis le <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> méthode est utilisée pour récupérer chaque ligne.

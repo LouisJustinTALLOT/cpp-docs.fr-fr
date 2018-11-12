@@ -1,10 +1,6 @@
 ---
-title: Cmapstringtostring, classe | Microsoft Docs
-ms.custom: ''
+title: Cmapstringtostring, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMapStringToString
 - AFXCOLL/CMapStringToString
@@ -26,8 +22,6 @@ f1_keywords:
 - AFXCOLL/CMapStringToOb::RemoveAll
 - AFXCOLL/CMapStringToOb::RemoveKey
 - AFXCOLL/CMapStringToOb::SetAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMapStringToString [MFC], CPair
 - CMapStringToOb [MFC], CMapStringToOb
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 718cc52175ff7d82527fd90486ee401c0e2ba80c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 404796a4ff51ef821b4d5ce805b8564ab2471d25
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375823"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677316"
 ---
 # <a name="cmapstringtostring-class"></a>Cmapstringtostring, classe
 
@@ -239,6 +229,4 @@ Appelez cette méthode pour rechercher un élément de carte avec une clé qui c
 [Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

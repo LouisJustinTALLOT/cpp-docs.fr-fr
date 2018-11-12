@@ -1,31 +1,21 @@
 ---
-title: CCachedDataPathProperty, classe | Microsoft Docs
-ms.custom: ''
+title: CCachedDataPathProperty, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CCachedDataPathProperty
 - AFXCTL/CCachedDataPathProperty
 - AFXCTL/CCachedDataPathProperty::CCachedDataPathProperty
 - AFXCTL/CCachedDataPathProperty::m_Cache
-dev_langs:
-- C++
 helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c22d905e50c6811c82ee54d6ec08c57ef3f41182
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1605d5fe1549ba5172f61583cce586a353c2ab56
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50485655"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty, classe
 
@@ -91,7 +81,6 @@ Construit un objet `CCachedDataPathProperty`.
 
 ```
 CCachedDataPathProperty(COleControl* pControl = NULL);
-
 
 CCachedDataPathProperty(
     LPCTSTR lpszPath,

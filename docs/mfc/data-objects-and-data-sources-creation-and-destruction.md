@@ -1,12 +1,6 @@
 ---
-title: 'Objets de données et Sources de données : création et la Destruction | Microsoft Docs'
-ms.custom: ''
+title: 'Objets de données et sources de données : création et destruction'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - destroying data objects [MFC]
 - object creation [MFC], data source objects
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c14c6725b4ff93ed59e8d11c51ab4e50a4a6de4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a46cc15a101618699b9e7fa988155517de673fdb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432425"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614966"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objets de données et sources de données : création et destruction
 
@@ -74,7 +64,7 @@ Les sources de données sont créées lorsqu'une application doit copier des don
 
 1. Les données sélectionnées sont insérées dans la source de données en appelant l'une des fonctions dans les groupes `COleDataSource::CacheData` ou `COleDataSource::DelayRenderData`.
 
-1. L'application appelle la fonction membre `SetClipboard` (ou la fonction membre `DoDragDrop` s'il s'agit d'une opération de type Glisser-déplacer) qui appartient à l'objet créé à l'étape 3.
+1. L’application appelle la fonction membre `SetClipboard` (ou la fonction membre `DoDragDrop` s’il s’agit d’une opération de type Glisser-déposer) qui appartient à l’objet créé à l’étape 3.
 
 1. S’il s’agit une **couper** opération ou `DoDragDrop` retourne **DROPEFFECT_MOVE**, les données sélectionnées à l’étape 1 sont supprimées du document.
 

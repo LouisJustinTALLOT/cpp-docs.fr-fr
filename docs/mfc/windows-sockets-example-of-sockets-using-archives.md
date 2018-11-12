@@ -1,27 +1,17 @@
 ---
-title: 'Windows Sockets : Exemple Sockets utilisant des Archives | Microsoft Docs'
-ms.custom: ''
+title: 'Windows Sockets : exemple de sockets utilisant des archives'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - sockets [MFC], with archives
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427275"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436268"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets : exemple de sockets utilisant des archives
 
@@ -40,11 +30,11 @@ Pour l’envoi, l’exemple de fonction effectue une itération pendant un nombr
 
 - Un « en-tête » qui spécifie la nature des données (dans ce cas, la valeur de la *bValue* variable et le nombre de copies sera envoyé).
 
-     Les deux éléments sont générés au hasard pour cet exemple.
+   Les deux éléments sont générés au hasard pour cet exemple.
 
 - Le nombre spécifié de copies des données.
 
-     Interne **pour** boucle envoie *bValue* le nombre de fois spécifié.
+   Interne **pour** boucle envoie *bValue* le nombre de fois spécifié.
 
 - Une chaîne appelée *strText* affichant le récepteur à son utilisateur.
 

@@ -1,28 +1,17 @@
 ---
-title: db_param (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: db_param (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.db_param
-dev_langs:
-- C++
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 153e1bba37b10da64b394c48ee1cf8c059ae86e9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 58d6fa5026395b4be6663ab253cf9ffdfea01788
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083021"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505038"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -87,7 +76,7 @@ L’exemple suivant associe le `nOutput` variable avec un paramètre de sortie.
 #include <atldbcli.h>
 
 [ db_source(L"my_connection_string"),
-  db_command(L"{ ? = CALL dbo.\"Sales by Year\"(?,?) }")  
+  db_command(L"{ ? = CALL dbo.\"Sales by Year\"(?,?) }")
 ]
 struct CSalesbyYear {
    DBSTATUS m_dwShippedDateStatus;
@@ -128,4 +117,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)  
+[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)

@@ -1,10 +1,6 @@
 ---
-title: normal_distribution, classe | Microsoft Docs
-ms.custom: ''
+title: normal_distribution, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::normal_distribution
 - random/std::normal_distribution::reset
@@ -19,8 +15,6 @@ f1_keywords:
 - random/std::normal_distribution::param_type::stddev
 - random/std::normal_distribution::param_type::operator==
 - random/std::normal_distribution::param_type::operator!=
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::normal_distribution [C++]
 - std::normal_distribution [C++], reset
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee9e6af44c77c16099dc5e30c78ac4a5f39aa54a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7fdb2f8b6674326ff6e37efa222483e859b3500f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108539"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604319"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution, classe
 
@@ -241,6 +231,7 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *mean*<br/>

@@ -1,12 +1,6 @@
 ---
-title: 'Sérialisation : Définir une classe sérialisable | Microsoft Docs'
-ms.custom: ''
+title: 'Sérialisation : définir une classe sérialisable'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - serializable class [MFC]
 - DECLARE_SERIAL macro [MFC]
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 378a99021ca1b48599ee934d659542384068e195
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa9a7f6cb1cb28c701e3954cad27e60cf9f7df4f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443343"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486968"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Sérialisation : définir une classe sérialisable
 
@@ -55,7 +45,7 @@ Le protocole et les fonctionnalités de base de sérialisation sont définis dan
 
 ##  <a name="_core_overriding_the_serialize_member_function"></a> Substitution de la fonction membre Serialize
 
-La fonction membre `Serialize`, définie dans la classe `CObject`, est chargée de la sérialisation réelle des données nécessaires pour capturer l'état actuel d'un objet. La fonction `Serialize` a un argument `CArchive` qu'elle utilise pour lire et écrire les données de l'objet. Le [CArchive](../mfc/reference/carchive-class.md) objet a une fonction membre, `IsStoring`, ce qui indique si `Serialize` est enregistre (écriture de données) ou le chargement (lecture). L’utilisation des résultats de `IsStoring` comme guide, insérez les données de votre objet dans le `CArchive` objet avec l’opérateur d’insertion (**<\<**) ou extraire des données avec l’opérateur d’extraction ( **>>**).
+La fonction membre `Serialize`, définie dans la classe `CObject`, est chargée de la sérialisation réelle des données nécessaires pour capturer l'état actuel d'un objet. La fonction `Serialize` a un argument `CArchive` qu’elle utilise pour lire et écrire les données de l’objet. Le [CArchive](../mfc/reference/carchive-class.md) objet a une fonction membre, `IsStoring`, ce qui indique si `Serialize` est enregistre (écriture de données) ou le chargement (lecture). L’utilisation des résultats de `IsStoring` comme guide, insérez les données de votre objet dans le `CArchive` objet avec l’opérateur d’insertion (**<\<**) ou extraire des données avec l’opérateur d’extraction ( **>>**).
 
 Considérons une classe qui est dérivée de `CObject` et a deux nouvelles variables membres, des types `CString` et **WORD**. Le fragment de déclaration de classe présente les variables membres et la déclaration de la fonction membre substituée de `Serialize` :
 
@@ -67,9 +57,9 @@ Considérons une classe qui est dérivée de `CObject` et a deux nouvelles varia
 
 1. Insérez ou extrayez les variables membres spécifiques à votre classe.
 
-     Les opérateurs d'insertion et d'extraction interagissent avec la classe d'archive pour lire et écrire les données. L'exemple suivant montre comment implémenter `Serialize` pour la classe `CPerson` déclarée ci-dessus :
+   Les opérateurs d'insertion et d'extraction interagissent avec la classe d'archive pour lire et écrire les données. L'exemple suivant montre comment implémenter `Serialize` pour la classe `CPerson` déclarée ci-dessus :
 
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
 
 Vous pouvez également utiliser le [CArchive::Read](../mfc/reference/carchive-class.md#read) et [CArchive::Write](../mfc/reference/carchive-class.md#write) fonctions membres pour lire et écrire des grandes quantités de données non typées.
 

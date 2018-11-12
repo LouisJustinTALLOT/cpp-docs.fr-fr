@@ -1,29 +1,19 @@
 ---
-title: Fonctions globales de serveur d’inscription | Microsoft Docs
-ms.custom: ''
+title: Fonctions globales de serveur d’inscription
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
 - atlbase/ATL::AtlComModuleUnregisterServer
 - atlbase/ATL::AtlComModuleRegisterClassObjects
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
-dev_langs:
-- C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c43e28e035691b04181bef2162de828f3271a600
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: f97a4ff0dc28077d42fe0f8ca4992946db4082f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082752"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441787"
 ---
 # <a name="server-registration-global-functions"></a>Fonctions globales de serveur d’inscription
 
@@ -38,7 +28,7 @@ Ces fonctions fournissent la prise en charge pour inscrire et désinscrire des o
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Cette fonction est appelée pour annuler l'inscription de chaque objet du mappage d'objets.|
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|Cette fonction est appelée pour inscrire des objets de classe.|
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Cette fonction est appelée pour révoquer des objets de classe à partir d’un module COM.|
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Cette fonction est appelée pour obtenir l’objet de classe.|  
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Cette fonction est appelée pour obtenir l’objet de classe.|
 
 ## <a name="requirements"></a>Configuration requise
 

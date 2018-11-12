@@ -1,26 +1,16 @@
 ---
-title: 'Procédure pas à pas : Placement de contrôles dans les barres d’outils | Microsoft Docs'
-ms.custom: ''
+title: "Procédure pas à pas : placement de contrôles dans les barres d'outils"
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1995d3472f175872e084e2654531a2e72a90f950
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3e0cc066e39cc71833e2061a1964619d04a80be3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235509"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580295"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Procédure pas à pas : placement de contrôles dans les barres d'outils
 

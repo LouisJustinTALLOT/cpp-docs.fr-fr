@@ -1,28 +1,18 @@
 ---
-title: À l’aide de vos anciennes barres d’outils | Microsoft Docs
-ms.custom: ''
+title: Utilisation de vos anciennes barres d'outils
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - COldToolBar
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbars [MFC], backward compatibility
 - COldToolBar class [MFC]
 ms.assetid: 3543257c-8547-43f0-a66a-ee641dc1cf89
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab5f743b2584733bc8d2bc1edf4c212ba40210f0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4c02f7d547c0799e79309e2635b9ab5903a16cd4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417603"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490107"
 ---
 # <a name="using-your-old-toolbars"></a>Utilisation de vos anciennes barres d'outils
 

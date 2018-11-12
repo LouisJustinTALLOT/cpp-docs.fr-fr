@@ -1,29 +1,19 @@
 ---
-title: 'TN045 : Prise en charge de MFC / Database de longs Varchar / Varbinary | Microsoft Docs'
-ms.custom: ''
+title: 'TN045 : Prise en charge de MFC / Database de longs Varchar / Varbinary'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.mfc.data
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN045
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60869fbd450f6a2122c91b852c29222f7d4d0744
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 286ef403ec4bd51b035945f3ca268b59fee4d9d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567035"
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045 : prise en charge MFC/Database de longs varchar/varbinary
 
@@ -64,7 +54,6 @@ void AFXAPI RFX_Text(CFieldExchange* pFX,
     int nMaxLength = 255,
     int nColumnType =
     SQL_VARCHAR);
-
 
 void AFXAPI RFX_Binary(CFieldExchange* pFX,
     const char *szName,

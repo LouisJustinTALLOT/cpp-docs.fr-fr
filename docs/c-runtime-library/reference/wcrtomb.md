@@ -1,10 +1,6 @@
 ---
-title: wcrtomb | Microsoft Docs
-ms.custom: ''
+title: wcrtomb
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcrtomb
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcrtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb function
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eca27e81cbb1df26d04059974cdc1ce5313bafa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5fad3f41c7ed459a1af3fae7c6a5a85c867d5ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412675"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659249"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -78,11 +68,11 @@ Retourne le nombre d’octets nécessaire pour représenter le caractère multio
 
 ## <a name="remarks"></a>Notes
 
-Le **wcrtomb** fonction convertit un caractère large, à compter de l’état de la conversion spécifiée contenue dans *mbstate*, à partir de la valeur contenue dans *wchar*, dans le adresse représentée par *mbchar*. La valeur de retour est le nombre d’octets requis pour représenter le caractère multioctet correspondant, mais il ne renvoie pas plus de **MB_CUR_MAX** octets.
+Le **wcrtomb** fonction convertit un caractère large, à compter de l’état de conversion spécifié contenu dans *mbstate*, à partir de la valeur contenue dans *wchar*, dans le adresse représentée par *mbchar*. La valeur de retour est le nombre d’octets nécessaires pour représenter le caractère multioctet correspondant, mais il ne retourne pas plus de **MB_CUR_MAX** octets.
 
-Si *mbstate* est null, le texte interne **mbstate_t** objet contenant l’état de conversion de *mbchar* est utilisé. Si la séquence de caractères *wchar* n’a pas multioctets correspondant représentation sous forme de caractère, une valeur -1 est retournée et le **errno** a la valeur **EILSEQ**.
+Si *mbstate* a la valeur null, le texte interne **mbstate_t** objet contenant l’état de conversion de *mbchar* est utilisé. Si la séquence de caractères *wchar* n’a pas un multioctets correspondants représentation sous forme de caractère, une valeur -1 est retournée et le **errno** a la valeur **EILSEQ**.
 
-Le **wcrtomb** diffère de la fonction [wctomb, _wctomb_l](wctomb-wctomb-l.md) par sa capacité à redémarrer. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, utilisez une application **wcsrlen** plutôt que **wcsnlen**, si un appel ultérieur à **wcsrtombs** ont été utilisés au lieu de **wcstombs**.
+Le **wcrtomb** diffère de la fonction [wctomb, _wctomb_l](wctomb-wctomb-l.md) par sa capacité à redémarrer. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application utiliserait **wcsrlen** plutôt que **wcsnlen**, si un appel ultérieur à **wcsrtombs** était utilisé au lieu de **wcstombs**.
 
 En C++, cette fonction a une surcharge de modèle qui appelle les équivalents plus récents et sécurisés de cette fonction. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -133,7 +123,7 @@ int main( void )
 The corresponding wide character "Q" was converted to the "Q" multibyte character.
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

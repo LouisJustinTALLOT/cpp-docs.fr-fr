@@ -1,10 +1,6 @@
 ---
-title: reader_writer_lock, classe | Microsoft Docs
-ms.custom: ''
+title: reader_writer_lock, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - reader_writer_lock
 - CONCRT/concurrency::reader_writer_lock
@@ -16,21 +12,15 @@ f1_keywords:
 - CONCRT/concurrency::reader_writer_lock::try_lock
 - CONCRT/concurrency::reader_writer_lock::try_lock_read
 - CONCRT/concurrency::reader_writer_lock::unlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 605bc438b51fb96581d679ab0d9d37ed3696a5e4
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 1c2696695992cac9d51d547913c41234beaecf57
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163879"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585989"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock, classe
 
@@ -141,6 +131,7 @@ Un wrapper RAII sécurisé qui peut être utilisé pour acquérir `reader_writer
 ```
 class scoped_lock;
 ```
+
 ## <a name="scoped_lock_ctor"></a> scoped_lock::scoped_lock
 
 Construit un `scoped_lock` de l’objet et acquiert le `reader_writer_lock` objet passé dans le `_Reader_writer_lock` paramètre en tant que rédacteur. Si le verrou est maintenu par un autre thread, cet appel bloquera.

@@ -1,10 +1,6 @@
 ---
-title: CBitmap, classe | Microsoft Docs
-ms.custom: ''
+title: CBitmap (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBitmap
 - AFXWIN/CBitmap
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXWIN/CBitmap::LoadOEMBitmap
 - AFXWIN/CBitmap::SetBitmapBits
 - AFXWIN/CBitmap::SetBitmapDimension
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBitmap [MFC], CBitmap
 - CBitmap [MFC], CreateBitmap
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 322b13ee62e61a836d6b0c66ab619a11348adeae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375639"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624599"
 ---
 # <a name="cbitmap-class"></a>CBitmap (classe)
 
@@ -161,11 +151,11 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Pour une image bitmap de couleur, soit le *nPlanes* ou *nBitcount* paramètre doit être défini sur 1. Si ces deux paramètres sont définis avec la valeur 1, `CreateBitmap` crée une image bitmap monochrome.
 
-Bien qu’une image bitmap ne peut pas être directement sélectionnée pour un périphérique d’affichage, il peut être sélectionné en tant qu’image bitmap active pour un « contexte de périphérique de mémoire » à l’aide de [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) et copiée dans un contexte de périphérique compatible à l’aide de la [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) (fonction).
+Même si une image bitmap ne peut pas être directement sélectionnée pour un périphérique d’affichage, elle peut être sélectionnée en tant qu’image bitmap active pour un « contexte de périphérique de mémoire » à l’aide de [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) et copiée dans un contexte de périphérique compatible à l’aide de la fonction [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) .
 
 Quand vous en avez terminé avec l’objet `CBitmap` créé par la fonction `CreateBitmap` , commencez par sélectionner l’image bitmap hors du contexte de périphérique, puis supprimez l’objet `CBitmap` .
 
-Pour plus d’informations, consultez la description de la `bmBits` champ dans le `BITMAP` structure. Le [BITMAP](../../mfc/reference/bitmap-structure.md) structure est décrite sous la [CBitmap::CreateBitmapIndirect](#createbitmapindirect) fonction membre.
+Pour plus d’informations, consultez la description de la `bmBits` champ dans le `BITMAP` structure. La structure [BITMAP](../../mfc/reference/bitmap-structure.md) est décrite sous la fonction membre [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
 
 ##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
@@ -205,7 +195,7 @@ BOOL CreateCompatibleBitmap(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Spécifie le contexte de périphérique.
 
 *nWidth*<br/>
@@ -243,7 +233,7 @@ BOOL CreateDiscardableBitmap(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Spécifie un contexte de périphérique.
 
 *nWidth*<br/>

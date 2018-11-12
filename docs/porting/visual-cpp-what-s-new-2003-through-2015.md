@@ -1,24 +1,13 @@
 ---
-title: Nouveautés de Visual C++ entre 2003 et 2015 | Microsoft Docs
-ms.custom: ''
+title: Nouveautés de Visual C++ entre 2003 et 2015
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084111"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499617"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -128,7 +117,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
     struct S2
     {
-        template <class C, void (C::*Function)(int) const> void f() {}        
+        template <class C, void (C::*Function)(int) const> void f() {}
     };
 
     void f()
@@ -271,7 +260,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
    Par exemple, votre code définit à la fois un opérateur **placement new** et un opérateur **placement delete** :
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -318,14 +307,14 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    ```cpp
     struct S {
-      S();
-     };
+      S();
+     };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+     union {
+      struct {
+       S s;
+      };
+     } u; // C2280
    ```
 
    Le code précédent génère l’erreur suivante dans Visual Studio 2015 :
@@ -525,7 +514,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **Classes de base virtuelles privées et héritage indirect**
 
-   Les versions précédentes du compilateur autorisaient une classe dérivée à appeler des fonctions membres de ses classes de base *dérivées indirectement*`private virtual` . Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur n’accepte plus de code écrit de cette façon. Il émet dans ce cas l’erreur du compilateur C2280.
+   Les versions précédentes du compilateur autorisaient une classe dérivée à appeler des fonctions membres de ses classes de base `private virtual` *dérivées indirectement*. Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur n’accepte plus de code écrit de cette façon. Il émet dans ce cas l’erreur du compilateur C2280.
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -834,7 +823,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **#include : utilisation du spécificateur de répertoire parent '..' dans le chemin** (concerne uniquement `/Wall` `/WX`)
 
-     Les versions précédentes du compilateur ne détectaient pas l’utilisation du spécificateur de répertoire parent ’..’ dans le chemin d’accès des directives  `#include` . Le code écrit de cette manière est généralement conçu pour inclure des en-têtes qui existent en dehors du projet en utilisant de manière incorrecte des chemins d’accès relatifs au projet. Cet ancien comportement créait un risque que le programme puisse être compilé en incluant un fichier source différent de celui prévu par le programmeur, ou que ces chemins d’accès relatifs ne soient pas portables vers d’autres environnements de génération. Désormais, le compilateur détecte et informe le programmeur du code écrit de cette façon, et il émet un avertissement C4464 facultatif si cette fonctionnalité est activée.
+   Les versions précédentes du compilateur ne détectaient pas l’utilisation du spécificateur de répertoire parent ’..’ dans le chemin d’accès des directives  `#include` . Le code écrit de cette manière est généralement conçu pour inclure des en-têtes qui existent en dehors du projet en utilisant de manière incorrecte des chemins d’accès relatifs au projet. Cet ancien comportement créait un risque que le programme puisse être compilé en incluant un fichier source différent de celui prévu par le programmeur, ou que ces chemins d’accès relatifs ne soient pas portables vers d’autres environnements de génération. Désormais, le compilateur détecte et informe le programmeur du code écrit de cette façon, et il émet un avertissement C4464 facultatif si cette fonctionnalité est activée.
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -1465,7 +1454,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Exemple (avant) :
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1473,7 +1462,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "b.h"
@@ -1483,7 +1472,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Exemple (après)
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1491,7 +1480,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "a.h"
@@ -1774,7 +1763,7 @@ Utilisez la nouvelle infrastructure de tests unitaires C++ de Visual Studio pour
 
 #### <a name="architecture-dependency-graphs"></a>Graphique de dépendance de l’architecture
 
-Pour mieux comprendre votre code, vous pouvez maintenant générer des graphiques de dépendance pour le binaire, la classe, l’espace de noms et les fichiers include d’une solution. Dans la barre de menus, choisissez **Architecture** > **Générer un graphique de dépendance**, puis **Pour la solution** ou **Pour le fichier Include** afin de générer un graphique de dépendance. Une fois la génération du graphique effectuée, vous pouvez l’explorer en développant chaque nœud, découvrir les relations de dépendance en vous déplaçant entre les nœuds et parcourir le code source en choisissant **Afficher le contenu** dans le menu contextuel d’un nœud. Pour générer un graphique de dépendance des fichiers include, dans le menu contextuel d’un fichier de code source *.cpp ou d’un fichier d’en-tête *.h, choisissez **Générer le graphique des fichiers Include**.
+Pour mieux comprendre votre code, vous pouvez maintenant générer des graphiques de dépendance pour le binaire, la classe, l’espace de noms et les fichiers include d’une solution. Dans la barre de menus, choisissez **Architecture** > **Générer un graphique de dépendance**, puis **Pour la solution** ou **Pour le fichier Include** afin de générer un graphique de dépendance. Une fois la génération du graphique effectuée, vous pouvez l’explorer en développant chaque nœud, découvrir les relations de dépendance en vous déplaçant entre les nœuds et parcourir le code source en choisissant **Afficher le contenu** dans le menu contextuel d’un nœud. Pour générer un graphique de dépendance des fichiers include, dans le menu contextuel d’un fichier de code source \*.cpp ou d’un fichier d’en-tête \*.h, choisissez **Générer le graphique des fichiers Include**.
 
 #### <a name="architecture-explorer"></a>Navigateur de l'architecture
 
@@ -2100,7 +2089,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 - L’option d’éditeur de liens `/CLRIMAGETYPE` (Spécifier le type d’une image CLR) a été ajoutée.
 - L’option d’éditeur de liens `/CLRSUPPORTLASTERROR` (Conserver le dernier code d’erreur pour les appels PInvoke) a été ajoutée.
 - L’option d’éditeur de liens `/CLRTHREADATTRIBUTE` (Définir l’attribut de thread CLR) a été ajoutée.
-- L’option d’éditeur de liens `/CLRUNMANAGEDCODECHECK` (Ajouter SupressUnmanagedCodeSecurityAttribute) a été ajoutée.
+- L’option d’éditeur de liens `/CLRUNMANAGEDCODECHECK` (Ajouter SuppressUnmanagedCodeSecurityAttribute) a été ajoutée.
 - L’option d’éditeur de liens `/ERRORREPORT` (Signaler les erreurs internes de L’éditeur de liens) a été ajoutée.
 - L’option d’éditeur de liens `/EXETYPE` a été supprimée. L’éditeur de liens ne prend plus en charge la création de pilotes d’appareils Windows 95 et Windows 98. Utilisez un kit DDK approprié pour créer ces pilotes d’appareils. Le mot clé EXETYPE n’est plus valide pour les fichiers de définition de module.
 - L’option d’éditeur de liens `/FUNCTIONPADMIN` (Créer une image corrigeable en mémoire) a été ajoutée.

@@ -1,14 +1,8 @@
 ---
-title: Création de projets de bureau à l’aide des Assistants Application | Microsoft Docs
-ms.custom: ''
+title: Création de projets de bureau à l'aide des Assistants Application
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.mfcexe.project
-dev_langs:
-- C++
 helpviewer_keywords:
 - platforms [C++], project creation
 - Visual C++ projects, application wizards
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - programs [C++], beginning with wizards
 - applications [C++], using wizards
 ms.assetid: 090c6423-deb8-4a00-817d-337eb5644544
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c16f68800fb69736593b61e3b56d837770c088be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49d0f37268e78f3d3917314505df75d8acdf7fd8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387781"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474759"
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>Création de projets de bureau à l'aide des Assistants Application
 

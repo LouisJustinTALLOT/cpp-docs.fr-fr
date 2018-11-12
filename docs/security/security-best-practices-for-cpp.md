@@ -1,29 +1,19 @@
 ---
-title: Meilleures pratiques de sécurité pour C++ | Microsoft Docs
-ms.custom: ''
+title: Meilleures pratiques de sécurité pour C++
 ms.date: 05/08/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - securitybestpracticesVC
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, security
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0bcfc1cef3ea8e7010dd4ecc14c8048f546b25f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6816a7ffbc09d0e01659dd56282e238fdbfc4a27
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438130"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462303"
 ---
 # <a name="security-best-practices-for-c"></a>Meilleures pratiques de sécurité pour C++
 
@@ -94,7 +84,6 @@ Vous pouvez utiliser AppVerifier pour :
 - Rechercher dans une application des problèmes liés à la mémoire.
 
 - Identifier des problèmes potentiels de sécurité dans une application.
-
 
 ## <a name="windows-user-accounts"></a>Comptes utilisateur Windows
 

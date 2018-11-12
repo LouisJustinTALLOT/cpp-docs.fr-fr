@@ -1,10 +1,6 @@
 ---
-title: CAnimationController, classe | Microsoft Docs
-ms.custom: ''
+title: CAnimationController, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationController
 - AFXANIMATIONCONTROLLER/CAnimationController
@@ -56,8 +52,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationController::m_pRelatedWnd
 - AFXANIMATIONCONTROLLER/CAnimationController::m_pTransitionFactory
 - AFXANIMATIONCONTROLLER/CAnimationController::m_pTransitionLibrary
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationController [MFC], CAnimationController
 - CAnimationController [MFC], AddAnimationObject
@@ -109,16 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ce23acf1988e88954279f3b8cdbc8fc3c9001af
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: bd0bdd1a3f423257b2f73745d7260d1fac12a0d8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083643"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556661"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController, classe
 
@@ -334,7 +324,6 @@ Crée une image clé qui dépend de la transition et l’ajoute au groupe spéci
 CKeyFrame* CreateKeyframe(
     UINT32 nGroupID,
     CBaseTransition* pTransition);
-
 
 CKeyFrame* CreateKeyframe(
     UINT32 nGroupID,

@@ -1,10 +1,6 @@
 ---
-title: CTabCtrl (classe) | Microsoft Docs
-ms.custom: ''
+title: CTabCtrl (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CTabCtrl
 - AFXCMN/CTabCtrl
@@ -41,8 +37,6 @@ f1_keywords:
 - AFXCMN/CTabCtrl::SetMinTabWidth
 - AFXCMN/CTabCtrl::SetPadding
 - AFXCMN/CTabCtrl::SetToolTips
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTabCtrl [MFC], CTabCtrl
 - CTabCtrl [MFC], AdjustRect
@@ -78,16 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa7fd6b89ad4437397e0ff685400b7efe957eaca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421880"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621427"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (classe)
 
@@ -618,17 +608,14 @@ LONG InsertItem(
     int nItem,
     TCITEM* pTabCtrlItem);
 
-
 LONG InsertItem(
     int nItem,
     LPCTSTR lpszItem);
-
 
 LONG InsertItem(
     int nItem,
     LPCTSTR lpszItem,
     int nImage);
-
 
 LONG InsertItem(
     UINT nMask,
@@ -636,7 +623,6 @@ LONG InsertItem(
     LPCTSTR lpszItem,
     int nImage,
     LPARAM lParam);
-
 
 LONG InsertItem(
     UINT nMask,

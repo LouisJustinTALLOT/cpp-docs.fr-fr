@@ -1,10 +1,6 @@
 ---
-title: CDaoRecordset, classe | Microsoft Docs
-ms.custom: ''
+title: CDaoRecordset (classe)
 ms.date: 08/27/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDaoRecordset
 - AFXDAO/CDaoRecordset
@@ -88,8 +84,6 @@ f1_keywords:
 - AFXDAO/CDaoRecordset::m_pDatabase
 - AFXDAO/CDaoRecordset::m_strFilter
 - AFXDAO/CDaoRecordset::m_strSort
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDaoRecordset [MFC], CDaoRecordset
 - CDaoRecordset [MFC], AddNew
@@ -172,16 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08e5433cfd7d1627babb4750c94396602a8f276c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400534"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639321"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset (classe)
 
@@ -1121,7 +1111,6 @@ void GetFieldInfo(
     CDaoFieldInfo& fieldinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetFieldInfo(
     LPCTSTR lpszName,
     CDaoFieldInfo& fieldinfo,
@@ -1164,7 +1153,6 @@ Appelez cette fonction membre pour récupérer des données dans un jeu d’enre
 virtual void GetFieldValue(
     LPCTSTR lpszName,
     COleVariant& varValue);
-
 
 virtual void GetFieldValue(
     int nIndex,
@@ -1229,7 +1217,6 @@ void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetIndexInfo(
     LPCTSTR lpszName,
@@ -1931,12 +1918,10 @@ virtual void Open(
     LPCTSTR lpszSQL = NULL,
     int nOptions = 0);
 
-
 virtual void Open(
     CDaoTableDef* pTableDef,
     int nOpenType = dbOpenTable,
     int nOptions = 0);
-
 
 virtual void Open(
     CDaoQueryDef* pQueryDef,
@@ -2086,7 +2071,6 @@ BOOL Seek(
     COleVariant* pKey1,
     COleVariant* pKey2 = NULL,
     COleVariant* pKey3 = NULL);
-
 
 BOOL Seek(
     LPCTSTR lpszComparison,
@@ -2356,16 +2340,13 @@ virtual void SetFieldValue(
     LPCTSTR lpszName,
     const COleVariant& varValue);
 
-
 virtual void SetFieldValue(
     int nIndex,
     const COleVariant& varValue);
 
-
 void SetFieldValue(
     LPCTSTR lpszName,
     LPCTSTR lpszValue);
-
 
 void SetFieldValue(
     int nIndex,
@@ -2450,7 +2431,6 @@ Appelez cette fonction membre pour définir la valeur d’un paramètre dans le 
 virtual void SetParamValue(
     int nIndex,
     const COleVariant& varValue);
-
 
 virtual void SetParamValue(
     LPCTSTR lpszName,

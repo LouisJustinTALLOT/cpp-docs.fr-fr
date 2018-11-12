@@ -1,10 +1,6 @@
 ---
-title: Csettingsstore, classe | Microsoft Docs
-ms.custom: ''
+title: CSettingsStore Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CSettingsStore
 - AFXSETTINGSSTORE/CSettingsStore
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXSETTINGSSTORE/CSettingsStore::Open
 - AFXSETTINGSSTORE/CSettingsStore::Read
 - AFXSETTINGSSTORE/CSettingsStore::Write
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSettingsStore [MFC], CSettingsStore
 - CSettingsStore [MFC], Close
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01b24996e04efe9c5f3dd0301d3f2135c89d496c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f1ca94423cb1ef269c7556be25b1926fa42d2a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375240"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614680"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -223,67 +213,54 @@ virtual BOOL Read(
     LPCTSTR pszKey,
     int& iVal);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     DWORD& dwVal);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
     CString& sVal);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CStringList& scStringList);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
     CStringArray& scArray);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CDWordArray& dwcArray);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
     CWordArray& wcArray);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CByteArray& bcArray);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
     LPPOINT& lpPoint);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CRect& rect);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
     BYTE** ppData,
     UINT* pBytes);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CObList& list);
 
-
 virtual BOOL Read(
     LPCTSTR pszKey,
     CObject& obj);
-
 
 virtual BOOL Read(
     LPCTSTR pszKey,
@@ -331,7 +308,7 @@ virtual BOOL Read(
 *Pétaoctets*<br/>
 [out] Pointeur vers une variable d’entier non signé. Cette variable reçoit la taille de la mémoire tampon qui *ppData* pointe vers.
 
-*list*<br/>
+*liste*<br/>
 [out] Référence à un [CObList](../../mfc/reference/coblist-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.
 
 *obj*<br/>
@@ -357,67 +334,54 @@ virtual BOOL Write(
     LPCTSTR pszKey,
     int iVal);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     DWORD dwVal);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
     LPCTSTR pszVal);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     CStringList& scStringList);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
     CByteArray& bcArray);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     CStringArray& scArray);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
     CDWordArray& dwcArray);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     CWordArray& wcArray);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
     const CRect& rect);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     LPPOINT& lpPoint);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
     LPBYTE pData,
     UINT nBytes);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     CObList& list);
 
-
 virtual BOOL Write(
     LPCTSTR pszKey,
     CObject& obj);
-
 
 virtual BOOL Write(
     LPCTSTR pszKey,
@@ -465,7 +429,7 @@ virtual BOOL Write(
 *nBytes*<br/>
 [in] Spécifie la taille, en octets, des données à laquelle le *pData* paramètre pointe.
 
-*list*<br/>
+*liste*<br/>
 [in] Référence à un [CObList](../../mfc/reference/coblist-class.md) variable qui contient les données à stocker.
 
 *obj*<br/>

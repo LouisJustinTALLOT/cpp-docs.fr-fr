@@ -1,30 +1,20 @@
 ---
-title: Structures, Styles, rappels et tables des messages | Microsoft Docs
-ms.custom: ''
+title: Structures, styles, rappels et tables de messages
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.structures
-dev_langs:
-- C++
 helpviewer_keywords:
 - callback functions, MFC
 - styles, MFC
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8499fd02e9338d518eae9c3f7ea4d4cb077fedb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f7251e93672df438e3b994a1fdad0bf0e926693
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572940"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Structures, styles, rappels et tables de messages
 
@@ -51,6 +41,4 @@ Répertorie les classes de la bibliothèque MFC en fonction de la catégorie.
 
 [Exemples MFC](../../visual-cpp-samples.md)<br/>
 Fournit des liens vers des exemples qui illustrent l’utilisation de la bibliothèque MFC.
-
-
 

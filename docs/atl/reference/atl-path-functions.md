@@ -1,8 +1,6 @@
 ---
-title: Fonctions de chemin d’accès de l’ATL | Microsoft Docs
-ms.custom: ''
+title: Fonctions de chemin d’accès de l’ATL
 ms.date: 11/04/2016
-ms.topic: reference
 helpviewer_keywords:
 - ATL, path
 f1_keywords:
@@ -43,16 +41,12 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d5b3677ab256e6d1b3e88f5bc71c8b9c7b097b2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 86ddb3c6916675a92070684a04c7a6a6ecd8a134
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586067"
 ---
 # <a name="atl-path-functions"></a>Fonctions de chemin d’accès de l’ATL
 
@@ -351,6 +345,7 @@ Cette fonction est un wrapper surchargé de [PathIsDirectory](/windows/desktop/a
 inline BOOL IsDirectory(const char* pszPath);
 inline BOOL IsDirectory(const wchar_t* pszPath);
 ```
+
 ### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez PathIsDirectory.

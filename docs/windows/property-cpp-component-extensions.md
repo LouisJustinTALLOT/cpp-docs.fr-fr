@@ -1,29 +1,19 @@
 ---
-title: propriété (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: propriété (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - property_cpp
 - property
-dev_langs:
-- C++
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: df456ffb906eb6e0c68f3670692f292a8c20c407
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526579"
 ---
 # <a name="property--ccli-and-ccx"></a>propriété (C++ / c++ / CLI et c++ / CX)
 
@@ -53,17 +43,17 @@ Vous devez déclarer explicitement un membre de données pour qu'il contienne la
 ```cpp
 property type property_name;
 
-property type property_name { 
-   access-modifier type get() inheritance-modifier {property_body}; 
+property type property_name {
+   access-modifier type get() inheritance-modifier {property_body};
    access-modifier void set(type value) inheritance-modifier {property_body};
-} 
+}
 
-property type property_name[index_list] { 
-   access-modifier type get(index_list) inheritance-modifier {property_body}; 
+property type property_name[index_list] {
+   access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
-} 
+}
 
-property type default[index_list] { 
+property type default[index_list] {
    access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
 }
@@ -173,7 +163,6 @@ Une accessibilité différente est autorisée pour les méthodes d'accesseur dan
 
 **propriété** est un mot clé contextuel.  Pour plus d’informations, consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).
 
-
 ### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
@@ -226,4 +215,4 @@ test
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,27 +1,17 @@
 ---
-title: 'Comment : déclarer et utiliser des pointeurs intérieurs et des tableaux managés (C++ / c++ / CLI) | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : déclarer et utiliser des pointeurs intérieurs et des tableaux managés (C++/CLI)'
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointers, interior
 - arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c0c34b43451f8e62583450998efa8e74000807b4
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 98f198812654706792ea18024bb8654803d27970
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598261"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Comment : déclarer et utiliser des pointeurs intérieurs et des tableaux managés (C++/CLI)
 
@@ -44,7 +34,7 @@ int main() {
    array<int>^ arr = gcnew array<int>(SIZE);
 
    // initialize the array
-   for (int i = 0 ; i < SIZE ; i++)  
+   for (int i = 0 ; i < SIZE ; i++)
       arr[i] = i + 1;
 
    // create an interior pointer into the array

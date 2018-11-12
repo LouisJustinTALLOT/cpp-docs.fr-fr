@@ -1,10 +1,6 @@
 ---
-title: _onexit, _onexit_m | Microsoft Docs
-ms.custom: ''
+title: _onexit, _onexit_m
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -25,8 +21,6 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs:
-- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c190ce2c78135625a502d7509e56771fd670aa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609601"
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 
@@ -69,17 +59,17 @@ Pointeur désignant une fonction à appeler à la sortie.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_onexit** retourne un pointeur à la fonction en cas de réussite ou **NULL** s’il n’existe pas d’espace pour stocker le pointeur de fonction.
+**_onexit** retourne un pointeur vers la fonction en cas de réussite ou **NULL** s’il n’existe pas d’espace pour stocker le pointeur de fonction.
 
 ## <a name="remarks"></a>Notes
 
-Le **_onexit** fonction reçoit l’adresse d’une fonction (*fonction*) à appeler lorsque le programme se termine normalement. Les appels successifs à **_onexit** créer un Registre de fonctions qui sont exécutées dans l’ordre LIFO (dernier-in-first-out). Les fonctions passé à **_onexit** ne peut pas prendre de paramètres.
+Le **_onexit** (fonction) est transmise à l’adresse d’une fonction (*fonction*) à appeler lorsque le programme se termine normalement. Les appels successifs à **_onexit** créent un registre des fonctions qui sont exécutées dans l’ordre LIFO (dernier-in-first-out). Les fonctions transmises à **_onexit** ne peut pas prendre de paramètres.
 
-Dans le cas lorsque **_onexit** est appelé à partir d’une DLL, routines enregistrées avec **_onexit** exécuter dans une DLL de déchargement après **DllMain** est appelée avec DLL_PROCESS_DETACH.
+Dans le cas lorsque **_onexit** est appelée à partir d’une DLL, les routines inscrites avec **_onexit** s’exécutent sur une DLL du déchargement après **DllMain** est appelé avec DLL_PROCESS_DETACH.
 
-**_onexit** est une extension Microsoft. Pour la portabilité ANSI, utilisez [atexit](atexit.md). Le **_onexit_m** version de la fonction est pour l’utilisation du mode mixte.
+**_onexit** est une extension Microsoft. Pour la portabilité ANSI, utilisez [atexit](atexit.md). Le **_onexit_m** version de la fonction concerne l’utilisation du mode mixte.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

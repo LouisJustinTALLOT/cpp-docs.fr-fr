@@ -1,25 +1,15 @@
 ---
-title: Conteneur Class::erase | Microsoft Docs
-ms.custom: ''
+title: Conteneur Class::erase
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - erase method
 ms.assetid: abc091c5-5a80-4bd8-93a8-a2d9bde2efec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 368b722f03a68445ddd016705aa8bebc6f33e6f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11e13fc74de779076b40ba338a21a6736eb04e06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842610"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553021"
 ---
 # <a name="container-classerase"></a>Conteneur Class::erase
 

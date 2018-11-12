@@ -1,10 +1,6 @@
 ---
-title: Cheapptrbase, classe | Microsoft Docs
-ms.custom: ''
+title: Cheapptrbase, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CHeapPtrBase
 - ATLCORE/ATL::CHeapPtrBase
@@ -14,21 +10,15 @@ f1_keywords:
 - ATLCORE/ATL::CHeapPtrBase::Free
 - ATLCORE/ATL::CHeapPtrBase::ReallocateBytes
 - ATLCORE/ATL::CHeapPtrBase::m_pData
-dev_langs:
-- C++
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f183bb21d6a23b4e8ac4284894cfa2fcc7bb1dfd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538151"
 ---
 # <a name="cheapptrbase-class"></a>Cheapptrbase, classe
 
@@ -76,7 +66,7 @@ La classe d’allocation de mémoire à utiliser. Par défaut, les routines CRT 
 |----------|-----------------|
 |[CHeapPtrBase::operator T *](#operator_t_star)|L’opérateur de cast.|
 |[CHeapPtrBase::operator &](#operator_amp)|Le & opérateur.|
-|[CHeapPtrBase::operator ->](#operator_ptr)|L’opérateur pointeur vers membre.|  
+|[CHeapPtrBase::operator ->](#operator_ptr)|L’opérateur pointeur vers membre.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 

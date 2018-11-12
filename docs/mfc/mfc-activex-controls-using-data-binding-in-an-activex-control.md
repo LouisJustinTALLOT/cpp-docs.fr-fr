@@ -1,18 +1,12 @@
 ---
-title: 'Contrôles ActiveX MFC : À l’aide de la liaison de données dans un contrôle ActiveX | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
 - defaultbind
 - displaybind
 - dispid
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], data binding
 - data binding [MFC], MFC ActiveX controls
@@ -20,23 +14,19 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ecd2cea655536ab12751a169793273c27b7d8f7
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 54cfbc6d31c0c86163400df691dec47e0c093d36
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029565"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603656"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX
 
 Une des utilisations plus puissantes de contrôles ActiveX est la liaison de données, ce qui permet à une propriété du contrôle à lier à un champ spécifique dans une base de données. Lorsqu’un utilisateur modifie les données de cette propriété liée, le contrôle notifie la base de données et les demandes que les champs d’enregistrements être mis à jour. La base de données puis vous avertit que le contrôle de la réussite ou l’échec de la demande.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Cet article traite du côté du contrôle de votre tâche. Mise en œuvre les interactions de liaison de données avec la base de données est la responsabilité du conteneur de contrôle. Comment gérer les interactions de la base de données dans votre conteneur est dépasse le cadre de cette documentation. Comment vous préparez le contrôle pour la liaison de données est expliquée dans le reste de cet article.
 
@@ -63,13 +53,13 @@ Il est possible de créer une propriété stock lié aux données, bien qu’il 
 
 1. Cliquez sur le nœud de l’interface de votre contrôle.
 
-     Cette opération ouvre le menu contextuel.
+   Cette opération ouvre le menu contextuel.
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
 
 1. Sélectionnez une des entrées à partir de la **nom de la propriété** liste déroulante. Par exemple, vous pouvez sélectionner **texte**.
 
-     Étant donné que **texte** est une propriété stock, les **peut être liée** et **requestedit** attributs sont déjà activés.
+   Étant donné que **texte** est une propriété stock, les **peut être liée** et **requestedit** attributs sont déjà activés.
 
 1. Sélectionnez les cases à cocher suivantes à partir de la **attributs IDL** onglet : **displaybind** et **defaultbind** pour ajouter les attributs à la définition de propriété dans le projet. Fichier IDL. Ces attributs Assurez-vous le contrôle visible par l’utilisateur et la propriété stock la propriété peut être liée par défaut.
 
@@ -96,7 +86,7 @@ En plus d’une propriété get/set (méthode), vous pouvez également créer un
 
 1. Cliquez sur le nœud de l’interface de votre contrôle.
 
-     Cette opération ouvre le menu contextuel.
+   Cette opération ouvre le menu contextuel.
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
 
@@ -112,33 +102,33 @@ En plus d’une propriété get/set (méthode), vous pouvez également créer un
 
 11. Modifier le corps de la `SetMyProp` de fonction pour qu’il contienne le code suivant :
 
-     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
+   [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
 12. Le paramètre passé à la `BoundPropertyChanged` et `BoundPropertyRequestEdit` fonctions est le dispid de la propriété, qui est le paramètre passé à l’attribut id() pour la propriété dans le. Fichier IDL.
 
 13. Modifier le [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) fonction afin qu’il contient le code suivant :
 
-     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
+   [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
 14. Modifier le `OnDraw` fonction pour qu’il contienne le code suivant :
 
-     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
+   [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
 15. À la section publique du fichier d’en-tête du fichier d’en-tête pour votre classe de contrôle, ajoutez les définitions suivantes (constructeurs) pour les variables membres :
 
-     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
+   [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
 16. Vérifiez la ligne suivante à la dernière ligne dans le `DoPropExchange` (fonction) :
 
-     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
+   [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
 17. Modifier le `OnResetState` fonction pour qu’il contienne le code suivant :
 
-     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
+   [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
 18. Modifier le `GetMyProp` fonction pour qu’il contienne le code suivant :
 
-     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
 Vous pouvez maintenant générer le projet, qui enregistrera le contrôle. Lorsque vous insérez le contrôle dans une boîte de dialogue, le **champ de données** et **Source de données** propriétés a été ajoutées et vous pouvez maintenant sélectionner une source de données et le champ à afficher dans le contrôle.
 

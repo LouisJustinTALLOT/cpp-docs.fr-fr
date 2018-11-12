@@ -1,28 +1,17 @@
 ---
-title: importidl (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: importidl (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.importidl
-dev_langs:
-- C++
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d1c022a48ef5510f67355af3af1ff0a0e98ad4c4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8d0d891f74da8df2351b0a861fb7501e72f5e2de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587168"
 ---
 # <a name="importidl"></a>importidl
 
@@ -65,7 +54,7 @@ Vous pouvez souhaiter utiliser **importidl**, par exemple, si vous souhaitez uti
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -74,4 +63,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [import](import.md)<br/>
 [importlib](importlib.md)<br/>
 [include](include-cpp.md)<br/>
-[includelib](includelib-cpp.md)  
+[includelib](includelib-cpp.md)

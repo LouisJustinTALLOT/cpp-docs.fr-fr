@@ -1,29 +1,18 @@
 ---
-title: Déplacement d’une chaîne à partir d’un fichier de ressources à un autre (C++) | Microsoft Docs
-ms.custom: ''
+title: Déplacement d’une chaîne à partir d’un fichier de ressources à un autre (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], moving between files
 - resource script files [C++], moving strings
 - string editing, moving strings between resources
 - String editor [C++], moving strings between files
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0d8ebfc8f1111049368a76a9b153fcf8079a4edd
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: e89a0d44dc824c72710f8a047a18771ba8da492b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649811"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>Déplacement d’une chaîne à partir d’un fichier de ressources à un autre (C++)
 
@@ -53,4 +42,4 @@ Win32
 
 [Éditeur de chaînes](../windows/string-editor.md)<br/>
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
-[Personnalisation des dispositions de fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  
+[Personnalisation des dispositions de fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

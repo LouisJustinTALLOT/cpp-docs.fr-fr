@@ -1,29 +1,18 @@
 ---
-title: Prise en charge de la bibliothèque pour les assemblys mixtes | Microsoft Docs
-ms.custom: ''
+title: Prise en charge de bibliothèque pour les assemblys mixtes
 ms.date: 09/18/2018
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - msvcm90[d].dll
 - mixed assemblies [C++], library support
 - msvcmrt[d].lib
 - libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 868cae6701e17c79c9856b3a16c63c1e25b67bda
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 42116c09d5b31cf669eb6d5d1e75eae60b2610a7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494515"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474747"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>Prise en charge de bibliothèque pour les assemblys mixtes
 
@@ -51,7 +40,6 @@ Cette prise en charge offre que plusieurs avantages connexes :
 En outre, cette prise en charge présente les limitations suivantes :
 
 - Uniquement le modèle de la DLL CRT est pris en charge pour le code compilé avec **/CLR**. Aucune bibliothèque CRT statique qui prennent en charge **/CLR** génère.
-
 
 ## <a name="see-also"></a>Voir aussi
 

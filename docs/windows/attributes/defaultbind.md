@@ -1,28 +1,17 @@
 ---
-title: defaultbind (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: defaultbind (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.defaultbind
-dev_langs:
-- C++
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: af4817c3b89f83fd9f3f22875e5da26053b55c87
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 43d5a1c827824f64ad1376a2461cfec6b9405fe7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790577"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458394"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -53,7 +42,7 @@ Consultez l’exemple de [peut être liée](bindable.md) pour obtenir un exemple
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -62,4 +51,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [Attributs de membre de données](data-member-attributes.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)<br/>
-[requestedit](requestedit.md)  
+[requestedit](requestedit.md)

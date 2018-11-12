@@ -1,10 +1,6 @@
 ---
-title: CMFCVisualManagerOffice2003, classe | Microsoft Docs
-ms.custom: ''
+title: CMFCVisualManagerOffice2003, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCVisualManagerOffice2003
 - AFXVISUALMANAGEROFFICE2003/CMFCVisualManagerOffice2003
@@ -93,21 +89,15 @@ f1_keywords:
 - AFXVISUALMANAGEROFFICE2003/CMFCVisualManagerOffice2003::SetDefaultWinXPColors
 - AFXVISUALMANAGEROFFICE2003/CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook
 - AFXVISUALMANAGEROFFICE2003/CMFCVisualManagerOffice2003::SetUseGlobalTheme
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43f180fd62d4e79f64119097401632caca9b44fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1b811de23b4a049bd462ddbb3f9b96e80ae25be0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399396"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558807"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003, classe
 
@@ -252,7 +242,7 @@ virtual BOOL DrawComboBorderWinXP(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -288,7 +278,7 @@ virtual BOOL DrawComboDropButtonWinXP(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -325,7 +315,7 @@ virtual void DrawCustomizeButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte d’affichage.
 
 *Rect*<br/>
@@ -359,7 +349,7 @@ virtual BOOL DrawPushButtonWinXP(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -459,7 +449,7 @@ virtual int GetShowAllMenuItemsHeight(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique.
 
 *sizeDefault*<br/>
@@ -740,7 +730,7 @@ virtual void OnDrawAutoHideButtonBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectBounds*<br/>
@@ -772,7 +762,7 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique pour une barre de contrôle.
 
 *rectGripper*<br/>
@@ -803,10 +793,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
-[in] [in] *rect*
-*pEdit*<br/>
-[in] [in] *état* [in] *clrText*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pEdit*<br/>
+[in] *état*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -826,7 +817,7 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique d’un bouton de barre d’outils.
 
 *pButton*<br/>
@@ -859,7 +850,7 @@ virtual void OnDrawCaptionBarBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pBar*<br/>
@@ -894,7 +885,7 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -930,7 +921,7 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique d’un bouton de zone de liste déroulante.
 
 *Rect*<br/>
@@ -968,7 +959,7 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -1019,7 +1010,7 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte d’affichage dans lequel la zone de taille doit être dessiné.
 
 *Rect*<br/>
@@ -1051,14 +1042,15 @@ virtual void OnDrawHeaderCtrlBorder(
 *pCtrl*<br/>
 [in] Un pointeur vers un [cmfcheaderctrl, classe](../../mfc/reference/cmfcheaderctrl-class.md) objet. Le framework Dessine la bordure de ce contrôle d’en-tête.
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
 [in] Un rectangle qui spécifie les limites du contrôle header.
 
-*bIsPressed*<br/>
-[in] [in] *bIsHighlighted* paramètre de type Boolean qui indique si le contrôle header est enfoncé.
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+Un paramètre booléen qui indique si le contrôle header est enfoncé.
 
 ### <a name="remarks"></a>Notes
 
@@ -1077,7 +1069,7 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Un pointeur vers le contexte de périphérique pour un [cmfcpopupmenu, classe](../../mfc/reference/cmfcpopupmenu-class.md) objet.
 
 *pMenu*<br/>
@@ -1102,7 +1094,7 @@ virtual void OnDrawOutlookBarSplitter(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectSplitter*<br/>
@@ -1126,7 +1118,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectBtn*<br/>
@@ -1155,7 +1147,7 @@ virtual void OnDrawPaneBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique d’une barre de contrôle.
 
 *pBar*<br/>
@@ -1183,7 +1175,7 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pBar*<br/>
@@ -1216,7 +1208,7 @@ virtual void OnDrawPopupWindowBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique de la fenêtre contextuelle.
 
 *Rect*<br/>
@@ -1237,7 +1229,7 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique du bouton.
 
 *rectClient*<br/>
@@ -1261,7 +1253,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique de la légende.
 
 *rectCaption*<br/>
@@ -1291,7 +1283,7 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pGroup*<br/>
@@ -1320,7 +1312,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique de la catégorie de ruban.
 
 *pContextCaption*<br/>
@@ -1347,7 +1339,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pTab*<br/>
@@ -1379,7 +1371,7 @@ virtual void OnDrawRibbonProgressBar(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pProgress*<br/>
@@ -1411,7 +1403,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pSeparator*<br/>
@@ -1437,7 +1429,7 @@ virtual void OnDrawRibbonSliderChannel(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pSlider*<br/>
@@ -1466,7 +1458,7 @@ virtual void OnDrawRibbonSliderThumb(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pSlider*<br/>
@@ -1505,7 +1497,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pSlider*<br/>
@@ -1543,7 +1535,7 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pBar*<br/>
@@ -1575,7 +1567,7 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -1606,7 +1598,7 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique pour une barre de contrôle.
 
 *pBar*<br/>
@@ -1635,7 +1627,7 @@ virtual void OnDrawShowAllMenuItems(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -1661,7 +1653,7 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pBar*<br/>
@@ -1699,7 +1691,7 @@ virtual void OnDrawStatusBarProgress(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Un pointeur vers le contexte de périphérique pour la barre d’état
 
 *pStatusBar*<br/>
@@ -1717,8 +1709,9 @@ virtual void OnDrawStatusBarProgress(
 *clrBar*<br/>
 [in] Couleur initiale de la barre de progression. La valeur est soit le début d’un dégradé de couleur ou la couleur complète de la barre de progression.
 
-*clrProgressBarDest*<br/>
-[in] [in] *clrProgressText* [in] *bProgressText*
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -1737,7 +1730,7 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pStatBar*<br/>
@@ -1765,7 +1758,7 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectTab*<br/>
@@ -1799,7 +1792,7 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -1833,7 +1826,7 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pTask*<br/>
@@ -1866,7 +1859,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -1897,7 +1890,7 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pGroup*<br/>
@@ -1929,7 +1922,7 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -1957,7 +1950,7 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectClient*<br/>
@@ -1981,7 +1974,7 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -2010,7 +2003,7 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -2041,7 +2034,7 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -2071,7 +2064,7 @@ virtual void OnFillAutoHideButtonBackground(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -2099,7 +2092,7 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique pour une barre de contrôle.
 
 *pBar*<br/>
@@ -2134,7 +2127,7 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique d’un bouton de barre d’outils.
 
 *pButton*<br/>
@@ -2163,7 +2156,7 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -2196,7 +2189,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pCtrl*<br/>
 [in] Un pointeur vers un [cmfcheaderctrl, classe](../../mfc/reference/cmfcheaderctrl-class.md) objet. L’infrastructure complète l’arrière-plan de ce contrôle d’en-tête.
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -2220,7 +2213,7 @@ virtual void OnFillHighlightedArea(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -2247,7 +2240,7 @@ virtual void OnFillOutlookBarCaption(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectCaption*<br/>
@@ -2277,7 +2270,7 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -2308,7 +2301,7 @@ virtual void OnFillPopupWindowBackground(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -2334,7 +2327,7 @@ virtual void OnFillTab(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectFill*<br/>
@@ -2369,7 +2362,7 @@ virtual void OnFillTasksGroupInterior(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -2394,7 +2387,7 @@ virtual void OnFillTasksPaneBackground(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectWorkArea*<br/>
@@ -2417,7 +2410,7 @@ virtual void OnHighlightQuickCustomizeMenuButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique pour le bouton.
 
 *pButton*<br/>
@@ -2440,7 +2433,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectRarelyUsed*<br/>

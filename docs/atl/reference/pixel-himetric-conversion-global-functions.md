@@ -1,26 +1,16 @@
 ---
-title: Fonctions globales de Conversion pixel-HIMETRIC | Microsoft Docs
-ms.custom: ''
+title: Fonctions globales de Conversion pixel-HIMETRIC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
 - atlwin/ATL::AtlPixelToHiMetric
-dev_langs:
-- C++
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b5ab980813eec09fe0eef35f54280444d8c08b80
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 95b3b9c6ba4e5d25a9f07f72f9479121a223ad00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105386"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529101"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Fonctions globales de Conversion pixel/HIMETRIC
 
@@ -40,7 +30,7 @@ Convertit la taille d'un objet en unités HIMETRIC (chaque unité représente 0,
 
 ```
 extern void AtlHiMetricToPixel(
-    const SIZEL* lpSizeInHiMetric, 
+    const SIZEL* lpSizeInHiMetric,
     LPSIZEL lpSizeInPix);
 ```
 
@@ -54,7 +44,7 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="example"></a>Exemple
 
-[!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
+[!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -66,7 +56,7 @@ Convertit la taille d'un objet en pixels sur l'appareil à écran vers une taill
 
 ```
 extern void AtlPixelToHiMetric(
-    const SIZEL* lpSizeInPix, 
+    const SIZEL* lpSizeInPix,
     LPSIZEL lpSizeInHiMetric);
 ```
 
@@ -80,11 +70,11 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="example"></a>Exemple
 
-[!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  
+[!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlwin.h  
+**En-tête :** atlwin.h
 
 ## <a name="see-also"></a>Voir aussi
 

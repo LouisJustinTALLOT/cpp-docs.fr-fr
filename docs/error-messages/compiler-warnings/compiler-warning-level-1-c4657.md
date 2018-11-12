@@ -1,27 +1,17 @@
 ---
-title: Compilateur avertissement (niveau 1) C4657 | Microsoft Docs
-ms.custom: ''
+title: Avertissement du compilateur (niveau 1) C4657
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4657
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4657
 ms.assetid: eb750050-cea6-4ead-b80c-d5dcd4971cfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0eb3701496b2300aa52f4734cb2d1ea6e236ad0a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 92415d1d17c3342dbb721aa850f37f4dfabd1406
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098826"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599310"
 ---
 # <a name="compiler-warning-level-1-c4657"></a>Avertissement du compilateur (niveau 1) C4657
 

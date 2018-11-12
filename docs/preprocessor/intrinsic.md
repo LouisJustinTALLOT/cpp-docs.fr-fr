@@ -1,29 +1,19 @@
 ---
-title: intrinsèque | Microsoft Docs
-ms.custom: ''
+title: intrinsic
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - intrinsic_CPP
 - vc-pragma.intrinsic
-dev_langs:
-- C++
 helpviewer_keywords:
 - intrinsic pragma
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4de24dfac4ccd24e5cb4bda8b60a43b3ec0d0560
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 393a73fcf31c7c00b2057862792ff0536cc98ad8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677459"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -101,4 +91,4 @@ Consultez [fonction #pragma](../preprocessor/function-c-cpp.md) pour plus d’in
 ## <a name="see-also"></a>Voir aussi
 
 [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)  
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

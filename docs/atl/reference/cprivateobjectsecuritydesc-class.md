@@ -1,10 +1,6 @@
 ---
-title: Cprivateobjectsecuritydesc, classe | Microsoft Docs
-ms.custom: ''
+title: Cprivateobjectsecuritydesc, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CPrivateObjectSecurityDesc
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc
@@ -13,21 +9,15 @@ f1_keywords:
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6b8f84966ed58c5b031518bdf5e9f42cf7cedb48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429212"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Cprivateobjectsecuritydesc, classe
 
@@ -84,7 +74,7 @@ Pour une présentation du modèle de contrôle d’accès dans Windows, consulte
 Appelez cette méthode pour convertir un descripteur de sécurité et ses listes de contrôle d’accès (ACL) dans un format qui prend en charge la propagation automatique d’entrées pouvant être héritées de contrôle d’accès (ACE).
 
 ```
-bool ConvertToAutoInherit(  
+bool ConvertToAutoInherit(
     const CSecurityDesc* pParent,
     GUID* ObjectType,
     bool bIsDirectoryObject,
@@ -142,14 +132,14 @@ Le destructeur libère toutes les ressources allouées et supprime le descripteu
 Appelez cette méthode pour allouer et initialiser un descripteur de sécurité auto-relatif pour l’objet privé créé par le Gestionnaire de ressources appelant.
 
 ```
-bool Create(  
+bool Create(
     const CSecurityDesc* pParent,
     const CSecurityDesc* pCreator,
     bool bIsDirectoryObject,
     const CAccessToken& Token,
     PGENERIC_MAPPING GenericMapping) throw();
 
-bool Create(  
+bool Create(
     const CSecurityDesc* pParent,
     const CSecurityDesc* pCreator,
     GUID* ObjectType,
@@ -203,7 +193,7 @@ La deuxième méthode autorise en spécifiant le type d’objet GUID du nouvel o
 Appelez cette méthode pour récupérer les informations de descripteur de sécurité d’un objet privé.
 
 ```
-bool Get(  
+bool Get(
     SECURITY_INFORMATION si,
     CSecurityDesc* pResult) const throw();
 ```
@@ -246,13 +236,13 @@ Retourne la mise à jour `CPrivateObjectSecurityDesc` objet.
 Appelez cette méthode pour modifier le descripteur de sécurité d’un objet privé.
 
 ```
-bool Set(  
+bool Set(
     SECURITY_INFORMATION si,
     const CSecurityDesc& Modification,
     PGENERIC_MAPPING GenericMapping,
     const CAccessToken& Token) throw();
 
-bool Set(  
+bool Set(
     SECURITY_INFORMATION si,
     const CSecurityDesc& Modification,
     ULONG AutoInheritFlags,

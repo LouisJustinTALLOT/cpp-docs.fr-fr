@@ -1,10 +1,6 @@
 ---
-title: CMFCCaptionBar, classe | Microsoft Docs
-ms.custom: ''
+title: CMFCCaptionBar, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCCaptionBar
 - AFXCAPTIONBAR/CMFCCaptionBar
@@ -38,8 +34,6 @@ f1_keywords:
 - AFXCAPTIONBAR/CMFCCaptionBar::m_clrBarBackground
 - AFXCAPTIONBAR/CMFCCaptionBar::m_clrBarBorder
 - AFXCAPTIONBAR/CMFCCaptionBar::m_clrBarText
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCCaptionBar [MFC], Create
 - CMFCCaptionBar [MFC], DoesAllowDynInsertBefore
@@ -72,16 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a6379112de9b31de55b86cc4bc4e06a94863ac6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406815"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429352"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar, classe
 
@@ -158,7 +148,7 @@ Pour activer le mode de barre de message, appelez [CMFCCaptionBar::Create](#crea
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCCaptionBar` classe. L’exemple montre comment créer le contrôle de barre de légende, définissez une bordure 3D de la barre de légende, définit la distance, en pixels, entre le bord de la légende de barre éléments et le bord du contrôle de barre de légende, définissez le bouton de la barre de légende , définir l’info-bulle pour le bouton, définir l’étiquette de texte pour la barre de légende, définissez l’image bitmap de la barre de légende et définir l’info-bulle pour l’image dans la barre de légende. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCCaptionBar` . L’exemple montre comment créer le contrôle de barre de légende, définissez une bordure 3D de la barre de légende, définit la distance, en pixels, entre le bord de la légende de barre éléments et le bord du contrôle de barre de légende, définissez le bouton de la barre de légende , définir l’info-bulle pour le bouton, définir l’étiquette de texte pour la barre de légende, définissez l’image bitmap de la barre de légende et définir l’info-bulle pour l’image dans la barre de légende. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -363,7 +353,7 @@ virtual void OnDrawBackground(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique de la barre de légende.
 
 *Rect*<br/>
@@ -387,7 +377,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Un contexte de périphérique qui est utilisé pour afficher les bordures.
 
 *Rect*<br/>
@@ -413,7 +403,7 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique qui est utilisé pour afficher le bouton.
 
 *Rect*<br/>
@@ -441,7 +431,7 @@ virtual void OnDrawImage(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique qui est utilisé pour afficher l’image.
 
 *Rect*<br/>
@@ -464,7 +454,7 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique qui est utilisé pour afficher le bouton.
 
 *Rect*<br/>
@@ -525,7 +515,6 @@ void SetBitmap(
     COLORREF clrTransparent,
     BOOL bStretch=FALSE,
     BarElementAlignment bmpAlignment=ALIGN_RIGHT);
-
 
 void SetBitmap(
     UINT uiBmpResID,

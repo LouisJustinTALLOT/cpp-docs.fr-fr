@@ -1,25 +1,15 @@
 ---
-title: Macros d’état de l’objet | Microsoft Docs
-ms.custom: ''
+title: Macros d’état d’objet
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::DECLARE_OLEMISC_STATUS
-dev_langs:
-- C++
 ms.assetid: 727dbef2-a342-4157-9d64-a421805d9747
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9b684d66a96a7a3a7d7d60a1b107792c2061ce57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9c4df80b2b9828077ec3738bc296f19aadf2df68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658950"
 ---
 # <a name="object-status-macros"></a>Macros d’état d’objet
 
@@ -27,11 +17,11 @@ Cette macro définit des indicateurs qui appartiennent à des contrôles ActiveX
 
 |||
 |-|-|
-|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Utilisé dans les contrôles ActiveX ATL pour définir les indicateurs OLEMISC.|  
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Utilisé dans les contrôles ActiveX ATL pour définir les indicateurs OLEMISC.|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlcom.h  
+**En-tête :** atlcom.h
 
 ##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS
 

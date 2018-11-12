@@ -1,12 +1,6 @@
 ---
-title: 'Contrôles ActiveX MFC : Les rubriques avancées | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : rubriques avancées'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - MFC ActiveX controls [MFC], accessing invisible dialog controls
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18d0a15b2fe1d61e1b7ba14d210b428f282bff4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 607fd1c0ee5ae35f46ef26584f7f8e3ac2f1c32f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386364"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645586"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Contrôles ActiveX MFC : rubriques avancées
 
@@ -44,7 +34,7 @@ Cet article couvre les rubriques avancées relatifs au développement de contrô
 - [L’accès aux contrôles de boîte de dialogue invisibles au moment de l’exécution](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 ##  <a name="_core_using_database_classes_in_activex_controls"></a> À l’aide des Classes de base de données dans les contrôles ActiveX
 
@@ -188,7 +178,7 @@ Vous pouvez créer des contrôles de boîte de dialogue qui n’ont aucune inter
 
 - Déclarez une variable locale et une sous-classe en tant que l’élément de boîte de dialogue. Insérer du code qui ressemble à celui-ci (`CMyCtrl` est la classe wrapper, IDC_MYCTRL1 est l’ID du contrôle) :
 
-     [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
 ## <a name="see-also"></a>Voir aussi
 

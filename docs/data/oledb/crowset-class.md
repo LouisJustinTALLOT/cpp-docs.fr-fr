@@ -1,10 +1,6 @@
 ---
-title: CRowset, classe | Microsoft Docs
-ms.custom: ''
+title: CRowset, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>
 - CRowset
@@ -215,8 +211,6 @@ f1_keywords:
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRowset class
 - AddRefRows method
@@ -244,709 +238,704 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 320f81bf0502d892cbd56b4320a82a1e11cc745a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 6af7b30ef7055fbf5b3c998dba6f3b84d0129c31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083610"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543063"
 ---
 # <a name="crowset-class"></a>CRowset, classe
 
-Encapsule un objet d’ensemble de lignes OLE DB et plusieurs liées interfaces et fournit des méthodes de manipulation pour les données de l’ensemble de lignes.  
-  
+Encapsule un objet d’ensemble de lignes OLE DB et plusieurs liées interfaces et fournit des méthodes de manipulation pour les données de l’ensemble de lignes.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CRowset  
-```  
-  
-### <a name="parameters"></a>Paramètres  
+template <class TAccessor = CAccessorBase>
+class CRowset
+```
+
+### <a name="parameters"></a>Paramètres
 
 *TAccessor*<br/>
-Classe d’accesseur. La valeur par défaut est `CAccessorBase`.  
-  
-## <a name="requirements"></a>Configuration requise  
+Classe d’accesseur. La valeur par défaut est `CAccessorBase`.
 
-**En-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise
 
-## <a name="members"></a>Membres  
-  
-### <a name="methods"></a>Méthodes  
-  
-|||  
-|-|-|  
-|[AddRefRows](#addrefrows)|Incrémente le décompte de références associé à la ligne actuelle.|  
-|[Fermer](#close)|Libère les lignes et en cours `IRowset` interface.|  
-|[Compare](#compare)|Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).|  
-|[CRowset](#crowset)|Crée un `CRowset` de l’objet et l’associe (éventuellement) une `IRowset` interface fournie en tant que paramètre.|  
-|[Supprimer](#delete)|Supprime des lignes de l’ensemble de lignes à l’aide [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|  
-|[FindNextRow](#findnextrow)|Recherche la ligne correspondante suivante après le signet spécifié.|  
-|[GetApproximatePosition](#getapproximateposition)|Retourne la position approximative d’une ligne correspondant à un signet.|  
-|[GetData](#getdata)|Récupère les données à partir de la copie de l’ensemble de lignes de la ligne.|  
-|[GetDataHere](#getdatahere)|Récupère les données à partir de la mémoire tampon spécifiée.|  
-|[GetOriginalData](#getoriginaldata)|Récupère les données récemment extraite ou transmise à la source de données, en ignorant les modifications en attente.|  
-|[GetRowStatus](#getrowstatus)|Retourne l’état de toutes les lignes.|  
-|[Insert](#insert)|Crée et insère une nouvelle ligne à l’aide [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921).|  
-|[IsSameRow](#issamerow)|Compare la ligne spécifiée avec la ligne actuelle.|  
-|[MoveFirst](#movefirst)|Repositionne l’emplacement de récupération suivant à la position initiale.|  
-|[MoveLast](#movelast)|Passe au dernier enregistrement.|  
-|[MoveNext](#movenext)|Extrait les données à partir de la ligne suivante séquentielle ou un nombre spécifié de positions au-delà de la ligne suivante.|  
-|[MovePrev](#moveprev)|Se déplace vers l’enregistrement précédent.|  
-|[MoveToBookmark](#movetobookmark)|Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié à partir de ce signet.|  
-|[MoveToRatio](#movetoratio)|Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.|  
-|[ReleaseRows](#releaserows)|Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) pour libérer le handle de ligne actuelle.|  
-|[SetData](#setdata)|Définit les valeurs de données dans une ou plusieurs colonnes d’une ligne en utilisant [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232).|  
-|[Annulation](#undo)|Annule toutes les modifications apportées à une ligne depuis la dernière extraction ou [mise à jour](../../data/oledb/crowset-update.md).|  
-|[Mettre à jour](#update)|Transmet les modifications apportées à la ligne en cours depuis la dernière extraction ou de la mise à jour en attente.|  
-|[UpdateAll](#updateall)|Transmet les modifications apportées à toutes les lignes depuis la dernière extraction ou de la mise à jour en attente.|  
-  
-## <a name="remarks"></a>Notes  
+**En-tête :** atldbcli.h
 
-Dans OLE DB, un ensemble de lignes est l’objet par le biais duquel un programme définit et récupère des données.  
-  
-Cette classe n’est pas destinée à être instanciée mais plutôt passé comme paramètre de modèle à `CTable` ou `CCommand` (`CRowset` est la valeur par défaut).  
+## <a name="members"></a>Membres
+
+### <a name="methods"></a>Méthodes
+
+|||
+|-|-|
+|[AddRefRows](#addrefrows)|Incrémente le décompte de références associé à la ligne actuelle.|
+|[Fermer](#close)|Libère les lignes et en cours `IRowset` interface.|
+|[Compare](#compare)|Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).|
+|[CRowset](#crowset)|Crée un `CRowset` de l’objet et l’associe (éventuellement) une `IRowset` interface fournie en tant que paramètre.|
+|[Supprimer](#delete)|Supprime des lignes de l’ensemble de lignes à l’aide [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|
+|[FindNextRow](#findnextrow)|Recherche la ligne correspondante suivante après le signet spécifié.|
+|[GetApproximatePosition](#getapproximateposition)|Retourne la position approximative d’une ligne correspondant à un signet.|
+|[GetData](#getdata)|Récupère les données à partir de la copie de l’ensemble de lignes de la ligne.|
+|[GetDataHere](#getdatahere)|Récupère les données à partir de la mémoire tampon spécifiée.|
+|[GetOriginalData](#getoriginaldata)|Récupère les données récemment extraite ou transmise à la source de données, en ignorant les modifications en attente.|
+|[GetRowStatus](#getrowstatus)|Retourne l’état de toutes les lignes.|
+|[Insert](#insert)|Crée et insère une nouvelle ligne à l’aide [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921).|
+|[IsSameRow](#issamerow)|Compare la ligne spécifiée avec la ligne actuelle.|
+|[MoveFirst](#movefirst)|Repositionne l’emplacement de récupération suivant à la position initiale.|
+|[MoveLast](#movelast)|Passe au dernier enregistrement.|
+|[MoveNext](#movenext)|Extrait les données à partir de la ligne suivante séquentielle ou un nombre spécifié de positions au-delà de la ligne suivante.|
+|[MovePrev](#moveprev)|Se déplace vers l’enregistrement précédent.|
+|[MoveToBookmark](#movetobookmark)|Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié à partir de ce signet.|
+|[MoveToRatio](#movetoratio)|Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.|
+|[ReleaseRows](#releaserows)|Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) pour libérer le handle de ligne actuelle.|
+|[SetData](#setdata)|Définit les valeurs de données dans une ou plusieurs colonnes d’une ligne en utilisant [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232).|
+|[Annulation](#undo)|Annule toutes les modifications apportées à une ligne depuis la dernière extraction ou [mise à jour](../../data/oledb/crowset-update.md).|
+|[Mettre à jour](#update)|Transmet les modifications apportées à la ligne en cours depuis la dernière extraction ou de la mise à jour en attente.|
+|[UpdateAll](#updateall)|Transmet les modifications apportées à toutes les lignes depuis la dernière extraction ou de la mise à jour en attente.|
+
+## <a name="remarks"></a>Notes
+
+Dans OLE DB, un ensemble de lignes est l’objet par le biais duquel un programme définit et récupère des données.
+
+Cette classe n’est pas destinée à être instanciée mais plutôt passé comme paramètre de modèle à `CTable` ou `CCommand` (`CRowset` est la valeur par défaut).
 
 ## <a name="addrefrows"></a> CRowset::AddRefRows
 
-Appels [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) d’incrémentation (1) le décompte de références associé avec le descripteur de ligne actuelle.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Appels [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) d’incrémentation (1) le décompte de références associé avec le descripteur de ligne actuelle.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT AddRefRows() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+HRESULT AddRefRows() throw();
+```
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Cette méthode incrémente le décompte de références pour le handle de ligne actuelle. Appelez [ReleaseRows](../../data/oledb/crowset-releaserows.md) pour décrémenter le décompte. Lignes retournées par les méthodes de déplacement ont un nombre de références d’un.  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Cette méthode incrémente le décompte de références pour le handle de ligne actuelle. Appelez [ReleaseRows](../../data/oledb/crowset-releaserows.md) pour décrémenter le décompte. Lignes retournées par les méthodes de déplacement ont un nombre de références d’un.
 
 ## <a name="close"></a> CRowset::Close
 
-Libère les lignes et en cours [IRowset](/previous-versions/windows/desktop/ms720986) interface.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-void Close() throw();  
-```  
-  
-### <a name="remarks"></a>Notes  
+Libère les lignes et en cours [IRowset](/previous-versions/windows/desktop/ms720986) interface.
 
-Cette méthode libère toutes les lignes actuellement dans l’ensemble de lignes.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+void Close() throw();
+```
+
+### <a name="remarks"></a>Notes
+
+Cette méthode libère toutes les lignes actuellement dans l’ensemble de lignes.
 
 ## <a name="compare"></a> CRowset::Compare
 
-Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Compare(const CBookmarkBase& bookmark1,   
-   const CBookmarkBase& bookmark2,   
-   DBCOMPARE* pComparison) const throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT Compare(const CBookmarkBase& bookmark1, 
+   const CBookmarkBase& bookmark2, 
+   DBCOMPARE* pComparison) const throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *Bookmark1*<br/>
-[in] Le premier signet à comparer.  
-  
+[in] Le premier signet à comparer.
+
 *Bookmark2*<br/>
-[in] Le deuxième signet à comparer.  
-  
+[in] Le deuxième signet à comparer.
+
 *pComparison*<br/>
-[out] Pointeur vers le résultat de la comparaison.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[out] Pointeur vers le résultat de la comparaison.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Cette méthode requiert l’interface facultative `IRowsetLocate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetLocate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
-  
-Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Cette méthode requiert l’interface facultative `IRowsetLocate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetLocate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
+
+Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).
 
 ## <a name="crowset"></a> CRowset::CRowset
 
-Crée un `CRowset` de l’objet et l’associe (éventuellement) une [IRowset](/previous-versions/windows/desktop/ms720986) interface fournie en tant que paramètre.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-CRowset();   
+Crée un `CRowset` de l’objet et l’associe (éventuellement) une [IRowset](/previous-versions/windows/desktop/ms720986) interface fournie en tant que paramètre.
 
-CRowset(IRowset* pRowset);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+CRowset(); 
+
+CRowset(IRowset* pRowset);
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *pRowset*<br/>
-[in] Un pointeur vers un `IRowset` interface à associer à cette classe.  
+[in] Un pointeur vers un `IRowset` interface à associer à cette classe.
 
 ## <a name="delete"></a> CRowset::Delete
 
-Appels [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) pour supprimer la ligne actuelle de l’ensemble de lignes.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT Delete() const throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+Appels [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) pour supprimer la ligne actuelle de l’ensemble de lignes.
 
-Une valeur HRESULT standard.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT Delete() const throw();
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Une valeur HRESULT standard.
 
 ## <a name="findnextrow"></a> CRowset::FindNextRow
 
-Recherche la ligne correspondante suivante après le signet spécifié.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Recherche la ligne correspondante suivante après le signet spécifié.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT FindNextRow(DBCOMPAREOP op,   
-   BYTE* pData,   
-   DBTYPE wType,   
-   DBLENGTH nLength,   
-   BYTE bPrecision,   
-   BYTE bScale,   
-   BOOL bSkipCurrent = TRUE,   
-   CBookmarkBase* pBookmark = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT FindNextRow(DBCOMPAREOP op, 
+   BYTE* pData, 
+   DBTYPE wType, 
+   DBLENGTH nLength, 
+   BYTE bPrecision, 
+   BYTE bScale, 
+   BOOL bSkipCurrent = TRUE, 
+   CBookmarkBase* pBookmark = NULL) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *Op*<br/>
-[in] L’opération à utiliser pour comparer les valeurs de ligne. Pour les valeurs, consultez [IRowsetFind::FindNextRow](/previous-versions/windows/desktop/ms723091).  
-  
+[in] L’opération à utiliser pour comparer les valeurs de ligne. Pour les valeurs, consultez [IRowsetFind::FindNextRow](/previous-versions/windows/desktop/ms723091).
+
 *pData*<br/>
-[in] Pointeur vers la valeur à mettre en correspondance.  
-  
+[in] Pointeur vers la valeur à mettre en correspondance.
+
 *wType*<br/>
-[in] Indique le type de données de la partie de la valeur de la mémoire tampon. Pour plus d’informations sur les indicateurs de type, consultez [Types de données](/previous-versions/windows/desktop/ms723969) dans le *de référence du programmeur OLE DB* dans le SDK Windows.  
-  
+[in] Indique le type de données de la partie de la valeur de la mémoire tampon. Pour plus d’informations sur les indicateurs de type, consultez [Types de données](/previous-versions/windows/desktop/ms723969) dans le *de référence du programmeur OLE DB* dans le SDK Windows.
+
 *nLength*<br/>
-[in] La longueur, en octets, de la structure de données de consommateur allouée pour la valeur de données. Pour plus d’informations, consultez la description de `cbMaxLen` dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB.*  
-  
+[in] La longueur, en octets, de la structure de données de consommateur allouée pour la valeur de données. Pour plus d’informations, consultez la description de `cbMaxLen` dans [Structures DBBINDING](/previous-versions/windows/desktop/ms716845) dans le *de référence du programmeur OLE DB.*
+
 *bPrecision*<br/>
-[in] La précision maximale utilisée lors de l’obtention des données. Utilisé uniquement si *wType* est DBTYPE_NUMERIC. Pour plus d’informations, consultez [Conversions impliquant DBTYPE_NUMERIC ou DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) dans le *de référence du programmeur OLE DB*.  
-  
+[in] La précision maximale utilisée lors de l’obtention des données. Utilisé uniquement si *wType* est DBTYPE_NUMERIC. Pour plus d’informations, consultez [Conversions impliquant DBTYPE_NUMERIC ou DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) dans le *de référence du programmeur OLE DB*.
+
 *bScale*<br/>
-[in] L’échelle utilisée lors de l’obtention des données. Utilisé uniquement si *wType* soit DBTYPE_NUMERIC DBTYPE_DECIMAL. Pour plus d’informations, consultez [Conversions impliquant DBTYPE_NUMERIC ou DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) dans le *de référence du programmeur OLE DB*.  
-  
+[in] L’échelle utilisée lors de l’obtention des données. Utilisé uniquement si *wType* soit DBTYPE_NUMERIC DBTYPE_DECIMAL. Pour plus d’informations, consultez [Conversions impliquant DBTYPE_NUMERIC ou DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) dans le *de référence du programmeur OLE DB*.
+
 *bSkipCurrent*<br/>
-[in] Le nombre de lignes à partir du signet à partir duquel commencer une recherche.  
-  
+[in] Le nombre de lignes à partir du signet à partir duquel commencer une recherche.
+
 *pBookmark*<br/>
-[in] Le signet de position à laquelle démarrer une recherche.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Le signet de position à laquelle démarrer une recherche.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Cette méthode requiert l’interface facultative `IRowsetFind`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetFind` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
-  
-Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Cette méthode requiert l’interface facultative `IRowsetFind`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetFind` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
+
+Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).
 
 ## <a name="getapproximateposition"></a> CRowset::GetApproximatePosition
 
-Retourne la position approximative d’une ligne correspondant à un signet.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Retourne la position approximative d’une ligne correspondant à un signet.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,   
-   DBCOUNTITEM* pPosition,   
-   DBCOUNTITEM* pcRows) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark, 
+   DBCOUNTITEM* pPosition, 
+   DBCOUNTITEM* pcRows) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *pBookmark*<br/>
-[in] Pointeur vers un signet qui identifie la ligne dont la position doit être trouvé. NULL si seul le nombre de lignes est requis.  
-  
+[in] Pointeur vers un signet qui identifie la ligne dont la position doit être trouvé. NULL si seul le nombre de lignes est requis.
+
 *pPosition*<br/>
-[out] Un pointeur vers l’emplacement où `GetApproximatePosition` retourne la position de la ligne. NULL si la position n’est pas obligatoire.  
-  
+[out] Un pointeur vers l’emplacement où `GetApproximatePosition` retourne la position de la ligne. NULL si la position n’est pas obligatoire.
+
 *pcRows*<br/>
-[out] Un pointeur vers l’emplacement où `GetApproximatePosition` retourne le nombre total de lignes. NULL si le nombre de lignes n’est pas obligatoire.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[out] Un pointeur vers l’emplacement où `GetApproximatePosition` retourne le nombre total de lignes. NULL si le nombre de lignes n’est pas obligatoire.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Cette méthode requiert l’interface facultative `IRowsetScroll`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetScroll` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
-  
-Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Cette méthode requiert l’interface facultative `IRowsetScroll`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetScroll` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
+
+Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).
 
 ## <a name="getdata"></a> CRowset::GetData
 
-Récupère les données à partir de la copie de l’ensemble de lignes de la ligne.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT GetData() throw();   
+Récupère les données à partir de la copie de l’ensemble de lignes de la ligne.
 
-HRESULT GetData(int nAccessor) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT GetData() throw(); 
+
+HRESULT GetData(int nAccessor) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *nAccessor*<br/>
-[in] Le numéro d’index (décalage de zéro) de l’accesseur à utiliser pour accéder aux données.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Le numéro d’index (décalage de zéro) de l’accesseur à utiliser pour accéder aux données.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Si vous spécifiez un accesseur qui n’est pas un auto-accesseur dans [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), cette méthode permet d’obtenir explicitement les données en transmettant le numéro de l’accesseur.  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Si vous spécifiez un accesseur qui n’est pas un auto-accesseur dans [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), cette méthode permet d’obtenir explicitement les données en transmettant le numéro de l’accesseur.
 
 ## <a name="getdatahere"></a> CRowset::GetDataHere
 
-Récupère les données à partir de la ligne actuelle et le place dans la mémoire tampon spécifiée.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Récupère les données à partir de la ligne actuelle et le place dans la mémoire tampon spécifiée.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT GetDataHere(int nAccessor,   
-   void* pBuffer) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT GetDataHere(int nAccessor, 
+   void* pBuffer) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *nAccessor*<br/>
-[in] Le numéro d’index de l’accesseur à utiliser pour accéder aux données.  
-  
-*pBuffer*<br/>
-[out] Une mémoire tampon dans laquelle placer les données de l’enregistrement actuel.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Le numéro d’index de l’accesseur à utiliser pour accéder aux données.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+*pBuffer*<br/>
+[out] Une mémoire tampon dans laquelle placer les données de l’enregistrement actuel.
+
+### <a name="return-value"></a>Valeur de retour
+
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
 
 Pour obtenir un exemple montrant comment utiliser cette fonction, consultez le [exemple MultiRead](../../visual-cpp-samples.md).
 
 ## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
-Appels `IRowsetUpdate::GetOriginalData` pour récupérer les données récemment extraite ou transmise à la source de données.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Appels `IRowsetUpdate::GetOriginalData` pour récupérer les données récemment extraite ou transmise à la source de données.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT GetOriginalData() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+HRESULT GetOriginalData() throw();
+```
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Cette méthode récupère les données extraites le plus récemment à partir d’ou transmise à la source de données ; elle ne récupère pas les valeurs en fonction des modifications en attente.  
-  
-Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetUpdate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes. 
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Cette méthode récupère les données extraites le plus récemment à partir d’ou transmise à la source de données ; elle ne récupère pas les valeurs en fonction des modifications en attente.
+
+Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetUpdate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
 
 ## <a name="getrowstatus"></a> CRowset::GetRowStatus
 
-Retourne l’état de toutes les lignes.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Retourne l’état de toutes les lignes.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *pStatus*<br/>
-[out] Un pointeur vers un emplacement où `GetRowStatus` retourne la valeur d’état. Consultez DBPENDINGSTATUS dans la référence du programmeur OLE DB.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[out] Un pointeur vers un emplacement où `GetRowStatus` retourne la valeur d’état. Consultez DBPENDINGSTATUS dans la référence du programmeur OLE DB.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetUpdate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.   
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetUpdate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
 
 ## <a name="insert"></a> CRowset::Insert
 
-Crée et initialise une nouvelle ligne à l’aide de données à partir de l’accesseur.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Crée et initialise une nouvelle ligne à l’aide de données à partir de l’accesseur.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Insert(int nAccessor = 0,   
-   bool bGetHRow = false) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT Insert(int nAccessor = 0, 
+   bool bGetHRow = false) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *nAccessor*<br/>
-[in] Le numéro de l’accesseur à utiliser pour insérer les données.  
-  
+[in] Le numéro de l’accesseur à utiliser pour insérer les données.
+
 *bGetHRow*<br/>
-[in] Indique si le handle de la ligne insérée est extraite.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Indique si le handle de la ligne insérée est extraite.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Cette méthode requiert l’interface facultative `IRowsetChange`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetChange` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
-  
-Insertion peut échouer si une ou plusieurs colonnes n’est pas accessible en écriture. Modifier le mappage de votre curseur pour corriger ce problème.  
-  
-### <a name="example"></a>Exemple  
+Une valeur HRESULT standard.
 
-L’exemple suivant montre comment accéder à une source de données via un ensemble de lignes, puis insérez une chaîne à l’aide d’une table dans cet ensemble de lignes.  
-  
-Tout d’abord, créez une classe de table en insérant un nouvel objet ATL dans votre projet. Par exemple, cliquez sur le projet dans le volet espace de travail et sélectionnez **nouvel objet ATL**. À partir de la **accès aux données** catégorie, sélectionnez **consommateur**. Créer un objet du consommateur de type **Table**. (En sélectionnant **Table** crée un ensemble de lignes directement à partir de la table ; sélection **commande** crée un ensemble de lignes via une commande SQL.) Sélectionnez une source de données, en spécifiant une table par le biais duquel pour accéder à cette source de données. Si vous appelez votre objet consommateur **CCustomerTable**, vous implémentez ensuite votre code d’insertion comme suit :  
-  
-[!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]  
+### <a name="remarks"></a>Notes
+
+Cette méthode requiert l’interface facultative `IRowsetChange`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetChange` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
+
+Insertion peut échouer si une ou plusieurs colonnes n’est pas accessible en écriture. Modifier le mappage de votre curseur pour corriger ce problème.
+
+### <a name="example"></a>Exemple
+
+L’exemple suivant montre comment accéder à une source de données via un ensemble de lignes, puis insérez une chaîne à l’aide d’une table dans cet ensemble de lignes.
+
+Tout d’abord, créez une classe de table en insérant un nouvel objet ATL dans votre projet. Par exemple, cliquez sur le projet dans le volet espace de travail et sélectionnez **nouvel objet ATL**. À partir de la **accès aux données** catégorie, sélectionnez **consommateur**. Créer un objet du consommateur de type **Table**. (En sélectionnant **Table** crée un ensemble de lignes directement à partir de la table ; sélection **commande** crée un ensemble de lignes via une commande SQL.) Sélectionnez une source de données, en spécifiant une table par le biais duquel pour accéder à cette source de données. Si vous appelez votre objet consommateur **CCustomerTable**, vous implémentez ensuite votre code d’insertion comme suit :
+
+[!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
 ## <a name="issamerow"></a> CRowset::IsSameRow
 
-Compare la ligne spécifiée avec la ligne actuelle.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Compare la ligne spécifiée avec la ligne actuelle.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT IsSameRow(HROW hRow) const throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT IsSameRow(HROW hRow) const throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *hRow*<br/>
-[in] Handle vers la ligne à comparer à la ligne actuelle.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Handle vers la ligne à comparer à la ligne actuelle.
 
-Une valeur HRESULT standard. S_OK indique les lignes sont les mêmes. Pour les autres valeurs, consultez [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629) dans le *de référence du programmeur OLE DB* dans le SDK Windows.  
+### <a name="return-value"></a>Valeur de retour
+
+Une valeur HRESULT standard. S_OK indique les lignes sont les mêmes. Pour les autres valeurs, consultez [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629) dans le *de référence du programmeur OLE DB* dans le SDK Windows.
 
 ## <a name="movefirst"></a> CRowset::MoveFirst
 
-Déplace le curseur à la position initiale et récupère la ligne initiale.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Déplace le curseur à la position initiale et récupère la ligne initiale.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveFirst() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+HRESULT MoveFirst() throw();
+```
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Appels [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) à repositionner l’emplacement de récupération suivant à la position initiale (la position qui était l’emplacement suivant-extraction lors de la création de l’ensemble de lignes) et récupère la ligne initiale.  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Appels [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) à repositionner l’emplacement de récupération suivant à la position initiale (la position qui était l’emplacement suivant-extraction lors de la création de l’ensemble de lignes) et récupère la ligne initiale.
 
 ## <a name="movelast"></a> CRowset::MoveLast
 
-Déplace le curseur vers la dernière ligne.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Déplace le curseur vers la dernière ligne.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveLast() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+HRESULT MoveLast() throw();
+```
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Appels [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) à repositionner l’emplacement de récupération suivant à la dernière position et récupère la dernière ligne.  
-  
-Cette méthode requiert que vous définissez `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes. (Pour de meilleures performances, vous pouvez également définir `DBPROP_QUICKRESTART` avec la valeur VARIANT_TRUE.)  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Appels [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) à repositionner l’emplacement de récupération suivant à la dernière position et récupère la dernière ligne.
+
+Cette méthode requiert que vous définissez `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes. (Pour de meilleures performances, vous pouvez également définir `DBPROP_QUICKRESTART` avec la valeur VARIANT_TRUE.)
 
 ## <a name="movenext"></a> CRowset::MoveNext
 
-Déplace le curseur à l’enregistrement suivant.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Déplace le curseur à l’enregistrement suivant.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
 HRESULT MoveNext() throw();
 
-HRESULT MoveNext(LONG lSkip,   
-   bool bForward= true) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT MoveNext(LONG lSkip, 
+   bool bForward= true) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *lSkip*<br/>
-[in] Le nombre de lignes à ignorer avant l’extraction.  
-  
+[in] Le nombre de lignes à ignorer avant l’extraction.
+
 *bForward*<br/>
-[in] Passer **true** d’avancer jusqu'à l’enregistrement suivant, **false** à déplacer vers le haut.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Passer **true** d’avancer jusqu'à l’enregistrement suivant, **false** à déplacer vers le haut.
 
-Une valeur HRESULT standard. Lorsque la fin de l’ensemble de lignes a été atteinte, retourne DB_S_ENDOFROWSET.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Extrait la ligne séquentielle suivante à partir de la `CRowset` objet, en mémorisant la position précédente. Si vous le souhaitez, vous pouvez choisir de passer directement *lSkip* lignes ou en arrière.  
-  
-Cette méthode requiert que vous définissez les propriétés suivantes avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes :  
-  
-- `DBPROP_CANSCROLLBACKWARDS` doit être VARIANT_TRUE si *lSkip* < 0  
-  
-- `DBPROP_CANFETCHBACKWARDS` doit être VARIANT_TRUE si *bForward* = false  
-  
-Dans le cas contraire (si *lSkip* > = 0 et *bForward* = true), vous n’avez pas besoin de définir des propriétés supplémentaires.  
+Une valeur HRESULT standard. Lorsque la fin de l’ensemble de lignes a été atteinte, retourne DB_S_ENDOFROWSET.
+
+### <a name="remarks"></a>Notes
+
+Extrait la ligne séquentielle suivante à partir de la `CRowset` objet, en mémorisant la position précédente. Si vous le souhaitez, vous pouvez choisir de passer directement *lSkip* lignes ou en arrière.
+
+Cette méthode requiert que vous définissez les propriétés suivantes avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes :
+
+- `DBPROP_CANSCROLLBACKWARDS` doit être VARIANT_TRUE si *lSkip* < 0
+
+- `DBPROP_CANFETCHBACKWARDS` doit être VARIANT_TRUE si *bForward* = false
+
+Dans le cas contraire (si *lSkip* > = 0 et *bForward* = true), vous n’avez pas besoin de définir des propriétés supplémentaires.
 
 ## <a name="moveprev"></a> CRowset::MovePrev
 
-Déplace le curseur à l’enregistrement précédent.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Déplace le curseur à l’enregistrement précédent.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MovePrev() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+HRESULT MovePrev() throw();
+```
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Cette méthode requiert que vous définissez soit `DBPROP_CANFETCHBACKWARDS` ou `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes. 
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Cette méthode requiert que vous définissez soit `DBPROP_CANFETCHBACKWARDS` ou `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
 
 ## <a name="movetobookmark"></a> CRowset::MoveToBookmark
 
-Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié (*lSkip*) à partir de ce signet.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié (*lSkip*) à partir de ce signet.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,   
-   LONG lSkip = 0) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
+   LONG lSkip = 0) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *Signet*<br/>
-[in] Un signet est l’emplacement à partir duquel vous souhaitez extraire des données.  
-  
+[in] Un signet est l’emplacement à partir duquel vous souhaitez extraire des données.
+
 *lSkip*<br/>
-[in] Le nombre de lignes à partir du signet à la ligne cible. Si *lSkip* est égal à zéro, la première ligne extraite est la ligne marquée par un signet. Si *lSkip* est 1, la première ligne extraite est la ligne après la ligne marquée par un signet. Si *lSkip* est -1, la première ligne extraite est la ligne avant la ligne marquée par un signet.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Le nombre de lignes à partir du signet à la ligne cible. Si *lSkip* est égal à zéro, la première ligne extraite est la ligne marquée par un signet. Si *lSkip* est 1, la première ligne extraite est la ligne après la ligne marquée par un signet. Si *lSkip* est -1, la première ligne extraite est la ligne avant la ligne marquée par un signet.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Cette méthode requiert l’interface facultative `IRowsetLocate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetLocate` sur VARIANT_TRUE et `DBPROP_CANFETCHBACKWARDS` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
-  
-Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).  
-  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Cette méthode requiert l’interface facultative `IRowsetLocate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetLocate` sur VARIANT_TRUE et `DBPROP_CANFETCHBACKWARDS` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
+
+Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).
+
 ## <a name="movetoratio"></a> CRowset::MoveToRatio
 
-Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,   
-   DBCOUNTITEM nDenominator,bool bForward = true) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
+   DBCOUNTITEM nDenominator,bool bForward = true) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *nNumerator*<br/>
-[in] Le numérateur permet de déterminer les fractions de seconde positionnels à partir de laquelle extraire des données.  
-  
+[in] Le numérateur permet de déterminer les fractions de seconde positionnels à partir de laquelle extraire des données.
+
 *nDenominator*<br/>
-[in] Le dénominateur permet de déterminer les fractions de seconde positionnels à partir de laquelle extraire des données.  
-  
+[in] Le dénominateur permet de déterminer les fractions de seconde positionnels à partir de laquelle extraire des données.
+
 *bForward*<br/>
-[in] Indique s’il faut avancer ou reculer. La valeur par défaut est simple.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Indique s’il faut avancer ou reculer. La valeur par défaut est simple.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-`MoveToRatio` extrait les lignes selon à peu près à la formule suivante :  
-  
-`(nNumerator *  RowsetSize ) / nDenominator`  
-  
-Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602).  
-  
-Cette méthode requiert l’interface facultative `IRowsetScroll`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetScroll` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+`MoveToRatio` extrait les lignes selon à peu près à la formule suivante :
+
+`(nNumerator *  RowsetSize ) / nDenominator`
+
+Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602).
+
+Cette méthode requiert l’interface facultative `IRowsetScroll`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetScroll` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
 
 ## <a name="releaserows"></a> CRowset::ReleaseRows
 
-Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) pour libérer le handle de ligne actuelle.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT ReleaseRows() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) pour libérer le handle de ligne actuelle.
 
-Une valeur HRESULT standard.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT ReleaseRows() throw();
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Une valeur HRESULT standard.
 
 ## <a name="setdata"></a> CRowset::SetData
 
-Définit les valeurs de données dans une ou plusieurs colonnes d’une ligne.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT SetData() const throw();   
+Définit les valeurs de données dans une ou plusieurs colonnes d’une ligne.
 
-HRESULT SetData(int nAccessor) const throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT SetData() const throw(); 
+
+HRESULT SetData(int nAccessor) const throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *nAccessor*<br/>
-[in] Le numéro de l’accesseur à utiliser pour accéder aux données.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Le numéro de l’accesseur à utiliser pour accéder aux données.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Pour le `SetData` formulaire qui accepte aucun argument, tous les utilisateurs connectés sont utilisés pour la mise à jour. Vous appelez généralement `SetData` pour définir les valeurs de données dans les colonnes dans une ligne, puis appelez [mise à jour](../../data/oledb/crowset-update.md) pour transmettre ces modifications.  
-  
-Cette méthode requiert l’interface facultative `IRowsetChange`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetChange` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
-  
-L’opération de configuration peut échouer si une ou plusieurs colonnes n’est pas accessible en écriture. Modifier le mappage de votre curseur pour corriger ce problème. 
-  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Pour le `SetData` formulaire qui accepte aucun argument, tous les utilisateurs connectés sont utilisés pour la mise à jour. Vous appelez généralement `SetData` pour définir les valeurs de données dans les colonnes dans une ligne, puis appelez [mise à jour](../../data/oledb/crowset-update.md) pour transmettre ces modifications.
+
+Cette méthode requiert l’interface facultative `IRowsetChange`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetChange` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
+
+L’opération de configuration peut échouer si une ou plusieurs colonnes n’est pas accessible en écriture. Modifier le mappage de votre curseur pour corriger ce problème.
+
 ## <a name="undo"></a> CRowset::Undo
 
-Annule toutes les modifications apportées à une ligne depuis la dernière extraction ou [mise à jour](../../data/oledb/crowset-update.md).  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Annule toutes les modifications apportées à une ligne depuis la dernière extraction ou [mise à jour](../../data/oledb/crowset-update.md).
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Undo(DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT Undo(DBCOUNTITEM* pcRows = NULL, 
+   HROW* phRow = NULL, 
+   DBROWSTATUS* pStatus = NULL) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *pcRows*<br/>
-[out] Un pointeur vers l’emplacement où `Undo` retourne le nombre de lignes, elle a tenté d’annuler si nécessaire.  
-  
+[out] Un pointeur vers l’emplacement où `Undo` retourne le nombre de lignes, elle a tenté d’annuler si nécessaire.
+
 *phRow*<br/>
-[out] Un pointeur vers l’emplacement où `Undo` retourne un tableau de handles pour toutes les lignes, elle a tenté d’annuler si nécessaire.  
-  
+[out] Un pointeur vers l’emplacement où `Undo` retourne un tableau de handles pour toutes les lignes, elle a tenté d’annuler si nécessaire.
+
 *pStatus*<br/>
-[out] Un pointeur vers l’emplacement où `Undo` retourne la valeur d’état de ligne. Aucun état n’est retournée si *pStatus* a la valeur null.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[out] Un pointeur vers l’emplacement où `Undo` retourne la valeur d’état de ligne. Aucun état n’est retournée si *pStatus* a la valeur null.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetUpdate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetUpdate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
 
 ## <a name="update"></a> CRowset::Update
 
-Transmet toutes les modifications apportées à la ligne actuelle depuis la dernière extraction ou `Update` appeler sur celle-ci.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Transmet toutes les modifications apportées à la ligne actuelle depuis la dernière extraction ou `Update` appeler sur celle-ci.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Update(DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT Update(DBCOUNTITEM* pcRows = NULL, 
+   HROW* phRow = NULL, 
+   DBROWSTATUS* pStatus = NULL) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *pcRows*<br/>
-[out] Un pointeur vers l’emplacement où `Update` retourne le nombre de lignes, elle a tenté de mettre à jour, si nécessaire.  
-  
+[out] Un pointeur vers l’emplacement où `Update` retourne le nombre de lignes, elle a tenté de mettre à jour, si nécessaire.
+
 *phRow*<br/>
-[out] Un pointeur vers l’emplacement où `Update` retourne le handle de la ligne, elle a tenté de mettre à jour. Aucun handle n’est retournée si *phRow* a la valeur null.  
-  
+[out] Un pointeur vers l’emplacement où `Update` retourne le handle de la ligne, elle a tenté de mettre à jour. Aucun handle n’est retournée si *phRow* a la valeur null.
+
 *pStatus*<br/>
-[out] Un pointeur vers l’emplacement où `Update` retourne la valeur d’état de ligne. Aucun état n’est retournée si *pStatus* a la valeur null.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[out] Un pointeur vers l’emplacement où `Update` retourne la valeur d’état de ligne. Aucun état n’est retournée si *pStatus* a la valeur null.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-Transmet les modifications apportées à la ligne actuelle dans la mesure où cette ligne dernière extraction ou mis à jour en attente (à l’aide de `Update` ou [UpdateAll](../../data/oledb/crowset-updateall.md)). Vous appelez généralement [SetData](../../data/oledb/crowset-setdata.md) pour définir les valeurs de données dans les colonnes dans une ligne, puis appelez `Update` pour transmettre ces modifications.  
-  
-Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetUpdate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+Transmet les modifications apportées à la ligne actuelle dans la mesure où cette ligne dernière extraction ou mis à jour en attente (à l’aide de `Update` ou [UpdateAll](../../data/oledb/crowset-updateall.md)). Vous appelez généralement [SetData](../../data/oledb/crowset-setdata.md) pour définir les valeurs de données dans les colonnes dans une ligne, puis appelez `Update` pour transmettre ces modifications.
+
+Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetUpdate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
 
 ## <a name="updateall"></a> CRowset::UpdateAll
 
-Transmet toutes les modifications apportées à toutes les lignes depuis la dernière extraction ou `Update` appeler sur celle-ci.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Transmet toutes les modifications apportées à toutes les lignes depuis la dernière extraction ou `Update` appeler sur celle-ci.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,   
-   HROW** pphRow = NULL,   
-   DBROWSTATUS** ppStatus = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL, 
+   HROW** pphRow = NULL, 
+   DBROWSTATUS** ppStatus = NULL) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *pcRows*<br/>
-[out] Un pointeur vers l’emplacement où `UpdateAll` retourne le nombre de lignes, elle a tenté de mettre à jour, si nécessaire.  
-  
+[out] Un pointeur vers l’emplacement où `UpdateAll` retourne le nombre de lignes, elle a tenté de mettre à jour, si nécessaire.
+
 *pphRow*<br/>
-[out] Pointeur vers la mémoire dans lequel `UpdateAll` retourne le handle de la ligne, elle a tenté de mettre à jour. Aucun handle n’est retournée si *pphRow* a la valeur null.  
-  
+[out] Pointeur vers la mémoire dans lequel `UpdateAll` retourne le handle de la ligne, elle a tenté de mettre à jour. Aucun handle n’est retournée si *pphRow* a la valeur null.
+
 *ppStatus*<br/>
-[out] Un pointeur vers l’emplacement où `Update` retourne la valeur d’état de ligne. Aucun état n’est retournée si *ppStatus* a la valeur null.  
-  
-### <a name="remarks"></a>Notes  
+[out] Un pointeur vers l’emplacement où `Update` retourne la valeur d’état de ligne. Aucun état n’est retournée si *ppStatus* a la valeur null.
 
-Transmet toutes les modifications apportées à toutes les lignes dans la mesure où ces lignes ont été dernière extraction ou mis à jour à l’aide de [mise à jour](../../data/oledb/crowset-update.md) ou `UpdateAll`. `UpdateAll` met à jour chaque ligne qui a été modifié, que vous ayez toujours le handle pour eux (consultez *pphRow*) ou non.  
-  
-Par exemple, si vous avez utilisé `Insert` pour insérer cinq lignes dans un ensemble de lignes, vous pouvez appeler `Update` cinq fois ou appel `UpdateAll` une fois tous les mettre à jour.  
-  
-Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetUpdate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.  
-  
-### <a name="return-value"></a>Valeur de retour  
+### <a name="remarks"></a>Notes
 
-Une valeur HRESULT standard.  
+Transmet toutes les modifications apportées à toutes les lignes dans la mesure où ces lignes ont été dernière extraction ou mis à jour à l’aide de [mise à jour](../../data/oledb/crowset-update.md) ou `UpdateAll`. `UpdateAll` met à jour chaque ligne qui a été modifié, que vous ayez toujours le handle pour eux (consultez *pphRow*) ou non.
 
-## <a name="see-also"></a>Voir aussi  
+Par exemple, si vous avez utilisé `Insert` pour insérer cinq lignes dans un ensemble de lignes, vous pouvez appeler `Update` cinq fois ou appel `UpdateAll` une fois tous les mettre à jour.
+
+Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si ce n’est le cas, la méthode retourne E_NOINTERFACE. Vous devez également définir `DBPROP_IRowsetUpdate` VARIANT_TRUE avant d’appeler `Open` sur la table ou d’une commande qui contient l’ensemble de lignes.
+
+### <a name="return-value"></a>Valeur de retour
+
+Une valeur HRESULT standard.
+
+## <a name="see-also"></a>Voir aussi
 
 [Exemple DBVIEWER](../../visual-cpp-samples.md)<br/>
 [Exemple multiRead](../../visual-cpp-samples.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: ICommandSource, Interface | Microsoft Docs
-ms.custom: ''
+title: ICommandSource, Interface
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -18,21 +14,15 @@ f1_keywords:
 - AFXWINFORMS/ICommandSource::RemoveCommandRangeUIHandler
 - AFXWINFORMS/ICommandSource::RemoveCommandUIHandler
 - AFXWINFORMS/ICommandSource::SendCommand
-dev_langs:
-- C++
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5071f2c6f00b3cc4aaf09974a01c4601d0078e42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4fca5a2ffef7e8da4f6dd79fcd99c72e92cfdf6a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377955"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538435"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource, Interface
 
@@ -103,6 +93,7 @@ void AddCommandRangeHandler(
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *cmdIDMin*<br/>
@@ -124,6 +115,7 @@ void AddCommandRangeUIHandler(
     unsigned int cmdIDMax,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *cmdIDMin*<br/>
@@ -145,6 +137,7 @@ void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *cmdID*<br/>
@@ -162,6 +155,7 @@ Publie un message sans attendre qu’il soit traité.
 ```
 void PostCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *command*<br/>
@@ -170,13 +164,13 @@ L’ID de commande du message à publier.
 
 Cette méthode publie façon asynchrone le message mappé à l’ID spécifié par la commande. Il appelle CWnd::PostMessage pour placer le message dans la file d’attente de messages de la fenêtre et puis retourne sans attendre que la fenêtre correspondante traiter le message.
 
-
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 
 Supprime un gestionnaire de commandes à partir d’un objet de source de commande.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *cmdID*<br/>
@@ -184,7 +178,6 @@ ID de la commande.
 ### <a name="remarks"></a>Notes
 
 Cette méthode supprime le Gestionnaire de commandes mappé à cmdID à partir de l’objet de source de commande.
-
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
 
@@ -194,6 +187,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *cmdIDMin*<br/>
@@ -212,6 +206,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *cmdIDMin*<br/>
@@ -228,6 +223,7 @@ Supprime un gestionnaire de messages de commande interface utilisateur à partir
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *cmdID*<br/>
@@ -242,6 +238,7 @@ Envoie un message et attend qu’il soit traité avant de retourner.
 ```
 void SendCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *command*<br/>

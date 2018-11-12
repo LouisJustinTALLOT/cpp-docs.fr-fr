@@ -1,12 +1,6 @@
 ---
-title: 'Contrôles ActiveX MFC : Ajout d’événements personnalisés | Microsoft Docs'
-ms.custom: ''
+title: "Contrôles ActiveX MFC : ajout d'événements personnalisés"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events [MFC]
 - EVENT_CUSTOM prefix [MFC]
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ad44cb097f03270b09612ad756d34725464a1765
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554906"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Contrôles ActiveX MFC : ajout d'événements personnalisés
 
@@ -48,7 +38,7 @@ La procédure suivante ajoute un événement personnalisé spécifique, ClickIn.
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter un événement**.
 
-     Cette opération ouvre l’Assistant Ajout d’événement.
+   Cette opération ouvre l’Assistant Ajout d’événement.
 
 1. Dans le **nom de l’événement** boîte, tout d’abord sélectionner n’importe quel événement existant, puis cliquez sur le **personnalisé** radio bouton, puis tapez *ClickIn*.
 
@@ -94,7 +84,7 @@ Maintenant que vous avez ajouté l’événement personnalisé ClickIn à l’ai
 
 1. Dans la fenêtre Propriétés, cliquez sur le **Messages** bouton.
 
-     La fenêtre Propriétés affiche une liste de messages qui peuvent être gérés par le contrôle ActiveX. Tout message indiqué en gras déjà possède une fonction de gestionnaire qui lui est assignée.
+   La fenêtre Propriétés affiche une liste de messages qui peuvent être gérés par le contrôle ActiveX. Tout message indiqué en gras déjà possède une fonction de gestionnaire qui lui est assignée.
 
 1. Dans la fenêtre Propriétés, sélectionnez le message que vous souhaitez gérer. Pour cet exemple, sélectionnez WM_LBUTTONDOWN.
 
@@ -131,7 +121,7 @@ La procédure suivante ajoute un personnalisé, cliquez sur événement.
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter un événement**.
 
-     Cette opération ouvre l’Assistant Ajout d’événement.
+   Cette opération ouvre l’Assistant Ajout d’événement.
 
 1. Dans le **nom de l’événement** liste déroulante, sélectionnez un nom d’événement stock. Pour cet exemple, sélectionnez **cliquez sur**.
 

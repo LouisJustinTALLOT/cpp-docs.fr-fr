@@ -1,26 +1,16 @@
 ---
-title: 'Serveurs : Implémentation d’un serveur | Microsoft Docs'
-ms.custom: ''
+title: "Serveurs : implémentation d'un serveur"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406788"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566753"
 ---
 # <a name="servers-implementing-a-server"></a>Serveurs : implémentation d'un serveur
 
@@ -36,7 +26,7 @@ Le code du serveur qui fournit l’Assistant application se divise en plusieurs 
 
    - Les ressources de menu et barre d’outils utilisés lorsque le serveur est actif en place.
 
-     Pour plus d’informations sur ces ressources, consultez [Menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
+   Pour plus d’informations sur ces ressources, consultez [Menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
 
 - Définition d’une classe d’élément dérivé `COleServerItem`. Pour plus d’informations sur les éléments de serveur, consultez [serveurs : éléments de serveur](../mfc/servers-server-items.md).
 

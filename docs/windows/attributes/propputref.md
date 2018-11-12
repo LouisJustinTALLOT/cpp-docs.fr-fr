@@ -1,28 +1,17 @@
 ---
-title: propputref (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: propputref (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.propputref
-dev_langs:
-- C++
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 147b46a3081f842b247ac7a2227bd07bb75d8fe6
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0ebf39be6d83e7c5a64ad29f34f9accf0743dbf4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790623"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551279"
 ---
 # <a name="propputref"></a>propputref
 
@@ -53,11 +42,11 @@ Consultez l’exemple de [peut être liée](bindable.md) pour un exemple d’uti
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|`propget`, `propput`|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
 [propget](propget.md)<br/>
-[propput](propput.md)  
+[propput](propput.md)

@@ -1,27 +1,17 @@
 ---
-title: SUPPOSONS QUE | Microsoft Docs
-ms.custom: ''
+title: ASSUME
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
 f1_keywords:
 - ASSUME
-dev_langs:
-- C++
 helpviewer_keywords:
 - ASSUME directive
 ms.assetid: cd162070-aee9-4c65-babc-005c6cc73d7c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a0e43548292d2ffecbebdaead6aa12d6dacc352
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 97a57cc8a1acccf70572ff963e496aa79fa3ab43
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693806"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500566"
 ---
 # <a name="assume"></a>ASSUME
 
@@ -33,7 +23,6 @@ Permet la vérification des erreurs pour les valeurs de registres.
 > Prenons *dataregister*:*type* [[, *dataregister*:*type*]]...<br/>
 > Prenons *inscrire*: erreur [[, *inscrire*: erreur]]...<br/>
 > Supposer que [[*inscrire*:]] rien [[, *inscrire*: rien]]...
-
 
 ## <a name="remarks"></a>Notes
 

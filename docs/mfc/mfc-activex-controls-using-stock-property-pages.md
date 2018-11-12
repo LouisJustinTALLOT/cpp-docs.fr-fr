@@ -1,16 +1,10 @@
 ---
-title: 'Contrôles ActiveX MFC : À l’aide Pages de propriétés Stock | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : utilisation des pages de propriétés stock'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - CLSID_CPicturePropPage
 - CLSID_CColorPropPage
 - CLSID_CFontPropPage
-dev_langs:
-- C++
 helpviewer_keywords:
 - picture stock property pages [MFC]
 - CLSID_CFontPropPage [MFC]
@@ -21,23 +15,19 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6fadc159f0924c3714616778cd1fd148b5ff0e84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f31bf245e35231b6cc62497e7bbc57ff7f0e6af1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423068"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545390"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>Contrôles ActiveX MFC : utilisation des pages de propriétés stock
 
 Cet article décrit les pages de propriétés stock disponibles pour les contrôles ActiveX et comment les utiliser.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Pour plus d’informations sur l’utilisation des pages de propriétés dans un contrôle ActiveX, consultez les articles suivants :
 

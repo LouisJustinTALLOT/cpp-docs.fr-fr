@@ -1,31 +1,21 @@
 ---
-title: Classe de CD2DSizeF | Microsoft Docs
-ms.custom: ''
+title: CD2DSizeF, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DSizeF
 - AFXRENDERTARGET/CD2DSizeF
 - AFXRENDERTARGET/CD2DSizeF::CD2DSizeF
 - AFXRENDERTARGET/CD2DSizeF::IsNull
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DSizeF [MFC], CD2DSizeF
 - CD2DSizeF [MFC], IsNull
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3610f5c8fa11aabcc3de81ddf0cb23060b9e77a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e9c8d77a9f84abe9a483a0f100e1f52b8768202b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390927"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557467"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF, classe
 
@@ -75,7 +65,6 @@ Construit un objet CD2DSizeF à partir de l’objet CSize.
 CD2DSizeF(const CSize& size);
 CD2DSizeF(const D2D1_SIZE_F& size);
   CD2DSizeF(const D2D1_SIZE_F* size);
-
 
 CD2DSizeF(
     FLOAT cx = 0.,

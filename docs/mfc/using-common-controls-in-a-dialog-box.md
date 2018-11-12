@@ -1,27 +1,17 @@
 ---
-title: Utilisation de contrôles communs dans une boîte de dialogue | Microsoft Docs
-ms.custom: ''
+title: Utilisation de contrôles communs dans une boîte de dialogue
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - common controls [MFC], in dialog boxes
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a17dac622ce1527a11d02888d6c4ce7905fcf669
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389863"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458648"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Utilisation de contrôles communs dans une boîte de dialogue
 
@@ -42,7 +32,7 @@ Les contrôles communs Windows peuvent être utilisés dans [boîtes de dialogue
 
 1. Dans [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) pour votre classe de boîte de dialogue, définissez des conditions initiales pour le contrôle commun. Grâce à la variable membre créée à l'étape précédente, utilisez les fonctions membres pour définir la valeur initiale et d'autres paramètres. Consultez les descriptions suivantes des contrôles pour plus d'informations sur les paramètres.
 
-     Vous pouvez également utiliser [échange de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md) (DDX) pour initialiser les contrôles dans une boîte de dialogue.
+   Vous pouvez également utiliser [échange de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md) (DDX) pour initialiser les contrôles dans une boîte de dialogue.
 
 1. Dans les gestionnaires des contrôles de la boîte de dialogue, utilisez la variable membre pour manipuler le contrôle. Consultez les descriptions suivantes des contrôles pour plus d'informations sur les méthodes.
 

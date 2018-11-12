@@ -1,28 +1,18 @@
 ---
-title: remove_extent, classe | Microsoft Docs
-ms.custom: ''
+title: remove_extent, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::remove_extent
-dev_langs:
-- C++
 helpviewer_keywords:
 - remove_extent class
 - remove_extent
 ms.assetid: b9320862-3891-49fc-80bc-571eb2c035cf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dcd99de00e7cc5bf2689476df03c5d97d65e2be5
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1425de12158354c649ec355124f8c255255b29c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107378"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436384"
 ---
 # <a name="removeextent-class"></a>remove_extent, classe
 

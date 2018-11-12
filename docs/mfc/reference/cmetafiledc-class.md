@@ -1,10 +1,6 @@
 ---
-title: CMetaFileDC, classe | Microsoft Docs
-ms.custom: ''
+title: CMetaFileDC (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMetaFileDC
 - AFXEXT/CMetaFileDC
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXEXT/CMetaFileDC::CloseEnhanced
 - AFXEXT/CMetaFileDC::Create
 - AFXEXT/CMetaFileDC::CreateEnhanced
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMetaFileDC [MFC], CMetaFileDC
 - CMetaFileDC [MFC], Close
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa9cc938d3738cd789dc648c87eb8bf9b84a6b14
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 343ab1a5d0c38ab0d17c609fbfc134b144502553
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414470"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471810"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC (classe)
 
@@ -227,6 +217,4 @@ Le nom de fichier pour le métafichier amélioré doit utiliser le. Extension EM
 
 [CDC, classe](../../mfc/reference/cdc-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

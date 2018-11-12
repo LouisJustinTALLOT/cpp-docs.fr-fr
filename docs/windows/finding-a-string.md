@@ -1,29 +1,18 @@
 ---
 title: Recherche une ressource de type chaîne (C++) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.string
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], searching
 - strings [C++]
 ms.assetid: c2497173-f356-4f77-97d6-f0ac41782510
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 308e84a84c39399c93d270ba4662b3b0f593e42d
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 0e6d8ac8027028377e903a9e0a3c89238a9862a2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082486"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585922"
 ---
 # <a name="finding-a-string-resource-c"></a>Recherche une ressource de type chaîne (C++)
 
@@ -55,4 +44,4 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur de chaînes](../windows/string-editor.md)  
+[Éditeur de chaînes](../windows/string-editor.md)

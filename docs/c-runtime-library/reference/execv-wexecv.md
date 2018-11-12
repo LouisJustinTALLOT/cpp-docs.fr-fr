@@ -1,10 +1,6 @@
 ---
-title: _execv, _wexecv | Microsoft Docs
-ms.custom: ''
+title: _execv, _wexecv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wexecv
 - _execv
@@ -25,24 +21,18 @@ f1_keywords:
 - _execv
 - _wexecv
 - wexecv
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wexecv function
 - _execv function
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8c6013e7d62b3738efe717c95e1464f31e2f0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399082"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523949"
 ---
 # <a name="execv-wexecv"></a>_execv, _wexecv
 
@@ -92,9 +82,9 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 Chacune de ces fonctions charge et exécute un nouveau processus, passant un tableau de pointeurs à des arguments de ligne de commande.
 
-Le **_execv** fonctions valident leurs paramètres. Si *cmdname* est un pointeur null, ou si *argv* est un pointeur null, pointeur vers un tableau vide, ou si le tableau contient une chaîne vide comme premier argument, la **_execv** fonctions appellent le Gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun processus lancé.
+Le **_execv** fonctions valident leurs paramètres. Si *cmdname* est un pointeur null, ou si *argv* est un pointeur null, pointeur vers un tableau vide, ou si le tableau contient une chaîne vide comme premier argument, le **_execv** fonctions appellent le Gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun processus lancé.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|

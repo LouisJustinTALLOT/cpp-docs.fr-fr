@@ -1,10 +1,6 @@
 ---
-title: _CrtGetAllocHook | Microsoft Docs
-ms.custom: ''
+title: _CrtGetAllocHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetAllocHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb811353d0ac252411cc5bfc8beb408b6e707089
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514957"
 ---
 # <a name="crtgetallochook"></a>_CrtGetAllocHook
 
@@ -55,11 +45,11 @@ Retourne la fonction de raccordement d’allocation définie.
 
 ## <a name="remarks"></a>Notes
 
-**_CrtGetAllocHook** récupère de la fonction de raccordement d’application définies par le client en cours pour le processus d’allocation mémoire bibliothèque C Runtime debug.
+**_CrtGetAllocHook** récupère la fonction de raccordement d’application définie par le client en cours pour le processus d’allocation mémoire de bibliothèque de débogage runtime C.
 
 Pour plus d’informations sur l’utilisation d’autres fonctions d’exécution compatibles avec le raccordement et sur l’écriture de vos propres fonctions de raccordement définies par le client, consultez [Écriture de fonctions de raccordement de débogage](/visualstudio/debugger/debug-hook-function-writing).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

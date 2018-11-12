@@ -1,10 +1,6 @@
 ---
-title: sin, sinf, sinl | Documents Microsoft
-ms.custom: ''
+title: sin, sinf, sinl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinl
 - sinf
@@ -27,8 +23,6 @@ f1_keywords:
 - sinf
 - sinl
 - sin
-dev_langs:
-- C++
 helpviewer_keywords:
 - _sinl function
 - sinl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99e7792e177c6203d38a368f3dd4125fe848a76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407575"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430360"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -72,20 +62,20 @@ Angle en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **sin** fonctions retournent le sinus de *x*. Si *x* est supérieur ou égal à 263 ou inférieur ou égal à -263, une perte de crédibilité du résultat se produit.
+Le **sin** fonctions retournent le sinus de *x*. Si *x* est supérieur ou égal à 263 ou inférieur ou égal à -263, une perte de précision dans le résultat se produit.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Aucun|_DOMAIN|
-|± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|
+|± QNAN,IND|Aucun.|_DOMAIN|
+|+ ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sin** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **sin** accepte et retourne toujours **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **sin** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **sin** accepte et retourne toujours **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|

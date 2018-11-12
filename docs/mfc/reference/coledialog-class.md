@@ -1,29 +1,19 @@
 ---
-title: COleDialog, classe | Microsoft Docs
-ms.custom: ''
+title: COleDialog, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDialog
 - AFXODLGS/COleDialog
 - AFXODLGS/COleDialog::GetLastError
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c6cebf6af24de860c583398c16c87824ede0075
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c798c1ad81395465e7aa5405ab786ddfb67b71d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401275"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494703"
 ---
 # <a name="coledialog-class"></a>COleDialog, classe
 
@@ -105,6 +95,4 @@ Consultez le `DoModal` fonction membre dans les classes dérivées pour plus d�
 
 [CCommonDialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

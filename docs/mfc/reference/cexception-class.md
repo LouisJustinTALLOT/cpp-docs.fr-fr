@@ -1,33 +1,23 @@
 ---
-title: CException, classe | Microsoft Docs
-ms.custom: ''
+title: CException (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CException
 - AFX/CException
 - AFX/CException::CException
 - AFX/CException::Delete
 - AFX/CException::ReportError
-dev_langs:
-- C++
 helpviewer_keywords:
 - CException [MFC], CException
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 189a6bd675ef3dec467fac98584abd7edfb49c19
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 53dac18b2ee0176eba0a869a0af254ff2978cffd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433934"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562225"
 ---
 # <a name="cexception-class"></a>CException (classe)
 
@@ -242,5 +232,4 @@ else
 [Graphique hiérarchique](../hierarchy-chart.md)<br/>
 [Traitement des exceptions](exception-processing.md)<br/>
 [Comment faire : créer mes propres Classes d’Exception personnalisées](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
 

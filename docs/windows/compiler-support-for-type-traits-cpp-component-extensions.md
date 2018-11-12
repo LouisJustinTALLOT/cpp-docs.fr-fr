@@ -1,9 +1,6 @@
 ---
-title: Prise en charge du compilateur pour les Type Traits (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Prise en charge du compilateur pour les Type Traits (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - __is_simple_value_class
@@ -34,8 +31,6 @@ f1_keywords:
 - __is_empty
 - __is_pod
 - __has_user_destructor
-dev_langs:
-- C++
 helpviewer_keywords:
 - __is_class keyword [C++]
 - __is_pod keyword [C++]
@@ -66,17 +61,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: dfa3f599da4594e9cb0d416def1846b9937664f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 5cd4d7feef01d1b7bedd407357c618ba208d06f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536186"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Prise en charge du compilateur pour les Type Traits (C++ / c++ / CLI et c++ / CX)
 
@@ -231,7 +221,7 @@ La liste suivante contient les traits de type qui sont pris en charge par le com
 
    Retourne **true** si le type a un destructeur trivial, généré par le compilateur.
 
-    ``` cpp 
+    ``` cpp
     // has_trivial_destructor.cpp
     #include <stdio.h>
     struct S {};
@@ -567,7 +557,7 @@ ref struct is_class {
 ref class R {};
 
 int main () {
-   if (is_class<R>::value)  
+   if (is_class<R>::value)
       Console::WriteLine("R is a ref class");
    else
       Console::WriteLine("R is not a ref class");
@@ -580,4 +570,4 @@ R is a ref class
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,9 +1,6 @@
 ---
-title: SafeInt, fonctions | Microsoft Docs
-ms.custom: ''
-ms.date: 09/28/2018
-ms.technology:
-- cpp-windows
+title: SafeInt, fonctions
+ms.date: 10/22/2018
 ms.topic: reference
 f1_keywords:
 - SafeInt functions
@@ -19,8 +16,6 @@ f1_keywords:
 - SafeMultiply
 - SafeNotEquals
 - SafeSubtract
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions, SafeInt
 - SafeAdd function
@@ -36,17 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 0cf1418e3bf00c037faaa67de2bc76ad2b7cc5e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162579"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578397"
 ---
 # <a name="safeint-functions"></a>SafeInt, fonctions
 
@@ -55,6 +45,9 @@ La Bibliothèque SafeInt fournit plusieurs fonctions que vous pouvez utiliser sa
 Ces fonctions permettent de comparer ou effectuer des opérations mathématiques sur deux types de paramètres sans avoir à les convertir d’abord vers le même type.
 
 Chacune de ces fonctions a deux types de modèle : `T` et `U`. Chacun de ces types peut être une valeur booléenne, un caractère ou un type intégral. Types intégraux peuvent être signés ou non signés et n’importe quelle taille allant de 8 bits à 64 bits.
+
+> [!NOTE]
+> La dernière version de cette bibliothèque se trouve dans [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="in-this-section"></a>Dans cette section
 

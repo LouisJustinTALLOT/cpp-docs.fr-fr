@@ -1,12 +1,6 @@
 ---
-title: Gestion des exceptions dans MFC | Microsoft Docs
-ms.custom: ''
+title: Gestion des exceptions dans MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DAO [MFC], exceptions
 - assertions [MFC], When to use exceptions
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c19b000c1d7ee5cb1f8480f0e9f384b42937dc9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fcc233b2cc0bfeeb589fec10c94343839f2c8032
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414483"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623442"
 ---
 # <a name="exception-handling-in-mfc"></a>Gestion des exceptions dans MFC
 
@@ -81,15 +71,15 @@ Trois catégories de résultats peuvent se produire lorsqu’une fonction est ap
 
 - Exécution normale
 
-     La fonction peut exécuter normalement et retourner. Certaines fonctions retournent un code de résultat à l’appelant, qui indique le résultat de la fonction. Les codes de résultat possibles sont strictement définis pour la fonction et représentent la plage de résultats possibles de la fonction. Le code de résultat peut indiquer la réussite ou échec, ou peut indiquer même un type particulier de défaillance qui se trouve dans la plage normale d’attentes. Par exemple, une fonction de l’état des fichiers peut retourner un code qui indique que le fichier n’existe pas. Notez que le terme « code d’erreur » n’est pas utilisé, car un code de résultat représente un des nombreux résultats possibles.
+   La fonction peut exécuter normalement et retourner. Certaines fonctions retournent un code de résultat à l’appelant, qui indique le résultat de la fonction. Les codes de résultat possibles sont strictement définis pour la fonction et représentent la plage de résultats possibles de la fonction. Le code de résultat peut indiquer la réussite ou échec, ou peut indiquer même un type particulier de défaillance qui se trouve dans la plage normale d’attentes. Par exemple, une fonction de l’état des fichiers peut retourner un code qui indique que le fichier n’existe pas. Notez que le terme « code d’erreur » n’est pas utilisé, car un code de résultat représente un des nombreux résultats possibles.
 
 - Exécution erronée
 
-     L’appelant commet une erreur lors du passage des arguments à la fonction ou appelle la fonction dans un contexte inapproprié. Cette situation provoque une erreur, et il doit être détecté par une assertion au cours du développement du programme. (Pour plus d’informations sur les assertions, consultez [Assertions C/C++](/visualstudio/debugger/c-cpp-assertions).)
+   L’appelant commet une erreur lors du passage des arguments à la fonction ou appelle la fonction dans un contexte inapproprié. Cette situation provoque une erreur, et il doit être détecté par une assertion au cours du développement du programme. (Pour plus d’informations sur les assertions, consultez [Assertions C/C++](/visualstudio/debugger/c-cpp-assertions).)
 
 - Exécution anormale
 
-     Exécution anormale inclut les situations où les conditions à l’extérieur du contrôle du programme, telles que la mémoire est insuffisante ou des erreurs d’e/s, influencent le résultat de la fonction. Situations anormales doivent être gérées par la mise en cache et levée d’exceptions.
+   Exécution anormale inclut les situations où les conditions à l’extérieur du contrôle du programme, telles que la mémoire est insuffisante ou des erreurs d’e/s, influencent le résultat de la fonction. Situations anormales doivent être gérées par la mise en cache et levée d’exceptions.
 
 Utilisation d’exceptions est particulièrement bien adapté pour exécution anormale.
 

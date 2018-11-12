@@ -1,10 +1,6 @@
 ---
-title: CMemFile, classe | Microsoft Docs
-ms.custom: ''
+title: CMemFile, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMemFile
 - AFX/CMemFile
@@ -16,8 +12,6 @@ f1_keywords:
 - AFX/CMemFile::GrowFile
 - AFX/CMemFile::Memcpy
 - AFX/CMemFile::Realloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMemFile [MFC], CMemFile
 - CMemFile [MFC], Attach
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0df3da3be3e2ad850b2b84b636d1bc1d3fb7eb98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7bc54d30df80ec8d56b6a403582ebe4c48858f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50634887"
 ---
 # <a name="cmemfile-class"></a>CMemFile, classe
 
@@ -165,7 +155,6 @@ La première surcharge ouvre un fichier de mémoire vide.
 
 ```
 CMemFile(UINT nGrowBytes = 1024);
-
 
 CMemFile(
     BYTE* lpBuffer,
@@ -303,6 +292,4 @@ Remplacez cette fonction pour implémenter la réallocation de mémoire personna
 
 [CFile, classe](../../mfc/reference/cfile-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

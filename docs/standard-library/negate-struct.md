@@ -1,30 +1,20 @@
 ---
-title: negate, struct | Microsoft Docs
-ms.custom: ''
+title: negate (struct)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::negate
-dev_langs:
-- C++
 helpviewer_keywords:
 - negate struct
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e43c47d5f5c3da22a5a0e0df11022d3b667149bd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 029fd73faf5326a0d1b99885864b1ed992080e8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313895"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654712"
 ---
-# <a name="negate-struct"></a>negate, struct
+# <a name="negate-struct"></a>negate (struct)
 
 Objet de fonction prédéfini qui effectue l’opération de négation arithmétique ( `operator-` unaire) sur son argument.
 

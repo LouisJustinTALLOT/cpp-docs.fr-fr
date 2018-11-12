@@ -1,66 +1,59 @@
 ---
-title: Récupération d’un BLOB | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
+title: Récupération d'un BLOB
+ms.date: 10/24/2018
 helpviewer_keywords:
 - retrieving BLOBs
 - BLOB (binary large object), retrieving
 - OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 5194d205dc29df9c73e3ca44637f23ca16f72e6b
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 365b2e5636ecc65ea334730a92953070edd104ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083773"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453207"
 ---
 # <a name="retrieving-a-blob"></a>Récupération d'un BLOB
 
-Vous pouvez récupérer un objet binaire volumineux (BLOB) de différentes manières. Vous pouvez utiliser `DBTYPE_BYTES` pour récupérer l’objet BLOB sous la forme d’une séquence d’octets ou utiliser une interface comme `ISequentialStream`. Pour plus d’informations, consultez [objets BLOB et OLE](/previous-versions/windows/desktop/ms711511) dans le *de référence du programmeur OLE DB*.  
-  
-Le code suivant montre comment récupérer un objet BLOB à l’aide `ISequentialStream`. La macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) vous permet de spécifier l’interface et les indicateurs utilisés pour l’interface. Après avoir ouvert la table, le code appelle `Read` à maintes reprises sur `ISequentialStream` pour lire les octets à partir de l’objet BLOB. Le code appelle `Release` pour supprimer le pointeur d’interface avant d’appeler `MoveNext` pour obtenir l’enregistrement suivant.  
-  
-```cpp  
-class CCategories  
-{  
-public:  
-   ISequentialStream*   pPicture;  
-  
-BEGIN_COLUMN_MAP(CCategories)  
-   BLOB_ENTRY(4, IID_ISequentialStream, STGM_READ, pPicture)  
-END_COLUMN_MAP()  
-};  
-  
-CTable<CAccessor<CCategories>> categories;  
-ULONG          cb;  
-BYTE            myBuffer[65536];  
-  
-categories.Open(session, "Categories");  
+Vous pouvez récupérer un objet binaire volumineux (BLOB) de différentes manières. Vous pouvez utiliser `DBTYPE_BYTES` pour récupérer l’objet BLOB sous la forme d’une séquence d’octets ou utiliser une interface comme `ISequentialStream`. Pour plus d’informations, consultez [objets BLOB et OLE](/previous-versions/windows/desktop/ms711511) dans le **de référence du programmeur OLE DB**.
 
-while (categories.MoveNext() == S_OK)  
-{  
-   do  
-   {  
-      categories.pPicture->Read(myBuffer, 65536, &cb);  
-      // Do something with the buffer  
-   } while (cb > 0);  
-   categories.pPicture->Release();  
-}  
-```  
-  
-Pour plus d’informations sur les macros qui gèrent les données BLOB, consultez « Macros de mappage de colonnes » dans [Macros et fonctions globales pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
-  
-## <a name="see-also"></a>Voir aussi  
+Le code suivant montre comment récupérer un objet BLOB à l’aide `ISequentialStream`. La macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) vous permet de spécifier l’interface et les indicateurs utilisés pour l’interface. Après avoir ouvert la table, le code appelle `Read` à maintes reprises sur `ISequentialStream` pour lire les octets à partir de l’objet BLOB. Le code appelle `Release` pour supprimer le pointeur d’interface avant d’appeler `MoveNext` pour obtenir l’enregistrement suivant.
+
+```cpp
+class CCategories
+{
+public:
+   ISequentialStream* pPicture;
+
+BEGIN_COLUMN_MAP(CCategories)
+   BLOB_ENTRY(4, IID_ISequentialStream, STGM_READ, pPicture)
+END_COLUMN_MAP()
+};
+```
+
+Ensuite, il est utilisé par le code suivant :
+
+```cpp
+CTable<CAccessor<CCategories>> categories;
+ULONG cb;
+BYTE myBuffer[65536];
+
+categories.Open(session, "Categories");
+
+while (categories.MoveNext() == S_OK)
+{
+   do
+   {
+      categories.pPicture->Read(myBuffer, 65536, &cb);
+      // Do something with the buffer
+   } while (cb > 0);
+   categories.pPicture->Release();
+}
+```
+
+Pour plus d’informations sur les macros qui gèrent les données BLOB, consultez **Macros de mappage de colonne** dans [Macros et fonctions globales pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).
+
+## <a name="see-also"></a>Voir aussi
 
 [Utilisation des accesseurs](../../data/oledb/using-accessors.md)<br/>
-[Macros et fonctions globales pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)
+[Macros et fonctions globales pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>

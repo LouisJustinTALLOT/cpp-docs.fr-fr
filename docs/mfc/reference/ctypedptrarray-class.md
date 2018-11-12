@@ -1,10 +1,6 @@
 ---
-title: CTypedPtrArray, classe | Microsoft Docs
-ms.custom: ''
+title: CTypedPtrArray (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CTypedPtrArray
 - AFXTEMPL/CTypedPtrArray
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXTEMPL/CTypedPtrArray::InsertAt
 - AFXTEMPL/CTypedPtrArray::SetAt
 - AFXTEMPL/CTypedPtrArray::SetAtGrow
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTypedPtrArray [MFC], Add
 - CTypedPtrArray [MFC], Append
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a83e425863afe4a8f355c4ce4543935c4e910216
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: da31f6eef95364ad010d9c9aeb19225d42a42283
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408009"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452323"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray (classe)
 
@@ -230,7 +220,6 @@ void InsertAt(
     INT_PTR nIndex,
     TYPE newElement,
     INT_PTR nCount = 1);
-
 
 void InsertAt(
     INT_PTR nStartIndex,

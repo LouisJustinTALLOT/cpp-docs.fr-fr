@@ -1,33 +1,23 @@
 ---
-title: Tableaux (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Tableaux (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
 - lang::array
-dev_langs:
-- C++
 helpviewer_keywords:
 - array keyword [C++]
 - arrays [C++], multidimensional
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b1a1f977e15d80d631799d8a9e101a8c85e3aaf1
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 1421434b1271d3c9caa11258647dd6ae357a2c0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328101"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632061"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Tableaux (C++ / c++ / CLI et c++ / CX)
 
@@ -55,10 +45,10 @@ Les tableaux sont des membres de la `Platform` espace de noms. Tableaux peuvent 
 Le premier exemple de la syntaxe de la **ref nouvelle** mot clé d’agrégation pour allouer un tableau. Le deuxième exemple déclare un tableau local.
 
 ```cpp
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]
 
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
@@ -111,10 +101,10 @@ int main() {
 Le premier exemple de la syntaxe de la **gcnew** mot clé pour allouer un tableau. Le deuxième exemple déclare un tableau local.
 
 ```cpp
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]
 
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
@@ -180,4 +170,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

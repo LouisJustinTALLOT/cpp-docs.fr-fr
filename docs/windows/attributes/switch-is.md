@@ -1,28 +1,17 @@
 ---
-title: switch_is (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: switch_is (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.switch_is
-dev_langs:
-- C++
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 425caf89619670dd8cabe647b01f8df63be24167
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e70f7d3d7419c25f0c5f9df8006e1d795c8b4361
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790688"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467287"
 ---
 # <a name="switchis"></a>switch_is
 
@@ -53,10 +42,10 @@ Consultez le [cas](case-cpp.md) exemple pour un exemple d’utilisation de **swi
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[switch_type](switch-type.md)  
+[switch_type](switch-type.md)

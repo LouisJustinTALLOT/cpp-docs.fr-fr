@@ -1,26 +1,16 @@
 ---
-title: 'Comment : sélectionner parmi les tâches terminées | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : effectuer une sélection parmi les tâches terminées'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c458ab708af738d181bd720085c8cf533652d2a6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c9137c3d1e354a5e3f50f0d281ecbbd247642597
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436050"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551630"
 ---
 # <a name="how-to-select-among-completed-tasks"></a>Comment : effectuer une sélection parmi les tâches terminées
 

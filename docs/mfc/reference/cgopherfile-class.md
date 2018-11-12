@@ -1,29 +1,19 @@
 ---
-title: CGopherFile, classe | Microsoft Docs
-ms.custom: ''
+title: CGopherFile (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CGopherFile
 - AFXINET/CGopherFile
 - AFXINET/CGopherFile::CGopherFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4405f591fbdf3636558dd770bd18b97476283d49
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9e5fbdcd14c0f988e894718f357d40e4b238c7c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421789"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658196"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile (classe)
 
@@ -77,7 +67,6 @@ CGopherFile(
     HINTERNET hFile,
     CGopherLocator& refLocator,
     CGopherConnection* pConnection);
-
 
 CGopherFile(
     HINTERNET hFile,

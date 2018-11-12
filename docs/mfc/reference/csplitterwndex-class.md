@@ -1,33 +1,21 @@
 ---
-title: Classe de CSplitterWndEx | Microsoft Docs
-ms.custom: ''
+title: Classe de CSplitterWndEx
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CSplitterWndEx
 - AFXSPLITTERWNDEX/CSplitterWndEx
 - AFXSPLITTERWNDEX/CSplitterWndEx::OnDrawSplitter
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7df892a3d3f038655f37b78fa88babb09d50df2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538994"
 ---
 # <a name="csplitterwndex-class"></a>Classe de CSplitterWndEx
-
-
 
 Représente une fenêtre fractionnée personnalisée.
 
@@ -86,7 +74,7 @@ virtual void OnDrawSplitter(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique. Si ce paramètre est NULL, le framework redessine la fenêtre active.
 
 *%nLes*<br/>

@@ -1,27 +1,17 @@
 ---
-title: Logpen, Structure | Microsoft Docs
-ms.custom: ''
+title: LOGPEN, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - LOGPEN
-dev_langs:
-- C++
 helpviewer_keywords:
 - LOGPEN structure [MFC]
 ms.assetid: a89e8690-6b61-4af5-990c-7c82da24f3b0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a535858a0d5540db481fd42918b4079f30c90728
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d53d99f5aed0fa0e0a67f829af2b8751d56d492d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375667"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589343"
 ---
 # <a name="logpen-structure"></a>LOGPEN, structure
 
@@ -56,9 +46,9 @@ Spécifie le type de stylet. Ce membre peut être une des valeurs suivantes :
 
 - Les fonctions qui spécifient un rectangle englobant de la sortie des PS_INSIDEFRAME crée un stylet qui dessine une ligne dans le cadre des formes fermées produit par GDI (par exemple, le `Ellipse`, `Rectangle`, `RoundRect`, `Pie`, et `Chord` membre fonctions). Quand ce style est utilisé avec GDI des fonctions qui ne spécifient pas d’un rectangle englobant de sortie (par exemple, le `LineTo` fonction membre), la zone de dessin du stylet n’est pas limitée par un frame.
 
-     Si un stylet a le style PS_INSIDEFRAME et une couleur qui ne correspond pas à une couleur de la table logique, le stylet est dessiné avec une couleur dégradée. Le style de stylet PS_SOLID ne peut pas être utilisé pour créer un stylet avec une couleur dégradée. Le style PS_INSIDEFRAME est identique à PS_SOLID si la largeur du stylet est inférieure ou égale à 1.
+   Si un stylet a le style PS_INSIDEFRAME et une couleur qui ne correspond pas à une couleur de la table logique, le stylet est dessiné avec une couleur dégradée. Le style de stylet PS_SOLID ne peut pas être utilisé pour créer un stylet avec une couleur dégradée. Le style PS_INSIDEFRAME est identique à PS_SOLID si la largeur du stylet est inférieure ou égale à 1.
 
-     Lorsque le style PS_INSIDEFRAME est utilisé avec les objets GDI générées par des fonctions autres que `Ellipse`, `Rectangle`, et `RoundRect`, la ligne est peut-être pas complètement à l’intérieur du cadre spécifié.
+   Lorsque le style PS_INSIDEFRAME est utilisé avec les objets GDI générées par des fonctions autres que `Ellipse`, `Rectangle`, et `RoundRect`, la ligne est peut-être pas complètement à l’intérieur du cadre spécifié.
 
 *lopnWidth*<br/>
 Spécifie la largeur du stylet, en unités logiques. Si le `lopnWidth` membre est 0, le stylet est 1 pixel de large sur les appareils raster, quel que soit le mode de mappage en cours.

@@ -1,33 +1,23 @@
 ---
-title: Cpanedialog, classe | Microsoft Docs
-ms.custom: ''
+title: Cpanedialog, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPaneDialog
 - AFXPANEDIALOG/CPaneDialog
 - AFXPANEDIALOG/CPaneDialog::Create
 - AFXPANEDIALOG/CPaneDialog::HandleInitDialog
 - AFXPANEDIALOG/CPaneDialog::SetOccDialogInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPaneDialog [MFC], Create
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9783eb0e4468f154591676dc46ed9342082d8512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 95fc66ba55734c415cb41151cdc9b83d1b154898
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431927"
 ---
 # <a name="cpanedialog-class"></a>Cpanedialog, classe
 
@@ -102,7 +92,6 @@ BOOL Create(
     DWORD dwTabbedStyle= AFX_CBRS_REGULAR_TABS,
     DWORD dwControlBarStyle=AFX_DEFAULT_DOCKING_PANE_STYLE);
 
-
 BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -111,13 +100,11 @@ BOOL Create(
     UINT nStyle,
     UINT nID);
 
-
 BOOL Create(
     CWnd* pParentWnd,
     LPCTSTR lpszTemplateName,
     UINT nStyle,
     UINT nID);
-
 
 BOOL Create(
     CWnd* pParentWnd,
@@ -221,6 +208,4 @@ Cette méthode prend en charge la [COccManager](../../mfc/reference/coccmanager-
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CDockablePane, classe](../../mfc/reference/cdockablepane-class.md)<br/>
 [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles)
-
-
 

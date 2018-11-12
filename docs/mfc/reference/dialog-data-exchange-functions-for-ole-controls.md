@@ -1,10 +1,6 @@
 ---
-title: Fonctions d’échange de données de la boîte de dialogue pour contrôles OLE | Microsoft Docs
-ms.custom: ''
+title: Fonctions d'échange de données de boîtes de dialogue pour contrôles OLE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - AFXDISP/DDX_OCBool
 - AFXDISP/DDX_OCBoolRO
@@ -18,22 +14,16 @@ f1_keywords:
 - AFXDISP/DDX_OCShortRO
 - AFXDISP/DDX_OCText
 - AFXDISP/DDX_OCTextRO
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a24bac5e27b0a3e0b1c011b1bb6019be2160d281
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531246"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Fonctions d'échange de données de boîtes de dialogue pour contrôles OLE
 
@@ -84,7 +74,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -118,7 +108,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -152,7 +142,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -186,7 +176,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -226,7 +216,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -266,7 +256,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -306,7 +296,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -346,7 +336,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -380,7 +370,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -414,7 +404,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -448,7 +438,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -482,7 +472,7 @@ Référence à une variable membre de l’objet boîte de dialogue, vue de formu
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).
+Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Configuration requise
 

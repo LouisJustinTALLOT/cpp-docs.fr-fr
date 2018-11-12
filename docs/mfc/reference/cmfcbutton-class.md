@@ -1,10 +1,6 @@
 ---
-title: Cmfcbutton, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcbutton, classe
 ms.date: 08/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCButton
 - AFXBUTTON/CMFCButton
@@ -45,8 +41,6 @@ f1_keywords:
 - AFXBUTTON/CMFCButton::m_bTransparent
 - AFXBUTTON/CMFCButton::m_nAlignStyle
 - AFXBUTTON/CMFCButton::m_nFlatStyle
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCButton [MFC], CleanUp
 - CMFCButton [MFC], EnableFullTextTooltip
@@ -86,16 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d9acae5f87223a3b23c492f02596452fabb745f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b33c4c89276b99b6b5f8a4129ef17f809f058ac5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441289"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547314"
 ---
 # <a name="cmfcbutton-class"></a>Cmfcbutton, classe
 
@@ -419,8 +409,6 @@ static BOOL IsWindowsThemingEnabled();
 
 TRUE si le style de la bordure du bouton correspondant au thème Windows en cours ; Sinon, FALSE.
 
-
-
 ## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
 
 Spécifie s’il faut utiliser des thèmes Windows XP lorsque le bouton de dessin.
@@ -446,7 +434,6 @@ Le `CMFCButton` constructeur initialise ce membre sur TRUE.
 ##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
 
 Lorsque la valeur est TRUE, permet à un bouton désactivé être dessiné comme grisé.
-
 
 ```
 BOOL m_bGrayDisabled;
@@ -479,7 +466,6 @@ Indique s’il faut afficher une image sur le côté droit du bouton.
 ```
 BOOL m_bRightImage;
 ```
-
 
 ##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
 
@@ -574,7 +560,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -600,7 +586,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectClient*<br/>
@@ -625,7 +611,7 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectClient*<br/>
@@ -650,7 +636,7 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -663,7 +649,7 @@ virtual void OnDrawText(
 [in] Indicateurs qui spécifient comment mettre en forme le texte. Pour plus d’informations, consultez le *nFormat* paramètre de la [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) (méthode).
 
 *uiState*<br/>
-[in] Réservé.
+[in] Réservée.
 
 ### <a name="remarks"></a>Notes
 
@@ -681,7 +667,7 @@ virtual void OnFillBackground(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *rectClient*<br/>
@@ -701,7 +687,7 @@ virtual CFont* SelectFont(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -739,14 +725,12 @@ void SetCheckedImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetCheckedImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetCheckedImage(
     UINT uiBmpResId,
@@ -828,14 +812,12 @@ void SetImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetImage(
     UINT uiBmpResId,

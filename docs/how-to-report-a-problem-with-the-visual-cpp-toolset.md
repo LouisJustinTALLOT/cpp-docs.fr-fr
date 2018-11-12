@@ -1,21 +1,16 @@
 ---
-title: Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++ | Microsoft Docs
+title: Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++
 ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 author: corob-msft
 ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 34157063e9b19539fd22c24986193987cf41979b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235007"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586847"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Guide pratique pour signaler un problème avec la documentation ou l’ensemble d’outils Visual C++
 
@@ -381,7 +376,7 @@ Pour les problèmes relatifs au compilateur, à l’éditeur de liens, et aux au
 
 Par défaut, **toutes les informations contenues dans les rapports, ainsi que les commentaires et les réponses qui peuvent y figurer, sont visibles publiquement**. Il s’agit en général d’un avantage dans la mesure où toute la communauté a accès aux problèmes, solutions et solutions de contournement identifiés par d’autres utilisateurs. Toutefois, si le fait de présenter au public vos données ou votre identité vous préoccupe, que ce soit pour des raisons de confidentialité ou de propriété intellectuelle, vous avez plusieurs options.
 
-Si vous ne souhaitez pas révéler votre identité, [créez un compte Microsoft](https://signup.live.com/) qui ne divulgue aucun détail vous concernant. Utilisez ce compte pour créer votre rapport. 
+Si vous ne souhaitez pas révéler votre identité, [créez un compte Microsoft](https://signup.live.com/) qui ne divulgue aucun détail vous concernant. Utilisez ce compte pour créer votre rapport.
 
 **Ne placez pas d’informations privées dans le titre ou le contenu du rapport initial, qui est public.** Au lieu de cela, envoyez des détails en privé dans un commentaire séparé. Pour garantir que votre rapport s’adresse aux bonnes personnes, ajoutez **cppcompiler** dans la liste des rubriques de votre rapport de problème. Une fois le rapport de problème créé, vous pouvez désormais spécifier qui peut voir vos réponses et pièces jointes.
 

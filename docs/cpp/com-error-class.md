@@ -1,27 +1,17 @@
 ---
-title: _com_error, classe | Microsoft Docs
-ms.custom: ''
+title: _com_error, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - _com_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfbaf1f0c88eaeb71bc4dfbbf2dca72c8d07251e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 093509d838ba6dc06a9b84b4c680c631a47826ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435177"
 ---
 # <a name="comerror-class"></a>_com_error, classe
 

@@ -1,27 +1,17 @@
 ---
-title: Utilisation de CString | Microsoft Docs
-ms.custom: ''
+title: Utilisation de CString
 ms.date: 06/18/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CString objects, C++ string manipulation
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e3de9b373a80ef939f5ac5ff3d746e0ebdc8b74
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d6ebc63fdcfa8294bf81aee0ce4df0c2f83af6f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405461"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430288"
 ---
 # <a name="using-cstring"></a>Utilisation de CString
 
@@ -43,13 +33,13 @@ Pour ajouter davantage de capacités à celles actuellement offertes par `CStrin
 
 Le code suivant montre comment créer un objet `CString` et l'imprimer dans la sortie standard :
 
-```cpp  
+```cpp
 #include <atlstr.h>
 
-int main() {  
-    CString aCString = CString(_T("A string"));  
-    _tprintf(_T("%s"), (LPCTSTR) aCString);  
-}  
+int main() {
+    CString aCString = CString(_T("A string"));
+    _tprintf(_T("%s"), (LPCTSTR) aCString);
+}
 ```
 
 ## <a name="in-this-section"></a>Dans cette section

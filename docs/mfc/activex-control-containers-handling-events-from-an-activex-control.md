@@ -1,12 +1,6 @@
 ---
-title: 'Conteneurs de contrôles ActiveX : Gestion des événements à partir d’un contrôle ActiveX | Microsoft Docs'
-ms.custom: ''
+title: "Conteneurs de contrôles ActiveX : gestion d'événements à partir d'un contrôle ActiveX"
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
 - ActiveX control containers [MFC], event sinks
@@ -17,24 +11,19 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a7bd8c505c857082732e56ff2b4bf1a5bed76647
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5deff0a50de813cc5faa43a86e591d3003a3c03e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420307"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659626"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Conteneurs de contrôles ActiveX : gestion d'événements à partir d'un contrôle ActiveX
 
 Cet article décrit l’utilisation de la fenêtre Propriétés pour installer des gestionnaires d’événements pour les contrôles ActiveX dans un conteneur de contrôles ActiveX. Les gestionnaires d’événements sont utilisés pour recevoir des notifications (à partir du contrôle) de certains événements et effectuer une action en réponse. Cette notification est appelée « déclenche » l’événement.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
-
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 > [!NOTE]
 >  Cet article utilise un boîte de dialogue ActiveX conteneur projet de contrôle nommé conteneur et un contrôle incorporé nommé CERC comme exemples dans les procédures et le code.
@@ -70,7 +59,7 @@ Pour plus d’informations sur les macros de récepteur d’événements, consul
 
 1. Dans la fenêtre Propriétés, sélectionnez l’ID de contrôle du contrôle ActiveX incorporé. Pour cet exemple, utilisez `IDC_CIRCCTRL1`.
 
-     La fenêtre Propriétés affiche une liste des événements qui peuvent être déclenchés par le contrôle ActiveX incorporé. N’importe quelle fonction membre indiquée en gras déjà dispose de fonctions de gestionnaire qui lui est assignées.
+   La fenêtre Propriétés affiche une liste des événements qui peuvent être déclenchés par le contrôle ActiveX incorporé. N’importe quelle fonction membre indiquée en gras déjà dispose de fonctions de gestionnaire qui lui est assignées.
 
 1. Sélectionnez l’événement que vous souhaitez que la classe de boîte de dialogue à gérer. Pour cet exemple, sélectionnez **cliquez sur**.
 

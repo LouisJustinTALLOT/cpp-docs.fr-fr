@@ -1,26 +1,16 @@
 ---
-title: typeid (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: typeid (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b31344b1ba72b37bcfff45a3fd4feefda85f6a7a
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 28d37c80d8a6ed560746f243807eff51f713d74c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580753"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++ / c++ / CLI et c++ / CX)
 
@@ -110,7 +100,7 @@ int main() {
    Type ^ pType = pG->GetType();
    Type ^ pType2 = G::typeid;
 
-   if (pType == pType2)  
+   if (pType == pType2)
       Console::WriteLine("typeid and GetType returned the same System::Type");
    Console::WriteLine(G::typeid);
 
@@ -123,7 +113,7 @@ int main() {
 typeid and GetType returned the same System::Type
 G
 
-System.Single*  
+System.Single*
 ```
 
 L’exemple suivant montre qu’une variable de type que System::type peut être utilisé pour obtenir les attributs sur un type.  Il montre également que pour certains types, vous devez créer un typedef pour utiliser `typeid`.
@@ -169,13 +159,13 @@ int main() {
    Console::WriteLine(MyType->IsClass);
 
    array<Object^>^ MyArray = MyType -> GetCustomAttributes(true);
-   for (int i = 0 ; i < MyArray->Length ; i++ )  
+   for (int i = 0 ; i < MyArray->Length ; i++ )
       Console::WriteLine(MyArray[i]);
 
-   if (int::typeid != pointer_to_int::typeid)  
+   if (int::typeid != pointer_to_int::typeid)
       Console::WriteLine("int::typeid != pointer_to_int::typeid, as expected");
 
-   if (int::typeid == handle_to_int::typeid)  
+   if (int::typeid == handle_to_int::typeid)
       Console::WriteLine("int::typeid == handle_to_int::typeid, as expected");
 }
 ```
@@ -200,4 +190,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

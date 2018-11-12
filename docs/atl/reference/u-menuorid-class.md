@@ -1,30 +1,20 @@
 ---
-title: _U_menuorid, classe | Microsoft Docs
-ms.custom: ''
+title: _U_menuorid, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - ATL._U_MENUorID
 - ATL::_U_MENUorID
 - _U_MENUorID
-dev_langs:
-- C++
 helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9e5902019704821d6c34c74480623593b7d7448a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dacb747978fd77d5ad8a464acc675c3509f5a815
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499734"
 ---
 # <a name="umenuorid-class"></a>_U_menuorid, classe
 
@@ -57,7 +47,7 @@ class _U_MENUorID
 
 Cette classe d’adaptateur argument permet ID (ventes) ou handles de menu (HMENUs) à passer à une fonction sans nécessiter un cast explicite part de l’appelant.
 
-Cette classe est conçue pour l’implémentation des wrappers pour l’API Windows, en particulier le [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) et [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) fonctions, qui acceptent un argument HMENU qui peut être une fenêtre enfant identificateur (UINT) plutôt qu’un handle de menu. Par exemple, vous pouvez voir cette classe en cours d’utilisation en tant que paramètre à [CWindowImpl::Create](cwindowimpl-class.md#create).  
+Cette classe est conçue pour l’implémentation des wrappers pour l’API Windows, en particulier le [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) et [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) fonctions, qui acceptent un argument HMENU qui peut être une fenêtre enfant identificateur (UINT) plutôt qu’un handle de menu. Par exemple, vous pouvez voir cette classe en cours d’utilisation en tant que paramètre à [CWindowImpl::Create](cwindowimpl-class.md#create).
 
 La classe définit deux surcharges de constructeur : une accepte un argument UINT et l’autre accepte un argument HMENU. L’argument UINT est simplement casté en une valeur HMENU du constructeur et le résultat stocké dans le membre de données unique de la classe, [m_hMenu](#_u_menuorid__m_hmenu). L’argument au constructeur HMENU est stocké directement, sans conversion.
 

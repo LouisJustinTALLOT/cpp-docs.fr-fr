@@ -1,27 +1,17 @@
 ---
-title: '&lt;utility&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;utility&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <utility>
-dev_langs:
-- C++
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 84464f485d39f1146f55fb6b5b1970cf1c9321df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 318cd86832875f3701c5d164ce9150e6adddb242
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858131"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467198"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
@@ -59,7 +49,7 @@ Les paires sont largement utilisées dans la bibliothèque standard C++. Elles s
 
 |Opérateur|Description|
 |-|-|
-|[operator!=](../standard-library/utility-operators.md#op_neq)|Teste si l'objet pair situé à gauche de l'opérateur n'est pas égal à l'objet pair situé à droite.|
+|[!=, opérateur](../standard-library/utility-operators.md#op_neq)|Teste si l'objet pair situé à gauche de l'opérateur n'est pas égal à l'objet pair situé à droite.|
 |[operator==](../standard-library/utility-operators.md#op_eq_eq)|Teste si l'objet pair situé à gauche de l'opérateur est égal à l'objet pair situé à droite.|
 |[operator<](../standard-library/utility-operators.md#op_lt)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur à l'objet pair situé à droite.|
 |[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur ou égal à l'objet pair situé à droite.|

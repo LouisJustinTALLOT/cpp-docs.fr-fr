@@ -1,12 +1,6 @@
 ---
-title: Test des propriétés et des événements avec le conteneur de Test | Microsoft Docs
-ms.custom: ''
+title: Test des propriétés et des événements avec le conteneur de test
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - testing, test containers
 - tstcon32.exe
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e06f10114b896e2728e5a017281e54f75ce534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf36514c6ce2cd25a49901165fcf919cffd5da7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633361"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Test des propriétés et des événements avec le conteneur de test
 
@@ -56,7 +46,7 @@ L’application conteneur de Test, fournie avec Visual C++, est un conteneur de 
 
 1. Cliquez sur **Invoke** pour appliquer la nouvelle valeur à l’objet.
 
-     La propriété contient maintenant la nouvelle valeur.
+   La propriété contient maintenant la nouvelle valeur.
 
 #### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>Pour tester des événements et spécifier la destination des informations sur les événements.
 

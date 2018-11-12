@@ -1,28 +1,17 @@
 ---
-title: async_uuid (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: async_uuid (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.async_uuid
-dev_langs:
-- C++
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 336bbf00edc84335972171aba0e7fc01e206984e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 559500a1390e0d1bac8344d0ffcfc1bdd9ad55f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790704"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490907"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -68,9 +57,9 @@ __interface ICustom {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|**Double**, **dispinterface**|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs d’interface](interface-attributes.md)  
+[Attributs d’interface](interface-attributes.md)

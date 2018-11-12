@@ -1,23 +1,13 @@
 ---
-title: 3.1 exécution des fonctions d’environnement | Microsoft Docs
-ms.custom: ''
+title: 3.1 Exécution des fonctions d'environnement
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 7d3e6f47-ce01-4dab-946b-bccc220e2ddd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dadb6f2ae7abeb8ed06f8979fd955dee3c7edc36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fae68a072063382fa5a5a33fe33fbe4460fb449f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668804"
 ---
 # <a name="31-execution-environment-functions"></a>3.1 Exécution des fonctions d'environnement
 

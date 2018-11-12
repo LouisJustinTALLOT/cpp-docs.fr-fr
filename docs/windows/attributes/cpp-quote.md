@@ -1,28 +1,17 @@
 ---
-title: cpp_quote (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: cpp_quote (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.cpp_quote
-dev_langs:
-- C++
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f3d6042866661659102090380c95e7d04e9bcd6c
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 5a281f9f88412df4d3ee18bff1302b19433e07f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466948"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -62,9 +51,9 @@ Consultez l’exemple de [double](dual.md) pour obtenir un exemple, utilisez l�
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs autonomes](stand-alone-attributes.md)  
+[Attributs autonomes](stand-alone-attributes.md)

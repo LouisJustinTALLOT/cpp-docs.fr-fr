@@ -1,10 +1,6 @@
 ---
-title: Cdatarecoveryhandler, classe | Microsoft Docs
-ms.custom: ''
+title: Cdatarecoveryhandler, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDataRecoveryHandler
 - AFXDATARECOVERY/CDataRecoveryHandler
@@ -36,8 +32,6 @@ f1_keywords:
 - AFXDATARECOVERY/CDataRecoveryHandler::SetSaveDocumentInfoOnIdle
 - AFXDATARECOVERY/CDataRecoveryHandler::SetShutdownByRestartManager
 - AFXDATARECOVERY/CDataRecoveryHandler::UpdateDocumentInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDataRecoveryHandler [MFC], CDataRecoveryHandler
 - CDataRecoveryHandler [MFC], AutosaveAllDocumentInfo
@@ -68,16 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7eedad2e1efb72d85da893764fbd1201b9ac4b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456041"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Cdatarecoveryhandler, classe
 
@@ -234,7 +224,6 @@ CDataRecoveryHandler(
 ### <a name="remarks"></a>Notes
 
 L’infrastructure MFC crée automatiquement un `CDataRecoveryHandler` objet pour votre application lorsque vous utilisez le **nouveau projet** Assistant. Sauf si vous personnalisez le comportement de récupération de données ou le Gestionnaire de redémarrage, vous ne devez pas créer un `CDataRecoveryHandler` objet.
-
 
 ##  <a name="createdocumentinfo"></a>  CDataRecoveryHandler::CreateDocumentInfo
 

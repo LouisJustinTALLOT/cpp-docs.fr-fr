@@ -1,10 +1,6 @@
 ---
-title: CInternetConnection, classe | Microsoft Docs
-ms.custom: ''
+title: CInternetConnection, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CInternetConnection
 - AFXINET/CInternetConnection
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXINET/CInternetConnection::GetContext
 - AFXINET/CInternetConnection::GetServerName
 - AFXINET/CInternetConnection::GetSession
-dev_langs:
-- C++
 helpviewer_keywords:
 - CInternetConnection [MFC], CInternetConnection
 - CInternetConnection [MFC], GetContext
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 650935eec8d268aa5e1433ebd9a60b0bc63d0296
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: da11f62cfb453e31d3cacc1d4bc5b8a26f5b3764
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409426"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564799"
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection, classe
 
@@ -173,6 +163,4 @@ operator HINTERNET() const;
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

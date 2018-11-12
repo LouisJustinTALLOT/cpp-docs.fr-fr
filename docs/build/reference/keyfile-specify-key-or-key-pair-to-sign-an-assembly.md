@@ -1,30 +1,20 @@
 ---
-title: -KEYFILE (spécifier la clé ou une paire de clés pour signer un Assembly) | Microsoft Docs
-ms.custom: ''
+title: /KEYFILE (Spécifier une clé ou une paire de clés pour signer un assembly)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /keyfile
 - VC.Project.VCLinkerTool.KeyFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - /KEYFILE linker option
 - -KEYFILE linker option
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f43609e14d4e081f39c43cb8e548b8b6ac7923a1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6896993f7be8e088242e8a2e3279aa1f6c9a721d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701272"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524954"
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE (Spécifier une clé ou une paire de clés pour signer un assembly)
 

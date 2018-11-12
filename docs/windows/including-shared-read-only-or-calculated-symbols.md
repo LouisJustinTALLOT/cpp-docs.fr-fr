@@ -1,14 +1,8 @@
 ---
-title: Y compris partagés (lecture seule) ou calculés symboles | Microsoft Docs
-ms.custom: ''
+title: Ajout de symboles partagés (lecture seule) ou calculés
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.shared.calculated
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], read-only
 - symbols [C++], shared
@@ -18,17 +12,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 329f1d21489b57130531db20014e249588f101a6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d57ceb202ce88a6668b8eb3cc93b41c1f11f2b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400508"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645992"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Ajout de symboles partagés (lecture seule) ou calculés
 
@@ -40,7 +29,7 @@ Vous pouvez également utiliser des fichiers de symboles inclus quand vous dispo
 
 ```cpp
 #define   IDC_CONTROL1 2100
-#define   IDC_CONTROL2 (IDC_CONTROL1+1)  
+#define   IDC_CONTROL2 (IDC_CONTROL1+1)
 ```
 
 L'environnement interprète correctement ces symboles calculés tant que les conditions suivantes sont respectées :

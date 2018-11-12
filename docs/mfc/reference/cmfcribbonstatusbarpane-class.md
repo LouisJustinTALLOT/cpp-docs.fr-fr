@@ -1,10 +1,6 @@
 ---
-title: Cmfcribbonstatusbarpane, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcribbonstatusbarpane, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBarPane
 - AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane
@@ -21,8 +17,6 @@ f1_keywords:
 - AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::StartAnimation
 - AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::StopAnimation
 - AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::OnFinishAnimation
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], CMFCRibbonStatusBarPane
 - CMFCRibbonStatusBarPane [MFC], GetAlmostLargeText
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d0cd2be2e07cc59041634a0c9f7ed2fc2c2e47d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 183fd879b09595dda1dcd6caa8a8299debb20b30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412845"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449333"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Cmfcribbonstatusbarpane, classe
 
@@ -233,7 +223,7 @@ virtual void OnDrawBorder(CDC*);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *Capture de données modifiées**
+[in] *Capture de données modifiées&#42;*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -247,7 +237,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -1,10 +1,6 @@
 ---
-title: Afx_global_data, Structure | Microsoft Docs
-ms.custom: ''
+title: AFX_GLOBAL_DATA (structure)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - AFX_GLOBAL_DATA
 - AFXGLOBALS/AFX_GLOBAL_DATA::AFX_GLOBAL_DATA
@@ -55,22 +51,16 @@ f1_keywords:
 - AFXGLOBALS/AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing
 - AFXGLOBALS/AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 - AFXGLOBALS/AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
-dev_langs:
-- C++
 helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b6ccad2c7c6c925a2c5ef6a7270a95d8a270f0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6e75dfaab57fa0da534f0d9862b04e99f1f089a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603201"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (structure)
 
@@ -113,13 +103,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Initialise les fabriques `D2D`, `DirectWrite`et `WIC` . Appelez cette méthode avant que la fenêtre principale soit initialisée.|
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|Indique si les icônes 32 bits prédéfinies sont prises en charge.|
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Détermine si `D2D` a été initialisé.|
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Fournit un moyen simple d’appeler le Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) (méthode).|
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Fournit un moyen simple d’appeler la méthode Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) .|
 |[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|Indique si les images sont actuellement affichées avec un contraste élevé.|
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Détecte l’état actuel des fonctionnalités de masquage automatique de la barre des tâches et de l’animation des menus du Bureau.|
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Inscrit la classe de fenêtre MFC spécifiée.|
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Libère les interfaces obtenues par les méthodes GetITaskbarList et GetITaskbarList3.|
-|[AFX_GLOBAL_DATA::Resume](#resume)|Réinitialise les pointeurs de fonction internes qui accèdent à des méthodes qui prennent en charge Windows [thèmes et styles visuels](/windows/desktop/Controls/visual-styles-overview).|
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Fournit un moyen simple d’appeler le Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) (méthode).|
+|[AFX_GLOBAL_DATA::Resume](#resume)|Réinitialise les pointeurs de fonction internes qui accèdent à des méthodes prenant en charge [les thèmes et les styles visuels](/windows/desktop/Controls/visual-styles-overview)Windows.|
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Fournit un moyen simple d’appeler la méthode Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) .|
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Crée la police logique spécifiée.|
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Crée et initialise un objet élément d’interpréteur de commandes à partir d’un nom de l’analyse.|
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|Réinitialise les polices logiques qui sont utilisées par l’infrastructure.|
@@ -169,11 +159,9 @@ La plupart des données dans la structure `AFX_GLOBAL_DATA` sont initialisées a
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
-
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
 Indique si le système d’exploitation prend en charge la fusion alpha.
-
 
 ```
 BOOL  bIsOSAlphaBlendingSupport;
@@ -183,19 +171,17 @@ BOOL  bIsOSAlphaBlendingSupport;
 
 TRUE indique que la fusion alpha est pris en charge ; Sinon, FALSE.
 
-
 ## <a name="cleanup"></a> AFX_GLOBAL_DATA::CleanUp
 
 Libère les ressources allouées par l’infrastructure, telles que les pinceaux, les polices et les DLL.
 
-
 ```
 void CleanUp();
 ```
+
 ## <a name="d2d1makerotatematrix"></a> AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
 
 Crée une transformation de rotation qui pivote autour d’un point spécifié selon un angle spécifié.
-
 
 ```
 HRESULT D2D1MakeRotateMatrix(
@@ -223,7 +209,6 @@ Sinon, retourne S_OK en cas de réussite, ou une valeur d’erreur.
 
 Dessine l’arrière-plan du parent d’un contrôle dans la zone spécifiée.
 
-
 ```
 BOOL DrawParentBackground(
     CWnd* pWnd,
@@ -236,7 +221,7 @@ BOOL DrawParentBackground(
 *pWnd*<br/>
 [in] Pointeur vers la fenêtre d’un contrôle.
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *lpRect*<br/>
@@ -249,7 +234,6 @@ TRUE si cette méthode a réussi ; Sinon, FALSE.
 ## <a name="drawtextonglass"></a> AFX_GLOBAL_DATA::DrawTextOnGlass
 
 Dessine le texte spécifié dans le style visuel du thème spécifié.
-
 
 ```
 BOOL DrawTextOnGlass(
@@ -271,14 +255,14 @@ BOOL DrawTextOnGlass(
 
 Utilisez le [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) méthode pour créer un HTHEME.
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *iPartId*<br/>
-[in] La partie de contrôle qui a l’apparence du texte de votre choix. Pour plus d’informations, consultez la colonne composants de la table dans [composants et états](https://msdn.microsoft.com/library/windows/desktop/bb773210). Si cette valeur est égale à 0, le texte est dessiné avec la police par défaut ou une police sélectionnée dans le contexte de l’appareil.
+[in] La partie de contrôle qui a l’apparence du texte de votre choix. Pour plus d’informations, consultez la colonne Composants de la table figurant dans [Composants et états](https://msdn.microsoft.com/library/windows/desktop/bb773210). Si cette valeur est égale à 0, le texte est dessiné avec la police par défaut ou une police sélectionnée dans le contexte de l’appareil.
 
 *iStateId*<br/>
-[in] L’état du contrôle qui a l’apparence du texte de votre choix. Pour plus d’informations, consultez la colonne des États de la table dans [composants et états](https://msdn.microsoft.com/library/windows/desktop/bb773210).
+[in] L’état du contrôle qui a l’apparence du texte de votre choix. Pour plus d’informations, consultez la colonne États de la table figurant dans [Composants et états](https://msdn.microsoft.com/library/windows/desktop/bb773210).
 
 *strText*<br/>
 [in] Le texte à dessiner.
@@ -319,7 +303,6 @@ Un thème définit le style visuel d’une application. Un thème n’est pas ut
 
 Active ou désactive la prise en charge de Microsoft Active Accessibility.
 
-
 ```
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
@@ -335,7 +318,6 @@ Active Accessibility est une technologie COM qui améliore les façon dont les p
 
 Utilisez le [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) méthode pour déterminer si la prise en charge de Microsoft Active Accessibility est activée.
 
-
 ### <a name="see-also"></a>Voir aussi
 
 [UI Automation et Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
@@ -344,7 +326,6 @@ Utilisez le [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) m
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
 Supprime la paire de balises XML spécifiée dans une mémoire tampon spécifiée.
-
 
 ```
 BOOL ExcludeTag(
@@ -392,7 +373,6 @@ Utiliser les symboles dans le tableau suivant pour encoder un jeu de caractères
 
 Récupère la couleur actuelle de l’élément d’interface utilisateur spécifié.
 
-
 ```
 COLORREF GetColor(int nColor);
 ```
@@ -420,7 +400,6 @@ Si le *nColor* paramètre est hors limites, la valeur de retour est égale à z�
 
 Retourne un pointeur vers l’interface ID2D1Factory qui est stocké dans les données globales. Si l’interface n’est pas initialisée, elle est créée avec les paramètres par défaut.
 
-
 ```
 ID2D1Factory* GetDirect2dFactory();
 ```
@@ -433,7 +412,6 @@ Pointeur vers l’interface ID2D1Factory si la création d’une fabrique réuss
 
 Récupère le curseur prédéfini qui ressemble à une main et dont l’identificateur est IDC_HAND.
 
-
 ```
 HCURSOR GetHandCursor();
 ```
@@ -445,7 +423,6 @@ Le handle du curseur main.
 ## <a name="getnonclientmetrics"></a> AFX_GLOBAL_DATA::GetNonClientMetrics
 
 Récupère les mesures associées à la zone non cliente des fenêtres non réduites.
-
 
 ```
 BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
@@ -460,7 +437,6 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 TRUE si cette méthode réussit ; Sinon, FALSE.
 
-
 ### <a name="see-also"></a>Voir aussi
 
 [Structure NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
@@ -468,7 +444,6 @@ TRUE si cette méthode réussit ; Sinon, FALSE.
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
 Récupère la hauteur des caractères de texte dans la police actuelle.
-
 
 ```
 int GetTextHeight(BOOL bHorz = TRUE);
@@ -487,7 +462,6 @@ La hauteur de la police actuelle, qui est mesurée à partir de son ascender à 
 
 Retourne un pointeur vers l’interface IWICImagingFactory qui est stocké dans les données globales. Si l’interface n’est pas initialisée, elle est créée avec les paramètres par défaut.
 
-
 ```
 IWICImagingFactory* GetWICFactory();
 ```
@@ -500,7 +474,6 @@ Pointeur vers l’interface IWICImagingFactory si la création d’une fabrique 
 
 Retourne un pointeur vers l’interface IDWriteFactory qui est stocké dans les données globales. Si l’interface n’est pas initialisée, elle est créée avec les paramètres par défaut.
 
-
 ```
 IDWriteFactory* GetWriteFactory();
 ```
@@ -512,7 +485,6 @@ Pointeur vers l’interface IDWriteFactory si la création d’une fabrique réu
 ## <a name="initd2d"></a> AFX_GLOBAL_DATA::InitD2D
 
 Initialise les fabriques D2D, DirectWrite et WIC. Appelez cette méthode avant que la fenêtre principale soit initialisée.
-
 
 ```
 BOOL InitD2D(
@@ -536,10 +508,8 @@ Retourne la valeur TRUE si les fabriques ont été initialisées, FALSE : sinon
 
 Indique si les icônes 32 bits prédéfinies sont prises en charge.
 
-
 ```
 BOOL Is32BitIcons() const;
-
 
 ```
 
@@ -555,7 +525,6 @@ Cette méthode retourne la valeur TRUE si le framework prend en charge les icôn
 
 Indique si la prise en charge de Microsoft Active Accessibility est activée.
 
-
 ```
 BOOL IsAccessibilitySupport() const;
 ```
@@ -570,7 +539,6 @@ Microsoft Active Accessibility était la solution précédemment utilisée pour 
 
 Utilisez le [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) méthode pour activer ou désactiver la prise en charge Active Accessibility.
 
-
 ### <a name="see-also"></a>Voir aussi
 
 [UI Automation et Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
@@ -578,7 +546,6 @@ Utilisez le [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysu
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 Détermine si le D2D a été initialisé.
-
 
 ```
 BOOL IsD2DInitialized() const;
@@ -590,8 +557,7 @@ TRUE si D2D a été initialisé ; Sinon, FALSE.
 
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
 
-Fournit un moyen simple d’appeler le Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) (méthode).
-
+Fournit un moyen simple d’appeler la méthode Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) .
 
 ```
 BOOL IsDwmCompositionEnabled();
@@ -625,7 +591,6 @@ En mode de contraste élevé noir, bords en face de la lumière sont le blancs e
 
 Indique si le système d’exploitation prend en charge les fenêtres superposées.
 
-
 ```
 BOOL IsWindowsLayerSupportAvailable() const;
 ```
@@ -642,7 +607,6 @@ Si les fenêtres superposées sont pris en charge, *ancrage actifs* marqueurs ut
 
 Indique si l’infrastructure utilise des icônes de couleur 32 bits prédéfinies ou des icônes d’une résolution inférieure.
 
-
 ```
 BOOL  m_bUseBuiltIn32BitIcons;
 ```
@@ -656,7 +620,6 @@ Ce membre doit être défini au démarrage de l’application.
 ## <a name="m_busesystemfont"></a> AFX_GLOBAL_DATA::m_bUseSystemFont
 
 Indique si une police système est utilisée pour les menus, les barres d’outils et les rubans.
-
 
 ```
 BOOL m_bUseSystemFont;
@@ -672,7 +635,6 @@ Test de ce membre n’est pas la seule façon de l’infrastructure pour déterm
 
 Stocke le handle du curseur en forme de main.
 
-
 ```
 HCURSOR m_hcurHand;
 ```
@@ -680,7 +642,6 @@ HCURSOR m_hcurHand;
 ## <a name="m_hcurstretch"></a> AFX_GLOBAL_DATA::m_hcurStretch
 
 Stocke le handle du curseur d’étirement horizontal.
-
 
 ```
 HCURSOR m_hcurStretch;
@@ -690,7 +651,6 @@ HCURSOR m_hcurStretch;
 
 Stocke le handle du curseur d’étirement vertical.
 
-
 ```
 HCURSOR m_hcurStretchVert;
 ```
@@ -699,14 +659,13 @@ HCURSOR m_hcurStretchVert;
 
 Stocke le handle de l’icône d’outil.
 
-
 ```
 HICON m_hiconTool;
 ```
+
 ## <a name="m_nautohidetoolbarmargin"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
 
 Spécifie l’offset à partir de la barre d’outils de masquage automatique à l’extrême gauche vers le côté gauche de la barre d’ancrage.
-
 
 ```
 int  m_nAutoHideToolBarMargin;
@@ -720,7 +679,6 @@ Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre de 4 pix
 
 Spécifie l’intervalle entre les barres d’outils de masquage automatique.
 
-
 ```
 int   m_nAutoHideToolBarSpacing;
 ```
@@ -732,7 +690,6 @@ Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre en 14 pi
 ## <a name="m_ndragframethicknessdock"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 
 Spécifie l’épaisseur du cadre de glissement qui est utilisé pour indiquer l’état d’ancrage.
-
 
 ```
 int  m_nDragFrameThicknessDock;
@@ -746,7 +703,6 @@ Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre de 3 pix
 
 Spécifie l’épaisseur du cadre de glissement qui est utilisé pour indiquer l’état flottant.
 
-
 ```
 int  m_nDragFrameThicknessFloat;
 ```
@@ -759,7 +715,6 @@ Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre de 4 pix
 
 Détecte l’état actuel des fonctionnalités de masquage automatique de la barre des tâches et de l’animation des menus du Bureau.
 
-
 ```
 void OnSettingChange();
 ```
@@ -771,7 +726,6 @@ Cette méthode définit les variables de framework à l’état de certains attr
 ## <a name="registerwindowclass"></a> AFX_GLOBAL_DATA::RegisterWindowClass
 
 Inscrit la classe de fenêtre MFC spécifiée.
-
 
 ```
 CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
@@ -799,7 +753,6 @@ La valeur de retour est une liste délimitée par des deux-points de la *lpszCla
 
 Réinitialise les pointeurs de fonction internes qui accèdent à des méthodes qui prennent en charge des thèmes de Windows et les styles visuels.
 
-
 ```
 BOOL Resume();
 ```
@@ -814,8 +767,7 @@ Cette méthode est appelée lorsque l’infrastructure reçoit le [WM_POWERBROAD
 
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
 
-Fournit un moyen simple d’appeler le Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) (méthode).
-
+Fournit un moyen simple d’appeler la méthode Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) .
 
 ```
 BOOL SetLayeredAttrib(
@@ -852,7 +804,6 @@ TRUE si cette méthode réussit ; Sinon, FALSE.
 
 Crée la police logique spécifiée.
 
-
 ```
 BOOL SetMenuFont(
     LPLOGFONT lpLogFont,
@@ -879,7 +830,6 @@ Cette méthode crée une police normale horizontale, une police soulignée, et u
 
 Réinitialise les polices logiques qui sont utilisées par l’infrastructure.
 
-
 ```
 void UpdateFonts();
 ```
@@ -892,7 +842,6 @@ Pour plus d’informations sur les polices logiques, consultez `CFont::CreateFon
 
 Initialise les couleurs, la profondeur de couleur, les pinceaux, les stylets et les images qui sont utilisés par l’infrastructure.
 
-
 ```
 void UpdateSysColors();
 ```
@@ -900,7 +849,6 @@ void UpdateSysColors();
 ## <a name="biswindows7"></a> AFX_GLOBAL_DATA::bIsWindows7
 
 Indique si l’application est en cours d’exécution sous Windows 7 ou version ultérieure.
-
 
 ```
 BOOL bIsWindows7;
@@ -910,7 +858,6 @@ BOOL bIsWindows7;
 
 Spécifie la couleur de dégradé de la légende active. Généralement utilisé pour les volets d’ancrage.
 
-
 ```
 COLORREF clrActiveCaptionGradient;
 ```
@@ -919,7 +866,6 @@ COLORREF clrActiveCaptionGradient;
 
 Spécifie la couleur de la légende inactive. Généralement utilisé pour les volets d’ancrage.
 
-
 ```
 COLORREF clrInactiveCaptionGradient;
 ```
@@ -927,7 +873,6 @@ COLORREF clrInactiveCaptionGradient;
 ## <a name="getitaskbarlist"></a> AFX_GLOBAL_DATA::GetITaskbarList
 
 Crée et stocke dans les données globales un pointeur vers le `ITaskBarList` interface.
-
 
 ```
 ITaskbarList *GetITaskbarList();
@@ -941,7 +886,6 @@ Un pointeur vers le `ITaskbarList` interface si la création d’une tâche à l
 
 Crée et stocke dans les données globales un pointeur vers le `ITaskBarList3` interface.
 
-
 ```
 ITaskbarList3 *GetITaskbarList3();
 ```
@@ -953,7 +897,6 @@ Un pointeur vers le `ITaskbarList3` interface si la création d’une tâche à 
 ## <a name="getshellautohidebars"></a> AFX_GLOBAL_DATA::GetShellAutohideBars
 
 Détermine les positions des barres de masquage automatique de l’interpréteur de commandes.
-
 
 ```
 int GetShellAutohideBars();
@@ -967,7 +910,6 @@ Une valeur entière avec des indicateurs encodées qui spécifient les positions
 
 Libère les interfaces obtenues via le `GetITaskbarList` et `GetITaskbarList3` méthodes.
 
-
 ```
 void ReleaseTaskBarRefs();
 ```
@@ -975,7 +917,6 @@ void ReleaseTaskBarRefs();
 ## <a name="shellcreateitemfromparsingname"></a> AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
 
 Crée et initialise un objet élément d’interpréteur de commandes à partir d’un nom de l’analyse.
-
 
 ```
 HRESULT ShellCreateItemFromParsingName(

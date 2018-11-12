@@ -1,10 +1,6 @@
 ---
-title: Colepropertiesdialog, classe | Microsoft Docs
-ms.custom: ''
+title: Colepropertiesdialog, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COlePropertiesDialog
 - AFXODLGS/COlePropertiesDialog
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXODLGS/COlePropertiesDialog::m_op
 - AFXODLGS/COlePropertiesDialog::m_psh
 - AFXODLGS/COlePropertiesDialog::m_vp
-dev_langs:
-- C++
 helpviewer_keywords:
 - COlePropertiesDialog [MFC], COlePropertiesDialog
 - COlePropertiesDialog [MFC], DoModal
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa1803fb34ce1c9cf50b996efb9cc5467dd55996
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e40483781427e3135d89a9339a34f606d45db77c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387833"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547353"
 ---
 # <a name="colepropertiesdialog-class"></a>Colepropertiesdialog, classe
 
@@ -138,15 +128,15 @@ Par défaut, la boîte de dialogue Propriétés de l’objet OLE a trois pages p
 
 - Général
 
-     Cette page contient des informations système pour le fichier représenté par l’élément de document sélectionné. Cette page, l’utilisateur peut convertir l’élément sélectionné vers un autre type.
+   Cette page contient des informations système pour le fichier représenté par l’élément de document sélectionné. Cette page, l’utilisateur peut convertir l’élément sélectionné vers un autre type.
 
 - Vue
 
-     Cette page contient des options pour afficher l’élément, la modification de l’icône et la modification de la mise à l’échelle de l’image.
+   Cette page contient des options pour afficher l’élément, la modification de l’icône et la modification de la mise à l’échelle de l’image.
 
 - Lien
 
-     Cette page contient des options de modification de l’emplacement de l’élément lié et de la mise à jour de l’élément lié. À partir de cette page, l’utilisateur peut rompre la liaison de l’élément sélectionné.
+   Cette page contient des options de modification de l’emplacement de l’élément lié et de la mise à jour de l’élément lié. À partir de cette page, l’utilisateur peut rompre la liaison de l’élément sélectionné.
 
 Pour ajouter des pages au-delà de ceux fournis par défaut, modifiez le [m_psh](#m_psh) variable membre avant de quitter le constructeur de votre `COlePropertiesDialog`-classe dérivée. Il s’agit d’une implémentation avancée de la `COlePropertiesDialog` constructeur.
 

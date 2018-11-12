@@ -1,10 +1,6 @@
 ---
-title: _CrtSetBreakAlloc | Microsoft Docs
-ms.custom: ''
+title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395433"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487826"
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -64,11 +54,11 @@ Retourne le numéro d'ordre d'allocation d'objet précédent qui avait un point 
 
 **_CrtSetBreakAlloc** permet à une application effectuer la détection des fuites de mémoire en s’arrêtant à un point spécifique d’allocation de mémoire et en remontant à l’origine de la demande. La fonction utilise le numéro d'ordre d'allocation d'objet séquentiel assigné au bloc de mémoire au moment où il a été alloué dans le tas. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtSetBreakAlloc** sont supprimés lors du prétraitement.
 
-Le numéro d’ordre d’allocation d’objet est stocké dans le champ *lRequest* de la structure **_CrtMemBlockHeader**, définie dans Crtdbg.h. Lorsque les informations sur un bloc de mémoire sont signalées par une des fonctions de vidage du débogage, ce nombre est placé entre accolades, tels que {36}.
+Le numéro d’ordre d’allocation d’objet est stocké dans le champ *lRequest* de la structure **_CrtMemBlockHeader**, définie dans Crtdbg.h. Lorsque les informations sur un bloc de mémoire sont signalées par une des fonctions de vidage du débogage, ce numéro est placé entre accolades, comme {36}.
 
 Pour plus d’informations sur la façon **_CrtSetBreakAlloc** peut être utilisé avec d’autres fonctions de gestion de mémoire, consultez [le suivi des demandes d’Allocation du tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,26 +1,16 @@
 ---
-title: Cibles d’attribut (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Cibles d’attribut (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 8d191b284350be13111f07c4bd9d4f06ce67eb2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327778"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467702"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>Cibles d’attribut (C++ / c++ / CLI et c++ / CX)
 
@@ -230,8 +220,8 @@ Spécificateurs de l’utilisation d’attribut sont requis dans les situations 
 - Pour spécifier qu’un attribut s’applique à l’accesseur d’une propriété, pas la propriété :
 
     ```cpp
-    [method:MyAttr(123)] property int Property()  
-    [property:MyAttr(123)] property int Property()  
+    [method:MyAttr(123)] property int Property()
+    [property:MyAttr(123)] property int Property()
     [MyAttr(123)] property int get_MyPropy() // default: property
     ```
 

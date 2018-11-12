@@ -1,10 +1,6 @@
 ---
-title: Classe CFileDialog | Microsoft Docs
-ms.custom: ''
+title: Classe CFileDialog
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFileDialog
 - AFXDLGS/CFileDialog
@@ -71,8 +67,6 @@ f1_keywords:
 - AFXDLGS/CFileDialog::OnShareViolation
 - AFXDLGS/CFileDialog::OnTypeChange
 - AFXDLGS/CFileDialog::m_ofn
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFileDialog [MFC], CFileDialog
 - CFileDialog [MFC], AddCheckButton
@@ -138,16 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3eb5010fda78cce2728bc47bc729859cef5c0108
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 94530f17c801c62005e837055ce3608e2eaa512f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376031"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499681"
 ---
 # <a name="cfiledialog-class"></a>Classe CFileDialog
 
@@ -423,7 +413,6 @@ Ajoute qu'un dossier à la liste des places disponible pour l’utilisateur à o
 void AddPlace(
     LPCWSTR lpszFolder,
     FDAP fdap = FDAP_TOP) throw();
-
 
 void AddPlace(
     IShellItem* psi,
@@ -1481,7 +1470,6 @@ void SetControlText(
     int nID,
     LPCSTR lpsz);
 
-
 void SetControlText(
     int nID,
     const wchar_t *lpsz);
@@ -1581,7 +1569,6 @@ Définit le modèle de boîte de dialogue pour le [CFileDialog](../../mfc/refere
 void SetTemplate(
     UINT nWin3ID,
     UINT nWin4ID);
-
 
 void SetTemplate(
     LPCTSTR lpWin3ID,

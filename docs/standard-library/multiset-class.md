@@ -1,10 +1,6 @@
 ---
-title: multiset, classe | Microsoft Docs
-ms.custom: ''
+title: multiset, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - set/std::multiset
 - set/std::multiset::allocator_type
@@ -47,8 +43,6 @@ f1_keywords:
 - set/std::multiset::swap
 - set/std::multiset::upper_bound
 - set/std::multiset::value_comp
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::multiset [C++]
 - std::multiset [C++], allocator_type
@@ -92,16 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d45b08ee356fd217207b625ffe7bf4fb0abffec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f33dd9343cc2acbaa7f43c060267c6d206da2fc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466870"
 ---
 # <a name="multiset-class"></a>multiset, classe
 
@@ -849,7 +839,6 @@ Retourne l'itérateur past-the-end.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -990,7 +979,6 @@ Retourne un itérateur qui fait référence à l'emplacement d'un élément dans
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1148,19 +1136,16 @@ Insère un élément ou une plage d'éléments dans une classe multiset.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1168,13 +1153,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1559,7 +1542,6 @@ multiset(
     initializer_list<Type> IList,
     const Compare& Comp,
     const Allocator& Al);
-
 
 template <class InputIterator>
 multiset (

@@ -1,10 +1,6 @@
 ---
-title: CSyncObject, classe | Microsoft Docs
-ms.custom: ''
+title: CSyncObject, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CSyncObject
 - AFXMT/CSyncObject
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXMT/CSyncObject::Lock
 - AFXMT/CSyncObject::Unlock
 - AFXMT/CSyncObject::m_hObject
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSyncObject [MFC], CSyncObject
 - CSyncObject [MFC], Lock
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5fea49ab46f55f4236194ebb811032d9351402d9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d72d167be874d0776ce8da02784c2e0c267c9175
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547431"
 ---
 # <a name="csyncobject-class"></a>CSyncObject, classe
 
@@ -173,6 +163,4 @@ L’implémentation par défaut de la déclaration avec deux paramètres toujour
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

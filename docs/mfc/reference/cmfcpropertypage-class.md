@@ -1,29 +1,19 @@
 ---
-title: Cmfcpropertypage, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcpropertypage, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCPropertyPage
 - AFXPROPERTYPAGE/CMFCPropertyPage
 - AFXPROPERTYPAGE/CMFCPropertyPage::CMFCPropertyPage
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6bbfce70e33441c1713a2297ca925e83e6cbba9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a55a1a8cd5d63a9e775038824a7bbbe91adbae01
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427145"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566736"
 ---
 # <a name="cmfcpropertypage-class"></a>Cmfcpropertypage, classe
 
@@ -85,7 +75,6 @@ Construit un objet `CMFCPropertyPage`.
 CMFCPropertyPage(
     UINT nIDTemplate,
     UINT nIDCaption=0);
-
 
 CMFCPropertyPage(
     LPCTSTR lpszTemplateName,

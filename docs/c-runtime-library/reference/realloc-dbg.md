@@ -1,10 +1,6 @@
 ---
-title: _realloc_dbg | Microsoft Docs
-ms.custom: ''
+title: _realloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _realloc_dbg
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _realloc_dbg
 - realloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - reallocating memory blocks
 - realloc_dbg function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - memory, reallocating
 - _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 9b30dfd6fbae9a4831ff53e7896aeb995657da03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451639"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640282"
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -60,14 +50,14 @@ void *_realloc_dbg(
 
 ### <a name="parameters"></a>Paramètres
 
-*UserData*<br/>
+*userData*<br/>
 Pointeur vers le bloc de mémoire précédemment alloué.
 
 *newSize*<br/>
 Taille demandée pour le bloc réalloué (octets).
 
 *blockType*<br/>
-Type pour le bloc réalloué demandé : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
+Type demandé pour le bloc réalloué : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
 *filename*<br/>
 Pointeur vers le nom du fichier source qui a demandé le **realloc** opération ou **NULL**.
@@ -75,7 +65,7 @@ Pointeur vers le nom du fichier source qui a demandé le **realloc** opération 
 *linenumber*<br/>
 Numéro de ligne dans le fichier source où la **realloc** opération a été demandée ou **NULL**.
 
-Le *nom de fichier* et *linenumber* paramètres sont disponibles uniquement quand **_realloc_dbg** a été appelée explicitement ou [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) constante du préprocesseur a été définie.
+Le *filename* et *linenumber* paramètres sont disponibles uniquement lorsque **_realloc_dbg** a été appelée explicitement ou [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) constante du préprocesseur a été définie.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -83,7 +73,7 @@ Opération réussie, cette fonction retourne un pointeur vers la partie utilisat
 
 ## <a name="remarks"></a>Notes
 
-**_realloc_dbg** est une version debug de la [realloc](realloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_realloc_dbg** est réduit à un appel à **realloc**. Les deux **realloc** et **_realloc_dbg** réallouer un bloc de mémoire dans le tas de base, mais **_realloc_dbg** gère plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques et *nom de fichier*/*linenumber* plus d’informations pour déterminer l’origine de demandes d’allocation.
+**_realloc_dbg** est une version debug de la [realloc](realloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_realloc_dbg** est réduite à un appel à **realloc**. Les deux **realloc** et **_realloc_dbg** réallouer un bloc de mémoire dans le tas de base, mais **_realloc_dbg** gère plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques et *filename*/*linenumber* informations pour déterminer l’origine de demandes d’allocation.
 
 **_realloc_dbg** réalloue le bloc de mémoire spécifié avec un peu plus d’espace que demandé *newSize*. *newSize* peut être supérieur ou inférieur à la taille du bloc de mémoire alloué initialement. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. La réallocation peut entraîner un déplacement du bloc de mémoire initial vers un emplacement différent dans le tas, ainsi qu'une modification de la taille du bloc de mémoire. Si le bloc de mémoire est déplacé, son contenu d'origine est remplacé.
 
@@ -91,7 +81,7 @@ Opération réussie, cette fonction retourne un pointeur vers la partie utilisat
 
 Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les types de bloc d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans la build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,25 +1,15 @@
 ---
-title: 'Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 2) | Microsoft Docs'
-ms.custom: ''
+title: "Procédure pas à pas : mise à jour de l'application Scribble MFC (partie 2)"
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: d618d79c50892523b3e4a71be163b8778402e48e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235436"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570337"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procédure pas à pas : mise à jour de l'application Scribble MFC (partie 2)
 
@@ -190,7 +180,7 @@ Ensuite, ajoutez un [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutt
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>Pour ajouter un bouton de couleur dans le panneau de stylet
 
-1. Avant d’ajouter le bouton de couleur, créez un élément de menu pour celui-ci. Dans le **affichage des ressources** fenêtre, ouvrez le **IDR_SCRIBBTYPE** ressource de menu. Cliquez sur le **stylet** élément de menu pour ouvrir le menu de stylet. Puis cliquez sur **tapez ici** et type `&Color`. Cliquez sur le texte que vous avez tapé pour afficher le **propriétés** fenêtre. Modifier l’ID à `ID_PEN_COLOR`.
+1. Avant d’ajouter le bouton de couleur, créez un élément de menu pour celui-ci. Dans le **affichage des ressources** fenêtre, ouvrez le **IDR_SCRIBBTYPE** ressource de menu. Cliquez sur le **stylet** élément de menu pour ouvrir le menu de stylet. Puis cliquez sur **tapez ici** et type `&Color`. Cliquez sur le texte que vous avez tapé pour afficher le **propriétés** fenêtre. Modifiez l’ID en lui attribuant la valeur `ID_PEN_COLOR`.
 
 1. Ajoutez maintenant le bouton de couleur. À partir de la **boîte à outils**, faites glisser un **bouton de couleur** à la **stylet** Panneau de configuration.
 

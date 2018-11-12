@@ -1,17 +1,11 @@
 ---
-title: -Je (autres répertoires Include) | Microsoft Docs
-ms.custom: ''
+title: /I (autres répertoires include)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
 - VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories
 - /I
 - VC.Project.VCNMakeTool.IncludeSearchPath
-dev_langs:
-- C++
 helpviewer_keywords:
 - /I compiler option [C++]
 - Additional Include Directories compiler option
@@ -20,28 +14,22 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a580488650a1272ec1dffcd1f0ba27c736df92da
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
+ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705339"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750390"
 ---
-# <a name="i-additional-include-directories"></a>/I (Autres répertoires Include)
+# <a name="i-additional-include-directories"></a>/I (autres répertoires include)
 
 Ajoute un répertoire à la liste des répertoires de recherche des fichiers include.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-/I[ ]directory
-```
+> **/I**[]*directory*
 
-## <a name="arguments"></a>Arguments
+### <a name="arguments"></a>Arguments
 
 *Répertoire*<br/>
 Le répertoire à ajouter à la liste des répertoires de recherche des fichiers include.
@@ -50,13 +38,13 @@ Le répertoire à ajouter à la liste des répertoires de recherche des fichiers
 
 Pour ajouter plusieurs répertoires, utilisez cette option plusieurs fois. Répertoires sont recherchés uniquement jusqu'à ce que le fichier include spécifié est trouvé.
 
-Vous pouvez utiliser cette option avec l’ignorer Standard chemins d’accès Include ([/X (ignorer Standard chemins d’accès Include)](../../build/reference/x-ignore-standard-include-paths.md)) option.
+Vous pouvez utiliser cette option avec le ([/X (ignorer Standard chemins d’accès Include)](../../build/reference/x-ignore-standard-include-paths.md)) option.
 
-Le compilateur recherche les répertoires dans l’ordre suivant :
+Le compilateur recherche des répertoires dans l’ordre suivant :
 
-1. Répertoires contenant le fichier source.
+1. Si spécifié à l’aide un [#include, directive](../../preprocessor/hash-include-directive-c-cpp.md) sous forme de guillemets doubles, il recherche tout d’abord les répertoires locaux. La recherche commence dans le même répertoire que le fichier qui contient le **#include** instruction. En cas d’échec rechercher le fichier, il recherche dans les répertoires d’actuellement ouverts fichiers incluent, dans l’ordre inverse dans lequel ils ont été ouverts. La recherche commence dans le répertoire du fichier Include parent et continue vers le haut, dans les répertoires de tous les fichiers Include grands-parents.
 
-1. Répertoires spécifiés avec le **/I** option, dans l’ordre où CL les trouve.
+1. Si spécifié à l’aide un **#include** directive dans l’angle mettre entre parenthèses le formulaire, ou si la recherche dans l’annuaire local a échoué, il recherche des répertoires spécifiés à l’aide de la **/I** option, dans l’ordre où CL les trouve sur la ligne de commande.
 
 1. Répertoires spécifiés dans le **INCLUDE** variable d’environnement.
 
@@ -64,9 +52,7 @@ Le compilateur recherche les répertoires dans l’ordre suivant :
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
-1. Cliquez sur le dossier **C/C++** .
-
-1. Cliquez sur le **général** page de propriétés.
+1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **général** page de propriétés.
 
 1. Modifier le **autres répertoires Include** propriété.
 
@@ -76,7 +62,7 @@ Le compilateur recherche les répertoires dans l’ordre suivant :
 
 ## <a name="example"></a>Exemple
 
-La commande suivante recherche les fichiers include demandés par MAIN.c dans l’ordre suivant : premier dans le répertoire contenant MAIN.c, puis le répertoire \INCLUDE, puis, dans le répertoire \MY\INCLUDE et enfin, dans les répertoires affectés à l’INCLUDE variable d’environnement.
+La commande suivante recherche les fichiers include demandés par MAIN.c dans l’ordre suivant : tout d’abord, s’il est spécifié à l’aide de guillemets doubles, les fichiers locaux sont recherchés. Ensuite, recherche continue dans le répertoire \INCLUDE, puis, dans le répertoire \MY\INCLUDE et enfin, dans les répertoires affecté à la variable d’environnement INCLUDE.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

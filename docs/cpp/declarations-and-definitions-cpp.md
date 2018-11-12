@@ -1,23 +1,13 @@
 ---
-title: Déclarations et définitions (C++) | Microsoft Docs
-ms.custom: ''
+title: Déclarations et définitions (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f2155fef0f9287273b3c45e9318665acfdae527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1e76f636a6efd652ac629ad2f97f0b09f6171f9c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432110"
 ---
 # <a name="declarations-and-definitions-c"></a>Déclarations et définitions (C++)
 
@@ -35,7 +25,7 @@ Une déclaration introduit un ou plusieurs noms dans un programme. Les déclarat
 
 1. est celle d'une donnée membre static dans une déclaration de classe ;
 
-     Les données membres de classe static sont des variables discrètes partagées par tous les objets de la classe. Elles doivent être définies et initialisées en dehors de la déclaration de classe. (Pour plus d’informations sur les classes et membres de classe, consultez [Classes](../cpp/classes-and-structs-cpp.md).)
+   Les données membres de classe static sont des variables discrètes partagées par tous les objets de la classe. Elles doivent être définies et initialisées en dehors de la déclaration de classe. (Pour plus d’informations sur les classes et membres de classe, consultez [Classes](../cpp/classes-and-structs-cpp.md).)
 
 1. est une déclaration de nom de classe qui n'est pas suivie par une définition, par exemple `class T;` ;
 

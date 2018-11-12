@@ -1,10 +1,6 @@
 ---
-title: signal | Microsoft Docs
-ms.custom: ''
+title: signal
 ms.date: 04/12/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - signal
 apilocation:
@@ -22,20 +18,14 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - signal
-dev_langs:
-- C++
 helpviewer_keywords:
 - signal function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f4e349707c22d8c252f56c08ea45fc78609e557
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1a0f9f8448149ce18155e0f5b88343c56d9b3d7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690626"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660705"
 ---
 # <a name="signal"></a>signal
 
@@ -55,7 +45,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 *sig*<br/>
 Valeur du signal.
 
-*Func*<br/>
+*func*<br/>
 Le deuxième paramètre est un pointeur vers la fonction à exécuter. Le premier paramètre est une valeur de signal et le deuxième paramètre est un sous-code qui peut être utilisé lorsque le premier paramètre est SIGFPE.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -129,30 +119,30 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 L’exemple suivant montre comment utiliser **signal** pour ajouter un comportement personnalisé pour le **SIGABRT** signal. Pour plus d’informations sur le comportement d’arrêt, consultez [_set_abort_behavior](set-abort-behavior.md).
 
 ```C
-// crt_signal.c
-// compile with: /EHsc /W4
-// Use signal to attach a signal handler to the abort routine
-#include <stdlib.h>
-#include <signal.h>
-#include <tchar.h>
+// crt_signal.c
+// compile with: /EHsc /W4
+// Use signal to attach a signal handler to the abort routine
+#include <stdlib.h>
+#include <signal.h>
+#include <tchar.h>
 
-void SignalHandler(int signal)
+void SignalHandler(int signal)
 {
-    if (signal == SIGABRT) {
-        // abort signal handler code
-    } else {
-        // ...
-    }
+    if (signal == SIGABRT) {
+        // abort signal handler code
+    } else {
+        // ...
+    }
 }
 
-int main()
+int main()
 {
-    typedef void (*SignalHandlerPointer)(int);
+    typedef void (*SignalHandlerPointer)(int);
 
-    SignalHandlerPointer previousHandler;
-    previousHandler = signal(SIGABRT, SignalHandler);
+    SignalHandlerPointer previousHandler;
+    previousHandler = signal(SIGABRT, SignalHandler);
 
-    abort();
+    abort();
 }
 ```
 

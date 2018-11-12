@@ -1,28 +1,17 @@
 ---
-title: peut être liée (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: peut être liée (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.bindable
-dev_langs:
-- C++
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 08bd8791a49c0dd6bc7514c2638dbcb0e818e4cf
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 08ecd3e242d1e3601f7a5a3ea54c51a679dca97a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664150"
 ---
 # <a name="bindable"></a>bindable
 
@@ -55,7 +44,7 @@ Le code suivant montre comment vous pouvez utiliser **peut être liée** sur une
 // compile with: /LD
 #include <windows.h>
 [
-   uuid("479B29E3-9A2C-11D0-B696-00A0C903487A"), dispinterface, helpstring("property demo Interface")  
+   uuid("479B29E3-9A2C-11D0-B696-00A0C903487A"), dispinterface, helpstring("property demo Interface")
 ]
 __interface IPropDemo : IDispatch {
 
@@ -80,7 +69,7 @@ __interface IPropDemo : IDispatch {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -89,4 +78,4 @@ Pour plus d’informations sur les contextes d’attribut, consultez [contextes 
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)<br/>
-[requestedit](requestedit.md)  
+[requestedit](requestedit.md)

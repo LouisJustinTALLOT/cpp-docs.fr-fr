@@ -1,23 +1,13 @@
 ---
-title: A.21 portée des Variables avec la Clause private | Microsoft Docs
-ms.custom: ''
+title: A.21   Portée des variables avec la clause private
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 7cdb4a7f-af24-44ac-9d33-e43840bc8f3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa68f0ebb5857e3f093e1985bd5f20105bb925c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4217bcc3911ded88b9385695c8c0ac851fceae9e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392786"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616125"
 ---
 # <a name="a21---scoping-variables-with-the-private-clause"></a>A.21   Portée des variables avec la clause private
 

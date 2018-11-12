@@ -1,10 +1,6 @@
 ---
-title: Classe de CD2DBitmap | Microsoft Docs
-ms.custom: ''
+title: CD2DBitmap, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DBitmap
 - AFXRENDERTARGET/CD2DBitmap
@@ -30,8 +26,6 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DBitmap::m_sizeDest
 - AFXRENDERTARGET/CD2DBitmap::m_strPath
 - AFXRENDERTARGET/CD2DBitmap::m_uiResID
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DBitmap [MFC], CD2DBitmap
 - CD2DBitmap [MFC], CD2DBitmap
@@ -57,16 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d232eec6593e0daafb31461847e8d481e60f80ba
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374355"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605866"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap, classe
 
@@ -180,20 +170,17 @@ CD2DBitmap(
     CD2DSizeU sizeDest = CD2DSizeU(0, 0),
     BOOL bAutoDestroy = TRUE);
 
-
 CD2DBitmap(
     CRenderTarget* pParentTarget,
     LPCTSTR lpszPath,
     CD2DSizeU sizeDest = CD2DSizeU(0, 0),
     BOOL bAutoDestroy = TRUE);
 
-
 CD2DBitmap(
     CRenderTarget* pParentTarget,
     HBITMAP hbmpSrc,
     CD2DSizeU sizeDest = CD2DSizeU(0, 0),
     BOOL bAutoDestroy = TRUE);
-
 
 CD2DBitmap(
     CRenderTarget* pParentTarget,

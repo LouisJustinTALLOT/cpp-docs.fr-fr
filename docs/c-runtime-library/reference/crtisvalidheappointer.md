@@ -1,10 +1,6 @@
 ---
-title: _CrtIsValidHeapPointer | Microsoft Docs
-ms.custom: ''
+title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidHeapPointer
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bc4be3f464cb48647985a96550a8b9ea13ce5ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdfb02c622cddc4c86a99f614e469abc527d8845
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396691"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662005"
 ---
 # <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
@@ -53,16 +43,16 @@ int _CrtIsValidHeapPointer(
 
 ### <a name="parameters"></a>Paramètres
 
-*UserData*<br/>
+*userData*<br/>
 Pointeur indiquant le début d'un bloc de mémoire alloué.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_CrtIsValidHeapPointer** retourne la valeur TRUE si le pointeur spécifié se trouve dans le tas partagé par toutes les instances de bibliothèque CRT. Dans les versions du CRT antérieures à Visual Studio 2010, cette fonction retourne TRUE si le pointeur spécifié se trouve dans le tas local. Dans le cas contraire, la fonction retourne FALSE.
+**_CrtIsValidHeapPointer** retourne TRUE si le pointeur spécifié se trouve dans le tas partagé par toutes les instances de bibliothèque CRT. Dans les versions du CRT antérieures à Visual Studio 2010, cette fonction retourne TRUE si le pointeur spécifié se trouve dans le tas local. Dans le cas contraire, la fonction retourne FALSE.
 
 ## <a name="remarks"></a>Notes
 
-Nous vous déconseillons d'utiliser cette fonction. À compter de la bibliothèque CRT de Visual Studio 2010, toutes les bibliothèques CRT partagent un même tas du système d’exploitation : le *tas de processus*. Le **_CrtIsValidHeapPointer** fonction signale si le pointeur a été alloué dans un tas CRT, mais pas qui il a été alloué par la bibliothèque CRT de l’appelant. Par exemple, supposons qu'un bloc a été alloué à l'aide de la version Visual Studio 2010 de la bibliothèque CRT. Si le **_CrtIsValidHeapPointer** fonction exportée par la version de Visual Studio 2012 de la bibliothèque CRT teste le pointeur, elle retourne la valeur TRUE. Ce test n'a plus d'utilité. Dans les versions de la bibliothèque CRT antérieures à Visual Studio 2010, la fonction permet de s'assurer qu'une adresse mémoire spécifique se trouve dans le tas local. Le tas local fait référence au tas créé et géré par une instance particulière de la bibliothèque Runtime C. Si une bibliothèque de liens dynamiques (DLL) contient un lien statique vers la bibliothèque Runtime, elle possède sa propre instance du tas Runtime et donc son propre tas, indépendant du tas local de l'application. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtIsValidHeapPointer** sont supprimés lors du prétraitement.
+Nous vous déconseillons d'utiliser cette fonction. À compter de la bibliothèque CRT de Visual Studio 2010, toutes les bibliothèques CRT partagent un même tas du système d’exploitation : le *tas de processus*. Le **_CrtIsValidHeapPointer** fonction signale si le pointeur a été alloué dans un segment de mémoire CRT, mais pas qui il a été alloué par la bibliothèque CRT de l’appelant. Par exemple, supposons qu'un bloc a été alloué à l'aide de la version Visual Studio 2010 de la bibliothèque CRT. Si le **_CrtIsValidHeapPointer** fonction exportée par la version de Visual Studio 2012 de la bibliothèque CRT teste le pointeur, il retourne la valeur TRUE. Ce test n'a plus d'utilité. Dans les versions de la bibliothèque CRT antérieures à Visual Studio 2010, la fonction permet de s'assurer qu'une adresse mémoire spécifique se trouve dans le tas local. Le tas local fait référence au tas créé et géré par une instance particulière de la bibliothèque Runtime C. Si une bibliothèque de liens dynamiques (DLL) contient un lien statique vers la bibliothèque Runtime, elle possède sa propre instance du tas Runtime et donc son propre tas, indépendant du tas local de l'application. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtIsValidHeapPointer** sont supprimés lors du prétraitement.
 
 Comme cette fonction retourne TRUE ou FALSE, elle peut être passée à l’une des macros [_ASSERT](assert-asserte-assert-expr-macros.md) pour créer un mécanisme de gestion des erreurs de débogage simple. L'exemple suivant provoque un échec d'assertion si l'adresse spécifiée n'est pas située dans le tas local :
 
@@ -72,7 +62,7 @@ _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 
 Pour plus d’informations sur la façon **_CrtIsValidHeapPointer** peut être utilisé avec d’autres fonctions de débogage et les macros, consultez [Macros pour la création de rapports](/visualstudio/debugger/macros-for-reporting). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

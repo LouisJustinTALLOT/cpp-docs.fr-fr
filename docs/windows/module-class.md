@@ -1,9 +1,6 @@
 ---
-title: Classe de module | Microsoft Docs
-ms.custom: ''
+title: Module (classe)
 ms.date: 10/18/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module
@@ -25,8 +22,6 @@ f1_keywords:
 - module/Microsoft::WRL::Module::UnregisterCOMObject
 - module/Microsoft::WRL::Module::UnregisterObjects
 - module/Microsoft::WRL::Module::UnregisterWinRTObject
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Module class
 - Microsoft::WRL::Module::Create method
@@ -48,17 +43,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterObjects method
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5df7ae90a347d82b303d7db251e533733c8e4a86
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 2b90c3b316d9eef195f815058d9ad1f9bcfa0b42
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468582"
 ---
 # <a name="module-class"></a>Module (classe)
 
@@ -243,7 +233,7 @@ S_OK en cas de réussite ; Sinon, le HRESULT retourné par GetActivationFactory
 Récupère un cache des fabriques de classes.
 
 ```cpp
- HRESULT GetClassObject(
+HRESULT GetClassObject(
    REFCLSID clsid,
    REFIID riid,
    _Deref_out_ void **ppv,

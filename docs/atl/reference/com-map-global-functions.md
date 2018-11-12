@@ -1,28 +1,18 @@
 ---
-title: Fonctions globales de mappage COM | Microsoft Docs
-ms.custom: ''
+title: Fonctions globales de mappage COM
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlInternalQueryInterface
 - atlbase/ATL::InlineIsEqualIUnknown
-dev_langs:
-- C++
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f3f5e1c5ec1d845962783b8768404a89727edc8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113134"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458784"
 ---
 # <a name="com-map-global-functions"></a>Fonctions globales de mappage COM
 
@@ -31,11 +21,11 @@ Ces fonctions prennent en charge pour le mappage COM `IUnknown` implémentations
 |||
 |-|-|
 |[AtlInternalQueryInterface](#atlinternalqueryinterface)|Délègue à la `IUnknown` d’un objet non regroupées en agrégats.|
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Génère un code efficace pour la comparaison des interfaces à `IUnknown`.|  
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Génère un code efficace pour la comparaison des interfaces à `IUnknown`.|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlbase.h  
+**En-tête :** atlbase.h
 
 ##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface
 

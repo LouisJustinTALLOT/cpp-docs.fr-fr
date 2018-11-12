@@ -1,10 +1,6 @@
 ---
-title: CMFCShellListCtrl, classe | Microsoft Docs
-ms.custom: ''
+title: CMFCShellListCtrl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCShellListCtrl
 - AFXSHELLLISTCTRL/CMFCShellListCtrl
@@ -26,8 +22,6 @@ f1_keywords:
 - AFXSHELLLISTCTRL/CMFCShellListCtrl::OnSetColumns
 - AFXSHELLLISTCTRL/CMFCShellListCtrl::Refresh
 - AFXSHELLLISTCTRL/CMFCShellListCtrl::SetItemTypes
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCShellListCtrl [MFC], DisplayFolder
 - CMFCShellListCtrl [MFC], DisplayParentFolder
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d2d7238fa9a75c173e1b02697359a72630a95a06
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd978bfa65cc003bcb69a309b44254a6d36a2ebd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433983"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588629"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl, classe
 
@@ -309,8 +299,9 @@ virtual int OnCompareItems(
 
 ### <a name="parameters"></a>Paramètres
 
-*lParam1*<br/>
-[in] [in] *lParam2* [in] *iColumn*
+[in] *lParam1*<br/>
+[in] *lParam2*<br/>
+[in] *iColumn*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 

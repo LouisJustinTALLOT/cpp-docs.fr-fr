@@ -1,24 +1,14 @@
 ---
-title: enum, classe (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: enum, classe (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 5bc850831e961a500ae71ce90e3ca39b3aabd159
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328140"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592515"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum, classe (C++ / c++ / CLI et c++ / CX)
 
@@ -175,7 +165,7 @@ void f(int32);
 Cependant, dans les versions actuelles du compilateur, l’énumération standard est émise en tant qu’énumération managée avec un [NativeEnumAttribute] et la ligne ci-dessous dans le langage MSIL pour la signature de fonction :
 
 ```cpp
-void f(E)  
+void f(E)
 ```
 
 Pour plus d'informations sur les énumérations natives, consultez [Déclarations d'énumération C++](../cpp/enumerations-cpp.md).
@@ -202,7 +192,7 @@ public enum n { c, d };
 // unnamed, standard enum
 public enum { e, f } o;
 
-int main()  
+int main()
 {
    // consume managed enum
    m mym = m::b;
@@ -231,4 +221,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

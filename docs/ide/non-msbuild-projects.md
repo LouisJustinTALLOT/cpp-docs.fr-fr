@@ -1,25 +1,15 @@
 ---
-title: Projets Ouvrir un dossier dans Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Projets Ouvrir un dossier dans Visual C++
 ms.date: 06/01/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aefcd05f4187e22adf5f21c4beffa74ca8be39b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 396b1fe9f879e7adcdfe9a69fee5c9e1916ff545
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420554"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542010"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Projets Ouvrir un dossier dans Visual C++
 
@@ -245,6 +235,7 @@ Vous pouvez créer autant de configurations que vous le souhaitez dans CppProper
   ]
 }
 ```
+
 ### <a name="define-tasks-with-tasksvsjson"></a>Définir de tâches avec tasks.vs.json
 
 Vous pouvez automatiser les scripts de génération ou d’autres opérations externes sur les fichiers de votre espace de travail actuel en les exécutant comme des tâches directement dans l’IDE. Vous pouvez configurer une nouvelle tâche en cliquant sur un fichier ou dossier puis en sélectionnant **Configurer les tâches**.

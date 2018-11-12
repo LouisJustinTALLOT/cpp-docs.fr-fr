@@ -1,10 +1,6 @@
 ---
-title: CMDIFrameWndEx, classe | Microsoft Docs
-ms.custom: ''
+title: CMDIFrameWndEx, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMDIFrameWndEx
 - AFXMDIFRAMEWNDEX/CMDIFrameWndEx
@@ -83,8 +79,6 @@ f1_keywords:
 - AFXMDIFRAMEWNDEX/CMDIFrameWndEx::WinHelp
 - AFXMDIFRAMEWNDEX/CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild
 - AFXMDIFRAMEWNDEX/CMDIFrameWndEx::m_bDisableSetRedraw
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMDIFrameWndEx [MFC], ActiveItemRecalcLayout
 - CMDIFrameWndEx [MFC], AddPane
@@ -162,16 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a7c797cdb2b0950d0158e8a63294f1e2ea913512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be9ecf2eaabb51f4c2dffd996bca76bd3f4c9128
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436895"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512865"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx, classe
 
@@ -253,7 +243,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Appelée par l’infrastructure quand un menu avec une barre détachable est activé.|
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Appelé par l’infrastructure pour mettre à jour le menu de frame. (Substitue `CMDIFrameWnd::OnUpdateFrameMenu`.)|
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Retourne le volet d’ancrage qui contient le point spécifié.|
-|`CMDIFrameWndEx::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows.  (Substitue `CMDIFrameWnd::PreTranslateMessage`.)|
+|`CMDIFrameWndEx::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .  (Substitue `CMDIFrameWnd::PreTranslateMessage`.)|
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Appelé par l’infrastructure pour recalculer la disposition de la fenêtre frame. (Substitue [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Annule l’inscription d’un volet et le supprime à partir du Gestionnaire d’ancrage.|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Enregistre la disposition actuelle de groupes avec onglet MDI et la liste des documents précédemment ouverts.|
@@ -831,7 +821,6 @@ void EnableWindowsDialog(
     LPCTSTR lpszMenuText,
     BOOL bShowAllways=FALSE,
     BOOL bShowHelpButton=FALSE);
-
 
 void EnableWindowsDialog(
     UINT uiMenuId,
@@ -1449,7 +1438,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pMenuButton*<br/>

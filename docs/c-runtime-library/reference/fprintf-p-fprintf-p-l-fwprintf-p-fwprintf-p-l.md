@@ -1,10 +1,6 @@
 ---
-title: _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fwprintf_p
 - _fprintf_p_l
@@ -29,8 +25,6 @@ f1_keywords:
 - _fwprintf_p
 - fprintf_p
 - ftprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - fprintf_p_l function
 - fprintf_p function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - ftprintf_p_l function
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef748590f412afc10b5046691c982ed1d5ccabb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404426"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462775"
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 
@@ -91,13 +81,13 @@ int _fwprintf_p_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 *format*<br/>
 Chaîne de contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs.
 
 *locale*<br/>
@@ -105,20 +95,20 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_fprintf_p** et **_fwprintf_p** retourner le nombre de caractères écrits ou retourner une valeur négative lorsqu’une erreur se produit.
+**_fprintf_p** et **_fwprintf_p** retourner le nombre de caractères écrits ou retourner une valeur négative lorsqu’une erreur de sortie se produit.
 
 ## <a name="remarks"></a>Notes
 
 **_fprintf_p** met en forme et imprime une série de caractères et de valeurs à la sortie *flux*. Chaque fonction *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Pour **_fprintf_p**, le *format* argument a la même syntaxe et utilisation de **_printf_p**. Ces fonctions prennent en charge les paramètres positionnels, ce qui signifie que l’ordre des paramètres utilisés par la chaîne de format peut être modifié. Pour plus d’informations sur les paramètres positionnels, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_fwprintf_p** est une version à caractères larges de **_fprintf_p**; dans **_fwprintf_p**, *format* est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **_fprintf_p** ne prend actuellement en charge la sortie dans un flux de données UNICODE.
+**_fwprintf_p** est une version à caractères larges de **_fprintf_p**; dans **_fwprintf_p**, *format* est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **_fprintf_p** ne prend actuellement en charge la sortie vers un flux UNICODE.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
 
-Comme les versions non sécurisées (voir [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), ces fonctions valident leurs paramètres et appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md), si le paramètre *flux* ou *format* est un pointeur null ou s’il existe des spécificateurs de mise en forme inconnues ou mal formés. Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+Comme les versions non sécurisées (voir [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), ces fonctions valident leurs paramètres et appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md), si *flux* ou *format* est un pointeur null ou s’il existe des spécificateurs de mise en forme inconnus ou incorrects. Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -129,7 +119,7 @@ Comme les versions non sécurisées (voir [fprintf, _fprintf_l, fwprintf, _fwpri
 
 Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

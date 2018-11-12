@@ -1,10 +1,6 @@
 ---
-title: CMFCColorPickerCtrl, classe | Microsoft Docs
-ms.custom: ''
+title: CMFCColorPickerCtrl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCColorPickerCtrl
 - AFXCOLORPICKERCTRL/CMFCColorPickerCtrl
@@ -25,8 +21,6 @@ f1_keywords:
 - AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetSaturation
 - AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetType
 - AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::DrawCursor
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], CMFCColorPickerCtrl
 - CMFCColorPickerCtrl [MFC], GetColor
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 107da291ea12490964fc5d142f8360c93a1ac536
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 073012642597d0b38dcb0f76cf5662666447adc1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380098"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519052"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl, classe
 
@@ -138,7 +128,7 @@ L’exemple suivant montre comment configurer un `CMFCColorPickerCtrl` objet à 
 
 [CMFCColorPickerCtrl](../../mfc/reference/cmfccolorpickerctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcolorpickerctrl.h
 
@@ -166,7 +156,7 @@ virtual void DrawCursor(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -209,7 +199,7 @@ void GetHLS(
 *luminance*<br/>
 [out] Pointeur vers une variable de type double qui reçoit les informations de luminance.
 
-*saturation*<br/>
+*Saturation*<br/>
 [out] Pointeur vers une variable de type double qui reçoit les informations de saturation.
 
 ### <a name="remarks"></a>Notes
@@ -265,7 +255,6 @@ void SelectCellHexagon(
     BYTE R,
     BYTE G,
     BYTE B);
-
 
 BOOL SelectCellHexagon(
     int x,
@@ -334,7 +323,7 @@ void SetHLS(
 *luminance*<br/>
 [in] Une valeur de luminance.
 
-*saturation*<br/>
+*Saturation*<br/>
 [in] Une valeur de saturation.
 
 *bInvalidate*<br/>

@@ -1,28 +1,17 @@
 ---
-title: Exporter (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: Export (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.export
-dev_langs:
-- C++
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a636b7d4c943896bcd1e5e7b3580c2d3f7410fc8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 951c0ef2f0da0fa897c299aa6b547d5c0788b285
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661589"
 ---
 # <a name="export"></a>exporter
 
@@ -70,9 +59,9 @@ struct MyStruct {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs de compilateur](compiler-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)  
+[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)

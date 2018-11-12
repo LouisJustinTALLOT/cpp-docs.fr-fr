@@ -1,27 +1,17 @@
 ---
-title: À l’aide de listes d’images dans un contrôle de zone de liste déroulante étendue | Microsoft Docs
-ms.custom: ''
+title: Utilisation de listes d'images dans un contrôle de zone de liste déroulante étendue
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - image lists [MFC], combo boxes
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 080256f9a5de719e265009080036a3c0c2617118
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 38f51205eea7220f0efbc2d8821fcb2b423e0add
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412234"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504597"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Utilisation de listes d'images dans un contrôle de zone de liste déroulante étendue
 
@@ -35,11 +25,11 @@ La procédure suivante associe une liste d’images à un contrôle de zone de l
 
 1. Initialiser le nouvel objet de liste d’images en appelant [CImageList::Create](../mfc/reference/cimagelist-class.md#create). Le code suivant est un exemple de cet appel.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_1.cpp)]
 
 1. Ajoutez des images facultatives pour chaque état possible : sélectionné ou non sélectionnées et qu’un segment de recouvrement. Le code suivant ajoute trois images prédéfinies.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_2.cpp)]
 
 1. Associer la liste d’images avec le contrôle avec un appel à [CComboBoxEx::SetImageList](../mfc/reference/ccomboboxex-class.md#setimagelist).
 

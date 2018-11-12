@@ -1,10 +1,6 @@
 ---
-title: Cmfcribbonmainpanel, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcribbonmainpanel, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonMainPanel
 - AFXRIBBONMAINPANEL/CMFCRibbonMainPanel
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddToBottom
 - AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddToRight
 - AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::GetCommandsFrame
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], Add
 - CMFCRibbonMainPanel [MFC], AddRecentFilesList
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9397dbd6c18d2256bf1803080f32d1fae36a159
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 101c718d25a2e06461156045deea5f42d85e2f4d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430577"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638215"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Cmfcribbonmainpanel, classe
 
@@ -96,7 +86,8 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pElem* un pointeur vers l’élément de ruban à ajouter au panneau principal.
+*pElem*<br/>
+[in, out] Un pointeur vers l’élément de ruban à ajouter au panneau principal.
 
 ### <a name="remarks"></a>Notes
 
@@ -132,7 +123,8 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pElem* un pointeur vers l’élément de ruban pour ajouter vers le bas du panneau principal.
+*pElem*<br/>
+[in, out] Pointeur vers l’élément de ruban pour ajouter vers le bas du panneau principal.
 
 ### <a name="remarks"></a>Notes
 

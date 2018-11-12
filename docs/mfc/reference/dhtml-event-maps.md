@@ -1,14 +1,8 @@
 ---
-title: DHTML, tables d’événements | Microsoft Docs
-ms.custom: ''
+title: DHTML, tables d'événements
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.macros.shared
-dev_langs:
-- C++
 helpviewer_keywords:
 - event map macros [MFC]
 - DHTML [MFC], event map macros
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5942a41272671a391cb600ef959d2c69b0bab3e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 329b4176ad4d24651a41b5321c26318cf2af30e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547197"
 ---
 # <a name="dhtml-event-maps"></a>DHTML, tables d'événements
 
@@ -142,7 +132,6 @@ Placer le begin_dhtml_event_map (macro) dans la définition (.h) fichier de la c
 ### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdhtml.h
-
 
 ##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP
 
@@ -1160,7 +1149,6 @@ L’identificateur de la page, *mapName*, est un symbole arbitraire utilisé pou
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple dans [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
-
 
 ### <a name="requirements"></a>Configuration requise
 

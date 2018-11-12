@@ -1,10 +1,6 @@
 ---
-title: _CrtIsValidPointer | Microsoft Docs
-ms.custom: ''
+title: _CrtIsValidPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidPointer
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidPointer
 - _CrtIsValidPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bb78f8dee494fd213df6db16e2800cb9090bdf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64197d460cdb7dd26d22196c08151be09df48573
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397265"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429245"
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 
@@ -70,7 +60,7 @@ Accessibilité en lecture/écriture à déterminer pour la plage mémoire.
 
 ## <a name="remarks"></a>Notes
 
-En commençant par la bibliothèque CRT dans Visual Studio 2010, le *taille* et *accès* paramètres sont ignorés, et **_CrtIsValidPointer** vérifie uniquement que le spécifié*adresse* n’est pas null. Ce test étant facile à effectuer par soi-même, nous vous déconseillons d'utiliser cette fonction. Dans les versions antérieures de Visual Studio 2010, la fonction vérifie que la plage mémoire débutant à *adresse* et l’extension pour *taille* octets est valide pour l’ou les opérations d’accessibilité spécifiées. Lorsque *accès* est définie sur TRUE, la plage de mémoire est vérifiée pour la lecture et l’écriture. Lorsque *accès* est FALSE, la plage de mémoire n’est validée pour la lecture. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtIsValidPointer** sont supprimés lors du prétraitement.
+En commençant par la bibliothèque CRT dans Visual Studio 2010, le *taille* et *accès* paramètres sont ignorés, et **_CrtIsValidPointer** qui vérifie uniquement le spécifié*adresse* n’est pas null. Ce test étant facile à effectuer par soi-même, nous vous déconseillons d'utiliser cette fonction. Dans les versions antérieures à Visual Studio 2010, la fonction vérifie que la plage mémoire débutant à *adresse* et s’étend sur *taille* octets est valide pour l’ou les opérations d’accessibilité spécifiées. Lorsque *accès* est définie sur TRUE, la plage de mémoire est vérifiée pour la lecture et écriture. Lorsque *accès* est FALSE, la plage mémoire n’est validée pour la lecture. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtIsValidPointer** sont supprimés lors du prétraitement.
 
 Comme cette fonction retourne TRUE ou FALSE, elle peut être passée à l’une des macros [_ASSERT](assert-asserte-assert-expr-macros.md) pour créer un mécanisme de gestion des erreurs de débogage simple. L'exemple suivant provoque un échec d'assertion si la plage mémoire n'est pas valide pour les opérations à la fois de lecture et d'écriture :
 
@@ -80,7 +70,7 @@ _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
 
 Pour plus d’informations sur la façon **_CrtIsValidPointer** peut être utilisé avec d’autres fonctions de débogage et les macros, consultez [Macros pour la création de rapports](/visualstudio/debugger/macros-for-reporting). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

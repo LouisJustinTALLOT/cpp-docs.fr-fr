@@ -1,18 +1,12 @@
 ---
-title: auto_ptr, classe | Microsoft Docs
-ms.custom: ''
+title: auto_ptr, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - memory/std::auto_ptr
 - memory/std::auto_ptr::element_type
 - memory/std::auto_ptr::get
 - memory/std::auto_ptr::release
 - memory/std::auto_ptr::reset
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::auto_ptr [C++]
 - std::auto_ptr [C++], element_type
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 945de6e2ef7e9ec3967091f88b1d0cfeaa8df5e3
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 587168323b8af63d232b8df63e9dcac2f4601433
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108887"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620946"
 ---
 # <a name="autoptr-class"></a>auto_ptr, classe
 
@@ -63,6 +53,7 @@ public:
     void reset(Type* ptr = 0);
 };
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *right*<br/>

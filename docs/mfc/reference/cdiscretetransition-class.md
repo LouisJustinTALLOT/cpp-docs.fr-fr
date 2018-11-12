@@ -1,10 +1,6 @@
 ---
-title: CDiscreteTransition, classe | Microsoft Docs
-ms.custom: ''
+title: CDiscreteTransition, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDiscreteTransition
 - AFXANIMATIONCONTROLLER/CDiscreteTransition
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_dblFinalValue
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_delay
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_hold
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDiscreteTransition [MFC], CDiscreteTransition
 - CDiscreteTransition [MFC], Create
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98deeff0e6b39a52002416c1b234434623f31b6a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6092e805516d242daf6149615a8ef72df334dfd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416212"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656701"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition, classe
 
@@ -115,7 +105,6 @@ virtual BOOL Create(
 
 *pLibrary*<br/>
 Un pointeur vers un [interface IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standards.
-
 
 ### <a name="return-value"></a>Valeur de retour
 

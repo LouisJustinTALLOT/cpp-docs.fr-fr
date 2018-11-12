@@ -1,25 +1,15 @@
 ---
-title: constexpr (C++) | Microsoft Docs
-ms.custom: ''
+title: constexpr (C++)
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - constexpr_cpp
-dev_langs:
-- C++
 ms.assetid: c6458ccb-51c6-4a16-aa61-f69e6f4e04f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: afe883bf74ae2d6115dc7bdcd92d09616dde0ae6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116722"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605733"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -95,7 +85,6 @@ Les règles suivantes s’appliquent aux **constexpr** fonctions dans Visual Stu
 - Il peut contenir des déclarations de variables locales, mais la variable doit être initialisée, doit être un type littéral et ne peut pas être statiques ou locales de thread. La variable déclarés localement ne doit pas être const et peut-être se transformer.
 
 - Une fonction de membre non statique constexpr n’est pas obligée être implicitement const.
-
 
 ```cpp
 constexpr float exp(float x, int n)

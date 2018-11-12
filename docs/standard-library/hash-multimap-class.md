@@ -1,10 +1,6 @@
 ---
-title: hash_multimap, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
+title: hash_multimap, classe
+ms.date: 10/18/2018
 f1_keywords:
 - hash_map/stdext::hash_multimap
 - hash_map/stdext::hash_multimap::allocator_type
@@ -47,8 +43,6 @@ f1_keywords:
 - hash_map/stdext::hash_multimap::swap
 - hash_map/stdext::hash_multimap::upper_bound
 - hash_map/stdext::hash_multimap::value_comp
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::hash_multimap
 - stdext::hash_multimap::allocator_type
@@ -92,16 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d34569f1b0f984a521b7d5a79221e089f1a1df0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 45325f5669da8617e0dee774bf884901dda68a40
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235761"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512963"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap, classe
 
@@ -1497,7 +1487,6 @@ hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp);
 
-
 hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp,
@@ -1554,7 +1543,7 @@ Les trois derniers constructeurs utilisent un initializer_list.
 ## <a name="insert"></a>  hash_multimap::insert
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multimap Class](../standard-library/unordered-multimap-class.md).
 
 Insère un élément ou une plage d’éléments dans une classe hash_multimap.
 
@@ -2477,9 +2466,9 @@ Retourne l’objet de fonction de comparaison utilisé par un hash_multimap pour
 
 ### <a name="remarks"></a>Notes
 
-Pour un hash_multimap *m*, si deux éléments *e*1( *k*1 *, d*1) and *e*2( *k*2 *, d*2) sont des objets de type [value_type](#value_type), où *k*1 et *k*2 ont des clés de type [key_type](#key_type) et `d`1 et `d`2 ont des données de type [mapped_type](#mapped_type), alors *m.*`value_comp`( )( *e*1 *, e*2) équivaut à *m.*`key_comp`( ) ( *k*1 *, k*2). Un objet stocké définit la fonction membre
+Pour un hash_multimap *m*, si deux éléments *e1* (*k1*, *d1*) et *e2*(*k2* , *d2*) sont des objets de type [value_type](#value_type), où *k1* et *k2* sont leurs clés de type [key_type](#key_type) et *d1* et *d2* sont leurs données de type [mapped_type](#mapped_type), puis `m.value_comp()(e1, e2)` équivaut à `m.key_comp()(k1, k2)` . Un objet stocké définit la fonction membre
 
-**bool operator**( **value_type&**`left`, **value_type&** `right`);
+`bool operator( value_type& left, value_type& right);`
 
 qui retourne **true** si la valeur de clé de `left` précède et n’est pas égale à la valeur clé de `right` dans l’ordre de tri.
 

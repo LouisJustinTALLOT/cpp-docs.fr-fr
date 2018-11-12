@@ -1,14 +1,8 @@
 ---
-title: Traitement des exceptions | Microsoft Docs
-ms.custom: ''
+title: Traitement des exceptions
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.exceptions
-dev_langs:
-- C++
 helpviewer_keywords:
 - macros [MFC], exception handling
 - DAO (Data Access Objects), exceptions [MFC]
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1711e634fca1b4350e8aca5f75f0de8a4b3a0e5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6f74f0fcef7f9dc63138dcdb29487120818974f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417356"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651410"
 ---
 # <a name="exception-processing"></a>Traitement des exceptions
 
@@ -388,7 +378,6 @@ Cette fonction est appelée lorsque les arguments non valides sont utilisés.
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [CInvalidArgException, classe](cinvalidargexception-class.md)<br/>
 [THROW](#throw)
-
 
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 

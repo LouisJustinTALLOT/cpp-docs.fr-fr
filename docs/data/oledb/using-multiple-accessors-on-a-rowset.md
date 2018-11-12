@@ -1,29 +1,18 @@
 ---
-title: Utilisation de plusieurs accesseurs sur un ensemble de lignes | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
+title: Utilisation de plusieurs accesseurs dans un jeu de lignes
+ms.date: 10/24/2018
 helpviewer_keywords:
 - BEGIN_ACCESSOR macro
 - BEGIN_ACCESSOR macro, multiple accessors
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 2f88213fce0c5aa1d91f94d7fbeb26eab6432207
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483289"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilisation de plusieurs accesseurs dans un jeu de lignes
 
@@ -37,7 +26,7 @@ Il existe trois principaux scénarios dans lesquels vous devez utiliser plusieur
 
 - **Performances** Dans ce scénario, une ou plusieurs colonnes ont une grande quantité de données, par exemple, aux fichiers de graphiques, audio ou vidéo. Chaque fois que vous passez à une ligne, sans doute ne voulez-vous extraire la colonne avec le fichier de données volumineux, car cela risque de ralentir les performances de votre application.
 
-   Vous pouvez définir des accesseurs distincts dans lequel le premier accesseur contient toutes les colonnes sauf celui avec des données volumineuses, et il récupère des données à partir de ces colonnes automatiquement ; l’accesseur premier est l’accesseur automatique. Le deuxième accesseur récupère seulement la colonne contenant des données volumineuses, mais il ne récupérer automatiquement des données à partir de cette colonne. Vous pouvez avoir des autres méthodes de mise à jour ou extraire les données volumineuses à la demande.
+   Vous pouvez définir des accesseurs distincts dans lequel le premier accesseur contient toutes les colonnes sauf celui avec des données volumineuses, et il récupère des données à partir de ces colonnes automatiquement ; l’accesseur premier est l’accesseur automatique. Le deuxième accesseur extrait uniquement la colonne contenant les données volumineuses, mais il ne récupérer automatiquement des données à partir de cette colonne. Vous pouvez avoir des autres méthodes de mise à jour ou extraire les données volumineuses à la demande.
 
    - Accesseur 0 est un accesseur automatique ; Il récupère toutes les colonnes à l’exception de celui avec des données volumineuses.
 
@@ -45,7 +34,7 @@ Il existe trois principaux scénarios dans lesquels vous devez utiliser plusieur
 
    Utilisez l’argument automatique pour spécifier si l’accesseur est un accesseur automatique.
 
-- **Plusieurs colonnes ISequentialStream.** Dans ce scénario, vous avez plus d’une colonne qui contient `ISequentialStream` données. Toutefois, chaque accesseur est limité à un `ISequentialStream` flux de données. Pour résoudre ce problème, configurez plusieurs accesseurs, chacun comportant une `ISequentialStream` pointeur.
+- **Plusieurs colonnes ISequentialStream.** Dans ce scénario, vous avez plus d’une exploitation colonne `ISequentialStream` données. Toutefois, chaque accesseur est limité à un `ISequentialStream` flux de données. Pour résoudre ce problème, configurez plusieurs accesseurs, chacun comportant une `ISequentialStream` pointeur.
 
 Normalement, vous créez des accesseurs en utilisant le [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) macros. Vous pouvez également utiliser le [db_accessor](../../windows/db-accessor.md) attribut. (Les accesseurs sont décrits dans [enregistrements utilisateur](../../data/oledb/user-records.md).) Les macros ou l’attribut spécifient si un accesseur est automatique ou un accesseur non automatique :
 

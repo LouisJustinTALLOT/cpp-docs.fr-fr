@@ -1,28 +1,17 @@
 ---
-title: inclure (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: inclure (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.include
-dev_langs:
-- C++
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 97c7ca1f808beb7e0658338dac77819455f9ed84
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6fb385877285602c1eb6649d11e16558d7fb07ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790720"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544753"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -67,7 +56,7 @@ Le code suivant montre un exemple montrant comment utiliser **incluent**. Pour c
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -76,4 +65,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
 [includelib](includelib-cpp.md)<br/>
-[importlib](importlib.md)  
+[importlib](importlib.md)

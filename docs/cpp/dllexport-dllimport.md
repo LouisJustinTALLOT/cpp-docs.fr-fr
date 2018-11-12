@@ -1,31 +1,21 @@
 ---
-title: dllexport, dllimport | Microsoft Docs
-ms.custom: ''
+title: dllexport, dllimport
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - dllimport_cpp
 - dllexport_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - dllexport __declspec keyword
 - __declspec keyword [C++], dllexport
 - dllimport __declspec keyword
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75a2e31e62d9899c2e287c5fca7ad5dfdcc67311
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2ae284172828ed63b6499475df108c28aecb32ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525955"
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 
@@ -46,7 +36,7 @@ Ces attributs définissent explicitement l'interface de la DLL à son client, qu
 
 Si une classe est marquée declspec(dllexport), les spécialisations des modèles de classe dans la hiérarchie de classes sont implicitement marquées comme declspec(dllexport). Cela signifie que les modèles de classe sont instanciés explicitement et que les membres de la classe doivent être définis.
 
-**dllexport** d’une fonction expose la fonction avec son nom décoré. Pour les fonctions C++, cela inclut l'altération des noms. Pour les fonctions C ou les fonctions déclarées comme `extern "C"`, cela inclut la décoration propre à la plateforme basée sur la convention d'appel. Pour plus d’informations sur la décoration de nom dans le code C/C++, consultez [noms décorés](../build/reference/decorated-names.md). Aucune décoration de nom n'est appliquée aux fonctions C exportées ni aux fonctions `extern "C"` C++ à l'aide de la convention d'appel `__cdecl`.
+**dllexport** d’une fonction expose la fonction avec son nom décoré. Pour les fonctions C++, cela inclut l'altération des noms. Pour les fonctions C ou les fonctions déclarées comme `extern "C"`, cela inclut la décoration propre à la plateforme basée sur la convention d’appel. Pour plus d’informations sur la décoration de nom dans le code C/C++, consultez [noms décorés](../build/reference/decorated-names.md). Aucune décoration de nom n’est appliquée aux fonctions C exportées ni aux fonctions `extern "C"` C++ à l’aide de la convention d’appel `__cdecl`.
 
 Pour exporter un nom non décoré, vous pouvez établir un lien à l'aide d'un fichier de définition de module (.def) qui définit le nom non décoré dans une section EXPORTS. Pour plus d’informations, consultez [exportations](../build/reference/exports.md). Une autre façon d’exporter un nom non décoré consiste à utiliser un `#pragma comment(linker, "/export:alias=decorated_name")` directive dans le code source.
 

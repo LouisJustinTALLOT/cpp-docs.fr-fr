@@ -1,12 +1,6 @@
 ---
-title: 'Conteneurs de contrôles ActiveX : Programmation de contrôles ActiveX dans un conteneur de contrôles ActiveX | Microsoft Docs'
-ms.custom: ''
+title: 'Conteneurs de contrôles ActiveX : programmation de contrôles ActiveX dans un conteneur de contrôles ActiveX'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX control containers [MFC], accessing ActiveX controls
 - Confirm Classes dialog box
@@ -18,23 +12,19 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2204df82263cdd39d7f78ff43cc2c02a7eafbac5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c9a0c51d090b1c62309f27bf6587ea02e0fe1152
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379799"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636889"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Conteneurs de contrôles ActiveX : programmation de contrôles ActiveX dans un conteneur de contrôles ActiveX
 
 Cet article décrit le processus permettant d’accéder aux exposés [méthodes](../mfc/mfc-activex-controls-methods.md) et [propriétés](../mfc/mfc-activex-controls-properties.md) de contrôles ActiveX intégrés.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 En fait, vous effectuerez les tâches suivantes :
 

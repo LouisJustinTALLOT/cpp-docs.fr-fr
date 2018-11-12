@@ -1,30 +1,20 @@
 ---
-title: 'TN065 : Prise en charge de Interface double pour les serveurs Automation OLE | Microsoft Docs'
-ms.custom: ''
+title: "TN065 : prise en charge d'une interface double pour les serveurs Automation OLE"
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.ole
-dev_langs:
-- C++
 helpviewer_keywords:
 - dual interfaces [MFC], OLE Automation
 - TN065 [MFC]
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 837149397ec45ebd8b41808b170b9f5e25146d6a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5a04c2712182fe9c9ed3fd9e5fe4548404f96a5d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387690"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575212"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065 : prise en charge d'une interface double pour les serveurs Automation OLE
 
@@ -37,7 +27,7 @@ Cette note indique comment ajouter la prise en charge d'interfaces doubles à un
 
 Bien que l'objet OLE Automation vous permet d'implémenter une interface `IDispatch`, une interface VTBL ou une double interface (qui comprend les deux), Microsoft recommande vivement d'implémenter des interfaces doubles pour tous les objets OLE Automation accessibles. Les interfaces doubles offrent d'importants avantages par rapport aux interfaces `IDispatch` uniquement ou uniquement VTBL :
 
-- La liaison peut avoir lieu au moment de la compilation via l'interface VTBL, ou à l'aide de `IDispatch`.
+- La liaison peut avoir lieu au moment de la compilation via l’interface VTBL, ou à l’aide de `IDispatch`.
 
 - Les contrôleurs OLE Automation qui peuvent utiliser l'interface VTBL peuvent tirer parti de meilleures performances.
 
@@ -328,7 +318,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
     ```
 
-     Cela crée un `HRESULT` spécifique à l'interface qui a provoqué l'exception. Le code d'erreur est décalé de 0x200 pour éviter tout conflit avec les `HRESULT`définis par le système pour les interfaces OLE standard.
+   Cela crée un `HRESULT` spécifique à l'interface qui a provoqué l'exception. Le code d'erreur est décalé de 0x200 pour éviter tout conflit avec les `HRESULT`définis par le système pour les interfaces OLE standard.
 
 - [CMemoryException](../mfc/reference/cmemoryexception-class.md) : dans ce cas, `E_OUTOFMEMORY` est retournée.
 

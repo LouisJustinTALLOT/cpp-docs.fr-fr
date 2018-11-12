@@ -1,26 +1,22 @@
 ---
-title: '&lt;hash_set&gt;, opérateurs | Microsoft Docs'
-ms.custom: ''
+title: '&lt;hash_set&gt;, opérateurs'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
-dev_langs:
-- C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: b9c6fe6b39b771b81b6508c10abd43c71774f9a7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 3cb0b743eefa52b178a89be1c2cc766352bf4849
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108252"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564838"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt;, opérateurs
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operator==](#op_eq_eq)|
+|[!=, opérateur](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operator==](#op_eq_eq)|
 |[operator== (hash_multiset)](#op_eq_eq_hash_multiset)|
 
 ## <a name="op_neq"></a>  operator!=

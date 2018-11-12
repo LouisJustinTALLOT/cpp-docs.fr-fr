@@ -1,26 +1,15 @@
 ---
-title: Classe d’attributs (C++ COM) | Microsoft Docs
-ms.custom: ''
+title: Attributs de classe C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a727bcf53a11e98ffd7e037037452c6bbdc4fe8a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448865"
 ---
 # <a name="class-attributes"></a>Attributs de classe
 
@@ -32,8 +21,8 @@ Les attributs suivants s’appliquent à la [classe](../../cpp/class-cpp.md) mot
 |[aggregates](aggregates.md)|Indique qu’un contrôle agrège la classe cible.|
 |[appobject](appobject.md)|Identifie la coclasse comme un objet de l’application, qui est associé à une application .exe complète et indique que les fonctions et les propriétés de la coclasse sont globalement disponibles dans cette bibliothèque de types.|
 |[case](case-cpp.md)|Utilisé avec le [switch_type](switch-type.md) attribut dans une union.|
-|[coclass](coclass.md)|Crée un contrôle ActiveX.|
-|[COM_INTERFACE_ENTRY](com-interface-entry-cpp.md)|Ajoute une entrée de l’interface à un mappage COM.|
+|[coclasse](coclass.md)|Crée un contrôle ActiveX.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Ajoute une entrée de l’interface à un mappage COM.|
 |[control](control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|
 |[custom](custom-cpp.md)|Vous permet de définir votre propre attribut.|
 |[db_command](db-command.md)|Crée une commande OLE DB.|
@@ -49,7 +38,7 @@ Les attributs suivants s’appliquent à la [classe](../../cpp/class-cpp.md) mot
 |[helpstringcontext](helpstringcontext.md)|Spécifie l’ID d’une rubrique d’aide dans un fichier .hlp ou .chm.|
 |[helpstring](helpstring.md)|Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique.|
 |[hidden](hidden.md)|Indique que l’élément existe, mais ne doit pas être affiché dans un navigateur orienté utilisateur.|
-|[Implémente](implements-cpp.md)|Spécifie les interfaces de dispatch obligés d’être membres de la coclasse IDL.|
+|[implements](implements-cpp.md)|Spécifie les interfaces de dispatch obligés d’être membres de la coclasse IDL.|
 |[implements_category](implements-category.md)|Spécifie les catégories de composants implémentés pour la classe.|
 |[module](module-cpp.md)|Définit le bloc de bibliothèque dans le fichier .idl.|
 |[noncreatable](noncreatable.md)|Définit un objet qui ne peut pas être instancié par lui-même.|
@@ -58,7 +47,7 @@ Les attributs suivants s’appliquent à la [classe](../../cpp/class-cpp.md) mot
 |[requestedit](requestedit.md)|Indique que la propriété prend en charge la `OnRequestEdit` notification.|
 |[source](source-cpp.md)|Spécifie les interfaces de source du contrôle des points de connexion sur une classe. Sur une propriété ou méthode, le `source` attribut indique que le membre retourne un objet ou `VARIANT` qui est une source d’événements.|
 |[support_error_info](support-error-info.md)|Prend en charge les rapports d’erreurs pour l’objet cible.|
-|[Threading](threading-cpp.md)|Spécifie le modèle de thread pour un contrôle.|
+|[threading](threading-cpp.md)|Spécifie le modèle de thread pour un contrôle.|
 |[uuid](uuid-cpp-attributes.md)|Spécifie l’ID unique pour une classe ou interface.|
 |[version](version-cpp.md)|Identifie une version particulière entre plusieurs versions d’une classe.|
 |[vi_progid](vi-progid.md)|Spécifie un formulaire indépendant de la version du ProgID.|

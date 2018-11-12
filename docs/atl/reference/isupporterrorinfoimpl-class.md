@@ -1,31 +1,21 @@
 ---
-title: ISupportErrorInfoImpl, classe | Microsoft Docs
-ms.custom: ''
+title: ISupportErrorInfoImpl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - ISupportErrorInfoImpl
 - ATLCOM/ATL::ISupportErrorInfoImpl
 - ATLCOM/ATL::ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - ISupportErrorInfo ATL implementation
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a3f912f7ba3a5455f7583ba2a5036548ac65df2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a4427a1190f145cc001a3288535df287326e97e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022173"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523286"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl, classe
 
@@ -38,7 +28,7 @@ Cette classe fournit une implémentation par défaut de la [ISupportErrorInfo In
 
 ```
 template<const IID* piid>
-class ATL_NO_VTABLE ISupportErrorInfoImpl 
+class ATL_NO_VTABLE ISupportErrorInfoImpl
    : public ISupportErrorInfo
 ```
 

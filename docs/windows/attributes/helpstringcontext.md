@@ -1,28 +1,17 @@
 ---
-title: helpstringcontext (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: helpstringcontext (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.helpstringcontext
-dev_langs:
-- C++
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e6d42dc242a2818f677f8f486b2c7db50125854c
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d292dd53ff3009a571dd5b0a1ba102e75b648e4d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790676"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533599"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -70,7 +59,7 @@ __interface IMyI
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -78,4 +67,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [Attributs d’interface](interface-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[module](module-cpp.md)  
+[module](module-cpp.md)

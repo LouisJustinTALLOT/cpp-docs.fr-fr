@@ -1,27 +1,17 @@
 ---
-title: 'Procédure pas à pas : Test d’un projet (C++) | Microsoft Docs'
-ms.custom: ''
+title: "Procédure pas à pas : test d'un projet (C++)"
 ms.date: 09/14/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - project testing [C++]
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437308"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Procédure pas à pas : test d'un projet (C++)
 
@@ -33,7 +23,7 @@ Dans cette procédure pas à pas, vous observez la valeur d’une variable que l
 
 - Cette procédure pas à pas part du principe que vous comprenez les notions de base du langage C++.
 
-- Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes listées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ### <a name="to-run-a-program-in-debug-mode"></a>Pour exécuter le programme en mode débogage
 
@@ -41,7 +31,7 @@ Dans cette procédure pas à pas, vous observez la valeur d’une variable que l
 
 1. Sélectionnez cette ligne de code :
 
-     `Cardgame.solitaire(1);`
+   `Cardgame.solitaire(1);`
 
 1. Pour définir un point d’arrêt sur cette ligne, dans la barre de menus, choisissez **Déboguer** > **Basculer le point d’arrêt** ou appuyez sur **F9**. Un cercle rouge apparaît à gauche de la ligne. Il indique qu’un point d’arrêt est défini. Pour supprimer un point d’arrêt, vous pouvez choisir la commande de menu ou réappuyer sur **F9**.
 

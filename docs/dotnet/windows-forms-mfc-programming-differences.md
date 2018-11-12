@@ -1,27 +1,16 @@
 ---
-title: Différences de programmation entre Windows Forms et MFC | Microsoft Docs
-ms.custom: ''
+title: Différences de programmation entre Windows Forms et MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: e6bac12d841a065495f7775598c65f39a0aaba67
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a284a74fe0b8cac0df43803951e3a5b5655f8189
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394268"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593178"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Différences de programmation entre Windows Forms et MFC
 
@@ -39,31 +28,31 @@ La vue MFC ou document et fonctionnalités de routage des commandes suivantes on
 
 - Intégration de l’interpréteur de commandes
 
-     MFC gère les commandes d’exchange (DDE) de données dynamiques et les arguments de ligne de commande par l’interpréteur de commandes pour vous avec le bouton droit à un document et sélectionnez des verbes, comme ouvrir, modifiez ou imprimez. Windows Forms n’a aucune interface intégrée et ne répond pas aux verbes du shell.
+   MFC gère les commandes d’exchange (DDE) de données dynamiques et les arguments de ligne de commande par l’interpréteur de commandes pour vous avec le bouton droit à un document et sélectionnez des verbes, comme ouvrir, modifiez ou imprimez. Windows Forms n’a aucune interface intégrée et ne répond pas aux verbes du shell.
 
 - Modèles de document
 
-     Dans MFC, les modèles de document associent une vue, qui est contenue dans une fenêtre frame (en mode MDI, SDI ou MTI), le document ouvert. Windows Forms n’a aucun équivalent aux modèles de document.
+   Dans MFC, les modèles de document associent une vue, qui est contenue dans une fenêtre frame (en mode MDI, SDI ou MTI), le document ouvert. Windows Forms n’a aucun équivalent aux modèles de document.
 
 - Documents
 
-     MFC inscrit les types de fichiers de document et traite le type de document lors de l’ouverture d’un document à partir de l’interpréteur de commandes. Windows Forms n’a aucune prise en charge du document.
+   MFC inscrit les types de fichiers de document et traite le type de document lors de l’ouverture d’un document à partir de l’interpréteur de commandes. Windows Forms n’a aucune prise en charge du document.
 
 - États de document
 
-     MFC gère les états modifiés pour le document. Par conséquent, lorsque vous fermez l’application, fermez la dernière vue qui contient l’application ou de sortie de Windows, MFC vous invite à enregistrer le document. Windows Forms n’a aucune prise en charge équivalente.
+   MFC gère les états modifiés pour le document. Par conséquent, lorsque vous fermez l’application, fermez la dernière vue qui contient l’application ou de sortie de Windows, MFC vous invite à enregistrer le document. Windows Forms n’a aucune prise en charge équivalente.
 
 - Commandes
 
-     MFC propose le concept de commandes. Le menu contextuel, la barre d’outils et la barre de menus peuvent appeler la même commande, par exemple, couper et copier. Dans les Windows Forms, les commandes sont des événements étroitement liés à partir d’un élément d’interface utilisateur particulier (par exemple, un élément de menu) ; Par conséquent, vous devez raccorder les événements de commande explicitement. Vous pouvez également gérer plusieurs événements avec un gestionnaire unique dans les Windows Forms. Pour plus d’informations, consultez [connexion de plusieurs événements à un seul gestionnaire d’événements dans les Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
+   MFC propose le concept de commandes. Le menu contextuel, la barre d’outils et la barre de menus peuvent appeler la même commande, par exemple, couper et copier. Dans les Windows Forms, les commandes sont des événements étroitement liés à partir d’un élément d’interface utilisateur particulier (par exemple, un élément de menu) ; Par conséquent, vous devez raccorder les événements de commande explicitement. Vous pouvez également gérer plusieurs événements avec un gestionnaire unique dans les Windows Forms. Pour plus d’informations, consultez [connexion de plusieurs événements à un seul gestionnaire d’événements dans les Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
 
 - Routage des commandes
 
-     Routage des commandes MFC permet à la vue active ou le document pour traiter les commandes. Étant donné que la même commande a souvent des significations différentes pour des vues différentes (par exemple, copier se comporte différemment dans le texte modifier plutôt que dans un éditeur graphique), les commandes doivent être traitées par la vue active. Étant donné que les menus Windows Forms et des barres d’outils n’ont aucun une compréhension inhérente de la vue active, vous ne pouvez avoir un gestionnaire différent pour chaque type d’affichage pour votre **MenuItem.Click** événements sans écrire de code interne supplémentaire.
+   Routage des commandes MFC permet à la vue active ou le document pour traiter les commandes. Étant donné que la même commande a souvent des significations différentes pour des vues différentes (par exemple, copier se comporte différemment dans le texte modifier plutôt que dans un éditeur graphique), les commandes doivent être traitées par la vue active. Étant donné que les menus Windows Forms et des barres d’outils n’ont aucun une compréhension inhérente de la vue active, vous ne pouvez avoir un gestionnaire différent pour chaque type d’affichage pour votre **MenuItem.Click** événements sans écrire de code interne supplémentaire.
 
 - Mécanisme de mise à jour de commande
 
-     MFC dispose d’une commande de mise à jour. Par conséquent, le document ou la vue active est responsable de l’état des éléments de l’interface utilisateur (par exemple, l’activation ou la désactivation d’un bouton de menu élément ou l’outil et états vérifiés). Windows Forms n’a aucun équivalent d’un mécanisme de mise à jour de commande.
+   MFC dispose d’une commande de mise à jour. Par conséquent, le document ou la vue active est responsable de l’état des éléments de l’interface utilisateur (par exemple, l’activation ou la désactivation d’un bouton de menu élément ou l’outil et états vérifiés). Windows Forms n’a aucun équivalent d’un mécanisme de mise à jour de commande.
 
 ## <a name="see-also"></a>Voir aussi
 

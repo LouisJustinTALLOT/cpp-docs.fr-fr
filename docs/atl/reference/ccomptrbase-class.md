@@ -1,10 +1,6 @@
 ---
-title: CComPtrBase, classe | Microsoft Docs
-ms.custom: ''
+title: CComPtrBase, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComPtrBase
 - ATLCOMCLI/ATL::CComPtrBase
@@ -18,21 +14,15 @@ f1_keywords:
 - ATLCOMCLI/ATL::CComPtrBase::Release
 - ATLCOMCLI/ATL::CComPtrBase::SetSite
 - ATLCOMCLI/ATL::CComPtrBase::p
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8d7c96ff047a6340511ee1d67f025db0ad7c5368
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070156"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452687"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase, classe
 
@@ -162,12 +152,12 @@ Libère l’interface vers laquelle pointé `CComPtrBase`.
 Appelez cette méthode pour créer un objet de la classe associée à un ID de classe spécifié ou les ID de programme.
 
 ```
-HRESULT CoCreateInstance(  
+HRESULT CoCreateInstance(
     LPCOLESTR szProgID,
     LPUNKNOWN pUnkOuter = NULL,
     DWORD dwClsContext = CLSCTX_ALL) throw();
 
-HRESULT CoCreateInstance(  
+HRESULT CoCreateInstance(
     REFCLSID rclsid,
     LPUNKNOWN pUnkOuter = NULL,
     DWORD dwClsContext = CLSCTX_ALL) throw();

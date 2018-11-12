@@ -1,28 +1,18 @@
 ---
-title: Exemples de script de Registre | Microsoft Docs
-ms.custom: ''
+title: Exemples de scripts du Registre
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - scripting, examples
 - registrar scripts [ATL]
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d15c2d9b6641f7d87f394327aa4be71e51afb613
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022109"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509355"
 ---
 # <a name="registry-scripting-examples"></a>Exemples de scripts du Registre
 
@@ -34,7 +24,7 @@ L’arborescence d’analyse suivante illustre un script simple qui ajoute une c
 
 ```
 HKEY_CURRENT_USER
-{  
+{
     'MyVeryOwnKey' = s 'HowGoesIt'
 }
 ```
@@ -43,14 +33,14 @@ Ce script peut facilement être étendu pour définir plusieurs sous-clés comme
 
 ```
 HKCU
-{  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-    {  
-        'HasASubkey'  
-        {  
-            'PrettyCool' = d '55'  
-            val 'ANameValue' = s 'WithANamedValue'  
-        }  
+{
+    'MyVeryOwnKey' = s 'HowGoesIt'
+    {
+        'HasASubkey'
+        {
+            'PrettyCool' = d '55'
+            val 'ANameValue' = s 'WithANamedValue'
+        }
     }
 }
 ```
@@ -63,21 +53,21 @@ Le script suivant inscrit le serveur de bureau d’enregistrement COM proprement
 
 ```
 HKCR
-{  
-    ATL.Registrar = s 'ATL Registrar Class'  
-    {  
-        CLSID = s '{44EC053A-400F-11D0-9DCD-00A0C90391D3}'  
-    }  
-    NoRemove CLSID  
-    {  
-        ForceRemove {44EC053A-400F-11D0-9DCD-00A0C90391D3} = s 'ATL Registrar Class'  
-        {  
-            ProgID = s 'ATL.Registrar'  
-            InprocServer32 = s '%MODULE%'  
-            {  
-                val ThreadingModel = s 'Apartment'  
-            }  
-        }  
+{
+    ATL.Registrar = s 'ATL Registrar Class'
+    {
+        CLSID = s '{44EC053A-400F-11D0-9DCD-00A0C90391D3}'
+    }
+    NoRemove CLSID
+    {
+        ForceRemove {44EC053A-400F-11D0-9DCD-00A0C90391D3} = s 'ATL Registrar Class'
+        {
+            ProgID = s 'ATL.Registrar'
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Apartment'
+            }
+        }
     }
 }
 ```
@@ -108,11 +98,11 @@ Pour spécifier plus d’une arborescence d’analyse dans un script, placez sim
 
 ```
 HKCR
-{  
+{
     'MyVeryOwnKey' = s 'HowGoesIt'
 }
 HKEY_CURRENT_USER
-{  
+{
     'MyVeryOwnKey' = s 'HowGoesIt'
 }
 ```

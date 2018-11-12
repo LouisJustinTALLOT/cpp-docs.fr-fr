@@ -1,30 +1,20 @@
 ---
-title: 'TN026 : Routines DDX et DDV | Microsoft Docs'
-ms.custom: ''
+title: 'TN026 : routines DDX et DDV'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
-dev_langs:
-- C++
 helpviewer_keywords:
 - DDX (dialog data exchange), procedures
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389733"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581907"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026 : routines DDX et DDV
 
@@ -224,21 +214,21 @@ Chaque champ est délimitée par un caractère « ; ». Les champs et leur obj
 
    - *promptN*
 
-     Chaîne à placer au-dessus de l’élément d’édition (en & pour accélérateur).
+      Chaîne à placer au-dessus de l’élément d’édition (en & pour accélérateur).
 
    - *fmtN*
 
-     Caractère de format pour le type arg, une des :
+      Caractère de format pour le type arg, une des :
 
-     |Caractère|Type|
-     |-|-|
-     d | int
-     u | unsigned int
-     D | long int (autrement dit, long)
-     U | long non signé (autrement dit, DWORD)
-     f | float
-     F | double
-     s | chaîne
+      |Caractère|Type|
+      |-|-|
+      |d | int|
+      |u | unsigned int|
+      |D | long int (autrement dit, long)|
+      |U | long non signé (autrement dit, DWORD)|
+      |f | float|
+      |F | double|
+      |s | chaîne|
 
 ## <a name="see-also"></a>Voir aussi
 

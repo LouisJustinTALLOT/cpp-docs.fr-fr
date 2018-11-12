@@ -1,12 +1,6 @@
 ---
-title: La mise à niveau d’un contrôle ActiveX | Microsoft Docs
-ms.custom: ''
+title: Mise à niveau d'un contrôle ActiveX
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX controls [MFC], Internet
 - LPK files for Internet controls
@@ -18,23 +12,19 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 18641c6e25aaccd6b5d0bcbbddbf8fc73b2a3c52
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890358"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525799"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Mise à niveau d'un contrôle ActiveX
 
 Contrôles ActiveX existant (anciennement contrôles OLE) peut être utilisé sur Internet sans modification. Toutefois, vous souhaiterez modifier des contrôles afin d’améliorer leurs performances.
 
 > [!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Lorsque vous utilisez votre contrôle sur une page Web, il existe des considérations supplémentaires. Le fichier .ocx et tous les fichiers de prise en charge doivent se trouver sur l’ordinateur cible ou être téléchargés sur Internet. Cela rend la taille du code et un aspect important de temps de téléchargement. Téléchargements peuvent être empaquetés dans un fichier .cab signé. Vous pouvez marquer votre contrôle comme sûrs pour l’écriture de scripts et l’initialisation.
 
@@ -213,11 +203,11 @@ Pour utiliser un contrôle sous licence dans une page HTML sur un ordinateur san
 
 1. Insérer le \<objet > balise pour votre contrôle sous licence après la balise de gestionnaire de licences.
 
-     Par exemple, une page HTML qui affiche le contrôle Microsoft Masked Edit est indiquée ci-dessous. Le premier identificateur de classe qu'est pour le contrôle de gestionnaire de licences, le deuxième identificateur de classe qu'est pour le contrôle Masked Edit. Modifier les balises pour pointer vers le chemin d’accès relatif du fichier d’interactivité que vous avez créé précédemment et ajoutez une balise d’objet, y compris l’ID de classe de votre contrôle.
+   Par exemple, une page HTML qui affiche le contrôle Microsoft Masked Edit est indiquée ci-dessous. Le premier identificateur de classe qu'est pour le contrôle de gestionnaire de licences, le deuxième identificateur de classe qu'est pour le contrôle Masked Edit. Modifier les balises pour pointer vers le chemin d’accès relatif du fichier d’interactivité que vous avez créé précédemment et ajoutez une balise d’objet, y compris l’ID de classe de votre contrôle.
 
 1. Insérer le \<EMBED > attribut pour le fichier LPK, si vous utilisez le module complémentaire NCompass ActiveX.
 
-     Si votre contrôle peut être affiché sur les autres actif activé navigateurs — par exemple, Netscape utilisant le module complémentaire NCompass ActiveX — vous devez ajouter le \<EMBED > syntaxe comme illustré ci-dessous.
+   Si votre contrôle peut être affiché sur les autres actif activé navigateurs — par exemple, Netscape utilisant le module complémentaire NCompass ActiveX — vous devez ajouter le \<EMBED > syntaxe comme illustré ci-dessous.
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

@@ -1,14 +1,8 @@
 ---
-title: Utilisation des couleurs (Éditeur d’images pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Utilisation des couleurs (Éditeur d'images pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], background colors
 - Image editor [C++], Colors Palette
@@ -18,17 +12,12 @@ helpviewer_keywords:
 - foreground colors [C++], Image editor
 - colors [C++]
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 200c71b6d2196251c8db3542b2b1b2ce88fdff85
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 7103332d0b7c0f4756da9526290cabb79544617d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315533"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610702"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Utilisation des couleurs (Éditeur d'images pour les icônes)
 
@@ -69,4 +58,4 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)

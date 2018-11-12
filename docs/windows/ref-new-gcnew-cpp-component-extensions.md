@@ -1,31 +1,21 @@
 ---
-title: gcnew nouvelle, ref (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: gcnew nouvelle, ref (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - gcnew
 - ref new
 - gcnew_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - ref new keyword (C++)
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f5a10278957e6a89b52e744f8f0dd78b475f7730
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: dd78bcb7283cb08f4971192274686710fe22181f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328309"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641766"
 ---
 # <a name="ref-new-gcnew--ccli-and-ccx"></a>gcnew nouvelle, ref (C++ / c++ / CLI et c++ / CX)
 
@@ -84,7 +74,7 @@ value class Boxed {
     public:
         int i;
 };
-int main()  
+int main()
 {
     Boxed^ y = gcnew Boxed;
     y->i = 32;
@@ -99,4 +89,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

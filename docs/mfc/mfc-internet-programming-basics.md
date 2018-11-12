@@ -1,12 +1,6 @@
 ---
-title: Notions de programmation Internet MFC | Microsoft Docs
-ms.custom: ''
+title: Éléments fondamentaux relatifs à la programmation Internet MFC
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ISAPI extensions, programming with ISAPI
 - Internet applications [MFC]
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7134ea1a822fa61ec0d82592145f1fd3c5ecc6aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d44d78474ccb030184c6e79ed2f257ffb00a068
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509459"
 ---
 # <a name="mfc-internet-programming-basics"></a>Éléments fondamentaux relatifs à la programmation Internet MFC
 
@@ -91,6 +81,4 @@ Le [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37
 La section OLE du kit SDK Windows contient des informations supplémentaires sur la programmation OLE. Ces informations fournissent des détails sur l’utilisation des fonctions Win32 WinInet directement, plutôt que via les classes MFC. Il contient également des informations générales sur les technologies Internet.
 
 ## <a name="see-also"></a>Voir aussi
-
-
 

@@ -1,25 +1,15 @@
 ---
-title: Principes de base HTML | Microsoft Docs
-ms.custom: ''
+title: Éléments fondamentaux relatifs à HTML
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b25f957615d738d0608f911736bb42f8e3731dd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: de79945b468689095f33feeb2153aca7d799d8ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499630"
 ---
 # <a name="html-basics"></a>Éléments fondamentaux relatifs à HTML
 
@@ -47,9 +37,9 @@ Les étapes ci-dessous utilisent les balises HTML pour générer une page Web. D
 
 1. Commutateur vers votre navigateur et depuis le **fichier** menu, choisissez **Open**, ou type *file://C:/webpages/first.htm* dans la zone d’édition URL du navigateur. Vous devez voir une page vide avec la légende de fenêtre "Étiquettes HTML principales"
 
-     Notez que les balises sont affichées par paires et incluses entre crochets pointus. Les étiquettes ne respectent pas la casse, mais la mise en majuscules est souvent utilisée pour distinguer les étiquettes.
+   Notez que les balises sont affichées par paires et incluses entre crochets pointus. Les étiquettes ne respectent pas la casse, mais la mise en majuscules est souvent utilisée pour distinguer les étiquettes.
 
-     La balise \<HTML > démarre le document et la balise \</HTML > le termine. Les étiquettes de fin (pas toujours requises) sont les mêmes que les étiquettes de début à la seule différence qu’une barre oblique (/) précède l’étiquette. Il ne doit y avoir aucun espace entre le crochet pointu (<) et le début de l’étiquette.
+   La balise \<HTML > démarre le document et la balise \</HTML > le termine. Les étiquettes de fin (pas toujours requises) sont les mêmes que les étiquettes de début à la seule différence qu’une barre oblique (/) précède l’étiquette. Il ne doit y avoir aucun espace entre le crochet pointu (<) et le début de l’étiquette.
 
 1. Commutateur au bloc-notes et après le \</head > de ligne, tapez :
 
@@ -64,9 +54,9 @@ Les étapes ci-dessous utilisent les balises HTML pour générer une page Web. D
 
 1. Basculez vers votre navigateur et actualisez la page.
 
-     Les mots apparaissent dans la zone cliente de votre fenêtre de navigateur. Notez que votre retour chariot est ignoré. Si vous souhaitez avoir un saut de ligne, vous devez inclure une balise `<BR>` après la première ligne.
+   Les mots apparaissent dans la zone cliente de votre fenêtre de navigateur. Notez que votre retour chariot est ignoré. Si vous souhaitez avoir un saut de ligne, vous devez inclure une étiquette `<BR>` après la première ligne.
 
-     Pour toutes les étapes qui suivent, insérez le texte n’importe où entre \<corps > et  \< /corps > pour ajouter le corps de votre document.
+   Pour toutes les étapes qui suivent, insérez le texte n’importe où entre \<corps > et  \< /corps > pour ajouter le corps de votre document.
 
 9. Ajoutez un en-tête :
 

@@ -1,24 +1,16 @@
 ---
-title: Énumérations d’espace de noms d’accès concurrentiel (AMP) | Microsoft Docs
-ms.custom: ''
+title: Énumérations d’espace de noms d’accès concurrentiel (AMP)
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
-dev_langs:
-- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4f842b799a81179fa1a612e652aae391ca3375d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d78299a9ce47760e6b1340c69d8be699a5eed8a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435660"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433567"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Énumérations d’espace de noms d’accès concurrentiel (AMP)
 
@@ -33,6 +25,7 @@ Type d’énumération utilisé pour identifier les différents types d’accès
 ```
 enum access_type;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|
@@ -50,6 +43,7 @@ Spécifie les modes de file d’attente qui sont pris en charge sur l’accélé
 ```
 enum queuing_mode;
 ```
+
 ### <a name="values"></a>Valeurs
 
 |Nom|Description|

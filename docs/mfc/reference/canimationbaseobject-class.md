@@ -1,10 +1,6 @@
 ---
-title: CAnimationBaseObject, classe | Microsoft Docs
-ms.custom: ''
+title: CAnimationBaseObject, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationBaseObject
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject
@@ -30,8 +26,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_nGroupID
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_nObjectID
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_pParentController
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationBaseObject [MFC], CAnimationBaseObject
 - CAnimationBaseObject [MFC], ApplyTransitions
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2061f83efea3a4e46d24f0a8e63452486046fb80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439353"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430444"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject, classe
 
@@ -176,7 +166,6 @@ Construit un objet d’animation.
 
 ```
 CAnimationBaseObject();
-
 
 CAnimationBaseObject(
     UINT32 nGroupID,

@@ -1,12 +1,7 @@
 ---
-title: Fonctions génériques (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: Fonctions génériques (C++/CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions [C++], generic
 - generic methods
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0d687dfbee48105001d3be04fd4918b9889e2d04
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 74e8cfe2b5b49a672b276400be75031626fd61c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327698"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432404"
 ---
 # <a name="generic-functions-ccli"></a>Fonctions génériques (C++/CLI)
 
@@ -57,7 +47,7 @@ Une fonction générique est une fonction qui est déclarée avec des paramètre
 return-type identifier<type-parameter identifier(s)>
 [type-parameter-constraints clauses]
 
-([formal-parameters])  
+([formal-parameters])
 {function-body}
 ```
 
@@ -193,5 +183,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Génériques](../windows/generics-cpp-component-extensions.md)

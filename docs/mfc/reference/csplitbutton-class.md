@@ -1,10 +1,6 @@
 ---
-title: CSplitButton, classe | Microsoft Docs
-ms.custom: ''
+title: CSplitButton, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CSplitButton
 - AFXCMN/CSplitButton
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXCMN/CSplitButton::Create
 - AFXCMN/CSplitButton::SetDropDownMenu
 - AFXCMN/CSplitButton::OnDropDown
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSplitButton [MFC], CSplitButton
 - CSplitButton [MFC], Create
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c21c3e62283c51257dd004f7473ad92de105a046
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca4899714fa336d058b2a53bcd5103c5b0c993e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547275"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton, classe
 
@@ -121,7 +111,6 @@ Construit un objet `CSplitButton`. Les paramètres du constructeur spécifient u
 
 ```
 CSplitButton();
-
 
 CSplitButton(
     UINT nMenuId,

@@ -1,10 +1,6 @@
 ---
-title: Cbasepane, classe | Microsoft Docs
-ms.custom: ''
+title: Cbasepane, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBasePane
 - AFXBASEPANE/CBasePane
@@ -88,8 +84,6 @@ f1_keywords:
 - AFXBASEPANE/CBasePane::StretchPane
 - AFXBASEPANE/CBasePane::UndockPane
 - AFXBASEPANE/CBasePane::DoPaint
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBasePane [MFC], AccNotifyObjectFocusEvent
 - CBasePane [MFC], AddPane
@@ -172,16 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a04e60c3cbaecc018fb1d577770e70c2148efc3b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378395"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469366"
 ---
 # <a name="cbasepane-class"></a>Cbasepane, classe
 
@@ -292,7 +282,7 @@ class CBasePane : public CWnd
 |[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` n’utilisez pas cette méthode.|
 |`CBasePane::OnUpdateCmdUI`|Utilisé en interne.|
 |[CBasePane::PaneFromPoint](#panefrompoint)|Retourne le volet qui contient le point donné.|
-|`CBasePane::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CBasePane::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` n’utilisez pas cette méthode.|
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Annule l’inscription d’un volet et le supprime de la liste dans le Gestionnaire d’ancrage.|
 |[CBasePane::SaveState](#savestate)|Enregistre l'état du volet dans le Registre.|
@@ -332,7 +322,7 @@ Les conseils de personnalisation suivantes se rapportent à la `CBasePane Class`
 
     - AFX_CBRS_CLOSE Active le volet à fermer (masqué).
 
-     Il s’agit des indicateurs que vous pouvez associer avec une opération OR au niveau du bit.
+   Il s’agit des indicateurs que vous pouvez associer avec une opération OR au niveau du bit.
 
 `CBasePane` implémente les méthodes de type Boolean virtuels suivantes pour refléter ces indicateurs : [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Vous pouvez les remplacer dans les classes dérivées pour personnaliser leur comportement.
 
@@ -352,7 +342,7 @@ Les conseils de personnalisation suivantes se rapportent à la `CBasePane Class`
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CBasePane` classe. L’exemple montre comment récupérer un volet à partir de la `CFrameWndEx` classe et comment définir le mode d’ancrage, l’alignement du volet et le style du volet. Le code est issu le [exemple Word Pad](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CBasePane` . L’exemple montre comment récupérer un volet à partir de la `CFrameWndEx` classe et comment définir le mode d’ancrage, l’alignement du volet et le style du volet. Le code est issu le [exemple Word Pad](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -867,7 +857,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 ### <a name="remarks"></a>Notes
@@ -1643,7 +1633,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *CPaneDivider\**  ne pas utilisé.
+*CPaneDivider\**<br/>
+[in] Non utilisé.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 
@@ -1815,7 +1806,7 @@ CFont* SelectDefaultFont(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Un contexte de périphérique.
 
 ### <a name="return-value"></a>Valeur de retour

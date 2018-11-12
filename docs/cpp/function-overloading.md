@@ -1,27 +1,17 @@
 ---
-title: Surcharge de fonction | Microsoft Docs
-ms.custom: ''
+title: Surcharge de fonction
 ms.date: 1/25/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 608b4560f11e35d9aefb2c848a27c99c8dc6f4ec
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 47e77e1709322abaa2607677bf21c9cfe4a3e6ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821346"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580205"
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
 
@@ -126,7 +116,6 @@ Le code précédent illustre la surcharge de la fonction `print` dans la portée
 L’argument par défaut n’est pas considéré comme faisant partie du type de fonction. Par conséquent, il n'est pas utilisé pour la sélection des fonctions surchargées. Deux fonctions qui diffèrent uniquement de par leurs arguments par défaut sont considérées comme des définitions distinctes plutôt que comme des fonctions surchargées.
 
 Les arguments par défaut ne peuvent pas être fournis pour les opérateurs surchargés.
-
 
 ## <a name="argument-matching"></a>Correspondance d’arguments
 
@@ -303,7 +292,7 @@ La règle précédente s’applique uniquement à un chemin de dérivation donn�
 
 ![Plusieurs&#45;héritage illustrant les conversions préférées](../cpp/media/vc391t2.gif "vc391T2") graphique d’héritages multiples illustrant les Conversions préférées
 
-La conversion du type `C*` vers le type `B*` est préférable à une conversion du type `C*` vers le type `A*`. Cela provient du fait qu'ils se trouvent dans le même chemin et que `B*` est plus proche. Toutefois, la conversion du type `C*` vers le type `D*` n'est pas préférable à une conversion vers le type `A*`. Il n'existe aucune préférence car les conversions suivent des chemins différents.
+La conversion du type `C*` vers le type `B*` est préférable à une conversion du type `C*` vers le type `A*`. Cela provient du fait qu'ils se trouvent dans le même chemin et que `B*` est plus proche. Toutefois, la conversion du type `C*` vers le type `D*` n’est pas préférable à une conversion vers le type `A*`. Il n’existe aucune préférence car les conversions suivent des chemins différents.
 
 1. Correspondance avec des conversions définies par l'utilisateur. Cette séquence ne peut pas être classée comme correspondance exacte, correspondance avec des promotions ou correspondance avec des conversions standard. La séquence doit contenir uniquement des conversions définies par l'utilisateur, des conversions standard ou des conversions ordinaires à classer comme correspondance avec des conversions définies par l'utilisateur. Une correspondance avec des conversions définies par l'utilisateur est considérée meilleure qu'une correspondance avec des points de suspension, mais pas aussi bonne qu'une correspondance avec des conversions standard.
 
@@ -405,7 +394,7 @@ obj.name
 (&obj)->name
 ```
 
-L'opérande gauche des opérateurs (pointeur vers membre) `->*` et `.*` est traité de la même façon que les opérateurs (sélection de membres) `.` et `->` en ce qui concerne la correspondance d'arguments.
+L’opérande gauche des opérateurs (pointeur vers membre) `->*` et `.*` est traité de la même façon que les opérateurs (sélection de membres) `.` et `->` en ce qui concerne la correspondance d’arguments.
 
 ## <a name="ref-qualifiers"></a> Qualificateurs ref sur les fonctions membres
 
@@ -471,7 +460,7 @@ Vous pouvez surcharger **opérateur new** uniquement en fonction du type de reto
     void Print( PSTR szToPrint );
     ```
 
-     Les deux fonctions précédentes ont des listes d’arguments identiques. `PSTR` est un synonyme de type `char *`. Dans la portée du membre, ce code génère une erreur.
+   Les deux fonctions précédentes ont des listes d’arguments identiques. `PSTR` est un synonyme de type `char *`. Dans la portée du membre, ce code génère une erreur.
 
 - Les types énumérés sont des types distincts et peuvent être utilisés pour établir une distinction entre les fonctions surchargées.
 
@@ -482,7 +471,7 @@ Vous pouvez surcharger **opérateur new** uniquement en fonction du type de reto
     void Print( char szToPrint[] );
     ```
 
-     Pour les tableaux dimensionnés de façon multiple, la deuxième et toutes les dimensions suivantes sont considérées comme faisant partie du type. Par conséquent, elles sont utilisées pour établir une distinction entre les fonctions surchargées :
+   Pour les tableaux dimensionnés de façon multiple, la deuxième et toutes les dimensions suivantes sont considérées comme faisant partie du type. Par conséquent, elles sont utilisées pour établir une distinction entre les fonctions surchargées :
 
     ```cpp
     void Print( char szToPrint[] );

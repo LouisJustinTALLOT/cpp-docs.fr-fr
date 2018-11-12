@@ -1,26 +1,16 @@
 ---
-title: La fonction de rappel (WRL) | Microsoft Docs
-ms.custom: ''
+title: Fonction de rappel (WRL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
-dev_langs:
-- C++
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ac4032184e8e8681b6cfa01ec48e8053af57b623
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: b39b4268213d0a4e093c27b1425cc6656b47b912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250958"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514245"
 ---
 # <a name="callback-function-wrl"></a>Fonction de rappel (WRL)
 
@@ -42,7 +32,7 @@ template<
 >
 ComPtr<TDelegateInterface> Callback(
    _In_ TCallbackObject *object,
-   _In_ HRESULT (TCallbackObject::* method)()  
+   _In_ HRESULT (TCallbackObject::* method)()
 );
 template<
    typename TDelegateInterface,
@@ -51,7 +41,7 @@ template<
 >
 ComPtr<TDelegateInterface> Callback(
    _In_ TCallbackObject *object,
-   _In_ HRESULT (TCallbackObject::* method)(TArg1)  
+   _In_ HRESULT (TCallbackObject::* method)(TArg1)
 );
 template<
    typename TDelegateInterface,
@@ -62,7 +52,7 @@ template<
 ComPtr<TDelegateInterface> Callback(
    _In_ TCallbackObject *object,
    _In_ HRESULT (TCallbackObject::* method)(TArg1,
-   TArg2)  
+   TArg2)
 );
 template<
    typename TDelegateInterface,
@@ -75,7 +65,7 @@ ComPtr<TDelegateInterface> Callback(
    _In_ TCallbackObject *object,
    _In_ HRESULT (TCallbackObject::* method)(TArg1,
    TArg2,
-   TArg3)  
+   TArg3)
 );
 template<
    typename TDelegateInterface,
@@ -90,7 +80,7 @@ ComPtr<TDelegateInterface> Callback(
    _In_ HRESULT (TCallbackObject::* method)(TArg1,
    TArg2,
    TArg3,
-   TArg4)  
+   TArg4)
 );
 template<
    typename TDelegateInterface,
@@ -107,7 +97,7 @@ ComPtr<TDelegateInterface> Callback(
    TArg2,
    TArg3,
    TArg4,
-   TArg5)  
+   TArg5)
 );
 template<
    typename TDelegateInterface,
@@ -126,7 +116,7 @@ ComPtr<TDelegateInterface> Callback(
    TArg3,
    TArg4,
    TArg5,
-   TArg6)  
+   TArg6)
 );
 template<
    typename TDelegateInterface,
@@ -147,7 +137,7 @@ ComPtr<TDelegateInterface> Callback(
    TArg4,
    TArg5,
    TArg6,
-   TArg7)  
+   TArg7)
 );
 template<
    typename TDelegateInterface,
@@ -170,7 +160,7 @@ ComPtr<TDelegateInterface> Callback(
    TArg5,
    TArg6,
    TArg7,
-   TArg8)  
+   TArg8)
 );
 template<
    typename TDelegateInterface,
@@ -195,7 +185,7 @@ ComPtr<TDelegateInterface> Callback(
    TArg6,
    TArg7,
    TArg8,
-   TArg9)  
+   TArg9)
 );
 ```
 

@@ -1,10 +1,6 @@
 ---
-title: CAnimationValue, classe | Microsoft Docs
-ms.custom: ''
+title: CAnimationValue, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationValue
 - AFXANIMATIONCONTROLLER/CAnimationValue
@@ -15,8 +11,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationValue::SetDefaultValue
 - AFXANIMATIONCONTROLLER/CAnimationValue::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationValue::m_value
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationValue [MFC], CAnimationValue
 - CAnimationValue [MFC], AddTransition
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 378af608ed9f7498b00563e841521b69a10e0b05
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a43536e3f9f90b70d5d68eb5ce5d277f9b42e00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418279"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613796"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue, classe
 
@@ -123,7 +113,6 @@ Construit un objet CAnimationValue.
 
 ```
 CAnimationValue();
-
 
 CAnimationValue(
     DOUBLE dblDefaultValue,

@@ -1,28 +1,17 @@
 ---
-title: source (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: source (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.source
-dev_langs:
-- C++
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 81ea5c45aff148d8f0683d0058963571bc02a57a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 59ed66acbbd6ef876e6052767dc5a5243d4b8dd6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790888"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476525"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -90,11 +79,11 @@ class NN : public b
 |**Attributs requis**|`coclass` (lorsqu’il est appliqué à la classe ou struct)|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[coclass](coclass.md)  
+[coclasse](coclass.md)

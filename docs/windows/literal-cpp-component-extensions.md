@@ -1,29 +1,19 @@
 ---
-title: littéral (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: littéral (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - literal
 - literal_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8168b3cd981bb288df35659ffd3520a7c8597d1e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: d58df1bb6a6ec1e53ee434cf60a8caf3d557eeb2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328065"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521033"
 ---
 # <a name="literal-ccli-and-ccx"></a>littéral (C++ / c++ / CLI et c++ / CX)
 
@@ -91,11 +81,11 @@ public ref struct A {
 Notez la différence dans les métadonnées pour `sc` et `lit`: le `modopt` directive est appliquée à `sc`, ce qui signifie qu’il peut être ignoré par d’autres compilateurs.
 
 ```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
 ```
 
 ```
-.field public static literal int32 lit = int32(0x0000000A)  
+.field public static literal int32 lit = int32(0x0000000A)
 ```
 
 ## <a name="example"></a>Exemple
@@ -137,4 +127,4 @@ Option du compilateur : `/clr`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

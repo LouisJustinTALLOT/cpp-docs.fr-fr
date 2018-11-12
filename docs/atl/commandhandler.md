@@ -1,27 +1,18 @@
 ---
-title: CommandHandler | Microsoft Docs
-ms.custom: ''
+title: CommandHandler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CommandHandler
-dev_langs:
-- C++
 helpviewer_keywords:
 - CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fe0871f9778d7a1f74bf74af6030d7f8162d3b79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019469"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50611846"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -31,9 +22,9 @@ ms.locfileid: "46019469"
 
 ```cpp
 LRESULT CommandHandler(
-    WORD wNotifyCode,  
-    WORD wID,  
-    HWND hWndCtl,  
+    WORD wNotifyCode,
+    WORD wID,
+    HWND hWndCtl,
     BOOL& bHandled);
 ```
 

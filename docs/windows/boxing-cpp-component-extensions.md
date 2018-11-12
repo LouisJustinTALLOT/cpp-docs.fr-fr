@@ -1,26 +1,16 @@
 ---
-title: Boxing (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Boxing (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 2308265b223304f30c8715d12d14e89bcb7344de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475423"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Boxing (C++ / c++ / CLI et c++ / CX)
 
@@ -51,7 +41,7 @@ L'exemple de code suivant effectue une opération boxing et une opération unbox
 Pour tester l’exemple, créez un `BlankApplication` projet, remplacez le `BlankPage::OnNavigatedTo()` (méthode), puis spécifiez les points d’arrêt au crochet fermant et l’assignation à la variable `str1`. Lorsque l’exemple atteint le crochet fermant, examinez `str1`.
 
 ```cpp
-void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
+void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 {
     using namespace Windows::Globalization::DateTimeFormatting;
 
@@ -174,7 +164,7 @@ int main() {
                 // Will call void func1(System::Object^);
 
    func2(v2);   // OK: Calls "static V2::operator System::Object^(V2 v2)"
-   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
+   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)
 }
 ```
 
@@ -195,9 +185,9 @@ in func1(V2^)
 
 in func2(System::ValueType^)
 
-in func2(System::ValueType^)  
+in func2(System::ValueType^)
 ```
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

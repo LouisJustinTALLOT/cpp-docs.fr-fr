@@ -1,27 +1,17 @@
 ---
-title: Assistant projet de paramètres d’application, ATL | Microsoft Docs
-ms.custom: ''
+title: Paramètres de l’application, Assistant Projet ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.atl.com.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4cff60e5316202842b2ee22c5c6ba10813839b5d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e026db8c1d2caacd9af15fb923d194750c9d8217
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035849"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622129"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Paramètres de l’application, Assistant Projet ATL
 
@@ -31,15 +21,15 @@ Utilisez le **paramètres d’Application** page de l’Assistant Projet ATL pou
 
 Choisissez une des trois types de serveur :
 
-- **Bibliothèque de liens dynamiques (DLL)**  
+- **Bibliothèque de liens dynamiques (DLL)**
 
    Sélectionnez cette option pour créer un serveur in-process.
 
-- **Fichier exécutable (EXE)**  
+- **Fichier exécutable (EXE)**
 
    Sélectionnez cette option pour créer un serveur out-of-process local. Cette option ne permet pas de prise en charge de MFC ou COM + 1.0. Il n’autorise pas la fusion du code proxy/stub.
 
-- **Service (EXE)**  
+- **Service (EXE)**
 
    Sélectionnez cette option pour créer une application Windows qui s’exécute en arrière-plan au démarrage de Windows. Cette option ne permet pas de prise en charge de MFC ou COM + 1.0 ou n’autorise pas la fusion du code proxy/stub.
 
@@ -48,15 +38,15 @@ Choisissez une des trois types de serveur :
 > [!NOTE]
 > Toutes les options supplémentaires sont disponibles pour les projets DLL.
 
-- **Autoriser la fusion du code proxy/stub**  
+- **Autoriser la fusion du code proxy/stub**
 
    Sélectionnez le **autoriser la fusion du code proxy/stub** case à cocher pour des raisons pratiques quand il est nécessaire de marshaling d’interfaces. Cette option place le code proxy et stub généré par MIDL dans le même exécutable en tant que le serveur.
 
-- **Prise en charge MFC**  
+- **Prise en charge MFC**
 
    Sélectionnez cette option pour spécifier que votre objet inclut la prise en charge MFC. Cette option lie votre projet aux bibliothèques MFC afin que vous pouvez accéder à toutes les classes et les fonctions qu’ils contiennent.
 
-- **Prise en charge COM + 1.0**  
+- **Prise en charge COM + 1.0**
 
    Sélectionnez cette option pour modifier les paramètres de génération de projet pour prendre en charge les composants COM + 1.0. Outre la liste standard des bibliothèques, l’Assistant ajoute le comsvcs.lib spécifique au composant bibliothèque COM + 1.0
 

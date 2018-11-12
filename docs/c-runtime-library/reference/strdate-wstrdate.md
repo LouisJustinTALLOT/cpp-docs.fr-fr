@@ -1,10 +1,6 @@
 ---
-title: _strdate, _wstrdate | Microsoft Docs
-ms.custom: ''
+title: _strdate, _wstrdate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate
 - _wstrdate
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate
 - _strdate
 - strdate
-dev_langs:
-- C++
 helpviewer_keywords:
 - strdate function
 - dates, copying
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8924ac1ad29408dd1d69a68c6f31d9194831fbc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411355"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639609"
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 
@@ -86,11 +76,11 @@ Chacune de ces fonctions retourne un pointeur vers la chaîne de caractères *da
 
 Il existe des versions plus sécurisées de ces fonctions. Consultez [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Il est recommandé d’utiliser les fonctions les plus sécurisées, dans la mesure du possible.
 
-Le **_strdate** fonction copie la date système actuelle dans la mémoire tampon vers laquelle pointée *datestr*mise en forme **mm**/**jj** / **yy**, où **mm** comprend deux chiffres représentant le mois, **jj** comprend deux chiffres représentant le jour, et **AA**  est les deux derniers chiffres de l’année. Par exemple, la chaîne **12/05/99** représente le 5 décembre 1999. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
+Le **_strdate** fonction copie la date système actuelle dans la mémoire tampon vers laquelle pointée *datestr*, mise en forme **mm**/**jj** / **yy**, où **mm** comprend deux chiffres représentant le mois, **jj** comprend deux chiffres représentant le jour, et **AA**  est les deux derniers chiffres de l’année. Par exemple, la chaîne **05/12/99** représente le 5 décembre 1999. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
 
 Si *datestr* est un **NULL** pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
 
-**_wstrdate** est une version à caractères larges de **_strdate**; la valeur des arguments et de retour de **_wstrdate** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
+**_wstrdate** est une version à caractères larges de **_strdate**; l’argument et valeur de retour de **_wstrdate** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -100,7 +90,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrdate**|**_strdate**|**_strdate**|**_wstrdate**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

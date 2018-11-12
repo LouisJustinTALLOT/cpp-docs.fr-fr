@@ -1,28 +1,17 @@
 ---
-title: dans (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: dans (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.in
-dev_langs:
-- C++
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 31c47fa07375c587257bc979ac68b64381880398
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bf23b1c776eccc284e5329b62bd45b0bd678823f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790622"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449697"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -53,7 +42,7 @@ Consultez [peut être liée](bindable.md) pour obtenir un exemple montrant comme
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|**retval**|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -62,4 +51,4 @@ Pour plus d’informations sur les contextes d’attribut, consultez [contextes 
 [Attributs de méthode](method-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
 [ID](id.md)<br/>
-[out](out-cpp.md)  
+[out](out-cpp.md)

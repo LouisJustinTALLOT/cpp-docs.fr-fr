@@ -1,10 +1,6 @@
 ---
-title: Classe CView | Microsoft Docs
-ms.custom: ''
+title: CView (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CView
 - AFXWIN/CView
@@ -31,8 +27,6 @@ f1_keywords:
 - AFXWIN/CView::OnPreparePrinting
 - AFXWIN/CView::OnPrint
 - AFXWIN/CView::OnUpdate
-dev_langs:
-- C++
 helpviewer_keywords:
 - CView [MFC], CView
 - CView [MFC], DoPreparePrinting
@@ -58,16 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ccb638669712222cac2dee522bf729766a4bc93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f325423c940df46940d7074c599eb8e502e90586
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402263"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50669077"
 ---
 # <a name="cview-class"></a>CView (classe)
 
@@ -196,7 +186,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>Paramètres
 
 *pInfo*<br/>
-Pointe vers un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure qui décrit le travail d’impression en cours.
+Pointe vers une structure [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) qui décrit le travail d’impression actif.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -315,17 +305,17 @@ virtual void OnBeginPrinting(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contexte de l’imprimante.
 
 *pInfo*<br/>
-Pointe vers un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure qui décrit le travail d’impression en cours.
+Pointe vers une structure [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) qui décrit le travail d’impression actif.
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut de cette fonction est sans effet. Remplacez cette fonction pour allouer des ressources GDI, telles que des stylets ou des polices, nécessaires précisément pour l’impression. Sélectionnez les objets GDI dans le contexte de périphérique de la [OnPrint](#onprint) fonction membre pour chaque page qui les utilise. Si vous utilisez le même objet d’affichage pour l’affichage et l’impression d’écran, utilisez des variables distinctes pour les ressources GDI nécessaires à chaque affichage ; vous pourrez ainsi mettre à jour l’écran pendant l’impression.
+L’implémentation par défaut de cette fonction est sans effet. Remplacez cette fonction pour allouer des ressources GDI, telles que des stylets ou des polices, nécessaires précisément pour l’impression. Sélectionnez les objets GDI dans le contexte de périphérique de la fonction membre [OnPrint](#onprint) pour chaque page qui les utilise. Si vous utilisez le même objet d’affichage pour l’affichage et l’impression d’écran, utilisez des variables distinctes pour les ressources GDI nécessaires à chaque affichage ; vous pourrez ainsi mettre à jour l’écran pendant l’impression.
 
-Vous pouvez aussi utiliser cette fonction pour exécuter des initialisations qui dépendent des propriétés du contexte de l’imprimante. Par exemple, le nombre de pages nécessaires à l’impression du document peut dépendre des paramètres que l’utilisateur a spécifiés dans la boîte de dialogue d’impression (comme la longueur de page). Dans ce cas, vous ne pouvez pas spécifier la longueur du document dans le [OnPreparePrinting](#onprepareprinting) fonction membre, où vous le feriez normalement ; vous devez attendre que le contexte de l’imprimante a été créé en fonction des paramètres de la boîte de dialogue. [OnBeginPrinting](#onbeginprinting) est la première fonction substituable qui vous donne accès à la [CDC](../../mfc/reference/cdc-class.md) objet représentant le contexte de l’imprimante, vous pouvez donc définir la longueur du document à partir de cette fonction. Notez que si la longueur du document n’est pas spécifiée à ce stade, aucune barre de défilement ne s’affiche pendant l’aperçu avant impression.
+Vous pouvez aussi utiliser cette fonction pour exécuter des initialisations qui dépendent des propriétés du contexte de l’imprimante. Par exemple, le nombre de pages nécessaires à l’impression du document peut dépendre des paramètres que l’utilisateur a spécifiés dans la boîte de dialogue d’impression (comme la longueur de page). En pareil cas, vous ne pouvez pas spécifier la longueur du document dans la fonction membre [OnPreparePrinting](#onprepareprinting) comme vous le feriez normalement ; vous devez attendre que le contexte de l’imprimante ait été créé en fonction des paramètres de la boîte de dialogue. [OnBeginPrinting](#onbeginprinting) est la première fonction substituable qui donne accès à l’objet [CDC](../../mfc/reference/cdc-class.md) représentant le contexte de l’imprimante. Vous pouvez donc définir la longueur du document à partir de cette fonction. Notez que si la longueur du document n’est pas spécifiée à ce stade, aucune barre de défilement ne s’affiche pendant l’aperçu avant impression.
 
 ##  <a name="ondragenter"></a>  CView::OnDragEnter
 
@@ -471,7 +461,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contexte de périphérique à utiliser pour le rendu d’une image du document.
 
 ### <a name="remarks"></a>Notes
@@ -598,11 +588,11 @@ virtual void OnEndPrinting(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contexte de l’imprimante.
 
 *pInfo*<br/>
-Pointe vers un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure qui décrit le travail d’impression en cours.
+Pointe vers une structure [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) qui décrit le travail d’impression actif.
 
 ### <a name="remarks"></a>Notes
 
@@ -622,11 +612,11 @@ virtual void OnEndPrintPreview(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contexte de l’imprimante.
 
 *pInfo*<br/>
-Pointe vers un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure qui décrit le travail d’impression en cours.
+Pointe vers une structure [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) qui décrit le travail d’impression actif.
 
 *point*<br/>
 Spécifie le point sur la page dernier affichage en mode Aperçu.
@@ -664,7 +654,7 @@ virtual void OnPrepareDC(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contexte de périphérique à utiliser pour le rendu d’une image du document.
 
 *pInfo*<br/>
@@ -701,7 +691,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>Paramètres
 
 *pInfo*<br/>
-Pointe vers un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure qui décrit le travail d’impression en cours.
+Pointe vers une structure [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) qui décrit le travail d’impression actif.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -741,7 +731,7 @@ virtual void OnPrint(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contexte de l’imprimante.
 
 *pInfo*<br/>
@@ -757,7 +747,7 @@ Remplacez cette fonction pour une des raisons suivantes :
 
 - Pour rendre l’image imprimée différer de l’image de l’écran (autrement dit, si votre application n’est pas WYSIWYG). Au lieu de passer à l’imprimante contexte de périphérique à `OnDraw`, utiliser le contexte de périphérique pour restituer une image à l’aide d’attributs ne pas affichées sur l’écran.
 
-     Si vous avez besoin de ressources GDI pour l’impression que vous n’utilisez pas pour l’écran, sélectionnez-les dans le contexte de périphérique avant le dessin et désélectionnez-les par la suite. Ces ressources GDI doivent être allouées dans [OnBeginPrinting](#onbeginprinting) et publiée en [OnEndPrinting](#onendprinting).
+   Si vous avez besoin de ressources GDI pour l’impression que vous n’utilisez pas pour l’écran, sélectionnez-les dans le contexte de périphérique avant le dessin et désélectionnez-les par la suite. Ces ressources GDI doivent être allouées dans [OnBeginPrinting](#onbeginprinting) et publiée en [OnEndPrinting](#onendprinting).
 
 - Pour implémenter les en-têtes ou pieds de page. Vous pouvez toujours utiliser `OnDraw` pour effectuer le rendu en limitant la zone impression.
 

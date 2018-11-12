@@ -1,10 +1,6 @@
 ---
-title: CRichEditCtrl (classe) | Microsoft Docs
-ms.custom: ''
+title: CRichEditCtrl (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CRichEditCtrl
 - AFXCMN/CRichEditCtrl
@@ -81,8 +77,6 @@ f1_keywords:
 - AFXCMN/CRichEditCtrl::StreamIn
 - AFXCMN/CRichEditCtrl::StreamOut
 - AFXCMN/CRichEditCtrl::Undo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRichEditCtrl [MFC], CRichEditCtrl
 - CRichEditCtrl [MFC], CanPaste
@@ -158,16 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dc76e89cf8ca44b3254b21585bf00ff6243d818c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: e8575c2eb814bd7fb3cb307654b0e3622506c6c1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890827"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505415"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (classe)
 
@@ -927,7 +917,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 
 ### <a name="parameters"></a>Paramètres
 
-*PF*<br/>
+*pf*<br/>
 Dans la première version, un pointeur vers un [RAJOUTER](/windows/desktop/api/richedit/ns-richedit-_paraformat) structure pour conserver le paragraphe mise en forme des attributs de la sélection actuelle.
 
 Dans la deuxième version, un pointeur vers un [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) structure, qui est une extension Rich Edit 2.0 à le `PARAFORMAT` structure, qui contient le caractère par défaut mise en forme d’attributs.
@@ -1782,7 +1772,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Paramètres
 
-*PF*<br/>
+*pf*<br/>
 Dans la première version, un pointeur vers un [RAJOUTER](/windows/desktop/api/richedit/ns-richedit-_paraformat) structure contenant la nouvelle valeur par défaut des attributs de mise en forme de paragraphe.
 
 Dans la deuxième version, un pointeur vers un [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) structure, qui est une extension Rich Edit 2.0 à le `PARAFORMAT` structure, qui contient le caractère par défaut mise en forme d’attributs.
@@ -1956,7 +1946,6 @@ Définit la largeur de périphérique et ligne cible utilisée pour WYSIWYG (ce 
 BOOL SetTargetDevice(
     HDC hDC,
     long lLineWidth);
-
 
 BOOL SetTargetDevice(
     CDC& dc,

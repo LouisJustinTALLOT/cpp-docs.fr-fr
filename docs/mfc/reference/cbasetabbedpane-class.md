@@ -1,10 +1,6 @@
 ---
-title: Cbasetabbedpane, classe | Microsoft Docs
-ms.custom: ''
+title: CBaseTabbedPane, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBaseTabbedPane
 - AFXBASETABBEDPANE/CBaseTabbedPane
@@ -36,8 +32,6 @@ f1_keywords:
 - AFXBASETABBEDPANE/CBaseTabbedPane::SetAutoDestroy
 - AFXBASETABBEDPANE/CBaseTabbedPane::SetAutoHideMode
 - AFXBASETABBEDPANE/CBaseTabbedPane::ShowTab
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBaseTabbedPane [MFC], AddTab
 - CBaseTabbedPane [MFC], AllowDestroyEmptyTabbedPane
@@ -68,16 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412026"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640893"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane, classe
 
@@ -179,7 +169,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pNewBar* un pointeur vers le volet à ajouter. Ce pointeur peut devenir non valide après avoir appelé cette méthode. Pour plus d'informations, consultez la section Remarques.
+*pNewBar*<br/>
+[in, out] Pointeur vers le volet à ajouter. Ce pointeur peut devenir non valide après avoir appelé cette méthode. Pour plus d'informations, consultez la section Remarques.
 
 *bVisible*<br/>
 [in] TRUE pour afficher l’onglet ; Sinon, FALSE.
@@ -384,7 +375,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pBar* un pointeur vers le volet pour float.
+*pBar*<br/>
+[in, out] Un pointeur vers le volet pour float.
 
 *nTabID*<br/>
 [in] Spécifie l’index de base zéro de l’onglet en float.
@@ -594,7 +586,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pBar* un pointeur vers le volet à supprimer dans le volet à onglets.
+*pBar*<br/>
+[in, out] Pointeur vers le volet à supprimer dans le volet à onglets.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -689,7 +682,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Spécifie l’alignement du volet masquage automatique qui doit être créé. Pour obtenir la liste des valeurs possibles, consultez [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
 
-[in] [out] *pCurrAutoHideBar* un pointeur vers la barre d’outils de masquage automatique en cours. Peut être NULL.
+*pCurrAutoHideBar*<br/>
+[in, out] Pointeur vers la barre d’outils de masquage automatique en cours. Peut être NULL.
 
 *bUseTimer*<br/>
 [in] Spécifie s’il faut utiliser l’effet de masquage automatique lorsque l’utilisateur bascule le volet en mode de masquage automatique, ou masquer le volet immédiatement.

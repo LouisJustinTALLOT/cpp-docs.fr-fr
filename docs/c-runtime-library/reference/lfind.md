@@ -1,10 +1,6 @@
 ---
-title: _lfind | Microsoft Docs
-ms.custom: ''
+title: _lfind
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lfind
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - lfind
 - _lfind
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - lfind function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c3bfc7b6abe5f0d5902a02c88e7d5ba16cb24ab
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450648"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579164"
 ---
 # <a name="lfind"></a>_lfind
 
@@ -83,11 +73,11 @@ Si la clé est trouvée, **_lfind** retourne un pointeur vers l’élément du t
 
 ## <a name="remarks"></a>Notes
 
-Le **_lfind** fonction effectue une recherche linéaire pour la valeur *clé* dans un tableau de *nombre* éléments, chacun des *largeur* octets. Contrairement aux **bsearch**, **_lfind** ne nécessite pas de tableau à trier. Le *base* argument est un pointeur vers la base du tableau à rechercher. Le *comparer* argument est un pointeur vers une routine fournie par l’utilisateur qui compare deux éléments du tableau, puis retourne une valeur précisant leur relation. **_lfind** appelle la *comparer* routine une ou plusieurs fois lors de la recherche, le passage de pointeurs vers deux éléments de tableau à chaque appel. Le *comparer* routine doit comparer les éléments, puis revenez différente de zéro (ce qui signifie que les éléments sont différents), ou 0 (ce qui signifie que les éléments sont identiques).
+Le **_lfind** fonction effectue une recherche linéaire portant sur la valeur *clé* dans un tableau de *nombre* éléments, chacun des *largeur* octets. Contrairement aux **bsearch**, **_lfind** ne nécessite pas de tableau à trier. Le *base* argument est un pointeur vers la base du tableau à rechercher. Le *comparer* argument est un pointeur désignant une routine fournie par l’utilisateur qui compare deux éléments de tableau, puis retourne une valeur spécifiant leur relation. **_lfind** appelle le *comparer* routines une ou plusieurs fois pendant la recherche, en passant les pointeurs désignant deux éléments de tableau à chaque appel. Le *comparer* routine doit comparer les éléments, puis retourner différente de zéro (ce qui signifie que les éléments sont différents) ou 0 (ce qui signifie que les éléments sont identiques).
 
 Cette fonction valide ses paramètres. Si *comparer*, *clé* ou *nombre* est **NULL**, ou si *base* est **NULL**et *nombre* est différent de zéro, ou si *largeur* est inférieur à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

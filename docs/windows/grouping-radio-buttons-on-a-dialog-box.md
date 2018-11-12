@@ -1,14 +1,8 @@
 ---
-title: Regroupement de cases d’option dans une boîte de dialogue (C++) | Microsoft Docs
-ms.custom: ''
+title: Regroupement de cases sur une boîte de dialogue (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.grouping
-dev_langs:
-- C++
 helpviewer_keywords:
 - member variables, adding to radio button groups
 - variables, dialog box control member variables
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - grouping controls
 - radio buttons [C++], grouping on dialog boxes
 ms.assetid: 3cc43f9e-56c8-4faa-9930-ce81733c69de
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5615756f8716ae1f4c73ccf98e2754b57f674216
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1776823a7385499e5a01a04134fe31f42700e14b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392959"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665944"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box-c"></a>Regroupement de cases sur une boîte de dialogue (C++)
 
@@ -63,7 +52,7 @@ Vous pouvez ajouter plusieurs groupes de cases d’option à une boîte de dialo
 
 Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

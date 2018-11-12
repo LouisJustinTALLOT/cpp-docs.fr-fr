@@ -1,12 +1,7 @@
 ---
-title: 'Comment : compiler du Code MFC et ATL à l’aide de - clr | Microsoft Docs'
+title: 'Comment : compiler du Code MFC et ATL à l’aide de - clr'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], interoperability
 - ATL [C++], interoperability
@@ -18,17 +13,12 @@ helpviewer_keywords:
 - interop [C++], /clr compiler option
 - extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 8c6079cd0371afa1b9a3ed32ba2cf67e1691d665
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e5e9f800d6316e3b4f1209ec62440ae42233fc13
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382802"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638072"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Comment : compiler du code MFC et ATL à l'aide de /clr
 
@@ -40,7 +30,7 @@ Cette rubrique explique comment compiler des programmes MFC et ATL existants pou
 
 1. Dans le **propriétés du projet** boîte de dialogue, développez le nœud regard **propriétés de Configuration** et sélectionnez **général**. Dans le volet droit, sous **projet par défaut est**, affectez la valeur **prise en charge du Common Language Runtime** à **prise en charge du Common Language Runtime (/ clr)**.
 
-     Dans le même volet, assurez-vous que **utilisation des MFC** a la valeur **utiliser les MFC dans une DLL partagée**.
+   Dans le même volet, assurez-vous que **utilisation des MFC** a la valeur **utiliser les MFC dans une DLL partagée**.
 
 1. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Assurez-vous que l’option **Format des informations de débogage** a la valeur **/Zi de base de données de programme** (pas **/Zi**).
 
@@ -60,7 +50,7 @@ Cette rubrique explique comment compiler des programmes MFC et ATL existants pou
 
 1. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **en-têtes précompilés**. Définissez **Création/utilisation d’un en-tête précompilé** à **ne pas à l’aide d’en-têtes précompilés**.
 
-     Comme alternative, dans **l’Explorateur de solutions**, avec le bouton droit Stdafx.cpp, puis sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Définissez **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
+   Comme alternative, dans **l’Explorateur de solutions**, avec le bouton droit Stdafx.cpp, puis sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Définissez **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
 
 1. Pour le fichier qui contient DllMain et tout ce qu’il appelle, dans **l’Explorateur de solutions**, cliquez sur le fichier, puis sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Dans le volet droit, sous **projet par défaut est**, affectez la valeur **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
 
@@ -84,7 +74,7 @@ Cette rubrique explique comment compiler des programmes MFC et ATL existants pou
 
 1. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **en-têtes précompilés**. Définissez **Création/utilisation d’un en-tête précompilé** à **ne pas à l’aide d’en-têtes précompilés**.
 
-     Comme alternative, dans **l’Explorateur de solutions**, avec le bouton droit Stdafx.cpp, puis sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Définissez **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
+   Comme alternative, dans **l’Explorateur de solutions**, avec le bouton droit Stdafx.cpp, puis sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Définissez **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
 
 1. Pour le fichier qui contient DllMain et tout ce qu’il appelle, dans **l’Explorateur de solutions**, cliquez sur le fichier, puis sur **propriétés**. Sous **propriétés de Configuration**, développez le nœud regard **C/C++** et sélectionnez **général**. Dans le volet droit, sous **projet par défaut est**, affectez la valeur **compiler avec prise en charge du Common Language Runtime** à **non Common Language Runtime support**.
 

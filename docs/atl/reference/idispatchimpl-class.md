@@ -1,10 +1,6 @@
 ---
-title: IDispatchImpl, classe | Microsoft Docs
-ms.custom: ''
+title: IDispatchImpl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IDispatchImpl
 - ATLCOM/ATL::IDispatchImpl
@@ -13,23 +9,17 @@ f1_keywords:
 - ATLCOM/ATL::IDispatchImpl::GetTypeInfo
 - ATLCOM/ATL::IDispatchImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispatchImpl::Invoke
-dev_langs:
-- C++
 helpviewer_keywords:
 - dual interfaces, classes
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8be209c8fb2e9f4d1f4dda4bbd3dc9e5220243b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709798"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490439"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl, classe
 
@@ -45,7 +35,7 @@ template<class T,
         const IID* piid= &__uuidof(T),
         const GUID* plibid = &CAtlModule::m_libid,
         WORD wMajor = 1,
-        WORD wMinor = 0, 
+        WORD wMinor = 0,
         class tihclass = CComTypeInfoHolder>
 class ATL_NO_VTABLE IDispatchImpl : public T
 ```

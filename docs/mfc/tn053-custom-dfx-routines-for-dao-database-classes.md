@@ -1,14 +1,8 @@
 ---
-title: 'TN053 : Personnaliser les Routines DFX pour DAO base Classes de données | Microsoft Docs'
-ms.custom: ''
+title: 'TN053 : personnaliser les routines DFX pour les classes de base de données DAO'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dfx
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, DAO and
 - database classes [MFC], DAO
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 054ff12e47d2a6bd38d1a51a7745e5b3916c90dc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 81529dd1e34d06dd3e5d541d39dbe91bb5eda1b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445111"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517765"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053 : personnaliser les routines DFX pour les classes de base de données DAO
 
@@ -104,14 +94,12 @@ rs.Update();
 // Get the employee's data so that it can be displayed
 emp.MoveNext();
 
-
 // If user wants to see employee's photograph,
 // fetch it
 COleVariant varPhoto;
 if (bSeePicture)
     emp.GetFieldValue(_T("photo"),
     varPhoto);
-
 
 // Display the data
 PopUpEmployeeData(emp.m_strFirstName,

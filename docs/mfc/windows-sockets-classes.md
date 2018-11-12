@@ -1,28 +1,18 @@
 ---
-title: Windows Sockets, Classes | Microsoft Docs
-ms.custom: ''
+title: Windows Sockets, classes (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.net
-dev_langs:
-- C++
 helpviewer_keywords:
 - sockets classes [MFC]
 - Windows Sockets [MFC], classes
 ms.assetid: 58b9ab8d-9e44-4db3-8265-e04e713d2e9a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 893fa525b04376cde0e96f280c95e6bfd1243946
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 18537c0de09185c8cd219e3d17ef8bb297e1d711
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439976"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433603"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets, classes (C++)
 

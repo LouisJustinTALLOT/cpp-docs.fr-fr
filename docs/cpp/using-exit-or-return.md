@@ -1,28 +1,18 @@
 ---
-title: À l’aide de sortie ou de retour | Microsoft Docs
-ms.custom: ''
+title: Utilisation d'exit ou return
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - Exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - exit function
 - return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ce62f17008bf4a1ba805db40583e6c63b69a302
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d60084c0d07d3eeb3f49a1fea53de04d150a701b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059978"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442739"
 ---
 # <a name="using-exit-or-return"></a>Utilisation d'exit ou return
 
@@ -68,7 +58,7 @@ int main() {
 
 Dans l'exemple précédent, les objets statiques `sd1` et `sd2` sont créés et initialisés avant l'entrée dans `main`. Après la fin de ce programme à l’aide de la **retourner** instruction, première `sd2` est détruite, puis `sd1`. Le destructeur de la classe `ShowData` ferme les fichiers associés à ces objets statiques.
 
-Une autre façon d'écrire ce code consiste à déclarer les objets `ShowData` avec portée de bloc, ce qui permet leur description lorsqu'ils sont hors de portée :
+Une autre façon d’écrire ce code consiste à déclarer les objets `ShowData` avec portée de bloc, ce qui permet leur destruction lorsqu’ils sont hors de portée :
 
 ```cpp
 int main() {

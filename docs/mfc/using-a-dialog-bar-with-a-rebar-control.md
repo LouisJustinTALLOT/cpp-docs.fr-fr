@@ -1,29 +1,19 @@
 ---
-title: Utilisation d’une barre de boîte de dialogue avec un contrôle Rebar | Microsoft Docs
-ms.custom: ''
+title: Utilisation d'une barre de boîte de dialogue avec un contrôle rebar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - WM_EX_TRANSPARENT
-dev_langs:
-- C++
 helpviewer_keywords:
 - WS_EX_TRANSPARENT style
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c881e31d178d6303939c94d68e2824fb11ec2cbd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fdef763db5085d6419f082ecd4dddca27a5b39b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425394"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554369"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Utilisation d'une barre de boîte de dialogue avec un contrôle rebar
 
@@ -41,13 +31,13 @@ La procédure suivante décrit les étapes nécessaires pour obtenir la transpar
 
 1. Dans le nouveau gestionnaire, modifiez le code existant pour correspondre à l’exemple suivant :
 
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
 
 1. Ajoutez un gestionnaire pour le message WM_MOVE.
 
 1. Dans le nouveau gestionnaire, modifiez le code existant pour correspondre à l’exemple suivant :
 
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
 
 Les nouveaux gestionnaires simulent la transparence de la barre de boîte de dialogue en transmettant le message WM_ERASEBKGND à la fenêtre parente et en forçant une mise à jour chaque fois que l’objet de barre de boîte de dialogue est déplacé.
 

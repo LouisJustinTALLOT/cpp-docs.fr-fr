@@ -1,28 +1,17 @@
 ---
-title: includelib (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: includelib (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.includelib
-dev_langs:
-- C++
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6be5bb96f819bf1f1b0ba90d345a3c2d312daeea
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 4cfadc84b9131aa787323b4967ae9cfc4baabbcb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791012"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570415"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -65,7 +54,7 @@ Le code suivant est indiqué dans un fichier .cpp :
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -74,4 +63,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
 [include](include-cpp.md)<br/>
-[importlib](importlib.md)  
+[importlib](importlib.md)

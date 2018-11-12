@@ -1,30 +1,20 @@
 ---
-title: Portage de bibliothèques tierces | Microsoft Docs
-ms.custom: ''
+title: Portage de bibliothèques tierces
 ms.date: 01/10/2017
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e1edc9e4a6172b3ac55e7a8bc9b21cdc571774d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1abd7f05614317237c911ceb69c243211a373e34
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658300"
 ---
 # <a name="porting-third-party-libraries"></a>Portage de bibliothèques tierces
 
-Quand vous mettez à niveau un projet vers la version actuelle de Visual C++, vous devez également mettre à niveau toutes les bibliothèques qu’il utilise, afin que la bibliothèque et votre projet soient générés avec les mêmes version et configuration du compilateur. (Pour plus d’informations, consultez [Vue d’ensemble des problèmes de mise à niveau potentiels](overview-of-potential-upgrade-issues-visual-cpp.md)). 
+Quand vous mettez à niveau un projet vers la version actuelle de Visual C++, vous devez également mettre à niveau toutes les bibliothèques qu’il utilise, afin que la bibliothèque et votre projet soient générés avec les mêmes version et configuration du compilateur. (Pour plus d’informations, consultez [Vue d’ensemble des problèmes de mise à niveau potentiels](overview-of-potential-upgrade-issues-visual-cpp.md)).
 
 ## <a name="introducing-vcpkg"></a>Présentation de vcpkg
 
@@ -35,7 +25,7 @@ Dans le passé, la recherche et la mise à niveau de bibliothèques tierces repr
 Si votre bibliothèque ne figure pas dans le catalogue **vcpkg**, vous pouvez signaler un problème sur le [dépôt GitHub](https://github.com/Microsoft/vcpkg/issues), où la communauté et l’équipe Visual C++ peuvent le voir et éventuellement créer le fichier de port pour cette bibliothèque.
 
 Pour les bibliothèques tierces propriétaires (non-open source), nous vous conseillons de contacter le fournisseur de la bibliothèque. Toutefois, nous aimerions connaître les bibliothèques propriétaires que vous utilisez et qui vous bloquent. Indiquez-nous celle dont vous dépendez (vous pouvez nous contacter à l’adresse vcupgrade@microsoft.com).
-  
-## <a name="see-also"></a>Voir aussi  
+
+## <a name="see-also"></a>Voir aussi
 
 [Guide du portage et de la mise à niveau de Visual C++](visual-cpp-porting-and-upgrading-guide.md)

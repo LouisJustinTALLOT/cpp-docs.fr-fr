@@ -1,10 +1,6 @@
 ---
-title: CWinFormsControl, classe | Microsoft Docs
-ms.custom: ''
+title: CWinFormsControl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CWinFormsControl
 - AFXWINFORMS/CWinFormsControl
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXWINFORMS/CWinFormsControl::CreateManagedControl
 - AFXWINFORMS/CWinFormsControl::GetControl
 - AFXWINFORMS/CWinFormsControl::GetControlHandle
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWinFormsControl [MFC], CWinFormsControl
 - CWinFormsControl [MFC], CreateManagedControl
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57a06fe87e7d4fbcf698cc333022c4c32afb40da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547483"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl, classe
 
@@ -102,12 +92,10 @@ inline BOOL CreateManagedControl(
     CWnd* pParentWnd,
     int nID);
 
-
 inline BOOL CreateManagedControl(
     DWORD dwStyle,
     int nPlaceHolderID,
     CWnd* pParentWnd);
-
 
 inline BOOL CreateManagedControl(
     typename TManagedControl^ pControl,

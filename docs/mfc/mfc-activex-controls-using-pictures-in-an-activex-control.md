@@ -1,14 +1,8 @@
 ---
-title: 'Contrôles ActiveX MFC : Utilisation d’images dans un contrôle ActiveX | Microsoft Docs'
-ms.custom: ''
+title: "Contrôles ActiveX MFC : utilisation d'images dans un contrôle ActiveX"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - LPPICTUREDISP
-dev_langs:
-- C++
 helpviewer_keywords:
 - OnDraw method, MFC ActiveX controls
 - MFC ActiveX controls [MFC], pictures
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 919cff46250d07876c9ca50acb21972fcfa75d4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe239f864f4b7730d28372ee3fc9d298131d28d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411404"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462099"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation d'images dans un contrôle ActiveX
 
@@ -47,15 +37,15 @@ Les classes de contrôles ActiveX fournissent différents composants que vous po
 
 - La classe [CPictureHolder](../mfc/reference/cpictureholder-class.md) .
 
-     Cette classe fournit un accès facile à l’objet Picture et les fonctionnalités pour l’élément affiché par la propriété Picture personnalisée.
+   Cette classe fournit un accès facile à l’objet Picture et les fonctionnalités pour l’élément affiché par la propriété Picture personnalisée.
 
 - Prise en charge des propriétés de type **LPPICTUREDISP**, implémentée avec les fonctions Get/Set.
 
-     Grâce à l’Affichage de classes, vous pouvez rapidement ajouter une ou plusieurs propriétés personnalisées prenant en charge le type Picture. Pour plus d’informations sur l’ajout de propriétés de contrôle ActiveX avec l’Affichage de classes, consultez l’article [Contrôles ActiveX MFC : propriétés](../mfc/mfc-activex-controls-properties.md).
+   Grâce à l’Affichage de classes, vous pouvez rapidement ajouter une ou plusieurs propriétés personnalisées prenant en charge le type Picture. Pour plus d’informations sur l’ajout de propriétés de contrôle ActiveX avec l’Affichage de classes, consultez l’article [Contrôles ActiveX MFC : propriétés](../mfc/mfc-activex-controls-properties.md).
 
 - Une page de propriétés qui permet de manipuler une ou plusieurs propriétés Picture d’un contrôle.
 
-     Cette page de propriétés fait partie d’un groupe de pages de propriétés stock disponibles pour les contrôles ActiveX. Pour plus d’informations sur les pages de propriétés des contrôles ActiveX, consultez l’article [Contrôles ActiveX MFC : utilisation des pages de propriétés stock](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+   Cette page de propriétés fait partie d’un groupe de pages de propriétés stock disponibles pour les contrôles ActiveX. Pour plus d’informations sur les pages de propriétés des contrôles ActiveX, consultez l’article [Contrôles ActiveX MFC : utilisation des pages de propriétés stock](../mfc/mfc-activex-controls-using-stock-property-pages.md).
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implémentation d’une propriété Picture personnalisée dans votre contrôle ActiveX
 
@@ -67,11 +57,11 @@ Pour implémenter une propriété Picture personnalisée, vous devez procéder c
 
 - [Ajoutez du code à votre projet de contrôle](#_core_additions_to_your_control_project).
 
-     Un ID de page de propriétés Picture standard, un membre de données de type `CPictureHolder`et une propriété personnalisée de type **LPPICTUREDISP** avec une implémentation de Get/Set doivent être ajoutés.
+   Un ID de page de propriétés Picture standard, un membre de données de type `CPictureHolder`et une propriété personnalisée de type **LPPICTUREDISP** avec une implémentation de Get/Set doivent être ajoutés.
 
 - [Modifiez plusieurs fonctions dans votre classe de contrôle](#_core_modifications_to_your_control_project).
 
-     Ces modifications sont apportées à plusieurs fonctions qui sont responsables du dessin de votre contrôle ActiveX.
+   Ces modifications sont apportées à plusieurs fonctions qui sont responsables du dessin de votre contrôle ActiveX.
 
 ##  <a name="_core_additions_to_your_control_project"></a> Ajouts à votre projet de contrôle
 

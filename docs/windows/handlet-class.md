@@ -1,9 +1,6 @@
 ---
-title: HandleT (classe) | Microsoft Docs
-ms.custom: ''
+title: HandleT (classe)
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleT
@@ -17,8 +14,6 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleT::IsValid
 - corewrappers/Microsoft::WRL::Wrappers::HandleT::operator=
 - corewrappers/Microsoft::WRL::Wrappers::HandleT::~HandleT
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT class
 - Microsoft::WRL::Wrappers::HandleT::Attach method
@@ -32,17 +27,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ae6e7c1ec602cb57df071ecac24a0ac084331c3c
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: c7c5951cd966e33d3dda45f9dad504d821838de6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486136"
 ---
 # <a name="handlet-class"></a>HandleT (classe)
 
@@ -193,7 +183,7 @@ Initialise une nouvelle instance de la classe `HandleT`.
 ```cpp
 explicit HandleT(
    typename HandleTraits::Type h =
-      HandleTraits::GetInvalidValue()  
+      HandleTraits::GetInvalidValue()
 );
 
 HandleT(

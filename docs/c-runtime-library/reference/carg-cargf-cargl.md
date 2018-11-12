@@ -1,11 +1,6 @@
 ---
-title: carg, cargf, cargl | Microsoft Docs
-ms.custom: ''
+title: carg, cargf, cargl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - carg
 - cargf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/carg
 - complex/cargf
 - complex/cargl
-dev_langs:
-- C++
 helpviewer_keywords:
 - carg function
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34a5e55b4261c68d90c3bcb28cf2f0e7be1a2c50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393470"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665593"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
@@ -79,13 +68,13 @@ Nombre complexe.
 
 ## <a name="return-value"></a>Valeur de retour
 
-L’argument (également appelée phase) de *z*. Le résultat est dans l’intervalle [-π, + π].
+L’argument (également appelé phase) de *z*. Le résultat est dans l’intervalle [-π, + π].
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **carg** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float** ou **long** **double** valeurs. Dans un programme C, **carg** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **carg** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float** ou **long** **double** valeurs. Dans un programme C, **carg** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

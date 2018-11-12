@@ -1,32 +1,22 @@
 ---
-title: Conteneurs de contrôles ActiveX | Microsoft Docs
-ms.custom: ''
+title: Conteneurs de contrôles ActiveX
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69bfb29bdcc03f0373b5c5ab4916108b0705fc83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b0ec605fd6e30033e303ff61872734136cfb73b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434425"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441910"
 ---
 # <a name="containers-for-activex-controls"></a>Conteneurs de contrôles ActiveX
 
 Vous pouvez utiliser les contrôles ActiveX développés dans Visual C++ dans d’autres applications, tant qu’ils prennent en charge les contrôles ActiveX. Un nombre d’applications Microsoft, commençant par les versions répertoriées, prennent en charge les contrôles ActiveX.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 > [!NOTE]
 >  La liste suivante n’est pas une liste complète des applications qui prennent en charge les contrôles ActiveX, mais représente le plus souvent utilisé dans le test de jeu :

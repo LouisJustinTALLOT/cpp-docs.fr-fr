@@ -1,28 +1,19 @@
 ---
-title: 'Procédure pas à pas : Compilation d’un programme C++ natif sur la ligne de commande | Microsoft Docs'
+title: "Procédure pas à pas : compilation d'un programme C++ natif sur la ligne de commande"
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2d02560f9a76ee6f7a2aa7170f2bca6a95fe3ce8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860405"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602252"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procédure pas à pas : compilation d'un programme C++ natif sur la ligne de commande
 
@@ -160,7 +151,7 @@ Pour compiler un programme qui a des fichiers de code source supplémentaires, e
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp`
 
-Le `/EHsc` option de ligne de commande indique au compilateur d’activer la gestion des exceptions C++. Pour plus d’informations, consultez l’article [/EH (Modèle de gestion des exceptions)](../build/reference/eh-exception-handling-model.md).
+L’option de ligne de commande `/EHsc` indique au compilateur d’activer la gestion des exceptions C++. Pour plus d’informations, consultez l’article [/EH (Modèle de gestion des exceptions)](../build/reference/eh-exception-handling-model.md).
 
 Lorsque vous fournissez des fichiers sources supplémentaires, le compilateur utilise le premier fichier d’entrée pour créer le nom du programme. Dans ce cas, il génère un programme appelé file1.exe. Pour modifier le nom à program1.exe, ajoutez un [/out](../build/reference/out-output-file-name.md) option de l’éditeur de liens :
 

@@ -1,34 +1,24 @@
 ---
-title: Message de traitement et cibles des commandes | Microsoft Docs
-ms.custom: ''
+title: Gestion des messages et cibles des commandes
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
-dev_langs:
-- C++
 helpviewer_keywords:
 - command targets [MFC]
 - message handling [MFC], active documents
 - IOleCommandTarget interface [MFC]
 - command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61ed4375121dafe198dce84b155858c0e7b0a8cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9212e32605a1fed179c931d4f63833e17870b5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414145"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442534"
 ---
 # <a name="message-handling-and-command-targets"></a>Gestion des messages et cibles des commandes
 
-L'interface de dispatch de commande `IOleCommandTarget` définit un mécanisme simple et extensible pour interroger et exécuter des commandes. Ce mécanisme est plus simple qu'`IDispatch` d'Automation, car il dépend entièrement d'un ensemble standard de commandes. Les commandes ont rarement des arguments, et aucune information de type n'est requise. (La cohérence des types est également réduite pour les arguments de commande).
+L'interface de dispatch de commande `IOleCommandTarget` définit un mécanisme simple et extensible pour interroger et exécuter des commandes. Ce mécanisme est plus simple qu’`IDispatch` d’Automation, car il dépend entièrement d’un ensemble standard de commandes. Les commandes ont rarement des arguments, et aucune information de type n’est requise. (La cohérence des types est également réduite pour les arguments de commande).
 
 Dans la conception d’interface de dispatch de commande, chaque commande appartient à un « groupe de commandes » qui est lui-même identifié avec un **GUID**. Par conséquent, une personne peut définir un nouveau groupe ainsi que toutes les commandes au sein de ce groupe sans avoir à coordonner avec Microsoft ou un autre fournisseur. (Il s’agit essentiellement le même moyen de définition comme un **dispinterface** plus **DISPID** dans Automation. Un chevauchement se produit ici, bien que ce mécanisme de routage de commande s'applique uniquement au routage de commande, et pas à la création de scripts et à la programmabilité à grande échelle, comme c'est le cas dans Automation).
 

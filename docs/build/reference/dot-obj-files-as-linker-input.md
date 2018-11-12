@@ -1,12 +1,6 @@
 ---
-title: . Fichiers obj en tant qu’entrée de l’éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Fichiers .obj en tant qu'entrée de l'Éditeur de liens
 ms.date: 12/29/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - linker [C++], OBJ files as input
 - object files, linker output
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: decd015a184b66fa5867435177c07fdf23ad53ae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 17a8ea51c41fb2c17d8feb223253cf9eed722675
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704377"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616149"
 ---
 # <a name="obj-files-as-linker-input"></a>Fichiers .obj en tant qu'entrée de l'Éditeur de liens
 

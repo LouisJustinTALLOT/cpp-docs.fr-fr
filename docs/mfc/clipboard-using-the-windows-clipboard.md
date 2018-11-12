@@ -1,12 +1,6 @@
 ---
-title: 'Presse-papiers : Utilisation du Presse-papiers de Windows | Microsoft Docs'
-ms.custom: ''
+title: 'Presse-papiers : utilisation du Presse-papiers Windows'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Clipboard commands
 - Cut/Copy and Paste command handler functions [MFC]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - Windows Clipboard [MFC]
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e43b55382d5e6443119efb52bd1935d3150c1aac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 67bc337af2cf55a4f39698f730ce14a3369ef742
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409998"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460695"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>Presse-papiers : utilisation du Presse-papiers Windows
 

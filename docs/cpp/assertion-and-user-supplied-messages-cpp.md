@@ -1,28 +1,18 @@
 ---
-title: Assertion et Messages fournis par l’utilisateur (C++) | Microsoft Docs
-ms.custom: ''
+title: Assertion et messages fournis par l'utilisateur (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - user-supplied messages [C++], run time
 - user-supplied messages [C++], preprocessor time
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 88873c9ebde2ce03163e62a59f3dd6fffdd36849
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 913aa199b4acd2ceb6daf7a24d8c50c28234b74a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090280"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507738"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Assertion et messages fournis par l'utilisateur (C++)
 
@@ -36,7 +26,7 @@ La durée de vie de votre application se compose d'une phase de prétraitement, 
 
 - Le [static_assert](../cpp/static-assert.md) déclaration est appliquée au moment de la compilation. Elle teste une assertion logicielle représentée par une expression intégrale spécifiée par l'utilisateur qui peut être convertie en valeur booléenne. Si l'expression est évaluée à la valeur zéro (false), le compilateur génère le message spécifié par l'utilisateur et la compilation échoue avec une erreur.
 
-     La déclaration `static_assert` est particulièrement utile pour le débogage des modèles, car des arguments template peuvent être inclus dans l'expression spécifiée par l'utilisateur.
+   La déclaration `static_assert` est particulièrement utile pour le débogage des modèles, car des arguments template peuvent être inclus dans l’expression spécifiée par l’utilisateur.
 
 - Le [assert (macro), _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro est appliquée au moment de l’exécution. Elle évalue une expression spécifiée par l'utilisateur, et si le résultat est zéro, le système génère un message de diagnostic et ferme votre application. Nombreuses autres macros, telles que[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) et _ASSERTE, ressemblent à cette macro mais génèrent des différents messages de diagnostic définie par le système ou définis par l’utilisateur.
 

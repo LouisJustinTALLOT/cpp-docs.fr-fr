@@ -1,27 +1,17 @@
 ---
-title: CREATESTRUCT, Structure | Microsoft Docs
-ms.custom: ''
+title: CREATESTRUCT, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CREATESTRUCT
-dev_langs:
-- C++
 helpviewer_keywords:
 - CREATESTRUCT structure [MFC]
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 880cbbde261caf804e16e9eb759abb213cb84f60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13f715dc914ccc052945790aeaff9c47bd34ed46
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422426"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619646"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT, structure
 
@@ -92,5 +82,4 @@ Spécifie le [style étendu](../../mfc/reference/styles-used-by-mfc.md#extended-
 
 [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)
-
 

@@ -1,32 +1,25 @@
 ---
-title: Obtention de pointeurs vers les mémoires tampons de données (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Obtention de pointeurs vers les tampons de données (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b8b94e2c342551d63612155d1d8a5771139e42cb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6fc136af4098659779b4b4ff7fb8878e1cea6590
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101780"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514268"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Obtention de pointeurs vers les tampons de données (C++/CX)
 
-Dans le Runtime Windows le [Windows::Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) interface fournit un moyen indépendant de la langue, en fonction du flux de données pour accéder aux mémoires tampons de données. En C++, vous pouvez obtenir un pointeur brut vers le tableau d'octets sous-jacent à l'aide de l'interface IBufferByteAccess de la bibliothèque Windows Runtime, qui est définie dans robuffer.h. En utilisant cette approche, vous pouvez modifier le tableau d'octets sur place sans effectuer de copies non nécessaires des données.
+Dans Windows Runtime, l’interface [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) fournit une méthode indépendante du langage, basée sur les flux, pour accéder aux mémoires tampons de données. En C++, vous pouvez obtenir un pointeur brut vers le tableau d'octets sous-jacent à l'aide de l'interface IBufferByteAccess de la bibliothèque Windows Runtime, qui est définie dans robuffer.h. En utilisant cette approche, vous pouvez modifier le tableau d'octets sur place sans effectuer de copies non nécessaires des données.
 
-Le diagramme suivant montre un élément image XAML, dont la source est un [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Une application cliente écrite dans un langage, quel qu'il soit, peut passer une référence à `WriteableBitmap` au code C++, lequel peut ensuite utiliser la référence pour atteindre la mémoire tampon sous-jacente. Dans une application de plateforme Windows universelle qui est écrit en C++, vous pouvez utiliser la fonction dans l’exemple suivant directement dans le code source sans l’empaqueter dans un composant Windows Runtime.
+Le diagramme suivant illustre un élément image XAML, dont la source est [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Une application cliente écrite dans un langage, quel qu'il soit, peut passer une référence à `WriteableBitmap` au code C++, lequel peut ensuite utiliser la référence pour atteindre la mémoire tampon sous-jacente. Dans une application de plateforme Windows universelle qui est écrit en C++, vous pouvez utiliser la fonction dans l’exemple suivant directement dans le code source sans l’empaqueter dans un composant Windows Runtime.
 
 ![C&#43; &#43; code accéder directement aux données de pixels](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
-La méthode suivante accepte un [Windows::Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) et retourne un pointeur brut vers le tableau d’octets sous-jacent. Pour appeler la fonction, passez un [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) propriété.
+La méthode suivante accepte [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) et retourne un pointeur brut au tableau d’octets sous-jacent. Pour appeler la fonction, passez une propriété [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) .
 
 ```cpp
 #include <wrl.h>

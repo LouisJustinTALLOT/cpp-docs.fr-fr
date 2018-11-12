@@ -1,22 +1,19 @@
 ---
-title: '&lt;vector&gt;, fonctions | Microsoft Docs'
-ms.custom: ''
+title: '&lt;vector&gt;, fonctions'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - vector/std::swap
 ms.assetid: 6cdcf043-eef6-4330-83f0-4596fb9f968a
 helpviewer_keywords:
 - std::swap [vector]
-ms.openlocfilehash: 71594b225c950714d8b9aba169e68804033c93a2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e883653338a35d39b14b03dfd75ccf2ac2a8d873
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700750"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483367"
 ---
 # <a name="ltvectorgt-functions"></a>&lt;vector&gt;, fonctions
-
 
 ## <a name="swap"></a>  swap
 

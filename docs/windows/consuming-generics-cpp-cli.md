@@ -1,26 +1,16 @@
 ---
-title: Utilisation de génériques (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: Utilisation de génériques (C++/CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6bccfc4ab3e5df690c6fdb5ddb04c458756a4cd7
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 3fa63ae0e75f4c754c8ff2dbdeb0d662246f00dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327750"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551734"
 ---
 # <a name="consuming-generics-ccli"></a>Utilisation de génériques (C++/CLI)
 
@@ -71,9 +61,9 @@ public class CircularList<ItemType> {
          first =
          last.next = first.next;
       }
-      for ( ; iter != last ; iter = iter.next )  
+      for ( ; iter != last ; iter = iter.next )
          if (iter.next.m_item.Equals( item )) {
-              if (iter.next == last)  
+              if (iter.next == last)
                   last = iter;
               iter.next = iter.next.next;
               return;
@@ -110,7 +100,7 @@ int main() {
    CircularList<int>^ circ1 = gcnew CircularList<int>();
    CircularList<MgdClass^>^ circ2 = gcnew CircularList<MgdClass^>();
 
-   for (int i = 0 ; i < 100 ; i += 10)  
+   for (int i = 0 ; i < 100 ; i += 10)
       circ1->Add(i);
    circ1->Remove(50);
    circ1->PrintAll();

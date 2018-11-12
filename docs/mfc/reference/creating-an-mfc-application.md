@@ -1,27 +1,17 @@
 ---
-title: Création d’une Application MFC | Microsoft Docs
-ms.custom: ''
+title: Création d'une application MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [MFC]
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c20d3214f8f2f76fedaeebcd439f10e016ccdd9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df1e49ffe9e4350d2023bc471d3687bec5defa04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434604"
 ---
 # <a name="creating-an-mfc-application"></a>Création d'une application MFC
 
@@ -63,5 +53,4 @@ Une fois votre projet créé, vous pouvez afficher les fichiers créés dans **l
 
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pages de propriétés](../../ide/property-pages-visual-cpp.md)
-
 

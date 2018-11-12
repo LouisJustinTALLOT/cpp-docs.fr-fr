@@ -1,10 +1,6 @@
 ---
-title: COleDateTime, classe | Microsoft Docs
-ms.custom: ''
+title: COleDateTime, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -30,8 +26,6 @@ f1_keywords:
 - ATLCOMTIME/ATL::COleDateTime::SetTime
 - ATLCOMTIME/ATL::COleDateTime::m_dt
 - ATLCOMTIME/ATL::COleDateTime::m_status
-dev_langs:
-- C++
 helpviewer_keywords:
 - shared classes, COleDateTime
 - time-only values
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 2f63535210110e699daedd39a0b5a5ac25fc53c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809159"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505896"
 ---
 # <a name="coledatetime-class"></a>COleDateTime, classe
 
@@ -228,10 +218,10 @@ Un `SYSTEMTIME` structure à être convertie en valeur de date/heure et copiés 
 *filetimeSrc*<br/>
 Un `FILETIME` structure à être convertie en valeur de date/heure et copiés dans le nouvel `COleDateTime` objet. Notez que `FILETIME` utilise le temps universel coordonné (UTC), donc si vous passez une heure locale de la structure, vos résultats seront incorrects. Consultez [heures de fichier](/windows/desktop/SysInfo/file-times) dans le SDK Windows pour plus d’informations.
 
-*nYear*, *nMonth*, *%n%njour*, *%n%nheure*, *nMin*, *nSec*  
+*nYear*, *nMonth*, *%n%njour*, *%n%nheure*, *nMin*, *nSec*<br/>
 Indiquer les valeurs de date et heure doit être copié dans le nouveau `COleDateTime` objet.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 Valeurs de date et heure de MS-DOS pour être convertie en valeur de date/heure et copiés dans le nouvel `COleDateTime` objet.
 
 *DBTS*<br/>
@@ -333,13 +323,13 @@ Si l’état de ce `COleDateTime` objet est null, la valeur de retour est une ch
 
 Une brève description des trois formes possibles pour cette fonction suit :
 
-`Format`( *dwFlags*, *lcid*)  
+`Format`( *dwFlags*, *lcid*)<br/>
 Ce formulaire met en forme la valeur en utilisant les spécifications de langage (ID de paramètres régionaux) pour la date et l’heure. L’aide des paramètres par défaut, cet écran imprimera la date et l’heure, sauf si la partie heure est 0 (minuit), auquel cas elle imprime simplement la date ou la partie de date est 0 (30 décembre 1899), dans auquel cas il imprimera juste le temps. Si la valeur de date/heure est 0 (30 décembre 1899, minuit), ce formulaire avec les paramètres par défaut sera imprimé à minuit.
 
-`Format`( *lpszFormat*)  
+`Format`( *lpszFormat*)<br/>
 Ce formulaire met en forme la valeur à l’aide de la chaîne de format qui contient les codes de mise en forme spéciales qui sont précédés d’un signe de pourcentage (%), comme dans `printf`. La chaîne mise en forme est passée en tant que paramètre à la fonction. Pour plus d’informations sur les codes de mise en forme, consultez [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) dans le Run-Time Library Reference.
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 Ce formulaire met en forme la valeur à l’aide de la chaîne de format qui contient les codes de mise en forme spéciales qui sont précédés d’un signe de pourcentage (%), comme dans `printf`. La chaîne mise en forme est une ressource. L’ID de ressource de cette chaîne est passée comme paramètre. Pour plus d’informations sur les codes de mise en forme, consultez [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) dans le *Run-Time Library Reference*.
 
 ### <a name="example"></a>Exemple
@@ -701,13 +691,13 @@ Retourne l’état de ce `COleDateTime` valeur. Si vous appelez `GetStatus` sur 
 La valeur de retour est définie par le `DateTimeStatus` type énuméré, qui est défini dans le `COleDateTime` classe.
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 Pour obtenir une brève description de ces valeurs d’état, consultez la liste suivante :
@@ -930,10 +920,10 @@ Le `DATE` opérateur vérifie si le `COleDateTime` objet est défini avec la val
 Analyse une chaîne pour lire une valeur de date/heure.
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -991,15 +981,15 @@ Pour plus d’informations sur les limites et la mise en œuvre pour `COleDateTi
 Définit la date de cette `COleDateTime` objet.
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*nYear*, *nMonth*, *%n%njour*  
+*nYear*, *nMonth*, *%n%njour*<br/>
 Indiquer les composants de date doit être copié dans ce `COleDateTime` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1062,18 +1052,18 @@ Pour plus d’informations sur les limites de `COleDateTime` valeurs, consultez 
 Définit la date et l’heure de ce `COleDateTime` objet.
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*nYear*, *nMonth*, *%n%njour*, *%n%nheure*, *nMin*, *nSec*  
+*nYear*, *nMonth*, *%n%njour*, *%n%nheure*, *nMin*, *nSec*<br/>
 Indiquer les composants de date et heure doit être copié dans ce `COleDateTime` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1170,15 +1160,15 @@ Consultez l’exemple de [GetStatus](#getstatus).
 Définit l’heure de cette `COleDateTime` objet.
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*%n%nheure*, *nMin*, *nSec*  
+*%n%nheure*, *nMin*, *nSec*<br/>
 Indiquer les composants heure doit être copié dans ce `COleDateTime` objet.
 
 ### <a name="return-value"></a>Valeur de retour

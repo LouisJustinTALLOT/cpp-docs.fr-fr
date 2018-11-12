@@ -1,23 +1,13 @@
 ---
-title: À l’aide de C++ AMP dans les applications UWP | Microsoft Docs
-ms.custom: ''
+title: À l’aide de C++ AMP dans les applications UWP
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: faa26db2df606502bf4a80f21d7a5be4bafc1f9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9e17cb8691408d664f403b53e9cd8ad70fe6e5e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377798"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447751"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>À l’aide de C++ AMP dans les applications UWP
 

@@ -1,30 +1,20 @@
 ---
-title: Options de l’éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Options de l'éditeur de liens
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - link
-dev_langs:
-- C++
 helpviewer_keywords:
 - linker [C++]
 - linker [C++], options listed
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 22ac88ede7cc015efd12f1a996ffdf361b43f041
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510110"
 ---
 # <a name="linker-options"></a>Options de l'éditeur de liens
 
@@ -60,7 +50,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|Définit le type (IJW, pure ou sécurisée) d’une image CLR.|
 |[/CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Préserve le dernier code d’erreur des fonctions qui sont appelées via le mécanisme P/Invoke.|
 |[/CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|Spécifie l’attribut de thread à appliquer au point d’entrée de votre programme CLR.|
-|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|Spécifie si l’éditeur de liens doit appliquer l’attribut SuppressUnmanagedCodeSecurity aux stubs PInvoke générés par l’éditeur de liens qui appellent à partir du code managé dans des DLL natives.|
+|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|Spécifie si l’éditeur de liens doit appliquer l’attribut SuppressUnmanagedCodeSecurity aux stubs PInvoke générés par l’éditeur de liens qui appellent à partir du code managé dans des DLL natives.|
 |[/DEBUG](../../build/reference/debug-generate-debug-info.md)|Crée des informations de débogage.|
 |[/DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|Spécifie les données à inclure dans les informations de débogage.|
 |[/DEF](../../build/reference/def-specify-module-definition-file.md)|Passe un fichier de définition de module (.def) à l’éditeur de liens.|

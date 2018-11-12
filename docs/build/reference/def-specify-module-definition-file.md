@@ -1,15 +1,9 @@
 ---
-title: -DEF (spécifier un fichier de définition de Module) | Microsoft Docs
-ms.custom: ''
+title: /DEF (Spécifier le fichier de définition de module)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ModuleDefinitionFile
 - /def
-dev_langs:
-- C++
 helpviewer_keywords:
 - module definition files, specifying
 - DEF linker option
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - module definition files
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0ec7458f5b81dd2b9d5aac49959b935f49377081
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 607af17a60612f69bb24708179bb453409098bde
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654751"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (Spécifier le fichier de définition de module)
 

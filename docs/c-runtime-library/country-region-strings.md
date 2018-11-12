@@ -1,29 +1,19 @@
 ---
-title: Chaînes de pays et de région | Microsoft Docs
-ms.custom: ''
+title: Chaînes de pays-région
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.strings
-dev_langs:
-- C++
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e5cd978c5774a4deb8b5bb79fc2b8e59c198e45
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a3bbe9d1278cf733bafbeb23efcb0a1ad577228
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028387"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463464"
 ---
-# <a name="countryregion-strings"></a>Chaînes de pays et de région
+# <a name="countryregion-strings"></a>chaînes pays/région
 
 Les chaînes de pays et de région peuvent être combinés avec une chaîne de langue pour créer une spécification de paramètres régionaux pour les fonctions `setlocale`, `_wsetlocale`, `_create_locale`et `_wcreate_locale` . Pour obtenir des listes des noms de pays et de régions pris en charge par différentes versions du système d’exploitation Windows, consultez les colonnes **Langue**, **Emplacement** et **Balise de langue** de la table dans [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) dans [MS-LCID] : référence d’identificateur de code de langue (LCID) Windows. Pour obtenir un exemple de code énumérant les noms de paramètres régionaux disponibles et les valeurs associées, consultez [NLS : exemple d’API en fonction du nom](/windows/desktop/intl/nls--name-based-apis-sample).
 

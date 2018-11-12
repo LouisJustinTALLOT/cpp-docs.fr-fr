@@ -1,14 +1,8 @@
 ---
-title: Modification de ressources graphiques (Éditeur d’images C++ pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Modification de ressources graphiques (Éditeur d’images C++ pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], editing
 - graphics [C++]
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - graphics [C++], Image editor
 - graphics [C++], editing
 ms.assetid: 09e422c5-f712-4378-b973-c7a3bbc92b9c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 184e011e82f2bb367a9c573176bbea1f7ccc5f47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 066ba931ed49a81acb55490401f553746e253261
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418019"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578917"
 ---
 # <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Modification de ressources graphiques (Éditeur d’images C++ pour les icônes)
 
@@ -77,4 +66,4 @@ Aucun.
 ## <a name="see-also"></a>Voir aussi
 
 [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
-[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)  
+[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

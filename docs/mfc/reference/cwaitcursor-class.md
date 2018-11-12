@@ -1,31 +1,21 @@
 ---
-title: Cwaitcursor, classe | Microsoft Docs
-ms.custom: ''
+title: Cwaitcursor, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CWaitCursor
 - AFXWIN/CWaitCursor
 - AFXWIN/CWaitCursor::CWaitCursor
 - AFXWIN/CWaitCursor::Restore
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5b7deaf83c093c16b30ee04d8c5924c1d567d86c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 10daa8c5af84b17d70cc18c9407686d4698e98a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435803"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533625"
 ---
 # <a name="cwaitcursor-class"></a>Cwaitcursor, classe
 
@@ -132,6 +122,4 @@ Si vous devez restaurer le curseur d’attente tandis que dans une fonction diff
 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
 [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
 [Comment faire : modifier le curseur de souris dans une Application de classe Microsoft Foundation](http://go.microsoft.com/fwlink/p/?linkid=128044)
-
-
 

@@ -1,27 +1,17 @@
 ---
-title: Tables d’événements | Microsoft Docs
-ms.custom: ''
+title: Tables d'événements
 ms.date: 06/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
-dev_langs:
-- C++
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492232"
 ---
 # <a name="event-maps"></a>Tables d'événements
 
@@ -279,7 +269,6 @@ La fonction appelée par le framework lorsque le verbe est appelé.
 L’index du verbe standard est au format `OLEIVERB_`, suivi par une action. OLEIVERB_SHOW, OLEIVERB_HIDE et OLEIVERB_UIACTIVATE sont quelques exemples de verbes standard.
 
 Consultez [ON_OLEVERB](#on_oleverb) pour obtenir une description du prototype de fonction à utiliser comme la *memberFxn* paramètre.
-
 
 ### <a name="requirements"></a>Configuration requise
 

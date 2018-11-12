@@ -1,37 +1,27 @@
 ---
-title: Création d’un conteneur de contrôle ActiveX MFC | Microsoft Docs
-ms.custom: ''
+title: Création d'un conteneur de contrôles ActiveX MFC
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.activex.container
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], containers
 - ActiveX control containers [MFC], creating
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 37119934a70f8a68d32ed83699fa6deb012d8879
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 04c271db18bc8d8ba273f16f7493bbbb1da96421
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404434"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544987"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Création d'un conteneur de contrôles ActiveX MFC
 
 Un conteneur de contrôles ActiveX est un programme parent qui fournit l’environnement pour un contrôle ActiveX (anciennement appelés OLE) à exécuter. Vous pouvez créer une application capable de contenir des contrôles ActiveX avec ou sans MFC, mais il est beaucoup plus facile à voir avec MFC.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](../activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](../activex-controls.md).
 
 Création d’un programme MFC conteneur à l’aide du [Assistant Application MFC](../../mfc/reference/mfc-application-wizard.md) vous permet d’accéder aux nombreuses fonctionnalités de contrôles ActiveX et d’automatisation qui sont implémentées par les classes MFC et ActiveX. Ces fonctionnalités incluent la modification visuelle, Automation, création de fichiers composés et prendre en charge pour les contrôles. Les options d’édition visuelle Assistant Application MFC qui prend en charge votre programme parent incluent la création d’un conteneur, un mini-serveur, un serveur complet et un programme qui est un conteneur et un serveur.
 

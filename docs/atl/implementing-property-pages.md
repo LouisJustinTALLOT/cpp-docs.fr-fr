@@ -1,27 +1,17 @@
 ---
-title: Implémentation des Pages de propriétés | Microsoft Docs
-ms.custom: ''
+title: Implémentation des Pages de propriétés
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - IPropertyPage2 class
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f69dab9dfc9216d1c56ed54730d5f94cbb58b1db
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088733"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543310"
 ---
 # <a name="implementing-property-pages"></a>Implémentation des Pages de propriétés
 
@@ -43,11 +33,11 @@ Pour créer une page de propriétés à l’aide d’ATL :
 
 - Si vous le souhaitez remplacer le `IPropertyPageImpl` méthodes en suivant les recommandations ci-dessous.
 
-   |Méthode IPropertyPageImpl|Substituer lorsque vous souhaitez...|Notes|  
-   |------------------------------|----------------------------------|-----------|  
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Effectuer des vérifications de validité de base sur le nombre d’objets passés à votre page et les interfaces qui prennent en charge.|Exécuter votre propre code avant d’appeler l’implémentation de classe de base. Si les objets en cours de définition non conformes à vos attentes, vous devez échouer l’appel dès que possible.|  
-   |[Activer](../atl/reference/ipropertypageimpl-class.md#activate)|Initialiser l’interface utilisateur de votre page (par exemple, définir des contrôles de boîte de dialogue avec les valeurs de propriété actuelles à partir d’objets, créer dynamiquement des contrôles ou effectuer d’autres initialisations).|Appeler l’implémentation de classe de base avant votre code afin que la classe de base a la possibilité de créer la fenêtre de la boîte de dialogue et tous les contrôles avant d’essayer de les mettre à jour.|  
-   |[Appliquer](../atl/reference/ipropertypageimpl-class.md#apply)|Valider les paramètres de propriété et mettre à jour les objets.|Il est inutile d’appeler l’implémentation de classe de base dans la mesure où il ne fait rien en dehors de la trace de l’appel.|  
+   |Méthode IPropertyPageImpl|Substituer lorsque vous souhaitez...|Notes|
+   |------------------------------|----------------------------------|-----------|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Effectuer des vérifications de validité de base sur le nombre d’objets passés à votre page et les interfaces qui prennent en charge.|Exécuter votre propre code avant d’appeler l’implémentation de classe de base. Si les objets en cours de définition non conformes à vos attentes, vous devez échouer l’appel dès que possible.|
+   |[Activer](../atl/reference/ipropertypageimpl-class.md#activate)|Initialiser l’interface utilisateur de votre page (par exemple, définir des contrôles de boîte de dialogue avec les valeurs de propriété actuelles à partir d’objets, créer dynamiquement des contrôles ou effectuer d’autres initialisations).|Appeler l’implémentation de classe de base avant votre code afin que la classe de base a la possibilité de créer la fenêtre de la boîte de dialogue et tous les contrôles avant d’essayer de les mettre à jour.|
+   |[Appliquer](../atl/reference/ipropertypageimpl-class.md#apply)|Valider les paramètres de propriété et mettre à jour les objets.|Il est inutile d’appeler l’implémentation de classe de base dans la mesure où il ne fait rien en dehors de la trace de l’appel.|
    |[Désactiver](../atl/reference/ipropertypageimpl-class.md#deactivate)|Nettoyer les éléments liés aux fenêtres.|L’implémentation de classe de base détruit la boîte de dialogue représentant la page de propriétés. Si vous avez besoin nettoyer avant la destruction de la boîte de dialogue, vous devez ajouter votre code avant d’appeler la classe de base.|
 
 Pour un exemple d’implémentation de page de propriété, consultez [exemple : implémentation d’une Page de propriété](../atl/example-implementing-a-property-page.md).

@@ -1,25 +1,16 @@
 ---
-title: Avertissements du compilateur désactivés par défaut | Microsoft Docs
+title: Avertissements du compilateur désactivés par défaut
 ms.date: 05/30/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b5a4551387716c81766ae99759f8188410497be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42544401"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651371"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avertissements du compilateur désactivés par défaut
 Le compilateur inclut des avertissements qui sont désactivés par défaut, car la plupart des développeurs ne souhaitent pas les voir. Dans certains cas, ils représentent un choix stylistique, sont des idiomes courants dans le code plus ancien ou tirer parti d’une extension Microsoft du langage. Dans d’autres cas, ils indiquent une zone où les programmeurs souvent des hypothèses incorrectes, ce qui peut entraîner un comportement inattendu ou non défini. Il se peut que certaines de ces avertissements peuvent être très bruyant dans les en-têtes de bibliothèque. Bibliothèques runtime C et les bibliothèques standards C++ sont destinés à n’émettre aucun avertissement uniquement au niveau d’avertissement [/W4](../build/reference/compiler-option-warning-level.md).
@@ -154,12 +145,12 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |C5042 (niveau 3)|«*fonction*' : les déclarations de fonction à portée de bloc ne peut pas être spécifié 'inline' en C++ standard ; supprimez le spécificateur 'inline' <sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Compilateur va insérer l’atténuation de Spectre pour la charge de mémoire si le commutateur/qspectre spécifié <sup>15.7</sup>|
 
-<sup>14,1</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 1.  
-<sup>14.3</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 3.  
-<sup>15.3</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.3.  
-<sup>15.5</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.5.  
-<sup>15.7</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.7.  
-<sup>Perm</sup> cet avertissement est désactivé, sauf si le [/ permissive-](../build/reference/permissive-standards-conformance.md) option du compilateur est définie.  
+<sup>14,1</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 1.<br/>
+<sup>14.3</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 3.<br/>
+<sup>15.3</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.3.<br/>
+<sup>15.5</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.5.<br/>
+<sup>15.7</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.7.<br/>
+<sup>Perm</sup> cet avertissement est désactivé, sauf si le [/ permissive-](../build/reference/permissive-standards-conformance.md) option du compilateur est définie.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avertissements désactivé par défaut dans les versions antérieures
 

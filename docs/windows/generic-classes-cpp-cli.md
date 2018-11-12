@@ -1,12 +1,7 @@
 ---
-title: Classes génériques (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: Classes génériques (C++/CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - classes [C++], generic
 - generic classes [C++], about generic classes
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3dbf6d861dd446745ba0cc3581c7e3e5511c01d3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74a16feb38f79b7e588324eb8d3fa72f88440a4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409361"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591764"
 ---
 # <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
 
@@ -58,7 +48,7 @@ Soit **classe** ou **typename**
 *clauses de contrainte*<br/>
 Une liste (ne pas séparées par des virgules) de **où** clauses spécifiant les contraintes pour les paramètres de type. Prend la forme :
 
-> **où** *identificateur de paramètre de type* **:** *liste de contraintes***...** 
+> **où** *identificateur de paramètre de type* **:** *liste de contraintes***...**
 
 *liste de contraintes*<br/>
 *classe ou interface*[`,` *...* ]
@@ -346,7 +336,7 @@ int main() {
 
 ```Output
 Name: Jeff Smith
-Amount: $123.00**  
+Amount: $123.00**
 ```
 
 ## <a name="generic-methods-in-generic-classes"></a>Méthodes génériques dans les Classes génériques

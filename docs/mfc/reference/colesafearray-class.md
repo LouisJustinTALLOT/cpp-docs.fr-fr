@@ -1,10 +1,6 @@
 ---
-title: COleSafeArray, classe | Microsoft Docs
-ms.custom: ''
+title: COleSafeArray, classe
 ms.date: 08/27/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleSafeArray
 - AFXDISP/COleSafeArray
@@ -35,8 +31,6 @@ f1_keywords:
 - AFXDISP/COleSafeArray::ResizeOneDim
 - AFXDISP/COleSafeArray::UnaccessData
 - AFXDISP/COleSafeArray::Unlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleSafeArray [MFC], COleSafeArray
 - COleSafeArray [MFC], AccessData
@@ -66,16 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af4f8bbbfc6d7a90120fe367c608db37cb055a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392994"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648095"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray, classe
 
@@ -240,11 +230,9 @@ Construit un objet `COleSafeArray`.
 ```
 COleSafeArray();
 
-
 COleSafeArray(
     const SAFEARRAY& saSrc,
     VARTYPE vtSrc);
-
 
 COleSafeArray(
     LPCSAFEARRAY pSrc,
@@ -305,7 +293,6 @@ void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
     DWORD* rgElements);
-
 
 void Create(
     VARTYPE vtSrc,

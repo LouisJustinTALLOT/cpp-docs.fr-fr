@@ -1,23 +1,13 @@
 ---
-title: Résumé des déclarations | Microsoft Docs
-ms.custom: ''
+title: Résumé des déclarations
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6e63fae717fc3e5c223ad512b5cd2eae82160431
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 21d6866f8e0b370d8a0d93253a6259302666963a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754636"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647198"
 ---
 # <a name="summary-of-declarations"></a>Résumé des déclarations
 
@@ -49,7 +39,7 @@ ms.locfileid: "43754636"
 &nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Propre à Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Spécifique à Microsoft \*/
 
 *type-specifier* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
@@ -107,7 +97,7 @@ ms.locfileid: "43754636"
 &nbsp;&nbsp;&nbsp;&nbsp;*enumerator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enumerator-list* **,** *enumerator*
 
-*enumerator* :<br/>
+*enumerator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant* **=** *constant-expression*
 

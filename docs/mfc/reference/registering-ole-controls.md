@@ -1,28 +1,18 @@
 ---
-title: Inscription des contrôles OLE | Microsoft Docs
-ms.custom: ''
+title: Inscription des contrôles OLE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
-dev_langs:
-- C++
 helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9008ba16d52987e4d7f14b5692cdf349951f83a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 08ed3771edbc0ebebfe98643a2651ff10c85d41e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407710"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544792"
 ---
 # <a name="registering-ole-controls"></a>Inscription des contrôles OLE
 
@@ -86,7 +76,7 @@ Contient un ou plusieurs des indicateurs suivants :
 
 - `afxRegFreeThreading` Définit le modèle de thread dans le Registre pour ThreadingModel = gratuit.
 
-     Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = Both. Consultez [InprocServer32](/windows/desktop/com/inprocserver32) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread.
+   Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = Both. Consultez [InprocServer32](/windows/desktop/com/inprocserver32) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread.
 
 > [!NOTE]
 >  Dans les versions MFC antérieures 4.2 de MFC, la **int** *nRegFlags* paramètre était un paramètre de type BOOL, *bInsertable*, qui autorisé ou interdit le contrôle à insérer à partir de l’instruction Insert Boîte de dialogue d’objet.

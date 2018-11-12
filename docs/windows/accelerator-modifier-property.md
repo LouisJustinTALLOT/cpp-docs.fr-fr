@@ -1,26 +1,15 @@
 ---
-title: Propriété modificateur d’un accélérateur (C++) | Microsoft Docs
-ms.custom: ''
+title: Propriété modificateur d’un accélérateur (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Modifier property
 ms.assetid: f05a9379-e037-4cfb-b6ef-d2c655bcfa7f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3c053af58842c75910b0214ae828c652daa33a81
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9dfcbde68d2b3d1ebdd1b94aa40339bbc0ff4e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389289"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650674"
 ---
 # <a name="accelerator-modifier-property-c"></a>Propriété modificateur d’un accélérateur (C++)
 

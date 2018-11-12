@@ -1,10 +1,6 @@
 ---
-title: CFrameWnd, classe | Microsoft Docs
-ms.custom: ''
+title: CFrameWnd (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFrameWnd
 - AFXWIN/CFrameWnd
@@ -58,8 +54,6 @@ f1_keywords:
 - AFXWIN/CFrameWnd::OnShowMenuBar
 - AFXWIN/CFrameWnd::m_bAutoMenuEnable
 - AFXWIN/CFrameWnd::rectDefault
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFrameWnd [MFC], CFrameWnd
 - CFrameWnd [MFC], ActivateFrame
@@ -112,16 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861731"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481443"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -1212,7 +1202,6 @@ Surchargé. S’applique à une superposition à un bouton de barre des tâches 
 BOOL SetTaskbarOverlayIcon(
     UINT nIDResource,
     LPCTSTR lpcszDescr);
-
 
 BOOL SetTaskbarOverlayIcon(
     HICON hIcon,

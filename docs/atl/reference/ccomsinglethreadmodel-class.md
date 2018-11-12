@@ -1,10 +1,6 @@
 ---
-title: CComSingleThreadModel, classe | Microsoft Docs
-ms.custom: ''
+title: CComSingleThreadModel, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComSingleThreadModel
 - ATLBASE/ATL::CComSingleThreadModel
@@ -13,21 +9,17 @@ f1_keywords:
 - ATLBASE/ATL::CComSingleThreadModel::ThreadModelNoCS
 - ATLBASE/ATL::CComSingleThreadModel::Decrement
 - ATLBASE/ATL::CComSingleThreadModel::Increment
-dev_langs:
-- C++
 helpviewer_keywords:
 - single-threaded applications
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: b257628747dca488292cfdfff0ef783303bd1b88
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b0e19c94c16de936758ed4e547d731aed40cb26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565358"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel, classe
 
@@ -58,9 +50,9 @@ class CComSingleThreadModel
 
 ## <a name="remarks"></a>Notes
 
-`CComSingleThreadModel` Fournit des méthodes pour incrémenter et décrémenter la valeur d’une variable. Contrairement aux [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) et [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), ces méthodes ne sont pas thread-safe.  
+`CComSingleThreadModel` Fournit des méthodes pour incrémenter et décrémenter la valeur d’une variable. Contrairement aux [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) et [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), ces méthodes ne sont pas thread-safe.
 
-En général, vous utilisez `CComSingleThreadModel` via un des deux **typedef** concernant les noms, soit [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). La classe référencée par chaque **typedef** varie selon le modèle de thread utilisé, comme indiqué dans le tableau suivant :  
+En général, vous utilisez `CComSingleThreadModel` via un des deux **typedef** concernant les noms, soit [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). La classe référencée par chaque **typedef** varie selon le modèle de thread utilisé, comme indiqué dans le tableau suivant :
 
 |typedef|Modèle de thread unique|Modèle de thread apartment (cloisonné)|Modèle de thread libre|
 |-------------|----------------------------|-------------------------------|--------------------------|

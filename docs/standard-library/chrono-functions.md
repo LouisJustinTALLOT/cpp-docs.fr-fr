@@ -1,25 +1,22 @@
 ---
-title: '&lt;chrono&gt;, fonctions | Microsoft Docs'
-ms.custom: ''
+title: '&lt;chrono&gt;, fonctions'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - chrono/std::duration_cast
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
-ms.openlocfilehash: f6230775418aa86f39f6dc1b96c759cb602cd9d3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5aadf776cc25e22a40ed75f854481dff63cce4bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840968"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597494"
 ---
 # <a name="ltchronogt-functions"></a>&lt;chrono&gt;, fonctions
 
 ||||
 |-|-|-|
 |[duration_cast](#duration_cast)|[time_point_cast](#time_point_cast)|
-
 
 ## <a name="duration_cast"></a>  duration_cast
 

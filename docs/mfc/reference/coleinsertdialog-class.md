@@ -1,10 +1,6 @@
 ---
-title: COleInsertDialog, classe | Microsoft Docs
-ms.custom: ''
+title: COleInsertDialog, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleInsertDialog
 - AFXODLGS/COleInsertDialog
@@ -17,8 +13,6 @@ f1_keywords:
 - AFXODLGS/COleInsertDialog::GetPathName
 - AFXODLGS/COleInsertDialog::GetSelectionType
 - AFXODLGS/COleInsertDialog::m_io
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleInsertDialog [MFC], COleInsertDialog
 - COleInsertDialog [MFC], CreateItem
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f279472e0783498b3d175ab55c605fa7c7e7286b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c99344c71d3f9789905516d661749b3668b57d50
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546303"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog, classe
 
@@ -172,7 +162,6 @@ Appelez cette fonction pour afficher la boîte de dialogue OLE insérer un objet
 ```
 virtual INT_PTR
     DoModal();
-
 
 INT_PTR
     DoModal(DWORD  dwFlags);

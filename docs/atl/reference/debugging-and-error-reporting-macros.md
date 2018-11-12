@@ -1,10 +1,6 @@
 ---
-title: Macros de débogage et rapport d’erreurs | Microsoft Docs
-ms.custom: ''
+title: Macros de débogage et rapport d’erreurs
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -12,21 +8,15 @@ f1_keywords:
 - afx/ATL::ATLENSURE
 - atltrace/ATL::ATLTRACENOTIMPL
 - atltrace/ATL::ATLTRACE
-dev_langs:
-- C++
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5de597484db727646b80bd522f11465f442393fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136157"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522296"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de débogage et rapport d’erreurs
 
@@ -102,7 +92,7 @@ Expression (pointeurs inclus) qui prend une valeur différente de zéro ou 0.
 
 ### <a name="remarks"></a>Notes
 
-Dans les versions debug, évalue ATLASSERT ; *booleanExpression* et génère un rapport de débogage lorsque le résultat est false.  
+Dans les versions debug, évalue ATLASSERT ; *booleanExpression* et génère un rapport de débogage lorsque le résultat est false.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -139,11 +129,11 @@ La différence entre ATLENSURE et ATLASSERT ; est que ATLENSURE lève une excep
 
 ### <a name="example"></a>Exemple
 
-[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afx.h  
+**En-tête :** afx.h
 
 ##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL
 
@@ -168,7 +158,7 @@ Dans les versions release, renvoie simplement E_NOTIMPL.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atltrace.h 
+**En-tête :** atltrace.h
 
 ##  <a name="atltrace"></a>  ATLTRACE
 
@@ -177,7 +167,7 @@ Signale les avertissements pour un périphérique de sortie, tels que la fenêtr
 ```
 ATLTRACE(exp);
 
-ATLTRACE(  
+ATLTRACE(
     DWORD category,
     UINT  level,
     LPCSTR lpszFormat, ...);

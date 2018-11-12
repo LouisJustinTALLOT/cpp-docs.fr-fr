@@ -1,29 +1,19 @@
 ---
-title: CMutex, classe | Microsoft Docs
-ms.custom: ''
+title: CMutex, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMutex
 - AFXMT/CMutex
 - AFXMT/CMutex::CMutex
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0d3be9a77435d8c607bacbc82b58cc95d04a805
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 823f38a6292152774f72c97963b9add5d429d2f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420646"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508782"
 ---
 # <a name="cmutex-class"></a>CMutex, classe
 
@@ -100,6 +90,4 @@ Pour accéder à ou libérer un `CMutex` d’objet, de créer un [CMultiLock](..
 
 [CSyncObject, classe](../../mfc/reference/csyncobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

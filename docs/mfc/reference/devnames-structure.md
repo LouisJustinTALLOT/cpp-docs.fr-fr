@@ -1,27 +1,17 @@
 ---
-title: DEVNAMES, Structure | Microsoft Docs
-ms.custom: ''
+title: DEVNAMES, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - DEVNAMES
-dev_langs:
-- C++
 helpviewer_keywords:
 - DEVNAMES [MFC]
 ms.assetid: aac97f60-2169-471a-ba5d-c0baed9eed9a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 637843873bbb0e12a76168bd08b613e14b391ef8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1fe553401ccf7a054ba7a19642aca2882bfa8fac
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392461"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441967"
 ---
 # <a name="devnames-structure"></a>DEVNAMES, structure
 
@@ -66,5 +56,4 @@ Le `PrintDlg` fonction utilise ces chaînes pour initialiser les membres dans la
 
 [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CPrintDialog::CreatePrinterDC](../../mfc/reference/cprintdialog-class.md#createprinterdc)
-
 

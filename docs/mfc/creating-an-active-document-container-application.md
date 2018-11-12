@@ -1,12 +1,6 @@
 ---
-title: Création d’une Application de conteneur de documents actifs | Microsoft Docs
-ms.custom: ''
+title: Création d'une application conteneur de documents actifs
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - active documents [MFC], containers
 - containers [MFC], active document
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecce997c451b39600606550dd1198cddfd764334
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388331"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463334"
 ---
 # <a name="creating-an-active-document-container-application"></a>Création d'une application conteneur de documents actifs
 
@@ -57,9 +47,9 @@ La façon la plus simple et plus recommandée pour créer une application de con
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` prend en charge l’impression. Ce code remplace `DoPreparePrinting`, qui repose sur la préparation d’impression par défaut.
+   `OnPreparePrinting` prend en charge l’impression. Ce code remplace `DoPreparePrinting`, qui repose sur la préparation d’impression par défaut.
 
-     Relation contenant-contenu de document actif fournit un schéma d’impression amélioré :
+   Relation contenant-contenu de document actif fournit un schéma d’impression amélioré :
 
    - Vous pouvez tout d’abord appeler le document actif via son `IPrint` interface et lui dire s’imprime. Ceci diffère du précédent OLE relation contenant-contenu, dans lequel le conteneur devait restituer une image de l’élément de contenu sur l’imprimante `CDC` objet.
 
@@ -67,7 +57,7 @@ La façon la plus simple et plus recommandée pour créer une application de con
 
    - Si cette tentative échoue, vérifiez votre propre rendu de l’élément.
 
-     Les fonctions membres statiques `COleDocObjectItem::OnPrint` et `COleDocObjectItem::OnPreparePrinting`, tel qu’implémenté dans le code précédent, gèrent ce schéma d’impression amélioré.
+   Les fonctions membres statiques `COleDocObjectItem::OnPrint` et `COleDocObjectItem::OnPreparePrinting`, tel qu’implémenté dans le code précédent, gèrent ce schéma d’impression amélioré.
 
 11. Ajouter votre propre implémentation et générez l’application.
 

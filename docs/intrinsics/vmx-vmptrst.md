@@ -1,28 +1,18 @@
 ---
-title: __vmx_vmptrst | Microsoft Docs
-ms.custom: ''
+title: __vmx_vmptrst
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmptrst
-dev_langs:
-- C++
 helpviewer_keywords:
 - __vmx_vmptrst intrinsic
 - VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f9cd2ebdbcf2ad2feb3b66412fbcd5687e85dce
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: a736a632c7f711ac8fdcc4d73eaf2bd341d0c978
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820566"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654231"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 
@@ -33,20 +23,21 @@ Stocke le pointeur vers la structure de contrôle de machine virtuelle actuelle 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-void __vmx_vmptrst( 
-   unsigned __int64 *VmcsPhysicalAddress 
+void __vmx_vmptrst( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-[in] *`VmcsPhysicalAddress` l’adresse où se trouve le pointeur de la VMCS actuels.
+*VmcsPhysicalAddress*<br/>
+[in] L’adresse où se trouve le pointeur de la VMCS actuels.
 
 ## <a name="remarks"></a>Notes
 
 Le pointeur de la VMCS est une adresse physique 64 bits.
 
-Le `__vmx_vmptrst` fonction est équivalente à la `VMPTRST` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+La fonction `__vmx_vmptrst` est équivalente à l’instruction machine `VMPTRST` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
 ## <a name="requirements"></a>Configuration requise
 

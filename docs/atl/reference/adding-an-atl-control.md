@@ -1,26 +1,16 @@
 ---
-title: Ajout d’un contrôle ATL | Microsoft Docs
-ms.custom: ''
+title: Ajout d’un contrôle ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a996df63430a2d6b1942112122a1f185ba8f13de
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 26667c2ad3bb2cedb42767fe42ff0ad358fa6d66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48859599"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487683"
 ---
 # <a name="adding-an-atl-control"></a>Ajout d’un contrôle ATL
 
@@ -47,4 +37,4 @@ En outre, vous pouvez réduire la taille du contrôle et supprimer des interface
 ## <a name="see-also"></a>Voir aussi
 
 [Ajout d’une fonctionnalité au contrôle composite](../../atl/adding-functionality-to-the-composite-control.md)<br/>
-[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
+[Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)

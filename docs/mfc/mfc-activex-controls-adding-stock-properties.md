@@ -1,12 +1,6 @@
 ---
-title: 'Contrôles ActiveX MFC : Ajout de propriétés Stock | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : ajout de propriétés stock'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - BackColor property [MFC]
 - properties [MFC], adding stock
@@ -15,22 +9,18 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4100dc14a25a744e5c28ffd1b16119408d800656
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b27979b5492ed03b93aa0d8990c9c0b699242c86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404512"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607829"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Contrôles ActiveX MFC : ajout de propriétés stock
 
 Propriétés stock diffèrent des propriétés personnalisées, ils sont déjà implémentées par la classe `COleControl`. `COleControl` contient des fonctions membres prédéfinies qui prennent en charge des propriétés communes pour le contrôle. Certaines propriétés courantes incluent la légende du contrôle et les couleurs de premier plan et d’arrière-plan. Pour plus d’informations sur les propriétés stock, consultez [Propriétés Stock prises en charge par l’Assistant Ajout de propriété](#_core_stock_properties_supported_by_classwizard) plus loin dans cet article. Les entrées de mappage de répartition pour les propriétés sont toujours préfixées par DISP_STOCKPROP de stock.
 
-Cet article décrit comment ajouter une propriété stock (dans ce cas, la légende) à un contrôle ActiveX à l’aide de l’Assistant Ajout de propriété et explique les modifications de code qui en résulte. Les rubriques traitées ici sont les suivantes :
+Cet article décrit comment ajouter une propriété stock (dans ce cas, la légende) à un contrôle ActiveX à l’aide de l’Assistant Ajout de propriété et explique les modifications de code qui en résulte. Les rubriques traitées ici sont les suivantes :
 
 - [À l’aide de l’Assistant Ajout de propriété pour ajouter une propriété stock](#_core_using_classwizard_to_add_a_stock_property)
 
@@ -59,7 +49,7 @@ Ajout de propriétés stock nécessite moins de code que l’ajout de propriét�
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
 
-     Cette opération ouvre le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md).
+   Cette opération ouvre le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md).
 
 1. Dans le **nom de la propriété** , cliquez sur **légende**.
 

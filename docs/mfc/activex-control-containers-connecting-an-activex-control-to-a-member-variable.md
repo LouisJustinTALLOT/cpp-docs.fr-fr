@@ -1,12 +1,6 @@
 ---
-title: 'Conteneurs de contrôles ActiveX : Association d’un contrôle ActiveX à une Variable membre | Microsoft Docs'
-ms.custom: ''
+title: "Conteneurs de contrôles ActiveX : association d'un contrôle ActiveX à une variable membre"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX control containers [MFC], accessing ActiveX controls
 - ActiveX controls [MFC], member variables of project
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - member variables [MFC], ActiveX controls in project
 - ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae0cefa518ce44913f5c316a096d221fa9bd41aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2234647e933e37ff82845c4b40dc93cefeb55575
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433853"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446460"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Conteneurs de contrôles ActiveX : association d'un contrôle ActiveX à une variable membre
 
@@ -45,7 +35,7 @@ Pour accéder à un contrôle ActiveX à partir de son application de conteneur 
 
 1. Dans le **nom de la Variable** , entrez un nom.
 
-     Par exemple, *m_circctl*.
+   Par exemple, *m_circctl*.
 
 1. Cliquez sur **Terminer** pour accepter votre choix et de quitter l’Assistant Ajout de Variable membre.
 

@@ -1,14 +1,8 @@
 ---
-title: Couleurs de fenêtre (Éditeur d’images pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Fenêtre Couleurs (Éditeur d'images pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.colorswindow
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], Colors Palette
 - Colors Palette, Image editor
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - colors [C++]
 - Color Indicator
 ms.assetid: 1d9b6c16-bf1d-4488-a19b-5d6fe601846a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aeed186ce38ffc9e2012f6e6b5a4c1af3efc9553
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647343"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Fenêtre Couleurs (Éditeur d'images pour les icônes)
 
@@ -36,8 +25,8 @@ Le **couleurs** fenêtre comporte deux parties :
 
 2. Le **indicateur de couleur**, qui affiche les couleurs de premier plan et d’arrière-plan et les sélecteurs pour l’écran et la couleur inversée.
 
-   ![Fenêtre couleurs](../windows/media/vccolorswindow.gif "vcColorsWindow")  
-Fenêtre Couleurs
+   ![Fenêtre couleurs](../windows/media/vccolorswindow.gif "vcColorsWindow")<br/>
+   Fenêtre Couleurs
 
 > [!NOTE]
 > Le **écran couleur** et **couleur inversée** outils sont uniquement disponibles pour les icônes et curseurs.

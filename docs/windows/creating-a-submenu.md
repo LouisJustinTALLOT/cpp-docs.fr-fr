@@ -1,28 +1,17 @@
 ---
-title: Création d’un sous-menu (C++) | Microsoft Docs
-ms.custom: ''
+title: Création d’un sous-menu (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - submenus
 - submenus [C++], creating
 - menus [C++], creating
 ms.assetid: fb95fdfd-0a80-459d-8c5c-a4e8bac9f56a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: aea96d49e656805f6df158dc8dd646baa1a9eed5
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: af98bf084b573b3f9d17d9574f812550068654b9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608150"
 ---
 # <a name="creating-a-submenu-c"></a>Création d’un sous-menu (C++)
 

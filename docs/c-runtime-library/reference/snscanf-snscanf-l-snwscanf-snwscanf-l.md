@@ -1,10 +1,6 @@
 ---
-title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Microsoft Docs
-ms.custom: ''
+title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf
 - _snscanf_l
@@ -35,8 +31,6 @@ f1_keywords:
 - sntscanf
 - snwscanf
 - snwscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - snscanf_l function
 - snwscanf function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d5d99cc7465f88c92588983d5356a004da466de4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408342"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626887"
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
@@ -102,7 +92,7 @@ int __cdecl _snwscanf_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Entrée*<br/>
+*entrée*<br/>
 Chaîne d’entrée à examiner.
 
 *length*<br/>
@@ -112,7 +102,7 @@ Nombre de caractères à examiner dans *d’entrée*.
 Un ou plusieurs spécificateurs de format.
 
 *...*<br/>
-Les variables facultatif qui permet de stocker les valeurs extraites à partir de la chaîne d’entrée par les spécificateurs de format dans *format*.
+Les variables facultatifs qui permet de stocker les valeurs extraites à partir de la chaîne d’entrée par les spécificateurs de format dans *format*.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
@@ -121,15 +111,15 @@ Paramètres régionaux à utiliser.
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est **EOF** pour une erreur ou si la fin de la chaîne est atteinte avant la première conversion. Pour plus d’informations, consultez [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Si *d’entrée* ou *format* est un **NULL** pointeur, ou si *longueur* est inférieur ou égal à zéro, le Gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et **errno** à **EINVAL**.
+Si *d’entrée* ou *format* est un **NULL** pointeur, ou si *longueur* est inférieure ou égale à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et définissez **errno** à **EINVAL**.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Cette fonction est similaire à **sscanf** , sauf qu’il fournit la possibilité de spécifier un nombre fixe de caractères à examiner à partir de la chaîne d’entrée. Pour plus d’informations, consultez [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Cette fonction est similaire à **sscanf** , à ceci près qu’il offre la possibilité de spécifier un nombre fixe de caractères à examiner à partir de la chaîne d’entrée. Pour plus d’informations, consultez [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -138,7 +128,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_sntscanf**|**_snscanf**|**_snscanf**|**_snwscanf**|
 |**_sntscanf_l**|**_snscanf_l**|**_snscanf_l**|**_snwscanf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

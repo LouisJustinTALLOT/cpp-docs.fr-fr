@@ -1,10 +1,6 @@
 ---
-title: Catltransactionmanager, classe | Microsoft Docs
-ms.custom: ''
+title: Catltransactionmanager, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
 - ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
@@ -26,21 +22,15 @@ f1_keywords:
 - ATLTRANSACTIONMANAGER/ATL::SetFileAttributes
 - ATLTRANSACTIONMANAGER/ATL::m_bFallback
 - ATLTRANSACTIONMANAGER/ATL::m_hTransaction
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6109ad46fb171d4bfe3386a4746b21768510ce0d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042441"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463776"
 ---
 # <a name="catltransactionmanager-class"></a>Catltransactionmanager, classe
 

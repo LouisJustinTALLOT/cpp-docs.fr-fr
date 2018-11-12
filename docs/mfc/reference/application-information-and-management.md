@@ -1,27 +1,17 @@
 ---
-title: Informations sur l’application et gestion | Microsoft Docs
-ms.custom: ''
+title: Informations sur l'application et gestion
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083799"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596662"
 ---
 # <a name="application-information-and-management"></a>Informations sur l'application et gestion
 
@@ -61,8 +51,6 @@ La bibliothèque Microsoft Foundation Class fournit les fonctions globales suiva
 |[AfxSocketInit](#afxsocketinit)|Appelé dans un `CWinApp::InitInstance` remplacement pour initialiser Windows Sockets.|
 |[AfxUserToolsManager](#afxusertoolsmanager)|Pointeur vers le global [responsable des outils utilisateur](cusertoolsmanager-class.md).|
 |[AfxWinInit](#afxwininit)|Appelé par le fournie par MFC `WinMain` (fonction), dans le cadre de la [CWinApp](../../mfc/reference/cwinapp-class.md) l’initialisation d’une application basée sur une interface graphique utilisateur, pour initialiser MFC. Doit être appelé directement pour les applications de console qui utilisent MFC.|
-
-
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -145,6 +133,7 @@ Pointeur vers le global [Gestionnaire de menu de contexte](ccontextmenumanager-c
 ```
 CContextMenuManager* afxContextMenuManager;
 ```
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcontextmenumanager.h
@@ -152,7 +141,6 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="see-also"></a>Voir aussi
 
 [CContextMenuManager, classe](ccontextmenumanager-class.md)
-
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -190,6 +178,7 @@ Utilisez `AfxFindResourceHandle` pour remonter la chaîne de ressource et de loc
 ```
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *Caractère*<br/>
@@ -471,6 +460,7 @@ Détermine si la fenêtre donnée est un objet frame étendu.
 ```
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *pWnd*<br/>
@@ -514,6 +504,7 @@ Détermine si la fenêtre donnée est un objet de barre d’outils.
 ```
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *pWnd*<br/>
@@ -536,7 +527,6 @@ Cette méthode retourne `TRUE` si *pWnd* dérive `CMFCToolBar`. Cette méthode e
 [CWnd, classe](cwnd-class.md)<br/>
 [CMFCToolBar, classe](cmfctoolbar-class.md)
 
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Pointeur vers le global [Gestionnaire de clavier](ckeyboardmanager-class.md).
@@ -546,6 +536,7 @@ Pointeur vers le global [Gestionnaire de clavier](ckeyboardmanager-class.md).
 ```
 CKeyboardManager* afxKeyboardManager;
 ```
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxkeyboardmanager.h
@@ -554,7 +545,6 @@ CKeyboardManager* afxKeyboardManager;
 
 [Macros, fonctions globales et Variables globales](mfc-macros-and-globals.md)<br/>
 [CKeyboardManager, classe](ckeyboardmanager-class.md)
-
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -618,6 +608,7 @@ Pointeur vers le global [Gestionnaire de menu volante](cmenutearoffmanager-class
 ```
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmenutearoffmanager.h
@@ -635,6 +626,7 @@ Pointeur vers le global [Gestionnaire de souris](cmousemanager-class.md).
 ```
 CMouseManager* afxMouseManager;
 ```
+
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmousemanager.h
@@ -642,8 +634,6 @@ CMouseManager* afxMouseManager;
 ### <a name="see-also"></a>Voir aussi
 
 [CMouseManager, classe](cmousemanager-class.md)
-
-
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -843,7 +833,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="see-also"></a>Voir aussi
 
 [CUserToolsManager, classe](cusertoolsmanager-class.md)
-
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 

@@ -1,28 +1,18 @@
 ---
-title: Utilisation et conservation des registres dans un Assembly Inline | Microsoft Docs
-ms.custom: ''
+title: Utilisation et conservation des registres dans un assembly inline
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - __asm keyword [C++], register values
 - inline assembly, registers
 - registers, inline assembly
 - preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60506f53eb1933e5acbb03318edada82a8904386
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 30b2f9ca8c658b65819709bb2e536b5aaecad676
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677016"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643064"
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>Utilisation et conservation des registres dans un assembly inline
 
@@ -32,7 +22,7 @@ En général, vous ne devez pas supposer qu'un registre aura une valeur donnée 
 
 Si vous utilisez la convention d'appel `__fastcall`, le compilateur passe les arguments de fonction dans les registres plutôt que sur la pile. Cela peut poser des problèmes dans les fonctions avec des blocs `__asm`, car une fonction n'a aucun moyen de déterminer quel paramètre figure dans quel registre. Si la fonction reçoit un paramètre dans EAX et qu'elle stocke immédiatement un autre élément dans EAX, le paramètre d'origine est perdu. En outre, vous devez conserver le registre ECX dans toute fonction déclarée avec `__fastcall`.
 
-Pour éviter ces conflits de registre, n'utilisez pas la convention `__fastcall` pour les fonctions qui contiennent un bloc `__asm`. Si vous spécifiez la convention `__fastcall` globalement avec l'option du compilateur /Gr, déclarez chaque fonction contenant un bloc `__asm` avec `__cdecl` ou `__stdcall`. (L'attribut `__cdecl` indique au compilateur qu'il faut utiliser la convention d'appel C pour cette fonction.) Si vous ne compilez pas avec /Gr, évitez de déclarer une fonction avec l'attribut `__fastcall`.
+Pour éviter ces conflits de registre, n'utilisez pas la convention `__fastcall` pour les fonctions qui contiennent un bloc `__asm`. Si vous spécifiez la convention `__fastcall` globalement avec l'option du compilateur /Gr, déclarez chaque fonction contenant un bloc `__asm` avec `__cdecl` ou `__stdcall`. (L’attribut `__cdecl` indique au compilateur qu’il faut utiliser la convention d’appel C pour cette fonction.) Si vous ne compilez pas avec /Gr, évitez de déclarer une fonction avec l'attribut `__fastcall`.
 
 Lorsque vous utilisez `__asm` pour écrire le langage assembleur dans des fonctions C/C++, vous n'avez pas besoin de conserver les registres EAX, EBX, ECX, EDX, ESI ou EDI. Par exemple, dans le POWER2. Exemple C dans [écriture de fonctions avec un Inline Assembly](../../assembler/inline/writing-functions-with-inline-assembly.md), le `power2` (fonction) ne conserve pas la valeur dans le registre EAX. Cependant, l'utilisation de ces registres affecte la qualité du code, car l'allocateur de registre ne peut pas les utiliser pour stocker des valeurs d'un bloc `__asm` à un autre. Par ailleurs, en utilisant EBX, ESI ou EDI dans du code assembleur inline, vous forcez le compilateur à enregistrer et à restaurer ces registres dans le prologue et l'épilogue de la fonction.
 

@@ -1,33 +1,23 @@
 ---
-title: Cdialogex, classe | Microsoft Docs
-ms.custom: ''
+title: Cdialogex, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDialogEx
 - AFXDIALOGEX/CDialogEx
 - AFXDIALOGEX/CDialogEx::CDialogEx
 - AFXDIALOGEX/CDialogEx::SetBackgroundColor
 - AFXDIALOGEX/CDialogEx::SetBackgroundImage
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDialogEx [MFC], CDialogEx
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02a8ae81ea94c47cd11beae0b3ed0eacee77db07
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e3040c9a91357ce9b3968729e0bf83d664c511d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448566"
 ---
 # <a name="cdialogex-class"></a>Cdialogex, classe
 
@@ -88,7 +78,6 @@ CDialogEx(
     UINT nIDTemplate,
     CWnd* pParent=NULL);
 
-
 CDialogEx(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd=NULL);
@@ -142,7 +131,6 @@ void SetBackgroundImage(
     BackgroundLocation location=BACKGR_TILE,
     BOOL bAutoDestroy=TRUE,
     BOOL bRepaint=TRUE);
-
 
 BOOL SetBackgroundImage(
     UINT uiBmpResId,

@@ -1,29 +1,19 @@
 ---
-title: À l’aide de CArchive &lt; &lt; et &gt; &gt; opérateurs | Microsoft Docs
-ms.custom: ''
+title: À l’aide de CArchive &lt; &lt; et &gt; &gt; opérateurs
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - CArchive
-dev_langs:
-- C++
 helpviewer_keywords:
 - objects [MFC], loading from previously stored values
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49ea94258c163c241243934f41d55d896d0d1fa2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28396d797d0ca63f110fe4482aba8fe69f0608c3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372455"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495470"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>À l’aide de CArchive &lt; &lt; et &gt; &gt; opérateurs
 
@@ -33,13 +23,13 @@ ms.locfileid: "46372455"
 
 1. L’exemple suivant montre comment stocker un objet dans un fichier via une archive :
 
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
 #### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>Charger un objet à partir d’une valeur précédemment stockée dans un fichier
 
 1. L’exemple suivant montre comment charger un objet à partir d’une valeur précédemment stockée dans un fichier :
 
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
 En règle générale, vous stockez et charger des données vers et à partir d’un fichier via une archive située dans le `Serialize` fonctions de `CObject`-les classes dérivées, qui vous devez avoir déclaré CObject. Une référence à un `CArchive` objet est passé à votre `Serialize` (fonction). Vous appelez le `IsLoading` fonction de la `CArchive` objet pour déterminer si le `Serialize` fonction a été appelée pour charger des données à partir du fichier ou stocker des données dans le fichier.
 

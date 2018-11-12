@@ -1,10 +1,6 @@
 ---
-title: _isctype, iswctype, _isctype_l, _iswctype_l | Microsoft Docs
-ms.custom: ''
+title: _isctype, iswctype, _isctype_l, _iswctype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isctype_l
 - iswctype
@@ -32,8 +28,6 @@ f1_keywords:
 - iswctype_l
 - isctype_l
 - _iswctype_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - isctype_l function
 - iswctype_l function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a9ca4580ba19c4efc342186c0c3b348d76ce94e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402550"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563158"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
-Tests *c* pour la propriété ctype spécifiée par le *desc* argument. Pour chaque valeur valide de *desc*, il existe une routine de classification de caractères larges équivalent.
+Tests *c* pour la propriété ctype spécifiée par le *desc* argument. Pour chaque valeur valide de *desc*, il existe une routine de classification de caractères larges équivalente.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -95,9 +85,9 @@ Paramètres régionaux à utiliser pour les tests dépendant des paramètres ré
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_isctype** et **iswctype** retourner une valeur différente de zéro si *c* a la propriété spécifiée par *desc* dans les paramètres régionaux actuels ou 0 s’il n’existe pas. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_isctype** et **iswctype** retourner une valeur différente de zéro si *c* a la propriété spécifiée par *desc* dans les paramètres régionaux actuels ou 0 si elle n’est pas le cas. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **_isctype** et **_isctype_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Lorsqu’une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, le fonctions de déclencher une assertion.
+Le comportement de **_isctype** et **_isctype_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -106,7 +96,7 @@ Le comportement de **_isctype** et **_isctype_l** n’est pas défini si *c* n�
 |N/A|**_isctype**|N/A|**_iswctype**|
 |N/A|**_isctype_l**|N/A|**_iswctype_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

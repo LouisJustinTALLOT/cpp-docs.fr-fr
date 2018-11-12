@@ -1,10 +1,6 @@
 ---
-title: Cmfcbasevisualmanager, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcbasevisualmanager, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCBaseVisualManager
 - AFXVISUALMANAGER/CMFCBaseVisualManager
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXVISUALMANAGER/CMFCBaseVisualManager::GetStandardWindowsTheme
 - AFXVISUALMANAGER/CMFCBaseVisualManager::CleanUpThemes
 - AFXVISUALMANAGER/CMFCBaseVisualManager::UpdateSystemColors
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CMFCBaseVisualManager
 - CMFCBaseVisualManager [MFC], DrawCheckBox
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec48152b918fb43cf859377e64eeb64478ad15f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9d3be75331004529ca1bd71a0d9422f45cac40b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374273"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440194"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Cmfcbasevisualmanager, classe
 
@@ -145,7 +135,7 @@ virtual BOOL DrawCheckBox(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Un pointeur vers un contexte de périphérique
 
 *Rect*<br/>
@@ -194,7 +184,7 @@ virtual BOOL DrawComboBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -230,7 +220,7 @@ virtual BOOL DrawComboDropButton(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*contrôleur de domaine principal*|[in] Pointeur vers un contexte de périphérique.|
+|*pDC*|[in] Pointeur vers un contexte de périphérique.|
 |*Rect*|[in] Le rectangle englobant de bouton de liste déroulante de zone de liste déroulante.|
 |*bDésactiver*|[in] Spécifie si le bouton de liste déroulante de zone de liste déroulante est désactivé.|
 |*bIsDropped*|[in] Spécifie si le bouton de liste déroulante de zone de liste déroulante est déroulé.|
@@ -254,7 +244,7 @@ virtual BOOL DrawPushButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -286,7 +276,7 @@ virtual BOOL DrawRadioButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -327,7 +317,7 @@ virtual BOOL DrawStatusBarProgress(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pStatusBar*<br/>
@@ -371,7 +361,7 @@ virtual void FillReBarPane(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pBar*<br/>

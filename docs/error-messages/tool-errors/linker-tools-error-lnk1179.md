@@ -1,27 +1,17 @@
 ---
-title: Erreur des LNK1179 des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK1179
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1179
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1179
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d22ebb329d390d44aea44ff9dc6f3bf2f86a1d26
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 71aba1f20cfaf5b6b9ec33d43ebde594e381921f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594088"
 ---
 # <a name="linker-tools-error-lnk1179"></a>Erreur des outils Éditeur de liens LNK1179
 

@@ -1,10 +1,6 @@
 ---
-title: Cdockingmanager, classe | Microsoft Docs
-ms.custom: ''
+title: Cdockingmanager, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDockingManager
 - AFXDOCKINGMANAGER/CDockingManager
@@ -85,8 +81,6 @@ f1_keywords:
 - AFXDOCKINGMANAGER/CDockingManager::m_nDockSensitivity
 - AFXDOCKINGMANAGER/CDockingManager::m_nTimeOutBeforeDockingBarDock
 - AFXDOCKINGMANAGER/CDockingManager::m_nTimeOutBeforeToolBarDock
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDockingManager [MFC], AddDockSite
 - CDockingManager [MFC], AddHiddenMDITabbedBar
@@ -166,16 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 24b663e1b07d1012c1611714390340df3ce3867f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6a920c92a0a3b3948ad89e31cfaf317f54ad6724
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448495"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438039"
 ---
 # <a name="cdockingmanager-class"></a>Cdockingmanager, classe
 
@@ -296,7 +286,7 @@ Les conseils suivants s’appliquent à `CDockingManager` objets :
 
     - `AFX_DOCK_TYPE::DT_SMART`
 
-     Ces modes d’ancrage sont définis par [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) et sont définies en appelant [CDockingManager::SetDockingMode](#setdockingmode).
+   Ces modes d’ancrage sont définis par [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) et sont définies en appelant [CDockingManager::SetDockingMode](#setdockingmode).
 
 - Si vous souhaitez créer un volet non flottante, non redimensionnable, appelez le [CDockingManager::AddPane](#addpane) (méthode). Cette méthode inscrit le volet avec le Gestionnaire d’ancrage, ce qui est responsable de la disposition du volet.
 
@@ -396,7 +386,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>Paramètres
 
 *hdwp*<br/>
-[in] Spécifie la structure de position de fenêtre différée. Pour plus d’informations, consultez [les Types de données Windows](/windows/desktop/WinProg/windows-data-types).
+[in] Spécifie la structure de position de fenêtre différée. Pour plus d'informations, consultez [Types de données Windows](/windows/desktop/WinProg/windows-data-types).
 
 ### <a name="remarks"></a>Notes
 

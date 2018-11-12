@@ -1,10 +1,6 @@
 ---
-title: CCustomInterpolator, classe | Microsoft Docs
-ms.custom: ''
+title: CCustomInterpolator, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CCustomInterpolator
 - AFXANIMATIONCONTROLLER/CCustomInterpolator
@@ -23,8 +19,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CCustomInterpolator::m_finalValue
 - AFXANIMATIONCONTROLLER/CCustomInterpolator::m_initialValue
 - AFXANIMATIONCONTROLLER/CCustomInterpolator::m_initialVelocity
-dev_langs:
-- C++
 helpviewer_keywords:
 - CCustomInterpolator [MFC], CCustomInterpolator
 - CCustomInterpolator [MFC], GetDependencies
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 175af6d9fdd02e24aaa9caae663db51c7dd4167a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49685d079e367449ee5973ab37f0bbc7ea44da14
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432819"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431903"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator, classe
 
@@ -113,7 +103,6 @@ Construit un objet interpolateur personnalisé et définit toutes les valeurs pa
 
 ```
 CCustomInterpolator();
-
 
 CCustomInterpolator(
     UI_ANIMATION_SECONDS duration,

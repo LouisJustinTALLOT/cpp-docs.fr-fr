@@ -1,31 +1,21 @@
 ---
-title: Classe de CD2DRectU | Microsoft Docs
-ms.custom: ''
+title: CD2DRectU, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DRectU
 - AFXRENDERTARGET/CD2DRectU
 - AFXRENDERTARGET/CD2DRectU::CD2DRectU
 - AFXRENDERTARGET/CD2DRectU::IsNull
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd6a9bdc5539b2e6d4faf35c47b208ec0d83ea92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: afcd328a8945853761fecfce8f3c14f73b2a96e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514411"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU, classe
 
@@ -75,7 +65,6 @@ Construit un objet CD2DRectU à partir de l’objet CRect.
 CD2DRectU(const CRect& rect);
 CD2DRectU(const D2D1_RECT_U& rect);
   CD2DRectU(const D2D1_RECT_U* rect);
-
 
 CD2DRectU(
     UINT32 uLeft = 0,

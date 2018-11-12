@@ -1,23 +1,14 @@
 ---
-title: Création du projet (didacticiel ATL, partie 1) | Microsoft Docs
+title: Création du projet (Didacticiel ATL, Partie 1)
 ms.custom: get-started-article
 ms.date: 09/26/2018
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd53bc778b3229522d34993c72833500732323b3
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: dab9bdab75bb710bf73314aae7283611d9a3b5cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821099"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539579"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Création du projet (Didacticiel ATL, Partie 1)
 
@@ -30,13 +21,13 @@ Ce didacticiel vous guide pas à pas dans un projet ATL sans attributs qui crée
 > Ce didacticiel crée le même code source que l’exemple de polygone. Si vous souhaitez éviter d’entrer le code source manuellement, vous pouvez le télécharger à partir de la [exemple Polygon](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Vous pouvez alors faire référence au code source de polygone que vous parcourez le didacticiel, ou l’utiliser pour rechercher les erreurs dans votre propre projet.
 > Pour compiler, ouvrez stdafx.h et remplacez :
 > ```
-> #ifndef WINVER  
-> #define WINVER 0x0400   
+> #ifndef WINVER
+> #define WINVER 0x0400
 > #endif
 > ```
 > par
 > ```
-> #ifndef WINVER  
+> #ifndef WINVER
 > #define WINVER 0x0500
 > #define _WIN32_WINNT 0x0500
 > #endif

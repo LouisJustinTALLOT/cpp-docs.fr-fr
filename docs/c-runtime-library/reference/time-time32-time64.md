@@ -1,10 +1,6 @@
 ---
-title: time, _time32, _time64 | Microsoft Docs
-ms.custom: ''
+title: time, _time32, _time64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - time
 - _time64
@@ -29,8 +25,6 @@ f1_keywords:
 - time/_time32
 - time/_time64
 - _time32
-dev_langs:
-- C++
 helpviewer_keywords:
 - time32 function
 - _time32 function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f627f0b9cbcfea1d048122d63c56d03aa61062d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0749ecbf0f88620e7293a043130b49dbe45aaf31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410565"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546574"
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
 
@@ -69,15 +59,15 @@ Pointeur vers l’emplacement de stockage pour le moment.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Renvoie le temps en secondes écoulées depuis le 1er janvier 1970 à minuit ou -1 en cas d’erreur.
+Retourne la durée en secondes écoulées depuis le 1er janvier 1970 à minuit ou -1 en cas d’erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **temps** fonction retourne le nombre de secondes écoulées depuis minuit (00 : 00:00), le 1er janvier 1970, temps universel coordonné (UTC), en fonction de l’horloge système. La valeur de retournée est stockée dans l’emplacement donné par *destTime*. Ce paramètre peut être **NULL**, auquel cas la valeur de retour n’est pas stockée.
+Le **temps** fonction retourne le nombre de secondes écoulées depuis minuit (00 : 00:00), le 1er janvier 1970, temps universel coordonné (UTC), en fonction de l’horloge système. La valeur de retournée est stockée dans l’emplacement indiqué par *destTime*. Ce paramètre peut être **NULL**, auquel cas la valeur de retour n’est pas stockée.
 
-**temps** est un wrapper pour **_time64** et **time_t** est, par défaut, équivalent à **__time64_t**. Si vous avez besoin forcer le compilateur à interpréter **time_t** en tant que l’ancien 32 bits **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 ; l’utilisation de cette macro n’est pas autorisée sur les plateformes 64 bits.
+**temps** est un wrapper pour **_time64** et **time_t** est, par défaut, équivalente à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** l’ancien 32-bit **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 ; l’utilisation de cette macro n’est pas autorisée sur les plateformes 64 bits.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|

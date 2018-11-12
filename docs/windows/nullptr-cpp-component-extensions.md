@@ -1,27 +1,17 @@
 ---
-title: nullptr (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: nullptr (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 46a68e3ab7119dfb2c99578f299b9d38cbc5736d
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 5d2a2a679beca3929622c93d71412661713859f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328491"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474007"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++ / c++ / CLI et c++ / CX)
 
@@ -86,7 +76,7 @@ int main() {
    if (pV1 == nullptr) {}
    if (pV2 == nullptr) {}
 // nullptr can be used as a function argument.
-   f(nullptr);   // calls f(System::Object ^)  
+   f(nullptr);   // calls f(System::Object ^)
 }
 ```
 
@@ -104,17 +94,17 @@ public:
 
 int main() {
    MyClass * pMyClass = nullptr;
-   if ( pMyClass == nullptr)  
+   if ( pMyClass == nullptr)
       System::Console::WriteLine("pMyClass == nullptr");
 
-   if ( pMyClass == 0)  
+   if ( pMyClass == 0)
       System::Console::WriteLine("pMyClass == 0");
 
    pMyClass = 0;
-   if ( pMyClass == nullptr)  
+   if ( pMyClass == nullptr)
       System::Console::WriteLine("pMyClass == nullptr");
 
-   if ( pMyClass == 0)  
+   if ( pMyClass == 0)
       System::Console::WriteLine("pMyClass == 0");
 }
 ```
@@ -164,7 +154,7 @@ int main() {
    // Delete the following line to resolve.
    f(nullptr);
 
-   f(0);   // T = int, call f(int)  
+   f(0);   // T = int, call f(int)
 }
 ```
 
@@ -201,7 +191,7 @@ ref class MyClass {
 public:
    void Test() {
       MyClass ^pMyClass;   // gc type
-      if (pMyClass == nullptr)  
+      if (pMyClass == nullptr)
          Console::WriteLine("NULL");
    }
 };
@@ -235,5 +225,5 @@ Option du compilateur : (non requis ; pris en charge par toutes les options de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

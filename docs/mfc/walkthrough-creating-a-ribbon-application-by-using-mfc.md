@@ -1,26 +1,16 @@
 ---
-title: 'Procédure pas à pas : Création d’une Application de ruban à l’aide de MFC | Microsoft Docs'
-ms.custom: ''
+title: "Procédure pas à pas : création d'une application de ruban à l'aide de MFC"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 16413b6027a36ec550ae2bf3e04604b32a8454c9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236021"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557489"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : création d'une application de ruban à l'aide de MFC
 
@@ -38,7 +28,7 @@ Cette procédure pas à pas suppose que vous avez défini Visual Studio à utili
 
 1. Définir les options suivantes le **Assistant Application MFC**:
 
-    1. Dans le **Type d’Application** section sous **style visuel et couleurs**, sélectionnez **Office 2007 (thème Blue)**. 
+    1. Dans le **Type d’Application** section sous **style visuel et couleurs**, sélectionnez **Office 2007 (thème Blue)**.
 
     1. Dans le **prise en charge des documents composés** section, assurez-vous que l’option **aucun** est sélectionné.
 
@@ -46,7 +36,7 @@ Cette procédure pas à pas suppose que vous avez défini Visual Studio à utili
 
     1. Dans le **prise en charge de la base de données** section, assurez-vous que l’option **aucun** est sélectionné.
 
-    1. Dans le **fonctionnalités d’Interface utilisateur** section, assurez-vous que l’option **utiliser un ruban** est sélectionné. 
+    1. Dans le **fonctionnalités d’Interface utilisateur** section, assurez-vous que l’option **utiliser un ruban** est sélectionné.
 
     1. Par défaut, le **Assistant Application MFC** ajoute la prise en charge de plusieurs volets d’ancrage. Cette procédure pas à pas ne concernant que le ruban, vous pouvez supprimer ces options de l'application. Dans le **fonctionnalités avancées** section, désactivez toutes les options.
 

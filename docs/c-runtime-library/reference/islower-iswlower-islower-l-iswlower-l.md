@@ -1,10 +1,6 @@
 ---
-title: islower, iswlower, _islower_l, _iswlower_l | Microsoft Docs
-ms.custom: ''
+title: islower, iswlower, _islower_l, _iswlower_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -33,8 +29,6 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14fb6eae9e06e973413c21607f2ca2881f33aa38
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14510d38f5bb4890f98c39b49ca17adc2be3ff41
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401829"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594127"
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
 
@@ -91,11 +81,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si *c* est une représentation spécifique d’un caractère en minuscule. **IsLower** retourne une valeur différente de zéro si *c* est un caractère en minuscule (a - z). **iswlower** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à une lettre minuscule, ou si *c* est d’un jeu défini par l’implémentation de caractères larges pour auxquelles aucun des **iswcntrl**, **iswdigit**, **iswpunct**, ou **iswspace** est différente de zéro. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+Chacune de ces routines retourne différente de zéro si *c* est une représentation particulière d’un caractère minuscule. **IsLower** retourne une valeur différente de zéro si *c* est un caractère minuscule (a - z). **iswlower** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à une lettre minuscule, ou si *c* fait partie d’un jeu défini par l’implémentation de caractères larges pour lequel aucun des **iswcntrl**, **iswdigit**, **iswpunct**, ou **iswspace** est différent de zéro. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
-Les versions de ces fonctions qui ont le **_l** suffixe utilisent les paramètres régionaux qui sont passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le **_l** suffixe utiliser les paramètres régionaux qui sont passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **islower** et **_islower_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Lorsqu’une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, le fonctions de déclencher une assertion.
+Le comportement de **islower** et **_islower_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -104,7 +94,7 @@ Le comportement de **islower** et **_islower_l** n’est pas défini si *c* n’
 |**_istlower**|**islower**|[_ismbclower](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswlower**|
 |**_istlower_l**|`_islower _l`|[_ismbclower_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_liswlower_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

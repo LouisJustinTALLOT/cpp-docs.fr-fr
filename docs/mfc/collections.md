@@ -1,12 +1,6 @@
 ---
-title: Collections | Microsoft Docs
-ms.custom: ''
+title: Collections
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, collections
 - arrays [MFC], classes
@@ -23,16 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f7ded70431b80257433058cc9af89bcb137c4247
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412858"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490855"
 ---
 # <a name="collections"></a>Collections
 
@@ -53,15 +43,15 @@ Chacune des trois formes de collection est décrite brièvement plus loin dans c
 
 - Liste
 
-     La classe de liste fournit une liste triée et non indexée d'éléments, implémentée comme une liste doublement chaînée. Une liste possède une "tête" et une "queue", et ajouter ou supprimer des éléments de la tête ou de la queue, ou insérer ou supprimer des éléments au milieu, est très rapide.
+   La classe de liste fournit une liste triée et non indexée d'éléments, implémentée comme une liste doublement chaînée. Une liste possède une "tête" et une "queue", et ajouter ou supprimer des éléments de la tête ou de la queue, ou insérer ou supprimer des éléments au milieu, est très rapide.
 
 - Tableau
 
-     La classe de tableau fournit un tableau d'objets classés, ordonnés et indexés par des entiers.
+   La classe de tableau fournit un tableau d'objets classés, ordonnés et indexés par des entiers.
 
 - Mappage (également appelé dictionnaire)
 
-     Un mappage est une collection qui associe un objet principal à un objet de valeur.
+   Un mappage est une collection qui associe un objet principal à un objet de valeur.
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Les Classes de Collection basées sur un modèle
 

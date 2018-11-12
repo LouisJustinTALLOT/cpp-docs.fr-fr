@@ -1,10 +1,6 @@
 ---
-title: Caccesstoken, classe | Microsoft Docs
-ms.custom: ''
+title: Caccesstoken, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAccessToken
 - ATLSECURITY/ATL::CAccessToken
@@ -53,21 +49,15 @@ f1_keywords:
 - ATLSECURITY/ATL::CAccessToken::SetDefaultDacl
 - ATLSECURITY/ATL::CAccessToken::SetOwner
 - ATLSECURITY/ATL::CAccessToken::SetPrimaryGroup
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee8080c8e2caacb882f43425ab528a08dd2f8ea0
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: faa715e8f5333a717689d281ccb89bd2369e9929
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083747"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661264"
 ---
 # <a name="caccesstoken-class"></a>Caccesstoken, classe
 
@@ -185,7 +175,7 @@ Appelez cette méthode pour déterminer si un SID spécifique est activé dans l
 
 ```
 bool CheckTokenMembership(
-    const CSid& rSid, 
+    const CSid& rSid,
     bool* pbIsMember) const throw(...);
 ```
 
@@ -216,7 +206,7 @@ Appelez cette méthode pour créer un jeton d’accès de l’emprunt d’identi
 
 ```
 bool CreateImpersonationToken(
-    CAccessToken* pImp, 
+    CAccessToken* pImp,
     SECURITY_IMPERSONATION_LEVEL sil = SecurityImpersonation) const throw(...);
 ```
 
@@ -1086,7 +1076,7 @@ Appelez cette méthode pour déterminer si un jeu défini de privilèges sont ac
 ```
 bool PrivilegeCheck(
     PPRIVILEGE_SET RequiredPrivileges,
-     bool* pbResult) const throw();
+    bool* pbResult) const throw();
 ```
 
 ### <a name="parameters"></a>Paramètres

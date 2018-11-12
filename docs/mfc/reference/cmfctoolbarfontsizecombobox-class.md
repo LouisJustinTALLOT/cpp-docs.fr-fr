@@ -1,10 +1,6 @@
 ---
-title: Cmfctoolbarfontsizecombobox, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfctoolbarfontsizecombobox, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
 - AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::GetTwipSize
 - AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::RebuildFontSizes
 - AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::SetTwipSize
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], CMFCToolBarFontSizeComboBox
 - CMFCToolBarFontSizeComboBox [MFC], GetTwipSize
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9942f0d9ca4f890965aaf7d05383beae6fa24af9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3344687e678f298aa6953fa36514d392251fd2fc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440389"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Cmfctoolbarfontsizecombobox, classe
 
@@ -149,6 +139,4 @@ Vous pouvez récupérer la taille de police valide précédent ultérieurement e
 [CMFCFontInfo, classe](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

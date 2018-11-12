@@ -1,25 +1,15 @@
 ---
-title: Construction d’objets de flux de sortie │ Microsoft Docs
-ms.custom: ''
+title: Construction d'objets de flux de sortie
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - output stream objects
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff3c924327c11d00dd9137a91ebd19ef7bdc9eaa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7da7d9dd0fae3ce3fa21ecd774f88643dca49c26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440935"
 ---
 # <a name="constructing-output-stream-objects"></a>Construction d'objets de flux de sortie
 

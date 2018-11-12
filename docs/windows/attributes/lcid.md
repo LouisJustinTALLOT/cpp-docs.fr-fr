@@ -1,28 +1,17 @@
 ---
-title: LCID (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: LCID (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.lcid
-dev_langs:
-- C++
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b3e4b14353e811def1cfa7a3a60505fdc25d1767
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e431736fcd38b3c08936e65ecf05594142ced4e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791005"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655315"
 ---
 # <a name="lcid"></a>lcid
 
@@ -64,9 +53,9 @@ __interface IStatic {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)  
+[Attributs de paramètres](parameter-attributes.md)

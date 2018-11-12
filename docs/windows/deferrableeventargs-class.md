@@ -1,32 +1,22 @@
 ---
-title: Deferrableeventargs, classe | Microsoft Docs
-ms.custom: ''
+title: DeferrableEventArgs, classe
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::DeferrableEventArgs
 - event/Microsoft::WRL::DeferrableEventArgs::GetDeferral
 - event/Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs class
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 20cb959727cb2c515bd82d5b4d5d8e45019c6875
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e00dcd5d1e62598e393d3798bd05d4bbc5633f72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788485"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471329"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs, classe
 
@@ -73,7 +63,7 @@ La classe est présentée comme premier argument au gestionnaire d’événement
 Obtient une référence à la [report](http://go.microsoft.com/fwlink/p/?linkid=526520) objet qui représente un événement différé.
 
 ```cpp
-HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)  
+HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -88,11 +78,11 @@ S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 ## <a name="invokeallfinished"></a>DeferrableEventArgs::InvokeAllFinished
 
 Appelé pour indiquer que le traitement d'un événement différé est terminé.
-  
+
 ```cpp
-void InvokeAllFinished()  
+void InvokeAllFinished()
 ```
-  
+
 ### <a name="remarks"></a>Notes
 
 Vous devez appeler cette méthode après les appels de source d’événement [InvokeAll](../windows/eventsource-invokeall-method.md). L'appel à cette méthode empêche tout autre report et force l'exécution du gestionnaire d'achèvement en l'absence de report.

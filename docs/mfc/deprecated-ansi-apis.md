@@ -1,25 +1,15 @@
 ---
-title: Les API ANSI déconseillées | Microsoft Docs
-ms.custom: ''
+title: API ANSI déconseillées
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e989b6f2193142de8feb4124e365285957ee804
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51d14f4cae530fe6723b04268865af1f5fac84a8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439861"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589500"
 ---
 # <a name="deprecated-ansi-apis"></a>API ANSI déconseillées
 
@@ -32,12 +22,9 @@ La bibliothèque Microsoft Foundation classes (MFC) est la migration vers les cl
 ```
 AFX_ANSI_DEPRECATED BOOL GetIdealSize(LPSIZE psize) const;
 
-
 AFX_ANSI_DEPRECATED BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist) const;
 
-
 AFX_ANSI_DEPRECATED BOOL GetTextMargin(LPRECT pmargin) const;
-
 
 AFX_ANSI_DEPRECATED BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
@@ -55,7 +42,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 AFX_ANSI_DEPRECATED BOOL GetCueBanner(LPWSTR lpszText,
     int cchText) const;
-
 
 AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
     BOOL fDrawIfFocused = FALSE);
@@ -75,36 +61,25 @@ AFX_ANSI_DEPRECATED int EnableGroupView(BOOL fEnable);
 AFX_ANSI_DEPRECATED int GetGroupInfo(int iGroupId,
     PLVGROUP pgrp) const;
 
-
 AFX_ANSI_DEPRECATED void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
-
 
 AFX_ANSI_DEPRECATED BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 
-
 AFX_ANSI_DEPRECATED COLORREF GetInsertMarkColor() const;
-
 
 AFX_ANSI_DEPRECATED int GetInsertMarkRect(LPRECT pRect) const;
 
-
 AFX_ANSI_DEPRECATED COLORREF GetOutlineColor() const;
-
 
 AFX_ANSI_DEPRECATED UINT GetSelectedColumn() const;
 
-
 AFX_ANSI_DEPRECATED BOOL GetTileInfo(PLVTILEINFO pti) const;
-
 
 AFX_ANSI_DEPRECATED BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 
-
 AFX_ANSI_DEPRECATED DWORD GetView() const;
 
-
 AFX_ANSI_DEPRECATED BOOL HasGroup(int iGroupId) const;
-
 
 AFX_ANSI_DEPRECATED int InsertGroup(int index,
     PLVGROUP pgrp);
@@ -114,9 +89,7 @@ AFX_ANSI_DEPRECATED void InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 AFX_ANSI_DEPRECATED int InsertMarkHitTest(LPPOINT pPoint,
     LPLVINSERTMARK lvim) const;
 
-
 AFX_ANSI_DEPRECATED BOOL IsGroupViewEnabled() const;
-
 
 AFX_ANSI_DEPRECATED void MoveGroup(int iGroupId,
     int toIndex);
@@ -158,7 +131,6 @@ AFX_ANSI_DEPRECATED BOOL SortGroups(PFNLVGROUPCOMPARE _pfnGroupCompare,
 ```
 AFX_ANSI_DEPRECATED void GetBandMargins(PMARGINS pMargins) const;
 
-
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
@@ -166,7 +138,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ```
 AFX_ANSI_DEPRECATED void GetMetrics(LPTBMETRICS ptbm) const;
-
 
 AFX_ANSI_DEPRECATED void SetMetrics(LPTBMETRICS ptbm);
 

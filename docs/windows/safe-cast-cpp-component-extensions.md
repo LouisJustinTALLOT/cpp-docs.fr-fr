@@ -1,30 +1,20 @@
 ---
-title: safe_cast (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: safe_cast (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
 - stdcli::language::safe_cast
-dev_langs:
-- C++
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 76d53a1322024f1a56477de4e4b58bcdb88930ad
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: a65b39cbd658787324c1951fd1a53e4257f33a4a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328478"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443743"
 ---
 # <a name="safecast-ccli-and-ccx"></a>safe_cast (C++ / c++ / CLI et c++ / CX)
 
@@ -37,7 +27,7 @@ Le **safe_cast** opération retourne l’expression spécifiée en tant que type
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-[default]:: safe_cast< type-id >( expression )  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ## <a name="windows-runtime"></a>Windows Runtime
@@ -107,7 +97,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-[cli]:: safe_cast< type-id >( expression )  
+[cli]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -136,7 +126,7 @@ Pour plus d’informations sur **safe_cast**, consultez :
 
 - [Les Casts de Style C avec /clr (C++ / c++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)
 
-- [Guide pratique pour utiliser safe_cast dans C++-CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+- [Guide pratique pour utiliser safe_cast dans C++-CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -176,4 +166,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

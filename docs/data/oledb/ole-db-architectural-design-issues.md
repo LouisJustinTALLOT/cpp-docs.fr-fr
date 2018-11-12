@@ -1,31 +1,20 @@
 ---
-title: Problèmes de conception architecturale OLE DB | Microsoft Docs
-ms.custom: ''
+title: Questions relatives à la conception architecturale d'OLE DB
 ms.date: 10/22/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: a79cc4dfa36170293a8832571ba3348d6e2c8865
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 3e0175c6b554c319a662ffd726023caf7176d9fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990021"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461969"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Questions relatives à la conception architecturale d'OLE DB
 
-Considérez les points suivants avant de commencer votre application OLE DB :  
-  
+Considérez les points suivants avant de commencer votre application OLE DB :
+
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Quelle implémentation de programmation utiliserez-vous pour écrire votre application OLE DB ?
 
 Microsoft offre plusieurs bibliothèques pour accomplir cette tâche : une bibliothèque de modèles OLE DB, des attributs OLE DB et les interfaces OLE DB brutes dans le SDK OLE DB. En outre, il existe les Assistants vous aident à écrire votre programme. Ces implémentations sont décrites dans [modèles OLE DB, attributs et autres implémentations](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).

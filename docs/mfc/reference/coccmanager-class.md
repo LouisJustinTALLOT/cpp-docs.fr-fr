@@ -1,10 +1,6 @@
 ---
-title: COccManager, classe | Microsoft Docs
-ms.custom: ''
+title: COccManager, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COccManager
 - AFXOCC/COccManager
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXOCC/COccManager::PreCreateDialog
 - AFXOCC/COccManager::SetDefaultButton
 - AFXOCC/COccManager::SplitDialogTemplate
-dev_langs:
-- C++
 helpviewer_keywords:
 - COccManager [MFC], CreateContainer
 - COccManager [MFC], CreateDlgControls
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 10bb10162345453eb9979b985a062dd1e4b595b9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 804db7be4ba796a67042e6772ae4cb631c0c232b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440181"
 ---
 # <a name="coccmanager-class"></a>COccManager, classe
 
@@ -120,7 +110,6 @@ virtual BOOL CreateDlgControls(
     CWnd* pWndParent,
     LPCTSTR lpszResourceName,
     _AFX_OCC_DIALOG_INFO* pOccDialogInfo);
-
 
 virtual BOOL CreateDlgControls(
     CWnd* pWndParent,
@@ -250,7 +239,6 @@ Appelez cette fonction pour déterminer si le mnémonique actuel correspond à r
 static BOOL AFX_CDECL IsMatchingMnemonic(
     CWnd* pWnd,
     LPMSG lpMsg);
-
 
 static BOOL AFX_CDECL IsMatchingMnemonic(
     COleControlSiteOrWnd* pWnd,

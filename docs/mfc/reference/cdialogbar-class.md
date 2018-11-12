@@ -1,31 +1,21 @@
 ---
-title: CDialogBar (classe) | Microsoft Docs
-ms.custom: ''
+title: CDialogBar (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDialogBar
 - AFXEXT/CDialogBar
 - AFXEXT/CDialogBar::CDialogBar
 - AFXEXT/CDialogBar::Create
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d76e5de4b8b7652857d935795c638c4f603f604b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1b631c093ea6997d89a738b4818aaf66f561836
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604414"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar (classe)
 
@@ -96,7 +86,6 @@ virtual BOOL Create(
     LPCTSTR lpszTemplateName,
     UINT nStyle,
     UINT nID);
-
 
 virtual BOOL Create(
     CWnd* pParentWnd,

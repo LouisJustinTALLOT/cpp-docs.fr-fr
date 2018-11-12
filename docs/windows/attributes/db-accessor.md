@@ -1,28 +1,17 @@
 ---
-title: db_accessor (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: db_accessor (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.db_accessor
-dev_langs:
-- C++
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 60cfe67acb2841c3cf5bf3cc371b0f70c7fcf72b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 3ab2e720e5bab834f76b755336b9ad9170d086b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790700"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495254"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -87,8 +76,8 @@ public:
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)  
+[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)

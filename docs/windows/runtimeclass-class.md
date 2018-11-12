@@ -1,9 +1,6 @@
 ---
-title: Runtimeclass, classe | Microsoft Docs
-ms.custom: ''
+title: RuntimeClass, classe
 ms.date: 09/11/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -18,8 +15,6 @@ f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass::Release
 - implements/Microsoft::WRL::RuntimeClass::RuntimeClass
 - implements/Microsoft::WRL::RuntimeClass::~RuntimeClass
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass class
 - Microsoft::WRL::RuntimeClass::AddRef method
@@ -34,17 +29,12 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
 - Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5dfe6622edcd8446b844b5d3d7c03d1fd5d0197c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23b7d0237562324ddae2207435b2071e8d66e572
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379409"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596818"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass, classe
 
@@ -145,7 +135,7 @@ Obtient un tableau qui contient l’interface implémentées par actuel des ID `
 ```cpp
 STDMETHOD(
    GetIids
-)  
+)
    (_Out_ ULONG *iidCount,
    _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
 ```
@@ -246,7 +236,7 @@ Récupère un pointeur vers l’ID de l’interface spécifiée.
 ```cpp
 STDMETHOD(
    QueryInterface
-)  
+)
    (REFIID riid,
    _Deref_out_ void **ppvObject);
 ```

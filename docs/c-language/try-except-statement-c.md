@@ -1,12 +1,6 @@
 ---
-title: try-except, instruction (C) | Microsoft Docs
-ms.custom: ''
+title: try-except, instruction (C)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - try-except keyword [C]
 - structured exception handling, try-except
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f367bd5d9e61d44c24a876bf1d69ad24406d0630
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b186a1923eadedd201119ff8fbbd0a730c33cff8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50611898"
 ---
 # <a name="try-except-statement-c"></a>try-except, instruction (C)
 
@@ -49,11 +39,11 @@ L'instruction composée après la clause `__try` est la section protégée. L'in
 
 1. Si une exception est levée pendant l’exécution de la section protégée ou dans toute routine appelée par la section protégée, l’expression `__except` est évaluée et la valeur retournée détermine comment l’exception est gérée. Il existe trois valeurs :
 
-     `EXCEPTION_CONTINUE_SEARCH` L’exception n’est pas reconnue. Poursuivre la recherche d’un gestionnaire dans la pile, en premier pour qu’il contienne des instructions **try-except**, puis pour les gestionnaires avec la priorité la plus élevée suivante.
+   `EXCEPTION_CONTINUE_SEARCH` L’exception n’est pas reconnue. Poursuivre la recherche d’un gestionnaire dans la pile, en premier pour qu’il contienne des instructions **try-except**, puis pour les gestionnaires avec la priorité la plus élevée suivante.
 
-     `EXCEPTION_CONTINUE_EXECUTION` L’exception est reconnue, mais ignorée. Poursuivre l'exécution au point où l'exception s'est produite.
+   `EXCEPTION_CONTINUE_EXECUTION` L’exception est reconnue, mais ignorée. Poursuivre l'exécution au point où l'exception s'est produite.
 
-     `EXCEPTION_EXECUTE_HANDLER` L’exception est reconnue. Transférez le contrôle au gestionnaire d'exceptions en exécutant l'instruction composée `__except`, puis continuez l'exécution au point où l'exception s'est produite.
+   `EXCEPTION_EXECUTE_HANDLER` L’exception est reconnue. Transférez le contrôle au gestionnaire d'exceptions en exécutant l'instruction composée `__except`, puis continuez l'exécution au point où l'exception s'est produite.
 
 L'expression `__except` étant évaluée comme une expression C, elle est limitée à une valeur unique, l'opérateur d'expression conditionnelle, ou l'opérateur virgule. Si un traitement plus étendu est requis, l'expression peut appeler une routine qui retourne l'une des trois valeurs répertoriées ci-dessus.
 

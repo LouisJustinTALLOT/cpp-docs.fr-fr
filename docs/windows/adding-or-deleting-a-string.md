@@ -1,31 +1,20 @@
 ---
-title: Ajout ou suppression d’une ressource de type chaîne (C++) | Microsoft Docs
-ms.custom: ''
+title: Ajout ou suppression d’une ressource de type chaîne (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.string
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], adding to string tables
 - string tables [C++], deleting strings
 - strings [C++], deleting in string tables
 - string tables [C++], adding strings
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1e26af845071e5765b30320a86f8d048d2eb12e6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 6c7614c78bb442abe7ae8c174f0bef15afb96e39
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083760"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617930"
 ---
 # <a name="adding-or-deleting-a-string-resource-c"></a>Ajout ou suppression d’une ressource de type chaîne (C++)
 
@@ -73,4 +62,4 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur de chaînes](../windows/string-editor.md)  
+[Éditeur de chaînes](../windows/string-editor.md)

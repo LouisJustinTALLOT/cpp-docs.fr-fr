@@ -1,27 +1,17 @@
 ---
-title: Deleteitemstruct, Structure | Microsoft Docs
-ms.custom: ''
+title: DELETEITEMSTRUCT, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - DELETEITEMSTRUCT
-dev_langs:
-- C++
 helpviewer_keywords:
 - DELETEITEMSTRUCT structure [MFC]
 ms.assetid: 48d3998c-f4a8-402a-bf90-df3770a78685
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb5b9d710bef136893c66208480056f6bc6390d3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd1f48fd584016dab740bc8a6bd05ff3b756e41b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486878"
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT, structure
 
@@ -68,5 +58,4 @@ Lorsqu’un élément est supprimé à partir de la zone de liste ou une zone de
 
 [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)
-
 

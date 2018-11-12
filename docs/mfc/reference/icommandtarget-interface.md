@@ -1,29 +1,19 @@
 ---
-title: ICommandTarget, Interface | Microsoft Docs
-ms.custom: ''
+title: ICommandTarget, Interface
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - ICommandTarget
 - AFXWINFORMS/ICommandTarget
 - AFXWINFORMS/ICommandTarget::Initialize
-dev_langs:
-- C++
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 95faae4de2e9fa756a4f69f231839e19019e08fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 830802f960cba1789c21c53efbf0ed05de3ac4cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436804"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557454"
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget, Interface
 
@@ -78,6 +68,4 @@ Cette méthode initialise l’objet cible de commande et l’associe à la cmdSo
 
 [Guide pratique pour ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [ICommandSource, interface](../../mfc/reference/icommandsource-interface.md)
-
-
 

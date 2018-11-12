@@ -1,29 +1,19 @@
 ---
-title: 'Comment : améliorer les performances avec des génériques (C++ / c++ / CLI) | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : améliorer les performances avec des génériques (C++ / c++ / CLI)'
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - performance, C++
 - C++, performance
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ead9491e7b5302cadfa59eb7d98215fb3c41eb09
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 61d858542505b0e37b03e13cca803df10ffbdddc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327817"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527957"
 ---
 # <a name="how-to-improve-performance-with-generics-ccli"></a>Comment : améliorer les performances avec des génériques (C++ / c++ / CLI)
 
@@ -48,7 +38,7 @@ L’exemple de code suivant montre les deux principaux inconvénients des collec
 using namespace System;
 using namespace System::Collections;
 
-int main()  
+int main()
 {
     // This Stack can contain any type.
     Stack ^s = gcnew Stack();
@@ -64,14 +54,14 @@ int main()
     // Pop the items off the Stack.
     // The item is returned as an Object, so a cast is
     // necessary to convert it to its proper type.
-    while (s->Count> 0)  
+    while (s->Count> 0)
     {
         Object ^o = s->Pop();
-        if (o->GetType() == Type::GetType("System.String"))  
+        if (o->GetType() == Type::GetType("System.String"))
         {
             Console::WriteLine("Popped a String: {0}", (String ^)o);
         }
-        else if (o->GetType() == Type::GetType("System.Int32"))  
+        else if (o->GetType() == Type::GetType("System.Int32"))
         {
             Console::WriteLine("Popped an int: {0}", (int)o);
         }
@@ -103,7 +93,7 @@ Comparez l’exemple suivant écrit ci-dessus avec cet exemple qui utilise un g�
 using namespace System;
 using namespace System::Collections::Generic;
 
-int main()  
+int main()
 {
     // This Stack can only contain integers.
     Stack<int> ^s = gcnew Stack<int>();

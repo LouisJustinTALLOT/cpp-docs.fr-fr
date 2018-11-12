@@ -1,27 +1,16 @@
 ---
-title: Manifeste de ressources (C++) | Microsoft Docs
-ms.custom: ''
+title: Ressources de manifeste (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - manifest resources [C++]
 - resources [C++], manifest
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2da93d1baaf95799c7ef68d6cc854d554fbe6c47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 081fd12a86c31973c7856ca7b9f3fcb129e2eb81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429563"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578280"
 ---
 # <a name="manifest-resources-c"></a>Ressources de manifeste (C++)
 
@@ -43,7 +32,7 @@ Dans les projets de bureau C++, les ressources de manifeste sont des fichiers XM
 </dependency>
 ```
 
-Pour une application Windows XP ou Windows Vista, la ressource de manifeste indique non seulement que l’application utilise la version la plus récente des contrôles communs Windows (v6.0, comme indiqué ci-dessus) mais il prend également en charge la [contrôle Syslink](/windows/desktop/Controls/syslink-overview).
+Pour une application Windows XP ou Windows Vista, la ressource de manifeste indique non seulement que l’application utilise la toute dernière version des contrôles communs Windows (v6.0, comme indiqué ci-dessus) mais qu’elle prend également en charge le nouveau [contrôle Syslink](/windows/desktop/Controls/syslink-overview).
 
 Pour afficher la version et tapez les informations contenues dans une ressource de manifeste, vous pouvez ouvrir le fichier dans une visionneuse XML ou dans l’éditeur de texte Visual Studio. Pour plus d'informations, voir [Ouverture d'une ressource de manifeste dans l'éditeur de texte Visual Studio](../windows/how-to-open-a-manifest-resource.md).
 

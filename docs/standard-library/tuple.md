@@ -1,27 +1,17 @@
 ---
-title: '&lt;tuple&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;tuple&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <tuple>
-dev_langs:
-- C++
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ba25328b86a51e34cba60bd55b63ce2eab696d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e46b3997096c6e61f7dd6140131e3f10223b8e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864582"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586665"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
@@ -46,7 +36,7 @@ Définit un modèle `tuple` dont les instances détiennent des objets de types v
 |Opérateur|Description|
 |-|-|
 |[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparaison d’objets `tuple`, égal|
-|[operator!=](../standard-library/tuple-operators.md#op_neq)|Comparaison d’objets `tuple`, non égal|
+|[!=, opérateur](../standard-library/tuple-operators.md#op_neq)|Comparaison d’objets `tuple`, non égal|
 |[operator<](../standard-library/tuple-operators.md#op_lt)|Comparaison d’objets `tuple`, inférieur à|
 |[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparaison d’objets `tuple`, inférieur ou égal à|
 |[operator>](../standard-library/tuple-operators.md#op_gt)|Comparaison d’objets `tuple`, supérieur à|

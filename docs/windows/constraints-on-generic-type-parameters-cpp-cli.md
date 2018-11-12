@@ -1,29 +1,19 @@
 ---
-title: Paramètres de Type de contraintes sur générique (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: Contraintes sur les paramètres de type générique (C++/CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - where
-dev_langs:
-- C++
 helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c9e3a7f5dc68f9f6726d591f051a6c04a0d48485
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: c0ad5a22adec0d93019e9ea5c81cc8329d1607f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328557"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533703"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Contraintes sur les paramètres de type générique (C++/CLI)
 
@@ -142,7 +132,7 @@ public:
    bool isSenior(ItemType item) {
       // Because of the constraint,
       // the Age method can be called on ItemType.
-      if (item->Age() >= 65)  
+      if (item->Age() >= 65)
          return true;
       else
          return false;
@@ -168,12 +158,12 @@ int main() {
    Adult^ parent = gcnew Adult();
    Senior^ grandfather = gcnew Senior();
 
-   if (ageGuess->isSenior<Adult^>(parent))  
+   if (ageGuess->isSenior<Adult^>(parent))
       Console::WriteLine("\"parent\" is a senior");
    else
       Console::WriteLine("\"parent\" is not a senior");
 
-   if (ageGuess->isSenior<Senior^>(grandfather))  
+   if (ageGuess->isSenior<Senior^>(grandfather))
       Console::WriteLine("\"grandfather\" is a senior");
    else
       Console::WriteLine("\"grandfather\" is not a senior");

@@ -1,10 +1,6 @@
 ---
-title: _CrtMemCheckpoint | Microsoft Docs
-ms.custom: ''
+title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtMemCheckpoint
 apilocation:
@@ -23,22 +19,16 @@ f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
 - crtdbg/_CrtMemCheckpoint
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107566"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589515"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -59,7 +49,7 @@ Pointeur vers **_CrtMemState** structure à remplir avec le point de contrôle d
 
 ## <a name="remarks"></a>Notes
 
-Le **_CrtMemCheckpoint** fonction crée un instantané de l’état actuel du tas de débogage à un moment donné. Cet instantané peut être utilisé par d’autres fonctions d’état du tas, comme [_CrtMemDifference](crtmemdifference.md), pour aider à détecter les fuites de mémoire et d’autres problèmes. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtMemState** sont supprimés lors du prétraitement.
+Le **_CrtMemCheckpoint** fonction crée un instantané de l’état actuel du tas de débogage à un moment donné. Cet instantané peut être utilisé par d’autres fonctions d’état du tas, comme [_CrtMemDifference](crtmemdifference.md) , pour aider à détecter les fuites de mémoire et d’autres problèmes. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtMemState** sont supprimés lors du prétraitement.
 
 L’application doit passer un pointeur vers une instance précédemment allouée de la **_CrtMemState** structure, définie dans Crtdbg.h, dans le *état* paramètre. Si **_CrtMemCheckpoint** rencontre une erreur lors de la création de point de contrôle, la fonction génère une **_CRT_WARN** décrivant le problème de rapport de débogage.
 

@@ -1,10 +1,6 @@
 ---
-title: CFontDialog, classe | Microsoft Docs
-ms.custom: ''
+title: CFontDialog, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFontDialog
 - AFXDLGS/CFontDialog
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXDLGS/CFontDialog::IsStrikeOut
 - AFXDLGS/CFontDialog::IsUnderline
 - AFXDLGS/CFontDialog::m_cf
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFontDialog [MFC], CFontDialog
 - CFontDialog [MFC], DoModal
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b2360e257fa6af343a7df689c48c8de93d967bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c9e3a7de10b6ba0913b02c5f79dcc63c89adce5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413969"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525175"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog, classe
 
@@ -407,6 +397,4 @@ Après avoir construit un `CFontDialog` de l’objet, vous pouvez utiliser `m_cf
 [Exemple MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [CCommonDialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

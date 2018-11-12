@@ -1,28 +1,17 @@
 ---
-title: DefaultValue (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: DefaultValue (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.defaultvalue
-dev_langs:
-- C++
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e67ed063030ae619124d82cb8fb8de3e7a6ff708
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 22aa969185afbac5ab395d0ac7dde23e715b8e58
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790592"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537668"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -76,7 +65,7 @@ __interface IFireTabCtrl : IDispatch {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -86,4 +75,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [retval](retval.md)<br/>
 [in](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>
-[unique](unique-cpp.md)  
+[unique](unique-cpp.md)

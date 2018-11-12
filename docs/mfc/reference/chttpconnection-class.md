@@ -1,31 +1,21 @@
 ---
-title: CHttpConnection, classe | Microsoft Docs
-ms.custom: ''
+title: CHttpConnection, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CHttpConnection
 - AFXINET/CHttpConnection
 - AFXINET/CHttpConnection::CHttpConnection
 - AFXINET/CHttpConnection::OpenRequest
-dev_langs:
-- C++
 helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cc1912ad915127657df3a3d80e2de8acce77d916
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50611001"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection, classe
 
@@ -84,7 +74,6 @@ CHttpConnection(
     LPCTSTR pstrServer,
     DWORD_PTR dwContext);
 
-
 CHttpConnection(
     CInternetSession* pSession,
     LPCTSTR pstrServer,
@@ -92,7 +81,6 @@ CHttpConnection(
     LPCTSTR pstrUserName = NULL,
     LPCTSTR pstrPassword = NULL,
     DWORD_PTR dwContext = 1);
-
 
 CHttpConnection(
     CInternetSession* pSession,
@@ -154,7 +142,6 @@ CHttpFile* OpenRequest(
     LPCTSTR* ppstrAcceptTypes = NULL,
     LPCTSTR pstrVersion = NULL,
     DWORD dwFlags = INTERNET_FLAG_EXISTING_CONNECT);
-
 
 CHttpFile* OpenRequest(
     int nVerb,

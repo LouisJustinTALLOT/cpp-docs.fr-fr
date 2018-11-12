@@ -1,28 +1,17 @@
 ---
-title: personnalisé (C++) | Microsoft Docs
-ms.custom: ''
+title: custom (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.custom
-dev_langs:
-- C++
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5a491c120dff7f8f505878d6887498eb5f05fb22
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7aca125879591f71fe2ba60f34b712918350940f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790745"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565696"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -62,7 +51,7 @@ Le **personnalisé** attribut a les mêmes fonctionnalités que le [personnalis�
 |**Attributs requis**|**coclasse** (lorsqu’il est utilisé pour la classe)|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -72,4 +61,4 @@ Pour plus d’informations sur les contextes d’attribut, consultez [contextes 
 [Attributs de paramètres](parameter-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
-[Attributs d’interface](interface-attributes.md)  
+[Attributs d’interface](interface-attributes.md)

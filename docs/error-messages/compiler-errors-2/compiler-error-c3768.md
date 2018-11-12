@@ -1,37 +1,27 @@
 ---
-title: Erreur du compilateur C3768 | Documents Microsoft
-ms.custom: ''
+title: Erreur du compilateur C3768
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3768
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6b7a2d1617591609f75b2b07f1a94983ee22f4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704956"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676730"
 ---
 # <a name="compiler-error-c3768"></a>Erreur du compilateur C3768
 
-> ne peut pas prendre l’adresse d’une fonction vararg virtuelle dans du code managé pur
+> ne peut pas prendre l’adresse d’une fonction vararg virtuelle dans le code managé pur
 
 ## <a name="remarks"></a>Notes
 
 Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 
-Lors de la compilation avec **/CLR : pure**, vous ne pouvez pas prendre l’adresse d’une machine virtuelle, `vararg` (fonction).
+Lors de la compilation avec **/CLR : pure**, vous ne pouvez pas prendre l’adresse d’une machine virtuelle `vararg` (fonction).
 
 ## <a name="example"></a>Exemple
 

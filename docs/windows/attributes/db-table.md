@@ -1,28 +1,17 @@
 ---
-title: db_table (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: db_table (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.db_table
-dev_langs:
-- C++
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 03d6512933d114cf1c3b06fa3fdc9eaa03c70934
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d0b67bae643698b6d4f09a75dd2e4ec6a23a5d28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790937"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607270"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -43,7 +32,7 @@ Chaîne spécifiant le nom d’une table de base de données (par exemple, « p
 (Facultatif) Le nom de la poignée que vous utilisez pour travailler avec la table. Vous devez spécifier ce paramètre si vous souhaitez retourner plusieurs lignes de résultats. **db_table** génère une variable avec la valeur *nom* qui peut être utilisé pour parcourir l’ensemble de lignes ou d’exécuter plusieurs requêtes d’action.
 
 *source_name*<br/>
-(Facultatif) Le `CSession` variable ou une instance d’une classe qui a le `db_source` attribut appliqué à ce dernier sur lequel la commande s’exécute. Consultez [db_source](db-source.md).
+(Facultatif) Le `CSession` variable ou une instance d’une classe qui a le `db_source` attribut appliqué à ce dernier sur lequel la commande s’exécute. Voir [db_source](db-source.md).
 
 *HRESULT*<br/>
 (Facultatif) Identifie la variable qui recevra la valeur HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.
@@ -84,8 +73,8 @@ Pour obtenir un exemple de cet attribut utilisé dans une application, consultez
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)  
+[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)

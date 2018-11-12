@@ -1,10 +1,6 @@
 ---
-title: atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs
-ms.custom: ''
+title: atoi, _atoi_l, _wtoi, _wtoi_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoi
 - _wtoi_l
@@ -30,8 +26,6 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ec426518aed278f98ca334ba4ed34830f5836a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c03f2766701f7e360ad0bf4f0fc701d2a7e983c
+ms.sourcegitcommit: b401a05c5c0f5cc4b32893d7382c05a51e4ab783
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397153"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50999984"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -90,21 +80,21 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne le **int** valeur produite par l’interprétation des caractères d’entrée en tant que nombre. La valeur de retour est 0 pour **atoi** et **_wtoi**, si l’entrée ne peut pas être convertie en valeur de ce type.
+Chaque fonction retourne le **int** valeur produite en interprétant les caractères d’entrée en tant que nombre. La valeur de retour est 0 pour **atoi** et **_wtoi**, si l’entrée ne peut pas être convertie en une valeur de ce type.
 
-Dans le cas de dépassement de capacité avec grandes valeurs intégrales négatifs, **LONG_MIN** est retourné. **atoi** et **_wtoi** retourner **INT_MAX** et **INT_MIN** sur ces conditions. Dans tous les cas d’out-of-range, **errno** a la valeur **ERANGE**. Si le paramètre passé est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourne 0.
+Dans le cas de dépassement de capacité avec grandes valeurs intégrales négatives, **LONG_MIN** est retourné. **atoi** et **_wtoi** retourner **INT_MAX** et **INT_MIN** sur ces conditions. Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent 0.
 
 ## <a name="remarks"></a>Notes
 
 Ces fonctions convertissent une chaîne de caractères en une valeur entière (**atoi** et **_wtoi**). La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère Null ('\0' ou L'\0') terminant la chaîne.
 
-Le *str* argument **atoi** et **_wtoi** a la forme suivante :
+Le *str* l’argument de **atoi** et **_wtoi** a la forme suivante :
 
-> [*espace blanc*] [*signe*] [*chiffres*]]
+> [*espace blanc*] [*connexion*] [*chiffres*]]
 
-A *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *signe* est plus (+) ou moins (-) ; et *chiffres* sont un ou plusieurs chiffres.
+Un *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *connexion* est soit plus (+) ou moins (-) ; et *chiffres* sont un ou plusieurs chiffres.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -113,7 +103,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_tstoi**|**atoi**|**atoi**|**_wtoi**|
 |**_ttoi**|**atoi**|**atoi**|**_wtoi**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routines|En-tête requis|
 |--------------|---------------------|
@@ -122,7 +112,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 
 ## <a name="example"></a>Exemple
 
-Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être converties en valeurs numériques à l’aide de la **atoi** fonctions.
+Ce programme montre comment nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide de la **atoi** fonctions.
 
 ```C
 // crt_atoi.c
@@ -150,7 +140,7 @@ int main( void )
     printf( "Function: atoi( \"%s\" ) = %d\n", str, value );
 
     // Another example of the atoi function
-    // with an overflow condition occuring.
+    // with an overflow condition occurring.
     str = "3336402735171707160320";
     value = atoi( str );
     printf( "Function: atoi( \"%s\" ) = %d\n", str, value );

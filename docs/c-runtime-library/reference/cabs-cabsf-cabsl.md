@@ -1,11 +1,6 @@
 ---
-title: cabs, cabsf, cabsl | Microsoft Docs
-ms.custom: ''
+title: cabs, cabsf, cabsl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cabs
 - cabsf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cabs
 - complex/cabsf
 - complex/cabsl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cabs function
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c14252e7857331482b0fe6f99dd56e49ab838dd0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393561"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623959"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -83,13 +72,13 @@ La valeur absolue de *z*.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cabs** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float** ou **long** **double** valeurs. Dans un programme C, **cabs** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **cabs** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float** ou **long** **double** valeurs. Dans un programme C, **cabs** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**CABS**, **cabsf**, **cabsl**|\<complex.h>|\<ccomplex>|
+|**fichiers CAB**, **cabsf**, **cabsl**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

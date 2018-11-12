@@ -1,28 +1,18 @@
 ---
-title: __segmentlimit | Microsoft Docs
-ms.custom: ''
+title: __segmentlimit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __segmentlimit
-dev_langs:
-- C++
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d31210194f9b9f1c9808176cd7e5495df8da1ebb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 854e3efce48b7ed863db1a94467a6da99d796a89
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636421"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 
@@ -33,8 +23,8 @@ Génère le `lsl` instruction de (limite du Segment de charge).
 ## <a name="syntax"></a>Syntaxe
 
 ```
-unsigned long __segmentlimit( 
-   unsigned long a 
+unsigned long __segmentlimit( 
+   unsigned long a 
 );
 ```
 
@@ -47,7 +37,7 @@ unsigned long __segmentlimit(
 
 La limite du segment du sélecteur de segment spécifié par `a`, à condition que le sélecteur est valide et visible au niveau d’autorisation actuel.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Intrinsèque|Architecture|
 |---------------|------------------|

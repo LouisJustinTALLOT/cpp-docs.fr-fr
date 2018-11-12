@@ -1,25 +1,15 @@
 ---
-title: Récapitulatif des constantes | Microsoft Docs
-ms.custom: ''
+title: Récapitulatif des constantes
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - constants, C
 ms.assetid: 4158234c-e189-4e25-970f-52a04bc6380a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33367c468d8e499382c30642dd55c4cd7fd1a59a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1da2a7434ced7f38fa199e5911e01709983fda91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760492"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547860"
 ---
 # <a name="summary-of-constants"></a>Récapitulatif des constantes
 

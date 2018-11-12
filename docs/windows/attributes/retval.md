@@ -1,28 +1,17 @@
 ---
-title: retval (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: retval (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.retval
-dev_langs:
-- C++
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e2b71271dc0579e1d0682b95a0d3bdf57d197d1a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 4ac6b72095620a3e857f2877d776e91b273e8f33
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566645"
 ---
 # <a name="retval"></a>retval
 
@@ -55,10 +44,10 @@ Consultez l’exemple de [peut être liée](bindable.md) pour un exemple d’uti
 |**Attributs requis**|**out**|
 |**Attributs non valides**|**in**|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de paramètres](parameter-attributes.md)<br/>
-[Attributs de méthode](method-attributes.md)  
+[Attributs de méthode](method-attributes.md)

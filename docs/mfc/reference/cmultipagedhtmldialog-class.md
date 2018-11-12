@@ -1,29 +1,19 @@
 ---
-title: CMultiPageDHtmlDialog, classe | Microsoft Docs
-ms.custom: ''
+title: CMultiPageDHtmlDialog, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMultiPageDHtmlDialog
 - AFXDHTML/CMultiPageDHtmlDialog
 - AFXDHTML/CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53ea81b7668f9d0786cf84a5e46cc9d86f429b44
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 680c485241b7a377d1c6f0ec2785dbbade01ed3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443549"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog, classe
 
@@ -95,7 +85,6 @@ CMultiPageDHtmlDialog(
     LPCTSTR lpszTemplateName,
     LPCTSTR szHtmlResID = NULL,
     CWnd* pParentWnd = NULL);
-
 
 CMultiPageDHtmlDialog(
     UINT nIDTemplate,

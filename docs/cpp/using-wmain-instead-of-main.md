@@ -1,28 +1,18 @@
 ---
-title: Utilisation de wmain au lieu de main | Microsoft Docs
-ms.custom: ''
+title: Utilisation de wmain au lieu de main
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - wmain
-dev_langs:
-- C++
 helpviewer_keywords:
 - main function, vs. wmain
 - wmain function
 ms.assetid: 7abb1257-b85c-413a-b913-d45b1582a71d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 274065ac3d753b744813a1fc88804ea26d44487d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8cdc986d1582d2b26f137e3147ce78bc83e9daca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104372"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677758"
 ---
 # <a name="using-wmain-instead-of-main"></a>Utilisation de wmain au lieu de main
 

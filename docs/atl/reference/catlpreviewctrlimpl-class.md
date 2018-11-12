@@ -1,10 +1,6 @@
 ---
-title: Catlpreviewctrlimpl, classe | Microsoft Docs
-ms.custom: ''
+title: Catlpreviewctrlimpl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAtlPreviewCtrlImpl
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl
@@ -21,21 +17,15 @@ f1_keywords:
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_plf
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrBack
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrText
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ffa2613909145bffaf901b2d5bae4129e6d434c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46079334"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505051"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Catlpreviewctrlimpl, classe
 
@@ -89,7 +79,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 |Name|Description|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Couleur d’arrière-plan de la fenêtre d’aperçu.|
-|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Couleur du texte de la fenêtre d’aperçu.|  
+|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Couleur du texte de la fenêtre d’aperçu.|
 
 ## <a name="remarks"></a>Notes
 
@@ -226,7 +216,7 @@ const LOGFONTW* m_plf;
 Gère le message WM_PAINT.
 
 ```
-LRESULT OnPaint(  
+LRESULT OnPaint(
     UINT nMsg,
     WPARAM wParam,
     LPARAM lParam,

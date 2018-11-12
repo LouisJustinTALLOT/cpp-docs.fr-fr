@@ -1,10 +1,6 @@
 ---
-title: map, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
+title: map, classe
+ms.date: 10/18/2018
 f1_keywords:
 - map/std::map
 - map/std::map::allocator_type
@@ -48,8 +44,6 @@ f1_keywords:
 - map/std::map::swap
 - map/std::map::upper_bound
 - map/std::map::value_comp
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::map [C++]
 - std::map [C++], allocator_type
@@ -94,16 +88,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42cd23fcba03ed0161b7a19923851dd3d574e23b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 8694d554261468c4e828936f6a999f073e98849f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429690"
 ---
 # <a name="map-class"></a>map, classe
 
@@ -1012,7 +1002,6 @@ Retourne l'itérateur past-the-end.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1115,11 +1104,9 @@ Supprime des positions spécifiées un élément ou une plage d’éléments com
 iterator erase(
     const_iterator Where);
 
-
 iterator erase(
     const_iterator First,
     const_iterator Last);
-
 
 size_type erase(
     const key_type& Key);
@@ -1232,7 +1219,6 @@ Retourne un itérateur qui fait référence à l'emplacement d'un élément dans
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1394,19 +1380,16 @@ Insère un élément ou une plage d'éléments dans une classe map.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1414,13 +1397,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2636,9 +2617,9 @@ Retourne l’objet de fonction de comparaison utilisé par une classe map pour o
 
 ### <a name="remarks"></a>Notes
 
-Pour une classe map *m*, si deux éléments *e*1( *k*1, *d*1) et *e*2( *k*2, `d`2) sont des objets de type `value_type`, où *k*1 et *k*2 ont des clés de type `key_type` et `d`1 et `d`2 ont des données de type `mapped_type`, alors *m.*`value_comp`( *e*1, *e*2) équivaut à *m.*`key_comp`*(k*1, *k*2). Un objet stocké définit la fonction membre
+Pour une carte *m*, si deux éléments *e1*(*k1*, *d1*) et *e2*(*k2*, *d2*) sont des objets de type `value_type`, où *k1* et *k1* sont leurs clés de type `key_type` et *d1* et *d2* sont leurs données de type `mapped_type`, puis `m.value_comp(e1, e2)` équivaut à `m.key_comp(k1, k2)`. Un objet stocké définit la fonction membre
 
-**bool operator**( **value_type&**`left`, **value_type&**`right`);
+`bool operator( value_type& left, value_type& right);`
 
 qui retourne **true** si la valeur de clé de `left` précède et n’est pas égale à la valeur clé de `right` dans l’ordre de tri.
 

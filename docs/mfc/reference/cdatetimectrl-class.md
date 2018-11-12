@@ -1,10 +1,6 @@
 ---
-title: CDateTimeCtrl (classe) | Microsoft Docs
-ms.custom: ''
+title: CDateTimeCtrl (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDateTimeCtrl
 - AFXDTCTL/CDateTimeCtrl
@@ -25,8 +21,6 @@ f1_keywords:
 - AFXDTCTL/CDateTimeCtrl::SetMonthCalStyle
 - AFXDTCTL/CDateTimeCtrl::SetRange
 - AFXDTCTL/CDateTimeCtrl::SetTime
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDateTimeCtrl [MFC], CDateTimeCtrl
 - CDateTimeCtrl [MFC], CloseMonthCal
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57e2b990e8fddbcb81d942cb7327ed8b9d448e6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cff81b7d260749d5be344edf3e0401a473b4f9e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508821"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl (classe)
 
@@ -551,7 +541,6 @@ Définit les heures système autorisée minimale et maximale pour un contrôle d
 BOOL SetRange(
     const COleDateTime* pMinRange,
     const COleDateTime* pMaxRange);
-
 
 BOOL SetRange(
     const CTime* pMinRange,

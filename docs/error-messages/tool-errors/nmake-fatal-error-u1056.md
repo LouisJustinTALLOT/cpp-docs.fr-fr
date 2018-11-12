@@ -1,27 +1,17 @@
 ---
-title: Erreur irrécupérable NMAKE U1056 | Microsoft Docs
-ms.custom: ''
+title: Erreur irrécupérable NMAKE U1056
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - U1056
-dev_langs:
-- C++
 helpviewer_keywords:
 - U1056
 ms.assetid: da855728-b69e-413c-83ed-df912126215e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e0a83c62bedf995708d5e99fee19f05696d05c2d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b15b14c04dd91ae648ea4311612c122f04f90477
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46065690"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635927"
 ---
 # <a name="nmake-fatal-error-u1056"></a>Erreur irrécupérable NMAKE U1056
 

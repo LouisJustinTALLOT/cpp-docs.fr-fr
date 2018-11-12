@@ -1,10 +1,6 @@
 ---
-title: array_view, classe | Microsoft Docs
-ms.custom: ''
+title: array_view, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - array_view
 - AMP/array_view
@@ -27,21 +23,15 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs:
-- C++
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c78d95afbadb0d3612dcdbca1714ae8c3a06454
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd13fbef1b335b6a2fde1f16a59ddf11d489cdde
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426339"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501697"
 ---
 # <a name="arrayview-class"></a>array_view, classe
 
@@ -561,6 +551,7 @@ Notifie le `array_view` objet sa mémoire liée a été modifié en dehors du `a
 ```
 void refresh() const restrict(cpu);
 ```
+
 ## <a name="reinterpret_as"></a> reinterpret_as
 
 Réinterprète l’array_view via un array_view unidimensionnel qui, en tant qu’option peut avoir un type de valeur différente de l’array_view source.

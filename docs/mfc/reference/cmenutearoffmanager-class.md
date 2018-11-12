@@ -1,10 +1,6 @@
 ---
-title: Cmenutearoffmanager, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: Cmenutearoffmanager, classe
+ms.date: 10/18/2018
 f1_keywords:
 - CMenuTearOffManager
 - AFXMENUTEAROFFMANAGER/CMenuTearOffManager
@@ -17,8 +13,6 @@ f1_keywords:
 - AFXMENUTEAROFFMANAGER/CMenuTearOffManager::Reset
 - AFXMENUTEAROFFMANAGER/CMenuTearOffManager::SetInUse
 - AFXMENUTEAROFFMANAGER/CMenuTearOffManager::SetupTearOffMenus
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMenuTearOffManager [MFC], CMenuTearOffManager
 - CMenuTearOffManager [MFC], Build
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dc4a6ee892c70a53e28031ff8dd9ef874d252a86
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60e89967d139a3f5bc7b96cc1823b31b98a57fb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380871"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558845"
 ---
 # <a name="cmenutearoffmanager-class"></a>Cmenutearoffmanager, classe
 
@@ -96,7 +86,6 @@ L’exemple suivant montre comment créer et initialiser un `CMenuTearOffManager
 
 ##  <a name="build"></a>  CMenuTearOffManager::Build
 
-
 ```
 void Build(
     UINT uiTearOffBarID,
@@ -105,8 +94,9 @@ void Build(
 
 ### <a name="parameters"></a>Paramètres
 
-*uiTearOffBarID*<br/>
-[in] [in] *strText*
+[in] *uiTearOffBarID*<br/>
+
+[in] *strText*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -123,7 +113,6 @@ CMenuTearOffManager();
 Dans la plupart des cas, vous ne devez pas créer un `CMenuTearOffManager` manuellement. L’infrastructure de votre application crée le `CMenuTearOffManager` lorsque vous appelez l’objet [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).
 
 ##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath
-
 
 ```
 LPCTSTR GetRegPath() const;
@@ -165,14 +154,13 @@ La plage d’ID de menu à partir de *uiTearOffMenuFirst* à *uiTearOffMenuLast*
 
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID
 
-
 ```
 BOOL IsDynamicID(UINT uiID) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *uiID*
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -180,14 +168,13 @@ BOOL IsDynamicID(UINT uiID) const;
 
 ##  <a name="parse"></a>  CMenuTearOffManager::Parse
 
-
 ```
 UINT Parse(CString& str);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *str*
+[in] *str*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -195,19 +182,17 @@ UINT Parse(CString& str);
 
 ##  <a name="reset"></a>  CMenuTearOffManager::Reset
 
-
 ```
 void Reset(HMENU hmenu);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *hmenu*
+[in] *hmenu*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse
-
 
 ```
 void SetInUse(
@@ -217,13 +202,13 @@ void SetInUse(
 
 ### <a name="parameters"></a>Paramètres
 
-*uiCmdId*<br/>
-[in] [in] *bUtiliser*
+[in] *uiCmdId*<br/>
+
+[in] *bUtiliser*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus
-
 
 ```
 void SetupTearOffMenus(HMENU hMenu);
@@ -231,7 +216,7 @@ void SetupTearOffMenus(HMENU hMenu);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *hMenu*
+[in] *hMenu*<br/>
 
 ### <a name="remarks"></a>Notes
 

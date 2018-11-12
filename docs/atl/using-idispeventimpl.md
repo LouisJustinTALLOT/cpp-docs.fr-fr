@@ -1,27 +1,17 @@
 ---
-title: Utilisation d’IDispEventImpl (ATL) | Microsoft Docs
-ms.custom: ''
+title: Utilisation d’IDispEventImpl (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - IDispEventImpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48afac392d02edfd3d312583642367bc6726e536
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ece96b26605c9f881ead2ba7cfcd1313a053faf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106790"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484901"
 ---
 # <a name="using-idispeventimpl"></a>Utilisation d’IDispEventImpl
 
@@ -41,7 +31,7 @@ Lorsque vous utilisez `IDispEventImpl` pour gérer les événements, vous devez�
 
 L’exemple ci-dessous montre comment gérer les `DocumentChange` événements déclenchement par de Word **Application** objet. Cet événement est défini en tant que méthode sur le `ApplicationEvents` dispinterface.
 
-L’exemple est issu le [exemple ATLEventHandling](../visual-cpp-samples.md).  
+L’exemple est issu le [exemple ATLEventHandling](../visual-cpp-samples.md).
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]

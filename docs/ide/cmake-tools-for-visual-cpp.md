@@ -1,27 +1,15 @@
 ---
-title: Projets CMake dans Visual C++ | Microsoft Docs
-ms.custom: ''
-ms.date: 09/26/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
+title: Projets CMake dans Visual C++
+ms.date: 10/18/2018
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 07c32e30aa36d6e59122340da0b1026e7025780d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235098"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612496"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projets CMake dans Visual C++
 
@@ -89,7 +77,7 @@ Le contenu du cache n’est pas importé en totalité.  Des propriétés comme l
 Pour générer un projet CMake, vous avez ces possibilités :
 
 1. Sélectionnez la cible dans la liste déroulante **Déboguer** et appuyez sur **F5**, ou cliquez sur le bouton **Exécuter** (triangle vert). Le projet est d’abord généré automatiquement, comme une solution Visual Studio.
-1. Cliquez avec le bouton droit sur CMakeLists.txt et sélectionnez **Générer** dans le menu contextuel. Si vous avez plusieurs cibles dans votre structure de dossiers, vous pouvez choisir de générer toutes les cibles ou une seule cible spécifique, ou
+1. Cliquez avec le bouton droit sur CMakeLists.txt et sélectionnez **Générer** dans le menu contextuel. Si vous avez plusieurs cibles dans votre structure de dossiers, vous pouvez choisir de générer toutes les cibles ou une seule cible spécifique.
 1. Dans le menu principal, sélectionnez **Générer | Générer la solution** (**F7** ou **Ctrl + Maj + B**). Vérifiez qu’une cible CMake est déjà sélectionnée dans la liste déroulante **Élément de démarrage** dans la barre d’outils **Général**.
 
 ![Commande de menu de génération CMake](media/cmake-build-menu.png "Commande de menu de génération CMake")
@@ -215,7 +203,7 @@ Pour spécifier un générateur Visual Studio, ouvrez CMakeSettings.json à part
 
 1. **buildRoot** : correspond au commutateur **-DCMAKE_BINARY_DIR** et spécifie où est créé le cache CMake. Si le dossier n’existe pas, il est créé.
 
-1. **variables** : contient une paire nom-valeur de variables CMake qui sont passées sous la forme **-D**_name_**=**_value_ à CMake. Si vos instructions de génération de projet CMake spécifient l’ajout des variables directement dans le fichier de cache CMake, nous vous recommandons de les ajouter ici à la place. L’exemple suivant indique comment spécifier les paires nom-valeur :
+1. **variables** : contient une paire nom-valeur de variables CMake qui sont passées sous la forme **-D** *_nom_=_valeur_* à CMake. Si vos instructions de génération de projet CMake spécifient l’ajout des variables directement dans le fichier de cache CMake, nous vous recommandons de les ajouter ici à la place. L’exemple suivant indique comment spécifier les paires nom-valeur :
 
 ```json
 "variables": [
@@ -285,7 +273,7 @@ CMakeSettings.json prend désormais en charge les environnements hérités. Cett
 
 L’exemple ci-dessus revient à exécuter **l’invite de commandes développeur pour VS 2017** avec les arguments **-arch=amd64 -host_arch=amd64**.
 
-Le tableau suivant montre les valeurs par défaut et leurs équivalents de ligne de commande :
+Le tableau suivant présente les valeurs par défaut :
 
 |Nom du contexte|Description|
 |-----------|-----------------|

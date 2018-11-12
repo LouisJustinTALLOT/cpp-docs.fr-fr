@@ -1,10 +1,6 @@
 ---
-title: La classe CArchive | Microsoft Docs
-ms.custom: ''
+title: CArchive (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CArchive
 - AFX/CArchive
@@ -31,8 +27,6 @@ f1_keywords:
 - AFX/CArchive::WriteObject
 - AFX/CArchive::WriteString
 - AFX/CArchive::m_pDocument
-dev_langs:
-- C++
 helpviewer_keywords:
 - CArchive [MFC], CArchive
 - CArchive [MFC], Abort
@@ -58,16 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ed01b2500beeccd5ffdd351b569864e79ad370c7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433547"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465609"
 ---
 # <a name="carchive-class"></a>CArchive (classe)
 
@@ -408,26 +398,21 @@ friend CArchive& operator<<(
     CArchive& ar,
     const CObject* pOb);
 
-
 throw(
     CArchiveException*,
     CFileException*);
-
 
 CArchive& AFXAPI operator<<(
     CArchive& ar,
     const RECT& rect);
 
-
 CArchive& AFXAPI operator<<(
     CArchive& ar,
     POINT point);
 
-
 CArchive& AFXAPI operator<<(
     CArchive& ar,
     SIZE size);
-
 
 template<typename BaseType,
     class StringTraits> CArchive& operator<<(
@@ -483,38 +468,31 @@ friend CArchive& operator>>(
     CArchive& ar,
     CObject *& pOb);
 
-
 throw(
     CArchiveException*,
     CFileException*,
     CMemoryException*);
-
 
 friend CArchive& operator>>(
     CArchive& ar,
     const CObject *& pOb);
 
-
 throw(
     CArchiveException*,
     CFileException*,
     CMemoryException*);
 
-
 CArchive& AFXAPI operator>>(
     CArchive& ar,
     const RECT& rect);
-
 
 CArchive& AFXAPI operator>>(
     CArchive& ar,
     POINT point);
 
-
 CArchive& AFXAPI operator>>(
     CArchive& ar,
     SIZE size);
-
 
 template<typename BaseType,
     class StringTraits> CArchive& operator>>(

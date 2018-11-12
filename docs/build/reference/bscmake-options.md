@@ -1,16 +1,10 @@
 ---
-title: Options BSCMAKE | Microsoft Docs
-ms.custom: ''
+title: Options BSCMAKE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCBscMakeTool.OutputFile
 - VC.Project.VCBscMakeTool.SuppressStartupBanner
 - VC.Project.VCBscMakeTool.PreserveSBR
-dev_langs:
-- C++
 helpviewer_keywords:
 - /v BSCMAKE option
 - Iu BSCMAKE option
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c00e6abd28d2e21c73d1eca83f2effb8782d8aa4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464907"
 ---
 # <a name="bscmake-options"></a>Options BSCMAKE
 
@@ -72,7 +62,7 @@ Vous permet d’envoyer des informations à Microsoft concernant des erreurs int
 
 Pour plus d’informations sur **/errorreport**, consultez [/errorReport (signaler les erreurs du compilateur interne)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
-**/ HELP**<br/>
+**/HELP**<br/>
 Affiche un résumé de la syntaxe de ligne de commande BSCMAKE.
 
 **/IU**<br/>

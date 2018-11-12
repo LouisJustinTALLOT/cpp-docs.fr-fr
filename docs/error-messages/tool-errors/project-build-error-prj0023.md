@@ -1,27 +1,17 @@
 ---
-title: Erreur de génération PRJ0023 de projet | Microsoft Docs
-ms.custom: ''
+title: Erreur de génération de projet PRJ0023
 ms.date: 08/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0023
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0023
 ms.assetid: ed55a320-e7c8-489f-886e-825feee0d576
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47b31aa1acba3d13bfeb52e52233f90e1c12cbda
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 75a5669b0f0b12fcc2f4311950ef98e53623a7f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213884"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636434"
 ---
 # <a name="project-build-error-prj0023"></a>Erreur de génération de projet PRJ0023
 

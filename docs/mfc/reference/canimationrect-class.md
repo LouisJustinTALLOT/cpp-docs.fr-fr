@@ -1,10 +1,6 @@
 ---
-title: CAnimationRect, classe | Microsoft Docs
-ms.custom: ''
+title: CAnimationRect, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationRect
 - AFXANIMATIONCONTROLLER/CAnimationRect
@@ -24,8 +20,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_rightValue
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_szInitial
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_topValue
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationRect [MFC], CAnimationRect
 - CAnimationRect [MFC], AddTransition
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e798862dc9e9d34d6a75461994989f685e33a554
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436024"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540177"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect, classe
 
@@ -168,13 +158,11 @@ Construit un objet CAnimationRect.
 ```
 CAnimationRect();
 
-
 CAnimationRect(
     const CRect& rect,
     UINT32 nGroupID,
     UINT32 nObjectID = (UINT32)-1,
     DWORD dwUserData = 0);
-
 
 CAnimationRect(
     const CPoint& pt,
@@ -182,7 +170,6 @@ CAnimationRect(
     UINT32 nGroupID,
     UINT32 nObjectID = (UINT32)-1,
     DWORD dwUserData = 0);
-
 
 CAnimationRect(
     int nLeft,

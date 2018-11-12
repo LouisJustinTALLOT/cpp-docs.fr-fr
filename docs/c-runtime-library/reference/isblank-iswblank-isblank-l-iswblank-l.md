@@ -1,10 +1,6 @@
 ---
-title: isblank, iswblank, _isblank_l, _iswblank_l | Microsoft Docs
-ms.custom: ''
+title: isblank, iswblank, _isblank_l, _iswblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isblank
 - _isblank_l
@@ -30,19 +26,13 @@ f1_keywords:
 - _istblank
 - _isblank_l
 - iswblank
-dev_langs:
-- C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d2787be85aa4e12bf22d1be14f90568891b83824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb088c4056e2277e188d7f98a57dd36216d013ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403311"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497316"
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
@@ -77,11 +67,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si *c* est une représentation spécifique d’un espace ou un caractère de tabulation horizontale, ou fait partie d’un ensemble de paramètres régionaux spécifiques de caractères qui sont utilisés pour séparer les mots dans une ligne de texte. **ISBLANK** retourne une valeur différente de zéro si *c* est un caractère d’espace (0 x 20) ou des caractères de tabulation horizontale (0 x 09). Le résultat de la condition de test pour le **ESTVIDE** fonctions dépend le **LC_CTYPE** catégorie de configuration des paramètres régionaux ; pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les versions de ces fonctions qui n’ont pas le **_l** suffixe utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe sont identiques, sauf qu’elles utilisent le paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Chacune de ces routines retourne différente de zéro si *c* est une représentation particulière d’un espace ou un caractère de tabulation horizontale, ou fait partie d’un jeu de paramètres régionaux spécifique de caractères qui servent à séparer les mots d’une ligne de texte. **ISBLANK** retourne une valeur différente de zéro si *c* est un caractère espace (0 x 20) ou le caractère de tabulation horizontale (0 x 09). Le résultat de la condition de test pour le **isblank** fonctions varie selon le **LC_CTYPE** catégorie définition des paramètres régionaux ; pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les versions de ces fonctions qui n’ont pas la **_l** suffixe utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le **_l** suffixe sont identiques, sauf qu’ils utilisent le paramètres régionaux qui sont passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 **iswblank** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à un espace standard ou un caractère de tabulation horizontale.
 
-Le comportement de **isblank** et **_isblank_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Lorsqu’une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, le fonctions de déclencher une assertion.
+Le comportement de **isblank** et **_isblank_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -90,7 +80,7 @@ Le comportement de **isblank** et **_isblank_l** n’est pas défini si *c* n’
 |**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
 |**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

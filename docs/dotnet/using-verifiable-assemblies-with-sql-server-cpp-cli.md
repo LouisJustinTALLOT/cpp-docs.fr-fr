@@ -1,26 +1,15 @@
 ---
-title: Utilisation d’assemblys vérifiables avec SQL Server (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: Utilisation d'assemblys vérifiables avec SQL Server (C++/CLI)
 ms.date: 10/17/2019
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 419b3de739de22597fffc7a607e2bf73561e3000
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472655"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilisation d'assemblys vérifiables avec SQL Server (C++/CLI)
 
@@ -32,7 +21,7 @@ SQL Server fournit des extensions à Transact-SQL (T-SQL) pour vous permettre d�
 
 - Mode non restreint : exécuter du code à vos risques et périls ; code ne devra pas être de type sécurisé.
 
-- Mode sans échec : exécuter sécurisé vérifié le code de type sécurisé ; compilé avec/clr : safe. 
+- Mode sans échec : exécuter sécurisé vérifié le code de type sécurisé ; compilé avec/clr : safe.
 
 > [!IMPORTANT]
 > Déconseillé de Visual Studio 2015 et Visual Studio 2017 ne prend pas en charge la **/CLR : pure** et **/CLR : safe** la création de projets vérifiables. Si vous avez besoin du code vérifiable, nous vous recommandons de que vous traduisez votre code en c#.
@@ -88,6 +77,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
 ## <a name="see-also"></a>Voir aussi
-
 
 [Classes et structs](../cpp/classes-and-structs-cpp.md)

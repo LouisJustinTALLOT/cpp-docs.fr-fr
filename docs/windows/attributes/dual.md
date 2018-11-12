@@ -1,28 +1,17 @@
 ---
-title: Double (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: Double (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.dual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 228349c878e3bef262b5d09790c315e1d8b9e28b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 30d334f58f0eb91c9ca44ba5a5b6b8edf3970510
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790709"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509952"
 ---
 # <a name="dual"></a>dual
 
@@ -58,7 +47,7 @@ __interface IStatic : IDispatch
    HRESULT P1([out, retval] long *nSize);
    [   propput,    id(1),    bindable,    displaybind,    defaultbind,    requestedit
    ]
-   HRESULT P1([in] long nSize); 
+   HRESULT P1([in] long nSize);
 };
 
 [cpp_quote("#include file.h")];
@@ -75,7 +64,7 @@ __interface IStatic : IDispatch
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|`dispinterface`|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -84,4 +73,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [custom](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

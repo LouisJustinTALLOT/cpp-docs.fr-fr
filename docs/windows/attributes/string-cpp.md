@@ -1,28 +1,17 @@
 ---
-title: chaîne (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: chaîne (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.string
-dev_langs:
-- C++
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 24d11a056d248e27be236f710cdd0532b3beca2d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8bf708067341ecde4fb18d565b7d72866312decd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790941"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603188"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -66,10 +55,10 @@ __interface IFireTabCtrl
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de tableau](array-attributes.md)<br/>
-[export](export.md)  
+[export](export.md)

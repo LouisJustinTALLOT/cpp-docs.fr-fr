@@ -1,28 +1,17 @@
 ---
-title: db_command (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: db_command (attribut de COM C++)
 ms.date: 07/10/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.db_command
-dev_langs:
-- C++
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0111dfc424a99d413a217149b3c5e579a3999f13
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790737"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559469"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -31,7 +20,7 @@ Crée une commande OLE DB.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)  
+[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)
 ]
 ```
 
@@ -74,7 +63,7 @@ où :
 
 Si la chaîne de commande contient un ou plusieurs spécificateurs tels que \[dans], \[out], ou \[en entrée/sortie], **db_command** génère un mappage de paramètres.
 
-Si la chaîne de commande contient un ou plusieurs paramètres comme \[db_column] ou \[bindto], **db_command** génère un ensemble de lignes et une table d’accesseurs pour traiter ces variables liées. Consultez [db_accessor](db-accessor.md) pour plus d’informations.
+Si la chaîne de commande contient un ou plusieurs paramètres comme \[db_column] ou \[bindto], **db_command** génère un ensemble de lignes et une table d’accesseurs pour traiter ces variables liées. Pour plus d’informations, consultez [db_accessor](db-accessor.md) .
 
 > [!NOTE]
 > \[*bindtype*] syntaxe et la *liaisons* paramètre ne sont pas valides lors de l’utilisation **db_command** au niveau de la classe.
@@ -88,7 +77,7 @@ TCHAR m_state[3] = 'CA';
 
 [db_command (command = "SELECT au_fname([bindto]m_au_fname), au_lname([bindto]m_au_lname) " \
    "FROM dbo.authors " \
-   "WHERE state = ?([in]m_state)")  
+   "WHERE state = ?([in]m_state)")
 ]
 ```
 
@@ -96,7 +85,7 @@ TCHAR m_state[3] = 'CA';
 (Facultatif) Le nom de la poignée que vous utilisez pour travailler avec l’ensemble de lignes. Si vous spécifiez *name*, **db_command** génère une classe avec l’objet *name*spécifié, qui peut être utilisée pour parcourir l’ensemble de lignes ou pour exécuter plusieurs requêtes d’action. Si vous ne spécifiez pas *name*, vous ne pouvez pas retourner plusieurs lignes de résultats à l’utilisateur.
 
 *source_name*<br/>
-(Facultatif) Le `CSession` variable ou une instance d’une classe qui a le `db_source` attribut appliqué à ce dernier sur lequel la commande s’exécute. Consultez [db_source](db-source.md).
+(Facultatif) Le `CSession` variable ou une instance d’une classe qui a le `db_source` attribut appliqué à ce dernier sur lequel la commande s’exécute. Voir [db_source](db-source.md).
 
 **db_command** vérifie que la variable utilisée pour *source_name* est valide. La variable spécifiée doit donc être dans la portée globale ou dans la portée de fonction.
 
@@ -113,15 +102,15 @@ Si vous ne spécifiez pas une valeur pour *liaisons*, **db_command** analyse le 
 *bulk_fetch*<br/>
 (Facultatif) Valeur entière qui spécifie le nombre de lignes à extraire.
 
-La valeur par défaut est 1, qui spécifie l’extraction de lignes unique (l’ensemble de lignes sera de type [CRowset](../../data/oledb/crowset-class.md)).
+La valeur par défaut est 1. Elle spécifie l’extraction d’une seule ligne (l’ensemble de lignes sera de type [CRowset](../../data/oledb/crowset-class.md)).
 
-Une valeur supérieure à 1 spécifie l’extraction de lignes en bloc. L’extraction de lignes en bloc fait référence à la capacité des ensembles de lignes en bloc à extraire plusieurs handles de ligne (l’ensemble de lignes sera de type [CBulkRowset](../../data/oledb/cbulkrowset-class.md) et appellera `SetRows` avec le nombre spécifié de lignes).
+Une valeur supérieure à 1 spécifie l’extraction de lignes en bloc. L’extraction de lignes en bloc fait référence à la capacité des ensembles de lignes en bloc à extraire plusieurs handles de ligne (l’ensemble de lignes sera de type [CBulkRowset](../../data/oledb/cbulkrowset-class.md) et appellera `SetRows` avec le nombre de lignes spécifié).
 
 Si *bulk_fetch* est inférieur à 1, `SetRows` retourne la valeur zéro.
 
 ## <a name="remarks"></a>Notes
 
-**db_command** crée un [CCommand](../../data/oledb/ccommand-class.md) objet, qui est utilisé par un consommateur OLE DB pour exécuter une commande.
+**db_command** crée un objet [CCommand](../../data/oledb/ccommand-class.md) , qui est utilisé par un consommateur OLE DB pour exécuter une commande.
 
 Vous pouvez utiliser **db_command** avec une portée de classe ou de fonction. La principale différence est la portée de l’objet `CCommand` . Avec la portée de fonction, les données telles que les liaisons se terminent à la fin de la fonction. Utilisations de portée de classe et de fonction impliquent la classe de modèle de consommateur OLE DB `CCommand<>`, mais les arguments template diffèrent pour les cas de fonction et de classe. Dans le cas d’une fonction, les liaisons sont effectuées à un `Accessor` qui comprend des variables locales, tandis que l’utilisation de la classe déduira un `CAccessor`-classe comme argument dérivée. En cas d’utilisation comme attribut de classe, **db_command** fonctionne conjointement avec **db_column**.
 
@@ -131,7 +120,7 @@ Lorsque le fournisseur d’attributs consommateur applique cet attribut à une c
 
 ## <a name="example"></a>Exemple
 
-Cet exemple définit une commande qui sélectionne le prénom et le nom dans une table où la colonne d’état correspond à « CA ». **db_command** crée et lit un ensemble de lignes sur lequel vous pouvez appeler des fonctions générées par l’Assistant comme [OpenAll et CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), ainsi que `CRowset` telles que les fonctions membres [MoveNext](../../data/oledb/crowset-movenext.md).
+Cet exemple définit une commande qui sélectionne le prénom et le nom dans une table où la colonne d’état correspond à « CA ». **db_command** crée et lit un ensemble de lignes sur lequel vous pouvez appeler des fonctions générées par un Assistant, telles que [OpenAll et CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), ainsi que des fonctions membres `CRowset` telles que [MoveNext](../../data/oledb/crowset-movenext.md).
 
 Notez que ce code vous oblige à fournir votre propre chaîne de connexion qui se connecte à la base de données pubs. Pour plus d’informations sur la façon de procéder dans l’environnement de développement, consultez [Comment : se connecter à une base de données et de parcourir les objets existants](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) et [ajouter de nouvelles connexions](/visualstudio/data-tools/add-new-connections).
 
@@ -253,9 +242,9 @@ int main() {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)<br/>
-[Attributs autonomes](stand-alone-attributes.md)  
+[Attributs autonomes](stand-alone-attributes.md)

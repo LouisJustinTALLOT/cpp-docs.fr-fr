@@ -1,12 +1,6 @@
 ---
-title: Former des vues (MFC) | Microsoft Docs
-ms.custom: ''
+title: Mode Formulaire (MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - user interfaces [MFC], forms
 - forms [MFC]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9019b8f2314cfefa5b952994e7fa7c3e9d8d459e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f092b9eca0fe0b4af40a5e1f6e77d3a0f1af74b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655622"
 ---
 # <a name="form-views-mfc"></a>Mode Formulaire (MFC)
 
@@ -40,7 +30,7 @@ Lorsque vous insérez un nouveau formulaire dans votre application, Visual C++ e
 
 - Crée une ressource de boîte de dialogue avec les styles appropriés (ou vous pouvez utiliser une ressource de boîte de dialogue existant qui n’a pas encore été associée à une classe).
 
-     Si vous choisissez une ressource existante de la boîte de dialogue, vous devrez peut-être définir ces styles à l’aide de la page de propriétés pour la boîte de dialogue. Styles pour une boîte de dialogue doivent inclure :
+   Si vous choisissez une ressource existante de la boîte de dialogue, vous devrez peut-être définir ces styles à l’aide de la page de propriétés pour la boîte de dialogue. Styles pour une boîte de dialogue doivent inclure :
 
      **WS_CHILD**= On
 
@@ -54,17 +44,17 @@ Pour les applications basées sur l’architecture document/vue, le **nouveau fo
 
 - Crée un `CDocument`-classe de base
 
-     Au lieu de créer une nouvelle classe, vous pouvez utiliser n’importe quel existant `CDocument`-basé sur la classe dans votre projet.
+   Au lieu de créer une nouvelle classe, vous pouvez utiliser n’importe quel existant `CDocument`-basé sur la classe dans votre projet.
 
 - Génère un modèle de document (dérivée de `CDocument`) avec les ressources de chaîne, un menu et icône.
 
-     Vous pouvez également créer une nouvelle classe sur laquelle baser le modèle.
+   Vous pouvez également créer une nouvelle classe sur laquelle baser le modèle.
 
 - Ajoute un appel à `AddDocumentTemplate` de votre application `InitInstance` code.
 
-     Visual C++ ajoute ce code pour chaque nouveau formulaire que vous créez, ce qui ajoute le formulaire à la liste des formulaires disponibles quand l’utilisateur choisit le **New** commande. Ce code inclut l’ID de ressource associé du formulaire et les noms de document associé, vue et des classes de frame qui constituent le nouvel objet de formulaire.
+   Visual C++ ajoute ce code pour chaque nouveau formulaire que vous créez, ce qui ajoute le formulaire à la liste des formulaires disponibles quand l’utilisateur choisit le **New** commande. Ce code inclut l’ID de ressource associé du formulaire et les noms de document associé, vue et des classes de frame qui constituent le nouvel objet de formulaire.
 
-     Modèles de document servent de la connexion entre les documents, fenêtres frame et vues. Pour un seul document, vous pouvez créer de nombreux modèles.
+   Modèles de document servent de la connexion entre les documents, fenêtres frame et vues. Pour un seul document, vous pouvez créer de nombreux modèles.
 
 Pour plus d'informations, voir :
 

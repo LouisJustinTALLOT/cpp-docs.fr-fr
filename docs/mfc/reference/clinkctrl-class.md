@@ -1,10 +1,6 @@
 ---
-title: CLinkCtrl, classe | Microsoft Docs
-ms.custom: ''
+title: CLinkCtrl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CLinkCtrl
 - AFXCMN/CLinkCtrl
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXCMN/CLinkCtrl::SetItemID
 - AFXCMN/CLinkCtrl::SetItemState
 - AFXCMN/CLinkCtrl::SetItemUrl
-dev_langs:
-- C++
 helpviewer_keywords:
 - CLinkCtrl [MFC], CLinkCtrl
 - CLinkCtrl [MFC], Create
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43bc666677a82551410a08a2778c844ed6f21e1b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446983"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597559"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl, classe
 
@@ -129,7 +119,6 @@ virtual BOOL Create(
     CWnd* pParentWnd,
     UINT nID);
 
-
 virtual BOOL Create(DWORD dwStyle,
     const RECT& rect,
     CWnd* pParentWnd,
@@ -187,7 +176,6 @@ virtual BOOL CreateEx(
     const RECT& rect,
     CWnd* pParentWnd,
     UINT nID);
-
 
 virtual BOOL CreateEx(DWORD  dwExStyle,
     DWORD  dwStyle,

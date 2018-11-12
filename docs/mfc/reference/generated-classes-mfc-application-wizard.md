@@ -1,27 +1,17 @@
 ---
-title: Classes, Assistant Application MFC générées | Microsoft Docs
-ms.custom: ''
+title: Classes générées, Assistant Application MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.classes
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 329a25bbe56293a1878fe4a1f31292d53dc56740
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 21b951b01b413a703bb28b76426da86a5996b99d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398792"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542283"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Classes générées, Assistant Application MFC
 

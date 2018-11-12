@@ -1,11 +1,6 @@
 ---
-title: _Cmulcr, _FCmulcr, _LCmulcr | Documents Microsoft
-ms.custom: ''
+title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcr
 - _FCmulcr
@@ -30,22 +25,16 @@ f1_keywords:
 - complex/_Cmulcr
 - complex/_FCmulcr
 - complex/_LCmulcr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bbd42e4c543d4bc42afa023d62b328a143c90374
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395023"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507482"
 ---
 # <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
@@ -69,19 +58,19 @@ L’opérande à virgule flottante à multiplier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-A **_Dcomplex**, **_Fcomplex**, ou **_Lcomplex** structure qui représente le produit complexe du nombre complexe *x* et nombre à virgule flaoting *y*.
+Un **_Dcomplex**, **_Fcomplex**, ou **_Lcomplex** structure qui représente le produit complex du nombre complexe *x* et nombre à virgule flaoting *y*.
 
 ## <a name="remarks"></a>Notes
 
-Étant donné que les opérateurs arithmétiques intégrés ne fonctionnent pas sur l’implémentation Microsoft de types complexes, le **_Cmulcr**, **_FCmulcr**, et **_LCmulcr** fonctions simplifier la multiplication de types complexes par les types à virgule flottante.
+Étant donné que les opérateurs arithmétiques intégrés ne fonctionnent pas sur l’implémentation Microsoft des types complexes, le **_Cmulcr**, **_FCmulcr**, et **_LCmulcr** fonctions Simplifiez la multiplication des types complexes par des types à virgule flottante.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
 |**_Cmulcr**, **_FCmulcr**, **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-Ces fonctions sont spécifiques à Microsoft. Les types **_Dcomplex**, **_Fcomplex**, et **_Lcomplex** sont équivalents spécifiques à Microsoft pour les types natifs C99 non implémentées **_Complex double** , **float _Complex**, et **_Complex long double**, respectivement. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Ces fonctions sont spécifiques à Microsoft. Les types **_Dcomplex**, **_Fcomplex**, et **_Lcomplex** sont équivalents spécifiques à Microsoft pour les types natifs C99 non implémentées **double _Complex** , **float _Complex**, et **long double _Complex**, respectivement. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

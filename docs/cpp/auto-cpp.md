@@ -1,28 +1,18 @@
 ---
-title: automatique (C++) | Microsoft Docs
-ms.custom: ''
+title: automatique (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 f1_keywords:
 - auto_CPP
 - auto
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e832dfa694e5d2977e6b6a4d659d373f726c0cd6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f396d95d08a435ac3d85e214226921ce468a2259
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447448"
 ---
 # <a name="auto-c"></a>automatique (C++)
 
@@ -76,25 +66,25 @@ Vous pouvez utiliser **automatique**, avec le **decltype** spécificateur, pour 
 
 ## <a name="references-and-cv-qualifiers"></a>Références et qualificateurs cv
 
-Notez que l’utilisation **automatique** supprime les références, qualificateurs constantes et qualificateurs volatiles. Prenons l'exemple suivant :
+Notez que l’utilisation **automatique** supprime les références, qualificateurs constantes et qualificateurs volatiles. Prenons l'exemple suivant :
 
 ```cpp
-// cl.exe /analyze /EHsc /W4
-#include <iostream>
+// cl.exe /analyze /EHsc /W4
+#include <iostream>
 
-using namespace std;
+using namespace std;
 
-int main( )
+int main( )
 {
-    int count = 10;
-    int& countRef = count;
-    auto myAuto = countRef;
+    int count = 10;
+    int& countRef = count;
+    auto myAuto = countRef;
 
-    countRef = 11;
-    cout << count << " ";
+    countRef = 11;
+    cout << count << " ";
 
-    myAuto = 12;
-    cout << count << endl;
+    myAuto = 12;
+    cout << count << endl;
 }
 
 ```
@@ -103,7 +93,7 @@ Dans l’exemple précédent, myAuto est de type int, pas une référence de typ
 
 ## <a name="type-deduction-with-braced-initializers-c14"></a>Déduction de type avec initialiseurs entre accolades (C ++ 14)
 
-L’exmample de code suivant montre comment initialiser une variable automatique à l’aide d’accolades. Notez la différence entre B et C et entre A et E.
+L’exemple de code suivant montre comment initialiser une variable automatique à l’aide d’accolades. Notez la différence entre B et C et entre A et E.
 
 ```cpp
 #include <initializer_list>

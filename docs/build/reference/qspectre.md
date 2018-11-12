@@ -1,26 +1,16 @@
 ---
-title: /Qspectre | Microsoft Docs
-ms.custom: ''
+title: /Qspectre
 ms.date: 10/12/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 f1_keywords:
 - /Qspectre
 helpviewer_keywords:
 - /Qspectre
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: af04a905fdb3b509a90249c6d55a28ccdaa39318
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328517"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507313"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -36,7 +26,7 @@ Le **/qspectre** option est disponible dans Visual Studio 2017 version 15.5.5 et
 
 Le **/qspectre** option est désactivée par défaut.
 
-Dans sa version initiale, le **/qspectre** option travaillée uniquement sur le code optimisé. Dans Visual Studio 2017 version 15.7 et ultérieure, le **/qspectre** option est prise en charge à tous les niveaux d’optimisation. 
+Dans sa version initiale, le **/qspectre** option travaillée uniquement sur le code optimisé. Dans Visual Studio 2017 version 15.7 et ultérieure, le **/qspectre** option est prise en charge à tous les niveaux d’optimisation.
 
 Bibliothèques Visual C++ de Microsoft sont également disponibles dans les versions avec atténuation de Spectre. Les bibliothèques d’atténuation de Spectre pour Visual Studio 2017 peuvent être téléchargés dans le programme d’installation Visual Studio. Ils sont trouvent dans le **composants individuels** onglet sous **compilateurs, outils de génération et runtimes**, et le nom contient « Libs pour Spectre ». DLL et bibliothèques runtime statique avec atténuation est activée sont disponibles pour un sous-ensemble des runtimes Visual C++ : code de démarrage VC ++, vcruntime140, msvcp140, concrt140 et vcamp140. Les DLL sont pris en charge pour le déploiement local de l’application uniquement ; le contenu de Redistributable Visual C++ 2017 Runtime bibliothèques n’ont pas été modifié. Vous pouvez également installer les bibliothèques d’atténuation de Spectre pour MFC et ATL, trouvé dans le **composants individuels** onglet sous **SDK, bibliothèques et infrastructures**.
 

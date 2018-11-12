@@ -1,29 +1,18 @@
 ---
-title: Ouverture d’une ressource pour l’édition binaire (C++) | Microsoft Docs
-ms.custom: ''
+title: Ouverture d’une ressource pour l’édition binaire (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary
-dev_langs:
-- C++
 helpviewer_keywords:
 - binary data, editing
 - resources [C++], opening for binary editing
 ms.assetid: d3cdb0e4-da66-410d-8e49-b29073ff2929
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5c489d1b17df579ecec6c118826a8f770f5664eb
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: cc66c9d06a8549984e9347af776c56883f8e22f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316352"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491180"
 ---
 # <a name="opening-a-resource-for-binary-editing-c"></a>Ouverture d’une ressource pour l’édition binaire (C++)
 
@@ -53,7 +42,7 @@ ms.locfileid: "44316352"
    > [!NOTE]
    > Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
-![Éditeur binaire](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
+![Éditeur binaire](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
 Données binaires pour une boîte de dialogue affichée dans l’éditeur binaire
 
 Seules certaines valeurs ASCII sont représentées dans l’éditeur binaire (0x20 à 0x7E). Les caractères étendus sont affichés sous forme de points dans la section Valeur ASCII de l’éditeur binaire (volet droit). Les caractères « imprimables » sont les valeurs ASCII comprises entre 32 et 126.

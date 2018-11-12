@@ -1,10 +1,6 @@
 ---
-title: Cnonstatelessworker, classe | Microsoft Docs
-ms.custom: ''
+title: Cnonstatelessworker, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CNonStatelessWorker
 - ATLUTIL/ATL::CNonStatelessWorker
@@ -12,21 +8,15 @@ f1_keywords:
 - ATLUTIL/ATL::CNonStatelessWorker::Execute
 - ATLUTIL/ATL::CNonStatelessWorker::Initialize
 - ATLUTIL/ATL::CNonStatelessWorker::Terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7aaae3728113cfd91c0655d2eac445cdd4b34246
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095597"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619623"
 ---
 # <a name="cnonstatelessworker-class"></a>Cnonstatelessworker, classe
 
@@ -75,7 +65,7 @@ L’avantage de cette classe est qu’il fournit un moyen pratique pour modifier
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-Implémentation de [WorkerArchetype::Execute](worker-archetype.md#execute).  
+Implémentation de [WorkerArchetype::Execute](worker-archetype.md#execute).
 
 ```
 void Execute(
@@ -86,7 +76,7 @@ void Execute(
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode crée une instance de la *Worker* classe sur la pile et les appels [initialiser](worker-archetype.md#initialize) sur cet objet. Si l’initialisation réussite, cette méthode appelle également [Execute](worker-archetype.md#execute) et [Terminate](worker-archetype.md#terminate) sur le même objet.  
+Cette méthode crée une instance de la *Worker* classe sur la pile et les appels [initialiser](worker-archetype.md#initialize) sur cet objet. Si l’initialisation réussite, cette méthode appelle également [Execute](worker-archetype.md#execute) et [Terminate](worker-archetype.md#terminate) sur le même objet.
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

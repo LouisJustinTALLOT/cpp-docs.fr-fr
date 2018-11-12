@@ -1,27 +1,17 @@
 ---
-title: 'Procédure pas à pas : Débogage d’un projet (C++) | Microsoft Docs'
-ms.custom: ''
+title: "Procédure pas à pas : débogage d'un projet (C++)"
 ms.date: 09/14/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 04bec9c0de7734ae2c78dd3e9c124eac3d0a55d8
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234312"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581946"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Procédure pas à pas : débogage d'un projet (C++)
 
@@ -45,11 +35,11 @@ Dans cette procédure pas à pas, vous modifiez le programme pour résoudre le p
 
 1. Pour réduire la valeur de `totalParticipants` quand un Cardgame se termine, ajoutez le code suivant entre les accolades du destructeur `Cardgame::~Cardgame`.
 
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
+   [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
 
 1. Le fichier Cardgame.cpp doit ressembler au code ci-dessous après le changement :
 
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
+   [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
 1. Dans la barre de menus, choisissez **Générer**  >  **Générer la solution**.
 

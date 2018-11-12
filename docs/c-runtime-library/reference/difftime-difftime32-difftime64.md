@@ -1,10 +1,6 @@
 ---
-title: difftime, _difftime32, _difftime64 | Microsoft Docs
-ms.custom: ''
+title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _difftime32
 - difftime
@@ -28,8 +24,6 @@ f1_keywords:
 - difftime64
 - _difftime32
 - difftime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _difftime32 function
 - difftime function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a972a8f7ee2cc5e97c22afeaa21f86e4b4d6d509
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefa946f0458f79950b443c0a84272866845df8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398719"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505948"
 ---
 # <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -77,13 +67,13 @@ Heure de début
 
 Le **difftime** fonction calcule la différence entre les deux valeurs d’heure fournie *timeStart* et *débutHeure de fin*.
 
-La valeur d’heure fournie doit tenir dans la plage de **time_t**. **time_t** est une valeur 64 bits. Ainsi, la fin de la plage a été repoussée du 18 janvier 2038 à 23:59:59, heure UTC au 31 décembre 3000 à 23:59:59. La plage inférieure de **time_t** est toujours le 1er janvier 1970 à minuit.
+La valeur de temps fournie doit appartenir à la plage de **time_t**. **time_t** est une valeur 64 bits. Ainsi, la fin de la plage a été repoussée du 18 janvier 2038 à 23:59:59, heure UTC au 31 décembre 3000 à 23:59:59. La plage inférieure de **time_t** est toujours le 1er janvier 1970 à minuit.
 
-**difftime** est une fonction inline qui prend la valeur soit **_difftime32** ou **_difftime64** selon que **_USE_32BIT_TIME_T** est défini. _difftime32 et _difftime64 peuvent être utilisés directement pour forcer l’utilisation d’une taille particulière du type d’heure.
+**difftime** est une fonction inline qui prend la valeur **_difftime32** ou **_difftime64** selon que **_USE_32BIT_TIME_T** est défini. _difftime32 et _difftime64 peuvent être utilisés directement pour forcer l’utilisation d’une taille particulière du type d’heure.
 
-Ces fonctions valident leurs paramètres. Si l’un des paramètres est zéro ou négatif, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent 0 et la valeur **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si l’un des paramètres est zéro ou négatif, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent 0 et définissez **errno** à **EINVAL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,28 +1,17 @@
 ---
-title: transmit_as (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: transmit_as (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.transmit_as
-dev_langs:
-- C++
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9c096853c968b78b4c5b7c1dacc87da4104f3e78
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 546b4c4b32837b46c48eafbe12e991bb6c1630ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790701"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573252"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -86,10 +75,10 @@ struct _TREE_NODE_TYPE * right;
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)  
+[export](export.md)

@@ -1,10 +1,6 @@
 ---
-title: Cmfcfontcombobox, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcfontcombobox, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
 - AFXFONTCOMBOBOX/CMFCFontComboBox
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXFONTCOMBOBOX/CMFCFontComboBox::SelectFont
 - AFXFONTCOMBOBOX/CMFCFontComboBox::Setup
 - AFXFONTCOMBOBOX/CMFCFontComboBox::m_bDrawUsingFont
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCFontComboBox [MFC], CMFCFontComboBox
 - CMFCFontComboBox [MFC], GetSelFont
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: feb34a64fee8f3d3674f1513ea2a964f574aab54
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1201b8778fe6e254e4ebe8ca19fddb0312d7ca0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402497"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643753"
 ---
 # <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox, classe
 
@@ -134,7 +124,6 @@ Sélectionne la police qui correspond aux critères spécifiés dans la zone de 
 
 ```
 BOOL SelectFont(CMFCFontInfo* pDesc);
-
 
 BOOL SelectFont(
     LPCTSTR lpszName,

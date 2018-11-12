@@ -1,10 +1,6 @@
 ---
-title: CComObject, classe | Microsoft Docs
-ms.custom: ''
+title: CComObject, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComObject
 - ATLCOM/ATL::CComObject
@@ -13,21 +9,15 @@ f1_keywords:
 - ATLCOM/ATL::CComObject::CreateInstance
 - ATLCOM/ATL::CComObject::QueryInterface
 - ATLCOM/ATL::CComObject::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7a6f4f014d609e8b650951d459c23b07fd4a006
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 57c054915ce98dd8cff6bb772cdd40f4b0f2b768
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660471"
 ---
 # <a name="ccomobject-class"></a>CComObject, classe
 
@@ -120,7 +110,7 @@ CComObject();
 
 ### <a name="remarks"></a>Notes
 
-Libère toutes les ressources allouées, appels [FinalRelease](ccomobjectrootex-class.md#finalrelease), et décrémente le module nombre de verrous.  
+Libère toutes les ressources allouées, appels [FinalRelease](ccomobjectrootex-class.md#finalrelease), et décrémente le module nombre de verrous.
 
 ##  <a name="createinstance"></a>  CComObject::CreateInstance
 

@@ -1,27 +1,17 @@
 ---
-title: Mots clés C | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
+title: Mots clés C
+ms.date: 10/09/2018
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 8751889124c7c621ae1d4dad5a523762e7190ebb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860886"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580724"
 ---
 # <a name="c-keywords"></a>Mots clés C
 
@@ -48,17 +38,19 @@ Les mots clés et les identificateurs spéciaux ci-dessous sont reconnus par le 
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
-|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**<sup>2</sup>|
-|**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
+|**__asm**<sup>3</sup>|**dllimport**<sup>2</sup>|**__int8**<sup>3</sup>|**naked**<sup>2</sup>|
+|**__based**<sup>1, 3</sup>|**__except**<sup>3</sup>|**__int16**<sup>3</sup>|**__stdcall**<sup>3</sup>|
+|**__cdecl**<sup>3</sup>|**__fastcall**|**__int32**<sup>3</sup>|**thread**<sup>2</sup>|
+|**__declspec**<sup>3</sup>|**__finally**<sup>3</sup>|**__int64**<sup>3</sup>|**__try**<sup>3</sup>|
+|**dllexport**<sup>2</sup>|**__inline**<sup>3</sup>|**__leave**<sup>3</sup>||
 
 <sup>1</sup> Le mot clé **__based** a des utilisations limitées pour les compilations 32 bits et 64 bits cibles.
 
 <sup>2</sup> Ce sont des identificateurs spéciaux quand ils sont utilisés avec **__declspec** ; leur utilisation dans d’autres contextes n’est pas limitée.
 
-Les extensions Microsoft sont activées par défaut. Pour garantir la portabilité totale de vos programmes, vous pouvez désactiver les extensions Microsoft en spécifiant l'option /Za (compilation pour compatibilité ANSI) pendant la compilation. Dans ce cas, les mots clés spécifiques à Microsoft sont désactivés.
+<sup>3</sup> Pour assurer la compatibilité avec les versions précédentes, ces mots clés sont disponibles à la fois avec deux traits de soulignement de début et un seul trait de soulignement de fin lorsque les extensions Microsoft sont activées.
+
+Les extensions Microsoft sont activées par défaut. Pour garantir la portabilité totale de vos programmes, vous pouvez désactiver les extensions Microsoft en spécifiant l'option  [/Za \(Désactiver les extensions de langage](../build/reference/za-ze-disable-language-extensions.md) pendant la compilation. Dans ce cas, certains mots clés spécifiques à Microsoft sont désactivés.
 
 Lorsque les extensions Microsoft sont activées, vous pouvez utiliser les mots clés répertoriés ci-dessus dans vos programmes. Pour la compatibilité ANSI, la plupart de ces mots clés sont précédés de deux traits de soulignement. Les quatre exceptions, **dllexport**, **dllimport**, **naked** et **thread**, sont utilisées uniquement avec **__declspec** et ne requièrent donc pas un double trait de soulignement à gauche. Pour assurer la compatibilité descendante, des versions à un seul trait de soulignement sont prises en charge pour les autres mots clés.
 

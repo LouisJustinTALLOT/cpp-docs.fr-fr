@@ -1,10 +1,6 @@
 ---
-title: Macros d’objet du composant logiciel enfichable | Microsoft Docs
-ms.custom: ''
+title: Macros d’objet du composant logiciel enfichable
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlsnap/ATL::BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
 - atlsnap/ATL::BEGIN_SNAPINTOOLBARID_MAP
@@ -14,19 +10,13 @@ f1_keywords:
 - atlsnap/ATL::EXTENSION_SNAPIN_NODEINFO_ENTRY
 - atlsnap/ATL::SNAPINMENUID
 - atlsnap/ATL::SNAPINTOOLBARID_ENTRY
-dev_langs:
-- C++
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e3eec62e2bea92f1f308b149046b83be1b9085b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050552"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656935"
 ---
 # <a name="snap-in-object-macros"></a>Macros d’objet du composant logiciel enfichable
 
@@ -41,7 +31,7 @@ Ces macros fournissent la prise en charge pour les extensions de composant logic
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Crée un membre de données pour la classe de données de l’extension du composant logiciel enfichable.|
 |[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Passe à une classe de données d’extension du composant logiciel enfichable dans le mappage de classe de données extension composant logiciel enfichable de l’objet Snap-In.|
 |[SNAPINMENUID](#snapinmenuid)|Déclare l’ID du menu contextuel utilisé par l’objet Snap-In.|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Insère une barre d’outils dans le mappage de la barre d’outils de l’objet Snap-In.|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Insère une barre d’outils dans le mappage de la barre d’outils de l’objet Snap-In.|
 
 ## <a name="requirements"></a>Configuration requise
 

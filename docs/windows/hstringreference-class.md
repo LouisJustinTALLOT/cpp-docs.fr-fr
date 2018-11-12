@@ -1,9 +1,6 @@
 ---
-title: Hstringreference, classe | Microsoft Docs
-ms.custom: ''
+title: HStringReference, classe
 ms.date: 09/25/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference
@@ -14,8 +11,6 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator==
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator!=
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator<
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference class
 - Microsoft::WRL::Wrappers::HStringReference::CopyTo method
@@ -26,17 +21,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ae2199ec414556fe3401c94c273d5ef0c13c3c5d
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 09bf994a77bb6b7c9c9e97566ae01e02bd5070c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162527"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441754"
 ---
 # <a name="hstringreference-class"></a>HStringReference, classe
 
@@ -110,7 +100,7 @@ Cette méthode appelle la [WindowsDuplicateString](https://msdn.microsoft.com/li
 Récupère la valeur du handle HSTRING sous-jacent.
 
 ```cpp
-HSTRING Get() const throw()  
+HSTRING Get() const throw()
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -159,7 +149,7 @@ Le troisième constructeur initialise un nouveau `HStringReference` objet à la 
 Déplace la valeur d’un autre `HStringReference` objet actuel `HStringReference` objet.
 
 ```cpp
-HStringReference& operator=(HStringReference&& other) throw()  
+HStringReference& operator=(HStringReference&& other) throw()
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -186,7 +176,7 @@ inline bool operator==(
 
 inline bool operator==(
                const HStringReference& lhs,
-               const HSTRING& rhs) throw()  
+               const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -216,7 +206,7 @@ inline bool operator!=(
 
 inline bool operator!=(
                const HStringReference& lhs,
-               const HSTRING& rhs) throw()  
+               const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -238,7 +228,7 @@ Indique si le premier paramètre est inférieur au second.
 ```cpp
 inline bool operator<(
     const HStringReference& lhs,
-    const HStringReference& rhs) throw()  
+    const HStringReference& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Paramètres

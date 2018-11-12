@@ -1,11 +1,6 @@
 ---
-title: exp2, exp2f, exp2l | Microsoft Docs
-ms.custom: ''
+title: exp2, exp2f, exp2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - exp2
 - exp2f
@@ -30,23 +25,17 @@ f1_keywords:
 - math/exp2f
 - exp2l
 - math/exp2l
-dev_langs:
-- C++
 helpviewer_keywords:
 - exp2 function
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aea847d367200635c8fecbd694f8a50be859b3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396720"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562758"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -98,9 +87,9 @@ Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **exp2** qui acceptent et retournent **float** et **long double** types. Dans un programme C, **exp2** accepte et retourne toujours un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **exp2** qui acceptent et retournent **float** et **long double** types. Dans un programme C, **exp2** accepte et retourne toujours un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

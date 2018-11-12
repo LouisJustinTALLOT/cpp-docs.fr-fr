@@ -1,29 +1,19 @@
 ---
-title: Utilisation des registres | Documents Microsoft
-ms.custom: ''
+title: Utilisation des registres
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c77469a8cef03827101f4bf367c00a3bb440820
-ms.sourcegitcommit: 4fc6869067d533b175207befd2dc60346afee285
+ms.openlocfilehash: fa04318ad4af298f300fbbbad8c01d0df9500ec7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629981"
 ---
 # <a name="register-usage"></a>Utilisation des registres
 
-L’architecture fournit pour 16 registres généraux (ci-après dénommés registres d’entiers) ainsi que 16 registres XMM/YMM de x64 inscrit disponibles pour une utilisation à virgule flottante. Les registres volatils sont des registres de travail censés être détruits après un appel. Les registres non volatils doivent conserver leurs valeurs tout au long d'un appel de fonction et être enregistrés par l'appelé s'il les utilise.
+Le x64 architecture fournit pour 16 registres généraux (ci-après dénommés registres d’entiers) ainsi que 16 registres XMM/YMM inscrit disponibles pour une utilisation à virgule flottante. Les registres volatils sont des registres de travail censés être détruits après un appel. Les registres non volatils doivent conserver leurs valeurs tout au long d'un appel de fonction et être enregistrés par l'appelé s'il les utilise.
 
-## <a name="register-volatility-and-preservation"></a>Inscrire la volatilité et la préservation de
+## <a name="register-volatility-and-preservation"></a>Inscrire la volatilité et préservation
 
 Le tableau suivant explique comment chaque registre est utilisé dans les appels de fonction :
 
@@ -50,7 +40,7 @@ Le tableau suivant explique comment chaque registre est utilisé dans les appels
 |XMM5, YMM5|Volatil|Doit être conservé si nécessaire par l'appelant ; sixième argument de type vectoriel quand `__vectorcall` est utilisé|
 |XMM6:XMM15, YMM6:YMM15|Non volatil (XMM), volatil (moitié supérieure de YMM)|Doit être conservé par l’appelé. Les registres YMM doivent être conservés si nécessaire par l'appelant.|
 
-Sur la sortie de la fonction et sur l’entrée de la fonction aux appels de la bibliothèque Runtime C et les appels du système Windows, l’indicateur de direction de l’UC indicateurs register est censé être désactivée.
+Sur la sortie de la fonction et sur l’entrée de la fonction aux appels de la bibliothèque Runtime C et les appels de système de Windows, l’indicateur de direction de l’UC indicateurs register est censé être effacé.
 
 ## <a name="see-also"></a>Voir aussi
 

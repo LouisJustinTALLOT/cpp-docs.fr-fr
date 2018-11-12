@@ -1,14 +1,8 @@
 ---
-title: Dérivation d’une classe de CObject | Microsoft Docs
-ms.custom: ''
+title: Dérivation d'une classe de CObject
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - CObject
-dev_langs:
-- C++
 helpviewer_keywords:
 - DECLARE_DYNCREATE macro [MFC]
 - DECLARE_SERIAL macro [MFC]
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f673f0212884fce33069f044b34d5396cf72b7c3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: afaddfcb0a75b7e753897768d993df7ab5d876c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081928"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566229"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Dérivation d'une classe de CObject
 
@@ -65,9 +55,9 @@ Le tableau suivant montre la relation entre les macros utilisées pour prendre e
 
 1. Utilisez la syntaxe C++ normale pour dériver votre classe de `CObject` (ou à partir d’une classe dérivée de `CObject`).
 
-     L’exemple suivant montre le cas le plus simple, la dérivation d’une classe à partir de `CObject`:
+   L’exemple suivant montre le cas le plus simple, la dérivation d’une classe à partir de `CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
 Normalement, toutefois, vous voudrez peut-être substituer certaines des `CObject`de fonctions membres pour gérer les particularités de votre nouvelle classe. Par exemple, vous souhaiterez généralement remplacer le `Dump` fonction de `CObject` pour fournir la sortie de débogage pour le contenu de votre classe. Pour plus d’informations sur la procédure de remplacement `Dump`, consultez l’article [Diagnostics : dump d’objets](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Vous pouvez également substituer la `AssertValid` fonction de `CObject` pour effectuer un test personnalisé pour valider la cohérence des données membres des objets de classe. Pour obtenir une description de la procédure de remplacement `AssertValid`, consultez [MFC ASSERT_VALID et CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 

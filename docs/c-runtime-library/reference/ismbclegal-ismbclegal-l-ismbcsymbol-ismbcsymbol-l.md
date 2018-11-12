@@ -1,10 +1,6 @@
 ---
-title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l | Microsoft Docs
-ms.custom: ''
+title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclegal_l
 - _ismbclegal
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbclegal_l
 - ismbcsymbol
 - ismbclegal
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcsymbol function
 - ismbclegal_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d2bd03eb230d85a1f93038d50566b8ccae468a5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402593"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454572"
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
@@ -95,18 +85,18 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c*< = 255 et qu’il existe un correspondant **_ismbb** routine (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), résultat est la valeur de retour correspondantes **_ismbb** routine.
+Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c*< = 255 et qu’il existe un correspondant **_ismbb** routine (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le Il en résulte la valeur de retour correspondantes **_ismbb** routine.
 
 ## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions teste un caractère multioctet fourni pour un état donné.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 |Routine|Condition de test|Exemple de page de codes 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|Multioctet valide|Retourne zéro si et seulement si le premier octet de *c* est inclus dans la plage 0 x 81-0x9F ou 0xE0 - 0xFC, tandis que le deuxième octet se trouve dans les plages 0 x 40-0x7E ou 0 x 80 - FC.|
-|**_ismbcsymbol**|Symbole multioctet|Retourne zéro si et seulement si 0x8141 < =*c*< = 0x81AC.|
+|**_ismbclegal**|Multioctet valide|Retourne différente de zéro si et seulement si le premier octet de *c* est inclus dans la plage 0 x 81-0x9F ou 0xE0 - 0xFC et que le deuxième octet 0 x 40 - 0x7E ou 0 x 80 - FC.|
+|**_ismbcsymbol**|Symbole multioctet|Retourne une valeur différente de zéro si et seulement si 0 x 8141 < =*c*< = 0x81AC.|
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -115,7 +105,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_istlegal**|Retourne toujours la valeur false|**_ismbclegal**|Retourne toujours la valeur false.|
 |**_istlegal_l**|Retourne toujours la valeur false|**_ismbclegal_l**|Retourne toujours la valeur false.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

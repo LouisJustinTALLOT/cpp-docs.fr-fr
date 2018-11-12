@@ -1,10 +1,6 @@
 ---
-title: _getdcwd_nolock, _wgetdcwd_nolock | Microsoft Docs
-ms.custom: ''
+title: _getdcwd_nolock, _wgetdcwd_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - _getdcwd_nolock
 - _tgetdcwd_nolock
 - getdcwd_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - getdcwd_nolock function
 - _tgetdcwd_nolock function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa969bb756754c1a6e1d28ac1b029ee443666ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401576"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563684"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
@@ -90,7 +80,7 @@ Consultez [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 
 ## <a name="remarks"></a>Notes
 
-**_getdcwd_nolock** et **_wgetdcwd_nolock** sont identiques aux **_getdcwd** et **_wgetdcwd**, respectivement, sauf qu’elles ne sont pas protégés à partir de interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+**_getdcwd_nolock** et **_wgetdcwd_nolock** sont identiques aux **_getdcwd** et **_wgetdcwd**, respectivement, à ceci près qu’elles ne sont pas protégées contre interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -98,7 +88,7 @@ Consultez [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tgetdcwd_nolock**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

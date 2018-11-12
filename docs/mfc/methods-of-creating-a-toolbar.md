@@ -1,12 +1,6 @@
 ---
-title: Méthodes de création d’une barre d’outils | Microsoft Docs
-ms.custom: ''
+title: Méthodes de création d'une barre d'outils
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CToolBarCtrl class [MFC], and CToolBar class [MFC]
 - CToolBar class [MFC], creating toolbars
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb7e73df0944a7a6c0c7b28c04e43008fcd70b39
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5296c0454e035770e196c3d6a4d15291d0c4ca6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401060"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612457"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Méthodes de création d'une barre d'outils
 

@@ -1,12 +1,6 @@
 ---
-title: (TLS) de stockage Local des threads | Microsoft Docs
-ms.custom: ''
+title: Stockage local des threads (TLS)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - multithreading [C++], Thread Local Storage
 - TLS [C++]
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 02c699ec64fe03a1f892fc3c7e8bf9f6b9c05dfc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081869"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507586"
 ---
 # <a name="thread-local-storage-tls"></a>Stockage local des threads (TLS)
 
@@ -100,7 +90,7 @@ Les instructions suivantes doivent être observées au moment de déclarer des v
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-     Cette restriction ne s'applique pas en C++. Sachant que C++ prévoit l'initialisation dynamique de tous les objets, vous pouvez initialiser un objet à l'aide d'une expression qui utilise l'adresse d'une variable locale de thread. Il s'agit de la même procédure que pour construire des objets locaux de thread. Par exemple, le code présenté plus haut ne génère pas d'erreur quand il est compilé en tant que fichier source C++. Notez que l'adresse d'une variable locale de thread est valide aussi longtemps qu'existe le thread d'où l'adresse a été extraite.
+   Cette restriction ne s'applique pas en C++. Sachant que C++ prévoit l'initialisation dynamique de tous les objets, vous pouvez initialiser un objet à l'aide d'une expression qui utilise l'adresse d'une variable locale de thread. Il s'agit de la même procédure que pour construire des objets locaux de thread. Par exemple, le code présenté plus haut ne génère pas d'erreur quand il est compilé en tant que fichier source C++. Notez que l'adresse d'une variable locale de thread est valide aussi longtemps qu'existe le thread d'où l'adresse a été extraite.
 
 - Le langage C standard prévoit l'initialisation d'un objet ou d'une variable à l'aide d'une expression impliquant une auto-référence, mais uniquement pour les objets d'étendue non statique. Même si C++ prévoit généralement l'initialisation dynamique d'objets à l'aide d'une expression impliquant une auto-référence, ce type d'initialisation n'est pas permis avec les objets locaux de thread. Exemple :
 
@@ -110,9 +100,9 @@ Les instructions suivantes doivent être observées au moment de déclarer des v
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-     Notez qu'une expression `sizeof` qui inclut l'objet initialisé ne représente pas une auto-référence et qu'elle est autorisée aussi bien en C qu'en C++.
+   Notez qu'une expression `sizeof` qui inclut l'objet initialisé ne représente pas une auto-référence et qu'elle est autorisée aussi bien en C qu'en C++.
 
-     C++ n’autorise pas l’initialisation dynamique des données de thread en raison des possibles futures améliorations dont pourrait bénéficier la fonctionnalité de stockage local des threads.
+   C++ n’autorise pas l’initialisation dynamique des données de thread en raison des possibles futures améliorations dont pourrait bénéficier la fonctionnalité de stockage local des threads.
 
 - Sur les systèmes d’exploitation Windows avant Windows Vista, `__declspec`(thread) présente certaines limitations. Si une DLL déclare des données ou un objet en tant que `__declspec`( thread ), elle peut provoquer une erreur de protection si elle est chargée de façon dynamique. Une fois que la DLL est chargée avec [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), provoque une défaillance système chaque fois que le code fait référence le `__declspec`données (thread). Sachant que l’espace de variables globales d’un thread est alloué au moment de l’exécution, la taille de cet espace varie en fonction du calcul des besoins de l’application et de ceux de toutes les DLL liées statiquement. Quand vous utilisez `LoadLibrary`, vous ne pouvez pas étendre cet espace pour tenir compte des variables locales de thread déclarées avec `__declspec`( thread ). Utiliser les API TLS, telles que [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), dans votre DLL pour allouer TLS si la DLL peut être chargée par `LoadLibrary`.
 

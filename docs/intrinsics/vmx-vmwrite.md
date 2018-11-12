@@ -1,28 +1,18 @@
 ---
-title: __vmx_vmwrite | Microsoft Docs
-ms.custom: ''
+title: __vmx_vmwrite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmwrite
-dev_langs:
-- C++
 helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f333a37972a31b5815a05797bfabb603f5a26947
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c5c6e0edcb3136986cfd8e05f3d5217b3d021fa7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820676"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529244"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
@@ -33,7 +23,7 @@ ms.locfileid: "48820676"
 ## <a name="syntax"></a>Syntaxe
 
 ```
-unsigned char __vmx_vmwrite( 
+unsigned char __vmx_vmwrite( 
    size_t Field,
    size_t FieldValue
 );
@@ -56,7 +46,7 @@ unsigned char __vmx_vmwrite(
 
 ## <a name="remarks"></a>Notes
 
-Le `__vmx_vmwrite` fonction est équivalente à la `VMWRITE` instruction machine. La valeur de la `Field` paramètre est un index de champ encodé qui est décrite dans la documentation Intel. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) de site et recherchez annexe C document.
+La fonction `__vmx_vmwrite` est équivalente à l’instruction machine `VMWRITE` . La valeur de la `Field` paramètre est un index de champ encodé qui est décrite dans la documentation Intel. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) de site et recherchez annexe C document.
 
 ## <a name="requirements"></a>Configuration requise
 

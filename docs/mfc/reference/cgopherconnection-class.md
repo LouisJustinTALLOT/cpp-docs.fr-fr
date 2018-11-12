@@ -1,10 +1,6 @@
 ---
-title: CGopherConnection, classe | Microsoft Docs
-ms.custom: ''
+title: CGopherConnection, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CGopherConnection
 - AFXINET/CGopherConnection
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXINET/CGopherConnection::CreateLocator
 - AFXINET/CGopherConnection::GetAttribute
 - AFXINET/CGopherConnection::OpenFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - CGopherConnection [MFC], CGopherConnection
 - CGopherConnection [MFC], CreateLocator
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f00a81aa7997591d152a665e14869f22bd14321
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9c2a99c30213a28f4c20ba0f4a2eebea85bef76
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377960"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519663"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection, classe
 
@@ -93,7 +83,6 @@ CGopherConnection(
     LPCTSTR pstrServer,
     DWORD_PTR dwContext);
 
-
 CGopherConnection(
     CInternetSession* pSession,
     LPCTSTR pstrServer,
@@ -148,7 +137,6 @@ CGopherLocator CreateLocator(
     DWORD dwGopherType);
 
 static CGopherLocator CreateLocator(LPCTSTR pstrLocator);
-
 
 static CGopherLocator CreateLocator(
     LPCTSTR pstrServerName,

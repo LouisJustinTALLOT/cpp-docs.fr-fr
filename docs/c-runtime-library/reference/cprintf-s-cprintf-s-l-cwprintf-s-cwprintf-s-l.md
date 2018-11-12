@@ -1,10 +1,6 @@
 ---
-title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_s_l
 - _cprintf_s_l
@@ -33,8 +29,6 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2d8a2f5f80b00eef47d09a8d505f31a42a0fab2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401342"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606517"
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 
@@ -95,7 +85,7 @@ int _cwprintf_s_l(
 *format*<br/>
 Chaîne de contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Paramètres facultatifs.
 
 *locale*<br/>
@@ -107,11 +97,11 @@ Nombre de caractères affichés.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions, mettre en forme et imprimer une série de caractères et les valeurs directement dans la console, à l’aide de la **_putch** (fonction) (**_putwch** pour **_cwprintf_s**) à la sortie caractères. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format a la même forme et fonction que la *format* paramètre pour le [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) (fonction). Contrairement à la **fprintf_s**, **printf_s**, et **sprintf_s** des fonctions, ni **_cprintf_s** ni **_cwprintf_s** convertit les caractères de saut de ligne en combinaisons de flux de retour de ligne (CRLF) chariot sortie.
+Ces fonctions mettre en forme et affichent toute une série de caractères et les valeurs directement dans la console, à l’aide de la **_putch** (fonction) (**_putwch** pour **_cwprintf_s**) à la sortie caractères. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format a la même forme et fonction que le *format* paramètre pour le [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) (fonction). Contrairement à la **fprintf_s**, **printf_s**, et **sprintf_s** fonctions ni **_cprintf_s** ni **_cwprintf_s** convertit les caractères de saut de ligne en combinaisons retour-saut de ligne (CR-LF) de transport lors de sortie.
 
-La différence est que **_cwprintf_s** affiche les caractères Unicode dans Windows NT. Contrairement aux **_cprintf_s**, **_cwprintf_s** utilise les paramètres régionaux actuels de la console
+Une différence importante est que **_cwprintf_s** affiche les caractères Unicode dans Windows NT. Contrairement aux **_cprintf_s**, **_cwprintf_s** utilise les paramètres régionaux actuels de la console
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
@@ -125,7 +115,7 @@ Comme les versions non sécurisées (voir [_cprintf, _cprintf_l, _cwprintf, _cwp
 |**_tcprintf_s**|**_cprintf_s**|**_cprintf_s**|**_cwprintf_s**|
 |**_tcprintf_s_l**|**_cprintf_s_l**|**_cprintf_s_l**|**_cwprintf_s_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,27 +1,17 @@
 ---
-title: Conversions standard | Microsoft Docs
-ms.custom: ''
+title: Conversions standard
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575446"
 ---
 # <a name="standard-conversions"></a>Conversions standard
 
@@ -81,11 +71,11 @@ Les promotions de type conservation-valeur et les promotions qui conservent l'en
 
 - Un opérande de **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, ou **>=**
 
-     Ces opérateurs se basent sur un signe pour déterminer le résultat. Par conséquent, les promotions de type conservation-valeur et conservation-signe produisent des résultats différents lorsqu’elles sont appliquées à ces opérandes.
+   Ces opérateurs se basent sur un signe pour déterminer le résultat. Par conséquent, les promotions de type conservation-valeur et conservation-signe produisent des résultats différents lorsqu’elles sont appliquées à ces opérandes.
 
 - L’opérande gauche de **>>** ou **>>=**
 
-     Ces opérateurs traitent les quantités signées et non signées différemment en effectuant une opération de décalage. Pour les quantités signées, le déplacement de la quantité vers la droite provoque la propagation du bit de signe dans les positions binaires libérées. Pour les quantités non signées, les positions binaires libérées sont vides.
+   Ces opérateurs traitent les quantités signées et non signées différemment en effectuant une opération de décalage. Pour les quantités signées, le déplacement de la quantité vers la droite provoque la propagation du bit de signe dans les positions binaires libérées. Pour les quantités non signées, les positions binaires libérées sont vides.
 
 - Argument vers une fonction ou un opérande surchargé d’un opérateur surchargé qui dépend de l’entier non signé du type de l’opérande pour la correspondance d’argument. (Consultez [opérateurs surchargés](../cpp/operator-overloading.md) pour plus d’informations sur la définition des opérateurs surchargés.)
 

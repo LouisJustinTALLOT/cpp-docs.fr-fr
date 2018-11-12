@@ -1,26 +1,16 @@
 ---
-title: Résoudre vos dépendances aux éléments internes de bibliothèque | Microsoft Docs
-ms.custom: ''
+title: Résoudre vos dépendances aux éléments internes de bibliothèque
 ms.date: 05/24/2017
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - library internals in an upgraded Visual C++ project
 - _Hash_seq in an upgraded Visual C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18e72e6b5e3fdfdb352d908b2fb9d0609593e7c2
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 7f1db0019894474b0770d293b293a663b1ee5a0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820923"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662694"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>Résoudre vos dépendances aux éléments internes de bibliothèque
 
@@ -88,4 +78,4 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
 [Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[Mettre à niveau votre code vers la bibliothèque Universal CRT](upgrade-your-code-to-the-universal-crt.md)  
+[Mettre à niveau votre code vers la bibliothèque Universal CRT](upgrade-your-code-to-the-universal-crt.md)

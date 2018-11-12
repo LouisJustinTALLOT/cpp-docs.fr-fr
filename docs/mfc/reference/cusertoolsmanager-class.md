@@ -1,10 +1,6 @@
 ---
-title: Cusertoolsmanager, classe | Microsoft Docs
-ms.custom: ''
+title: Cusertoolsmanager, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CUserToolsManager
 - AFXUSERTOOLSMANAGER/CUserToolsManager
@@ -27,8 +23,6 @@ f1_keywords:
 - AFXUSERTOOLSMANAGER/CUserToolsManager::SaveState
 - AFXUSERTOOLSMANAGER/CUserToolsManager::SetDefExt
 - AFXUSERTOOLSMANAGER/CUserToolsManager::SetFilter
-dev_langs:
-- C++
 helpviewer_keywords:
 - CUserToolsManager [MFC], CUserToolsManager
 - CUserToolsManager [MFC], CreateNewTool
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2da34eacb7524168f16d05248eee97422a1fb770
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 405260d4bc2f7cdf163dbd7a00f342b8afc87d48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380759"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668110"
 ---
 # <a name="cusertoolsmanager-class"></a>Cusertoolsmanager, classe
 
@@ -156,7 +146,6 @@ Construit un objet `CUserToolsManager`. Chaque application doit avoir au plus un
 
 ```
 CUserToolsManager();
-
 
 CUserToolsManager(
     const UINT uiCmdToolsDummy,

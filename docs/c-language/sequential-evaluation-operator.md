@@ -1,27 +1,17 @@
 ---
-title: Opérateur d'évaluation séquentielle | Microsoft Docs
-ms.custom: ''
+title: Opérateur d'évaluation séquentielle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - operators [C++], sequential-evaluation
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a285cc87ec4182586663afcb3559101167ae7261
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1da8c64ad12d794178ec2e24c3b6c2d587d029e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095571"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527186"
 ---
 # <a name="sequential-evaluation-operator"></a>Opérateur d'évaluation séquentielle
 
@@ -29,9 +19,9 @@ L’opérateur d’évaluation séquentielle, appelé aussi opérateur virgule, 
 
 ## <a name="syntax"></a>Syntaxe
 
-*expression*: *assignment-expression*
-
-*expression*  **,**  *assignment-expression*
+*expression* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
 
 L'opérande gauche de l'opérateur d'évaluation séquentielle est évalué comme une expression `void`. Le résultat de l'opération a la même valeur et le même type que l'opérande droite. Chaque opérande peut être de tout type. L'opérateur d'évaluation séquentielle n'effectue pas de conversions de type entre ses opérandes et ne produit pas de l-value. Il existe un point de séquence après le premier opérande. Cela signifie que tous les effets secondaires de l’évaluation de l’opérande gauche sont terminés avant le début de l’évaluation de l’opérande droite. Pour plus d'informations, consultez [Points de séquence](../c-language/c-sequence-points.md).
 

@@ -1,25 +1,15 @@
 ---
-title: 'Procédure pas à pas : À l’aide de la bibliothèque MFC nouveau Shell de contrôles | Microsoft Docs'
-ms.custom: ''
+title: "Procédure pas à pas : utilisation des nouveaux contrôles d'environnement MFC"
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47b169371b8551622650687e5d7bd8c06f560725
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4ff585123fb30a4fc31460c95f8960f5cfd7b7bc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236047"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507562"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procédure pas à pas : utilisation des nouveaux contrôles d'environnement MFC
 
@@ -35,17 +25,17 @@ Cette procédure pas à pas suppose que vous avez configuré Visual Studio à ut
 
 1. Dans le **nouveau projet** boîte de dialogue, développez le **Visual C++** nœud dans le **types de projets** volet et sélectionnez **MFC**. Ensuite, dans le **modèles** volet, sélectionnez **Application MFC**. Tapez un nom pour le projet, tel que `MFCShellControls` et cliquez sur **OK**. Après avoir **Assistant Application MFC** affiche, utilisez les options suivantes :
 
-    1. Sur le **Type d’Application** volet, sous **type d’Application**, désactivez le **documents avec onglet** option. Ensuite, sélectionnez **monodocument** et sélectionnez **support de l’architecture Document/vue**. Sous **projet style**, sélectionnez **Visual Studio**et à partir de la **style visuel et couleurs** liste déroulante liste, sélectionnez **Office 2007 (thème Blue)**. 
+    1. Sur le **Type d’Application** volet, sous **type d’Application**, désactivez le **documents avec onglet** option. Ensuite, sélectionnez **monodocument** et sélectionnez **support de l’architecture Document/vue**. Sous **projet style**, sélectionnez **Visual Studio**et à partir de la **style visuel et couleurs** liste déroulante liste, sélectionnez **Office 2007 (thème Blue)**.
 
     1. Sur le **prise en charge des documents composés** volet, sélectionnez **aucun**.
 
     1. N’apportez aucune modification à la **chaînes modèles de Document** volet.
 
-    1. Sur le **prise en charge de la base de données** volet (Visual Studio 2015 et versions antérieure), sélectionnez **aucun** , car l’application n’utilise pas une base de données. 
+    1. Sur le **prise en charge de la base de données** volet (Visual Studio 2015 et versions antérieure), sélectionnez **aucun** , car l’application n’utilise pas une base de données.
 
-    1. Sur le **fonctionnalités d’Interface utilisateur** volet, assurez-vous que le **utiliser une barre de menus et la barre d’outils** option est sélectionnée. Laissez toutes les autres options telles quelles. 
+    1. Sur le **fonctionnalités d’Interface utilisateur** volet, assurez-vous que le **utiliser une barre de menus et la barre d’outils** option est sélectionnée. Laissez toutes les autres options telles quelles.
 
-    1. Sur le **fonctionnalités avancées** volet, sous **fonctionnalités avancées**, sélectionnez uniquement **contrôles ActiveX** et **le manifeste de contrôle commun**. Sous **avancé des fenêtres frames**, sélectionnez uniquement le **volet de Navigation** option. Cela entraînera l’Assistant créer le volet à gauche de la fenêtre avec un `CMFCShellTreeCtrl` déjà incorporées. 
+    1. Sur le **fonctionnalités avancées** volet, sous **fonctionnalités avancées**, sélectionnez uniquement **contrôles ActiveX** et **le manifeste de contrôle commun**. Sous **avancé des fenêtres frames**, sélectionnez uniquement le **volet de Navigation** option. Cela entraînera l’Assistant créer le volet à gauche de la fenêtre avec un `CMFCShellTreeCtrl` déjà incorporées.
 
     1. Nous n’allons pas apporter des modifications à la **Classes générées par** volet, cliquez sur **Terminer** pour créer votre projet MFC.
 

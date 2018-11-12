@@ -1,10 +1,6 @@
 ---
-title: '&lt;filesystem&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;filesystem&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::directory_entry
 - filesystem/std::experimental::filesystem::recursive_directory_iterator
@@ -12,19 +8,13 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs:
-- C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 88e44100e20ce40b343a82c7caed66387ca1bcd5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681038"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473383"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -128,8 +118,8 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 
 |Name|Description|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) qui détermine le comportement si un fichier de destination existe déjà.|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) qui détermine le comportement si un fichier de destination existe déjà.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) et qui détermine le comportement si un fichier de destination existe déjà.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) et qui détermine le comportement si un fichier de destination existe déjà.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Énumération qui spécifie les options pour les itérateurs de répertoire.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Énumération pour les types de fichiers.|
 |[Perms](../standard-library/filesystem-enumerations.md#perms)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|

@@ -1,15 +1,9 @@
 ---
-title: -INCLUDE (forcer les références de symbole) | Microsoft Docs
-ms.custom: ''
+title: /INCLUDE (Forcer les références des symboles)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /include
 - VC.Project.VCLinkerTool.ForceSymbolReferences
-dev_langs:
-- C++
 helpviewer_keywords:
 - INCLUDE linker option
 - force symbol references linker option
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - symbols, add to symbol table
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6528f6edc51a2dd01e8f91107827b570a44785de
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 418b66cb16954f23036eaa65e07a4abf80fdba79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715778"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439336"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Forcer les références des symboles)
 

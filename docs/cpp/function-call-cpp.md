@@ -1,12 +1,6 @@
 ---
-title: Fonction d’appel (C++) | Microsoft Docs
-ms.custom: ''
+title: Appel de fonction (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - function calls, C++ functions
 - functions [C++], calling
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - function call operator ()
 ms.assetid: 5094254a-045b-46f7-8653-69bc91e80dce
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d583609a1013620384e7e938182403fb5c694fb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0064b17f0adf5cadf732321fbb62403a1da5db76
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081391"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649148"
 ---
 # <a name="function-call-c"></a>Appel de fonction (C++)
 
@@ -40,7 +30,7 @@ primary-expression ( expression-list )
 
 ## <a name="remarks"></a>Notes
 
-Dans ce contexte, `primary-expression` est le premier opérande et `expression-list`, une liste d'arguments éventuellement vide, est le deuxième opérande. L'opérateur d'appel de fonction est utilisé pour les opérations nécessitant un certain nombre de paramètres. Cela fonctionne car `expression-list` est une liste et non un opérande unique. L'opérateur d'appel de fonction doit être une fonction membre non statique.
+Dans ce contexte, `primary-expression` est le premier opérande et `expression-list`, une liste d’arguments éventuellement vide, est le deuxième opérande. L'opérateur d'appel de fonction est utilisé pour les opérations nécessitant un certain nombre de paramètres. Cela fonctionne car `expression-list` est une liste et non un opérande unique. L'opérateur d'appel de fonction doit être une fonction membre non statique.
 
 L'opérateur d'appel de fonction, quand il est surchargé, ne modifie pas la façon dont les fonctions sont appelées, mais la façon dont l'opérateur doit être interprété quand il est appliqué aux objets d'un type de classe donné. Par exemple, le code suivant n'a généralement pas de signification :
 

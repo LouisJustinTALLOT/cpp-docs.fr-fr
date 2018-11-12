@@ -1,10 +1,6 @@
 ---
-title: Cmfcribbonlinkctrl, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcribbonlinkctrl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonLinkCtrl
 - AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl
@@ -21,8 +17,6 @@ f1_keywords:
 - AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OnSetIcon
 - AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OpenLink
 - AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::SetLink
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], CMFCRibbonLinkCtrl
 - CMFCRibbonLinkCtrl [MFC], CopyFrom
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 24dc82015e003b3a2ddbbd202dd6cba9176154eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6e20b8fd2c8b40f907301c36f2aa3acef144d7b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440080"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559144"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Cmfcribbonlinkctrl, classe
 
@@ -129,19 +119,17 @@ L’exemple suivant montre comment utiliser le constructeur de la `CMFCRibbonLin
 
 ##  <a name="copyfrom"></a>  CMFCRibbonLinkCtrl::CopyFrom
 
-
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *src*
+[in] *src*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getcompactsize"></a>  CMFCRibbonLinkCtrl::GetCompactSize
-
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -149,7 +137,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -171,21 +159,19 @@ La valeur actuelle du lien hypertexte.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonLinkCtrl::GetRegularSize
 
-
 ```
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="gettooltiptext"></a>  CMFCRibbonLinkCtrl::GetToolTipText
-
 
 ```
 virtual CString GetToolTipText() const;
@@ -197,21 +183,20 @@ virtual CString GetToolTipText() const;
 
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonLinkCtrl::OnDrawMenuImage
 
-
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *CDC** [in] *CRect*
+[in] *Capture de données modifiées&#42;*<br/>
+[in] *CRect*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="isdrawtooltipimage"></a>  CMFCRibbonLinkCtrl::IsDrawTooltipImage
-
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -223,19 +208,17 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ##  <a name="ondraw"></a>  CMFCRibbonLinkCtrl::OnDraw
 
-
 ```
 virtual void OnDraw(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="onmousemove"></a>  CMFCRibbonLinkCtrl::OnMouseMove
-
 
 ```
 virtual void OnMouseMove(CPoint point);
@@ -243,12 +226,11 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *point*
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="onseticon"></a>  CMFCRibbonLinkCtrl::OnSetIcon
-
 
 ```
 virtual void OnSetIcon();

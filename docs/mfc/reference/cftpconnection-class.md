@@ -1,10 +1,6 @@
 ---
-title: CFtpConnection, classe | Microsoft Docs
-ms.custom: ''
+title: CFtpConnection, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFtpConnection
 - AFXINET/CFtpConnection
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXINET/CFtpConnection::RemoveDirectory
 - AFXINET/CFtpConnection::Rename
 - AFXINET/CFtpConnection::SetCurrentDirectory
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFtpConnection [MFC], CFtpConnection
 - CFtpConnection [MFC], Command
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3dce0efa8ced6e51557e4efc64b8c5f7441d662
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e5c8629a1aa1c489cc51224f9d008c4cdd3397
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504245"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection, classe
 
@@ -115,7 +105,6 @@ CFtpConnection(
     HINTERNET hConnected,
     LPCTSTR pstrServer,
     DWORD_PTR dwContext);
-
 
 CFtpConnection(
     CInternetSession* pSession,

@@ -1,29 +1,19 @@
 ---
-title: Cresourceexception, classe | Microsoft Docs
-ms.custom: ''
+title: Cresourceexception, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CResourceException
 - AFXWIN/CResourceException
 - AFXWIN/CResourceException::CResourceException
-dev_langs:
-- C++
 helpviewer_keywords:
 - CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 993b484c40386a60dd2da04d7198d692f5e16f97
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa7fd6e2caa15a256cec2eae5ede6c6e47cd1518
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632683"
 ---
 # <a name="cresourceexception-class"></a>Cresourceexception, classe
 
@@ -79,5 +69,4 @@ N’utilisez pas ce constructeur directement, mais plutôt appeler la fonction g
 
 [CException, classe](cexception-class.md)<br/>
 [Graphique hiérarchique](../hierarchy-chart.md)
-
 

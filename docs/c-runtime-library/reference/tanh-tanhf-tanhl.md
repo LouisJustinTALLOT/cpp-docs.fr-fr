@@ -1,10 +1,6 @@
 ---
-title: TANH, tanhf, tanhl | Documents Microsoft
-ms.custom: ''
+title: TANH, tanhf, tanhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tanh
 - tanhf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanhf
 - tanhl
 - _tanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanhl function
 - _tanhl function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 438c587099edafedbb2cc3feb4b3a285aa155a0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408518"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432385"
 ---
 # <a name="tanh-tanhf-tanhl"></a>TANH, tanhf, tanhl
 
@@ -73,15 +63,15 @@ Angle en radians.
 
 Le **tanh** fonctions retournent la tangente hyperbolique de *x*. Aucun retour d'erreur.
 
-|Entrée|Exception SEH|**Matherr** (Exception)|
+|Entrée|Exception SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|aucun|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **tanh** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **tanh** accepte et retourne toujours **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **tanh** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **tanh** accepte et retourne toujours **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C)|
 |-------------|---------------------|-|

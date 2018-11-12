@@ -1,10 +1,6 @@
 ---
-title: strspn, wcsspn, _mbsspn, _mbsspn_l | Microsoft Docs
-ms.custom: ''
+title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspn_l
 - wcsspn
@@ -30,8 +26,6 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b7d826b72a006e0a8b011d89dfc96aa8aea4690
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415159"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477311"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
 Retourne l’index du premier caractère, dans une chaîne, qui n’appartient pas à un jeu de caractères.
 
 > [!IMPORTANT]
-> **_mbsspn** et **_mbsspn_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspn** et **_mbsspn_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -99,13 +89,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne une valeur entière spécifiant la longueur de la sous-chaîne dans *str* qui se compose uniquement de caractères dans *strCharSet*. Si *str* commence par un caractère ne figurant pas dans *strCharSet*, la fonction retourne 0.
+Retourne une valeur entière spécifiant la longueur de la sous-chaîne dans *str* qui se compose uniquement de caractères dans *strCharSet*. Si *str* commence par un caractère non *strCharSet*, la fonction retourne 0.
 
 ## <a name="remarks"></a>Notes
 
-Le **strspn** fonction retourne l’index du premier caractère dans *str* qui n’appartient pas au jeu de caractères dans *strCharSet*. La recherche n’inclut pas les caractères Null de fin.
+Le **strspn** renvoie l’index du premier caractère dans *str* qui n’appartient pas au jeu de caractères dans *strCharSet*. La recherche n’inclut pas les caractères Null de fin.
 
-**wcsspn** et **_mbsspn** sont des versions à caractères larges et caractères multioctets de **strspn**. Les arguments de **wcsspn** sont des caractères larges chaînes ; ceux de **_mbsspn** sont des chaînes de caractères multioctets. **_mbsspn** valide ses paramètres. Si *str* ou *strCharSet* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, **_mbspn** définit **errno** à **EINVAL** et retourne 0. **strspn** et **wcsspn** ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
+**wcsspn** et **_mbsspn** sont des versions à caractères larges et à caractères multioctets de **strspn**. Les arguments de **wcsspn** sont des caractères larges chaînes ; ceux de **_mbsspn** sont des chaînes de caractères multioctets. **_mbsspn** valide ses paramètres. Si *str* ou *strCharSet* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, **_mbspn** définit **errno** à **EINVAL** et retourne 0. **strspn** et **wcsspn** ne valident pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -116,7 +106,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 |**_tcsspn**|**strspn**|**_mbsspn**|**wcsspn**|
 |**n/a**|**n/a**|**_mbsspn_l**|**n/a**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

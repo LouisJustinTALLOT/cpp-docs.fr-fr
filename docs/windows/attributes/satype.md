@@ -1,28 +1,17 @@
 ---
-title: satype (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: satype (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.satype
-dev_langs:
-- C++
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 255517789a5854ee6f76c4982bb75825905df546
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 3d2d921e750adad0089df0d00590f256b56c732e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791004"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517687"
 ---
 # <a name="satype"></a>satype
 
@@ -75,4 +64,4 @@ __interface A {
 [Attributs de compilateur](compiler-attributes.md)<br/>
 [Attributs de paramètres](parameter-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[ID](id.md)  
+[ID](id.md)

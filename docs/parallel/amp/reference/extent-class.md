@@ -1,10 +1,6 @@
 ---
-title: Extent, classe (C++ AMP) | Microsoft Docs
-ms.custom: ''
+title: extent, classe (C++ AMP)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - extent
 - AMP/extent
@@ -13,21 +9,15 @@ f1_keywords:
 - AMP/Concurrency::extent::size
 - AMP/Concurrency::extent::tile
 - AMP/Concurrency::extent::rank Constant
-dev_langs:
-- C++
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca17d81aa1712bcf6222b0ec0888f3a987269f03
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163118"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476651"
 ---
 # <a name="extent-class-c-amp"></a>extent, classe (C++ AMP)
 
@@ -393,6 +383,7 @@ tiled_extent<_Dim0, _Dim1> tile() const ;
 template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *_Dim0*<br/>

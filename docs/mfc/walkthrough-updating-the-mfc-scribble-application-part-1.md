@@ -1,12 +1,6 @@
 ---
-title: 'Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1) | Microsoft Docs'
-ms.custom: ''
+title: 'Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1)'
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - examples [MFC], update existing application
 - ribbon UI, porting to
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 85ff0c17f8ec523fc5cb52101fb44cfc37dd9b50
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235502"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481846"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1)
 
@@ -32,7 +22,7 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
 
 Cette procédure pas à pas modifie l’exemple Scribble des MFC 1.0 classic qui vous permet d’utiliser la souris pour créer des dessins de ligne. Cette partie de la procédure pas à pas montre comment modifier l’exemple Scribble afin qu’il affiche une barre de ruban. [Partie 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) ajoute plus de boutons à la barre du ruban.
 
-## <a name="prerequisites"></a>Prérequis 
+## <a name="prerequisites"></a>Prérequis
 
 Le [exemple Scribble des MFC 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Pour obtenir de l’aide sur la conversion vers Visual Studio 2017, consultez [Guide du portage : Scribble MFC](../porting/porting-guide-mfc-scribble.md).
 
@@ -146,7 +136,7 @@ Cette procédure pas à pas copie des fichiers de ressources à partir de l’ex
    1. Importer le fichier filesmall.bmp, qui contient les onze 16 x 16 (16 x 176) des images. Modifier l’ID de la bitmap à `IDB_RIBBON_FILESMALL`.
 
    > [!NOTE]
-   > Étant donné que nous avons besoin uniquement les images de huit premières 16 x 16 (16 x 128), vous pouvez survenir si vous le souhaitez la largeur de la partie droite de cette image bitmap à partir de 176 à 128. 
+   > Étant donné que nous avons besoin uniquement les images de huit premières 16 x 16 (16 x 128), vous pouvez survenir si vous le souhaitez la largeur de la partie droite de cette image bitmap à partir de 176 à 128.
 
    1. Importer le filelarge.bmp, qui contient les 32 x 32 (32 x 288) neuf images. Modifier l’ID de la bitmap à `IDB_RIBBON_FILELARGE`.
 
@@ -161,7 +151,7 @@ Cette procédure pas à pas copie des fichiers de ressources à partir de l’ex
    1. Importer l’image bitmap panelicons.bmp, qui contient huit 16 x 16 images. Dans le **propriétés** fenêtre de la **éditeur de bitmaps**, ajustez la largeur de la bitmap à 64 (16 x 64). Modifier l’ID de la bitmap à `IDB_PANEL_ICONS`.
 
    > [!NOTE]
-   > Étant donné que nous avons besoin uniquement les images de quatre premières 16 x 16 (16 x 64), vous pouvez survenir si vous le souhaitez la largeur de la partie droite de cette image bitmap à partir de 128 à 64. 
+   > Étant donné que nous avons besoin uniquement les images de quatre premières 16 x 16 (16 x 64), vous pouvez survenir si vous le souhaitez la largeur de la partie droite de cette image bitmap à partir de 128 à 64.
 
 ##  <a name="addribbon"></a> Ajout d’une ressource de ruban au projet
 

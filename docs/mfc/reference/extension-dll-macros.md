@@ -1,25 +1,15 @@
 ---
-title: Macros et fonctions pour la gestion de DLL | Microsoft Docs
-ms.custom: ''
+title: Macros et fonctions pour la gestion de DLL
 ms.date: 04/03/2017
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 320bbc9fde5888f75149d6f3f9fad60deb869924
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 9ef46d9ba026dbabfe1a2c4ac676a8940cdce1d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616591"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Macros et fonctions pour la gestion de DLL
 
@@ -221,6 +211,7 @@ Appelez cette fonction dans une DLL d’extension MFC `DllMain` pour initialiser
 ```
 BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModule );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *state*<br/>
@@ -282,6 +273,7 @@ Utilisez cette fonction pour définir l’indicateur d’état par module, ce qu
 ```
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *bSet*<br/>

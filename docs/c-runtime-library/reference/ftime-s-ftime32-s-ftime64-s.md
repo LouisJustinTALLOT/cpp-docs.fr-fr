@@ -1,10 +1,6 @@
 ---
-title: _ftime_s, _ftime32_s, _ftime64_s | Microsoft Docs
-ms.custom: ''
+title: _ftime_s, _ftime32_s, _ftime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftime_s
 - _ftime64_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _ftime32_s
 - ftime32_s
 - ftime64_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftime32_s function
 - ftime_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a23b31fb88b60b05e587bf62ab07ec7e72de869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402986"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435475"
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
@@ -75,7 +65,7 @@ Zéro si l'opération a réussi, un code d'erreur en cas d'échec. Si *timeptr* 
 
 ## <a name="remarks"></a>Notes
 
-Le **_ftime_s** fonction obtient l’heure locale actuelle et la stocke dans la structure vers laquelle pointée *timeptr*. Le **_timeb**, **__timeb32**, et **__timeb64** structures sont définies dans SYS\Timeb.h. Elles contiennent quatre champs, qui sont présentés dans le tableau suivant.
+Le **_ftime_s** fonction obtient l’heure locale actuelle et le stocke dans la structure vers laquelle pointée *timeptr*. Le **_timeb**, **__timeb32**, et **__timeb64** structures sont définies dans sys\timeb.h. Elles contiennent quatre champs, qui sont présentés dans le tableau suivant.
 
 |Champ|Description|
 |-|-|
@@ -84,13 +74,13 @@ Le **_ftime_s** fonction obtient l’heure locale actuelle et la stocke dans la 
 |**time**|Durée en secondes depuis le 1er janvier 1970, minuit (00:00:00), temps universel (UTC).|
 |**timezone**|Différence en minutes, en direction de l’ouest, entre les heures UTC et locale. La valeur de **fuseau horaire** est définie à partir de la valeur de la variable globale **_timezone** (consultez **_tzset**).|
 
-Le **_ftime64_s** (fonction), qui utilise le **__timeb64** de la structure, autorise les dates de création de fichiers d’exprimer des et 23:59:59, le 31 décembre 3000 UTC ; alors que **_ftime32_s** représente uniquement les dates et 23:59:59 18 janvier 2038, UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour toutes ces fonctions.
+Le **_ftime64_s** (fonction), qui utilise le **__timeb64** structure, permet d’exprimer à 23:59:59 le 31 décembre 3000, UTC ; des dates de création de fichiers tandis que **_ftime32_s** représente uniquement les dates jusqu’à 23:59:59 le 18 janvier 2038, UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour toutes ces fonctions.
 
-Le **_ftime_s** fonction est équivalente à **_ftime64_s**, et **_timeb** contient une heure 64 bits, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_ftime_s** utilise une heure 32 bits et **_timeb** contient une heure 32 bits.
+Le **_ftime_s** fonction est équivalente à **_ftime64_s**, et **_timeb** contient une heure 64 bits, à moins que **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_ftime_s** utilise une heure 32 bits et **_timeb** contient une heure 32 bits.
 
-**_ftime_s** valide ses paramètres. Si un pointeur null en tant que passé *timeptr*, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit **errno** à **EINVAL**.
+**_ftime_s** valide ses paramètres. Si reçoit un pointeur null en tant que *timeptr*, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit **errno** à **EINVAL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

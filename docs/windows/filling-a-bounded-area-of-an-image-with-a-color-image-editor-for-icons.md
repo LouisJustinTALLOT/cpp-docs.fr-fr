@@ -1,29 +1,18 @@
 ---
-title: Remplissage d’une zone délimitée d’une Image avec une couleur (Éditeur d’images pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Remplissage avec une couleur d'une zone délimitée d'une image (Éditeur d'images pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - colors [C++], image
 - images [C++], colors
 - Image editor [C++], colors
 - Fill tool
 ms.assetid: e647ef83-421b-4818-855d-249b4c4cb5f2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ff816e1cb6706847caceecebeffd13a210b3e94d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 678d3275a41628b5ada28068a760ef60cc258776
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403829"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451712"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Remplissage avec une couleur d'une zone délimitée d'une image (Éditeur d'images pour les icônes)
 

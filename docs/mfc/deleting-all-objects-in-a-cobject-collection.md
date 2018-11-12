@@ -1,12 +1,6 @@
 ---
-title: Suppression de tous les objets d’une Collection CObject | Microsoft Docs
-ms.custom: ''
+title: Suppression de tous les objets d’une collection CObject
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - objects [MFC], deleting in collections
 - objects in CObject collections, deleting
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3e56c08f6165f6662c30e3ecbd6eda45c6696788
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542582"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Suppression de tous les objets d’une collection CObject
 
@@ -68,9 +58,9 @@ Notez la différence entre supprimer l'élément d'un objet et supprimer l'élé
 
 1. Appelez la fonction `RemoveAll` pour supprimer tous les éléments du tableau après leur suppression.
 
-     Le code pour supprimer tous les éléments d'un tableau est le suivant :
+   Le code pour supprimer tous les éléments d'un tableau est le suivant :
 
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 Comme dans l'exemple de liste ci-dessus, vous pouvez appeler `RemoveAll` pour supprimer tous les éléments d'un tableau ou `RemoveAt` pour supprimer chaque élément un par un.
 
@@ -82,9 +72,9 @@ Comme dans l'exemple de liste ci-dessus, vous pouvez appeler `RemoveAll` pour su
 
 1. Appelez la fonction `RemoveAll` pour supprimer tous les éléments du mappage après leur suppression.
 
-     Le code pour supprimer tous les éléments d'une collection `CMap` est le suivant. Chaque élément du mappage a une chaîne en tant que clé et un objet `CPerson` (dérivé de `CObject`) en tant que valeur.
+   Le code pour supprimer tous les éléments d'une collection `CMap` est le suivant. Chaque élément du mappage a une chaîne en tant que clé et un objet `CPerson` (dérivé de `CObject`) en tant que valeur.
 
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 Vous pouvez appeler `RemoveAll` pour supprimer tous les éléments d'un mappage ou `RemoveKey` pour supprimer chaque élément avec la clé spécifiée.
 

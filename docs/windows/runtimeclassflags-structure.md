@@ -1,30 +1,20 @@
 ---
-title: Runtimeclassflags, Structure | Microsoft Docs
-ms.custom: ''
+title: RuntimeClassFlags (structure)
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClassFlags
 - implements/Microsoft::WRL::RuntimeClassFlags::value
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::RuntimeClassFlags structure
 - Microsoft::WRL::RuntimeClassFlags::value constant
 ms.assetid: 7098d605-bd14-4d51-82f4-3def8296a938
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c5bfd9fc6dd87c61149722e8ef7fed79f8f017da
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 74ae72dc87d45abba04d15303ed2ec92b18f8c28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788836"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668531"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags (structure)
 
@@ -63,7 +53,7 @@ Un [RuntimeClassType (énumération)](../windows/runtimeclasstype-enumeration.md
 ## <a name="value-constant"></a>Runtimeclassflags::value, constante
 
 Un champ qui contient un [RuntimeClassType (énumération)](../windows/runtimeclasstype-enumeration.md) valeur.
-  
+
 ```cpp
 static const unsigned int value = flags;
 ```

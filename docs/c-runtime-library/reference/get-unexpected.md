@@ -1,10 +1,6 @@
 ---
-title: _get_unexpected | Microsoft Docs
-ms.custom: ''
+title: _get_unexpected
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_unexpected
 apilocation:
@@ -23,27 +19,21 @@ f1_keywords:
 - __get_unexpected
 - _get_unexpected
 - get_unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - __get_unexpected function
 - get_unexpected function
 - _get_unexpected function
 ms.assetid: a5f7a7a0-18e0-485e-953d-db291068a1e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6f768d6f384e5b3b39e8d2884a7a7cb0362915
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 225158ecab60a5997ebedbad107eb43d82189234
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451652"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519403"
 ---
 # <a name="getunexpected"></a>_get_unexpected
 
-Retourne la routine de terminaison à être appelé par **inattendue**.
+Retourne la routine d’arrêt doit être appelée par **inattendue**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,9 +43,9 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur désignant la fonction enregistrée par [set_unexpected](set-unexpected-crt.md). Si aucune fonction n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **NULL**.
+Retourne un pointeur désignant la fonction enregistrée par [set_unexpected](set-unexpected-crt.md). Si aucune fonction n’a été définie, la valeur de retournée peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **NULL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

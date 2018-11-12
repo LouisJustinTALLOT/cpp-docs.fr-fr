@@ -1,10 +1,6 @@
 ---
-title: vfscanf_s, vfwscanf_s | Microsoft Docs
-ms.custom: ''
+title: vfscanf_s, vfwscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vfscanf_s
 - vfwscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - vfscanf_s
 - vfwscanf_s
 - _vftscanf_s
-dev_langs:
-- C++
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 79b00ee0216120451c029b7de1caf9ac1967f802
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40bfad26ebdf7ffba48a184491a371f4010e90ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416309"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429404"
 ---
 # <a name="vfscanfs-vfwscanfs"></a>vfscanf_s, vfwscanf_s
 
@@ -60,7 +50,7 @@ int vfwscanf_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 *format*<br/>
@@ -73,13 +63,13 @@ Liste d’arguments de variable.
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. Si une erreur se produit, ou si la fin du flux de fichier est atteinte avant la première conversion, la valeur de retour est **EOF** pour **vfscanf_s** et **vfwscanf_s**.
 
-Ces fonctions valident leurs paramètres. Si *flux* est un pointeur de fichier non valide, ou *format* est un pointeur null, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si *flux* est un pointeur de fichier non valide ou *format* est un pointeur null, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et définissez **errno** à **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **vfscanf_s** fonction lit les données à partir de la position actuelle de *flux* dans les emplacements qui sont fournis par le *arglist* liste d’arguments (le cas échéant). Chaque argument dans la liste doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. *format* contrôles l’interprétation de l’entrée des champs et a la même forme et fonction que la *format* argument pour **scanf_s**; consultez [champs de spécification de Format : les fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) pour obtenir une description de *format*. **vfwscanf_s** est une version à caractères larges de **vfscanf_s**; l’argument de format **vfwscanf_s** est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **vfscanf_s** non prise en charge d’entrée à partir d’un flux de données UNICODE.
+Le **vfscanf_s** fonction lit les données à partir de la position actuelle du *flux* dans les emplacements fournis par le *arglist* liste d’arguments (le cas échéant). Chaque argument dans la liste doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type dans *format*. *format* contrôle l’interprétation de l’entrée champs et a la même forme et fonction que le *format* argument pour **scanf_s**; consultez [des champs de spécification de Format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) pour obtenir une description de *format*. **vfwscanf_s** est une version à caractères larges de **vfscanf_s**; l’argument format pour **vfwscanf_s** est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **vfscanf_s** ne prend actuellement en charge d’entrée à partir d’un flux de données UNICODE.
 
-La principale différence entre les fonctions plus sécurisées (qui ont le **_s** suffixe) et les autres versions est que les fonctions plus sécurisées requièrent la taille en caractères de chaque **c**, **C**, **s**, **S**, et **[** champ de type à passer en tant qu’argument qui suit immédiatement la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
+La principale différence entre les fonctions plus sécurisées (qui ont le **_s** suffixe) et les autres versions est que les fonctions plus sécurisées requièrent que la taille en caractères de chaque **c**, **C**, **s**, **S**, et **[** champ de type à passer en tant qu’argument immédiatement après la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
 > Le paramètre de taille est de type **non signé**, et non **size_t**.
@@ -90,7 +80,7 @@ La principale différence entre les fonctions plus sécurisées (qui ont le **_s
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftscanf_s**|**vfscanf_s**|**vfscanf_s**|**vfwscanf_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

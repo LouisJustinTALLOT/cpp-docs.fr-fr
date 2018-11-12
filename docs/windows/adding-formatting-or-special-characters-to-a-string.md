@@ -1,29 +1,18 @@
 ---
-title: Ajoutez des caractères spéciaux ou de mise en forme à une ressource de chaîne (C++) | Microsoft Docs
-ms.custom: ''
+title: Ajoutez des caractères spéciaux ou de mise en forme à une ressource de chaîne (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - special characters, adding to strings
 - ASCII characters, adding to strings
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 328db31cf595247932a17a96dab6c6395813470c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493845"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>Ajoutez des caractères spéciaux ou de mise en forme à une ressource de chaîne (C++)
 
@@ -58,4 +47,4 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur de chaînes](../windows/string-editor.md)  
+[Éditeur de chaînes](../windows/string-editor.md)

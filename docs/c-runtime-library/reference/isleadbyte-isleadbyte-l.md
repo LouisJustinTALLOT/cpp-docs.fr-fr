@@ -1,10 +1,6 @@
 ---
-title: isleadbyte, _isleadbyte_l | Microsoft Docs
-ms.custom: ''
+title: isleadbyte, _isleadbyte_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -25,8 +21,6 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs:
-- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 682cdde6983c5e590920c43418e510b9c275b34e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401016"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531887"
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 
@@ -66,13 +56,13 @@ Entier à tester.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**isleadbyte** retourne une valeur différente de zéro si l’argument satisfait la condition de test ou 0 si elle n’est pas le cas. Dans les paramètres régionaux « C » et dans un octet du jeu de caractères des paramètres régionaux (SBCS), **isleadbyte** retourne toujours 0.
+**isleadbyte** retourne une valeur différente de zéro si l’argument satisfait la condition de test ou 0 si elle n’est pas le cas. Jeu de paramètres régionaux (SBCS), dans les paramètres régionaux « C » et dans un octet caractères **isleadbyte** retourne toujours 0.
 
 ## <a name="remarks"></a>Notes
 
 Le **isleadbyte** macro retourne une valeur différente de zéro si son argument est le premier octet d’un caractère multioctet. **isleadbyte** produit un résultat significatif pour n’importe quel argument entier compris entre -1 (**EOF**) à **UCHAR_MAX** (0xFF), inclus.
 
-Type d’argument attendu de **isleadbyte** est **int**; si un caractère signé est passé, le compilateur peut le convertir en un entier par extension de signe, aboutissant à des résultats imprévisibles.
+Type d’argument attendu de **isleadbyte** est **int**; si un caractère signé est passé, le compilateur peut le convertir en un entier par extension de signe, produisant des résultats imprévisibles.
 
 La version de cette fonction avec la **_l** suffixe est identique, sauf qu’elle utilise les paramètres régionaux passé au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.
 
@@ -82,7 +72,7 @@ La version de cette fonction avec la **_l** suffixe est identique, sauf qu’ell
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istleadbyte**|Retourne toujours la valeur false|**_isleadbyte**|Retourne toujours la valeur false|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

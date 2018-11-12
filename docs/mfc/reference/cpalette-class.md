@@ -1,10 +1,6 @@
 ---
-title: CPalette, classe | Microsoft Docs
-ms.custom: ''
+title: CPalette (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPalette
 - AFXWIN/CPalette
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXWIN/CPalette::GetPaletteEntries
 - AFXWIN/CPalette::ResizePalette
 - AFXWIN/CPalette::SetPaletteEntries
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPalette [MFC], CPalette
 - CPalette [MFC], AnimatePalette
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4a2b161368b39f586c6393bbf1916d64dacd833
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1022d05265fc7c2b349dec22e41984e7d41820b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381398"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586054"
 ---
 # <a name="cpalette-class"></a>CPalette (classe)
 
@@ -151,7 +141,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Identifie le contexte de périphérique.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -341,6 +331,4 @@ Pour plus d’informations sur la structure Windows `PALETTEENTRY`, consultez [P
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CPalette::GetPaletteEntries](#getpaletteentries)<br/>
 [CPalette::SetPaletteEntries](#setpaletteentries)
-
-
 

@@ -1,12 +1,6 @@
 ---
-title: 'Contrôles ActiveX MFC : Pages de propriétés | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : pages de propriétés'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DDP_ functions [MFC]
 - MFC ActiveX controls [MFC], properties
@@ -16,23 +10,19 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 764590b5d7162d7f10a60dda24649adde9e090c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376484"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656181"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Contrôles ActiveX MFC : pages de propriétés
 
 Pages de propriétés permettent à un utilisateur du contrôle ActiveX afficher et modifier les propriétés du contrôle ActiveX. Ces propriétés sont accessibles en appelant une boîte de dialogue Propriétés du contrôle, qui contient un ou plusieurs pages de propriétés qui fournissent une interface graphique personnalisée pour afficher et modifier les propriétés du contrôle.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Pages de propriétés du contrôle ActiveX sont affichés de deux manières :
 
@@ -86,7 +76,7 @@ Par exemple à des fins, les procédures suivantes utilisent un contrôle simple
 
 1. Ouvrez la boîte de dialogue IDD_PROPPAGE_SAMPLE.
 
-     L’Assistant contrôle ActiveX ajoute le nom du projet à la fin de l’ID de boîte de dialogue, dans ce cas, un exemple.
+   L’Assistant contrôle ActiveX ajoute le nom du projet à la fin de l’ID de boîte de dialogue, dans ce cas, un exemple.
 
 1. Glisser -déplacer le contrôle sélectionné à partir de la boîte à outils vers la zone de la boîte de dialogue.
 

@@ -1,10 +1,6 @@
 ---
-title: CPen, classe | Microsoft Docs
-ms.custom: ''
+title: CPen (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPen
 - AFXWIN/CPen
@@ -14,8 +10,6 @@ f1_keywords:
 - AFXWIN/CPen::FromHandle
 - AFXWIN/CPen::GetExtLogPen
 - AFXWIN/CPen::GetLogPen
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPen [MFC], CPen
 - CPen [MFC], CreatePen
@@ -24,16 +18,12 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc9216d10b620a79aa8e20e240791207f25a65c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440288"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531558"
 ---
 # <a name="cpen-class"></a>CPen (classe)
 
@@ -92,12 +82,10 @@ Construit un objet `CPen`.
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +120,13 @@ La deuxième version de la `CPen` constructeur spécifie une combinaison de type
 
 - PS_COSMETIC crée un stylet.
 
-     La deuxième version de la `CPen` constructeur ajoute les styles suivants de stylet pour *nPenStyle*:
+   La deuxième version de la `CPen` constructeur ajoute les styles suivants de stylet pour *nPenStyle*:
 
 - PS_ALTERNATE crée un stylet qui définit tous les autres pixels. (Ce style est applicable uniquement pour les stylets cosmétiques.)
 
 - PS_USERSTYLE crée un stylet qui utilise un tableau de style fourni par l’utilisateur.
 
-     L’extrémité de fin peut être une des valeurs suivantes :
+   L’extrémité de fin peut être une des valeurs suivantes :
 
 - Embouts PS_ENDCAP_ROUND sont arrondis.
 
@@ -146,7 +134,7 @@ La deuxième version de la `CPen` constructeur spécifie une combinaison de type
 
 - Embouts PS_ENDCAP_FLAT sont fixes.
 
-     La jointure peut être une des valeurs suivantes :
+   La jointure peut être une des valeurs suivantes :
 
 - PS_JOIN_BEVEL joint sont en relief.
 
@@ -192,7 +180,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

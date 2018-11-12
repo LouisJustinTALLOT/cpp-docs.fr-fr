@@ -1,12 +1,6 @@
 ---
-title: Modèles de document et le processus de création de Document / Vue | Microsoft Docs
-ms.custom: ''
+title: Modèles de document et le processus de création de Document / Vue
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - icons, for multiple document templates
 - document templates [MFC], and views
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 182cf58b3ee712ef0d45719591e967c0b81909bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 544a9bf60ee2066688703faa7e430e2337454e66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426521"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606347"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Modèles de document et processus de création de document/vue
 
@@ -36,7 +26,7 @@ Certaines applications prennent en charge plusieurs types de documents. Par exem
 
 ![Application MDI qui possède deux types de documents](../mfc/media/vc387h1.gif "vc387h1") une Application MDI avec deux Types de documents
 
-Les modèles de document sont créés et entretenus par l'objet d'application. L'une des tâches clé effectuées pendant la fonction `InitInstance` de votre application consiste à créer un ou plusieurs modèles de document du type approprié. Cette fonctionnalité est décrite dans [création du modèle de Document](../mfc/document-template-creation.md). L'objet d'application enregistre un pointeur à chaque modèle de document dans sa liste de modèles et fournit une interface pour ajouter des modèles de document.
+Les modèles de document sont créés et entretenus par l'objet d'application. L’une des tâches clé effectuées pendant la fonction `InitInstance` de votre application consiste à créer un ou plusieurs modèles de document du type approprié. Cette fonctionnalité est décrite dans [création du modèle de Document](../mfc/document-template-creation.md). L'objet d'application enregistre un pointeur à chaque modèle de document dans sa liste de modèles et fournit une interface pour ajouter des modèles de document.
 
 Si vous avez besoin prendre en charge deux ou plusieurs types de documents, vous devez ajouter un appel supplémentaire à [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) pour chaque type de document.
 

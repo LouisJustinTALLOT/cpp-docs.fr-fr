@@ -1,10 +1,6 @@
 ---
-title: Cmfccolormenubutton, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfccolormenubutton, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCColorMenuButton
 - AFXCOLORMENUBUTTON/CMFCColorMenuButton
@@ -27,8 +23,6 @@ f1_keywords:
 - AFXCOLORMENUBUTTON/CMFCColorMenuButton::IsEmptyMenuAllowed
 - AFXCOLORMENUBUTTON/CMFCColorMenuButton::OnDraw
 - AFXCOLORMENUBUTTON/CMFCColorMenuButton::OnDrawOnCustomizeList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCColorMenuButton [MFC], CMFCColorMenuButton
 - CMFCColorMenuButton [MFC], EnableAutomaticButton
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 075fcf0433e925c45e8fd06938b231c62ec77352
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: adb0cdbdde90ad7bdd6aef42c1e83c7ba3fd28b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624885"
 ---
 # <a name="cmfccolormenubutton-class"></a>Cmfccolormenubutton, classe
 
@@ -140,7 +130,6 @@ Construit un objet `CMFCColorMenuButton`.
 
 ```
 CMFCColorMenuButton();
-
 
 CMFCColorMenuButton(
     UINT uiCmdID,
@@ -398,7 +387,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -437,7 +426,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>

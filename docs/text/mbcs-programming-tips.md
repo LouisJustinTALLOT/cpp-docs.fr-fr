@@ -1,30 +1,20 @@
 ---
-title: Conseils de programmation MBCS | Microsoft Docs
-ms.custom: ''
+title: Conseils de programmation MBCS
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - _mbcs
-dev_langs:
-- C++
 helpviewer_keywords:
 - programming [C++], MBCS
 - character sets [C++], multibyte
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac4ed378640942dbe33490d618cec7289125b0c8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 70669f67b78ee4ea4f8073b78d2b9589e56a6356
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418786"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552618"
 ---
 # <a name="mbcs-programming-tips"></a>Conseils de programmation MBCS
 

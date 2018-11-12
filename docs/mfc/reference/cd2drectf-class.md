@@ -1,31 +1,21 @@
 ---
-title: Classe de CD2DRectF | Microsoft Docs
-ms.custom: ''
+title: CD2DRectF, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DRectF
 - AFXRENDERTARGET/CD2DRectF
 - AFXRENDERTARGET/CD2DRectF::CD2DRectF
 - AFXRENDERTARGET/CD2DRectF::IsNull
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eee19197c4b171cf669c9458ab722240e431bf70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fad906510a111a2132d590d7c221d2484645f044
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591202"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF, classe
 
@@ -75,7 +65,6 @@ Construit un objet CD2DRectF à partir de l’objet CRect.
 CD2DRectF(const CRect& rect);
 CD2DRectF(const D2D1_RECT_F& rect);
   CD2DRectF(const D2D1_RECT_F* rect);
-
 
 CD2DRectF(
     FLOAT fLeft = 0.,

@@ -1,10 +1,6 @@
 ---
-title: CDaoTableDef, classe | Microsoft Docs
-ms.custom: ''
+title: CDaoTableDef, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDaoTableDef
 - AFXDAO/CDaoTableDef
@@ -41,8 +37,6 @@ f1_keywords:
 - AFXDAO/CDaoTableDef::SetValidationText
 - AFXDAO/CDaoTableDef::m_pDAOTableDef
 - AFXDAO/CDaoTableDef::m_pDatabase
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDaoTableDef [MFC], CDaoTableDef
 - CDaoTableDef [MFC], Append
@@ -78,16 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f678a00d4556cf81ad378088df2525038bbdd6a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426365"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579234"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef, classe
 
@@ -573,7 +563,6 @@ void GetFieldInfo(
     CDaoFieldInfo& fieldinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetFieldInfo(
     LPCTSTR lpszName,
     CDaoFieldInfo& fieldinfo,
@@ -635,7 +624,6 @@ void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetIndexInfo(
     LPCTSTR lpszName,

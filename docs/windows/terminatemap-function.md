@@ -1,28 +1,18 @@
 ---
-title: Terminatemap, fonction | Microsoft Docs
-ms.custom: ''
+title: TerminateMap, fonction
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::TerminateMap
-dev_langs:
-- C++
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f844d63bc04deb4294203f04aef30db48f195fd9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: efee7edfc1085288b3220698024cb0deeb4e71af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438065"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643220"
 ---
 # <a name="terminatemap-function"></a>TerminateMap, fonction
 
@@ -34,7 +24,7 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 inline bool TerminateMap(
    _In_ ModuleBase *module,
    _In_opt_z_ const wchar_t *serverName,
-    bool forceTerminate) throw()  
+    bool forceTerminate) throw()
 ```
 
 ### <a name="parameters"></a>Paramètres

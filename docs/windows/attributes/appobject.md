@@ -1,28 +1,17 @@
 ---
-title: appobject (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: appobject (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.appobject
-dev_langs:
-- C++
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: dcd863cabb0f2cc58d25ea98503637592a994794
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 269c5bd3b51e2cc65fbb9c1c7766613595f8b547
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486409"
 ---
 # <a name="appobject"></a>appobject
 
@@ -68,10 +57,10 @@ class A : public ICustom {
 |**Attributs requis**|`coclass`|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)  
+[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)

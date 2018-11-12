@@ -1,12 +1,6 @@
 ---
-title: Création de Collections de piles et file d’attente | Microsoft Docs
-ms.custom: ''
+title: Création de collections de piles et de files d’attente
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC collection classes [MFC], stack collections
 - collections, stack
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 082308acaeddcb173a0d873c0f50e2e40fd8fe12
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403784"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569218"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Création de collections de piles et de files d’attente
 
@@ -40,9 +30,9 @@ Cet article explique comment créer les autres structures de données, tel que [
 
 1. Dérivez une nouvelle classe de liste de l'une des classes de liste MFC existantes et ajoutez des fonctions membres pour prendre en charge les fonctionnalités des opérations de pile.
 
-     L'exemple suivant montre comment ajouter des fonctions membres pour empiler des éléments, jetez un coup d'œil à l'élément supérieur de la pile et désempilez-le :
+   L'exemple suivant montre comment ajouter des fonctions membres pour empiler des éléments, jetez un coup d'œil à l'élément supérieur de la pile et désempilez-le :
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 Notez que cette approche présente la classe `CObList` sous-jacente. L'utilisateur peut appeler n'importe quelle fonction membre `CObList`, qu'elle soit logique pour une pile ou non.
 
@@ -54,9 +44,9 @@ Notez que cette approche présente la classe `CObList` sous-jacente. L'utilisate
 
 1. Dérivez une nouvelle classe de liste de l'une des classes de liste prédéfinies fournies dans la bibliothèque MFC et ajoutez des fonctions membres supplémentaires pour prendre en charge la sémantique des opérations de file.
 
-     L'exemple suivant montre comment ajouter des fonctions membres pour insérer un élément à la fin de la file et obtenir l'élément situé au début de la file.
+   L'exemple suivant montre comment ajouter des fonctions membres pour insérer un élément à la fin de la file et obtenir l'élément situé au début de la file.
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>Voir aussi
 

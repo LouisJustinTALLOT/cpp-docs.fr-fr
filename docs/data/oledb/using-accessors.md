@@ -1,43 +1,32 @@
 ---
-title: Utilisation des accesseurs | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
+title: Utilisation des accesseurs
+ms.date: 10/24/2018
 helpviewer_keywords:
 - accessors [C++], OLE DB Templates
 - OLE DB consumer templates, accessors
 - rowsets [C++], accessors
 ms.assetid: 6ce484a6-fbbe-40de-8ff9-5cddcd78d283
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 30ebb0e28bd25cf92a2d1c918d3cc5bc921df9f6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9e6cf38cbe4d4f9ad585a3f13d6f83696574e0b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532719"
 ---
 # <a name="using-accessors"></a>Utilisation des accesseurs
 
-Les rubriques suivantes expliquent comment déterminer le type d’accesseur convient le mieux à vos données application, puis comment utiliser les différents types d’accesseurs disponibles :  
-  
-- [Détermination du type d’accesseur à utiliser](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
-  
-- [Utilisation de plusieurs accesseurs dans un jeu de lignes](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
-  
-- [Utilisation d’accesseurs dynamiques](../../data/oledb/using-dynamic-accessors.md)  
-  
-- [Utilisation des accesseurs manuels](../../data/oledb/using-manual-accessors.md)  
-  
-- [Accès aux données XML](../../data/oledb/accessing-xml-data.md)  
-  
-## <a name="see-also"></a>Voir aussi  
+Les rubriques suivantes expliquent comment déterminer le type d’accesseur convient le mieux à vos données application, puis comment utiliser les différents types d’accesseurs disponibles :
+
+- [Détermination du type d’accesseur à utiliser](../../data/oledb/determining-which-type-of-accessor-to-use.md)
+
+- [Utilisation de plusieurs accesseurs dans un jeu de lignes](../../data/oledb/using-multiple-accessors-on-a-rowset.md)
+
+- [Utilisation d’accesseurs dynamiques](../../data/oledb/using-dynamic-accessors.md)
+
+- [Utilisation des accesseurs manuels](../../data/oledb/using-manual-accessors.md)
+
+- [Accès aux données XML](../../data/oledb/accessing-xml-data.md)
+
+## <a name="see-also"></a>Voir aussi
 
 [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

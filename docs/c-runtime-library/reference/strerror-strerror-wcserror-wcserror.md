@@ -1,10 +1,6 @@
 ---
-title: strerror, _strerror, _wcserror, __wcserror | Microsoft Docs
-ms.custom: ''
+title: strerror, _strerror, _wcserror, __wcserror
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strerror
 - _strerror
@@ -33,8 +29,6 @@ f1_keywords:
 - _tcserror
 - _wcserror
 - tcserror
-dev_langs:
-- C++
 helpviewer_keywords:
 - strerror function
 - _strerror function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e89a5de45baeb9b3beea2aa538cb0a2168f3c5ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4038fcc29c18e5d73024cbe5688c674e00d1409e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412385"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594643"
 ---
 # <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
@@ -95,22 +85,22 @@ Toutes ces fonctions retournent un pointeur vers la chaîne de message d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **strerror** mappages de fonction *errnum* une chaîne de message d’erreur et retourne un pointeur vers la chaîne. Ni **strerror** ni **_strerror** réellement imprime le message : pour ce faire, vous devez appeler une fonction de sortie tel que [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+Le **strerror** fonction maps *errnum* sur une chaîne de message d’erreur et retourne un pointeur désignant la chaîne. Ni **strerror** ni **_strerror** n’imprime réellement le message : pour cela, vous devez appeler une fonction de sortie telle que [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-Si *strErrMsg* est passé en tant que **NULL**, **_strerror** retourne un pointeur vers une chaîne qui contient le message d’erreur système pour le dernier appel de bibliothèque qui a généré une erreur. La chaîne de message d'erreur se termine par le caractère de saut de ligne ('\n'). Si *strErrMsg* n’est pas égal à **NULL**, puis **_strerror** retourne un pointeur vers une chaîne qui contient (dans l’ordre) votre message de type chaîne, un signe deux-points, un espace, l’erreur du système message pour le dernier appel de bibliothèque qui génère une erreur et un caractère de saut de ligne. La longueur maximale de votre message de type chaîne est de 94 caractères.
+Si *strErrMsg* est passé en tant que **NULL**, **_strerror** retourne un pointeur vers une chaîne qui contient le message d’erreur système pour le dernier appel de bibliothèque qui a généré l’erreur. La chaîne de message d'erreur se termine par le caractère de saut de ligne ('\n'). Si *strErrMsg* n’est pas égal à **NULL**, puis **_strerror** retourne un pointeur vers une chaîne qui contient (dans l’ordre) votre message de type chaîne, un signe deux-points, un espace, l’erreur système message pour le dernier appel de bibliothèque qui produit une erreur et un caractère de saut de ligne. La longueur maximale de votre message de type chaîne est de 94 caractères.
 
-Le numéro d’erreur réel pour **_strerror** est stocké dans la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Pour générer des résultats précis, appelez **_strerror** immédiatement après le retour de la routine de bibliothèque avec une erreur. Sinon, les appels suivants à **strerror** ou **_strerror** peut remplacer le **errno** valeur.
+Le numéro d’erreur pour **_strerror** est stocké dans la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Pour produire des résultats précis, appelez **_strerror** immédiatement après le retour de la routine de bibliothèque avec une erreur. Sinon, les appels suivants à **strerror** ou **_strerror** peut remplacer le **errno** valeur.
 
 **_wcserror** et **__wcserror** sont des versions à caractères larges de **strerror** et **_strerror**, respectivement.
 
 **_strerror**, **_wcserror**, et **__wcserror** ne font pas partie de la définition ANSI ; ils sont des extensions Microsoft et nous vous recommandons de ne pas utiliser les où vous voulez un code portable. Pour la compatibilité ANSI, utilisez **strerror** à la place.
 
-Pour obtenir des chaînes d’erreur, nous vous recommandons de **strerror** ou **_wcserror** au lieu des macros déconseillées [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) et [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) et les fonctions internes déconseillées **__sys_errlist** et **__sys_nerr**.
+Pour obtenir des chaînes d’erreur, nous vous recommandons de **strerror** ou **_wcserror** plutôt que les macros déconseillées [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) et [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) et les fonctions internes déconseillées **__sys_errlist** et **__sys_nerr**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -118,7 +108,7 @@ Pour obtenir des chaînes d’erreur, nous vous recommandons de **strerror** ou 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcserror**|**strerror**|**strerror**|**_wcserror**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

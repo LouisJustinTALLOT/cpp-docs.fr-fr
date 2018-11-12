@@ -1,10 +1,6 @@
 ---
-title: _putchar_nolock, _putwchar_nolock | Microsoft Docs
-ms.custom: ''
+title: _putchar_nolock, _putwchar_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putchar_nolock
 - _putwchar_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - _putchar_nolock
 - _putwchar_nolock
 - putchar_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _puttchar_nolock function
 - putchar_nolock function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47195d48c624496e806769bb02c1e70f2d7ccb71
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b7c0b4fcdbb7c29c48d9489cb262d2b1a1cf401
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580880"
 ---
 # <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock, _putwchar_nolock
 
@@ -76,7 +66,7 @@ Consultez **putchar, putwchar**.
 
 ## <a name="remarks"></a>Notes
 
-**putchar_nolock** et **_putwchar_nolock** sont identiques aux versions sans le **_nolock** suffixe, sauf qu’elles ne sont pas protégés contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+**putchar_nolock** et **_putwchar_nolock** sont identiques aux versions sans le **_nolock** suffixe, à ceci près qu’elles ne sont pas protégées contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -84,14 +74,14 @@ Consultez **putchar, putwchar**.
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_puttchar_nolock**|**_putchar_nolock**|**_putchar_nolock**|**_putwchar_nolock**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_putchar_nolock**|\<stdio.h>|
 |**_putwchar_nolock**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 

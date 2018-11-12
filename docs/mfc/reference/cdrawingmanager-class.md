@@ -1,10 +1,6 @@
 ---
-title: Cdrawingmanager, classe | Microsoft Docs
-ms.custom: ''
+title: Cdrawingmanager, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDrawingManager
 - AFXDRAWMANAGER/CDrawingManager
@@ -33,8 +29,6 @@ f1_keywords:
 - AFXDRAWMANAGER/CDrawingManager::SetAlphaPixel
 - AFXDRAWMANAGER/CDrawingManager::SetPixel
 - AFXDRAWMANAGER/CDrawingManager::SmartMixColors
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDrawingManager [MFC], CDrawingManager
 - CDrawingManager [MFC], CreateBitmap_32
@@ -62,16 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 013dc05b4ecbfc31f0f475d50e3a3be6d74c846d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c7295d8003b364b36a84fcb5b2c5921ae9899b51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386611"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465986"
 ---
 # <a name="cdrawingmanager-class"></a>Cdrawingmanager, classe
 
@@ -700,7 +690,6 @@ static double __stdcall HuetoRGB(
     double m1,
     double m2,
     double h);
-
 
 static BYTE __stdcall HueToRGB(
     float rm1,

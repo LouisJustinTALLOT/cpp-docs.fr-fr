@@ -1,10 +1,6 @@
 ---
-title: isdigit, iswdigit, _isdigit_l, _iswdigit_l | Microsoft Docs
-ms.custom: ''
+title: isdigit, iswdigit, _isdigit_l, _iswdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isdigit_l
 - iswdigit
@@ -30,8 +26,6 @@ f1_keywords:
 - isdigit
 - _istdigit
 - _istdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - iswdigit function
 - iswdigit_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7701b287d6ec4de757249aca5ccd252b38c58267
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0bffe54bb68eaf7a26c338ad52522ff9b48335aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636577"
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 
@@ -88,11 +78,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne différente de zéro si *c* est une représentation spécifique d’un caractère numérique décimal. **IsDigit** retourne une valeur différente de zéro si *c* est un chiffre décimal (0 - 9). **iswdigit** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à un caractère numérique décimal. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+Chacune de ces routines retourne différente de zéro si *c* est une représentation particulière d’un caractère numérique décimal. **IsDigit** retourne une valeur différente de zéro si *c* est un chiffre décimal (0 - 9). **iswdigit** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à un caractère numérique décimal. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
-Les versions de ces fonctions qui ont le **_l** suffixe utilisent les paramètres régionaux qui sont passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le **_l** suffixe utiliser les paramètres régionaux qui sont passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **isdigit** et **_isdigit_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Lorsqu’une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, le fonctions de déclencher une assertion.
+Le comportement de **isdigit** et **_isdigit_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Quand une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -101,7 +91,7 @@ Le comportement de **isdigit** et **_isdigit_l** n’est pas défini si *c* n’
 |**_istdigit**|**isdigit**|[_ismbcdigit](ismbcalnum-functions.md)|**iswdigit**|
 |**_istdigit_l**|**_isdigit_l**|[_ismbcdigit_l](ismbcalnum-functions.md)|**_iswdigit_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

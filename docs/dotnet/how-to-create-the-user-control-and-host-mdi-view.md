@@ -1,27 +1,17 @@
 ---
-title: 'Comment : créer le contrôle utilisateur et héberger l’affichage MDI | Microsoft Docs'
+title: "Comment : créer le contrôle utilisateur et héberger l'affichage MDI"
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: eeeb02393e96e7afd2deed875465f6797d145b6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2705ef1938684d8521316436fccaae367629584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399811"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509120"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Comment : créer le contrôle utilisateur et héberger l'affichage MDI
 
@@ -38,23 +28,23 @@ Cette procédure suppose que vous avez créé un projet de bibliothèque de cont
 
 1. Créer un projet d’Application MFC.
 
-     Sur le **fichier** menu, sélectionnez **New**, puis cliquez sur **projet**. Dans le **Visual C++** dossier, sélectionnez **Application MFC**.
+   Sur le **fichier** menu, sélectionnez **New**, puis cliquez sur **projet**. Dans le **Visual C++** dossier, sélectionnez **Application MFC**.
 
-     Dans le **nom** , entrez `MFC02` et modifiez le **Solution** à **ajouter à la Solution**. Cliquez sur **OK**.
+   Dans le **nom** , entrez `MFC02` et modifiez le **Solution** à **ajouter à la Solution**. Cliquez sur **OK**.
 
-     Dans le **Assistant Application MFC**, acceptez toutes les valeurs par défaut, puis cliquez sur **Terminer**. Cette opération crée une application MFC avec une Interface multidocument.
+   Dans le **Assistant Application MFC**, acceptez toutes les valeurs par défaut, puis cliquez sur **Terminer**. Cette opération crée une application MFC avec une Interface multidocument.
 
 1. Configurer le projet pour la prise en charge du Common Language Runtime (CLR).
 
-     Dans **l’Explorateur de solutions**, cliquez sur le `MFC01` nœud de projet, puis sélectionnez **propriétés** dans le menu contextuel. Le **Pages de propriétés** boîte de dialogue s’affiche.
+   Dans **l’Explorateur de solutions**, cliquez sur le `MFC01` nœud de projet, puis sélectionnez **propriétés** dans le menu contextuel. Le **Pages de propriétés** boîte de dialogue s’affiche.
 
-     Sous **propriétés de Configuration**, sélectionnez **général**. Sous le **projet par défaut est** section, définissez **prise en charge du Common Language Runtime** à **prise en charge du Common Language Runtime (/ clr)**.
+   Sous **propriétés de Configuration**, sélectionnez **général**. Sous le **projet par défaut est** section, définissez **prise en charge du Common Language Runtime** à **prise en charge du Common Language Runtime (/ clr)**.
 
-     Sous **propriétés de Configuration**, développez **C/C++** et cliquez sur le **général** nœud. Définissez **Format des informations de débogage** à **(/ Zi) de la base de données du programme**.
+   Sous **propriétés de Configuration**, développez **C/C++** et cliquez sur le **général** nœud. Définissez **Format des informations de débogage** à **(/ Zi) de la base de données du programme**.
 
-     Cliquez sur le **génération de Code** nœud. Définissez **activer la régénération minimale** à **non (/ Gm-)**. Définissez également **base Runtime vérifie** à **par défaut**.
+   Cliquez sur le **génération de Code** nœud. Définissez **activer la régénération minimale** à **non (/ Gm-)**. Définissez également **base Runtime vérifie** à **par défaut**.
 
-     Cliquez sur **OK** pour appliquer vos modifications.
+   Cliquez sur **OK** pour appliquer vos modifications.
 
 1. Dans stdafx.h, ajoutez la ligne suivante :
 
@@ -64,7 +54,7 @@ Cette procédure suppose que vous avez créé un projet de bibliothèque de cont
 
 1. Ajoutez une référence au contrôle .NET.
 
-     Dans **l’Explorateur de solutions**, avec le bouton droit le `MFC02` nœud de projet et sélectionnez **ajouter**, **références**. Dans le **Page de propriétés**, cliquez sur **ajouter une nouvelle référence**, sélectionnez WindowsFormsControlLibrary1 (sous le **projets** onglet), puis cliquez sur **OK** . Cette opération ajoute une référence sous la forme d’un [/FU](../build/reference/fu-name-forced-hash-using-file.md) option du compilateur afin que le programme est compilé ; cela copie également WindowsFormsControlLibrary1.dll dans le `MFC02` répertoire du projet afin que le programme s’exécute.
+   Dans **l’Explorateur de solutions**, avec le bouton droit le `MFC02` nœud de projet et sélectionnez **ajouter**, **références**. Dans le **Page de propriétés**, cliquez sur **ajouter une nouvelle référence**, sélectionnez WindowsFormsControlLibrary1 (sous le **projets** onglet), puis cliquez sur **OK** . Cette opération ajoute une référence sous la forme d’un [/FU](../build/reference/fu-name-forced-hash-using-file.md) option du compilateur afin que le programme est compilé ; cela copie également WindowsFormsControlLibrary1.dll dans le `MFC02` répertoire du projet afin que le programme s’exécute.
 
 1. Dans stdafx.h, recherchez la ligne suivante :
 
@@ -72,7 +62,7 @@ Cette procédure suppose que vous avez créé un projet de bibliothèque de cont
     #endif // _AFX_NO_AFXCMN_SUPPORT
     ```
 
-     Ajoutez ces lignes au-dessus :
+   Ajoutez ces lignes au-dessus :
 
     ```
     #include <afxwinforms.h>   // MFC Windows Forms support
@@ -80,7 +70,7 @@ Cette procédure suppose que vous avez créé un projet de bibliothèque de cont
 
 1. Modifier la classe d’affichage afin qu’elle hérite de [CWinFormsView](../mfc/reference/cwinformsview-class.md).
 
-     Dans MFC02View.h, remplacez [CView](../mfc/reference/cview-class.md) avec [CWinFormsView](../mfc/reference/cwinformsview-class.md) afin que le code s’affiche comme suit :
+   Dans MFC02View.h, remplacez [CView](../mfc/reference/cview-class.md) avec [CWinFormsView](../mfc/reference/cwinformsview-class.md) afin que le code s’affiche comme suit :
 
     ```
     class CMFC02View : public CWinFormsView
@@ -88,7 +78,7 @@ Cette procédure suppose que vous avez créé un projet de bibliothèque de cont
     };
     ```
 
-     Si vous souhaitez ajouter des affichages supplémentaires à votre application MDI, vous devez appeler [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) pour chaque vue que vous créez.
+   Si vous souhaitez ajouter des affichages supplémentaires à votre application MDI, vous devez appeler [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) pour chaque vue que vous créez.
 
 1. Modifiez le fichier MFC02View.cpp pour transformer CView en CWinFormsView dans le mappage de message et de la macro IMPLEMENT_DYNCREATE et remplacez le constructeur vide existant par le constructeur indiqué dessous :
 
@@ -105,11 +95,11 @@ Cette procédure suppose que vous avez créé un projet de bibliothèque de cont
 
 1. Générez et exécutez le projet.
 
-     Dans **l’Explorateur de solutions**, cliquez sur MFC02, puis sélectionnez **définir comme projet de démarrage**.
+   Dans **l’Explorateur de solutions**, cliquez sur MFC02, puis sélectionnez **définir comme projet de démarrage**.
 
-     Dans le menu **Générer** , cliquez sur **Générer la solution**.
+   Dans le menu **Générer** , cliquez sur **Générer la solution**.
 
-     Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**.
+   Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**.
 
 ## <a name="see-also"></a>Voir aussi
 

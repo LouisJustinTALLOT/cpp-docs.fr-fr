@@ -1,32 +1,22 @@
 ---
-title: Technologie active sur Internet | Microsoft Docs
-ms.custom: ''
+title: Technologie active sur Internet
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db0c93070fe8373cdd4494419ce1b71bf4068b14
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 04444ca1318eaf52f05c05a251baf120c16eec29
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395116"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453387"
 ---
 # <a name="active-technology-on-the-internet"></a>Technologie active sur Internet
 
 Technologie active est une plateforme ouverte qui permet aux développeurs de créer des applications pour Internet, ou pour le réseau interne d’une société, appelé intranet et du contenu passionnant et dynamiques. Les principales technologies fournies par Microsoft pour la programmation Internet sont décrites ci-dessous.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 ## <a name="activex-controls"></a>Contrôles ActiveX
 

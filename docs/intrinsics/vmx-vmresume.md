@@ -1,28 +1,18 @@
 ---
-title: __vmx_vmresume | Microsoft Docs
-ms.custom: ''
+title: __vmx_vmresume
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmresume
-dev_langs:
-- C++
 helpviewer_keywords:
 - __vmx_vmresume intrinsic
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02442fab506f867a682a68b49a6c573305075992
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 4be197566f32c5edf49a9036b1ac641416d28fc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820514"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616851"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
 
@@ -49,7 +39,7 @@ unsigned char __vmx_vmresume(
 
 Une application peut effectuer une opération VM-enter à l’aide de la fonction [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou `__vmx_vmresume` . La fonction `__vmx_vmlaunch` peut être utilisée seulement avec une VMCS dont l’état de lancement est `Clear`, et la fonction `__vmx_vmresume` peut être utilisée seulement avec une VMCS dont l’état de lancement est `Launched`. Par conséquent, utilisez la fonction [__vmx_vmclear](../intrinsics/vmx-vmclear.md) pour définir l’état de lancement d’une VMCS sur `Clear`, puis utilisez la fonction `__vmx_vmlaunch` pour votre première opération VM-enter et la fonction `__vmx_vmresume` pour les opérations VM-enter ultérieures.
 
-La fonction `__vmx_vmresume` est équivalente à l’instruction machine `VMRESUME` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document PDF « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+La fonction `__vmx_vmresume` est équivalente à l’instruction machine `VMRESUME` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document PDF « Intel Virtualization Technical Specification for the IA-32 Intel Architecture », dont le numéro de document est C97063-002, sur le site d’ [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Configuration requise
 

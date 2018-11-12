@@ -1,26 +1,16 @@
 ---
-title: Directives de préprocesseur | Microsoft Docs
-ms.custom: ''
+title: Directives de préprocesseur
 ms.date: 06/28/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - directives, preprocessor
 - preprocessor, directives
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3835d3c3d2900b97c16bc82963df2d08f35a879d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9481e977f2afb3de27a74278893a217fde48044b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608024"
 ---
 # <a name="preprocessor-directives"></a>Directives de préprocesseur
 
@@ -45,4 +35,4 @@ Les directives de préprocesseur peuvent apparaître n'importe où dans un fichi
 
 [Opérateurs de préprocesseur](../preprocessor/preprocessor-operators.md)<br/>
 [Macros prédéfinies](../preprocessor/predefined-macros.md)<br/>
-[Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)  
+[Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

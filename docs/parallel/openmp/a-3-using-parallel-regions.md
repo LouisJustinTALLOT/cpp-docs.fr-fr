@@ -1,23 +1,13 @@
 ---
-title: A.3 utilisation des régions parallèles | Microsoft Docs
-ms.custom: ''
+title: A.3   Utilisation des régions parallèles
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 575216a1-960a-47f7-9c82-7f660291fcfe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82bc1655584af300cb2d36a62250595839d74551
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 573c4f7c47c90bc6d567c4640360aa6abee5a48c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413079"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458992"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3   Utilisation des régions parallèles
 

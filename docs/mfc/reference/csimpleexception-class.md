@@ -1,31 +1,21 @@
 ---
-title: Csimpleexception, classe | Microsoft Docs
-ms.custom: ''
+title: Csimpleexception, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CSimpleException
 - AFX/CSimpleException
 - AFX/CSimpleException::CSimpleException
 - AFX/CSimpleException::GetErrorMessage
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f25928243c8086462f4f35b47dee5239a3a240bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fb5f7e2133f1055cde05b2dc1358896c9ea0c20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446996"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508292"
 ---
 # <a name="csimpleexception-class"></a>Csimpleexception, classe
 
@@ -132,6 +122,4 @@ Pour plus d’informations, consultez [CException::GetErrorMessage](../../mfc/re
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CException, classe](../../mfc/reference/cexception-class.md)<br/>
 [Gestion des exceptions](../../mfc/exception-handling-in-mfc.md)
-
-
 

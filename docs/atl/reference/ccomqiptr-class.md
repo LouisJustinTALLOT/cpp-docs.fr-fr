@@ -1,29 +1,19 @@
 ---
-title: CComQIPtr, classe | Microsoft Docs
-ms.custom: ''
+title: CComQIPtr, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComQIPtr
 - ATLCOMCLI/ATL::CComQIPtr
 - ATLCOMCLI/ATL::CComQIPtr::CComQIPtr
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e4c35ab13d5cf2448135b1e07405a1e31a5eec86
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c231d4d83a3030ea63e781e6f3d185270a483ccc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116670"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624924"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr, classe
 

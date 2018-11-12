@@ -1,10 +1,6 @@
 ---
-title: Cmfcdesktopalertwndinfo, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: Cmfcdesktopalertwndinfo, classe
+ms.date: 10/18/2018
 f1_keywords:
 - CMFCDesktopAlertWndInfo
 - AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_nURLCmdID
 - AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_strText
 - AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_strURL
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_hIcon
 - CMFCDesktopAlertWndInfo [MFC], m_nURLCmdID
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5adc1e5a5df7a1c14a3af1e0f36718806497b682
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d815abbd48e1744900853fcf81dc05b6af62788c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443812"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509068"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Cmfcdesktopalertwndinfo, classe
 
@@ -100,7 +90,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *src*
+[in] *src*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -1,27 +1,17 @@
 ---
-title: Avertissement LNK4237 des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Avertissement des outils Éditeur de liens LNK4237
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4237
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4237
 ms.assetid: 87bfec39-5241-464f-9feb-517b49f352ea
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 479bd4ff8a4f48da679c9e17ec100668de84d089
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 62ce0a0edc7f15bc5a19e4630133976f413da35a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588615"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>Avertissement des outils Éditeur de liens LNK4237
 

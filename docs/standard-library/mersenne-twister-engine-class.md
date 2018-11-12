@@ -1,27 +1,17 @@
 ---
-title: mersenne_twister_engine, classe | Microsoft Docs
-ms.custom: ''
+title: mersenne_twister_engine, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::mersenne_twister_engine
-dev_langs:
-- C++
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c0f30eacb308da61064a0383a6433b7127032a3e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100220"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607452"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine, classe
 
@@ -83,7 +73,7 @@ Cette classe de modèle décrit un moteur de nombres aléatoires, avec retour de
 
 Le générateur déforme la valeur élevée qu’il contient en utilisant un Registre à décalage de commentaires généralisés déformés défini par les valeurs de décalage *N* et *M*, une valeur de torsion *R*et un masque XOR conditionnel *A*. En outre, les bits du Registre à décalage brut sont brouillés (altérés) selon une matrice de brouillage des bits définie par les valeurs *U*, *D*, *S*, *B* , *T*, *C*, et *L*.
 
-L’argument de modèle `UIntType` doit être assez volumineux pour contenir des valeurs jusqu’à `2`<sup>W</sup> - `1`. Les valeurs des autres arguments de modèle doivent être conformes aux spécifications suivantes : `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
+L’argument de modèle `UIntType` doit être assez volumineux pour contenir des valeurs jusqu’à `2`<sup>W</sup> - `1`. Les valeurs des autres arguments de modèle doivent être conformes aux exigences suivantes : `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
 Bien que vous puissiez construire un générateur directement à partir de ce moteur, nous vous conseillons d’utiliser l’un des typedefs prédéfinis suivants :
 

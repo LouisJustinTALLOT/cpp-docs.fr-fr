@@ -1,29 +1,19 @@
 ---
-title: CSemaphore, classe | Microsoft Docs
-ms.custom: ''
+title: CSemaphore, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CSemaphore
 - AFXMT/CSemaphore
 - AFXMT/CSemaphore::CSemaphore
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19d43d108888d1d89b4fa6173ab3ebd0e8e55bbc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e8e71af6fa33dc748bfb8d19266a72495f216502
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400248"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447019"
 ---
 # <a name="csemaphore-class"></a>CSemaphore, classe
 
@@ -106,6 +96,4 @@ Pour accéder à ou libérer un `CSemaphore` d’objet, de créer un [CMultiLock
 
 [CSyncObject, classe](../../mfc/reference/csyncobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

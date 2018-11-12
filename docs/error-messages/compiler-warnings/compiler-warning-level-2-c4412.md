@@ -1,41 +1,31 @@
 ---
-title: Compilateur avertissement (niveau 2) C4412 | Documents Microsoft
-ms.custom: ''
+title: Avertissement du compilateur (niveau 2) C4412
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4412
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47659a9ba0469b8ee719dbc686ba611e876d32c1
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665515"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>Avertissement du compilateur (niveau 2) C4412
 
-> '*fonction*' : signature de fonction contient le type '*type*' ; Objets C++ sont unsafe à passer entre le code pure et mixte ou natif.
+> «*fonction*' : signature de fonction contient le type '*type*' ; Objets C++ n’est unsafe pour passer entre le code pure et mixte ou natif.
 
 ## <a name="remarks"></a>Notes
 
-Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017. Si vous disposez du code qui doit être pure, nous recommandons de porter vers c#.
+Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017. Si vous avez le code qui doit être pure, nous vous recommandons de porter à C#.
 
-Le compilateur a détecté une situation potentiellement dangereuse qui peut entraîner une erreur d’exécution : un appel est fait à partir un **/CLR : pure** compiland à une fonction qui a été importée via dllimport et la signature de fonction contienne un type non sécurisé . Un type est unsafe, s’il contient une fonction membre ou un membre de données est un type non sécurisé ou une indirection à un type non sécurisé.
+Le compilateur a détecté une situation potentiellement dangereuse susceptibles d’entraîner une erreur d’exécution : un appel est effectué à partir d’un **/CLR : pure** compiland à une fonction qui a été importée via dllimport et la signature de fonction contient un type non sécurisé . Un type est unsafe s’il contient une fonction membre ou un membre de données est un type non sécurisé ou une indirection à un type non sécurisé.
 
-Cela est déconseillé en raison de la différence entre la valeur par défaut conventions entre le code natif pur d’appel (ou mixte natif et managé). Lors de l’importation (via `dllimport`) une fonction dans une **/CLR : pure** compiland, assurez-vous que les déclarations de chaque type dans la signature sont identiques à celles du module qui exporte la fonction (est particulièrement vigilant différences dans les conventions d’appel implicites).
+Cela n’est pas sûre en raison de la différence entre la valeur par défaut conventions entre code pur et native d’appel (ou mixte natif et managé). Lors de l’importation (via `dllimport`) une fonction dans un **/CLR : pure** compiland, assurez-vous que les déclarations de chaque type dans la signature sont identiques à celles du module qui exporte la fonction (qui est particulièrement vigilant différences dans les conventions d’appel implicites).
 
-Une fonction membre virtuelle est particulièrement susceptible de provoquer des résultats inattendus.  Toutefois, même une fonction non virtuelle doit être testée pour vous assurer que vous obtenez les résultats corrects. Si vous êtes sûr que vous obtenez les résultats corrects, vous pouvez ignorer cet avertissement.
+Une fonction membre virtuelle est particulièrement susceptibles d’engendrer des résultats inattendus.  Toutefois, même une fonction non virtuelle doit être testée pour vous assurer d’obtenir les résultats corrects. Si vous êtes sûr que vous obtenez les résultats corrects, vous pouvez ignorer cet avertissement.
 
 C4412 est désactivée par défaut. Consultez [avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) et [dllexport, dllimport](../../cpp/dllexport-dllimport.md) pour plus d’informations.
 

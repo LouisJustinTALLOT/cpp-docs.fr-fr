@@ -1,10 +1,6 @@
 ---
-title: gmtime, _gmtime32, _gmtime64 | Microsoft Docs
-ms.custom: ''
+title: gmtime, _gmtime32, _gmtime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gmtime32
 - gmtime
@@ -26,8 +22,6 @@ f1_keywords:
 - gmtime
 - _gmtime32
 - _gmtime64
-dev_langs:
-- C++
 helpviewer_keywords:
 - gmtime32 function
 - _gmtime64 function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28ce8b8e2367e1d4dd26672206557867c07827e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f32da5920a0cb892619195207d6501a4b1fd874
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403958"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480000"
 ---
 # <a name="gmtime-gmtime32-gmtime64"></a>gmtime, _gmtime32, _gmtime64
 
@@ -67,7 +57,7 @@ Pointeur désignant la valeur de temps stockée. Le temps est représenté sous 
 
 ## <a name="return-value"></a>Valeur de retour
 
-Pointeur désignant une structure de type [tm](../../c-runtime-library/standard-types.md). Les champs de la structure retournée doit contenir la valeur évaluée de la *sourceTime* argument au format UTC plutôt qu’en heure locale. Chacun des champs de la structure est de type **int**, comme suit :
+Pointeur désignant une structure de type [tm](../../c-runtime-library/standard-types.md). Les champs de la structure retournée doit contenir la valeur évaluée de la *sourceTime* argument en UTC plutôt qu’en heure locale. Chacun des champs de structure est de type **int**, comme suit :
 
 |Champ|Description|
 |-|-|
@@ -81,22 +71,22 @@ Pointeur désignant une structure de type [tm](../../c-runtime-library/standard-
 |**tm_yday**|Jour de l’année (0 - 365 ; Le 1er janvier = 0).|
 |**tm_isdst**|Toujours 0 pour **gmtime**.|
 
-Les versions 32 bits et 64 bits de **gmtime**, [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md), et [localtime](localtime-localtime32-localtime64.md) utilisent toutes un commun **tm**  structure par thread pour la conversion. Chaque appel à une de ces fonctions détruit le résultat de tout appel précédent. Si *sourceTime* représente une date avant le 1er janvier 1970 à minuit **gmtime** retourne **NULL**. Aucun retour d'erreur.
+Les versions 32 bits et 64 bits de **gmtime**, [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md), et [localtime](localtime-localtime32-localtime64.md) utilisent toutes un commun **tm**  structure par thread pour la conversion. Chaque appel à une de ces fonctions détruit le résultat de tout appel précédent. Si *sourceTime* représente une date antérieure au 1er janvier 1970 à minuit **gmtime** retourne **NULL**. Aucun retour d'erreur.
 
-**_gmtime64**, qui utilise le **__time64_t** de la structure, Active des dates d’exprimer à 23:59:59, le 31 décembre 3000 UTC, tandis que **_gmtime32** représentent uniquement les dates à 23:59:59. Le 18 janvier 2038, UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour les deux fonctions.
+**_gmtime64**, qui utilise le **__time64_t** structure, permet des dates exprimer à 23:59:59 le 31 décembre 3000, UTC, tandis que **_gmtime32** représentent uniquement les dates à 23:59:59 Le 18 janvier 2038, UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour les deux fonctions.
 
-**gmtime** est une fonction inline qui prend la valeur **_gmtime64**, et **time_t** équivaut à **__time64_t** , sauf si **_USE_32BIT_TIME_ T** est défini. Si vous devez forcer le compilateur à interpréter **time_t** en tant que l’ancien 32 bits **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**, mais ainsi, **gmtime** pour être inline à **_gmtime32** et **time_t** être défini en tant que **__time32_t**. Nous vous recommandons de ne pas effectuer cette opération, car elle n’est pas autorisée sur les plateformes 64 bits et, dans tous les cas, votre application risque d’échouer après le 18 janvier 2038.
+**gmtime** est une fonction inline qui prend la valeur **_gmtime64**, et **time_t** équivaut à **__time64_t** , sauf si **_USE_32BIT_TIME_ T** est défini. Si vous devez forcer le compilateur à interpréter **time_t** l’ancien 32-bit **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**, mais ce faisant **gmtime** pour être inline à **_gmtime32** et **time_t** soit définie comme **__time32_t**. Nous vous recommandons de ne pas effectuer cette opération, car elle n’est pas autorisée sur les plateformes 64 bits et, dans tous les cas, votre application risque d’échouer après le 18 janvier 2038.
 
-Ces fonctions valident leurs paramètres. Si *sourceTime* est un pointeur null, ou si le *sourceTime* valeur est négative, ces fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, les fonctions retournent **NULL** et **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si *sourceTime* est un pointeur null, ou si le *sourceTime* valeur est négative, ces fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, les fonctions retournent **NULL** et définissez **errno** à **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_gmtime32** décompose en fonction du *sourceTime* valeur et la stocke dans une structure allouée de manière statique de type **tm**, défini dans le temps. H. La valeur de *sourceTime* est généralement obtenue à partir d’un appel à la [temps](time-time32-time64.md) (fonction).
+Le **_gmtime32** fonction décompose le *sourceTime* valeur et le stocke dans une structure allouée de manière statique de type **tm**, défini dans le temps. H. La valeur de *sourceTime* est généralement obtenue à partir d’un appel à la [temps](time-time32-time64.md) (fonction).
 
 > [!NOTE]
 > Dans la plupart des cas, l’environnement cible tente de déterminer si l’heure d’été est en vigueur. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été utilisées sont celles des États-Unis.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|

@@ -1,10 +1,6 @@
 ---
-title: CMonthCalCtrl (classe) | Microsoft Docs
-ms.custom: ''
+title: CMonthCalCtrl (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMonthCalCtrl
 - AFXDTCTL/CMonthCalCtrl
@@ -50,8 +46,6 @@ f1_keywords:
 - AFXDTCTL/CMonthCalCtrl::SetYearView
 - AFXDTCTL/CMonthCalCtrl::SizeMinReq
 - AFXDTCTL/CMonthCalCtrl::SizeRectToMin
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMonthCalCtrl [MFC], CMonthCalCtrl
 - CMonthCalCtrl [MFC], Create
@@ -96,16 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e0d66689071371f1e951c7f8d84fe0c4c69b4c1c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 26a0feadfd6603f74ce222e4850f0da9cf71e7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433766"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509586"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl (classe)
 
@@ -223,7 +213,6 @@ virtual BOOL Create(
     const RECT& rect,
     CWnd* pParentWnd,
     UINT nID);
-
 
 virtual BOOL Create(
     DWORD dwStyle,
@@ -1163,11 +1152,9 @@ BOOL SetRange(
     const COleDateTime* pMinRange,
     const COleDateTime* pMaxRange);
 
-
 BOOL SetRange(
     const CTime* pMinRange,
     const CTime* pMaxRange);
-
 
 BOOL SetRange(
     const LPSYSTEMTIME pMinRange,
@@ -1203,11 +1190,9 @@ BOOL SetSelRange(
     const COleDateTime& pMinRange,
     const COleDateTime& pMaxRange);
 
-
 BOOL SetSelRange(
     const CTime& pMinRange,
     const CTime& pMaxRange);
-
 
 BOOL SetSelRange(
     const LPSYSTEMTIME pMinRange,

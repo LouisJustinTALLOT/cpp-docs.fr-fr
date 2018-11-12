@@ -1,10 +1,6 @@
 ---
-title: _ismbbkprint, _ismbbkprint_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbkprint, _ismbbkprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkprint
 - _ismbbkprint_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkprint
 - _ismbbkprint
 - ismbbkprint_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkprint function
 - ismbbkprint_l function
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1a6a215bac14f81d29d83a856313133fb4e88a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399499"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645976"
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -71,9 +61,9 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbkprint** retourne une valeur différente de zéro si l’entier *c* est un fichier texte non ASCII ou symbole de ponctuation non ASCII ou 0 s’il n’est pas. Par exemple, dans la page de codes 932 uniquement, **_ismbbkprint** teste s’il s’agit de katakanas alphanumériques ou de ponctuation katakana (plage : 0xA1 - 0xDF). **_ismbbkprint** utilise les paramètres régionaux actuels pour les paramètres de caractères dépendant des paramètres régionaux. **_ismbbkprint_l** est identique, sauf qu’elle utilise les paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbbkprint** retourne une valeur différente de zéro si l’entier *c* est un texte non ASCII ou symbole de ponctuation non ASCII ou 0 si ce n’est pas. Par exemple, dans la page de codes 932 uniquement, **_ismbbkprint** teste s’il s’agit de katakanas alphanumériques ou de ponctuation katakana (plage : 0xA1 - 0xDF). **_ismbbkprint** utilise les paramètres régionaux actuels pour les paramètres de caractères dépendant des paramètres régionaux. **_ismbbkprint_l** est identique, sauf qu’elle utilise le paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

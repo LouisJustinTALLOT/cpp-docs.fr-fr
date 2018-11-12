@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s_dbg, _wdupenv_s_dbg | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
@@ -24,8 +20,6 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ef129cec096734c23e911a5dc77bf3bd0b2df03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404303"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579586"
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
@@ -95,15 +85,15 @@ Numéro de ligne dans le fichier source ou **NULL**.
 
 Zéro en cas de réussite, code d'erreur en cas d'échec.
 
-Ces fonctions valident leurs paramètres ; Si *tampon* ou *varname* est **NULL**, le Gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définissent **errno** à **EINVAL** et retourner **EINVAL**.
+Ces fonctions valident leurs paramètres ; Si *tampon* ou *varname* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définissent **errno** à **EINVAL** et retourner **EINVAL**.
 
-Si ces fonctions ne peut pas allouer suffisamment de mémoire, elles affectent *tampon* à **NULL** et *numberOfElements* à 0 et retournent **ENOMEM**.
+Si ces fonctions ne peut pas allouer suffisamment de mémoire, elles définies *tampon* à **NULL** et *numberOfElements* à 0 et retournent **ENOMEM**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_dupenv_s_dbg** et **_wdupenv_s_dbg** fonctions sont identiques aux **_dupenv_s** et **_wdupenv_s** , sauf que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md), allocation de mémoire pour la valeur de la variable d’environnement. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
+Le **_dupenv_s_dbg** et **_wdupenv_s_dbg** fonctions sont identiques aux **_dupenv_s** et **_wdupenv_s** , à ceci près que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md)pour allouer la mémoire pour la valeur de la variable d’environnement. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
 
-Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur **_CRTDBG_MAP_ALLOC**. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_dupenv_s** et **_wdupenv_s** sont remappés à **_dupenv_s_dbg** et **_wdupenv_s_dbg**, respectivement, avec la *blockType* la valeur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations sur les types de bloc, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
+Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir l’indicateur **_CRTDBG_MAP_ALLOC**. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_dupenv_s** et **_wdupenv_s** sont remappés à **_dupenv_s_dbg** et **_wdupenv_s_dbg**, respectivement, avec le *blockType* définie sur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions explicitement, sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations sur les types de bloc, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -111,7 +101,7 @@ Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de mani�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s_dbg**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

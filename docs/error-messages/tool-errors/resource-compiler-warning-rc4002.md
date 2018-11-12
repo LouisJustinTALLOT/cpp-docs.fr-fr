@@ -1,27 +1,17 @@
 ---
-title: Avertissement RC4002 du compilateur de ressources | Microsoft Docs
-ms.custom: ''
+title: 'Avertissement RC4002 du compilateur de ressources '
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RC4002
-dev_langs:
-- C++
 helpviewer_keywords:
 - RC4002
 ms.assetid: a157bc55-1a75-4337-aee4-e2ba61ff8cfa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 400d748f0ce9cafa4d11690f1d6c9fbfa4af90e7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ddb16a5ea810d272db5f1d2b7473a6e5d49d69bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058989"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484563"
 ---
 # <a name="resource-compiler-warning-rc4002"></a>Avertissement RC4002 du compilateur de ressources 
 

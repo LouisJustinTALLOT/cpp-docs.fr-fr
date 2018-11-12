@@ -1,27 +1,16 @@
 ---
-title: 'Comment : créer des Applications Console CLR (C++ / c++ / CLI) | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : créer des applications console CLR (C++/CLI)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: a650d62a53fa6cada535119cb8897f1f97870ea1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fa45578b1e773e954fe692bd1c49e311626c35de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525658"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Comment : créer des applications console CLR (C++/CLI)
 
@@ -33,7 +22,7 @@ Quand vous utilisez le modèle Application console pour créer un projet, il ajo
 
 - Références à ces espaces de noms .NET Framework :
 
-   - [Système](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx): contient des classes fondamentales et des classes de base qui définissent généralement utilisé des valeurs et types de données de référence, événements et gestionnaires d’événements, interfaces, attributs et des exceptions de traitement.
+   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx): contient des classes fondamentales et des classes de base qui définissent des valeurs et des types de données de référence, des événements et des gestionnaires d’événements, des interfaces, des attributs et des exceptions de traitement couramment utilisés.
 
    - mscorlib  : DLL de l’assembly qui prend en charge le développement .NET Framework.
 
@@ -67,7 +56,7 @@ Quand vous utilisez le modèle Application console pour créer un projet, il ajo
 
 1. Dans la zone **Nom** , entrez un nom unique pour votre application.
 
-     Vous pouvez spécifier d’autres paramètres pour le projet et la solution, mais ils ne sont pas obligatoires.
+   Vous pouvez spécifier d’autres paramètres pour le projet et la solution, mais ils ne sont pas obligatoires.
 
 1. Sélectionnez le bouton **OK** .
 

@@ -1,33 +1,27 @@
 ---
-title: Visual C++ dans Visual Studio | Microsoft Docs
+title: Visual C++ dans Visual Studio
 description: Visual C++ est le nom employé pour le compilateur Microsoft C++, l’éditeur de code et les outils associés dans l’IDE Visual Studio. Utilisez Visual C++ pour développer des programmes pour Windows, Linux, Android et iOS.
-ms.custom: ''
 ms.date: 09/26/2018
 ms.technology:
 - cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: fbabb949fa0dae03cabfb6db1c98c2ebc1f1af12
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821279"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668336"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ dans Visual Studio
 
-> [!NOTE]  
-> Cette documentation pour les développeurs s’applique à Visual Studio 2015 et Visual Studio 2017. 
+> [!NOTE]
+> Cette documentation pour les développeurs s’applique à Visual Studio 2015 et Visual Studio 2017.
 
-> Si vous recherchez un package redistribuable Visual C++ pour pouvoir exécuter un programme, accédez au [Centre de téléchargement Microsoft](http://www.microsoft.com/download/) et entrez **Visual C++** dans la zone de recherche.  
-  
+> Si vous recherchez un package redistribuable Visual C++ pour pouvoir exécuter un programme, accédez au [Centre de téléchargement Microsoft](http://www.microsoft.com/download/) et entrez **Visual C++** dans la zone de recherche.
+
 
 Microsoft Visual C++, généralement abrégé en Visual C++ ou MSVC, est le nom qui désigne les outils de développement C++, C et en langage assembleur et les bibliothèques disponibles dans le cadre de Visual Studio sur Windows. Ces outils et bibliothèques vous permettent de créer des applications de plateforme Windows universelle (UWP), des applications serveur et de bureau Windows natives, des bibliothèques multiplateformes et des applications qui s’exécutent sur Windows, Linux, Android et iOS, ainsi que des applications et des bibliothèques managées qui utilisent le .NET Framework. Vous pouvez utiliser Visual C++ pour écrire aussi bien des applications de console simples que des applications plus sophistiquées et complexes pour le Bureau Windows,des pilotes de périphériques et des composants de système d’exploitation que des jeux multiplateformes pour appareils mobiles, des très petits appareils IoT que des dispositifs HPC multiserveurs dans le cloud Azure.
 

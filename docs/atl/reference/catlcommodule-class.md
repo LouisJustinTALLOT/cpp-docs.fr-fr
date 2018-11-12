@@ -1,10 +1,6 @@
 ---
-title: Catlcommodule, classe | Microsoft Docs
-ms.custom: ''
+title: Catlcommodule, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAtlComModule
 - ATLBASE/ATL::CAtlComModule
@@ -13,21 +9,15 @@ f1_keywords:
 - ATLBASE/ATL::CAtlComModule::RegisterTypeLib
 - ATLBASE/ATL::CAtlComModule::UnregisterServer
 - ATLBASE/ATL::CAtlComModule::UnRegisterTypeLib
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 270e6ca4dcb5c7701281cc2ac6c04e1d60093db3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040802"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499802"
 ---
 # <a name="catlcommodule-class"></a>Catlcommodule, classe
 
@@ -149,7 +139,7 @@ Appelez cette méthode pour annuler l’inscription de chaque objet du mappage d
 
 ```
 HRESULT UnregisterServer(
-    BOOL bRegTypeLib = FALSE,  
+    BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL);
 ```
 

@@ -1,27 +1,17 @@
 ---
-title: unary_function, struct | Microsoft Docs
-ms.custom: ''
+title: unary_function, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - functional/std::unary
-dev_langs:
-- C++
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff8e486be6e28de313a8e1a20634af4c50c350e8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: aaca8d48171ebb4043e9c8f0ea66316feb73d39c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462801"
 ---
 # <a name="unaryfunction-struct"></a>unary_function, structure
 
@@ -36,6 +26,7 @@ struct unary_function
    typedef Result result_type;
 };
 ```
+
 ## <a name="remarks"></a>Notes
 
 Le struct de modèle sert de base pour les classes qui définissent une fonction membre de la forme **result_type**`operator()`(**constargument_type&**) **const**.

@@ -1,10 +1,6 @@
 ---
-title: CFileException, classe | Microsoft Docs
-ms.custom: ''
+title: CFileException, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFileException
 - AFX/CFileException
@@ -17,8 +13,6 @@ f1_keywords:
 - AFX/CFileException::m_cause
 - AFX/CFileException::m_lOsError
 - AFX/CFileException::m_strFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFileException [MFC], CFileException
 - CFileException [MFC], ErrnoToException
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d6230e488bdcca6f21e6c867c86c86f18a05bbe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50485816"
 ---
 # <a name="cfileexception-class"></a>CFileException, classe
 
@@ -323,6 +313,4 @@ Un pointeur vers la chaîne contenant le nom du fichier qui a provoqué l’exce
 [CException, classe](../../mfc/reference/cexception-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Traitement des exceptions](../../mfc/reference/exception-processing.md)
-
-
 

@@ -1,28 +1,18 @@
 ---
-title: Rendre un objet ATL comme Noncreatable | Microsoft Docs
-ms.custom: ''
+title: Rendre un objet ATL comme Noncreatable
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.objects
-dev_langs:
-- C++
 helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f0b20cbae3036ffecfa63f2e3ee6be8e2153fc8f
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: c92d049d95a2eacf3389c49d0b1561c2374b0c3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860912"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650630"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Rendre un objet ATL comme Noncreatable
 
@@ -34,14 +24,14 @@ Vous pouvez modifier les attributs d’un objet COM basé sur ATL afin qu’un c
 
 1. Ajouter le [noncreatable](../../windows/noncreatable.md) attribut à la coclasse dans le fichier .idl. Exemple :
 
-    ```  
-    [uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851), 
-    helpstring("MyObject"), 
-    noncreatable]  
-    coclass MyObject  
-    {  
-        [default] interface IMyInterface;  
-    }  
+    ```
+    [uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851),
+    helpstring("MyObject"),
+    noncreatable]
+    coclass MyObject
+    {
+        [default] interface IMyInterface;
+    }
     ```
 
 ## <a name="see-also"></a>Voir aussi

@@ -1,10 +1,6 @@
 ---
-title: Agrégation et Macros de fabrique de classe | Microsoft Docs
-ms.custom: ''
+title: Agrégation et Macros de fabrique de classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::DECLARE_AGGREGATABLE
 - atlcom/ATL::DECLARE_CLASSFACTORY
@@ -17,22 +13,16 @@ f1_keywords:
 - atlcom/ATL::DECLARE_POLY_AGGREGATABLE
 - atlcom/ATL::DECLARE_PROTECT_FINAL_CONSTRUCT
 - atlcom/ATL::DECLARE_VIEW_STATUS
-dev_langs:
-- C++
 helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c0e3b6903e382ad56be9500792bec895a7641f00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497184"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agrégation et Macros de fabrique de classe
 
@@ -51,7 +41,7 @@ Ces macros fournissent des méthodes de contrôle de l’agrégation et de la d�
 |[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|Déclare que votre objet doit être agrégée.|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|Vérifie la valeur de l’inconnu externe et déclare votre objet peut être agrégé ou ne peut pas être agrégé, le cas échéant.|
 |[MACRO DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Protège l’objet externe d’une suppression pendant la construction d’un objet interne.|
-|[DECLARE_VIEW_STATUS](#declare_view_status)|Spécifie les indicateurs de double au conteneur.|  
+|[DECLARE_VIEW_STATUS](#declare_view_status)|Spécifie les indicateurs de double au conteneur.|
 
 ## <a name="requirements"></a>Configuration requise
 

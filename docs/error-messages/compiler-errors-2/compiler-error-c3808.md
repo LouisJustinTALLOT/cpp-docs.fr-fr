@@ -1,31 +1,21 @@
 ---
-title: Erreur du compilateur C3808 | Documents Microsoft
-ms.custom: ''
+title: Erreur du compilateur C3808
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3808
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40668b8b2cc1a1f85b0ad4a7ef63d89956e922b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705203"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587731"
 ---
 # <a name="compiler-error-c3808"></a>Erreur du compilateur C3808
 
-> '*type*' : une classe avec l’attribut ComImport ne peut pas définir de membre '*membre*', abstraite uniquement ou les fonctions dllimport sont autorisées
+> «*type*' : une classe avec l’attribut ComImport ne peut pas définir de membre '*membre*', abstraite uniquement ou les fonctions de dllimport sont autorisées
 
 ## <a name="remarks"></a>Notes
 

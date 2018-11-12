@@ -1,28 +1,17 @@
 ---
-title: v1_enum (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: v1_enum (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.v1_enum
-dev_langs:
-- C++
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f5cb71c2fcdaf60f19ca381b28213dc0c48971f6
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 9771181399a1abaef2e273665e8b267a2065efea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790589"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632425"
 ---
 # <a name="v1enum"></a>v1_enum
 
@@ -64,9 +53,9 @@ enum eList {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)  
+[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)

@@ -1,10 +1,6 @@
 ---
-title: Référence (Runtime d’accès concurrentiel) | Microsoft Docs
-ms.custom: ''
+title: Référence (runtime d'accès concurrentiel)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_My_segment
 - agents/Concurrency::details::_Dynamic_array::_Swap
@@ -451,24 +447,18 @@ f1_keywords:
 - concrt/Concurrency::details::_Timer::_Stop
 - concrt/Concurrency::details::_TaskCollectionBase::_M_pParent
 - agents/Concurrency::_Network_link_iterator::operator->
-dev_langs:
-- C++
 helpviewer_keywords:
 - DWORD typedef
 - HANDLE typedef
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412104"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663331"
 ---
 # <a name="reference-concurrency-runtime"></a>Référence (runtime d'accès concurrentiel)
 
@@ -480,7 +470,7 @@ Cette section contient des informations de référence pour le Runtime d’accè
 ## <a name="in-this-section"></a>Dans cette section
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
-L’espace de noms d’accès concurrentiel fournit des classes et des fonctions qui vous donnent accès au Runtime d’accès concurrentiel, une infrastructure de programmation simultanée pour C++. Pour plus d’informations, consultez [Runtime d’accès concurrentiel](../concurrency-runtime.md).
+L’espace de noms d’accès concurrentiel fournit des classes et des fonctions qui vous donnent accès au Runtime d’accès concurrentiel, une infrastructure de programmation simultanée pour C++. Pour plus d'informations, consultez [Concurrency Runtime](../concurrency-runtime.md).
 
 [espace de noms std](std-namespace.md)
 

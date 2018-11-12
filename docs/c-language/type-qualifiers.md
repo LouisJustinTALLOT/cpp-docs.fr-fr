@@ -1,12 +1,6 @@
 ---
-title: Qualificateurs de type | Microsoft Docs
-ms.custom: ''
+title: Qualificateurs de type
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - volatile keyword [C], type qualifier
 - type qualifiers
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - memory, access using volatile
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ecac60a1b9cbd2758090e52d917c7a65259d62d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 31cfa4d0d443cc6bb854e8010f1e1535cd39b51b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507673"
 ---
 # <a name="type-qualifiers"></a>Qualificateurs de type
 
@@ -69,7 +59,7 @@ La liste suivante explique comment utiliser **const** et `volatile`.
 
 - Le compilateur suppose que, à tout moment dans le programme, une variable `volatile` est accessible par un processus inconnu qui utilise ou modifie sa valeur. Par conséquent, indépendamment des optimisations spécifiées sur la ligne de commande, le code pour chaque assignation ou référence d'une variable `volatile` doit être généré même s'il semble n'avoir aucun effet.
 
-     Si `volatile` est utilisé seul, `int` est pris par défaut. Le spécificateur de type `volatile` peut être utilisé pour fournir un accès fiable aux emplacements de mémoire spéciaux. Utilisez `volatile` avec des objets de données accessibles ou modifiables par les gestionnaires de signaux, en exécutant simultanément des programmes, ou par un matériel spécial tel que les registres de contrôle d'E/S mappé en mémoire. Vous pouvez déclarer une variable comme `volatile` pour toute sa durée de vie, ou vous pouvez effectuer un cast d'une référence unique pour qu'elle soit `volatile`.
+   Si `volatile` est utilisé seul, `int` est pris par défaut. Le spécificateur de type `volatile` peut être utilisé pour fournir un accès fiable aux emplacements de mémoire spéciaux. Utilisez `volatile` avec des objets de données accessibles ou modifiables par les gestionnaires de signaux, en exécutant simultanément des programmes, ou par un matériel spécial tel que les registres de contrôle d'E/S mappé en mémoire. Vous pouvez déclarer une variable comme `volatile` pour toute sa durée de vie, ou vous pouvez effectuer un cast d'une référence unique pour qu'elle soit `volatile`.
 
 - Un élément peut être **const** et `volatile`, auquel cas il ne peut pas être légitimement modifié par son propre programme, mais par un processus asynchrone.
 

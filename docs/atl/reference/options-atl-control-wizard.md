@@ -1,27 +1,17 @@
 ---
-title: Options, Assistant contrôle ATL | Microsoft Docs
-ms.custom: ''
+title: Options, Assistant contrôle ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.options
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711938"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443756"
 ---
 # <a name="options-atl-control-wizard"></a>Options, Assistant contrôle ATL
 
@@ -49,11 +39,11 @@ Le type de contrôle que vous souhaitez créer.
 
    - Une page de test HTML contenant le contrôle composite.
 
-     Par défaut, ce contrôle définit [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres. Il implémente une table de récepteur. Pour plus d’informations, consultez [prise en charge pour le contrôle DHTML](../../atl/atl-support-for-dhtml-controls.md).
+   Par défaut, ce contrôle définit [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres. Il implémente une table de récepteur. Pour plus d’informations, consultez [prise en charge pour le contrôle DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
 - **Contrôle DHTML**: contrôle ATL DHTML spécifie l’interface utilisateur, à l’aide de HTML. La classe UI DHTML contient un mappage COM. Par défaut, ce contrôle définit [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres.
 
-     Pour plus d’informations, consultez [identification des éléments du projet de contrôle DHTML Edit](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+   Pour plus d’informations, consultez [identification des éléments du projet de contrôle DHTML Edit](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
 ### <a name="minimal-control"></a>Contrôle minimal
 

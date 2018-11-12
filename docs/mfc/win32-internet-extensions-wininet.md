@@ -1,28 +1,18 @@
 ---
-title: Extension Internet Win32 (WinInet) | Microsoft Docs
-ms.custom: ''
+title: Extension Internet Win32 (WinInet)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Internet applications [MFC], Win32 Internet Extensions
 - Internet client applications [MFC], about Internet client applications
 - client applications [MFC], Win32 Internet
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: f8c80f0b-ce14-4f0d-a3cf-4f7d8c5cca59
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 35d3805ee88cca048ac44dc15426cb35eb52bb5b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3fce3960723beac15cae6ea33cf8232e8a98fb77
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374760"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612392"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Extension Internet Win32 (WinInet)
 
@@ -60,6 +50,4 @@ Les rubriques suivantes fournissent des étapes pour effectuer les tâches typiq
 
 [Notions de base de la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Notions de base de WinInet](../mfc/wininet-basics.md)
-
-
 

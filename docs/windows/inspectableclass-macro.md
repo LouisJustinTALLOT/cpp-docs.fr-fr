@@ -1,26 +1,16 @@
 ---
-title: Inspectableclass, Macro | Microsoft Docs
-ms.custom: ''
+title: InspectableClass, macro
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::InspectableClass
-dev_langs:
-- C++
 ms.assetid: ff390b26-58cc-424f-87ac-1fe3cc692b59
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a20815972f595a15097a057537d6cb5cdca4fb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 55d5aed96ff7c8b01142f8d4de81a431fdfcc2d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408327"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631593"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass, macro
 
@@ -31,7 +21,7 @@ Définit le niveau de confiance et de nom de la classe runtime.
 ```cpp
 InspectableClass(
    runtimeClassName,
-   trustLevel)  
+   trustLevel)
 ```
 
 ### <a name="parameters"></a>Paramètres

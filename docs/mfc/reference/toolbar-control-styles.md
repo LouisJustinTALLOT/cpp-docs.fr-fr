@@ -1,25 +1,15 @@
 ---
-title: Styles de contrôle de barre d’outils | Microsoft Docs
-ms.custom: ''
+title: Styles de contrôle ToolBar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fe31acea49dddf6a1cf76c01de789ccfc8583e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f26edc6c0ce4a19528a9a8754428411318e9b9d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386533"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648992"
 ---
 # <a name="toolbar-control-styles"></a>Styles de contrôle ToolBar
 
@@ -67,5 +57,4 @@ Le Gestionnaire visuel détermine l’apparence des boutons dans chaque état. C
 [Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CMFCToolBarButton, classe](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Gestionnaire de visualisation](../../mfc/visualization-manager.md)
-
 

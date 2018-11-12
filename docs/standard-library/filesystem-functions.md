@@ -1,10 +1,6 @@
 ---
-title: '&lt;filesystem&gt;, fonctions | Microsoft Docs'
-ms.custom: ''
+title: '&lt;filesystem&gt;, fonctions'
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::absolute
 - FILESYSTEM/std::experimental::filesystem::canonical
@@ -46,11 +42,7 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::system_complete
 - FILESYSTEM/std::experimental::filesystem::temp_directory_path
 - FILESYSTEM/std::experimental::filesystem::u8path
-dev_langs:
-- C++
 ms.assetid: be3cb821-4728-4d47-ab78-858fa8aa5045
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::experimental::filesystem::absolute
 - std::experimental::filesystem::canonical
@@ -92,14 +84,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4dc53bff438830cfb8a7b0414c4e5cfb111f8f31
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: ff908ab57b1130f959e5e9818e4185a8b3cfd348
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691495"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473576"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt;, fonctions
 
@@ -120,7 +110,6 @@ Ces fonctions libres de l’en-tête [\<filesystem>](../standard-library/filesys
 |[resize_file](#resize_file)|[space](#space)|[status](#status)|
 |[status_known](#status_known)|[swap](#swap)|[symlink_status](#symlink_status)|
 |[system_complete](#system_complete)|[temp_directory_path](#temp_directory_path)|[u8path](#u8path)|
-
 
 ## <a name="absolute"></a> absolu
 

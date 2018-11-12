@@ -1,27 +1,17 @@
 ---
-title: Erreur LNK2028 des outils Éditeur de liens | Documents Microsoft
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK2028
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2028
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9c8eaa03927f51acd3c3d84731e9ef2b282b7c6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ed2dc1a95d4dd7c447b360da21b5046e20f79083
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704152"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643675"
 ---
 # <a name="linker-tools-error-lnk2028"></a>Erreur des outils Éditeur de liens LNK2028
 
@@ -35,7 +25,7 @@ Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 
 
 ## <a name="example"></a>Exemple
 
-Cet exemple de code génère un composant avec une fonction native exportée dont la convention d’appel est implicitement [__cdecl](../../cpp/cdecl.md).
+Cet exemple de code génère un composant avec une fonction exportée native, dont la convention d’appel est implicitement [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2028.cpp

@@ -1,35 +1,28 @@
 ---
-title: SafeInt, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 09/27/2018
-ms.technology:
-- cpp-windows
+title: SafeInt, classe
+ms.date: 10/22/2018
 ms.topic: reference
 f1_keywords:
 - SafeInt
 - SafeInt::SafeInt
 - SafeInt.SafeInt
-dev_langs:
-- C++
 helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 4dab192b2d5d4210461bd791e3f4d9996363c953
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 70343d4dbaf4b57c83d28e225419164906e2b1ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445147"
 ---
 # <a name="safeint-class"></a>SafeInt, classe
 
 Étend les primitives entières afin d’éviter les débordements d’entiers et vous permet de comparer les différents types d’entiers.
+
+> [!NOTE] 
+> La dernière version de cette bibliothèque se trouve dans [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -259,7 +252,7 @@ SafeInt (
 I template <typename U>
 SafeInt (
    const U& i
-)  
+)
 ```
 
 ### <a name="parameters"></a>Paramètres

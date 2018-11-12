@@ -1,25 +1,15 @@
 ---
-title: Routines de Validation de données de boîte de dialogue standard | Microsoft Docs
-ms.custom: ''
+title: Routines de validation des données de boîte de dialogue standard
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 116cd9ee86ca29aac6da489916f78c3884ba8bdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b5813600bbf8eb2a7b25992b3e1b020fcf8dfa02
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513943"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Routines de validation des données de boîte de dialogue standard
 
@@ -47,8 +37,6 @@ Cette rubrique répertorie les routines de validation (DDV) de données boîte d
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|Vérifie une valeur de contrôle donné ne dépasse pas un donné **UINT** plage.|
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Vérifie qu'une valeur de contrôle donné se situe entre deux valeurs spécifiées.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Vérifie une valeur de contrôle donné ne dépasse pas un donné **ULONGLONG** plage.|
-
-
 
 ##  <a name="ddv_maxchars"></a>  DDV_MaxChars
 
@@ -552,6 +540,7 @@ Appelez `DDV_MinMaxUnsigned` pour vérifier que la valeur dans le contrôle asso
        unsigned minVal,
        unsigned maxVal );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *pDX*<br/>
@@ -579,6 +568,4 @@ Pour plus d’informations sur DDV, consultez [échange de données de boîtes d
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [DDX_Slider](#ddx_slider)<br/>
 [DDX_FieldSlider](#ddx_fieldslider)
-
-
 

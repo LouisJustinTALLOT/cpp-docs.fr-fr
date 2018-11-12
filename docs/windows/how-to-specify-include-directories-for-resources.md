@@ -1,28 +1,17 @@
 ---
-title: 'Comment : spécifier répertoires Include pour les ressources (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : spécifier répertoires Include pour les ressources (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - directories [C++], specifying include paths for resources
 - include files [C++], specifying for resources
 - resources [C++], including in projects
 ms.assetid: d6a7c0f6-4810-4bb0-b4b7-7d2476a20ca2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ebebd8d0b6dc53ef5d83374c329ebe35d23f7fe8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9b127c70fc9da43c07de768b00de4a27941beebb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443538"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555153"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>Comment : spécifier répertoires Include pour les ressources (C++)
 
@@ -32,7 +21,7 @@ ms.locfileid: "46443538"
 
 2. Dans le **Pages de propriétés** boîte de dialogue, cliquez sur le **ressources** nœud dans le volet gauche, puis spécifiez les répertoires dans include supplémentaires le **autres répertoires include** propriété.
 
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le Guide du développeur .NET Framework. 
+Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le Guide du développeur .NET Framework.
 
 ## <a name="requirements"></a>Configuration requise
 

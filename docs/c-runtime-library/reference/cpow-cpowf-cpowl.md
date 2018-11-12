@@ -1,11 +1,6 @@
 ---
-title: cpow, cpowf, cpowl | Microsoft Docs
-ms.custom: ''
+title: cpow, cpowf, cpowl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cpow
 - cpowf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cpow
 - complex/cpowf
 - complex/copwl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cpow function
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8311b4c8bd8c082b03f01a2df253c55d170c560e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394780"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562485"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
 
@@ -82,13 +71,13 @@ Exposant.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de *x* à la puissance de *y* avec une branche de coupe pour *x* sur l’axe réel négatif.
+La valeur de *x* élevé à la puissance de *y* avec une coupure pour *x* le long de l’axe réel négatif.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cpow** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **cpow** accepte et retourne toujours un **_Dcomplex** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **cpow** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **cpow** accepte et retourne toujours un **_Dcomplex** valeur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

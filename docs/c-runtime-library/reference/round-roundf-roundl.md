@@ -1,10 +1,6 @@
 ---
-title: round, roundf, roundl | Microsoft Docs
-ms.custom: ''
+title: round, roundf, roundl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - round
 - roundl
@@ -26,23 +22,17 @@ f1_keywords:
 - roundf
 - roundl
 - round
-dev_langs:
-- C++
 helpviewer_keywords:
 - roundl function
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83c157793b80ec851f2c6159a5454f7101d2baed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591770"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -75,17 +65,17 @@ Valeur à virgule flottante à arrondir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **arrondir** fonctions retournent une valeur à virgule flottante qui représente l’entier le plus proche *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
+Le **arrondir** fonctions retournent une valeur à virgule flottante qui représente l’entier le plus proche à *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|aucun|**_DOMAIN**|
+|+ **QNAN**, **IND**|none|**_DOMAINE**|
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **arrondir** qui acceptent et retournent **float** et **long** **double** valeurs. Dans un programme C, **arrondir** accepte et retourne toujours un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **arrondir** qui acceptent et retournent **float** et **long** **double** valeurs. Dans un programme C, **arrondir** accepte et retourne toujours un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

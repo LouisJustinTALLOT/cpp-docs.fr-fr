@@ -1,10 +1,6 @@
 ---
-title: bsearch_s | Microsoft Docs
-ms.custom: ''
+title: bsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - bsearch_s
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - bsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2600b77031967bec5d5dd549a7dd8f34fc5c5e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd621c1dae2cae847bbbf032dec7e6972c526203
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400614"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430834"
 ---
 # <a name="bsearchs"></a>bsearch_s
 
@@ -71,14 +61,14 @@ Nombre d'éléments.
 Largeur des éléments.
 
 *compare*<br/>
-Fonction de rappel qui compare deux éléments. Le premier argument est le *contexte* pointeur. Le deuxième argument est un pointeur vers le *clé* pour la recherche. Le troisième argument est un pointeur vers l’élément de tableau à comparer avec *clé*.
+Fonction de rappel qui compare deux éléments. Le premier argument est le *contexte* pointeur. Le deuxième argument est un pointeur vers le *clé* pour la recherche. Le troisième argument est un pointeur vers l’élément de tableau doit être comparée à *clé*.
 
-*Contexte*<br/>
+*context*<br/>
 Pointeur vers un objet accessible dans la fonction de comparaison.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**bsearch_s** retourne un pointeur vers une occurrence de *clé* dans le tableau vers lequel pointé *base*. Si *clé* n’est trouvé, la fonction retourne **NULL**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
+**bsearch_s** retourne un pointeur vers une occurrence de *clé* dans le tableau vers lequel pointé *base*. Si *clé* est introuvable, la fonction retourne **NULL**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
 
 Si des paramètres non valides sont passés à la fonction, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -94,7 +84,7 @@ Si des paramètres non valides sont passés à la fonction, le gestionnaire de p
 
 ## <a name="remarks"></a>Notes
 
-Le **bsearch_s** fonction effectue une recherche binaire dans un tableau trié de *nombre* éléments, chacun des *largeur* taille en octets. Le *base* valeur est un pointeur vers la base du tableau à rechercher, et *clé* est la valeur recherchée. Le *comparer* paramètre est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et retourne l’une des valeurs suivantes précisant leur relation :
+Le **bsearch_s** fonction effectue une recherche binaire dans un tableau trié de *nombre* éléments, chacun des *largeur* taille octets. Le *base* valeur est un pointeur vers la base du tableau à rechercher, et *clé* est la valeur recherchée. Le *comparer* paramètre est un pointeur désignant une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et retourne une des valeurs suivantes spécifiant leur relation :
 
 |Valeur retournée par *comparer* routine|Description|
 |-----------------------------------------|-----------------|
@@ -102,9 +92,9 @@ Le **bsearch_s** fonction effectue une recherche binaire dans un tableau trié d
 |0|La clé est égale à l’élément de tableau.|
 |> 0|La clé est supérieure à l’élément de tableau.|
 
-Le *contexte* pointeur peut être utile si la structure de données de recherche fait partie d’un objet, et la fonction de comparaison doit accéder aux membres de l’objet. Le *comparer* fonction peut effectuer un cast du pointeur void dans les membres de type et l’accès de l’objet approprié de cet objet. L’ajout de la *contexte* paramètre rend **bsearch_s** plus sécurisé, car un contexte supplémentaire permet d’éviter les bogues de réentrance associés à l’utilisation de variables statiques pour ces données à la *comparer* (fonction).
+Le *contexte* pointeur peut être utile si la structure de données explorée fait partie d’un objet, et la fonction de comparaison doit accéder aux membres de l’objet. Le *comparer* fonction peut effectuer un cast du pointeur void vers l’objet approprié type et accéder aux membres de cet objet. L’ajout de la *contexte* paramètre rend **bsearch_s** plus sécurisée dans la mesure où un contexte supplémentaire peut être utilisé pour éviter les bogues de réentrance associés à l’utilisation de variables statiques et pour rendre les données accessibles à la *comparer* (fonction).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -114,7 +104,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="example"></a>Exemple
 
-Ce programme trie un tableau de chaînes avec [qsort_s](qsort-s.md) et utilise ensuite bsearch_s pour rechercher le mot « cat ».
+Ce programme trie un tableau de chaînes avec [qsort_s](qsort-s.md)et utilise ensuite bsearch_s pour rechercher le mot « cat ».
 
 ```cpp
 // crt_bsearch_s.cpp

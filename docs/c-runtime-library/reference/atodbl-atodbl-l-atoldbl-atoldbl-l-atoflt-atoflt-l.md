@@ -1,10 +1,6 @@
 ---
-title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Microsoft Docs
-ms.custom: ''
+title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoldbl
 - _atoldbl_l
@@ -38,8 +34,6 @@ f1_keywords:
 - atoflt
 - atoldbl_l
 - _atodbl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atodbl function
 - _atoldbl_l function
@@ -55,16 +49,12 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da36dfae81f33f5fb30a1a4bc93a57437980d720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393587"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552033"
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
@@ -98,13 +88,13 @@ Retourne 0 en cas de réussite. Codes d’erreur possibles sont **_UNDERFLOW** o
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions convertissent une chaîne en une valeur à virgule flottante. La différence entre ces fonctions et les **atof** famille de fonctions est que ces fonctions ne génèrent pas de code à virgule flottante et ne provoquent pas d’exceptions matérielles. Au lieu de cela, les conditions d’erreur sont signalées en tant que codes d’erreur.
+Ces fonctions convertissent une chaîne en une valeur à virgule flottante. La différence entre ces fonctions et les **atof** famille de fonctions est que ces fonctions ne génèrent pas de code en virgule flottante et ne lèvent pas d’exceptions de matériel. Au lieu de cela, les conditions d’erreur sont signalées en tant que codes d’erreur.
 
-Si une chaîne n’est pas une interprétation valide en tant que valeur à virgule flottante, *valeur* est définie sur zéro et la valeur de retour valeur est égale à zéro.
+Si une chaîne n’est pas une interprétation valide en tant que valeur à virgule flottante, *valeur* est définie sur zéro et la valeur de retour la valeur est zéro.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques les versions qui n’ont pas le suffixe, à ceci près qu’elles utilisent le *paramètres régionaux* paramètre qui est passé au lieu du thread en cours paramètres régionaux.
+Les versions de ces fonctions qui ont le **_l** suffixe sont identiques les versions qui n’ont pas le suffixe, à ceci près qu’elles utilisent le *paramètres régionaux* paramètre qui est passé au lieu du thread actuel paramètres régionaux.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routines|En-tête requis|
 |--------------|---------------------|

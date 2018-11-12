@@ -1,10 +1,6 @@
 ---
-title: Cuintarray, classe | Microsoft Docs
-ms.custom: ''
+title: Cuintarray, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CUIntArray
 - AFXCOLL/CUIntArray
@@ -26,8 +22,6 @@ f1_keywords:
 - AFXCOLL/CObArray::SetAt
 - AFXCOLL/CObArray::SetAtGrow
 - AFXCOLL/CObArray::SetSize
-dev_langs:
-- C++
 helpviewer_keywords:
 - CObArray [MFC], CObArray
 - CObArray [MFC], Add
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c110ffd183aa3de989543d368349ba629c580433
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccbd3d5ff708b12fd557b8c3470fb270303678f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399663"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657884"
 ---
 # <a name="cuintarray-class"></a>Cuintarray, classe
 
@@ -138,6 +128,4 @@ Pour plus d’informations sur l’utilisation de `CUIntArray`, consultez l’ar
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

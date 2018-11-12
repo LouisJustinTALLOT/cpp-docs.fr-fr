@@ -1,10 +1,6 @@
 ---
-title: duration, classe | Microsoft Docs
-ms.custom: ''
+title: duration, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -12,21 +8,15 @@ f1_keywords:
 - chrono/std::chrono::duration::max
 - chrono/std::chrono::duration::min
 - chrono/std::chrono::duration::zero
-dev_langs:
-- C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100909"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568886"
 ---
 # <a name="duration-class"></a>duration, classe
 
@@ -112,7 +102,6 @@ constexpr duration() = default;
 
 template <class Rep2>
 constexpr explicit duration(const Rep2& R);
-
 
 template <class Rep2, class Period2>
 constexpr duration(const duration<Rep2, Period2>& Dur);

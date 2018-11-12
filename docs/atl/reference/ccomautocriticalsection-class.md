@@ -1,29 +1,19 @@
 ---
-title: Ccomautocriticalsection, classe | Microsoft Docs
-ms.custom: ''
+title: Ccomautocriticalsection, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComAutoCriticalSection
 - ATLCORE/ATL::CComAutoCriticalSection
 - ATLCORE/ATL::CComAutoCriticalSection::CComAutoCriticalSection
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff8687783907cb84af36122c5d7828f8845d595d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1da9aeb0ff285893ed4f81277f379ad8bffcc65b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590903"
 ---
 # <a name="ccomautocriticalsection-class"></a>Ccomautocriticalsection, classe
 
@@ -48,7 +38,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 `CComAutoCriticalSection` est semblable à la classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), à l’exception `CComAutoCriticalSection` initialise automatiquement l’objet de section critique dans le constructeur.
 
-En général, vous utilisez `CComAutoCriticalSection` via la `typedef` nom [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Ce nom fait référence à `CComAutoCriticalSection` lorsque [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) est utilisé.  
+En général, vous utilisez `CComAutoCriticalSection` via la `typedef` nom [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Ce nom fait référence à `CComAutoCriticalSection` lorsque [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) est utilisé.
 
 Le `Init` et `Term` méthodes à partir de [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) ne sont pas disponibles lors de l’utilisation de cette classe.
 

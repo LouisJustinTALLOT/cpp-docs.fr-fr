@@ -1,26 +1,16 @@
 ---
-title: Makeandinitialize, fonction | Microsoft Docs
-ms.custom: ''
+title: MakeAndInitialize, fonction
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
-dev_langs:
-- C++
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 05f577ce8845b85cdb3a263aaea1e8c2cdb0f240
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61c923675aa7b5653aacb9ba2c51dec6105498a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409179"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448618"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize, fonction
 
@@ -38,7 +28,7 @@ typename TArg5,
 typename TArg6,
 typename TArg7,
 typename TArg8,
-typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()  
+typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()
 ```
 
 ### <a name="parameters"></a>Paramètres

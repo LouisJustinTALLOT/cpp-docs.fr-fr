@@ -1,15 +1,10 @@
 ---
-title: Type de tailles et de Variable dans l’Assembly Inline | Microsoft Docs
-ms.custom: ''
+title: Tailles de type et de variable dans l'assembly inline
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
 ms.topic: reference
 f1_keywords:
 - length
 - Type
-dev_langs:
-- C++
 helpviewer_keywords:
 - variables, length
 - size, getting in inline assembly
@@ -21,16 +16,12 @@ helpviewer_keywords:
 - variables, type
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3defb0b11a55258aa0a7d8c050d5a59bb6b8eb5a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 36c97ee866ca449e9bbcf514e464a13f24f12cd9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539098"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Tailles de type et de variable dans l'assembly inline
 

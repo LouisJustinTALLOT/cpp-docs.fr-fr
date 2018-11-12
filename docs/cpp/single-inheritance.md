@@ -1,12 +1,6 @@
 ---
-title: L’héritage simple | Microsoft Docs
-ms.custom: ''
+title: Héritage simple
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0817ba40dd5868e7e9a805bf5070cbc38927389d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a188780201c00451b125288b37c7c62fbe2322c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461852"
 ---
 # <a name="single-inheritance"></a>Héritage simple
 
@@ -64,7 +54,7 @@ Dans le diagramme ci-dessus, appelé « graphique acyclique dirigé », certai
 > [!NOTE]
 >  Les graphiques acycliques dirigés ne sont pas propres à l'héritage unique. Ils sont également utilisés pour représenter des cas d'héritage multiple.
 
-Dans un héritage, la classe dérivée contient les membres de la classe de base, ainsi que tous les nouveaux membres que vous ajoutez. Par conséquent, une classe dérivée peut faire référence à des membres de la classe de base (à moins que ces membres soient redéfinis dans la classe dérivée). L'opérateur de résolution de portée (`::`) peut être utilisé pour faire référence à des membres de classes de base directes ou indirectes, lorsque ces membres ont été redéfinis dans la classe dérivée. Considérez cet exemple :
+Dans un héritage, la classe dérivée contient les membres de la classe de base, ainsi que tous les nouveaux membres que vous ajoutez. Par conséquent, une classe dérivée peut faire référence à des membres de la classe de base (à moins que ces membres soient redéfinis dans la classe dérivée). L’opérateur de résolution de portée (`::`) peut être utilisé pour faire référence à des membres de classes de base directes ou indirectes, lorsque ces membres ont été redéfinis dans la classe dérivée. Considérez cet exemple :
 
 ```cpp
 // deriv_SingleInheritance2.cpp
@@ -110,7 +100,7 @@ Book LibraryBook( "Programming Windows, 2nd Ed", 944 );
 LibraryBook.PrintNameOf();
 ```
 
-Comme le montre l'exemple précédent, le membre de classe et les données et fonctions héritées sont utilisés de façon identique. Si l'implémentation de la classe `Book` demande une réimplémentation de la fonction `PrintNameOf`, la fonction qui appartient à la classe `Document` peut être appelée uniquement à l'aide de l'opérateur de résolution de portée (`::`) :
+Comme le montre l'exemple précédent, le membre de classe et les données et fonctions héritées sont utilisés de façon identique. Si l’implémentation de la classe `Book` demande une réimplémentation de la fonction `PrintNameOf`, la fonction qui appartient à la classe `Document` peut être appelée uniquement à l’aide de l’opérateur de résolution de portée (`::`) :
 
 ```cpp
 // deriv_SingleInheritance3.cpp

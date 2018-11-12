@@ -1,12 +1,6 @@
 ---
-title: Création d’une icône de 256 couleurs ou d’un curseur (Éditeur d’images pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Création d'une icône ou d'un curseur 256 couleurs (Éditeur d'images pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - 256-color palette
 - cursors [C++], color
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - colors [C++], cursors
 - icons, color
 ms.assetid: 2738089b-4fd3-4c45-96ae-6a15e4c6b780
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1d6e3af00bfe906a1954f7fc1d2b0af1ea52945e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd1100c05b41017fc89ccf58854cb8ed219a7873
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415913"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642754"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Création d'une icône ou d'un curseur 256 couleurs (Éditeur d'images pour les icônes)
 
@@ -34,7 +23,7 @@ ms.locfileid: "46415913"
 
 1. Dans [affichage des ressources](../windows/resource-view-window.md), avec le bouton droit de votre fichier .rc, puis choisissez **insérer la ressource** dans le menu contextuel. (Si vous disposez déjà d’une ressource image dans votre fichier .rc, par exemple un curseur, vous pouvez simplement cliquer sur le **curseur** dossier et sélectionnez **insérer Cursor** dans le menu contextuel.)
 
-   > [!NOTE] 
+   > [!NOTE]
    > Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
 
 2. Dans le [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), sélectionnez **icône** ou **curseur** et cliquez sur **New**.

@@ -1,28 +1,17 @@
 ---
-title: États d’éditeur de la boîte de dialogue (repères et grilles) (C++) | Microsoft Docs
-ms.custom: ''
+title: États d’éditeur de la boîte de dialogue (repères et grilles) (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Dialog Editor [C++], guides and margins
 ms.assetid: dbacf9ef-e8b0-4125-a7ce-84911c482e98
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3d0cc73df8304377bde00d8da2ab3c501ea5db45
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a07c3c91551acadf8fc548efd816b48bcb3125e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373267"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461826"
 ---
-# <a name="dialog-editor-states-guides-and-grids-c"></a>États d’éditeur de la boîte de dialogue (repères et grilles) (C++) 
+# <a name="dialog-editor-states-guides-and-grids-c"></a>États d’éditeur de la boîte de dialogue (repères et grilles) (C++)
 
 Vous pouvez organiser les contrôles dans les boîtes de dialogue avec le **boîte de dialogue** editor dans un des trois états différents :
 

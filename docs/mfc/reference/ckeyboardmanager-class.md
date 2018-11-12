@@ -1,10 +1,6 @@
 ---
-title: Ckeyboardmanager, classe | Microsoft Docs
-ms.custom: ''
+title: Ckeyboardmanager, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CKeyboardManager
 - AFXKEYBOARDMANAGER/CKeyboardManager
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXKEYBOARDMANAGER/CKeyboardManager::ShowAllAccelerators
 - AFXKEYBOARDMANAGER/CKeyboardManager::TranslateCharToUpper
 - AFXKEYBOARDMANAGER/CKeyboardManager::UpdateAccelTable
-dev_langs:
-- C++
 helpviewer_keywords:
 - CKeyboardManager [MFC], CKeyboardManager
 - CKeyboardManager [MFC], CleanUp
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c705f3da0b4b0681271353f1ce9d9aa2474f09a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 85bda6747c4ef6bed87b7a2ef30a3ef06bdfe29e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420814"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517856"
 ---
 # <a name="ckeyboardmanager-class"></a>Ckeyboardmanager, classe
 
@@ -354,7 +344,6 @@ BOOL UpdateAccelTable(
     int nSize,
     CFrameWnd* pDefaultFrame = NULL);
 
-
 BOOL UpdateAccelTable(
     CMultiDocTemplate* pTemplate,
     HACCEL hAccelNew,
@@ -393,6 +382,4 @@ Cette fonction permet de remplacer la table de raccourci existant avec nouvelles
 [CWinAppEx, classe](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [Personnalisation du clavier et de la souris](../../mfc/keyboard-and-mouse-customization.md)
-
-
 

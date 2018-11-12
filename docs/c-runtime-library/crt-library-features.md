@@ -1,14 +1,8 @@
 ---
-title: Fonctionnalités de la bibliothèque CRT | Microsoft Docs
-ms.custom: ''
+title: Fonctionnalités de la bibliothèque CRT
 ms.date: 08/20/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.runtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -24,16 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 08d85cd6993a2f3558ddb501dacac671c0d5d797
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540268"
 ---
 # <a name="crt-library-features"></a>Fonctionnalités de la bibliothèque CRT
 
@@ -123,7 +113,6 @@ Vous pouvez éviter la plupart de ces problèmes en utilisant des technologies A
 Il est également possible d’éviter certains de ces problèmes si toutes les images de votre processus utilisent la même version chargée dynamiquement du CRT. Pour vous assurer que tous les composants utilisent la même version DLL du CRT, créez-les à l’aide de l’option **/MD** et utilisez les mêmes outils de compilateur et paramètres de propriétés.
 
 Une attention particulière est nécessaire si votre programme passe certaines ressources CRT (comme les handles de fichiers, les paramètres régionaux et les variables d'environnement) à travers les limites des DLL, même en utilisant la même version du CRT. Pour plus d’informations sur les problèmes rencontrés et leur résolution, consultez [Erreurs potentielles de passage d’objets CRT entre frontières DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
-
 
 ## <a name="see-also"></a>Voir aussi
 

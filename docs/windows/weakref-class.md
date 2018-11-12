@@ -1,9 +1,6 @@
 ---
-title: Weakref, classe | Microsoft Docs
-ms.custom: ''
+title: WeakRef, classe
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::WeakRef
@@ -13,8 +10,6 @@ f1_keywords:
 - client/Microsoft::WRL::WeakRef::CopyTo
 - client/Microsoft::WRL::WeakRef::operator&
 - client/Microsoft::WRL::WeakRef::WeakRef
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::WeakRef class
 - Microsoft::WRL::WeakRef::~WeakRef, destructor
@@ -24,17 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::WeakRef::operator& operator
 - Microsoft::WRL::WeakRef::WeakRef, constructor
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: adbd47e8aeeb777b9a5e077429d74ef542abb85d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bd8aecc17c7f70540c06fa6b7b4885002dbea31a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645690"
 ---
 # <a name="weakref-class"></a>WeakRef, classe
 
@@ -75,7 +65,7 @@ Un `WeakRef` objet conserve un *référence forte*, qui est associé à un objet
 
 Un `WeakRef` objet est généralement utilisé pour représenter un objet dont l’existence est contrôlée par un thread externe ou une application. Par exemple, construisez un `WeakRef` objet à partir d’une référence à un objet fichier. Pendant que le fichier est ouvert, la référence forte est valide, mais si le fichier est fermé, la référence forte devient non valide.
 
-Notez qu’il existe un changement de comportement dans le [comme](#as), [AsIID](#asiid) et [CopyTo](#copyto) méthodes dans le SDK Windows 10. Précédemment, après avoir appelé une de ces méthodes, vous pouvez vérifier le `WeakRef` pour `nullptr` pour déterminer si une référence forte était obtenue avec succès, comme dans le code suivant :
+Notez qu’il existe un changement de comportement des méthodes [As](#as), [AsIID](#asiid) et [CopyTo](#copyto) dans le Kit de développement logiciel SDK Windows 10. Précédemment, après avoir appelé une de ces méthodes, vous pouvez vérifier le `WeakRef` pour `nullptr` pour déterminer si une référence forte était obtenue avec succès, comme dans le code suivant :
 
 ```cpp
 WeakRef wr;
@@ -88,7 +78,7 @@ HRESULT hr = wr.As(&strongRef);
 
 // This check won't work with the Windows 10 SDK version of the library.
 // Check the input pointer instead.
-if(wr == nullptr)  
+if(wr == nullptr)
 {
     wprintf(L"Couldn’t get strong ref!");
 }
@@ -97,7 +87,7 @@ if(wr == nullptr)
 Le code ci-dessus ne fonctionne pas lorsque vous utilisez le Kit de développement logiciel SDK Windows 10 (ou version ultérieure). Au lieu de cela, vérifiez le pointeur qui a été transmis pour `nullptr`.
 
 ```cpp
-if (strongRef == nullptr)  
+if (strongRef == nullptr)
 {
     wprintf(L"Couldn't get strong ref!");
 }
@@ -244,7 +234,7 @@ La valeur de retour S_OK signifie que cette opération a réussi, mais elle n’
 Retourne un `ComPtrRef` objet qui représente l’actuel `WeakRef` objet.
 
 ```cpp
-Details::ComPtrRef<WeakRef> operator&() throw()  
+Details::ComPtrRef<WeakRef> operator&() throw()
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -262,7 +252,7 @@ Initialise une nouvelle instance de la classe `WeakRef`.
 ```cpp
 WeakRef();
 WeakRef(
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 WeakRef(

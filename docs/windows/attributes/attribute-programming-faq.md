@@ -1,28 +1,18 @@
 ---
-title: Attribut de programmation (FAQ) | Microsoft Docs
-ms.custom: ''
+title: Programmation par attributs (FAQ)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
 ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributed programming
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a93dc67bd06f0dc88603643646fed3ad65052874
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790749"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434981"
 ---
 # <a name="attribute-programming-faq"></a>Programmation par attributs (FAQ)
 
@@ -118,7 +108,7 @@ Les éléments suivants sont autorisé :
 Ce qui suit n’est pas autorisé :
 
 ```cpp
-[ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)  
+[ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)
 ]
 ```
 
@@ -151,7 +141,7 @@ L’exemple suivant est le résultat de la copie du code injecté dans un fichie
 
 // ITestTest
 [
-   object, uuid("DADECE00-0FD2-46F1-BFD3-6A0579CA1BC4"), dual, helpstring("ITestTest Interface"), pointer_default(unique)  
+   object, uuid("DADECE00-0FD2-46F1-BFD3-6A0579CA1BC4"), dual, helpstring("ITestTest Interface"), pointer_default(unique)
 ]
 
 __interface ITestTest : IDispatch {
@@ -161,7 +151,7 @@ __interface ITestTest : IDispatch {
 
 // _ITestTestEvents
 [
-   uuid("12753B9F-DEF4-49b0-9D52-A79C371F2909"), dispinterface, helpstring("_ITestTestEvents Interface")  
+   uuid("12753B9F-DEF4-49b0-9D52-A79C371F2909"), dispinterface, helpstring("_ITestTestEvents Interface")
 ]
 
 __interface _ITestTestEvents {
@@ -172,7 +162,7 @@ __interface _ITestTestEvents {
 [
    coclass, threading(apartment), vi_progid("TestATL1.TestTest"), progid("TestATL1.TestTest.1"), version(1.0), uuid("D9632007-14FA-4679-9E1C-28C9A949E784"), // this line would be commented out from original file
    // event_source("com"), // this line would be added to support injected code
-   source(_ITestTestEvents), helpstring("TestTest Class")  
+   source(_ITestTestEvents), helpstring("TestTest Class")
 ]
 
 class ATL_NO_VTABLE CTestTest : public ITestTest,
@@ -185,7 +175,7 @@ public:
    }
    // this line would be commented out from original file
    // __event __interface _ITestTestEvents;
-   DECLARE_PROTECT_FINAL_CONSTRUCT()  
+   DECLARE_PROTECT_FINAL_CONSTRUCT()
    HRESULT FinalConstruct() {
       return S_OK;
    }
@@ -224,7 +214,7 @@ HRESULT BeforeChange(::BSTR i1,::VARIANT_BOOL* i2) {
          DISPPARAMS disp = { rgvars, NULL, 2, 0 };
          VARIANT ret_val;
          hr = __ComInvokeEventHandler(pDispatch, 1, 1, &disp, &ret_val);
-         if (FAILED(hr))  
+         if (FAILED(hr))
             break;
       }
       pp++;
@@ -232,9 +222,9 @@ HRESULT BeforeChange(::BSTR i1,::VARIANT_BOOL* i2) {
    return hr;
 }
 
-BEGIN_CONNECTION_POINT_MAP(CTestTest)  
-CONNECTION_POINT_ENTRY(__uuidof(::_ITestTestEvents))  
-END_CONNECTION_POINT_MAP()  
+BEGIN_CONNECTION_POINT_MAP(CTestTest)
+CONNECTION_POINT_ENTRY(__uuidof(::_ITestTestEvents))
+END_CONNECTION_POINT_MAP()
 // end added code section
 
 // _ITestCtrlEvents Methods
@@ -254,4 +244,4 @@ Non, à l’aide des attributs sur une classe dérivée d’une classe qui utili
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs de C++ pour COM et .NET](cpp-attributes-com-net.md)
+[Attributs C++ pour COM et .NET](cpp-attributes-com-net.md)

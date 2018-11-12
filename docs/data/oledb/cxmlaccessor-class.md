@@ -1,10 +1,6 @@
 ---
-title: CXMLAccessor, classe | Microsoft Docs
-ms.custom: ''
+title: CXMLAccessor, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - ATL::CXMLAccessor
 - CXMLAccessor
@@ -19,123 +15,116 @@ f1_keywords:
 - CXMLAccessor::GetXMLRowData
 - CXMLAccessor.GetXMLRowData
 - GetXMLRowData
-dev_langs:
-- C++
 helpviewer_keywords:
 - CXMLAccessor class
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 58e9d70079dce96153076b03acc1aeca87c50433
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ff72d672db963a166284c9ea0f7e3e8c1a89d5e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136196"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594712"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor, classe
 
-Permet d’accéder aux sources de données en tant que données de chaîne lorsque vous n’avez aucune connaissance du schéma du magasin de données (structure sous-jacente).  
-  
+Permet d’accéder aux sources de données en tant que données de chaîne lorsque vous n’avez aucune connaissance du schéma du magasin de données (structure sous-jacente).
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class CXMLAccessor : public CDynamicStringAccessorW  
-```  
+class CXMLAccessor : public CDynamicStringAccessorW
+```
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Configuration requise
 
-**En-tête**: atldbcli.h  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="methods"></a>Méthodes  
-  
-|||  
-|-|-|  
-|[GetXMLColumnData](#getxmlcolumndata)|Récupère les informations de colonne.|  
-|[GetXMLRowData](#getxmlrowdata)|Récupère le contenu entier d’une table par lignes.|  
-  
-## <a name="remarks"></a>Notes  
+**En-tête**: atldbcli.h
 
-Toutefois, `CXMLAccessor` diffère `CDynamicStringAccessorW` car elle convertit toutes les données accédées à partir du magasin de données au format XML (référencé). Cela est particulièrement utile pour la sortie vers des pages Web prenant en charge XML. Les noms de balise XML correspond à des noms de colonnes du magasin de données aussi fidèlement que possible.  
-  
-Utilisez `CDynamicAccessor` méthodes pour obtenir des informations de colonne. Ces informations de colonne vous permet de créer un accesseur dynamiquement au moment de l’exécution.  
-  
-Les informations de colonne sont stockées dans une mémoire tampon créée et gérée par cette classe. Obtenir des informations de colonne à l’aide [GetXMLColumnData](#getxmlcolumndata) ou obtenir des données de la colonne en lignes à l’aide [GetXMLRowData](#getxmlrowdata).  
-  
-## <a name="example"></a>Exemple  
+## <a name="members"></a>Membres
 
-[!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
+### <a name="methods"></a>Méthodes
+
+|||
+|-|-|
+|[GetXMLColumnData](#getxmlcolumndata)|Récupère les informations de colonne.|
+|[GetXMLRowData](#getxmlrowdata)|Récupère le contenu entier d’une table par lignes.|
+
+## <a name="remarks"></a>Notes
+
+Toutefois, `CXMLAccessor` diffère `CDynamicStringAccessorW` car elle convertit toutes les données accédées à partir du magasin de données au format XML (référencé). Cela est particulièrement utile pour la sortie vers des pages Web prenant en charge XML. Les noms de balise XML correspond à des noms de colonnes du magasin de données aussi fidèlement que possible.
+
+Utilisez `CDynamicAccessor` méthodes pour obtenir des informations de colonne. Ces informations de colonne vous permet de créer un accesseur dynamiquement au moment de l’exécution.
+
+Les informations de colonne sont stockées dans une mémoire tampon créée et gérée par cette classe. Obtenir des informations de colonne à l’aide [GetXMLColumnData](#getxmlcolumndata) ou obtenir des données de la colonne en lignes à l’aide [GetXMLRowData](#getxmlrowdata).
+
+## <a name="example"></a>Exemple
+
+[!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
 ## <a name="getxmlcolumndata"></a> CXMLAccessor::GetXMLColumnData
 
-Récupère les informations de type de colonne d’une table en tant que données de chaîne au format XML, par colonne.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Récupère les informations de type de colonne d’une table en tant que données de chaîne au format XML, par colonne.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *strOutput*<br/>
-[out] Une référence à une mémoire tampon de chaîne qui contient les informations de type de colonne à récupérer. La chaîne est mise en forme avec des noms de balise XML qui correspondent aux noms de colonne du magasin de données.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[out] Une référence à une mémoire tampon de chaîne qui contient les informations de type de colonne à récupérer. La chaîne est mise en forme avec des noms de balise XML qui correspondent aux noms de colonne du magasin de données.
 
-Une des valeurs HRESULT standards.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-L’exemple suivant montre comment les informations de type de colonne sont au format XML. `type` Spécifie le type de données de la colonne. Notez que les types de données sont basés sur les types de données OLE DB, pas celles de la base de données en cours d’accès.  
-  
-`<columninfo>`  
-  
-`<column type = I2/> ColumnName`  
-  
-`</columninfo>` 
+Une des valeurs HRESULT standards.
+
+### <a name="remarks"></a>Notes
+
+L’exemple suivant montre comment les informations de type de colonne sont au format XML. `type` Spécifie le type de données de la colonne. Notez que les types de données sont basés sur les types de données OLE DB, pas celles de la base de données en cours d’accès.
+
+`<columninfo>`
+
+`<column type = I2/> ColumnName`
+
+`</columninfo>`
 
 ## <a name="getxmlrowdata"></a> CXMLAccessor::GetXMLRowData
 
-Récupère le contenu entier d’une table en tant que données de chaîne au format XML, en ligne.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Récupère le contenu entier d’une table en tant que données de chaîne au format XML, en ligne.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT GetXMLRowData(CSimpleStringW& strOutput,   
-   bool bAppend = false) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT GetXMLRowData(CSimpleStringW& strOutput, 
+   bool bAppend = false) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *strOutput*<br/>
-[out] Une référence à une mémoire tampon contenant les données de table à récupérer. Les données sont formatées en tant que données de chaîne avec les noms de balise XML qui correspondent aux noms de colonne du magasin de données.  
-  
+[out] Une référence à une mémoire tampon contenant les données de table à récupérer. Les données sont formatées en tant que données de chaîne avec les noms de balise XML qui correspondent aux noms de colonne du magasin de données.
+
 *bAppend*<br/>
-[in] Valeur booléenne spécifiant s’il faut ajouter une chaîne à la fin des données de sortie.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Valeur booléenne spécifiant s’il faut ajouter une chaîne à la fin des données de sortie.
 
-Une des valeurs HRESULT standards.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-L’exemple suivant montre comment les données de ligne sont au format XML. `DATA` ci-dessous représente les données de ligne. Utilisez les méthodes pour passer à la ligne souhaitée de déplacement.  
-  
-`<row>`  
-  
-`<column name>DATA</column name>`  
-  
-`</row>`   
-  
-## <a name="see-also"></a>Voir aussi  
+Une des valeurs HRESULT standards.
+
+### <a name="remarks"></a>Notes
+
+L’exemple suivant montre comment les données de ligne sont au format XML. `DATA` ci-dessous représente les données de ligne. Utilisez les méthodes pour passer à la ligne souhaitée de déplacement.
+
+`<row>`
+
+`<column name>DATA</column name>`
+
+`</row>`
+
+## <a name="see-also"></a>Voir aussi
 
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

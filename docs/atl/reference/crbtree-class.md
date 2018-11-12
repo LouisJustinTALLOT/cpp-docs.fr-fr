@@ -1,10 +1,6 @@
 ---
-title: Crbtree, classe | Microsoft Docs
-ms.custom: ''
+title: Crbtree, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CRBTree
 - ATLCOLL/ATL::CRBTree
@@ -28,21 +24,15 @@ f1_keywords:
 - ATLCOLL/ATL::CRBTree::RemoveAll
 - ATLCOLL/ATL::CRBTree::RemoveAt
 - ATLCOLL/ATL::CRBTree::SetValueAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de307c1b4f3d910615061915a240bf7b2c61b337
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a0f66e888220fbc5a4a484ddd37a3f28dff66065
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090358"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583272"
 ---
 # <a name="crbtree-class"></a>Crbtree, classe
 
@@ -52,8 +42,8 @@ Cette classe fournit des méthodes pour la création et l’utilisation d’une 
 
 ```
 template <typename K,
-          typename V, 
-          class KTraits = CElementTraits<K>, 
+          typename V,
+          class KTraits = CElementTraits<K>,
           class VTraits = CElementTraits<V>>
 class CRBTree
 ```

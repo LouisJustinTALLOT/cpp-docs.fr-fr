@@ -1,29 +1,19 @@
 ---
-title: 'TN020 : ID d’affectation de noms et la numérotation des Conventions | Microsoft Docs'
-ms.custom: ''
+title: "TN020 : conventions de dénomination d'ID et de numérotation"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.id
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN020
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f19d79b7946e3f2b4fda0b2651ce8d2099373d93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5ae31303d87840017320f580632e567be79e6a9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464500"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020 : conventions de dénomination d'ID et de numérotation
 
@@ -105,7 +95,7 @@ Raisons de ces limites de plage :
 
    - 16000 via 18000 (voir afxribbonres.h)
 
-     Ces plages peuvent changer dans les futures implémentations de MFC.
+   Ces plages peuvent changer dans les futures implémentations de MFC.
 
 - Plusieurs commandes du système Windows utilisent la plage de 0xF000 à 0xFFFF.
 

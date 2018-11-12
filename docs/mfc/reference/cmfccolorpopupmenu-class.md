@@ -1,10 +1,6 @@
 ---
-title: Cmfccolorpopupmenu, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfccolorpopupmenu, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCColorPopupMenu
 - AFXCOLORPOPUPMENU/CMFCColorPopupMenu
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXCOLORPOPUPMENU/CMFCColorPopupMenu::CreateTearOffBar
 - AFXCOLORPOPUPMENU/CMFCColorPopupMenu::GetMenuBar
 - AFXCOLORPOPUPMENU/CMFCColorPopupMenu::SetPropList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], CMFCColorPopupMenu
 - CMFCColorPopupMenu [MFC], CreateTearOffBar
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e32c6d167fbccf1d2217aa4c187944b8018acdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a3bb6f4d2926f07f61891656613c06e5690c9099
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432501"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491453"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Cmfccolorpopupmenu, classe
 
@@ -113,7 +103,6 @@ CMFCColorPopupMenu(
     UINT uiCommandID,
     BOOL bStdColorDlg = FALSE);
 
-
 CMFCColorPopupMenu(
     CMFCColorButton* pParentBtn,
     const CArray<COLORREF, COLORREF>& colors,
@@ -123,7 +112,6 @@ CMFCColorPopupMenu(
     LPCTSTR lpszDocColors, CList<COLORREF, COLORREF>& lstDocColors,
     int nColumns,
     COLORREF colorAutomatic);
-
 
 CMFCColorPopupMenu(
     CMFCRibbonColorButton* pParentBtn,

@@ -1,28 +1,18 @@
 ---
-title: Archive distante, propriétés (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: Archive distante, propriétés (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 5ee1e44c-8337-4c3a-b2f3-35e4be954f9f
-author: mikeblome
-ms.author: mblome
 f1_keywords: []
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 004e015b7e5ad8a99b3bea2bf21b7b598f2fedbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcd0e0eef16addc60743000b6ed8cba12276e29c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328651"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439222"
 ---
 # <a name="remote-archive-properties-c-linux"></a>Archive distante, propriétés (Linux C++)
 
-Propriété | Description
+Property | Description
 --- | ---
 Créer un index d’archive | Crée un index d’archive (voir ranlib).  Cette opération contribue à accélérer l’édition des liens et à réduire la dépendance au sein de sa propre bibliothèque.
 Créer une archive fine | Crée une archive fine.  Une archive fine n’incorpore pas les objets, mais contient leurs chemins relatifs.  Le passage entre les modes Fin et Normal nécessite la suppression de la bibliothèque existante.

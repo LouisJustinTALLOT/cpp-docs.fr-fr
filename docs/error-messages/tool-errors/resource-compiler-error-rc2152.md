@@ -1,27 +1,17 @@
 ---
-title: Erreur RC2152 du compilateur de ressources | Microsoft Docs
-ms.custom: ''
+title: 'Erreur RC2152 du compilateur de ressources '
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RC2152
-dev_langs:
-- C++
 helpviewer_keywords:
 - RC2152
 ms.assetid: 8efcba8f-9971-43cc-a1cd-8d7c9aec133c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a7359582273fa418b3a6aad6bc764dc28d64a31d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 398409d3c502ca0c295d30ada8de2c5e200ac680
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062824"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643727"
 ---
 # <a name="resource-compiler-error-rc2152"></a>Erreur RC2152 du compilateur de ressources 
 

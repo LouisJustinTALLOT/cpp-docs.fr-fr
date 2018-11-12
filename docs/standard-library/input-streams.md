@@ -1,28 +1,18 @@
 ---
-title: Flux d’entrée | Microsoft Docs
-ms.custom: ''
+title: Flux d'entrée
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - data [C++], reading from input stream
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3dff2e0bb0ee070b8b90ca3896d7bf8114ca918
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f56f5ffc8e61c0881eddbbd65e1c431b9219674
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845568"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504765"
 ---
 # <a name="input-streams"></a>Flux d'entrée
 

@@ -1,12 +1,6 @@
 ---
-title: 'Serveurs : Éléments du serveur | Microsoft Docs'
-ms.custom: ''
+title: 'Serveurs : éléments du serveur'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - server items, implementing
 - servers [MFC], server items
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72f8de75607921edda62aec9baec424066431d61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ea04a3eefff0f127873ffbf67ea39ade3a6b9b85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438858"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453688"
 ---
 # <a name="servers-server-items"></a>Serveurs : éléments du serveur
 
@@ -43,7 +33,7 @@ Si vous utilisez l’Assistant Application pour générer le code de démarrage 
 
 1. Dans votre classe dérivée, substituez la fonction membre `OnDraw`.
 
-     Le framework appelle `OnDraw` pour afficher l'élément OLE dans un métafichier. L'application conteneur utilise ce métafichier pour afficher l'élément. La classe d'affichage de votre application a également une fonction membre `OnDraw`, utilisée pour afficher l'élément lorsque l'application serveur est active.
+   Le framework appelle `OnDraw` pour afficher l'élément OLE dans un métafichier. L'application conteneur utilise ce métafichier pour afficher l'élément. La classe d'affichage de votre application a également une fonction membre `OnDraw`, utilisée pour afficher l'élément lorsque l'application serveur est active.
 
 1. Implémentez une substitution de `OnGetEmbeddedItem` pour votre classe de document serveur. Pour plus d’informations, consultez l’article [serveurs : implémentation des Documents serveur](../mfc/servers-implementing-server-documents.md) et l’exemple OLE MFC [HIERSVR](../visual-cpp-samples.md).
 

@@ -1,34 +1,24 @@
 ---
-title: 'Contrôles ActiveX MFC : Advanced implémentation de la propriété | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : implémentation des propriétés avancées'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4aa1116384ac9fd5212046f9a0b3354a3aa70d88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d26dbcb1c18c3c939214051d9010cb5b6db90929
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416082"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568023"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Contrôles ActiveX MFC : implémentation des propriétés avancées
 
 Cet article décrit les rubriques relatives à l’implémentation des propriétés avancées dans un contrôle ActiveX.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 - [Propriétés en lecture seule et en écriture seule](#_core_read2donly_and_write2donly_properties)
 
@@ -48,7 +38,7 @@ L’Assistant Ajout de propriété fournit une méthode rapide et simple pour im
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
 
-     Cette opération ouvre le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md).
+   Cette opération ouvre le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md).
 
 1. Dans le **nom de la propriété** , tapez le nom de votre propriété.
 

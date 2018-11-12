@@ -1,10 +1,6 @@
 ---
-title: CBrush, classe | Microsoft Docs
-ms.custom: ''
+title: CBrush (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBrush
 - AFXWIN/CBrush
@@ -17,8 +13,6 @@ f1_keywords:
 - AFXWIN/CBrush::CreateSysColorBrush
 - AFXWIN/CBrush::FromHandle
 - AFXWIN/CBrush::GetLogBrush
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBrush [MFC], CBrush
 - CBrush [MFC], CreateBrushIndirect
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c01cc08368e5c02a5513569e7230ab064d06163f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4f6b5db22b956584507a2979a517ff26d5364a0c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386717"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661641"
 ---
 # <a name="cbrush-class"></a>CBrush (classe)
 
@@ -183,7 +173,6 @@ Initialise un pinceau avec le modèle spécifié par une bitmap indépendante du
 BOOL CreateDIBPatternBrush(
     HGLOBAL hPackedDIB,
     UINT nUsage);
-
 
 BOOL CreateDIBPatternBrush(
     const void* lpPackedDIB,

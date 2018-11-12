@@ -1,10 +1,6 @@
 ---
-title: Cfontholder, classe | Microsoft Docs
-ms.custom: ''
+title: Cfontholder, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFontHolder
 - AFXCTL/CFontHolder
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXCTL/CFontHolder::Select
 - AFXCTL/CFontHolder::SetFont
 - AFXCTL/CFontHolder::m_pFont
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFontHolder [MFC], CFontHolder
 - CFontHolder [MFC], GetDisplayString
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 344e2e39e52aa80624e4959daada5038506bb4c5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24a33aafa279f47bcfabd1ac3f3ee8d4abd4c731
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433169"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659640"
 ---
 # <a name="cfontholder-class"></a>Cfontholder, classe
 
@@ -151,7 +141,6 @@ Appelez cette fonction pour obtenir un handle à une police Windows.
 ```
 HFONT GetFontHandle();
 
-
 HFONT GetFontHandle(
     long cyLogical,
     long cyHimetric);
@@ -245,7 +234,7 @@ CFont* Select(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Contexte de périphérique dans lequel la police est sélectionnée.
 
 *cyLogical*<br/>

@@ -1,32 +1,22 @@
 ---
-title: IConnectionPointContainerImpl, classe | Microsoft Docs
-ms.custom: ''
+title: IConnectionPointContainerImpl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IConnectionPointContainerImpl
 - ATLCOM/ATL::IConnectionPointContainerImpl
 - ATLCOM/ATL::IConnectionPointContainerImpl::EnumConnectionPoints
 - ATLCOM/ATL::IConnectionPointContainerImpl::FindConnectionPoint
-dev_langs:
-- C++
 helpviewer_keywords:
 - connectable objects
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27c1d945cf9e801ec1fe2346232aebcad559982a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 247013322925ad6fe246b079bcff7e0521e5561d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019892"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551643"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl, classe
 
@@ -36,7 +26,7 @@ Cette classe implémente un conteneur de point de connexion pour gérer une coll
 
 ```
 template<class T>
-class ATL_NO_VTABLE IConnectionPointContainerImpl 
+class ATL_NO_VTABLE IConnectionPointContainerImpl
    : public IConnectionPointContainer
 ```
 

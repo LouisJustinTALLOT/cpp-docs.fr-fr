@@ -1,10 +1,6 @@
 ---
-title: CSimpleMap, classe | Microsoft Docs
-ms.custom: ''
+title: CSimpleMap, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CSimpleMap
 - ATLSIMPCOLL/ATL::CSimpleMap
@@ -24,21 +20,15 @@ f1_keywords:
 - ATLSIMPCOLL/ATL::CSimpleMap::ReverseLookup
 - ATLSIMPCOLL/ATL::CSimpleMap::SetAt
 - ATLSIMPCOLL/ATL::CSimpleMap::SetAtIndex
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fa2c3b421aa0aa60194f8ed949c023d78b70c2d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1c1aa34d54f5754feee238fdf12fd6e55b8c32c1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070284"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666252"
 ---
 # <a name="csimplemap-class"></a>CSimpleMap, classe
 
@@ -371,7 +361,7 @@ Retourne la valeur TRUE si la clé a été trouvée, et la valeur a été modifi
 Définit la clé et la valeur à l’index spécifié.
 
 ```
-BOOL SetAtIndex(  
+BOOL SetAtIndex(
     int nIndex,
     const TKey& key,
     const TVal& val);

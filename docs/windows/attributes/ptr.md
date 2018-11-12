@@ -1,28 +1,17 @@
 ---
-title: PTR (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: PTR (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.ptr
-dev_langs:
-- C++
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89f00c5e2d65fde2c8a3bb2fd064796c2585c720
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7ed08403f32e5e4609266975c5c479a7b758fe89
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790913"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506208"
 ---
 # <a name="ptr"></a>ptr
 
@@ -53,11 +42,11 @@ Consultez l’exemple de [defaultvalue](defaultvalue.md) pour un exemple d’uti
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs d’interface](interface-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)  
+[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)

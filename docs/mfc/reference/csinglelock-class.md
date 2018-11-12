@@ -1,10 +1,6 @@
 ---
-title: CSingleLock, classe | Microsoft Docs
-ms.custom: ''
+title: CSingleLock, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CSingleLock
 - AFXMT/CSingleLock
@@ -12,22 +8,18 @@ f1_keywords:
 - AFXMT/CSingleLock::IsLocked
 - AFXMT/CSingleLock::Lock
 - AFXMT/CSingleLock::Unlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSingleLock [MFC], CSingleLock
 - CSingleLock [MFC], IsLocked
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: 988ade49bb7acbb3bcb759f1bdf3e565e033308f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2d65af79971aab88884efe1f92d1090194b737d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394138"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459564"
 ---
 # <a name="csinglelock-class"></a>CSingleLock, classe
 
@@ -146,7 +138,6 @@ Libère l’objet de synchronisation appartenant `CSingleLock`.
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,

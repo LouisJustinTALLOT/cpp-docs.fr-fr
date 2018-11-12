@@ -1,28 +1,17 @@
 ---
-title: oleautomation (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: oleautomation (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.oleautomation
-dev_langs:
-- C++
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a3a0ec5a39d6e99e5ceb6ec4ed089373e3057c1e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 4a50121e1a2e170ba69ee21526f4600512097c74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790640"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471667"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -53,9 +42,9 @@ Reportez-vous aux exemples de [defaultvalue](defaultvalue.md) et [nonextensible]
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|**dispinterface**|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs d’interface](interface-attributes.md)  
+[Attributs d’interface](interface-attributes.md)

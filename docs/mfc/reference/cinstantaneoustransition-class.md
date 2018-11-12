@@ -1,33 +1,23 @@
 ---
-title: CInstantaneousTransition, classe | Microsoft Docs
-ms.custom: ''
+title: CInstantaneousTransition, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CInstantaneousTransition
 - AFXANIMATIONCONTROLLER/CInstantaneousTransition
 - AFXANIMATIONCONTROLLER/CInstantaneousTransition::CInstantaneousTransition
 - AFXANIMATIONCONTROLLER/CInstantaneousTransition::Create
 - AFXANIMATIONCONTROLLER/CInstantaneousTransition::m_dblFinalValue
-dev_langs:
-- C++
 helpviewer_keywords:
 - CInstantaneousTransition [MFC], CInstantaneousTransition
 - CInstantaneousTransition [MFC], Create
 - CInstantaneousTransition [MFC], m_dblFinalValue
 ms.assetid: c3d5121f-2c6b-4221-9e57-10e082a31120
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e984bb3d616596d0e6c9439fa3096ba23059caae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5195677f741f69517a7f33b8f53ae4efd22919b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428133"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486048"
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition, classe
 
@@ -102,7 +92,6 @@ virtual BOOL Create(
 
 *pLibrary*<br/>
 Un pointeur vers un [interface IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standards.
-
 
 ### <a name="return-value"></a>Valeur de retour
 

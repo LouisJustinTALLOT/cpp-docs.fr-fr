@@ -1,28 +1,18 @@
 ---
-title: Vue d’ensemble de l’assembleur inline | Microsoft Docs
-ms.custom: ''
+title: Vue d'ensemble de l'assembleur inline
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - inline assembler
 - __asm keyword [C++], invoking inline assembler
 - invoking inline assembler
 - inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e52316a5080ce7d64d34a09aa265ea561c186ed
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 21e0d9ca0e64922b83518eb79c19d2f2e67813bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543206"
 ---
 # <a name="inline-assembler-overview"></a>Vue d'ensemble de l'assembleur inline
 

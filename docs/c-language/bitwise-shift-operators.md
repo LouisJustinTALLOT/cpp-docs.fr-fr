@@ -1,50 +1,41 @@
 ---
-title: Opérateurs de décalage de bits | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
+title: Opérateurs de décalage de bits
+ms.date: 10/18/2018
 helpviewer_keywords:
 - operators [C++], bitwise
 - shift operators, bitwise
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4dfb5ffe13d8813eff0e3db4978eb1799bee1a85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d0873e3975e69bbfac01d437006561f0bf88ee31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020119"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50485356"
 ---
 # <a name="bitwise-shift-operators"></a>Opérateurs de décalage de bits
 
-Les opérateurs de décalage décalent leur premier opérande vers la gauche (`<<`) ou vers la droite (`>>`) du nombre de positions spécifié par le second opérande.
+Les opérateurs de décalage décalent leur premier opérande vers la gauche (**&lt;&lt;**) ou vers la droite (**>>**) du nombre de positions spécifié par le second opérande.
 
 ## <a name="syntax"></a>Syntaxe
 
-*shift-expression*: *additive-expression*
-
-*shift-expression*  `<<`  *additive-expression shift-expression*  `>>`  *additive-expression*
+*shift-expression* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
 
 Les deux opérandes doivent être des valeurs intégrales. Ces opérateurs exécutent les conversions arithmétiques habituelles ; le type du résultat est le type de l'opérande gauche après conversion.
 
 Pour les décalages vers la gauche, les bits droits libérés prennent la valeur 0. Pour les décalages vers la droite, les bits gauche libérés sont remplis en fonction du type du premier opérande après conversion. Si le type est `unsigned`, ils prennent la valeur 0. Sinon, ils sont remplis avec des copies du bit de signe. Pour les opérateurs à décalage vers la gauche sans dépassement de capacité, l'instruction
 
-```
+```C
 expr1 << expr2
 ```
 
 équivaut à la multiplication par 2<sup>expr2</sup>. Pour les opérateurs à décalage vers la droite,
 
-```
+```C
 expr1 >> expr2
 ```
 
@@ -54,7 +45,7 @@ Le résultat d’une opération de décalage est non défini si le second opéra
 
 Étant donné que les conversions exécutées par les opérateurs de décalage ne fournissent pas de conditions de dépassement de capacité positif ou négatif, les informations peuvent être perdues si le résultat d'une opération de décalage ne peut pas être représenté dans le type du premier opérande après conversion.
 
-```
+```C
 unsigned int x, y, z;
 
 x = 0x00AA;

@@ -1,17 +1,11 @@
 ---
-title: CWinTraits, classe | Microsoft Docs
-ms.custom: ''
+title: CWinTraits, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CWinTraits
 - ATLWIN/ATL::CWinTraits
 - ATLWIN/ATL::CWinTraits::GetWndExStyle
 - ATLWIN/ATL::CWinTraits::GetWndStyle
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMDIChildWinTraits class
 - window styles, default values for ATL
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9e60eb773573142d0a4498c42a98f6e9c4c49a7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069390"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532598"
 ---
 # <a name="cwintraits-class"></a>CWinTraits, classe
 
@@ -68,15 +58,15 @@ Utilisez ce modèle lorsque vous souhaitez fournir par défaut des styles de fen
 
 ATL fournit trois spécialisations prédéfinies de ce modèle pour des combinaisons de styles de fenêtre couramment utilisés :
 
-- `CControlWinTraits`  
+- `CControlWinTraits`
 
    Conçu pour une fenêtre de contrôle standard. Les styles standards suivants sont utilisés : WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Il n’existe aucun des styles étendus.
 
-- `CFrameWinTraits`  
+- `CFrameWinTraits`
 
    Conçu pour une fenêtre frame standard. Incluent les styles standards utilisées : WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Incluent les styles étendus utilisés : WS_EX_APPWINDOW et WS_EX_WINDOWEDGE.
 
-- `CMDIChildWinTraits`  
+- `CMDIChildWinTraits`
 
    Conçu pour une fenêtre enfant MDI standard. Incluent les styles standards utilisées : WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Incluent les styles étendus utilisés : WS_EX_MDICHILD.
 

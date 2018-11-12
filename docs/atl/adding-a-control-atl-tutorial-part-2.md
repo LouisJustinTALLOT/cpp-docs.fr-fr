@@ -1,23 +1,14 @@
 ---
-title: Ajout d’un contrôle (didacticiel ATL, partie 2) | Microsoft Docs
+title: Ajout d'un contrôle (Didacticiel ATL, Partie 2)
 ms.custom: get-started-article
 ms.date: 09/26/2018
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2d4918887e36e405c5efb0d5280cea5976f14bb9
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: b59d8f05e151e1d543f6aa6bb2b62ae0f59dc36a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428650"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Ajout d'un contrôle (Didacticiel ATL, Partie 2)
 

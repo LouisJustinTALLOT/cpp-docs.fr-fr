@@ -1,30 +1,20 @@
 ---
-title: Fonctions de rappel utilisées par MFC | Microsoft Docs
-ms.custom: ''
+title: Fonctions de rappel utilisées par MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
-dev_langs:
-- C++
 helpviewer_keywords:
 - callback functions [MFC], MFC
 - MFC, callback functions
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be34fa84a05d329d26d1bc4aaacbed0c2b0a76e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 17078bd9d916aac2676180f8854d93a4de92aa4a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409192"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555608"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Fonctions de rappel utilisées par MFC
 
@@ -117,7 +107,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 *hPr*<br/>
 Identifie le contexte de périphérique.
 
-*Code*<br/>
+*code*<br/>
 Spécifie si une erreur s’est produite. Il est 0 si aucune erreur ne se n’est produite. Il est SP_OUTOFDISK si le Gestionnaire d’impression est actuellement manque d’espace disque et davantage d’espace disque devient disponible si l’application attend. Si *code* est SP_OUTOFDISK, l’application ne devra pas abandonner le travail d’impression. Dans le cas contraire, elle doit générer pour le Gestionnaire d’impression en appelant le `PeekMessage` ou `GetMessage` (fonction) Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -127,7 +117,6 @@ La valeur de retour de la fonction de gestionnaire d’abandon est différent de
 ### <a name="remarks"></a>Notes
 
 Le nom réel doit être exporté comme décrit dans la section Notes de [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
-
 
 ## <a name="see-also"></a>Voir aussi
 

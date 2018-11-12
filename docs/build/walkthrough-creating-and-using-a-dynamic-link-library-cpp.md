@@ -1,26 +1,17 @@
 ---
-title: 'Procédure pas à pas : Créer et utiliser votre propre bibliothèque de liens dynamiques (C++) | Microsoft Docs'
+title: 'Procédure pas à pas : Créer et utiliser votre propre bibliothèque de liens dynamiques (C++)'
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9806a17bfb603ff54609f2d509c50d0a5d91e15d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821251"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591007"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procédure pas à pas : Créer et utiliser votre propre bibliothèque de liens dynamiques (C++)
 
@@ -64,7 +55,7 @@ Dans cet ensemble de tâches, vous créez un projet pour votre DLL, ajoutez le c
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017-version-153-or-later"></a>Pour créer un projet DLL dans Visual Studio 2017 version 15.3 ou version ultérieure
 
-1. Dans la barre de menus, choisissez **fichier** > **New** > **projet** pour ouvrir le **nouveau projet** boîte de dialogue.
+1. Dans la barre de menus, choisissez **Fichier** > **Nouveau** > **Projet** pour ouvrir la boîte de dialogue **Nouveau projet**.
 
 1. Dans le volet gauche de la **nouveau projet** boîte de dialogue, développez **installé** et **Visual C++** si nécessaire, puis choisissez **Windows Desktop** . Dans le volet central, sélectionnez **Windows Desktop Assistant**. Entrez `MathLibrary` dans le **nom** zone pour spécifier un nom pour le projet.
 
@@ -405,7 +396,7 @@ Appuyez sur n’importe quelle touche pour fermer la fenêtre de commande.
 
 Maintenant que vous avez créé une DLL et une application cliente, vous pouvez faire des essais. Essayez de définir des points d’arrêt dans le code de l’application cliente et exécuter l’application dans le débogueur. Consultez ce qui se passe lorsque vous parcourez un appel de bibliothèque. Ajouter d’autres fonctions à la bibliothèque, ou écrire une autre application cliente qui utilise votre DLL.
 
-Lorsque vous déployez votre application, vous devez également déployer les DLL qu’il utilise. Le plus simple de proposer les DLL que vous générez ou que vous incluez de tiers à votre application consiste à les placer dans le même répertoire que votre application, également appelé *déploiement d’app-local*. Pour plus d’informations sur le déploiement, consultez [déploiement dans Visual C++](..\ide\deployment-in-visual-cpp.md).
+Lorsque vous déployez votre application, vous devez également déployer les DLL qu’il utilise. Le plus simple de proposer les DLL que vous générez ou que vous incluez de tiers à votre application consiste à les placer dans le même répertoire que votre application, également appelé *déploiement d’app-local*. Pour plus d’informations sur le déploiement, consultez [Deployment in Visual C++](..\ide\deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Voir aussi
 

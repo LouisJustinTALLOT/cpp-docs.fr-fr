@@ -1,10 +1,6 @@
 ---
-title: Csnapinitemimpl, classe | Microsoft Docs
-ms.custom: ''
+title: Csnapinitemimpl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
 - ATLSNAP/ATL::CSnapInItemImpl
@@ -25,24 +21,18 @@ f1_keywords:
 - ATLSNAP/ATL::CSnapInItemImpl::m_bstrDisplayName
 - ATLSNAP/ATL::CSnapInItemImpl::m_resultDataItem
 - ATLSNAP/ATL::CSnapInItemImpl::m_scopeDataItem
-dev_langs:
-- C++
 helpviewer_keywords:
 - snap-ins, data items
 - snap-ins, ATL support for
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 19c957ae80267efda89a3b151f57c453ecb935bc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091827"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609407"
 ---
 # <a name="csnapinitemimpl-class"></a>Csnapinitemimpl, classe
 
@@ -119,7 +109,7 @@ TRUE si l’objet est une extension de composant logiciel enfichable ; Sinon, F
 Cette méthode implémente la fonction Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
 
 ```
-AddMenuItems(  
+AddMenuItems(
     LPCONTEXTMENUCALLBACK piCallback,
     long* pInsertionAllowed,
     DATA_OBJECT_TYPES type);
@@ -181,7 +171,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 Cette méthode implémente la fonction Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
 
 ```
-CreatePropertyPages(  
+CreatePropertyPages(
     LPPROPERTYSHEETCALLBACK lpProvider,
     long handle,
     IUnknown* pUnk,
@@ -393,7 +383,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 Appelez cette fonction pour modifier les indicateurs d’insertion de menu, spécifiés par *pInsertionAllowed*, pour l’objet de composant logiciel enfichable.
 
 ```
-void SetMenuInsertionFlags(  
+void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
 ```
@@ -425,7 +415,7 @@ Vous ne devez pas tenter de définir des bits *pInsertionAllowed* qui ont été 
 Appelez cette fonction pour modifier les styles de bouton de barre d’outils, de l’objet composant logiciel enfichable, avant la création de la barre d’outils.
 
 ```
-void SetToolbarButtonInfo(  
+void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
     BYTE* fsType);
@@ -469,7 +459,7 @@ void SetToolbarButtonInfo(
 Appelez cette fonction pour modifier un élément de menu avant qu’il est inséré dans le menu contextuel de l’objet de composant logiciel enfichable.
 
 ```
-void UpdateMenuState(  
+void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
     UINT* flags);

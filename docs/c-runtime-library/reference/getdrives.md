@@ -1,10 +1,6 @@
 ---
-title: _getdrives | Microsoft Docs
-ms.custom: ''
+title: _getdrives
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdrives
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - getdrives
 - _getdrives
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getdrives function
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec2834e9f755a8039326ea6fb193c4bc591355ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d34b03e307a9c619fab077973e4cc0a4c644de6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597256"
 ---
 # <a name="getdrives"></a>_getdrives
 
@@ -56,9 +46,9 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si la fonction aboutit, la valeur de retour est un masque de bits qui représente les lecteurs de disque actuellement disponibles. La position de bit 0 (bit de poids faible) est le lecteur A, la position de bit 1 est le lecteur B, la position de bit 2 est le lecteur C, et ainsi de suite. Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir des informations d’erreur plus complètes, appelez **GetLastError**.
+Si la fonction aboutit, la valeur de retour est un masque de bits qui représente les lecteurs de disque actuellement disponibles. La position de bit 0 (bit de poids faible) est le lecteur A, la position de bit 1 est le lecteur B, la position de bit 2 est le lecteur C, et ainsi de suite. Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir les informations d’erreur étendues, appelez **GetLastError**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,30 +1,20 @@
 ---
-title: Cheapptrelementtraits, classe | Microsoft Docs
-ms.custom: ''
+title: Cheapptrelementtraits, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CHeapPtrElementTraits
 - ATLCOLL/ATL::CHeapPtrElementTraits
 - ATLCOLL/ATL::CHeapPtrElementTraits::INARGTYPE
 - ATLCOLL/ATL::CHeapPtrElementTraits::OUTARGTYPE
-dev_langs:
-- C++
 helpviewer_keywords:
 - CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b873a615e04bd92e08abb51a048f227f19fd9eec
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4e5d66c3e596383fecfcf730c81c4d41c08d5e2a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610136"
 ---
 # <a name="cheapptrelementtraits-class"></a>Cheapptrelementtraits, classe
 
@@ -37,7 +27,7 @@ Cette classe fournit des méthodes, les fonctions statiques et les typedefs util
 
 ```
 template<typename T, class Allocator = ATL::CCRTAllocator>
-class CHeapPtrElementTraits : 
+class CHeapPtrElementTraits :
    public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```
 

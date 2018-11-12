@@ -1,30 +1,19 @@
 ---
-title: Création d’un Menu (C++) | Microsoft Docs
-ms.custom: ''
+title: Création d’un Menu (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.menu
-dev_langs:
-- C++
 helpviewer_keywords:
 - mnemonics [C++], associating menu items
 - menus [C++], associating commands with mnemonic keys
 - menus [C++], creating
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 59689abec68fc6cff2a742bd4db97b58cd023af1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b779e6b089410b818247471086fe987c37b1f36c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316261"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518554"
 ---
 # <a name="creating-a-menu-c"></a>Création d’un Menu (C++)
 
@@ -37,8 +26,8 @@ ms.locfileid: "44316261"
 
 2. Sélectionnez la zone **Nouvel élément** (le rectangle qui contient « Tapez ici ») dans la barre de menus.
 
-   ![Zone de nouvel élément dans l’éditeur de menus](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
-Zone Nouvel élément
+   ![Zone de nouvel élément dans l’éditeur de menus](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   Zone Nouvel élément
 
 3. Tapez un nom pour votre nouveau menu, par exemple, « Fichier ».
 
@@ -46,8 +35,8 @@ Zone Nouvel élément
 
    Une fois que vous avez donné un nom à votre nouveau menu dans la barre de menus, la zone Nouvel élément se déplace vers la droite (pour vous permettre d’ajouter un autre menu) et une autre zone Nouvel élément s’ouvre sous votre premier menu pour que vous puissiez y ajouter des commandes de menu.
 
-   ![Zone nouvel élément développée](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
-Zone Nouvel élément avec déplacement du focus quand vous avez tapé le nom du menu
+   ![Zone nouvel élément développée](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   Zone Nouvel élément avec déplacement du focus quand vous avez tapé le nom du menu
 
    > [!NOTE]
    > Pour créer un seul élément de menu sur la barre de menus, définissez le **contextuelle** propriété **False**.

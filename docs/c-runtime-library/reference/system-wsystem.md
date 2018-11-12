@@ -1,10 +1,6 @@
 ---
-title: system, _wsystem | Microsoft Docs
-ms.custom: ''
+title: system, _wsystem
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca44648ed378d4484b8e4c32a38a6780b3eddd53
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414700"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624664"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -71,7 +61,7 @@ Commande à exécuter.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si *commande* est **NULL** et l’interpréteur de commandes est trouvée, retourne une valeur différente de zéro. Si l’interpréteur de commandes est introuvable, retourne 0 et définit **errno** à **ENOENT**. Si *commande* n’est pas **NULL**, **système** retourne la valeur retournée par l’interpréteur de commandes. Elle retourne la valeur 0 uniquement si l'interpréteur de commande retourne la valeur 0. Une valeur de retour de - 1 indique une erreur et **errno** est définie à une des valeurs suivantes :
+Si *commande* est **NULL** et l’interpréteur de commandes est trouvée, retourne une valeur différente de zéro. Si l’interpréteur de commandes n’est trouvée, retourne 0 et attribue **errno** à **ENOENT**. Si *commande* n’est pas **NULL**, **système** retourne la valeur retournée par l’interpréteur de commandes. Elle retourne la valeur 0 uniquement si l'interpréteur de commande retourne la valeur 0. Une valeur de retour de - 1 indique une erreur, et **errno** est défini sur l’une des valeurs suivantes :
 
 |||
 |-|-|
@@ -84,11 +74,11 @@ Pour plus d’informations sur ces codes de retour, consultez [_doserrno, errno,
 
 ## <a name="remarks"></a>Notes
 
-Le **système** fonction passe *commande* à l’interpréteur de commande qui exécute la chaîne comme une commande du système d’exploitation. **système** utilise le **COMSPEC** et **chemin d’accès** variables d’environnement pour localiser l’interpréteur de commandes CMD.exe de fichiers. Si *commande* est **NULL**, la fonction vérifie uniquement l’existence de l’interpréteur de commandes.
+Le **système** fonction passe *commande* à l’interpréteur de commandes, qui s’exécute à la chaîne comme une commande de système d’exploitation. **système** utilise le **COMSPEC** et **chemin d’accès** variables d’environnement pour localiser l’interpréteur de commandes CMD.exe de fichiers. Si *commande* est **NULL**, la fonction vérifie uniquement l’existence de l’interpréteur de commandes.
 
 Vous devez explicitement vider, à l’aide de [fflush](fflush.md) ou [_flushall](flushall.md), ou fermer tout flux avant d’appeler **système**.
 
-**_wsystem** est une version à caractères larges de **système**; le *commande* argument **_wsystem** est une chaîne à caractères larges. Ces fonctions se comportent sinon de façon identique.
+**_wsystem** est une version à caractères larges de **système**; le *commande* l’argument de **_wsystem** est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -96,7 +86,7 @@ Vous devez explicitement vider, à l’aide de [fflush](fflush.md) ou [_flushall
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsystem**|**system**|**system**|**_wsystem**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

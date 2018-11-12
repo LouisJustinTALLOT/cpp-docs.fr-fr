@@ -1,27 +1,17 @@
 ---
-title: CPrintInfo, Structure | Microsoft Docs
-ms.custom: ''
+title: CPrintInfo (Structure)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPrintInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b12c93375618cacf25e88ecba6919808ac7bd705
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ec770f594836073fe340b0661e0427c058533b22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446854"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677524"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo (Structure)
 
@@ -94,7 +84,6 @@ Appelez cette fonction pour récupérer le numéro de la première page à impri
 ```
 UINT GetFromPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -111,7 +100,6 @@ Appelez cette fonction pour récupérer le numéro de la dernière page du docum
 
 ```
 UINT GetMaxPage() const;
-
 
 ```
 
@@ -130,7 +118,6 @@ Appelez cette fonction pour récupérer le numéro de la première page du docum
 ```
 UINT GetMinPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -148,7 +135,6 @@ Appelez cette fonction pour récupérer le décalage lors de l’impression de p
 ```
 UINT GetOffsetPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -165,7 +151,6 @@ Appelez cette fonction pour récupérer le numéro de la dernière page à impri
 
 ```
 UINT GetToPage() const;
-
 
 ```
 
@@ -345,6 +330,4 @@ Normalement, les numéros de page commencent à 1. Cette valeur est stockée dan
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [Comme CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-
-
 

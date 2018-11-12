@@ -1,28 +1,17 @@
 ---
-title: iid_is (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: iid_is (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.iid_is
-dev_langs:
-- C++
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 4ec9bb1a35b1ce049dfeca7b356b98431fad4578
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 176ab83bfae18ff7f43fe0860591f2d1ac50d7eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791056"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535328"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -73,9 +62,9 @@ __interface IFireTabCtrl : IDispatch
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)  
+[Attributs de paramètres](parameter-attributes.md)

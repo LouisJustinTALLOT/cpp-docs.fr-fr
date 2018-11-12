@@ -1,12 +1,6 @@
 ---
-title: 'Exceptions : Exceptions de base de données | Microsoft Docs'
-ms.custom: ''
+title: 'Exceptions : exceptions de base de données'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DAO [MFC], exceptions
 - exceptions [MFC], database
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 804e93c45e4fb4d95b097c78d20df6a252626a36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 17a52787462301e839cb2e960fad8b480380ba49
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387365"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492795"
 ---
 # <a name="exceptions-database-exceptions"></a>Exceptions : exceptions de base de données
 

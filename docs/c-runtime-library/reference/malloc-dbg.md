@@ -1,10 +1,6 @@
 ---
-title: _malloc_dbg | Microsoft Docs
-ms.custom: ''
+title: _malloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _malloc_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - malloc_dbg
 - _malloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - malloc_dbg function
 - memory allocation
 - _malloc_dbg function
 ms.assetid: c97eca51-140b-4461-8bd2-28965b49ecdb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 64fb40028d9130278077f3d05dd1e25914dba212
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633608"
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -69,7 +59,7 @@ Pointeur vers le nom du fichier source qui a demandé l’opération d’allocat
 *linenumber*<br/>
 Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **NULL**.
 
-Le *nom de fichier* et *linenumber* paramètres sont disponibles uniquement quand **_malloc_dbg** a été appelée explicitement ou [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)constante du préprocesseur a été définie.
+Le *filename* et *linenumber* paramètres sont disponibles uniquement lorsque **_malloc_dbg** a été appelée explicitement ou [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)constante du préprocesseur a été définie.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -77,7 +67,7 @@ Opération réussie, cette fonction retourne un pointeur vers la partie utilisat
 
 ## <a name="remarks"></a>Notes
 
-**_malloc_dbg** est une version debug de la [malloc](malloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_malloc_dbg** est réduit à un appel à **malloc**. Les deux **malloc** et **_malloc_dbg** allouer un bloc de mémoire dans le tas de base, mais **_malloc_dbg** propose plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de l’utilisateur partie du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques et *nom de fichier*/*linenumber* plus d’informations pour déterminer l’origine de demandes d’allocation.
+**_malloc_dbg** est une version debug de la [malloc](malloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_malloc_dbg** est réduite à un appel à **malloc**. Les deux **malloc** et **_malloc_dbg** allouer un bloc de mémoire dans le tas de base, mais **_malloc_dbg** propose plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de l’utilisateur partie du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques et *filename*/*linenumber* informations pour déterminer l’origine de demandes d’allocation.
 
 **_malloc_dbg** alloue le bloc de mémoire avec un peu plus d’espace que demandé *taille*. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. Quand le bloc est alloué, la partie utilisateur du bloc est renseignée avec la valeur 0xCD et chaque mémoire tampon de remplacement est renseignée avec la valeur 0xFD.
 
@@ -85,7 +75,7 @@ Opération réussie, cette fonction retourne un pointeur vers la partie utilisat
 
 Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les types de bloc d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans la build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

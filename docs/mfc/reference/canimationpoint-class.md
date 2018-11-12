@@ -1,10 +1,6 @@
 ---
-title: CAnimationPoint, classe | Microsoft Docs
-ms.custom: ''
+title: CAnimationPoint, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationPoint
 - AFXANIMATIONCONTROLLER/CAnimationPoint
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationPoint::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationPoint::m_xValue
 - AFXANIMATIONCONTROLLER/CAnimationPoint::m_yValue
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationPoint [MFC], CAnimationPoint
 - CAnimationPoint [MFC], AddTransition
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b584902a1eb9b3c1aba27645e084ad6ea23cb72
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 15f18a43fcda76bb5531434de84d97a349cb7f39
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404837"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497197"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint, classe
 
@@ -136,7 +126,6 @@ Construit un objet CAnimationPoint.
 
 ```
 CAnimationPoint();
-
 
 CAnimationPoint(
     const CPoint& ptDefault,

@@ -1,10 +1,6 @@
 ---
-title: _unlink, _wunlink | Microsoft Docs
-ms.custom: ''
+title: _unlink, _wunlink
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _unlink
 - _wunlink
@@ -26,8 +22,6 @@ f1_keywords:
 - _unlink
 - wunlink
 - _wunlink
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], deleting
 - _wunlink function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ace694452467d6d559f8820216be71ecd85b54e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411007"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544195"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
@@ -71,13 +61,13 @@ Nom du fichier à supprimer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne 0 en cas d’échec. Sinon, la fonction retourne -1 et définit **errno** à **EACCES**, ce qui signifie que le chemin d’accès spécifie un fichier en lecture seule, ou à **ENOENT**, ce qui signifie que le fichier ou le chemin d’accès est introuvable ou le chemin d’accès spécifié un répertoire.
+Chacune de ces fonctions retourne 0 en cas d’échec. Sinon, la fonction retourne -1 et définit **errno** à **EACCES**, ce qui signifie que le chemin d’accès spécifie un fichier en lecture seule, ou la valeur **ENOENT**, ce qui signifie que le fichier ou le chemin d’accès est introuvable ou le chemin d’accès a spécifié un répertoire.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_unlink** fonction supprime le fichier spécifié par *nom de fichier*. **_wunlink** est une version à caractères larges de **_unlink**; le *nom de fichier* argument **_wunlink** est une chaîne à caractères larges. Ces fonctions se comportent sinon de façon identique.
+Le **_unlink** fonction supprime le fichier spécifié par *filename*. **_wunlink** est une version à caractères larges de **_unlink**; le *filename* l’argument de **_wunlink** est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -85,7 +75,7 @@ Le **_unlink** fonction supprime le fichier spécifié par *nom de fichier*. **_
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tunlink**|**_unlink**|**_unlink**|**_wunlink**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

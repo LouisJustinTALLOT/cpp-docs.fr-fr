@@ -1,29 +1,19 @@
 ---
-title: Ce pointeur | Microsoft Docs
-ms.custom: ''
+title: Pointeur this
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - this_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - nonstatic member functions [C++]
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb7198b22491a94eb2f00fecec83ec296ce03450
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535003"
 ---
 # <a name="this-pointer"></a>Pointeur this
 
@@ -32,7 +22,7 @@ Le **cela** pointeur est un pointeur accessible uniquement dans les fonctions me
 ## <a name="syntax"></a>Syntaxe
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +171,7 @@ int main()
 
 Le type de **cela** dans un membre de fonction est décrite par la syntaxe suivante, où *cv-qualifier-list* est déterminé à partir du déclarateur de fonctions de membre et peut être **const**ou **volatile** (ou les deux), et *type de classe* est le nom de la classe :
 
-*type de classe [cv-qualifier-list]* **\* const cela**
+*type de classe [cv-qualifier-list]* **&#42; const cela**
 
 En d’autres termes, **cela** est toujours un pointeur const ; il ne peut pas être réassigné.  Le **const** ou **volatile** qualificateurs utilisés dans la déclaration de fonction membre s’appliquent à l’instance de classe vers laquelle pointé **cela** dans la portée de cette fonction.
 

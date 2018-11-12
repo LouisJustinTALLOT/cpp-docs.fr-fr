@@ -1,24 +1,14 @@
 ---
-title: C/C++, propriétés (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: C/C++, propriétés (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
-author: mikeblome
-ms.author: mblome
 f1_keywords: []
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 7ab78284929de8e5991abb0d1a8c89ead500096a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4719f02b1050472f35375b921fd1a6bd670c11c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314701"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498126"
 ---
 # <a name="cc-properties-linux-c"></a>C/C++, propriétés (Linux C++)
 
@@ -85,4 +75,4 @@ Property | Description | Options
 Compiler en | Permet de sélectionner l’option de langage de compilation pour les fichiers .c et .cpp.  'Default' effectue la détection d’après l’extension (.c ou .cpp). (-x c, -x c++) | **Par défaut** : option par défaut.<br/>**Compiler en code C** : compile en code C.<br/>**Compiler en code C++**  : compile en code C++.<br/>
 Fichiers Include forcés | Un ou plusieurs fichiers Include forcés. (-include [name])
 
-## <a name="additional-options"></a>Options supplémentaires 
+## <a name="additional-options"></a>Options supplémentaires

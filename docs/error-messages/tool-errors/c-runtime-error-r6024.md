@@ -1,27 +1,17 @@
 ---
-title: Erreur Runtime C R6024 | Microsoft Docs
-ms.custom: ''
+title: Erreur Runtime C R6024
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - R6024
-dev_langs:
-- C++
 helpviewer_keywords:
 - R6024
 ms.assetid: 0fb11c0f-9b81-4cab-81bd-4785742946a5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: df874ae68f786585e85a8bc1b01ea8d0ac831d87
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 89b99a93512603eaf2273a6ff3f434f1ad3b3bb8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861289"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497054"
 ---
 # <a name="c-runtime-error-r6024"></a>Erreur Runtime C R6024
 

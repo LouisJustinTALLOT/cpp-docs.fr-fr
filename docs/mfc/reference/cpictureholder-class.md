@@ -1,10 +1,6 @@
 ---
-title: CPictureHolder, classe | Microsoft Docs
-ms.custom: ''
+title: CPictureHolder, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPictureHolder
 - AFXCTL/CPictureHolder
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXCTL/CPictureHolder::Render
 - AFXCTL/CPictureHolder::SetPictureDispatch
 - AFXCTL/CPictureHolder::m_pPict
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPictureHolder [MFC], CPictureHolder
 - CPictureHolder [MFC], CreateEmpty
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e38233c5057f2cc1fa121c318330cdc7533d4fc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509570"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder, classe
 
@@ -127,12 +117,10 @@ Utilise une image bitmap pour initialiser l’objet de l’image dans un `CPictu
 BOOL CreateFromBitmap(
     UINT idResource);
 
-
 BOOL CreateFromBitmap(
     CBitmap* pBitmap,
     CPalette* pPal = NULL,
     BOOL bTransferOwnership = TRUE);
-
 
 BOOL CreateFromBitmap(
     HBITMAP hbm,
@@ -175,7 +163,6 @@ Utilise une icône pour initialiser l’objet de l’image dans un `CPictureHold
 ```
 BOOL CreateFromIcon(
     UINT idResource);
-
 
 BOOL CreateFromIcon(
     HICON hIcon,
@@ -309,7 +296,7 @@ void Render(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte d’affichage dans lequel l’image doit être restitué.
 
 *rcRender*<br/>

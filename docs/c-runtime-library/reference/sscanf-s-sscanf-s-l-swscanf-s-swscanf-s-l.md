@@ -1,10 +1,6 @@
 ---
-title: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sscanf_s_l
 - sscanf_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _swscanf_s_l
 - _stscanf_s_l
 - _sscanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - stscanf_s_l function
 - stscanf_s function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08cdc1b3fe2d190bdc4a6cbb3d505378e6dcf6ae
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: b1f535ad8a418fa3ce6492f9bdaa6e0299073504
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451821"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538136"
 ---
 # <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -96,7 +86,7 @@ Données stockées
 *format*<br/>
 Chaîne de contrôle de format. Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs
 
 *locale*<br/>
@@ -112,7 +102,7 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-Le **sscanf_s** fonction lit les données à partir de *tampon* dans l’emplacement indiqué par chaque *argument*. Les arguments qui suivent la chaîne de format spécifient des pointeurs vers les variables qui ont un type qui correspond à un spécificateur de type dans *format*. Contrairement à la version la moins sécurisée [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), un paramètre de taille de mémoire tampon est requis lorsque vous utilisez les caractères du champ de type **c**, **C**, **s**, **S**, ou qui sont inclus dans les jeux de contrôles de chaîne **[]**. La taille de mémoire tampon en caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
+Le **sscanf_s** fonction lit les données à partir de *tampon* dans l’emplacement indiqué par chaque *argument*. Les arguments après la chaîne de format spécifient des pointeurs vers des variables qui ont un type qui correspond à un spécificateur de type dans *format*. Contrairement à la version moins sécurisée [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), un paramètre de taille de mémoire tampon est nécessaire lorsque vous utilisez les caractères de champ de type **c**, **C**, **s**, **S**, ou chaîne de jeux de contrôle qui sont entourés de **[]**. La taille de mémoire tampon en caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
 
 ```C
 wchar_t ws[10];
@@ -140,11 +130,11 @@ Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_
 > [!NOTE]
 > Le paramètre de taille est de type **non signé**, et non **size_t**. Lors de la compilation pour des cibles 64 bits, utilisez un cast statique pour convertir **_countof** ou **sizeof** résultats à la taille correcte.
 
-Le *format* contrôles argument des champs de l’interprétation de l’entrée et a la même forme et fonction que la *format* argument pour le **scanf_s** (fonction). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Le *format* contrôles d’argument des champs de l’interprétation de l’entrée et a les mêmes forme et fonction que le *format* argument pour le **scanf_s** (fonction). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-**swscanf_s** est une version à caractères larges de **sscanf_s**; les arguments de **swscanf_s** sont des chaînes à caractères larges. **sscanf_s** ne gère pas les caractères hexadécimaux multioctets. **swscanf_s** ne traite pas hexadécimal de pleine chasse Unicode ou des caractères de la « zone de compatibilité ». Dans le cas contraire, **swscanf_s** et **sscanf_s** se comportent de façon identique.
+**swscanf_s** est une version à caractères larges de **sscanf_s**; les arguments de **swscanf_s** sont des chaînes à caractères larges. **sscanf_s** ne gère pas les caractères hexadécimaux multioctets. **swscanf_s** ne gère pas hexadécimaux entiers Unicode ou caractères de « zone de compatibilité ». Sinon, **swscanf_s** et **sscanf_s** ont un comportement identique.
 
-Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux du thread actuel.
+Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux qui sont passés au lieu de paramètres régionaux du thread actuel.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -153,7 +143,7 @@ Les versions de ces fonctions qui ont le **_l** suffixe sont identiques, sauf qu
 |**_stscanf_s**|**sscanf_s**|**sscanf_s**|**swscanf_s**|
 |**_stscanf_s_l**|**_sscanf_s_l**|**_sscanf_s_l**|**_swscanf_s_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

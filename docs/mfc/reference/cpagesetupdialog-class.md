@@ -1,10 +1,6 @@
 ---
-title: Cpagesetupdialog, classe | Microsoft Docs
-ms.custom: ''
+title: Cpagesetupdialog, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
 - AFXDLGS/CPageSetupDialog
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXDLGS/CPageSetupDialog::OnDrawPage
 - AFXDLGS/CPageSetupDialog::PreDrawPage
 - AFXDLGS/CPageSetupDialog::m_psd
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPageSetupDialog [MFC], CPageSetupDialog
 - CPageSetupDialog [MFC], CreatePrinterDC
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86dc19600dc8cbb452db585993dec85c3f7b8591
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 136f172dcd406e323afddae87d6fb234b5d4b273
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328387"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544883"
 ---
 # <a name="cpagesetupdialog-class"></a>Cpagesetupdialog, classe
 
@@ -418,6 +408,4 @@ Remplacez cette fonction pour personnaliser le dessin de l’image. Si vous subs
 [Exemple MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [CCommonDialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

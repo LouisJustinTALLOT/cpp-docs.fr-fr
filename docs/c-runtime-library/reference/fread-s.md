@@ -1,10 +1,6 @@
 ---
-title: fread_s | Microsoft Docs
-ms.custom: ''
+title: fread_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread_s
 apilocation:
@@ -23,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - fread_s
 - stdio/fread_s
-dev_langs:
-- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: febfab21889afab773dd9a8405b1e07dc7798f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401891"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519819"
 ---
 # <a name="freads"></a>fread_s
 
@@ -67,22 +57,22 @@ Taille de l’élément à lire en octets.
 *count*<br/>
 Nombre maximal d’éléments à lire.
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fread_s** retourne le nombre de (entier) d’éléments qui ont été lus dans la mémoire tampon, ce qui peut être inférieur à *nombre* si une erreur de lecture ou à la fin du fichier se trouve avant *nombre* est atteinte. Utilisez le **feof** ou **ferror** afin de distinguer une erreur à partir d’une condition de fin de fichier. Si *taille* ou *nombre* est 0, **fread_s** retourne 0 et le contenu de la mémoire tampon est identiques. Si *flux* ou *tampon* est un pointeur null, **fread_s** appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne 0.
+**fread_s** retourne le nombre de (entier) d’éléments qui ont été lus dans la mémoire tampon, ce qui peut être inférieur à *nombre* si une erreur de lecture ou à la fin du fichier est rencontrée avant *nombre* est atteinte. Utilisez le **feof** ou **ferror** fonction permettant de distinguer une erreur d’une condition de fin de fichier. Si *taille* ou *nombre* est 0, **fread_s** retourne 0 et le contenu de la mémoire tampon est identiques. Si *flux* ou *tampon* est un pointeur null, **fread_s** appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne 0.
 
 Pour plus d’informations sur les codes d’erreur, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **fread_s** fonction lit jusqu'à *nombre* des éléments de *elementSize* octets à partir de l’entrée *flux* et les stocke dans *tampon*.  Le pointeur de fichier est associé *flux* (le cas échéant) est augmentée par le nombre d’octets réellement lus. Si le flux donné est ouvert en mode texte, paires de sauts de ligne de chariot sont remplacées par les caractères de saut de ligne unique. Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
+Le **fread_s** fonction lit jusqu'à *nombre* éléments de *elementSize* octets à partir de l’entrée *flux* et les stocke dans *tampon*.  Le pointeur de fichier qui est associé avec *flux* (le cas échéant) est augmenté le nombre d’octets réellement lus. Si le flux donné est ouvert en mode texte, paires de sauts de ligne de chariot sont remplacées par les caractères de saut de ligne unique. Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
 
 Cette fonction verrouille les autres threads. Si vous avez besoin d’une version sans verrouillage, utilisez **_fread_nolock**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

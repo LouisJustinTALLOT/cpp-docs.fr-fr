@@ -1,26 +1,16 @@
 ---
-title: Arithmétique sur les pointeurs | Microsoft Docs
-ms.custom: ''
+title: Arithmétique sur les pointeurs
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointer arithmetic
 - arithmetic pointer
 ms.assetid: eb924a29-59d3-48a5-9d62-9424790730eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd80fd88a5924cbedf9a07ee700f16c65b66672f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ed238bdeedf95bb79543a28ed8dd602020fa55b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020145"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615473"
 ---
 # <a name="pointer-arithmetic"></a>Arithmétique sur les pointeurs
 

@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C3651 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C3651
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3651
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3651
 ms.assetid: a03e692e-c219-4654-9827-8415cfa5a22d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7cff220121be333b6df1bc802654f792e36acf17
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5601dd2f510e4322e67f49478eefce795312e380
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017274"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494176"
 ---
 # <a name="compiler-error-c3651"></a>Erreur du compilateur C3651
 

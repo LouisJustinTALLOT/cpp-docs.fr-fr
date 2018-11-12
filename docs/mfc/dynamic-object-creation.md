@@ -1,28 +1,18 @@
 ---
-title: Création d’objet dynamique | Microsoft Docs
-ms.custom: ''
+title: Création d'objet dynamique
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - object creation [MFC], dynamically at run time
 - CObject class [MFC], dynamic object creation
 - objects [MFC], creating dynamically at run time
 - dynamic object creation [MFC]
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19f6a895eb48b3ae1816edc45747c865e7e03b96
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 75d4a055f047abfcac4451c04bcd1cc75650c89a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563721"
 ---
 # <a name="dynamic-object-creation"></a>Création d'objet dynamique
 
@@ -32,7 +22,7 @@ Cet article explique comment créer un objet dynamiquement au moment de l’exé
 
 1. Utilisez le code suivant pour créer dynamiquement un objet à l’aide de la `CreateObject` fonction de la `CRuntimeClass`. Notez que, en cas d’échec, `CreateObject` retourne **NULL** au lieu de lever une exception :
 
-     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
 
 ## <a name="see-also"></a>Voir aussi
 

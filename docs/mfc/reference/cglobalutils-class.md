@@ -1,10 +1,6 @@
 ---
-title: Cglobalutils, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: Cglobalutils, classe
+ms.date: 10/18/2018
 f1_keywords:
 - CGlobalUtils
 - AFXGLOBALUTILS/CGlobalUtils
@@ -24,8 +20,6 @@ f1_keywords:
 - AFXGLOBALUTILS/CGlobalUtils::SetNewParent
 - AFXGLOBALUTILS/CGlobalUtils::StringFromCy
 - AFXGLOBALUTILS/CGlobalUtils::StringFromDecimal
-dev_langs:
-- C++
 helpviewer_keywords:
 - CGlobalUtils [MFC], AdjustRectToWorkArea
 - CGlobalUtils [MFC], CalcExpectedDockedRect
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42436a885b194e0270bc9956514f4ff0de9c7461
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd382a7f0143d1dce75815430741ef58cee0f8c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445891"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643311"
 ---
 # <a name="cglobalutils-class"></a>Cglobalutils, classe
 
@@ -108,13 +98,12 @@ void AdjustRectToworkArea(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
-[in, out] [in] *pRectDelta*
+[in, out] *rect*<br/>
+[in] *pRectDelta*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="calcexpecteddockedrect"></a>  CGlobalUtils::CalcExpectedDockedRect
-
 
 ```
 void CalcExpectedDockedRect(
@@ -128,17 +117,21 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*barContainerManager*<br/>
-[in] [in] *pWndTodock*
-*ptMouse*<br/>
-[in] [out] *rectResult*
-*bDrawTab*<br/>
-[out] [out] *ppTargetBar*
+[in] *barContainerManager*<br/>
+
+[in] *pWndTodock*<br/>
+
+[in] *ptMouse*<br/>
+
+[out] *rectResult*<br/>
+
+[out] *bDrawTab*<br/>
+
+[out] *ppTargetBar*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="canbeattached"></a>  CGlobalUtils::CanBeAttached
-
 
 ```
 BOOL CanBeAttached(CWnd* pWnd) const;
@@ -146,7 +139,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pWnd*
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -154,21 +147,19 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 
 ##  <a name="canpanebeinfloatingmultipaneframewnd"></a>  CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd
 
-
 ```
 BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pWnd*
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="checkalignment"></a>  CGlobalUtils::CheckAlignment
-
 
 ```
 BOOL CheckAlignment(
@@ -184,21 +175,27 @@ BOOL CheckAlignment(
 
 ### <a name="parameters"></a>Paramètres
 
-*point*<br/>
-[in] [in] *pBar*
-*nSensitivity*<br/>
-[in] [in] *pDockManager*
-*bOuterEdge*<br/>
-[in] [out] *dwAlignment*
-*dwEnabledDockBars*<br/>
-[in] [in] *lpRectBounds*
+[in] *point*<br/>
+
+[in] *pBar*<br/>
+
+[in] *nSensitivity*<br/>
+
+[in] *pDockManager*<br/>
+
+[in] *bOuterEdge*<br/>
+
+[out] *dwAlignment*<br/>
+
+[in] *dwEnabledDockBars*<br/>
+
+[in] *lpRectBounds*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="cyfromstring"></a>  CGlobalUtils::CyFromString
-
 
 ```
 BOOL CyFromString(
@@ -208,15 +205,15 @@ BOOL CyFromString(
 
 ### <a name="parameters"></a>Paramètres
 
-*CY*<br/>
-[out] [in] *psz*
+[out] *cy*<br/>
+
+[in] *psz*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="decimalfromstring"></a>  CGlobalUtils::DecimalFromString
-
 
 ```
 BOOL DecimalFromString(
@@ -226,15 +223,15 @@ BOOL DecimalFromString(
 
 ### <a name="parameters"></a>Paramètres
 
-*decimal*<br/>
-[out] [in] *psz*
+[out] *décimal*<br/>
+
+[in] *psz*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="fliprect"></a>  CGlobalUtils::FlipRect
-
 
 ```
 void FlipRect(
@@ -244,13 +241,12 @@ void FlipRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
-[in, out] [in] *nDegrees*
+[in, out] *rect*<br/>
+[in] *nDegrees*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="forceadjustlayout"></a>  CGlobalUtils::ForceAdjustLayout
-
 
 ```
 void ForceAdjustLayout(
@@ -261,13 +257,15 @@ void ForceAdjustLayout(
 
 ### <a name="parameters"></a>Paramètres
 
-*pDockManager*<br/>
-[in, out] [in] *bForce* [in] *bForceInvisible*
+[in, out] *pDockManager*<br/>
+
+[in] *bForce*<br/>
+
+[in] *bForceInvisible*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getdockingmanager"></a>  CGlobalUtils::GetDockingManager
-
 
 ```
 CDockingManager* GetDockingManager(CWnd* pWnd);
@@ -275,7 +273,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pWnd*
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -283,21 +281,19 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 
 ##  <a name="getoppositealignment"></a>  CGlobalUtils::GetOppositeAlignment
 
-
 ```
 DWORD GetOppositeAlignment(DWORD dwAlign);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *dwAlign*
+[in] *dwAlign*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getpaneandalignfrompoint"></a>  CGlobalUtils::GetPaneAndAlignFromPoint
-
 
 ```
 BOOL GetPaneAndAlignFromPoint(
@@ -311,12 +307,17 @@ BOOL GetPaneAndAlignFromPoint(
 
 ### <a name="parameters"></a>Paramètres
 
-*barContainerManager*<br/>
-[in] [in] *pt*
-*ppTargetControlBar*<br/>
-[out] [out] *dwAlignment*
-*bTabArea*<br/>
-[out] [out] *bCaption*
+[in] *barContainerManager*<br/>
+
+[in] *pt*<br/>
+
+[out] *ppTargetControlBar*<br/>
+
+[out] *dwAlignment*<br/>
+
+[out] *bTabArea*<br/>
+
+[out] *bCaption*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -324,21 +325,19 @@ BOOL GetPaneAndAlignFromPoint(
 
 ##  <a name="getwndicon"></a>  CGlobalUtils::GetWndIcon
 
-
 ```
 HICON GetWndIcon(CWnd* pWnd);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pWnd*
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="setnewparent"></a>  CGlobalUtils::SetNewParent
-
 
 ```
 void SetNewParent(
@@ -349,13 +348,15 @@ void SetNewParent(
 
 ### <a name="parameters"></a>Paramètres
 
-*lstControlBars*<br/>
-[in] [in] *pNewParent* [in] *bCheckVisibility*
+[in] *lstControlBars*<br/>
+
+[in] *pNewParent*<br/>
+
+[in] *bCheckVisibility*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="stringfromcy"></a>  CGlobalUtils::StringFromCy
-
 
 ```
 BOOL StringFromCy(
@@ -365,15 +366,15 @@ BOOL StringFromCy(
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
-[out] [in] *cy*
+[out] *str*<br/>
+
+[in] *cy*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="stringfromdecimal"></a>  CGlobalUtils::StringFromDecimal
-
 
 ```
 BOOL StringFromDecimal(
@@ -383,8 +384,9 @@ BOOL StringFromDecimal(
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
-[out] [in] *décimal*
+[out] *str*<br/>
+
+[in] *décimal*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 

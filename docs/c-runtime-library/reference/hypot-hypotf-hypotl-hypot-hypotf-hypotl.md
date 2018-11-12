@@ -1,10 +1,6 @@
 ---
-title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft Docs
-ms.custom: ''
+title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _hypotf
 - hypot
@@ -32,8 +28,6 @@ f1_keywords:
 - hypot
 - _hypot
 - _hypotf
-dev_langs:
-- C++
 helpviewer_keywords:
 - hypotenuse calculation
 - hypot function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a8488b160c10eb29f0448127c44d3514f8debf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400201"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439531"
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -94,7 +84,7 @@ Valeurs à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **hypot** retourne la longueur de l’hypoténuse ; de dépassement de capacité, **hypot** retourne INF (infini) et la **errno** variable est définie sur **ERANGE** . Vous pouvez utiliser **_matherr** pour modifier la gestion des erreurs.
+En cas de réussite, **hypot** retourne la longueur de l’hypoténuse ; en cas de dépassement, **hypot** retourne INF (infini) et le **errno** variable est définie sur **ERANGE** . Vous pouvez utiliser **_matherr** pour modifier la gestion des erreurs.
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -104,7 +94,7 @@ Le **hypot** fonctions calculent la longueur de l’hypoténuse d’un triangle 
 
 Les versions des fonctions qui comportent des traits de soulignement de début sont fournies à des fins de compatibilité avec les normes précédentes. Elles ont le même comportement que les versions qui n’en ont pas. Nous vous recommandons d’utiliser les versions sans traits de soulignement de début pour le nouveau code.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: CDataPathProperty, classe | Microsoft Docs
-ms.custom: ''
+title: CDataPathProperty, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDataPathProperty
 - AFXCTL/CDataPathProperty
@@ -15,8 +11,6 @@ f1_keywords:
 - AFXCTL/CDataPathProperty::ResetData
 - AFXCTL/CDataPathProperty::SetControl
 - AFXCTL/CDataPathProperty::SetPath
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDataPathProperty [MFC], CDataPathProperty
 - CDataPathProperty [MFC], GetControl
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f61f62c62a73963fa790795cd5153c5103c3a61f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1d17b121854623e9919f434a44b6ab40c2db2691
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385116"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608181"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty, classe
 
@@ -150,12 +140,10 @@ virtual BOOL Open(
     COleControl* pControl,
     CFileException* pError = NULL);
 
-
 virtual BOOL Open(
     LPCTSTR lpszPath,
     COleControl* pControl,
     CFileException* pError = NULL);
-
 
 virtual BOOL Open(
     LPCTSTR lpszPath,

@@ -1,10 +1,6 @@
 ---
-title: COS, cosf, cosl | Documents Microsoft
-ms.custom: ''
+title: COS, cosf, cosl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cos
 - cosf
@@ -26,8 +22,6 @@ f1_keywords:
 - cos
 - cosf
 - cosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a49f8489d084b1f67bc46432970114350c56f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519891"
 ---
 # <a name="cos-cosf-cosl"></a>COS, cosf, cosl
 
@@ -72,18 +62,18 @@ Angle en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Cosinus de *x*. Si *x* est supérieur ou égal à 263 ou inférieur ou égal à -263, une perte de crédibilité du résultat se produit.
+Le cosinus de *x*. Si *x* est supérieur ou égal à 263 ou inférieur ou égal à -263, une perte de précision dans le résultat se produit.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|aucun|**_DOMAIN**|
-|± INF|**NON VALIDE**|**_DOMAIN**|
+|+ QNAN, IND|none|**_DOMAINE**|
+|+ INF|**NON VALIDE**|**_DOMAINE**|
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cos** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **cos** accepte et retourne toujours un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **cos** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **cos** accepte et retourne toujours un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|
@@ -93,7 +83,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="example"></a>Exemple
 
-Consultez l’exemple de [sin, sinf, sinl](sin-sinf-sinl.md).
+Consultez l’exemple dans [sin, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Voir aussi
 

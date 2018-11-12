@@ -1,10 +1,6 @@
 ---
-title: strcpy, wcscpy, _mbscpy | Microsoft Docs
-ms.custom: ''
+title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcpy
 - wcscpy
@@ -29,8 +25,6 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -43,23 +37,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c996fc8ceb81d98d24e3c95330f2ed9c37097e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413919"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640061"
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Copie une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -110,9 +100,9 @@ Chacune de ces fonctions retourne la chaîne de destination. Aucune valeur de re
 Le **strcpy** fonction copies *strSource*, y compris le caractère null de fin, à l’emplacement spécifié par *strDestination*. Le comportement de **strcpy** n’est pas défini si les chaînes source et de destination se chevauchent.
 
 > [!IMPORTANT]
-> Étant donné que **strcpy** ne vérifie pas suffisamment d’espace *strDestination* avant de copier *strSource*, il s’agit d’une cause potentielle de dépassements de mémoire tampon. Par conséquent, nous vous recommandons d’utiliser plutôt [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
+> Étant donné que **strcpy** ne vérifie pas suffisamment d’espace *strDestination* avant de copier *strSource*, il est une cause potentielle de dépassements de mémoire tampon. Par conséquent, nous vous recommandons d’utiliser plutôt [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
-**wcscpy** et **_mbscpy** sont respectivement des versions à caractères larges et caractères multioctets de **strcpy**. Les arguments et la valeur de retour de **wcscpy** sont des caractères larges chaînes ; ceux de **_mbscpy** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**wcscpy** et **_mbscpy** sont, respectivement, les versions de caractères larges et à caractères multioctets **strcpy**. Les arguments et la valeur de retour de **wcscpy** sont des caractères larges chaînes ; ceux de **_mbscpy** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -122,7 +112,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy**|**strcpy**|**_mbscpy**|**wcscpy**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

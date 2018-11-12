@@ -1,27 +1,17 @@
 ---
-title: 'Comment : déclarer des Types de valeur avec le mot clé interior_ptr (C++ / c++ / CLI) | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : déclarer des types de valeur avec le mot clé interior_ptr (C++/CLI)'
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bae409c881255b19a92b481fecab625c6b66c3c1
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 114d1bd3677537029f336f4de3675015f1725214
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612860"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Comment : déclarer des types de valeur avec le mot clé interior_ptr (C++/CLI)
 
@@ -131,7 +121,7 @@ int main() {
 }
 ```
 
-```Output 
+```Output
 22
 23
 hello

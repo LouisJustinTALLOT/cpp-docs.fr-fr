@@ -1,10 +1,6 @@
 ---
-title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l | Microsoft Docs
-ms.custom: ''
+title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_s_l
 - _mbslwr_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _mbslwr_s_l
 - wcslwr_s
 - _mbslwr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcslwr_s function
 - wcslwr_s function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61f3db37a61a30909e8deadee96c3bfbe2c46bb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7eb9d81b1269018cd41c80c1f9c15aa92a4f85a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415337"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497257"
 ---
 # <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
 Convertit une chaîne en minuscules en utilisant les paramètres régionaux actifs ou un objet de paramètres régionaux transmis. Ces versions de [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbslwr_s** et **_mbslwr_s_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr_s** et **_mbslwr_s_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -158,11 +148,11 @@ Paramètres régionaux à utiliser.
 
 Zéro en cas de réussite ; code d’erreur différent de zéro en cas d’échec.
 
-Ces fonctions valident leurs paramètres. Si *str* n’est pas une chaîne valide se terminant par null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, les fonctions retournent **EINVAL** et **errno** à **EINVAL**. Si *numberOfElements* est inférieure à la longueur de la chaîne, les fonctions retournent également **EINVAL** et **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si *str* n’est pas une chaîne se terminant par null valide, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, les fonctions retournent **EINVAL** et définissez **errno** à **EINVAL**. Si *numberOfElements* est inférieure à la longueur de la chaîne, les fonctions retournent également **EINVAL** et définissez **errno** à **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_strlwr_s** convertit de fonction, en place, les lettres majuscules pour *str* en minuscules. **_mbslwr_s** est une version à caractères multioctets de **_strlwr_s**. **_wcslwr_s** est une version à caractères larges de **_strlwr_s**.
+Le **_strlwr_s** fonction convertit sur place, les lettres majuscules dans *str* en minuscules. **_mbslwr_s** est une version de caractères multioctets de **_strlwr_s**. **_wcslwr_s** est une version à caractères larges de **_strlwr_s**.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -177,7 +167,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 |**_tcslwr_s**|**_strlwr_s**|**_mbslwr_s**|**_wcslwr_s**|
 |**_tcslwr_s_l**|**_strlwr_s_l**|**_mbslwr_s_l**|**_wcslwr_s_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

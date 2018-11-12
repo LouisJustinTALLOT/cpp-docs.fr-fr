@@ -1,29 +1,19 @@
 ---
-title: Cheapptrlist, classe | Microsoft Docs
-ms.custom: ''
+title: Cheapptrlist, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CHeapPtrList
 - ATLCOLL/ATL::CHeapPtrList
 - ATLCOLL/ATL::CHeapPtrList::CHeapPtrList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1990de6165e50397f11d84cb0486c1d5d5d67fce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ef0224ccb9e2592daecb94204db5e1a8c785c7b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089228"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676978"
 ---
 # <a name="cheapptrlist-class"></a>Cheapptrlist, classe
 
@@ -36,7 +26,7 @@ Cette classe fournit des méthodes utiles lors de la construction d’une liste 
 
 ```
 template<typename E, class Allocator = ATL::CCRTAllocator>
-class CHeapPtrList 
+class CHeapPtrList
    : public CAtlList<ATL::CHeapPtr<E, Allocator>,
                      CHeapPtrElementTraits<E, Allocator>>
 ```

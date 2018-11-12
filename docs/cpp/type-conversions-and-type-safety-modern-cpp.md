@@ -1,23 +1,14 @@
 ---
-title: Conversions de types et sécurité de Type (Modern C++) | Microsoft Docs
-ms.custom: ''
+title: Conversions de types et sécurité de type (Modern C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae3b2d89c06d0e7b17b648907fa3d7734b51205c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136153"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471342"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversions de types et sécurité de type (Modern C++)
 
@@ -70,7 +61,7 @@ Un type intégral signé et son équivalent non signé sont toujours la même ta
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +117,7 @@ L’opérateur de cast de style C est identique à l’opérateur d’appel () e
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     Pour plus d’informations, consultez [static_cast](../cpp/static-cast-operator.md).
+   Pour plus d’informations, consultez [static_cast](../cpp/static-cast-operator.md).
 
 - **dynamic_cast**, des casts sûr et exécution d’une vérification de pointeur à base de pointeur vers dérivé. Un **dynamic_cast** est plus sûre qu’un **static_cast** pour downcasts, mais le runtime vérification entraîne une certaine surcharge.
 
@@ -151,7 +142,7 @@ L’opérateur de cast de style C est identique à l’opérateur d’appel () e
     //Output: d3 is null;
     ```
 
-     Pour plus d’informations, consultez [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Pour plus d’informations, consultez [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
 - **const_cast**pour cast le **const**- caractère d’une variable ou de la conversion d’une non -**const** variable comme étant **const**. Cast **const**-ness à l’aide de cet opérateur est simplement comme sujette à l’utilisation d’un cast, à ceci près qu’avec C-style **cast de const** vous êtes moins susceptible d’effectuer le cast accidentellement. Parfois, vous devez caster la **const**-nature d’une variable, par exemple, pour passer un **const** variable à une fonction qui accepte un non -**const** paramètre. L'exemple suivant montre comment effectuer cette opération.
 
@@ -164,14 +155,14 @@ L’opérateur de cast de style C est identique à l’opérateur d’appel () e
     }
     ```
 
-     Pour plus d’informations, consultez [const_cast](../cpp/const-cast-operator.md).
+   Pour plus d’informations, consultez [const_cast](../cpp/const-cast-operator.md).
 
 - **reinterpret_cast**, des informations sur les casts entre types tels que **pointeur** à **int**.
 
     > [!NOTE]
     >  Cet opérateur de cast n’est pas utilisé aussi souvent que les autres, et il n’a pas systématiquement à d’autres compilateurs.
 
-     L’exemple suivant illustre comment **reinterpret_cast** diffère **static_cast**.
+   L’exemple suivant illustre comment **reinterpret_cast** diffère **static_cast**.
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +174,7 @@ L’opérateur de cast de style C est identique à l’opérateur d’appel () e
                                        // However, it is not 64-bit safe.
     ```
 
-     Pour plus d’informations, consultez [reinterpret_cast, opérateur](../cpp/reinterpret-cast-operator.md).
+   Pour plus d’informations, consultez [reinterpret_cast, opérateur](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>Voir aussi
 

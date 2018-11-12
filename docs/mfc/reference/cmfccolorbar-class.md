@@ -1,10 +1,6 @@
 ---
-title: Cmfccolorbar, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfccolorbar, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCColorBar
 - AFXCOLORBAR/CMFCColorBar
@@ -42,8 +38,6 @@ f1_keywords:
 - AFXCOLORBAR/CMFCColorBar::SelectPalette
 - AFXCOLORBAR/CMFCColorBar::SetPropList
 - AFXCOLORBAR/CMFCColorBar::ShowCommandMessageString
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCColorBar [MFC], CMFCColorBar
 - CMFCColorBar [MFC], ContextToSize
@@ -80,16 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8c5b1a1bd1358caa491370b2e38b35bde1f8fc7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6dc3044d1ca402ca099184eced2e5615ff161804
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387513"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636876"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar, classe
 
@@ -154,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`m_bInternal`|Un champ booléen qui détermine si les événements de souris sont traités. En règle générale, les événements de souris sont traitées lorsque ce champ a la valeur TRUE et le mode de personnalisation a la valeur FALSE.|
 |`m_bIsEnabled`|Valeur booléenne qui indique si un contrôle est activé.|
@@ -237,7 +227,7 @@ L’exemple suivant montre comment configurer une barre de couleurs à l’aide 
 
 [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcolorbar.h
 
@@ -321,7 +311,6 @@ CMFCColorBar(
     UINT nCommandID,
     CMFCColorButton* pParentBtn);
 
-
 CMFCColorBar(
     const CArray<COLORREF,COLORREF>& colors,
     COLORREF color,
@@ -333,7 +322,6 @@ CMFCColorBar(
     COLORREF colorAutomatic,
     UINT nCommandID,
     CMFCRibbonColorButton* pParentRibbonBtn);
-
 
 CMFCColorBar(
     CMFCColorBar& src,
@@ -804,7 +792,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*contrôleur de domaine principal*|[in] Pointeur vers le contexte de périphérique du bouton parent du contrôle de barre de couleurs actuel.|
+|*pDC*|[in] Pointeur vers le contexte de périphérique du bouton parent du contrôle de barre de couleurs actuel.|
 
 ### <a name="return-value"></a>Valeur de retour
 

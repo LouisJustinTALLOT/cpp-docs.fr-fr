@@ -1,10 +1,6 @@
 ---
-title: Cmfccolorbutton, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfccolorbutton, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCColorButton
 - AFXCOLORBUTTON/CMFCColorButton
@@ -27,8 +23,6 @@ f1_keywords:
 - AFXCOLORBUTTON/CMFCColorButton::RebuildPalette
 - AFXCOLORBUTTON/CMFCColorButton::UpdateColor
 - AFXCOLORBUTTON/CMFCColorButton::m_bEnabledInCustomizeMode
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCColorButton [MFC], CMFCColorButton
 - CMFCColorButton [MFC], EnableAutomaticButton
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e964042b111a42d671b484b646945480e344082b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97012e1d8cdc36f080245243c5f099b340225fc9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428887"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533859"
 ---
 # <a name="cmfccolorbutton-class"></a>Cmfccolorbutton, classe
 
@@ -270,7 +260,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointe vers le contexte de périphérique qui est utilisé pour restituer l’image du bouton.
 
 *Rect*<br/>
@@ -296,7 +286,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointe vers le contexte de périphérique utilisé pour dessiner la bordure.
 
 *rectClient*<br/>
@@ -321,7 +311,7 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointe vers le contexte de périphérique utilisé pour dessiner le rectangle de focus.
 
 *rectClient*<br/>

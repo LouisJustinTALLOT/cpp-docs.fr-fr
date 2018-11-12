@@ -1,27 +1,17 @@
 ---
-title: ABC, Structure | Microsoft Docs
-ms.custom: ''
+title: ABC, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - ABC
-dev_langs:
-- C++
 helpviewer_keywords:
 - ABC structure [MFC]
 ms.assetid: 32663839-c3b7-4f47-896c-b15329c96bc8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a977e3f0efd763ee416348f11e3c6b016c0d42e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f899a84ddbe5ca3ec3abd4dff135a585aa61eaa9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373710"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549563"
 ---
 # <a name="abc-structure"></a>ABC, structure
 
@@ -60,5 +50,4 @@ La largeur totale d’un caractère est la somme des espaces A, B et C. L’un o
 
 [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
-
 

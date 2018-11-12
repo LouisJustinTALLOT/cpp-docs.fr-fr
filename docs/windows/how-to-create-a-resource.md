@@ -1,28 +1,17 @@
 ---
-title: 'Comment : créer une ressource (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : créer une ressource (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbars [C++], resources
 - resource toolbars
 - resources [C++], creating
 ms.assetid: aad44914-9145-45a3-a7d8-9de89b366716
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 75f7f722b354e60b86abdeb9a3f9a01469aefcf8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513689"
 ---
 # <a name="how-to-create-a-resource"></a>Comment : créer une ressource
 
@@ -33,7 +22,7 @@ ms.locfileid: "46438637"
 
 1. Avec le focus sur votre fichier .rc dans [affichage des ressources](../windows/resource-view-window.md), cliquez sur le **modifier** menu et choisissez **ajouter une ressource** (ou cliquez sur le fichier .rc dans **affichagedesressources** et choisissez **ajouter une ressource** dans le menu contextuel).
 
-   > [!NOTE] 
+   > [!NOTE]
    > Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
 
 2. Dans la [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), choisissez le type de ressource que vous souhaitez ajouter à votre projet.
@@ -48,7 +37,7 @@ ms.locfileid: "46438637"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Pour créer une ressource dans l’affichage de classes
 
-1. Dans [affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), avec le bouton droit de votre classe et choisissez **ajouter**, puis cliquez sur **ajouter une ressource** dans le menu contextuel.
+1. Dans [Affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), cliquez avec le bouton droit sur la classe, choisissez **Ajouter**, puis cliquez sur **Ajouter une ressource** dans le menu contextuel.
 
 2. Dans la [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), choisissez le type de ressource que vous souhaitez ajouter à votre projet.
 
@@ -70,4 +59,4 @@ Win32
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 [Éditeurs de ressources](../windows/resource-editors.md)<br/>
-[Ajouter une ressource, boîte de dialogue](../windows/add-resource-dialog-box.md)
+[Add Resource Dialog Box](../windows/add-resource-dialog-box.md)

@@ -1,10 +1,6 @@
 ---
-title: Fonctions globales de contrôle composite | Microsoft Docs
-ms.custom: ''
+title: Fonctions globales de contrôle composite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
 - atlhost/ATL::AtlAxCreateDialog
@@ -19,21 +15,15 @@ f1_keywords:
 - atlhost/ATL::AtlAxWinInit
 - atlhost/ATL::AtlAxWinTerm
 - atlhost/ATL::AtlGetObjectSourceInterface
-dev_langs:
-- C++
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084098"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525266"
 ---
 # <a name="composite-control-global-functions"></a>Fonctions globales de contrôle composite
 
@@ -56,11 +46,11 @@ Ces fonctions prennent en charge pour la création de boîtes de dialogue et de 
 |[AtlSetChildSite](#atlsetchildsite)|Initialise le `IUnknown` du site enfant.|
 |[AtlAxWinInit](#atlaxwininit)|Initialise le code d’hébergement pour les objets de AxWin.|
 |[AtlAxWinTerm](#atlaxwinterm)|N’initialise pas le code d’hébergement pour les objets de AxWin.|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Retourne des informations sur l’interface source par défaut d’un objet.|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Retourne des informations sur l’interface source par défaut d’un objet.|
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atlhost.h  
+**En-tête :** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
@@ -101,7 +91,7 @@ Une des valeurs HRESULT standards.
 À utiliser `AtlAxDialogBox` avec un modèle de boîte de dialogue qui contient un contrôle ActiveX, spécifiez une chaîne CLSID, APPID ou URL valide comme le *texte* champ la **contrôle** section de la ressource de la boîte de dialogue, avec » AtlAxWin80 » en tant que le *nom de la classe* champ sous la même section. Les éléments suivants montrent quelles valide **contrôle** section peut ressembler :
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -261,7 +251,7 @@ Pour créer un contrôle ActiveX sous licence, consultez [AtlAxCreateControlLicE
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-Crée un contrôle ActiveX sous licence, puis initialise et héberge ce dernier dans la fenêtre spécifiée.  
+Crée un contrôle ActiveX sous licence, puis initialise et héberge ce dernier dans la fenêtre spécifiée.
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +474,7 @@ Différent de zéro si l’initialisation du contrôle de code d’hébergement 
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être appelée avant d’utiliser l’API d’hébergement de contrôle ATL. Suite à un appel à cette fonction, le **« AtlAxWin »** classe de fenêtre peut être utilisée dans les appels à [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) ou [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), comme décrit dans le SDK Windows.  
+Cette fonction doit être appelée avant d’utiliser l’API d’hébergement de contrôle ATL. Suite à un appel à cette fonction, le **« AtlAxWin »** classe de fenêtre peut être utilisée dans les appels à [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) ou [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), comme décrit dans le SDK Windows.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 

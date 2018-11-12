@@ -1,26 +1,16 @@
 ---
-title: Macros ATL | Microsoft Docs
-ms.custom: ''
+title: Macros ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL, macros
 - macros, ATL
 ms.assetid: 788bd803-e7dc-4dc5-9e8d-31649471415b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d99306fe806c29d224289d70ee7ea42555aa1e98
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9523ceef462dc0fbf7669467a72749a8cbd83617
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105425"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624940"
 ---
 # <a name="atl-macros"></a>Macros ATL
 
@@ -50,7 +40,7 @@ Fournit des équipements de trace et de débogage utiles.
 [Macros de gestion des exceptions](../../atl/reference/exception-handling-macros.md)<br/>
 Prennent en charge la gestion des exceptions.
 
-[Macros de mappage des messages](../../atl/reference/message-map-macros-atl.md)<br/>
+[Macros de table des messages](../../atl/reference/message-map-macros-atl.md)<br/>
 Définir les tables des messages et des entrées.
 
 [Macros de mappage d’objets](../../atl/reference/object-map-macros.md)<br/>
@@ -89,5 +79,5 @@ Transférer les messages de fenêtre.
 [Fonctions](../../atl/reference/atl-functions.md)<br/>
 [Variables globales](../../atl/reference/atl-global-variables.md)<br/>
 [Les classes et structs](../../atl/reference/atl-classes.md)<br/>
-[Typedef](../../atl/reference/atl-typedefs.md)   
+[Typedef](../../atl/reference/atl-typedefs.md)
 

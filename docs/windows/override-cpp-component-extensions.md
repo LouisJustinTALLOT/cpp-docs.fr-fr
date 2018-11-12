@@ -1,27 +1,17 @@
 ---
-title: Remplacer (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Remplacer (C++ / c++ / CLI et c++ / CX)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - overriding, override keyword [C++]
 - override keyword [C++]
 ms.assetid: 34d19257-1686-4fcd-96f5-af07c70ba914
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: fc124ffcdd0ff428c4ef696bf54a27eb9b0ee7d8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: be7a347e4ddc700acaf4c5a968af648195445485
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647367"
 ---
 # <a name="override--ccli-and-ccx"></a>Remplacer (C++ / c++ / CLI et c++ / CX)
 
@@ -55,7 +45,7 @@ struct X : public I1 {
 
 L’exemple de code suivant montre que **remplacer** peut être utilisé dans les compilations de Windows Runtime.
 
-```cpp 
+```cpp
 // override_keyword_2.cpp
 // compile with: /ZW /c
 ref struct I1 {

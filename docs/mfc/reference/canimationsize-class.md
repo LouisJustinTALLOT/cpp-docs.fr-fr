@@ -1,10 +1,6 @@
 ---
-title: CAnimationSize, classe | Microsoft Docs
-ms.custom: ''
+title: CAnimationSize, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationSize
 - AFXANIMATIONCONTROLLER/CAnimationSize
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationSize::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationSize::m_cxValue
 - AFXANIMATIONCONTROLLER/CAnimationSize::m_cyValue
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationSize [MFC], CAnimationSize
 - CAnimationSize [MFC], AddTransition
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 974bf49b4315095a2103c50bfb81cc5e164273d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ad7200ca53aa99104270209ca253b93d2393d8a8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433168"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448644"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize, classe
 
@@ -136,7 +126,6 @@ Construit un objet de taille de l’animation.
 
 ```
 CAnimationSize();
-
 
 CAnimationSize(
     const CSize& szDefault,

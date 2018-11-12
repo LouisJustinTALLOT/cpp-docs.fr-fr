@@ -1,27 +1,17 @@
 ---
-title: Personnalisation de l’élément d’en-tête&#39;s apparence | Microsoft Docs
-ms.custom: ''
+title: Personnalisation de l’élément d’en-tête&#39;s apparence
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - header controls [MFC], customization of items
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61c0e3e26679b2b84e3ea18a8e1bb92722d73e22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8610a3fcc489e69d95f0b0d2e78987664130555e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442901"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511018"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Personnalisation de l’élément d’en-tête&#39;s apparence
 
@@ -31,15 +21,15 @@ Voici un échantillon des styles que vous pouvez définir et leur objectif :
 
 - Pour rendre un élément d’en-tête se présenter comme un bouton de commande, utilisez le **HDS_BUTTONS** style.
 
-     Utilisez ce style si vous souhaitez exécuter des actions en réponse aux clics de souris sur un élément d’en-tête, telles que le tri des données par une colonne particulière, comme c’est le cas dans Microsoft Outlook.
+   Utilisez ce style si vous souhaitez exécuter des actions en réponse aux clics de souris sur un élément d’en-tête, telles que le tri des données par une colonne particulière, comme c’est le cas dans Microsoft Outlook.
 
 - Pour donner des éléments d’en-tête une apparence « réactive » lorsque le curseur de la souris passe dessus, utilisez le **HDS_HOTTRACK** style.
 
-     Suivi affiche un contour 3D lorsque le pointeur passe sur un élément dans un sinon plat barre.
+   Suivi affiche un contour 3D lorsque le pointeur passe sur un élément dans un sinon plat barre.
 
 - Pour indiquer que le contrôle header doit être masqué, utilisez le **HDS_HIDDEN** style.
 
-     Le **HDS_HIDDEN** style indique que le contrôle header est destiné à être utilisé comme un conteneur de données et pas un contrôle visuel. Ce style ne masque pas automatiquement le contrôle, mais, au lieu de cela, affecte le comportement de `CHeaderCtrl::Layout`. La valeur retournée dans le *cy* membre de la `WINDOWPOS` structure sera égal à zéro qui indique que le contrôle ne doit pas être visible par l’utilisateur.
+   Le **HDS_HIDDEN** style indique que le contrôle header est destiné à être utilisé comme un conteneur de données et pas un contrôle visuel. Ce style ne masque pas automatiquement le contrôle, mais, au lieu de cela, affecte le comportement de `CHeaderCtrl::Layout`. La valeur retournée dans le *cy* membre de la `WINDOWPOS` structure sera égal à zéro qui indique que le contrôle ne doit pas être visible par l’utilisateur.
 
 Pour plus d’informations sur ces propriétés, consultez [éléments](/windows/desktop/Controls/header-controls) dans le SDK Windows. Pour plus d’informations sur l’ajout d’éléments à un contrôle header, consultez [Ajout d’éléments au contrôle Header](../mfc/adding-items-to-the-header-control.md).
 

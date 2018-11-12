@@ -1,10 +1,6 @@
 ---
-title: vsscanf_s, vswscanf_s | Microsoft Docs
-ms.custom: ''
+title: vsscanf_s, vswscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vswscanf_s
 - vsscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
-dev_langs:
-- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbcf6d0a8b54cc08242d613b24c415ac1ef05fd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3106e3533f5bb65334f8a4f3d38f55d886faef4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417101"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477166"
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
 
@@ -78,7 +68,7 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-Le **vsscanf_s** fonction lit les données à partir de *tampon* dans les emplacements qui sont fournies par chaque argument dans le *arglist* liste d’arguments. Les arguments dans la liste d’arguments spécifient des pointeurs vers les variables qui ont un type qui correspond à un spécificateur de type dans *format*. Contrairement à la version la moins sécurisée **vsscanf**, un paramètre de taille de mémoire tampon est requis lorsque vous utilisez les caractères du champ de type **c**, **C**, **s**, **S**, ou ensembles de contrôle de la chaîne sont entourées de **[]**. La taille de mémoire tampon en caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite.
+Le **vsscanf_s** fonction lit les données à partir de *tampon* dans les emplacements qui sont fournis par chaque argument dans le *arglist* liste d’arguments. Les arguments dans la liste d’arguments spécifient des pointeurs vers des variables qui ont un type qui correspond à un spécificateur de type dans *format*. Contrairement à la version moins sécurisée **vsscanf**, un paramètre de taille de mémoire tampon est nécessaire lorsque vous utilisez les caractères de champ de type **c**, **C**, **s**, **S**, ou les jeux de contrôle de chaîne sont placés entre **[]**. La taille de mémoire tampon en caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite.
 
 La taille de la mémoire tampon inclut le caractère Null de fin. Un champ de spécification de largeur peut être utilisé pour faire en sorte que le jeton lu tiendra dans la mémoire tampon. Si aucun champ de spécification de largeur n'est utilisé, et si le jeton lu est trop grand pour la mémoire tampon, aucune valeur n'est écrite dans cette mémoire tampon.
 
@@ -87,9 +77,9 @@ Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_
 > [!NOTE]
 > Le paramètre de taille est de type **non signé**, et non **size_t**.
 
-Le *format* contrôles argument des champs de l’interprétation de l’entrée et a la même forme et fonction que la *format* argument pour le **scanf_s** (fonction). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Le *format* contrôles d’argument des champs de l’interprétation de l’entrée et a les mêmes forme et fonction que le *format* argument pour le **scanf_s** (fonction). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-**vswscanf_s** est une version à caractères larges de **vsscanf_s**; les arguments de **vswscanf_s** sont des chaînes à caractères larges. **vsscanf_s** ne gère pas les caractères hexadécimaux multioctets. **vswscanf_s** ne traite pas hexadécimal de pleine chasse Unicode ou des caractères de la « zone de compatibilité ». Dans le cas contraire, **vswscanf_s** et **vsscanf_s** se comportent de façon identique.
+**vswscanf_s** est une version à caractères larges de **vsscanf_s**; les arguments de **vswscanf_s** sont des chaînes à caractères larges. **vsscanf_s** ne gère pas les caractères hexadécimaux multioctets. **vswscanf_s** ne gère pas hexadécimaux entiers Unicode ou caractères de « zone de compatibilité ». Sinon, **vswscanf_s** et **vsscanf_s** ont un comportement identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -97,7 +87,7 @@ Le *format* contrôles argument des champs de l’interprétation de l’entrée
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstscanf_s**|**vsscanf_s**|**vsscanf_s**|**vswscanf_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

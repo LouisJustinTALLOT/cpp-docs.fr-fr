@@ -1,10 +1,6 @@
 ---
-title: COleDocument, classe | Microsoft Docs
-ms.custom: ''
+title: COleDocument, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDocument
 - AFXOLE/COleDocument
@@ -31,8 +27,6 @@ f1_keywords:
 - AFXOLE/COleDocument::OnUpdateObjectVerbMenu
 - AFXOLE/COleDocument::OnUpdatePasteLinkMenu
 - AFXOLE/COleDocument::OnUpdatePasteMenu
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDocument [MFC], COleDocument
 - COleDocument [MFC], AddItem
@@ -58,16 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42ec82a1f0aa025b8de938d30117032bd666d8bb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f28178240f7d17e124970d91ec7eb338ef110e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403173"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452147"
 ---
 # <a name="coledocument-class"></a>COleDocument, classe
 
@@ -558,6 +548,4 @@ Ainsi, l’infrastructure pour inviter l’utilisateur à enregistrer le documen
 [Exemple MFC MFCBIND](../../visual-cpp-samples.md)<br/>
 [CDocument, classe](../../mfc/reference/cdocument-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

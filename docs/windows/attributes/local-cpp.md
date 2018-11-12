@@ -1,28 +1,17 @@
 ---
-title: local (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: local (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.local
-dev_langs:
-- C++
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e24efe4d4ad4f4e28b93503ecf82936e3113c1ed
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 377d6ffbddb5f88533c8b4f054f0d658a9b19573
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791008"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489087"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -53,11 +42,11 @@ Consultez [call_as](call-as.md) pour obtenir un exemple montrant comment utilise
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|`dispinterface`|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs d’interface](interface-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[call_as](call-as.md)  
+[call_as](call-as.md)

@@ -1,10 +1,6 @@
 ---
-title: '&lt;filesystem&gt;, énumerations | Microsoft Docs'
-ms.custom: ''
+title: '&lt;filesystem&gt;, énumérations'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - filesystem/std::filesystem::copy_options
 - filesystem/std::experimental::filesystem::copy_options
@@ -14,19 +10,13 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::file_type
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
-dev_langs:
-- C++
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff655573f77b901725fe18c2346c46306c9b853a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716805"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538929"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;, énumérations
 
@@ -73,7 +63,6 @@ enum class copy_options {
 |`directories_only`|Itérer uniquement sur les répertoires, ignorer les fichiers.|
 |`create_symlinks`|Créer des liens symboliques au lieu de copier les fichiers. Un chemin absolu doit servir de chemin source, sauf si la destination est le répertoire actuel.|
 |`create_hard_links`|Créer des liens physiques au lieu de copier les fichiers.|
-
 
 ## <a name="directory_options"></a> directory_options
 

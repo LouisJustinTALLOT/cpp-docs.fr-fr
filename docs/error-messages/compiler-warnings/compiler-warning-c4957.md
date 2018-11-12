@@ -1,31 +1,21 @@
 ---
-title: Avertissement du compilateur C4957 | Documents Microsoft
-ms.custom: ''
+title: Avertissement du compilateur C4957
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4957
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60cf1c03ace94c866b77c5340e2a04a9d8190e4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9afdd213baadd907afacde0ff7f14f3c78bc60a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705216"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528256"
 ---
 # <a name="compiler-warning-c4957"></a>Avertissement du compilateur C4957
 
-> '*cast*' : cast explicite de '*cast_from*'à'*cast_to*' n’est pas vérifiable
+> «*cast*' : cast explicite de '*cast_from*'en'*cast_to*' n’est pas vérifiable
 
 ## <a name="remarks"></a>Notes
 
@@ -33,7 +23,7 @@ Un cast aura pour résultat une image non vérifiable.
 
 Certains casts sont « safe » (par exemple, un `static_cast` qui déclenche des conversions définies par l’utilisateur et un `const_cast`). Un [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) garantit la génération d’un code vérifiable.
 
-Pour plus d’informations, consultez [Code pur et vérifiable (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Pour plus d’informations, consultez [Code pur et vérifiable (C++ / c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 Le **/CLR : safe** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 

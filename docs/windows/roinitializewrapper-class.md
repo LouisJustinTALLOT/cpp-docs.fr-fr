@@ -1,34 +1,24 @@
 ---
-title: Roinitializewrapper, classe | Microsoft Docs
-ms.custom: ''
+title: RoInitializeWrapper, classe
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper
 - corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::HRESULT
 - corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper
 - corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Wrappers::RoInitializeWrapper class
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::operator HRESULT operator
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper, constructor
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper, destructor
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3dd1b5df8749f22873a52782b6f528760c3823a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b43d5bb2f553d298584ab2ae497c22637d3beb0d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788759"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570551"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper, classe
 
@@ -74,7 +64,7 @@ Nom                                       | Description
 Récupère la valeur HRESULT produite par la dernière `RoInitializeWrapper` constructeur.
 
 ```cpp
-operator HRESULT()  
+operator HRESULT()
 ```
 
 ## <a name="roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
@@ -82,7 +72,7 @@ operator HRESULT()
 Initialise une nouvelle instance de la classe `RoInitializeWrapper`.
 
 ```cpp
-RoInitializeWrapper(   RO_INIT_TYPE flags)  
+RoInitializeWrapper(RO_INIT_TYPE flags)
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -99,7 +89,7 @@ Le `RoInitializeWrapper` classe appelle `Windows::Foundation::Initialize(flags)`
 Annule l’exécution de Windows.
 
 ```cpp
-~RoInitializeWrapper()  
+~RoInitializeWrapper()
 ```
 
 ### <a name="remarks"></a>Notes

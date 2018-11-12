@@ -1,18 +1,12 @@
 ---
-title: basic_istringstream, classe | Microsoft Docs
-ms.custom: ''
+title: basic_istringstream, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - sstream/std::basic_istringstream
 - sstream/std::basic_istringstream::allocator_type
 - sstream/std::basic_istringstream::rdbuf
 - sstream/std::basic_istringstream::str
 - sstream/std::basic_istringstream::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::basic_istringstream [C++]
 - std::basic_istringstream [C++], allocator_type
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9580068474eba77bcf50067efefb98b5949d464f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: fdf622bbef370e8b3625f419be29f293bc06eacc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109887"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643263"
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream, classe
 
@@ -171,7 +161,6 @@ Obtient ou définit le texte dans une mémoire tampon de chaîne sans modifier l
 
 ```cpp
 basic_string<Elem, Tr, Alloc> str() const;
-
 
 void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);

@@ -1,30 +1,20 @@
 ---
-title: Fonctions d’image Bitmap tramée et grise | Microsoft Docs
-ms.custom: ''
+title: fonctions d'image bitmap tramée et grise
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
 - AFXWIN/AfxDrawDitheredBitmap
 - AFXWIN/AfxGetDitheredBitmap
-dev_langs:
-- C++
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd0a0a25e1607b3b4318fdfca1f68f272cd02173
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380189"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490894"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>fonctions d'image bitmap tramée et grise
 
@@ -65,7 +55,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contrôleur de domaine de destination.
 
 *x*<br/>
@@ -146,7 +136,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointe vers le contrôleur de domaine de destination.
 
 *x*<br/>
@@ -177,7 +167,6 @@ Le bitmap source est dessiné sur le DC de destination avec deux couleurs (*cr1*
 ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
-
 
 ##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
 

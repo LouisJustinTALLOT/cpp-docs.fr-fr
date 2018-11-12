@@ -1,10 +1,6 @@
 ---
-title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l | Microsoft Docs
-ms.custom: ''
+title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclower
 - _ismbclower_l
@@ -26,8 +22,6 @@ apitype: DLLExport
 f1_keywords:
 - _ismbcupper
 - _ismbclower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcupper function
 - ismbclower function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ef7b21cc10ca5e72a5054e34b0e228be89d74cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402232"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431861"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -85,22 +75,22 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c*< = 255 et qu’il existe un correspondant **_ismbb** routine (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), résultat est la valeur de retour correspondantes **_ismbb** routine.
+Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c*< = 255 et qu’il existe un correspondant **_ismbb** routine (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le Il en résulte la valeur de retour correspondantes **_ismbb** routine.
 
 ## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions teste un caractère multioctet fourni pour un état donné.
 
-Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 |Routine|Condition de test|Exemple de page de codes 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Caractère alphabétique minuscule|Retourne zéro si et seulement si *c* est une représentation d’un octet une lettre alphabétique d’ASCII minuscules : 0 x 61 < =*c*< = 0x7A.|
-|**_ismbclower_l**|Caractère alphabétique minuscule|Retourne zéro si et seulement si *c* est une représentation d’un octet une lettre alphabétique d’ASCII minuscules : 0 x 61 < =*c*< = 0x7A.|
-|**_ismbcupper**|Caractère alphabétique majuscule|Retourne zéro si et seulement si *c* est une représentation d’un octet de lettres ASCII majuscules anglais : 0 x 41 < =*c*< = 0x5A.|
-|**_ismbcupper_l**|Caractère alphabétique majuscule|Retourne zéro si et seulement si *c* est une représentation d’un octet de lettres ASCII majuscules anglais : 0 x 41 < =*c*< = 0x5A.|
+|**_ismbclower**|Caractère alphabétique minuscule|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais minuscule ASCII : 0 x 61 < =*c*< = 0x7A.|
+|**_ismbclower_l**|Caractère alphabétique minuscule|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais minuscule ASCII : 0 x 61 < =*c*< = 0x7A.|
+|**_ismbcupper**|Caractère alphabétique majuscule|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’un caractère en anglais majuscule ASCII : 0 x 41 < =*c*< = 0x5A.|
+|**_ismbcupper_l**|Caractère alphabétique majuscule|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’un caractère en anglais majuscule ASCII : 0 x 41 < =*c*< = 0x5A.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

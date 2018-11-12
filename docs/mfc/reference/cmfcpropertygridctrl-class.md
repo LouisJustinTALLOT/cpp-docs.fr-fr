@@ -1,10 +1,6 @@
 ---
-title: Classe CMFCPropertyGridCtrl | Microsoft Docs
-ms.custom: ''
+title: Classe CMFCPropertyGridCtrl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridCtrl
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl
@@ -80,8 +76,6 @@ f1_keywords:
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnPropertyChanged
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnSelectCombo
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ValidateItemData
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], CMFCPropertyGridCtrl
 - CMFCPropertyGridCtrl [MFC], accSelect
@@ -156,16 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47af9bf4a42f02ce16cc6f43e0689bfa2c5003b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 764a1fc33d91888c8c32111eca41666d9d0abbd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557324"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 
@@ -247,7 +237,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Indique si le framework redessine les colonnes nom et la valeur du contrôle de grille de propriété actuel lorsqu’un utilisateur redimensionne les colonnes.|
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Indique si l’apparence du contrôle de grille de propriété est dans le style qui est utilisé par Visual Studio .NET.|
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Spécifie comment afficher les propriétés modifiées.|
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Supprime tous les objets de propriété à partir d’un contrôle de grille de propriétés.|
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Restaure la valeur d’origine de toutes les propriétés.|
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Définit ou réinitialise le mode alphabétique.|
@@ -331,7 +321,6 @@ L’exemple suivant montre comment configurer un objet de contrôle de grille de
 
 ##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect
 
-
 ```
 virtual HRESULT accSelect(
     long flagsSelect,
@@ -340,8 +329,8 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>Paramètres
 
-*flagsSelect*<br/>
-[in] [in] *varChild*
+[in] *flagsSelect*<br/>
+[in] *varChild*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -391,14 +380,13 @@ Cette méthode recalcule la façon de dessiner le contrôle de grille de propri�
 
 ##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-
 ```
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bShow*
+[in] *bShow*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -527,7 +515,6 @@ TRUE si cette méthode a réussi ; Sinon, FALSE.
 Utilisez cette méthode pour supprimer une propriété et sous-éléments, à partir du contrôle de grille de propriété.
 
 ##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors
-
 
 ```
 BOOL DrawControlBarColors() const;
@@ -682,14 +669,13 @@ Utilisez le [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) 
 
 ##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount
 
-
 ```
 virtual HRESULT get_accChildCount(long* pcountChildren);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pcountChildren*
+[in] *pcountChildren*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -697,21 +683,19 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ##  <a name="get_accfocus"></a>  CMFCPropertyGridCtrl::get_accFocus
 
-
 ```
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pvarChild*
+[in] *pvarChild*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="get_acchelp"></a>  CMFCPropertyGridCtrl::get_accHelp
-
 
 ```
 virtual HRESULT get_accHelp(
@@ -721,15 +705,14 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>Paramètres
 
-*varChild*<br/>
-[in] [in] *pszHelp*
+[in] *varChild*<br/>
+[in] *pszHelp*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="get_acchelptopic"></a>  CMFCPropertyGridCtrl::get_accHelpTopic
-
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -740,15 +723,15 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszHelpFile*<br/>
-[in] [in] *varChild* [in] *pidTopic*
+[in] *pszHelpFile*<br/>
+[in] *varChild*<br/>
+[in] *pidTopic*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="get_acckeyboardshortcut"></a>  CMFCPropertyGridCtrl::get_accKeyboardShortcut
-
 
 ```
 virtual HRESULT get_accKeyboardShortcut(
@@ -758,8 +741,8 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>Paramètres
 
-*varChild*<br/>
-[in] [in] *pszKeyboardShortcut*
+[in] *varChild*<br/>
+[in] *pszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -767,14 +750,13 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ##  <a name="get_accselection"></a>  CMFCPropertyGridCtrl::get_accSelection
 
-
 ```
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pvarChildren*
+[in] *pvarChildren*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1137,7 +1119,6 @@ Utilisez le [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) métho
 
 ##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
 
-
 ```
 BOOL IsAlwaysShowUserToolTip() const;
 ```
@@ -1308,7 +1289,7 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 ### <a name="remarks"></a>Notes
@@ -1325,7 +1306,7 @@ virtual void OnDrawDescription(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *Rect*<br/>
@@ -1345,7 +1326,7 @@ virtual void OnDrawList(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 ### <a name="remarks"></a>Notes
@@ -1362,7 +1343,7 @@ virtual int OnDrawProperty(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *pProp*<br/>

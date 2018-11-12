@@ -1,27 +1,17 @@
 ---
-title: Erreur des LNK1106 des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK1106
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1106
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1106
 ms.assetid: 528f7e65-04be-4966-b8af-9276837c7cda
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7551e2f3f1efc90913981feb674f48aadb9ace51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110872"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619031"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Erreur des outils Éditeur de liens LNK1106
 
@@ -33,16 +23,16 @@ L’outil ne peut pas lire ou écrire dans `location` dans un fichier mappé en 
 
 1. Disque plein.
 
-     Libérer de l’espace et le lier à nouveau.
+   Libérer de l’espace et le lier à nouveau.
 
 1. Essayez de lier un réseau.
 
-     Certains réseaux ne prennent pas entièrement en charge les fichiers mappés en mémoire utilisés par l’éditeur de liens. Essayer la liaison sur votre disque local.
+   Certains réseaux ne prennent pas entièrement en charge les fichiers mappés en mémoire utilisés par l’éditeur de liens. Essayer la liaison sur votre disque local.
 
 1. Bloc défectueux sur votre disque.
 
-     Bien que le système d’exploitation et le matériel de disque doivent avoir a détecté une telle erreur, vous souhaiterez exécuter un programme de vérification du disque.
+   Bien que le système d’exploitation et le matériel de disque doivent avoir a détecté une telle erreur, vous souhaiterez exécuter un programme de vérification du disque.
 
 1. Espace du tas insuffisant.
 
-     Consultez [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) pour plus d’informations.
+   Consultez [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) pour plus d’informations.

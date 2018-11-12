@@ -1,10 +1,6 @@
 ---
-title: CCriticalSection, classe | Microsoft Docs
-ms.custom: ''
+title: CCriticalSection, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CCriticalSection
 - AFXMT/CCriticalSection
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXMT/CCriticalSection::Lock
 - AFXMT/CCriticalSection::Unlock
 - AFXMT/CCriticalSection::m_sect
-dev_langs:
-- C++
 helpviewer_keywords:
 - CCriticalSection [MFC], CCriticalSection
 - CCriticalSection [MFC], Lock
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e5147faaf0170a10295006f12d7e95f5dfd3e8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 152efe6b1c5e8be67a3c37cc7e56b12c88c1b4dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641464"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection, classe
 
@@ -54,7 +44,7 @@ class CCriticalSection : public CSyncObject
 |Nom|Description|
 |----------|-----------------|
 |[CCriticalSection::Lock](#lock)|Utiliser pour accéder à la `CCriticalSection` objet.|
-|[CCriticalSection::Unlock](#unlock)|Libère l'objet `CCriticalSection`.|
+|[CCriticalSection::Unlock](#unlock)|Libère l’objet `CCriticalSection`.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -81,7 +71,7 @@ Il existe deux méthodes pour utiliser un `CCriticalSection` objet : autonome e
 
 - Méthode autonome à utiliser un autonome `CCriticalSection` d’objet, de construire le `CCriticalSection` de l’objet lorsqu’il est nécessaire. Après un retour réussi à partir du constructeur, verrouiller explicitement l’objet avec un appel à [verrou](#lock). Appelez [Unlock](#unlock) lorsque vous avez terminé l’accès à la section critique. Cette méthode, lors de la façon la plus claire à une personne lisant votre code source, est plus sujette aux erreurs que vous devez penser à verrouiller et déverrouiller la section critique avant et après l’accès.
 
-     Une méthode plus préférable consiste à utiliser le [CSingleLock](../../mfc/reference/csinglelock-class.md) classe. Il possède également un `Lock` et `Unlock` (méthode), mais vous n’avez pas à vous soucier de déverrouillage de la ressource si une exception se produit.
+   Une méthode plus préférable consiste à utiliser le [CSingleLock](../../mfc/reference/csinglelock-class.md) classe. Il possède également un `Lock` et `Unlock` (méthode), mais vous n’avez pas à vous soucier de déverrouillage de la ressource si une exception se produit.
 
 - Incorporé de méthode, vous pouvez également partager une classe avec plusieurs threads en ajoutant un `CCriticalSection`-membre de données de type à la classe et de verrouillage le membre de données si nécessaire.
 

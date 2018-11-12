@@ -1,10 +1,6 @@
 ---
-title: _query_new_mode | Microsoft Docs
-ms.custom: ''
+title: _query_new_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _query_new_mode
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - query_new_mode
 - _query_new_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - query_new_mode function
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8907b043e8b4441d6e5213a1d386dbc1a5a6910a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405716"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620023"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
-Retourne un entier qui indique le mode du nouveau gestionnaire défini par **_set_new_mode** pour **malloc**.
+Retourne un entier indiquant le mode de nouveau gestionnaire défini par **_set_new_mode** pour **malloc**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,13 +45,13 @@ int _query_new_mode(
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le mode Gestionnaire nouvelle actuel, à savoir 0 ou 1, pour **malloc**. Une valeur de 1 indique que, en cas d’échec d’allocation de mémoire, de retour **malloc** appelle la routine du nouveau gestionnaire ; une valeur de retour de 0 indique qu’il n’existe pas.
+Retourne le mode Gestionnaire nouveau actuel, à savoir 0 ou 1, pour **malloc**. Une valeur de retour 1 indique qui, en cas d’échec d’allocation de mémoire, **malloc** appelle la routine de nouveau gestionnaire ; une valeur de retour 0 indique qu’il n’existe pas.
 
 ## <a name="remarks"></a>Notes
 
-C++ **_query_new_mode** fonction retourne un entier qui indique le nouveau mode de gestionnaire est défini par le C++ [_set_new_mode](set-new-mode.md) fonctionner pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique que ce soit, sur les échecs d’allocation de mémoire, **malloc** consiste à appeler la routine du gestionnaire en tant que jeu par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de gestionnaire de nouveau en cas d’échec. Vous pouvez utiliser **_set_new_mode** pour remplacer ce comportement, qui en cas d’échec **malloc** appelle la routine du gestionnaire dans la même façon que la **nouveau** opérateur s’il ne parvient pas à allocation de mémoire. Pour plus d’informations, consultez la description des [opérateurs new et delete](../../cpp/new-and-delete-operators.md) dans la Référence du langage C++.
+Le C++ **_query_new_mode** fonction retourne un entier qui indique le mode de nouveau gestionnaire défini par le C++ [_set_new_mode](set-new-mode.md) fonctionner pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec d’allocation de mémoire, **malloc** consiste à appeler la routine de nouveau gestionnaire telle que définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec. Vous pouvez utiliser **_set_new_mode** pour remplacer ce comportement par conséquent, qui en cas d’échec **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouveau** opérateur s’il ne parvient pas à allouer de la mémoire. Pour plus d’informations, consultez la description des [opérateurs new et delete](../../cpp/new-and-delete-operators.md) dans la Référence du langage C++.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

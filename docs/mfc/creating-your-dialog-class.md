@@ -1,12 +1,6 @@
 ---
-title: Création de votre classe de boîte de dialogue | Microsoft Docs
-ms.custom: ''
+title: Création de votre classe de boîte de dialogue
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], creating
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9cec6ac40834e8cd3ccc9e0eadb18630ee507b92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 924cf2d79056d958aad775f92a6d0df2d45c8a70
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442043"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536577"
 ---
 # <a name="creating-your-dialog-class"></a>Création de votre classe de boîte de dialogue
 

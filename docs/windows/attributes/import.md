@@ -1,28 +1,17 @@
 ---
-title: Importer (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: Import (attribut de COM C++)
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.import
-dev_langs:
-- C++
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a0509f6c1292ee7bb2e1ba97d1f75c626f3b0761
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: f9be9b86b6c6a6ceabbd354da1d7c1ceedc35227
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790948"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462199"
 ---
 # <a name="import"></a>d'importation
 
@@ -82,7 +71,7 @@ library MyLib {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -91,4 +80,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [importidl](importidl.md)<br/>
 [importlib](importlib.md)<br/>
 [include](include-cpp.md)<br/>
-[includelib](includelib-cpp.md)  
+[includelib](includelib-cpp.md)

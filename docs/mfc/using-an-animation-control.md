@@ -1,27 +1,17 @@
 ---
-title: À l’aide d’un contrôle Animation | Microsoft Docs
-ms.custom: ''
+title: Utilisation d'un contrôle Animation
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [MFC], animation
 - CAnimateCtrl class [MFC], animation controls
 - animation controls [MFC]
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3da9684d0218c631cbd745475d48f1cf23addde5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fa5ce6cc30d4bc31dbe52c0e559ce97e40acacba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630995"
 ---
 # <a name="using-an-animation-control"></a>Utilisation d'un contrôle Animation
 

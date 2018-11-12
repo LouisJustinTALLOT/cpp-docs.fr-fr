@@ -1,11 +1,6 @@
 ---
-title: catanh, catanhf, catanhl | Microsoft Docs
-ms.custom: ''
+title: catanh, catanhf, catanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catanh
 - catanhf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catanh
 - complex/catanhf
 - complex/catanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catanh function
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd74d00e7f5be5e7631bc33fb9b7ea13eb32a407
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393948"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646358"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 
-Récupère la tangente hyperbolique inverse d’un nombre complexe, avec des coupes de branche en dehors de l’intervalle [-1 ; + 1] sur l’axe réel.
+Récupère la tangente hyperbolique inverse d’un nombre complexe, avec des coupures en dehors de l’intervalle [-1 ; + 1] sur l’axe des réels.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,13 +68,13 @@ Nombre complexe qui représente un angle, en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La tangente hyperbolique inverse de *z*, en radians. Le résultat est illimité sur l’axe réel, ainsi que dans l’intervalle [-iπ/2 ; + iπ/2] sur l’axe imaginaire. Une erreur de domaine se produit si *z* est en dehors de l’intervalle [-1, + 1]. Une erreur de pôle se produira si *z* est -1 ou + 1.
+La tangente hyperbolique inverse de *z*, en radians. Le résultat est illimité sur l’axe des réels et dans l’intervalle [-iπ/2 ; + iπ/2] sur l’axe des imaginaires. Une erreur de domaine se produit si *z* est en dehors de l’intervalle [-1, + 1]. Une erreur de pôle se produira si *z* est -1 ou + 1.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **catanh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **catanh** accepte et retourne toujours un **_Dcomplex** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **catanh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **catanh** accepte et retourne toujours un **_Dcomplex** valeur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

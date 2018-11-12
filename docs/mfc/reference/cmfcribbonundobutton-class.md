@@ -1,10 +1,6 @@
 ---
-title: Cmfcribbonundobutton, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcribbonundobutton, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonUndoButton
 - AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::CleanUpUndoList
 - AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::GetActionNumber
 - AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::HasMenu
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], CMFCRibbonUndoButton
 - CMFCRibbonUndoButton [MFC], AddUndoAction
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 38b27a65c7a8c8305cd64391a23df706b40d0deb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78d6b3423f19fe0cf3caf3aa0184fbe779a6c029
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439248"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512891"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Cmfcribbonundobutton, classe
 
@@ -117,7 +107,6 @@ CMFCRibbonUndoButton(
     LPCTSTR lpszText,
     int nSmallImageIndex=-1,
     int nLargeImageIndex=-1);
-
 
 CMFCRibbonUndoButton(
     UINT nID,

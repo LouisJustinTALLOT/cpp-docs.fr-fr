@@ -1,12 +1,6 @@
 ---
-title: 'Windows Sockets : Arrière-plan | Microsoft Docs'
-ms.custom: ''
+title: 'Windows Sockets : arrière-plan'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - record-oriented data [MFC]
 - e-mail [MFC]
@@ -24,16 +18,12 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fe08de0cbeaf6e70c8d786f3cfc849094117cd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93342f734d1e475cbae1b7e3025c59e6e6f73284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468027"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets : arrière-plan
 
@@ -69,11 +59,11 @@ Deux types de socket sont disponibles :
 
 - Sockets de Stream
 
-     Stream de sockets fournissent pour un flux de données sans limites d’enregistrement : un flux d’octets. Flux sont garantis pour être remis et être séquencée et non-duplication correctement.
+   Stream de sockets fournissent pour un flux de données sans limites d’enregistrement : un flux d’octets. Flux sont garantis pour être remis et être séquencée et non-duplication correctement.
 
 - Sockets datagramme
 
-     Datagramme des flux de données de prise en charge orientée sur un enregistrement de sockets qui ne sont pas garanti pour être remis et ne peuvent pas être séquencée comme envoyé ni non dupliqué.
+   Datagramme des flux de données de prise en charge orientée sur un enregistrement de sockets qui ne sont pas garanti pour être remis et ne peuvent pas être séquencée comme envoyé ni non dupliqué.
 
 « Ordonnancé » signifie que les paquets sont remis dans l’ordre d’envoi. « Non dupliqué » signifie que vous obtenez un paquet particulier une seule fois.
 

@@ -1,10 +1,6 @@
 ---
-title: CWindow, classe | Microsoft Docs
-ms.custom: ''
+title: CWindow, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CWindow
 - ATLWIN/ATL::CWindow
@@ -154,21 +150,15 @@ f1_keywords:
 - ATLWIN/ATL::CWindow::WinHelp
 - ATLWIN/ATL::CWindow::m_hWnd
 - ATLWIN/ATL::CWindow::rcDefault
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 59258864eddb251b24f2e191d309707abf3736a8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861939"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441104"
 ---
 # <a name="cwindow-class"></a>CWindow, classe
 
@@ -499,7 +489,7 @@ Consultez [CheckDlgButton](/windows/desktop/api/winuser/nf-winuser-checkdlgbutto
 Vérifie la case d’option spécifié.
 
 ```
-BOOL CheckRadioButton(  
+BOOL CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
     int nIDCheckButton) throw();
@@ -667,7 +657,7 @@ Initialise le [m_hWnd](#m_hwnd) membre à *hWnd*, qui par défaut est NULL.
 Met à jour de la structure de la position de fenêtre plusieurs spécifiée pour la fenêtre spécifiée.
 
 ```
-HDWP DeferWindowPos(  
+HDWP DeferWindowPos(
     HDWP hWinPosInfo,
     HWND hWndInsertAfter,
     int x,
@@ -720,7 +710,7 @@ Le HWND associé le `CWindow` objet.
 Remplit une zone de liste avec les noms de tous les fichiers correspondant à un chemin d’accès spécifié ou le nom de fichier.
 
 ```
-int DlgDirList(  
+int DlgDirList(
     LPTSTR lpPathSpec,
     int nIDListBox,
     int nIDStaticPath,
@@ -736,7 +726,7 @@ Consultez [DlgDirList](/windows/desktop/api/winuser/nf-winuser-dlgdirlista) dans
 Remplit une zone de liste déroulante avec les noms de tous les fichiers correspondant à un chemin d’accès spécifié ou le nom de fichier.
 
 ```
-int DlgDirListComboBox(  
+int DlgDirListComboBox(
     LPTSTR lpPathSpec,
     int nIDComboBox,
     int nIDStaticPath,
@@ -752,7 +742,7 @@ Consultez [DlgDirListComboBox](/windows/desktop/api/winuser/nf-winuser-dlgdirlis
 Récupère la sélection actuelle d'une zone de liste.
 
 ```
-BOOL DlgDirSelect(  
+BOOL DlgDirSelect(
     LPTSTR lpString,
     int nCount,
     int nIDListBox) throw();
@@ -767,7 +757,7 @@ Consultez [DlgDirSelectEx](/windows/desktop/api/winuser/nf-winuser-dlgdirselecte
 Récupère la sélection actuelle à partir d’une zone de liste déroulante.
 
 ```
-BOOL DlgDirSelectComboBox(  
+BOOL DlgDirSelectComboBox(
     LPTSTR lpString,
     int nCount,
     int nIDComboBox) throw();
@@ -927,7 +917,7 @@ Le handle de fenêtre descendant.
 Appelez cette fonction pour obtenir un pointeur vers une interface d’un contrôle ActiveX qui est hébergé par un contrôle composite ou une boîte de dialogue qui héberge le contrôle.
 
 ```
-HRESULT GetDlgControl(  
+HRESULT GetDlgControl(
     int nID,
     REFIID iid,
     void** ppCtrl) throw();
@@ -969,7 +959,7 @@ Consultez [GetDlgCtrlID](/windows/desktop/api/winuser/nf-winuser-getdlgctrlid) d
 Récupère un pointeur vers une interface pour le contrôle ATL qui héberge le conteneur.
 
 ```
-HRESULT GetDlgHost(  
+HRESULT GetDlgHost(
     int nID,
     REFIID iid,
     void** ppHost) throw();
@@ -1011,7 +1001,7 @@ Consultez [GetDlgItem](/windows/desktop/api/winuser/nf-winuser-getdlgitem) dans 
 Traduit le texte d’un contrôle en entier.
 
 ```
-UINT GetDlgItemInt(  
+UINT GetDlgItemInt(
     int nID,
     BOOL* lpTrans = NULL,
     BOOL bSigned = TRUE) const throw();
@@ -1026,12 +1016,12 @@ Consultez [GetDlgItemInt](/windows/desktop/api/winuser/nf-winuser-getdlgitemint)
 Récupère le texte d’un contrôle.
 
 ```
-UINT GetDlgItemText(  
+UINT GetDlgItemText(
     int nID,
     LPTSTR lpStr,
     int nMaxCount) const throw();
 
-BOOL GetDlgItemText(  
+BOOL GetDlgItemText(
     int nID,
     BSTR& bstrText) const throw();
 ```
@@ -1202,7 +1192,7 @@ Consultez [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) d
 Récupère la plage de barre de défilement.
 
 ```
-BOOL GetScrollRange(  
+BOOL GetScrollRange(
     int nBar,
     LPINT lpMinPos,
     LPINT lpMaxPos) const throw();
@@ -1543,7 +1533,7 @@ Consultez [HideCaret](/windows/desktop/api/winuser/nf-winuser-hidecaret) dans le
 Met en surbrillance ou supprime la mise en surbrillance d’un élément de menu de niveau supérieur.
 
 ```
-BOOL HiliteMenuItem(  
+BOOL HiliteMenuItem(
     HMENU hMenu,
     UINT uHiliteItem,
     UINT uHilite) throw();
@@ -1785,12 +1775,12 @@ HWND m_hWnd throw() throw();
 Convertit un ensemble de points à partir de l’espace de coordonnées de la fenêtre à l’espace de coordonnées d’une autre fenêtre.
 
 ```
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPPOINT lpPoint,
     UINT nCount) const throw();
 
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPRECT lpRect) const throw();
 ```
@@ -1806,7 +1796,7 @@ La deuxième version de cette méthode vous permet de convertir les coordonnées
 Affiche une boîte de message.
 
 ```
-int MessageBox(  
+int MessageBox(
     LPCTSTR lpszText,
     LPCTSTR lpszCaption = NULL,
     UINT nType = MB_OK) throw();
@@ -1825,7 +1815,7 @@ Consultez [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) dans 
 Modifie les styles de fenêtre de la `CWindow` objet.
 
 ```
-BOOL ModifyStyle(  
+BOOL ModifyStyle(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1871,7 +1861,7 @@ Pour modifier une fenêtre de styles étendus, appelez [ModifyStyleEx](#modifyst
 Modifie les styles de fenêtre étendus de la `CWindow` objet.
 
 ```
-BOOL ModifyStyleEx(  
+BOOL ModifyStyleEx(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1917,14 +1907,14 @@ Pour modifier à l’aide de styles de fenêtre standard de windows, appelez [Mo
 Modifie la taille et la position de la fenêtre.
 
 ```
-BOOL MoveWindow(  
+BOOL MoveWindow(
     int x,
     int y,
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE) throw();
 
-BOOL MoveWindow(  
+BOOL MoveWindow(
     LPCRECT lpRect,
     BOOL bRepaint = TRUE) throw();
 ```
@@ -1980,7 +1970,7 @@ CWindow& operator= (HWND hWnd) throw();
 Place un message dans la file d’attente de message associé au thread qui a créé la fenêtre.
 
 ```
-BOOL PostMessage(  
+BOOL PostMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2077,7 +2067,7 @@ static RECT rcDefault;
 Met à jour un rectangle spécifié ou une région dans la zone cliente.
 
 ```
-BOOL RedrawWindow(  
+BOOL RedrawWindow(
     LPCRECT lpRectUpdate = NULL,
     HRGN hRgnUpdate = NULL,
     UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
@@ -2114,7 +2104,7 @@ Consultez [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) dans le
 Redimensionne la fenêtre à la taille de la zone client spécifié.
 
 ```
-BOOL ResizeClient(  
+BOOL ResizeClient(
     int nWidth,
     int nHeight,
     BOOL bRedraw = FALSE) throw();
@@ -2151,7 +2141,7 @@ La deuxième version de cette méthode vous permet de convertir les coordonnées
 Fait défiler la zone cliente spécifiée.
 
 ```
-BOOL ScrollWindow(  
+BOOL ScrollWindow(
     int xAmount,
     int yAmount,
     LPCRECT lpRect = NULL,
@@ -2167,7 +2157,7 @@ Consultez [ScrollWindow](/windows/desktop/api/winuser/nf-winuser-scrollwindow) d
 Fait défiler la zone client spécifié avec des fonctionnalités supplémentaires.
 
 ```
-int ScrollWindowEx(  
+int ScrollWindowEx(
     int dx,
     int dy,
     LPCRECT lpRectScroll,
@@ -2186,7 +2176,7 @@ Consultez [ScrollWindowEx](/windows/desktop/api/winuser/nf-winuser-scrollwindowe
 Envoie un message à un contrôle.
 
 ```
-LRESULT SendDlgItemMessage(  
+LRESULT SendDlgItemMessage(
     int nID,
     UINT message,
     WPARAM wParam = 0,
@@ -2202,12 +2192,12 @@ Consultez [SendDlgItemMessage](/windows/desktop/api/winuser/nf-winuser-senddlgit
 Envoie un message à la fenêtre et ne retourne pas jusqu'à ce que la procédure de fenêtre ait traité le message.
 
 ```
-LRESULT SendMessage(  
+LRESULT SendMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
 
-static LRESULT SendMessage(  
+static LRESULT SendMessage(
     HWND hWnd,
     UINT message,
     WPARAM wParam,
@@ -2227,7 +2217,7 @@ Consultez [SendMessage](https://msdn.microsoft.com/library/windows/desktop/ms644
 Envoie le message spécifié à tous les enfants immédiats de le `CWindow` objet.
 
 ```
-void SendMessageToDescendants(  
+void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0,
@@ -2257,7 +2247,7 @@ Si *bDeep* a la valeur TRUE, le message est également envoyé à toutes les aut
 Envoie un message à la fenêtre.
 
 ```
-BOOL SendNotifyMessage(  
+BOOL SendNotifyMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2331,7 +2321,7 @@ En cas de réussite, l’identificateur précédent de la fenêtre. sinon 0.
 Modifie le texte d’un contrôle à la représentation sous forme de chaîne d’une valeur entière.
 
 ```
-BOOL SetDlgItemInt(  
+BOOL SetDlgItemInt(
     int nID,
     UINT nValue,
     BOOL bSigned = TRUE) throw();
@@ -2483,7 +2473,7 @@ Appelez `SetRedraw` pour autoriser les modifications à être redessiné ou pour
 Définit les paramètres d’une barre de défilement.
 
 ```
-int SetScrollInfo(  
+int SetScrollInfo(
     int nBar,
     LPSCROLLINFO lpScrollInfo,
     BOOL bRedraw = TRUE) throw();
@@ -2498,7 +2488,7 @@ Consultez [SetScrollInfo](/windows/desktop/api/winuser/nf-winuser-setscrollinfo)
 Modifie la position de la case de défilement.
 
 ```
-int SetScrollPos(  
+int SetScrollPos(
     int nBar,
     int nPos,
     BOOL bRedraw = TRUE) throw();
@@ -2513,7 +2503,7 @@ Consultez [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos) d
 Modifie la plage de barre de défilement.
 
 ```
-BOOL SetScrollRange(  
+BOOL SetScrollRange(
     int nBar,
     int nMinPos,
     int nMaxPos,
@@ -2529,7 +2519,7 @@ Consultez [SetScrollRange](/windows/desktop/api/winuser/nf-winuser-setscrollrang
 Crée un événement du minuteur.
 
 ```
-UINT SetTimer(  
+UINT SetTimer(
     UINT nIDEvent,
     UINT nElapse,
     void (CALLBACK* lpfnTimer)(HWND, UINT, UINT, DWORD) = NULL) throw();
@@ -2597,7 +2587,7 @@ Consultez [SetWindowPlacement](https://msdn.microsoft.com/library/windows/deskto
 Définit la taille, position et ordre de plan.
 
 ```
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     int x,
     int y,
@@ -2605,7 +2595,7 @@ BOOL SetWindowPos(
     int cy,
     UINT nFlags) throw();
 
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     LPCRECT lpRect,
     UINT nFlags) throw();
@@ -2770,7 +2760,7 @@ Consultez [ValidateRgn](/windows/desktop/api/winuser/nf-winuser-validatergn) dan
 Aide de Windows démarre.
 
 ```
-BOOL WinHelp(  
+BOOL WinHelp(
     LPCTSTR lpszHelp,
     UINT nCmd = HELP_CONTEXT,
     DWORD dwData = 0) throw();

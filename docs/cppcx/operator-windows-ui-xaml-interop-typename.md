@@ -1,24 +1,17 @@
 ---
-title: opérateur Windows::UI::Xaml::Interop::TypeName | Microsoft Docs
-ms.custom: ''
+title: Windows::UI::Xaml::Interop::TypeName, opérateur
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 262fb9d08da72201db041eff1a510a598851e3e2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c77655ed7692c4cdccc311bc27c492126d62e54e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105963"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659211"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Windows::UI::Xaml::Interop::TypeName, opérateur
 
-Permet la conversion de `Platform::Type` à [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).
+Permet la conversion de `Platform::Type` en [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,11 +21,11 @@ Operator TypeName(Platform::Type^ type);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) en fonction d’un `Platform::Type^`.
+Retourne [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) quand un `Platform::Type^`est fourni.
 
 ### <a name="remarks"></a>Notes
 
-`TypeName` est la structure Windows Runtime indépendante du langage pour représenter les informations de type. [Platform::Type](../cppcx/platform-type-class.md) est spécifique à C++ et ne peut pas être passé à travers l'interface binaire d'application (ABI). Voici une utilisation de `TypeName`, dans le [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) fonction :
+`TypeName` est la structure Windows Runtime indépendante du langage pour représenter les informations de type. [Platform::Type](../cppcx/platform-type-class.md) est spécifique à C++ et ne peut pas être passé à travers l'interface binaire d'application (ABI). Voici une utilisation de `TypeName`dans la fonction [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) :
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

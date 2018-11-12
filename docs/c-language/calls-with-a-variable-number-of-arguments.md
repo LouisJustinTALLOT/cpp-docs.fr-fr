@@ -1,12 +1,6 @@
 ---
-title: Appels avec un nombre variable d’arguments | Microsoft Docs
-ms.custom: ''
+title: Appels avec un nombre variable d’arguments
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - arguments [C++], function
 - arguments [C++], variable number of
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec70da7259ce0b04334bf9c0e1f529e76b46c6c3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aaf4236815632c9c764ffcf0a800cc02cf7ab501
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028218"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541165"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Appels avec un nombre variable d’arguments
 

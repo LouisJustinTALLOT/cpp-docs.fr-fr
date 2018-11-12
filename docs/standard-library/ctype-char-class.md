@@ -1,28 +1,18 @@
 ---
-title: ctype&lt;char&gt;, classe | Microsoft Docs
-ms.custom: ''
+title: ctype&lt;char&gt;, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - ctype<char>
 - locale/std::ctype<char>
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: faed3af6595b37146bfd565e09e9ceeea3ca5d73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: adaad8f76de5b712aea13794ef2d7b9a096fb8ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217652"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491989"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt;, classe
 
@@ -42,52 +32,42 @@ public:
     mask _Maskval,
     _Elem _Ch) const;
 
-
     const _Elem* is(
     const _Elem* first,
     const _Elem* last,
     mask* dest) const;
-
 
     const _Elem* scan_is(
     mask _Maskval,
     const _Elem* first,
     const _Elem* last) const;
 
-
     const _Elem* scan_not(
     mask _Maskval,
     const _Elem* first,
     const _Elem* last) const;
 
-
     _Elem tolower(
     _Elem _Ch) const;
-
 
     const _Elem* tolower(
     _Elem* first,
     const _Elem* last) const;
 
-
     _Elem toupper(
     _Elem _Ch) const;
-
 
     const _Elem* toupper(
     _Elem* first,
     const _Elem* last) const;
 
-
     _Elem widen(
     char _Byte) const;
-
 
     const _Elem* widen(
     const char* first,
     const char* last,
     _Elem* dest) const;
-
 
     const _Elem* _Widen_s(
     const char* first,
@@ -95,11 +75,9 @@ public:
     _Elem* dest,
     size_t dest_size) const;
 
-
     _Elem narrow(
     _Elem _Ch,
     char _Dflt = '\0') const;
-
 
     const _Elem* narrow(
     const _Elem* first,
@@ -107,14 +85,12 @@ public:
     char _Dflt,
     char* dest) const;
 
-
     const _Elem* _Narrow_s(
     const _Elem* first,
     const _Elem* last,
     char _Dflt,
     char* dest,
     size_t dest_size) const;
-
 
     static locale::id& id;
     explicit ctype(

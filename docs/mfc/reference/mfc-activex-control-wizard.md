@@ -1,14 +1,8 @@
 ---
-title: Assistant contrôle ActiveX MFC | Microsoft Docs
-ms.custom: ''
+title: Contrôle ActiveX MFC (Assistant)
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX controls [MFC], MFC
 - MFC ActiveX controls [MFC], wizards
@@ -16,23 +10,19 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ccf2da630c72962ee3e74badc250de5cce5f14e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d916517342bd28aaf77cdce20e2479eb80dec024
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446590"
 ---
 # <a name="mfc-activex-control-wizard"></a>Contrôle ActiveX MFC (Assistant)
 
 Un contrôle ActiveX est un type spécifique de [serveur automation](../../mfc/automation-servers.md); c’est un composant réutilisable. L’application qui héberge le contrôle ActiveX est le [client automation](../../mfc/automation-clients.md) de ce contrôle. Si votre objectif est de créer un tel composant réutilisable, utilisez ensuite cet Assistant pour créer votre contrôle. Consultez [contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md) pour plus d’informations.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](../activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](../activex-controls.md).
 
 Vous pouvez également créer une automatisation serveur MFC application à l’aide de la [Assistant Application MFC](../../mfc/reference/mfc-application-wizard.md).
 

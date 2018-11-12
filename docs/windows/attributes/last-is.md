@@ -1,28 +1,17 @@
 ---
-title: last_is (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: last_is (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.last_is
-dev_langs:
-- C++
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f9659baf5da491e93bcc085e3319729e38a5d750
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ce19d8d727a359054289200b2cdcb6a6427dc706
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790681"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545715"
 ---
 # <a name="lastis"></a>last_is
 
@@ -58,7 +47,7 @@ Consultez [first_is](first-is.md) pour obtenir un exemple montrant comment spéc
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -68,4 +57,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>
 [length_is](length-is.md)<br/>
-[size_is](size-is.md)  
+[size_is](size-is.md)

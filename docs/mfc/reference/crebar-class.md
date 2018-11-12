@@ -1,33 +1,23 @@
 ---
-title: CReBar, classe | Microsoft Docs
-ms.custom: ''
+title: CReBar (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CReBar
 - AFXEXT/CReBar
 - AFXEXT/CReBar::AddBar
 - AFXEXT/CReBar::Create
 - AFXEXT/CReBar::GetReBarCtrl
-dev_langs:
-- C++
 helpviewer_keywords:
 - CReBar [MFC], AddBar
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f5bc9bb1e537b7c8b338ed0164b0d85f27230b11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6a63440f5f415901128a09c7b5f34e73539fc3e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429225"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648823"
 ---
 # <a name="crebar-class"></a>CReBar (classe)
 
@@ -76,7 +66,7 @@ Un objet rebar se comporte comme un objet de barre d’outils. Un contrôle reba
 
 `CReBar`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxext.h
 
@@ -90,7 +80,6 @@ BOOL AddBar(
     LPCTSTR pszText = NULL,
     CBitmap* pbmp = NULL,
     DWORD dwStyle = RBBS_GRIPPERALWAYS | RBBS_FIXEDBMP);
-
 
 BOOL AddBar(
     CWnd* pBar,
@@ -189,6 +178,4 @@ Pour plus d’informations sur l’utilisation de `CReBarCtrl` pour personnalise
 [MFC, exemple MFCIE](../../visual-cpp-samples.md)<br/>
 [CControlBar, classe](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

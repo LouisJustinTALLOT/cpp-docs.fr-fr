@@ -1,28 +1,17 @@
 ---
-title: ms_union (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: ms_union (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.ms_union
-dev_langs:
-- C++
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 720d03cbab6712e5d76c5ee22c2e12b7b1b65742
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6b9788fc02a3bf4d59d34823ba83d86f97298597
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790648"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642466"
 ---
 # <a name="msunion"></a>ms_union
 
@@ -76,9 +65,9 @@ __interface IFireTabCtrl {
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|`dispinterface`|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)  
+[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)

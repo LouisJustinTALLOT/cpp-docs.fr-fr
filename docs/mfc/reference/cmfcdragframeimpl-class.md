@@ -1,27 +1,17 @@
 ---
-title: Cmfcdragframeimpl, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: Cmfcdragframeimpl, classe
+ms.date: 10/18/2018
 f1_keywords:
 - CMFCDragFrameImpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8cf56cec1a9b09a9176577fa7fce58a853a1d3aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2769b52e03d8d3de14fdbf431279dd9226323b0c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433996"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640698"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Cmfcdragframeimpl, classe
 
@@ -50,19 +40,17 @@ Vous pouvez contrôler l’épaisseur de la faire glisser le rectangle en utilis
 
 ##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame
 
-
 ```
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bClearInternalRects*
+[in] *bClearInternalRects*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="init"></a>  CMFCDragFrameImpl::Init
-
 
 ```
 void Init(CWnd* pDraggedWnd);
@@ -70,12 +58,11 @@ void Init(CWnd* pDraggedWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDraggedWnd*
+[in] *pDraggedWnd*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="movedragframe"></a>  CMFCDragFrameImpl::MoveDragFrame
-
 
 ```
 void MoveDragFrame(BOOL bForceMove = FALSE);
@@ -83,12 +70,11 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bForceMove*
+[in] *bForceMove*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="placetabpredocking"></a>  CMFCDragFrameImpl::PlaceTabPreDocking
-
 
 ```
 void PlaceTabPreDocking(
@@ -100,13 +86,15 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ### <a name="parameters"></a>Paramètres
 
-*pTabbedBar*<br/>
-[in] [in] *bFirstTime* [in] *pCBarToPlaceOn*
+[in] *pTabbedBar*<br/>
+
+[in] *bFirstTime*<br/>
+
+[in] *pCBarToPlaceOn*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="removetabpredocking"></a>  CMFCDragFrameImpl::RemoveTabPreDocking
-
 
 ```
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
@@ -114,12 +102,11 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pOldTargetBar*
+[in] *pOldTargetBar*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="resetstate"></a>  CMFCDragFrameImpl::ResetState
-
 
 ```
 void ResetState();

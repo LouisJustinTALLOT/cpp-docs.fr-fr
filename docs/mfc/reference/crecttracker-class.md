@@ -1,10 +1,6 @@
 ---
-title: CRectTracker, classe | Microsoft Docs
-ms.custom: ''
+title: CRectTracker (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -24,8 +20,6 @@ f1_keywords:
 - AFXEXT/CRectTracker::m_nStyle
 - AFXEXT/CRectTracker::m_rect
 - AFXEXT/CRectTracker::m_sizeMin
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRectTracker [MFC], CRectTracker
 - CRectTracker [MFC], AdjustRect
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b229382a5d72607d8aa624002a88ead88800a028
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390836"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473370"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (classe)
 
@@ -151,7 +141,6 @@ Crée et initialise un `CRectTracker` objet.
 ```
 CRectTracker();
 
-
 CRectTracker(
     LPCRECT lpSrcRect,
     UINT nStyle);
@@ -191,7 +180,7 @@ void Draw(CDC* pDC) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique sur lequel dessiner.
 
 ### <a name="remarks"></a>Notes
@@ -218,7 +207,7 @@ Pointeur vers le `RECT` qui contient le rectangle à dessiner.
 *pWndClipTo*<br/>
 Pointeur vers la fenêtre à utiliser dans le rectangle de détourage.
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique sur lequel dessiner.
 
 *pWnd*<br/>

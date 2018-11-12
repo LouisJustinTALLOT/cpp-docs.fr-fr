@@ -1,12 +1,6 @@
 ---
-title: Versions de la bibliothèque MFC | Microsoft Docs
-ms.custom: ''
+title: Versions de bibliothèque MFC
 ms.date: 1/09/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1781077896465d8a7a1d925262c3fd0696d24380
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410557"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537655"
 ---
 # <a name="mfc-library-versions"></a>Versions de bibliothèque MFC
 
@@ -95,7 +85,7 @@ Projets MFC utilisent le symbole de préprocesseur \_UNICODE pour indiquer la pr
 
 Les bibliothèques statiques MFC utilisent les conventions d’affectation de noms suivantes. Les noms de bibliothèque ont la forme
 
-> *u*AFX*c ** d*. LIB
+> <em>u</em>AFX<em>cd</em>. LIB
 
 où les lettres indiqués en italique minuscules sont des espaces réservés pour des spécificateurs dont la signification est indiquée dans le tableau suivant :
 

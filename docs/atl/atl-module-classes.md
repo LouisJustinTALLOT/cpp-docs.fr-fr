@@ -1,27 +1,17 @@
 ---
-title: Module ATL, Classes | Microsoft Docs
-ms.custom: ''
+title: Module ATL, classes
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComModule class, what's changed
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 47ab7f69e5df98dbd9b09adaa2676c22fdf72bed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067634"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505263"
 ---
 # <a name="atl-module-classes"></a>Module ATL, classes
 
@@ -55,15 +45,15 @@ La fonctionnalité de `CComModule` a été distribuée dans plusieurs nouvelles 
 
 - Vérifiez la fonctionnalité dans `CComModule` granulaire.
 
-     Prise en charge de COM, le fenêtrage, débogage de l’interface et les fonctionnalités (DLL ou EXE) spécifique à l’application est maintenant dans des classes distinctes.
+   Prise en charge de COM, le fenêtrage, débogage de l’interface et les fonctionnalités (DLL ou EXE) spécifique à l’application est maintenant dans des classes distinctes.
 
 - Déclarer automatiquement l’instance globale de chacun de ces modules.
 
-     Une instance globale des classes du module requis est liée au projet.
+   Une instance globale des classes du module requis est liée au projet.
 
 - Supprimer la nécessité de l’appel de méthodes Init et terme.
 
-     Les méthodes Init et Term ont déplacés dans les constructeurs et les destructeurs des classes de module ; Il n’est plus nécessaire de les appeler à terme.
+   Les méthodes Init et Term ont déplacés dans les constructeurs et les destructeurs des classes de module ; Il n’est plus nécessaire de les appeler à terme.
 
 ## <a name="see-also"></a>Voir aussi
 

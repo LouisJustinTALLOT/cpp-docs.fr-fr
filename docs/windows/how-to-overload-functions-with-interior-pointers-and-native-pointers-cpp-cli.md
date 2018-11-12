@@ -1,26 +1,16 @@
 ---
-title: 'Comment : surcharger des fonctions avec des pointeurs intérieurs et des pointeurs natifs (C++ / c++ / CLI) | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : surcharger des fonctions avec des pointeurs intérieurs et des pointeurs natifs (C++/CLI)'
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Functions with interior and native pointers, overloading
 ms.assetid: d70df625-4aad-457c-84f5-70a0a290cc1f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 02f8d15c69bfef361d8ce34d9d6a1748692ea345
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: e7c3ca576b2f3d961b4720cc6175103c54316015
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327821"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666371"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Comment : surcharger des fonctions avec des pointeurs intérieurs et des pointeurs natifs (C++/CLI)
 
@@ -68,9 +58,9 @@ int main() {
 };
 ```
 
-```Output 
-in f( int* pi )  
-in f( interior_ptr<int> pi )  
+```Output
+in f( int* pi )
+in f( interior_ptr<int> pi )
 ```
 
 ## <a name="see-also"></a>Voir aussi

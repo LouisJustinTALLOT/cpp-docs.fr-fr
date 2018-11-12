@@ -1,28 +1,17 @@
 ---
-title: ProgID (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: ProgID (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.progid
-dev_langs:
-- C++
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b5e499a6faabda20450a7af76d97664b90464b36
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: cb4802fbf4d647f11298848e3dac1b1d92300ce8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790604"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654738"
 ---
 # <a name="progid"></a>progid
 
@@ -68,11 +57,11 @@ Consultez l’exemple de [coclasse](coclass.md) pour un exemple d’utilisation 
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Clé de progID](/windows/desktop/com/-progid--key)  
+[Clé de progID](/windows/desktop/com/-progid--key)

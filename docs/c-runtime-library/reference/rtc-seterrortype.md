@@ -1,10 +1,6 @@
 ---
-title: _RTC_SetErrorType | Microsoft Docs
-ms.custom: ''
+title: _RTC_SetErrorType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorType
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83395727b37ea3901e2e3c28d7adb6663f043d12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635670"
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 
@@ -59,7 +49,7 @@ int _RTC_SetErrorType(
 Nombre compris entre zéro et un, inférieur à la valeur retournée par [_RTC_NumErrors](rtc-numerrors.md).
 
 *ErrType*<br/>
-Valeur à affecter à ce *errnum*. Par exemple, vous pouvez utiliser une virgule **_CRT_ERROR**. Si vous utilisez **_CrtDbgReport** en tant que gestionnaire d’erreurs, *ErrType* ne peut être l’un des symboles définis dans [_CrtSetReportMode](crtsetreportmode.md). Si vous disposez de votre propre gestionnaire d’erreurs ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), vous pouvez avoir autant d’*ErrType* que d’*errnum*.
+Valeur à affecter à ce *errnum*. Par exemple, vous pouvez utiliser une virgule **_CRT_ERROR**. Si vous utilisez **_CrtDbgReport** en tant que gestionnaire d’erreurs, *ErrType* peut être seulement un des symboles définis dans [_CrtSetReportMode](crtsetreportmode.md). Si vous disposez de votre propre gestionnaire d’erreurs ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), vous pouvez avoir autant d’ *ErrType*qu’il y a d’ *errnum*.
 
 Un *ErrType* _rtc_errtype_ignore a une signification particulière pour **_CrtSetReportMode**; l’erreur est ignorée.
 
@@ -73,7 +63,7 @@ Par défaut, toutes les erreurs sont définies sur *ErrType* = 1, qui correspond
 
 Avant d’appeler cette fonction, vous devez d’abord appeler une des fonctions d’initialisation de vérification d’erreurs au moment de l’exécution. Consultez [Utilisation de contrôles d’exécution sans la bibliothèque Runtime C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

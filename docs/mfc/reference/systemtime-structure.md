@@ -1,27 +1,17 @@
 ---
-title: SYSTEMTIME, Structure | Microsoft Docs
-ms.custom: ''
+title: SYSTEMTIME, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - SYSTEMTIME
-dev_langs:
-- C++
 helpviewer_keywords:
 - SYSTEMTIME structure [MFC]
 ms.assetid: 9aaef4d6-de79-4fa1-8158-86b245ef5bff
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6882a4e169b7efa67bef02ab5abee1276384e52f
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: b46482a9f4eb0165b72d74cb7d69e96e2a15e953
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334537"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559046"
 ---
 # <a name="systemtime-structure"></a>SYSTEMTIME, structure
 

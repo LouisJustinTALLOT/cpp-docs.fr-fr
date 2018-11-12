@@ -1,10 +1,6 @@
 ---
-title: unordered_map, classe | Microsoft Docs
-ms.custom: ''
+title: unordered_map, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - unordered_map/std::unordered_map
 - unordered_map/std::unordered_map::allocator_type
@@ -52,8 +48,6 @@ f1_keywords:
 - unordered_map/std::unordered_map::swap
 - unordered_map/std::unordered_map::unordered_map
 - unordered_map/std::unordered_map::hash_function
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::unordered_map
 - std::unordered_map::allocator_type
@@ -144,16 +138,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d5fb638851398f39aad94675e1f4b0a59618dd2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 9106d8e2eaba1cc16b645f79418d0ff02766b04d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235670"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592190"
 ---
 # <a name="unorderedmap-class"></a>unordered_map, classe
 
@@ -1468,29 +1458,24 @@ Insère un élément ou une plage d'éléments dans une classe unordered_map.
 // (1) single element
 pair<iterator, bool> insert(    const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(    ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(    const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
 iterator insert(    const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(initializer_list<value_type>
@@ -2002,7 +1987,6 @@ Obtient ou définit le nombre maximal d’éléments par compartiment.
 
 ```cpp
 float max_load_factor() const;
-
 
 void max_load_factor(float factor);
 ```

@@ -1,28 +1,17 @@
 ---
-title: module (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: module (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.module
-dev_langs:
-- C++
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e999928e2080796c013107e3bc862d19426dbf88
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5692e07e71683b1c24f86a43e989ee3df1fbe904
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083526"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570610"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -181,4 +170,4 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>
-[version](version-cpp.md)  
+[version](version-cpp.md)

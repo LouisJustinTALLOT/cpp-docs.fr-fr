@@ -1,27 +1,16 @@
 ---
-title: TypeDef, Enum, Union et Struct (attributs) (C++ COM) | Microsoft Docs
-ms.custom: ''
+title: TypeDef, Enum, Union et Struct (attributs) (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e1511df2aeabe7cbd63549a1dca6e53944fbe2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790744"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631060"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Attributs Typedef, Enum, Union et Struct
 
@@ -84,8 +73,8 @@ Les attributs suivants s’appliquent à la [typedef](../../cpp/aliases-and-type
 |[aggregatable](aggregatable.md)|Indique que la classe prend en charge l’agrégation.|
 |[aggregates](aggregates.md)|Indique qu’un contrôle agrège la classe cible.|
 |[appobject](appobject.md)|Identifie la coclasse comme un objet de l’application, qui est associé à une application .exe complète et indique que les fonctions et les propriétés de la coclasse sont globalement disponibles dans cette bibliothèque de types.|
-|[coclass](coclass.md)|Crée un contrôle ActiveX.|
-|[COM_INTERFACE_ENTRY](com-interface-entry-cpp.md)|Ajoute une entrée de l’interface à un mappage COM.|
+|[coclasse](coclass.md)|Crée un contrôle ActiveX.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Ajoute une entrée de l’interface à un mappage COM.|
 |[control](control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|
 |[custom](custom-cpp.md)|Vous permet de définir votre propre attribut.|
 |[db_column](db-column.md)|Lie une colonne spécifiée à l’ensemble de lignes.|
@@ -107,7 +96,7 @@ Les attributs suivants s’appliquent à la [typedef](../../cpp/aliases-and-type
 |[requires_category](requires-category.md)|Spécifie les catégories de composant requis de la classe cible.|
 |[size_is](size-is.md)|Spécifie la taille de mémoire allouée pour les pointeurs de taille, taille des pointeurs vers des pointeurs de taille et seul ou les tableaux multidimensionnels.|
 |[source](source-cpp.md)|Sur une classe, spécifie les interfaces de source de l’objet COM pour les points de connexion. Sur une propriété ou une méthode, indique que le membre retourne un objet ou un VARIANT et qui est une source d’événements.|
-|[Threading](threading-cpp.md)|Spécifie le modèle de thread pour un objet COM.|
+|[threading](threading-cpp.md)|Spécifie le modèle de thread pour un objet COM.|
 |[unique](unique-cpp.md)|Spécifie un pointeur unique.|
 |[uuid](uuid-cpp-attributes.md)|Spécifie l’ID unique pour une classe ou interface.|
 |[version](version-cpp.md)|Identifie une version particulière entre plusieurs versions d’une classe.|

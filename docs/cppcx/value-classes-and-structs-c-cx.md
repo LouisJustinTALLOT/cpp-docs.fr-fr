@@ -1,23 +1,16 @@
 ---
-title: Classes et structs Value (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Classes de valeur et structures de valeur (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3e054bfbfe64630c426ff82bf0d76091c7e60c7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7f716e5ebdc3cf8c832442295897ba44509ff4e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109030"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435631"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes de valeur et structures de valeur (C++/CX)
 
@@ -159,4 +152,4 @@ public:
 [Système de type (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)<br/>
-[Classes et structures ref (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)
+[Classes et structures de référence (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

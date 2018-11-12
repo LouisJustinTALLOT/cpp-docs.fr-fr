@@ -1,10 +1,6 @@
 ---
-title: _matherr | Microsoft Docs
-ms.custom: ''
+title: _matherr
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _matherr
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _matherr
 - matherr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f8cba1887fe806c3a6cfa795437d3d60ed7f31e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445719"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -56,17 +46,17 @@ Pointeur vers la structure contenant des informations sur l’erreur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_matherr** renvoie la valeur 0 pour indiquer une erreur ou une valeur différente de zéro pour indiquer une réussite. Si **_matherr** retourne 0, un message d’erreur peut être affichés et **errno** est définie sur une valeur d’erreur approprié. Si **_matherr** renvoie une valeur différente de zéro, aucun message d’erreur s’affiche et **errno** demeure inchangée.
+**_matherr** retourne 0 pour indiquer une erreur ou une valeur différente de zéro pour indiquer la réussite. Si **_matherr** retourne 0, un message d’erreur peut être affichés et **errno** est définie sur une valeur d’erreur approprié. Si **_matherr** renvoie une valeur différente de zéro, aucun message d’erreur s’affiche et **errno** reste inchangé.
 
 Pour plus d’informations sur ces codes de retour, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **_matherr** fonction traite les erreurs générées par les fonctions à virgule flottante de la bibliothèque mathématique. Ces fonctions appellent **_matherr** lorsqu’une erreur est détectée.
+Le **_matherr** fonction traite les erreurs générées par les fonctions à virgule flottante de la bibliothèque mathématique. Ces fonctions appellent **_matherr** quand une erreur est détectée.
 
-Pour gérer les erreurs spéciales, vous pouvez fournir une autre définition de **_matherr**. Si vous utilisez la version liée dynamiquement de la bibliothèque d’exécution C (CRT), vous pouvez remplacer la valeur par défaut **_matherr** routine dans un fichier exécutable avec une version défini par l’utilisateur du client. Toutefois, vous ne pouvez pas remplacer la valeur par défaut **_matherr** routine dans un client de la DLL de la DLL CRT.
+Pour une gestion particulière des erreurs, vous pouvez fournir une autre définition de **_matherr**. Si vous utilisez la version liée dynamiquement de la bibliothèque d’exécution C (CRT), vous pouvez remplacer la valeur par défaut **_matherr** routine dans un fichier exécutable avec une version défini par l’utilisateur du client. Toutefois, vous ne pouvez pas remplacer la valeur par défaut **_matherr** routine dans un client de la DLL de la DLL CRT.
 
-Lorsqu’une erreur survient dans une routine de mathématiques, **_matherr** est appelée avec un pointeur vers un **_exception** structure type (défini dans \<math.h >) en tant qu’argument. La structure **_exception** contient les éléments suivants.
+Lorsqu’une erreur se produit dans une routine mathématique, **_matherr** est appelée avec un pointeur vers un **_exception** structure de type (défini dans \<math.h >) en tant qu’argument. La structure **_exception** contient les éléments suivants.
 
 ```C
 struct _exception
@@ -79,22 +69,22 @@ struct _exception
 };
 ```
 
-Le **type** membre spécifie le type d’erreur mathématique. Il s’agit d’une des valeurs suivantes, définies dans \<math.h > :
+Le **type** membre spécifie le type d’erreur mathématique. C’est une des valeurs suivantes, définies dans \<math.h > :
 
 |Macro|Signification|
 |-|-|
-**_DOMAIN**|Erreur de domaine argument
+**_DOMAINE**|Erreur de domaine d’argument
 **_SING**|Singularité de l’argument
 **_OVERFLOW**|Erreur de plage avec dépassement
-**_PLOSS**|Perte partielle de l’argument précision
-**_TLOSS**|Perte totale de l’argument précision
+**_PLOSS**|Perte partielle de précision
+**_TLOSS**|Perte totale de précision
 **_UNDERFLOW**|Le résultat est trop petit pour être représenté. (Cette condition n’est pas prise en charge.)
 
-Le membre de structure **name** est un pointeur désignant une chaîne terminée par le caractère Null qui contient le nom de la fonction ayant provoqué l’erreur. Les membres de structure **arg1** et **arg2** spécifient les valeurs qui ont provoqué l’erreur. Si seul un argument est fourni, il est stocké dans **arg1**.
+Le membre de structure **name** est un pointeur désignant une chaîne terminée par le caractère Null qui contient le nom de la fonction ayant provoqué l’erreur. Les membres de structure **arg1** et **arg2** spécifient les valeurs qui ont provoqué l’erreur. Si seul un seul argument est fourni, il est stocké dans **arg1**.
 
 La valeur de retour par défaut pour l’erreur donnée est **retval**. Si vous modifiez la valeur de retour, elle doit spécifier si une erreur s’est effectivement produite.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

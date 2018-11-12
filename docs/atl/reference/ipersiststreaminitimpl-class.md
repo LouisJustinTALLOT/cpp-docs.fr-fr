@@ -1,10 +1,6 @@
 ---
-title: Ipersiststreaminitimpl, classe | Microsoft Docs
-ms.custom: ''
+title: Ipersiststreaminitimpl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IPersistStreamInitImpl
 - ATLCOM/ATL::IPersistStreamInitImpl
@@ -14,23 +10,17 @@ f1_keywords:
 - ATLCOM/ATL::IPersistStreamInitImpl::IsDirty
 - ATLCOM/ATL::IPersistStreamInitImpl::Load
 - ATLCOM/ATL::IPersistStreamInitImpl::Save
-dev_langs:
-- C++
 helpviewer_keywords:
 - IPersistStreamInit ATL implementation
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 85e772b9222f2066259042e551fa393758559ab2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 472b01e169788ce3cf10f8ed9f2198c44cdeb88a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115870"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645664"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Ipersiststreaminitimpl, classe
 
@@ -43,7 +33,7 @@ Cette classe implémente `IUnknown` et fournit une implémentation par défaut d
 
 ```
 template<class T>
-class ATL_NO_VTABLE IPersistStreamInitImpl 
+class ATL_NO_VTABLE IPersistStreamInitImpl
    : public IPersistStreamInit
 ```
 

@@ -1,27 +1,17 @@
 ---
-title: 'Comment : exécuter de mappage et réduire les opérations en parallèle | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : exécuter des opérations de mappage et de réduction en parallèle'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - parallel_transform function, example
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2eb7580b82d336e3a99d89f6bde6c2f8c950b6c3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b73e46e63fc1b320a84322bf2b0efd7adf244ccb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411298"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651851"
 ---
 # <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Comment : exécuter des opérations de mappage et de réduction en parallèle
 

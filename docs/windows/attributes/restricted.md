@@ -1,28 +1,17 @@
 ---
-title: restreint (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: restreint (C++ COM attribut)
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.restricted
-dev_langs:
-- C++
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1dfaed296242d2a0fc341c2ff5f137a08d753e71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1aa18255f7d7a0740494050a149d436fb167fe8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521032"
 ---
 # <a name="restricted"></a>restricted
 
@@ -83,10 +72,10 @@ class c : public a, public b
 |**Attributs requis**|**coclasse** (lorsqu’il est appliqué à **classe** ou **struct**)|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs d’interface](interface-attributes.md)<br/>
-[Attributs de méthode](method-attributes.md)  
+[Attributs de méthode](method-attributes.md)

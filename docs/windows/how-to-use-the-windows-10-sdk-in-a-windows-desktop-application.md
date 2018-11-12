@@ -1,24 +1,14 @@
 ---
-title: 'Comment : utiliser Windows 10 SDK dans une Application de bureau Windows | Microsoft Docs'
+title: 'Procédure : utilisation du Kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows'
 ms.custom: get-started-article
 ms.date: 07/12/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: afe678ca4ea381709b126168639df3f710867b9e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611318"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50669116"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procédure : utilisation du Kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows
 
@@ -26,7 +16,7 @@ Lorsque vous créez un projet de bureau Windows classique dans Visual Studio 201
 
 Si vous souhaitez cibler une version antérieure du Kit de développement, vous pouvez ouvrir **projet | Propriétés** et choisissez parmi les autres versions SDK disponibles dans la liste déroulante de Version du Kit de développement logiciel Windows.
 
-À partir de Visual Studio 2015 et le SDK Windows 10, la bibliothèque CRT a été divisée en deux parties, une (ucrtbase) qui contient les fonctions qui sont acceptables pour une utilisation dans les applications Windows universelles et celui qui contient tout le reste (vcruntime140). Étant donné que le Kit de développement logiciel (SDK) Windows 10 contient de nouvelles fonctions, comme de nombreuses fonctions C99, vous devez procéder comme suit pour utiliser ces fonctions. Consultez [Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md).
+À partir de Visual Studio 2015 et le SDK Windows 10, la bibliothèque CRT a été divisée en deux parties, une (ucrtbase) qui contient les fonctions qui sont acceptables pour une utilisation dans les applications Windows universelles et celui qui contient tout le reste (vcruntime140). Étant donné que le Kit de développement logiciel (SDK) Windows 10 contient de nouvelles fonctions, comme de nombreuses fonctions C99, vous devez procéder comme suit pour utiliser ces fonctions. Consultez [CRT Library Features](../c-runtime-library/crt-library-features.md).
 
 ### <a name="to-target-the-windows-10-sdk"></a>Pour cibler le Kit de développement logiciel (SDK) Windows 10
 

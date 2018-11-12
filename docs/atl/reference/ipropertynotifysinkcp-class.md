@@ -1,30 +1,20 @@
 ---
-title: IPropertyNotifySinkCP, classe | Microsoft Docs
-ms.custom: ''
+title: IPropertyNotifySinkCP, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IPropertyNotifySinkCP
 - atlctl/ATL::IPropertyNotifySinkCP
-dev_langs:
-- C++
 helpviewer_keywords:
 - connection points [C++], managing
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13ddd14ad530fa2b7ce2892ce8838b27e307381f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6a80ff17b5d8083704b144686d8bff27be115b18
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46135763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461605"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP, classe
 
@@ -37,7 +27,7 @@ Cette classe expose [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ip
 
 ```
 template<class T, class CDV = CComDynamicUnkArray>
-class IPropertyNotifySinkCP 
+class IPropertyNotifySinkCP
    : public IConnectionPointImpl<T, &IID_IPropertyNotifySink, CDV>
 ```
 

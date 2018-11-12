@@ -1,10 +1,6 @@
 ---
-title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l | Microsoft Docs
-ms.custom: ''
+title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspnp
 - _wcsspnp
@@ -34,8 +30,6 @@ f1_keywords:
 - _wcsspnp
 - _strspnp
 - mbsspnp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strspnp function
 - _wcsspnp function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80f257d7aef9678258644758e083817cbbfbe134
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272375948c8c650b226bfb71073c6c65c5b8acef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635290"
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
 Retourne un pointeur désignant le premier caractère dans une chaîne donnée différente d’une autre chaîne donnée.
 
 > [!IMPORTANT]
-> **_mbsspnp** et **_mbsspnp_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** et **_mbsspnp_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -102,13 +92,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_strspnp**, **_wcsspnp**, et **_mbsspnp** retournent un pointeur vers le premier caractère dans *str* qui n’appartient pas au jeu de caractères dans *jeu de caractères*. Chacune de ces fonctions retourne **NULL** si *str* se compose uniquement de caractères à partir de *charset*. Pour chacune de ces routines, aucune valeur de retour n’est réservée pour indiquer une erreur.
+**_strspnp**, **_wcsspnp**, et **_mbsspnp** retourner un pointeur vers le premier caractère dans *str* qui n’appartient pas au jeu de caractères dans *charset*. Chacune de ces fonctions retourne **NULL** si *str* est entièrement composé de caractères à partir de *charset*. Pour chacune de ces routines, aucune valeur de retour n’est réservée pour indiquer une erreur.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsspnp** fonction retourne un pointeur vers le caractère multioctet qui est le premier caractère dans *str* qui n’appartient pas au jeu de caractères dans *charset*. **_mbsspnp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation. La recherche n’inclut pas les caractères Null de fin.
+Le **_mbsspnp** fonction retourne un pointeur désignant le caractère multioctet qui est le premier caractère dans *str* qui n’appartient pas au jeu de caractères dans *charset*. **_mbsspnp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation. La recherche n’inclut pas les caractères Null de fin.
 
-Si le paramètre *str* ou *charset* est un pointeur null, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **NULL** et définit **errno** à **EINVAL**.
+Si *str* ou *charset* est un pointeur null, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **NULL** et définit **errno** à **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -116,9 +106,9 @@ Si le paramètre *str* ou *charset* est un pointeur null, cette fonction appelle
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** et **_wcsspnp** sont les caractères codés sur un octet et les versions à caractères larges de **_mbsspnp**. **_strspnp** et **_wcsspnp** se comportent de la même manière que **_mbsspnp** ; sinon, elles sont fournies uniquement pour ce mappage et ne doit pas être utilisés pour toute autre raison. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** et **_wcsspnp** sont les caractères codés sur un octet et les versions à caractères larges de **_mbsspnp**. **_strspnp** et **_wcsspnp** se comportent de façon identique **_mbsspnp** ; sinon, ils sont fournis uniquement pour ce mappage et ne doit pas être utilisés pour toute autre raison. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** est identique, sauf qu’elle utilise les paramètres régionaux passés à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_mbsspnp_l** est identique, sauf qu’elle utilise les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Spécifications
 

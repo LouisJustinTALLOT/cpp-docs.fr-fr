@@ -1,27 +1,16 @@
 ---
-title: 'Comment : convertir une collection .NET en conteneur STL/CLR | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : convertir une collection .NET en conteneur STL/CLR'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: ba6d6193c8422e25e174c7a4b73b2b74095cced9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 39c2beda6ae95783a2a29134013d6f01288a29b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436505"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431146"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Comment : convertir une collection .NET en conteneur STL/CLR
 
@@ -31,7 +20,7 @@ Cette rubrique montre comment convertir des collections .NET en leurs équivalen
 
 1. Pour convertir une collection complète, créez un conteneur STL/CLR et passez la collection au constructeur.
 
-     Le premier exemple illustre cette procédure.
+   Le premier exemple illustre cette procédure.
 
 - OU -
 
@@ -39,7 +28,7 @@ Cette rubrique montre comment convertir des collections .NET en leurs équivalen
 
 1. Copiez le contenu de la collection de .NET dans le conteneur. Cela est possible à l’aide d’une bibliothèque STL/CLR [algorithme](../dotnet/algorithm-stl-clr.md), ou en effectuant une itération sur la collection de .NET et l’insertion d’une copie de chaque élément dans le conteneur STL/CLR.
 
-     Le deuxième exemple illustre cette procédure.
+   Le deuxième exemple illustre cette procédure.
 
 ## <a name="example"></a>Exemple
 

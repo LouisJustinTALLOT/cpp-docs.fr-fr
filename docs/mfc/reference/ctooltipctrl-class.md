@@ -1,10 +1,6 @@
 ---
-title: Classe CToolTipCtrl | Microsoft Docs
-ms.custom: ''
+title: CToolTipCtrl Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CToolTipCtrl
 - AFXCMN/CToolTipCtrl
@@ -41,8 +37,6 @@ f1_keywords:
 - AFXCMN/CToolTipCtrl::SetWindowTheme
 - AFXCMN/CToolTipCtrl::Update
 - AFXCMN/CToolTipCtrl::UpdateTipText
-dev_langs:
-- C++
 helpviewer_keywords:
 - CToolTipCtrl [MFC], CToolTipCtrl
 - CToolTipCtrl [MFC], Activate
@@ -78,16 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bfb50c707f0e9055d80a91581696981b6a4d6606
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500410"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -203,7 +193,6 @@ BOOL AddTool(
     UINT nIDText,
     LPCRECT lpRectTool = NULL,
     UINT_PTR nIDTool = 0);
-
 
 BOOL AddTool(
     CWnd* pWnd,
@@ -727,7 +716,6 @@ Définit le temps de retard pour un contrôle info-bulle.
 ```
 void SetDelayTime(UINT nDelay);
 
-
 void SetDelayTime(
     DWORD dwDuration,
     int iTime);
@@ -919,7 +907,6 @@ void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
-
 
 void UpdateTipText(
     UINT nIDText,

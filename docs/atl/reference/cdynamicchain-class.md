@@ -1,10 +1,6 @@
 ---
-title: CDynamicChain, classe | Microsoft Docs
-ms.custom: ''
+title: CDynamicChain, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CDynamicChain
 - ATLWIN/ATL::CDynamicChain
@@ -12,23 +8,17 @@ f1_keywords:
 - ATLWIN/ATL::CDynamicChain::CallChain
 - ATLWIN/ATL::CDynamicChain::RemoveChainEntry
 - ATLWIN/ATL::CDynamicChain::SetChainEntry
-dev_langs:
-- C++
 helpviewer_keywords:
 - message maps, chaining
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 57bbd009bbcbe0ea3352ab27c5d6fbb630b7d050
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668011"
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain, classe
 
@@ -93,7 +83,7 @@ Pour plus d’informations sur le chaînage de mappage de message, consultez [ta
 Dirige le message Windows à la table des messages d’un autre objet.
 
 ```
-BOOL CallChain(  
+BOOL CallChain(
     DWORD dwChainID,
     HWND hWnd,
     UINT uMsg,
@@ -174,7 +164,7 @@ TRUE si la table des messages est correctement supprimée de la collection. Sino
 Ajoute le mappage de message spécifié à la collection.
 
 ```
-BOOL SetChainEntry(  
+BOOL SetChainEntry(
     DWORD dwChainID,
     CMessageMap* pObject,
     DWORD dwMsgMapID = 0);

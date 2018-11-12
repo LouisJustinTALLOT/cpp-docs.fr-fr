@@ -1,10 +1,6 @@
 ---
-title: AFX (Messages) | Microsoft Docs
-ms.custom: ''
+title: AFX (messages)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - SB_LINELEFT
 - SB_THUMBTRACK
@@ -65,21 +61,15 @@ f1_keywords:
 - AFX_WM_CREATETOOLBAR
 - SB_THUMBPOSITION
 - AFX_WM_POSTSETPREVIEWFRAME
-dev_langs:
-- C++
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92f24c18de594cfe734b703ec13c3116b7b5d31b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45c6a9174cbd39c4c0c24ffbdfdefb9d184a3cc1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390987"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594686"
 ---
 # <a name="afx-messages"></a>AFX (messages)
 
@@ -100,7 +90,7 @@ Le tableau suivant répertorie les messages qui sont utilisés dans la biblioth�
 |AFX_WM_CHANGING_ACTIVE_TAB|Envoyé au parent de `CMFCTabCtrl` objet.  Traiter ce message si vous souhaitez recevoir des notifications à partir de `CMFCTabCtrl` objets lorsqu’un utilisateur réinitialise un onglet.|L’index de l’onglet est en cours d’activation.|Non utilisé.|Différent de zéro.|
 |AFX_WM_CHECKEMPTYMINIFRAME|Uniquement réservé à un usage interne.|Non applicable.|Non applicable.|Non applicable.|
 |AFX_WM_CREATETOOLBAR|Envoyé à partir de `CMFCToolBarsListPropertyPage` lorsqu’un utilisateur crée une nouvelle barre d’outils pendant le processus de personnalisation. Vous pouvez traiter ce message pour instancier un objet dérivé de CMFCToolBar personnalisé. Si vous gérez ce message et que vous créez votre propre barre d’outils, omettez d’appeler le gestionnaire par défaut.|Non utilisé.|Un pointeur vers une chaîne qui contient le nom de la barre d’outils.|Pointeur vers la barre d’outils qui vient d’être créé. NULL indique que la création de la barre d’outils a été annulée.|
-|AFX_WM_CUSTOMIZEHELP|Envoyé à la fenêtre frame principale à partir de la feuille de propriétés de personnalisation `CMFCToolbarCustomize Dialog` lorsque l’utilisateur appuie sur le **aide** bouton ou la touche F1.|Spécifie la page active de la feuille de propriétés de personnalisation.|Un pointeur vers un `CMFCToolbarCustomize Dialog` objet.|Égal à zéro.|
+|AFX_WM_CUSTOMIZEHELP|Envoyé à la fenêtre frame principale à partir de la feuille de propriétés de personnalisation `CMFCToolbarCustomize Dialog` lorsque l’utilisateur appuie sur le **aide** bouton ou la touche F1.|Spécifie la page active de la feuille de propriétés de personnalisation.|Pointeur vers un objet `CMFCToolbarCustomize Dialog` .|Égal à zéro.|
 |AFX_WM_CUSTOMIZETOOLBAR|Le `CMFCToolbarCustomize Dialog` envoie ce message pour informer le frame parent que l’utilisateur crée une nouvelle barre d’outils.|La valeur TRUE au démarrage de personnalisation, FALSE lors de la personnalisation est terminée.|Non utilisé.|Égal à zéro.|
 |AFX_WM_DELETETOOLBAR|Envoyé à la fenêtre frame principale lorsque l’utilisateur est sur le point de supprimer une barre d’outils dans le mode de personnalisation.<br /><br /> Traiter ce message pour exécuter des actions supplémentaires lorsqu’un utilisateur supprime une barre d’outils dans le mode de personnalisation. Vous devez également appeler le gestionnaire par défaut (`OnToolbarDelete`), ce qui supprime la barre d’outils. Le gestionnaire par défaut retourne une valeur qui indique s’il est possible de supprimer la barre d’outils.|Non utilisé.|Pointeur vers un `CMFCToolBar` objet à supprimer.|Différent de zéro si une barre d’outils ne peut pas être supprimé ; sinon 0.|
 |AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` envoie ce message à la fenêtre frame principale pour récupérer les couleurs de document.|Non utilisé.|[in, out] Pointeur vers un `CList<COLORREF, COLORREF>` objet.|Égal à zéro.|

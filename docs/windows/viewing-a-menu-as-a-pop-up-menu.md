@@ -1,27 +1,16 @@
 ---
-title: Affichage d’un Menu sous la forme d’un Menu contextuel (C++) | Microsoft Docs
-ms.custom: ''
+title: Affichage d’un Menu sous la forme d’un Menu contextuel (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - pop-up menus
 - menus [C++], pop-up
 ms.assetid: 220a16dd-a6e8-4362-af85-68fbfce2870e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 71e1bfaf47a901cc57c1280194c4209d94356aac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c8af24c7a39e8574e046da1bfce073a9a432387f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377485"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614810"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Affichage d'un menu sous la forme d'un menu contextuel
 
@@ -43,4 +32,4 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Création de menus contextuels](../windows/creating-pop-up-menus.md)<br/>
-[Éditeur de menus](../windows/menu-editor.md)  
+[Éditeur de menus](../windows/menu-editor.md)

@@ -1,28 +1,17 @@
 ---
-title: pragma (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: pragma (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.pragma
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2d7f6b371db09fd5eac9d6ef7260df7d790c21df
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d90e37e27f7e2a13ffebd11043e415c1d43751c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430497"
 ---
 # <a name="pragma"></a>pragma
 
@@ -70,10 +59,10 @@ __interface A
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs autonomes](stand-alone-attributes.md)<br/>
-[pack](../../preprocessor/pack.md)  
+[pack](../../preprocessor/pack.md)

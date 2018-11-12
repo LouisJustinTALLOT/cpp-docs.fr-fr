@@ -1,30 +1,20 @@
 ---
-title: CRuntimeClass, Structure | Microsoft Docs
-ms.custom: ''
+title: CRuntimeClass, Structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CRuntimeClass
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRuntimeClass structure [MFC]
 - dynamic class information [MFC]
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8bc788e646b0e8f788dd8db97d5bc43c3240441f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 54f47fd931374df0e9f71c0d946845d8d5b16695
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402484"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452700"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass, Structure
 
@@ -134,7 +124,6 @@ Appelez cette fonction pour déterminer si la classe appelante est dérivée de 
 ```
 BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 
-
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -236,6 +225,4 @@ Pour plus d’informations sur les numéros de schéma, consultez le [IMPLEMENT_
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-
-
 

@@ -1,29 +1,19 @@
 ---
-title: délégué (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: délégué (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - delegate_cpp
 - delegate
-dev_langs:
-- C++
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2281dfb6648f9c4756800a0693f184ccaa7435d7
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7c58a5b239e91fd3e15f806049e4f71635aebb73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327958"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584121"
 ---
 # <a name="delegate--ccli-and-ccx"></a>délégué (C++ / c++ / CLI et c++ / CX)
 
@@ -52,7 +42,7 @@ return-type
 delegate-type-identifier
 (
 [ parameters ]
-)  
+)
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -131,7 +121,7 @@ Pour plus d’informations sur les délégués, consultez
 
 - [Guide pratique pour définir et utiliser des délégués (C++-CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Délégués génériques (C++ / c++ / CLI)](../windows/generic-delegates-visual-cpp.md)
+- [Délégués génériques (C++/CLI)](../windows/generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -171,14 +161,14 @@ int main () {
    MyDel^ DelInst;
 
    // test if delegate is initialized
-   if (DelInst)  
+   if (DelInst)
       DelInst(7);
 
    // assigning to delegate
    DelInst = gcnew MyDel(a, &A::func1);
 
    // invoke delegate
-   if (DelInst)  
+   if (DelInst)
       DelInst(8);
 
    // add a function
@@ -212,4 +202,4 @@ in static func3 11
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

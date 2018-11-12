@@ -1,30 +1,20 @@
 ---
-title: Création d’un projet DLL MFC | Microsoft Docs
-ms.custom: ''
+title: Création d'un projet DLL MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcdll.project
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC DLLs [MFC], creating projects
 - DLLs [MFC], MFC
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c83ab1a42c62a4cb1afd0c7f49f55c40633d05b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 6a24fb136570d1b5984582cab3593a29d843a54c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234565"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608115"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Création d'un projet DLL MFC
 
@@ -53,5 +43,4 @@ Une fois votre projet créé, vous pouvez afficher les fichiers créés dans **l
 [Types de projets Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pages de propriétés](../../ide/property-pages-visual-cpp.md)
-
 

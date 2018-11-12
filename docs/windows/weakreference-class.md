@@ -1,9 +1,6 @@
 ---
-title: Classe WeakReference | Microsoft Docs
-ms.custom: ''
+title: WeakReference, classe
 ms.date: 09/24/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::WeakReference
@@ -13,8 +10,6 @@ f1_keywords:
 - implements/Microsoft::WRL::Details::WeakReference::SetUnknown
 - implements/Microsoft::WRL::Details::WeakReference::~WeakReference
 - implements/Microsoft::WRL::Details::WeakReference::WeakReference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference class
 - Microsoft::WRL::Details::WeakReference::DecrementStrongReference method
@@ -24,17 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7ff2f2b0e329e30ef73b82a8f1fea969eb7c31f1
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: a3372a176a158dd9c89eb888c8deb0244eef9a84
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48239824"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654933"
 ---
 # <a name="weakreference-class"></a>WeakReference, classe
 
@@ -137,7 +127,7 @@ Incrémente le nombre de référence forte d’actuel `WeakReference` objet.
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
 
 ```cpp
-STDMETHOD(Resolve)  
+STDMETHOD(Resolve)
    (REFIID riid,
    _Deref_out_opt_ IInspectable **ppvObject
 );

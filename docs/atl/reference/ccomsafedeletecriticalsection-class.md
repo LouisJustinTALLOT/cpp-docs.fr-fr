@@ -1,10 +1,6 @@
 ---
-title: Ccomsafedeletecriticalsection, classe | Microsoft Docs
-ms.custom: ''
+title: Ccomsafedeletecriticalsection, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComSafeDeleteCriticalSection
 - ATLCORE/ATL::CComSafeDeleteCriticalSection
@@ -13,21 +9,15 @@ f1_keywords:
 - ATLCORE/ATL::CComSafeDeleteCriticalSection::Lock
 - ATLCORE/ATL::CComSafeDeleteCriticalSection::Term
 - ATLCORE/ATL::m_bInitialized
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4b9c82f1d9b4b1a46d134b94842fffe56f457afa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6d7965b0f5801ed956333950e11e6b9b3eb5a0c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429950"
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>Ccomsafedeletecriticalsection, classe
 
@@ -118,7 +108,7 @@ Retourne le résultat de [CComCriticalSection::Init](../../atl/reference/ccomcri
 
 ##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock
 
-Appelle l’implémentation de classe de base de [verrou](ccomcriticalsection-class.md#lock).  
+Appelle l’implémentation de classe de base de [verrou](ccomcriticalsection-class.md#lock).
 
 ```
 HRESULT Lock();

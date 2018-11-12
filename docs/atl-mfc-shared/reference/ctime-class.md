@@ -1,10 +1,6 @@
 ---
-title: Classe de CTime | Microsoft Docs
-ms.custom: ''
+title: Classe de CTime
 ms.date: 10/18/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CTime
 - ATLTIME/ATL::CTime
@@ -25,22 +21,16 @@ f1_keywords:
 - ATLTIME/ATL::CTime::GetTime
 - ATLTIME/ATL::CTime::GetYear
 - ATLTIME/ATL::CTime::Serialize64
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c99fe44b5012e08a4b32a9e84d4255e4ee2b7e0
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: bed403e4bc1cca1d31a394be7157de9e65abff95
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519442"
 ---
 # <a name="ctime-class"></a>Classe de CTime
 
@@ -161,7 +151,7 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 Indique un `CTime` objet qui existe déjà.
 
 *time*<br/>
-Un **__time64_t** valeur de temps, ce qui correspond au nombre de secondes après le 1er janvier 1970 UTC. Notez que cela soit ajustée à votre heure locale. Par exemple, si vous êtes à New York et créez un `CTime` objet en passant un paramètre de 0, [CTime::GetMonth](#getmonth) retourne 12.
+Un `__time64_t` valeur de temps, ce qui correspond au nombre de secondes après le 1er janvier 1970 UTC. Notez que cela soit ajustée à votre heure locale. Par exemple, si vous êtes à New York et créez un `CTime` objet en passant un paramètre de 0, [CTime::GetMonth](#getmonth) retourne 12.
 
 *nYear*, *nMonth*, *%n%njour*, *%n%nheure*, *nMin*, *nSec*<br/>
 Indique les valeurs de date et heure doit être copié dans le nouveau `CTime` objet.

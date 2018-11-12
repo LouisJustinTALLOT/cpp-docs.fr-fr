@@ -1,10 +1,6 @@
 ---
-title: CStringList, classe | Microsoft Docs
-ms.custom: ''
+title: CStringList, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CStringList
 - AFXCOLL/CStringList
@@ -30,8 +26,6 @@ f1_keywords:
 - AFXCOLL/CObList::RemoveHead
 - AFXCOLL/CObList::RemoveTail
 - AFXCOLL/CObList::SetAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CObList [MFC], CObList
 - CObList [MFC], AddHead
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3182a9f5a53c2f086800eb0eccb7d61e423e591
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29865e7986e435a4cce1ac1abb2027bc8513231e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439183"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499003"
 ---
 # <a name="cstringlist-class"></a>CStringList, classe
 
@@ -152,6 +142,4 @@ Pour plus d’informations sur l’utilisation de `CStringList`, consultez l’a
 [Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

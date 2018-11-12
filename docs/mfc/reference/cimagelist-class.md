@@ -1,10 +1,6 @@
 ---
-title: CImageList, classe | Microsoft Docs
-ms.custom: ''
+title: CImageList (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CImageList
 - AFXCMN/CImageList
@@ -42,8 +38,6 @@ f1_keywords:
 - AFXCMN/CImageList::SetOverlayImage
 - AFXCMN/CImageList::Write
 - AFXCMN/CImageList::m_hImageList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CImageList [MFC], CImageList
 - CImageList [MFC], Add
@@ -80,16 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15f021d78158caa6f607be3d68a9666b4ab6d6a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d311c064d9b91967a60823fc3fd0e43f22a119c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448517"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500761"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -184,7 +174,6 @@ Appelez cette fonction pour ajouter une ou plusieurs images ou une icône à une
 int Add(
     CBitmap* pbmImage,
     CBitmap* pbmMask);
-
 
 int Add(
     CBitmap* pbmImage,
@@ -288,7 +277,6 @@ BOOL Copy(
     int iSrc,
     UINT uFlags = ILCF_MOVE);
 
-
 BOOL Copy(
     int iDst,
     CImageList* pSrc,
@@ -335,20 +323,17 @@ BOOL Create(
     int nInitial,
     int nGrow);
 
-
 BOOL Create(
     UINT nBitmapID,
     int cx,
     int nGrow,
     COLORREF crMask);
 
-
 BOOL Create(
     LPCTSTR lpszBitmapID,
     int cx,
     int nGrow,
     COLORREF crMask);
-
 
 BOOL Create(
     CImageList& imagelist1,
@@ -417,7 +402,7 @@ Décalage de l’axe x de la deuxième image par rapport à la première image, 
 Décalage de l’axe y de la deuxième image par rapport à la première image, en pixels.
 
 *pImageList*<br/>
-Un pointeur vers un `CImageList` objet.
+Pointeur vers un objet `CImageList` .
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -594,7 +579,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique de destination.
 
 *nImage*<br/>
@@ -639,7 +624,7 @@ BOOL DrawEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique de destination.
 
 *nImage*<br/>
@@ -679,7 +664,6 @@ Appelez cette fonction membre pour dessiner une image à partir d’une liste d�
 ```
 BOOL DrawIndirect(IMAGELISTDRAWPARAMS* pimldp);
 
-
 BOOL DrawIndirect(
     CDC* pDC,
     int nImage,
@@ -700,7 +684,7 @@ BOOL DrawIndirect(
 *pimldp*<br/>
 Un pointeur vers un [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) structure qui contient des informations sur l’opération de dessin.
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 Pointeur vers le contexte de périphérique de destination. Vous devez supprimer cela [CDC](../../mfc/reference/cdc-class.md) objet lorsque vous avez terminé avec lui.
 
 *nImage*<br/>
@@ -1046,7 +1030,6 @@ BOOL Replace(
     int nImage,
     CBitmap* pbmImage,
     CBitmap* pbmMask);
-
 
 int Replace(
     int nImage,

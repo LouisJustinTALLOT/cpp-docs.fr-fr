@@ -1,12 +1,6 @@
 ---
-title: Spécification de niveaux de fonctionnalité | Microsoft Docs
-ms.custom: ''
+title: Spécification de niveaux de fonctionnalité
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CObject class [MFC], adding functionality to derived classes
 - runtime [MFC], class information
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c4b5ed392850fac97e8671774dee0905bf3417eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3fb9b18712b24046e05f05834caaac2819fb73dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375888"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494651"
 ---
 # <a name="specifying-levels-of-functionality"></a>Spécification de niveaux de fonctionnalité
 
@@ -46,11 +36,11 @@ Pour obtenir une description générale de `CObject` fonctionnalités, consultez
 
 1. Utilisez la macro DECLARE_DYNAMIC dans votre déclaration de classe, comme illustré ici :
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
 
 1. Utilisez la macro IMPLEMENT_DYNAMIC dans le fichier d’implémentation (. (CPP) de votre classe. Cette macro prend comme arguments le nom de la classe et de sa classe de base, comme suit :
 
-     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
 
 > [!NOTE]
 >  Placez toujours IMPLEMENT_DYNAMIC dans le fichier d’implémentation (. (CPP) pour votre classe. La macro IMPLEMENT_DYNAMIC doit être évaluée une seule fois durant une compilation et ne doit donc pas être utilisée dans un fichier d’interface (. (H) qui pourrait potentiellement être inclus dans plusieurs fichiers.

@@ -1,10 +1,6 @@
 ---
-title: CPropertyPage, classe | Microsoft Docs
-ms.custom: ''
+title: CPropertyPage (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPropertyPage
 - AFXDLGS/CPropertyPage
@@ -25,8 +21,6 @@ f1_keywords:
 - AFXDLGS/CPropertyPage::QuerySiblings
 - AFXDLGS/CPropertyPage::SetModified
 - AFXDLGS/CPropertyPage::m_psp
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPropertyPage [MFC], CPropertyPage
 - CPropertyPage [MFC], CancelToClose
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d8b1b2253a1355b6065d05052a86181907e4a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1816e6ee2dc0f358cb2da4c8bab572daa33a29c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400599"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561237"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (classe)
 
@@ -152,18 +142,15 @@ void Construct(
     UINT nIDTemplate,
     UINT nIDCaption = 0);
 
-
 void Construct(
     LPCTSTR lpszTemplateName,
     UINT nIDCaption = 0);
-
 
 void Construct(
     UINT nIDTemplate,
     UINT nIDCaption,
     UINT nIDHeaderTitle,
     UINT nIDHeaderSubTitle = 0);
-
 
 void Construct(
     LPCTSTR lpszTemplateName,
@@ -214,18 +201,15 @@ Construit un objet `CPropertyPage`.
 ```
 CPropertyPage();
 
-
 explicit CPropertyPage(
     UINT nIDTemplate,
     UINT nIDCaption = 0,
     DWORD dwSize = sizeof(PROPSHEETPAGE));
 
-
 explicit CPropertyPage(
     LPCTSTR lpszTemplateName,
     UINT nIDCaption = 0,
     DWORD dwSize = sizeof(PROPSHEETPAGE));
-
 
 CPropertyPage(
     UINT nIDTemplate,
@@ -233,7 +217,6 @@ CPropertyPage(
     UINT nIDHeaderTitle,
     UINT nIDHeaderSubTitle = 0,
     DWORD dwSize = sizeof(PROPSHEETPAGE));
-
 
 CPropertyPage(
     LPCTSTR lpszTemplateName,

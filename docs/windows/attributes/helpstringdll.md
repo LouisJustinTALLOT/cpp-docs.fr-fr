@@ -1,28 +1,17 @@
 ---
-title: helpstringdll (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: helpstringdll (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.helpstringdll
-dev_langs:
-- C++
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bdac159baf51d7143083eb1369d1a83233f0f022
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 17e70a54024b8e5a3ab29e2420f60fbf3eec08a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677238"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -69,11 +58,11 @@ __interface IMyI
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs d’interface](interface-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
-[Attributs de méthode](method-attributes.md)  
+[Attributs de méthode](method-attributes.md)

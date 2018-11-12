@@ -1,10 +1,6 @@
 ---
-title: _getchar_nolock, _getwchar_nolock | Microsoft Docs
-ms.custom: ''
+title: _getchar_nolock, _getwchar_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getchar_nolock
 - _getwchar_nolock
@@ -25,8 +21,6 @@ f1_keywords:
 - _getwchar_nolock
 - _getchar_nolock
 - getchar_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getwchar_nolock function
 - getwchar_nolock function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - getchar_nolock function
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83388f8c8d1788fa42f193030a45bf97c3472e23
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: feeda65d06dbcfecb6ea5adc60934abf3d0df415
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400396"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600136"
 ---
 # <a name="getcharnolock-getwcharnolock"></a>_getchar_nolock, _getwchar_nolock
 
@@ -63,7 +53,7 @@ See [getchar, getwchar](getchar-getwchar.md).
 
 ## <a name="remarks"></a>Notes
 
-**_getchar_nolock** et **_getwchar_nolock** sont identiques aux **getchar** et **getwchar** , sauf qu’elles ne sont pas protégés contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+**_getchar_nolock** et **_getwchar_nolock** sont identiques aux **getchar** et **getwchar** , à ceci près qu’elles ne sont pas protégées contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -71,14 +61,14 @@ See [getchar, getwchar](getchar-getwchar.md).
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_gettchar_nolock**|**_getchar_nolock**|**_getchar_nolock**|**_getwchar_nolock**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_getchar_nolock**|\<stdio.h>|
 |**_getwchar_nolock**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas pris en charge dans les applications Universal Windows Platform (UWP). Les handles de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés pour que les fonctions runtime C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

@@ -1,10 +1,6 @@
 ---
-title: Cstringelementtraits, classe | Microsoft Docs
-ms.custom: ''
+title: Cstringelementtraits, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CStringElementTraits
 - CSTRINGT/ATL::CStringElementTraits
@@ -15,21 +11,15 @@ f1_keywords:
 - CSTRINGT/ATL::CStringElementTraits::CopyElements
 - CSTRINGT/ATL::CStringElementTraits::Hash
 - CSTRINGT/ATL::CStringElementTraits::RelocateElements
-dev_langs:
-- C++
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2359bb3909c803e4df1efdeef9058a3553908ff9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f3e0bd447d2ff7c04ecf3c4a72b7dd2340c6bb4e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074056"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534223"
 ---
 # <a name="cstringelementtraits-class"></a>Cstringelementtraits, classe
 
@@ -114,7 +104,7 @@ Le deuxième élément de chaîne.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Zéro si les chaînes sont identiques, < 0 si *str1* est inférieure à *str2*, ou 0 > Si *str1* est supérieur à *str2*. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour exécuter les comparaisons.  
+Zéro si les chaînes sont identiques, < 0 si *str1* est inférieure à *str2*, ou 0 > Si *str1* est supérieur à *str2*. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour exécuter les comparaisons.
 
 ##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
 

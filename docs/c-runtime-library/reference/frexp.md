@@ -1,10 +1,6 @@
 ---
-title: frexp, frexpf, frexpl | Documents Microsoft
-ms.custom: ''
+title: frexp, frexpf, frexpl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - frexp
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - frexp
 - _frexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _frexpl function
 - mantissas, floating-point variables
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3bf79e954274b1cedb104ed637ad14b8e1c6431
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400087"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563837"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
 
@@ -83,15 +73,15 @@ Pointeur désignant l’exposant entier stocké.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**frexp** renvoie la mantisse. Si *x* est 0, la fonction retourne 0 pour la mantisse et l’exposant. Si *expptr* est **NULL**, le Gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne 0.
+**frexp** retourne la mantisse. Si *x* est 0, la fonction retourne 0 pour la mantisse et l’exposant. Si *expptr* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne 0.
 
 ## <a name="remarks"></a>Notes
 
-Le **frexp** fonction décompose la valeur à virgule flottante (*x*) dans une mantisse (*m*) et un exposant (*n*), telle qu’absolu valeur de *m* est supérieur ou égal à 0,5 et inférieur à 1,0, et *x* = *m* * 2<sup>*n*</sup>. L’exposant entier *n* est stocké à l’emplacement vers lequel pointé *expptr*.
+Le **frexp** fonction décompose la valeur à virgule flottante (*x*) en une mantisse (*m*) et un exposant (*n*), telle qu’absolue valeur de *m* est supérieure ou égale à 0,5 et inférieure à 1,0 et *x* = *m* * 2<sup>*n*</sup>. L’exposant entier *n* est stocké à l’emplacement vers lequel pointé *expptr*.
 
-C++ autorise la surcharge, vous pouvez appeler des surcharges de **frexp**. Dans un programme C, **frexp** prend toujours un **double** et un **int** pointeur et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **frexp**. Dans un programme C, **frexp** prend toujours un **double** et un **int** pointeur et retourne un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

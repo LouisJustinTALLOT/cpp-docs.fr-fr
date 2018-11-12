@@ -1,10 +1,6 @@
 ---
-title: Cmfcribbonstatusbar, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcribbonstatusbar, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBar
 - AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar
@@ -30,8 +26,6 @@ f1_keywords:
 - AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::RemoveElement
 - AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::SetInformation
 - AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::OnDrawInformation
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], AddDynamicElement
 - CMFCRibbonStatusBar [MFC], AddElement
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59bc8c58c6f11903b483893e99f415ab836ae358
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 068cff9ea3827e780bec886bc5d4b0e263c02e62
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448049"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635342"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Cmfcribbonstatusbar, classe
 
@@ -121,7 +111,7 @@ En règle générale, la zone principale de la barre d’état affiche des notif
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonStatusBar` classe. L’exemple montre comment ajouter un nouvel élément de ruban à la barre d’état de ruban, ajoutez un élément de ruban à la zone étendue de la barre d’état du ruban, ajoutez un séparateur et activer le mode normal pour la barre d’état du ruban.
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonStatusBar` . L’exemple montre comment ajouter un nouvel élément de ruban à la barre d’état de ruban, ajoutez un élément de ruban à la zone étendue de la barre d’état du ruban, ajoutez un séparateur et activer le mode normal pour la barre d’état du ruban.
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -289,8 +279,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*uiCmdID*<br/>
-[in] [in] *BOOL*
+[in] *uiCmdID*<br/>
+[in] *BOOL*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -385,7 +375,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *rect*
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -425,7 +415,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pElement*
+[in] *pElement*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -460,7 +450,7 @@ virtual void OnDrawInformation(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
 *strInfo*<br/>

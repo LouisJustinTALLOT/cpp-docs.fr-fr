@@ -1,27 +1,17 @@
 ---
-title: Comment MFC facilite la création d’Applications de Client Internet | Microsoft Docs
-ms.custom: ''
+title: Comment MFC facilite la création d'applications clientes Internet
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 - MFC, Internet applications
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 26380dc7e01449e4700ddf403c7395714287ed38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b288db54a020b0074766ee69debdb9f397d3bd03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573429"
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>Comment MFC facilite la création d'applications clientes Internet
 

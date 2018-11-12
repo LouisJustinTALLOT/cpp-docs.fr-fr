@@ -1,10 +1,6 @@
 ---
-title: journal, logf, logl, log10, log10f, log10l | Documents Microsoft
-ms.custom: ''
+title: journal, logf, logl, log10, log10f, log10l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - log10f
 - logf
@@ -34,8 +30,6 @@ f1_keywords:
 - log10f
 - log10l
 - log10
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating logarithms
 - log10f function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12f475cde27d4660f4b4936f3f7717a665b70e86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402840"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543297"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>journal, logf, logl, log10, log10f, log10l
 
@@ -86,21 +76,21 @@ Valeur dont le logarithme doit être recherché.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **journal** fonctions retournent le logarithme naturel (base *e*) de *x* en cas de réussite. Le **log10** fonctions retournent le logarithme de base 10. Si *x* est négatif, ces fonctions retournent un indéfini (IND), par défaut. Si *x* est 0, elles retournent l’infini (INF).
+Le **journal** fonctions retournent le logarithme népérien (base *e*) de *x* en cas de réussite. Le **log10** fonctions retournent le logarithme en base 10. Si *x* est négatif, ces fonctions retournent un indéfini (IND), par défaut. Si *x* est 0, elles retournent l’infini (INF).
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|aucun|_DOMAIN|
+|+ QNAN, IND|none|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**journal** et **log10** avoir une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
+**journal** et **log10** ont une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorise la surcharge, vous pouvez appeler des surcharges de **journal** et **log10** qui acceptent et retournent **float** ou **long double** valeurs. Dans un programme C, **journal** et **log10** acceptent et retournent toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **journal** et **log10** qui acceptent et retournent **float** ou **long double** valeurs. Dans un programme C, **journal** et **log10** acceptent et retournent toujours un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

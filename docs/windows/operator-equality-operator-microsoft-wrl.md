@@ -1,26 +1,16 @@
 ---
-title: opérateur ==, opérateur (Microsoft::WRL) | Microsoft Docs
-ms.custom: ''
+title: operator==, opérateur (Microsoft::WRL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator==
-dev_langs:
-- C++
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2293bd70e391ef021d8187e3fca2a9a0ab4d98d2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c8a0937ec446f03ce2365ec23f9d73fc2d10a31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427626"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451543"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator==, opérateur (Microsoft::WRL)
 
@@ -35,7 +25,7 @@ WRL_NOTHROW bool operator==(
 );
 WRL_NOTHROW bool operator==(
    const ComPtr<T>& a,
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 WRL_NOTHROW bool operator==(
    decltype(__nullptr),
@@ -47,7 +37,7 @@ WRL_NOTHROW bool operator==(
 );
 WRL_NOTHROW bool operator==(
    const Details::ComPtrRef<ComPtr<T>>& a,
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 WRL_NOTHROW bool operator==(
    decltype(__nullptr),

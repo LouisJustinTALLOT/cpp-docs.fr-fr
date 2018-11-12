@@ -1,28 +1,18 @@
 ---
-title: Vue d’ensemble des fonctions membres | Microsoft Docs
-ms.custom: ''
+title: Vue d'ensemble des fonctions membres
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - this pointer, and nonstatic member functions
 - nonstatic member functions [C++]
 - inline functions [C++], treating member functions as
 - member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 409f896e7b2c345d1558700f86182d06793f543d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: faa7d016c8f48e9a5ee57c8efa4ce3dfd3f3eb01
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016420"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652444"
 ---
 # <a name="overview-of-member-functions"></a>Vue d'ensemble des fonctions membres
 
@@ -53,7 +43,7 @@ int main()
 }
 ```
 
-Si la définition de la fonction d’un membre est en dehors de la déclaration de classe, il est traité comme une fonction inline uniquement si elle est déclarée explicitement comme **inline**. En outre, le nom de fonction dans la définition doit être qualifié avec son nom de classe par l'opérateur de résolution de portée (`::`).
+Si la définition de la fonction d’un membre est en dehors de la déclaration de classe, il est traité comme une fonction inline uniquement si elle est déclarée explicitement comme **inline**. En outre, le nom de fonction dans la définition doit être qualifié avec son nom de classe par l’opérateur de résolution de portée (`::`).
 
 L'exemple suivant est identique à la déclaration précédente de la classe `Account`, sauf que la fonction `Deposit` est définie à l'extérieur de la déclaration de classe :
 

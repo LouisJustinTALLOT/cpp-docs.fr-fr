@@ -1,28 +1,17 @@
 ---
-title: Modification des propriétés de contrôle | Microsoft Docs
-ms.custom: ''
+title: Modification des propriétés d'un contrôle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], undoing changes
 - controls [C++], editing properties
 - dialog box controls [C++], editing properties
 ms.assetid: 9bdae21d-6dec-4344-a197-2ca4fc46d040
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f0f387f536e5d1762f3c48a1955b5053e144e3bc
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: cd9226e6eb4fc2b16d24cd0c9727d4fcbfdbf02b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082855"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454801"
 ---
 # <a name="editing-control-properties"></a>Modification des propriétés d'un contrôle
 

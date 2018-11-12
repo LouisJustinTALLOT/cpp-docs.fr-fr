@@ -1,14 +1,8 @@
 ---
-title: -Od (désactiver (débogage)) | Microsoft Docs
-ms.custom: ''
+title: /Od (Désactiver (Débogage))
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /od
-dev_langs:
-- C++
 helpviewer_keywords:
 - no optimizations
 - fast compiling
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - -Od compiler option [C++]
 - disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f0fa55b7ddfc97d1073211ad23c04d724aabe50
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b7cbf8de06e698e67e370eb399da5bb00b262895
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595794"
 ---
 # <a name="od-disable-debug"></a>/Od (Désactiver (Débogage))
 

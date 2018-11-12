@@ -1,27 +1,17 @@
 ---
-title: Alternatives à l’Architecture Document / Vue | Microsoft Docs
-ms.custom: ''
+title: Alternatives à l’Architecture Document / Vue
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - documents [MFC], applications without
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5a9026ca400c3e7c403ff8f2b86f486bcde79cf8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403473"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569778"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Solutions de remplacement de l'architecture document/vue
 
@@ -56,7 +46,7 @@ Il est fortement recommandé d'utiliser l'Assistant Application MFC pour créer 
 
 - Traitez le document comme une annexe inutilisée et implémentez le code de gestion des données de la classe d'affichage, comme suggéré précédemment. La surcharge du document est relativement basse. Un seul [CDocument](../mfc/reference/cdocument-class.md) objet entraîne une petite quantité de charge par lui-même, ainsi que la surcharge de `CDocument`de classes de base, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) et [CObject](../mfc/reference/cobject-class.md). Les deux dernières classes sont petites.
 
-     Déclaré dans `CDocument`:
+   Déclaré dans `CDocument`:
 
    - Deux objets `CString`.
 
@@ -66,7 +56,7 @@ Il est fortement recommandé d'utiliser l'Assistant Application MFC pour créer 
 
    - Un objet `CPtrList`, qui contient une liste des vues du document.
 
-     En outre, le document requiert la durée nécessaire pour créer l'objet de document, ses objets de vue, une fenêtre frame et un objet modèle de document.
+   En outre, le document requiert la durée nécessaire pour créer l'objet de document, ses objets de vue, une fenêtre frame et un objet modèle de document.
 
 - Traitez à la fois le document et la vue comme des annexes inutilisées. Placez votre code de gestion des données et de dessin dans la fenêtre frame plutôt que dans la vue. Cette approche est plus proche du modèle de programmation en langage C.
 

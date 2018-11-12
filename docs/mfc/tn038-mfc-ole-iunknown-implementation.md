@@ -1,14 +1,8 @@
 ---
-title: 'TN038 : Implémentation IUnknown MFC-OLE | Microsoft Docs'
-ms.custom: ''
+title: 'TN038 : Implémentation IUnknown MFC-OLE'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
-dev_langs:
-- C++
 helpviewer_keywords:
 - aggregation macros [MFC]
 - COM interfaces, base interface
@@ -24,16 +18,12 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6bf8f299ef46166c5b09a716e5bed21fd3b9b01
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387098"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571429"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038 : implémentation IUnknown MFC/OLE
 
@@ -57,7 +47,7 @@ public:
 ```
 
 > [!NOTE]
-> Certains détails nécessaires de la convention d'appel, tels que `__stdcall`, sont omis dans cette illustration.
+> Certains détails nécessaires de la convention d’appel, tels que `__stdcall`, sont omis dans cette illustration.
 
 Le [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) et [version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) fonctions membres de contrôlent la gestion de la mémoire de l’objet. COM utilise un système de comptage de références pour assurer le suivi des objets. Les objets ne sont jamais référencés directement comme en C++. Au lieu de cela, les objets COM sont toujours référencés au moyen d'un pointeur. Pour libérer l’objet lorsque le propriétaire est effectué à l’aide de son, l’objet [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) membre est appelé (par opposition à l’utilisation de la suppression d’opérateur, comme vous pouvez la supprimer pour un objet C++ traditionnel). Le mécanisme de comptage de références autorise la gestion de plusieurs références à un même objet. Une implémentation de [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) et [version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) conserve un décompte de références sur l’objet, l’objet n’est pas supprimé tant que son décompte de références atteint zéro.
 
@@ -398,7 +388,6 @@ class CAggrExample : public CCmdTarget
 {
 public:
     CAggrExample();
-
 
 protected:
     LPUNKNOWN m_lpAggrInner;

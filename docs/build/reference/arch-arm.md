@@ -1,23 +1,13 @@
 ---
-title: -arch (ARM) | Microsoft Docs
-ms.custom: ''
+title: /arch (ARM)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bfa68eece4a7fd626c787fd5421d9dcac58cf805
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bf12abd140a56b1b914156083ecbbd3e61e7285a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495564"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 

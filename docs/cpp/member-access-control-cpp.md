@@ -1,27 +1,17 @@
 ---
-title: Contrôle d’accès de membre (C++) | Microsoft Docs
-ms.custom: ''
+title: Contrôle d'accès aux membres (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: ee4e9d89878aab4be2e4daf45525f9e951d214f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821658"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50611417"
 ---
 # <a name="member-access-control-c"></a>Contrôle d'accès aux membres (C++)
 
@@ -246,8 +236,7 @@ Dans les treillis à héritage multiple impliquant des classes de base virtuelle
 
 ![Accès avec les chemins d’accès d’un graphique d’héritage](../cpp/media/vc38v91.gif "vc38V91") le long de chemins d’accès d’un graphique d’héritage
 
-Dans cette figure, un nom déclaré dans la classe `VBase` est toujours accessible via la classe `RightPath`. Le chemin d'accès correct est plus accessible car `RightPath` déclare `VBase` en tant que classe de base publique, tandis que `LeftPath` déclare `VBase` comme classe privée.
-
+Dans cette figure, un nom déclaré dans la classe `VBase` est toujours accessible via la classe `RightPath`. Le chemin d’accès correct est plus accessible car `RightPath` déclare `VBase` en tant que classe de base publique, tandis que `LeftPath` déclare `VBase` comme classe privée.
 
 ## <a name="see-also"></a>Voir aussi
 

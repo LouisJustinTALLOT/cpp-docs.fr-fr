@@ -1,10 +1,6 @@
 ---
-title: CPropExchange, classe | Microsoft Docs
-ms.custom: ''
+title: CPropExchange, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPropExchange
 - AFXCTL/CPropExchange
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXCTL/CPropExchange::GetVersion
 - AFXCTL/CPropExchange::IsAsynchronous
 - AFXCTL/CPropExchange::IsLoading
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPropExchange [MFC], ExchangeBlobProp
 - CPropExchange [MFC], ExchangeFontProp
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1009daaa378b4630d9fa477488a802a580d769a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 772388d069bdec274bd396b776d404711b694771
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390083"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560369"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange, classe
 
@@ -304,6 +294,4 @@ Différent de zéro si les propriétés sont en cours de chargement ; sinon 0.
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
-
-
 

@@ -1,14 +1,8 @@
 ---
-title: Modification des noms de fichiers d’en-tête de symbole | Microsoft Docs
-ms.custom: ''
+title: Modification des noms des fichiers d'en-tête de symbole
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing.header
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource files [C++], multiple
 - Resource Includes dialog box [C++]
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - symbols [C++], symbol header files
 - Resource.h
 ms.assetid: b948284a-7899-402e-ab12-9f2c8480ca9d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 626fb3a7421414355d98a680d5647a494de26594
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d9aa350d0f680e975c68bf46ac066072df044cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374397"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432332"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>Modification des noms des fichiers d'en-tête de symbole
 

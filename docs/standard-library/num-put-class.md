@@ -1,18 +1,12 @@
 ---
-title: num_put, classe | Microsoft Docs
-ms.custom: ''
+title: num_put, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocnum/std::num_put
 - locale/std::num_put::char_type
 - locale/std::num_put::iter_type
 - locale/std::num_put::do_put
 - locale/std::num_put::put
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::num_put [C++]
 - std::num_put [C++], char_type
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19e08d1544a23ad1272bde5066a63f37b1e511fd
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c6866358cde7d381ec8a703d50aeb3193bef9d5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100922"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441858"
 ---
 # <a name="numput-class"></a>num_put, classe
 
@@ -104,13 +94,11 @@ virtual iter_type do_put(
     _Elem _Fill,
     bool val) const;
 
-
 virtual iter_type do_put(
     iter_type dest,
     ios_base& _Iosbase,
     _Elem _Fill,
     long val) const;
-
 
 virtual iter_type do_put(
     iter_type dest,
@@ -118,13 +106,11 @@ virtual iter_type do_put(
     _Elem _Fill,
     unsigned long val) const;
 
-
 virtual iter_type do_put(
     iter_type dest,
     ios_base& _Iosbase,
     _Elem _Fill,
     double val) const;
-
 
 virtual iter_type do_put(
     iter_type dest,
@@ -132,13 +118,11 @@ virtual iter_type do_put(
     _Elem _Fill,
     long double val) const;
 
-
 virtual iter_type do_put(
     iter_type dest,
     ios_base& _Iosbase,
     _Elem _Fill,
     const void* val) const;
-
 
 virtual iter_type do_put(
     iter_type dest,
@@ -352,13 +336,11 @@ iter_type put(
     _Elem _Fill,
     bool val) const;
 
-
 iter_type put(
     iter_type dest,
     ios_base& _Iosbase,
     _Elem _Fill,
     long val) const;
-
 
 iter_type put(
     iter_type dest,
@@ -366,13 +348,11 @@ iter_type put(
     _Elem _Fill,
     unsigned long val) const;
 
-
 iter_type put(
     iter_type dest,
     ios_base& _Iosbase,
     _Elem _Fill,
     Long long val) const;
-
 
 iter_type put(
     iter_type dest,
@@ -380,20 +360,17 @@ iter_type put(
     _Elem _Fill,
     Unsigned long long val) const;
 
-
 iter_type put(
     iter_type dest,
     ios_base& _Iosbase,
     _Elem _Fill,
     double val) const;
 
-
 iter_type put(
     iter_type dest,
     ios_base& _Iosbase,
     _Elem _Fill,
     long double val) const;
-
 
 iter_type put(
     iter_type dest,

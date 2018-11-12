@@ -1,25 +1,15 @@
 ---
 title: hash, structure (bibliothèque standard C++) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - thread/std::hash
-dev_langs:
-- C++
 ms.assetid: 4a8bf5bc-4334-4070-936b-98585f8a073b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f2e9fdbef911a0160ff42925a9c7984f0211069
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb230d401d5061f4951f8007f93c3a28ce3dab03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579860"
 ---
 # <a name="hash-structure-c-standard-library"></a>hash, structure (bibliothèque standard C++)
 
@@ -34,11 +24,10 @@ struct hash<thread::id> :
 {
     size_t operator()(thread::id Val) const;
 
-
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<thread >
 

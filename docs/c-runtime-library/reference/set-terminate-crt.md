@@ -1,10 +1,6 @@
 ---
-title: set_terminate (CRT) | Microsoft Docs
-ms.custom: ''
+title: set_terminate (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - set_terminate
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - set_terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_terminate function
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e62dc1e4f99a1d2707c6e7b86c79e0ffc8aa027
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450974"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493910"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
-Installe votre propre routine de terminaison à être appelé par **Terminer**.
+Installe votre propre routine d’arrêt doit être appelée par **Terminer**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,26 +47,26 @@ Pointeur désignant une fonction d’arrêt que vous écrivez.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers la fonction précédente enregistrée par **set_terminate** afin que la fonction précédente permettre être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **NULL**.
+Retourne un pointeur vers la précédente fonction inscrite par **set_terminate** afin que la fonction précédente peut être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retournée peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **NULL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **set_terminate** fonction installe *termFunction* que la fonction appelée par **Terminer**. **set_terminate** est utilisé avec la gestion des exceptions C++ et peut être appelée à tout moment dans votre programme avant que l’exception est levée. **Terminer** appelle [abandonner](abort.md) par défaut. Vous pouvez modifier cette valeur par défaut en écrivant votre propre fonction d’arrêt et en appelant **set_terminate** avec le nom de votre fonction comme argument. **Terminer** appelle la dernière fonction donnée comme argument à **set_terminate**. Une fois exécutant une tâches de nettoyage, vous le souhaitez *termFunction* doit quitter le programme. Si elle ne quitte pas (si elle retourne à son appelant), [abandonner](abort.md) est appelée.
+Le **set_terminate** fonction installe *termFunction* que la fonction appelée par **Terminer**. **set_terminate** est utilisé avec la gestion des exceptions C++ et peut être appelée à tout moment dans votre programme avant l’exception est levée. **mettre fin à** appels [abandonner](abort.md) par défaut. Vous pouvez modifier cette valeur par défaut en écrivant votre propre fonction d’arrêt et en appelant **set_terminate** avec le nom de votre fonction comme argument. **mettre fin à** appelle la dernière fonction donnée comme argument à **set_terminate**. Une fois exécutant une tâches de nettoyage, souhaitées *termFunction* doit fermer le programme. Si elle ne se ferme pas (si elle retourne à son appelant), [abandonner](abort.md) est appelée.
 
 Dans un environnement multithread, les fonctions d’arrêt sont gérées séparément pour chaque thread. Chaque nouveau thread doit installer sa propre fonction d’arrêt. Par conséquent, chaque thread est responsable de sa propre gestion des arrêts.
 
-Le **terminate_function** type est défini dans le Gestionnaire d’événements. H comme un pointeur vers une fonction définie par l’utilisateur un arrêt, *termFunction* qui retourne **void**. Votre fonction personnalisée *termFunction* ne peut prendre aucun argument et ne doit pas retourner à son appelant. Dans ce cas, [abandonner](abort.md) est appelée. Une exception ne peut pas être levée à partir de *termFunction*.
+Le **terminate_function** type est défini dans le Gestionnaire d’événements. H comme un pointeur vers une fonction d’arrêt défini par l’utilisateur, *termFunction* qui retourne **void**. Votre fonction personnalisée *termFunction* peut prendre aucun argument et ne doit pas retourner à son appelant. Le cas échéant, [abandonner](abort.md) est appelée. Une exception ne peut pas être levée depuis *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
 ```
 
 > [!NOTE]
-> Le **set_terminate** fonctionne uniquement en dehors du débogueur.
+> Le **set_terminate** fonction fonctionne uniquement en dehors du débogueur.
 
-Il existe un seul **set_terminate** gestionnaire pour tous les liée de manière dynamique DLL ou exe ; même si vous appelez **set_terminate** votre gestionnaire peut être remplacé par un autre, ou vous pouvez remplacer un gestionnaire défini par un autre Fichier DLL ou EXE.
+Il existe un seul **set_terminate** gestionnaire pour tout dynamiquement DLL ou exe liés ; même si vous appelez **set_terminate** votre gestionnaire peut être remplacé par un autre, ou vous pouvez remplacer un gestionnaire défini par un autre DLL ou EXE.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

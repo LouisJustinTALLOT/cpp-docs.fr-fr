@@ -1,23 +1,13 @@
 ---
-title: C.2 règles | Microsoft Docs
-ms.custom: ''
+title: C.2 Règles
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c0de4c14e229716bcf764d9859be439090368b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404772"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642804"
 ---
 # <a name="c2-rules"></a>C.2 Règles
 
@@ -26,7 +16,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
 **/\* en C++ (ISO/IEC 14882:1998) \*/**
 
 *instruction-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instruction*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*directive OpenMP*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*instruction de déclaration-seq*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*-modifier-seq instruction de la directive openmp*
@@ -34,7 +24,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
 **/\* dans C90 (9899 : 1990 de la norme ISO/IEC) \*/**
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instruction*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*directive OpenMP*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*instruction de la liste d’instructions*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*liste d’instructions de la directive openmp*
@@ -42,8 +32,8 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
 **/\* dans C99 (ISO/IEC 9899 : 1999) \*/**
 
 *élément de bloc*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Déclaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instruction*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*directive OpenMP*
 
 **/\* instructions standard \*/**
@@ -68,7 +58,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
 &nbsp;&nbsp;&nbsp;&nbsp;*directive Flush*
 
 *bloc structuré*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instruction*
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*
 
 *construction parallèle*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*bloc structuré de la directive parallèle*
@@ -199,18 +189,18 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
 &nbsp;&nbsp;&nbsp;&nbsp;*directive threadprivate*
 
 *la directive threadprivate*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *variable-list***)** *nouvelle ligne* 
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *variable-list***)** *nouvelle ligne*
 
 *clause de données*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**privé (** *variable-list* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***variable-list***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***variable-list***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *variable-list***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***variable-list***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***variable-list***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *variable-list***)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**partagé (** *variable-list* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**par défaut (partagé)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**par défaut (aucun)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**réduction (***opérateur de réduction***:***variable-list***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***variable-list***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**réduction (***opérateur de réduction***:***variable-list***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***variable-list***)**
 
 *opérateur de réduction*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Une des :  **+  \* -& ^ &#124; & &&#124;&#124;**

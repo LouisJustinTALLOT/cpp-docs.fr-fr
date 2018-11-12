@@ -1,10 +1,6 @@
 ---
-title: CAtlArray, classe | Microsoft Docs
-ms.custom: ''
+title: CAtlArray, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAtlArray
 - ATLCOLL/ATL::CAtlArray
@@ -26,21 +22,15 @@ f1_keywords:
 - ATLCOLL/ATL::SetCount
 - ATLCOLL/ATL::INARGTYPE
 - ATLCOLL/ATL::OUTARGTYPE
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442677"
 ---
 # <a name="catlarray-class"></a>CAtlArray, classe
 
@@ -90,7 +80,7 @@ Le code utilisé pour copier ou déplacer des éléments.
 
 |||
 |-|-|
-|[opérateur&#91;&#93;](#operator_at)|Appeler cet opérateur pour retourner une référence à un élément dans le tableau.|  
+|[opérateur&#91;&#93;](#operator_at)|Appeler cet opérateur pour retourner une référence à un élément dans le tableau.|
 
 ### <a name="typedefs"></a>Typedef
 

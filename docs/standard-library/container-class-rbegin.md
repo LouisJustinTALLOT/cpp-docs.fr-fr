@@ -1,25 +1,15 @@
 ---
-title: Conteneur Class::rbegin | Microsoft Docs
-ms.custom: ''
+title: Conteneur Class::rbegin
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - rbegin method
 ms.assetid: c1f0d60c-93aa-4313-81b9-04e3f9c796c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d19e7016120d66ceb59b8d1c77620121fc569b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: baa718e3902aeae13d169e9ac2ad19c0b5607d79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842056"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592080"
 ---
 # <a name="container-classrbegin"></a>Conteneur Class::rbegin
 
@@ -32,7 +22,6 @@ Retourne un itérateur inverse qui pointe juste après la fin de la séquence co
 
 ```cpp
 const_reverse_iterator rbegin() const;
-
 
 reverse_iterator rbegin();
 ```

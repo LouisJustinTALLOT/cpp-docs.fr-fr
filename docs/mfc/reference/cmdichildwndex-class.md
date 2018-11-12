@@ -1,10 +1,6 @@
 ---
-title: CMDIChildWndEx, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: CMDIChildWndEx, classe
+ms.date: 10/18/2018
 f1_keywords:
 - CMDIChildWndEx
 - AFXMDICHILDWNDEX/CMDIChildWndEx
@@ -61,8 +57,6 @@ f1_keywords:
 - AFXMDICHILDWNDEX/CMDIChildWndEx::ShowPane
 - AFXMDICHILDWNDEX/CMDIChildWndEx::UnregisterTaskbarTab
 - AFXMDICHILDWNDEX/CMDIChildWndEx::UpdateTaskbarTabIcon
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMDIChildWndEx [MFC], ActivateTopLevelFrame
 - CMDIChildWndEx [MFC], AddPane
@@ -118,23 +112,18 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f52ce513f0a0d96fe2454397417f2f7885e2c2f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9b92c9689749dca1ab4eebcade1c4f7e71d25a76
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441732"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541542"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx, classe
 
 Le `CMDIChildWndEx` classe fournit les fonctionnalités d’un Windows fenêtre interface multidocument (MDI) enfant. Il étend les fonctionnalités de [CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md). L'infrastructure requiert cette classe lorsqu'une application MDI utilise certaines classes MFC.
 
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
-
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -193,7 +182,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Appelé par l’infrastructure lorsqu’il a besoin étendre une bitmap pour Windows 7 barre des tâches onglet image miniature de l’enfant MDI.|
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Appelé par l’infrastructure pour mettre à jour le titre du frame. (Substitue `CMDIChildWnd::OnUpdateFrameTitle`.)|
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Retourne le volet qui contient le point donné.|
-|`CMDIChildWndEx::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CMDIChildWndEx::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Recalcule la disposition de la fenêtre.|
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Inscrit l’enfant MDI avec onglets de la barre des tâches Windows 7.|
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Supprime un volet à partir du Gestionnaire d’ancrage.|
@@ -283,7 +272,6 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 [in] Handle vers une structure de fenêtre différée.
 
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs
-
 
 ```
 virtual BOOL CanShowOnMDITabs();
@@ -411,7 +399,6 @@ Appelez cette méthode pour permettre l’alignement d’ancrage au frame princi
 
 ##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager();
 ```
@@ -502,7 +489,6 @@ CBasePane* GetPane(UINT nID);
 Pointeur vers le volet si elle est trouvée, sinon NULL.
 
 ##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup
-
 
 ```
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -770,19 +756,17 @@ void RemovePaneFromDockManager(
 
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup
 
-
 ```
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *p*
+[in] *p*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane
-
 
 ```
 void ShowPane(
@@ -794,10 +778,13 @@ void ShowPane(
 
 ### <a name="parameters"></a>Paramètres
 
-*pBar*<br/>
-[in] [in] *bShow*
-*bDelay*<br/>
-[in] [in] *bActivate*
+[in] *pBar*<br/>
+
+[in] *bShow*<br/>
+
+[in] *bDelay*<br/>
+
+[in] *bActivate*<br/>
 
 ### <a name="remarks"></a>Notes
 

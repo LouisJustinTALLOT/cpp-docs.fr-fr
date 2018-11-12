@@ -1,8 +1,6 @@
 ---
-title: '&lt;algorithm&gt;, fonctions | Microsoft Docs'
-ms.custom: ''
+title: '&lt;algorithm&gt;, fonctions'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - algorithm/std::adjacent_find
 - algorithm/std::all_of
@@ -102,11 +100,7 @@ f1_keywords:
 - algorithm/std::count_if
 - algorithm/std::partition_copy
 - algorithm/std::swap
-dev_langs:
-- C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::adjacent_find [C++]
 - std::all_of [C++]
@@ -206,14 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c2e2e6e4ce39d74142891c5e539b8cc4d028753
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fb928edf603a5eec2acf1ac53bcd73360a876735
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726841"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630960"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
 
@@ -1020,25 +1012,25 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1 { 0, 5, 10, 15, 20, 25 };
-    vector<int> v2 { 0, 5, 10, 15, 20, 25 };
-    vector<int> v3 { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
+    vector<int> v1 { 0, 5, 10, 15, 20, 25 };
+    vector<int> v2 { 0, 5, 10, 15, 20, 25 };
+    vector<int> v3 { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
 
-    // Using range-and-a-half equal:
-    bool b = equal(v1.begin(), v1.end(), v2.begin());
-    cout << "v1 and v2 are equal: "
-       << b << endl; // true, as expected
+    // Using range-and-a-half equal:
+    bool b = equal(v1.begin(), v1.end(), v2.begin());
+    cout << "v1 and v2 are equal: "
+       << b << endl; // true, as expected
 
-    b = equal(v1.begin(), v1.end(), v3.begin());
-    cout << "v1 and v3 are equal: "
-       << b << endl; // true, surprisingly
+    b = equal(v1.begin(), v1.end(), v3.begin());
+    cout << "v1 and v3 are equal: "
+       << b << endl; // true, surprisingly
 
-    // Using dual-range equal:
-    b = equal(v1.begin(), v1.end(), v3.begin(), v3.end());
-    cout << "v1 and v3 are equal with dual-range overload: "
-       << b << endl; // false
+    // Using dual-range equal:
+    b = equal(v1.begin(), v1.end(), v3.begin(), v3.end());
+    cout << "v1 and v3 are equal with dual-range overload: "
+       << b << endl; // false
 
-    return 0;
+    return 0;
 }
 
 ```
@@ -8763,6 +8755,7 @@ int main()
 }
 
 ```
+
 ## <a name="see-also"></a>Voir aussi
 
 [\<algorithm>](../standard-library/algorithm.md)<br/>

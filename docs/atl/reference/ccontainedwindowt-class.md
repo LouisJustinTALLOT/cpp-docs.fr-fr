@@ -1,10 +1,6 @@
 ---
-title: CContainedWindowT, classe | Microsoft Docs
-ms.custom: ''
+title: CContainedWindowT, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CContainedWindowT
 - ATLWIN/ATL::CContainedWindowT
@@ -21,23 +17,17 @@ f1_keywords:
 - ATLWIN/ATL::CContainedWindowT::m_lpszClassName
 - ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
 - ATLWIN/ATL::CContainedWindowT::m_pObject
-dev_langs:
-- C++
 helpviewer_keywords:
 - CContainedWindow class
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e65451fcb506da9072d0dc8031ffba1b30280e6
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: bbc1f7a5ff27fdb18b251b73d5b40e87f637ef21
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548523"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT, classe
 
@@ -176,7 +166,7 @@ Si vous sous-classer une fenêtre existante via [SubclassWindow](#subclasswindow
 Appels [RegisterWndSuperclass](#registerwndsuperclass) pour inscrire une classe de fenêtre qui est basée sur une classe existante mais utilise [CContainedWindowT::WindowProc](#windowproc).
 
 ```
-HWND Create(  
+HWND Create(
     HWND hWndParent,
     _U_RECT rect,
     LPCTSTR szWindowName = NULL,
@@ -441,7 +431,7 @@ Utilisez cette méthode uniquement si vous souhaitez restaurer la procédure de 
 Cette méthode statique implémente la procédure de fenêtre.
 
 ```
-static LRESULT CALLBACK WindowProc(  
+static LRESULT CALLBACK WindowProc(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C3495 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C3495
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3495
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3495
 ms.assetid: 1fd40cb8-8373-403d-b8a8-f08424a50807
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dda1e2f2699969ad0bc446d9f79a0004e043998d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 81fcbb8102d5df8059aad00772b7ee0cc07c01d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067387"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452466"
 ---
 # <a name="compiler-error-c3495"></a>Erreur du compilateur C3495
 
@@ -50,5 +40,4 @@ int main()
 ## <a name="see-also"></a>Voir aussi
 
 [Expressions lambda](../../cpp/lambda-expressions-in-cpp.md)
-
 

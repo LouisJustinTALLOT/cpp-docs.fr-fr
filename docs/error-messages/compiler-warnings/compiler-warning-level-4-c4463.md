@@ -1,27 +1,17 @@
 ---
-title: Compilateur avertissement (niveau 4) C4463 | Microsoft Docs
-ms.custom: ''
+title: Compilateur avertissement (niveau 4) C4463
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4463
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 388f18ce1bc2e3a4279510ad6dc1a6938ab6f0e3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e125a532f87533958ec43ed5580665ad4108856b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474820"
 ---
 # <a name="compiler-warning-level-4-c4463"></a>Compilateur avertissement (niveau 4) C4463
 

@@ -1,31 +1,21 @@
 ---
-title: COleException, classe | Microsoft Docs
-ms.custom: ''
+title: COleException, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleException
 - AFXDISP/COleException
 - AFXDISP/COleException::Process
 - AFXDISP/COleException::m_sc
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e3b93e2c52feab4dea5c4d069d48991a2e14ee54
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 243ea2028b30d60a2c19b22238914682966d3b69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438897"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599340"
 ---
 # <a name="coleexception-class"></a>COleException, classe
 
@@ -122,6 +112,4 @@ Pour plus d’informations sur SCODE, consultez [Structure of COM Error Codes](/
 [Exemple MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
 [CException, classe](../../mfc/reference/cexception-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

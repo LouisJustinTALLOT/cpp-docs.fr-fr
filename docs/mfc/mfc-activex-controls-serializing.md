@@ -1,16 +1,10 @@
 ---
-title: 'Contrôles ActiveX MFC : Sérialisation | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : sérialisation'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - _wVerMinor
 - DoPropExchange
 - _wVerMajor
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], version support
 - wVerMinor global constant [MFC]
@@ -21,23 +15,19 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3be523feaacb403076f2c066943ca55ace958dce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fddd09ad7a3dc7d9211480bb21ac434419a48758
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401835"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522211"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Contrôles ActiveX MFC : sérialisation
 
 Cet article décrit comment sérialiser un contrôle ActiveX. Sérialisation est le processus de lecture ou écriture sur un support de stockage persistant, tel qu’un fichier de disque. La bibliothèque Microsoft Foundation classes (MFC) fournit la prise en charge intégrée pour la sérialisation dans la classe `CObject`. `COleControl` étend cette prise en charge pour les contrôles ActiveX via l’utilisation d’un mécanisme d’échange de propriété.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Sérialisation pour les contrôles ActiveX est implémentée en substituant [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Cette fonction, appelée pendant le chargement et l’enregistrement de l’objet contrôle, stocke toutes les propriétés implémentées avec une variable de membre ou une variable membre avec notification de modification.
 

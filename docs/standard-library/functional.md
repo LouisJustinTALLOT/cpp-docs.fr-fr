@@ -1,30 +1,20 @@
 ---
-title: '&lt;functional&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;functional&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <functional>
 - functional/std::<functional>
 - std::<functional>
-dev_langs:
-- C++
 helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3e838bf10b710caf12b5dcd51cad4cf625d887e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961234"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50457315"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -163,7 +153,7 @@ Chaque wrapper d'appel a un constructeur de déplacement et un constructeur de c
 |Opérateur|Description|
 |-|-|
 |[operator==](../standard-library/functional-operators.md#op_eq_eq)|N'autorise pas la comparaison d'égalité d'objets pouvant être appelés.|
-|[operator!=](../standard-library/functional-operators.md#op_neq)|N'autorise pas la comparaison d'inégalité d'objets pouvant être appelés.|
+|[!=, opérateur](../standard-library/functional-operators.md#op_neq)|N'autorise pas la comparaison d'inégalité d'objets pouvant être appelés.|
 
 ## <a name="see-also"></a>Voir aussi
 

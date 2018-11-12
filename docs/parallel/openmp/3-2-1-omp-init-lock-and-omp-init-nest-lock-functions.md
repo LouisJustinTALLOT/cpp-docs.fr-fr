@@ -1,23 +1,13 @@
 ---
-title: 3.2.1 fonctions fonctions omp_init_lock et omp_init_nest_lock | Microsoft Docs
-ms.custom: ''
+title: 3.2.1 Fonctions omp_init_lock and omp_init_nest_lock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 098a2721-b16a-484f-bc83-4b8e281e382c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4303eb3ccfcb1c449022a4be32f94b9f91e6e80c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2d15aacb5e6743d18150fb45bea85b7ca22a401f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387001"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472774"
 ---
 # <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 Fonctions omp_init_lock and omp_init_nest_lock
 

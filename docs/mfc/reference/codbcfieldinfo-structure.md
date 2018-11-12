@@ -1,28 +1,18 @@
 ---
-title: Codbcfieldinfo, Structure | Microsoft Docs
-ms.custom: ''
+title: CODBCFieldInfo, structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CODBCFieldInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - ODBC [MFC], data source information
 - CODBCFieldInfo structure [MFC]
 ms.assetid: 92598b4f-facc-4108-b282-63a179ff79ab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 797a229007be58ff3da3bb529c9e8f4a062c12b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ad7d8f710c763b25771e3d1fa8839b5b64802ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655271"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo, structure
 
@@ -71,5 +61,4 @@ Pour récupérer ces informations, appelez [CRecordset::GetODBCFieldInfo](../../
 [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
 [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
-
 

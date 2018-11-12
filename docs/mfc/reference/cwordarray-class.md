@@ -1,10 +1,6 @@
 ---
-title: CWordArray, classe | Microsoft Docs
-ms.custom: ''
+title: CWordArray, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CWordArray
 - AFXCOLL/CWordArray
@@ -26,8 +22,6 @@ f1_keywords:
 - AFXCOLL/CObArray::SetAt
 - AFXCOLL/CObArray::SetAtGrow
 - AFXCOLL/CObArray::SetSize
-dev_langs:
-- C++
 helpviewer_keywords:
 - CObArray [MFC], CObArray
 - CObArray [MFC], Add
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cddcf337c68908d58749623e0739f3cb5979fa91
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c8915b8d82f96ed0bd1fad11e1a4f0687b40493
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387950"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530167"
 ---
 # <a name="cwordarray-class"></a>CWordArray, classe
 
@@ -559,6 +549,4 @@ Cette fonction permet l’affichage pour mettre à jour son affichage afin de re
 [Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

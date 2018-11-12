@@ -1,10 +1,6 @@
 ---
-title: Cmfctoolbarmenubutton, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfctoolbarmenubutton, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCToolBarMenuButton
 - AFXTOOLBARMENUBUTTON/CMFCToolBarMenuButton
@@ -51,8 +47,6 @@ f1_keywords:
 - AFXTOOLBARMENUBUTTON/CMFCToolBarMenuButton::SetTearOff
 - AFXTOOLBARMENUBUTTON/CMFCToolBarMenuButton::DrawDocumentIcon
 - AFXTOOLBARMENUBUTTON/CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], CMFCToolBarMenuButton
 - CMFCToolBarMenuButton [MFC], CompareWith
@@ -98,16 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f4dffd2fe57e38855033d192ddaf9ac9752e201
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed786f3449f172f1aa4255a4ca677a400b767e83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404896"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429365"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Cmfctoolbarmenubutton, classe
 
@@ -257,14 +247,13 @@ L’exemple suivant montre comment construire un objet de la `CMFCToolBarMenuBut
 
 ##  <a name="comparewith"></a>  CMFCToolBarMenuButton::CompareWith
 
-
 ```
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *autres*
+[in] *autres*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -272,14 +261,13 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ##  <a name="copyfrom"></a>  CMFCToolBarMenuButton::CopyFrom
 
-
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *src*
+[in] *src*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -349,7 +337,7 @@ void DrawDocumentIcon(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique.
 
 *rectImage*<br/>
@@ -364,7 +352,6 @@ Cette méthode prend une icône de document et il dessine sur le bouton de menu,
 
 ##  <a name="enablequickcustomize"></a>  CMFCToolBarMenuButton::EnableQuickCustomize
 
-
 ```
 void EnableQuickCustomize();
 ```
@@ -372,7 +359,6 @@ void EnableQuickCustomize();
 ### <a name="remarks"></a>Notes
 
 ##  <a name="hasbutton"></a>  CMFCToolBarMenuButton::HasButton
-
 
 ```
 virtual BOOL HasButton() const;
@@ -384,7 +370,6 @@ virtual BOOL HasButton() const;
 
 ##  <a name="havehotborder"></a>  CMFCToolBarMenuButton::HaveHotBorder
 
-
 ```
 virtual BOOL HaveHotBorder() const;
 ```
@@ -394,7 +379,6 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>Notes
 
 ##  <a name="isborder"></a>  CMFCToolBarMenuButton::IsBorder
-
 
 ```
 virtual BOOL IsBorder() const;
@@ -406,7 +390,6 @@ virtual BOOL IsBorder() const;
 
 ##  <a name="isclickedonmenu"></a>  CMFCToolBarMenuButton::IsClickedOnMenu
 
-
 ```
 BOOL IsClickedOnMenu() const;
 ```
@@ -416,7 +399,6 @@ BOOL IsClickedOnMenu() const;
 ### <a name="remarks"></a>Notes
 
 ##  <a name="isquickmode"></a>  CMFCToolBarMenuButton::IsQuickMode
-
 
 ```
 BOOL IsQuickMode();
@@ -581,7 +563,6 @@ Lorsque cette variable de membre est définie sur TRUE, le bouton appelle toujou
 
 ##  <a name="onaftercreatepopupmenu"></a>  CMFCToolBarMenuButton::OnAfterCreatePopupMenu
 
-
 ```
 virtual void OnAfterCreatePopupMenu();
 ```
@@ -589,7 +570,6 @@ virtual void OnAfterCreatePopupMenu();
 ### <a name="remarks"></a>Notes
 
 ##  <a name="onbeforedrag"></a>  CMFCToolBarMenuButton::OnBeforeDrag
-
 
 ```
 virtual BOOL OnBeforeDrag() const;
@@ -601,7 +581,6 @@ virtual BOOL OnBeforeDrag() const;
 
 ##  <a name="oncalculatesize"></a>  CMFCToolBarMenuButton::OnCalculateSize
 
-
 ```
 virtual SIZE OnCalculateSize(
     CDC* pDC,
@@ -611,15 +590,15 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
-[in] [in] *sizeDefault* [in] *bHorz*
+[in] *pDC*<br/>
+[in] *sizeDefault*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="oncancelmode"></a>  CMFCToolBarMenuButton::OnCancelMode
-
 
 ```
 virtual void OnCancelMode();
@@ -629,19 +608,17 @@ virtual void OnCancelMode();
 
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarMenuButton::OnChangeParentWnd
 
-
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pWndParent*
+[in] *pWndParent*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="onclick"></a>  CMFCToolBarMenuButton::OnClick
-
 
 ```
 virtual BOOL OnClick(
@@ -651,8 +628,8 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Paramètres
 
-*pWnd*<br/>
-[in] [in] *bDelay*
+[in] *pWnd*<br/>
+[in] *bDelay*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -678,21 +655,19 @@ Pour personnaliser le traitement des éléments de menu, substituez `OnClickMenu
 
 ##  <a name="oncontexthelp"></a>  CMFCToolBarMenuButton::OnContextHelp
 
-
 ```
 virtual BOOL OnContextHelp(CWnd* pWnd);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pWnd*
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="ondraw"></a>  CMFCToolBarMenuButton::OnDraw
-
 
 ```
 virtual void OnDraw(
@@ -708,19 +683,18 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
-[in] [in] *rect*
-*pImages*<br/>
-[in] [in] *bHorz*
-*bCustomizeMode*<br/>
-[in] [in] *bHighlight*
-*bDrawBorder*<br/>
-[in] [in] *bGrayDisabledButtons*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *pImages*<br/>
+[in] *bHorz*<br/>
+[in] *bCustomizeMode*<br/>
+[in] *bHighlight*<br/>
+[in] *bDrawBorder*<br/>
+[in] *bGrayDisabledButtons*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarMenuButton::OnDrawOnCustomizeList
-
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -731,8 +705,9 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
-[in] [in] *rect* [in] *bSelected*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bSelected*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -761,7 +736,6 @@ Cette fonction est appelée par l’infrastructure quand l’utilisateur ouvre u
 
 ##  <a name="resetimagetodefault"></a>  CMFCToolBarMenuButton::ResetImageToDefault
 
-
 ```
 virtual void ResetImageToDefault();
 ```
@@ -769,7 +743,6 @@ virtual void ResetImageToDefault();
 ### <a name="remarks"></a>Notes
 
 ##  <a name="savebarstate"></a>  CMFCToolBarMenuButton::SaveBarState
-
 
 ```
 virtual void SaveBarState();
@@ -781,14 +754,13 @@ L’infrastructure appelle cette méthode lorsqu’il crée un bouton de barre d
 
 ##  <a name="serialize"></a>  CMFCToolBarMenuButton::Serialize
 
-
 ```
 virtual void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *ar*
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -859,14 +831,13 @@ Dans le mode de palette, tous les éléments de menu sont affichés sous une pal
 
 ##  <a name="setmessagewnd"></a>  CMFCToolBarMenuButton::SetMessageWnd
 
-
 ```
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pWndMessage*
+[in] *pWndMessage*<br/>
 
 ### <a name="remarks"></a>Notes
 

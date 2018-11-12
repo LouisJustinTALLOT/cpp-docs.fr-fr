@@ -1,10 +1,6 @@
 ---
-title: CGopherFileFind, classe | Microsoft Docs
-ms.custom: ''
+title: CGopherFileFind, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CGopherFileFind
 - AFXINET/CGopherFileFind
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXINET/CGopherFileFind::GetLocator
 - AFXINET/CGopherFileFind::GetScreenName
 - AFXINET/CGopherFileFind::IsDots
-dev_langs:
-- C++
 helpviewer_keywords:
 - CGopherFileFind [MFC], CGopherFileFind
 - CGopherFileFind [MFC], FindFile
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a66ba34356fbc429421f1e9e9e547e7392220a8a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d5c8ceeaeb87b2e0f099ac027bbacc744598e8e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374481"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662408"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind, classe
 
@@ -144,7 +134,6 @@ virtual BOOL FindFile(
     CGopherLocator& refLocator,
     LPCTSTR pstrString,
     DWORD dwFlags = INTERNET_FLAG_RELOAD);
-
 
 virtual BOOL FindFile(
     LPCTSTR pstrString,

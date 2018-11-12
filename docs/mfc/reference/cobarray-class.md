@@ -1,10 +1,6 @@
 ---
-title: CObArray, classe | Microsoft Docs
-ms.custom: ''
+title: CObArray (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CObArray
 - AFXCOLL/CObArray
@@ -26,8 +22,6 @@ f1_keywords:
 - AFXCOLL/CObArray::SetAt
 - AFXCOLL/CObArray::SetAtGrow
 - AFXCOLL/CObArray::SetSize
-dev_langs:
-- C++
 helpviewer_keywords:
 - CObArray [MFC], CObArray
 - CObArray [MFC], Add
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02b3a076a46092c3c4b36055aadb2dfa24af0f82
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 255928fd767dab36404af561f9dda2c1115fc30f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420099"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508262"
 ---
 # <a name="cobarray-class"></a>CObArray (classe)
 
@@ -531,7 +521,6 @@ void InsertAt(
     INT_PTR nIndex,
     CObject* newElement,
     INT_PTR nCount = 1);
-
 
 void InsertAt(
     INT_PTR nStartIndex,

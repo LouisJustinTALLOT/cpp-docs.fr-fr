@@ -1,25 +1,15 @@
 ---
-title: Conteneur Class::end | Microsoft Docs
-ms.custom: ''
+title: Conteneur Class::end
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - end method
 ms.assetid: 6fa38a20-3798-4387-9c6e-20fc3e90d813
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d22551a9832b18bbb246ea99dafe75dad11c361
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 458f22e76f03322c1a67a9ec93b953ad82d71a35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842480"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475421"
 ---
 # <a name="container-classend"></a>Conteneur Class::end
 
@@ -33,7 +23,6 @@ Retourne un itérateur qui pointe juste après la fin de la séquence.
 ```
 
     const_iterator end() const;
-
 
 iterator end();
 ```

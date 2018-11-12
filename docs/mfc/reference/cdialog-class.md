@@ -1,10 +1,6 @@
 ---
-title: CDialog, classe | Microsoft Docs
-ms.custom: ''
+title: CDialog (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDialog
 - AFXWIN/CDialog
@@ -25,8 +21,6 @@ f1_keywords:
 - AFXWIN/CDialog::SetHelpID
 - AFXWIN/CDialog::OnCancel
 - AFXWIN/CDialog::OnOK
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDialog [MFC], CDialog
 - CDialog [MFC], Create
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fdbbda6956e3265e7b17aa63ea26ac760b1fda5a
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 879f7d6eb4887dfebcc9b2be393b60da4942a351
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890619"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614928"
 ---
 # <a name="cdialog-class"></a>CDialog (classe)
 
@@ -158,7 +148,6 @@ explicit CDialog(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd = NULL);
 
-
 explicit CDialog(
     UINT nIDTemplate,
     CWnd* pParentWnd = NULL);
@@ -195,7 +184,6 @@ Appelez `Create` pour créer une boîte de dialogue non modale à l’aide d’u
 virtual BOOL Create(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd = NULL);
-
 
 virtual BOOL Create(
     UINT nIDTemplate,
@@ -244,7 +232,6 @@ virtual BOOL CreateIndirect(
     LPCDLGTEMPLATE lpDialogTemplate,
     CWnd* pParentWnd = NULL,
     void* lpDialogInit = NULL);
-
 
 virtual BOOL CreateIndirect(
     HGLOBAL hDialogTemplate,
@@ -377,7 +364,6 @@ BOOL InitModalIndirect(
     LPCDLGTEMPLATE lpDialogTemplate,
     CWnd* pParentWnd = NULL,
     void* lpDialogInit = NULL);
-
 
     BOOL InitModalIndirect(
     HGLOBAL hDialogTemplate,

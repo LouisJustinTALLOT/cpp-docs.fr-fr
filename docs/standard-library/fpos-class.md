@@ -1,32 +1,22 @@
 ---
-title: fpos, classe | Microsoft Docs
-ms.custom: ''
+title: fpos, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - iosfwd/std::fpos
 - iosfwd/std::fpos::seekpos
 - iosfwd/std::fpos::state
 - iosfwd/std::fpos::operator streamoff
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::fpos [C++]
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 914f3623e3ac288a27554edac848686efc025896
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: bf15cdf0ec4df1301b074ba2ae179dee3619d30d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105879"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564201"
 ---
 # <a name="fpos-class"></a>fpos, classe
 
@@ -67,7 +57,7 @@ Informations d'état.
 
 |Opérateur|Description|
 |-|-|
-|[operator!=](#op_neq)|Teste l'inégalité d'indicateurs de position de fichier.|
+|[!=, opérateur](#op_neq)|Teste l'inégalité d'indicateurs de position de fichier.|
 |[operator+](#op_add)|incrémente un indicateur de position de fichier.|
 |[operator+=](#op_add_eq)|incrémente un indicateur de position de fichier.|
 |[operator-](#operator-)|Décrémente un indicateur de position de fichier.|

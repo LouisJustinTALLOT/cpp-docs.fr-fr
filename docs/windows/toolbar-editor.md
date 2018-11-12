@@ -1,31 +1,20 @@
 ---
-title: Éditeur de la barre d’outils (C++) | Microsoft Docs
-ms.custom: ''
+title: Éditeur de la barre d’outils (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource editors [C++], Toolbar editor
 - editors, toolbars
 - toolbars [C++], editing
 - Toolbar editor
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0bb329b60b72aae268252ae3ddbcc2c63d4a18f6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7efff3d4d784de6ee3130c3481f3674351cc7463
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486054"
 ---
 # <a name="toolbar-editor-c"></a>Éditeur de la barre d’outils (C++)
 
@@ -43,8 +32,7 @@ Avec le **barre d’outils** éditeur, vous pouvez :
 
 Le **barre d’outils** fenêtre de l’éditeur affiche deux vues d’une image du bouton, identique à la fenêtre d’éditeur d’Image. Une barre de fractionnement sépare les deux volets. Vous pouvez faire glisser la barre de fractionnement pour modifier la taille des volets. Une bordure de sélection entoure le volet actif. Au-dessus des deux affichages de l’image figure la barre d’outils de sujet.
 
-![Barre d’outils Éditeur](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
-Éditeur de barres d’outils
+![Barre d’outils Éditeur](../mfc/media/vctoolbareditor.gif "vcToolbarEditor") éditeur de la barre d’outils
 
 Le **barre d’outils** éditeur est similaire à la **Image** éditeur dans la fonctionnalité. Les éléments de menu, outils de graphique et grille de bitmap sont les mêmes que celles figurant dans le **Image** éditeur. Il existe une commande de menu sur le **Image** menu vous permet de basculer entre le **barre d’outils** éditeur et le **Image** éditeur. Pour plus d’informations sur l’utilisation de la **Graphics** barre d’outils, **couleurs** palette, ou **Image** menu, consultez [Éditeur d’images](../windows/image-editor-for-icons.md).
 

@@ -1,10 +1,6 @@
 ---
-title: Cjumplist, classe | Microsoft Docs
-ms.custom: ''
+title: Cjumplist, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CJumpList
 - AFXADV/CJumpList
@@ -23,8 +19,6 @@ f1_keywords:
 - AFXADV/CJumpList::GetRemovedItems
 - AFXADV/CJumpList::InitializeList
 - AFXADV/CJumpList::SetAppID
-dev_langs:
-- C++
 helpviewer_keywords:
 - CJumpList [MFC], CJumpList
 - CJumpList [MFC], AbortList
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ecbfcbe75620f89b8ef25fba51273e16ae9f28d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7248c86f71780ef1867a1ce7edf871f27fc67643
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408074"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642180"
 ---
 # <a name="cjumplist-class"></a>Cjumplist, classe
 
@@ -126,11 +116,9 @@ BOOL AddDestination(
     LPCTSTR lpcszCategoryName,
     LPCTSTR strDestinationPath);
 
-
 BOOL AddDestination(
     LPCTSTR strCategoryName,
     IShellItem* pShellItem);
-
 
 BOOL AddDestination(
     LPCTSTR strCategoryName,

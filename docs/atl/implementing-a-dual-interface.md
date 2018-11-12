@@ -1,30 +1,20 @@
 ---
-title: Implémentation d’une Interface double (ATL) | Microsoft Docs
-ms.custom: ''
+title: Implémentation d’une Interface double (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a362ba60b1601e2b291201e10ac49cf9c0ec1ef
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b5363bb74a0db5b3cc5dad9bb0c0c6cb05edf15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441221"
 ---
 # <a name="implementing-a-dual-interface"></a>Implémentation d’une Interface double
 
-Vous pouvez implémenter une interface double à l’aide de la [IDispatchImpl](../atl/reference/idispatchimpl-class.md) (classe), qui fournit une implémentation par défaut de la `IDispatch` méthodes dans une interface double. Pour plus d’informations, consultez [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Vous pouvez implémenter une interface double à l’aide de la [IDispatchImpl](../atl/reference/idispatchimpl-class.md) (classe), qui fournit une implémentation par défaut de la `IDispatch` méthodes dans une interface double. Pour plus d'informations, consultez [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 Pour utiliser cette classe :
 

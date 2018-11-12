@@ -1,26 +1,16 @@
 ---
-title: 'Conteneurs : Implémentation d’un conteneur | Microsoft Docs'
-ms.custom: ''
+title: "Conteneurs : implémentation d'un conteneur"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 46fa8b115dd01a9ee11442a0701cd719cc6d389e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394359"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546703"
 ---
 # <a name="containers-implementing-a-container"></a>Conteneurs : implémentation d'un conteneur
 
@@ -62,15 +52,15 @@ Vous pouvez aussi prendre en charge certaines des fonctionnalités suivantes dan
 
 - Activation en place lors de la modification d'un élément incorporé.
 
-     Pour plus d’informations, consultez [Activation](../mfc/activation-cpp.md).
+   Pour plus d’informations, consultez [Activation](../mfc/activation-cpp.md).
 
 - Création d’éléments OLE par glissement-dépôt d’une sélection depuis une application serveur.
 
-     Pour plus d’informations, consultez [glisser-déposer (OLE)](../mfc/drag-and-drop-ole.md).
+   Pour plus d’informations, consultez [glisser-déposer (OLE)](../mfc/drag-and-drop-ole.md).
 
 - Liens vers les objets incorporés ou association des applications conteneur/serveur.
 
-     Pour plus d’informations, consultez [conteneurs : fonctionnalités avancées](../mfc/containers-advanced-features.md).
+   Pour plus d’informations, consultez [conteneurs : fonctionnalités avancées](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>Voir aussi
 

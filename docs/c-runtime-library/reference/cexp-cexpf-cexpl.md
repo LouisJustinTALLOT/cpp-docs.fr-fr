@@ -1,11 +1,6 @@
 ---
-title: cexp, cexpf, cexpl | Microsoft Docs
-ms.custom: ''
+title: cexp, cexpf, cexpl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cexp
 - cexpf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cepx
 - complex/cexpf
 - complex/cexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cexp function
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a54dc0c25fd0b476887914778278ec83c19fe8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393990"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462931"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 
@@ -72,13 +61,13 @@ Nombre complexe qui représente l’exposant.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de **e** à la puissance de *z*.
+La valeur de **e** élevé à la puissance de *z*.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cexp** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **cexp** accepte et retourne toujours un **_Dcomplex** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **cexp** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **cexp** accepte et retourne toujours un **_Dcomplex** valeur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

@@ -1,10 +1,6 @@
 ---
-title: tiled_extent, classe | Microsoft Docs
-ms.custom: ''
+title: tiled_extent, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - tiled_extent
 - AMP/tiled_extent
@@ -16,19 +12,13 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs:
-- C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a15cc3aae03c0f9c57d982aac93cf711c735b35b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 77d16eefa61fb30614cb6527792014cc8655abe0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393490"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476893"
 ---
 # <a name="tiledextent-class"></a>tiled_extent, classe
 
@@ -216,6 +206,7 @@ Stocke la longueur de la prochaine-à-dimension la plus significative.
 ```
 static const int tile_dim1 = _Dim1;
 ```
+
 ## <a name="tile_dim2"> </a>  tile_dim2
 
 Stocke la longueur de la dimension la moins significative.
@@ -225,6 +216,7 @@ Stocke la longueur de la dimension la moins significative.
 ```
 static const int tile_dim2 = _Dim2;
 ```
+
 ## <a name="tile_extent"> </a>  tile_extent
   Obtient un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.
 

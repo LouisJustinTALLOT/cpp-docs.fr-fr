@@ -1,12 +1,6 @@
 ---
-title: 'Contrôles ActiveX MFC : Optimisation | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : optimisation'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], windowless
 - flicker-free ActiveX controls
@@ -20,23 +14,19 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4864e0be8ef49541cc59474bdb24c2ef25840007
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cc4d210abe0bca5ba8d3a442796173111f45f6e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441198"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588563"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Contrôles ActiveX MFC : optimisation
 
 Cet article explique les techniques que vous pouvez utiliser pour optimiser vos contrôles ActiveX pour de meilleures performances.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Les rubriques [activation de désactiver l’Option actif quand Visible](../mfc/turning-off-the-activate-when-visible-option.md) et [fournissant Interaction souris pendant l’inactivité](../mfc/providing-mouse-interaction-while-inactive.md) traitent des contrôles qui ne créent une fenêtre jusqu'à l’activation. La rubrique [fournissant l’Activation sans fenêtre](../mfc/providing-windowless-activation.md) décrit les contrôles jamais créent une fenêtre, même lorsqu’ils sont activés.
 

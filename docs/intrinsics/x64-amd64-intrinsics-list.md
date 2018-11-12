@@ -1,26 +1,16 @@
 ---
-title: x64 (amd64) liste d’intrinsèques | Microsoft Docs
-ms.custom: ''
+title: Liste d'intrinsèques x64 (amd64)
 ms.date: 06/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl-exe compiler, intrinsics
 - intrinsics, x64
 - intrinsics, amd64
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28a1d01910fd996ea396d2fd3e845001fa208341
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406865"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491249"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Liste d'intrinsèques x64 (amd64)
 
@@ -32,9 +22,9 @@ Pour plus d'informations sur les intrinsèques, consultez ces ressources, en fon
 
 - [Guide des fonctions intrinsèques Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Utilisez la zone de recherche pour rechercher des fonctions intrinsèques spécifiques.
 
-- [Manuels de développement logiciel Intel 64 et IA-32 Architectures](https://software.intel.com/articles/intel-sdm)
+- [Manuels de développement logiciel pour les architectures Intel 64 et IA-32](https://software.intel.com/articles/intel-sdm)
 
-- [Référence de programmation des Extensions du jeu d’instructions d’Architecture Intel](https://software.intel.com/isa-extensions)
+- [Extensions ISA (Instruction Set Architecture) Intel](https://software.intel.com/isa-extensions)
 
 - [Présentation d’Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
@@ -1284,4 +1274,4 @@ Le tableau suivant répertorie les fonctions intrinsèques disponibles sur les p
 
 [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [ARM, fonctions intrinsèques](../intrinsics/arm-intrinsics.md)<br/>
-[x86 intrinsèques](../intrinsics/x86-intrinsics-list.md)
+[Intrinsèques x86](../intrinsics/x86-intrinsics-list.md)

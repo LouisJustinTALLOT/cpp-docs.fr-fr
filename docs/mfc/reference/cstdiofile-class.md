@@ -1,10 +1,6 @@
 ---
-title: CStdioFile, classe | Microsoft Docs
-ms.custom: ''
+title: CStdioFile, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CStdioFile
 - AFX/CStdioFile
@@ -14,8 +10,6 @@ f1_keywords:
 - AFX/CStdioFile::Seek
 - AFX/CStdioFile::WriteString
 - AFX/CStdioFile::m_pStream
-dev_langs:
-- C++
 helpviewer_keywords:
 - CStdioFile [MFC], CStdioFile
 - CStdioFile [MFC], Open
@@ -24,16 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bbe6d2bd5ea8d03a73fd7389da9eeb0e7ca32cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442420"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456210"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile, classe
 
@@ -101,11 +91,9 @@ CStdioFile();
 CStdioFile(CAtlTransactionManager* pTM);
   CStdioFile(FILE* pOpenStream);
 
-
 CStdioFile(
     LPCTSTR lpszFileName,
     UINT nOpenFlags);
-
 
 CStdioFile(
     LPCTSTR lpszFileName,
@@ -166,7 +154,6 @@ virtual BOOL Open(
     LPCTSTR lpszFileName,
     UINT nOpenFlags,
     CFileException* pError = NULL);
-
 
 virtual BOOL Open(
     LPCTSTR lpszFileName,

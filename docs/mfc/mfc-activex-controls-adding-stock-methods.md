@@ -1,34 +1,24 @@
 ---
-title: 'Contrôles ActiveX MFC : Ajout de méthodes Stock | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : ajout de méthodes stock'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], stock methods
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b42907273423d69ed93df5700b33556047338fe2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391424"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585027"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Contrôles ActiveX MFC : ajout de méthodes stock
 
 Une méthode stockée diffère d’une méthode personnalisée car il est déjà implémenté par classe [COleControl](../mfc/reference/colecontrol-class.md). Par exemple, `COleControl` contient une fonction membre prédéfinie qui prend en charge de la méthode d’actualisation pour votre contrôle. L’entrée de mappage de répartition pour cette méthode stockée est DISP_STOCKFUNC_REFRESH.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 `COleControl` prend en charge deux méthodes stock : DoClick et l’actualisation. L’actualisation est appelée par l’utilisateur du contrôle pour mettre immédiatement à jour l’apparence du contrôle ; DoClick est appelée pour déclencher Click du contrôle événement.
 
@@ -51,7 +41,7 @@ Ajout d’une méthode stockée est simple à l’aide de la [Assistant Ajout de
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une méthode**.
 
-     Cette opération ouvre l’Assistant Ajout de méthode.
+   Cette opération ouvre l’Assistant Ajout de méthode.
 
 1. Dans le **nom de la méthode** , cliquez sur **Actualiser**.
 

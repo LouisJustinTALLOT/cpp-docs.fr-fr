@@ -1,28 +1,17 @@
 ---
-title: VARARG (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: VARARG (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.vararg
-dev_langs:
-- C++
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 97a546c5e6502018e4ee59f26a976994f0c74b7f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6f3048e60c10efed05fc5bccc3c61949351f7bf9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790677"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504700"
 ---
 # <a name="vararg"></a>vararg
 
@@ -67,9 +56,9 @@ __interface X : public IUnknown
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs de méthode](method-attributes.md)  
+[Attributs de méthode](method-attributes.md)

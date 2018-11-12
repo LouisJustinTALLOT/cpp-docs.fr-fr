@@ -1,10 +1,6 @@
 ---
-title: _set_error_mode | Microsoft Docs
-ms.custom: ''
+title: _set_error_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_error_mode
 apilocation:
@@ -23,26 +19,20 @@ apitype: DLLExport
 f1_keywords:
 - set_error_mode
 - _set_error_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 130e9fee13401c8b598a5d6eef7d1fab3ed80ae9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406493"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502308"
 ---
 # <a name="seterrormode"></a>_set_error_mode
 
-Modifie **__error_mode** pour déterminer un emplacement non définis par défaut dans lequel le runtime C écrit un message d’erreur pour une erreur qui peut mettre fin au programme.
+Modifie **__error_mode** pour déterminer un emplacement non défini par défaut dans lequel le runtime C écrit un message d’erreur pour une erreur qui peut mettre fin au programme.
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -75,13 +65,13 @@ Le *mode_val* paramètre peut être défini à une des valeurs suivantes.
 |**_OUT_TO_DEFAULT**|L’intercepteur d’erreurs est déterminé par **__app_type**.|
 |**_OUT_TO_STDERR**|L'intercepteur d'erreurs est une erreur standard.|
 |**_OUT_TO_MSGBOX**|L'intercepteur d'erreurs est une boîte de message.|
-|**_REPORT_ERRMODE**|État actuel **__error_mode** valeur.|
+|**_REPORT_ERRMODE**|Rapport actuel **__error_mode** valeur.|
 
 Si la valeur transmise est différente de celles répertoriées, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_set_error_mode** définit **errno** à **EINVAL** et retourne -1.
 
-Lorsqu’il est utilisé avec un [assert](assert-macro-assert-wassert.md), **_set_error_mode** affiche l’instruction ayant échouée dans la boîte de dialogue et vous donne la possibilité de choisir le **ignorer** bouton afin que vous puissiez continuer à exécuter le programme.
+Lorsqu’il est utilisé avec un [assert](assert-macro-assert-wassert.md), **_set_error_mode** affiche l’instruction en échec dans la boîte de dialogue et vous donne la possibilité de choisir le **ignorer** bouton afin que vous puissiez continuer à exécuter le programme.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

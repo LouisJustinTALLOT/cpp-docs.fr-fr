@@ -1,28 +1,18 @@
 ---
-title: _emit, pseudo-instruction | Microsoft Docs
-ms.custom: ''
+title: _emit, pseudo-instruction
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
 f1_keywords:
 - _emit
-dev_langs:
-- C++
 helpviewer_keywords:
 - byte defining (inline assembly)
 - _emit pseudoinstruction
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8c11165e8b6632488d29e5fe79aa945332c25e9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f2a7c9c4dab97bc1aba3147b5d75f6abbdac951f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540866"
 ---
 # <a name="emit-pseudoinstruction"></a>_emit, pseudo-instruction
 
@@ -38,8 +28,8 @@ Le fragment suivant place les octets 0x4A, 0x43 et 0x4B dans le code :
 .
 .
 __asm {
-     randasm
-     }
+    randasm
+    }
 ```
 
 > [!CAUTION]

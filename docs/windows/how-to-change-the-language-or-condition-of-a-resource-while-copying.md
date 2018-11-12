@@ -1,28 +1,17 @@
 ---
-title: 'Comment : modifier la langue ou la Condition d’une ressource lors de la copie (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : modifier la langue ou la Condition d’une ressource lors de la copie (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.changing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Language property [C++]
 ms.assetid: 8f622ab0-bac2-468f-ae70-78911afc4759
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6239acd275d94eb2a59fe59882095d5106d3fc1e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 42d8fb36dcbd243b0a99f2dbc597bdf352f47266
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405734"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642518"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>Comment : modifier la langue ou la Condition d’une ressource lors de la copie (C++)
 
@@ -35,7 +24,7 @@ Durant la copie d'une ressource, vous pouvez changer sa propriété language ou 
 La langue et la condition d'une ressource sont affichées entre parenthèses après le nom de la ressource dans la fenêtre Espace de travail. Dans cet exemple, la ressource nommée IDD_AboutBox utilise le finnois comme langue, et sa condition est XX33.
 
 ```cpp
-IDD_AboutBox (Finnish - XX33)  
+IDD_AboutBox (Finnish - XX33)
 ```
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Pour copier une ressource existante et modifier sa langue ou sa condition

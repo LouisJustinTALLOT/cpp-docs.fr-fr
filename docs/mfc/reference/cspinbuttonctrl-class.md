@@ -1,10 +1,6 @@
 ---
-title: CSpinButtonCtrl, classe | Microsoft Docs
-ms.custom: ''
+title: CSpinButtonCtrl (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
 - AFXCMN/CSpinButtonCtrl
@@ -21,8 +17,6 @@ f1_keywords:
 - AFXCMN/CSpinButtonCtrl::SetBuddy
 - AFXCMN/CSpinButtonCtrl::SetPos
 - AFXCMN/CSpinButtonCtrl::SetRange
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSpinButtonCtrl [MFC], CSpinButtonCtrl
 - CSpinButtonCtrl [MFC], Create
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e37f277c4d1676a15aa5f1c0cd593bf0a181040
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395737"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526404"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 
@@ -389,7 +379,6 @@ Définit les limites supérieures et inférieures (plage) d’un contrôle de bo
 void SetRange(
     short nLower,
     short nUpper);
-
 
 void SetRange32(
     int nLower,

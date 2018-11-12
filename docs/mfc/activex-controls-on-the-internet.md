@@ -1,12 +1,6 @@
 ---
-title: Contrôles ActiveX sur Internet | Microsoft Docs
-ms.custom: ''
+title: Contrôles ActiveX sur Internet
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX controls [MFC], creating
 - ActiveX controls [MFC], Internet
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890334"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603708"
 ---
 # <a name="activex-controls-on-the-internet"></a>Contrôles ActiveX sur Internet
 
@@ -67,7 +57,7 @@ Pour améliorer les performances de vos contrôles, suivez ces recommandations e
 
 - Téléchargez les données par petits blocs.
 
-     En téléchargeant des flux volumineux, tels que des fichiers bitmap ou des données vidéo, accédez aux données d'un contrôle en coopération avec le conteneur. Récupérez des données de façon incrémentielle ou progressive, en travaillant en coopération avec d'autres contrôles qui peuvent aussi récupérer des données. Ce code peut également être téléchargé de manière asynchrone.
+   En téléchargeant des flux volumineux, tels que des fichiers bitmap ou des données vidéo, accédez aux données d'un contrôle en coopération avec le conteneur. Récupérez des données de façon incrémentielle ou progressive, en travaillant en coopération avec d'autres contrôles qui peuvent aussi récupérer des données. Ce code peut également être téléchargé de manière asynchrone.
 
 - Téléchargez le code et les propriétés en arrière-plan.
 
@@ -75,15 +65,15 @@ Pour améliorer les performances de vos contrôles, suivez ces recommandations e
 
 - Considérez la manière dont les données permanentes sont enregistrées, à la fois pour les propriétés et les importantes données BLOB (par exemple une image bitmap ou des données vidéo).
 
-     Les contrôles avec des quantités importantes de données permanentes, telles que des fichiers bitmap ou AVI, requièrent une attention particulière à la méthode de téléchargement. Un document ou une page peut être visible dès que possible, et permet à l'utilisateur d'interagir avec la page lorsque les contrôles extraient des données en arrière-plan.
+   Les contrôles avec des quantités importantes de données permanentes, telles que des fichiers bitmap ou AVI, requièrent une attention particulière à la méthode de téléchargement. Un document ou une page peut être visible dès que possible, et permet à l'utilisateur d'interagir avec la page lorsque les contrôles extraient des données en arrière-plan.
 
 - Entrez des routines efficaces pour réduire le nombre et l'exécution d'instructions.
 
-     Les contrôles d'étiquette et de petits boutons, avec seulement quelques octets de données persistantes, conviennent pour une utilisation dans l'environnement Internet et fonctionnent correctement à l'intérieur des navigateurs.
+   Les contrôles d'étiquette et de petits boutons, avec seulement quelques octets de données persistantes, conviennent pour une utilisation dans l'environnement Internet et fonctionnent correctement à l'intérieur des navigateurs.
 
 - Considérez que la progression est communiquée au conteneur.
 
-     Informez le conteneur de la progression du téléchargement asynchrone, notamment lorsque l'utilisateur peut commencer à interagir avec une page, et si le téléchargement est terminé. Le conteneur peut afficher la progression à l'utilisateur, tels que les pourcentages atteints.
+   Informez le conteneur de la progression du téléchargement asynchrone, notamment lorsque l'utilisateur peut commencer à interagir avec une page, et si le téléchargement est terminé. Le conteneur peut afficher la progression à l'utilisateur, tels que les pourcentages atteints.
 
 - Déterminez comment les contrôles sont stockés sur l'ordinateur client.
 
@@ -99,7 +89,7 @@ Lors de la création d'un contrôle avec l'Assistant Application, vous pouvez ch
 
 1. Sur le **paramètres de contrôle** page, sélectionnez **charge les propriétés de façon asynchrone**. Cette option configure la propriété d'état Prêt et l'événement de modification d'état prêt pour vous.
 
-     Vous pouvez également sélectionner d’autres optimisations, telles que **l’activation sans fenêtre**, qui est décrite dans [contrôles ActiveX : optimisation](../mfc/mfc-activex-controls-optimization.md).
+   Vous pouvez également sélectionner d’autres optimisations, telles que **l’activation sans fenêtre**, qui est décrite dans [contrôles ActiveX : optimisation](../mfc/mfc-activex-controls-optimization.md).
 
 1. Choisissez **Terminer** pour créer le projet.
 
@@ -111,15 +101,15 @@ Lors de la création d'un contrôle avec l'Assistant Application, vous pouvez ch
 
 1. Dans cette classe, remplacez `OnDataAvailable`. Cette fonction est appelée lorsque les données sont disponibles pour l'affichage. Lorsque des données deviennent disponibles, vous pouvez les gérer avec la méthode de votre choix, par exemple avec un affichage progressif.
 
-     L'extrait de code ci-dessous est un exemple simple d'affichage progressif des données dans un contrôle d'édition. Notez l’utilisation de l’indicateur **BSCF_FIRSTDATANOTIFICATION** pour effacer le contrôle d’édition.
+   L'extrait de code ci-dessous est un exemple simple d'affichage progressif des données dans un contrôle d'édition. Notez l’utilisation de l’indicateur **BSCF_FIRSTDATANOTIFICATION** pour effacer le contrôle d’édition.
 
-     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
-     Notez que vous devez inclure AFXCMN.H pour utiliser la classe `CListCtrl`.
+   Notez que vous devez inclure AFXCMN.H pour utiliser la classe `CListCtrl`.
 
 1. Lorsque votre contrôle change d'état général (par exemple, de "en chargement" à "initialisé" ou "en interaction utilisateur"), appelez `COleControl::InternalSetReadyState`. Si votre contrôle a la propriété de données qu’un seul chemin d’accès, vous pouvez ajouter du code sur **BSCF_LASTDATANOTIFICATION** pour notifier au conteneur que le téléchargement est terminé. Exemple :
 
-     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
 1. Substituez `OnProgress` Dans `OnProgress`, il vous est renvoyé un nombre qui indique la plage maximale et un nombre indiquant l'avancement du téléchargement en cours. Vous pouvez utiliser ces nombres pour afficher l'état, comme le pourcentage de progression.
 
@@ -135,19 +125,19 @@ La procédure suivante ajoute une propriété au contrôle pour utiliser uniquem
 
 1. Déclarez une variable membre de votre classe dérivée de `CDataPathProperty` à votre classe de contrôle ActiveX.
 
-     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
+   [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
 1. Implémentez les méthodes `Get/Set`. Pour `Get`, retourner la chaîne. Pour `Set`, chargez la propriété et appelez `SetModifiedFlag`.
 
-     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
 1. Dans [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange), ajoutez la ligne suivante :
 
-     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
 
 1. Substituer [ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata) pour notifier la propriété à réinitialiser son contrôle en ajoutant cette ligne :
 
-     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
 
 ## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>Choisir d'effectuer une dérivation à partir de CDataPathProperty ou de CCachedDataPathProperty
 
@@ -200,8 +190,6 @@ Si vous ajoutez la prise en charge des propriétés asynchrones à un contrôle 
 [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
 
 Vous mettrez à jour l’état prêt comme votre code est téléchargé en appelant [COleControl::InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). Un emplacement à partir duquel vous pouvez appeler `InternalSetReadyState` est depuis la substitution `OnProgress` de la classe dérivée de `CDataPathProperty`.
-
-
 
 ## <a name="see-also"></a>Voir aussi
 

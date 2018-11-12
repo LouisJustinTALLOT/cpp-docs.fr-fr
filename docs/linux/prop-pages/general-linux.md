@@ -1,27 +1,17 @@
 ---
 title: Général, propriétés (projet Linux C++) | Microsoft Docs
-ms.custom: ''
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 82dbdb4b2978860faba4e31c756ab0b69928e080
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc4eb39d2d735f8f7f782d2827bf2b938c5c2457
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461332"
 ---
 # <a name="general-properties-linux-c"></a>Général, propriétés (Linux C++)
 
-Propriété | Description | Options
+Property | Description | Options
 --- | ---| ---
 Répertoire de sortie | Spécifie un chemin relatif vers le répertoire de fichiers de sortie ; peut inclure des variables d’environnement.
 Répertoire intermédiaire | Spécifie un chemin relatif vers le répertoire de fichiers intermédiaire ; peut inclure des variables d’environnement.

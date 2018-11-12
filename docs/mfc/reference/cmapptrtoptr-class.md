@@ -1,10 +1,6 @@
 ---
-title: CMapPtrToPtr, classe | Microsoft Docs
-ms.custom: ''
+title: CMapPtrToPtr, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMapPtrToPtr
 - AFXCOLL/CMapPtrToPtr
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXCOLL/CMapStringToOb::RemoveAll
 - AFXCOLL/CMapStringToOb::RemoveKey
 - AFXCOLL/CMapStringToOb::SetAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMapStringToOb [MFC], CMapStringToOb
 - CMapStringToOb [MFC], GetCount
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4bbe44b7ae10b6b2ee448be8e9dcb682f9e0a1a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ec635ea00c9659d43d148c55e02a70a7c759279a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540827"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr, classe
 
@@ -125,6 +115,4 @@ Pour plus d’informations sur `CMapPtrToPtr`, consultez l’article [Collection
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

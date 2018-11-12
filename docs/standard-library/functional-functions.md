@@ -1,10 +1,6 @@
 ---
-title: '&lt;functional&gt;, fonctions | Microsoft Docs'
-ms.custom: ''
+title: '&lt;functional&gt;, fonctions'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - functional/std::bind
 - xfunctional/std::bind1st
@@ -22,8 +18,6 @@ f1_keywords:
 - xfunctional/std::ptr_fun
 - functional/std::ref
 - functional/std::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::bind [C++]
 - std::bind1st
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c93f32a7684d32cba0d2822571bd138f9206f46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 696f937686e9ff3a45f8132da8a8d79857d989da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107398"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585209"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt;, fonctions
 
@@ -169,7 +159,7 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>Paramètres
 
-*Func*<br/>
+*func*<br/>
 Objet de fonction binaire à convertir en un objet de fonction unaire.
 
 *left*<br/>
@@ -263,7 +253,7 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Func*<br/>
+*func*<br/>
 Objet de fonction binaire à convertir en un objet de fonction unaire.
 
 *right*<br/>
@@ -424,7 +414,7 @@ Le foncteur `bit_not` est limité aux types intégraux pour les types de donnée
 
 ## <a name="bit_or"></a>  bit_or
 
-Objet de fonction prédéfini qui effectue l'opération OR au niveau du bit (`operator|`) sur ses arguments.
+Objet de fonction prédéfini qui effectue l’opération OR au niveau du bit (`operator|`) sur ses arguments.
 
 ```cpp
 template <class Type = void>
@@ -898,7 +888,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Paramètres
 
-*Func*<br/>
+*func*<br/>
 Prédicat binaire à rendre négatif.
 
 ### <a name="return-value"></a>Valeur de retour

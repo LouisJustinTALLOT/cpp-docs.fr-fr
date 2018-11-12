@@ -1,28 +1,18 @@
 ---
-title: Création d’un contrôle ActiveX MFC | Microsoft Docs
-ms.custom: ''
+title: Création d'un contrôle ActiveX MFC
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.activex.project
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b8345b99655cae3ea27b93e1742d8c07e8d80eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be0b4639fd42461a19db10f88ced336cd1129fb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408024"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633512"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Création d'un contrôle ActiveX MFC
 
@@ -54,5 +44,4 @@ Une fois que vous avez créé votre projet, vous pouvez utiliser les Assistants 
 
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pages de propriétés](../../ide/property-pages-visual-cpp.md)
-
 

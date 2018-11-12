@@ -1,14 +1,8 @@
 ---
-title: Classe de collection Helpers | Microsoft Docs
-ms.custom: ''
+title: Programmes d’assistance pour les classes de collection
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
-dev_langs:
-- C++
 helpviewer_keywords:
 - DestructElements function
 - ConstructElements function
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 639c4f7952abcf18c29aa3cb0d9fee45b50430af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381718"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567464"
 ---
 # <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
 
@@ -152,7 +142,6 @@ Nombre d’éléments à être vidées.
 Le `CArray::Dump`, `CList::Dump`, et `CMap::Dump` fonctions appelez cette méthode si la profondeur de l’image mémoire est supérieure à 0.
 
 L'implémentation par défaut n'exécute aucune opération. Si les éléments de votre collection sont dérivés de `CObject`, votre remplacement sera généralement itérer au sein des éléments de la collection, appelant `Dump` pour chaque élément à son tour.
-
 
 ### <a name="requirements"></a>Configuration requise
 

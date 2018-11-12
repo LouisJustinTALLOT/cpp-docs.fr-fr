@@ -1,12 +1,6 @@
 ---
-title: Caractères Unicode et définir la prise en charge (MBCS) | Microsoft Docs
-ms.custom: ''
+title: Prise en charge des jeux de caractères Unicode et MBCS (Multibyte Character Set)
 ms.date: 1/09/2017
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], character set support
 - MBCS [C++], strings and MFC support
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 708825ddda9becc51d9009d0d6a03a22c48f8007
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432475"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596649"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Prise en charge des jeux de caractères Unicode et MBCS (Multibyte Character Set)
 
@@ -106,4 +96,4 @@ De même, `CString` méthodes sont implémentées à l’aide des mappages de ty
 ## <a name="see-also"></a>Voir aussi
 
 [Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
-[Manipulation de chaînes](../c-runtime-library/string-manipulation-crt.md)  
+[Manipulation de chaînes](../c-runtime-library/string-manipulation-crt.md)

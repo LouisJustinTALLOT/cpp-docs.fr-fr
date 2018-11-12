@@ -1,28 +1,17 @@
 ---
-title: no_injected_text (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: no_injected_text (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.no_injected_text
-dev_langs:
-- C++
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a9289c1b8f28b90dd5a3a4a437d3e2a5870e8468
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: af4bb4b07439c0a5dacfa0d4956db564d2dccefe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790929"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618115"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -54,8 +43,8 @@ L’utilisation la plus courante de la **no_injected_text** attribut C++ est par
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs de compilateur](compiler-attributes.md)  
+[Attributs de compilateur](compiler-attributes.md)

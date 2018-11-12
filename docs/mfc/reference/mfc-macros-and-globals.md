@@ -1,14 +1,8 @@
 ---
-title: MFC Macros and Globals | Microsoft Docs
-ms.custom: ''
+title: Macros et objet Globals MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, global functions and variables
 - MFC, macros
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d5e735a78f35ac799678b077b7933c6134d568e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2dfb2c1c5062f742b728ea651a292be84e33f6d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386184"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566775"
 ---
 # <a name="mfc-macros-and-globals"></a>Macros et objet Globals MFC
 
@@ -75,7 +65,6 @@ Les macros MFC et globals offrent des fonctionnalités dans les catégories suiv
 - [Styles de contrôle ToolBar](toolbar-control-styles.md)
 
 - [CMFCImagePaintArea::IMAGE_EDIT_MODE, énumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md)
-
 
 ## <a name="database"></a>Base de données
 
@@ -139,6 +128,4 @@ La première partie de cette section décrit chacune des catégories précédent
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../../mfc/class-library-overview.md)
-
-
 

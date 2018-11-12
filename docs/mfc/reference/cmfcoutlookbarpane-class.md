@@ -1,10 +1,6 @@
 ---
-title: Cmfcoutlookbarpane, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcoutlookbarpane, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCOutlookBarPane
 - AFXOUTLOOKBARPANE/CMFCOutlookBarPane
@@ -25,8 +21,6 @@ f1_keywords:
 - AFXOUTLOOKBARPANE/CMFCOutlookBarPane::SetTransparentColor
 - AFXOUTLOOKBARPANE/CMFCOutlookBarPane::EnableContextMenuItems
 - AFXOUTLOOKBARPANE/CMFCOutlookBarPane::RemoveAllButtons
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], AddButton
 - CMFCOutlookBarPane [MFC], CanBeAttached
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08055d748bb61101e80df31b272e847db045164c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f8d93362f9e341087e9213d07475501a26d79d44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398070"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492607"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Cmfcoutlookbarpane, classe
 
@@ -159,13 +149,11 @@ BOOL AddButton(
     UINT iIdCommand,
     int iInsertAt=-1);
 
-
 BOOL AddButton(
     UINT uiImage,
     UINT uiLabel,
     UINT iIdCommand,
     int iInsertAt=-1);
-
 
 BOOL AddButton(
     LPCTSTR szBmpFileName,
@@ -173,13 +161,11 @@ BOOL AddButton(
     UINT iIdCommand,
     int iInsertAt=-1);
 
-
 BOOL AddButton(
     HBITMAP hBmp,
     LPCTSTR lpszLabel,
     UINT iIdCommand,
     int iInsertAt=-1);
-
 
 BOOL AddButton(
     HICON hIcon,

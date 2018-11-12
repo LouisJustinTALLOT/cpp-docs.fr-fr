@@ -1,36 +1,25 @@
 ---
-title: Assistant fournisseur Oledb ATL | Microsoft Docs
-ms.custom: ''
+title: Assistant Fournisseur OLEDB ATL
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.provider.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6857bf80aaaad36b4dcfc4fbf1330eccd03f971a
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: c01852c89d79b44bdae75b0ded9e2b8d1678cbd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250352"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441321"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Assistant Fournisseur OLEDB ATL
 
 Cet Assistant crée les classes qui composent un fournisseur OLE DB.
 
 > [!WARNING]
-> Dans Visual Studio 2017 version 15.9 cet Assistant code est déconseillé et sera supprimé dans une future version de Visual Studio. Cet Assistant est rarement utilisé. Prise en charge générale pour ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette utilisation déconseillée, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires est important pour nous.
-
+> Dans Visual Studio 2017 version 15.9, cet Assistant Code est déprécié et sera supprimé dans une version ultérieure de Visual Studio. Cet Assistant est rarement utilisé. La prise en charge générale d’ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette dépréciation, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires sont précieux pour nous.
 
 ## <a name="remarks"></a>Notes
 

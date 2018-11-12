@@ -1,33 +1,23 @@
 ---
-title: CPaintDC, classe | Microsoft Docs
-ms.custom: ''
+title: CPaintDC (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPaintDC
 - AFXWIN/CPaintDC
 - AFXWIN/CPaintDC::CPaintDC
 - AFXWIN/CPaintDC::m_ps
 - AFXWIN/CPaintDC::m_hWnd
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPaintDC [MFC], CPaintDC
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36da6917a3f0a04cf078132c3949079ccecb25cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 991ea39ccf03cd4f2921a759d3278576c7a1fd92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435582"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525747"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (classe)
 
@@ -141,6 +131,4 @@ Notez que vous pouvez accéder au handle de contexte de périphérique via le `P
 [Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
 [CDC, classe](../../mfc/reference/cdc-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

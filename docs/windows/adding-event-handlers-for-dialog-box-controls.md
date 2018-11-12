@@ -1,29 +1,18 @@
 ---
-title: Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue (C++) | Microsoft Docs
-ms.custom: ''
+title: Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue (C++)
 ms.date: 06/28/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Dialog Editor [C++], adding event handlers to controls
 - controls [C++], event handlers
 - dialog box controls [C++], events
 - event handlers, for dialog box controls
 ms.assetid: f9c70f24-ea6f-44df-82eb-78a2deaee769
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 156908a1611f8a1c8b22df61e6b789468753d25d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6539b7e0f8ab4d0b1b60ecfbd80685473534316
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443083"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487176"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue (C++)
 
@@ -82,5 +71,5 @@ Win32
 [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)<br/>
 [Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)  
+[Substitution d’une fonction virtuelle](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)

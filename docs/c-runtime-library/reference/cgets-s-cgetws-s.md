@@ -1,10 +1,6 @@
 ---
-title: _cgets_s, _cgetws_s | Microsoft Docs
-ms.custom: ''
+title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -26,8 +22,6 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b00f9eee699b7e556c2fcc3f88abd8d783a261
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396795"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588537"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 
@@ -96,15 +86,15 @@ La valeur de retour est égale à zéro en cas de réussite ; sinon, un code d'
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*numberOfElements*|*pSizeRead*|Retourner|Contenu de *tampon*|
+|*buffer*|*numberOfElements*|*pSizeRead*|Retourner|Contenu de *mémoire tampon*|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|any|any|**EINVAL**|N/A|
-|pas **NULL**|zéro|any|**EINVAL**|non modifié|
-|pas **NULL**|any|**NULL**|**EINVAL**|chaîne de longueur nulle|
+|Pas **NULL**|zéro|any|**EINVAL**|non modifié|
+|Pas **NULL**|any|**NULL**|**EINVAL**|chaîne de longueur nulle|
 
 ## <a name="remarks"></a>Notes
 
-**_cgets_s** et **_cgetws_s** lire une chaîne à partir de la console et copiez la chaîne (avec une marque de fin null) dans *tampon*. **_cgetws_s** est la version à caractères larges de la fonction ; hormis la taille de caractères, le comportement de ces deux fonctions est identique. La taille maximale de la chaîne à lire est passée comme le *numberOfElements* paramètre. Cette taille doit inclure un caractère supplémentaire pour le caractère null de fin. Le nombre réel de caractères lus est placé dans *pSizeRead*.
+**_cgets_s** et **_cgetws_s** lire une chaîne à partir de la console et copiez la chaîne (avec une marque de fin null) dans *tampon*. **_cgetws_s** est la version à caractères larges de la fonction ; hormis la taille des caractères, le comportement de ces deux fonctions est identique. La taille maximale de la chaîne à lire est passée dans en tant que le *numberOfElements* paramètre. Cette taille doit inclure un caractère supplémentaire pour le caractère null de fin. Le nombre réel de caractères lus est placé dans *pSizeRead*.
 
 Si une erreur se produit pendant l’opération ou durant la validation des paramètres, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **EINVAL** est retourné.
 
@@ -116,7 +106,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_cgetts_s**|**_cgets_s**|**_cgets_s**|**_cgetws_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

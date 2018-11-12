@@ -1,28 +1,17 @@
 ---
-title: une licence (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: Attribut sous licence (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.licensed
-dev_langs:
-- C++
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ed39cc636bdc5cc82c5ac16ab33a75c2efbbd8b8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b0b66da845151ca8cad17f3fb33e0e0a736a4813
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790611"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566359"
 ---
 # <a name="licensed"></a>licensed
 
@@ -70,9 +59,9 @@ public:
 |**Attributs requis**|`coclass`|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs de classe](class-attributes.md)  
+[Attributs de classe](class-attributes.md)

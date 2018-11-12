@@ -1,29 +1,18 @@
 ---
-title: Modification d’une chaîne dans une ressource d’informations de Version (C++) | Microsoft Docs
-ms.custom: ''
+title: Modification d’une chaîne dans une ressource d’informations de Version (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.version
-dev_langs:
-- C++
 helpviewer_keywords:
 - version information resources [C++]
 - resources [C++], editing version information
 ms.assetid: d3a7d4e4-7d31-47c2-902c-f50b8404ba4f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 87fac131c053afa3c3b6d6da549d7a002fa95b64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 75d41444d685b067b57aa78aee944ee005da5d3b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445022"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476425"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>Modification d’une chaîne dans une ressource d’informations de Version (C++)
 
@@ -31,7 +20,7 @@ ms.locfileid: "46445022"
 
 1. Cliquez sur l’élément pour le sélectionner, puis recliquez dessus pour commencer à le modifier. Apportez les modifications directement dans le **informations de Version** table ou dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Les modifications que vous apportez apparaîtront aux deux emplacements.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Lors de la modification la `FILEFLAGS` clé dans le **informations de Version** éditeur, vous remarquerez que vous ne pouvez pas définir le **déboguer**, **Private Build**, ou **spécial Build** propriétés (dans le **propriétés** fenêtre) pour les fichiers .rc :
 
    - Le **informations de Version** éditeur attribue le **déboguer** propriété avec une `#ifdef` dans le script de ressources, selon le `_DEBUG` indicateur de build.
@@ -49,4 +38,4 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Éditeur d’informations sur la version](../windows/version-information-editor.md)<br/>
-[Informations de version (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+[Informations sur la version (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

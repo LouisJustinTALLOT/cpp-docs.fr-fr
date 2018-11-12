@@ -1,10 +1,6 @@
 ---
-title: Macros d’échange de données de Registre | Microsoft Docs
-ms.custom: ''
+title: Macros d’échange de données de Registre
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlplus/ATL::BEGIN_RDX_MAP
 - atlplus/ATL::END_RDX_MAP
@@ -12,21 +8,15 @@ f1_keywords:
 - atlplus/ATL::RDX_CSTRING_TEXT
 - atlplus/ATL::RDX_DWORD
 - atlplus/ATL::RDX_TEXT
-dev_langs:
-- C++
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c1a746487b799979cd83f2900a0f7a12d21a6837
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109338"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524831"
 ---
 # <a name="registry-data-exchange-macros"></a>Macros d’échange de données de Registre
 
@@ -39,7 +29,7 @@ Ces macros effectuent des opérations d’échange de données de Registre.
 |[RDX_BINARY](#rdx_binary)|Associe l’entrée de Registre spécifiée à une variable de membre spécifié de type BYTE.|
 |[RDX_CSTRING_TEXT](#rdx_cstring_text)|Associe l’entrée de Registre spécifiée à une variable de membre spécifié du type CString.|
 |[RDX_DWORD](#rdx_dword)|Associe l’entrée de Registre spécifiée à une variable de membre spécifié de type DWORD.|
-|[RDX_TEXT](#rdx_text)|Associe l’entrée de Registre spécifiée à une variable de membre spécifié de type TCHAR.|  
+|[RDX_TEXT](#rdx_text)|Associe l’entrée de Registre spécifiée à une variable de membre spécifié de type TCHAR.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -80,10 +70,10 @@ Associe l’entrée de Registre spécifiée à une variable de membre spécifié
 
 ```
 RDX_BINARY(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -98,7 +88,7 @@ La sous-clé de Registre.
 *nom de valeur*<br/>
 La clé de Registre.
 
-*Membre*<br/>
+*member*<br/>
 La variable membre à associer à l’entrée de Registre spécifié.
 
 *member_size*<br/>
@@ -114,10 +104,10 @@ Associe l’entrée de Registre spécifiée à une variable de membre spécifié
 
 ```
 RDX_CSTRING_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -132,7 +122,7 @@ La sous-clé de Registre.
 *nom de valeur*<br/>
 La clé de Registre.
 
-*Membre*<br/>
+*member*<br/>
 La variable membre à associer à l’entrée de Registre spécifié.
 
 *member_size*<br/>
@@ -148,10 +138,10 @@ Associe l’entrée de Registre spécifiée à une variable de membre spécifié
 
 ```
 RDX_DWORD(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -166,7 +156,7 @@ La sous-clé de Registre.
 *nom de valeur*<br/>
 La clé de Registre.
 
-*Membre*<br/>
+*member*<br/>
 La variable membre à associer à l’entrée de Registre spécifié.
 
 *member_size*<br/>
@@ -182,10 +172,10 @@ Associe l’entrée de Registre spécifiée à une variable de membre spécifié
 
 ```
 RDX_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -200,7 +190,7 @@ La sous-clé de Registre.
 *nom de valeur*<br/>
 La clé de Registre.
 
-*Membre*<br/>
+*member*<br/>
 La variable membre à associer à l’entrée de Registre spécifié.
 
 *member_size*<br/>

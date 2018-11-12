@@ -1,10 +1,6 @@
 ---
-title: erf, erff, erfl, erfc, erfcf, erfcl | Microsoft Docs
-ms.custom: ''
+title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - erff
 - erfl
@@ -26,23 +22,17 @@ f1_keywords:
 - erfl
 - erf
 - erff
-dev_langs:
-- C++
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b7ab1448c3f1d77ab79266858a19d822b1cdb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450047"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -94,15 +84,15 @@ Le **erf** fonctions retournent le Gauss fonction d’erreur de *x*. Le **erfc**
 
 ## <a name="remarks"></a>Notes
 
-Le **erf** fonctions calculent la fonction d’erreur de Gauss de *x*, qui est défini en tant que :
+Le **erf** fonctions calculent la fonction d’erreur de Gauss de *x*, qui est définie comme :
 
 ![Fonction d’erreur de x](media/crt_erf_formula.PNG "CRT_erf_formula")
 
-La fonction d’erreur de Gauss complémentaire est définie en tant que 1 - ERF (x). Le **erf** fonctions retournent une valeur dans la plage -1,0 à 1,0. Aucun retour d'erreur. Le **erfc** fonctions retournent une valeur dans la plage 0 à 2. Si *x* est trop grande pour **erfc**, le **errno** variable est définie sur **ERANGE**.
+La fonction d’erreur de Gauss complémentaire est définie en tant que 1 - ERF. Le **erf** fonctions retournent une valeur dans la plage -1,0 à 1,0. Aucun retour d'erreur. Le **erfc** fonctions retournent une valeur dans la plage 0 à 2. Si *x* est trop grande pour **erfc**, le **errno** variable est définie sur **ERANGE**.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **erf** et **erfc** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **erf** et **erfc** acceptent et retournent toujours un **double**.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **erf** et **erfc** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **erf** et **erfc** acceptent et retournent toujours un **double**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: memmove_s, wmemmove_s | Microsoft Docs
-ms.custom: ''
+title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403893"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561185"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 
@@ -90,11 +80,11 @@ Zéro si l’opération a réussi ; code d’erreur en cas de échec.
 
 ## <a name="remarks"></a>Notes
 
-Copies *nombre* octets de caractères à partir de *src* à *dest*. Si certaines régions de la zone source et la destination se chevauchent, **memmove_s** garantit que les octets sources d’origine dans la région de chevauchement sont copiés avant d’être remplacés.
+Copies *nombre* octets de caractères à partir de *src* à *dest*. Si certaines régions de la zone source et la destination se chevauchent, **memmove_s** garantit que les octets source d’origine dans la région de chevauchement sont copiés avant d’être remplacés.
 
-Si *dest* ou si *src* est un pointeur null, ou si la chaîne de destination est trop petite, ces fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et **errno** à **EINVAL**.
+Si *dest* ou si *src* est un pointeur null, ou si la chaîne de destination est trop petite, ces fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et définissez **errno** à **EINVAL**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,28 +1,18 @@
 ---
-title: Objet Globals d’analyse URL Internet et les programmes d’assistance | Microsoft Docs
-ms.custom: ''
+title: Programmes d’assistance et objet Globals d’analyse URL Internet
 ms.date: 04/03/2017
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.isapi
-dev_langs:
-- C++
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c0ffae70ae2da4edab9326a913e597fe1434611
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383764"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477153"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Programmes d’assistance et objet Globals d’analyse URL Internet
 
@@ -237,6 +227,7 @@ Utilisez cette fonction globale pour déterminer le type d’un handle d’Inter
   ```
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *hQuery*<br/>
@@ -297,6 +288,7 @@ Lève une exception d’Internet.
 ```
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *dwContext*<br/>
@@ -321,5 +313,4 @@ Vous êtes chargé de déterminer la cause en fonction du code d’erreur de sys
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [CInternetException, classe](cinternetexception-class.md)<br/>
 [THROW](#throw)
-
 

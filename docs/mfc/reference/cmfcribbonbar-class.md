@@ -1,10 +1,6 @@
 ---
-title: Classe CMFCRibbonBar | Microsoft Docs
-ms.custom: ''
+title: Classe CMFCRibbonBar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonBar
 - AFXRIBBONBAR/CMFCRibbonBar
@@ -99,8 +95,6 @@ f1_keywords:
 - AFXRIBBONBAR/CMFCRibbonBar::ShowKeyTips
 - AFXRIBBONBAR/CMFCRibbonBar::ToggleMimimizeState
 - AFXRIBBONBAR/CMFCRibbonBar::TranslateChar
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonBar [MFC], ActivateContextCategory
 - CMFCRibbonBar [MFC], AddCategory
@@ -194,16 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd7dfaa0511c7d776afd009ad8ea9c1db3008f09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434285"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640243"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 
@@ -713,7 +703,7 @@ BOOL DrawMenuImage(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour le bouton de menu.
 
 *pMenuItem*<br/>
@@ -1495,7 +1485,6 @@ virtual void OnClickButton(
 
 ##  <a name="oneditcontextmenu"></a>  CMFCRibbonBar::OnEditContextMenu
 
-
 ```
 virtual void OnEditContextMenu(
     CMFCRibbonRichEditCtrl* pEdit,
@@ -1504,8 +1493,8 @@ virtual void OnEditContextMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*pEdit*<br/>
-[in] [in] *point*
+[in] *pEdit*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -1546,7 +1535,6 @@ S_OK en cas de réussite, sinon FALSE ou S_FALSE.
 
 ##  <a name="onshowribboncontextmenu"></a>  CMFCRibbonBar::OnShowRibbonContextMenu
 
-
 ```
 virtual BOOL OnShowRibbonContextMenu(
     CWnd* pWnd,
@@ -1557,17 +1545,16 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*pWnd*<br/>
-[in] [in] *x*
-*y*<br/>
-[in] [in] *pHit*
+[in] *pWnd*<br/>
+[in] *x*<br/>
+[in] *y*<br/>
+[in] *pHit*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="onshowribbonqatmenu"></a>  CMFCRibbonBar::OnShowRibbonQATMenu
-
 
 ```
 virtual BOOL OnShowRibbonQATMenu(
@@ -1579,10 +1566,10 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*pWnd*<br/>
-[in] [in] *x*
-*y*<br/>
-[in] [in] *pHit*
+[in] *pWnd*<br/>
+[in] *x*<br/>
+[in] *y*<br/>
+[in] *pHit*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2076,7 +2063,6 @@ virtual BOOL LoadFromResource(
     LPCTSTR lpszResType = RT_RIBBON,
     HINSTANCE hInstance = NULL);
 
-
 virtual BOOL LoadFromResource(
     LPCTSTR lpszXMLResID,
     LPCTSTR lpszResType = RT_RIBBON,
@@ -2170,6 +2156,4 @@ TRUE recalcule la disposition de ruban ; FALSE sinon.
 [CMFCRibbonPanel, classe](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement, classe](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Procédure pas à pas : Mise à jour l’Application Scribble MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-
-
 

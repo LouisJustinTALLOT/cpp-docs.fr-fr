@@ -1,8 +1,6 @@
 ---
-title: Fonctions d’espace de noms Concurrency::precise_math | Microsoft Docs
-ms.custom: ''
+title: Fonctions d’espace de noms Concurrency::precise_math
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
 - amp_math/Concurrency::precise_math::acosh
@@ -91,19 +89,13 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::tgamma
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
-dev_langs:
-- C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dac840ecb0d3dadd25387eebff9c28ff83213cbe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448530"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469353"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Fonctions d’espace de noms Concurrency::precise_math
 
@@ -984,6 +976,7 @@ inline double fdim(
    double _Y
 ) restrict(amp);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *_X*<br/>
@@ -1003,6 +996,7 @@ inline float fdimf(
    float _Y
 ) restrict(amp);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *_X*<br/>
@@ -1065,6 +1059,7 @@ inline double fma(
    double _Z
 ) restrict(amp);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *_X*<br/>
@@ -1088,6 +1083,7 @@ inline float fmaf(
    float _Z
 ) restrict(amp);
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *_X*<br/>

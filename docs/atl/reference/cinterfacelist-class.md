@@ -1,29 +1,19 @@
 ---
-title: Cinterfacelist, classe | Microsoft Docs
-ms.custom: ''
+title: Cinterfacelist, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CInterfaceList
 - ATLCOLL/ATL::CInterfaceList
 - ATLCOLL/ATL::CInterfaceList::CInterfaceList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6187bd6ada44a0e967b02e0183aa34becf0750ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032430"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520429"
 ---
 # <a name="cinterfacelist-class"></a>Cinterfacelist, classe
 
@@ -33,7 +23,7 @@ Cette classe fournit des méthodes utiles lors de la construction d’une liste 
 
 ```
 template<class I, const IID* piid =& __uuidof(I)>
-class CInterfaceList 
+class CInterfaceList
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
 ```

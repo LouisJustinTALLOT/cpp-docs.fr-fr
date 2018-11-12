@@ -1,27 +1,16 @@
 ---
-title: Utilisation d’accesseurs dynamiques | Microsoft Docs
-ms.custom: ''
+title: Utilisation d’accesseurs dynamiques
 ms.date: 10/18/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 3a776043d8a65d0a037d17c1c2538a4606b4c9d1
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 4539247894c3980464e744c76cea450324372382
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808379"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649720"
 ---
 # <a name="using-dynamic-accessors"></a>Utilisation d’accesseurs dynamiques
 
@@ -173,4 +162,4 @@ Pour obtenir un exemple qui montre comment utiliser cette classe pour exécuter 
 [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CDynamicStringAccessor, classe](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
 [CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-[Exemple DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)  
+[Exemple DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)

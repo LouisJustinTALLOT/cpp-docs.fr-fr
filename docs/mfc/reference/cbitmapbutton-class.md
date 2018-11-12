@@ -1,10 +1,6 @@
 ---
-title: CBitmapButton, classe | Microsoft Docs
-ms.custom: ''
+title: CBitmapButton, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBitmapButton
 - AFXEXT/CBitmapButton
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXEXT/CBitmapButton::AutoLoad
 - AFXEXT/CBitmapButton::LoadBitmaps
 - AFXEXT/CBitmapButton::SizeToContent
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBitmapButton [MFC], CBitmapButton
 - CBitmapButton [MFC], AutoLoad
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a4cc427459036b4b124573f47c71146eafcb970
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6bff87cd7648e1e5f4e0391a0a7fc1a1455a51f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599652"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton, classe
 
@@ -178,7 +168,6 @@ BOOL LoadBitmaps(
     LPCTSTR lpszBitmapResourceSel = NULL,
     LPCTSTR lpszBitmapResourceFocus = NULL,
     LPCTSTR lpszBitmapResourceDisabled = NULL);
-
 
 BOOL LoadBitmaps(
     UINT nIDBitmapResource,

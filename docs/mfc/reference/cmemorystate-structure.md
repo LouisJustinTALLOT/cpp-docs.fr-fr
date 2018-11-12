@@ -1,29 +1,19 @@
 ---
-title: CMemoryState, Structure | Microsoft Docs
-ms.custom: ''
+title: CMemoryState, Structure
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMemoryState
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMemoryState structure [MFC]
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 73d04141d67b832f3c42fe74e7b2a35d8751afef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1a6912cd736643313306f6453ce19b1f6b97adc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378681"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502967"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState, Structure
 
@@ -150,7 +140,6 @@ Appelle le `Dump` (fonction) pour tous les objets d’un type dérivé de la cla
 ```
 void DumpAllObjectsSince() const;
 
-
 ```
 
 ### <a name="remarks"></a>Notes
@@ -167,7 +156,6 @@ Imprime un rapport de statistiques de mémoire concise à partir d’un `CMemory
 
 ```
 void DumpStatistics() const;
-
 
 ```
 
@@ -212,6 +200,4 @@ Vous pouvez maintenant exécuter le programme en mode débogage pour voir le ré
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

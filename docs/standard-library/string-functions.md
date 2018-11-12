@@ -1,8 +1,6 @@
 ---
-title: '&lt;string&gt;, fonctions | Microsoft Docs'
-ms.custom: ''
+title: '&lt;string&gt;, fonctions'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - string/std::getline
 - string/std::stod
@@ -17,8 +15,6 @@ f1_keywords:
 - string/std::to_string
 - string/std::to_wstring
 ms.assetid: 1a4ffd11-dce5-4cc6-a043-b95de034c7c4
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::getline [C++]
 - std::stod [C++]
@@ -32,14 +28,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a80749e6eaffe02d748167f462580782a2755f89
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7707f1239bb8612b1c454997a98d134165f09b75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106741"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544285"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt;, fonctions
 
@@ -62,20 +56,17 @@ basic_istream<CharType, Traits>& getline(
     basic_string<CharType, Traits, Allocator>& str,
     CharType delim);
 
-
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
     basic_istream<CharType, Traits>&& is,
     basic_string<CharType, Traits, Allocator>& str,
     const CharType delim);
 
-
 // (2) default delimiter used
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
     basic_istream<CharType, Traits>& is,
     basic_string<CharType, Traits, Allocator>& str);
-
 
 template <class Allocator, class Traits, class Allocator>
 basic_istream<Allocator, Traits>& getline(

@@ -1,33 +1,23 @@
 ---
-title: COleIPFrameWnd, classe | Microsoft Docs
-ms.custom: ''
+title: COleIPFrameWnd, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
 - AFXOLE/COleIPFrameWnd
 - AFXOLE/COleIPFrameWnd::COleIPFrameWnd
 - AFXOLE/COleIPFrameWnd::OnCreateControlBars
 - AFXOLE/COleIPFrameWnd::RepositionFrame
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleIPFrameWnd [MFC], COleIPFrameWnd
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: debe4c271d2a6e6a82cde9acc75eaa28404ebb43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78b846a6b17fb18f533139e9ac6444babd4baac5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443876"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498830"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd, classe
 
@@ -96,7 +86,6 @@ Le framework appelle la `OnCreateControlBars` fonctionner lorsqu’un élément 
 virtual BOOL OnCreateControlBars(
     CWnd* pWndFrame,
     CWnd* pWndDoc);
-
 
 virtual BOOL OnCreateControlBars(
     CFrameWnd* pWndFrame,

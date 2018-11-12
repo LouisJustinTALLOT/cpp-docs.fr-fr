@@ -1,10 +1,6 @@
 ---
-title: Caractères du champ de type scanf | Microsoft Docs
-ms.custom: ''
+title: Caractères du champ de type scanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apilocation:
 - msvcr90.dll
 - msvcr80.dll
@@ -15,21 +11,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - scanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - scanf function, type field characters
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 50db1a8370a43b8b0c43c7c228c7b3acf9dd2c8a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a73625093607869076851bd253864d796c46fd81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082874"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565462"
 ---
 # <a name="scanf-type-field-characters"></a>Caractères du champ de type scanf
 
@@ -54,7 +44,6 @@ Le caractère `type` est le seul champ de format obligatoire. Il apparaît aprè
 |`n`|Aucune entrée lue à partir du flux ou de la mémoire tampon.|Pointeur vers `int`, où sont stockés un certain nombre de caractères correctement lus à partir du flux ou de la mémoire tampon jusqu'à ce stade dans l'appel des fonctions `scanf` ou `wscanf` .|Non.|
 |`s`|Chaîne, jusqu'au premier espace blanc (espace, tabulation ou nouvelle ligne). Pour lire des chaînes non délimitées par des espaces, utilisez des crochets (`[ ]`), comme indiqué dans [scanf Width Specification](../c-runtime-library/scanf-width-specification.md).|Quand il est utilisé avec les fonctions `scanf` , signifie un tableau de caractères codés sur un octet. Quand il est utilisé avec les fonctions `wscanf` , signifie un tableau de caractères larges. Dans les deux cas, le tableau de caractères doit être suffisamment grand pour le champ d'entrée, ainsi que le caractère Null de fin, qui est automatiquement ajouté.|Obligatoire. La taille inclut un espace pour un terminateur Null.|
 |`S`|Chaîne de caractères de taille inverse, jusqu'au premier espace blanc (espace, tabulation ou nouvelle ligne). Pour lire des chaînes non délimitées par des espaces, utilisez des crochets (`[ ]`), comme indiqué dans [Spécification de largeur scanf](../c-runtime-library/scanf-width-specification.md).|Quand il est utilisé avec les fonctions `scanf`, signifie un tableau de caractères codés sur un octet. Quand il est utilisé avec les fonctions `wscanf`, signifie un tableau de caractères larges. Dans les deux cas, le tableau de caractères doit être suffisamment grand pour le champ d'entrée, ainsi que le caractère Null de fin, qui est automatiquement ajouté.|Obligatoire. La taille inclut un espace pour un terminateur Null.|
-
 
 Les arguments relatifs à la taille, le cas échéant, doivent être passés à la liste de paramètres immédiatement après l'argument auquel ils s'appliquent. Par exemple, le code suivant :
 

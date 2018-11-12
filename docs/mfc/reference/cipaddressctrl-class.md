@@ -1,10 +1,6 @@
 ---
-title: Cipaddressctrl, classe | Microsoft Docs
-ms.custom: ''
+title: Cipaddressctrl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CIPAddressCtrl
 - AFXCMN/CIPAddressCtrl
@@ -17,8 +13,6 @@ f1_keywords:
 - AFXCMN/CIPAddressCtrl::SetAddress
 - AFXCMN/CIPAddressCtrl::SetFieldFocus
 - AFXCMN/CIPAddressCtrl::SetFieldRange
-dev_langs:
-- C++
 helpviewer_keywords:
 - CIPAddressCtrl [MFC], CIPAddressCtrl
 - CIPAddressCtrl [MFC], ClearAddress
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fbc8daa4231a69d037ca6a775954d4a1b124bdb8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe5503eb78954bf39a135cd0e4acda6c37fc5fa9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410024"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568699"
 ---
 # <a name="cipaddressctrl-class"></a>Cipaddressctrl, classe
 
@@ -343,6 +333,4 @@ Cette fonction membre implémente le comportement du message Win32 [IPM_SETRANGE
 
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

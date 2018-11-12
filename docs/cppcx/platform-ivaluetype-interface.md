@@ -1,24 +1,16 @@
 ---
-title: Platform::ivaluetype, Interface | Microsoft Docs
-ms.custom: ''
+title: Platform::IValueType, interface
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::IValueType
-dev_langs:
-- C++
 ms.assetid: 8b89b21e-0d7b-4cc2-baa3-93b17c82945c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fcf251a67e787f9cf935c9482d444031db96b879
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0146ab1b4f27ae6a939d498d59b66c30ace88552
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104210"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499018"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType, interface
 

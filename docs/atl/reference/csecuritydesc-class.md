@@ -1,10 +1,6 @@
 ---
-title: CSecurityDesc, classe | Microsoft Docs
-ms.custom: ''
+title: CSecurityDesc, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CSecurityDesc
 - ATLSECURITY/ATL::CSecurityDesc
@@ -35,21 +31,15 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3df63cbed5fcb17b01450435aa2d991ca3e0c5a8
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: d06ec86b4a049daba945c347f4b424b5987010f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605802"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc, classe
 
@@ -556,7 +546,7 @@ Définit les bits de contrôle d'un descripteur de sécurité.
 
 ```
 bool SetControl(
-    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest, 
+    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest,
     SECURITY_DESCRIPTOR_CONTROL ControlBitsToSet) throw();
 ```
 
@@ -581,11 +571,11 @@ Cette méthode appelle [SetSecurityDescriptorControl](https://msdn.microsoft.com
 Définit les informations dans une liste de contrôle d’accès discrétionnaire (DACL). Si une liste DACL est déjà présente dans le descripteur de sécurité, il est remplacé.
 
 ```
-inline void SetDacl(  
+inline void SetDacl(
     bool bPresent = true,
     bool bDefaulted = false) throw(...);
 
-inline void SetDacl(  
+inline void SetDacl(
     const CDacl& Dacl,
     bool bDefaulted = false) throw(...);
 ```

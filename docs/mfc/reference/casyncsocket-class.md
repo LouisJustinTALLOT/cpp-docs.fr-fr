@@ -1,10 +1,6 @@
 ---
-title: CAsyncSocket, classe | Microsoft Docs
-ms.custom: ''
+title: CAsyncSocket (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAsyncSocket
 - AFXSOCK/CAsyncSocket
@@ -42,8 +38,6 @@ f1_keywords:
 - AFXSOCK/CAsyncSocket::OnReceive
 - AFXSOCK/CAsyncSocket::OnSend
 - AFXSOCK/CAsyncSocket::m_hSocket
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAsyncSocket [MFC], CAsyncSocket
 - CAsyncSocket [MFC], Accept
@@ -80,16 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef45fa1804b9199a6fc7d34b6c5d1aca278d47d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29fe705292b223a0ae367d34d67a99aa60fb719c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424350"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660016"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (classe)
 
@@ -326,7 +316,6 @@ BOOL Bind(
     UINT nSocketPort,
     LPCTSTR lpszSocketAddress = NULL);
 
-
 BOOL Bind (
     const SOCKADDR* lpSockAddr,
     int nSockAddrLen);
@@ -406,7 +395,6 @@ Appelez cette fonction membre pour établir une connexion à un socket datagramm
 BOOL Connect(
     LPCTSTR lpszHostAddress,
     UINT nHostPort);
-
 
 BOOL Connect(
     const SOCKADDR* lpSockAddr,
@@ -605,7 +593,6 @@ BOOL GetPeerName(
     CString& rPeerAddress,
     UINT& rPeerPort);
 
-
 BOOL GetPeerName(
     SOCKADDR* lpSockAddr,
     int* lpSockAddrLen);
@@ -691,7 +678,6 @@ Appelez cette fonction membre pour obtenir le nom local pour un socket.
 BOOL GetSockName(
     CString& rSocketAddress,
     UINT& rSocketPort);
-
 
 BOOL GetSockName(
     SOCKADDR* lpSockAddr,
@@ -1237,7 +1223,6 @@ int ReceiveFrom(
     UINT& rSocketPort,
     int nFlags = 0);
 
-
 int ReceiveFrom(
     void* lpBuf,
     int nBufLen,
@@ -1480,7 +1465,6 @@ int SendTo(
     UINT nHostPort,
     LPCTSTR lpszHostAddress = NULL,
     int nFlags = 0);
-
 
 int SendTo(
     const void* lpBuf,

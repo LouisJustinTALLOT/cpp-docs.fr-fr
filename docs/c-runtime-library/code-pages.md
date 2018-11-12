@@ -1,14 +1,8 @@
 ---
-title: Pages de codes | Microsoft Docs
-ms.custom: ''
+title: Pages de codes
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.international
-dev_langs:
-- C++
 helpviewer_keywords:
 - character sets [C++], code pages
 - ANSI [C++], code pages
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 707aec51b0a244fe305205b9b098f3f67a90de1b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113719"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521058"
 ---
 # <a name="code-pages"></a>Pages de codes
 
@@ -43,7 +33,7 @@ La bibliothèque Runtime Microsoft utilise les types suivants de pages de codes�
     setlocale ( LC_ALL, "" );
     ```
 
-     définit également les paramètres régionaux sur la page de codes ANSI par défaut du système.
+   définit également les paramètres régionaux sur la page de codes ANSI par défaut du système.
 
 - Page de codes des paramètres régionaux. Le comportement d'un certain nombre de routines d'exécution dépend des paramètres régionaux actuels, qui incluent la page de codes des paramètres régionaux. Pour plus d’informations, consultez [Routines dépendantes des paramètres régionaux](../c-runtime-library/locale.md). Par défaut, toutes les routines dépendantes des paramètres régionaux de la bibliothèque Runtime Microsoft utilisent la page de codes correspondant aux paramètres régionaux "C". Au moment de l’exécution, vous pouvez modifier ou interroger la page de codes des paramètres régionaux utilisée avec un appel à [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 

@@ -1,10 +1,6 @@
 ---
-title: localtime_s, _localtime32_s, _localtime64_s | Microsoft Docs
-ms.custom: ''
+title: localtime_s, _localtime32_s, _localtime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _localtime64_s
 - _localtime32_s
@@ -28,8 +24,6 @@ f1_keywords:
 - localtime_s
 - localtime64_s
 - _localtime64_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _localtime64_s function
 - localtime32_s function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 513bfe5baa16c9cae5052da084c65f580aad7f2e
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255806"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492774"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 
-Convertit un **time_t** temps valeur pour un **tm** structurer et corrige le fuseau horaire local. Ces versions de [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Convertit un **time_t** temps valeur pour un **tm** structurer et correction en fonction du fuseau horaire local. Ces versions de [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,7 +74,7 @@ Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un 
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*tmDest*|*sourceTime*|Valeur de retour|Valeur de *tmDest*|Appelle un gestionnaire de paramètres non valides|
+|*tmDest*|*sourceTime*|Valeur de retour|Valeur dans *tmDest*|Appelle un gestionnaire de paramètres non valides|
 |-----------|------------|------------------|--------------------|---------------------------------------|
 |**NULL**|any|**EINVAL**|Non modifiée|Oui|
 |Pas **NULL** (pointe vers une mémoire valide)|**NULL**|**EINVAL**|Tous les champs définis sur -1|Oui|
@@ -96,16 +86,16 @@ Concernant les deux premières conditions d’erreur, le gestionnaire de paramè
 
 Le **_localtime32_s** fonction convertit une heure stockée en tant qu’un [time_t](../../c-runtime-library/standard-types.md) valeur et stocke le résultat dans une structure de type [tm](../../c-runtime-library/standard-types.md). Le **long** valeur *sourceTime* représente les secondes écoulées depuis minuit (00 : 00:00), le 1er janvier 1970, UTC. Cette valeur est généralement obtenue à partir de la [temps](time-time32-time64.md) (fonction).
 
-**_localtime32_s** corrige le fuseau horaire local si l’utilisateur définit la variable d’environnement global **TZ**. Lorsque **TZ** est défini, les trois autres variables d’environnement (**_timezone**, **_daylight**, et **_tzname**) sont définies automatiquement ainsi. Si le **TZ** variable n’est pas définie, **localtime32_s** tente d’utiliser les informations de fuseau horaire spécifiées dans l’application de Date/heure dans le panneau de configuration. Si ces informations ne peuvent pas être obtenues, PST8PDT (fuseau horaire Pacifique) est utilisé par défaut. Consultez [_tzset](tzset.md) pour obtenir une description de ces variables. **TZ** est une extension Microsoft et ne fait pas partie de la définition standard ANSI de **localtime**.
+**_localtime32_s** correction en fonction du fuseau horaire local si l’utilisateur définit tout d’abord la variable d’environnement global **TZ**. Lorsque **TZ** est définie, les trois autres variables d’environnement (**_timezone**, **_daylight**, et **_tzname**) sont également définies automatiquement. Si le **TZ** variable n’est pas définie, **localtime32_s** tente d’utiliser les informations de fuseau horaire spécifiées dans l’application de Date/heure dans le panneau de configuration. Si ces informations ne peuvent pas être obtenues, PST8PDT (fuseau horaire Pacifique) est utilisé par défaut. Consultez [_tzset](tzset.md) pour obtenir une description de ces variables. **TZ** est une extension Microsoft et la fait pas partie de la définition de la norme ANSI de **localtime**.
 
 > [!NOTE]
 > L’environnement cible doit tenter de déterminer si l’heure d’été est en vigueur.
 
-**_localtime64_s**, qui utilise le **__time64_t** structure, permet des dates d’exprimer des et 23:59:59, le 18 janvier 3001, temps universel coordonné (UTC), tandis que **_localtime32_s** représente les dates et 23:59:59 18 janvier 2038, UTC.
+**_localtime64_s**, qui utilise le **__time64_t** structure, permet d’exprimer à 23:59:59, 18 janvier 3001, temps universel coordonné (UTC), les dates alors que **_localtime32_s** représente les dates jusqu’à 23:59:59 le 18 janvier 2038, UTC.
 
-**localtime_s** est une fonction inline qui prend la valeur **_localtime64_s**, et **time_t** équivaut à **__time64_t**. Si vous avez besoin forcer le compilateur à interpréter **time_t** en tant que l’ancien 32 bits **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Cette action provoquerait **localtime_s** à évaluer à **_localtime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
+**localtime_s** est une fonction inline qui prend la valeur **_localtime64_s**, et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** l’ancien 32-bit **time_t**, vous pouvez définir **_USE_32BIT_TIME_T**. Ainsi, **localtime_s** soit évaluée comme **_localtime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
-Les champs du type structure [tm](../../c-runtime-library/standard-types.md) stocker les valeurs suivantes, chacune d’elles étant un **int**.
+Les champs du type structure [tm](../../c-runtime-library/standard-types.md) stockent les valeurs suivantes, chacune d’elles étant un **int**.
 
 |Champ|Description|
 |-|-|
@@ -119,9 +109,9 @@ Les champs du type structure [tm](../../c-runtime-library/standard-types.md) sto
 |**tm_yday**|Jour de l’année (0 - 365 ; Le 1er janvier = 0).|
 |**tm_isdst**|Valeur positive si l’heure d’été est en vigueur ; 0 si l’heure d’été n’est pas appliquée ; valeur négative si l’état de l’heure d’été est inconnu.|
 
-Si le **TZ** variable d’environnement est définie, la bibliothèque Runtime C suppose que les règles appropriées aux États-Unis pour le calcul de l’heure d’été (DST).
+Si le **TZ** variable d’environnement est définie, la bibliothèque Runtime C suppose que les règles appropriées pour les États-Unis le calcul de l’heure d’été à l’heure d’été (DST).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|

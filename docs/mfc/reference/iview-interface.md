@@ -1,33 +1,23 @@
 ---
-title: Interface IView | Microsoft Docs
-ms.custom: ''
+title: Interface IView
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - IView
 - AFXWINFORMS/IView
 - AFXWINFORMS/IView::OnActivateView
 - AFXWINFORMS/IView::OnInitialUpdate
 - AFXWINFORMS/IView::OnUpdate
-dev_langs:
-- C++
 helpviewer_keywords:
 - views [MFC]
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ec1e6215cd085ed948e4b0554bca12a678563d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7684ef034acd247355b3f572c86fcb80cb126b0c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434009"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594348"
 ---
 # <a name="iview-interface"></a>Interface IView
 
@@ -57,7 +47,6 @@ interface class IView
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-
 ## <a name="requirements"></a>Configuration requise
 
 En-tête : les afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
@@ -68,6 +57,7 @@ Appelé par MFC lorsqu’une vue est activée ou désactivée.
 ```
 void OnActivateView(bool activate);
 ```
+
 ## <a name="parameters"></a>Paramètres
 
 *Activer*<br/>
@@ -86,6 +76,7 @@ Appelé par MFC, une fois que le document de la vue a été modifié.
 ```
 void OnUpdate();
 ```
+
 ## <a name="remarks"></a>Notes
 
 Cette fonction permet l’affichage pour mettre à jour son affichage afin de refléter les modifications.

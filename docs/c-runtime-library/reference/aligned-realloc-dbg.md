@@ -1,10 +1,6 @@
 ---
-title: _aligned_realloc_dbg | Microsoft Docs
-ms.custom: ''
+title: _aligned_realloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_realloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - aligned_realloc_dbg
 - _aligned_realloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_realloc_dbg function
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1fd5854bc18cecda1fd3ffee4f28ec2fa5d2a68a
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 2a261b3e578bef5464bbfda8528ffd8b491acb23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451665"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545949"
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -74,13 +64,13 @@ Numéro de ligne dans le fichier source où la **realloc** opération a été de
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_aligned_realloc_dbg** retourne un pointeur void vers le bloc de mémoire réalloué (et éventuellement déplacé). La valeur de retour est **NULL** si la taille est égale à zéro et que l’argument de la mémoire tampon n’est pas **NULL**, ou s’il n’existe pas de suffisamment de mémoire pour étendre le bloc à la taille donnée. Dans le premier cas, le bloc d'origine est libéré. Dans le second cas, le bloc d'origine est inchangé. La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que void, utilisez un cast de type sur la valeur de retour.
+**_aligned_realloc_dbg** retourne un pointeur void vers le bloc de mémoire réalloué (et éventuellement déplacé). La valeur de retour est **NULL** si la taille est égale à zéro et que l’argument de la mémoire tampon n’est pas **NULL**, ou s’il n’existe pas de suffisamment de mémoire disponible pour étendre le bloc à la taille donnée. Dans le premier cas, le bloc d'origine est libéré. Dans le second cas, le bloc d'origine est inchangé. La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que void, utilisez un cast de type sur la valeur de retour.
 
 Le fait de réallouer la mémoire et de modifier l'alignement d'un bloc constitue une erreur.
 
 ## <a name="remarks"></a>Notes
 
-**_aligned_realloc_dbg** est une version debug de la [_aligned_realloc](aligned-realloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_realloc_dbg** est réduit à un appel à **_aligned_realloc**. Les deux **_aligned_realloc** et **_aligned_realloc_dbg** réallouer un bloc de mémoire dans le tas de base, mais **_aligned_realloc_dbg** gère plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques et *nom de fichier*/*linenumber* informations pour déterminer l’origine des demandes d’allocation.
+**_aligned_realloc_dbg** est une version debug de la [_aligned_realloc](aligned-realloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_realloc_dbg** est réduite à un appel à **_aligned_realloc**. Les deux **_aligned_realloc** et **_aligned_realloc_dbg** réallouer un bloc de mémoire dans le tas de base, mais **_aligned_realloc_dbg** gère plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques et *filename*/*linenumber* informations pour déterminer l’origine des demandes d’allocation.
 
 **_aligned_realloc_dbg** réalloue le bloc de mémoire spécifié avec un peu plus d’espace que demandé *newSize*. *newSize* peut être supérieur ou inférieur à la taille du bloc de mémoire alloué initialement. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. La réallocation peut entraîner un déplacement du bloc de mémoire initial vers un emplacement différent dans le tas, ainsi qu'une modification de la taille du bloc de mémoire. Si le bloc de mémoire est déplacé, son contenu d'origine est remplacé.
 
@@ -90,7 +80,7 @@ En outre, **_aligned_realloc_dbg** valide ses paramètres. Si *alignement* n’e
 
 Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les types de bloc d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur les différences entre l’appel à une fonction de tas standard et sa version de débogage dans la build de débogage d’une application, consultez [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

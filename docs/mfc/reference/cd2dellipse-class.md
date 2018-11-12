@@ -1,29 +1,19 @@
 ---
-title: Classe de CD2DEllipse | Microsoft Docs
-ms.custom: ''
+title: CD2DEllipse, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DEllipse
 - AFXRENDERTARGET/CD2DEllipse
 - AFXRENDERTARGET/CD2DEllipse::CD2DEllipse
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6acec41bcae08f5585eb521dc90ff12d082fd5ad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa280215aaac55e3aaa9542ca1ab2bd9d21655e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642037"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse, classe
 
@@ -49,7 +39,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 `CD2DEllipse`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrendertarget.h
 
@@ -61,7 +51,6 @@ Construit un objet CD2DEllipse à partir de l’objet de CD2DRectF.
 CD2DEllipse(const CD2DRectF& rect);
 CD2DEllipse(const D2D1_ELLIPSE& ellipse);
   CD2DEllipse(const D2D1_ELLIPSE* ellipse);
-
 
 CD2DEllipse(
     const CD2DPointF& ptCenter,

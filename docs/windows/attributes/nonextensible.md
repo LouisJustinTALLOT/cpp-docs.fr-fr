@@ -1,28 +1,17 @@
 ---
-title: nonextensible (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: nonextensible (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.nonextensible
-dev_langs:
-- C++
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 84f14cccdd4dd142f2fa6e17e48c37a3fecb94ea
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 332f61148ccf8cb5816e8bd347181ac9d130a730
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790897"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512445"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -70,9 +59,9 @@ __interface IFireTabCtrl
 |**Attributs requis**|`dual` et `oleautomation`, ou `dispinterface`|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs d’interface](interface-attributes.md)  
+[Attributs d’interface](interface-attributes.md)

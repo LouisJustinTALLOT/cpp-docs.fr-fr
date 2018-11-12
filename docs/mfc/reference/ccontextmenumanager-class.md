@@ -1,10 +1,6 @@
 ---
-title: Ccontextmenumanager, classe | Microsoft Docs
-ms.custom: ''
+title: Ccontextmenumanager, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CContextMenuManager
 - AFXCONTEXTMENUMANAGER/CContextMenuManager
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXCONTEXTMENUMANAGER/CContextMenuManager::SetDontCloseActiveMenu
 - AFXCONTEXTMENUMANAGER/CContextMenuManager::ShowPopupMenu
 - AFXCONTEXTMENUMANAGER/CContextMenuManager::TrackPopupMenu
-dev_langs:
-- C++
 helpviewer_keywords:
 - CContextMenuManager [MFC], CContextMenuManager
 - CContextMenuManager [MFC], AddMenu
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5fbf5301b7fa49805eee3857b35a5c9e31a53fd5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49e9b1cd12bee562daaf4ffb40492c80d8549ec3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445735"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639332"
 ---
 # <a name="ccontextmenumanager-class"></a>Ccontextmenumanager, classe
 
@@ -113,7 +103,6 @@ Ajoute un menu contextuel pour le [CContextMenuManager](../../mfc/reference/ccon
 BOOL AddMenu(
     UINT uiMenuNameResId,
     UINT uiMenuResId);
-
 
 BOOL AddMenu(
     LPCTSTR lpszName,
@@ -298,7 +287,6 @@ virtual BOOL ShowPopupMenu(
     CWnd* pWndOwner,
     BOOL bOwnMessage = FALSE,
     BOOL bRightAlign = FALSE);
-
 
 virtual CMFCPopupMenu* ShowPopupMenu(
     HMENU hmenuPopup,

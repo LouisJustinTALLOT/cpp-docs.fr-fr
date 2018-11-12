@@ -1,10 +1,6 @@
 ---
-title: Crecentdocksiteinfo, classe | Microsoft Docs
-ms.custom: ''
+title: Crecentdocksiteinfo, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CRecentDockSiteInfo
 - AFXRECENTDOCKSITEINFO/CRecentDockSiteInfo
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXRECENTDOCKSITEINFO/CRecentDockSiteInfo::SaveListOfRecentPanes
 - AFXRECENTDOCKSITEINFO/CRecentDockSiteInfo::SetInfo
 - AFXRECENTDOCKSITEINFO/CRecentDockSiteInfo::StoreDockInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], CleanUp
 - CRecentDockSiteInfo [MFC], GetRecentDefaultPaneDivider
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], SetInfo
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a949a487f04a0aaac1ddf6eb3597dc6243cea548
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aee66ea9893325921c62bfaef9cd501ef40e817a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403073"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615278"
 ---
 # <a name="crecentdocksiteinfo-class"></a>Crecentdocksiteinfo, classe
 
@@ -101,7 +91,6 @@ Un objet `CRecentDockSiteInfo` est créé à chaque création d'un volet. Chaque
 
 ##  <a name="cleanup"></a>  CRecentDockSiteInfo::CleanUp
 
-
 ```
 void CleanUp();
 ```
@@ -110,19 +99,17 @@ void CleanUp();
 
 ##  <a name="crecentdocksiteinfo"></a>  CRecentDockSiteInfo::CRecentDockSiteInfo
 
-
 ```
 CRecentDockSiteInfo(CPane* pBar);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getrecentdefaultpanedivider"></a>  CRecentDockSiteInfo::GetRecentDefaultPaneDivider
-
 
 ```
 CPaneDivider* GetRecentDefaultPaneDivider();
@@ -134,14 +121,13 @@ CPaneDivider* GetRecentDefaultPaneDivider();
 
 ##  <a name="getrecentdockedpercent"></a>  CRecentDockSiteInfo::GetRecentDockedPercent
 
-
 ```
 int GetRecentDockedPercent(BOOL bForSlider);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bForSlider*
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -149,14 +135,13 @@ int GetRecentDockedPercent(BOOL bForSlider);
 
 ##  <a name="getrecentdockedrect"></a>  CRecentDockSiteInfo::GetRecentDockedRect
 
-
 ```
 CRect& GetRecentDockedRect(BOOL bForSlider);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bForSlider*
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -164,14 +149,13 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 
 ##  <a name="getrecentlistofpanes"></a>  CRecentDockSiteInfo::GetRecentListOfPanes
 
-
 ```
 CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bForSlider*
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -179,14 +163,13 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 
 ##  <a name="getrecentpanecontainer"></a>  CRecentDockSiteInfo::GetRecentPaneContainer
 
-
 ```
 CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bForSlider*
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -194,21 +177,19 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 
 ##  <a name="getrecenttabcontainer"></a>  CRecentDockSiteInfo::GetRecentTabContainer
 
-
 ```
 CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bForSlider*
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="init"></a>  CRecentDockSiteInfo::Init
-
 
 ```
 void Init();
@@ -218,14 +199,13 @@ void Init();
 
 ##  <a name="isrecentleftpane"></a>  CRecentDockSiteInfo::IsRecentLeftPane
 
-
 ```
 BOOL IsRecentLeftPane(BOOL bForSlider);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bForSlider*
+[in] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -233,21 +213,19 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 
 ##  <a name="operator_eq"></a>  CRecentDockSiteInfo::operator =
 
-
 ```
 CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *src*
+[in] *src*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="savelistofrecentpanes"></a>  CRecentDockSiteInfo::SaveListOfRecentPanes
-
 
 ```
 void SaveListOfRecentPanes(CList<HWND,
@@ -257,13 +235,13 @@ void SaveListOfRecentPanes(CList<HWND,
 
 ### <a name="parameters"></a>Paramètres
 
-*CList < HWND*<br/>
-[in] [in] *lstOrg* [in] *bForSlider*
+[in] *CList < HWND*<br/>
+[in] *lstOrg*<br/>
+[in] *bForSlider*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="setinfo"></a>  CRecentDockSiteInfo::SetInfo
-
 
 ```
 virtual void SetInfo(
@@ -273,13 +251,12 @@ virtual void SetInfo(
 
 ### <a name="parameters"></a>Paramètres
 
-*bForSlider*<br/>
-[in] [in] *srcInfo*
+[in] *bForSlider*<br/>
+[in] *srcInfo*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="storedockinfo"></a>  CRecentDockSiteInfo::StoreDockInfo
-
 
 ```
 virtual void StoreDockInfo(
@@ -289,8 +266,8 @@ virtual void StoreDockInfo(
 
 ### <a name="parameters"></a>Paramètres
 
-*pRecentContainer*<br/>
-[in] [in] *pTabbedBar*
+[in] *pRecentContainer*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Notes
 

@@ -1,27 +1,17 @@
 ---
-title: Expressions lambda en C++ | Microsoft Docs
-ms.custom: ''
+title: Expressions lambda en C++
 ms.date: 07/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d7a9915c7ca6b9d2c3f01cea12e2979ef256f904
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 44255df8633ad677587129dd27c0bdc23a616d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821177"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493806"
 ---
 # <a name="lambda-expressions-in-c"></a>Expressions lambda en C++
 
@@ -71,7 +61,7 @@ Cette illustration montre les éléments d'une expression lambda :
 
 Une expression lambda peut introduire de nouvelles variables dans son corps (dans **C ++ 14**) et il peut également accès, ou *capturer*, variables de la portée environnante. Une expression lambda commence par la clause de capture (*lambda-introducer* dans la syntaxe Standard), qui spécifie quelles variables sont capturées et si la capture par valeur ou par référence. Les variables avec le préfixe esperluette (`&`) sont accessibles par référence et celles qui n'ont pas ce préfixe sont accessibles par valeur.
 
-Une clause de capture vide, `[ ]`, indique que le corps de l'expression lambda n'accède à aucune variable dans la portée englobante.
+Une clause de capture vide, `[ ]`, indique que le corps de l’expression lambda n’accède à aucune variable dans la portée englobante.
 
 Vous pouvez utiliser le mode de capture par défaut (*par défaut de la capture* dans la syntaxe Standard) pour indiquer comment capturer les variables externes qui sont référencées dans l’expression lambda : `[&]` signifie que vous faites référence à toutes les variables sont capturées par référence, et `[=]` signifie qu’elles sont capturées par valeur. Vous pouvez utiliser un mode de capture par défaut, puis spécifier le mode opposé explicitement pour des variables spécifiques. Par exemple, si le corps d'une expression lambda accède à la variable externe `total` par référence et à la variable externe `factor` par valeur, les clauses de capture suivantes sont équivalentes :
 
@@ -167,7 +157,7 @@ En règle générale, opérateur d’appel de fonction d’une expression lambda
 
 ### <a name="exception-specification"></a>Spécification d'exception
 
-Vous pouvez utiliser la spécification d'exception `noexcept` pour indiquer que l'expression lambda ne lève pas d'exception. Comme avec les fonctions ordinaires, le compilateur Visual C++ génère l’avertissement [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) si une expression lambda déclare la `noexcept` spécification d’exception et le corps lambda lève une exception, comme illustré ici :
+Vous pouvez utiliser la spécification d’exception `noexcept` pour indiquer que l’expression lambda ne lève pas d’exception. Comme avec les fonctions ordinaires, le compilateur Visual C++ génère l’avertissement [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) si une expression lambda déclare la `noexcept` spécification d’exception et le corps lambda lève une exception, comme illustré ici :
 
 ```cpp
 // throw_lambda_expression.cpp
@@ -208,7 +198,7 @@ Le corps lambda (*compound-statement* dans la syntaxe Standard) d’une expressi
 
 - Toute variable ayant une durée de stockage statique (par exemple, les variables globales)
 
-L'exemple suivant contient une expression lambda qui capture explicitement la variable `n` par valeur, et capture implicitement la variable `m` par référence :
+L’exemple suivant contient une expression lambda qui capture explicitement la variable `n` par valeur, et capture implicitement la variable `m` par référence :
 
 ```cpp
 // captures_lambda_expression.cpp
@@ -230,7 +220,7 @@ int main()
 0
 ```
 
-La variable `n` étant capturée par valeur, sa valeur reste `0` après l'appel à l'expression lambda. Le **mutable** spécification permet `n` à modifier dans l’expression lambda.
+La variable `n` étant capturée par valeur, sa valeur reste `0` après l’appel à l’expression lambda. Le **mutable** spécification permet `n` à modifier dans l’expression lambda.
 
 Bien qu’une expression lambda ne puisse capturer que les variables qui ont une durée de stockage automatique, vous pouvez utiliser les variables qui ont une durée de stockage statique dans le corps d’une expression lambda. L'exemple suivant utilise la fonction `generate` et une expression lambda pour assigner une valeur à chaque élément dans un objet `vector`. L’expression lambda modifie la variable statique pour générer la valeur de l’élément suivant.
 
@@ -250,7 +240,7 @@ void fillVector(vector<int>& v)
 
 Pour plus d’informations, consultez [générer](../standard-library/algorithm-functions.md#generate).
 
-L’exemple de code suivant utilise la fonction de l’exemple précédent et ajoute un exemple d’une expression lambda qui utilise l’algorithme de la bibliothèque Standard C++ `generate_n`. Cette expression lambda affecte un élément d'un objet `vector` à la somme des deux éléments précédents. Le **mutable** mot clé est utilisé afin que le corps de l’expression lambda puisse modifier ses copies des variables externes `x` et `y`, que l’expression lambda capture par valeur. Étant donné que l'expression lambda capture les variables `x` et `y` d'origine par valeur, leurs valeurs restent égales à `1` après l'exécution de l'expression.
+L’exemple de code suivant utilise la fonction de l’exemple précédent et ajoute un exemple d’une expression lambda qui utilise l’algorithme de la bibliothèque Standard C++ `generate_n`. Cette expression lambda affecte un élément d’un objet `vector` à la somme des deux éléments précédents. Le **mutable** mot clé est utilisé afin que le corps de l’expression lambda puisse modifier ses copies des variables externes `x` et `y`, que l’expression lambda capture par valeur. Étant donné que l’expression lambda capture les variables `x` et `y` d’origine par valeur, leurs valeurs restent égales à `1` après l’exécution de l’expression.
 
 ```cpp
 // compile with: /W4 /EHsc

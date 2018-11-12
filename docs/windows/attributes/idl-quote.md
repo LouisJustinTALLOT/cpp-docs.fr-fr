@@ -1,28 +1,17 @@
 ---
-title: idl_quote (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: idl_quote (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.idl_quote
-dev_langs:
-- C++
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0f4050e78e6313b77808c1a1ed790e2b7082122d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: edfeb18053f3ae4fa8c45211833e0ceaa037cf79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790593"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595570"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -93,9 +82,9 @@ Ce code provoque `MYFLOT` et `MYDUB` et *texte* entrée à placer dans le fichie
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs autonomes](stand-alone-attributes.md)  
+[Attributs autonomes](stand-alone-attributes.md)

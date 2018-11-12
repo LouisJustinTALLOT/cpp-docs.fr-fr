@@ -1,10 +1,6 @@
 ---
-title: Cmousemanager, classe | Microsoft Docs
-ms.custom: ''
+title: Cmousemanager, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMouseManager
 - AFXMOUSEMANAGER/CMouseManager
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXMOUSEMANAGER/CMouseManager::LoadState
 - AFXMOUSEMANAGER/CMouseManager::SaveState
 - AFXMOUSEMANAGER/CMouseManager::SetCommandForDblClk
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMouseManager [MFC], AddView
 - CMouseManager [MFC], GetViewDblClickCommand
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5b27579211e6d0cf3cd1a933dd6ee83599dcd06f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b3c5104038e6d715977a211af5a535cc9a5d916f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498148"
 ---
 # <a name="cmousemanager-class"></a>Cmousemanager, classe
 
@@ -89,7 +79,6 @@ BOOL AddView(
     int iViewId,
     UINT uiViewNameResId,
     UINT uiIconId = 0);
-
 
 BOOL AddView(
     int iId,
@@ -284,6 +273,4 @@ Si *uiCmd* est définie sur 0, la vue spécifiée n’est plus associée à une 
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx, classe](../../mfc/reference/cwinappex-class.md)<br/>
 [Personnalisation du clavier et de la souris](../../mfc/keyboard-and-mouse-customization.md)
-
-
 

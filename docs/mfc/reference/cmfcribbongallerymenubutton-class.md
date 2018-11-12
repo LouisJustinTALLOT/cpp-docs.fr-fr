@@ -1,10 +1,6 @@
 ---
-title: Cmfcribbongallerymenubutton, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcribbongallerymenubutton, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonGalleryMenuButton
 - AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton
@@ -14,8 +10,6 @@ f1_keywords:
 - AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton::GetPalette
 - AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton::HasButton
 - AFXRIBBONPALETTEGALLERY/CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonGalleryMenuButton [MFC], CMFCRibbonGalleryMenuButton
 - CMFCRibbonGalleryMenuButton [MFC], CopyFrom
@@ -24,16 +18,12 @@ helpviewer_keywords:
 - CMFCRibbonGalleryMenuButton [MFC], HasButton
 - CMFCRibbonGalleryMenuButton [MFC], IsEmptyMenuAllowed
 ms.assetid: 4d459d9b-8b1a-4371-92f6-dc4ce6cc42c8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1ddec12ccdd6fb730ac9f1c5170f17e52eede2b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 99a48c62b7e47e1c2de1a4d2c473ebde6fc0da22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448192"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516988"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Cmfcribbongallerymenubutton, classe
 
@@ -107,14 +97,13 @@ InitBulletPalette (&paletteBullet.GetPalette ());
 
 ##  <a name="copyfrom"></a>  CMFCRibbonGalleryMenuButton::CopyFrom
 
-
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *src*
+[in] *src*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -128,7 +117,6 @@ CMFCRibbonGalleryMenuButton(
     int iImage,
     LPCTSTR lpszText,
     CMFCToolBarImages& imagesPalette);
-
 
 CMFCRibbonGalleryMenuButton(
     UINT uiID,
@@ -170,7 +158,6 @@ L’exemple suivant montre comment utiliser le constructeur de la `CMFCRibbonGal
 
 ##  <a name="createpopupmenu"></a>  CMFCRibbonGalleryMenuButton::CreatePopupMenu
 
-
 ```
 virtual CMFCPopupMenu* CreatePopupMenu();
 ```
@@ -180,7 +167,6 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getpalette"></a>  CMFCRibbonGalleryMenuButton::GetPalette
-
 
 ```
 CMFCRibbonGallery& GetPalette();
@@ -192,7 +178,6 @@ CMFCRibbonGallery& GetPalette();
 
 ##  <a name="hasbutton"></a>  CMFCRibbonGalleryMenuButton::HasButton
 
-
 ```
 virtual BOOL HasButton() const;
 ```
@@ -202,7 +187,6 @@ virtual BOOL HasButton() const;
 ### <a name="remarks"></a>Notes
 
 ##  <a name="isemptymenuallowed"></a>  CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed
-
 
 ```
 virtual BOOL IsEmptyMenuAllowed() const;

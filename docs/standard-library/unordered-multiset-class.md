@@ -1,10 +1,6 @@
 ---
-title: unordered_multiset, classe | Microsoft Docs
-ms.custom: ''
+title: unordered_multiset, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - unordered_set/std::unordered_multiset
 - unordered_set/std::unordered_multiset::allocator_type
@@ -51,8 +47,6 @@ f1_keywords:
 - unordered_set/std::unordered_multiset::unordered_multiset
 - unordered_set/std::unordered_multiset::operator=
 - unordered_set/std::unordered_multiset::hash_function
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::unordered_multiset
 - std::unordered_multiset::allocator_type
@@ -140,16 +134,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 35c13890262bf7d1bbcf5d86d71e50ed55a073ff
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: a7dc6943d984cffc666c7751d21b9106a7eb2e77
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656195"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset, classe
 
@@ -290,7 +280,6 @@ Désigne le début de la séquence contrôlée ou un compartiment.
 iterator begin();
 
 const_iterator begin() const;
-
 
 local_iterator begin(size_type nbucket);
 
@@ -1866,7 +1855,6 @@ Obtient ou définit le nombre maximal d’éléments par compartiment.
 
 ```cpp
 float max_load_factor() const;
-
 
 void max_load_factor(float factor);
 ```

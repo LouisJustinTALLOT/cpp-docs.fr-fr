@@ -1,28 +1,17 @@
 ---
-title: objet (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: objet (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.object
-dev_langs:
-- C++
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 14bb20cae26ecb012362b65f86aae5e422170a1a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1cae9e6b014f33dfbbcccdeb4172d6f35349e307
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526160"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -55,7 +44,7 @@ Consultez [nonbrowsable](nonbrowsable.md) pour obtenir un exemple montrant comme
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -64,4 +53,4 @@ Pour plus d’informations sur les contextes d’attribut, consultez [contextes 
 [dual](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [custom](custom-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

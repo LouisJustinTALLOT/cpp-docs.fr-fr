@@ -1,10 +1,6 @@
 ---
-title: CMultiLock, classe | Microsoft Docs
-ms.custom: ''
+title: CMultiLock, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMultiLock
 - AFXMT/CMultiLock
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXMT/CMultiLock::IsLocked
 - AFXMT/CMultiLock::Lock
 - AFXMT/CMultiLock::Unlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMultiLock [MFC], CMultiLock
 - CMultiLock [MFC], IsLocked
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27c0eb396ac1384b691f51bf7089f6820157cf8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430850"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613419"
 ---
 # <a name="cmultilock-class"></a>CMultiLock, classe
 
@@ -148,19 +138,19 @@ Si `Lock` échoue, elle retourne - 1. Si l’opération réussit, elle retourne 
 
 - Entre WAIT_OBJECT_0 et WAIT_OBJECT_0 + (nombre d’objets - 1)
 
-     Si *bWaitForAll* a la valeur TRUE, tous les objets sont signalés (disponible). Si *bWaitForAll* est FALSE, la valeur de retour - WAIT_OBJECT_0 est l’index dans le tableau d’objets de l’objet qui est signalé (disponible).
+   Si *bWaitForAll* a la valeur TRUE, tous les objets sont signalés (disponible). Si *bWaitForAll* est FALSE, la valeur de retour - WAIT_OBJECT_0 est l’index dans le tableau d’objets de l’objet qui est signalé (disponible).
 
 - WAIT_OBJECT_0 + (nombre d’objets)
 
-     Un événement spécifié dans *dwWakeMask* est disponible dans la file d’entrée du thread.
+   Un événement spécifié dans *dwWakeMask* est disponible dans la file d’entrée du thread.
 
 - Entre WAIT_ABANDONED_0 et WAIT_ABANDONED_0 + (nombre d’objets - 1)
 
-     Si *bWaitForAll* est TRUE, tous les objets sont signalés, et au moins un des objets est un objet mutex abandonné. Si *bWaitForAll* est FALSE, la valeur de retour - WAIT_ABANDONED_0 est l’index dans le tableau d’objets de l’objet mutex abandonné ayant respecté l’attente.
+   Si *bWaitForAll* est TRUE, tous les objets sont signalés, et au moins un des objets est un objet mutex abandonné. Si *bWaitForAll* est FALSE, la valeur de retour - WAIT_ABANDONED_0 est l’index dans le tableau d’objets de l’objet mutex abandonné ayant respecté l’attente.
 
 - WAIT_TIMEOUT
 
-     L’intervalle de délai d’expiration spécifié dans *dwTimeOut* expiré sans l’attente qui suit.
+   L’intervalle de délai d’expiration spécifié dans *dwTimeOut* expiré sans l’attente qui suit.
 
 ### <a name="remarks"></a>Notes
 
@@ -174,7 +164,6 @@ Libère l’objet de synchronisation appartenant `CMultiLock`.
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +191,4 @@ La première forme de `Unlock` tente de déverrouiller l’objet de synchronisat
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

@@ -1,10 +1,6 @@
 ---
-title: CDaoQueryDef, classe | Microsoft Docs
-ms.custom: ''
+title: CDaoQueryDef, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDaoQueryDef
 - AFXDAO/CDaoQueryDef
@@ -38,8 +34,6 @@ f1_keywords:
 - AFXDAO/CDaoQueryDef::SetSQL
 - AFXDAO/CDaoQueryDef::m_pDAOQueryDef
 - AFXDAO/CDaoQueryDef::m_pDatabase
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDaoQueryDef [MFC], CDaoQueryDef
 - CDaoQueryDef [MFC], Append
@@ -72,16 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be2676609cae4de6b2f3995be1bc9311f88e0a84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 07c508dcf4bd57855d09be5a305847d0b2981305
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408712"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664527"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef, classe
 
@@ -235,7 +225,7 @@ Vous pouvez modifier la querydef si :
 
 - Vous disposez des autorisations de mise à jour pour la base de données.
 
-     Cela dépend si vous avez implémenté les fonctionnalités de sécurité. MFC ne fournit pas de prise en charge pour la sécurité. Vous devez l’implémenter vous-même en appel de DAO directement ou à l’aide de Microsoft Access. Consultez la rubrique « Propriété autorisations » dans l’aide de DAO.
+   Cela dépend si vous avez implémenté les fonctionnalités de sécurité. MFC ne fournit pas de prise en charge pour la sécurité. Vous devez l’implémenter vous-même en appel de DAO directement ou à l’aide de Microsoft Access. Consultez la rubrique « Propriété autorisations » dans l’aide de DAO.
 
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef
 
@@ -426,7 +416,6 @@ void GetFieldInfo(
     CDaoFieldInfo& fieldinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetFieldInfo(
     LPCTSTR lpszName,
     CDaoFieldInfo& fieldinfo,
@@ -519,7 +508,6 @@ void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetParameterInfo(
     LPCTSTR lpszName,
@@ -790,7 +778,6 @@ Appelez cette fonction membre pour définir la valeur d’un paramètre dans l�
 virtual void SetParamValue(
     LPCTSTR lpszName,
     const COleVariant& varValue);
-
 
 virtual void SetParamValue(
     int nIndex,

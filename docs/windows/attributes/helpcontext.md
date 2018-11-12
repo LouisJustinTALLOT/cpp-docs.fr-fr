@@ -1,28 +1,17 @@
 ---
-title: HelpContext (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: HelpContext (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.helpcontext
-dev_langs:
-- C++
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bd3278ee31cf27dd6cd422e247c1d0911bc3bf5a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 921e5370303cb62830ec281bcefd7c03331efaeb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790584"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552748"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -58,7 +47,7 @@ Consultez l’exemple de [defaultvalue](defaultvalue.md) pour obtenir un exemple
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -68,4 +57,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [Attributs de méthode](method-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
-[helpstring](helpstring.md)  
+[helpstring](helpstring.md)

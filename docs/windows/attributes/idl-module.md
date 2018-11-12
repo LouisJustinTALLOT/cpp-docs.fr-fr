@@ -1,28 +1,17 @@
 ---
-title: idl_module (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: idl_module (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.idl_module
-dev_langs:
-- C++
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 91bed0ebfdacae21f2d606c0b8fa1bb43326816d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: c58997928fb3121c1ab8e277790969a93d9066de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791036"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608688"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -56,10 +45,10 @@ Un nom défini par l’utilisateur du bloc de code qui s’affiche dans le fichi
 (Facultatif) L’ID d’aide pour cette bibliothèque de types.
 
 *hidden*<br/>
-(Facultatif) Un paramètre qui empêche l’affichage de la bibliothèque. Consultez le [masqué](/windows/desktop/Midl/hidden) attribut MIDL pour plus d’informations.
+(Facultatif) Un paramètre qui empêche l’affichage de la bibliothèque. Pour plus d’informations, consultez l’attribut MIDL [hidden](/windows/desktop/Midl/hidden) .
 
 *restricted*<br/>
-(Facultatif) Membres de la bibliothèque ne peut pas être appelées arbitrairement. Consultez le [restreint](/windows/desktop/Midl/restricted) attribut MIDL pour plus d’informations.
+(Facultatif) Membres de la bibliothèque ne peut pas être appelées arbitrairement. Pour plus d’informations, consultez l’attribut MIDL [restricted](/windows/desktop/Midl/restricted) .
 
 *déclaration de fonction*<br/>
 La fonction que vous définirez.
@@ -98,10 +87,10 @@ void FuncName(int i);
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs autonomes](stand-alone-attributes.md)<br/>
-[entry](entry.md)  
+[entry](entry.md)

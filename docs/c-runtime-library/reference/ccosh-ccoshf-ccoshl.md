@@ -1,11 +1,6 @@
 ---
-title: ccosh, ccoshf, ccoshl | Microsoft Docs
-ms.custom: ''
+title: ccosh, ccoshf, ccoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ccosh
 - ccoshf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ccosh
 - complex/ccoshf
 - complex/ccoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ccosh function
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a883869b830efbba08822b77c97fd6a156358dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394481"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676835"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
 
@@ -83,9 +72,9 @@ Le cosinus hyperbolique de *z*, en radians.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ccosh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **ccosh** accepte et retourne toujours un **_Dcomplex** valeur.
+Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **ccosh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **ccosh** accepte et retourne toujours un **_Dcomplex** valeur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|

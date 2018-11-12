@@ -1,10 +1,6 @@
 ---
-title: Cmfcdesktopalertwnd, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: CMFCDesktopAlertWnd Class
+ms.date: 10/18/2018
 f1_keywords:
 - CMFCDesktopAlertWnd
 - AFXDESKTOPALERTWND/CMFCDesktopAlertWnd
@@ -27,8 +23,6 @@ f1_keywords:
 - AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetAutoCloseTime
 - AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetSmallCaption
 - AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetTransparency
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], Create
 - CMFCDesktopAlertWnd [MFC], GetAnimationSpeed
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 728aa39341eb808b2bae178e0a419ec3a2ab46e1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 759f4cdb66c1e16f022731e9d3183ad1192e0975
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585131"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -160,7 +150,6 @@ virtual BOOL Create(
     CPoint ptPos = CPoint(-1,-1),
     CRuntimeClass* pRTIDlgBar = RUNTIME_CLASS(CMFCDesktopAlertDialog));
 
-
 virtual BOOL Create(
     CWnd* pWndOwner,
     CMFCDesktopAlertWndInfo& params,
@@ -170,7 +159,8 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] [out] *pWndOwner* Spécifie le propriétaire de la fenêtre d’alerte. Ce propriétaire recevra ensuite toutes les notifications de la fenêtre d’alerte de bureau. Cette valeur ne peut pas être NULL.
+*pWndOwner*<br/>
+[in, out] Spécifie le propriétaire de la fenêtre d’alerte. Ce propriétaire recevra ensuite toutes les notifications de la fenêtre d’alerte de bureau. Cette valeur ne peut pas être NULL.
 
 *uiDlgResID*<br/>
 [in] Spécifie l’ID de ressource de la fenêtre d’alerte.
@@ -319,14 +309,13 @@ Utilisez cette méthode pour déterminer si la fenêtre contextuelle a une barre
 
 ##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow
 
-
 ```
 virtual BOOL OnBeforeShow(CPoint&);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *CPoint &*
+[in] *CPoint &*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -355,7 +344,6 @@ Substituez cette méthode dans une classe dérivée si vous souhaitez être aver
 
 ##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand
 
-
 ```
 virtual BOOL OnCommand(
     WPARAM wParam,
@@ -364,8 +352,9 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>Paramètres
 
-*wParam*<br/>
-[in] [in] *lParam*
+[in] *wParam*<br/>
+
+[in] *lParam*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -373,19 +362,17 @@ virtual BOOL OnCommand(
 
 ##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw
 
-
 ```
 virtual void OnDraw(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand
-
 
 ```
 BOOL ProcessCommand(HWND hwnd);
@@ -393,7 +380,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *hwnd*
+[in] *hwnd*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -495,7 +482,6 @@ void SetTransparency(BYTE nTransparency);
 Appelez cette fonction pour définir le niveau de transparence de la fenêtre contextuelle.
 
 ##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize
-
 
 ```
 virtual CSize GetDialogSize();

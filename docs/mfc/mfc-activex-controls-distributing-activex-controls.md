@@ -1,15 +1,9 @@
 ---
-title: 'Contrôles ActiveX MFC : Distribution de contrôles ActiveX | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : distribution de contrôles ActiveX'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - GetWindowsDirectory
 - GetSystemDirectory
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], ANSI or Unicode versions
 - RegSvr32.exe
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f067b1835c9ff70c7a7c91d401a83e7fa3e1cce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 26ea2cce8891d145740d2f91e06e15c2a1161566
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382295"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513735"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Contrôles ActiveX MFC : distribution de contrôles ActiveX
 
@@ -52,9 +42,8 @@ Cet article décrit plusieurs problèmes liés à la redistribution de contrôle
 
 - [Inscrire des contrôles](#_core_registering_controls)
 
-
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 ##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI ou Unicode du contrôle des Versions
 

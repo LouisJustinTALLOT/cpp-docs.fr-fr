@@ -1,29 +1,19 @@
 ---
-title: Définition de l’état du jour d’un mois contrôle Calendar | Microsoft Docs
-ms.custom: ''
+title: Définition de l'état du jour d'un contrôle month calendar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - MCN_GETDAYSTATE
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], setting day state info
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b443e1758f766b7fa2dd9a0169ab98172423779d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a07808819e1cb049de7438c9e7964436e8c83802
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439340"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464764"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Définition de l'état du jour d'un contrôle month calendar
 
@@ -51,9 +41,9 @@ Pour gérer correctement ce message, vous devez déterminer combien de mois les 
 
 1. Dans le corps du gestionnaire, ajoutez le code suivant :
 
-     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
 
-     L’exemple suivant convertit le *pNMHDR* pointeur vers le type approprié, puis détermine le nombre de mois d’informations est demandé (`pDayState->cDayState`). Pour chaque mois, le champ de bits actuel (`pDayState->prgDayState[i]`) est initialisé à zéro et les dates nécessaires sont assignées (dans ce cas, le 15 de chaque mois).
+   L’exemple suivant convertit le *pNMHDR* pointeur vers le type approprié, puis détermine le nombre de mois d’informations est demandé (`pDayState->cDayState`). Pour chaque mois, le champ de bits actuel (`pDayState->prgDayState[i]`) est initialisé à zéro et les dates nécessaires sont assignées (dans ce cas, le 15 de chaque mois).
 
 ## <a name="see-also"></a>Voir aussi
 

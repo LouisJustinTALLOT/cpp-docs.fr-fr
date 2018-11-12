@@ -1,12 +1,6 @@
 ---
-title: Types multidocuments, vues et Windows de Frame | Microsoft Docs
-ms.custom: ''
+title: Types multidocuments, vues et fenêtres frame
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - static splitter windows [MFC]
 - multiple views [MFC]
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a488a3d46d60762f73406ea6f604761804277aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3c1422aed5535d30a2f9fb79300f6093326d2ef3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50669103"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Types multidocuments, vues et fenêtres frame
 
@@ -62,15 +52,15 @@ MFC prend en charge trois interfaces utilisateur courantes nécessitant des vues
 
 - Objets de vue de la même classe, chacun dans une fenêtre frame de document MDI distincte.
 
-     Vous pouvez prendre en charge la création d’une deuxième fenêtre frame d’un document. L’utilisateur peut choisir une commande Nouvelle fenêtre pour ouvrir une deuxième fenêtre frame avec une vue du même document, puis utiliser les deux fenêtres frame pour afficher simultanément différentes parties du document. Pour prendre en charge la commande Nouvelle fenêtre du menu Fenêtre pour les applications MDI, l’infrastructure duplique la fenêtre frame et la vue initiales jointes au document.
+   Vous pouvez prendre en charge la création d’une deuxième fenêtre frame d’un document. L’utilisateur peut choisir une commande Nouvelle fenêtre pour ouvrir une deuxième fenêtre frame avec une vue du même document, puis utiliser les deux fenêtres frame pour afficher simultanément différentes parties du document. Pour prendre en charge la commande Nouvelle fenêtre du menu Fenêtre pour les applications MDI, l’infrastructure duplique la fenêtre frame et la vue initiales jointes au document.
 
 - Objets de vue de la même classe dans la même fenêtre frame de document.
 
-     Les fenêtres fractionnées divisent l’espace de vue d’une fenêtre de document unique en plusieurs vues distinctes du document. L’infrastructure crée plusieurs objets de vue de la même classe de vue. Pour plus d’informations, consultez [Fenêtres fractionnées](#_core_splitter_windows).
+   Les fenêtres fractionnées divisent l’espace de vue d’une fenêtre de document unique en plusieurs vues distinctes du document. L’infrastructure crée plusieurs objets de vue de la même classe de vue. Pour plus d’informations, consultez [Fenêtres fractionnées](#_core_splitter_windows).
 
 - Objets de vue de différentes classes dans une même fenêtre frame.
 
-     Dans ce modèle, une variante de la fenêtre fractionnée, plusieurs vues partagent une même fenêtre frame. Les vues sont construites à partir de différentes classes, chaque vue présentant le même document d’une façon différente. Par exemple, une vue peut afficher un document de traitement de texte en mode normal tandis qu’une autre vue peut l’afficher en mode plan. Un contrôle splitter permet à l’utilisateur d’ajuster les tailles relatives des vues.
+   Dans ce modèle, une variante de la fenêtre fractionnée, plusieurs vues partagent une même fenêtre frame. Les vues sont construites à partir de différentes classes, chaque vue présentant le même document d’une façon différente. Par exemple, une vue peut afficher un document de traitement de texte en mode normal tandis qu’une autre vue peut l’afficher en mode plan. Un contrôle splitter permet à l’utilisateur d’ajuster les tailles relatives des vues.
 
 La figure suivante, divisée en plusieurs parties (a, b et c), présente les trois modèles d’interface utilisateur dans l’ordre indiqué ci-dessus.
 

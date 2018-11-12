@@ -1,12 +1,6 @@
 ---
-title: Classes basées sur un modèle | Microsoft Docs
-ms.custom: ''
+title: Classes basées sur un modèle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - type-safe collections
 - CTypedPtrList class [MFC], template-based classes
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 680ff7d339f592cf112a91fc303a6367fbc4805b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bd64e1c5efd1f80f43cb3460719326f30d5416c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557857"
 ---
 # <a name="template-based-classes"></a>Classes basées sur un modèle
 
@@ -47,13 +37,13 @@ MFC prédéfinit deux catégories de collections basées sur des modèles :
 
 - [Tableau simple, liste et classes de mappage](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
-     `CArray`, `CList`, `CMap`
+   `CArray`, `CList`, `CMap`
 
 - [Tableaux, listes et tables de pointeurs typés](#_core_using_typed.2d.pointer_collection_templates)
 
-     `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
+   `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
-Toutes les classes de collection simples sont dérivées de la classe `CObject`, de sorte qu'elles héritent de la sérialisation, de la création dynamique et d'autres propriétés de `CObject`. Les classes de collection de pointeurs typés nécessitent que vous spécifiez la classe de dérivation, qui doit être l'une des collections de pointeurs non basées sur un modèle prédéfinies par MFC, par exemple `CPtrList` ou `CPtrArray`. La nouvelle classe de collection hérite de la classe de base spécifiée, et ses fonctions membres utilisent des appels encapsulés aux membres de la classe de base pour appliquer la cohérence des types.
+Toutes les classes de collection simples sont dérivées de la classe `CObject`, de sorte qu'elles héritent de la sérialisation, de la création dynamique et d'autres propriétés de `CObject`. Les classes de collection de pointeurs typés nécessitent que vous spécifiez la classe de dérivation, qui doit être l’une des collections de pointeurs non basées sur un modèle prédéfinies par MFC, par exemple `CPtrList` ou `CPtrArray`. La nouvelle classe de collection hérite de la classe de base spécifiée, et ses fonctions membres utilisent des appels encapsulés aux membres de la classe de base pour appliquer la cohérence des types.
 
 Pour plus d’informations sur les modèles C++, consultez [modèles](../cpp/templates-cpp.md) dans le *référence du langage C++*.
 

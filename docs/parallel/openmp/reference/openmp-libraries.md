@@ -1,23 +1,13 @@
 ---
-title: Bibliothèques OpenMP | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: reference
-dev_langs:
-- C++
+title: Bibliothèques OpenMP
+ms.date: 10/24/2018
 ms.assetid: f89abf97-67e3-4327-bc30-43f85b9533a2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c9a4ccfefeaeb9446731027db44b849233bfefd6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 75f772c953a2120a02f72d8bdfc73c1baaaef390
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530336"
 ---
 # <a name="openmp-libraries"></a>Bibliothèques OpenMP
 
@@ -32,10 +22,10 @@ Les bibliothèques suivantes contiennent les fonctions de bibliothèque Runtime 
 
 Si _DEBUG est défini dans une compilation et si `#include omp.h` est dans le code source, VCOMPD. LIB sera la bibliothèque par défaut. Sinon, VCOMP. LIB sera utilisé.
 
-Vous pouvez utiliser [/NODEFAULTLIB (Ignore Libraries)](../../../build/reference/nodefaultlib-ignore-libraries.md) à supprimer de la bibliothèque par défaut et lier explicitement avec la bibliothèque de votre choix.
+Vous pouvez utiliser [/NODEFAULTLIB (ignorer les bibliothèques)](../../../build/reference/nodefaultlib-ignore-libraries.md) à supprimer de la bibliothèque par défaut et lier explicitement avec la bibliothèque de votre choix.
 
 Les DLL OpenMP se trouvent dans le répertoire de package redistribuable Visual C++ et doivent être distribués avec les applications qui utilisent OpenMP.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de la bibliothèque](../../../parallel/openmp/reference/openmp-library-reference.md)
+[Référence de la bibliothèque](openmp-library-reference.md)

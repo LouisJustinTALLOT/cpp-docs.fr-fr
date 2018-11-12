@@ -1,10 +1,6 @@
 ---
-title: CRBMap, classe | Microsoft Docs
-ms.custom: ''
+title: CRBMap, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CRBMap
 - ATLCOLL/ATL::CRBMap
@@ -12,21 +8,15 @@ f1_keywords:
 - ATLCOLL/ATL::CRBMap::Lookup
 - ATLCOLL/ATL::CRBMap::RemoveKey
 - ATLCOLL/ATL::CRBMap::SetAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e0ffdb791355aa40a33d80104af540b856cdf601
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fc702feacff5b2f2bbe53a9ea49f664a241d788c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019482"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677511"
 ---
 # <a name="crbmap-class"></a>CRBMap, classe
 
@@ -36,8 +26,8 @@ Cette classe représente une structure de mappage, à l’aide d’une arboresce
 
 ```
 template <typename K,
-          typename V, 
-          class KTraits = CElementTraits<K>, 
+          typename V,
+          class KTraits = CElementTraits<K>,
           class VTraits = CElementTraits<V>>
 class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ```

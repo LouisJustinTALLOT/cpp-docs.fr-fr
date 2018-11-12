@@ -1,38 +1,28 @@
 ---
-title: 'Contrôles ActiveX MFC : Localisation d’un contrôle ActiveX | Microsoft Docs'
-ms.custom: ''
+title: "Contrôles ActiveX MFC : localisation d'un contrôle ActiveX"
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - LocaleID
 - AfxOleRegisterTypeLib
-dev_langs:
-- C++
 helpviewer_keywords:
 - localization, ActiveX controls
 - MFC ActiveX controls [MFC], localizing
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2705061b1914ac8fad9f7ca8d769df16bab2f5c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a9c45873f784cf639ccf7e886f65527a6a78f2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415692"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613195"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Contrôles ActiveX MFC : localisation d'un contrôle ActiveX
 
 Cet article décrit les procédures permettant de rechercher des interfaces de contrôle ActiveX.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Si vous souhaitez adapter un contrôle ActiveX à un marché international, vous pouvez le localiser. Windows prend en charge plusieurs langues en plus de l'anglais par défaut, notamment l'allemand, le français et le suédois. Cela peut présenter des problèmes pour le contrôle si l'interface est uniquement en anglais.
 
@@ -68,7 +58,7 @@ Pour créer plusieurs bibliothèques de types traduites, vous pouvez ajouter au 
 
 1. Avec votre projet de contrôle ouvert, dans le **projet** menu, cliquez sur **ajouter un élément existant**.
 
-     Le **ajouter un élément existant** boîte de dialogue s’affiche.
+   Le **ajouter un élément existant** boîte de dialogue s’affiche.
 
 1. Si nécessaire, sélectionnez le lecteur et le répertoire à afficher.
 

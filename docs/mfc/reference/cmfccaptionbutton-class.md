@@ -1,10 +1,6 @@
 ---
-title: Cmfccaptionbutton, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfccaptionbutton, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCCaptionButton
 - AFXCAPTIONBUTTON/CMFCCaptionButton
@@ -17,8 +13,6 @@ f1_keywords:
 - AFXCAPTIONBUTTON/CMFCCaptionButton::Move
 - AFXCAPTIONBUTTON/CMFCCaptionButton::OnDraw
 - AFXCAPTIONBUTTON/CMFCCaptionButton::SetMiniFrameButton
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCCaptionButton [MFC], CMFCCaptionButton
 - CMFCCaptionButton [MFC], GetHit
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 719d6bafc50a036831f4aef1dd34c293b4129a83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4fa9d6a57cb2ee70e9da7853954241955d724a5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381528"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604285"
 ---
 # <a name="cmfccaptionbutton-class"></a>Cmfccaptionbutton, classe
 
@@ -104,7 +94,6 @@ Construit un objet `CMFCCaptionButton`.
 
 ```
 CMFCCaptionButton();
-
 
 CMFCCaptionButton(
     UINT nHit,
@@ -266,7 +255,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour le bouton.
 
 *bActive*<br/>

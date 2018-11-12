@@ -1,10 +1,6 @@
 ---
-title: CBulkRowset, classe | Microsoft Docs
-ms.custom: ''
+title: CBulkRowset, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - ATL::CBulkRowset
 - ATL.CBulkRowset
@@ -93,8 +89,6 @@ f1_keywords:
 - ATL::CBulkRowset::SetRows
 - CBulkRowset.SetRows
 - SetRows
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBulkRowset class
 - AddRefRows method
@@ -108,229 +102,224 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: c62dd4ba7f4f91371378b7c1a6b0295edb3625e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431068"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset, classe
 
-Récupère et manipule des lignes à traiter les données en bloc en récupérant plusieurs handles de ligne avec un seul appel.  
-  
+Récupère et manipule des lignes à traiter les données en bloc en récupérant plusieurs handles de ligne avec un seul appel.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class TAccessor>  
-class CBulkRowset : public CRowset<TAccessor>  
-```  
-  
-### <a name="parameters"></a>Paramètres  
+template <class TAccessor>
+class CBulkRowset : public CRowset<TAccessor>
+```
+
+### <a name="parameters"></a>Paramètres
 
 *TAccessor*<br/>
-Classe d’accesseur.  
+Classe d’accesseur.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atldbcli.h  
-  
-## <a name="members"></a>Membres  
-  
-### <a name="methods"></a>Méthodes  
-  
-|||  
-|-|-|  
-|[AddRefRows](#addrefrows)|Incrémente le décompte de références.|  
-|[CBulkRowset](#cbulkrowset)|Constructeur.|  
-|[MoveFirst](#movefirst)|Récupère la première ligne de données, en effectuant une nouvelle extraction en bloc si nécessaire.|  
-|[MoveLast](#movelast)|Passe à la dernière ligne.|  
-|[MoveNext](#movenext)|Récupère la ligne suivante de données.|  
-|[MovePrev](#moveprev)|Se déplace vers la ligne précédente.|  
-|[MoveToBookmark](#movetobookmark)|Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié à partir de ce signet.|  
-|[MoveToRatio](#movetoratio)|Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.|  
-|[ReleaseRows](#releaserows)|Définit la ligne actuelle (`m_nCurrentRow`) à zéro et les versions de toutes les lignes.|  
-|[SetRows](#setrows)|Définit le nombre de handles de ligne doivent être récupérées à un seul appel.|  
-  
-## <a name="example"></a>Exemple  
+**En-tête :** atldbcli.h
 
-L’exemple suivant illustre l’utilisation de la `CBulkRowset` classe.  
-  
-[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+## <a name="members"></a>Membres
+
+### <a name="methods"></a>Méthodes
+
+|||
+|-|-|
+|[AddRefRows](#addrefrows)|Incrémente le décompte de références.|
+|[CBulkRowset](#cbulkrowset)|Constructeur.|
+|[MoveFirst](#movefirst)|Récupère la première ligne de données, en effectuant une nouvelle extraction en bloc si nécessaire.|
+|[MoveLast](#movelast)|Passe à la dernière ligne.|
+|[MoveNext](#movenext)|Récupère la ligne suivante de données.|
+|[MovePrev](#moveprev)|Se déplace vers la ligne précédente.|
+|[MoveToBookmark](#movetobookmark)|Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié à partir de ce signet.|
+|[MoveToRatio](#movetoratio)|Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.|
+|[ReleaseRows](#releaserows)|Définit la ligne actuelle (`m_nCurrentRow`) à zéro et les versions de toutes les lignes.|
+|[SetRows](#setrows)|Définit le nombre de handles de ligne doivent être récupérées à un seul appel.|
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant illustre l’utilisation de la `CBulkRowset` classe.
+
+[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Appels [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) pour incrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT AddRefRows() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+Appels [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) pour incrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.
 
-Une valeur HRESULT standard. 
-  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT AddRefRows() throw();
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Une valeur HRESULT standard.
+
 ## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
 
-Crée un `CBulkRowset` de l’objet et affecte le nombre de lignes par défaut 10.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Crée un `CBulkRowset` de l’objet et affecte le nombre de lignes par défaut 10.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-CBulkRowset();  
-```  
+CBulkRowset();
+```
 
 ## <a name="movefirst"></a> CBulkRowset::MoveFirst
 
-Récupère la première ligne de données.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Récupère la première ligne de données.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveFirst() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+HRESULT MoveFirst() throw();
+```
+
+### <a name="return-value"></a>Valeur de retour
 
 Une valeur HRESULT standard.
 
 ## <a name="movelast"></a> CBulkRowset::MoveLast
 
-Passe à la dernière ligne.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT MoveLast() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+Passe à la dernière ligne.
 
-Une valeur HRESULT standard.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT MoveLast() throw();
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Une valeur HRESULT standard.
 
 ## <a name="movenext"></a> CBulkRowset::MoveNext
 
-Récupère la ligne suivante de données.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT MoveNext() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+Récupère la ligne suivante de données.
 
-Une valeur HRESULT standard. Lorsque la fin de l’ensemble de lignes a été atteinte, retourne DB_S_ENDOFROWSET. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT MoveNext() throw();
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Une valeur HRESULT standard. Lorsque la fin de l’ensemble de lignes a été atteinte, retourne DB_S_ENDOFROWSET.
 
 ## <a name="moveprev"></a> CBulkRowset::MovePrev
 
-Se déplace vers la ligne précédente.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT MovePrev() throw();  
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+Se déplace vers la ligne précédente.
 
-Une valeur HRESULT standard.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT MovePrev() throw();
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Une valeur HRESULT standard.
 
 ## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
 
-Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié (*lSkip*) à partir de ce signet.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié (*lSkip*) à partir de ce signet.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
-   DBCOUNTITEM lSkip = 0) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
+   DBCOUNTITEM lSkip = 0) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *Signet*<br/>
-[in] Un signet est l’emplacement à partir duquel vous souhaitez extraire des données.  
-  
-*lSkip*<br/>
-[in] Le nombre de lignes à partir du signet à la ligne cible. Si *lSkip* est égal à zéro, la première ligne extraite est la ligne marquée par un signet. Si *lSkip* est 1, la première ligne extraite est la ligne après la ligne marquée par un signet. Si *lSkip* est -1, la première ligne extraite est la ligne avant la ligne marquée par un signet.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Un signet est l’emplacement à partir duquel vous souhaitez extraire des données.
 
-Consultez [IRowset::GetData](/previous-versions/windows/desktop/ms716988) dans le *de référence du programmeur OLE DB*. 
+*lSkip*<br/>
+[in] Le nombre de lignes à partir du signet à la ligne cible. Si *lSkip* est égal à zéro, la première ligne extraite est la ligne marquée par un signet. Si *lSkip* est 1, la première ligne extraite est la ligne après la ligne marquée par un signet. Si *lSkip* est -1, la première ligne extraite est la ligne avant la ligne marquée par un signet.
+
+### <a name="return-value"></a>Valeur de retour
+
+Consultez [IRowset::GetData](/previous-versions/windows/desktop/ms716988) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
-Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
-   DBCOUNTITEM nDenominator)throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
+   DBCOUNTITEM nDenominator)throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *nNumerator*<br/>
-[in] Le numérateur est utilisé pour déterminer la position décimale à partir de laquelle extraire des données.  
-  
+[in] Le numérateur est utilisé pour déterminer la position décimale à partir de laquelle extraire des données.
+
 *nDenominator*<br/>
-[in] Le dénominateur permet de déterminer la position décimale à partir de laquelle extraire des données.  
-  
-### <a name="return-value"></a>Valeur de retour  
+[in] Le dénominateur permet de déterminer la position décimale à partir de laquelle extraire des données.
 
-Une valeur HRESULT standard.  
-  
-### <a name="remarks"></a>Notes  
+### <a name="return-value"></a>Valeur de retour
 
-`MoveToRatio` extrait les lignes à peu près en fonction de la formule suivante :  
-  
-`(nNumerator *  RowsetSize ) / nDenominator`  
-  
-Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) dans le *de référence du programmeur OLE DB*.   
+Une valeur HRESULT standard.
+
+### <a name="remarks"></a>Notes
+
+`MoveToRatio` extrait les lignes à peu près en fonction de la formule suivante :
+
+`(nNumerator *  RowsetSize ) / nDenominator`
+
+Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) pour décrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT ReleaseRows() throw();   
-```  
-  
-### <a name="return-value"></a>Valeur de retour  
+Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) pour décrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.
 
-Une valeur HRESULT standard.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT ReleaseRows() throw();
+```
+
+### <a name="return-value"></a>Valeur de retour
+
+Une valeur HRESULT standard.
 
 ## <a name="setrows"></a> CBulkRowset::SetRows
 
-Définit le nombre de descripteurs de lignes récupérées par chaque appel.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Définit le nombre de descripteurs de lignes récupérées par chaque appel.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-void SetRows(DBROWCOUNT nRows) throw();  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
+void SetRows(DBROWCOUNT nRows) throw();
+```
+
+#### <a name="parameters"></a>Paramètres
 
 *nRows*<br/>
-[in] La nouvelle taille de l’ensemble de lignes (nombre de lignes).  
-  
-### <a name="remarks"></a>Notes  
+[in] La nouvelle taille de l’ensemble de lignes (nombre de lignes).
+
+### <a name="remarks"></a>Notes
 
 Si vous appelez cette fonction, il doit être avant l’ouverture de l’ensemble de lignes.
-  
-## <a name="see-also"></a>Voir aussi  
+
+## <a name="see-also"></a>Voir aussi
 
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

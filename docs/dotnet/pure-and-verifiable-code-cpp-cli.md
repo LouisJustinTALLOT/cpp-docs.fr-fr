@@ -1,12 +1,6 @@
 ---
-title: Code pur et vérifiable (C + c++ / CLI) | Documents Microsoft
-ms.custom: ''
+title: Code pur et vérifiable (C++/CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - /clr compiler option [C++], verifiable assemblies
 - /clr compiler option [C++], mixed assemblies
@@ -23,29 +17,24 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 453bb40e94c1d345adbe22f8792b59d1e584499a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 11cccc082d5b9e467f5fafce6f2128aa50d33879
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704826"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512801"
 ---
-# <a name="pure-and-verifiable-code-ccli"></a>Code pur et vérifiable (C + c++ / CLI)
+# <a name="pure-and-verifiable-code-ccli"></a>Code pur et vérifiable (C++ / c++ / CLI)
 
-Pour la programmation .NET, Visual C++ dans Visual Studio 2017 prend en charge la création d’assemblys mixtes à l’aide de la [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) option du compilateur. Le **/CLR : pure** et **CLR : safe** options sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017. Si votre code doit être sécurisé ou vérifiable, puis nous vous recommandons de porter vers c#.
+Pour la programmation .NET, Visual C++ dans Visual Studio 2017 prend en charge la création d’assemblys mixtes à l’aide de la [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) option du compilateur. Le **/CLR : pure** et **CLR : safe** options sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017. Si votre code doit être sécurisé ou vérifiable, nous vous recommandons de porter à C#.
 
 ## <a name="mixed-clr"></a>Mixte (/ clr)
 
-Assemblys mixtes (compilés avec **/CLR**), contiennent à la fois non managé et managés parties, ce qui permet d’utiliser les fonctionnalités de .NET, mais encore contiennent du code natif. Ainsi, les applications et des composants à mettre à jour utiliser les fonctionnalités .NET sans avoir à réécrire de l’ensemble du projet. À l’aide de Visual C++ permet de combiner le code managé et natif de cette manière est appelé l’interopérabilité C++. Pour plus d’informations, consultez [mixte (natif et managé) assemblys](../dotnet/mixed-native-and-managed-assemblies.md) et [natif et l’interopérabilité .NET](../dotnet/native-and-dotnet-interoperability.md).
+Assemblys mixtes (compilés avec **/CLR**), tous les deux non managée et parties managées, ce qui permet d’utiliser les fonctionnalités de .NET, tout en contenant du code natif. Ainsi, les applications et les composants à mettre à jour utiliser les fonctionnalités de .NET sans nécessiter que l’ensemble du projet être réécrites. À l’aide de Visual C++ permet de combiner du code managé et natif de cette manière est appelé l’interopérabilité C++. Pour plus d’informations, consultez [assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md) et [natif et l’interopérabilité .NET](../dotnet/native-and-dotnet-interoperability.md).
 
-Les appels effectués à partir d’assemblys managés dans des DLL natives via P/Invoke sont compilés mais risque d’échouer lors de l’exécution en fonction des paramètres de sécurité.
+Appels effectués à partir d’assemblys managés dans des DLL natives via P/Invoke compilera, mais peuvent échouer lors de l’exécution en fonction des paramètres de sécurité.
 
-Il existe un scénario de programmation qui passera le compilateur mais le résultat sera dans un assembly non vérifiable : appel de fonction virtuelle via une instance d’objet à l’aide de l’opérateur de résolution de portée.  Par exemple : `MyObj -> A::VirtualFunction();`.
+Il existe un scénario de programmation qui passera le compilateur, mais cela entraîne un assembly non vérifiable : appeler une fonction virtuelle via une instance d’objet à l’aide de l’opérateur de résolution de portée.  Par exemple : `MyObj -> A::VirtualFunction();`.
 
 ## <a name="see-also"></a>Voir aussi
 

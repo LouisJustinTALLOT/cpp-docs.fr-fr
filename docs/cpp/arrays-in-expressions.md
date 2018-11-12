@@ -1,26 +1,16 @@
 ---
-title: Tableaux dans les Expressions | Microsoft Docs
-ms.custom: ''
+title: Tableaux dans les expressions
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - expressions [C++], arrays in
 - arrays [C++], in expressions
 ms.assetid: 6e5a795b-d6bd-4e39-b313-6a20d47c4d4b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34f8a45dfa9de9a5a48e13cb6a38f667e5963f2d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0f2ef43c2a5bc4f8a44378c21d6d53b14f07ea07
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068544"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478167"
 ---
 # <a name="arrays-in-expressions"></a>Tableaux dans les expressions
 

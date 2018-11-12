@@ -1,10 +1,6 @@
 ---
-title: Cmfcdynamiclayout, classe | Microsoft Docs
-ms.custom: ''
+title: CMFCDynamicLayout Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCDynamicLayout
 - AFXLAYOUT/CMFCDynamicLayout
@@ -18,19 +14,13 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::IsEmpty
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
-dev_langs:
-- C++
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 868bc5271fd52e32ecb01f0155fe1c11181ac2ea
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: da512b5e05f3d5ff0229cc44a0a8268148a43f82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640633"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout Class
 
@@ -101,7 +91,6 @@ Ajoute une fenêtre enfant, généralement un contrôle, à la liste des fenêtr
 BOOL AddItem(
     HWND hwnd,
     MoveSettings moveSettings SizeSettings sizeSettings);
-
 
 BOOL AddItem(
     int nID,
@@ -338,7 +327,6 @@ Il s'agit d'une classe imbriquée dans `CMFCDynamicLayout`.
 ## <a name="cmfcdynamiclayoutmovesettingsishorizontal"></a>CMFCDynamicLayout::MoveSettings::IsHorizontal
 
 Vérifie si les données de déplacement spécifient un déplacement horizontal différent de zéro.
-
 
 ```
 BOOL IsHorizontal() const

@@ -1,28 +1,17 @@
 ---
-title: pointer_default (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: pointer_default (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.pointer_default
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6e8ddf566082bfded1f20a2bfe04e7cef0b5dc14
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8261d789f50c2750cccce48dac675ef478a70420
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504388"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -58,9 +47,9 @@ Consultez l’exemple de [defaultvalue](defaultvalue.md) pour un exemple d’uti
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs d’interface](interface-attributes.md)  
+[Attributs d’interface](interface-attributes.md)

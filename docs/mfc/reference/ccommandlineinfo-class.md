@@ -1,10 +1,6 @@
 ---
-title: Ccommandlineinfo, classe | Microsoft Docs
-ms.custom: ''
+title: Ccommandlineinfo, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
 - AFXWIN/CCommandLineInfo
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXWIN/CCommandLineInfo::m_strPortName
 - AFXWIN/CCommandLineInfo::m_strPrinterName
 - AFXWIN/CCommandLineInfo::m_strRestartIdentifier
-dev_langs:
-- C++
 helpviewer_keywords:
 - CCommandLineInfo [MFC], CCommandLineInfo
 - CCommandLineInfo [MFC], ParseParam
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b7f17cf82f7dffe4ac08bd5c27a9eee6210e6010
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379019"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481469"
 ---
 # <a name="ccommandlineinfo-class"></a>Ccommandlineinfo, classe
 
@@ -288,7 +278,6 @@ virtual void ParseParam(
     const char* pszParam,
     BOOL bFlag,
     BOOL bLast);
-
 
 virtual void ParseParam(
     const TCHAR* pszParam,

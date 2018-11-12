@@ -1,26 +1,16 @@
 ---
-title: Classes MFC | Microsoft Docs
-ms.custom: ''
+title: Classes MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 40294e0d0af3f5181ffe295a2a6c625fa5223f5b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463386"
 ---
 # <a name="mfc-classes"></a>Classes MFC
 
@@ -1316,6 +1306,4 @@ Prend en charge des tableaux de mots de 16 bits.
 
 [MFC, applications de bureau](../../mfc/mfc-desktop-applications.md)<br/>
 Contient des liens vers les rubriques sur les classes, les fonctions globales, les variables globales et les macros qui composent la bibliothèque MFC.
-
-
 

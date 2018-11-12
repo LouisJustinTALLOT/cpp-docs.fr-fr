@@ -1,12 +1,6 @@
 ---
-title: Création de Scripts pour ATL (inscription) | Microsoft Docs
-ms.custom: ''
+title: Création de Scripts pour ATL (inscription)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - scripting, registry scripting
 - ATL, registry
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abffe3c8d0a107c48c3a14a9bf584122229ad3b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bc76e41ab0d2cd2d26ef227e6368cb420a8a6401
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767258"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480236"
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 

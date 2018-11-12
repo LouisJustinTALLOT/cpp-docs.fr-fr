@@ -1,28 +1,18 @@
 ---
-title: Mots clés contextuels (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Mots clés contextuels (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5d02939e61da4a247b46da5637c38d01e7990c49
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 78b61e77da8ed45a43b3830b7eaa9588c1860928
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327932"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652749"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>Mots clés contextuels (C++ / c++ / CLI et c++ / CX)
 
@@ -111,4 +101,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

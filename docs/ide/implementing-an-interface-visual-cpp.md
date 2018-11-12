@@ -1,25 +1,15 @@
 ---
-title: Implémentation d’une interface (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Implémentation d'une interface (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - interfaces, implementing
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4227f566d655911553baeb5e8162f13bc9994130
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5146a8ced1b8347ea724940a7419d8d2507b5b58
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395529"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449645"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implémentation d'une interface (Visual C++)
 

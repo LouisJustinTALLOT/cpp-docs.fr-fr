@@ -1,29 +1,19 @@
 ---
-title: partielle (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: partielle (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - partial_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ace57934c741d0a6e7b7ab6fbe5e482540a9bc48
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: f1837eb785f53e53a4b5ff621a898b0375cfc0fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592583"
 ---
 # <a name="partial--ccli-and-ccx"></a>partielle (C++ / c++ / CLI et c++ / CX)
 
@@ -41,12 +31,12 @@ Pour une classe ref qui a deux d√©finitions partielles, le **partielle** mot cl√
 
 ```cpp
 partial class-key identifier {
-   /* The first part of the partial class definition. 
+   /* The first part of the partial class definition.
       This is typically auto-generated */
 }
 // ...
 class-key identifier {
-   /* The subsequent part(s) of the class definition. The same 
+   /* The subsequent part(s) of the class definition. The same
       identifier is specified, but the "partial" keyword is omitted. */
 }
 ```

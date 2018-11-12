@@ -1,26 +1,16 @@
 ---
-title: Implications en matière de sécurité de personnalisation | Microsoft Docs
-ms.custom: ''
+title: Implications en matière de sécurité de la personnalisation
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - security, MFC Feature Pack
 - MFC Feature Pack, security
 ms.assetid: 9be96b12-be38-43bd-a133-5d671265f7a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cdb8e0d39a76f749011ca3c680e25b86212b6519
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442082"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434423"
 ---
 # <a name="security-implications-of-customization"></a>Implications en matière de sécurité de la personnalisation
 
@@ -38,7 +28,7 @@ Nous recommandons une de ces trois méthodes pour fermer les vulnérabilités da
 
 - Store les données dans un fichier sécurisé au lieu de dans le Registre.
 
-     Pour effectuer l’une de ces deux premières méthodes, dérivez une classe de [CSettingsStore Class](../mfc/reference/csettingsstore-class.md) et substituer ses méthodes pour implémenter le chiffrement ou le stockage en dehors du Registre.
+   Pour effectuer l’une de ces deux premières méthodes, dérivez une classe de [CSettingsStore Class](../mfc/reference/csettingsstore-class.md) et substituer ses méthodes pour implémenter le chiffrement ou le stockage en dehors du Registre.
 
 - Vous pouvez également désactiver des personnalisations dans votre application.
 

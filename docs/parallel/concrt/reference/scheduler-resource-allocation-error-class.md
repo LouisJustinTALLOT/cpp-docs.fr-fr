@@ -1,30 +1,20 @@
 ---
-title: scheduler_resource_allocation_error, classe | Microsoft Docs
-ms.custom: ''
+title: scheduler_resource_allocation_error, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - scheduler_resource_allocation_error
 - CONCRT/concurrency::scheduler_resource_allocation_error
 - CONCRT/concurrency::scheduler_resource_allocation_error::scheduler_resource_allocation_error
 - CONCRT/concurrency::scheduler_resource_allocation_error::get_error_code
-dev_langs:
-- C++
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8639e70e74f122da8ffa2d58501ad04884aa306
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d8b94a17c4d842e97901e97dd2197692252eed43
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613159"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error, classe
 

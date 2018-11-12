@@ -1,26 +1,16 @@
 ---
-title: 'Comment : convertir un ruban MFC existant à une ressource de ruban | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : convertir un ruban MFC existant en ressource du ruban'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ba2907a95018948670847282fd09e0a71a8c106
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378109"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509562"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Comment : convertir un ruban MFC existant en ressource du ruban
 
@@ -37,13 +27,13 @@ Vous devez disposer d’un projet MFC existant qui comporte du code qui utilise 
 
 ```
 
-     Save and close the file.
+   Enregistrez et fermez le fichier.
 
 1. Générer et exécuter l’application MFC, puis dans le bloc-notes, ouvrez RibbonOutput.txt et copiez son contenu.
 
 1. Dans Visual Studio, sur le **projet** menu, cliquez sur **ajouter une ressource**. Dans le **ajouter une ressource** boîte de dialogue, sélectionnez **ruban** puis cliquez sur **New**.
 
-     Visual Studio crée une ressource de ruban et s’ouvre en mode design. L’ID de ressource de ruban est IDR_RIBBON1, qui s’affiche dans **affichage des ressources**. Le ruban est défini dans le fichier XML de ribbon1.mfcribbon-ms.
+   Visual Studio crée une ressource de ruban et s’ouvre en mode design. L’ID de ressource de ruban est IDR_RIBBON1, qui s’affiche dans **affichage des ressources**. Le ruban est défini dans le fichier XML de ribbon1.mfcribbon-ms.
 
 1. Dans Visual Studio, ouvrez ribbon1.mfcribbon-ms, supprimez son contenu, puis collez le contenu du RibbonOutput.txt, ce qui vous avez copiée précédemment. Enregistrez et fermez ribbon1.mfcribbon-ms.
 

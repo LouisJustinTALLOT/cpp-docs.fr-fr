@@ -1,24 +1,14 @@
 ---
-title: Vous connecter à votre ordinateur Linux distant dans Visual Studio | Microsoft Docs
+title: Vous connecter à votre ordinateur Linux distant dans Visual Studio
 description: Comment se connecter à un ordinateur Linux distant à partir d’un projet C++ Visual Studio.
-ms.custom: ''
 ms.date: 07/20/2018
-ms.technology:
-- cpp-linux
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 5e6a5dd4a00bd4d98c36222434d7cd83242905c9
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: ce6a3c02846586dbc46b0c9bc0db0d579878c814
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410757"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575238"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Se connecter à votre ordinateur Linux distant
 
@@ -29,7 +19,7 @@ Lors de la génération d’un projet Linux C++ dans Visual Studio, le code Linu
    ![Gestionnaire de connexion](media/settings_connectionmanager.png)
 
    Dans les deux cas, la fenêtre **Connect to Remote System** (Se connecter au système distant) s’affiche.
-   
+
    ![Connect to Remote System (Se connecter au système distant)](media/connect.png)
 
 1. Entrez les informations suivantes :

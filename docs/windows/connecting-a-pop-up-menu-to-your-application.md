@@ -1,29 +1,18 @@
 ---
-title: Connexion d’un Menu contextuel à votre Application C++ | Microsoft Docs
-ms.custom: ''
+title: Connexion d’un Menu contextuel à votre Application C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - pop-up menus [C++], connecting to applications
 - context menus [C++], connecting to applications
 - menus [C++], pop-up
 - shortcut menus [C++], connecting to applications
 ms.assetid: 295cbf0e-6416-478e-bc3d-472fb98e0e52
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f1ebb5e2151fe770e6a59210ac564237155fafd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8a0cb64caaa58b464b0d5abb52093350c5e3cfeb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412078"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556492"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-c-application"></a>Connexion d’un Menu contextuel à votre Application C++
 
@@ -51,4 +40,4 @@ MFC
 ## <a name="see-also"></a>Voir aussi
 
 [Création de menus contextuels](../windows/creating-pop-up-menus.md)<br/>
-[Éditeur de menus](../windows/menu-editor.md)  
+[Éditeur de menus](../windows/menu-editor.md)

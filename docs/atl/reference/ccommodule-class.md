@@ -1,10 +1,6 @@
 ---
-title: CComModule, classe | Microsoft Docs
-ms.custom: ''
+title: CComModule (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComModule
 - ATLBASE/ATL::CComModule
@@ -31,22 +27,16 @@ f1_keywords:
 - ATLBASE/ATL::CComModule::m_hInstResource
 - ATLBASE/ATL::CComModule::m_hInstTypeLib
 - ATLBASE/ATL::CComModule::m_pObjMap
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 519837379369f08108d3d5b5b300fe0bcb9ac5e7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083812"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589447"
 ---
 # <a name="ccommodule-class"></a>CComModule (classe)
 
@@ -136,7 +126,7 @@ En plus de `CComModule`, ATL fournit [CComAutoThreadModule](../../atl/reference/
 À compter d’ATL 7.0, `CComModule` est obsolète : consultez [Module ATL, Classes](../../atl/atl-module-classes.md) pour plus d’informations.
 
 ```
-HRESULT GetClassObject(  
+HRESULT GetClassObject(
     REFCLSID rclsid,
     REFIID riid,
     LPVOID* ppv) throw();
@@ -340,7 +330,7 @@ Pointe vers la table des objets gérés par l’instance de module.
 À compter d’ATL 7.0, `CComModule` est obsolète : consultez [Module ATL, Classes](../../atl/atl-module-classes.md) pour plus d’informations.
 
 ```
-ATL_DEPRECATED HRESULT RegisterClassHelper(  
+ATL_DEPRECATED HRESULT RegisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -405,7 +395,7 @@ Inscrit un objet de classe EXE avec OLE pour d’autres applications peuvent se 
 
 ```
 HRESULT RegisterServer(
-    BOOL bRegTypeLib = FALSE,  
+    BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
 ```
 
@@ -488,7 +478,7 @@ Libère tous les membres de données.
 À compter d’ATL 7.0, `CComModule` est obsolète : consultez [Module ATL, Classes](../../atl/atl-module-classes.md) pour plus d’informations.
 
 ```
-ATL_DEPRECATED HRESULT UnregisterClassHelper(  
+ATL_DEPRECATED HRESULT UnregisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID);
@@ -549,7 +539,7 @@ Consultez [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) pour plus 
 À compter d’ATL 7.0, `CComModule` est obsolète : consultez [Module ATL, Classes](../../atl/atl-module-classes.md) pour plus d’informations.
 
 ```
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -557,7 +547,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
     DWORD dwFlags,
     BOOL bRegister);
 
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -608,12 +598,12 @@ En spécifiant le [DECLARE_REGISTRY](registry-macros.md#declare_registry) macro,
 À compter d’ATL 7.0, `CComModule` est obsolète : consultez [Module ATL, Classes](../../atl/atl-module-classes.md) pour plus d’informations.
 
 ```
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw ();
@@ -658,12 +648,12 @@ Pour plus d’informations sur les paramètres remplaçables et l’écriture de
 À compter d’ATL 7.0, `CComModule` est obsolète : consultez [Module ATL, Classes](../../atl/atl-module-classes.md) pour plus d’informations.
 
 ```
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();

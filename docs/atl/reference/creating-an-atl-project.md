@@ -1,30 +1,20 @@
 ---
-title: Création d’un projet ATL | Microsoft Docs
-ms.custom: ''
+title: Création d’un projet ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.project
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, creating
 - ATL70.DLL
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4adaa1da407d9727db74add14eb517e83a5e610c
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: c6fb81ad1a6a5233eb27f67fb7985e23b0c0f4b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861549"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443791"
 ---
 # <a name="creating-an-atl-project"></a>Création d’un projet ATL
 
@@ -48,4 +38,4 @@ Une fois votre projet créé, vous pouvez afficher les fichiers créés dans **l
 ## <a name="see-also"></a>Voir aussi
 
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Pages de propriétés](../../ide/property-pages-visual-cpp.md)   
+[Pages de propriétés](../../ide/property-pages-visual-cpp.md)

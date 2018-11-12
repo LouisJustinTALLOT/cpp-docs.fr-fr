@@ -1,10 +1,6 @@
 ---
-title: Icommandui, Interface | Microsoft Docs
-ms.custom: ''
+title: Icommandui, Interface
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - ICommandUI
 - AFXWINFORMS/ICommandUI
@@ -15,21 +11,15 @@ f1_keywords:
 - AFXWINFORMS/ICommandUI::Index
 - AFXWINFORMS/ICommandUI::Radio
 - AFXWINFORMS/ICommandUI::Text
-dev_langs:
-- C++
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429203"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467096"
 ---
 # <a name="icommandui-interface"></a>Icommandui, Interface
 
@@ -73,6 +63,7 @@ Définit l’élément d’interface utilisateur pour cette commande à l’éta
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>Notes
 
 Cette propriété définit l’élément d’interface utilisateur pour cette commande à l’état de vérification appropriée. Vérification de l’ensemble les valeurs suivantes :
@@ -86,6 +77,7 @@ Indique au mécanisme de routage de commande pour continuer le message en cours 
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>Notes
 
 Il s’agit d’une fonction membre avancé qui doit être utilisée conjointement avec un gestionnaire ON_COMMAND_EX qui retourne la valeur FALSE. Pour plus d’informations, consultez Technical Note TN006 : tables des messages.
@@ -96,6 +88,7 @@ Active ou désactive l’élément d’interface utilisateur pour cette commande
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>Notes
 
 Cette propriété Active ou désactive l’élément d’interface utilisateur pour cette commande. Définissez activé à True pour activer l’élément, FALSE pour le désactiver.
@@ -106,6 +99,7 @@ Obtient l’ID de l’objet d’interface utilisateur représenté par l’objet
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>Notes
 
 Cette propriété obtient l’ID (un handle) de l’élément de menu, bouton de barre d’outils ou un autre objet d’interface utilisateur représenté par l’objet ICommandUI.
@@ -116,6 +110,7 @@ Obtient l’index de l’objet d’interface utilisateur représenté par l’ob
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>Notes
 
 Cette propriété obtient l’index (un handle) de l’élément de menu, bouton de barre d’outils ou un autre objet d’interface utilisateur représenté par l’objet ICommandUI.
@@ -126,6 +121,7 @@ Définit l’élément d’interface utilisateur pour cette commande à l’éta
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>Notes
 
 Cette propriété définit l’élément d’interface utilisateur pour cette commande à l’état de vérification appropriée. Case d’option de jeu à True pour activer l’élément ; Sinon, FALSE.
@@ -136,6 +132,7 @@ Définit le texte de l’élément d’interface utilisateur pour cette commande
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>Notes
 
 Cette propriété définit le texte de l’élément d’interface utilisateur pour cette commande. La valeur texte est un handle de chaîne de texte.

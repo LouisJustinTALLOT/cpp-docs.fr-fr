@@ -1,10 +1,6 @@
 ---
-title: _ismbbkalnum, _ismbbkalnum_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkalnum
 - _ismbbkalnum_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkalnum
 - ismbbkalnum_l
 - _ismbbkalnum_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkalnum_l function
 - ismbbkalnum_l function
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62aa208085b3a295ef51f4aa5ecafd7e68bb4710
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481053"
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -71,9 +61,9 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbkalnum** retourne une valeur différente de zéro si l’entier *c* est un symbole de texte non-ASCII autre que le signe de ponctuation ou 0 s’il n’est pas. **_ismbbkalnum** utilise les paramètres régionaux actuels pour les informations de caractères dépendant des paramètres régionaux. **_ismbbkalnum_l** est identique à **_ismbbkalnum** sauf qu’elle prend les paramètres régionaux en tant que paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbbkalnum** retourne une valeur différente de zéro si l’entier *c* est un symbole de texte non-ASCII autre qu’un signe de ponctuation ou 0 si ce n’est pas. **_ismbbkalnum** utilise les paramètres régionaux actuels pour les informations sur les caractères de dépendant des paramètres régionaux. **_ismbbkalnum_l** est identique à **_ismbbkalnum** , à ceci près qu’elle prend les paramètres régionaux en tant que paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

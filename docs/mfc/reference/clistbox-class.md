@@ -1,10 +1,6 @@
 ---
-title: CListBox, classe | Microsoft Docs
-ms.custom: ''
+title: CListBox (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CListBox
 - AFXWIN/CListBox
@@ -56,8 +52,6 @@ f1_keywords:
 - AFXWIN/CListBox::SetTabStops
 - AFXWIN/CListBox::SetTopIndex
 - AFXWIN/CListBox::VKeyToItem
-dev_langs:
-- C++
 helpviewer_keywords:
 - CListBox [MFC], CListBox
 - CListBox [MFC], AddString
@@ -108,16 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ceef559e83b111a9ca8bcb96541fe8fbda19cf0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387171"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656090"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 
@@ -141,7 +131,7 @@ class CListBox : public CWnd
 
 |Nom|Description|
 |----------|-----------------|
-|[CListBox::AddString](#addstring)|Ajoute une chaîne à une zone de liste.|
+|[CComboBox::AddString](#addstring)|Ajoute une chaîne à une zone de liste.|
 |[CListBox::CharToItem](#chartoitem)|Méthode override pour fournir WM_CHAR personnalisé gérant pour les zones de liste en mode owner-draw n’ayant pas de chaînes.|
 |[CListBox::CompareItem](#compareitem)|Appelé par l’infrastructure pour déterminer la position d’un nouvel élément dans une zone de liste triée en mode owner-draw.|
 |[CListBox::Create](#create)|Crée la zone de liste Windows et l’attache à la `CListBox` objet.|
@@ -169,7 +159,7 @@ class CListBox : public CWnd
 |[CListBox::GetTextLen](#gettextlen)|Retourne la longueur en octets d’un élément de zone de liste.|
 |[CListBox::GetTopIndex](#gettopindex)|Retourne l’index de la première chaîne visible dans une zone de liste.|
 |[CListBox::InitStorage](#initstorage)|Préalloue les blocs de mémoire pour les chaînes et les éléments de liste.|
-|[CListBox::InsertString](#insertstring)|Insère une chaîne à un emplacement spécifique dans une zone de liste.|
+|[CComboBox::InsertString](#insertstring)|Insère une chaîne à un emplacement spécifique dans une zone de liste.|
 |[CListBox::ItemFromPoint](#itemfrompoint)|Retourne l’index de l’élément de zone de liste le plus proche d’un point.|
 |[CListBox::MeasureItem](#measureitem)|Appelé par le framework lorsqu’une zone de liste owner-draw est créée pour déterminer les dimensions de la zone de liste.|
 |[CListBox::ResetContent](#resetcontent)|Efface toutes les entrées à partir d’une zone de liste.|
@@ -1446,7 +1436,6 @@ Définit les positions de taquet de tabulation dans une zone de liste.
 ```
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
-
 
 BOOL SetTabStops(
     int nTabStops,

@@ -1,10 +1,6 @@
 ---
-title: La classe CTreeCtrl | Microsoft Docs
-ms.custom: ''
+title: CTreeCtrl Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CTreeCtrl
 - AFXCMN/CTreeCtrl
@@ -86,8 +82,6 @@ f1_keywords:
 - AFXCMN/CTreeCtrl::ShowInfoTip
 - AFXCMN/CTreeCtrl::SortChildren
 - AFXCMN/CTreeCtrl::SortChildrenCB
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTreeCtrl [MFC], CTreeCtrl
 - CTreeCtrl [MFC], Create
@@ -168,16 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98dfdc792341d215830d46d078d9ece69419efed
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890840"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477946"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -1402,7 +1392,6 @@ Appelez cette fonction pour insérer un nouvel élément dans un contrôle d’a
 ```
 HTREEITEM InsertItem(LPTVINSERTSTRUCT lpInsertStruct);
 
-
 HTREEITEM InsertItem(
     UINT nMask,
     LPCTSTR lpszItem,
@@ -1414,12 +1403,10 @@ HTREEITEM InsertItem(
     HTREEITEM hParent,
     HTREEITEM hInsertAfter);
 
-
 HTREEITEM InsertItem(
     LPCTSTR lpszItem,
     HTREEITEM hParent = TVI_ROOT,
     HTREEITEM hInsertAfter = TVI_LAST);
-
 
 HTREEITEM InsertItem(
     LPCTSTR lpszItem,
@@ -1912,7 +1899,6 @@ Appelez cette fonction pour définir les attributs de l’élément d’arboresc
 
 ```
 BOOL SetItem(TVITEM* pItem);
-
 
 BOOL SetItem(
     HTREEITEM hItem,

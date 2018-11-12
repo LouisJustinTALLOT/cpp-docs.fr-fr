@@ -1,30 +1,20 @@
 ---
-title: Création d’une Application MFC de Style navigateur Web | Microsoft Docs
-ms.custom: ''
+title: Création d'une application MFC de style navigateur Web
 ms.date: 06/25/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, Web applications
 - Web browsers, creating from MFC architecture
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ae8f516da368631e727cf302f85ab33ea31f608
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1fd61b3e6bcb2f429c43edcabb41e166bcec95c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397674"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466155"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Création d'une application MFC de style navigateur Web
 
@@ -84,5 +74,4 @@ void CWebView::OnInitialUpdate()
 [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md)<br/>
 [Pages de propriétés](../../ide/property-pages-visual-cpp.md)<br/>
 [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md)
-
 

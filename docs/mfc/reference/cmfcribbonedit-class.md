@@ -1,10 +1,6 @@
 ---
-title: Cmfcribbonedit, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcribbonedit, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonEdit
 - AFXRIBBONEDIT/CMFCRibbonEdit
@@ -41,8 +37,6 @@ f1_keywords:
 - AFXRIBBONEDIT/CMFCRibbonEdit::SetEditText
 - AFXRIBBONEDIT/CMFCRibbonEdit::SetTextAlign
 - AFXRIBBONEDIT/CMFCRibbonEdit::SetWidth
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonEdit [MFC], CMFCRibbonEdit
 - CMFCRibbonEdit [MFC], CanBeStretched
@@ -79,16 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ade4e83e5cbc887a0cf800104d60ad1ec3f6d70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377973"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578904"
 ---
 # <a name="cmfcribbonedit-class"></a>Cmfcribbonedit, classe
 
@@ -313,7 +303,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -346,7 +336,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -482,7 +472,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -497,7 +487,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -512,7 +502,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -533,7 +523,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour le `CMFCRibbonEdit` contrôle.
 
 *strText*<br/>

@@ -1,28 +1,18 @@
 ---
-title: Assistant composant ATL COM + 1.0 | Microsoft Docs
-ms.custom: ''
+title: Assistant Composant COM+ 1.0 ATL
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250404"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513774"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistant Composant COM+ 1.0 ATL
 
@@ -31,7 +21,7 @@ Utilisez cet Assistant pour ajouter un objet à votre projet qui prend en charge
 Vous pouvez spécifier si l’objet prend en charge les interfaces doubles et l’automatisation. Vous pouvez également indiquer la prise en charge de l’interface d’informations d’erreur, contrôle de l’objet amélioré, transactions et asynchrone message queuing.
 
 > [!WARNING]
-> Dans Visual Studio 2017 version 15.9 cet Assistant code est déconseillé et sera supprimé dans une future version de Visual Studio. Cet Assistant est rarement utilisé. Prise en charge générale pour ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette utilisation déconseillée, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires est important pour nous.
+> Dans Visual Studio 2017 version 15.9, cet Assistant Code est déprécié et sera supprimé dans une version ultérieure de Visual Studio. Cet Assistant est rarement utilisé. La prise en charge générale d’ATL et MFC n’est pas affectée par la suppression de cet Assistant. Si vous souhaitez partager vos commentaires sur cette dépréciation, veuillez remplir [cette enquête](https://www.surveymonkey.com/r/QDWKKCN). Vos commentaires sont précieux pour nous.
 
 ## <a name="remarks"></a>Notes
 

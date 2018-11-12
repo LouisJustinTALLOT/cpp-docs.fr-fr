@@ -1,29 +1,18 @@
 ---
-title: Par défaut des événements de contrôle | Microsoft Docs
-ms.custom: ''
+title: Événements de contrôle par défaut
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Dialog Editor [C++], default control events
 - controls [C++], default control events
 - events [C++], controls
 - dialog box controls [C++], events
 ms.assetid: 75556b23-18f5-4390-97a4-2ecad3309741
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 95c3d15414dbb312c60029a86707c1d32df56adc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8cd0102be240bc98cf7900653b8fbb714e2a99a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405513"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520404"
 ---
 # <a name="default-control-events"></a>Événements de contrôle par défaut
 
@@ -68,4 +57,4 @@ Win32
 [Modification d’un gestionnaire de messages](../mfc/reference/editing-a-message-handler.md)<br/>
 [Définition d’un gestionnaire de messages pour un message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)<br/>
 [Déclaration d’une variable basée sur votre nouvelle classe de contrôle](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)<br/>
-[Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)
+[Substitution d’une fonction virtuelle](../ide/overriding-a-virtual-function-visual-cpp.md)

@@ -1,10 +1,6 @@
 ---
-title: CReBarCtrl, classe | Microsoft Docs
-ms.custom: ''
+title: CReBarCtrl (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CReBarCtrl
 - AFXCMN/CReBarCtrl
@@ -54,8 +50,6 @@ f1_keywords:
 - AFXCMN/CReBarCtrl::SetWindowTheme
 - AFXCMN/CReBarCtrl::ShowBand
 - AFXCMN/CReBarCtrl::SizeToRect
-dev_langs:
-- C++
 helpviewer_keywords:
 - CReBarCtrl [MFC], CReBarCtrl
 - CReBarCtrl [MFC], BeginDrag
@@ -104,16 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b68f0180a581898b552715ccda4bfd0e972facd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ec3dcec2aa122f44c2b9aa6083f6faaa64157770
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502529"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (classe)
 
@@ -1147,5 +1137,4 @@ Notez que cette fonction membre utilise un `CRect` objet en tant que paramètre,
 
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
 

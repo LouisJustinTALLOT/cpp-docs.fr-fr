@@ -1,27 +1,17 @@
 ---
-title: Contrôle d’application | Microsoft Docs
-ms.custom: ''
+title: Contrôle d'application
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b20b5ea002ac16feb99707610fbe4556bf3254f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c155605ceaada7083200dee255214ad68bdf6de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375992"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578930"
 ---
 # <a name="application-control"></a>Contrôle d'application
 
@@ -41,7 +31,6 @@ OLE nécessite un contrôle important sur les applications et leurs objets. Les 
 |[AfxOleUnlockControl](#afxoleunlockcontrol)| Déverrouille la fabrique de classe du contrôle spécifié. |
 |[AfxOleRegisterServerClass](#afxoleregisterserverclass)|Inscrit un serveur dans le Registre du système OLE.|
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|Implémente l’interface utilisateur pour le *typename* commande de l’objet.|
-
 
 ##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp
 
@@ -192,6 +181,7 @@ Verrouille la fabrique de classe du contrôle spécifié afin que créées dynam
 BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *clsid*<br/>
@@ -357,6 +347,7 @@ Déverrouille la fabrique de classe du contrôle spécifié.
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>Paramètres
 
 *clsid*<br/>

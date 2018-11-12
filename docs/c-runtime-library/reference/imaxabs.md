@@ -1,10 +1,6 @@
 ---
-title: imaxabs | Microsoft Docs
-ms.custom: ''
+title: imaxabs
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxabs
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxabs
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9476db108a4296811e1c88e820d12ddd24b1386
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400487"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666245"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -60,9 +50,9 @@ Valeur entière.
 Le **imaxabs** fonction retourne la valeur absolue de l’argument. Aucun retour d'erreur.
 
 > [!NOTE]
-> Étant donné que la plage d’entiers négatifs qui peuvent être représentées à l’aide de **intmax_t** est supérieure à la plage d’entiers positifs qui peuvent être représentés, il est possible de fournir un argument à **imaxabs** qui ne peut pas être converti. Si la valeur absolue de l’argument ne peut pas être représentée par la valeur de retour de type, le comportement de **imaxabs** n’est pas défini.
+> Étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide de **intmax_t** est supérieure à la plage d’entiers positifs qui peuvent être représentés, il est possible de fournir un argument à **imaxabs** qui ne peut pas être converti. Tapez si la valeur absolue de l’argument ne peut pas être représentée par la valeur de retour, le comportement de **imaxabs** n’est pas défini.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

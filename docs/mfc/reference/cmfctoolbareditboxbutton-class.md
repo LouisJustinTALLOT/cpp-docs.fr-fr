@@ -1,10 +1,6 @@
 ---
-title: Cmfctoolbareditboxbutton, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfctoolbareditboxbutton, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCToolBarEditBoxButton
 - AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton
@@ -31,8 +27,6 @@ f1_keywords:
 - AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::OnUpdateToolTip
 - AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::SetContextMenuID
 - AFXTOOLBAREDITBOXBUTTON/CMFCToolBarEditBoxButton::SetFlatMode
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], CMFCToolBarEditBoxButton
 - CMFCToolBarEditBoxButton [MFC], CanBeStretched
@@ -58,16 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a346cf75a0afebcfdcb31259a0ba72d3a8f6c22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397320"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525717"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Cmfctoolbareditboxbutton, classe
 
@@ -141,7 +131,7 @@ Pour plus d’informations, consultez [procédure pas à pas : placer le contr�
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCToolBarEditBoxButton` classe. L’exemple montre comment spécifier qu’un utilisateur peut étirer le bouton au cours de personnalisation, spécifier qu’une bordure du bouton s’affiche lorsqu’un utilisateur clique sur le bouton, définir le texte dans le contrôle de zone de texte, spécifier l’apparence de style à deux dimensions de boutons de zone d’édition dans l’appli cations et spécifiez le style d’une barre d’outils de contrôle zone d’édition.
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCToolBarEditBoxButton` . L’exemple montre comment spécifier qu’un utilisateur peut étirer le bouton au cours de personnalisation, spécifier qu’une bordure du bouton s’affiche lorsqu’un utilisateur clique sur le bouton, définir le texte dans le contrôle de zone de texte, spécifier l’apparence de style à deux dimensions de boutons de zone d’édition dans l’appli cations et spécifiez le style d’une barre d’outils de contrôle zone d’édition.
 
 [!code-cpp[NVC_MFC_RibbonApp#40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]
 
@@ -499,7 +489,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
 *nCtlColor*<br/>
@@ -703,6 +693,4 @@ Cette méthode définit [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfcto
 [CEdit, classe](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

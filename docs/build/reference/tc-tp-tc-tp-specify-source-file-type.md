@@ -1,16 +1,11 @@
 ---
-title: / Tc, / TP, /TP (spécifier le Type de fichier Source) | Microsoft Docs
+title: /Tc, /Tp, /TC, /TP (Spécifier le type de fichier source)
 ms.date: 1/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.CompileAs
 - VC.Project.VCCLCompilerTool.CompileAs
 - /Tp
 - /tc
-dev_langs:
-- C++
 helpviewer_keywords:
 - Tp compiler option [C++]
 - /Tc compiler option [C++]
@@ -19,16 +14,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c6c264a11e4cec478502fbd0e1837ceba450ba9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e435b48359a708408ff8659e53c9e7c4f7e80261
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619113"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Spécifier le type de fichier source)
 

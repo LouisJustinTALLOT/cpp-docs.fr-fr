@@ -1,25 +1,15 @@
 ---
-title: Conteneur Class::begin | Microsoft Docs
-ms.custom: ''
+title: Conteneur Class::begin
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - begin method
 ms.assetid: 633708cb-17fe-488b-9fb1-1b5f2da0f46c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b7b7bf1d15a6ddba4960fa1c77e94f0824840490
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ede3b1d430a057772d1461d6565dcd3a13f86c46
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841321"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603747"
 ---
 # <a name="container-classbegin"></a>Conteneur Class::begin
 
@@ -33,7 +23,6 @@ Retourne un itérateur qui pointe sur le premier élément de la séquence (ou j
 ```
 
     const_iterator begin() const;
-
 
 iterator begin();
 ```

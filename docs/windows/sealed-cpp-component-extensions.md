@@ -1,29 +1,19 @@
 ---
-title: sealed (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: sealed (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - sealed_cpp
 - sealed
-dev_langs:
-- C++
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 211428335473f677f520ee14ad688e5ffcbda8fd
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: bbeaaa6b7d921cca600a665a961307ddac967367
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327997"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551227"
 ---
 # <a name="sealed--ccli-and-ccx"></a>sealed (C++ / c++ / CLI et c++ / CX)
 
@@ -104,7 +94,7 @@ public:
       System::Console::WriteLine("Y::f override of I1::f");
    }
 
-   /*  
+   /*
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
@@ -150,4 +140,4 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

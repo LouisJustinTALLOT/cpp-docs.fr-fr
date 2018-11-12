@@ -1,29 +1,19 @@
 ---
-title: CMemoryException, classe | Microsoft Docs
-ms.custom: ''
+title: CMemoryException, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMemoryException
 - AFX/CMemoryException
 - AFX/CMemoryException::CMemoryException
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 028c74bdc0c937fe59b621b81fb6abb8def63707
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e4a399ffb4c0d2161479ed7c84e66eb58a9260ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385103"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552839"
 ---
 # <a name="cmemoryexception-class"></a>CMemoryException, classe
 
@@ -79,6 +69,4 @@ N’utilisez pas ce constructeur directement, mais plutôt appeler la fonction g
 
 [CException, classe](cexception-class.md)<br/>
 [Graphique hiérarchique](../hierarchy-chart.md)
-
-
 

@@ -1,10 +1,6 @@
 ---
-title: Colecmdui, classe | Microsoft Docs
-ms.custom: ''
+title: Colecmdui, classe
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleCmdUI
 - AFXDOCOBJ/COleCmdUI
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXDOCOBJ/COleCmdUI::Enable
 - AFXDOCOBJ/COleCmdUI::SetCheck
 - AFXDOCOBJ/COleCmdUI::SetText
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleCmdUI [MFC], COleCmdUI
 - COleCmdUI [MFC], Enable
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9fe0365440823a394bee44d84bcecd6ed0b70c8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30caf7b42cf570a5dcd92d48817ef3743cf63811
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439092"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677433"
 ---
 # <a name="colecmdui-class"></a>Colecmdui, classe
 
@@ -150,6 +140,4 @@ Un pointeur vers le texte à utiliser avec la commande.
 
 [CCmdUI, classe](../../mfc/reference/ccmdui-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

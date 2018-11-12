@@ -1,16 +1,10 @@
 ---
-title: 'Contrôles ActiveX MFC : Utilisation des polices | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : utilisation des polices'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - OnFontChanged
 - HeadingFont
 - InternalFont
-dev_langs:
-- C++
 helpviewer_keywords:
 - notifications [MFC], MFC ActiveX controls fonts
 - OnDraw method, MFC ActiveX controls
@@ -25,16 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b14adec8d601778e255ae7e4242fc552fc820e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608911"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Contrôles ActiveX MFC : utilisation des polices
 
@@ -64,7 +54,7 @@ Comme indiqué dans [contrôles ActiveX MFC : propriétés](../mfc/mfc-activex-
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
 
-     Cette opération ouvre l’Assistant Ajout de propriété.
+   Cette opération ouvre l’Assistant Ajout de propriété.
 
 1. Dans le **nom de la propriété** , cliquez sur **police**.
 
@@ -90,7 +80,7 @@ La propriété stock Caption est un exemple d’une propriété de texte qui peu
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
 
-     Cette opération ouvre l’Assistant Ajout de propriété.
+   Cette opération ouvre l’Assistant Ajout de propriété.
 
 1. Dans le **nom de la propriété** , cliquez sur **légende**.
 
@@ -132,7 +122,7 @@ Pour implémenter une propriété personnalisée de la police, l’Assistant Ajo
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
 
-     Cette opération ouvre l’Assistant Ajout de propriété.
+   Cette opération ouvre l’Assistant Ajout de propriété.
 
 1. Dans le **nom de la propriété** , tapez un nom pour la propriété. Pour cet exemple, utilisez **HeadingFont**.
 
@@ -168,35 +158,35 @@ Dans le fichier d’implémentation (. (CPP), procédez comme suit :
 
 - Initialiser *m_fontHeading* dans le constructeur du contrôle.
 
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
 - Déclarer une structure FONTDESC statique contenant les attributs par défaut de la police.
 
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
 - Dans le contrôle `DoPropExchange` membre de fonction, ajoutez un appel à la `PX_Font` (fonction). Cela fournit l’initialisation et la persistance pour votre propriété personnalisée de la police.
 
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
 - Terminer l’implémentation du contrôle `GetHeadingFont` fonction membre.
 
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
 - Terminer l’implémentation du contrôle `SetHeadingFont` fonction membre.
 
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
 - Modifier le contrôle `OnDraw` fonction membre pour définir une variable pour contenir la police sélectionnée précédemment.
 
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
 - Modifier le contrôle `OnDraw` fonction membre pour sélectionner la police personnalisée dans le contexte de périphérique en ajoutant la ligne suivante partout où la police doit être utilisée.
 
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
 - Modifier le contrôle `OnDraw` fonction membre pour sélectionner la police précédente dans le contexte de périphérique en ajoutant la ligne suivante après la police a été utilisée.
 
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
 Une fois que la propriété personnalisée de la police a été implémentée, la page de propriétés de police standard doit être implémentée, permettant aux utilisateurs de contrôle modifier la police du contrôle actuel. Pour ajouter l’ID de page de propriétés pour la page de propriétés de police standard, insérez la ligne suivante après la macro BEGIN_PROPPAGEIDS :
 

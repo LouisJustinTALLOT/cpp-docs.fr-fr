@@ -1,9 +1,6 @@
 ---
-title: ComPtr, classe | Microsoft Docs
-ms.custom: ''
+title: ComPtr (classe)
 ms.date: 10/01/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr
@@ -29,8 +26,6 @@ f1_keywords:
 - client/Microsoft::WRL::ComPtr::Reset
 - client/Microsoft::WRL::ComPtr::Swap
 - client/Microsoft::WRL::ComPtr::~ComPtr
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::ComPtr class
 - Microsoft::WRL::ComPtr::As method
@@ -56,17 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 12afcfe09335082f873d88e1aa825b4eee3a1ae2
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 512d12260c90652328f4e1030a724658f2867ef1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163229"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626718"
 ---
 # <a name="comptr-class"></a>ComPtr (classe)
 
@@ -265,7 +255,7 @@ Initialise une nouvelle instance de la classe `ComPtr`. Les surcharges fournisse
 ```cpp
 WRL_NOTHROW ComPtr();
 WRL_NOTHROW ComPtr(
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 template<class U>
 WRL_NOTHROW ComPtr(
@@ -455,7 +445,7 @@ Assigne une valeur à actuel `ComPtr`.
 
 ```cpp
 WRL_NOTHROW ComPtr& operator=(
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 WRL_NOTHROW ComPtr& operator=(
    _In_opt_ T *other
@@ -520,7 +510,7 @@ bool operator==(
 
 bool operator==(
    const ComPtr<T>& a,
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 bool operator==(
@@ -555,7 +545,7 @@ bool operator!=(
 
 bool operator!=(
    const ComPtr<T>& a,
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 bool operator!=(

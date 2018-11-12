@@ -1,23 +1,13 @@
 ---
-title: Navigation dans le système de fichiers │ Microsoft Docs
-ms.custom: ''
+title: Navigation dans le système de fichiers
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e6e14e0b94000972873b6050f0e8154891b4e57
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: cfdc789daab5b476566f2072109d23fb9310094f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026797"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509611"
 ---
 # <a name="file-system-navigation"></a>Navigation dans le système de fichiers
 

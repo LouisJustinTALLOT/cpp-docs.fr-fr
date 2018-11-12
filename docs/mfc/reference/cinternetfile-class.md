@@ -1,10 +1,6 @@
 ---
-title: CInternetFile, classe | Microsoft Docs
-ms.custom: ''
+title: CInternetFile, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CInternetFile
 - AFXINET/CInternetFile
@@ -21,8 +17,6 @@ f1_keywords:
 - AFXINET/CInternetFile::Write
 - AFXINET/CInternetFile::WriteString
 - AFXINET/CInternetFile::m_hFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - CInternetFile [MFC], CInternetFile
 - CInternetFile [MFC], Abort
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28cfffbe3ce8304d12f5a52cd3cf3af7b6679c2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406852"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586873"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile, classe
 
@@ -141,7 +131,6 @@ CInternetFile(
     LPCTSTR pstrFileName,
     CInternetConnection* pConnection,
     BOOL bReadMode);
-
 
 CInternetFile(
     HINTERNET hFile,
@@ -261,7 +250,6 @@ Appelez cette fonction membre pour lire un flux de caractères jusqu'à ce qu’
 
 ```
 virtual BOOL ReadString(CString& rString);
-
 
 virtual LPTSTR ReadString(
     LPTSTR pstr,

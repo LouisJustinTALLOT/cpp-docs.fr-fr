@@ -1,27 +1,17 @@
 ---
-title: 'Comment : ajouter la commande routage pour les Windows Forms contrôle | Microsoft Docs'
+title: 'Comment : ajouter le routage des commandes au contrôle Windows Forms'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 5161e23d17283ba1495baf6fcb201943f8b6ae12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b3f93574e007fdb1b7d4009d85c573223091adf9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422413"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447110"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Comment : ajouter le routage des commandes au contrôle Windows Forms
 
@@ -51,7 +41,7 @@ Cette rubrique suppose que vous avez déjà effectué [Comment : créer le cont
     partial class UserControl1
     ```
 
-     Par ceci :
+   Par ceci :
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
@@ -84,19 +74,19 @@ Cette rubrique suppose que vous avez déjà effectué [Comment : créer le cont
 
 1. Ajoutez une option de menu qui appelle `singleMenuHandler`.
 
-     Accédez à **affichage des ressources** (Ctrl + Maj + E), développez le **Menu** dossier, puis double-cliquez sur **IDR_MFC02TYPE**. Cela affiche l’éditeur de menus.
+   Accédez à **affichage des ressources** (Ctrl + Maj + E), développez le **Menu** dossier, puis double-cliquez sur **IDR_MFC02TYPE**. Cela affiche l’éditeur de menus.
 
-     Ajoutez une option de menu en bas de la **vue** menu. Notez l’ID de l’option de menu dans le **propriétés** fenêtre. Enregistrez le fichier.
+   Ajoutez une option de menu en bas de la **vue** menu. Notez l’ID de l’option de menu dans le **propriétés** fenêtre. Enregistrez le fichier.
 
-     Dans **l’Explorateur de solutions**, ouvrez le fichier Resource.h, copiez la valeur d’ID pour l’option de menu que vous venez d’ajouter et collez cette valeur comme premier paramètre à la `m_CmdSrc.AddCommandHandler` appeler dans le projet c# `Initialize` (méthode) (en remplaçant `32771` si nécessaire).
+   Dans **l’Explorateur de solutions**, ouvrez le fichier Resource.h, copiez la valeur d’ID pour l’option de menu que vous venez d’ajouter et collez cette valeur comme premier paramètre à la `m_CmdSrc.AddCommandHandler` appeler dans le projet c# `Initialize` (méthode) (en remplaçant `32771` si nécessaire).
 
 9. Générez et exécutez le projet.
 
-     Dans le menu **Générer** , cliquez sur **Générer la solution**.
+   Dans le menu **Générer** , cliquez sur **Générer la solution**.
 
-     Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**.
+   Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**.
 
-     Sélectionnez l’option de menu que vous avez ajouté. Notez que la méthode dans le fichier .dll est appelée.
+   Sélectionnez l’option de menu que vous avez ajouté. Notez que la méthode dans le fichier .dll est appelée.
 
 ## <a name="see-also"></a>Voir aussi
 

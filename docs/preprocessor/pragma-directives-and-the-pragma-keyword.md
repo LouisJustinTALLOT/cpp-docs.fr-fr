@@ -1,14 +1,8 @@
 ---
-title: Directives pragma et mot clé _pragma | Microsoft Docs
-ms.custom: ''
+title: Directives pragma et mot clé _Pragma
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '#pragma'
-dev_langs:
-- C++
 helpviewer_keywords:
 - '#pragma directives, C/C++'
 - __pragma keyword
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e326bb10960153ac8f4367b2a5e66ff0083b1c2a
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 9e79ba7378e28fdea863af010decb7064df415cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234149"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660094"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Directives pragma et mot clé _Pragma
 
@@ -47,7 +37,7 @@ Chaque implémentation de C et C++ prend en charge des fonctionnalités spécifi
 
 Les pragmas sont spécifiques à l'ordinateur ou au système d'exploitation, par définition, et sont généralement différents pour chaque compilateur. Les pragmas peuvent être utilisés dans les instructions conditionnelles pour fournir de nouvelles fonctionnalités de préprocesseur ou pour fournir des informations définies par l'implémentation au compilateur.
 
-`token-string` est une série de caractères qui fournit à un compilateur spécifique l'instruction et les arguments, le cas échéant. Le signe dièse (**#**) doit être le premier caractère autre qu’un espace blanc sur la ligne qui contient le pragma ; blancs peuvent séparer le signe dièse et le mot « pragma ». Suivant **#pragma**, saisissez un texte que le traducteur peut analyser en tant que jetons de prétraitement. L’argument **#pragma** est soumis à une expansion macro.
+`token-string` est une série de caractères qui fournit à un compilateur spécifique l’instruction et les arguments, le cas échéant. Le signe dièse (**#**) doit être le premier caractère autre qu’un espace blanc sur la ligne qui contient le pragma ; blancs peuvent séparer le signe dièse et le mot « pragma ». Suivant **#pragma**, saisissez un texte que le traducteur peut analyser en tant que jetons de prétraitement. L’argument **#pragma** est soumis à une expansion macro.
 
 Si le compilateur recherche un pragma qu'il ne reconnaît pas, il émet un avertissement et continue la compilation.
 

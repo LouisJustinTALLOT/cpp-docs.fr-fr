@@ -1,10 +1,6 @@
 ---
-title: _execlpe, _wexeclpe | Microsoft Docs
-ms.custom: ''
+title: _execlpe, _wexeclpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execlpe
 - _wexeclpe
@@ -26,24 +22,18 @@ f1_keywords:
 - execlpe
 - wexeclpe
 - _execlpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexeclpe function
 - _wexeclpe function
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b0dd88ce15b3a74c491ae751d4f32196e914d09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402174"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506852"
 ---
 # <a name="execlpe-wexeclpe"></a>_execlpe, _wexeclpe
 
@@ -102,9 +92,9 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 Chacune de ces fonctions charge et exécute un nouveau processus, passant chaque argument de ligne de commande en tant que paramètre distinct et passant également un tableau de pointeurs aux paramètres d’environnement. Ces fonctions utilisent la **chemin d’accès** variable d’environnement pour rechercher le fichier à exécuter.
 
-Le **_execlpe** fonctions valident leurs paramètres. Si le paramètre *cmdname* ou *arg0* est une valeur null des pointeurs ou chaîne vide, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun nouveau processus n'est lancé.
+Le **_execlpe** fonctions valident leurs paramètres. Si *cmdname* ou *arg0* est une valeur null des pointeurs ou chaîne vide, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun nouveau processus n'est lancé.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|

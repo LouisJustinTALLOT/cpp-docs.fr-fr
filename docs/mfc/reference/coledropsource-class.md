@@ -1,10 +1,6 @@
 ---
-title: COleDropSource, classe | Microsoft Docs
-ms.custom: ''
+title: COleDropSource, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDropSource
 - AFXOLE/COleDropSource
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXOLE/COleDropSource::GiveFeedback
 - AFXOLE/COleDropSource::OnBeginDrag
 - AFXOLE/COleDropSource::QueryContinueDrag
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDropSource [MFC], COleDropSource
 - COleDropSource [MFC], GiveFeedback
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f40ac527ba8ad7e65f025910e96a69f546842e30
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51d524054b67a5cecc5aa7791b0aeea0cc076813
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447555"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50457779"
 ---
 # <a name="coledropsource-class"></a>COleDropSource, classe
 
@@ -177,6 +167,4 @@ L’implémentation par défaut initialise la liste déroulante ou annule l’op
 [Exemple MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

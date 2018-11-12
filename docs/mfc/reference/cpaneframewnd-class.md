@@ -1,10 +1,6 @@
 ---
-title: Cpaneframewnd, classe | Microsoft Docs
-ms.custom: ''
+title: Cpaneframewnd, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPaneFrameWnd
 - AFXPANEFRAMEWND/CPaneFrameWnd
@@ -71,8 +67,6 @@ f1_keywords:
 - AFXPANEFRAMEWND/CPaneFrameWnd::OnCheckRollState
 - AFXPANEFRAMEWND/CPaneFrameWnd::OnDrawBorder
 - AFXPANEFRAMEWND/CPaneFrameWnd::m_bUseSaveBits
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPaneFrameWnd [MFC], AddPane
 - CPaneFrameWnd [MFC], AddRemovePaneFromGlobalList
@@ -138,16 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34ac2ddb08b485a56274f6067871c5bbd5893f94
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434815"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450165"
 ---
 # <a name="cpaneframewnd-class"></a>Cpaneframewnd, classe
 
@@ -211,7 +201,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Appelé par l'infrastructure quand un volet de la fenêtre mini-frame est masqué ou affiché.|
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Retourne un volet s'il contient un point fourni par l'utilisateur à l'intérieur d'une fenêtre mini-frame.|
 |[CPaneFrameWnd::Pin](#pin)||
-|`CPaneFrameWnd::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows.|
+|`CPaneFrameWnd::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .|
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Redessine toutes les fenêtres mini-frame.|
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Appelé par l'infrastructure pour supprimer les volets non valides.|
 |[CPaneFrameWnd::RemovePane](#removepane)|Supprime un volet de la fenêtre mini-frame.|
@@ -312,7 +302,6 @@ virtual void AdjustLayout();
 
 ##  <a name="adjustpaneframes"></a>  CPaneFrameWnd::AdjustPaneFrames
 
-
 ```
 virtual void AdjustPaneFrames();
 ```
@@ -401,7 +390,6 @@ Différent de zéro si le mini-frame peut être ancré à *pDockingBar*; sinon, 
 
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility
 
-
 ```
 virtual void CheckGripperVisibility();
 ```
@@ -440,9 +428,11 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Spécifie la taille initiale et la position de la fenêtre mini-frame.
 
-[in] [out] *pParentWnd* Spécifie le frame parent de la fenêtre mini-frame. Cette valeur ne doit pas être NULL.
+*pParentWnd*<br/>
+[in, out] Spécifie le frame parent de la fenêtre mini-frame. Cette valeur ne doit pas être NULL.
 
-[in] [out] *pContext* contexte défini par l’utilisateur de spécifie.
+*pContext*<br/>
+[in, out] Spécifie le contexte défini par l’utilisateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -480,9 +470,11 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Spécifie la taille initiale et la position de la fenêtre mini-frame.
 
-[in] [out] *pParentWnd* Spécifie le frame parent de la fenêtre mini-frame. Cette valeur ne doit pas être NULL.
+*pParentWnd*<br/>
+[in, out] Spécifie le frame parent de la fenêtre mini-frame. Cette valeur ne doit pas être NULL.
 
-[in] [out] *pContext* contexte défini par l’utilisateur de spécifie.
+*pContext*<br/>
+[in, out] Spécifie le contexte défini par l’utilisateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -607,7 +599,6 @@ Cette méthode est appelée par l’infrastructure lorsqu’il affiche le texte 
 
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager() const;
 ```
@@ -648,7 +639,6 @@ Le premier volet dans la fenêtre mini-frame, ou NULL si la fenêtre mini-frame 
 
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint
 
-
 ```
 CPoint GetHotPoint() const;
 ```
@@ -687,7 +677,6 @@ Le nombre de volets dans la fenêtre mini-frame. Cette valeur peut être zéro.
 
 ##  <a name="getparent"></a>  CPaneFrameWnd::GetParent
 
-
 ```
 CWnd* GetParent();
 ```
@@ -698,7 +687,6 @@ CWnd* GetParent();
 
 ##  <a name="getpinstate"></a>  CPaneFrameWnd::GetPinState
 
-
 ```
 BOOL GetPinState() const;
 ```
@@ -708,7 +696,6 @@ BOOL GetPinState() const;
 ### <a name="remarks"></a>Notes
 
 ##  <a name="getrecentfloatingrect"></a>  CPaneFrameWnd::GetRecentFloatingRect
-
 
 ```
 CRect GetRecentFloatingRect() const;
@@ -770,7 +757,6 @@ Une des valeurs suivantes :
 
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured
 
-
 ```
 BOOL IsCaptured() const;
 ```
@@ -780,7 +766,6 @@ BOOL IsCaptured() const;
 ### <a name="remarks"></a>Notes
 
 ##  <a name="isdelayshow"></a>  CPaneFrameWnd::IsDelayShow
-
 
 ```
 BOOL IsDelayShow() const;
@@ -912,7 +897,7 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique utilisé pour dessiner la bordure.
 
 ### <a name="remarks"></a>Notes
@@ -991,14 +976,13 @@ Appelé par l’infrastructure quand un volet dans la fenêtre mini-frame est af
 
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin
 
-
 ```
 void Pin(BOOL bPin = TRUE);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bPin*
+[in] *bPin*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -1141,19 +1125,17 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow
 
-
 ```
 void SetDelayShow(BOOL bDelayShow);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bDelayShow*
+[in] *bDelayShow*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="setdockingmanager"></a>  CPaneFrameWnd::SetDockingManager
-
 
 ```
 void SetDockingManager(CDockingManager* pManager);
@@ -1161,7 +1143,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pManager*
+[in] *pManager*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -1193,14 +1175,13 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint
 
-
 ```
 void SetHotPoint(CPoint& ptNew);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *ptNew*
+[in] *ptNew*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -1267,19 +1248,17 @@ TRUE si la méthode a réussi ; Sinon, FALSE.
 
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo
 
-
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>Notes
 
 ##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo
-
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -1289,8 +1268,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>Paramètres
 
-*pDockingBar*<br/>
-[in] [in] *pTabbedBar*
+[in] *pDockingBar*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Notes
 

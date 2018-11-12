@@ -1,33 +1,23 @@
 ---
-title: 'Contrôles ActiveX MFC : Ajout de méthodes personnalisées | Microsoft Docs'
-ms.custom: ''
+title: 'Contrôles ActiveX MFC : ajout de méthodes personnalisées'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 428f43d5cd1a0cfaa4b5f829b59208ce96eab85d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd67e5f248f389755b1bf25854867322af60878e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441081"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554555"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Contrôles ActiveX MFC : ajout de méthodes personnalisées
 
 Méthodes personnalisées la différence des méthodes stock qu’ils ne sont pas déjà implémentées par `COleControl`. Vous devez fournir l’implémentation pour chaque méthode personnalisée que vous ajoutez à votre contrôle.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Un utilisateur du contrôle ActiveX peut appeler une méthode personnalisée à tout moment pour effectuer des actions spécifiques du contrôle. L’entrée de mappage de répartition pour les méthodes personnalisées est au format DISP_FUNCTION.
 
@@ -48,7 +38,7 @@ La procédure suivante illustre l’ajout de la méthode personnalisée PtInCirc
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une méthode**.
 
-     Cette opération ouvre l’Assistant Ajout de méthode.
+   Cette opération ouvre l’Assistant Ajout de méthode.
 
 1. Dans le **nom de la méthode** , tapez *PtInCircle*.
 

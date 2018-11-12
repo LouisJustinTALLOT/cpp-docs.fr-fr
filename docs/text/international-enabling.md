@@ -1,12 +1,6 @@
 ---
-title: Compatibilité internationale | Microsoft Docs
-ms.custom: ''
+title: Compatibilité internationale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - globalization [C++], character sets
 - strings [C++], international enabling
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6c889e8b8312c3b4d6383fa2b82596faf1de444c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4476b0805c8806d344a9290ba190aed7c7697a8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514632"
 ---
 # <a name="international-enabling"></a>Compatibilité internationale
 

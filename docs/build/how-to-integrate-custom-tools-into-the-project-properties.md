@@ -1,27 +1,17 @@
 ---
-title: 'Comment : intégrer des outils personnalisés dans les propriétés du projet | Microsoft Docs'
-ms.custom: ''
+title: 'Comment : intégrer les outils personnalisés dans les propriétés du projet'
 ms.date: 04/27/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.integratecustomtools
-dev_langs:
-- C++
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 800652b845294ebad4e1cca5310e0b95f6d79151
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7041e6583ba1e2c7f035edcc72617ccdb8d5aa02
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720391"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633010"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Comment : intégrer les outils personnalisés dans les propriétés du projet
 

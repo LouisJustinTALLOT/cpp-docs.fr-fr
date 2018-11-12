@@ -1,10 +1,6 @@
 ---
-title: COLECurrency, classe | Microsoft Docs
-ms.custom: ''
+title: COLECurrency, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleCurrency
 - AFXDISP/COleCurrency
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXDISP/COleCurrency::SetStatus
 - AFXDISP/COleCurrency::m_cur
 - AFXDISP/COleCurrency::m_status
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleCurrency [MFC], COleCurrency
 - COleCurrency [MFC], Format
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec20b4b212ee435c9538716afaca645edfe5adcc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d831353c72c40ab4f35b64046ab5d5236aa9644a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404202"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553489"
 ---
 # <a name="colecurrency-class"></a>COLECurrency, classe
 
@@ -113,7 +103,6 @@ COleCurrency();
 COleCurrency(CURRENCY cySrc);
   COleCurrency(const COleCurrency& curSrc);
 COleCurrency(const VARIANT& varSrc);
-
 
 COleCurrency(
     long nUnits,

@@ -1,10 +1,6 @@
 ---
-title: CInternetSession, classe | Microsoft Docs
-ms.custom: ''
+title: CInternetSession, classe
 ms.date: 06/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CInternetSession
 - AFXINET/CInternetSession
@@ -21,8 +17,6 @@ f1_keywords:
 - AFXINET/CInternetSession::OpenURL
 - AFXINET/CInternetSession::SetCookie
 - AFXINET/CInternetSession::SetOption
-dev_langs:
-- C++
 helpviewer_keywords:
 - CInternetSession [MFC], CInternetSession
 - CInternetSession [MFC], Close
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a519d9b978f5b48377b1a85d52274cba35c9d075
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401801"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586323"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession, classe
 
@@ -245,7 +235,6 @@ static BOOL GetCookie(
     LPCTSTR pstrCookieName,
     LPTSTR pstrCookieData,
     DWORD dwBufLen);
-
 
 static BOOL GetCookie(
     LPCTSTR pstrUrl,
@@ -601,7 +590,6 @@ BOOL SetOption(
     LPVOID lpBuffer,
     DWORD dwBufferLength,
     DWORD dwFlags = 0);
-
 
 BOOL SetOption(
     DWORD dwOption,

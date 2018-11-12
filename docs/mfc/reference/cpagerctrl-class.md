@@ -1,10 +1,6 @@
 ---
-title: CPagerCtrl, classe | Microsoft Docs
-ms.custom: ''
+title: CPagerCtrl, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPagerCtrl
 - AFXCMN/CPagerCtrl
@@ -29,8 +25,6 @@ f1_keywords:
 - AFXCMN/CPagerCtrl::SetButtonSize
 - AFXCMN/CPagerCtrl::SetChild
 - AFXCMN/CPagerCtrl::SetScrollPos
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPagerCtrl [MFC], CPagerCtrl
 - CPagerCtrl [MFC], Create
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a582d5de7087e433aed839dc2f55db01dd926f22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd3eed89753031de64d35a2b3602b1fb42356123
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447568"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613536"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl, classe
 
@@ -627,6 +617,4 @@ Cette méthode envoie le [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) mess
 [CPagerCtrl, classe](../../mfc/reference/cpagerctrl-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Contrôles de pagination](/windows/desktop/Controls/pager-controls)
-
-
 

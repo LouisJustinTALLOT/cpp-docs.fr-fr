@@ -1,10 +1,6 @@
 ---
-title: CComObjectRootEx, classe | Microsoft Docs
-ms.custom: ''
+title: CComObjectRootEx, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
 - ATLCOM/ATL::CComObjectRootEx
@@ -21,21 +17,15 @@ f1_keywords:
 - ATLCOM/ATL::ObjectMain
 - ATLCOM/ATL::m_dwRef
 - ATLCOM/ATL::m_pOuterUnknown
-dev_langs:
-- C++
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 63547405791f7f0391138dd2d23020c62c8a4a28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098951"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655804"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx, classe
 
@@ -51,7 +41,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>Paramètres
 
 *ThreadModel*<br/>
-La classe dont les méthodes implémentent le modèle de thread souhaité. Vous pouvez choisir explicitement le modèle de thread en définissant *ThreadModel* à [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), ou [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Vous pouvez accepter le modèle de thread du serveur par défaut en définissant *ThreadModel* à [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
+La classe dont les méthodes implémentent le modèle de thread souhaité. Vous pouvez choisir explicitement le modèle de thread en définissant *ThreadModel* à [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), ou [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Vous pouvez accepter le modèle de thread du serveur par défaut en définissant *ThreadModel* à [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
 ## <a name="members"></a>Membres
 
@@ -139,9 +129,9 @@ Il existe des avantages à l’exécution de l’initialisation dans `FinalConst
 
 - Vous ne pouvez pas appeler des fonctions virtuelles via le mécanisme de fonction virtuelle à partir du constructeur d’une classe. Appel de fonction virtuelle à partir du constructeur d’une classe entraîne un appel résolu statiquement à la fonction car il est défini à ce stade dans la hiérarchie d’héritage. Les appels aux fonctions virtuelles pures entraînent des erreurs de l’éditeur de liens.
 
-     Votre classe n’est pas la classe la plus dérivée dans la hiérarchie d’héritage, il s’appuie sur une classe dérivée, fournie par ATL pour fournir certaines de ses fonctionnalités. Il est probable que l’initialisation de votre devrez utiliser les fonctionnalités fournies par cette classe (il s’agit certainement true lorsque les objets de votre classe doivent regrouper d’autres objets), mais le constructeur dans votre classe n’a aucun moyen d’accéder à ces fonctionnalités. Le code de construction pour votre classe est exécuté avant que la classe la plus dérivée est entièrement construite.
+   Votre classe n’est pas la classe la plus dérivée dans la hiérarchie d’héritage, il s’appuie sur une classe dérivée, fournie par ATL pour fournir certaines de ses fonctionnalités. Il est probable que l’initialisation de votre devrez utiliser les fonctionnalités fournies par cette classe (il s’agit certainement true lorsque les objets de votre classe doivent regrouper d’autres objets), mais le constructeur dans votre classe n’a aucun moyen d’accéder à ces fonctionnalités. Le code de construction pour votre classe est exécuté avant que la classe la plus dérivée est entièrement construite.
 
-     Toutefois, `FinalConstruct` est appelée immédiatement après les plus dérivées classe est entièrement construite, ce qui vous permet d’appeler des fonctions virtuelles et d’utiliser l’implémentation de comptage de références fournie par ATL.
+   Toutefois, `FinalConstruct` est appelée immédiatement après les plus dérivées classe est entièrement construite, ce qui vous permet d’appeler des fonctions virtuelles et d’utiliser l’implémentation de comptage de références fournie par ATL.
 
 ### <a name="example"></a>Exemple
 
@@ -265,7 +255,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>Notes
 
-Avec `m_pOuterUnknown`, qui fait partie d’une union :  
+Avec `m_pOuterUnknown`, qui fait partie d’une union :
 
 ```
 union {

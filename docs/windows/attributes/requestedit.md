@@ -1,28 +1,17 @@
 ---
-title: requestedit (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: requestedit (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.requestedit
-dev_langs:
-- C++
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f566308384b1fb9dc863c2fe5a4483fc0cddbe83
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 27e6190cbb5908d46150acb758e2b4d5efaff1bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50611587"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -53,7 +42,7 @@ Consultez l’exemple de [peut être liée](bindable.md) pour un exemple d’uti
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations sur les contextes d’attribut, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -62,4 +51,4 @@ Pour plus d’informations sur les contextes d’attribut, consultez [contextes 
 [Attributs de membre de données](data-member-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
-[immediatebind](immediatebind.md)  
+[immediatebind](immediatebind.md)

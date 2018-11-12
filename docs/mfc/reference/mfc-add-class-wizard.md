@@ -1,28 +1,18 @@
 ---
-title: Ajouter une Assistant classe MFC | Microsoft Docs
-ms.custom: ''
+title: Assistant Ajouter une classe MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.simple.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f9098bf7aa812e79e0928266d52ad2c1602135c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 201f3f08e59dd9b252e0d008e61adea234449157
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419843"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476321"
 ---
 # <a name="mfc-add-class-wizard"></a>Assistant Ajouter une classe MFC
 

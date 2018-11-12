@@ -1,26 +1,22 @@
 ---
-title: '&lt;unordered_map&gt;, opérateurs | Microsoft Docs'
-ms.custom: ''
+title: '&lt;unordered_map&gt;, opérateurs'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
-dev_langs:
-- C++
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: d74eaf0c0f2a431bc481341ce5160d07ee0a4bb5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 280b9c866c17d69bca21ed6685f67f9fe986d45a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701426"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480403"
 ---
 # <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt;, opérateurs
 
 |||||
 |-|-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
+|[!=, opérateur](#op_neq)|[operator==](#op_eq_eq)|[!=, opérateur](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
 
 ## <a name="op_neq"></a>  operator!=
 

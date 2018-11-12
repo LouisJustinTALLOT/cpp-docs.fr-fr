@@ -1,10 +1,6 @@
 ---
-title: _mbsnbset_s, _mbsnbset_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbset_s, _mbsnbset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbset_s_l
 - _mbsnbset_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _mbsnbset_s_l
 - _mbsnbset_s
 - mbsnbset_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnbset_s function
@@ -38,23 +32,19 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07cbdc979ddd7ba240d9dcaf623d408b8c2681e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d021f147ba407f5b0b7316afc7cfd79fe300997
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404732"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580972"
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
 
-Définit le premier **n** octets d’une chaîne de caractères multioctets un caractère spécifié. Ces versions de [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Définit le premier **n** octets d’une chaîne de caractères multioctets à un caractère spécifié. Ces versions de [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -110,13 +100,13 @@ Zéro en cas de réussite ; code d'erreur dans un autre cas.
 
 ## <a name="remarks"></a>Notes
 
-Le **_mbsnbset_s** et **_mbsnbset_s_l** fonctions définissent au maximum, la première *nombre* octets de *str* à *c*. Si *nombre* est supérieure à la longueur de *str*, la longueur de *str* est utilisé à la place de *nombre*. Si *c* est un caractère multioctet et ne peut pas être défini entièrement dans le dernier octet spécifié par *nombre*, le dernier octet est rempli avec un caractère vide. **_mbsnbset_s** et **_mbsnbset_s_l** ne placent pas l’une de fin null à la fin de *str*.
+Le **_mbsnbset_s** et **_mbsnbset_s_l** fonctions remplacent, au maximum, la première *nombre* octets de *str* à *c*. Si *nombre* est supérieur à la longueur de *str*, la longueur de *str* est utilisé au lieu de *nombre*. Si *c* est un caractère multioctet et ne peut pas être défini entièrement dans le dernier octet spécifié par *nombre*, le dernier octet est rempli avec un caractère vide. **_mbsnbset_s** et **_mbsnbset_s_l** ne placez pas de point à la fin null à la fin de *str*.
 
-**_mbsnbset_s** et **_mbsnbset_s_l** ressemblent aux **_mbsnset**, à ceci près qu’elles définissent *nombre* octets plutôt que *nombre* caractères de *c*.
+**_mbsnbset_s** et **_mbsnbset_s_l** ressemblent aux **_mbsnset**, à ceci près qu’elles définies *nombre* octets plutôt que *nombre* caractères de *c*.
 
 Si *str* est **NULL** ou *nombre* est égal à zéro, cette fonction génère une exception de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**. En outre, si *c* n’est pas un caractère multioctet valide, **errno** a la valeur **EINVAL** et un espace est utilisé à la place.
 
-La valeur de sortie est affectée par la définition de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Le **_mbsnbset_s** version de cette fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la **_mbsnbset_s_l** version est identique, sauf qu’elle utilise à la place les paramètres régionaux de passée. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Le **_mbsnbset_s** version de cette fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la **_mbsnbset_s_l** version est identique, à ceci près qu’elle utilise les paramètres régionaux du passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite ainsi d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

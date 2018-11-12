@@ -1,27 +1,17 @@
 ---
-title: Insertion d’un formulaire dans un projet | Microsoft Docs
-ms.custom: ''
+title: Insertion d'un formulaire dans un projet
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - inserting forms [MFC]
 - Insert New dialog box [MFC]
 - forms, adding to projects
 ms.assetid: f3bd2998-3ce2-496d-ac5c-57ca70eec7cb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83606041250dafed0ef57eb4eea18d7314e0bbef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f5758e84e89f23f06fb9d5f2fa97220d0279725
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429264"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666620"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Insertion d'un formulaire dans un projet
 
@@ -33,7 +23,7 @@ Forms fournit un conteneur pratique pour les contrôles. Vous pouvez facilement 
 
 1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une classe**.
 
-     Si le **nouveau formulaire** commande n’est pas disponible, votre projet peut être basé sur la bibliothèque ATL (Active Template). Pour ajouter un formulaire à un projet ATL, vous devez [spécifier certains paramètres](../atl/reference/application-settings-atl-project-wizard.md) lors de la création du projet.
+   Si le **nouveau formulaire** commande n’est pas disponible, votre projet peut être basé sur la bibliothèque ATL (Active Template). Pour ajouter un formulaire à un projet ATL, vous devez [spécifier certains paramètres](../atl/reference/application-settings-atl-project-wizard.md) lors de la création du projet.
 
 1. À partir de la **MFC** dossier, cliquez sur **classe MFC**.
 

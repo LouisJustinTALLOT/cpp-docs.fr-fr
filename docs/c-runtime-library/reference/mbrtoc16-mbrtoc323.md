@@ -1,11 +1,6 @@
 ---
-title: mbrtoc16, mbrtoc323 | Microsoft Docs
-ms.custom: ''
+title: mbrtoc16, mbrtoc323
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - mbrtoc16
 - mbrtoc32
@@ -27,22 +22,16 @@ f1_keywords:
 - mbrtoc32
 - uchar/mbrtoc16
 - uchar/mbrtoc32
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a12e90f9a4bc0cc27df421c27d77a1b9b69334b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c1683bad8d015071eb2267283630e2f61995fb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405300"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534626"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -72,7 +61,7 @@ size_t mbrtoc32(
 *Destination*<br/>
 Pointeur vers le **char16_t** ou **char32_t** équivalent du caractère multioctet à convertir. Si vous spécifiez la valeur null, la fonction ne stocke pas de valeur.
 
-*Source*<br/>
+*source*<br/>
 Pointeur vers la chaîne de caractères multioctets à convertir.
 
 *max_bytes*<br/>
@@ -87,11 +76,11 @@ En cas de réussite, retourne la valeur de la première de ces conditions s’ap
 
 |Value|Condition|
 |-----------|---------------|
-|0|La prochaine *max_bytes* ou moins de caractères converties à partir de *source* correspond au caractère large null, qui est la valeur stockée si *destination* n’est pas null.<br /><br /> *état* contient l’état du décalage initial.|
-|Compris entre 1 et *max_bytes*(inclus)|La valeur retournée est le nombre d’octets de *source* qui terminent un caractère multioctet valide. Les caractères larges convertis sont stockés si *destination* n’est pas null.|
+|0|La prochaine *max_bytes* ou moins de caractères converties à partir *source* correspondent au caractère large null, qui est la valeur stockée si *destination* n’est pas null.<br /><br /> *état* contient l’état de décalage initial.|
+|Entre 1 et *max_bytes*inclus,|La valeur retournée est le nombre d’octets de *source* qui terminent un caractère multioctet valide. Les caractères larges convertis sont stockés si *destination* n’est pas null.|
 |-3|Le caractère large suivant résultant d’un appel précédent à la fonction a été stocké dans *destination* si *destination* n’est pas null. Aucun octet à partir de *source* sont consommés par cet appel à la fonction.<br /><br /> Lorsque *source* pointe vers un caractère multioctet qui nécessite plus d’un caractère large à représenter (par exemple, une paire de substitution), puis le *état* valeur est mise à jour afin que l’appel de fonction suivant écrit  le caractère supplémentaire.|
 |-2|La prochaine *max_bytes* octets représentent un incomplet, mais potentiellement valide caractère multioctet. Aucune valeur n’est stockée dans *destination*. Ce résultat peut se produire si *max_bytes* est égal à zéro.|
-|-1|Une erreur d’encodage s’est produite. La prochaine *max_bytes* ou un nombre d’octets ne contribue pas à un caractère multioctet complet et valide. Aucune valeur n’est stockée dans *destination*.<br /><br /> **EILSEQ** est stocké dans **errno** et l’état de conversion *état* n’est pas spécifié.|
+|-1|Une erreur d’encodage s’est produite. La prochaine *max_bytes* ou moins d’octets ne contribuent pas à un caractère multioctet complet et valid. Aucune valeur n’est stockée dans *destination*.<br /><br /> **EILSEQ** est stocké dans **errno** et l’état de conversion *état* n’est pas spécifié.|
 
 ## <a name="remarks"></a>Notes
 
@@ -99,9 +88,9 @@ Le **mbrtoc16** fonction lit jusqu'à *max_bytes* octets à partir de *source* p
 
 Si *source* est null, ces fonctions retournent l’équivalent d’un appel effectué à l’aide des arguments de **NULL** pour *destination*, **» «** pour *source*et 1 pour *max_bytes*. Les valeurs passées de *destination* et *max_bytes* sont ignorés.
 
-Si *source* est non null, la fonction commence au début de la chaîne et elle inspecte jusqu'à *max_bytes* octets pour déterminer le nombre d’octets requis pour terminer le caractère multioctet suivant, y compris les séquences de décalage. Si les octets examinés contiennent un caractère multioctet valide et complet, la fonction convertit le caractère en caractères larges 16 bits ou 32 bits équivalents. Si *destination* n’est ne pas null, la fonction stocke le résultat du premier (et éventuellement unique) caractère dans la destination. Si les caractères de sortie supplémentaires sont requises, une valeur est définie *état*, de sorte que les appels suivants à la fonction génèrent les caractères supplémentaires et retournent la valeur de -3. Si aucun autre caractère de sortie n’est requis, puis *état* est définie sur l’état du décalage initial.
+Si *source* est non null, la fonction commence au début de la chaîne et elle inspecte jusqu'à *max_bytes* octets pour déterminer le nombre d’octets requis pour terminer le caractère multioctet suivant, y compris les séquences de décalage. Si les octets examinés contiennent un caractère multioctet valide et complet, la fonction convertit le caractère en caractères larges 16 bits ou 32 bits équivalents. Si *destination* n’est ne pas null, la fonction stocke le résultat de la première (et éventuellement unique) caractère dans la destination. Si les caractères de sortie supplémentaires sont nécessaires, une valeur est définie *état*, de sorte que les appels suivants à la fonction génèrent les caractères supplémentaires et retournent la valeur -3. Si plus aucun caractère de sortie n’est requis, puis *état* est défini sur l’état de décalage initial.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

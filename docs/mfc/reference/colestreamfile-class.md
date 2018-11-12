@@ -1,10 +1,6 @@
 ---
-title: COleStreamFile, classe | Microsoft Docs
-ms.custom: ''
+title: COleStreamFile, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleStreamFile
 - AFXOLE/COleStreamFile
@@ -15,8 +11,6 @@ f1_keywords:
 - AFXOLE/COleStreamFile::Detach
 - AFXOLE/COleStreamFile::GetStream
 - AFXOLE/COleStreamFile::OpenStream
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleStreamFile [MFC], COleStreamFile
 - COleStreamFile [MFC], Attach
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f93b367b207730f331e4a9ae16b191f7a5314e4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 25d3da4ac9092fe53e84e446e93ff7aa030e6709
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577539"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile, classe
 
@@ -255,6 +245,4 @@ Pour plus d’informations, consultez [IStorage::OpenStream](/windows/desktop/ap
 
 [CFile, classe](../../mfc/reference/cfile-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

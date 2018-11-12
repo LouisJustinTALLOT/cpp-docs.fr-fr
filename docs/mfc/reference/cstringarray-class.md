@@ -1,10 +1,6 @@
 ---
-title: Cstringarray, classe | Microsoft Docs
-ms.custom: ''
+title: Cstringarray, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CStringArray
 - AFXCOLL/CStringArray
@@ -26,8 +22,6 @@ f1_keywords:
 - AFXCOLL/CObArray::SetAt
 - AFXCOLL/CObArray::SetAtGrow
 - AFXCOLL/CObArray::SetSize
-dev_langs:
-- C++
 helpviewer_keywords:
 - CObArray [MFC], CObArray
 - CObArray [MFC], Add
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 6c637e06-bba8-4c08-b0fc-cf8cb067ce34
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92907db1419456f6d9f2a10a7225df10dc2192f4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf4d489661516271e1d21487aaa3b69fe3580e62
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409634"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560197"
 ---
 # <a name="cstringarray-class"></a>Cstringarray, classe
 
@@ -148,6 +138,4 @@ Pour plus d’informations sur l’utilisation de `CStringArray`, consultez l’
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

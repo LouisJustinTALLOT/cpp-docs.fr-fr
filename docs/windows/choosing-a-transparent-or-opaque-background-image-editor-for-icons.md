@@ -1,12 +1,6 @@
 ---
-title: Choix d’un arrière-plan Transparent ou Opaque (Éditeur d’images pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Choix d'un arrière-plan transparent ou opaque (Éditeur d'images pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - opaque backgrounds [C++]
 - colors [C++], image
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - images [C++], transparency
 - images [C++], opaque background
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7f4c3da16181dca4a3a0722f96f61ce02863d369
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7e4d427a6926d48b5115a1b5bb9ba2ca2d8068c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378721"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653529"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Choix d'un arrière-plan transparent ou opaque (Éditeur d'images pour les icônes)
 
@@ -32,7 +21,7 @@ Lorsque vous déplacez ou copiez une sélection d’une image, les pixels de la 
 
 Vous pouvez passer d’un arrière-plan transparent (la valeur par défaut) à un arrière-plan opaque et inversement. Lorsque vous utilisez un outil de sélection, le **arrière-plan Transparent** et **arrière-plan Opaque** options s’affichent dans le **Option** sélecteur sur le **Éditeur d’images** barre d’outils (comme indiqué ci-dessous).
 
-![Options d’arrière-plan &#45; opaque ou transparent](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+![Options d’arrière-plan &#45; opaque ou transparent](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
 **Options transparentes et opaques** sur la **barre d’outils Éditeur d’images**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Pour basculer entre un arrière-plan transparent et opaque

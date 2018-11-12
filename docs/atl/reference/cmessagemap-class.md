@@ -1,31 +1,21 @@
 ---
-title: CMessageMap, classe | Microsoft Docs
-ms.custom: ''
+title: CMessageMap, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CMessageMap
 - ATLWIN/ATL::CMessageMap
 - ATLWIN/ATL::CMessageMap::ProcessWindowMessage
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMessageMap class
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 325851b75cef340fe5dcc762df54c40ded1ed704
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024392"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534080"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap, classe
 
@@ -69,7 +59,7 @@ Pour plus d’informations sur les tables des messages, consultez [tables des me
 Accède à la table des messages identifiée par *dwMsgMapID* dans un `CMessageMap`-classe dérivée.
 
 ```
-virtual BOOL ProcessWindowMessage(  
+virtual BOOL ProcessWindowMessage(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

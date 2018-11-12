@@ -1,14 +1,8 @@
 ---
-title: MFC COM | Microsoft Docs
-ms.custom: ''
+title: MFC COM
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - MFC COM (MFC)
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, COM support
 - MFC ActiveX controls [MFC], COM support in MFC
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a3da9e437dc9ca20aa2a02977b1c8653d68930f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890034"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645157"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -52,7 +42,7 @@ Technologies Active incluent des technologies client et serveur, notamment les s
 
 - [Automation](../mfc/automation.md) (anciennement appelé OLE Automation) permet à une application de manipuler des objets implémentés dans une autre application, ou « exposer » les objets afin qu’ils puissent être manipulés.
 
-     L’objet automatisé peut être local ou distant (sur un autre ordinateur accessible via un réseau). Automation est disponible pour les objets OLE et COM.
+   L’objet automatisé peut être local ou distant (sur un autre ordinateur accessible via un réseau). Automation est disponible pour les objets OLE et COM.
 
 - Cette section fournit également des informations sur la façon d’écrire des composants COM à l’aide de MFC, par exemple, dans [Points de connexion](../mfc/connection-points.md).
 

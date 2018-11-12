@@ -1,29 +1,19 @@
 ---
-title: -Y-(ignorer les Options d’en-têtes précompilés) | Microsoft Docs
-ms.custom: ''
+title: /Y- (Ignorer les options d’en-têtes précompilés)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /y-
-dev_langs:
-- C++
 helpviewer_keywords:
 - Y- compiler option [C++]
 - -Y- compiler option [C++]
 - /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d99408490874f989a5063aef29d0b0e020f2e08a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8de7de7a4164916b9662e3a78fe00dd0a40cecc9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719652"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542897"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Ignorer les options d’en-têtes précompilés)
 

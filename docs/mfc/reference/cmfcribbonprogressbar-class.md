@@ -1,10 +1,6 @@
 ---
-title: Cmfcribbonprogressbar, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcribbonprogressbar, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonProgressBar
 - AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetInfiniteMode
 - AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetPos
 - AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetRange
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], CMFCRibbonProgressBar
 - CMFCRibbonProgressBar [MFC], GetPos
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27fec3420343b5b6af240f89bb922256cee52a7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13d73b09fc9fb88736242e7d0c04c33baa795914
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375561"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608596"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar, classe
 
@@ -81,7 +71,7 @@ Un `CMFCRibbonProgressBar` peut fonctionner dans deux modes : normal et infinie
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonProgressBar` classe. L’exemple montre comment définir la barre de progression pour fonctionner en mode infini (où l’heure d’achèvement d’une opération est inconnu), définissez les valeurs minimales et maximales pour la barre de progression et définissez la position actuelle de la barre de progression. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonProgressBar` . L’exemple montre comment définir la barre de progression pour fonctionner en mode infini (où l’heure d’achèvement d’une opération est inconnu), définissez les valeurs minimales et maximales pour la barre de progression et définissez la position actuelle de la barre de progression. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -103,7 +93,6 @@ Crée et initialise un [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonpro
 
 ```
 CMFCRibbonProgressBar();
-
 
 CMFCRibbonProgressBar(
     UINT nID,
@@ -174,7 +163,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -206,7 +195,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Notes
 

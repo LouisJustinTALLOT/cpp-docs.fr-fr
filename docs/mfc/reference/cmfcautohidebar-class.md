@@ -1,10 +1,6 @@
 ---
-title: Cmfcautohidebar, classe | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: Cmfcautohidebar, classe
+ms.date: 10/18/2018
 f1_keywords:
 - CMFCAutoHideBar
 - AFXAUTOHIDEBAR/CMFCAutoHideBar
@@ -24,8 +20,6 @@ f1_keywords:
 - AFXAUTOHIDEBAR/CMFCAutoHideBar::UnSetAutoHideMode
 - AFXAUTOHIDEBAR/CMFCAutoHideBar::UpdateVisibleState
 - AFXAUTOHIDEBAR/CMFCAutoHideBar::m_nShowAHWndDelay
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCAutoHideBar [MFC], CMFCAutoHideBar
 - CMFCAutoHideBar [MFC], AddAutoHideWindow
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 78582039e172be92f397c898163ec62c6041f32f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 8592a5485afedab075a21215e1ffa140a8c66e28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619451"
 ---
 # <a name="cmfcautohidebar-class"></a>Cmfcautohidebar, classe
 
-`CMFCAutoHideBar` est une classe de barre d'outils spéciale qui implémente la fonctionnalité de masquage automatique.
+`CMFCAutoHideBar` est une classe de barre d’outils spéciale qui implémente la fonctionnalité de masquage automatique.
 
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
 
@@ -184,8 +174,9 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Paramètres
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -282,7 +273,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *CPoint*
+[in] *CPoint*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 

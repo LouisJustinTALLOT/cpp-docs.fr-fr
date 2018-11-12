@@ -1,33 +1,23 @@
 ---
-title: Cmfctoolbarfontcombobox, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfctoolbarfontcombobox, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
 - AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox
 - AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::CMFCToolBarFontComboBox
 - AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::GetFontDesc
 - AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::SetFont
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], CMFCToolBarFontComboBox
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8aa96d87c51eb4db8c7d180f741c3543571984ec
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28b2b77ed28453f148786ba7109743a0b7baf598
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416485"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429258"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Cmfctoolbarfontcombobox, classe
 
@@ -104,7 +94,6 @@ CMFCToolBarFontComboBox(
     int iWidth = 0,
     BYTE nPitchAndFamily = DEFAULT_PITCH);
 
-
 protected:
 CMFCToolBarFontComboBox(
     CObList* pLstFontsExternal,
@@ -172,7 +161,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un `CMFCFontInfo` objet. Si *iIndex* ne spécifie pas un index d’élément valide, la valeur de retour est NULL.
+Pointeur vers un objet `CMFCFontInfo` . Si *iIndex* ne spécifie pas un index d’élément valide, la valeur de retour est NULL.
 
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight
 
@@ -226,6 +215,4 @@ Si *bExact* a la valeur TRUE, cette méthode sélectionne une police qui corresp
 [CMFCFontInfo, classe](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

@@ -1,10 +1,6 @@
 ---
-title: Cmfcribboncheckbox, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcribboncheckbox, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonCheckBox
 - AFXRIBBONCHECKBOX/CMFCRibbonCheckBox
@@ -17,8 +13,6 @@ f1_keywords:
 - AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDrawMenuImage
 - AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDrawOnList
 - AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::SetACCData
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], CMFCRibbonCheckBox
 - CMFCRibbonCheckBox [MFC], GetCompactSize
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0b10004551a594d6f969ffaf7893cd2e7efe2d76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 067f38522c1be112d6e12200c2c10e1d439e5057
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396549"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612418"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Cmfcribboncheckbox, classe
 
@@ -135,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers la capture de données modifiées associé à la case à cocher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -156,7 +146,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers la capture de données modifiées associée à cette case à cocher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -177,7 +167,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers l’objet de capture de données modifiées associé à cette case à cocher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -212,7 +202,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers la capture de données modifiées dans lequel dessiner la case à cocher.
 
 ### <a name="remarks"></a>Notes
@@ -227,7 +217,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *CDC** pointeur vers la capture de données modifiées associé à la case à cocher.
+[in] *Capture de données modifiées&#42;*<br/>
+Pointeur vers la capture de données modifiées associé à la case à cocher.
 
 *CRect*<br/>
 [in] Un `CRect` objet qui spécifie le rectangle dans lequel dessiner l’image de menu.
@@ -256,7 +247,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Pointeur vers le contexte de périphérique dans lequel dessiner la case à cocher.
 
 *strText*<br/>

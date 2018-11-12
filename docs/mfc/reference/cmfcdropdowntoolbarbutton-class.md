@@ -1,10 +1,6 @@
 ---
-title: Cmfcdropdowntoolbarbutton, classe | Microsoft Docs
-ms.custom: ''
+title: Cmfcdropdowntoolbarbutton, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCDropDownToolbarButton
 - AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton
@@ -26,8 +22,6 @@ f1_keywords:
 - AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::Serialize
 - AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::SetDefaultCommand
 - AFXDROPDOWNTOOLBAR/CMFCDropDownToolbarButton::m_uiShowBarDelay
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], CMFCDropDownToolbarButton
 - CMFCDropDownToolbarButton [MFC], CopyFrom
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 157bcb8b1b8341e16d7dcb6c3a9d9fc9dc1a4d4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3544bbd65b5e0c754552f93b45263f768b73fe69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431737"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625314"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Cmfcdropdowntoolbarbutton, classe
 
@@ -151,7 +141,6 @@ Construit un objet `CMFCDropDownToolbarButton`.
 
 ```
 CMFCDropDownToolbarButton();
-
 
 CMFCDropDownToolbarButton(
     LPCTSTR lpszName,
@@ -299,7 +288,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
 *sizeDefault*<br/>
@@ -455,7 +444,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
 *Rect*<br/>
@@ -496,7 +485,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Paramètres
 
-*contrôleur de domaine principal*<br/>
+*pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
 *Rect*<br/>
@@ -557,6 +546,4 @@ Appelez cette méthode pour spécifier une commande par défaut exécutée par l
 [CMFCToolBar, classe](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarMenuButton, classe](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
 [Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

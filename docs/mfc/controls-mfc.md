@@ -1,27 +1,17 @@
 ---
-title: Contrôles (MFC) | Microsoft Docs
-ms.custom: ''
+title: Contrôles (MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows common controls [MFC]
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3607af849b1e395a0a467bcdbe65a2763fb3603
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe427b2330441b5d9d38a8947ded85dedbb4e086
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405058"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472707"
 ---
 # <a name="controls-mfc"></a>Contrôles (MFC)
 

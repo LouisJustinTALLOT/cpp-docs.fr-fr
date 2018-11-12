@@ -1,10 +1,6 @@
 ---
-title: CProgressCtrl, classe | Microsoft Docs
-ms.custom: ''
+title: CProgressCtrl (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CProgressCtrl
 - AFXCMN/CProgressCtrl
@@ -26,8 +22,6 @@ f1_keywords:
 - AFXCMN/CProgressCtrl::SetState
 - AFXCMN/CProgressCtrl::SetStep
 - AFXCMN/CProgressCtrl::StepIt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CProgressCtrl [MFC], CProgressCtrl
 - CProgressCtrl [MFC], Create
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b6a5668a5d9c179f37e7056de6ae17a25c1b4ebe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585898"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl (classe)
 
@@ -510,7 +500,6 @@ void SetRange(
     short nLower,
     short nUpper);
 
-
 void SetRange32(
     int nLower,
     int nUpper);
@@ -618,5 +607,4 @@ L’incrément de l’étape est définie par le `CProgressCtrl::SetStep` foncti
 [MFC exemple CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
 

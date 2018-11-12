@@ -1,14 +1,8 @@
 ---
-title: 'TN011 : Utilisation de MFC dans le cadre d’une DLL | Microsoft Docs'
-ms.custom: ''
+title: "TN011 : utilisation de MFC dans le cadre d'une DLL"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
-dev_langs:
-- C++
 helpviewer_keywords:
 - _USRDLL symbol
 - USRDLLs, compiler switches
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bc30248fda9c179b22769230d5e09bf1da474d3b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e709404ed6e0ba79159131de1cbff80905e9f216
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517648"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011 : utilisation de MFC dans le cadre d'une DLL
 
@@ -113,7 +103,6 @@ struct TracerData
 };
 
 BOOL PromptTraceFlags(TracerData FAR* lpData);
-
 
 #ifdef __cplusplus
 }

@@ -1,14 +1,8 @@
 ---
-title: Deux façons de créer un objet CArchive | Microsoft Docs
-ms.custom: ''
+title: Deux manières de créer un objet CArchive
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - CArchive
-dev_langs:
-- C++
 helpviewer_keywords:
 - CArchive class [MFC], closing CArchive objects
 - CArchive objects [MFC], closing
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 10b87f57daaf510252fe6f07dc3ba2d9d0a8650d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a97223602e9994647a8af16cc68de5394494c1ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409335"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659925"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Deux manières de créer un objet CArchive
 
@@ -66,9 +56,9 @@ En plus de sérialiser un document par le biais de l’infrastructure, il existe
 
 1. Passer le `CFile` objet au constructeur pour `CArchive`, comme illustré dans l’exemple suivant :
 
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-     Le deuxième argument à la `CArchive` constructeur est une valeur énumérée qui spécifie si l’archive doit être utilisée pour stocker ou de chargement des données vers ou à partir du fichier. Le `Serialize` fonction d’un objet vérifie cet état en appelant le `IsStoring` fonction pour l’objet de l’archive.
+   Le deuxième argument à la `CArchive` constructeur est une valeur énumérée qui spécifie si l’archive doit être utilisée pour stocker ou de chargement des données vers ou à partir du fichier. Le `Serialize` fonction d’un objet vérifie cet état en appelant le `IsStoring` fonction pour l’objet de l’archive.
 
 Lorsque vous avez terminé de stockage ou le chargement des données vers ou depuis le `CArchive` d’objet, fermez-le. Bien que le `CArchive` (et `CFile`) objets seront ferme automatiquement l’archive (et fichier), il est conseillé de faire explicitement dans la mesure où il facilite la récupération des erreurs. Pour plus d’informations sur la gestion des erreurs, consultez l’article [Exceptions : interception et suppression des Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
@@ -76,7 +66,7 @@ Lorsque vous avez terminé de stockage ou le chargement des données vers ou dep
 
 1. L’exemple suivant illustre comment fermer le `CArchive` objet :
 
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
 ## <a name="see-also"></a>Voir aussi
 

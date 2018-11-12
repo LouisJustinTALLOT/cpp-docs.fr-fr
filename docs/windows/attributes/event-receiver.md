@@ -1,14 +1,8 @@
 ---
-title: event_receiver (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: event_receiver (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.event_receiver
-dev_langs:
-- C++
 helpviewer_keywords:
 - event_receiver attribute
 - event receivers
@@ -18,17 +12,12 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b8e049d8338ba63e4d127c8a83fd3d9add32c6a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e483ece1019d4a8203215eddbc4d3b9d545328a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790721"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663193"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -85,7 +74,7 @@ Le **event_receiver** attribut C++ indique que la classe ou structure à laquell
 |**Attributs requis**|`coclass` Lorsque *layout_dependent*=**true**|
 |**Attributs non valides**|Aucun.|
 
-Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-com-net.md#contexts).
+Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -94,4 +83,4 @@ Pour plus d’informations, consultez [contextes d’attribut](cpp-attributes-co
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[Attributs de classe](class-attributes.md)  
+[Attributs de classe](class-attributes.md)

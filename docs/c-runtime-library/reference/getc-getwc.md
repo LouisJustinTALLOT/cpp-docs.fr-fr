@@ -1,10 +1,6 @@
 ---
-title: getc, getwc | Microsoft Docs
-ms.custom: ''
+title: getc, getwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getwc
 - getc
@@ -26,8 +22,6 @@ f1_keywords:
 - getwc
 - _gettchar
 - getc
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, reading
 - _gettc function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a4908e8fa3343bb54191fe2494f738ff0edf887
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664865"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -66,12 +56,12 @@ wint_t getwc(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Flux d’entrée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le caractère lu. Pour indiquer une erreur de lecture ou d’une condition de fin de fichier, **getc** retourne **EOF**, et **getwc** retourne **WEOF**. Pour **getc**, utilisez **ferror** ou **feof** pour une erreur ou de fin de fichier. Si *flux* est **NULL**, **getc** et **getwc** appellent le Gestionnaire de paramètre non valide, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** (ou **WEOF** pour **getwc**) et la valeur **errno** à  **EINVAL**.
+Retourne le caractère lu. Pour indiquer une erreur de lecture ou d’une condition de fin de fichier, **getc** retourne **EOF**, et **getwc** retourne **WEOF**. Pour **getc**, utilisez **ferror** ou **feof** pour une erreur ou de fin du fichier. Si *flux* est **NULL**, **getc** et **getwc** appellent le Gestionnaire de paramètre non valide, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** (ou **WEOF** pour **getwc**) et définissez **errno** à  **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -85,8 +75,8 @@ Voici une série de notes spécifiques aux routines.
 
 |Routine|Notes|
 |-------------|-------------|
-|**getc**|Identique à **fgetc**, mais sont implémentés en tant que fonction et comme une macro.|
-|**getwc**|Version à caractères larges de **getc**. Lit un caractère multioctet ou un caractère large selon s’il *flux* est ouvert en mode de texte ou binaire.|
+|**getc**|Identique à **fgetc**, mais sont implémentés sous la forme d’une fonction et une macro.|
+|**getwc**|Version à caractères larges de **getc**. Lit un caractère multioctet ou large selon que *flux* est ouvert en mode texte ou binaire.|
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -94,7 +84,7 @@ Voici une série de notes spécifiques aux routines.
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_gettc**|**getc**|**getc**|**getwc**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

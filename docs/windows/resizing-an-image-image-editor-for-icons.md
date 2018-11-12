@@ -1,31 +1,20 @@
 ---
-title: Redimensionnement d’une Image (Éditeur d’images pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Redimensionnement d'une image (Éditeur d'images pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], resizing images
 - graphics [C++], resizing
 - images [C++], resizing
 - resizing images
 ms.assetid: d83a02c4-4dfe-4586-a0df-51a50c2ba71d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6e81ca5418782b993f406f33b0b207bc8acb5ba0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 721a8f1de511c105df5d72bbe60685d210ad5a94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393657"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576096"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Redimensionnement d'une image (Éditeur d'images pour les icônes)
 
@@ -37,7 +26,7 @@ Lorsque la sélection inclut l’image entière, le **Image** éditeur soit réd
 
 Il existe deux mécanismes pour redimensionner une image : les poignées de redimensionnement et la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez faire glisser les poignées de redimensionnement pour modifier la taille de tout ou partie d’une image. Les poignées de dimensionnement que vous pouvez faire glisser sont pleines. Vous ne pouvez pas faire glisser les poignées qui sont vides. Vous pouvez utiliser la **propriétés** fenêtre pour redimensionner l’intégralité de l’image uniquement, pas une partie sélectionnée.
 
-![Dimensionnement des handles sur une image bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
+![Dimensionnement des handles sur une image bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
 Poignées de redimensionnement
 
 > [!NOTE]

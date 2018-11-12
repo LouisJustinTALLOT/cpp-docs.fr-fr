@@ -1,12 +1,6 @@
 ---
-title: Ouverture de fichiers | Microsoft Docs
-ms.custom: ''
+title: Ouverture de fichiers
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Open member functions [MFC]
 - CFile class [MFC], variable
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a29485b8258503682d59abb51dcfa72e383f0b8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408516"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577709"
 ---
 # <a name="opening-files"></a>Ouverture de fichiers
 
@@ -41,15 +31,15 @@ Dans MFC, la méthode la plus courante pour ouvrir un fichier est un processus e
 
 1. Créez l’objet de fichier sans spécifier un chemin d’accès ou d’autorisation des indicateurs.
 
-     Vous créez généralement un objet fichier en déclarant un [CFile](../mfc/reference/cfile-class.md) variable sur le frame de pile.
+   Vous créez généralement un objet fichier en déclarant un [CFile](../mfc/reference/cfile-class.md) variable sur le frame de pile.
 
 1. Appelez le [Open](../mfc/reference/cfile-class.md#open) fonction membre de l’objet de fichier, en fournissant un chemin d’accès et d’autorisation des indicateurs.
 
-     La valeur de retour pour `Open` sera différent de zéro si le fichier a été ouverte avec succès ou 0 si le fichier spécifié n’a pas pu être ouvert. Le `Open` fonction membre se présente comme suit :
+   La valeur de retour pour `Open` sera différent de zéro si le fichier a été ouverte avec succès ou 0 si le fichier spécifié n’a pas pu être ouvert. Le `Open` fonction membre se présente comme suit :
 
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+   `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-     Les indicateurs d’ouverture spécifient les autorisations, comme en lecture seule, vous souhaitez pour le fichier. Les valeurs possibles des indicateurs sont définies en tant que constantes énumérées dans le `CFile` classe, afin qu’ils soient qualifiés avec «`CFile::`» comme dans `CFile::modeRead`. Utilisez le `CFile::modeCreate` indicateur si vous souhaitez créer le fichier.
+   Les indicateurs d’ouverture spécifient les autorisations, comme en lecture seule, vous souhaitez pour le fichier. Les valeurs possibles des indicateurs sont définies en tant que constantes énumérées dans le `CFile` classe, afin qu’ils soient qualifiés avec «`CFile::`» comme dans `CFile::modeRead`. Utilisez le `CFile::modeCreate` indicateur si vous souhaitez créer le fichier.
 
 L’exemple suivant montre comment créer un nouveau fichier avec l’autorisation de lecture/écriture (avec le même chemin, en remplaçant tout fichier précédent) :
 

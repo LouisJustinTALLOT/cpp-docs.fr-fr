@@ -1,27 +1,17 @@
 ---
-title: Génériques et modèles (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: Génériques et modèles (C++ / c++ / CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 4d63d7620aa4d2cb83b954494172da9db55f6a2e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 81b2812faa2fcb7acfdc272474d22039afa24655
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328218"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660046"
 ---
 # <a name="generics-and-templates-ccli"></a>Génériques et modèles (C++ / c++ / CLI)
 
@@ -89,7 +79,7 @@ public:
    MyRef(T t) {
       ig = gcnew MyGeneric<T>(t);
       ig->F();
-    } 
+    }
 };
 
 int main() {

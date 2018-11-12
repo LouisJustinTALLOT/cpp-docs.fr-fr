@@ -1,10 +1,6 @@
 ---
-title: CObject, classe | Microsoft Docs
-ms.custom: ''
+title: CObject (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CObject
 - AFX/CObject
@@ -15,8 +11,6 @@ f1_keywords:
 - AFX/CObject::IsKindOf
 - AFX/CObject::IsSerializable
 - AFX/CObject::Serialize
-dev_langs:
-- C++
 helpviewer_keywords:
 - CObject [MFC], CObject
 - CObject [MFC], AssertValid
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2dd74589833d3a5debac4dfa8320267b7a9c430c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eb0580f6fef39df29d66e15cfd051a0460cb8d56
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447373"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584013"
 ---
 # <a name="cobject-class"></a>CObject (classe)
 
@@ -288,11 +278,9 @@ Pour la version de la bibliothèque, opérateur **supprimer** libère la mémoir
 ```
 void PASCAL operator delete(void* p);
 
-
 void PASCAL operator delete(
     void* p,
     void* pPlace);
-
 
 void PASCAL operator delete(
     void* p,
@@ -327,7 +315,6 @@ Pour la version de la bibliothèque, opérateur **nouveau** effectue une allocat
 ```
 void* PASCAL operator new(size_t nSize);
 void* PASCAL operator new(size_t, void* p);
-
 
 void* PASCAL operator new(
     size_t nSize,
@@ -390,6 +377,4 @@ Consultez [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pour 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
-
 

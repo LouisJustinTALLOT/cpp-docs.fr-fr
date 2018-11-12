@@ -1,27 +1,17 @@
 ---
-title: Fonctions globales de marshaling | Microsoft Docs
-ms.custom: ''
+title: Fonctions globales de marshaling
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlFreeMarshalStream
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
-dev_langs:
-- C++
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dadaf119f8f1d0aefb4f5b4b740747a2794d271e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554410"
 ---
 # <a name="marshaling-global-functions"></a>Fonctions globales de marshaling
 
@@ -34,7 +24,7 @@ Ces fonctions fournissent la prise en charge de marshaling et de conversion de d
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Libère les données de marshaling et les `IStream` pointeur.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crée un objet de flux et marshale le pointeur d’interface spécifié.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Convertit les données de marshaling d’un flux en un pointeur d’interface.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Convertit les données de marshaling d’un flux en un pointeur d’interface.|
 
 ## <a name="requirements"></a>Configuration requise :
 
@@ -42,7 +32,7 @@ Ces fonctions fournissent la prise en charge de marshaling et de conversion de d
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-Libère les données de marshaling dans le flux, puis libère le pointeur de flux.  
+Libère les données de marshaling dans le flux, puis libère le pointeur de flux.
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

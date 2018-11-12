@@ -1,29 +1,19 @@
 ---
-title: XML Data Generator Tool, page de propriétés | Microsoft Docs
-ms.custom: ''
+title: Outil XML Data Generator Tool (page de propriétés)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCXMLDataGeneratorTool.GeneratedProxyLanguage
 - VC.Project.VCXMLDataGeneratorTool.Output
-- VC.Project.VCXMLDataGeneratorTool.SupressStartupBanner
-dev_langs:
-- C++
+- VC.Project.VCXMLDataGeneratorTool.SuppressStartupBanner
 helpviewer_keywords:
 - XML Data Generator Tool property page
 ms.assetid: b2ef1c12-3419-429d-bb9d-bd7d9ffe1ffb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd101d5cbea106c356fcfab5b556dc3f49fe8e87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a5df028a809fa9dae623ec8023b7c107c5ff095b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385038"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554092"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>Outil XML Data Generator Tool (page de propriétés)
 

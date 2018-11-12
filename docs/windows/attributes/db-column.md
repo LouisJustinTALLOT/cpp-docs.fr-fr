@@ -1,28 +1,17 @@
 ---
-title: db_column (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: db_column (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.db_column
-dev_langs:
-- C++
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: c9c060bda4198c199ea86f0e2a33adc3275b353b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083607"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555049"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -125,4 +114,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)<br/>
-[Attributs de classe](class-attributes.md)  
+[Attributs de classe](class-attributes.md)

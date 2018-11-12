@@ -1,15 +1,9 @@
 ---
-title: 'Contrôles ActiveX MFC : Sous-classement d’un contrôle Windows | Microsoft Docs'
-ms.custom: ''
+title: "Contrôles ActiveX MFC : sous-classement d'un contrôle Windows"
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - precreatewindow
 - IsSubclassed
-dev_langs:
-- C++
 helpviewer_keywords:
 - OnDraw method, MFC ActiveX controls
 - subclassing
@@ -22,23 +16,19 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 24284af7766f0fd968ca08724440509bc171fba6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890555"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576642"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Contrôles ActiveX MFC : sous-classement d'un contrôle Windows
 
 Cet article explique le processus de sous-classement d'un contrôle Windows commun pour créer un contrôle ActiveX. Le sous-classement d'un contrôle Windows existant est un moyen rapide de développer un contrôle ActiveX. Le nouveau contrôle a les fonctionnalités du contrôle Windows sous-classé, telles que la peinture et la réponse aux clics de souris. Exemple de contrôles ActiveX MFC [bouton](../visual-cpp-samples.md) est un exemple de sous-classement d’un contrôle Windows.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent les ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Pour sous-classer un contrôle Windows, effectuez les tâches suivantes :
 
@@ -94,12 +84,12 @@ Pour ajouter un gestionnaire de messages pour un message de fenêtre réfléchi 
 
 - Dans le fichier .H de la classe de contrôle, déclarez une fonction gestionnaire. La fonction doit avoir un type de retour **LRESULT** et deux paramètres, avec des types **WPARAM** et **LPARAM**, respectivement. Exemple :
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - Dans la classe du contrôle. CPP, ajoutez une entrée ON_MESSAGE à la table des messages. Les paramètres de cette entrée doivent être l'identificateur de message et le nom de la fonction gestionnaire. Exemple :
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - Également dans le. Fichier CPP, implémenter la `OnOcmCommand` fonction membre pour traiter le message réfléchi. Le *wParam* et *lParam* paramètres sont les mêmes que celles du message de fenêtre d’origine.
 

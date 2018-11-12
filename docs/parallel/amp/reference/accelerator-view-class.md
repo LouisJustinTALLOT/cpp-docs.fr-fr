@@ -1,10 +1,6 @@
 ---
-title: accelerator_view, classe | Microsoft Docs
-ms.custom: ''
+title: accelerator_view, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - accelerator_view
 - AMPRT/accelerator_view
@@ -22,21 +18,15 @@ f1_keywords:
 - AMPRT/Concurrency::accelerator_view:is_debug
 - AMPRT/Concurrency::accelerator_view:queuing_mode
 - AMPRT/Concurrency::accelerator_view:version
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30eb0befda4d439bf4153d7c6726c982d3bf19ae
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: e17284ef8652e5d08b2305dc07d27f080ec64239
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568045"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view, classe
 
@@ -167,6 +157,7 @@ Retourne l’objet d’accélérateur pour l’objet accelerator_view.
 ```
 accelerator get_accelerator() const;
 ```
+
 ### <a name="return-value"></a>Valeur de retour
 
 L’objet accélérateur pour l’objet accelerator_view.

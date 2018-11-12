@@ -1,29 +1,19 @@
 ---
-title: Manipulation de chaînes (CRT) │ Microsoft Docs
-ms.custom: ''
+title: Manipulation de chaînes (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.strings
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], manipulating
 - string manipulation
 - manipulating strings
 ms.assetid: 6545861a-59e7-408d-9d29-2ec9134fc91a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f0dc9950b8c5185c9be99613e8fb1636da37ff95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fce14ff3e7cd83be0414ccf3e9db7ba2171d0ca7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464868"
 ---
 # <a name="string-manipulation-crt"></a>Manipulation de chaînes (CRT)
 

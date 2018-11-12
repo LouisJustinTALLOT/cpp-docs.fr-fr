@@ -1,26 +1,16 @@
 ---
-title: Synthèse de la programmation Unicode | Microsoft Docs
-ms.custom: ''
+title: Synthèse de la programmation Unicode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d49f87d5709483a36325afa426a790374fc93837
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415809"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437933"
 ---
 # <a name="unicode-programming-summary"></a>Synthèse de la programmation Unicode
 
@@ -87,7 +77,7 @@ Pour tirer parti de la prise en charge runtime C et MFC pour Unicode, vous devez
     pDC->TextOut( str, str.GetLength( ) );
     ```
 
-     `CDC::TextOut` prend un nombre de caractères, pas un nombre d’octets.
+   `CDC::TextOut` prend un nombre de caractères, pas un nombre d’octets.
 
 - Utilisez [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) pour ouvrir les fichiers Unicode.
 

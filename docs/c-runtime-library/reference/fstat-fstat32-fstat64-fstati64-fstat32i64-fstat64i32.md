@@ -1,10 +1,6 @@
 ---
-title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32 | Microsoft Docs
-ms.custom: ''
+title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fstat32
 - _fstat64
@@ -38,8 +34,6 @@ f1_keywords:
 - _fstat
 - fstat32
 - _fstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fstat64 function
 - fstati64 function
@@ -55,16 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 65d77bfdd7922387568ca8257e66f6e19dde1a35
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404966"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677784"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -109,7 +99,7 @@ Pointeur désignant la structure destinée à stocker les résultats.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne 0 si les informations sur l’état des fichiers sont obtenues. Une valeur de retour de -1 indique une erreur. Si le descripteur de fichier n’est pas valide ou *tampon* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EBADF**, dans le cas d’un descripteur de fichier non valide, ou aux **EINVAL**si *tampon* est **NULL**.
+Retourne 0 si les informations sur l’état des fichiers sont obtenues. Une valeur de retour de -1 indique une erreur. Si le descripteur de fichier n’est pas valide ou *tampon* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EBADF**, dans le cas d’un descripteur de fichier non valide, ou à **EINVAL**si *tampon* est **NULL**.
 
 ## <a name="remarks"></a>Notes
 
@@ -119,22 +109,22 @@ Le **_fstat** fonction obtient des informations sur le fichier ouvert associé *
 |-|-|
 **st_atime**|Heure du dernier accès au fichier.
 **st_ctime**|Heure de la création du fichier.
-**st_dev**|Si un périphérique, *fd*; sinon, 0.
+**st_dev**|Si un appareil, *fd*; sinon, 0.
 **st_mode**|Masque de bits pour les informations relatives au mode de fichier. Le **_S_IFCHR** bit est défini si *fd* fait référence à un périphérique. Le **_S_IFREG** bit est défini si *fd* fait référence à un fichier ordinaire. Les bits de lecture/écriture sont définis en fonction du mode d’autorisation du fichier. **_S_IFCHR** et autres constantes sont définies dans sys\stat.h.
 **st_mtime**|Heure de la dernière modification du fichier.
 **st_nlink**|Toujours 1 sur les systèmes de fichiers autres que NTFS.
-**st_rdev**|Si un périphérique, *fd*; sinon, 0.
+**st_rdev**|Si un appareil, *fd*; sinon, 0.
 **st_size**|Taille du fichier en octets.
 
-Si *fd* fait référence à un périphérique, le **st_atime**, **st_ctime**, **st_mtime**, et **st_size** sont des champs non significative.
+Si *fd* fait référence à un périphérique, le **st_atime**, **st_ctime**, **st_mtime**, et **st_size** sont des champs pas significatives.
 
 Étant donné que Stat.h utilise le type [_dev_t](../../c-runtime-library/standard-types.md), qui est défini dans Types.h, vous devez inclure Types.h avant Stat.h dans votre code.
 
-**_fstat64**, qui utilise le **__stat64** de la structure, permet des dates de création de fichiers d’exprimer des et 23:59:59, le 31 décembre 3000 UTC ; tandis que les autres fonctions représentent uniquement les dates à 23:59:59 le 18 janvier 2038, UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour toutes ces fonctions.
+**_fstat64**, qui utilise le **__stat64** structure, permet d’exprimer à 23:59:59 le 31 décembre 3000, UTC ; des dates de création de fichiers tandis que les autres fonctions représentent uniquement les dates à 23:59:59 le 18 janvier, 2038, UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour toutes ces fonctions.
 
-Les variantes de ces fonctions prennent en charge les types d’heures 32 bits ou 64 bits, ainsi que les longueurs de fichiers 32 bits ou 64 bits. Le premier suffixe numérique (**32** ou **64**) indique la taille de la durée du type utilisé ; le deuxième suffixe est **i32** ou **i64**, qui indique si la taille du fichier est représentée comme un entier 32 bits ou 64 bits.
+Les variantes de ces fonctions prennent en charge les types d’heures 32 bits ou 64 bits, ainsi que les longueurs de fichiers 32 bits ou 64 bits. Le premier suffixe numérique (**32** ou **64**) indique la taille du temps type utilisé ; le deuxième suffixe est **i32** ou **i64**, indiquant si la taille du fichier est représentée comme un entier 32 bits ou 64 bits.
 
-**_fstat** équivaut à **_fstat64i32**, et **struct** **_stat** contient une heure 64 bits. Cela est vrai, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_fstat** utilise une heure 32 bits, et **struct** **_stat** contient une heure 32 bits. Est de même pour **_fstati64**.
+**_fstat** équivaut à **_fstat64i32**, et **struct** **_stat** contient une heure 64 bits. Cela est vrai, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_fstat** utilise une heure 32 bits, et **struct** **_stat** contient une heure 32 bits. Vaut également pour **_fstati64**.
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variantes de type d’heure et de type de longueur de fichier de _stat
 
@@ -149,7 +139,7 @@ Les variantes de ces fonctions prennent en charge les types d’heures 32 bits 
 |**_fstat32i64**|Non affecté par la définition de macro|32 bits|64 bits|
 |**_fstat64i32**|Non affecté par la définition de macro|64 bits|32 bits|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

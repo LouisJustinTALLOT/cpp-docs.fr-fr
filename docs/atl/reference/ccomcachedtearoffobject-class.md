@@ -1,10 +1,6 @@
 ---
-title: CComCachedTearOffObject, classe | Microsoft Docs
-ms.custom: ''
+title: CComCachedTearOffObject, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComCachedTearOffObject
 - ATLCOM/ATL::CComCachedTearOffObject
@@ -15,22 +11,16 @@ f1_keywords:
 - ATLCOM/ATL::CComCachedTearOffObject::QueryInterface
 - ATLCOM/ATL::CComCachedTearOffObject::Release
 - ATLCOM/ATL::CComCachedTearOffObject::m_contained
-dev_langs:
-- C++
 helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 009bc1e20693a9e45490c58ea29ff9d28b6aa6ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075707"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582724"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject, classe
 
@@ -199,7 +189,7 @@ Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Si l’interface demandée est `IUnknown`, retourne un pointeur vers le `CComCachedTearOffObject`de propre `IUnknown` et incrémente le décompte de références. Sinon, les requêtes pour l’interface sur votre classe détachables à l’aide de la [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) héritée de la méthode `CComObjectRootEx`.  
+Si l’interface demandée est `IUnknown`, retourne un pointeur vers le `CComCachedTearOffObject`de propre `IUnknown` et incrémente le décompte de références. Sinon, les requêtes pour l’interface sur votre classe détachables à l’aide de la [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) héritée de la méthode `CComObjectRootEx`.
 
 ##  <a name="release"></a>  CComCachedTearOffObject::Release
 

@@ -1,10 +1,6 @@
 ---
-title: feof | Microsoft Docs
-ms.custom: ''
+title: feof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - feof
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - feof
-dev_langs:
-- C++
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3162fd72acdfedc198764a92deec043cd681a10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397013"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580695"
 ---
 # <a name="feof"></a>feof
 
@@ -53,22 +43,22 @@ int feof(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux de données*<br/>
+*flux de données*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **feof** fonction retourne une valeur différente de zéro si une opération de lecture a tenté de lire au-delà de la fin du fichier ; sinon, retourne 0. Si le pointeur de flux est **NULL**, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **feof** retourne 0.
+Le **feof** fonction retourne une valeur différente de zéro si une opération de lecture a tenté de lire au-delà de la fin du fichier ; sinon retourne 0. Si le pointeur de flux est **NULL**, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **feof** retourne 0.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le **feof** routine (implémentée comme une fonction et comme une macro) détermine si la fin de *flux* a été passé. Lorsque la fin du fichier est passé, lisez les opérations retournent un indicateur de fin de fichier jusqu'à ce que le flux est fermé ou jusqu'à ce que [rembobiner](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md), ou  **clearerr** est appelée par rapport à elle.
+Le **feof** routine (implémenté en tant que fonction et en tant que macro) détermine si la fin de *flux* a été passé. Lorsque la fin du fichier est passé, opérations de lecture retournent un indicateur de fin de fichier jusqu'à ce que le flux est fermé ou jusqu'à ce que [rewind](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md), ou  **clearerr** est appelé sur lui.
 
-Par exemple, si un fichier contient 10 octets et de lecture de 10 octets à partir du fichier, **feof** retourne 0 car, même si le pointeur de fichier est à la fin du fichier, vous avez tenté pas lire au-delà de la fin. Seulement une fois que vous essayez de lire un octet 11 **feof** retourner une valeur différente de zéro.
+Par exemple, si un fichier contient 10 octets et que vous lisez 10 octets à partir du fichier, **feof** retourne 0 car, même si le pointeur de fichier est à la fin du fichier, vous n’avez pas tenté de lire au-delà de la fin. Seulement une fois que vous tentez de lire un 11e octet **feof** retournent une valeur différente de zéro.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

@@ -1,14 +1,8 @@
 ---
-title: Enregistrement de Bitmaps au format GIF ou JPEG (Éditeur d’images pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Enregistrement de bitmaps au format GIF ou JPEG (Éditeur d'images pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
-dev_langs:
-- C++
 helpviewer_keywords:
 - .gif files [C++], saving bitmaps as
 - jpg files [C++], saving bitmaps as
@@ -21,17 +15,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 115df69f-10fb-4e6f-906b-853c1e4a54af
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 11eea641132a608bf780f9adcc7cfeafad0950d5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 99b083236f935bc02acef46d6620256416df93a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383132"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592827"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Enregistrement de bitmaps au format GIF ou JPEG (Éditeur d'images pour les icônes)
 

@@ -1,27 +1,17 @@
 ---
-title: Erreur LNK1277 des outils Éditeur de liens | Microsoft Docs
-ms.custom: ''
+title: Erreur des outils Éditeur de liens LNK1277
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1277
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1277
 ms.assetid: afca3de0-50cc-4140-af7a-13493a170835
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 542c48bd23b3f84ab301404987c77d964f51823e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 137aa15dd9dad4b08d52af55da60a9cdf8b58055
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082515"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662070"
 ---
 # <a name="linker-tools-error-lnk1277"></a>Erreur des outils Éditeur de liens LNK1277
 

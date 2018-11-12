@@ -1,10 +1,6 @@
 ---
-title: COleDateTimeSpan, classe | Microsoft Docs
-ms.custom: ''
+title: COleDateTimeSpan, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -23,8 +19,6 @@ f1_keywords:
 - ATLCOMTIME/ATL::COleDateTimeSpan::SetStatus
 - ATLCOMTIME/ATL::COleDateTimeSpan::m_span
 - ATLCOMTIME/ATL::COleDateTimeSpan::m_status
-dev_langs:
-- C++
 helpviewer_keywords:
 - timespan
 - time span
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 7bcf4c50577cf7211f90415143edac9fd0df1d5b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808977"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509329"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan, classe
 
@@ -157,7 +147,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 *dblSpanSrc*<br/>
 Le nombre de jours doit être copié dans le nouveau `COleDateTimeSpan` objet.
 
-*lDays*, *nHours*, *nMins*, *every*  
+*lDays*, *nHours*, *nMins*, *every*<br/>
 Indiquer les valeurs de jour et d’heure doit être copié dans le nouveau `COleDateTimeSpan` objet.
 
 ### <a name="remarks"></a>Notes
@@ -217,10 +207,10 @@ Appeler ces fonctions pour créer une représentation sous forme de mise en form
 
 Une brève description des formes pour cette fonction suit :
 
-**Format (** *pFormat* **)**  
+**Format (** *pFormat* **)**<br/>
 Ce formulaire met en forme la valeur à l’aide de la chaîne de format qui contient les codes de mise en forme spéciales qui sont précédés d’un signe de pourcentage (%), comme dans `printf`. La chaîne mise en forme est passée en tant que paramètre à la fonction.
 
-**Format (** *nID* **)**  
+**Format (** *nID* **)**<br/>
 Ce formulaire met en forme la valeur à l’aide de la chaîne de format qui contient les codes de mise en forme spéciales qui sont précédés d’un signe de pourcentage (%), comme dans `printf`. La chaîne mise en forme est une ressource. L’ID de ressource de cette chaîne est passée comme paramètre.
 
 ### <a name="example"></a>Exemple
@@ -388,11 +378,11 @@ L’état de ce `COleDateTimeSpan` valeur.
 La valeur de retour est définie par le `DateTimeSpanStatus` type énuméré, qui est défini dans le `COleDateTimeSpan` classe.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-};  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+};
 ```
 
 Pour obtenir une brève description de ces valeurs d’état, consultez la liste suivante :
@@ -585,11 +575,11 @@ DateTimeSpanStatus m_status;
 ### <a name="remarks"></a>Notes
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Pour obtenir une brève description de ces valeurs d’état, consultez la liste suivante :
@@ -694,7 +684,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*lDays*, *nHours*, *nMins*, *every*  
+*lDays*, *nHours*, *nMins*, *every*<br/>
 Indiquer les valeurs de plage de dates et d’intervalle de temps doit être copié dans ce `COleDateTimeSpan` objet.
 
 ### <a name="remarks"></a>Notes
@@ -739,11 +729,11 @@ La nouvelle valeur d’état pour ce `COleDateTimeSpan` objet.
 Le *état* valeur du paramètre est définie par le `DateTimeSpanStatus` type énuméré, qui est défini dans le `COleDateTimeSpan` classe.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Pour obtenir une brève description de ces valeurs d’état, consultez la liste suivante :

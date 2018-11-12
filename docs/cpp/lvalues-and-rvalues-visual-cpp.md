@@ -1,26 +1,16 @@
 ---
-title: 'Catégories de valeur : Lvalues et Rvalues (Visual C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Catégories de valeur : Lvalues et Rvalues (Visual C++)'
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f19a06ac0583dd4cb911818787408aeca30b2ec
-ms.sourcegitcommit: 2f84d56b6ab19ba745b32ecd96b193c73cd62adf
+ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546352"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues et Rvalues (Visual C++)
 
@@ -30,7 +20,7 @@ La norme C ++ 17 définit les catégories de valeur d’expression comme suit :
 
 - Un *glvalue ayant* est une expression dont l’évaluation détermine l’identité d’un objet, un champ de bits ou une fonction.
 - Un *prvalue* est une expression dont l’évaluation Initialise un objet ou un champ de bits, ou calcule la valeur de l’opérande d’un opérateur, comme spécifié par le contexte dans lequel elle apparaît.
-- Un *xvalue* est un glvalue ayant qui désigne un objet ou un champ de bits dont les ressources peuvent être réutilisés (généralement, car il s’agit de la fin de sa durée de vie). [Exemple : certains types d’expressions impliquant des références rvalue (8.3.2) génèrent des valeurs x, par exemple un appel à une fonction dont le type de retour est une référence rvalue ou un cast en un type référence rvalue. ]
+- Un *xvalue* est un glvalue ayant qui désigne un objet ou un champ de bits dont les ressources peuvent être réutilisés (généralement, car il s’agit de la fin de sa durée de vie). [Exemple : certains types d’expressions impliquant des références rvalue (8.3.2) génèrent des valeurs x, par exemple un appel à une fonction dont le type de retour est une référence rvalue ou un cast en un type référence rvalue. ]
 - Un *lvalue* est un glvalue ayant qui n’est pas une valeur de x.
 - Un *rvalue* est une prvalue ou une valeur de x.
 

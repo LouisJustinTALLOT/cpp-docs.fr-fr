@@ -1,15 +1,9 @@
 ---
-title: Barre d’outils (Éditeur d’images C++ pour les icônes) | Microsoft Docs
-ms.custom: ''
+title: Barre d’outils (Éditeur d’images C++ pour les icônes)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
-dev_langs:
-- C++
 helpviewer_keywords:
 - Graphics toolbar
 - Image editor [C++], toolbar
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - Properties window
 - Option selector, Image editor
 ms.assetid: a0af4209-6273-4106-a7c1-0edecc9b5755
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4995ead65dd6f794093643e53d8d8fb15e62adb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521097"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>Barre d’outils (Éditeur d’images C++ pour les icônes)
 
@@ -36,8 +25,7 @@ Le **Éditeur d’images** barre d’outils contient les outils de dessin, peint
 > [!NOTE]
 > Tous les outils disponibles sur le **Éditeur d’images** barre d’outils sont également disponibles à partir de la **Image** menu (sous le **outils** commande).
 
-![Barre d’outils Éditeur d’images](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
-Barre d’outils Éditeur d’images
+![Barre d’outils Éditeur d’images](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar") barre d’outils Éditeur d’images
 
 Pour utiliser le **Éditeur d’images** barre d’outils et **Option** sélecteur, cliquez sur l’outil ou l’option que vous souhaitez.
 
@@ -46,8 +34,7 @@ Pour utiliser le **Éditeur d’images** barre d’outils et **Option** sélecte
 
 Avec le **Option** sélecteur, vous pouvez spécifier la largeur de ligne, trait de pinceau, etc. L’icône sur le **Option** sélecteur bouton change en fonction de l’outil que vous avez sélectionné.
 
-![Dessin&#45;sélecteur de forme dans la barre d’outils Éditeur d’images](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-Sélecteur d’options de la barre d’outils Éditeur d’images
+![Dessin&#45;sélecteur de forme dans la barre d’outils Éditeur d’images](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector") sélecteur d’options de la barre d’outils Éditeur d’images
 
 Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 

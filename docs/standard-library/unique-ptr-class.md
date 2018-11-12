@@ -1,10 +1,6 @@
 ---
-title: unique_ptr, classe | Microsoft Docs
-ms.custom: ''
+title: unique_ptr, classe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - memory/std::unique_ptr
 - memory/std::unique_ptr::deleter_type
@@ -15,8 +11,6 @@ f1_keywords:
 - memory/std::unique_ptr::release
 - memory/std::unique_ptr::reset
 - memory/std::unique_ptr::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::unique_ptr [C++]
 - std::unique_ptr [C++], deleter_type
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc013ca5cc8c941e0208b5921a73daebdae2264b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 00a29fc22c07cf54d4a26cd3353deef0b7a88acc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725190"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642193"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr, classe
 
@@ -86,7 +76,6 @@ public:
     unique_ptr& operator=(unique_ptr<U, E>&& u) noexcept;
     unique_ptr& operator=(nullptr_t) noexcept;
     T& operator[](size_t i) const;
-
 
     pointer get() const noexcept;
     deleter_type& get_deleter() noexcept;

@@ -1,12 +1,7 @@
 ---
-title: Gestion des exceptions (C++ / c++ / CLI et c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Gestion des exceptions (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - structured exception handling [C++], managed exceptions
 - Exception class, managed applications
@@ -15,17 +10,12 @@ helpviewer_keywords:
 - exception handling, types of
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7d070cc223f90f84bd52176ee7e50dbbfa441789
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 8886480b6f4497d042c6dd79dc2215887b84fceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328127"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505025"
 ---
 # <a name="exception-handling--ccli-and-ccx"></a>Gestion des exceptions (C++ / c++ / CLI et c++ / CX)
 
@@ -58,4 +48,4 @@ Décrit la gestion des exceptions dans C++ standard.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composants pour .NET et UWP](../windows/component-extensions-for-runtime-platforms.md)

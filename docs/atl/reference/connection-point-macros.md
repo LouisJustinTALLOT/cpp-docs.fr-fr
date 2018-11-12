@@ -1,28 +1,18 @@
 ---
-title: Macros de Point de connexion | Microsoft Docs
-ms.custom: ''
+title: Macros de Point de connexion
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_CONNECTION_POINT_MAP
 - atlcom/ATL::END_CONNECTION_POINT_MAP
-dev_langs:
-- C++
 helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ac00b1c5a937c32ecc02e11e735541119c388588
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039541"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605788"
 ---
 # <a name="connection-point-macros"></a>Macros de Point de connexion
 
@@ -33,7 +23,7 @@ Ces macros définissent les mappages de point de connexion et les entrées.
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Marque le début des entrées de mappage de point de connexion.|
 |[CONNECTION_POINT_ENTRY](#connection_point_entry)|Entre les points de connexion dans la classe map.|
 |[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Mais, comme dans CONNECTION_POINT_ENTRY prend un pointeur vers l’iid.|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Marque la fin des entrées de mappage de point de connexion.|  
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Marque la fin des entrées de mappage de point de connexion.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -74,7 +64,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="parameters"></a>Paramètres
 
 *IID*<br/>
-[in] Le GUID de l’interface qui est ajoutée à la carte de point de connexion. 
+[in] Le GUID de l’interface qui est ajoutée à la carte de point de connexion.
 
 *piid*<br/>
 [in] Pointeur vers le GUID de l’interface en cours adde.

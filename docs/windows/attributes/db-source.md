@@ -1,28 +1,17 @@
 ---
-title: db_source (attribut de COM C++) | Microsoft Docs
-ms.custom: ''
+title: db_source (attribut de COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.db_source
-dev_langs:
-- C++
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 11a58511684a58ebb0b8ec13138bfbdb7afa4729
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 2bb15597be5ac4e1bb5f37fb2f12b74631e5a354
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081901"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592703"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -72,7 +61,7 @@ Cet exemple appelle **db_source** sur une classe pour créer une connexion à la
 
 [
   db_source(L"my_connection_string", name="ds"),
-  db_command(L"select * from Products")  
+  db_command(L"select * from Products")
 ]
 class CMyCommand {};
 ```
@@ -92,4 +81,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)  
+[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)

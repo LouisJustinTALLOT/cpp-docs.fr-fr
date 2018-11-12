@@ -1,10 +1,6 @@
 ---
-title: CWnd, classe | Microsoft Docs
-ms.custom: ''
+title: CWnd, classe
 ms.date: 08/27/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CWnd
 - AFXWIN/CWnd
@@ -414,8 +410,6 @@ f1_keywords:
 - AFXWIN/CWnd::ResizeDynamicLayout
 - AFXWIN/CWnd::WindowProc
 - AFXWIN/CWnd::m_hWnd
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWnd [MFC], CWnd
 - CWnd [MFC], accDoDefaultAction
@@ -824,16 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd35c0879896ca7edfd6524c31a86765bbcce219
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3d54da2b3907110d8c08480dbeef76e252cc55d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084189"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488424"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -2035,7 +2025,6 @@ BOOL CreateControl(
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
 
-
 BOOL CreateControl(
     REFCLSID clsid,
     LPCTSTR pszWindowName,
@@ -2046,7 +2035,6 @@ BOOL CreateControl(
     CFile* pPersist = NULL,
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
-
 
 BOOL CreateControl(
     REFCLSID clsid,
@@ -2140,7 +2128,6 @@ virtual BOOL CreateEx(
     HWND hWndParent,
     HMENU nIDorHMenu,
     LPVOID lpParam = NULL);
-
 
 virtual BOOL CreateEx(
     DWORD dwExStyle,
@@ -5816,7 +5803,6 @@ void MoveWindow(
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE);
-
 
 void MoveWindow(
     LPCRECT lpRect,

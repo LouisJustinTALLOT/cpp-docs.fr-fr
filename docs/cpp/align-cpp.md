@@ -1,28 +1,18 @@
 ---
-title: align (C++) | Microsoft Docs
-ms.custom: ''
+title: align (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - align_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f5353354a334f6ee597bca3e49dfa2b4f98a0005
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076292"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440441"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -179,7 +169,7 @@ void fn() {
 }
 ```
 
-Quand la mémoire est allouée sur le tas, l'alignement dépend de la fonction d'allocation appelée.  Par exemple, si vous utilisez `malloc`, le résultat dépend de la taille d'opérande. Si *arg* > = 8, la mémoire retournée est alignée de 8 octets. Si *arg* < 8, l’alignement de la mémoire retournée représente la première puissance de 2 inférieure à *arg*. Par exemple, si vous utilisez malloc (7), l'alignement est sur 4 octets.
+Quand la mémoire est allouée sur le tas, l'alignement dépend de la fonction d'allocation appelée.  Par exemple, si vous utilisez `malloc`, le résultat dépend de la taille d’opérande. Si *arg* > = 8, la mémoire retournée est alignée de 8 octets. Si *arg* < 8, l’alignement de la mémoire retournée représente la première puissance de 2 inférieure à *arg*. Par exemple, si vous utilisez malloc (7), l'alignement est sur 4 octets.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Définition de nouveaux Types avec __declspec(align(#))
 

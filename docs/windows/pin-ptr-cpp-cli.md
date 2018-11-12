@@ -1,31 +1,21 @@
 ---
-title: pin_ptr (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
+title: pin_ptr (C++/CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - pin_ptr_cpp
 - stdcli::language::pin_ptr
 - pin_ptr
-dev_langs:
-- C++
 helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d4d8fcc0b1527483e0802eaf88339670abb8ed3c
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 1e1d7959825284cc9c239147d33e54cc56352fa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587276"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -118,7 +108,7 @@ using namespace System;
 #pragma unmanaged
 // native function that initializes an array
 void native_function(int* p) {
-   for(int i = 0 ; i < 10 ; i++)  
+   for(int i = 0 ; i < 10 ; i++)
     p[i] = i;
 }
 #pragma managed
@@ -140,7 +130,7 @@ public:
 
    int sum() {
       int total = 0;
-      for (int i = 0 ; i < SIZE ; i++)  
+      for (int i = 0 ; i < SIZE ; i++)
          total += arr[i];
       return total;
    }

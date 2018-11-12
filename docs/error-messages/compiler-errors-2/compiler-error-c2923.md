@@ -1,27 +1,17 @@
 ---
-title: Erreur du compilateur C2923 | Microsoft Docs
-ms.custom: ''
+title: Erreur du compilateur C2923
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2923
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2923
 ms.assetid: 6b92933b-13ef-4124-99d9-b89f9fdae030
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e8bcf4a16681c725240f052921dfa9efb8dde8ad
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 885a3a09d43d8c3c479d11e22342487d1a1958d4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593620"
 ---
 # <a name="compiler-error-c2923"></a>Erreur du compilateur C2923
 
