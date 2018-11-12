@@ -1,29 +1,19 @@
 ---
-title: Copier les sources, propriétés de projet (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: Copier les sources, propriétés de projet (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: d13bc7c129696e2b7251ccb23b68338956864321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd0a26db58265724f0a0e46c31365c97c00ff568
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325589"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477244"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Copier les sources, propriétés de projet (Linux C++)
 
 Les propriétés définies dans cette page de propriétés s’appliquent à tous les fichiers contenus dans le projet, à l’exception de ceux pour lesquels des propriétés de niveau fichier sont définies.
 
-Propriété | Description
+Property | Description
 --- | ---
 Sources à copier | Spécifie les sources devant être copiées sur le système distant. Tout changement apporté à cette liste peut entraîner un décalage ou des répercussions dans la structure des répertoires où sont copiés les fichiers sur le système distant.
 Copier les sources | Spécifie si les sources doivent être copiées sur le système distant.

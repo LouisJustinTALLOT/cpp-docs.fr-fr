@@ -1,27 +1,17 @@
 ---
-title: Opérateur d’expression conditionnelle | Microsoft Docs
-ms.custom: ''
+title: Opérateur d'expression conditionnelle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - conditional operators
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2037d64aba025b9acf8279a3da9073611d11ce8e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b93e99aef4b7d8a1b20373fda1e4d9672b416b7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107908"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506143"
 ---
 # <a name="conditional-expression-operator"></a>Opérateur d'expression conditionnelle
 

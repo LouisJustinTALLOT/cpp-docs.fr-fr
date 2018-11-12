@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: 18edc1ae13ef66f9646edbcf1d0fdfdbe0586cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cda4efcdb26499f910ad875b2bf7b7504a825cf6
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611209"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265098"
 ---
 # <a name="testing-the-read-only-provider"></a>Test du fournisseur accessible en lecture seule
 
@@ -24,11 +24,11 @@ L’exemple dans cette rubrique crée une application d’Assistant Application 
 
 1. Dans le menu **Fichier** , cliquez sur **Nouveau**, puis sur **Projet**.
 
-1. Dans le **Types de projets** volet, sélectionnez le **des projets Visual C++** dossier. Dans le **modèles** volet, sélectionnez **Application MFC**.
+1. Dans le **Types de projets** volet, sélectionnez le **installé** > **Visual C++** > **MFC/ATL** dossier. Dans le **modèles** volet, sélectionnez **Application MFC**.
 
 1. Nom de projet, entrez *TestProv*, puis cliquez sur **OK**.
 
-   L’Assistant Application MFC s’affiche.
+   Le **Application MFC** Assistant s’affiche.
 
 1. Sur le **Type d’Application** page, sélectionnez **basée sur un dialogue**.
 
@@ -37,13 +37,14 @@ L’exemple dans cette rubrique crée une application d’Assistant Application 
 > [!NOTE]
 > L’application ne nécessite pas de prise en charge Automation si vous ajoutez `CoInitialize` dans `CTestProvApp::InitInstance`.
 
-Vous pouvez afficher et modifier le **TestProv** boîte de dialogue (IDD_TESTPROV_DIALOG) en le sélectionnant dans **affichage des ressources**. Placez les deux zones de liste, un pour chaque chaîne dans l’ensemble de lignes dans la boîte de dialogue. Désactiver la propriété de tri pour les deux zones de liste en appuyant sur **Alt**+**entrée** lorsqu’une zone de liste est sélectionnée, en cliquant sur le **Styles** onglet et en désactivant le  **Tri** case à cocher. En outre, placez un **exécuter** bouton dans la boîte de dialogue pour extraire le fichier. Le terminé **TestProv** boîte de dialogue doit avoir deux zones de liste intitulées « String 1 » et « String 2 », respectivement ; il a également **OK**, **Annuler**, et **exécuter**  boutons.
+Vous pouvez afficher et modifier le **TestProv** boîte de dialogue (IDD_TESTPROV_DIALOG) en le sélectionnant dans **affichage des ressources**. Placez les deux zones de liste, un pour chaque chaîne dans l’ensemble de lignes dans la boîte de dialogue. Désactiver la propriété de tri pour les deux zones de liste en appuyant sur **Alt**+**entrée** lorsqu’une zone de liste est sélectionnée et en définissant le **tri** propriété **False**. En outre, placez un **exécuter** bouton dans la boîte de dialogue pour extraire le fichier. Le terminé **TestProv** boîte de dialogue doit avoir deux zones de liste intitulées « String 1 » et « String 2 », respectivement ; il a également **OK**, **Annuler**, et **exécuter**  boutons.
 
 Ouvrez le fichier d’en-tête pour la classe de boîte de dialogue (en l’occurrence TestProvDlg.h). Ajoutez le code suivant au fichier d’en-tête (en dehors de toutes les déclarations de classe) :
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
 // TestProvDlg.h
+#include <atldbcli.h>  
 
 class CProvider
 {
@@ -68,11 +69,11 @@ Ajouter une fonction gestionnaire pour le **exécuter** bouton en appuyant sur *
 ///////////////////////////////////////////////////////////////////////
 // TestProvDlg.cpp
 
-void CtestProvDlg::OnRun()
+void CTestProvDlg::OnRun()
 {
    CCommand<CAccessor<CProvider>> table;
    CDataSource source;
-   CSession   session;
+   CSession session;
 
    if (source.Open("Custom.Custom.1", NULL) != S_OK)
       return;
@@ -91,36 +92,17 @@ void CtestProvDlg::OnRun()
 }
 ```
 
-Le `CCommand`, `CDataSource`, et `CSession` classes appartiennent tous à des modèles du consommateur OLE DB. Chaque classe simule un objet COM dans le fournisseur. Le `CCommand` objet prend la `CProvider` classe, déclarée dans le fichier d’en-tête, comme un paramètre de modèle. Le `CProvider` paramètre représente les liaisons que vous utilisez pour accéder aux données à partir du fournisseur. Voici le `Open` code pour la source de données, la session et la commande :
-
-```cpp
-if (source.Open("Custom.Custom.1", NULL) != S_OK)
-   return;
-
-if (session.Open(source) != S_OK)
-   return;
-
-if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
-   return;
-```
+Le `CCommand`, `CDataSource`, et `CSession` classes appartiennent tous à des modèles du consommateur OLE DB. Chaque classe simule un objet COM dans le fournisseur. Le `CCommand` objet prend la `CProvider` classe, déclarée dans le fichier d’en-tête, comme un paramètre de modèle. Le `CProvider` paramètre représente les liaisons que vous utilisez pour accéder aux données à partir du fournisseur. 
 
 Les lignes pour ouvrir chacune des classes créent chaque objet COM dans le fournisseur. Pour localiser le fournisseur, utilisez le `ProgID` du fournisseur. Vous pouvez obtenir le `ProgID` à partir du Registre système ou en consultant le fichier Custom.rgs (ouvrez le répertoire du fournisseur et recherchez le `ProgID` clé).
 
-Le fichier MyData.txt est inclus avec le `MyProv` exemple. Pour créer un fichier de votre choix, utilisez un éditeur et tapez un nombre pair de chaînes, en appuyant sur entrée entre chaque chaîne. Modifiez le nom de chemin d’accès si vous déplacez le fichier.
+Le fichier MyData.txt est inclus avec le `MyProv` exemple. Pour créer un fichier de votre choix, utilisez un éditeur et tapez un nombre pair de chaînes, en appuyant sur **entrée** entre chaque chaîne. Modifiez le nom de chemin d’accès si vous déplacez le fichier.
 
 Passez la chaîne « c:\\\samples\\\myprov\\\MyData.txt » dans le `table.Open` ligne. Si vous parcourez le `Open` appel, vous voyez que cette chaîne est passée à la `SetCommandText` méthode dans le fournisseur. Notez que le `ICommandText::Execute` méthode utilisé cette chaîne.
 
-Pour extraire les données, appelez `MoveNext` sur la table. `MoveNext` appelle le `IRowset::GetNextRows`, `GetRowCount`, et `GetData` fonctions. Lorsqu’il n’y a plus aucune ligne (autrement dit, la position actuelle dans l’ensemble de lignes est supérieure à `GetRowCount`), la boucle se termine :
+Pour extraire les données, appelez `MoveNext` sur la table. `MoveNext` appelle le `IRowset::GetNextRows`, `GetRowCount`, et `GetData` fonctions. Lorsqu’il n’y a plus aucune ligne (autrement dit, la position actuelle dans l’ensemble de lignes est supérieure à `GetRowCount`), la boucle se termine.
 
-```cpp
-while (table.MoveNext() == S_OK)
-{
-   m_ctlString1.AddString(table.szField1);
-   m_ctlString2.AddString(table.szField2);
-}
-```
-
-Notez que lorsqu’il n’y a plus aucune ligne, les fournisseurs retournent DB_S_ENDOFROWSET. La valeur DB_S_ENDOFROWSET n’est pas une erreur. Vous devez toujours vérifier par rapport à S_OK pour annuler une boucle d’extraction de données et de ne pas utiliser la macro SUCCEEDED.
+Lorsqu’il n’y a plus aucune ligne, les fournisseurs retournent DB_S_ENDOFROWSET. La valeur DB_S_ENDOFROWSET n’est pas une erreur. Vous devez toujours vérifier par rapport à S_OK pour annuler une boucle d’extraction de données et de ne pas utiliser la macro SUCCEEDED.
 
 Vous devez maintenant être en mesure de générer et tester le programme.
 

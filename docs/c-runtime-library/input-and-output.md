@@ -1,14 +1,8 @@
 ---
-title: Entrée et sortie | Microsoft Docs
-ms.custom: ''
+title: Entrées et sorties
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.io
-dev_langs:
-- C++
 helpviewer_keywords:
 - input routines
 - I/O [CRT]
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - I/O [CRT], routines
 - output routines
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e62319d040275d96314ee824f9fea020a4004974
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26d527f7afad544b051a2ad765af09c430782083
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389389"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590383"
 ---
 # <a name="input-and-output"></a>Entrées et sorties
 

@@ -1,27 +1,17 @@
 ---
-title: Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio
 ms.date: 02/28/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - versions [C++]
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 79814d96bac185e73cc1c42a98be6d7b35e9a75d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42578230"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463750"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio
 

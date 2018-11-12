@@ -1,23 +1,13 @@
 ---
-title: Portage vers la plateforme universelle Windows (C++) | Microsoft Docs
-ms.custom: ''
+title: Portage vers la plateforme Windows universelle (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16fe66e6ba8ea3f6e4f88f434b58c61d46ce1edb
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 83af480dc2a2fdd5ccd15de8a9f62aacebcf4558
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080648"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640412"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portage vers la plateforme Windows universelle (C++)
 
