@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 7707f1239bb8612b1c454997a98d134165f09b75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d10af9bc32acd730db1fe9da3775ac2aa84e5fff
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544285"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519210"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt;, fonctions
 
@@ -154,7 +154,6 @@ int main()
         cout << p << endl;
     }
 }
-
 ```
 
 ## <a name="stod"></a>  stod

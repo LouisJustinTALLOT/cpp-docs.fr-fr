@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: 89d2964fbc3e0d7858ec662fb55511c090036ad8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d99ee230780d1bfdcd104c1fcf3b3bd099fd6e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530922"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326917"
 ---
 # <a name="outbytestring"></a>__outbytestring
 
@@ -24,10 +24,10 @@ Génère le `rep outsb` instruction, qui envoie le premier `Count` octets de don
 ## <a name="syntax"></a>Syntaxe
 
 ```
-void __outbytestring( 
-   unsigned short Port, 
-   unsigned char* Buffer, 
-   unsigned long Count 
+void __outbytestring(
+   unsigned short Port,
+   unsigned char* Buffer,
+   unsigned long Count
 );
 ```
 

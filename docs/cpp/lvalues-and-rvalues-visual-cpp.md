@@ -5,12 +5,12 @@ helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 301e6140699c921ee1b1229b9183c8555992f716
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546352"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330606"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues et Rvalues (Visual C++)
 
@@ -20,7 +20,7 @@ La norme C ++ 17 définit les catégories de valeur d’expression comme suit :
 
 - Un *glvalue ayant* est une expression dont l’évaluation détermine l’identité d’un objet, un champ de bits ou une fonction.
 - Un *prvalue* est une expression dont l’évaluation Initialise un objet ou un champ de bits, ou calcule la valeur de l’opérande d’un opérateur, comme spécifié par le contexte dans lequel elle apparaît.
-- Un *xvalue* est un glvalue ayant qui désigne un objet ou un champ de bits dont les ressources peuvent être réutilisés (généralement, car il s’agit de la fin de sa durée de vie). [Exemple : certains types d’expressions impliquant des références rvalue (8.3.2) génèrent des valeurs x, par exemple un appel à une fonction dont le type de retour est une référence rvalue ou un cast en un type référence rvalue. ]
+- Un *xvalue* est un glvalue ayant qui désigne un objet ou un champ de bits dont les ressources peuvent être réutilisés (généralement, car il s’agit de la fin de sa durée de vie). Exemple : Certains types d’expressions impliquant des références rvalue (8.3.2) génèrent des valeurs x, par exemple un appel à une fonction dont le type de retour est une référence rvalue ou un cast en un type référence rvalue.
 - Un *lvalue* est un glvalue ayant qui n’est pas une valeur de x.
 - Un *rvalue* est une prvalue ou une valeur de x.
 

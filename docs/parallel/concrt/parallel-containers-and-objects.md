@@ -6,12 +6,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 0d3d883fa2199096d4dc880e2d8e78cff6d9830c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542556"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333284"
 ---
 # <a name="parallel-containers-and-objects"></a>Conteneurs et objets parallèles
 
@@ -95,15 +95,19 @@ Le tableau suivant présente le commun `concurrent_vector` méthodes et opérate
 
 ||||
 |-|-|-|
-
-|[à](reference/concurrent-vector-class.md#at)|[fin](reference/concurrent-vector-class.md#end)|[opérateur&#91;&#93;](reference/concurrent-vector-class.md#operator_at)||[ commencer](reference/concurrent-vector-class.md#begin)|[front](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)||[ retour](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)||[ capacité](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)||[ vide](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[taille](reference/concurrent-vector-class.md#size)|
+|[at](reference/concurrent-vector-class.md#at)|[end](reference/concurrent-vector-class.md#end)|[operator&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|
+|[begin](reference/concurrent-vector-class.md#begin)|[front](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
+|[back](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|
+|[capacity](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|
+|[empty](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[size](reference/concurrent-vector-class.md#size)|
 
 Opérations fournies par le runtime pour la compatibilité avec la bibliothèque C++ Standard, par exemple, `reserve`, ne sont pas compatibles avec la concurrence. Le tableau suivant montre les méthodes courantes et les opérateurs qui ne sont pas compatibles avec la concurrence.
 
 |||
 |-|-|
-
-|[affecter](reference/concurrent-vector-class.md#assign)|[réserver](reference/concurrent-vector-class.md#reserve)||[ Désactivez](reference/concurrent-vector-class.md#clear)|[redimensionner](reference/concurrent-vector-class.md#resize)||[ opérateur =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
+|[assign](reference/concurrent-vector-class.md#assign)|[reserve](reference/concurrent-vector-class.md#reserve)|
+|[clear](reference/concurrent-vector-class.md#clear)|[resize](reference/concurrent-vector-class.md#resize)|
+|[operator=](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
 
 Les opérations qui modifient la valeur des éléments existants ne sont pas compatibles avec la concurrence. Utiliser un objet de synchronisation comme un [reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) objet à synchroniser simultanées en lecture et les opérations d’écriture pour le même élément de données. Pour plus d’informations sur les objets de synchronisation, consultez [les Structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md).
 

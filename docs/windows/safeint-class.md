@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 70343d4dbaf4b57c83d28e225419164906e2b1ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ff5aaf2eee84af1b1dddba21560e7b254f00069
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445147"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327211"
 ---
 # <a name="safeint-class"></a>SafeInt, classe
 
@@ -33,134 +33,134 @@ class SafeInt;
 
 ### <a name="parameters"></a>Paramètres
 
-Modèle | Description
--------- | -------------------------------------------------------------------
-T        | Le type d’entier ou un paramètre booléen qui `SafeInt` remplace.
-E        | Type de données énuméré qui définit la stratégie de gestion d’erreur.
-U        | Le type d’entier ou un paramètre booléen pour l’opérande secondaire.
+| Modèle  |  Description |
+|--------|------------|
+| T         |  Le type d’entier ou un paramètre booléen qui `SafeInt` remplace. |
+| E         |  Type de données énuméré qui définit la stratégie de gestion d’erreur. |
+| U         |  Le type d’entier ou un paramètre booléen pour l’opérande secondaire. |
 
-Paramètre | Description
---------- | ---------------------------------------------------------------------------------------------------------------------
-*terme de droite*     | [in] Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes.
-*i*       | [in] Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes.
-*Bits*    | [in] Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes.
+| Paramètre  |  Description |
+|---------|-----------------|
+| *terme de droite*      |  [in] Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes. |
+| *i*        |  [in] Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes. |
+| *Bits*     |  [in] Un paramètre d’entrée qui représente la valeur sur le côté droit de l’opérateur dans plusieurs fonctions autonomes. |
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-Nom                         | Description
----------------------------- | --------------------
-[SafeInt::SafeInt](#safeint) | Constructeur par défaut.
+| Nom                          |  Description |
+|---------------------------|--------------------|
+| [SafeInt::SafeInt](#safeint)  |  Constructeur par défaut. |
 
 ### <a name="assignment-operators"></a>Opérateurs d'assignation
 
-Name | Syntaxe
----- | ---------------------------------------------------------------------------------------
-=    | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const U& rhs)`
-=    | `SafeInt<T,E>& operator= (const T& rhs) throw()`
-=    | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const SafeInt<U, E>& rhs)`
-=    | `SafeInt<T,E>& operator= (const SafeInt<T,E>& rhs) throw()`
+| Name  |  Syntaxe |
+|----|---------|
+| =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
+| =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
+| =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const SafeInt<U, E>& rhs)` |
+| =     |  `SafeInt<T,E>& operator= (const SafeInt<T,E>& rhs) throw()` |
 
 ### <a name="casting-operators"></a>Opérateurs de casting
 
-Name             | Syntaxe
----------------- | -----------------------------------
-bool             | `operator bool() throw()`
-char             | `operator char() const`
-signed char      | `operator signed char() const`
-unsigned char    | `operator unsigned char() const`
-__int16          | `operator __int16() const`
-unsigned __int16 | `operator unsigned __int16() const`
-__int32          | `operator __int32() const`
-unsigned __int32 | `operator unsigned __int32() const`
-long             | `operator long() const`
-unsigned long    | `operator unsigned long() const`
-__int64          | `operator __int64() const`
-unsigned __int64 | `operator unsigned __int64() const`
-wchar_t          | `operator wchar_t() const`
+| Name              |  Syntaxe |
+|------|---------------------------------|
+| bool              |  `operator bool() throw()` |
+| char              |  `operator char() const` |
+| signed char       |  `operator signed char() const` |
+| unsigned char     |  `operator unsigned char() const` |
+| __int16           |  `operator __int16() const` |
+| unsigned __int16  |  `operator unsigned __int16() const` |
+| __int32           |  `operator __int32() const` |
+| unsigned __int32  |  `operator unsigned __int32() const` |
+| long              |  `operator long() const` |
+| unsigned long     |  `operator unsigned long() const` |
+| __int64           |  `operator __int64() const` |
+| unsigned __int64  |  `operator unsigned __int64() const` |
+| wchar_t           |  `operator wchar_t() const` |
 
 ### <a name="comparison-operators"></a>Opérateurs de comparaison
 
-Name | Syntaxe
----- | --------------------------------------------------------------------------
-<    | `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()`
-<    | `bool operator< (SafeInt<T,E> rhs) const throw()`
->=   | `template<typename U>`<br /><br /> `bool operator>= (U rhs) const throw()`
->=   | `Bool operator>= (SafeInt<T,E> rhs) const throw()`
->    | `template<typename U>`<br /><br /> `bool operator> (U rhs) const throw()`
->    | `Bool operator> (SafeInt<T,E> rhs) const throw()`
-<=   | `template<typename U>`<br /><br /> `bool operator<= (U rhs) const throw()`
-<=   | `bool operator<= (SafeInt<T,E> rhs) const throw()`
-==   | `template<typename U>`<br /><br /> `bool operator== (U rhs) const throw()`
-==   | `bool operator== (bool rhs) const throw()`
-==   | `bool operator== (SafeInt<T,E> rhs) const throw()`
-!=   | `template<typename U>`<br /><br /> `bool operator!= (U rhs) const throw()`
-!=   | `bool operator!= (bool b) const throw()`
-!=   | `bool operator!= (SafeInt<T,E> rhs) const throw()`
+| Name  |  Syntaxe |
+|----|----------------|
+| \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
+| \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
+| \>=    |  `template<typename U>`<br /><br /> `bool operator>= (U rhs) const throw()` |
+| \>=    |  `Bool operator>= (SafeInt<T,E> rhs) const throw()` |
+| \>     |  `template<typename U>`<br /><br /> `bool operator> (U rhs) const throw()` |
+| \>     |  `Bool operator> (SafeInt<T,E> rhs) const throw()` |
+| \<=    |  `template<typename U>`<br /><br /> `bool operator<= (U rhs) const throw()` |
+| \<=    |  `bool operator<= (SafeInt<T,E> rhs) const throw()` |
+| ==    |  `template<typename U>`<br /><br /> `bool operator== (U rhs) const throw()` |
+| ==    |  `bool operator== (bool rhs) const throw()` |
+| ==    |  `bool operator== (SafeInt<T,E> rhs) const throw()` |
+| !=    |  `template<typename U>`<br /><br /> `bool operator!= (U rhs) const throw()` |
+| !=    |  `bool operator!= (bool b) const throw()` |
+| !=    |  `bool operator!= (SafeInt<T,E> rhs) const throw()` |
 
 ### <a name="arithmetic-operators"></a>Opérateurs arithmétiques
 
-Name | Syntaxe
----- | ---------------------------------------------------------------------------------
-+    | `const SafeInt<T,E>& operator+ () const throw()`
--    | `SafeInt<T,E> operator- () const`
-++   | `SafeInt<T,E>& operator++ ()`
---   | `SafeInt<T,E>& operator-- ()`
-%    | `template<typename U>`<br /><br /> `SafeInt<T,E> operator% (U rhs) const`
-%    | `SafeInt<T,E> operator% (SafeInt<T,E> rhs) const`
-%=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (U rhs)`
-%=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (SafeInt<U, E> rhs)`
-*    | `template<typename U>`<br /><br /> `SafeInt<T,E> operator* (U rhs) const`
-*    | `SafeInt<T,E> operator* (SafeInt<T,E> rhs) const`
-*=   | `SafeInt<T,E>& operator*= (SafeInt<T,E> rhs)`
-*=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (U rhs)`
-*=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (SafeInt<U, E> rhs)`
-/    | `template<typename U>`<br /><br /> `SafeInt<T,E> operator/ (U rhs) const`
-/    | `SafeInt<T,E> operator/ (SafeInt<T,E> rhs ) const`
-/=   | `SafeInt<T,E>& operator/= (SafeInt<T,E> i)`
-/=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (U i)`
-/=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (SafeInt<U, E> i)`
-+    | `SafeInt<T,E> operator+ (SafeInt<T,E> rhs) const`
-+    | `template<typename U>`<br /><br /> `SafeInt<T,E> operator+ (U rhs) const`
-+=   | `SafeInt<T,E>& operator+= (SafeInt<T,E> rhs)`
-+=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (U rhs)`
-+=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (SafeInt<U, E> rhs)`
--    | `template<typename U>`<br /><br /> `SafeInt<T,E> operator- (U rhs) const`
--    | `SafeInt<T,E> operator- (SafeInt<T,E> rhs) const`
--=   | `SafeInt<T,E>& operator-= (SafeInt<T,E> rhs)`
--=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (U rhs)`
--=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (SafeInt<U, E> rhs)`
+| Name  |  Syntaxe |
+|----|--------------|
+| +     |  `const SafeInt<T,E>& operator+ () const throw()` |
+| -     |  `SafeInt<T,E> operator- () const` |
+| ++    |  `SafeInt<T,E>& operator++ ()` |
+| --    |  `SafeInt<T,E>& operator-- ()` |
+| %     |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator% (U rhs) const` |
+| %     |  `SafeInt<T,E> operator% (SafeInt<T,E> rhs) const` |
+| %=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (U rhs)` |
+| %=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (SafeInt<U, E> rhs)` |
+| \*     |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator* (U rhs) const` |
+| \*     |  `SafeInt<T,E> operator* (SafeInt<T,E> rhs) const` |
+| \*=    |  `SafeInt<T,E>& operator*= (SafeInt<T,E> rhs)` |
+| \*=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (U rhs)` |
+| \*=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (SafeInt<U, E> rhs)` |
+| /     |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator/ (U rhs) const` |
+| /     |  `SafeInt<T,E> operator/ (SafeInt<T,E> rhs ) const` |
+| /=    |  `SafeInt<T,E>& operator/= (SafeInt<T,E> i)` |
+| /=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (U i)` |
+| /=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (SafeInt<U, E> i)` |
+| +     |  `SafeInt<T,E> operator+ (SafeInt<T,E> rhs) const` |
+| +     |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator+ (U rhs) const` |
+| +=    |  `SafeInt<T,E>& operator+= (SafeInt<T,E> rhs)` |
+| +=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (U rhs)` |
+| +=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (SafeInt<U, E> rhs)` |
+| -     |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator- (U rhs) const` |
+| -     |  `SafeInt<T,E> operator- (SafeInt<T,E> rhs) const` |
+| -=    |  `SafeInt<T,E>& operator-= (SafeInt<T,E> rhs)` |
+| -=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (U rhs)` |
+| -=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (SafeInt<U, E> rhs)` |
 
 ### <a name="logical-operators"></a>Opérateurs logiques
 
-Name    | Syntaxe
-------- | -----------------------------------------------------------------------------------------------
-!       | `bool operator !() const throw()`
-~       | `SafeInt<T,E> operator~ () const throw()`
-<<      | `template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (U bits) const throw()`
-<<      | `template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (SafeInt<U, E> bits) const throw()`
-<<=     | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (U bits) throw()`
-<<=     | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (SafeInt<U, E> bits) throw()`
->>      | `template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (U bits) const throw()`
->>      | `template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (SafeInt<U, E> bits) const throw()`
->>=     | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (U bits) throw()`
->>=     | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (SafeInt<U, E> bits) throw()`
-&       | `SafeInt<T,E> operator& (SafeInt<T,E> rhs) const throw()`
-&       | `template<typename U>`<br /><br /> `SafeInt<T,E> operator& (U rhs) const throw()`
-&=      | `SafeInt<T,E>& operator&= (SafeInt<T,E> rhs) throw()`
-&=      | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (U rhs) throw()`
-&=      | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (SafeInt<U, E> rhs) throw()`
-^       | `SafeInt<T,E> operator^ (SafeInt<T,E> rhs) const throw()`
-^       | `template<typename U>`<br /><br /> `SafeInt<T,E> operator^ (U rhs) const throw()`
-^=      | `SafeInt<T,E>& operator^= (SafeInt<T,E> rhs) throw()`
-^=      | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (U rhs) throw()`
-^=      | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (SafeInt<U, E> rhs) throw()`
-&#124;  | `SafeInt<T,E> operator&#124; (SafeInt<T,E> rhs) const throw()`
-&#124;  | `template<typename U>`<br /><br /> `SafeInt<T,E> operator&#124; (U rhs) const throw()`
-&#124;= | `SafeInt<T,E>& operator&#124;= (SafeInt<T,E> rhs) throw()`
-&#124;= | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()`
-&#124;= | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()`
+| Name     |  Syntaxe |
+|------|--------------|
+| !        |  `bool operator !() const throw()` |
+| ~        |  `SafeInt<T,E> operator~ () const throw()` |
+| \<\<       |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (U bits) const throw()` |
+| \<\<       |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (SafeInt<U, E> bits) const throw()` |
+| \<\<=      |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (U bits) throw()` |
+| \<\<=      |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (SafeInt<U, E> bits) throw()` |
+| \>\>       |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (U bits) const throw()` |
+| \>\>       |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (SafeInt<U, E> bits) const throw()` |
+| \>\>=      |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (U bits) throw()` |
+| \>\>=      |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (SafeInt<U, E> bits) throw()` |
+| &        |  `SafeInt<T,E> operator& (SafeInt<T,E> rhs) const throw()` |
+| &        |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator& (U rhs) const throw()` |
+| &=       |  `SafeInt<T,E>& operator&= (SafeInt<T,E> rhs) throw()` |
+| &=       |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (U rhs) throw()` |
+| &=       |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (SafeInt<U, E> rhs) throw()` |
+| ^        |  `SafeInt<T,E> operator^ (SafeInt<T,E> rhs) const throw()` |
+| ^        |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator^ (U rhs) const throw()` |
+| ^=       |  `SafeInt<T,E>& operator^= (SafeInt<T,E> rhs) throw()` |
+| ^=       |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (U rhs) throw()` |
+| ^=       |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (SafeInt<U, E> rhs) throw()` |
+| &#124;   |  `SafeInt<T,E> operator&#124; (SafeInt<T,E> rhs) const throw()` |
+| &#124;   |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator&#124; (U rhs) const throw()` |
+| &#124;=  |  `SafeInt<T,E>& operator&#124;= (SafeInt<T,E> rhs) throw()` |
+| &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
+| &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
 
 ## <a name="remarks"></a>Notes
 

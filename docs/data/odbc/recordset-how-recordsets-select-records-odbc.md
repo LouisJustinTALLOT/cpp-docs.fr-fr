@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618450"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329466"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset : sélection d'enregistrements par les recordsets (ODBC)
 
@@ -61,9 +61,8 @@ Lorsque vous appelez un objet recordset [Open](../../mfc/reference/crecordset-cl
 
 - Le [tri](../../data/odbc/recordset-sorting-records-odbc.md) ordre à respecter pour le jeu d’enregistrements, si un, contenue dans le [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) membre de données. L’infrastructure utilise la chaîne pour construire une instance SQL **ORDER BY** clause.
 
-
-    > [!TIP]
-    >  Pour utiliser le code SQL **GROUP BY** clause (et éventuellement le **HAVING** clause), ajoutez les clauses à la fin de la chaîne de filtre.
+   > [!TIP]
+   > Pour utiliser le code SQL **GROUP BY** clause (et éventuellement le **HAVING** clause), ajoutez les clauses à la fin de la chaîne de filtre.
 
 - Les valeurs de n’importe quel [les membres de données de paramètre](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) que vous spécifiez pour la classe. Vous définissez des valeurs de paramètre avant d’appeler `Open` ou `Requery`. L’infrastructure lie les valeurs de paramètre pour « ? » des espaces réservés dans la chaîne SQL. Au moment de la compilation, vous spécifiez la chaîne avec des espaces réservés. Au moment de l’exécution, l’infrastructure complète dans les détails selon les valeurs de paramètre que vous passez.
 

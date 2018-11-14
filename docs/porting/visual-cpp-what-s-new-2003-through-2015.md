@@ -2,12 +2,12 @@
 title: Nouveautés de Visual C++ entre 2003 et 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499617"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51520175"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -260,7 +260,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
    Par exemple, votre code définit à la fois un opérateur **placement new** et un opérateur **placement delete** :
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -306,15 +306,15 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
    sont à présent plus conformes à la norme. Les versions précédentes du compilateur généraient un constructeur explicite et un destructeur pour les unions anonymes. Ceux-ci sont supprimés dans Visual Studio 2015.
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    Le code précédent génère l’erreur suivante dans Visual Studio 2015 :
@@ -328,14 +328,14 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -552,7 +552,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     }
    ```
 
-  - ou -
+  \- ou -
 
    ```cpp
     class base;  // as above
@@ -586,7 +586,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   De plus, bien que le compilateur ne donne pas de diagnostic spécifique, l’opérateur new inline est considéré comme incorrect.
 
 - **Appel de 'operator *type*()' (conversion définie par l’utilisateur) sur des types autres que des types classe** Les versions précédentes du compilateur autorisaient l’appel de 'operator *type*()' sur des types autres que des types classe et ignoraient cet appel en silence. Cet ancien comportement créait un risque de génération de code incorrect en mode silencieux qui provoquait un comportement imprévisible au moment de l’exécution. Le compilateur n’accepte plus de code écrit de cette façon. Au lieu de cela, il émet l’erreur du compilateur C2228.
 
@@ -1673,10 +1673,10 @@ Cette prise en charge améliorée des normes ISO C/C++ peut nécessiter des modi
 - Prise en charge des énumérations délimitées. La clé Enum de la classe enum C++ est désormais prise en charge. Le code suivant montre comment cette clé Enum diffère du comportement enum précédent.
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Prise en charge du développement d’applications Windows Runtime

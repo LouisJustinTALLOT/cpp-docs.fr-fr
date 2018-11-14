@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 904e4df6b6c16b846ab4417d24a1d9836380d75b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544545"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331475"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -84,7 +84,7 @@ Pour plus d’informations sur les types de rapports utilisés dans les typedefs
 
 ### <a name="literals"></a>Littéraux
 
-**(C++11)** L’en-tête \<chrono> définit les [littéraux définis par l’utilisateur](../cpp/user-defined-literals-cpp.md) suivants que vous pouvez utiliser par souci pratique, pour la cohérence des types et pour faciliter la maintenance de votre code. Ces littéraux sont définis dans l'espace de noms inline `literals::chrono_literals` et sont dans la portée quand std::chrono est dans la portée.
+**(C ++ 11)**  Le \<chrono > en-tête définit ce qui suit [littéraux définis par l’utilisateur](../cpp/user-defined-literals-cpp.md) que vous pouvez utiliser pour plus de commodité, sécurité de type et la facilité de maintenance de votre code. Ces littéraux sont définis dans l'espace de noms inline `literals::chrono_literals` et sont dans la portée quand std::chrono est dans la portée.
 
 |Literal|Description|
 |-------------|-----------------|

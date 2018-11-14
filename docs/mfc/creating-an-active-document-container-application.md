@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: ecce997c451b39600606550dd1198cddfd764334
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cdd3de8f4efcc23f89b81cb61302b5950938800
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463334"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520411"
 ---
 # <a name="creating-an-active-document-container-application"></a>Création d'une application conteneur de documents actifs
 
@@ -37,15 +37,15 @@ La façon la plus simple et plus recommandée pour créer une application de con
 
 1. Cliquez sur **Terminer**.
 
-9. Lorsque l’Assistant Application MFC a terminé de générer l’application, ouvrez les fichiers suivants à l’aide de l’Explorateur de solutions :
+1. Lorsque l’Assistant Application MFC a terminé de générer l’application, ouvrez les fichiers suivants à l’aide de l’Explorateur de solutions :
 
    - *MyProjview.cpp*
 
-10. Dans *MyProjview.cpp*, apportez les modifications suivantes :
+1. Dans *MyProjview.cpp*, apportez les modifications suivantes :
 
    - Dans `CMyProjView::OnPreparePrinting`, remplacez le contenu de la fonction par le code suivant :
 
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
    `OnPreparePrinting` prend en charge l’impression. Ce code remplace `DoPreparePrinting`, qui repose sur la préparation d’impression par défaut.
 
@@ -59,7 +59,7 @@ La façon la plus simple et plus recommandée pour créer une application de con
 
    Les fonctions membres statiques `COleDocObjectItem::OnPrint` et `COleDocObjectItem::OnPreparePrinting`, tel qu’implémenté dans le code précédent, gèrent ce schéma d’impression amélioré.
 
-11. Ajouter votre propre implémentation et générez l’application.
+1. Ajouter votre propre implémentation et générez l’application.
 
 ## <a name="see-also"></a>Voir aussi
 

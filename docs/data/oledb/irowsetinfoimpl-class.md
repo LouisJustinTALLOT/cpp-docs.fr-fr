@@ -26,23 +26,23 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 39c4f441e7b18fd93510620f1052677cdd0e881e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61544658f2aef4b59b2b70baa310dcc09e2740fe
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580282"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556203"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
 
-Fournit une implémentation pour le [IRowsetInfo](/previous-versions/windows/desktop/ms724541) interface.
+Fournit une implémentation pour le [IRowsetInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE IRowsetInfoImpl :
-   public IRowsetInfo,  
+   public IRowsetInfo, 
    public CUtlProps<PropClass>
 ```
 
@@ -54,7 +54,7 @@ Votre classe, dérivée de `IRowsetInfoImpl`.
 *PropClass*<br/>
 Une classe de propriété définis par l’utilisateur par défaut est *T*.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** altdb.h
 
@@ -87,7 +87,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetInfo::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719611(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
@@ -103,7 +103,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145) dans le *de référence du programmeur OLE DB*. Le *iOrdinal* paramètre doit être une colonne de signet.
+Consultez [IRowsetInfo::GetReferencedRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721145(v=vs.85)) dans le *de référence du programmeur OLE DB*. Le *iOrdinal* paramètre doit être une colonne de signet.
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
@@ -118,7 +118,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetInfo::GetSpecification](https://docs.microsoft.com/previous-versions/windows/desktop/ms716746(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ### <a name="remarks"></a>Notes
 

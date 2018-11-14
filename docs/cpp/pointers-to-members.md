@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: ac8a1b43b3bf8bde8f910e72b601bf7d94e0d19d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480286"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326964"
 ---
 # <a name="pointers-to-members"></a>Pointeurs vers membres
 
@@ -25,28 +25,40 @@ Les déclarations de pointeurs vers des membres sont des cas spéciaux de décla
 ```
 
 1. Spécificateur de déclaration :
-  - Spécificateur de classe de stockage facultatif.
 
-  - Facultatif **const** et/ou **volatile** spécificateurs.
+   - Spécificateur de classe de stockage facultatif.
 
-  - Spécificateur de type : nom d'un type.  Il s'agit du type du membre vers lequel pointer, et non de la classe.
+   - Facultatif **const** et/ou **volatile** spécificateurs.
+
+   - Spécificateur de type : nom d'un type.  Il s'agit du type du membre vers lequel pointer, et non de la classe.
 
 1. Déclarateur :
 
-  - Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
-1. Nom qualifié de la classe contenant les membres vers lesquels pointer.
-  - Opérateur ::.
-  - Le <strong>\*</strong> opérateur.
-  - Facultatif **const** et/ou **volatile** spécificateurs.
-  - Identificateur nommant le pointeur vers le membre.
+   - Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-  - Initialiseur facultatif :
-  - Le **=** opérateur.
-  - Le **&** opérateur.
-  - Nom qualifié de la classe.
-  - opérateur `::`,
-  - Nom d'un membre non statique de la classe du type approprié.
-  - Comme toujours, les déclarateurs multiples (et tout initialiseur associé) sont autorisés dans une même déclaration.
+   - Nom qualifié de la classe contenant les membres vers lesquels pointer.
+
+   - Le __::__ opérateur.
+
+   - Le __\*__ opérateur.
+
+   - Facultatif **const** et/ou **volatile** spécificateurs.
+
+   - Identificateur nommant le pointeur vers le membre.
+
+1. Initialiseur facultatif :
+
+   - Le **=** opérateur.
+
+   - Le **&** opérateur.
+
+   - Nom qualifié de la classe.
+
+   - Le __::__ opérateur.
+
+   - Nom d'un membre non statique de la classe du type approprié.
+
+Comme toujours, les déclarateurs multiples (et tout initialiseur associé) sont autorisés dans une même déclaration.
 
 Un pointeur vers un membre d'une classe diffère d'un pointeur normal, car il comporte des informations de type pour le type du membre et pour la classe à laquelle le membre appartient. Un pointeur normal identifie (a l'adresse de) un seul objet en mémoire. Un pointeur vers un membre d'une classe identifie ce membre dans toute instance de la classe. L'exemple suivant déclare une classe, `Window`, et certains pointeurs vers des données membres.
 

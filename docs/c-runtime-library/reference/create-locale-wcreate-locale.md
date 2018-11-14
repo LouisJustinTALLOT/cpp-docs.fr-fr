@@ -28,12 +28,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 0ede14d56dc093b83078bf28eb01f5b5c55d8949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 109a1d93692d0c65269b40fd0559381907ce1cab
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545923"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326561"
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 
@@ -70,16 +70,16 @@ Le **_create_locale** fonction vous permet de créer un objet qui représente ce
 
 **_wcreate_locale** est une version à caractères larges de **_create_locale**; le *paramètres régionaux* l’argument de **_wcreate_locale** est une chaîne de caractères larges. **_wcreate_locale** et **_create_locale** se comportent de façon identique dans le cas contraire.
 
-Le *catégorie* argument spécifie les parties du comportement spécifique de paramètres régionaux qui sont affectées. Les indicateurs utilisés pour *catégorie* et les parties du programme qu’ils affectent sont comme indiqué dans le tableau suivant.
+Le *catégorie* argument spécifie les parties du comportement spécifique de paramètres régionaux qui sont affectées. Les indicateurs utilisés pour *catégorie* et les parties du programme qu’ils affectent sont comme indiqué dans ce tableau :
 
-|*catégorie* indicateur|Affecte|
-|-|-|
-**LC_ALL**|Toutes les catégories, comme indiqué ci-dessous.
-**LC_COLLATE**|Le **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_ strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**, et **wcsxfrm** fonctions.
-**LC_CTYPE**|Les fonctions de gestion de caractères (sauf **isdigit**, **isxdigit**, **mbstowcs**, et **mbtowc**, qui ne sont pas affecté).
-**LC_MONETARY**|Informations de mise en forme monétaire retournées par la **localeconv** (fonction).
-**LC_NUMERIC**|Caractère pour les routines de sortie mise en forme de virgule décimale (tel que **printf**), pour les routines de conversion de données et pour les informations de mise en forme non monétaire retournées par **localeconv**. Outre le caractère de virgule décimale, **LC_NUMERIC** séparateur de milliers de jeux et le contrôle de regroupement chaîne retournée par [localeconv](localeconv.md).
-**LC_TIME**|Le **strftime** et **wcsftime** fonctions.
+| *catégorie* indicateur | Affecte |
+|-----------------|---------|
+| **LC_ALL** |Toutes les catégories, comme indiqué ci-dessous. |
+| **LC_COLLATE** |Le **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_ strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**, et **wcsxfrm** fonctions. |
+| **LC_CTYPE** | Les fonctions de gestion de caractères (sauf **isdigit**, **isxdigit**, **mbstowcs**, et **mbtowc**, qui ne sont pas affecté). |
+| **LC_MONETARY** | Informations de mise en forme monétaire retournées par la **localeconv** (fonction). |
+| **LC_NUMERIC** | Caractère pour les routines de sortie mise en forme de virgule décimale (tel que **printf**), pour les routines de conversion de données et pour les informations de mise en forme non monétaire retournées par **localeconv**. Outre le caractère de virgule décimale, **LC_NUMERIC** séparateur de milliers de jeux et le contrôle de regroupement chaîne retournée par [localeconv](localeconv.md). |
+| **LC_TIME** | Le **strftime** et **wcsftime** fonctions. |
 
 Cette fonction valide le *catégorie* et *paramètres régionaux* paramètres. Si le paramètre de catégorie ne fait pas partie des valeurs fournies dans le tableau précédent ou si *paramètres régionaux* est **NULL**, la fonction retourne **NULL**.
 

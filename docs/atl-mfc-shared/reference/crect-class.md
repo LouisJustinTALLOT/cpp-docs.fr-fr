@@ -1,6 +1,6 @@
 ---
 title: CRect, classe
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CRect
 - ATLTYPES/ATL::CRect
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 200f4a9345904055496a53ff2f751c3e2571e7d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2ecaeb4f3b434ef7b57573f2ea379719aebcbff
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471485"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520034"
 ---
 # <a name="crect-class"></a>CRect, classe
 
@@ -97,8 +97,8 @@ class CRect : public tagRECT
 |[CRect::operator ! =](#operator_neq)|Détermine si `CRect` n’est pas égal à un rectangle.|
 |[CRect::operator &amp;](#operator_amp)|Crée l’intersection de `CRect` et un rectangle et retourne le résultat `CRect`.|
 |[CRect::operator &amp;=](#operator_amp_eq)|Jeux `CRect` égal à l’intersection de `CRect` et un rectangle.|
-|[CRect::operator |](#operator_or)|Crée l’union de `CRect` et un rectangle et retourne le résultat `CRect`.|
-|[CRect::operator |=](#operator_or_eq)|Jeux `CRect` égal à l’union de `CRect` et un rectangle.|
+|[CRect::operator&#124;](#operator_or)|Crée l’union de `CRect` et un rectangle et retourne le résultat `CRect`.|
+|[CRect::operator &#124;=](#operator_or_eq)|Jeux `CRect` égal à l’union de `CRect` et un rectangle.|
 |[CRect::operator +](#operator_add)|Ajoute les décalages donnés à `CRect` ou augmente `CRect` et retourne le résultat `CRect`.|
 |[CRect::operator +=](#operator_add_eq)|Ajoute des offsets spécifiés au `CRect` ou augmente `CRect`.|
 |[CRect::operator =](#operator_eq)|Copie les dimensions d’un rectangle à `CRect`.|
@@ -112,7 +112,7 @@ class CRect : public tagRECT
 Un `CRect` objet peut être passé comme paramètre de fonction partout où un `RECT` structure, `LPCRECT`, ou `LPRECT` peuvent être passés.
 
 > [!NOTE]
->  Cette classe est dérivée de la `tagRECT` structure. (Le nom `tagRECT` est un nom moins couramment utilisés pour le `RECT` structure.) Cela signifie que les membres de données (`left`, `top`, `right`, et `bottom`) de la `RECT` structure sont membres de données accessibles de `CRect`.
+> Cette classe est dérivée de la `tagRECT` structure. (Le nom `tagRECT` est un nom moins couramment utilisés pour le `RECT` structure.) Cela signifie que les membres de données (`left`, `top`, `right`, et `bottom`) de la `RECT` structure sont membres de données accessibles de `CRect`.
 
 Un `CRect` contient des variables de membres qui définissent les points en haut à gauche et en bas à droite d’un rectangle.
 
@@ -443,11 +443,11 @@ Différent de zéro si les deux rectangles ont les même haut, gauche, bas et le
 ### <a name="example"></a>Exemple
 
 ```cpp
-   CRect rect1(35, 150, 10, 25);
-   CRect rect2(35, 150, 10, 25);
-   CRect rect3(98, 999, 6, 3);
+CRect rect1(35, 150, 10, 25);
+CRect rect2(35, 150, 10, 25);
+CRect rect3(98, 999, 6, 3);
 ASSERT(rect1.EqualRect(rect2));
-   ASSERT(!rect1.EqualRect(rect3));
+ASSERT(!rect1.EqualRect(rect3));
 // works just fine against RECTs, as well
 
 RECT test;
@@ -484,12 +484,8 @@ La valeur résultante peut être négative.
 CRect rect(20, 30, 80, 70);
 int nHt = rect.Height();
 
-```cpp
-   CRect rect(20, 30, 80, 70);
-int nHt = rect.Height();
-
-   // nHt is now 40
-   ASSERT(nHt == 40);
+// nHt is now 40
+ASSERT(nHt == 40);
 ```
 
 ##  <a name="inflaterect"></a>  CRect::InflateRect
@@ -578,7 +574,6 @@ L’intersection est le plus grand rectangle contenu dans les deux rectangles ex
 CRect rectOne(125, 0, 150, 200);
 CRect rectTwo(0, 75, 350,  95);
 CRect rectInter;
-
 ```cpp
    CRect rectOne(125,  0, 150, 200);
    CRect rectTwo(0, 75, 350, 95);
@@ -617,7 +612,6 @@ Un rectangle est vide si la largeur et/ou la hauteur est 0 ou négatif. Diffère
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -648,7 +642,6 @@ Diffère `IsRectEmpty`, qui détermine si le rectangle est vide.
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -678,7 +671,6 @@ Coordonnée x absolue pour l’angle supérieur gauche du rectangle.
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
@@ -712,7 +704,6 @@ Un `POINT` structure qui spécifie l’angle supérieur gauche absolue du rectan
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToXY(10, 10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
    rect.MoveToXY(10, 10);

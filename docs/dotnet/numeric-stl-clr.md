@@ -17,12 +17,12 @@ helpviewer_keywords:
 - inner_product function [STL/CLR]
 - partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-ms.openlocfilehash: 95449937dda62d8ef127d41625553f0e4294cf77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0311b36ec1190631e053eeade443939703e69103
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574243"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328901"
 ---
 # <a name="numeric-stlclr"></a>numériques (STL/CLR)
 
@@ -91,7 +91,7 @@ Cette fonction comporte comme la fonction de bibliothèque Standard C++ numériq
 
 Calcule la somme du produit d’éléments de deux plages et l’ajoute à une valeur initiale spécifiée, ou calcule le résultat d’une procédure généralisée dans laquelle les opérations binaires de somme et de produit sont remplacées par d’autres opérations binaires spécifiées.
 
-###<a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 template<class _InIt1, class _InIt2, class _Ty> inline

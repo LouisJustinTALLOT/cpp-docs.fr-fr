@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: a8b204c2bf48802b8efcfe5ca487d62876942c29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540334"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333226"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -117,12 +117,12 @@ La chaîne de caractères *mode* Spécifie le type d’accès demandé pour le f
 
 |*mode*|Accès|
 |-|-|
-**"r"**|Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **fopen** appeler échoue.
-**"w"**|Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.
-**"a"**|S'ouvre pour écriture à la fin du fichier (ajout) sans supprimer le marqueur de fin de fichier (EOF) avant que de nouvelles données soient écrites dans le fichier. Crée le fichier s'il n'existe pas.
-**"r+"**|Ouvre pour l'accès en lecture et en écriture. Le fichier doit exister.
-**"w+"**|Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier existe, son contenu est détruit.
-**"a+"**|S'ouvre pour lecture et ajout. L'opération d'ajout inclut la suppression du marqueur EOF avant que de nouvelles données soient écrites dans le fichier. Le marqueur EOF n'est pas restauré une fois l'écriture terminée. Crée le fichier s'il n'existe pas.
+| **"r"** | Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **fopen** appeler échoue. |
+| **"w"** | Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit. |
+| **"a"** | S'ouvre pour écriture à la fin du fichier (ajout) sans supprimer le marqueur de fin de fichier (EOF) avant que de nouvelles données soient écrites dans le fichier. Crée le fichier s'il n'existe pas. |
+| **"r+"** | Ouvre pour l'accès en lecture et en écriture. Le fichier doit exister. |
+| **"w+"** | Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier existe, son contenu est détruit. |
+| **"a+"** | S'ouvre pour lecture et ajout. L'opération d'ajout inclut la suppression du marqueur EOF avant que de nouvelles données soient écrites dans le fichier. Le marqueur EOF n'est pas restauré une fois l'écriture terminée. Crée le fichier s'il n'existe pas. |
 
 Quand un fichier est ouvert à l’aide de la **« a »** type d’accès ou le **« a + »** accéder au type, toutes les opérations se produisent à la fin du fichier d’écriture. Le pointeur de fichier peut être repositionné à l’aide de [fseek](fseek-fseeki64.md) ou [rewind](rewind.md), mais est toujours redéplacé à la fin du fichier avant toute opération d’écriture. Par conséquent, les données existantes ne peuvent pas être remplacées.
 
@@ -134,8 +134,8 @@ Outre les valeurs précédentes, les caractères suivants peuvent être ajoutés
 
 |*mode* modificateur|Mode de traduction|
 |-|-|
-**t**|Ouvrir en mode texte (traduit).
-**b**|Ouvrir en mode binaire (non traduit) ; les traductions implique la suppression des caractères de retour chariot et de saut de ligne.
+| **t** | Ouvrir en mode texte (traduit). |
+| **b** | Ouvrir en mode binaire (non traduit) ; les traductions implique la suppression des caractères de retour chariot et de saut de ligne. |
 
 En mode texte, CTRL + Z est interprété comme un caractère EOF en entrée. Dans les fichiers qui sont ouverts en lecture/écriture à l’aide de **« a + »**, **fopen** recherche un CTRL + Z à la fin du fichier et le supprime, si possible. En effet à l’aide de [fseek](fseek-fseeki64.md) et **ftell** pour se déplacer dans un fichier qui se termine par CTRL + Z peut provoquer [fseek](fseek-fseeki64.md) comportement incorrect vers la fin du fichier.
 
@@ -149,14 +149,14 @@ Les options suivantes peuvent être ajoutées aux *mode* pour spécifier des com
 
 |*mode* modificateur|Comportement|
 |-|-|
-**c**|Activer l’indicateur de validation associé au *filename* afin que le contenu de la mémoire tampon de fichier est écrites directement sur le disque si **fflush** ou **_flushall** est appelée.
-**n**|Réinitialiser l’indicateur de validation associé au *filename* pour « no-commit ». Il s'agit de la valeur par défaut. Substitue également l'indicateur de validation global si vous liez votre programme avec COMMODE.OBJ. La valeur par défaut de l’indicateur de validation globale est « no-commit », sauf si vous liez explicitement votre programme avec COMMODE.OBJ (consultez [Link Options](../../c-runtime-library/link-options.md)).
-**N**|Indique que le fichier n'est pas hérité par les processus enfants.
-**S**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque.
-**R**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque.
-**T**|Spécifie un fichier comme temporaire. Si possible, il n'est pas vidé sur disque.
-**D**|Spécifie un fichier comme temporaire. Il est supprimé lorsque le dernier pointeur de fichier est fermé.
-**CCS =**_encodage_|Spécifie le codé en jeu de caractères à utiliser (un des **UTF-8**, **UTF-16LE**, ou **UNICODE**) pour ce fichier. Laissez ce paramètre non spécifié si vous souhaitez bénéficier de l'encodage ANSI.
+| **c** | Activer l’indicateur de validation associé au *filename* afin que le contenu de la mémoire tampon de fichier est écrites directement sur le disque si **fflush** ou **_flushall** est appelée. |
+| **n** | Réinitialiser l’indicateur de validation associé au *filename* pour « no-commit ». Il s'agit de la valeur par défaut. Substitue également l'indicateur de validation global si vous liez votre programme avec COMMODE.OBJ. La valeur par défaut de l’indicateur de validation globale est « no-commit », sauf si vous liez explicitement votre programme avec COMMODE.OBJ (consultez [Link Options](../../c-runtime-library/link-options.md)). |
+| **N** | Indique que le fichier n'est pas hérité par les processus enfants. |
+| **S** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque. |
+| **R** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque. |
+| **T** | Spécifie un fichier comme temporaire. Si possible, il n'est pas vidé sur disque. |
+| **D** | Spécifie un fichier comme temporaire. Il est supprimé lorsque le dernier pointeur de fichier est fermé. |
+| **CCS =**_encodage_ | Spécifie le codé en jeu de caractères à utiliser (un des **UTF-8**, **UTF-16LE**, ou **UNICODE**) pour ce fichier. Laissez ce paramètre non spécifié si vous souhaitez bénéficier de l'encodage ANSI. |
 
 Caractères valides pour le *mode* chaîne qui est utilisée dans **fopen** et **_fdopen** correspondent aux *oflag* arguments qui sont utilisés dans [_open](open-wopen.md) et [_sopen](sopen-wsopen.md), comme suit.
 

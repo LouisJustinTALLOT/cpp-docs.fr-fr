@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: b635bb17949c14c8c18da256475b4fc03a161248
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bfdf2191a4bf88ce6d061e1729e194236564330
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587926"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326418"
 ---
 # <a name="stosw"></a>__stosw
 
@@ -24,10 +24,10 @@ Génère une instruction de chaîne de magasin (`rep stosw`).
 ## <a name="syntax"></a>Syntaxe
 
 ```
-void __stosw( 
-   unsigned short* Dest, 
-   unsigned short Data, 
-   size_t Count 
+void __stosw(
+   unsigned short* Dest,
+   unsigned short Data,
+   size_t Count
 );
 ```
 
@@ -42,7 +42,7 @@ void __stosw( 
 *Nombre*<br/>
 [in] La longueur du bloc de mots à écrire.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|

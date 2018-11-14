@@ -2,12 +2,12 @@
 title: Problèmes de migration de virgule flottante
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: ea34f1eb8e8bd528273da5d7d18cd545cd22de37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530869"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332346"
 ---
 # <a name="floating-point-migration-issues"></a>Problèmes de migration de virgule flottante
 
@@ -17,7 +17,7 @@ Quand vous mettez à niveau vos projets avec une version plus récente de Visual
 
 La plupart des fonctions mathématiques CRT sont présentes dans Visual Studio depuis des années, mais à partir de Visual Studio 2013, toutes les fonctions requises par la norme ISO C99 sont incluses. Ces fonctions sont implémentées pour équilibrer le niveau de performance avec exactitude. Étant donné que la production du résultat correctement arrondi dans chaque cas peut atteindre un coût prohibitif, ces fonctions sont conçues pour produire efficacement une approximation précise du résultat correctement arrondi. Dans la plupart des cas, le résultat produit se situe à +/-1 unité en dernière position (ou *ULP*, Unit in the Last Place), du résultat correctement arrondi, même si parfois, le niveau d’imprécision peut être plus grand. Si vous utilisiez une bibliothèque mathématique différente pour obtenir ces fonctions, des différences d’implémentation peuvent expliquer les modifications dans vos résultats.
 
-Quand les fonctions mathématiques ont été déplacées vers la bibliothèque CRT universelle de Visual Studio 2015, certains nouveaux algorithmes ont été utilisés et plusieurs bogues dans l’implémentation des fonctions qui étaient nouvelles dans Visual Studio 2013 ont été résolus. Ces modifications peuvent entraîner des différences détectables dans les résultats des calculs en virgule flottante qui utilisent ces fonctions. Les fonctions victimes de bogues étaient erf, exp2, remainder, remquo, scalbln et scalbn et leurs variantes de type long double et à virgule flottante.  D’autres changements dans Visual Studio 2015 ont résolu les problèmes liés à la conservation des informations sur l’état d’exception et le mot d’état des opérations à virgule flottante dans les fonctions _clear87, _clearfp, fegetenv, fesetenv et feholdexcept.
+Quand les fonctions mathématiques ont été déplacées vers la bibliothèque CRT universelle de Visual Studio 2015, certains nouveaux algorithmes ont été utilisés et plusieurs bogues dans l’implémentation des fonctions qui étaient nouvelles dans Visual Studio 2013 ont été résolus. Ces modifications peuvent entraîner des différences détectables dans les résultats des calculs en virgule flottante qui utilisent ces fonctions. Les fonctions victimes de bogues étaient erf, exp2, remainder, remquo, scalbln et scalbn et leurs variantes de type long double et à virgule flottante.  D’autres changements dans Visual Studio 2015 ont résolu les problèmes liés à la conservation des informations sur l’état d’exception et le mot d’état des opérations à virgule flottante dans les fonctions _clear87, _clearfp, fegetenv, fesetenv et feholdexcept.
 
 ## <a name="processor-differences-and-compiler-flags"></a>Différences de processeur et indicateurs de compilateur
 

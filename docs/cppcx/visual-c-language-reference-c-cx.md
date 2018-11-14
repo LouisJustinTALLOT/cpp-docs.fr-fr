@@ -2,12 +2,12 @@
 title: Référence du langage Visual C++ (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 97d4f6391a02dd88e15c8fa4145539ab41a4dae3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8d73523a2b9ae577125975726f0072503f0e2e0
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600003"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330422"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Référence du langage Visual C++ (C++/CX)
 
@@ -15,7 +15,7 @@ C++ / c++ / CX est un ensemble d’extensions du langage C++ qui permettent la c
 
 > [!NOTE]
 > **[C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) est l’alternative recommandée à C++ / c++ / CX**. Il s’agit d’une nouvelle, standard C ++ 17 projection de langage pour Windows Runtime APIs, disponible dans le SDK Windows 10 plus récente à partir de la version 1803 qui interviennent. C++ / c++ / WinRT est entièrement implémentée dans les fichiers d’en-tête et conçu pour vous permettre d’accès idéal à l’API Windows moderne.
-
+>
 > Avec C / c++ / WinRT, vous pouvez consommer et créer le Windows Runtime APIs à l’aide de n’importe quel conformes aux normes C ++ 17 du compilateur. C++ / c++ / WinRT généralement plus performant et produit des binaires plus petits que toute autre option de langage pour le Windows Runtime. Nous continuerons à prendre en charge de C++ / c++ / CX et WRL, mais vous recommandons vivement que les nouvelles applications utiliser C++ / c++ / WinRT. Pour plus d’informations, consultez [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 À l’aide de C++ / c++ / CX, vous pouvez créer :

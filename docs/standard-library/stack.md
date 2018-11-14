@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: 51e350169babc3d5247fbdabab2f3b9bda717d47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8f2bb6cf74d0607bd3105196336a515adcade9e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617050"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518201"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
@@ -22,7 +22,6 @@ Définit la pile de classe de modèle et les deux modèles de prise en charge.
 
 ```cpp
 #include <stack>
-
 ```
 
 ### <a name="operators"></a>Opérateurs

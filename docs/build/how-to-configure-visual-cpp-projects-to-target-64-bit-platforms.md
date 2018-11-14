@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 3df2252e1879fbbcdf6cc950fa8dd637894ba3f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664553"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523935"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Comment : configurer des projets Visual C++ pour cibler les 64 bits, x64 plateformes
 
@@ -43,18 +43,18 @@ Vous pouvez utiliser les configurations de projet dans l’IDE Visual Studio pou
 
 - Quand la boîte de dialogue **Nouvelle plateforme de solution** est ouverte pendant que vous configurez un projet pour cibler une plateforme 64 bits, dans la liste déroulante **Copier les paramètres à partir de** , sélectionnez **Win32**. Ces paramètres de projet sont mis à jour automatiquement au niveau du projet :
 
-   - L’option [/MACHINE](../build/reference/machine-specify-target-platform.md) de l’Éditeur de liens prend la valeur **/MACHINE:X64**.
+  - L’option [/MACHINE](../build/reference/machine-specify-target-platform.md) de l’Éditeur de liens prend la valeur **/MACHINE:X64**.
 
-   - L’**Inscription de la sortie** est désactivée. Pour plus d'informations, consultez [Linker Property Pages](../ide/linker-property-pages.md).
+  - L’**Inscription de la sortie** est désactivée. Pour plus d'informations, consultez [Linker Property Pages](../ide/linker-property-pages.md).
 
-   - L’**Environnement cible** prend la valeur **/env x64**. Pour plus d'informations, consultez [MIDL Property Pages: General](../ide/midl-property-pages-general.md).
+  - L’**Environnement cible** prend la valeur **/env x64**. Pour plus d'informations, consultez [MIDL Property Pages: General](../ide/midl-property-pages-general.md).
 
-   - L’option**Validation des paramètres** est effacée et réinitialisée à la valeur par défaut. Pour plus d'informations, consultez [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md).
+  - L’option**Validation des paramètres** est effacée et réinitialisée à la valeur par défaut. Pour plus d'informations, consultez [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md).
 
-   - Si vous avez affecté la valeur **/ZI** à l’option **Format des informations de débogage** dans la configuration de projet Win32, elle prend la valeur **/Zi** dans la configuration de projet 64 bits. Pour plus d’informations, consultez l’article [/Z7, /Zi, /ZI (Format des informations de débogage)](../build/reference/z7-zi-zi-debug-information-format.md).
+  - Si vous avez affecté la valeur **/ZI** à l’option **Format des informations de débogage** dans la configuration de projet Win32, elle prend la valeur **/Zi** dans la configuration de projet 64 bits. Pour plus d’informations, consultez l’article [/Z7, /Zi, /ZI (Format des informations de débogage)](../build/reference/z7-zi-zi-debug-information-format.md).
 
-   > [!NOTE]
-   > Aucune de ces propriétés de projet n’est modifiée si elle est substituée au niveau du fichier.
+  > [!NOTE]
+  > Aucune de ces propriétés de projet n’est modifiée si elle est substituée au niveau du fichier.
 
 ## <a name="see-also"></a>Voir aussi
 

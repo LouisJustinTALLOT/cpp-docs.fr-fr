@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 12f177887552cb14edba6ae8cfeeab1abe24a45b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0668342468e30733f8257ccd2682bfe785551857
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657507"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333600"
 ---
 # <a name="hashset-class"></a>hash_set, classe
 
@@ -565,7 +565,7 @@ Clé des éléments à mettre en correspondance à partir du hash_set.
 
 La fonction membre retourne le nombre d'éléments dans la plage suivante :
 
-[ **lower_bound** (_ *Key* ), **upper_bound** (\_ *Key* ) ).
+\[ lower_bound (*clé*), upper_bound (*clé*)).
 
 ### <a name="example"></a>Exemple
 
@@ -1534,7 +1534,7 @@ Pour plus d’informations sur *Traits* voir le [hash_set, classe](../standard-l
 
 L’objet stocké définit la fonction membre :
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 qui retourne **true** si `_xVal` précède et n’est pas égal à `_yVal` dans l’ordre de tri.
 
@@ -2296,7 +2296,7 @@ Pour plus d’informations sur *comparer*, consultez la section Notes de la [has
 
 L’objet stocké définit la fonction membre :
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 qui retourne **true** si `_xVal` précède et n’est pas égal à `_yVal` dans l’ordre de tri.
 

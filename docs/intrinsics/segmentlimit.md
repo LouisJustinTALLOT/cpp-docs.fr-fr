@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 854e3efce48b7ed863db1a94467a6da99d796a89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2748eee7db3a56b026e9d1896e35824c93938256
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636421"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326054"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 
@@ -23,8 +23,8 @@ Génère le `lsl` instruction de (limite du Segment de charge).
 ## <a name="syntax"></a>Syntaxe
 
 ```
-unsigned long __segmentlimit( 
-   unsigned long a 
+unsigned long __segmentlimit(
+   unsigned long a
 );
 ```
 
@@ -37,7 +37,7 @@ unsigned long __segmentlimit( 
 
 La limite du segment du sélecteur de segment spécifié par `a`, à condition que le sélecteur est valide et visible au niveau d’autorisation actuel.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|

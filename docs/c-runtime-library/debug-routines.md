@@ -10,12 +10,12 @@ helpviewer_keywords:
 - debug macros
 - debugging [CRT], runtime routines
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
-ms.openlocfilehash: f8ceb25f7ccdd10ff2b6dc7529563616b2fd0da6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1281b578435086dc7de04c7962145c2b265277a
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452180"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329463"
 ---
 # <a name="debug-routines"></a>Routines de débogage
 
@@ -63,7 +63,7 @@ Pour utiliser ces routines, l’indicateur [_DEBUG](../c-runtime-library/debug.m
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Allouer un nombre spécifié de blocs de mémoire dans le tas avec de l’espace supplémentaire pour un en-tête de débogage et des mémoires tampons de remplacement|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Redimensionner un bloc de mémoire spécifié sur le tas l’augmentant ou en le diminuant|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Libérer un bloc de mémoire sur le tas|
-|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Créer un nom de chemin absolu ou complet pour le nom de chemin relatif spécifié, en utilisant [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) pour allouer de la mémoire|[System::IO::File::Create](https://msdn.microsoft.com/library/system.io.file.create.aspx)|
+|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Créer un nom de chemin absolu ou complet pour le nom de chemin relatif spécifié, en utilisant [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) pour allouer de la mémoire|
 |[_getcwd_dbg, _wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|Obtenir le répertoire de travail actuel, en utilisant [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) pour allouer de la mémoire.|
 |[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|Allouer un bloc de mémoire dans le tas avec de l’espace supplémentaire pour un en-tête de débogage et des mémoires tampons de remplacement|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Calculer la taille d’un bloc de mémoire dans le tas|

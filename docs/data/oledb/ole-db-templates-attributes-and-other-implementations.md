@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 97924110d6dd59e59eda9492713518dedf68af55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079ec68afe2e538a40920fb2c6524f8d5b8aae89
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596597"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520636"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modèles, attributs et autres implémentations OLE DB
 
@@ -25,7 +25,7 @@ Cette bibliothèque de modèles contient deux parties :
 
 - **Les modèles du fournisseur OLE DB** permettent d’implémenter une application de serveur (fournisseur) OLE DB.
 
-Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643).
+Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [de référence du programmeur OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
 Pour plus d’informations, vous pouvez :
 
@@ -37,7 +37,7 @@ Pour plus d’informations, vous pouvez :
 
 - Afficher la liste des [exemples de modèles OLE DB](https://github.com/Microsoft/VCSamples).
 
-- Consultez [de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643) (dans le Kit de développement logiciel Windows).
+- Consultez [de référence du programmeur OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) (dans le Kit de développement logiciel Windows).
 
 ## <a name="ole-db-attributes"></a>Attributs du Kit de développement OLE DB
 
@@ -49,7 +49,7 @@ La bibliothèque MFC possède une classe, [COleDBRecordView](../../mfc/reference
 
 ## <a name="ole-db-sdk-interfaces"></a>Interfaces OLE DB SDK
 
-Dans les cas où les modèles OLE DB ne prennent en charge des fonctionnalités OLE DB, vous devez utiliser les interfaces OLE DB elles-mêmes. Pour plus d’informations, consultez [de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643) dans le SDK Windows.
+Dans les cas où les modèles OLE DB ne prennent en charge des fonctionnalités OLE DB, vous devez utiliser les interfaces OLE DB elles-mêmes. Pour plus d’informations, consultez [de référence du programmeur OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) dans le SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

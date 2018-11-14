@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: efd3e750abb68ad84eb8894ea6b53fe8e29e0e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447786"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332632"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -21,12 +21,11 @@ Définit la classe de modèle valarray et de nombreuses fonctions et classes de 
 
 ```cpp
 #include <valarray>
-
 ```
 
 ## <a name="remarks"></a>Notes
 
-Une latitude inhabituelle est accordée à ces fonctions et classes de modèle afin d'améliorer les performances. Plus spécifiquement, toute fonction qui retourne le type **valarray\<** T1**>** peut retourner un objet d’un autre type T2. Dans ce cas, toute fonction qui accepte un ou plusieurs arguments de type **valarray\<** T2**>** doit avoir des surcharges qui acceptent des combinaisons arbitraires de ces arguments, chacun remplacé par un argument de type T2.
+Une latitude inhabituelle est accordée à ces fonctions et classes de modèle afin d'améliorer les performances. En particulier, n’importe quelle fonction qui retourne le type `valarray<T1>` peut retourner un objet d’un autre type T2. Dans ce cas, toute fonction qui accepte un ou plusieurs arguments de type `valarray<T2>` doit avoir des surcharges qui acceptent des combinaisons arbitraires de ces arguments, chacun remplacés par un argument de type T2.
 
 ### <a name="functions"></a>Fonctions
 

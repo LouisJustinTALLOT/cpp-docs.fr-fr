@@ -1,12 +1,12 @@
 ---
 title: La gestion des exceptions ARM64
 ms.date: 07/11/2018
-ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5189c399a4cbff071d2ec846008229ba76306882
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620595"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333587"
 ---
 # <a name="arm64-exception-handling"></a>La gestion des exceptions ARM64
 
@@ -56,7 +56,7 @@ Il s’agit de la description des exceptions hypothèses :
 
 Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée à n’importe quelle position dans la zone de variable locale en fonction des considérations d’optimisation. L’objectif est de maximiser le nombre de variables locales qui peut être atteint par une instruction unique basée sur le pointeur de frame (r29) ou le pointeur de pile (sp). Toutefois pour `alloca` fonctions, il doit être chaîné et r29 doit pointer vers le bas de pile. Pour permettre une meilleure couverture register-paire-adressage-mode, non volatile inscrire aave zones sont positionnés en haut de la pile de réseau Local. Voici des exemples qui illustrent certains des séquences de prologue plus efficaces. Par souci de clarté une meilleure localité de cache, l’ordre de stockage de registres enregistrés des appelés dans tous les prologues canoniques est dans l’ordre « croissante des ». `#framesz` ci-dessous représente la taille de pile entière (à l’exclusion de la zone d’alloca). `#localsz` et `#outsz` indiquent la taille de la zone locale (y compris l’enregistrement concernant la \<r29, lr > paire) et sortant de taille de paramètre, respectivement.
 
-1. Chaînées, #localsz < = 512
+1. Chaînées, #localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -95,7 +95,7 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-   Toutes les variables locales sont accessibles selon le fournisseur de services. \<R29, lr > pointe vers le frame précédent. Pour la taille de trame < = 512, la « sub sp,... » peuvent être optimisées, si la zone de réglementations enregistrées est déplacée vers le bas de la pile. L’inconvénient de qui est qu’il n’est pas cohérente avec les autres dispositions ci-dessus et réglementations enregistrées tirer partie de la plage pour le respect de la paire et mode d’adressage de décalage pré- et post-indexé.
+   Toutes les variables locales sont accessibles selon le fournisseur de services. \<R29, lr > pointe vers le frame précédent. Pour la taille de trame \<= 512, la « sub sp,... » peuvent être optimisées, si la zone de réglementations enregistrées est déplacée vers le bas de la pile. L’inconvénient de qui est qu’il n’est pas cohérente avec les autres dispositions ci-dessus et réglementations enregistrées tirer partie de la plage pour le respect de la paire et mode d’adressage de décalage pré- et post-indexé.
 
 1. Fonctions non chaînées, non terminaux (lr est enregistrée dans la zone de Int enregistré)
 
@@ -131,7 +131,7 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
 
    Toutes les variables locales sont accessibles selon le fournisseur de services. \<R29 > pointe vers le frame précédent.
 
-1. Chaînées, #framesz < = 512, #outsz = 0
+1. Chaînées, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -283,40 +283,40 @@ Si les exceptions ont été garanties ne se produisaient au sein d’un corps de
 
 Les codes de déroulement sont encodées selon le tableau ci-dessous. Tous les codes de déroulement sont un octet unique/double, sauf celui qui alloue une énorme. Voici les totalement 21 code de déroulement. Chaque déroulement code maps exactement une seule instruction dans le prologue/épilogue afin de permettre le déroulement de partiellement exécuté les prologues et épilogues.
 
-Code de déroulement|Bits et l’interprétation
+|Code de déroulement|Bits et l’interprétation|
 |-|-|
-`alloc_s`|000xxxxx : allouer de la petite pile avec taille < 512 (2 ^ 5 * 16).
-`save_r19r20_x`|    001zzzzz : enregistrer \<r19, r 20 > la paire à [Z sp-# * 8] !, décalage préalable indexée > =-248
-`save_fplr`|        01zzzzzz : enregistrer \<r29, lr > coupler à [sp + #Z * 8], décalage < = 504.
-`save_fplr_x`|        10zzzzzz : enregistrer \<r29, lr > coupler à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -512
-`alloc_m`|        11000xxx\|xxxxxxxx : allouer de la pile volumineuses avec une taille de < 16 k (2 ^ 11 * 16).
-`save_regp`|        110010xx\|xxzzzzzz : enregistrer la paire de r(19+#X) à [sp + #Z * 8], décalage < = 504
-`save_regp_x`|        110011xx\|xxzzzzzz : enregistrer r(19+#X) paire à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -512
-`save_reg`|        110100xx\|xxzzzzzz : enregistrer r(19+#X) reg à [sp + #Z * 8], décalage < = 504
-`save_reg_x`|        x 1101010\|xxxzzzzz : enregistrer r(19+#X) reg à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -256
-`save_lrpair`|         x 1101011\|xxzzzzzz : enregistrer la paire \<r19 + 2 *#X, lr > à [sp + #Z*8], décalage < = 504
-`save_fregp`|        x 1101100\|xxzzzzzz : enregistrer d(8+#X) paire à [sp + #Z * 8], décalage < = 504
-`save_fregp_x`|        x 1101101\|xxzzzzzz : enregistrer d(8+#X) paire, [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -512
-`save_freg`|        x 1101110\|xxzzzzzz : enregistrer d(8+#X) reg à [sp + #Z * 8], décalage < = 504
-`save_freg_x`|        11011110\|xxxzzzzz : enregistrer d(8+#X) reg à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -256
-`alloc_l`|         11100000\|xxxxxxxx\|xxxxxxxx\|xxxxxxxx : allouer de la pile volumineuses avec taille < 256 M (2 ^ 24 * 16)
-`set_fp`|        11100001 : configurer r29 : avec : r29 mov, sp
-`add_fp`|        11100010\|xxxxxxxx : configurer r29 avec : ajoutez r29, sp, #x * 8
-`nop`|            11100011 : aucun déroulement de l’opération est nécessaire.
-`end`|            11100100 : fin du code de déroulement. Implique ret dans l’épilogue.
-`end_c`|        11100101 : fin du code de déroulement dans la portée chaînée actuelle.
-`save_next`|        11100110 : Enregistrer suivant Int non volatile ou FP inscrire paire.
-`arithmetic(add)`|    11100111\| 000zxxxx : ajouter un cookie reg(z) à lr (0 = x28, 1 = sp) ; ajouter lr, lr, reg(z)
-`arithmetic(sub)`|    11100111\| 001zxxxx : sub reg(z) de cookie à partir de lr (0 = x28, 1 = sp) ; sub lr, lr, reg(z)
-`arithmetic(eor)`|    11100111\| 010zxxxx : lr eor avec cookie reg(z) (0 = x28, 1 = sp) ; eor lr, lr, reg(z)
-`arithmetic(rol)`|    11100111\| 0110xxxx : rol simulé de lr avec reg cookie (x28) ; xip0 = neg x28 ; ror lr, xip0
-`arithmetic(ror)`|    11100111\| 100zxxxx : lr ror avec cookie reg(z) (0 = x28, 1 = sp) ; ror lr, lr, reg(z)
-||            11100111 : xxxz--- :---réservé
-||              11101xxx : réservé pour les cas de pile personnalisée ci-dessous générés uniquement pour les routines asm
-||              11101001 : pile personnalisé pour MSFT_OP_TRAP_FRAME
-||              11101010 : pile personnalisé pour MSFT_OP_MACHINE_FRAME
-||              11101011 : pile personnalisé pour MSFT_OP_CONTEXT
-||              1111xxxx : réservé
+|`alloc_s`|000xxxxx : allouer de la petite pile avec taille \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz : enregistrer \<r19, r 20 > la paire à [Z sp-# * 8] !, décalage préalable indexée > =-248 |
+|`save_fplr`|        01zzzzzz : enregistrer \<r29, lr > coupler à [sp + #Z * 8], décalage \<= 504. |
+|`save_fplr_x`|        10zzzzzz : enregistrer \<r29, lr > coupler à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -512 |
+|`alloc_m`|        11000xxx'xxxxxxxx : allouer de la pile volumineuses avec taille \< 16 k (2 ^ 11 * 16). |
+|`save_regp`|        110010xx'xxzzzzzz : enregistrer la paire de r(19+#X) à [sp + #Z * 8], décalage \<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz : enregistrer r(19+#X) paire à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -512 |
+|`save_reg`|        110100xx'xxzzzzzz : enregistrer r(19+#X) reg à [sp + #Z * 8], décalage \<= 504 |
+|`save_reg_x`|        x 1101010'xxxzzzzz : enregistrer r(19+#X) reg à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -256 |
+|`save_lrpair`|         x 1101011'xxzzzzzz : enregistrer la paire \<r19 + 2 *#X, lr > à [sp + #Z*8], décalage \<= 504 |
+|`save_fregp`|        x 1101100'xxzzzzzz : enregistrer d(8+#X) paire à [sp + #Z * 8], décalage \<= 504 |
+|`save_fregp_x`|        x 1101101'xxzzzzzz : enregistrer d(8+#X) paire, [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -512 |
+|`save_freg`|        x 1101110'xxzzzzzz : enregistrer d(8+#X) reg à [sp + #Z * 8], décalage \<= 504 |
+|`save_freg_x`|        11011110' xxxzzzzz : enregistrer d(8+#X) reg à [sp-(#Z + 1) * 8] !, décalage préalable indexée > = -256 |
+|`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx : allouer de la pile volumineuses avec taille \< M 256 (2 ^ 24 * 16) |
+|`set_fp`|        11100001 : configurer r29 : avec : r29 mov, sp |
+|`add_fp`|        11100010' xxxxxxxx : configurer r29 avec : ajoutez r29, sp, #x * 8 |
+|`nop`|            11100011 : aucun déroulement de l’opération est nécessaire. |
+|`end`|            11100100 : fin du code de déroulement. Implique ret dans l’épilogue. |
+|`end_c`|        11100101 : fin du code de déroulement dans la portée chaînée actuelle. |
+|`save_next`|        11100110 : Enregistrer suivant Int non volatile ou FP inscrire paire. |
+|`arithmetic(add)`|    11100111' 000zxxxx : ajouter un cookie reg(z) à lr (0 = x28, 1 = sp) ; Ajouter lr, lr, reg(z) |
+|`arithmetic(sub)`|    11100111' 001zxxxx : sub reg(z) de cookie à partir de lr (0 = x28, 1 = sp) ; Sub lr, lr, reg(z) |
+|`arithmetic(eor)`|    11100111' 010zxxxx : lr eor avec cookie reg(z) (0 = x28, 1 = sp) ; EOR lr, lr, reg(z) |
+|`arithmetic(rol)`|    11100111' 0110xxxx : rol simulé de lr avec reg cookie (x28) ; xip0 = neg x28 ; ROR lr, xip0 |
+|`arithmetic(ror)`|    11100111' 100zxxxx : lr ror avec cookie reg(z) (0 = x28, 1 = sp) ; ROR lr, lr, reg(z) |
+| |            11100111 : xxxz--- :---réservé |
+| |              11101xxx : réservé pour les cas de pile personnalisée ci-dessous générés uniquement pour les routines asm |
+| |              11101001 : pile personnalisé pour MSFT_OP_TRAP_FRAME |
+| |              11101010 : pile personnalisé pour MSFT_OP_MACHINE_FRAME |
+| |              11101011 : pile personnalisé pour MSFT_OP_CONTEXT |
+| |              1111xxxx : réservé |
 
 Dans les instructions avec des valeurs élevées couvrant plusieurs octets, les bits les plus significatifs sont enregistrés en premier. Les codes de déroulement ci-dessus soient conçus pour en recherchant simplement le premier octet du code, il est possible de connaître la taille totale en octets du code de déroulement. Étant donné que chaque code de déroulement est mappée exactement à une instruction de prologue/épilogue, pour calculer la taille du prologue ou de l’épilogue, doit être effectuée qu’à remonter à partir du début de la séquence à la fin, à l’aide d’une table de recherche ou un dispositif similaire pour déterminer la durée pendant laquelle le cor est de l’opcode répond.
 
@@ -382,7 +382,7 @@ Les prologues canoniques qui appartiennent aux catégories 1, 2 (sans zone de pa
 5D|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\*: If **CR** == 01 et **RegI** est un nombre impair, étape 2 et dernière save_rep à l’étape 1 sont fusionnées dans un save_regp.
+\* Si **CR** == 01 et **RegI** est un nombre impair, étape 2 et dernière save_rep à l’étape 1 sont fusionnées dans un save_regp.
 
 \*\* Si **RegI** == **CR** == 0, et **RegF** ! = 0, le premier protocole stp pour la virgule flottante ne la décrémentation préfixée.
 

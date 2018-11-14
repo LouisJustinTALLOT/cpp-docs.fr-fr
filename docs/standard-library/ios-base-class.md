@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648667"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333349"
 ---
 # <a name="iosbase-class"></a>ios_base, classe
 
@@ -914,7 +914,7 @@ Les indicateurs de format précédent
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre appelle [indicateurs](#flags)(_ *masque* &#124; \_ *indicateurs*) (la valeur des bits sélectionnés), puis retourne les indicateurs de format précédent. La deuxième fonction membre appelle **indicateurs**(\_ *masque* **& fmtfl, indicateurs & ~**`_Mask`) (remplacer les bits sélectionnés sous un masque) et puis retourne les indicateurs de format précédent.
+La première fonction membre appelle [indicateurs](#flags)(  *\_masque* &#124;  *\_indicateurs*) (la valeur des bits sélectionnés), puis retourne le indicateurs de format précédent. La deuxième fonction membre appelle `flags(_Mask & fmtfl, flags & ~_Mask)` (remplacez bits sélectionnés sous un masque), puis retourne les indicateurs de format précédent.
 
 ### <a name="example"></a>Exemple
 

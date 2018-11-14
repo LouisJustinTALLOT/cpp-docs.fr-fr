@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 6b0c0f018d5d66ea62b29b971e5390751a69e3c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631801"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326916"
 ---
 # <a name="try-finally-statement"></a>try-finally, instruction
 
@@ -33,27 +33,26 @@ ms.locfileid: "50631801"
 
 La syntaxe suivante décrit la **try-finally** instruction :
 
-```cpp
-__try {
-   // guarded code
-}
-__finally {
-   // termination code
-}
-```
+> **\_\_Essayez**<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;code protégé<br/>
+> }<br/>
+> **\_\_Enfin**<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;code d’arrêt<br/>
+> }<br/>
 
 ## <a name="grammar"></a>Grammaire
 
-*try-finally-statement*: **__try** *compound-statement*
-
-**__finally** *compound-statement*
+*try-finally-statement* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\_\_Essayez** *compound-statement*  **\_ \_enfin** *compound-statement*
 
 Le **try-finally** instruction est une extension de Microsoft pour les langages C et C++ qui permet aux applications cibles garantir l’exécution de code de nettoyage lorsque l’exécution d’un bloc de code est interrompue. Le nettoyage se compose de tâches telles que la désallocation de mémoire, la fermeture de fichiers et la libération des handles de fichiers. Le **try-finally** instruction est particulièrement utile pour les routines qui ont plusieurs endroits où un contrôle est effectué pour une erreur qui peut entraîner prématuré de retour de la routine.
 
 Pour plus d’informations et un exemple de code, consultez [essayez-EXCEPT, instruction](../cpp/try-except-statement.md). Pour plus d’informations sur structurée des exceptions en général, consultez [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Pour plus d’informations sur la gestion des exceptions dans les applications managées, consultez [gestion des exceptions sous /clr](../windows/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
->  La gestion structurée des exceptions fonctionne avec Win32 pour les fichiers sources C et C++. Toutefois, elle n'est pas conçue spécifiquement pour C++. Vous pouvez vous assurer que votre code est plus portable en utilisant la gestion des exceptions C++. En outre, la gestion des exceptions C++ est plus souple, car elle permet de traiter des exceptions de tout type. Pour les programmes C++, il est recommandé d’utiliser le mécanisme de gestion des exceptions C++ ([try, catch et throw](../cpp/try-throw-and-catch-statements-cpp.md) instructions).
+> La gestion structurée des exceptions fonctionne avec Win32 pour les fichiers sources C et C++. Toutefois, elle n'est pas conçue spécifiquement pour C++. Vous pouvez vous assurer que votre code est plus portable en utilisant la gestion des exceptions C++. En outre, la gestion des exceptions C++ est plus souple, car elle permet de traiter des exceptions de tout type. Pour les programmes C++, il est recommandé d’utiliser le mécanisme de gestion des exceptions C++ ([try, catch et throw](../cpp/try-throw-and-catch-statements-cpp.md) instructions).
 
 L’instruction composée après la **__try** clause est la section protégée. L’instruction composée après la **__finally** clause est le Gestionnaire de terminaisons. Le gestionnaire spécifie un jeu d'actions qui s'exécutent lorsque la section protégée est fermée, que la section protégée soit fermée par une exception (fin anormale) ou par un passage standard (fin normale).
 
@@ -72,7 +71,7 @@ Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à 
 ![Commande d’arrêt&#45;l’exécution du gestionnaire](../cpp/media/vc38cx1.gif "vc38CX1") ordre d’exécution de gestionnaire de terminaisons
 
 > [!NOTE]
->  Le comportement de try-finally est différent d’autres langages qui prennent en charge l’utilisation de **enfin**, tel que c#.  Un seul **__try** peut-être, mais pas les deux de **__finally** et **__except**.  Si les deux doivent être utilisés conjointement, une instruction try-except externe doit entourer l'instruction try-finally interne.  Les règles qui spécifient le moment d'exécution de chaque blocs sont également différentes.
+> Le comportement de try-finally est différent d’autres langages qui prennent en charge l’utilisation de **enfin**, tel que c#.  Un seul **__try** peut-être, mais pas les deux de **__finally** et **__except**.  Si les deux doivent être utilisés conjointement, une instruction try-except externe doit entourer l'instruction try-finally interne.  Les règles qui spécifient le moment d'exécution de chaque blocs sont également différentes.
 
 Pour assurer la compatibilité avec les versions précédentes, **_try**, **_finally**, et **_leave** sont synonymes de **__try**, **__ enfin**, et **__leave** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
 

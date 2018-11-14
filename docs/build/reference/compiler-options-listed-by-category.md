@@ -1,15 +1,15 @@
 ---
 title: Options du compilateur classées par catégorie
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532949"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598819"
 ---
 # <a name="compiler-options-listed-by-category"></a>Options du compilateur classées par catégorie
 
@@ -46,7 +46,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/Gh](gh-enable-penter-hook-function.md)|Appelle la fonction de raccordement `_penter`.|
 |[/GH](gh-enable-pexit-hook-function.md)|Appelle la fonction de raccordement `_pexit`.|
 |[/GL](gl-whole-program-optimization.md)|Active l'optimisation de l'ensemble du programme.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Active la régénération minimale.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Obsolète. Active la régénération minimale.|
 |[/GR](gr-enable-run-time-type-information.md)|Active les informations de type au moment de l'exécution (RTTI, Run-Time Type Information).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Utilise la convention d'appel `__fastcall` . (x86 uniquement)|
 |[/GS](gs-buffer-security-check.md)|Vérifie la sécurité des mémoires tampons.|
@@ -202,6 +202,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Obsolète. Utilisez plutôt [/LN (Create MSIL Module)](ln-create-msil-module.md) .|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Obsolète. Crée un fichier d’informations de consultation sans variables locales.|
 |[/Ge](ge-enable-stack-probes.md)|Obsolète. Active les tests de pile. Activé par défaut.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Obsolète. Active la régénération minimale.|
 |[/GX](gx-enable-exception-handling.md)|Obsolète. Active la gestion synchrone des exceptions. Utilisez [/EH](eh-exception-handling-model.md) à la place.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Obsolète. Active les vérifications rapides. Utilisez [/RTC1](rtc-run-time-error-checks.md) à la place.|
 |[/H](h-restrict-length-of-external-names.md)|Obsolète. Limite la longueur des noms externes (publics).|

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 2ac243f5e2c91636183c31640b50fa7bef95254d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b8c713bcf00cd68f9621b8c112d4d6fd27aec01
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459018"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556399"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl, classe
 
-Fournit une implémentation de la [IDBCreateCommand](/previous-versions/windows/desktop/ms711625) interface.
+Fournit une implémentation de la [IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms711625(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,14 +62,14 @@ Crée une nouvelle commande et retourne l’interface demandée.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-STDMETHOD(CreateCommand)(IUnknown * pUnkOuter, 
-   REFIID riid, 
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
+   REFIID riid,
    IUnknown ** ppvCommand);
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772) dans le *de référence du programmeur OLE DB*.
+Consultez [IDBCreateCommand::CreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709772(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBCreateCommand::CreateCommand`:
 

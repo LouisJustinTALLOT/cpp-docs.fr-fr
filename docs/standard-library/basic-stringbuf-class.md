@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 87ea8150e13076d176665bc3ddcc04482d639b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462023"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329642"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf, classe
 
@@ -183,7 +183,7 @@ Si la fonction ne peut pas réussir, elle retourne `traits_type::eof`. Sinon, el
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de _ *Meta* n’est pas égale à **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la fonction membre virtuelle protégée essaie d’insérer l’élément **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
+Si  *\_Meta* ne compare pas égal à **traits_type ::**[eof](../standard-library/char-traits-struct.md#eof), la fonction membre virtuelle protégée tente d’insérer l’élément  **traits_type ::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
 
 - Si une position d’écriture est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.
 

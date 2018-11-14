@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 72038e119f7d4483dcd6c6b343d20fd3655856b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533872"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327341"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox, classe
 
@@ -80,13 +80,13 @@ Si vous souhaitez gérer les messages de notification Windows envoyés par une z
 
 Chaque entrée de table des messages prend la forme suivante :
 
-**ON_** Notification **(**`id`, `memberFxn` **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
 où `id` Spécifie l’ID de fenêtre enfant du contrôle qui envoie la notification et `memberFxn` est le nom de la fonction de membre parent que vous avez écrit pour gérer les notifications.
 
 Prototype de fonction du parent est la suivante :
 
-**afx_msg** `void` `memberFxn` **() ;**
+`afx_msg void memberFxn();`
 
 Il n'existe qu’une seule entrée de table des messages qui se rapporte spécifiquement à `CCheckListBox` (mais consultez également les entrées de table des messages pour [CListBox](../../mfc/reference/clistbox-class.md)) :
 

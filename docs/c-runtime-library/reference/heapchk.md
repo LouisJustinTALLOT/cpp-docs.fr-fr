@@ -26,12 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580620"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331397"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -49,11 +49,11 @@ int _heapchk( void );
 
 |Valeur de retour|Condition|
 |-|-|
-**_HEAPBADBEGIN**|Les informations d’en-tête initiales sont incorrectes ou introuvables.
-**_HEAPBADNODE**|Un nœud incorrect a été trouvé ou le tas est endommagé.
-**_HEAPBADPTR**|Le pointeur vers le tas n’est pas valide.
-**_HEAPEMPTY**|Le tas n’a pas été initialisé.
-**_HEAPOK**|Le tas est cohérent.
+| **_HEAPBADBEGIN** | Les informations d’en-tête initiales sont incorrectes ou introuvables. |
+| **_HEAPBADNODE** | Un nœud incorrect a été trouvé ou le tas est endommagé. |
+| **_HEAPBADPTR** | Le pointeur vers le tas n’est pas valide. |
+| **_HEAPEMPTY** | Le tas n’a pas été initialisé. |
+| **_HEAPOK** | Le tas est cohérent. |
 
 En outre, si une erreur se produit, **_heapchk** définit **errno** à **ENOSYS**.
 

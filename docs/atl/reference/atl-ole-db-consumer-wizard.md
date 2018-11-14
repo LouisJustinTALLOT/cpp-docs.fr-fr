@@ -8,12 +8,12 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 835b3e6246741c3859f51e017686531f450db194
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499565"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524129"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistant Consommateur OLEDB ATL
 
@@ -84,13 +84,13 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
 
       **Autre :** dans **Connect timeout**, spécifiez le nombre de secondes d’inactivité autorisée avant un délai d’expiration se produit. Dans **autorisations d’accès**, spécifiez les autorisations d’accès sur la connexion de données.
 
-       Pour plus d’informations sur les propriétés avancées d’initialisation, reportez-vous à la documentation fournie avec chaque fournisseur OLE DB.
+      Pour plus d’informations sur les propriétés avancées d’initialisation, reportez-vous à la documentation fournie avec chaque fournisseur OLE DB.
 
    - **Tous les** onglet
 
       Cet onglet affiche un résumé des propriétés d’initialisation pour la source de données et de la connexion que vous avez spécifié. Vous pouvez modifier ces valeurs.
 
-   Cliquez sur **OK** se termine. Le **sélectionner un objet de base de données** boîte de dialogue s’affiche. Dans cette boîte de dialogue, sélectionnez la table, une vue ou une procédure stockée que le consommateur doit utiliser.
+      Cliquez sur **OK** se termine. Le **sélectionner un objet de base de données** boîte de dialogue s’affiche. Dans cette boîte de dialogue, sélectionnez la table, une vue ou une procédure stockée que le consommateur doit utiliser.
 
 - **Classe**
 

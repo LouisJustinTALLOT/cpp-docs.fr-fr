@@ -84,16 +84,17 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: ff908ab57b1130f959e5e9818e4185a8b3cfd348
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49a5b59234d92d2587abceff80382e477f66e762
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473576"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333304"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt;, fonctions
 
 Ces fonctions libres de l’en-tête [\<filesystem>](../standard-library/filesystem.md) effectuent des opérations de modification et de requête sur des chemins, des fichiers, des liens symboliques, des répertoires et des volumes. Pour plus d’informations et pour obtenir des exemples de code, consultez [Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md).
+
 ||||
 |-|-|-|
 |[absolute](#absolute)|[begin](#begin)|[canonical](#canonical)|

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 707287ea7abe255409911f5388cd1f96d976802b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454633"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326730"
 ---
 # <a name="ismbc-routines"></a>_ismbc, routines
 
@@ -42,7 +42,7 @@ La valeur de sortie est affectée par le paramètre de catégorie `LC_CTYPE` des
 |Routine|Condition de test|Exemple de page de codes 932|
 |-------------|--------------------|---------------------------|
 |[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphanumérique|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’une lettre de l’alphabet anglais ASCII : consultez les exemples pour `_ismbcdigit` et `_ismbcalpha`.|
-|[_ismbcalpha, _ismbcalpha\_](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphabétique|Retourne une valeur différente de zéro si, et seulement si, `c` est une représentation sur un octet d’une lettre de l’alphabet anglais ASCII (voir des exemples pour `_ismbcupper` et `_ismbclower`) ou une lettre katakana : 0xA6<=`c`<=0xDF.|
+|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphabétique|Retourne une valeur différente de zéro si, et seulement si, `c` est une représentation sur un octet d’une lettre de l’alphabet anglais ASCII (voir des exemples pour `_ismbcupper` et `_ismbclower`) ou une lettre katakana : 0xA6<=`c`<=0xDF.|
 |[_ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Chiffre|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’un chiffre ASCII : 0x30<=`c`<=0x39.|
 |[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Graphique|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’un caractère imprimable ASCII ou katakana, à l’exception d’un espace blanc ( ). Afficher des exemples pour `_ismbcdigit`, `_ismbcalpha` et `_ismbcpunct`|
 |[_ismbclegal, _ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Caractère multioctet valide|Retourne une valeur différente de zéro si, et seulement si, le premier octet de `c` appartient à la plage 0x81-0x9F ou 0xE0-0xFC et que le deuxième octet appartient à la plage 0x40-0x7E ou 0x80-FC.|

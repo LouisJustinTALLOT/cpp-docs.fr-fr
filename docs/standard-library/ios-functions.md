@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: bf22c0e4775ef93b1965a7c9d61f024441bea821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18f42f8e5bcd69872e4300d154eb72f489015e36
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509680"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519677"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt;, fonctions
 
@@ -213,7 +213,7 @@ Référence à l’objet à partir duquel _ *Str* est dérivé.
 
 `fixed` est la notation d’affichage par défaut pour les nombres à virgule flottante. [scientific](../standard-library/ios-functions.md#scientific) fait en sorte que les nombres à virgule flottante soient affichés à l’aide de la notation scientifique.
 
-Le manipulateur appelle * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, `ios_base::floatfield`), puis retourne *str*.
+Le manipulateur appelle *str*.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, `ios_base::floatfield` ), puis retourne *str*.
 
 ### <a name="example"></a>Exemple
 
@@ -872,15 +872,13 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 1 2 3
-
 ```
 
 ```Output
-
-      1 2 3.1.
+Enter three characters: 1 2 3
+.1.
 .2.
 .3.
 ```

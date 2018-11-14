@@ -12,12 +12,12 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: b3e5664064f9c32d6c5f5a1e6751712bc36cc7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bc6a3b2ef2d78e5b30ea36149ea691468c9b0ec
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668557"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327510"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
@@ -28,17 +28,17 @@ Lire la mémoire à partir d’un emplacement spécifié par un décalage par ra
 ## <a name="syntax"></a>Syntaxe
 
 ```
-unsigned char __readgsbyte( 
-   unsigned long Offset 
-);
-unsigned short __readgsword( 
-   unsigned long Offset 
-);
-unsigned long __readgsdword( 
+unsigned char __readgsbyte(
    unsigned long Offset
 );
-unsigned __int64 __readgsqword( 
-   unsigned long Offset 
+unsigned short __readgsword(
+   unsigned long Offset
+);
+unsigned long __readgsdword(
+   unsigned long Offset
+);
+unsigned __int64 __readgsqword(
+   unsigned long Offset
 );
 ```
 
@@ -51,14 +51,14 @@ unsigned __int64 __readgsqword( 
 
 Le contenu de la mémoire de l’octet, word, mot double ou mot quadruple (comme indiqué par le nom de la fonction appelée) à l’emplacement `GS:[Offset]`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
-|`__readgsbyte`|x64|
-|`__readgsdword`|x64|
-|`__readgsqword`|x64|
-|`__readgsword`|x64|
+|`__readgsbyte`|X64|
+|`__readgsdword`|X64|
+|`__readgsqword`|X64|
+|`__readgsword`|X64|
 
 **Fichier d’en-tête** \<intrin.h >
 

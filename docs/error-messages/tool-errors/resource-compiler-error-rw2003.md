@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: 2e0a7d2d5b7e8fc4603b10450ba30dbf014e02cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583167"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520606"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Erreur RW2003 du compilateur de ressources 
 
@@ -51,10 +51,10 @@ Erreur de génération
 
    Pour Windows 3.1, une ressource ne peut pas dépasser 65 000 octets environ. Si votre ressource est le cas, vous ne pourrez pas compiler avec Visual C++ ou le compilateur de ressources en ligne de commande. Cette limite de taille ne s’applique pas aux curseurs, aux icônes, aux bitmaps et autres ressources basées sur un fichier.
 
-9. **Fichier de ressources n’est pas au format 3.00**
+1. **Fichier de ressources n’est pas au format 3.00**
 
    Une icône ou curseur utilisait un format antérieures à la version 3.00. La ressource doit être converti ou recréé en utilisant le format de la version 3.00 ou ultérieure.
 
-10. **Impossible d’ouvrir le fichier temporaire**
+1. **Impossible d’ouvrir le fichier temporaire**
 
    Le compilateur de ressources/Visual C++ n’a pas pu ouvrir un fichier temporaire. La cause probable est que vous n’avez pas d’autorisations en écriture pour le répertoire ou que le répertoire n’existe pas. Le compilateur de ressources/Visual C++ essaie d’utiliser ces fichiers dans le répertoire spécifié par la variable d’environnement **TMP** ou le répertoire actuel si aucun n’est spécifié.

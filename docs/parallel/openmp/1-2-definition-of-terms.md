@@ -2,12 +2,12 @@
 title: 1.2 Définition des termes
 ms.date: 11/04/2016
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-ms.openlocfilehash: ac117a03f784e617e5db246f4bda28e350d2e7a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd8bcc47a7fc9d1d0683c220ccd5ef1edac2b4e9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597208"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326028"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Définition des termes
 
@@ -63,7 +63,7 @@ Les termes suivants sont utilisés dans ce document :
 
 - bloc structuré
 
-   Un bloc structuré est une instruction (unique ou composée) qui a une seule entrée et une sortie unique. Aucune instruction n’est un bloc structuré s’il existe un saut dans ou hors de cette instruction (y compris un appel à **longjmp**(3C) ou l’utilisation de **lever**, mais un appel à **quitter** est autorisée). Une instruction composée est un bloc structuré si son exécution toujours commence à l’ouverture **{** et se termine toujours à la fermeture **}**. Une instruction d’expression, une instruction de sélection, une instruction d’itération, ou **essayez** bloc est un bloc structuré si l’instruction composée correspondante obtenue en le plaçant dans **{** et **}** serait un bloc structuré. Une instruction de saut, une instruction étiquetée ou une instruction de déclaration n’est pas un bloc structuré.
+   Un bloc structuré est une instruction (unique ou composée) qui a une seule entrée et une sortie unique. Aucune instruction n’est un bloc structuré s’il existe un saut dans ou hors de cette instruction (y compris un appel à **longjmp**(3C) ou l’utilisation de **lever**, mais un appel à **quitter** est autorisée). Une instruction composée est un bloc structuré si son exécution toujours commence à l’ouverture **{** et se termine toujours à la fermeture **}**. Une instruction d’expression, une instruction de sélection, une instruction d’itération, ou **essayez** bloc est un bloc structuré si l’instruction composée correspondante obtenue en le plaçant dans **{** et **}**  serait un bloc structuré. Une instruction de saut, une instruction étiquetée ou une instruction de déclaration n’est pas un bloc structuré.
 
 - Équipe
 

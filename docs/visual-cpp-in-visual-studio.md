@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: fbabb949fa0dae03cabfb6db1c98c2ebc1f1af12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5f263bb6716d4f66673257115d37cd17a59051
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668336"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327185"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ dans Visual Studio
 
 > [!NOTE]
 > Cette documentation pour les développeurs s’applique à Visual Studio 2015 et Visual Studio 2017.
-
+>
 > Si vous recherchez un package redistribuable Visual C++ pour pouvoir exécuter un programme, accédez au [Centre de téléchargement Microsoft](http://www.microsoft.com/download/) et entrez **Visual C++** dans la zone de recherche.
 
 

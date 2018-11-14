@@ -1,17 +1,17 @@
 ---
 title: Test du contrôle ATL DHTML modifié
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 helpviewer_keywords:
 - HTML controls, testing
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: f0fec3e2430fd5956e3cc48cd64532efee30926d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99f55807a7da647af0961f73c600ae0e31166cdc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501671"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330968"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Test du contrôle ATL DHTML modifié
 
@@ -31,13 +31,13 @@ Les méthodes qui ne font pas partie de l’interface utilisateur de test mainte
 
 1. Mettez en surbrillance le contrôle, afin de la bordure est activée.
 
-1. Sur le **contrôle** menu, cliquez sur **appeler les méthodes**.
+1. Sur le **contrôle** menu, choisissez **appeler les méthodes**.
 
-Les méthodes dans la liste intitulée **nom de la méthode** sont les méthodes que le conteneur peut appeler : `MethodInvoked` et `GoToURL`. Toutes les autres méthodes sont contrôlées par l’interface utilisateur.
+   Les méthodes dans la liste intitulée **nom de la méthode** sont les méthodes que le conteneur peut appeler : `MethodInvoked` et `GoToURL`. Toutes les autres méthodes sont contrôlées par l’interface utilisateur.
 
-1. Sélectionnez une méthode à appeler et cliquez sur `Invoke` pour afficher la boîte de message de la méthode ou pour accéder à www.microsoft.com.
+1. Sélectionnez une méthode à appeler et choisissez **Invoke** pour afficher la boîte de message de la méthode ou pour accéder à `www.microsoft.com`.
 
-1. Dans le **appeler les méthodes** boîte de dialogue, cliquez sur **fermer**.
+1. Dans le **appeler les méthodes** boîte de dialogue, sélectionnez **fermer**.
 
 Pour en savoir plus sur les différents éléments et les fichiers qui composent un contrôle ATL DHTML, consultez [identification des éléments du projet de contrôle DHTML Edit](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 

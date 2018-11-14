@@ -106,12 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637279"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331202"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -228,17 +228,17 @@ Le **_stat** structure, définie dans SYS\STAT. H, inclut les champs suivants.
 
 |Champ||
 |-|-|
-**st_gid**|Identificateur numérique du groupe propriétaire du fichier (propre à UNIX). Ce champ est toujours zéro sur les systèmes Windows. Un fichier de redirection est classé comme un fichier Windows.
-**st_atime**|Heure du dernier accès au fichier. Valide sur NTFS, mais pas sur les lecteurs de disque au format FAT.
-**st_ctime**|Heure de création du fichier. Valide sur NTFS, mais pas sur les lecteurs de disque au format FAT.
-**st_dev**|Numéro du disque contenant le fichier du lecteur (même en tant que **st_rdev**).
-**st_ino**|Numéro du nœud d’informations (le **inode**) pour le fichier (propre à UNIX). Sur les systèmes de fichiers UNIX, le **inode** décrit la date du fichier et les horodatages, les autorisations et les contenus. Lorsque les fichiers sont matériellement liés entre eux, ils partagent le même **inode**. Le **inode**et par conséquent **st_ino**, n’a aucune signification dans les systèmes de fichiers FAT, HPFS ou NTFS.
-**st_mode**|Masque de bits pour les informations relatives au mode de fichier. Le **_S_IFDIR** bit est défini si *chemin d’accès* spécifie un répertoire ; le **_S_IFREG** bit est défini si *chemin d’accès* spécifie un fichier ordinaire ou un périphérique. Les bits de lecture/écriture utilisateur sont définis en fonction du mode d’autorisation du fichier. Les bits d’exécution utilisateur sont définis en fonction de l’extension de nom de fichier.
-**st_mtime**|Heure de dernière modification du fichier.
-**st_nlink**|Toujours 1 sur les systèmes de fichiers autres que NTFS.
-**st_rdev**|Numéro du disque contenant le fichier du lecteur (même en tant que **st_dev**).
-**st_size**|Taille du fichier en octets ; un entier 64 bits pour les variantes avec le **i64** suffixe.
-**st_uid**|Identificateur numérique de l’utilisateur propriétaire du fichier (propre à UNIX). Ce champ est toujours zéro sur les systèmes Windows. Un fichier de redirection est classé comme un fichier Windows.
+| **st_gid** | Identificateur numérique du groupe propriétaire du fichier (propre à UNIX). Ce champ est toujours zéro sur les systèmes Windows. Un fichier de redirection est classé comme un fichier Windows. |
+| **st_atime** | Heure du dernier accès au fichier. Valide sur NTFS, mais pas sur les lecteurs de disque au format FAT. |
+| **st_ctime** | Heure de création du fichier. Valide sur NTFS, mais pas sur les lecteurs de disque au format FAT. |
+| **st_dev** | Numéro du disque contenant le fichier du lecteur (même en tant que **st_rdev**). |
+| **st_ino** | Numéro du nœud d’informations (le **inode**) pour le fichier (propre à UNIX). Sur les systèmes de fichiers UNIX, le **inode** décrit la date du fichier et les horodatages, les autorisations et les contenus. Lorsque les fichiers sont matériellement liés entre eux, ils partagent le même **inode**. Le **inode**et par conséquent **st_ino**, n’a aucune signification dans les systèmes de fichiers FAT, HPFS ou NTFS. |
+| **st_mode** | Masque de bits pour les informations relatives au mode de fichier. Le **_S_IFDIR** bit est défini si *chemin d’accès* spécifie un répertoire ; le **_S_IFREG** bit est défini si *chemin d’accès* spécifie un fichier ordinaire ou un périphérique. Les bits de lecture/écriture utilisateur sont définis en fonction du mode d’autorisation du fichier. Les bits d’exécution utilisateur sont définis en fonction de l’extension de nom de fichier. |
+| **st_mtime** | Heure de dernière modification du fichier. |
+| **st_nlink** | Toujours 1 sur les systèmes de fichiers autres que NTFS. |
+| **st_rdev** | Numéro du disque contenant le fichier du lecteur (même en tant que **st_dev**). |
+| **st_size** | Taille du fichier en octets ; un entier 64 bits pour les variantes avec le **i64** suffixe. |
+| **st_uid** | Identificateur numérique de l’utilisateur propriétaire du fichier (propre à UNIX). Ce champ est toujours zéro sur les systèmes Windows. Un fichier de redirection est classé comme un fichier Windows. |
 
 Si *chemin d’accès* fait référence à un périphérique, le **st_size**, divers champs d’heure, **st_dev**, et **st_rdev** champs dans le **_stat**  structure n’ont aucune signification. Étant donné que STAT.H utilise le type [_dev_t](../../c-runtime-library/standard-types.md) défini dans TYPES.H, vous devez inclure TYPES.H avant STAT.H dans votre code.
 

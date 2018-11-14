@@ -6,13 +6,17 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: 91bd50ca34893b7dd91f6402f5ca95865f872650
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd1f38236baf2caca9f2a2a426f28f797291fb13
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429339"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524649"
 ---
+# <a name="delegate-and-interface-map-macros"></a>Macros de mappage d’interface et délégué
+
+MFC prend en charge ces macros pour les cartes d’interface et délégué :
+
 |||
 |-|-|
 |[BEGIN_DELEGATE_MAP](#begin_delegate_map)|Commence un mappage de délégué.|
@@ -221,7 +225,6 @@ L’exemple de code suivant montre comment utiliser EVENT_DELEGATE_ENTRY pour cr
 BEGIN_DELEGATE_MAP(CMyView)
    EVENT_DELEGATE_ENTRY(OnClick, System::Object^, System::EventArgs^)
 END_DELEGATE_MAP()
-
 ```
 
 ### <a name="requirements"></a>Configuration requise

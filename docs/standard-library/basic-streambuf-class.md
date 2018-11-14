@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: d15e38c63e335dbd574ad2d1c1ee23e0d5a70a30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565722"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524675"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf, classe
 
@@ -457,7 +457,7 @@ Si la fonction ne peut pas réussir, elle retourne **traits_type::eof** ou lève
 
 ### <a name="remarks"></a>Notes
 
-Si _ *Meta* n’a pas une valeur égale à **traits_type::eof**, la fonction membre virtuelle protégée s’efforce d’insérer l’élément **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) dans le flux de sortie. Elle peut le faire de différentes manières :
+Si  *\_Meta* ne compare pas égal à **traits_type::eof**, la fonction membre virtuelle protégée s’efforce d’insérer l’élément **traits_type ::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) dans le flux de sortie. Elle peut le faire de différentes manières :
 
 - Si une `write position` est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.
 
@@ -492,7 +492,7 @@ Si la fonction ne peut pas réussir, elle retourne **traits_type::eof** ou lève
 
 ### <a name="remarks"></a>Notes
 
-Si _ *Meta* a la même valeur que **traits_type::eof**, l’élément à remettre est celui qui se trouve dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). La fonction peut replacer un élément de différentes manières :
+Si  *\_Meta* est égale à **traits_type::eof**, l’élément à remettre est celui déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par **traits_type ::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). La fonction peut replacer un élément de différentes manières :
 
 - Si une position où remettre l’élément est disponible, elle peut stocker l’élément dans cette position et décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
 
@@ -689,15 +689,12 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 3
-
 ```
 
 ```Output
-
-      33
+33
 51
 ```
 
@@ -967,14 +964,11 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 aa
-
 ```
 
 ```Output
-
 aa97
 ```
 

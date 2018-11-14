@@ -2,12 +2,12 @@
 title: Mettre à niveau votre code vers le CRT universel
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 5e417df380ff2239b7c09ba32cc02b784e9343d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668609"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331748"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Mettre à niveau votre code vers le CRT universel
 
@@ -37,7 +37,7 @@ L’UCRT étant à présent un composant du système d’exploitation Microsoft 
 
 Vous pouvez utiliser l’UCRT sur n’importe quelle version de Windows prise en charge par Visual Studio 2015 ou Visual Studio 2017. Vous pouvez la redistribuer à l’aide d’un package vcredist pour les versions prises en charge de Windows distinctes de Windows 10. Les packages vcredist incluent les composants UCRT et les installent automatiquement sur les systèmes d’exploitation Windows qui en sont dépourvus par défaut. Pour plus d’informations, consultez [Redistribution des fichiers Visual C++](../ide/redistributing-visual-cpp-files.md).
 
-Le déploiement local de l’application de l’UCRT est pris en charge, bien que non recommandé pour des raisons de performances et de sécurité. Les DLL pour un déploiement local de l’application sont incluses dans le cadre du SDK Windows, dans le sous-répertoire **redist**. Les DLL requises incluent ucrtbase.dll et un jeu de DLL de type **redirecteur APISet** nommé -ms-win-_sous-ensemble_.dll. Comme le jeu de DLL requis varie d’un système d’exploitation à l’autre, nous vous recommandons d’inclure toutes les DLL quand vous utilisez le déploiement local de l’application. Pour plus de détails et mises en garde concernant le déploiement local de l’application, consultez [Déploiement dans Visual C++](../ide/deployment-in-visual-cpp.md).
+Le déploiement local de l’application de l’UCRT est pris en charge, bien que non recommandé pour des raisons de performances et de sécurité. Les DLL pour un déploiement local de l’application sont incluses dans le cadre du SDK Windows, dans le sous-répertoire **redist**. Les DLL requises incluent ucrtbase.dll et un jeu de DLL de type **redirecteur APISet** nommé -ms-win-_sous-ensemble_.dll. Comme le jeu de DLL requis varie d’un système d’exploitation à l’autre, nous vous recommandons d’inclure toutes les DLL quand vous utilisez le déploiement local de l’application. Pour plus de détails et mises en garde concernant le déploiement local de l’application, consultez [Déploiement dans Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Modifications apportées aux macros et fonctions du CRT universel
 

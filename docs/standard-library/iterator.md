@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 1582f6167d8aae3a9d5a318726cc7404c7e1ea62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640360"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520749"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -22,7 +22,6 @@ Définit les primitives des itérateurs, les itérateurs prédéfinis et les it�
 
 ```cpp
 #include <iterator>
-
 ```
 
 ## <a name="remarks"></a>Notes

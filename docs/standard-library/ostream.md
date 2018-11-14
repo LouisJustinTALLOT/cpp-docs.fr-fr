@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: e8084fcbbeb2f1526107584058fc227bbd514d39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb73c77f0e2658cf750cf17ca85549a09d1cbe51
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582584"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523765"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -23,7 +23,6 @@ Définit la classe de modèle [basic_ostream](../standard-library/basic-ostream-
 
 ```cpp
 #include <ostream>
-
 ```
 
 ### <a name="typedefs"></a>Typedef

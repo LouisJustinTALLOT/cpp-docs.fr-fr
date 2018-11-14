@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: a6677d5d265b2de9f94160dae6afaedfb3c8b89f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a900a472a3783bde66584b64e361d80c606f0e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644325"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524558"
 ---
 # <a name="diagnostic-services"></a>Services de diagnostic
 
@@ -657,7 +657,7 @@ Pour utiliser cette fonction avec succès :
 - Le fichier IMAGEHLP. DLL doit être sur votre chemin d’accès. Si vous n’avez pas cette DLL, la fonction affiche un message d’erreur. Consultez [bibliothèque d’aide Image](/windows/desktop/Debug/image-help-library) pour plus d’informations sur l’ensemble de la fonction fournie par IMAGEHLP.
 
 - Les modules qui ont des trames sur la pile doivent inclure les informations de débogage. Si elles ne contiennent pas les informations de débogage, la fonction va générer une trace de pile, mais la trace sera moins détaillée.
-### <a name="requirements"></a>Configuration requise
+  ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 

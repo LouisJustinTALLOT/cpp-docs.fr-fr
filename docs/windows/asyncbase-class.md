@@ -25,7 +25,6 @@ f1_keywords:
 - async/Microsoft::WRL::AsyncBase::put_Id
 - async/Microsoft::WRL::AsyncBase::PutOnComplete
 - async/Microsoft::WRL::AsyncBase::PutOnProgress
-- async/Microsoft::WRL::AsyncBase::Start
 - async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
 - async/Microsoft::WRL::AsyncBase::TryTransitionToError
 helpviewer_keywords:
@@ -51,16 +50,15 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::put_Id method
 - Microsoft::WRL::AsyncBase::PutOnComplete method
 - Microsoft::WRL::AsyncBase::PutOnProgress method
-- Microsoft::WRL::AsyncBase::Start method
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 71839fbea4300560dbf2b9617fe7b8d3864676b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19c4779dbd4d39260d5fe03967e8c0a530a75026
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599666"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556918"
 ---
 # <a name="asyncbase-class"></a>AsyncBase (classe)
 
@@ -116,7 +114,7 @@ Nom                                         | Description
 [AsyncBase::put_Id](#put-id)                 | Définit le handle de l’opération asynchrone.
 [AsyncBase::PutOnComplete](#putoncomplete)   | Définit l’adresse du Gestionnaire d’événements de saisie semi-automatique à la valeur spécifiée.
 [AsyncBase::PutOnProgress](#putonprogress)   | Définit l’adresse du Gestionnaire d’événements de progression à la valeur spécifiée.
-[AsyncBase::Start](#start)                   | Démarre l’opération asynchrone.
+
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
@@ -130,6 +128,7 @@ Nom                                                                         | De
 [AsyncBase::OnCancel](#oncancel)                                             | En cas de substitution dans une classe dérivée, annule une opération asynchrone.
 [AsyncBase::OnClose](#onclose)                                               | En cas de substitution dans une classe dérivée, ferme une opération asynchrone.
 [AsyncBase::OnStart](#onstart)                                               | En cas de substitution dans une classe dérivée, démarre une opération asynchrone.
+[AsyncBase::Start](#start)                                                   | Démarre l’opération asynchrone.
 [AsyncBase::TryTransitionToCompleted](#trytransitiontocompleted)             | Indique si l’opération asynchrone en cours est terminée.
 [AsyncBase::TryTransitionToError](#trytransitiontoerror)                     | Indique si le code d’erreur spécifié peut modifier l’état d’erreur interne.
 
@@ -504,7 +503,7 @@ S_OK si l’opération démarre ou est déjà démarré ; Sinon, E_ILLEGAL_STAT
 
 ### <a name="remarks"></a>Notes
 
-`Start()` est une implémentation par défaut de `IAsyncInfo::Start`, et n’effectue aucun travail réel. Pour lancer une opération asynchrone, remplacer le `OnStart()` méthode virtuelle pure.
+`Start()` est une méthode protégée qui n’est pas visible de l’extérieur, car les opérations asynchrones « chaud début » avant de retourner à l’appelant.
 
 ## <a name="trytransitiontocompleted"></a>AsyncBase::TryTransitionToCompleted
 

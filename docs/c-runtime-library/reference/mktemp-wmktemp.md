@@ -33,12 +33,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 9dbaba9e4a68523c0d79762c6a7ff54c238e397d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554164"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326262"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 
@@ -82,7 +82,7 @@ Le **_mktemp** fonction crée un nom de fichier unique en modifiant le *nameTemp
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-Le *nameTemplate* argument présente sous la forme *base ** XXXXXX*, où *base* est la partie du nouveau nom de fichier que vous fournissez et chaque X est un espace réservé pour un caractère fourni par **_mktemp**. Chaque caractère d’espace réservé dans *nameTemplate* doit être un x majuscule. **_mktemp** conserve *base* et remplace le premier X de fin par un caractère alphabétique. **_mktemp** remplace la fin suivant x avec une valeur à cinq chiffres ; cette valeur est un numéro unique identifiant le processus appelant, ou dans les programmes multithread, le thread appelant.
+Le *nameTemplate* argument présente sous la forme *base*XXXXXX, où *base* est la partie du nouveau nom de fichier que vous fournissez et chaque X est un espace réservé pour un caractère fourni par **_mktemp**. Chaque caractère d’espace réservé dans *nameTemplate* doit être un x majuscule. **_mktemp** conserve *base* et remplace le premier X de fin par un caractère alphabétique. **_mktemp** remplace la fin suivant x avec une valeur à cinq chiffres ; cette valeur est un numéro unique identifiant le processus appelant, ou dans les programmes multithread, le thread appelant.
 
 Chaque appel réussi à **_mktemp** modifie *nameTemplate*. Dans chaque appel suivant à partir du même processus ou le thread avec le même *nameTemplate* argument, **_mktemp** vérifications pour les noms de fichiers qui correspondent aux noms retournés par **_mktemp** dans appels précédents. Si aucun fichier n’existe pour un nom donné, **_mktemp** retourne ce nom. Si les fichiers existent pour tous les noms précédemment retournaient, **_mktemp** crée un nouveau nom en remplaçant le caractère alphabétique utilisé dans le nom précédemment retourné par la lettre minuscule suivante disponible, dans l’ordre, à partir de 'a' à 'z'. Par exemple, si *base* est :
 

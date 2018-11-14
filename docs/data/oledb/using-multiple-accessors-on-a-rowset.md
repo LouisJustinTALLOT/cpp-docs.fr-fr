@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: 2f88213fce0c5aa1d91f94d7fbeb26eab6432207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ce150375b98c697c32767001911eade53ed2f8c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483289"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522023"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilisation de plusieurs accesseurs dans un jeu de lignes
 
@@ -20,19 +20,19 @@ Il existe trois principaux scénarios dans lesquels vous devez utiliser plusieur
 
 - **Plusieurs ensembles de lignes en lecture/écriture.** Dans ce scénario, vous avez une table avec une clé primaire. Vous souhaitez être en mesure de lire toutes les colonnes dans la ligne, y compris la clé primaire. Vous souhaitez également être en mesure d’écrire des données à toutes les colonnes à l’exception de la clé primaire (car vous ne peut pas écrire dans la colonne clé primaire). Dans ce cas, vous définissez deux accesseurs :
 
-   - L’accesseur 0 contient toutes les colonnes.
+  - L’accesseur 0 contient toutes les colonnes.
 
-   - L’accesseur 1 contient toutes les colonnes à l’exception de la clé primaire.
+  - L’accesseur 1 contient toutes les colonnes à l’exception de la clé primaire.
 
 - **Performances** Dans ce scénario, une ou plusieurs colonnes ont une grande quantité de données, par exemple, aux fichiers de graphiques, audio ou vidéo. Chaque fois que vous passez à une ligne, sans doute ne voulez-vous extraire la colonne avec le fichier de données volumineux, car cela risque de ralentir les performances de votre application.
 
-   Vous pouvez définir des accesseurs distincts dans lequel le premier accesseur contient toutes les colonnes sauf celui avec des données volumineuses, et il récupère des données à partir de ces colonnes automatiquement ; l’accesseur premier est l’accesseur automatique. Le deuxième accesseur extrait uniquement la colonne contenant les données volumineuses, mais il ne récupérer automatiquement des données à partir de cette colonne. Vous pouvez avoir des autres méthodes de mise à jour ou extraire les données volumineuses à la demande.
+  Vous pouvez définir des accesseurs distincts dans lequel le premier accesseur contient toutes les colonnes sauf celui avec des données volumineuses, et il récupère des données à partir de ces colonnes automatiquement ; l’accesseur premier est l’accesseur automatique. Le deuxième accesseur extrait uniquement la colonne contenant les données volumineuses, mais il ne récupérer automatiquement des données à partir de cette colonne. Vous pouvez avoir des autres méthodes de mise à jour ou extraire les données volumineuses à la demande.
 
-   - Accesseur 0 est un accesseur automatique ; Il récupère toutes les colonnes à l’exception de celui avec des données volumineuses.
+  - Accesseur 0 est un accesseur automatique ; Il récupère toutes les colonnes à l’exception de celui avec des données volumineuses.
 
-   - L’accesseur 1 n’est pas un accesseur automatique ; Il récupère la colonne avec des données volumineuses.
+  - L’accesseur 1 n’est pas un accesseur automatique ; Il récupère la colonne avec des données volumineuses.
 
-   Utilisez l’argument automatique pour spécifier si l’accesseur est un accesseur automatique.
+  Utilisez l’argument automatique pour spécifier si l’accesseur est un accesseur automatique.
 
 - **Plusieurs colonnes ISequentialStream.** Dans ce scénario, vous avez plus d’une exploitation colonne `ISequentialStream` données. Toutefois, chaque accesseur est limité à un `ISequentialStream` flux de données. Pour résoudre ce problème, configurez plusieurs accesseurs, chacun comportant une `ISequentialStream` pointeur.
 

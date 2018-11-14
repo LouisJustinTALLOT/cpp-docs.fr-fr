@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: a0245862fe90c108b8ffc038b723a8b5bb62a665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7451b462087d6430c642ddbe3b7cf8141a792f2e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431909"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329369"
 ---
 # <a name="csize-class"></a>CSize, classe
 
@@ -173,11 +173,17 @@ CRect operator+(const RECT* lpRect) const throw();
 
 Consultez les descriptions suivantes des opérateurs individuels :
 
-- **opérateur + (** `size` **)** cette opération ajoute deux `CSize` valeurs.
+- **opérateur + (** *taille* **)**
 
-- **opérateur + (** `point` **)** cette opération offsets (déplace) un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) (ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) la valeur par ce `CSize` valeur. Le **cx** et **cy** membres de ce `CSize` valeur sont ajoutés à la **x** et **y** membres de données de la **POINT**  valeur. Elle est analogue à la version de [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) qui accepte un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) paramètre.
+  Cette opération ajoute deux `CSize` valeurs.
 
-- **opérateur + (** `lpRect` **)** cette opération offsets (déplace) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (ou [CRect](../../atl-mfc-shared/reference/crect-class.md)) la valeur par ce `CSize` valeur. Le **cx** et **cy** membres de ce `CSize` valeur sont ajoutés à la **gauche**, **haut**, **droite**, et **bas** membres de données de la `RECT` valeur. Elle est analogue à la version de [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) qui accepte un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) paramètre.
+- **opérateur + (** *point* **)**
+
+  Cette opération offsets (déplace) un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) (ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) la valeur par ce `CSize` valeur. Le `cx` et `cy` membres de ce `CSize` valeur sont ajoutés à la `x` et `y` membres de données de la `POINT` valeur. Elle est analogue à la version de [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) qui accepte un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) paramètre.
+
+- **opérateur + (** *lpRect* **)**
+
+   Cette opération offsets (déplace) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (ou [CRect](../../atl-mfc-shared/reference/crect-class.md)) la valeur par ce `CSize` valeur. Le `cx` et `cy` membres de ce `CSize` valeur sont ajoutés à la `left`, `top`, `right`, et `bottom` membres de données de la `RECT` valeur. Elle est analogue à la version de [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) qui accepte un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) paramètre.
 
 ### <a name="example"></a>Exemple
 
@@ -198,13 +204,21 @@ CSize operator-() const throw();
 
 L’opérateur quatrième, l’unaire, modifie le signe de la `CSize` valeur. Consultez les descriptions suivantes des opérateurs individuels :
 
-- **opérateur-(** `size` **)** cette opération Soustrait deux `CSize` valeurs.
+- **opérateur-(** *taille* **)**
 
-- **opérateur-(** `point` **)** cette opération offsets (déplace) un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valeur par l’inverse additif de ce `CSize` valeur. Le **cx** et **cy** de ce `CSize` valeur sont soustraites de la **x** et **y** membres de données de la **POINT**  valeur. Elle est analogue à la version de [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) qui accepte un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) paramètre.
+  Cette opération Soustrait deux `CSize` valeurs.
 
-- **opérateur-(** `lpRect` **)** cette opération offsets (déplace) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) valeur par l’inverse additif de ce `CSize` valeur. Le **cx** et **cy** membres de ce `CSize` valeur sont soustraites de la **gauche**, **haut**, **droite**, et **bas** membres de données de la `RECT` valeur. Elle est analogue à la version de [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) qui accepte un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) paramètre.
+- **opérateur-(** *point* **)**
 
-- **opérateur-()** cette opération retourne l’inverse additif de ce `CSize` valeur.
+  Cette opération offsets (déplace) un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valeur par l’inverse additif de ce `CSize` valeur. Le `cx` et `cy` de ce `CSize` valeur sont soustraites de la `x` et `y` membres de données de la `POINT` valeur. Elle est analogue à la version de [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) qui accepte un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) paramètre.
+
+- **opérateur-(** *lpRect* **)**
+
+  Cette opération offsets (déplace) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) valeur par l’inverse additif de ce `CSize` valeur. Le `cx` et `cy` membres de ce `CSize` valeur sont soustraites de la `left`, `top`, `right`, et `bottom` membres de données de la `RECT` valeur. Elle est analogue à la version de [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) qui accepte un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) paramètre.
+
+- **opérateur-()**
+
+  Cette opération retourne l’inverse additif de ce `CSize` valeur.
 
 ### <a name="example"></a>Exemple
 

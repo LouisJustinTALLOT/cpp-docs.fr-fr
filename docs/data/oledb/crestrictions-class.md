@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 0a6b6b10d4275cbfc2cd99180aa472d9476b17e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95517931f3156c4850e07c78910ccbffff424faa
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565131"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556515"
 ---
 # <a name="crestrictions-class"></a>CRestrictions, classe
 
@@ -92,7 +92,7 @@ Une des valeurs HRESULT standards.
 
 Vous pouvez spécifier un maximum de sept restrictions sur un ensemble de lignes de schéma.
 
-Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) pour plus d’informations sur les restrictions définies sur chaque ensemble de lignes de schéma.
+Consultez [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) pour plus d’informations sur les restrictions définies sur chaque ensemble de lignes de schéma.
 
 ## <a name="see-also"></a>Voir aussi
 

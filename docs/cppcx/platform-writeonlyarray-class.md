@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: 2c4c9fecd8e3c8e638af96bc7d047e03a0f31bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651319"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330610"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 
@@ -39,8 +39,12 @@ Ces méthodes offrent une accessibilité interne, c'est-à-dire qu'elles ne sont
 
 |Name|Description|
 |----------|-----------------|
-
-|[WriteOnlyArray::begin](#begin)| Un itérateur qui pointe vers le premier élément du tableau. | | [WriteOnlyArray::Data](#data)| Un pointeur vers le tampon de données. | | [WriteOnlyArray::end](#end)| Un itérateur qui pointe juste après le dernier élément dans le tableau. | | [WriteOnlyArray::FastPass](#fastpass)| Indique si le tableau peut utiliser le mécanisme FastPass, qui est une optimisation exécutée en toute transparence par le système. N’utilisez pas cela dans votre code | | [WriteOnlyArray::Length](#length)| Retourne le nombre d’éléments dans le tableau. | | [WriteOnlyArray::set](#set)| Définit l’élément spécifié à la valeur spécifiée. |
+|[WriteOnlyArray::begin](#begin)|Itérateur qui pointe vers le premier élément du tableau.|
+|[WriteOnlyArray::Data](#data)|Pointeur vers le tampon de données.|
+|[WriteOnlyArray::end](#end)|Itérateur qui pointe vers un élément au-delà du dernier élément du tableau.|
+|[WriteOnlyArray::FastPass](#fastpass)|Indique si le tableau peut utiliser le mécanisme FastPass, qui est une optimisation exécutée en toute transparence par le système. N'utilisez pas cela dans votre code|
+|[WriteOnlyArray::Length](#length)|Retourne le nombre d'éléments du tableau.|
+|[WriteOnlyArray::set](#set)|Définit l'élément spécifié sur la valeur spécifiée.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 

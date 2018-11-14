@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 9509b122e271ac22529c1b8a7b8e8d0b4b50025b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641101"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333265"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -208,7 +208,7 @@ Si vous souhaitez gérer les messages de notification Windows envoyés par une z
 
 Chaque entrée de table des messages prend la forme suivante :
 
-**ON_** Notification **(**`id`**,**`memberFxn`**)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
 où `id` Spécifie l’ID de fenêtre enfant du contrôle zone de liste déroulante envoie la notification et `memberFxn` est le nom de la fonction de membre parent que vous avez écrit pour gérer les notifications.
 

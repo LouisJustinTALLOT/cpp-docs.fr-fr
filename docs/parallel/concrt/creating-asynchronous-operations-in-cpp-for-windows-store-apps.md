@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: ecef168d2162adf3a478268ec08b0a61f35c6260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563200"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333330"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Création d’opérations asynchrones en C++ pour les applications UWP
 
@@ -148,11 +148,10 @@ Vous pouvez passer un objet `task_continuation_context` à la méthode [task::th
 La section suivante présente une application qui lit un fichier sur le disque dur, recherche les mots les plus courants dans ce fichier, et donne les résultats dans l'interface utilisateur. L'opération finale, mettant à jour l'interface utilisateur, se produit sur le thread d'interface utilisateur.
 
 > [!IMPORTANT]
->  Ce comportement est spécifique aux applications UWP. Pour les applications de bureau, vous ne contrôlez pas où s'exécutent les continuations. À la place, le planificateur choisit un thread de travail sur lequel exécuter chaque continuation.
+> Ce comportement est spécifique aux applications UWP. Pour les applications de bureau, vous ne contrôlez pas où s'exécutent les continuations. À la place, le planificateur choisit un thread de travail sur lequel exécuter chaque continuation.
 
 > [!IMPORTANT]
-
->  N'appelez pas [concurrency::task::wait](reference/task-class.md#wait) dans le corps d'une continuation qui s'exécute sur le STA. Sinon, le runtime lève [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) , car cette méthode bloque le thread actuel et peut provoquer le blocage de l'application. Toutefois, vous pouvez appeler la méthode [concurrency::task::get](reference/task-class.md#get) pour recevoir le résultat de la tâche précédente dans une continuation basée sur des tâches.
+> N'appelez pas [concurrency::task::wait](reference/task-class.md#wait) dans le corps d'une continuation qui s'exécute sur le STA. Sinon, le runtime lève [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) , car cette méthode bloque le thread actuel et peut provoquer le blocage de l'application. Toutefois, vous pouvez appeler la méthode [concurrency::task::get](reference/task-class.md#get) pour recevoir le résultat de la tâche précédente dans une continuation basée sur des tâches.
 
 ##  <a name="example-app"></a> Exemple : Contrôle de l’exécution dans une application de Runtime Windows avec C++ et XAML
 

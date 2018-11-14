@@ -90,12 +90,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceaa8fea4414bab4bbb035aa4525b415ca7ac0b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542077"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331436"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
@@ -166,12 +166,12 @@ Mémoire tampon des informations du fichier.
 
 En cas de réussite, **_findfirst** retourne un handle de recherche unique identifiant le fichier ou le groupe de fichiers qui correspondent à la *filespec* spécification, qui peut être utilisée dans un appel ultérieur à [_ FindNext](findnext-functions.md) ou [_findclose](findclose.md). Sinon, **_findfirst** retourne -1 et définit **errno** à une des valeurs suivantes.
 
-|Valeur de la variable errno|Condition|
+| Valeur de la variable errno | Condition |
 |-|-|
-**EINVAL**|Paramètre non valide : *filespec* ou *fileinfo* a été **NULL**. Ou bien, le système d’exploitation a retourné une erreur inattendue.
-**ENOENT**|Spécification de fichier impossible à mettre en correspondance.
-**ENOMEM**|Mémoire insuffisante.
-**EINVAL**|Spécification de nom de fichier non valide ou le nom de fichier donné était supérieur **MAX_PATH**.
+| **EINVAL** | Paramètre non valide : *filespec* ou *fileinfo* a été **NULL**. Ou bien, le système d’exploitation a retourné une erreur inattendue. |
+| **ENOENT** | Spécification de fichier impossible à mettre en correspondance. |
+| **ENOMEM** | Mémoire insuffisante. |
+| **EINVAL** | Spécification de nom de fichier non valide ou le nom de fichier donné était supérieur **MAX_PATH**. |
 
 Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

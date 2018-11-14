@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 587168323b8af63d232b8df63e9dcac2f4601433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620946"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327120"
 ---
 # <a name="autoptr-class"></a>auto_ptr, classe
 
@@ -282,11 +282,11 @@ Objet de type `auto_ptr`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Référence à un objet de type `auto_ptr`\< **Type**.
+Référence à un objet de type `auto_ptr<Type>`.
 
 ### <a name="remarks"></a>Notes
 
-L’assignation évalue l’expression `delete myptr`, mais uniquement si le pointeur stocké `myptr` modifications suite à l’affectation. Elle transfère ensuite la propriété du pointeur stocké dans _ *Right* en stockant \_ *Right*. [mise en production](#release) dans `myptr`. La fonction retourne **\*this**.
+L’assignation évalue l’expression `delete myptr`, mais uniquement si le pointeur stocké `myptr` modifications suite à l’affectation. Il transfère ensuite la propriété du pointeur stocké dans *droit*, en stockant *droit*.[ mise en production](#release) dans `myptr`. La fonction retourne __\*this__.
 
 ### <a name="example"></a>Exemple
 

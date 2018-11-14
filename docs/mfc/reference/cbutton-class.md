@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662850"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333535"
 ---
 # <a name="cbutton-class"></a>CButton, classe
 
@@ -153,13 +153,13 @@ Si vous souhaitez gérer les messages de notification Windows envoyés par un co
 
 Chaque entrée de table des messages prend la forme suivante :
 
-**ON_** Notification **(**`id`, `memberFxn` **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
-où `id` Spécifie l’ID de fenêtre enfant du contrôle qui envoie la notification et `memberFxn` est le nom de la fonction de membre parent que vous avez écrit pour gérer les notifications.
+où *id* Spécifie l’ID de fenêtre enfant du contrôle qui envoie la notification et *memberFxn* est le nom de la fonction de membre parent que vous avez écrit pour gérer les notifications.
 
 Prototype de fonction du parent est la suivante :
 
-**afx_msg** `void` `memberFxn` **() ;**
+`afx_msg void memberFxn();`
 
 Les entrées de table des messages potentielles sont les suivantes :
 

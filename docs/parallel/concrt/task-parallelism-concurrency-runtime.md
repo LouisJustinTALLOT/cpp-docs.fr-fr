@@ -8,12 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630423"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331215"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallélisme des tâches (runtime d’accès concurrentiel)
 
@@ -22,8 +22,7 @@ Dans le Runtime d’accès concurrentiel, un *tâche* est une unité de travail 
 Vous utilisez des tâches quand vous écrivez du code asynchrone et que vous voulez qu’une opération se produise une fois que l’opération asynchrone est terminée. Par exemple, vous pouvez utiliser une tâche pour lire de façon asynchrone à partir d’un fichier, puis utiliser une autre tâche, un *tâche de continuation*, qui est expliqué plus loin dans ce document, pour traiter les données dès qu’il est disponible. À l’inverse, vous pouvez utiliser des groupes de tâches pour décomposer un travail parallèle en éléments plus petits. Par exemple, supposons que vous ayez un algorithme récursif qui divise le travail restant en deux partitions. Vous pouvez utiliser des groupes de tâches pour exécuter ces partitions simultanément, puis attendre que le travail divisé soit terminé.
 
 > [!TIP]
-
->  Lorsque vous souhaitez appliquer la même routine à chaque élément d’une collection en parallèle, utilisez un algorithme parallèle, tel que [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), au lieu d’une tâche ou un groupe de tâches. Pour plus d’informations sur les algorithmes parallèles, consultez [algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md).
+> Lorsque vous souhaitez appliquer la même routine à chaque élément d’une collection en parallèle, utilisez un algorithme parallèle, tel que [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), au lieu d’une tâche ou un groupe de tâches. Pour plus d’informations sur les algorithmes parallèles, consultez [algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="key-points"></a>Points clés
 
@@ -205,7 +204,6 @@ Considérez une application UWP qui utilise C++ et XAML et écrit un ensemble de
 1. Dans MainPage.xaml.cpp, implémentez `WriteFilesAsync` comme indiqué dans l'exemple.
 
 > [!TIP]
-
 > `when_all` est une fonction non bloquante qui produit un `task` en tant que résultat. Contrairement aux [task::wait](reference/task-class.md#wait), il est déconseillé d’appeler cette fonction dans une application UWP sur le thread ASTA (Application STA).
 
 ###  <a name="when-any"></a> Fonction when_any
@@ -229,14 +227,14 @@ Comme avec `when_all`, il est courant d'utiliser une continuation avec `when_any
 Dans cet exemple, vous pouvez également spécifier `task<pair<int, size_t>>` pour produire une continuation basée sur des tâches.
 
 > [!NOTE]
->  Comme avec `when_all`, les tâches que vous passez à `when_any` doivent toutes retourner le même type.
+> Comme avec `when_all`, les tâches que vous passez à `when_any` doivent toutes retourner le même type.
 
 Vous pouvez également utiliser la syntaxe `||` pour produire une tâche qui s’exécute une fois que la première tâche d’un ensemble de tâches est terminée, comme illustré dans l’exemple suivant.
 
 `auto t = t1 || t2; // same as when_any`
 
 > [!TIP]
->  Comme avec `when_all`, `when_any` est non bloquant et peut être appelé dans une application UWP sur le thread ASTA.
+> Comme avec `when_all`, `when_any` est non bloquant et peut être appelé dans une application UWP sur le thread ASTA.
 
 ##  <a name="delayed-tasks"></a> Exécution de la tâche différée
 
@@ -257,8 +255,7 @@ La bibliothèque PPL utilise le [concurrency::task_group](reference/task-group-c
 La bibliothèque PPL divise les groupes de tâches en deux catégories : *groupes de tâches non structurés* et *structurées de groupes de tâches*. La bibliothèque de modèles parallèles utilise la classe `task_group` pour représenter les groupes de tâches non structurés et la classe `structured_task_group` pour représenter les groupes de tâches structurés.
 
 > [!IMPORTANT]
-
->  La bibliothèque PPL définit également la [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorithme, qui utilise le `structured_task_group` classe pour exécuter un ensemble de tâches en parallèle. Étant donné que l'algorithme `parallel_invoke` a une syntaxe plus concise, nous vous recommandons de l'utiliser à la place de la classe `structured_task_group` dès que possible. La rubrique [algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md) décrit `parallel_invoke` plus en détail.
+> La bibliothèque PPL définit également la [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorithme, qui utilise le `structured_task_group` classe pour exécuter un ensemble de tâches en parallèle. Étant donné que l'algorithme `parallel_invoke` a une syntaxe plus concise, nous vous recommandons de l'utiliser à la place de la classe `structured_task_group` dès que possible. La rubrique [algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md) décrit `parallel_invoke` plus en détail.
 
 Utilisez `parallel_invoke` quand vous avez plusieurs tâches indépendantes à exécuter en même temps, et que vous devez attendre que toutes les tâches soient terminées avant de continuer. Cette technique est souvent appelée *bifurcation et jointure* parallélisme. Utilisez `task_group` quand vous avez plusieurs tâches indépendantes à exécuter en même temps, mais que vous voulez attendre plus tard que les tâches se terminent. Par exemple, vous pouvez ajouter des tâches à un objet `task_group` et attendre qu'elles se terminent dans une autre fonction ou à partir d'un autre thread.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591007"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330539"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procédure pas à pas : Créer et utiliser votre propre bibliothèque de liens dynamiques (C++)
 
@@ -396,7 +396,7 @@ Appuyez sur n’importe quelle touche pour fermer la fenêtre de commande.
 
 Maintenant que vous avez créé une DLL et une application cliente, vous pouvez faire des essais. Essayez de définir des points d’arrêt dans le code de l’application cliente et exécuter l’application dans le débogueur. Consultez ce qui se passe lorsque vous parcourez un appel de bibliothèque. Ajouter d’autres fonctions à la bibliothèque, ou écrire une autre application cliente qui utilise votre DLL.
 
-Lorsque vous déployez votre application, vous devez également déployer les DLL qu’il utilise. Le plus simple de proposer les DLL que vous générez ou que vous incluez de tiers à votre application consiste à les placer dans le même répertoire que votre application, également appelé *déploiement d’app-local*. Pour plus d’informations sur le déploiement, consultez [Deployment in Visual C++](..\ide\deployment-in-visual-cpp.md).
+Lorsque vous déployez votre application, vous devez également déployer les DLL qu’il utilise. Le plus simple de proposer les DLL que vous générez ou que vous incluez de tiers à votre application consiste à les placer dans le même répertoire que votre application, également appelé *déploiement d’app-local*. Pour plus d’informations sur le déploiement, consultez [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Voir aussi
 

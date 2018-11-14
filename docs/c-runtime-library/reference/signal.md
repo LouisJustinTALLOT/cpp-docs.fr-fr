@@ -20,12 +20,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 1a0f9f8448149ce18155e0f5b88343c56d9b3d7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 351bdbe1d787fc5e5d741460adfe415df7fda756
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660705"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328576"
 ---
 # <a name="signal"></a>signal
 
@@ -119,30 +119,30 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 L’exemple suivant montre comment utiliser **signal** pour ajouter un comportement personnalisé pour le **SIGABRT** signal. Pour plus d’informations sur le comportement d’arrêt, consultez [_set_abort_behavior](set-abort-behavior.md).
 
 ```C
-// crt_signal.c
-// compile with: /EHsc /W4
-// Use signal to attach a signal handler to the abort routine
-#include <stdlib.h>
-#include <signal.h>
-#include <tchar.h>
+// crt_signal.c
+// compile with: /EHsc /W4
+// Use signal to attach a signal handler to the abort routine
+#include <stdlib.h>
+#include <signal.h>
+#include <tchar.h>
 
-void SignalHandler(int signal)
+void SignalHandler(int signal)
 {
-    if (signal == SIGABRT) {
-        // abort signal handler code
-    } else {
-        // ...
-    }
+    if (signal == SIGABRT) {
+        // abort signal handler code
+    } else {
+        // ...
+    }
 }
 
-int main()
+int main()
 {
-    typedef void (*SignalHandlerPointer)(int);
+    typedef void (*SignalHandlerPointer)(int);
 
-    SignalHandlerPointer previousHandler;
-    previousHandler = signal(SIGABRT, SignalHandler);
+    SignalHandlerPointer previousHandler;
+    previousHandler = signal(SIGABRT, SignalHandler);
 
-    abort();
+    abort();
 }
 ```
 

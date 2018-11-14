@@ -10,16 +10,16 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: a4427a1190f145cc001a3288535df287326e97e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3227142d6ca31d0015411a3619281894eb5e419
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523286"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520047"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl, classe
 
-Cette classe fournit une implémentation par défaut de la [ISupportErrorInfo Interface](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) et peuvent être utilisés lors d’une seule interface génère des erreurs sur un objet.
+Cette classe fournit une implémentation par défaut de la [ISupportErrorInfo Interface](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) et peuvent être utilisés lors d’une seule interface génère des erreurs sur un objet.
 
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 #### <a name="parameters"></a>Paramètres
 
 *piid*<br/>
-Un pointeur vers l’IID d’une interface qui prend en charge [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
+Un pointeur vers l’IID d’une interface qui prend en charge [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
 
 ## <a name="members"></a>Membres
 
@@ -43,11 +43,11 @@ Un pointeur vers l’IID d’une interface qui prend en charge [IErrorInfo](/pre
 
 |Nom|Description|
 |----------|-----------------|
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Indique si l’interface identifié par `riid` prend en charge la [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interface.|
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Indique si l’interface identifié par `riid` prend en charge la [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interface.|
 
 ## <a name="remarks"></a>Notes
 
-Le [ISupportErrorInfo Interface](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) garantit que les informations d’erreur peuvent être retournées au client. Objets qui utilisent `IErrorInfo` doit implémenter `ISupportErrorInfo`.
+Le [ISupportErrorInfo Interface](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) garantit que les informations d’erreur peuvent être retournées au client. Objets qui utilisent `IErrorInfo` doit implémenter `ISupportErrorInfo`.
 
 Classe `ISupportErrorInfoImpl` fournit une implémentation par défaut de `ISupportErrorInfo` et peuvent être utilisés lors d’une seule interface génère des erreurs sur un objet. Exemple :
 
@@ -65,7 +65,7 @@ Classe `ISupportErrorInfoImpl` fournit une implémentation par défaut de `ISupp
 
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
 
-Indique si l’interface identifié par `riid` prend en charge la [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interface.
+Indique si l’interface identifié par `riid` prend en charge la [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interface.
 
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
@@ -73,7 +73,7 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 
 ### <a name="remarks"></a>Notes
 
-Consultez [ISupportErrorInfo::InterfaceSupportsErrorInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) dans le Kit de développement logiciel Windows.
+Consultez [ISupportErrorInfo::InterfaceSupportsErrorInfo](/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) dans le Kit de développement logiciel Windows.
 
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
 

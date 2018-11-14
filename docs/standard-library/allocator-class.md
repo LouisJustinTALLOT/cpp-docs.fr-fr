@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450672"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518864"
 ---
 # <a name="allocator-class"></a>allocator, classe
 
@@ -63,7 +63,7 @@ Tous les conteneurs de bibliothèque C++ Standard ont un paramètre de modèle p
 
 Par exemple, un objet allocateur peut allouer du stockage sur un segment de mémoire privé ou dans la mémoire partagée, ou il peut optimiser la mémoire pour les objets de petite ou de grande taille. Il peut également spécifier, via les définitions de types qu’il fournit, que les éléments soient accessibles via des objets d’accesseur spéciaux qui gèrent la mémoire partagée, ou effectuer un nettoyage de la mémoire automatique. Ainsi, une classe qui alloue du stockage à l’aide d’un objet allocateur doit utiliser ces types pour déclarer des objets pointeur et référence, comme le font les conteneurs dans la bibliothèque C++ Standard.
 
-**(C_++98/03 uniquement)** Quand vous dérivez de la classe allocator, vous devez fournir un struct [rebind](#rebind), dont le typedef `_Other` référence votre classe nouvellement dérivée.
+<strong>(C ++ 98/03 uniquement)</strong>  Lorsque vous dérivez à partir de la classe d’allocateur, vous devez fournir un [relier](#rebind) struct, dont `_Other` (typedef) fait référence à votre classe nouvellement dérivée.
 
 Ainsi, un allocateur définit les types suivants :
 

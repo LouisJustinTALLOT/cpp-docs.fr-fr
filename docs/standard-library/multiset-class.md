@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: f33dd9343cc2acbaa7f43c060267c6d206da2fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bbf0e706939ccd61e8e7944f6f8a05d5aa92498
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466870"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525442"
 ---
 # <a name="multiset-class"></a>multiset, classe
 
@@ -482,7 +482,7 @@ Nombre d'éléments du multiset dont la clé de tri correspond à la clé de par
 
 La fonction membre retourne le nombre d’éléments *x* dans la plage
 
-[ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) ).
+\[ lower_bound (*clé*), upper_bound (*clé*))
 
 ### <a name="example"></a>Exemple
 
@@ -756,7 +756,6 @@ int main()
     print(s1);
     cout << endl;
 }
-
 ```
 
 ## <a name="emplace_hint"></a>  multiset::emplace_hint
@@ -1285,7 +1284,6 @@ int main()
     print(s4);
     cout << endl;
 }
-
 ```
 
 ## <a name="iterator"></a>  multiset::iterator

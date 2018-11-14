@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: cf1f519521d86f2b7782fb93ed3b4aca4ecd5b24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643441"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326497"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -41,7 +41,7 @@ for (auto num : vec)
 
 Il existe cinq catégories d'itérateurs. Par ordre de puissance croissante, les catégories sont :
 
-- **Sortie**. Un *itérateur de sortie* `X` peut itérer vers l’avant sur une séquence à l’aide de la **++** opérateur et peut écrire un élément qu’une seule fois, à l’aide de la **&ast;** opérateur.
+- **Sortie**. Un *itérateur de sortie* `X` peut itérer vers l’avant sur une séquence à l’aide de la **++** opérateur et peut écrire un élément qu’une seule fois, à l’aide de la __\*__ opérateur.
 
 - **Entrée**. Un *itérateur d’entrée* `X` peut itérer vers l’avant sur une séquence à l’aide de la ++ (opérateur) et capable de lire un élément autant de fois à l’aide de la **&ast;** opérateur. Vous pouvez comparer des itérateurs d’entrée à l’aide de la **++** et **! =** opérateurs. Une fois que vous incrémentez une copie d'un itérateur d'entrée, aucune des autres copies ne peut être comparée, déréférencée ou incrémentée de façon fiable par la suite.
 

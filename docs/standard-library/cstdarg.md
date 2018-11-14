@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: e7ed9bb43ae198426a66bcdc238beba677c520dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25a7cbdccf1287043659772b760a14fefd52e4ea
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582154"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51517813"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
@@ -21,7 +21,6 @@ Inclut l’en-tête \<stdarg.h> de la bibliothèque C Standard et ajoute les no
 
 ```cpp
 #include <cstdarg>
-
 ```
 
 ## <a name="remarks"></a>Notes

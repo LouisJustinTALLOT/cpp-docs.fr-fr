@@ -2,12 +2,12 @@
 title: Attributs en C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: a4d24324165f3cce60d259adf6e3d21638296cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 444abf2ddf6d4563dcbeb5b683adc52f903bd97f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471823"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520788"
 ---
 # <a name="attributes-in-c"></a>Attributs en C++
 
@@ -45,16 +45,16 @@ Les attributs représentent une alternative standardisée aux extensions spécif
 
 - `[[nodiscard]]` **Visual Studio 2017 15.3 et versions ultérieures :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) Spécifie que valeur de retour d’une fonction n’est pas destinée à être ignoré. Déclenche avertissement de C4834, comme illustré dans cet exemple :
 
-   ```cpp
-   [[nodiscard]]
-   int foo(int i) { return i * i; }
+    ```cpp
+    [[nodiscard]]
+    int foo(int i) { return i * i; }
 
-   int main()
-   {
-       foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
-       return 0;
-   }
-   ```
+    int main()
+    {
+        foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
+        return 0;
+    }
+    ```
 
 - `[[maybe_unused]]` **Visual Studio 2017 15.3 et versions ultérieures :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) Spécifie qu’une variable, fonction, classe, typedef, les données membres non statiques, enum ou spécialisation de modèle peut être pas intentionnellement utilisée. Le compilateur ne pas avertit lorsqu’une entité marquée `[[maybe_unused]]` n’est pas utilisé. Une entité est déclarée sans l’attribut ultérieurement peut être redéclarée avec l’attribut et vice versa. Une entité est considérée comme marqué après que sa première déclaration marquée est analysée et pour le reste de la traduction de l’unité de traduction actuelle.
 
@@ -75,12 +75,12 @@ Les attributs représentent une alternative standardisée aux extensions spécif
     }
     ```
 
-   L’exemple génère ces avertissements :
+  L’exemple génère ces avertissements :
 
-   - 26494 (type de règle 5 : Initialisez toujours un objet.)
+  - 26494 (type de règle 5 : Initialisez toujours un objet.)
 
-   - 26485 (limites de la règle 3 : aucun groupe de DÉSINTÉGRATION de pointeur.)
+  - 26485 (limites de la règle 3 : aucun groupe de DÉSINTÉGRATION de pointeur.)
 
-   - 26481 (limites règle 1 : ne pas utiliser l’opération arithmétique de pointeur. Utilisez span à la place.)
+  - 26481 (limites règle 1 : ne pas utiliser l’opération arithmétique de pointeur. Utilisez span à la place.)
 
-   Les deux premiers avertissements sont activés lorsque vous compilez ce code avec l’outil d’analyse du code CppCoreCheck installé et activé. Mais le troisième avertissement ne se déclenche en raison de l’attribut. Vous pouvez supprimer le profil bounds entière en écrivant [[gsl::suppress(bounds)]] sans inclure un numéro de règle spécifique. Les recommandations C++ Core Guidelines sont conçus pour vous aider à écrire du code de meilleure et plus sûr. L’attribut supprimer rend plus facile de désactiver les avertissements lorsqu’ils ne doivent pas figurer.
+  Les deux premiers avertissements sont activés lorsque vous compilez ce code avec l’outil d’analyse du code CppCoreCheck installé et activé. Mais le troisième avertissement ne se déclenche en raison de l’attribut. Vous pouvez supprimer le profil bounds entière en écrivant [[gsl::suppress(bounds)]] sans inclure un numéro de règle spécifique. Les recommandations C++ Core Guidelines sont conçus pour vous aider à écrire du code de meilleure et plus sûr. L’attribut supprimer rend plus facile de désactiver les avertissements lorsqu’ils ne doivent pas figurer.
