@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: ab460d30dae49d3cbc8100799ffe0bdcda59249b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cad8fe9431570c87f26e07e30ae23611fafc1f3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545884"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518656"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref et struct ref (C++ / c++ / CLI et c++ / CX)
 
@@ -31,7 +31,6 @@ Le **classe ref** ou **ref struct** extensions déclarent une classe ou un struc
 class_accessref structnamemodifier :  inherit_accessbase_type {};
 class_accessvalue classnamemodifier :  inherit_accessbase_type {};
 class_accessvalue structnamemodifier :  inherit_accessbase_type {};
-
 ```
 
 ### <a name="parameters"></a>Paramètres

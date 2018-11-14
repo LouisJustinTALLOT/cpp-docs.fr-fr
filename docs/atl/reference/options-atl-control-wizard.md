@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443756"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522309"
 ---
 # <a name="options-atl-control-wizard"></a>Options, Assistant contrôle ATL
-
-Insérer « Résultats de la recherche « résumé ici.
 
 Utilisez cette page de l’Assistant pour définir le type de contrôle que vous créez et le niveau de prise en charge de l’interface qu’il contient.
 
@@ -29,17 +27,17 @@ Le type de contrôle que vous souhaitez créer.
 
 - **Contrôle composite**: contrôle ActiveX qui peut contenir (semblable à une boîte de dialogue) autres contrôles ActiveX ou Windows. Un contrôle composite inclut les éléments suivants :
 
-   - Un modèle pour la boîte de dialogue qui implémente le contrôle composite.
+  - Un modèle pour la boîte de dialogue qui implémente le contrôle composite.
 
-   - Une ressource personnalisée, REGISTRY, qui inscrit automatiquement le contrôle composite lorsqu’elle est appelée.
+  - Une ressource personnalisée, REGISTRY, qui inscrit automatiquement le contrôle composite lorsqu’elle est appelée.
 
-   - Une classe C++ qui implémente le contrôle composite.
+  - Une classe C++ qui implémente le contrôle composite.
 
-   - Une interface COM exposée par le contrôle composite.
+  - Une interface COM exposée par le contrôle composite.
 
-   - Une page de test HTML contenant le contrôle composite.
+  - Une page de test HTML contenant le contrôle composite.
 
-   Par défaut, ce contrôle définit [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres. Il implémente une table de récepteur. Pour plus d’informations, consultez [prise en charge pour le contrôle DHTML](../../atl/atl-support-for-dhtml-controls.md).
+    Par défaut, ce contrôle définit [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres. Il implémente une table de récepteur. Pour plus d’informations, consultez [prise en charge pour le contrôle DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
 - **Contrôle DHTML**: contrôle ATL DHTML spécifie l’interface utilisateur, à l’aide de HTML. La classe UI DHTML contient un mappage COM. Par défaut, ce contrôle définit [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres.
 

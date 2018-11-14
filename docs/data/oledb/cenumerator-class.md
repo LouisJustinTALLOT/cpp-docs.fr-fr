@@ -22,27 +22,27 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: c148bdb0a897e19bc3f3aeb7ed40e905073336b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb44af102f08e05edddc2fb692d1e30dd7e31717
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428598"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556671"
 ---
 # <a name="cenumerator-class"></a>CEnumerator, classe
 
-Utilise un objet énumérateur OLE DB, qui expose le [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interface à retourner un ensemble de lignes décrivant toutes les sources de données et les énumérateurs.
+Utilise un objet énumérateur OLE DB, qui expose le [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85)) interface à retourner un ensemble de lignes décrivant toutes les sources de données et les énumérateurs.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class CEnumerator : 
+class CEnumerator :
    public CAccessorRowset< CAccessor <CEnumeratorAccessor >>
 ```
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** atldbcli.h
+**En-tête :** atldbcli.h
 
 ## <a name="members"></a>Membres
 
@@ -79,7 +79,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="remarks"></a>Notes
 
-Ce nom ne correspond à la `SOURCES_NAME` membre de la [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interface.
+Ce nom ne correspond à la `SOURCES_NAME` membre de la [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85)) interface.
 
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
 
@@ -90,7 +90,7 @@ Analyse le nom d’affichage pour extraire le composant de la chaîne qui peut �
 ```cpp
 HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();
 
-HRESULT GetMoniker(LPMONIKER* ppMoniker, 
+HRESULT GetMoniker(LPMONIKER* ppMoniker,
    LPCTSTR lpszDisplayName) const throw();
 ```
 
@@ -108,7 +108,7 @@ Une valeur HRESULT standard.
 
 ## <a name="open"></a> CEnumerator::Open
 
-Lie le moniker de l’énumérateur, si un est spécifié, puis récupère l’ensemble de lignes de l’énumérateur en appelant [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200).
+Lie le moniker de l’énumérateur, si un est spécifié, puis récupère l’ensemble de lignes de l’énumérateur en appelant [ISourcesRowset::GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
 ### <a name="syntax"></a>Syntaxe
 

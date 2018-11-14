@@ -6,12 +6,12 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: 47e77e1709322abaa2607677bf21c9cfe4a3e6ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580205"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333369"
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
 
@@ -253,12 +253,12 @@ Le tableau ci-dessous présente un groupe de conversions, appelées conversions 
 |-----------------------|---------------------|
 |*type-name*|*nom de type* **&**|
 |*nom de type* **&**|*type-name*|
-|*type-name* **[ ]**|*type-name\**|
-|*type-name* **(** *argument-list* **)**|**(**  *\*type-name* **) (** *liste d’arguments* **)**|
+|*type-name* **[ ]**|*nom de type* __\*__|
+|*type-name* **(** *argument-list* **)**|**(** __\*__ *type-name* **) (** *liste d’arguments* **)**|
 |*type-name*|**const** *type-name*|
 |*type-name*|**volatile** *type-name*|
-|*type-name\***|**const** *type-name\***|
-|*type-name\***|**volatile** *type-name\**|
+|*nom de type* __\*__|**const** *type-name* __\*__|
+|*nom de type* __\*__|**volatile** *type-name* __\*__|
 
 La séquence dans laquelle les conversions sont tentées est la suivante :
 

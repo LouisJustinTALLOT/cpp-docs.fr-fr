@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 5a9fa47ab19a5935bf0c7c36dea37b3cfe6180ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512383"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327302"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf, classe
 
@@ -186,11 +186,11 @@ Caractère à insérer dans la mémoire tampon, ou `EOF`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, si _ *Meta* == `EOF`, elle retourne une valeur autre que `EOF`. Sinon, elle retourne \_ *Meta*.
+Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, si  *\_Meta* == `EOF`, elle retourne une valeur autre que `EOF`. Sinon, elle retourne  *\_Meta*.
 
 ### <a name="remarks"></a>Notes
 
-Si _ *Meta* != `EOF`, la fonction membre virtuelle protégée tente d’insérer l’élément ( `char`)\_ *Meta* dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
+Si  *\_Meta* ! = `EOF`, la fonction membre virtuelle protégée tente d’insérer l’élément `(char)_Meta` dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
 
 - Si une position d’écriture est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.
 
@@ -211,13 +211,13 @@ Caractère à insérer dans la mémoire tampon, ou `EOF`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, si _ *Meta* == `EOF`, elle retourne une valeur autre que `EOF`. Sinon, elle retourne \_ *Meta*.
+Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, si  *\_Meta* == `EOF`, elle retourne une valeur autre que `EOF`. Sinon, elle retourne  *\_Meta*.
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre virtuelle protégée tente de replacer un élément dans la mémoire tampon d’entrée, puis d’en faire l’élément actif (vers lequel pointe le pointeur suivant).
 
-Si _ *Meta* == `EOF`, l’élément à replacer est effectivement celui qui se trouve déjà dans le flux avant l’élément actif. Dans le cas contraire, cet élément est remplacé par **ch** = ( `char`)\_ *Meta*. La fonction peut replacer un élément de différentes manières :
+Si  *\_Meta* == `EOF`, l’élément à remettre est celui déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par `ch = (char)_Meta`. La fonction peut replacer un élément de différentes manières :
 
 - Si une position de remise est disponible, et l’élément stocké est égal à `ch`, elle peut décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
 
@@ -289,15 +289,15 @@ La fonction membre virtuelle protégée s’efforce de modifier les positions ac
 
 La nouvelle position est déterminée comme suit :
 
-- Si `_Way` == `ios_base::beg`, la nouvelle position est le début du flux plus _ *Off*.
+- Si `_Way == ios_base::beg`, la nouvelle position est le début du flux plus *_Off*.
 
-- Si `_Way` == `ios_base::cur`, la nouvelle position est la position actuelle du flux plus _ *Off*.
+- Si `_Way == ios_base::cur`, la nouvelle position est la position actuelle du flux plus *_Off*.
 
-- Si `_Way` == `ios_base::end`, la nouvelle position est la fin du flux plus _ *Off*.
+- Si `_Way == ios_base::end`, la nouvelle position est la fin du flux plus *_Off*.
 
-Si `_Which` & **ios_base::in** est différent de zéro et que la mémoire tampon d’entrée existe, la fonction modifie la position suivante de lecture dans la mémoire tampon d’entrée. Si `_Which` & **ios_base::out** est également différent de zéro, `_Way` != **ios_base::cur**, et que la mémoire tampon de sortie existe, la fonction définit également la position suivante d’écriture pour qu’elle corresponde à la position suivante de lecture.
+Si `_Which & ios_base::in` est différent de zéro et que la mémoire tampon d’entrée existe, la fonction modifie la position suivante à lire dans la mémoire tampon d’entrée. Si `_Which & ios_base::out` est également différent de zéro, `_Way != ios_base::cur`et la mémoire tampon de sortie existe, la fonction définit également la position suivante d’écriture correspondre à la position suivante à lire.
 
-Dans le cas contraire, si `_Which` & `ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction modifie la position suivante d’écriture dans la mémoire tampon de sortie. Dans le cas contraire, l’opération de positionnement échoue. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée.
+Sinon, si `_Which & ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction modifie la position suivante d’écriture dans le tampon de sortie. Dans le cas contraire, l’opération de positionnement échoue. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée.
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
@@ -321,7 +321,7 @@ Si la fonction réussit à modifier une ou les deux positions de flux, elle reto
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée s’efforce de modifier les positions actuelles des flux contrôlés. Pour un objet de classe strstreambuf, une position de flux se compose uniquement d’un décalage de flux. Le décalage zéro désigne le premier élément de la séquence contrôlée. La nouvelle position est déterminée par _ *Sp*.
+La fonction membre virtuelle protégée s’efforce de modifier les positions actuelles des flux contrôlés. Pour un objet de classe strstreambuf, une position de flux se compose uniquement d’un décalage de flux. Le décalage zéro désigne le premier élément de la séquence contrôlée. La nouvelle position est déterminée par *_Sp*.
 
 Si `_Which` & **ios_base::in** est différent de zéro et que la mémoire tampon d’entrée existe, la fonction modifie la position suivante de lecture dans la mémoire tampon d’entrée. Si `_Which` & `ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction définit également la position suivante d’écriture pour qu’elle corresponde à la position suivante de lecture. Dans le cas contraire, si `_Which` & `ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction modifie la position suivante d’écriture dans la mémoire tampon de sortie. Dans le cas contraire, l’opération de positionnement échoue. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée.
 
@@ -398,7 +398,7 @@ Mémoire tampon utilisée pour la sortie.
 
 Le premier constructeur stocke un pointeur Null dans tous les pointeurs contrôlant la mémoire tampon d’entrée, la mémoire tampon de sortie et l’allocation strstreambuf. Il définit le mode strstreambuf stocké pour rendre la séquence contrôlée modifiable et extensible. Il accepte également *nombre* comme une taille d’allocation initiale suggérée.
 
-Le deuxième constructeur se comporte comme le premier, si ce n’est qu’il stocke _ *Allocfunc* comme pointeur vers la fonction à appeler pour allouer le stockage et \_ *Freefunc* comme pointeur vers la fonction à appeler pour libérer ce stockage.
+Le deuxième constructeur se comporte comme la première, sauf qu’elle stocke  *\_Allocfunc* en tant que le pointeur vers la fonction à appeler pour allouer le stockage et  *\_Freefunc* que le pointeur à la fonction à appeler pour libérer ce stockage.
 
 Les trois constructeurs :
 

@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648095"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525403"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray, classe
 
@@ -408,7 +408,7 @@ Sous-jacent `VARIANT` valeur dans le `COleSafeArray` objet.
 
 ### <a name="remarks"></a>Notes
 
-La fonction détache les données dans un tableau sécurisé en définissant le VARTYPE de l’objet avec la valeur VT_EMPTY. Il revient l’appelant de libérer le tableau en appelant la fonction Windows [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).
+La fonction détache les données dans un tableau sécurisé en définissant le VARTYPE de l’objet avec la valeur VT_EMPTY. Il revient l’appelant de libérer le tableau en appelant la fonction Windows [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear).
 
 En cas d’erreur, la fonction lève un [COleException](../../mfc/reference/coleexception-class.md).
 
@@ -674,7 +674,7 @@ Pointeur vers les données à affecter au groupe. Types variant VT_DISPATCH VT_U
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction appelle automatiquement les fonctions Windows [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) et [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) avant et après l’affectation de l’élément. Si l'élément de données est une chaîne, un objet ou un variant, la fonction le copie correctement ; si l'élément existant est une chaîne, un objet ou un variant, il est effacé correctement.
+Cette fonction appelle automatiquement les fonctions Windows [SafeArrayLock](/windows/desktop/api/oleauto/nf-oleauto-safearraylock) et [SafeArrayUnlock](/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) avant et après l’affectation de l’élément. Si l'élément de données est une chaîne, un objet ou un variant, la fonction le copie correctement ; si l'élément existant est une chaîne, un objet ou un variant, il est effacé correctement.
 
 Il est à noter qu'un tableau peut avoir plusieurs verrous. Il est donc possible de placer des éléments dans un tableau pendant que le tableau est verrouillé par d'autres opérations.
 

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: 03fa25f5800928aad7185c98a331d06b1c39779b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e3a8d3cf476dfff7c74007ec371c39f5128bbe7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562017"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326471"
 ---
 # <a name="spawnve-wspawnve"></a>_spawnve, _wspawnve
 
@@ -82,11 +82,11 @@ La valeur de retour à partir d’une commande synchrone **_spawnve** ou **_wspa
 
 |||
 |-|-|
-**E2BIG**|La liste des arguments dépasse 1024 octets.
-**EINVAL**|*mode* argument n’est pas valide.
-**ENOENT**|Fichier ou chemin d'accès introuvable.
-**ENOEXEC**|Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide.
-**ENOMEM**|Mémoire insuffisante pour exécuter le nouveau processus.
+| **E2BIG** | La liste des arguments dépasse 1024 octets. |
+| **EINVAL** | *mode* argument n’est pas valide. |
+| **ENOENT** | Fichier ou chemin d'accès introuvable. |
+| **ENOEXEC** | Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide. |
+| **ENOMEM** | Mémoire insuffisante pour exécuter le nouveau processus. |
 
 Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

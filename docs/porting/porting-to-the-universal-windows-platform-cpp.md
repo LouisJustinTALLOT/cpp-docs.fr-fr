@@ -2,12 +2,12 @@
 title: Portage vers la plateforme Windows universelle (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 83af480dc2a2fdd5ccd15de8a9f62aacebcf4558
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640412"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518539"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portage vers la plateforme Windows universelle (C++)
 
@@ -33,29 +33,29 @@ Si vous avez une application du Windows Store Windows 8.1, vous pouvez appliquer
 
    Vous devez avoir installé les **Outils Windows 8.1 du programme d’installation de Visual Studio**. Si ces outils ne sont pas installés, démarrez le programme d’installation de **Visual Studio** à partir de la fenêtre **Programmes et fonctionnalités**, choisissez **Visual Studio 2017**, puis dans la fenêtre d’installation, choisissez **Modifier**. Recherchez **Outils Windows 8.1**, vérifiez que l’option est sélectionnée, puis choisissez **OK**.
 
-2. Ouvrez la fenêtre **Propriétés du projet** et, sous **C++** > **Général**, affectez à la propriété **Ensemble d’outils de plateforme** la valeur **v141**, ce qui correspond à l’ensemble d’outils pour Visual Studio 2017.
+1. Ouvrez la fenêtre **Propriétés du projet** et, sous **C++** > **Général**, affectez à la propriété **Ensemble d’outils de plateforme** la valeur **v141**, ce qui correspond à l’ensemble d’outils pour Visual Studio 2017.
 
-3. Générez le projet comme projet Windows 8.1 et résolvez les éventuelles erreurs de génération. À ce stade, les erreurs sont probablement dues à des modifications avec rupture dans les outils de génération et les bibliothèques. Pour obtenir une explication détaillée des modifications susceptibles d’affecter votre code, consultez [Historique des modifications de Visual C++ entre 2003 et 2015](../porting/visual-cpp-change-history-2003-2015.md).
+1. Générez le projet comme projet Windows 8.1 et résolvez les éventuelles erreurs de génération. À ce stade, les erreurs sont probablement dues à des modifications avec rupture dans les outils de génération et les bibliothèques. Pour obtenir une explication détaillée des modifications susceptibles d’affecter votre code, consultez [Historique des modifications de Visual C++ entre 2003 et 2015](../porting/visual-cpp-change-history-2003-2015.md).
 
    Une fois votre projet généré correctement, vous êtes prêt à effectuer le portage vers UWP (Windows 10).
 
-4. Créez un projet d'application Windows universelle à l'aide du modèle Vierge. Vous souhaiterez peut-être lui donner le même nom que votre projet existant, bien que pour cela les projets doivent être dans des répertoires différents.
+1. Créez un projet d'application Windows universelle à l'aide du modèle Vierge. Vous souhaiterez peut-être lui donner le même nom que votre projet existant, bien que pour cela les projets doivent être dans des répertoires différents.
 
-5. Fermez la solution puis, à l’aide de l’**Explorateur Windows** ou de la ligne de commande, copiez les fichiers de code (avec les extensions .cpp, .h et .xaml) de votre projet Windows 8.1 vers le même dossier que le fichier projet (.vcxproj) du projet que vous avez créé à l’étape 1. Ne copiez pas le fichier Package.appxmanifest et, si vous avez du code distinct pour la version de bureau de Windows 8.1 et pour Windows Phone, choisissez l'une des deux versions à porter en premier (vous devrez effectuer certaines tâches ultérieurement pour adapter l'autre version). Veillez à copier les sous-dossiers et leur contenu. Si vous y êtes invité, choisissez de remplacer les fichiers ayant des noms dupliqués.
+1. Fermez la solution puis, à l’aide de l’**Explorateur Windows** ou de la ligne de commande, copiez les fichiers de code (avec les extensions .cpp, .h et .xaml) de votre projet Windows 8.1 vers le même dossier que le fichier projet (.vcxproj) du projet que vous avez créé à l’étape 1. Ne copiez pas le fichier Package.appxmanifest et, si vous avez du code distinct pour la version de bureau de Windows 8.1 et pour Windows Phone, choisissez l'une des deux versions à porter en premier (vous devrez effectuer certaines tâches ultérieurement pour adapter l'autre version). Veillez à copier les sous-dossiers et leur contenu. Si vous y êtes invité, choisissez de remplacer les fichiers ayant des noms dupliqués.
 
-6. Rouvrez la solution, puis choisissez **Ajouter** > **Élément existant** dans le menu contextuel du nœud de projet. Sélectionnez tous les fichiers que vous avez copiés, à l'exception de ceux qui font déjà partie du projet.
+1. Rouvrez la solution, puis choisissez **Ajouter** > **Élément existant** dans le menu contextuel du nœud de projet. Sélectionnez tous les fichiers que vous avez copiés, à l'exception de ceux qui font déjà partie du projet.
 
    Vérifiez tous les sous-dossiers et veillez à y ajouter également les fichiers.
 
-7. Si vous n’utilisez pas le même nom de projet que celui de votre ancien projet, ouvrez le fichier Package.appxmanifest et mettez à jour le **point d’entrée** pour refléter le nom de l’espace de noms de la classe `App`.
+1. Si vous n’utilisez pas le même nom de projet que celui de votre ancien projet, ouvrez le fichier Package.appxmanifest et mettez à jour le **point d’entrée** pour refléter le nom de l’espace de noms de la classe `App`.
 
    Le champ **Point d’entrée** du fichier Package.appxmanifest contient un nom inclus dans l’étendue pour la classe `App`, qui comprend l’espace de noms contenant la classe `App`. Quand vous créez un projet d'application Windows universelle, l'espace de noms est défini sur le nom du projet. S'il diffère de ce qui figure dans les fichiers que vous avez copiés depuis votre ancien projet, vous devez mettre l'un ou l'autre à jour pour qu'ils correspondent.
 
-8. Générez le projet et résolvez les éventuelles erreurs de génération dues à des changements entre les différentes versions du Kit de développement logiciel Windows.
+1. Générez le projet et résolvez les éventuelles erreurs de génération dues à des changements entre les différentes versions du Kit de développement logiciel Windows.
 
-9. Exécutez le projet sur le bureau local. Vérifiez qu'il n'y a aucune erreur de déploiement, que la disposition de l'application semble correcte et qu'elle fonctionne correctement sur le bureau.
+1. Exécutez le projet sur le bureau local. Vérifiez qu'il n'y a aucune erreur de déploiement, que la disposition de l'application semble correcte et qu'elle fonctionne correctement sur le bureau.
 
-10. Si vous aviez des fichiers de code et .xaml distincts pour un autre appareil, tel que Windows Phone 8.1, examinez ce code et identifiez où il diffère de l'appareil standard. Si la différence concerne uniquement la disposition, vous pouvez éventuellement utiliser un **gestionnaire d’état visuel** dans le code xaml pour personnaliser l’affichage en fonction de la taille de l’écran. Pour les autres différences, vous pouvez utiliser des sections de conditions dans votre code en utilisant les instructions #if suivantes.
+1. Si vous aviez des fichiers de code et .xaml distincts pour un autre appareil, tel que Windows Phone 8.1, examinez ce code et identifiez où il diffère de l'appareil standard. Si la différence concerne uniquement la disposition, vous pouvez éventuellement utiliser un **gestionnaire d’état visuel** dans le code xaml pour personnaliser l’affichage en fonction de la taille de l’écran. Pour les autres différences, vous pouvez utiliser des sections de conditions dans votre code en utilisant les instructions #if suivantes.
 
     ```cpp
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)
@@ -66,7 +66,7 @@ Si vous avez une application du Windows Store Windows 8.1, vous pouvez appliquer
 
    Ces instructions s’appliquent respectivement aux applications UWP, aux applications du Windows Phone Store, aux deux ou bien aux applications de bureau Win32 classiques uniquement. Ces macros sont uniquement disponibles dans le Kit de développement logiciel (SDK) Windows 8.1 et versions ultérieures. Par conséquent, si votre code doit être compilé avec des versions antérieures du SDK Windows ou pour d’autres plateformes non-Windows, vous devez également vous préparer à l’éventualité qu’aucune de ces macros ne soit définie.
 
-11. Exécutez et déboguez l’application sur un émulateur ou un appareil physique pour chaque type d’appareil pris en charge par votre application. Pour exécuter un émulateur, vous devez exécuter Visual Studio sur un ordinateur physique, et non sur un ordinateur virtuel.
+1. Exécutez et déboguez l’application sur un émulateur ou un appareil physique pour chaque type d’appareil pris en charge par votre application. Pour exécuter un émulateur, vous devez exécuter Visual Studio sur un ordinateur physique, et non sur un ordinateur virtuel.
 
 ## <a name="BK_81Component"></a> Portage d'un composant d'exécution Windows 8.1 vers UWP
 
@@ -76,11 +76,11 @@ Si vous avez une DLL ou un composant Windows Runtime qui fonctionne déjà avec 
 
 1. Dans la boîte de dialogue **Nouveau projet** dans Visual Studio 2017, localisez le nœud **Windows universel**. Si vous ne voyez pas ce nœud, installez d’abord les [Outils pour Windows 10](http://go.microsoft.com/fwlink/p/?LinkID=617903) . Choisissez le modèle **Composant Windows Runtime** , donnez un nom à votre composant, puis choisissez le bouton **OK** . Le nom du composant sera utilisé comme nom de l’espace de noms. C’est pourquoi il est conseillé d’utiliser le même nom que celui de l’espace de noms de vos anciens projets. Pour ce faire, vous devez créer le projet dans un dossier autre que celui de l'ancien. Si vous choisissez un nom différent, vous pouvez mettre à jour le nom de l'espace de noms dans les fichiers de code générés.
 
-2. Fermez le projet.
+1. Fermez le projet.
 
-3. Copiez tous les fichiers de code (.cpp, .h, .xaml, etc.) de votre composant Windows 8.1 vers votre projet nouvellement créé. Ne copiez pas le fichier Package.appxmanifest.
+1. Copiez tous les fichiers de code (.cpp, .h, .xaml, etc.) de votre composant Windows 8.1 vers votre projet nouvellement créé. Ne copiez pas le fichier Package.appxmanifest.
 
-4. Générez le projet et résolvez toutes les erreurs dues à des modifications avec rupture entre les différentes versions du Kit de développement logiciel Windows (Kit SDK Windows).
+1. Générez le projet et résolvez toutes les erreurs dues à des modifications avec rupture entre les différentes versions du Kit de développement logiciel Windows (Kit SDK Windows).
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 

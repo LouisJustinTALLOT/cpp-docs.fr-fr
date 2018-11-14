@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644819"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332216"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;, opérateurs
 
@@ -115,7 +115,7 @@ Chaîne qui est la concaténation des chaînes d'entrée.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions surchargent toutes `operator+` pour concaténer deux objets de classe de modèle [basic_string](../standard-library/basic-string-class.md). Elles retournent toutes `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*).
+Les fonctions surchargent toutes `operator+` pour concaténer deux objets de classe de modèle [basic_string](../standard-library/basic-string-class.md). Retournent toutes `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Pour plus d’informations, consultez [ajouter](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Exemple
 
@@ -575,7 +575,7 @@ Chaîne à entrer dans le flux de sortie.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle surcharge **operator<<** pour insérer un objet _ *Str* de classe de modèle [basic_string](../standard-library/basic-string-class.md) dans le flux \_ *Ostr.* La fonction retourne effectivement \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size)).
+Les surcharges de fonction de modèle **opérateur <<** pour insérer un objet *str* de classe de modèle [basic_string](../standard-library/basic-string-class.md) dans le flux  *\_ Ostr*. La fonction retourne effectivement `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  operator&gt;
 

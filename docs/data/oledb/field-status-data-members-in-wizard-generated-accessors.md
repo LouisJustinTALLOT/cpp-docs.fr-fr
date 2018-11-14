@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 25bb370c0714bfef97bc6659deae2fbd21aed23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46cf285e07bffe178874546d13d196b5165cb28b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664566"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524356"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Données membres de l’état des champs dans les accesseurs générés par l’Assistant
 
@@ -58,7 +58,7 @@ Vous pouvez utiliser les valeurs d’état pour le débogage. Si le code génér
 
 Vous pouvez également utiliser les valeurs d’état pour définir une valeur NULL pour un champ particulier. Cela est utile dans lequel vous voulez distinguer une valeur de champ en tant que valeur NULL au lieu de zéro. Il vous incombe de déterminer si NULL est une valeur valide ou une valeur spéciale et décider comment votre application doit la gérer. OLE DB définit DBSTATUS_S_ISNULL comme le moyen correct pour spécifier une valeur NULL générique. Si le consommateur lit les données et la valeur est null, le champ d’état a la valeur DBSTATUS_S_ISNULL. Si le consommateur souhaite définir une valeur NULL, le consommateur définit la valeur d’état DBSTATUS_S_ISNULL avant d’appeler le fournisseur.
 
-Ensuite, ouvrez Oledb.h et recherchez DBSTATUSENUM. Vous pouvez ensuite faire correspondre la valeur numérique de l’état différent de zéro aux valeurs d’énumération DBSTATUSENUM. Si le nom de l’énumération n’est pas suffisant pour vous indiquer quel est le problème, consultez le **état** rubrique dans le **liaison de valeurs de données** section de la [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643). Cette rubrique contient des tableaux de valeurs d’état utilisés durant l’obtention ou définition de données. Pour plus d’informations sur les valeurs de longueur, consultez le **longueur** rubrique dans la même section.
+Ensuite, ouvrez Oledb.h et recherchez DBSTATUSENUM. Vous pouvez ensuite faire correspondre la valeur numérique de l’état différent de zéro aux valeurs d’énumération DBSTATUSENUM. Si le nom de l’énumération n’est pas suffisant pour vous indiquer quel est le problème, consultez le **état** rubrique dans le **liaison de valeurs de données** section de la [Guide du programmeur OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Cette rubrique contient des tableaux de valeurs d’état utilisés durant l’obtention ou définition de données. Pour plus d’informations sur les valeurs de longueur, consultez le **longueur** rubrique dans la même section.
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Récupération de la longueur ou l’état d’une colonne
 

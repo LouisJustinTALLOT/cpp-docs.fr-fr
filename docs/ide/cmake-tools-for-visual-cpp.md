@@ -4,12 +4,12 @@ ms.date: 10/18/2018
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 07c32e30aa36d6e59122340da0b1026e7025780d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4f7b3931dc8ed8bd7206c7f30ce4b65633f08b6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612496"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518982"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projets CMake dans Visual C++
 
@@ -38,8 +38,11 @@ Dans Visual Studio 2015, les utilisateurs de Visual Studio peuvent utiliser un [
 Quand vous choisissez **Fichier | Ouvrir | Dossier** pour ouvrir un dossier contenant un fichier CMakeLists.txt, les événements suivants se produisent :
 
 - Visual Studio ajoute un élément de menu **CMake** au menu principal, avec des commandes pour voir et modifier les scripts CMake.
+
 - **L’Explorateur de solutions** affiche la structure de dossiers et les fichiers.
+
 - Visual Studio exécute CMake.exe et génère le cache CMake pour la *configuration* par défaut, qui est x86 Debug. La ligne de commande CMake s’affiche dans la **fenêtre Sortie**, ainsi que la sortie supplémentaire de CMake.  **Visual Studio 2017 versions 15.7 et ultérieures** : La génération automatique du cache peut être désactivée dans la boîte de dialogue **Outils | Options | CMake | Général**.
+
 - En arrière-plan, Visual Studio démarre pour indexer les fichiers sources afin d’activer IntelliSense, les informations de navigation, la refactorisation et ainsi de suite. Pendant que vous travaillez, Visual Studio surveille les changements dans l’éditeur et sur le disque pour synchroniser son index avec les sources.
 
 Vous pouvez ouvrir des dossiers avec un nombre quelconque de projets CMake. Visual Studio détecte et configure tous les fichiers CMakeLists.txt « racines » dans votre espace de travail. Les opérations CMake (configurer, générer, déboguer) ainsi que les opérations C++ IntelliSense et de navigation sont disponibles pour tous les projets CMake dans votre espace de travail.
@@ -77,7 +80,9 @@ Le contenu du cache n’est pas importé en totalité.  Des propriétés comme l
 Pour générer un projet CMake, vous avez ces possibilités :
 
 1. Sélectionnez la cible dans la liste déroulante **Déboguer** et appuyez sur **F5**, ou cliquez sur le bouton **Exécuter** (triangle vert). Le projet est d’abord généré automatiquement, comme une solution Visual Studio.
+
 1. Cliquez avec le bouton droit sur CMakeLists.txt et sélectionnez **Générer** dans le menu contextuel. Si vous avez plusieurs cibles dans votre structure de dossiers, vous pouvez choisir de générer toutes les cibles ou une seule cible spécifique.
+
 1. Dans le menu principal, sélectionnez **Générer | Générer la solution** (**F7** ou **Ctrl + Maj + B**). Vérifiez qu’une cible CMake est déjà sélectionnée dans la liste déroulante **Élément de démarrage** dans la barre d’outils **Général**.
 
 ![Commande de menu de génération CMake](media/cmake-build-menu.png "Commande de menu de génération CMake")
@@ -182,20 +187,25 @@ L’exemple suivant montre un exemple de configuration, que vous pouvez utiliser
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
     },
-
 ```
 
 1. **name** : nom qui apparaît dans la liste déroulante des configurations C++. Cette valeur de propriété peut également être utilisée comme une macro, `${name}`, pour spécifier d’autres valeurs de propriété. Pour obtenir un exemple, consultez la définition de **buildRoot** dans CMakeSettings.json.
 
 1. **generator** : correspond au commutateur **-G** et spécifie le générateur à utiliser. Cette propriété peut également être utilisée comme une macro, `${generator}`, pour spécifier d’autres valeurs de propriété. Visual Studio prend actuellement en charge les générateurs CMake suivants :
 
-    - « Ninja »
-    - « Visual Studio 14 2015 »
-    - « Visual Studio 14 2015 ARM »
-    - « Visual Studio 14 2015 Win64 »
-    - « Visual Studio 15 2017 »
-    - « Visual Studio 15 2017 ARM »
-    - « Visual Studio 15 2017 Win64 »
+   - « Ninja »
+
+   - « Visual Studio 14 2015 »
+
+   - « Visual Studio 14 2015 ARM »
+
+   - « Visual Studio 14 2015 Win64 »
+
+   - « Visual Studio 15 2017 »
+
+   - « Visual Studio 15 2017 ARM »
+
+   - « Visual Studio 15 2017 Win64 »
 
 Comme Ninja est conçu pour des vitesses de génération rapides plutôt que pour la flexibilité et la fonctionnalité, il est défini par défaut. Toutefois, certains projets CMake peuvent ne pas pouvoir être générés correctement avec Ninja. Si cela se produit, vous pouvez demander à CMake de générer un projet Visual Studio à la place.
 
@@ -232,11 +242,17 @@ CMakeSettings.json prend également en charge la consommation de variables d’e
 Vous avez également accès aux macros intégrées dans ce fichier :
 
 - `${workspaceRoot}` : Fournit le chemin complet du dossier de l’espace de travail
+
 - `${workspaceHash}` : Hachage de l’emplacement de l’espace de travail. Utile pour créer un identificateur unique pour l’espace de travail actuel (par exemple, à utiliser dans les chemins de dossier)
+
 - `${projectFile}` : Chemin complet du fichier racine CMakeLists.txt
+
 - `${projectDir}` : Chemin complet du dossier du fichier racine CMakeLists.txt
+
 - `${thisFile}` : Chemin complet du fichier CMakeSettings.json
+
 - `${name}` : Nom de la configuration
+
 - `${generator}` : Nom du générateur CMake utilisé dans cette configuration
 
 ### <a name="ninja-command-line-arguments"></a>Arguments de ligne de commande Ninja
@@ -393,9 +409,11 @@ Si vous avez besoin de plus d’informations sur l’état du cache CMake pour d
 ![Compilation de fichier unique CMake](media/cmake-single-file-compile.png)
 
 ## <a name="run-cmake-from-the-command-line"></a>Exécuter CMake à partir de la ligne de commande
+
 Si vous avez installé CMake à partir de Visual Studio Installer, vous pouvez l’exécuter à partir de la ligne de commande en suivant les étapes suivantes :
 
 1. Exécutez le fichier vsdevcmd.bat approprié (x86/x64). Pour plus d’informations, consultez [Génération à partir de la ligne de commande](../build/building-on-the-command-line.md).
-1. Revenez à votre dossier de sortie.
-1. Exécutez CMake pour générer/configurer votre application.
 
+1. Revenez à votre dossier de sortie.
+
+1. Exécutez CMake pour générer/configurer votre application.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: db20cb087d70284103cd02dcfa34b2089ae09821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533417"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520154"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028 : prise en charge de l'aide contextuelle
 
@@ -85,7 +85,6 @@ Pour remplacer cette fonctionnalité et la façon dont le contexte d'aide est d�
 ```
 
 afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
-
 ```
 
 WM_COMMANDHELP est un message Windows MFC privé qui est reçu par la fenêtre active lorsque l'Aide est demandée. Lorsque la fenêtre reçoit le message, elle peut appeler `CWinApp::WinHelp` avec le contexte qui correspond à l'état interne de la fenêtre.

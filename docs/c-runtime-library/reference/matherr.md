@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445719"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329629"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,12 +73,12 @@ Le **type** membre spécifie le type d’erreur mathématique. C’est une des v
 
 |Macro|Signification|
 |-|-|
-**_DOMAINE**|Erreur de domaine d’argument
-**_SING**|Singularité de l’argument
-**_OVERFLOW**|Erreur de plage avec dépassement
-**_PLOSS**|Perte partielle de précision
-**_TLOSS**|Perte totale de précision
-**_UNDERFLOW**|Le résultat est trop petit pour être représenté. (Cette condition n’est pas prise en charge.)
+| **_DOMAINE** | Erreur de domaine d’argument |
+| **_SING** | Singularité de l’argument |
+| **_OVERFLOW** | Erreur de plage avec dépassement |
+| **_PLOSS** | Perte partielle de précision |
+| **_TLOSS** | Perte totale de précision |
+| **_UNDERFLOW** | Le résultat est trop petit pour être représenté. (Cette condition n’est pas prise en charge.) |
 
 Le membre de structure **name** est un pointeur désignant une chaîne terminée par le caractère Null qui contient le nom de la fonction ayant provoqué l’erreur. Les membres de structure **arg1** et **arg2** spécifient les valeurs qui ont provoqué l’erreur. Si seul un seul argument est fourni, il est stocké dans **arg1**.
 

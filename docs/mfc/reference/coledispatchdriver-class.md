@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: f6e52d993619929666d61f019c1f6d5d28243ab1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569220"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524935"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver, classe
 
@@ -258,7 +258,7 @@ void AFX_CDECL InvokeHelper(
 Identifie la méthode ou propriété à appeler.
 
 *wFlags*<br/>
-Indicateurs décrivant le contexte de l’appel à `IDispatch::Invoke`. . Pour obtenir la liste des valeurs possibles, consultez le *wFlags* paramètre dans [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) dans le SDK Windows.
+Indicateurs décrivant le contexte de l’appel à `IDispatch::Invoke`. . Pour obtenir la liste des valeurs possibles, consultez le *wFlags* paramètre dans [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) dans le SDK Windows.
 
 *vtRet*<br/>
 Spécifie le type de la valeur de retour. Pour connaître les valeurs possibles, consultez la section Notes.
@@ -296,9 +296,9 @@ Les valeurs possibles pour le *vtRet* argument proviennent de l’énumération 
 
 Le *pbParamInfo* argument est une liste séparée par des espaces de **VTS_** constantes. Une ou plusieurs de ces valeurs, séparées par des espaces (et non par des virgules), spécifient la liste des paramètres de la fonction. Les valeurs possibles sont répertoriées avec la macro [EVENT_CUSTOM](event-maps.md#event_custom) .
 
-Cette fonction convertit les paramètres VARIANTARG valeurs, puis appelle la [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) (méthode). Si l’appel à `Invoke` échoue, cette fonction lève une exception. Si le SCODE (code d’état) retourné par `IDispatch::Invoke` est DISP_E_EXCEPTION, cette fonction lève un [COleException](../../mfc/reference/coleexception-class.md) ; sinon, elle lève une [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
+Cette fonction convertit les paramètres VARIANTARG valeurs, puis appelle la [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) (méthode). Si l’appel à `Invoke` échoue, cette fonction lève une exception. Si le SCODE (code d’état) retourné par `IDispatch::Invoke` est DISP_E_EXCEPTION, cette fonction lève un [COleException](../../mfc/reference/coleexception-class.md) ; sinon, elle lève une [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
-Pour plus d’informations, consultez [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), et [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes) dans le Kit de développement logiciel Windows.
+Pour plus d’informations, consultez [VARIANTARG](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), et [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes) dans le Kit de développement logiciel Windows.
 
 ### <a name="example"></a>Exemple
 

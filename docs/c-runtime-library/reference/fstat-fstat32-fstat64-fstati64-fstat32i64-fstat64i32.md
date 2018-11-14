@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677784"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331241"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -107,14 +107,14 @@ Le **_fstat** fonction obtient des informations sur le fichier ouvert associé *
 
 |Champ|Signification|
 |-|-|
-**st_atime**|Heure du dernier accès au fichier.
-**st_ctime**|Heure de la création du fichier.
-**st_dev**|Si un appareil, *fd*; sinon, 0.
-**st_mode**|Masque de bits pour les informations relatives au mode de fichier. Le **_S_IFCHR** bit est défini si *fd* fait référence à un périphérique. Le **_S_IFREG** bit est défini si *fd* fait référence à un fichier ordinaire. Les bits de lecture/écriture sont définis en fonction du mode d’autorisation du fichier. **_S_IFCHR** et autres constantes sont définies dans sys\stat.h.
-**st_mtime**|Heure de la dernière modification du fichier.
-**st_nlink**|Toujours 1 sur les systèmes de fichiers autres que NTFS.
-**st_rdev**|Si un appareil, *fd*; sinon, 0.
-**st_size**|Taille du fichier en octets.
+| **st_atime** | Heure du dernier accès au fichier. |
+| **st_ctime** | Heure de la création du fichier. |
+| **st_dev** | Si un appareil, *fd*; sinon, 0. |
+| **st_mode** | Masque de bits pour les informations relatives au mode de fichier. Le **_S_IFCHR** bit est défini si *fd* fait référence à un périphérique. Le **_S_IFREG** bit est défini si *fd* fait référence à un fichier ordinaire. Les bits de lecture/écriture sont définis en fonction du mode d’autorisation du fichier. **_S_IFCHR** et autres constantes sont définies dans sys\stat.h. |
+| **st_mtime** | Heure de la dernière modification du fichier. |
+| **st_nlink** | Toujours 1 sur les systèmes de fichiers autres que NTFS. |
+| **st_rdev** | Si un appareil, *fd*; sinon, 0. |
+| **st_size** | Taille du fichier en octets. |
 
 Si *fd* fait référence à un périphérique, le **st_atime**, **st_ctime**, **st_mtime**, et **st_size** sont des champs pas significatives.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615057"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329298"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modèle de gestion des exceptions)
 
@@ -29,12 +29,17 @@ Spécifie le type de gestion des exceptions utilisé par le compilateur, quand o
 
 ## <a name="arguments"></a>Arguments
 
-|||
-|-|-|
-**a**|Le modèle de gestion des exceptions qui intercepte toutes les deux asynchrones (structurées) et les exceptions synchrones (C++) à l’aide de C++ `catch(...)` syntaxe.
-**s**|Le modèle de gestion des exceptions qui intercepte uniquement les exceptions (C++) synchrones et qui indique au compilateur de supposer que les fonctions déclarées en tant que **extern « C »** peut lever une exception.
-**c**|Si utilisé avec **s** (**/EHsc**), intercepte uniquement les exceptions C++ et indique au compilateur de supposer que les fonctions déclarées en tant que **extern « C »** jamais lever une exception C++. **/EHca** équivaut à **/EHa**.
-**r**|Indique au compilateur de générer en permanence des vérifications d’arrêt au moment de l’exécution pour tous les **noexcept** fonctions. Par défaut, le runtime vérifie pour **noexcept** peuvent être optimisées, si le compilateur détermine la fonction appelle uniquement pas d’exceptions de fonctions.
+**a**<br/>
+Le modèle de gestion des exceptions qui intercepte toutes les deux asynchrones (structurées) et les exceptions synchrones (C++) à l’aide de C++ `catch(...)` syntaxe.
+
+**s**<br/>
+Le modèle de gestion des exceptions qui intercepte uniquement les exceptions (C++) synchrones et qui indique au compilateur de supposer que les fonctions déclarées en tant que **extern « C »** peut lever une exception.
+
+**c**<br/>
+Si utilisé avec **s** (**/EHsc**), intercepte uniquement les exceptions C++ et indique au compilateur de supposer que les fonctions déclarées en tant que **extern « C »** jamais lever une exception C++. **/EHca** équivaut à **/EHa**.
+
+**r**<br/>
+Indique au compilateur de générer en permanence des vérifications d’arrêt au moment de l’exécution pour tous les **noexcept** fonctions. Par défaut, le runtime vérifie pour **noexcept** peuvent être optimisées, si le compilateur détermine la fonction appelle uniquement pas d’exceptions de fonctions.
 
 ## <a name="remarks"></a>Notes
 

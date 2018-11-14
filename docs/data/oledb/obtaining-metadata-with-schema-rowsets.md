@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: cb0f7813a351f272d5417955fb98719d889a64ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9717649c1bd4f956da8bc926e8f492f4eccff74
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561211"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556840"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Récupération de métadonnées à l'aide de jeux de lignes du schéma
 
@@ -52,7 +52,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 Le [CRestrictions](../../data/oledb/crestrictions-class.md) classe fournit la prise en charge de la restriction. Après avoir créé une instance de l’ensemble de lignes du schéma, appelez [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Cette méthode retourne un jeu de résultats basé sur les restrictions que vous spécifiez.
 
-Pour spécifier des restrictions, consultez [annexe b : Schema Rowsets](/previous-versions/windows/desktop/ms712921) et rechercher l’ensemble de lignes que vous utilisez. Par exemple, `CColumns` correspond à la [ensemble de lignes COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); cette rubrique répertorie les colonnes de restriction de l’ensemble de lignes COLUMNS : TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Vous devez suivre cet ordre quand vous spécifiez vos restrictions.
+Pour spécifier des restrictions, consultez [annexe b : Schema Rowsets](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85)) et rechercher l’ensemble de lignes que vous utilisez. Par exemple, `CColumns` correspond à la [ensemble de lignes COLUMNS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); cette rubrique répertorie les colonnes de restriction de l’ensemble de lignes COLUMNS : TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Vous devez suivre cet ordre quand vous spécifiez vos restrictions.
 
 Par conséquent, par exemple, si vous souhaitez limiter par nom de table, TABLE_NAME est la troisième colonne de restriction, puis appelez `Open`, spécifiant le nom de table souhaité comme troisième paramètre de restriction, comme indiqué dans l’exemple suivant.
 
@@ -82,7 +82,7 @@ Par conséquent, par exemple, si vous souhaitez limiter par nom de table, TABLE_
 
 Pour la référence de l’ensemble de lignes de schéma, les classes typedef fournies dans les modèles OLE DB (consultez [Classes d’ensemble de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).
 
-Pour plus d’informations sur les ensembles de lignes de schéma OLE DB, y compris les colonnes de restriction, consultez [annexe b : Schema Rowsets](/previous-versions/windows/desktop/ms712921) dans le **de référence du programmeur OLE DB**.
+Pour plus d’informations sur les ensembles de lignes de schéma OLE DB, y compris les colonnes de restriction, consultez [annexe b : Schema Rowsets](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85)) dans le **de référence du programmeur OLE DB**.
 
 Pour obtenir des exemples plus complexes de l’utilisation des classes de jeu de lignes de schéma, consultez le [CatDB](https://github.com/Microsoft/VCSamples) et [DBViewer](https://github.com/Microsoft/VCSamples) exemples.
 

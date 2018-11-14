@@ -33,12 +33,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: c0bc8a0a43051b3b4bfb2a007806dc2147e24a7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b71fc43c3766f9a039d841b8872dee99210fe8c
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446274"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556749"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet, classe
 
@@ -81,8 +81,8 @@ Ajoute une propriété au jeu de propriétés.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-bool AddProperty(DWORD dwPropertyID, 
-   constVARIANT& var, 
+bool AddProperty(DWORD dwPropertyID,
+   constVARIANT& var,
    DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
    LPCSTR szValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
    LPCWSTR szValue,DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
@@ -127,7 +127,7 @@ bool AddProperty(DWORD dwPropertyID, 
 
 ## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
 
-Constructeur. Initialise le `rgProperties`, `cProperties`, et `guidPropertySet` champs de la [DBPROPSET](/previous-versions/windows/desktop/ms714367) structure.
+Constructeur. Initialise le `rgProperties`, `cProperties`, et `guidPropertySet` champs de la [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structure.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -160,7 +160,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Paramètres
 
 *guid*<br/>
-[in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPSET](/previous-versions/windows/desktop/ms714367) structure.
+[in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structure.
 
 ### <a name="remarks"></a>Notes
 
@@ -181,5 +181,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet, classe](../../data/oledb/cdbpropidset-class.md)<br/>
-[Structure DBPROPSET](/previous-versions/windows/desktop/ms714367)
-[Structure DBPROP](/previous-versions/windows/desktop/ms717970)
+[Structure DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))
+[Structure DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))

@@ -19,12 +19,12 @@ apilocation:
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 5f1db48abdc7237dc46a0ea8a3ea5647a0fce62f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70d074b13b0f24f1f040ef0e861e073e303ac7b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579307"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520463"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -52,7 +52,6 @@ float log2f(
 long double log2l(
    long double x
 );
-
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -66,7 +65,7 @@ En cas de réussite, retourne LOG2 *x*.
 
 Sinon, peut retourner l’une des valeurs suivantes :
 
-|Problème|Return|
+|Problème|Retourner|
 |-----------|------------|
 |*x* < 0|NaN|
 |*x* = ±0|-INFINITY|
@@ -82,9 +81,9 @@ Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 Si x est un entier, cette fonction retourne essentiellement l’index de base zéro du bit 1 plus significatif de *x*.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-|Fonction|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**LOG2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
 

@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: f52b5b4313f8c9703a578f7d0d3ed672555f647e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53e9305dd308e77afbd8d53754614c1cfb559f94
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646111"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557074"
 ---
 # <a name="cdatasource-class"></a>CDataSource, classe
 
@@ -117,7 +117,7 @@ Récupère la chaîne d’initialisation d’une source de données qui est actu
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetInitializationString(BSTR* pInitializationString, 
+HRESULT GetInitializationString(BSTR* pInitializationString,
    bool bIncludePassword = false) throw();
 ```
 
@@ -144,15 +144,15 @@ Retourne les informations de propriété demandées pour l’objet de source de 
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetProperties(ULONG ulPropIDSets, 
-   constDBPROPIDSET* pPropIDSet, 
-   ULONG* pulPropertySets, 
+HRESULT GetProperties(ULONG ulPropIDSets,
+   constDBPROPIDSET* pPropIDSet,
+   ULONG* pulPropertySets,
    DBPROPSET** ppPropsets) const throw();
 ```
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.
+Consultez [IDBProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -169,8 +169,8 @@ Retourne la valeur d’une propriété spécifiée pour l’objet de source de d
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetProperty(const GUID& guid, 
-   DBPROPID propid, 
+HRESULT GetProperty(const GUID& guid,
+   DBPROPID propid,
    VARIANT* pVariant) const throw();
 ```
 
@@ -228,13 +228,13 @@ HRESULT Open(const CEnumerator& enumerator,
 HRESULT Open(HWND hWnd = GetActiveWindow(),
    DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_WIZARDSHEET) throw();
 
-HRESULT Open(LPCWSTR szProgID, 
-   DBPROPSET* pPropSet = NULL, 
+HRESULT Open(LPCWSTR szProgID,
+   DBPROPSET* pPropSet = NULL,
    ULONG nPropertySets = 1) throw();
 
-HRESULT Open(LPCSTR szProgID, 
-   LPCTSTR pName,LPCTSTR pUserName = NULL, 
-   LPCTSTR pPassword = NULL, 
+HRESULT Open(LPCSTR szProgID,
+   LPCTSTR pName,LPCTSTR pUserName = NULL,
+   LPCTSTR pPassword = NULL,
    long nInitMode = 0) throw();
 ```
 
@@ -244,10 +244,10 @@ HRESULT Open(LPCSTR szProgID, 
 [in] Le `CLSID` du fournisseur de données.
 
 *pPropSet*<br/>
-[in] Un pointeur vers un tableau de [DBPROPSET](/previous-versions/windows/desktop/ms714367) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](/previous-versions/windows/desktop/ms713696) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.
+[in] Un pointeur vers un tableau de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.
 
 *nPropertySets*<br/>
-[in] Le nombre de [DBPROPSET](/previous-versions/windows/desktop/ms714367) structures passées dans le *pPropSet* argument.
+[in] Le nombre de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passées dans le *pPropSet* argument.
 
 *pName*<br/>
 [in] Nom de la base de données à laquelle se connecter.
@@ -259,7 +259,7 @@ HRESULT Open(LPCSTR szProgID, 
 [in] Mot de passe de l'utilisateur.
 
 *nInitMode*<br/>
-[in] Mode d'initialisation de la base de données. Consultez [propriétés d’initialisation](/previous-versions/windows/desktop/ms723127)dans le *de référence du programmeur OLE DB* dans le SDK Windows pour obtenir la liste des modes d’initialisation valides. Si *nInitMode* est égal à zéro, aucune initialisation mode est inclus dans le jeu de propriétés utilisé pour ouvrir la connexion.
+[in] Mode d'initialisation de la base de données. Consultez [propriétés d’initialisation](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))dans le *de référence du programmeur OLE DB* dans le SDK Windows pour obtenir la liste des modes d’initialisation valides. Si *nInitMode* est égal à zéro, aucune initialisation mode est inclus dans le jeu de propriétés utilisé pour ouvrir la connexion.
 
 *szProgID*<br/>
 [in] Identificateur de programme.
@@ -304,7 +304,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] Nom d'un fichier, généralement un fichier de connexion de source de données au format .UDL.
 
-Pour plus d’informations sur les fichiers de liaison de données (fichiers .udl), consultez [Data Link API Overview](/previous-versions/windows/desktop/ms718102) dans le SDK Windows.
+Pour plus d’informations sur les fichiers de liaison de données (fichiers .udl), consultez [Data Link API Overview](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85)) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -321,7 +321,7 @@ Ouvre une source de données spécifiée par la chaîne d’initialisation fourn
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString, 
+HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
    bool fPromptForInfo= false) throw();
 ```
 
@@ -350,8 +350,8 @@ Cette méthode présente une invite à l'utilisateur sous la forme d'une boîte 
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ), 
-   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE, 
+HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
+   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE,
    LPCOLESTR szInitialDirectory = NULL) throw();
 ```
 
@@ -399,10 +399,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 [in] ID de programme d'un fournisseur de données.
 
 *pPropset*<br/>
-[in] Un pointeur vers un tableau de [DBPROPSET](/previous-versions/windows/desktop/ms714367) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](/previous-versions/windows/desktop/ms713696) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows. Si l'objet source de données est initialisé, les propriétés doivent appartenir au groupe de propriétés Source de données. Si la même propriété est spécifiée plusieurs fois dans *pPropset*, puis de la valeur utilisée est spécifique au fournisseur. Si *ulPropSets* est égal à zéro, ce paramètre est ignoré.
+[in] Un pointeur vers un tableau de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows. Si l'objet source de données est initialisé, les propriétés doivent appartenir au groupe de propriétés Source de données. Si la même propriété est spécifiée plusieurs fois dans *pPropset*, puis de la valeur utilisée est spécifique au fournisseur. Si *ulPropSets* est égal à zéro, ce paramètre est ignoré.
 
 *ulPropSets*<br/>
-[in] Le nombre de [DBPROPSET](/previous-versions/windows/desktop/ms714367) structures passées dans le *pPropSet* argument. S’il s’agit de zéro, le fournisseur ignore *pPropset*.
+[in] Le nombre de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passées dans le *pPropSet* argument. S’il s’agit de zéro, le fournisseur ignore *pPropset*.
 
 ### <a name="return-value"></a>Valeur de retour
 

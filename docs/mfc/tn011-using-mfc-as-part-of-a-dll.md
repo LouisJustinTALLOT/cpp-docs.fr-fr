@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: e709404ed6e0ba79159131de1cbff80905e9f216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517648"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326198"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011 : utilisation de MFC dans le cadre d'une DLL
 
@@ -33,7 +33,7 @@ DLL MFC normales ont plusieurs avantages :
 
 - Avec les DLL MFC standard qui lient statiquement à MFC, la taille de la DLL dépend uniquement les routines runtime C et MFC qui sont utilisées et liées.
 
-- Avec les DLL MFC normales de manière dynamique aux MFC, les économies dans la mémoire à l’aide de la version partagée des MFC peuvent être significatifs. Toutefois, vous devez distribuer les DLL partagées, Mfc*\<version >*.dll et Msvvcrt*\<version >*.dll, avec votre DLL.
+- Avec les DLL MFC normales de manière dynamique aux MFC, les économies dans la mémoire à l’aide de la version partagée des MFC peuvent être significatifs. Toutefois, vous devez distribuer les DLL partagées, Mfc\<*version*> .dll et Msvvcrt\<*version*> .dll, avec votre DLL.
 
 - La création de la DLL est indépendante de la façon dont les classes sont implémentées. La conception de DLL exporte uniquement pour les API que vous souhaitez. Par conséquent, si l’implémentation change, les DLL MFC normales sont toujours valides.
 

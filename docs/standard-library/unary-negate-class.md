@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: acb0eaa446bf21a014d8be8c4dbeaedf0f282a1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b43db182d9274281020d7ce92cfa1b3efe724197
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648186"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326015"
 ---
 # <a name="unarynegate-class"></a>unary_negate, classe
 
@@ -44,7 +44,7 @@ Négation de la fonction unaire.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie d’un objet de fonction unaire _ *Func.* Elle définit sa fonction membre `operator()` comme retournant **!**\_ *Func(left).*
+La classe de modèle stocke une copie d’un objet de fonction unaire  *\_Func*. Elle définit sa fonction membre `operator()` comme retournant `!_Func(left)`.
 
 Le constructeur de `unary_negate` est rarement utilisé directement. La fonction d’assistance [not1](../standard-library/functional-functions.md#not1) simplifie la manière de déclarer et d’utiliser le prédicat de l’adaptateur **unary_negator**.
 

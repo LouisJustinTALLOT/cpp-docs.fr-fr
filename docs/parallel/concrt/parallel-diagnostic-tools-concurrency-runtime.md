@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 44bb32f87379a05829816234ee8bc412de1f24b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9d6823a5f82e3d52f82f568d3e3c00b68236fef
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608570"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329213"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Outils de diagnostic parallèles (runtime d'accès concurrentiel)
 
@@ -35,8 +35,13 @@ Le tableau suivant décrit les événements que le runtime déclenche lorsque le
 
 |Événement|Description|Value|
 |-----------|-----------------|-----------|
-
-|[Concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)| L’identificateur du fournisseur ETW pour le Runtime d’accès concurrentiel. | `f7b697a3-4db5-4d3b-be71-c4d284e6592f`| | [concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)| Marque les événements qui sont associés aux contextes. | `5727a00f-50be-4519-8256-f7699871fecb`| | [concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)| Marque le début et la fin des appels à la [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithme. | `31c8da6b-6165-4042-8b92-949e315f4d84`| | [concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)| Marque le début et la fin des appels à la [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorithme. | `5cb7d785-9d66-465d-bae1-4611061b5434`| | [concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)| Marque le début et la fin des appels à la [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorithme. | `d1b5b133-ec3d-49f4-98a3-464d1a9e4682`| | [concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)| Marque les événements qui sont liées à la [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md). | `e2091f8a-1e0a-4731-84a2-0dd57c8a5261`| | [concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)| Marque les événements qui sont associés aux processeurs virtuels. |`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
+|[Concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|L’identificateur du fournisseur ETW pour le Runtime d’accès concurrentiel.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
+|[Concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Marque les événements qui sont associés aux contextes.|`5727a00f-50be-4519-8256-f7699871fecb`|
+|[Concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|Marque le début et la fin des appels à la [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithme.|`31c8da6b-6165-4042-8b92-949e315f4d84`|
+|[Concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Marque le début et la fin des appels à la [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorithme.|`5cb7d785-9d66-465d-bae1-4611061b5434`|
+|[Concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Marque le début et la fin des appels à la [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorithme.|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
+|[Concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|Marque les événements qui sont liées à la [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
+|[Concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Marque les événements qui sont associés aux processeurs virtuels.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
 
 Le Runtime d’accès concurrentiel définit, mais ne pas actuellement déclenche, les événements suivants. Le runtime réserve ces événements pour une utilisation ultérieure :
 

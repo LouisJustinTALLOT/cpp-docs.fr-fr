@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LOCAL directive
 ms.assetid: 76147e2d-23ca-4f1e-8817-81428becd113
-ms.openlocfilehash: c8ea49b9862159a5a56bfb3d2c3cd0c1f4cd7413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94af498865151ff5c49fac9dbc03de65c4ecb934
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596870"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327601"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
 
@@ -19,9 +19,9 @@ Dans la première directive, au sein d’une macro, **LOCAL** définit les étiq
 
 ## <a name="syntax"></a>Syntaxe
 
-> LOCAL *localname* [[, *localname*]]...
-
-> LOCAL *étiquette* [[[*nombre*]]] [[ :*type*]] [[, *étiquette* [[[*nombre*]]] [[ *type*]]]]...
+> LOCAL *localname* \[, *localname*]...
+>
+> LOCAL *étiquette* \[ __\[__ *nombre*__]__ ] \[ __:__  *type*] \[ __,__ *étiquette* \[ __\[__ *nombre* __]__  ] \[ *type*]]...
 
 ## <a name="remarks"></a>Notes
 

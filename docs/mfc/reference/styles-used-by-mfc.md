@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: dc70059e2de054e4b1aac4800e1d61c58bc9b467
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642908"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525301"
 ---
 # <a name="styles-used-by-mfc"></a>Styles utilisés par MFC
 
@@ -338,7 +338,7 @@ Appliquent des styles de zone de liste à [CListBox (classe)](../../mfc/referenc
 |LBS_HASSTRINGS|Spécifie une zone de liste owner-draw qui contient des éléments composés de chaînes. La zone de liste contient la mémoire et les pointeurs des chaînes afin que l'application puisse utiliser la fonction membre `GetText` pour récupérer le texte d'un élément particulier.|
 |LBS_MULTICOLUMN|Spécifie une zone de liste multicolonne qui défile horizontalement. La fonction membre `SetColumnWidth` définit la largeur des colonnes.|
 |LBS_MULTIPLESEL|Sélection de la chaîne est modifiée chaque fois que l’utilisateur clique ou double-clique sur la chaîne. Plusieurs chaînes peuvent être sélectionnées.|
-|LBS_NODATA|Spécifie une zone de liste sans données. Spécifiez ce style lorsque le nombre d'éléments dans la zone de liste dépasse 1000. Une zone de liste sans données doit également avoir le style LBS_OWNERDRAWFIXED, mais ne doit pas avoir le style LBS_SORT ou LBS_HASSTRINGS. <br />< /br / > une zone de liste sans données ressemble à une zone de liste owner-drawn mais il ne contient aucune donnée de chaîne ou image bitmap pour un élément. Les commandes d'ajout, d'insertion ou de suppression d'un élément ignorent toutes les données d'un élément donné ; les requêtes de recherche d'une chaîne dans la zone de liste échouent toujours. Le système envoie le message WM_DRAWITEM à la fenêtre propriétaire lorsqu’un élément doit être dessiné. Le membre itemID de la `DRAWITEMSTRUCT` structure passée avec le message WM_DRAWITEM Spécifie le numéro de ligne de l’élément à dessiner. Une zone de liste sans données n’envoie pas d’un message WM_DELETEITEM.|
+|LBS_NODATA|Spécifie une zone de liste sans données. Spécifiez ce style lorsque le nombre d'éléments dans la zone de liste dépasse 1000. Une zone de liste sans données doit également avoir le style LBS_OWNERDRAWFIXED, mais ne doit pas avoir le style LBS_SORT ou LBS_HASSTRINGS.<br/><br/> Une zone de liste sans données s'apparente à une zone de liste personnalisée par son propriétaire sauf qu'elle ne contient aucune chaîne ou donnée bitmap d'un élément. Les commandes d'ajout, d'insertion ou de suppression d'un élément ignorent toutes les données d'un élément donné ; les requêtes de recherche d'une chaîne dans la zone de liste échouent toujours. Le système envoie le message WM_DRAWITEM à la fenêtre propriétaire lorsqu’un élément doit être dessiné. Le membre itemID de la `DRAWITEMSTRUCT` structure passée avec le message WM_DRAWITEM Spécifie le numéro de ligne de l’élément à dessiner. Une zone de liste sans données n’envoie pas d’un message WM_DELETEITEM.|
 |LBS_NOINTEGRALHEIGHT|La taille de la zone de liste est exactement la taille spécifiée par l’application lors de la création de la zone de liste. Généralement, Windows redimensionne une zone de liste pour qu'elle n'affiche aucun élément de manière partielle.|
 |LBS_NOREDRAW|Affichage de la zone de liste n’est pas mis à jour lorsque des modifications sont apportées. Ce style peut être modifié à tout moment en envoyant un message WM_SETREDRAW.|
 |LBS_NOSEL|Spécifie que la zone de liste contient des éléments qui peuvent être affichés, mais pas sélectionnées.|
@@ -350,7 +350,7 @@ Appliquent des styles de zone de liste à [CListBox (classe)](../../mfc/referenc
 |LBS_USETABSTOPS|Permet à une zone de liste à reconnaître et développer des caractères de tabulation quand il dessine ses chaînes. Les positions des onglets par défaut correspondent à 32 unités de boîte de dialogue. (L'unité de boîte de dialogue est une distance horizontale ou verticale. Une unité de boîte de dialogue horizontale est égale à un quart de l'unité de largeur de base de dialogue actuelle. Les unités de dialogue sont calculées en fonction de la hauteur et de la largeur de la police système actuelle. Le `GetDialogBaseUnits` (fonction) Windows retourne, unités de base, la boîte de dialogue actuelle en pixels.) Ce style ne doit pas être utilisé avec LBS_OWNERDRAWFIXED.|
 |LBS_WANTKEYBOARDINPUT|Le propriétaire de la zone de liste reçoit les messages WM_VKEYTOITEM ou WM_CHARTOITEM chaque fois que l’utilisateur appuie sur une touche alors que la zone de liste a le focus d’entrée. Cela permet à une application d'effectuer un traitement spécial sur l'entrée de clavier.|
 
-##<a name="message-box-styles"></a>  Styles de zone de message
+## <a name="message-box-styles"></a>  Styles de zone de message
 
 Appliquent des styles de zone de message à [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) éléments. Spécifiez une combinaison de styles dans le *%nLes* paramètre de `AfxMessageBox`. Pour plus d’informations sur les styles de zone de message dans Windows, consultez [MessageBox (fonction) (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).
 
@@ -383,6 +383,7 @@ Les styles de boîte de message suivants sont disponibles.
 |MB_ICONINFORMATION|Une icône composée d’un « I » dans un cercle apparaît dans la boîte de message.|
 |MB_ICONQUESTION|Une icône de point d’interrogation apparaît dans la boîte de message.|
 |MB_ICONSTOP|Une icône de symbole d’arrêt apparaît dans la boîte de message.|
+
 ### <a name="message-box-default-buttons"></a>Boutons de boîte de message par défaut
 
 |Style|Description|

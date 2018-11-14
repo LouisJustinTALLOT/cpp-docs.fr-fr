@@ -1,6 +1,6 @@
 ---
 title: Cbasepane, classe
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CBasePane
 - AFXBASEPANE/CBasePane
@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: a04e60c3cbaecc018fb1d577770e70c2148efc3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469366"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525416"
 ---
 # <a name="cbasepane-class"></a>Cbasepane, classe
 
@@ -316,13 +316,13 @@ Les conseils de personnalisation suivantes se rapportent à la `CBasePane Class`
 
 - Lorsque vous créez un volet, vous pouvez appliquer plusieurs styles de nouveau :
 
-    - AFX_CBRS_FLOAT rend le float volet.
+  - AFX_CBRS_FLOAT rend le float volet.
 
-    - AFX_CBRS_AUTOHIDE Active le mode de masquage automatique.
+  - AFX_CBRS_AUTOHIDE Active le mode de masquage automatique.
 
-    - AFX_CBRS_CLOSE Active le volet à fermer (masqué).
+  - AFX_CBRS_CLOSE Active le volet à fermer (masqué).
 
-   Il s’agit des indicateurs que vous pouvez associer avec une opération OR au niveau du bit.
+  Il s’agit des indicateurs que vous pouvez associer avec une opération OR au niveau du bit.
 
 `CBasePane` implémente les méthodes de type Boolean virtuels suivantes pour refléter ces indicateurs : [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Vous pouvez les remplacer dans les classes dérivées pour personnaliser leur comportement.
 
@@ -1628,12 +1628,12 @@ Cette méthode n’a aucune fonctionnalité pour la `CBasePane` classe.
 Cette méthode n’est actuellement pas utilisée.
 
 ```
-virtual void OnMovePaneDivider(CPaneDivider*);
+virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*CPaneDivider\**<br/>
+*inutilisé*<br/>
 [in] Non utilisé.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu

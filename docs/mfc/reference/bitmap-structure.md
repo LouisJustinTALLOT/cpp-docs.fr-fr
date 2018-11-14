@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - BITMAP structure [MFC]
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
-ms.openlocfilehash: 1a1079ea0b032f5d28995dc0e3b15b5ba6d16376
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9ffa7191b5f0e815db9c7e8b8a26b0b6b200f2d
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576083"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330240"
 ---
 # <a name="bitmap-structure"></a>Structure BITMAP
 
-Le **BITMAP** structure définit la hauteur, largeur, format de couleur et les valeurs de bit d’une image bitmap logique **.**
+Le **BITMAP** structure définit la hauteur, largeur, format de couleur et les valeurs de bit d’une image bitmap logique.
 
 ## <a name="syntax"></a>Syntaxe
 

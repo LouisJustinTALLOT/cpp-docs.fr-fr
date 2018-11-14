@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: b6e7208628ee77df8647eaa46b00e6e22d294879
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdda18243366de059b26fd566b5eecb308cbed14
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529140"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556645"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet, classe
 
@@ -72,7 +72,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ## <a name="remarks"></a>Notes
 
-Utilisation de consommateurs OLE DB `DBPROPIDSET` structures pour passer un tableau d’ID de propriété pour lequel le consommateur souhaite obtenir des informations de propriété. Les propriétés identifiées dans un seul [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) structure appartiennent à une propriété est définie.
+Utilisation de consommateurs OLE DB `DBPROPIDSET` structures pour passer un tableau d’ID de propriété pour lequel le consommateur souhaite obtenir des informations de propriété. Les propriétés identifiées dans un seul [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) structure appartiennent à une propriété est définie.
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 
@@ -91,7 +91,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
 
-Constructeur. Initialise le `rgProperties`, `cProperties`et (éventuellement) `guidPropertySet` champs de la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) structure.
+Constructeur. Initialise le `rgProperties`, `cProperties`et (éventuellement) `guidPropertySet` champs de la [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) structure.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -124,7 +124,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Paramètres
 
 *guid*<br/>
-[in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) structure.
+[in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) structure.
 
 ### <a name="remarks"></a>Notes
 

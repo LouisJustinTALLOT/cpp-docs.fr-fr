@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: e8b7dc097c1af60894c627b8b660c4d9d81361db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519455"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327861"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -64,10 +64,10 @@ Ces constantes manifestes sont définis dans \<fcntl.h > :
 
 |||
 |-|-|
-**\_O\_APPEND**|Positionne un pointeur de fichier à la fin du fichier avant chaque opération d’écriture.
-**\_O\_RDONLY**|Ouvre le fichier pour un accès en lecture uniquement.
-**\_O\_TEXTE**|Ouvre le fichier en mode texte (traduit).
-**\_O\_WTEXT**|Ouvre le fichier en mode Unicode (UTF-16 traduit).
+| **\_O\_APPEND** | Positionne un pointeur de fichier à la fin du fichier avant chaque opération d’écriture. |
+| **\_O\_RDONLY** | Ouvre le fichier pour un accès en lecture uniquement. |
+| **\_O\_TEXTE** | Ouvre le fichier en mode texte (traduit). |
+| **\_O\_WTEXT** | Ouvre le fichier en mode Unicode (UTF-16 traduit). |
 
 Le **_open_osfhandle** appel transfère la propriété du handle de fichier Win32 pour le descripteur de fichier. Pour fermer un fichier ouvert avec **_open_osfhandle**, appelez [ \_fermer](close.md). Le handle de fichier du système d’exploitation sous-jacent étant aussi fermé par un appel à **_close**, donc il n’est pas nécessaire d’appeler la fonction Win32 **CloseHandle** sur le handle d’origine. Si le descripteur de fichier est détenu par un **fichier &#42;**  flux, puis en appelant [fclose](fclose-fcloseall.md) sur qui **fichier &#42;**  flux ferme également les deux le descripteur de fichier et le handle sous-jacent. Dans ce cas, n’appelez pas **_close** sur le descripteur de fichier.
 

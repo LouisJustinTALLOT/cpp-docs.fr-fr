@@ -39,12 +39,12 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: a8097a31ebbc56281008f14da58671d5b2e4e8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5479448a4e3a3cedba3a62d9b12b0dbe4160f7c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490777"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331696"
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
@@ -112,7 +112,7 @@ Le **_strtoi64** fonction convertit *strSource* à un **__int64**. Les deux fonc
 |**_tcstoi64**|**_strtoi64**|**_strtoi64**|**_wcstoi64**|
 |**_tcstoi64_l**|**_strtoi64_l**|**_strtoi64_l**|**_wcstoi64_l**|
 
-Le paramètres régionaux **LC_NUMERIC** paramètre de catégorie détermine la reconnaissance du caractère de base dans *strSource ** ;* pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les fonctions sans suffixe _l utilisent les paramètres régionaux actifs ; **_strtoi64_l** et **_wcstoi64_l** sont identiques à la fonction correspondante sans le **_l** suffixe, sauf qu’ils utilisent les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le paramètres régionaux **LC_NUMERIC** paramètre de catégorie détermine la reconnaissance du caractère de base dans *strSource*; pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les fonctions sans suffixe _l utilisent les paramètres régionaux actifs ; **_strtoi64_l** et **_wcstoi64_l** sont identiques à la fonction correspondante sans le **_l** suffixe, sauf qu’ils utilisent les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 Si *endptr* n’est pas **NULL**, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement vers lequel pointé *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide a été trouvé ou une base non valide a été spécifiée), la valeur de *strSource* est stocké à l’emplacement vers lequel pointé *endptr*.
 

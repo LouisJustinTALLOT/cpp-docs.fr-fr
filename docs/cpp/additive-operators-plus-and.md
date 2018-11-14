@@ -12,19 +12,19 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-ms.openlocfilehash: 0da5a5e50f20972ab29c0318c0b3bbac1ab3cbb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441286"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330370"
 ---
 # <a name="additive-operators--and--"></a>Opérateurs additifs : + et -
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-expression + expression 
+expression + expression
 expression - expression
 ```
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 1b276f427fc127fb04f4f8e09f0278033ef64754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677173"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333213"
 ---
 # <a name="priorityqueue-class"></a>priority_queue, classe
 
@@ -224,9 +224,9 @@ Construit un priority_queue qui est vide ou qui est une copie d’une plage d’
 ```cpp
 priority_queue();
 
-explicit priority_queue(const Traits&_comp);
+explicit priority_queue(const Traits& _comp);
 
-priority_queue(const Traits&_comp, const container_type& _Cont);
+priority_queue(const Traits& _comp, const container_type& _Cont);
 
 priority_queue(const priority_queue& right);
 
@@ -234,15 +234,15 @@ template <class InputIterator>
 priority_queue(InputIterator first, InputIterator last);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp, const container_type& _Cont);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp, const container_type& _Cont);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*_ comp*<br/>
+*_comp*<br/>
 Fonction de comparaison de type **constTraits** qui est utilisée pour classer les éléments dans l’objet priority_queue (par défaut, la fonction compare du conteneur de base).
 
 *_Cont*<br/>
@@ -263,7 +263,7 @@ Chacun des trois premiers constructeurs spécifie un priority_queue initial vide
 
 Le quatrième constructeur spécifie une copie du priority_queue *droit*.
 
-Les trois derniers constructeurs copient la plage [* premier, dernier *) d’un conteneur et les valeurs utilisées pour initialiser un priority_queue avec augmentation de caractère spécifiant le type de fonction de comparaison de classe **Traits** et `container_type`.
+Les trois derniers constructeurs copient la plage \[ *première*, *dernière*) d’un conteneur et les valeurs utilisées pour initialiser un priority_queue avec un en spécifiant le type de caractère fonction de comparaison de classe `Traits` et `container_type`.
 
 ### <a name="example"></a>Exemple
 

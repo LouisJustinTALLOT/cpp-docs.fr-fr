@@ -28,12 +28,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: 15ff6e4a70069845369acdc3ffd153c48f228201
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5f775eab370f8f4a3b6a5c1d7f0918ec7efa3ff
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447538"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331085"
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 
@@ -75,9 +75,9 @@ Le **fseek** et **_fseeki64** fonctions déplace le pointeur de fichier (le cas 
 
 |valeur d’origine|Signification|
 |-|-|
-**SEEK_CUR**|Position actuelle du pointeur de fichier.
-**SEEK_END**|Fin du fichier.
-**SEEK_SET**|Début du fichier.
+| **SEEK_CUR** | Position actuelle du pointeur de fichier. |
+| **SEEK_END** | Fin du fichier. |
+| **SEEK_SET** | Début du fichier. |
 
 Vous pouvez utiliser **fseek** et **_fseeki64** pour repositionner le pointeur n’importe où dans un fichier. Le pointeur peut également être positionné au-delà de la fin du fichier. **fseek** et **_fseeki64** efface l’indicateur de fin de fichier et annulent l’effet de tout avant [ungetc](ungetc-ungetwc.md) les appels de fonction *flux*.
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: a9f8eb1c96c40336f39f14fe1a0ee29d60efd003
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 9f845834b844c16bf2820a295768696e8f6a6526
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265215"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556294"
 ---
 # <a name="overriding-provider-service-defaults"></a>Substitution des services par défaut du fournisseur
 
-Valeur de Registre du fournisseur pour les OLEDB_SERVICES est retournée en tant que la valeur par défaut pour le [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898) propriété d’initialisation sur l’objet de source de données.
+Valeur de Registre du fournisseur pour les OLEDB_SERVICES est retournée en tant que la valeur par défaut pour le [DBPROP_INIT_OLEDBSERVICES](https://docs.microsoft.com/previous-versions/windows/desktop/ms716898(v=vs.85)) propriété d’initialisation sur l’objet de source de données.
 
 Tant que l’entrée de Registre existe, les objets du fournisseur sont agrégées. L’utilisateur peut remplacer le paramétrage par défaut des services activés en définissant la propriété DBPROP_INIT_OLEDBSERVICES avant l’initialisation. Pour activer ou désactiver un service particulier, l’utilisateur obtient la valeur actuelle de la propriété DBPROP_INIT_OLEDBSERVICES, définit ou efface le bit de la propriété particulière à être activé ou désactivé et réinitialise la propriété. DBPROP_INIT_OLEDBSERVICES peut être définie directement dans OLE DB ou dans la chaîne de connexion passée à ADO ou `IDataInitialize::GetDatasource`. Les valeurs correspondantes pour activer ou désactiver des services individuels sont répertoriés dans le tableau suivant.
 
@@ -30,7 +30,7 @@ Si l’entrée de Registre n’existe pas pour le fournisseur, les gestionnaires
 
 ## <a name="see-also"></a>Voir aussi
 
-[Regroupement des ressources](/previous-versions/windows/desktop/ms713655)<br/>
-[Comment les consommateurs utilisent le regroupement des ressources](/previous-versions/windows/desktop/ms715907)<br/>
-[Comment les fournisseurs de travailler efficacement avec le regroupement de ressources](/previous-versions/windows/desktop/ms714906)<br/>
+[Regroupement des ressources](https://docs.microsoft.com/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
+[Comment les consommateurs utilisent le regroupement des ressources](https://docs.microsoft.com/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
+[Comment les fournisseurs de travailler efficacement avec le regroupement de ressources](https://docs.microsoft.com/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
 [Activation et désactivation des services OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

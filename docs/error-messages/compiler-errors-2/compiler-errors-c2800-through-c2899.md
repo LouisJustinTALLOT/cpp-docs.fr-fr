@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 1c1b001e4d55c913cd2b9a50ee2e4bb4d2915523
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601107"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332073"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Erreurs du compilateur C2800 à C2899
 
@@ -74,7 +74,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2812](compiler-error-c2812.md)|#import n’est pas pris en charge avec/clr : pure et/CLR : safe|
 |[Erreur du compilateur C2813](compiler-error-c2813.md)|#import n'est pas pris en charge avec /MP|
 |[Erreur du compilateur C2814](compiler-error-c2814.md)|«*membre*' : un type natif ne peut pas être imbriqué dans un type géré/WinRT '*classe*»|
-|[Erreur du compilateur C2815](compiler-error-c2815.md)|'operator delete' : le premier paramètre formel doit être ' void *», mais «* type *' a été utilisé|
+|[Erreur du compilateur C2815](compiler-error-c2815.md)|'operator delete' : le premier paramètre formel doit être ' void \*», mais «*type*' a été utilisé|
 |C2816 d’erreur du compilateur|Obsolète.|
 |[Erreur du compilateur C2817](compiler-error-c2817.md)|type de retour de 'operator delete' doit être 'void'|
 |[Erreur du compilateur C2818](compiler-error-c2818.md)|application de surchargé 'operator ->' est récurrente à travers le type '*classe*'|
@@ -83,7 +83,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2821](compiler-error-c2821.md)|premier paramètre formel de 'operator new' doit être 'size_t'|
 |C2822 d’erreur du compilateur|déroulement local n’est pas pris en charge sur cette plateforme|
 |[Erreur du compilateur C2823](compiler-error-c2823.md)|un modèle/générique de typedef n’est pas conforme|
-|[Erreur du compilateur C2824](compiler-error-c2824.md)|type de retour de 'operator new' doit être ' void *'|
+|[Erreur du compilateur C2824](compiler-error-c2824.md)|type de retour de 'operator new' doit être ' void \*'|
 |[Erreur du compilateur C2825](compiler-error-c2825.md)|«*identificateur*' : doit être une classe ou un espace de noms lorsqu’il est suivi par ' :: »|
 |Erreur du compilateur C2826|Obsolète.|
 |[Erreur du compilateur C2827](compiler-error-c2827.md)|' opérateur *opérateur*' ne peut pas être globalement substitué par une forme unaire|

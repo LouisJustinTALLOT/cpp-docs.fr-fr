@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b776aedb71f81d7dc27f9322ed87fd080c8819a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558724"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327419"
 ---
 # <a name="cancellation-in-the-ppl"></a>Annulation dans la bibliothèque de modèles parallèles
 
@@ -90,13 +90,12 @@ L'exemple suivant montre le premier modèle de base pour l'annulation de tâches
 La fonction `cancel_current_task` se lance ; par conséquent, il est inutile de retourner explicitement un résultat à partir de la boucle ou fonction actuelle.
 
 > [!TIP]
-
->  Vous pouvez également appeler le [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) fonction au lieu de `cancel_current_task`.
+> Vous pouvez également appeler le [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) fonction au lieu de `cancel_current_task`.
 
 Il est important d’appeler `cancel_current_task` quand vous répondez à l’annulation, car cela fait passer la tâche à l’état annulé. Si vous retournez un résultat trop tôt au lieu d'appeler `cancel_current_task`, l'opération passe à l'état terminé et toutes les continuations basées sur des valeurs sont exécutées.
 
 > [!CAUTION]
->  Ne levez jamais `task_canceled` à partir de votre code. Appelez `cancel_current_task` à la place.
+> Ne levez jamais `task_canceled` à partir de votre code. Appelez `cancel_current_task` à la place.
 
 Lorsqu’une tâche se termine à l’état annulé, le [Concurrency::Task :: Get](reference/task-class.md#get) méthode lève une exception [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (À l’inverse, [Concurrency::Task :: wait](reference/task-class.md#wait) retourne [task_status::canceled](reference/concurrency-namespace-enums.md#task_group_status) et ne lève pas d’exception.) L’exemple suivant illustre ce comportement pour une continuation basée sur des tâches. Une continuation basée sur des tâches est toujours appelée, même quand la tâche antécédente est annulée.
 
@@ -107,8 +106,7 @@ Lorsqu’une tâche se termine à l’état annulé, le [Concurrency::Task :: G
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-
->  Si vous ne passez pas un jeton d’annulation à la `task` constructeur ou la [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) (fonction), cette tâche n’est pas annulable. En outre, vous devez passer le même jeton d’annulation au constructeur de toutes les tâches imbriquées (autrement dit, les tâches qui sont créées dans le corps d’une autre tâche) pour annuler toutes les tâches simultanément.
+> Si vous ne passez pas un jeton d’annulation à la `task` constructeur ou la [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) (fonction), cette tâche n’est pas annulable. En outre, vous devez passer le même jeton d’annulation au constructeur de toutes les tâches imbriquées (autrement dit, les tâches qui sont créées dans le corps d’une autre tâche) pour annuler toutes les tâches simultanément.
 
 Vous voulez peut-être exécuter du code arbitraire quand un jeton d'annulation est annulé. Par exemple, si l’utilisateur choisit un **Annuler** bouton sur l’interface utilisateur d’annuler l’opération, vous pouvez désactiver ce bouton jusqu'à ce que l’utilisateur démarre une autre opération. L’exemple suivant montre comment utiliser le [Concurrency::cancellation_token :: register_callback](reference/cancellation-token-class.md#register_callback) méthode pour inscrire une fonction de rappel qui s’exécute lorsqu’un jeton d’annulation est annulé.
 
@@ -123,11 +121,10 @@ Le document [parallélisme des tâches](../../parallel/concrt/task-parallelism-c
 Ces comportements ne sont pas affectés par une tâche qui a échoué (autrement dit, une tâche qui lève une exception). Dans ce cas, une continuation basée sur des valeurs est annulée ; une continuation basée sur des tâches n'est pas annulée.
 
 > [!CAUTION]
->  Une tâche créée dans une autre tâche (en d'autres termes, une tâche imbriquée) n'hérite pas du jeton d'annulation de la tâche parente. Seule une continuation basée sur des valeurs hérite du jeton d’annulation de sa tâche antécédente.
+> Une tâche créée dans une autre tâche (en d'autres termes, une tâche imbriquée) n'hérite pas du jeton d'annulation de la tâche parente. Seule une continuation basée sur des valeurs hérite du jeton d’annulation de sa tâche antécédente.
 
 > [!TIP]
-
->  Utilisez le [concurrency::cancellation_token :: none](reference/cancellation-token-class.md#none) méthode lorsque vous appelez un constructeur ou une fonction qui accepte un `cancellation_token` objet et que vous ne souhaitez pas que l’opération soit annulable.
+> Utilisez le [concurrency::cancellation_token :: none](reference/cancellation-token-class.md#none) méthode lorsque vous appelez un constructeur ou une fonction qui accepte un `cancellation_token` objet et que vous ne souhaitez pas que l’opération soit annulable.
 
 Vous pouvez également fournir un jeton d'annulation au constructeur d'un objet `task_group` ou `structured_task_group`. Autre aspect important : les groupes de tâches enfants héritent de ce jeton d’annulation. Pour obtenir un exemple qui illustre ce concept en utilisant le [concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) fonction à exécuter pour appeler `parallel_for`, consultez [annulation d’algorithmes parallèles](#algorithms) plus loin dans cette document.
 

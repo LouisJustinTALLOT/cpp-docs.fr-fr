@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-ms.openlocfilehash: 2395b1aa48b7802a508ab0cb8be1ef35a1a81564
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ef28d6cafa0b74b50ee2c50ec380b8bd3aed79f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612986"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327289"
 ---
 # <a name="open-wopen"></a>_open, _wopen
 
@@ -74,11 +74,11 @@ Chacune de ces fonctions retourne un descripteur de fichier pour le fichier ouve
 
 |Valeur de la variable errno|Condition|
 |-|-|
-**EACCES**|A essayé d'ouvrir un fichier en lecture seule pour un accès en écriture, le mode de partage du fichier n'autorise pas les opérations spécifiées ou le chemin d'accès donné est un répertoire.
-**EEXIST**|**_O_CREAT** et **_O_EXCL** indicateurs spécifiés, mais *filename* existe déjà.
-**EINVAL**|Non valide *oflag* ou *pmode* argument.
-**EMFILE**|Plus aucun descripteur de fichier n'est disponible (trop de fichiers sont ouverts).
-**ENOENT**|Fichier ou chemin d’accès introuvable.
+| **EACCES** | A essayé d'ouvrir un fichier en lecture seule pour un accès en écriture, le mode de partage du fichier n'autorise pas les opérations spécifiées ou le chemin d'accès donné est un répertoire. |
+| **EEXIST** | **_O_CREAT** et **_O_EXCL** indicateurs spécifiés, mais *filename* existe déjà. |
+| **EINVAL** | Non valide *oflag* ou *pmode* argument. |
+| **EMFILE** | Plus aucun descripteur de fichier n'est disponible (trop de fichiers sont ouverts). |
+| **ENOENT** | Fichier ou chemin d’accès introuvable. |
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -96,23 +96,23 @@ Le **_open** fonction ouvre le fichier spécifié par *filename* et le prépare 
 
 |*oflag* constante|Comportement|
 |-|-|
-**_O_APPEND**|Déplace le pointeur de fichier à la fin du fichier avant chaque opération d'écriture.
-**_O_BINARY**|Ouvre le fichier en mode binaire (non traduit). (Pour obtenir une description du mode binaire, consultez [fopen](fopen-wfopen.md).)
-**_O_CREAT**|Crée un fichier et l'ouvre pour l'accès en écriture. N’a aucun effet si le fichier spécifié par *filename* existe. Le *pmode* argument est requis quand **_O_CREAT** est spécifié.
-**_O_CREAT** &AMP;#124; **_O_SHORT_LIVED**|Crée un fichier temporaire et, dans la mesure du possible, n'effectue pas de vidage sur disque. Le *pmode* argument est requis quand **_O_CREAT** est spécifié.
-**_O_CREAT** &AMP;#124; **_O_TEMPORARY**|Crée un fichier temporaire ; le fichier est supprimé quand le dernier descripteur de fichier est fermé. Le *pmode* argument est requis quand **_O_CREAT** est spécifié.
-**_O_CREAT**&AMP;#124; ` _O_EXCL`|Retourne une valeur d’erreur si un fichier spécifié par *filename* existe. S’applique uniquement lorsque utilisé avec **_O_CREAT**.
-**_O_NOINHERIT**|Empêche la création d'un descripteur de fichier partagé.
-**_O_RANDOM**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque.
-**_O_RDONLY**|Ouvre un fichier pour l'accès en lecture uniquement. Ne peut pas être spécifié avec **_O_RDWR** ou **_O_WRONLY**.
-**_O_RDWR**|Ouvre un fichier pour l'accès en lecture et en écriture. Ne peut pas être spécifié avec **_O_RDONLY** ou **_O_WRONLY**.
-**_O_SEQUENTIAL**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque.
-**_O_TEXT**|Ouvre un fichier en mode texte (traduit). (Pour plus d’informations, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md) et [fopen](fopen-wfopen.md).)
-**_O_TRUNC**|Ouvre un fichier et le tronque à une longueur nulle. Le fichier doit disposer d'une autorisation en écriture. Ne peut pas être spécifié avec **_O_RDONLY**. **_O_TRUNC** utilisé avec **_O_CREAT** ouvre un fichier existant ou crée un fichier. **Remarque :** le **_O_TRUNC** indicateur détruit le contenu du fichier spécifié.
-**_O_WRONLY**|Ouvre un fichier pour l'accès en écriture uniquement. Ne peut pas être spécifié avec **_O_RDONLY** ou **_O_RDWR**.
-**_O_U16TEXT**|Ouvre un fichier en mode Unicode UTF-16.
-**_O_U8TEXT**|Ouvre un fichier en mode Unicode UTF-8.
-**_O_WTEXT**|Ouvre un fichier en mode Unicode.
+| **_O_APPEND** | Déplace le pointeur de fichier à la fin du fichier avant chaque opération d'écriture. |
+| **_O_BINARY** | Ouvre le fichier en mode binaire (non traduit). (Pour obtenir une description du mode binaire, consultez [fopen](fopen-wfopen.md).) |
+| **_O_CREAT** | Crée un fichier et l'ouvre pour l'accès en écriture. N’a aucun effet si le fichier spécifié par *filename* existe. Le *pmode* argument est requis quand **_O_CREAT** est spécifié. |
+| **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Crée un fichier temporaire et, dans la mesure du possible, n'effectue pas de vidage sur disque. Le *pmode* argument est requis quand **_O_CREAT** est spécifié. |
+| **_O_CREAT** &AMP;#124; **_O_TEMPORARY** | Crée un fichier temporaire ; le fichier est supprimé quand le dernier descripteur de fichier est fermé. Le *pmode* argument est requis quand **_O_CREAT** est spécifié. |
+| **_O_CREAT**&AMP;#124; ` _O_EXCL` | Retourne une valeur d’erreur si un fichier spécifié par *filename* existe. S’applique uniquement lorsque utilisé avec **_O_CREAT**. |
+| **_O_NOINHERIT** | Empêche la création d'un descripteur de fichier partagé. |
+| **_O_RANDOM** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque. |
+| **_O_RDONLY** | Ouvre un fichier pour l'accès en lecture uniquement. Ne peut pas être spécifié avec **_O_RDWR** ou **_O_WRONLY**. |
+| **_O_RDWR** | Ouvre un fichier pour l'accès en lecture et en écriture. Ne peut pas être spécifié avec **_O_RDONLY** ou **_O_WRONLY**. |
+| **_O_SEQUENTIAL** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque. |
+| **_O_TEXT** | Ouvre un fichier en mode texte (traduit). (Pour plus d’informations, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md) et [fopen](fopen-wfopen.md).) |
+| **_O_TRUNC** | Ouvre un fichier et le tronque à une longueur nulle. Le fichier doit disposer d'une autorisation en écriture. Ne peut pas être spécifié avec **_O_RDONLY**. **_O_TRUNC** utilisé avec **_O_CREAT** ouvre un fichier existant ou crée un fichier. **Remarque :** le **_O_TRUNC** indicateur détruit le contenu du fichier spécifié. |
+| **_O_WRONLY** | Ouvre un fichier pour l'accès en écriture uniquement. Ne peut pas être spécifié avec **_O_RDONLY** ou **_O_RDWR**. |
+| **_O_U16TEXT** | Ouvre un fichier en mode Unicode UTF-16. |
+| **_O_U8TEXT** | Ouvre un fichier en mode Unicode UTF-8. |
+| **_O_WTEXT** | Ouvre un fichier en mode Unicode. |
 
 Pour spécifier le mode d’accès de fichier, vous devez spécifier soit **_O_RDONLY**, **_O_RDWR**, ou **_O_WRONLY**. Il n'y a aucune valeur par défaut pour le mode d'accès.
 
@@ -128,9 +128,9 @@ Le *pmode* argument est requis uniquement lorsque **_O_CREAT** est spécifié. S
 
 |*pmode*|Signification|
 |-|-|
-**_S_IREAD**|Lecture autorisée uniquement.
-**_S_IWRITE**|Écriture autorisée. (En fait, autorise la lecture et l'écriture.)
-**_S_IREAD** &AMP;#124; **_S_IWRITE**|Lecture et écriture autorisées.
+| **_S_IREAD** | Lecture autorisée uniquement. |
+| **_S_IWRITE** | Écriture autorisée. (En fait, autorise la lecture et l'écriture.) |
+| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Lecture et écriture autorisées. |
 
 Quand les deux constantes sont données, elles sont jointes avec l’opérateur OR au niveau du bit ( **&#124;** ). Dans Windows, tous les fichiers sont lisibles ; l'autorisation d'écriture seule n'est pas disponible. Par conséquent, les modes **_S_IWRITE** et **_S_IREAD** | **_S_IWRITE** sont équivalentes.
 

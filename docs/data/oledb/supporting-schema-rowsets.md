@@ -7,16 +7,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: f8c96021b93a35ae9fd10503e78401bbac8abeb7
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 6046bcb1b99e446974a3b4fae11d0021778bf526
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264890"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556879"
 ---
 # <a name="supporting-schema-rowsets"></a>Prise en charge des ensembles de lignes de schéma
 
-Ensembles de lignes de schéma permettent aux consommateurs d’obtenir des informations sur un magasin de données sans connaître sa structure sous-jacente, ou son schéma. Par exemple, un magasin de données peut avoir des tables organisées dans une hiérarchie définie par l’utilisateur, donc il n’y aurait aucun moyen d’être certain de connaître le schéma à l’exception en le lisant. (Un autre exemple, les Assistants Visual C++ utilisent les ensembles de lignes de schéma pour générer des accesseurs pour le consommateur.) Pour permettre au consommateur pour ce faire, objet de session du fournisseur expose des méthodes sur le [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) interface. Dans les applications Visual C++, vous utilisez le [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe pour implémenter `IDBSchemaRowset`.
+Ensembles de lignes de schéma permettent aux consommateurs d’obtenir des informations sur un magasin de données sans connaître sa structure sous-jacente, ou son schéma. Par exemple, un magasin de données peut avoir des tables organisées dans une hiérarchie définie par l’utilisateur, donc il n’y aurait aucun moyen d’être certain de connaître le schéma à l’exception en le lisant. (Un autre exemple, les Assistants Visual C++ utilisent les ensembles de lignes de schéma pour générer des accesseurs pour le consommateur.) Pour permettre au consommateur pour ce faire, objet de session du fournisseur expose des méthodes sur le [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) interface. Dans les applications Visual C++, vous utilisez le [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe pour implémenter `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` prend en charge les méthodes suivantes :
 
@@ -86,7 +86,7 @@ class CUpdateSessionTRSchemaRowset :
 
 `CUpdateSession` hérite de `IDBSchemaRowsetImpl`, afin qu’elle possède toutes les restrictions des méthodes de gestion. À l’aide de `CSchemaRowsetImpl`, déclarez les trois classes enfant (énumérées dans le mappage du schéma ci-dessus) : `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, et `CUpdateSessionPTSchemaRowset`. Chacune de ces classes enfant a un `Execute` méthode qui gère son jeu de restrictions (critères de recherche) respectif. Chaque `Execute` méthode compare les valeurs de la *cRestrictions* et *rgRestrictions* paramètres. Consultez la description de ces paramètres dans [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Pour plus d’informations sur les restrictions correspondant à un ensemble de lignes de schéma particulier, consultez le tableau des GUID du jeu de lignes de schéma dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) dans le **de référence du programmeur OLE DB** dans le Kit de développement Windows .
+Pour plus d’informations sur les restrictions correspondant à un ensemble de lignes de schéma particulier, consultez le tableau des GUID du jeu de lignes de schéma dans [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le **de référence du programmeur OLE DB** dans le Kit de développement Windows .
 
 Par exemple, si pris en charge de la restriction TABLE_NAME sur DBSCHEMA_TABLES, effectuez ce qui suit :
 

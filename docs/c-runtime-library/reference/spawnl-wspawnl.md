@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 4dbc8fab611d98f7f87529196b0e10e85196faa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518077"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326977"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -83,11 +83,11 @@ La valeur de retour à partir d’une commande synchrone **_spawnl** ou **_wspaw
 
 |||
 |-|-|
-**E2BIG**|La liste des arguments dépasse 1024 octets.
-**EINVAL**|*mode* argument n’est pas valide.
-**ENOENT**|Fichier ou chemin d'accès introuvable.
-**ENOEXEC**|Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide.
-**ENOMEM**|Mémoire insuffisante pour exécuter le nouveau processus.
+| **E2BIG** | La liste des arguments dépasse 1024 octets. |
+| **EINVAL** | *mode* argument n’est pas valide. |
+| **ENOENT** | Fichier ou chemin d'accès introuvable. |
+| **ENOEXEC** | Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide. |
+| **ENOMEM** | Mémoire insuffisante pour exécuter le nouveau processus. |
 
 Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

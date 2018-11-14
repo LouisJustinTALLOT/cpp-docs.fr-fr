@@ -4,12 +4,12 @@ ms.date: 06/01/2018
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 396b1fe9f879e7adcdfe9a69fee5c9e1916ff545
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6354cc656d501d1611219378f72831cc2fa94389
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542010"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523994"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Projets Ouvrir un dossier dans Visual C++
 
@@ -33,7 +33,8 @@ Quel que soit le système de génération que vous utilisez dans Visual C++, vou
 ## <a name="configuring-open-folder-projects"></a>Configuration de projets Ouvrir un dossier
 
 Les trois fichiers JSON suivants vous permettent de personnaliser un projet Ouvrir un dossier :
-|||
+
+| | |
 |-|-|
 |CppProperties.json|Spécifiez les informations de configuration personnalisées pour la navigation. Si nécessaire, créez ce fichier dans votre dossier de projet racine.|
 |launch.vs.json|Spécifiez les arguments de la ligne de commande. Accessible via l’option **Paramètres de débogage et de lancement** du menu contextuel de l’**Explorateur de solutions**.|
@@ -58,6 +59,7 @@ Le comportement d’IntelliSense et de la navigation varie en partie selon la co
   ]
 }
 ```
+
 Une configuration peut avoir l’une des propriétés suivantes :
 
 |||
@@ -135,6 +137,7 @@ Vous pouvez définir des variables d’environnement personnalisées dans CppPro
   ]
 }
 ```
+
 Vous pouvez également définir une propriété **environments** à l’intérieur d’une configuration. Ainsi, elle ne s’applique qu’à cette configuration et remplace toutes les variables globales du même nom. Dans l’exemple suivant, la configuration x64 définit une variable **INCLUDE** locale qui remplace la valeur globale :
 
 ```json
@@ -186,6 +189,7 @@ Toutes les variables d’environnement par défaut et personnalisées sont égal
 #### <a name="macros"></a>Macros
 
 Vous avez accès aux macros intégrées suivantes à l’intérieur de CppProperties.json :
+
 |||
 |-|-|
 |`${workspaceRoot}`| Chemin complet au dossier de l’espace de travail|
@@ -258,11 +262,13 @@ Cette opération crée (ou ouvre) le fichier `tasks.vs.json` dans le dossier .vs
   ]
 }
 ```
+
 Après avoir enregistré tasks.vs.json, vous pouvez cliquer avec le bouton droit sur n’importe quel fichier .cpp contenu dans le dossier et choisir **Echo filename** à partir du menu contextuel. Le nom du fichier apparaît dans la fenêtre Sortie.
 
 #### <a name="appliesto"></a>appliesTo
 
 Vous pouvez créer des tâches pour tout fichier ou dossier en spécifiant son nom dans le champ `appliesTo`, par exemple `"appliesTo" : "hello.cpp"`. Les masques de fichier suivants peuvent être utilisés comme valeurs :
+
 |||
 |-|-|
 |`"*"`| la tâche est disponible pour tous les fichiers et dossiers dans l’espace de travail|
@@ -340,4 +346,3 @@ Quand vous enregistrez ce fichier, la nouvelle configuration apparaît dans le m
 ## <a name="see-also"></a>Voir aussi
 
 [IDE et outils de développement Visual C++](ide-and-tools-for-visual-cpp-development.md)
-

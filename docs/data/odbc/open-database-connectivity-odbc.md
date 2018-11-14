@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 49955f12c5e9d4105d9fdbe0ec16bbd302672546
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468729"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523349"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 
 La bibliothèque Microsoft Foundation Classes (MFC) fournit des classes pour la programmation avec Open Database Connectivity (ODBC). À compter de Visual Studio 2015 et ODBC de SQL Server 2012 est la meilleure façon de se connecter aux sources de données SQL.
 
-Pour plus d’informations sur l’utilisation de l’API ODBC sans MFC, consultez le [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) SDK sur MSDN.
+Pour plus d’informations sur l’utilisation de l’API ODBC sans MFC, consultez le [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK sur MSDN.
 
 
 ## <a name="in-this-section"></a>Dans cette section
@@ -58,7 +58,7 @@ Pour plus d’informations sur l’utilisation de l’API ODBC sans MFC, consult
 
 ## <a name="odbc-database-tasks"></a>Tâches de base de données ODBC
 
-Ces tâches sont basées sur la bibliothèque MFC [ODBC](odbc-basics.md) classes. Pour plus d’informations sur l’utilisation de l’API ODBC sans MFC, consultez le [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) SDK.
+Ces tâches sont basées sur la bibliothèque MFC [ODBC](odbc-basics.md) classes. Pour plus d’informations sur l’utilisation de l’API ODBC sans MFC, consultez le [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK.
 
 - [Installer et bien démarrer avec ODBC](installing-and-getting-started-with-odbc.md)
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: fdea70f8d87604ca0665baa64c8652c14295a670
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506572"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331267"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset : paramétrage d'un recordset (ODBC)
 
@@ -54,7 +54,7 @@ Utilisations courantes de paramètres sont les suivantes :
 
    Chaîne de filtre du recordset, stockée dans `m_strFilter`, peut se présenter comme suit :
 
-    ```
+    ```cpp
     "StudentID = ?"
     ```
 
@@ -62,7 +62,7 @@ Utilisations courantes de paramètres sont les suivantes :
 
    Attribuez la valeur du paramètre comme suit :
 
-    ```
+    ```cpp
     strInputID = "100";
     ...
     m_strParam = strInputID;
@@ -70,7 +70,7 @@ Utilisations courantes de paramètres sont les suivantes :
 
    Vous ne serez pas que vous souhaitez configurer une chaîne de filtrage de cette façon :
 
-    ```
+    ```cpp
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted
                                        // for some drivers
     ```
@@ -79,15 +79,15 @@ Utilisations courantes de paramètres sont les suivantes :
 
    La valeur du paramètre diffère à chaque fois que vous actualisez le jeu d’enregistrements pour un nouvel ID d’étudiant.
 
-    > [!TIP]
-    >  À l’aide d’un paramètre est plus efficace que simplement un filtre. Pour un jeu d’enregistrements paramétré, la base de données doit traiter une SQL **sélectionnez** instruction qu’une seule fois. Pour un jeu d’enregistrements filtré sans paramètres, le **sélectionnez** instruction doit être exécutée chaque fois que vous `Requery` avec une nouvelle valeur de filtre.
+   > [!TIP]
+   > À l’aide d’un paramètre est plus efficace que simplement un filtre. Pour un jeu d’enregistrements paramétré, la base de données doit traiter une SQL **sélectionnez** instruction qu’une seule fois. Pour un jeu d’enregistrements filtré sans paramètres, le **sélectionnez** instruction doit être exécutée chaque fois que vous `Requery` avec une nouvelle valeur de filtre.
 
 Pour plus d’informations sur les filtres, consultez [Recordset : filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> Paramétrage de la classe de votre jeu d’enregistrements
 
 > [!NOTE]
->  Cette section s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction, l’implémentation des paramètres de lignes en bloc est un processus similaire. Pour plus d’informations, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Cette section s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction, l’implémentation des paramètres de lignes en bloc est un processus similaire. Pour plus d’informations, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Avant de créer votre classe de jeu d’enregistrements, déterminez les paramètres vous avez besoin, leurs types de données, et comment le jeu d’enregistrements les utilise.
 
@@ -116,7 +116,7 @@ Avant de créer votre classe de jeu d’enregistrements, déterminez les paramè
 
 1. Modifier le [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) définition de fonction membre dans le fichier .cpp. Ajoutez un appel de fonctions RFX pour chaque membre de données de paramètre ajouté à la classe. Pour plus d’informations sur l’écriture de fonctions RFX, consultez [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Faites précéder les appels RFX pour les paramètres avec un seul appel à :
 
-    ```
+    ```cpp
     pFX->SetFieldType( CFieldExchange::param );
     // RFX calls for parameter data members
     ```
@@ -130,11 +130,10 @@ Avant de créer votre classe de jeu d’enregistrements, déterminez les paramè
    Au moment de l’exécution, « ? » des espaces réservés sont remplis, dans l’ordre, par les valeurs de paramètre que vous passez. Le premier membre de données de paramètre définie après la [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) appel remplace le premier « ? « dans la chaîne SQL, le deuxième membre de données de paramètre remplace le deuxième » ? », et ainsi de suite.
 
 > [!NOTE]
->  Ordre des paramètres est important : l’ordre des appels RFX des paramètres dans votre `DoFieldExchange` fonction doit correspondre à l’ordre des espaces réservés de paramètre dans la chaîne SQL.
+> Ordre des paramètres est important : l’ordre des appels RFX des paramètres dans votre `DoFieldExchange` fonction doit correspondre à l’ordre des espaces réservés de paramètre dans la chaîne SQL.
 
 > [!TIP]
-
->  La chaîne probablement de fonctionner avec est la chaîne que vous spécifiez (le cas échéant) de la classe [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membre de données, mais certains pilotes ODBC autorisent des paramètres dans d’autres clauses SQL.
+> La chaîne probablement de fonctionner avec est la chaîne que vous spécifiez (le cas échéant) de la classe [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membre de données, mais certains pilotes ODBC autorisent des paramètres dans d’autres clauses SQL.
 
 ##  <a name="_core_passing_parameter_values_at_run_time"></a> Transmission de valeurs de paramètre en cours d’exécution
 

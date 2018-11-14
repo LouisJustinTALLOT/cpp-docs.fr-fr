@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: 42e57c9fd5dafb60a866b24a7a5b8496643d1c76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd96aa1bf7f1f19b84e2e83e3ab5b33c4a0c5bfc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487085"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332099"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function, classe
 
@@ -45,7 +45,7 @@ Objet right sur lequel la fonction *\*pfunc* est appelée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La classe de modèle stocke une copie de `pfunc`. Elle définit sa fonction membre `operator()` comme retournant (\* **pfunc**)(_ *Left*, \_ *Right*).
+La classe de modèle stocke une copie de `pfunc`. Elle définit sa fonction membre `operator()` comme retournant `(* pfunc)(Left, right)`.
 
 ## <a name="remarks"></a>Notes
 

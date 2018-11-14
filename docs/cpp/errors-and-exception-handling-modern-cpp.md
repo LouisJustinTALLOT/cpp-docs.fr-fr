@@ -3,12 +3,12 @@ title: Gestion des erreurs et des exceptions (Modern C++)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: 8f5e0070f3e52d20293ddd624a0d0de57660e316
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667988"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523286"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Gestion des erreurs et des exceptions (Modern C++)
 
@@ -58,7 +58,6 @@ int main()
     //...
     return 0;
 }
-
 ```
 
 Les exceptions en C++ ressemblent à celles des langages tels que c# et Java. Dans le **essayez** bloquer, si une exception est *levée* il sera *interceptée* par le premier associé **catch** bloc dont le type correspond à celui de la exception. En d’autres termes, l’exécution passe à partir de la **lever** instruction à la **catch** instruction. Si aucun bloc catch utilisable n’est trouvée, `std::terminate` est appelé et le programme se termine. En C++, n’importe quel type peut être levé ; Toutefois, nous vous recommandons de lever un type qui dérive directement ou indirectement de `std::exception`. Dans l’exemple précédent, le type d’exception, [invalid_argument](../standard-library/invalid-argument-class.md), est défini dans la bibliothèque standard dans le [ \<stdexcept >](../standard-library/stdexcept.md) fichier d’en-tête. C++ ne fournit pas et ne requiert pas, un **enfin** bloc pour vous assurer que toutes les ressources sont libérées si une exception est levée. Resource acquisition is idiome RAII (initialization), qui utilise des pointeurs intelligents, fournit les fonctionnalités requises pour le nettoyage des ressources. Pour plus d’informations, consultez [Comment : conception pour la sécurité de l’Exception](../cpp/how-to-design-for-exception-safety.md). Pour plus d’informations sur le mécanisme de déroulement de pile C++, consultez [Exceptions et déroulement de pile](../cpp/exceptions-and-stack-unwinding-in-cpp.md).

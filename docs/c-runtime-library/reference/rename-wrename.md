@@ -34,12 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463984"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326133"
 ---
 # <a name="rename-wrename"></a>rename, _wrename
 
@@ -72,9 +72,9 @@ Chacune de ces fonctions retourne 0 en cas de réussite. En cas d’erreur, la f
 
 |Valeur de la variable errno|Condition|
 |-|-|
-**EACCES**|Le fichier ou le répertoire spécifié par *newname* existe déjà ou n’a pas pu être créé (chemin non valide) ; ou *oldname* est un répertoire et *newname* spécifie un autre chemin.
-**ENOENT**|Le fichier ou le chemin spécifié par *oldname* est introuvable.
-**EINVAL**|Le nom contient des caractères non valides.
+| **EACCES** | Le fichier ou le répertoire spécifié par *newname* existe déjà ou n’a pas pu être créé (chemin non valide) ; ou *oldname* est un répertoire et *newname* spécifie un autre chemin. |
+| **ENOENT** | Le fichier ou le chemin spécifié par *oldname* est introuvable. |
+| **EINVAL** | Le nom contient des caractères non valides. |
 
 Pour connaître les autres valeurs de retour possibles, consultez [_doserrno, _errno, syserrlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

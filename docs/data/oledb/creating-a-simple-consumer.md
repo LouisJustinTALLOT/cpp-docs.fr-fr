@@ -1,15 +1,15 @@
 ---
 title: Création d'un consommateur simple
-ms.date: 10/09/2018
+ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 2a10e4da743c1f867d801ffe6767ab6b5b6c0290
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608050"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326639"
 ---
 # <a name="creating-a-simple-consumer"></a>Création d'un consommateur simple
 
@@ -51,18 +51,18 @@ Ensuite, utilisez le **Assistant Consommateur OLE DB ATL** pour ajouter un objet
 
 1. Dans le **propriétés des liaisons de données** boîte de dialogue zone, procédez comme suit :
 
-    1. Sur le **fournisseur** onglet, spécifiez un fournisseur OLE DB.
+   1. Sur le **fournisseur** onglet, spécifiez un fournisseur OLE DB.
 
-    1. Sur le **connexion** onglet, spécifiez les informations requises, telles que le nom du serveur, nom d’utilisateur et mot de passe pour votre source de données et de la base de données sur le serveur.
+   1. Sur le **connexion** onglet, spécifiez les informations requises, telles que le nom du serveur, nom d’utilisateur et mot de passe pour votre source de données et de la base de données sur le serveur.
 
-       > [!NOTE]
-       > Il existe un problème de sécurité avec le **autoriser l’enregistrement du mot de passe** fonctionnalité de la **propriétés des liaisons de données** boîte de dialogue. Dans **Entrez des informations pour vous connecter au serveur**, il existe deux boutons radio : **utilisez Windows NT la sécurité intégrée** et **utiliser un nom d’utilisateur spécifique et un mot de passe**.
+      > [!NOTE]
+      > Il existe un problème de sécurité avec le **autoriser l’enregistrement du mot de passe** fonctionnalité de la **propriétés des liaisons de données** boîte de dialogue. Dans **Entrez des informations pour vous connecter au serveur**, il existe deux boutons radio : **utilisez Windows NT la sécurité intégrée** et **utiliser un nom d’utilisateur spécifique et un mot de passe**.
 
-       > [!NOTE]
-       > Si vous sélectionnez **utiliser un nom d’utilisateur spécifique et un mot de passe**, vous avez la possibilité d’enregistrer le mot de passe (à l’aide de la **autoriser l’enregistrement du mot de passe** case à cocher) ; Toutefois, cette option n’est pas sécurisée. Il est recommandé de sélectionner **utilisez Windows NT la sécurité intégrée**; cette option utilise Windows NT pour vérifier votre identité.
+      > [!NOTE]
+      > Si vous sélectionnez **utiliser un nom d’utilisateur spécifique et un mot de passe**, vous avez la possibilité d’enregistrer le mot de passe (à l’aide de la **autoriser l’enregistrement du mot de passe** case à cocher) ; Toutefois, cette option n’est pas sécurisée. Il est recommandé de sélectionner **utilisez Windows NT la sécurité intégrée**; cette option utilise Windows NT pour vérifier votre identité.
 
-       > [!NOTE]
-       > Si vous ne pouvez pas utiliser la sécurité intégrée de Windows NT, vous devez utiliser une application de couche intermédiaire pour inviter l’utilisateur pour le mot de passe ou pour stocker le mot de passe dans un emplacement avec les mécanismes de sécurité pour aider à protéger (et non dans le code source).
+      > [!NOTE]
+      > Si vous ne pouvez pas utiliser la sécurité intégrée de Windows NT, vous devez utiliser une application de couche intermédiaire pour inviter l’utilisateur pour le mot de passe ou pour stocker le mot de passe dans un emplacement avec les mécanismes de sécurité pour aider à protéger (et non dans le code source).
 
    1. Après avoir sélectionné votre fournisseur et autres paramètres, cliquez sur **tester la connexion** pour vérifier les sélections opérées dans les pages de boîte de dialogue précédente. Si le **résultats** zone rapports `Test connection succeeded`, cliquez sur **OK** pour créer la liaison de données.
 

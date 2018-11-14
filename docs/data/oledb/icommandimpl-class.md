@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: a3520ed34f356c70163b9063178df48e4bc66a7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583584"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556814"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl, classe
 
-Fournit l’implémentation pour le [ICommand](/previous-versions/windows/desktop/ms709737) interface.
+Fournit l’implémentation pour le [ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -119,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>Notes
 
-Consultez [ICommand::Cancel](/previous-versions/windows/desktop/ms714402) dans le *de référence du programmeur OLE DB*.
+Consultez [ICommand::Cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 
@@ -178,7 +178,7 @@ Une valeur HRESULT standard. Consultez `ICommand::Execute` pour obtenir la liste
 
 Pour créer plus d’un ensemble de lignes, ou pour fournir vos propres conditions pour la création de différents ensembles de lignes, placez les différents appels à `CreateRowset` depuis `Execute`.
 
-Consultez [ICommand::Execute](/previous-versions/windows/desktop/ms718095) dans le *de référence du programmeur OLE DB.*
+Consultez [ICommand::Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) dans le *de référence du programmeur OLE DB.*
 
 ## <a name="execute"></a> ICommandImpl::Execute
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [ICommand::Execute](/previous-versions/windows/desktop/ms718095) dans le *de référence du programmeur OLE DB*.
+Consultez [ICommand::Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ### <a name="remarks"></a>Notes
 
@@ -217,7 +217,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622) dans le *de référence du programmeur OLE DB*.
+Consultez [ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ### <a name="remarks"></a>Notes
 

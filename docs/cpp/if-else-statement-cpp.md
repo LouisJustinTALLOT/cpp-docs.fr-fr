@@ -9,12 +9,12 @@ helpviewer_keywords:
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: a6ab56befb4416bf232109a63932604e256df639
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471420"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330826"
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
 
@@ -30,24 +30,24 @@ Contrôles création de branches conditionnelles. Les instructions dans le *bloc
 ```cpp
 if ( expression )
 {
-   statement1;
+   statement1;
    ...
 }
 else  // optional
 {
-   statement2;
+   statement2;
    ...
 }
 
 // Visual Studio 2017 version 15.3 and later:
 if ( initialization; expression )
 {
-   statement1;
+   statement1;
    ...
 }
 else  // optional
 {
-   statement2;
+   statement2;
    ...
 }
 
@@ -59,7 +59,7 @@ if constexpr (expression)
 }
 else  // optional
 {
-   statement2;
+   statement2;
    ...
 }
 ```

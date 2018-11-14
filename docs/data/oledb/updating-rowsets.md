@@ -7,18 +7,18 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 03f1a5c964d6de6c4bba0c965e5c1debfd4c2034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d00b9036b216e3425615478d6bf92d239a3637d1
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521299"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556697"
 ---
 # <a name="updating-rowsets"></a>mettre à jour les jeux de lignes
 
 Une opération de base de données consiste à mettre à jour, ou écrire des données dans le magasin de données. Dans OLE DB, le mécanisme de mise à jour est simple : votre application consommatrice définit les valeurs des membres de données liés, puis écrit ces valeurs dans le rowset ; le consommateur demande ensuite au fournisseur de mettre à jour le magasin de données.
 
-Les consommateurs peuvent effectuer les types suivants de mises à jour sur les données de l’ensemble de lignes : définition des valeurs de colonne dans une ligne, insertion d’une ligne et la suppression d’une ligne. Pour effectuer ces opérations, la classe de modèle OLE DB [CRowset](../../data/oledb/crowset-class.md) implémente le [IRowsetChange](/previous-versions/windows/desktop/ms715790) interface et substitue les méthodes d’interface suivantes :
+Les consommateurs peuvent effectuer les types suivants de mises à jour sur les données de l’ensemble de lignes : définition des valeurs de colonne dans une ligne, insertion d’une ligne et la suppression d’une ligne. Pour effectuer ces opérations, la classe de modèle OLE DB [CRowset](../../data/oledb/crowset-class.md) implémente le [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) interface et substitue les méthodes d’interface suivantes :
 
 - [SetData](../../data/oledb/crowset-setdata.md) les valeurs des colonnes de modifications dans une ligne d’un ensemble de lignes ; ce qui équivaut à la commande SQL UPDATE.
 
@@ -207,4 +207,4 @@ Enfin, une des principales raisons de différer des modifications est la possibi
 
 [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset, classe](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](/previous-versions/windows/desktop/ms715790)<br/>
+[IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

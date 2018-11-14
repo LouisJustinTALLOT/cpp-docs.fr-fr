@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: f86eded7cc7c04a85b1bcd93e917bd5a2b5c9696
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b2d554cb6b4eaeb7ee1ddd884aefb3ab6da0f2e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590877"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523414"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Consommateur ODBC MFC (Assistant)
 
@@ -25,30 +25,30 @@ Cet Assistant définit une classe de jeu d’enregistrements ODBC et les liaison
 
 - **Source de données**
 
-   Le **Source de données** bouton vous permet de définir la source de données spécifié à l’aide du pilote ODBC spécifié. Pour plus d’informations sur les fichiers de source de données (DSN), consultez [les Sources de données de fichier](/previous-versions/windows/desktop/ms715401) dans le SDK ODBC.
+  Le **Source de données** bouton vous permet de définir la source de données spécifié à l’aide du pilote ODBC spécifié. Pour plus d’informations sur les fichiers de source de données (DSN), consultez [les Sources de données de fichier](/previous-versions/windows/desktop/ms715401) dans le SDK ODBC.
 
-   Le **sélectionner une Source de données** boîte de dialogue comporte deux onglets :
+  Le **sélectionner une Source de données** boîte de dialogue comporte deux onglets :
 
-   - **Fichier Source de données** onglet :
+  - **Fichier Source de données** onglet :
 
-      Le **Regarder dans** zone spécifie le répertoire dans lequel sélectionner les fichiers à utiliser comme sources de données. La valeur par défaut est \Program Files\ODBC\Data Sources. Les sources de données de fichiers existants (fichiers .dsn) s’affichent dans la zone de liste principale. Vous pouvez configurer les sources de données avant l’heure à l’aide de la **fichier DSN** onglet sur le [administrateur de sources de données ODBC](/previous-versions/windows/desktop/ms714024), ou créer de nouveaux à l’aide de cette boîte de dialogue.
+     Le **Regarder dans** zone spécifie le répertoire dans lequel sélectionner les fichiers à utiliser comme sources de données. La valeur par défaut est \Program Files\ODBC\Data Sources. Les sources de données de fichiers existants (fichiers .dsn) s’affichent dans la zone de liste principale. Vous pouvez configurer les sources de données avant l’heure à l’aide de la **fichier DSN** onglet sur le [administrateur de sources de données ODBC](/previous-versions/windows/desktop/ms714024), ou créer de nouveaux à l’aide de cette boîte de dialogue.
 
-      Pour créer une nouvelle source de données de fichier à partir de cette boîte de dialogue, cliquez sur `New` pour spécifier un nom de source de données ; la **créer une nouvelle Source de données** boîte de dialogue s’affiche. Dans le **créer une nouvelle Source de données** boîte de dialogue, sélectionnez un pilote approprié puis cliquez sur `Next`; cliquez sur **Parcourir**, puis sélectionnez le nom du fichier à utiliser comme source de données (vous devez sélectionner « Tous les fichiers » pour afficher les fichiers non DSN, tels que les fichiers .xls) ; Cliquez sur `Next`, puis cliquez sur **Terminer**. (Si vous avez sélectionné un fichier non DSN, vous obtiendrez une boîte de dialogue de spécifiques au pilote, tels que « Installation ODBC pour Microsoft Excel, » qui convertira le fichier à une source de données.)
+     Pour créer une nouvelle source de données de fichier à partir de cette boîte de dialogue, cliquez sur `New` pour spécifier un nom de source de données ; la **créer une nouvelle Source de données** boîte de dialogue s’affiche. Dans le **créer une nouvelle Source de données** boîte de dialogue, sélectionnez un pilote approprié puis cliquez sur `Next`; cliquez sur **Parcourir**, puis sélectionnez le nom du fichier à utiliser comme source de données (vous devez sélectionner « Tous les fichiers » pour afficher les fichiers non DSN, tels que les fichiers .xls) ; Cliquez sur `Next`, puis cliquez sur **Terminer**. (Si vous avez sélectionné un fichier non DSN, vous obtiendrez une boîte de dialogue de spécifiques au pilote, tels que « Installation ODBC pour Microsoft Excel, » qui convertira le fichier à une source de données.)
 
-      > [!NOTE]
-      > Vous pouvez également créer une nouvelle source de données de fichier au préalable à l’aide de l’administrateur de sources de données ODBC. À partir de la **Démarrer** menu, sélectionnez **paramètres**, **le panneau de configuration**, **outils d’administration**, **deSourcesdedonnées(ODBC)**, puis **administrateur de sources de données ODBC**.
+     > [!NOTE]
+     > Vous pouvez également créer une nouvelle source de données de fichier au préalable à l’aide de l’administrateur de sources de données ODBC. À partir de la **Démarrer** menu, sélectionnez **paramètres**, **le panneau de configuration**, **outils d’administration**, **deSourcesdedonnées(ODBC)**, puis **administrateur de sources de données ODBC**.
 
-      Le **nom DSN** boîte vous permet de spécifier un nom pour la source de données de fichier. Vous devez vous assurer que le nom de source de données se termine avec l’extension de fichier approprié, tel que .xls pour les fichiers Excel ou .mdb pour accéder aux fichiers.
+     Le **nom DSN** boîte vous permet de spécifier un nom pour la source de données de fichier. Vous devez vous assurer que le nom de source de données se termine avec l’extension de fichier approprié, tel que .xls pour les fichiers Excel ou .mdb pour accéder aux fichiers.
 
-      Pour plus d’informations sur les sources de données, consultez [les Sources de données de fichier](/previous-versions/windows/desktop/ms715401) dans le SDK ODBC.
+     Pour plus d’informations sur les sources de données, consultez [les Sources de données de fichier](/previous-versions/windows/desktop/ms715401) dans le SDK ODBC.
 
-   - **Source de données de l’ordinateur** onglet :
+  - **Source de données de l’ordinateur** onglet :
 
-      Cet onglet répertorie les sources système et données utilisateur. Sources de données utilisateur sont spécifiques à un utilisateur sur cet ordinateur. Sources de données système peuvent être utilisés par tous les utilisateurs sur cet ordinateur ou d’un service système. Consultez [Machine des Sources de données](/previous-versions/windows/desktop/ms710952) dans le Kit de développement logiciel ODBC
+     Cet onglet répertorie les sources système et données utilisateur. Sources de données utilisateur sont spécifiques à un utilisateur sur cet ordinateur. Sources de données système peuvent être utilisés par tous les utilisateurs sur cet ordinateur ou d’un service système. Consultez [Machine des Sources de données](/previous-versions/windows/desktop/ms710952) dans le Kit de développement logiciel ODBC
 
-      Pour plus d’informations sur les sources de données ODBC, consultez [des Sources de données](/previous-versions/windows/desktop/ms711688) dans le SDK ODBC.
+     Pour plus d’informations sur les sources de données ODBC, consultez [des Sources de données](/previous-versions/windows/desktop/ms711688) dans le SDK ODBC.
 
-   Cliquez sur **OK** se termine. Le **sélectionner un objet de base de données** boîte de dialogue s’affiche. À partir de cette boîte de dialogue, sélectionnez la table ou afficher que le consommateur doit utiliser. Notez que vous pouvez sélectionner plusieurs vues et tables en maintenant la touche CTRL tout en cliquant sur les éléments. Cliquez sur **OK** se termine.
+  Cliquez sur **OK** se termine. Le **sélectionner un objet de base de données** boîte de dialogue s’affiche. À partir de cette boîte de dialogue, sélectionnez la table ou afficher que le consommateur doit utiliser. Notez que vous pouvez sélectionner plusieurs vues et tables en maintenant la touche CTRL tout en cliquant sur les éléments. Cliquez sur **OK** se termine.
 
 - **Classe**
 

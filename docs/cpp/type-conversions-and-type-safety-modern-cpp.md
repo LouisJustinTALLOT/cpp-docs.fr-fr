@@ -3,12 +3,12 @@ title: Conversions de types et sécurité de type (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: ae3b2d89c06d0e7b17b648907fa3d7734b51205c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 201f09cc9ac17f76634103c9c9b6c0259c8a8637
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471342"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332619"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversions de types et sécurité de type (Modern C++)
 
@@ -61,7 +61,7 @@ Un type intégral signé et son équivalent non signé sont toujours la même ta
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1

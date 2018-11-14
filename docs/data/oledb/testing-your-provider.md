@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: 42186d789c1b85c359b9e3e30883929a6c71ab33
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 9bb42af69a204c88e6068444642275b59ea5bf5c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265111"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518292"
 ---
 # <a name="testing-your-provider"></a>Test de votre fournisseur
 
@@ -21,7 +21,7 @@ Avant de publier un fournisseur, vous devez effectuer les tests suivants, dans l
 
 1. Tester le fournisseur à l’aide d’une application consommateur écrite avec ADO. La plupart des développeurs (notamment les développeurs Microsoft Visual Basic et Microsoft c#) utilisent ADO ou ADO.NET pour les applications grand public. Le consommateur de test doit couvrir toutes les zones fonctionnelles de votre fournisseur. Pour obtenir un exemple d’application consommateur ADO, consultez [exemples de Code ADO dans Microsoft Visual Basic](https://msdn.microsoft.com/library/ms807514.aspx).
 
-1. Exécutez les tests de compatibilité OLE DB (y compris les tests de compatibilité ADO) pour indiquer que votre fournisseur est conforme au niveau 0 standard pour les fournisseurs OLE DB. (Pour une explication du niveau 0, recherchez **Tests de compatibilité OLE DB de niveau 0** à [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643). Ces tests et la documentation associée sont inclus avec Visual C++ dans le Kit de développement accès aux données. Ces tests permettent également de montrer que votre fournisseur s’exécute bien lorsqu’il est regroupé par d’autres [fournisseurs de services](../../data/oledb/ole-db-resource-pooling-and-services.md) et sont particulièrement utiles si vous modifiez ou ajoutez des propriétés. Pour plus d’informations sur les tests de compatibilité, consultez le fichier Lisez-moi pour Data Access SDK, qui se trouve sur l’un des CD Visual Studio.
+1. Exécutez les tests de compatibilité OLE DB (y compris les tests de compatibilité ADO) pour indiquer que votre fournisseur est conforme au niveau 0 standard pour les fournisseurs OLE DB. (Pour une explication du niveau 0, recherchez **Tests de compatibilité OLE DB de niveau 0** à [Guide du programmeur OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Ces tests et la documentation associée sont inclus avec Visual C++ dans le Kit de développement accès aux données. Ces tests permettent également de montrer que votre fournisseur s’exécute bien lorsqu’il est regroupé par d’autres [fournisseurs de services](../../data/oledb/ole-db-resource-pooling-and-services.md) et sont particulièrement utiles si vous modifiez ou ajoutez des propriétés. Pour plus d’informations sur les tests de compatibilité, consultez le fichier Lisez-moi pour Data Access SDK, qui se trouve sur l’un des CD Visual Studio.
 
 ## <a name="see-also"></a>Voir aussi
 

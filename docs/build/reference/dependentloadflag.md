@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 80065bb4e67674c49761d0832395ae535bbfbf24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604269"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326158"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (indicateurs de charge dépendants définis par défaut)
 
@@ -27,9 +27,8 @@ Définit les indicateurs de charge par défaut utilisée lorsque `LoadLibrary` e
 
 ### <a name="arguments"></a>Arguments
 
-|||
-|-|-|
-*loadflags*|Une valeur d’entier 16 bits en « C »-style facultative dans décimal, octal avec un zéro non significatif ou hexadécimal avec un préfixe `0x`, qui spécifie les indicateurs de chargement dépendant à appliquer à tous les [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) appels. La valeur par défaut est 0.
+*loadflags*<br/>
+Une valeur d’entier 16 bits en « C »-style facultative dans décimal, octal avec un zéro non significatif ou hexadécimal avec un préfixe `0x`, qui spécifie les indicateurs de chargement dépendant à appliquer à tous les [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) appels. La valeur par défaut est 0.
 
 ## <a name="remarks"></a>Notes
 

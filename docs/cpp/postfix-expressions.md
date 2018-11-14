@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 78fce31b3044cb1b80dc6a129d1a0182094c158a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677381"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332437"
 ---
 # <a name="postfix-expressions"></a>Expressions suffixées
 
@@ -31,7 +31,7 @@ Les expressions suffixées se composent d'expressions primaires ou d'expressions
 La syntaxe suivante décrit les expressions suffixées possibles :
 
 ```
-primary-expression 
+primary-expression
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -41,7 +41,7 @@ Le *postfix-expression* ci-dessus peut être une expression primaire ou une autr
 func(1)->GetValue()++
 ```
 
-Dans l’expression ci-dessus, `func` est une expression primaire, `func(1)` est une expression de fonction suffixée, `func(1)->GetValue` est une expression suffixée spécifiant un membre de la classe, `func(1)->GetValue()` est une autre expression de fonction suffixée et l’ensemble expression est une expression suffixée incrémentant la valeur de retour de GetValue.  L'expression entière signifie : Appeler fonction passant 1 comme argument et obtenir un pointeur vers une classe comme valeur de retour.  Appelez ensuite `GetValue()` sur cette classe, puis incrémenter la valeur retournée.
+Dans l’expression ci-dessus, `func` est une expression primaire, `func(1)` est une expression de fonction suffixée, `func(1)->GetValue` est une expression suffixée spécifiant un membre de la classe, `func(1)->GetValue()` est une autre expression de fonction suffixée et l’ensemble expression est une expression suffixée incrémentant la valeur de retour de GetValue.  L’expression entière signifie : Appeler fonction passant 1 comme argument et obtenir un pointeur vers une classe comme valeur de retour.  Appelez ensuite `GetValue()` sur cette classe, puis incrémenter la valeur retournée.
 
 Les expressions répertoriées ci-dessus sont des expressions d'assignation, ce qui signifie que le résultat de ces expressions doit être une r-value.
 
@@ -61,11 +61,11 @@ Le **typeid** opérateur est considéré comme une expression suffixée.  Consul
 
 Les programmes appelants passent des informations aux fonctions appelées dans des « arguments réels ». Les fonctions appelées accèdent aux informations à l'aide des « arguments formels » correspondants.
 
-Lorsqu'une fonction est appelée, les tâches suivantes sont effectuées :
+Lorsqu’une fonction est appelée, les tâches suivantes sont effectuées :
 
-- Tous les arguments réels (ceux fournis par l'appelant) sont évalués. Il n'y a pas d'ordre implicite dans lequel ces arguments sont évalués, mais ils sont tous évalués et les effets secondaires sont résolus avant l'entrée dans la fonction.
+- Tous les arguments réels (ceux fournis par l’appelant) sont évalués. Il n'y a pas d'ordre implicite dans lequel ces arguments sont évalués, mais ils sont tous évalués et les effets secondaires sont résolus avant l'entrée dans la fonction.
 
-- Chaque argument formel est initialisé avec son argument réel correspondant dans la liste d'expressions. (Un argument formel est un argument déclaré dans l'en-tête de fonction et utilisé dans le corps d'une fonction.) Les conversions sont effectuées suite à une initialisation — les conversions standard et celles définies par l'utilisateur sont exécutées en convertissant un argument réel en type correct. L'initialisation exécutée est illustrée conceptuellement par le code suivant :
+- Chaque argument formel est initialisé avec son argument réel correspondant dans la liste d'expressions. (Un argument formel est un argument déclaré dans l'en-tête de fonction et utilisé dans le corps d'une fonction.) Les conversions sont effectuées suite à une initialisation — les conversions standard et celles définies par l’utilisateur sont exécutées en convertissant un argument réel en type correct. L'initialisation exécutée est illustrée conceptuellement par le code suivant :
 
     ```cpp
     void Func( int i ); // Function prototype
@@ -84,9 +84,9 @@ Lorsqu'une fonction est appelée, les tâches suivantes sont effectuées :
 
    Par conséquent, si le prototype de fonction (déclaration) fait appel à un argument de type **long**, et si le programme appelant fournit un argument réel de type **int**, l’argument réel est promu à l’aide un conversion de type standard vers le type **long** (consultez [Conversions Standard](../cpp/standard-conversions.md)).
 
-   C'est une erreur de fournir un argument réel pour lequel il n'existe aucune conversion standard ou définie par l'utilisateur au type de l'argument formel.
+   C’est une erreur de fournir un argument réel pour lequel il n’existe aucune conversion standard ou définie par l’utilisateur au type de l’argument formel.
 
-   Pour les arguments réels du type classe, l'argument formel est initialisé en appelant le constructeur de la classe. (Consultez [constructeurs](../cpp/constructors-cpp.md) pour plus d’informations sur ces fonctions de membre de classe spéciale.)
+   Pour les arguments réels du type classe, l’argument formel est initialisé en appelant le constructeur de la classe. (Consultez [constructeurs](../cpp/constructors-cpp.md) pour plus d’informations sur ces fonctions de membre de classe spéciale.)
 
 - L'appel de fonction est exécuté.
 
@@ -115,7 +115,7 @@ Lorsque `func` est appelée à partir de main, le paramètre formel `param1` est
 
 ## <a name="treatment-of-argument-types"></a>Traitement des types d’arguments
 
-Les arguments formels déclarés en tant que types const ne peuvent pas être modifiés dans le corps d'une fonction. Fonctions peuvent modifier tout argument qui n’est pas de type **const**. Toutefois, la modification est locale à la fonction et n’affecte pas la valeur d’argument réel, sauf si l’argument réel faisait référence à un objet pas de type **const**.
+Les arguments formels déclarés en tant que types const ne peuvent pas être modifiés dans le corps d’une fonction. Fonctions peuvent modifier tout argument qui n’est pas de type **const**. Toutefois, la modification est locale à la fonction et n’affecte pas la valeur d’argument réel, sauf si l’argument réel faisait référence à un objet pas de type **const**.
 
 Les fonctions suivantes illustrent certains de ces concepts :
 
@@ -139,19 +139,19 @@ double& func2( double& d, const char *c ) {
 
 Les fonctions peuvent être déclarées pour accepter moins d'arguments que le nombre spécifié dans la définition de fonction, en utilisant l'une des deux méthodes suivantes : points de suspension (`...`) ou arguments par défaut.
 
-Les points de suspension indiquent que des arguments peuvent être requis mais que leur nombre et leurs types ne sont pas spécifiés dans la déclaration. C'est habituellement une mauvaise pratique de programmation C++ car elle occulte l'un des avantages du C++ : la sécurité de type. Différentes conversions sont appliquées aux fonctions déclarées avec des points de suspension par rapport aux fonctions pour lesquelles les types d'argument formels et réels sont connus :
+Les points de suspension indiquent que des arguments peuvent être requis mais que leur nombre et leurs types ne sont pas spécifiés dans la déclaration. C'est habituellement une mauvaise pratique de programmation C++ car elle occulte l'un des avantages du C++ : la sécurité de type. Différentes conversions sont appliquées aux fonctions déclarées avec des points de suspension par rapport aux fonctions pour lesquelles les types d’argument formels et réels sont connus :
 
 - Si l’argument réel est de type **float**, il est promu au type **double** avant l’appel de fonction.
 
 - N’importe quel signé ou non signé **char**, **court**, type énuméré ou champ de bits est converti en signée ou non signée **int** à l’aide de la promotion intégrale.
 
-- Tout argument de type classe est transmis par valeur comme une structure de données. La copie est créée par copie binaire plutôt que par appel d'un constructeur de copie de la classe (le cas échéant).
+- Tout argument de type classe est transmis par valeur comme une structure de données. La copie est créée par copie binaire plutôt que par appel d’un constructeur de copie de la classe (le cas échéant).
 
-Les points de suspension, s'ils sont utilisés, doivent être déclarés en dernier dans la liste d'arguments. Pour plus d’informations sur la transmission d’un nombre variable d’arguments, consultez la discussion de [va_arg, va_start et va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) dans le *Run-Time Library Reference*.
+Les points de suspension, s’ils sont utilisés, doivent être déclarés en dernier dans la liste d’arguments. Pour plus d’informations sur la transmission d’un nombre variable d’arguments, consultez la discussion de [va_arg, va_start et va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) dans le *Run-Time Library Reference*.
 
 Pour plus d’informations sur les arguments par défaut dans la programmation CLR, consultez [listes d’arguments variables (...) (C + C++ / CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
-Les arguments par défaut vous permettent de spécifier la valeur qu'un argument doit prendre si aucune n'est fournie dans l'appel de fonction. Le fragment de code suivant montre le fonctionnement des arguments par défaut. Pour plus d’informations sur les restrictions sur la spécification des arguments par défaut, consultez [Arguments par défaut](../cpp/default-arguments.md).
+Les arguments par défaut vous permettent de spécifier la valeur qu’un argument doit prendre si aucune n’est fournie dans l’appel de fonction. Le fragment de code suivant montre le fonctionnement des arguments par défaut. Pour plus d’informations sur les restrictions sur la spécification des arguments par défaut, consultez [Arguments par défaut](../cpp/default-arguments.md).
 
 ```cpp
 // expre_Ellipses_and_Default_Arguments.cpp

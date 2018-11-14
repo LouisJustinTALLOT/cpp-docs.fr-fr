@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586323"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519291"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession, classe
 
@@ -318,12 +318,12 @@ Pointeur vers une chaîne se terminant par null qui spécifie le nom de l’util
 *pstrPassword*<br/>
 Un pointeur vers une chaîne se terminant par null qui spécifie le mot de passe à utiliser pour vous connecter. Si les deux *pstrPassword* et *pstrUserName* ont la valeur NULL, le mot de passe anonyme par défaut est le nom de messagerie de l’utilisateur. Si *pstrPassword* est NULL (ou une chaîne vide), mais *pstrUserName* n’est pas NULL, un mot de passe vide est utilisée. Le tableau suivant décrit le comportement pour les quatre paramètres possibles de *pstrUserName* et *pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|Nom d’utilisateur envoyé au serveur FTP|Mot de passe envoyé au serveur FTP|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL ou « »|NULL ou « »|« anonyme »|Nom de messagerie de l’utilisateur|
-|Chaîne non NULL|NULL ou « »|*pstrUserName*|" "|
-|NULL|Chaîne non NULL|ERREUR|ERREUR||
-|Chaîne non NULL|Chaîne non NULL|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | Nom d’utilisateur envoyé au serveur FTP | Mot de passe envoyé au serveur FTP |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   NULL ou « »   |   NULL ou « »   |         « anonyme »         |      Nom de messagerie de l’utilisateur      |
+| Chaîne non NULL |   NULL ou « »   |       *pstrUserName*        |             " "             |
+|      NULL       | Chaîne non NULL |            ERROR            |            ERROR            |
+| Chaîne non NULL | Chaîne non NULL |       *pstrUserName*        |       *pstrPassword*        |
 
 *%nPort*<br/>
 Numéro qui identifie le port TCP/IP à utiliser sur le serveur.

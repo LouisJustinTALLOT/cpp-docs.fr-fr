@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 6ce6886c74a2a82a2a072a3f5d7e3222bb572bea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82036017188acc3f882e9751096af8ab268fd9db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477374"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525169"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Avertissement du compilateur (niveau 4) C4754
 
@@ -94,7 +94,6 @@ Dans ce cas, le code résolu se présente comme suit :
 // that all the addition operands are 32-bit, so any overflow
 // is detected by the check.
 if (a + (unsigned long)sizeof(unsigned long) < a)
-
 ```
 
 **Remarque** le numéro de ligne fait référence dans les avertissements du compilateur est la dernière ligne d’une instruction. Dans un message d'avertissement concernant une instruction conditionnelle complexe répartie sur plusieurs lignes, la ligne contenant l'erreur de code peut être plusieurs lignes avant la ligne indiquée. Exemple :

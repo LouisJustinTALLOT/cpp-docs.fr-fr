@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 9ef46d9ba026dbabfe1a2c4ac676a8940cdce1d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66c3477c7f2901cd9986a8b52e3d9287191e7b4b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616591"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329590"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Macros et fonctions pour la gestion de DLL
 
@@ -46,7 +46,7 @@ Pour plus d’informations, consultez [exportation et importation à l’aide de
 
 ### <a name="requirements"></a>Configuration requise
 
-En-tête : **afxv_** dll.h
+**En-tête :** afxv_dll.h
 
 ## <a name="afx_manage_state"></a>  AFX_MANAGE_STATE
 

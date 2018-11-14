@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: 74194311eb33a23de5643b3cb956c2e3f752dea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525617"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329408"
 ---
 # <a name="process-and-environment-control"></a>Contrôle de processus et d'environnement
 
@@ -46,7 +46,7 @@ Utilisez les routines de contrôle de processus pour démarrer, arrêter et gér
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Appeler des fonctions inscrites par **atexit** et **_onexit**, vider toutes les mémoires tampons, fermer tous les fichiers ouverts et terminer le processus|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Terminer le processus immédiatement sans appeler **atexit** ou **_onexit**, ou vider les mémoires tampons|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Obtenir la valeur de la variable d’environnement|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Obtenir un numéro d’identification de processus|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Obtenir un numéro d’identification de processus|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Restaurer l’environnement de pile enregistré, l’utiliser pour exécuter un **goto** non local|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Planifier des routines à exécuter à l’arrêt du programme ; utiliser pour la compatibilité avec Microsoft C/C++ version 7.0 et antérieures|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Attendre un nouveau processeur de commandes et fermer le flux du canal associé|

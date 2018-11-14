@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-ms.openlocfilehash: e1ecb43226c9e21f3b13c2d5b7c2a0f93b72f3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d8ba1e66c1ffc46429b5c0e987be833aef2e72f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469548"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328524"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Record Field Exchange : utilisation de RFX
 
@@ -30,10 +30,13 @@ Le tableau suivant indique le rôle par rapport à ce que l’infrastructure eff
 
 |Vous|L'infrastructure|
 |---------|-------------------|
-
-| Déclarez vos classes de jeu d’enregistrements avec un Assistant. Spécifiez les noms et types de données des membres de données de champ. | Dérive de l’Assistant un `CRecordset` classe et écrit un [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) remplacer pour vous, y compris un RFX appel pour chaque membre de données de champ de fonction. | | () Facultatif) ajouter manuellement les nécessaires des membres de données de paramètre à la classe. Ajouter manuellement un appel de fonction RFX à `DoFieldExchange` pour chaque membre de données de paramètre, ajoutez un appel à [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) pour le groupe de paramètres et spécifiez le nombre total de paramètres dans [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Consultez [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). || | () Facultatif) lier manuellement les colonnes supplémentaires aux membres de données de champ. Incrémenter manuellement [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Consultez [Recordset : liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). ||
-
-| Construisez un objet de votre classe de jeu d’enregistrements. Avant d’utiliser l’objet, définissez les valeurs de son paramètre membres de données, le cas échéant. | Pour plus d’efficacité, l’infrastructure lie au préalable les paramètres à l’aide de ODBC. Lorsque vous transmettez des valeurs de paramètre, l’infrastructure les passe à la source de données. Seules les valeurs de paramètre sont envoyées pour des actualisations, sauf si les chaînes de tri et/ou de filtre ont été modifiés. | | Ouvrez un objet de jeu d’enregistrements à l’aide [CRecordset::Open](../../mfc/reference/crecordset-class.md#open). | Exécute la requête du recordset, lie les colonnes aux membres de données de champ du jeu d’enregistrements et les appels `DoFieldExchange` pour échanger des données entre le premier enregistrement sélectionné et les membres de données de champ du jeu d’enregistrements. | | Défilement dans le jeu d’enregistrements à l’aide [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) ou une commande de menu ou de barre d’outils. | Appels `DoFieldExchange` pour transférer des données vers les membres de données de champ du nouvel enregistrement en cours. | | Ajouter, mettre à jour et supprimer des enregistrements. | Appels `DoFieldExchange` pour transférer des données à la source de données. |
+|Déclarez vos classes de jeu d’enregistrements avec un Assistant. Spécifiez les noms et types de données des membres de données de champ.|L’Assistant dérive un `CRecordset` classe et les écritures un [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) remplacer pour vous, y compris un RFX appel pour chaque membre de données de champ de fonction.|
+|(Facultatif) Ajouter manuellement des membres de données de paramètre nécessaire à la classe. Ajouter manuellement un appel de fonction RFX à `DoFieldExchange` pour chaque membre de données de paramètre, ajoutez un appel à [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) pour le groupe de paramètres et spécifiez le nombre total de paramètres dans [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Consultez [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).||
+|(Facultatif) Lier manuellement les colonnes supplémentaires aux membres de données de champ. Incrémenter manuellement [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Consultez [Recordset : liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+|Construisez un objet de votre classe de jeu d’enregistrements. Avant d’utiliser l’objet, définissez les valeurs de son paramètre données membres, le cas échéant.|Pour plus d’efficacité, l’infrastructure lie au préalable les paramètres à l’aide de ODBC. Lorsque vous transmettez des valeurs de paramètre, l’infrastructure les passe à la source de données. Seules les valeurs de paramètre sont envoyées pour des actualisations, sauf si les chaînes de tri et/ou de filtre ont été modifiés.|
+|Ouvrez un objet de jeu d’enregistrements à l’aide [CRecordset::Open](../../mfc/reference/crecordset-class.md#open).|Exécute la requête du recordset, lie les colonnes aux membres de données de champ du jeu d’enregistrements et les appels `DoFieldExchange` pour échanger des données entre le premier enregistrement sélectionné et les membres de données de champ du jeu d’enregistrements.|
+|Défilement dans le jeu d’enregistrements à l’aide [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) ou une commande de menu ou de barre d’outils.|Appels `DoFieldExchange` pour transférer des données vers les membres de données de champ du nouvel enregistrement en cours.|
+|Ajouter, mettre à jour et supprimer des enregistrements.|Appels `DoFieldExchange` pour transférer des données à la source de données.|
 
 ## <a name="see-also"></a>Voir aussi
 

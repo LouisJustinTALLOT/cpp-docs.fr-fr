@@ -3,12 +3,12 @@ title: Système de type C++ (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 3e500980fbb5e6397e992f53b58f28fa710e7af0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602603"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521090"
 ---
 # <a name="c-type-system-modern-c"></a>Système de type C++ (Modern C++)
 
@@ -86,7 +86,6 @@ Tout type intégré ou défini par l'utilisateur peut être qualifié par le mot
 
 const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
-
 ```
 
 Le **const** qualificateur est largement utilisé dans les déclarations de fonction et de variable et « vérification const » est un concept important en C++ ; cela signifie qu’il utiliser **const** pour s’assurer, au moment de la compilation que les valeurs ne sont pas modifiées involontairement. Pour plus d’informations, consultez [const](../cpp/const-cpp.md).

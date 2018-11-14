@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: f30194d552f8bafb4d52597aeb53dbe02a780213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438114"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333639"
 ---
 # <a name="chtmlview-class"></a>CHtmlView, classe
 
@@ -1194,7 +1194,7 @@ Un pointeur vers une chaîne qui correspond à l’URL, UNC du fichier le nom, o
 
 Pas chaque trame se déclenche cet événement, mais chaque trame qui se déclenche une [OnDownloadBegin](#ondownloadbegin) événement déclenche un correspondant `OnDocumentComplete` événement.
 
-L’URL indiquée par *lpszURL* peut être différent de l’URL que le navigateur a été dit vers lequel naviguer, étant donné que cette URL est l’URL au format canonique et qualifié. Par exemple, si une application spécifie une URL de « www.microsoft.com » dans un appel à [Navigate](#navigate) ou [Navigate2](#navigate2), l’URL transmise `OnNavigateComplete2` sera « http://www.microsoft.com/». En outre, si le serveur a redirigé le navigateur vers une URL différente, l’URL redirigée apparaîtront ici.
+L’URL indiquée par *lpszURL* peut être différent de l’URL que le navigateur a été dit vers lequel naviguer, étant donné que cette URL est l’URL au format canonique et qualifié. Par exemple, si une application spécifie une URL de « www.microsoft.com » dans un appel à [Navigate](#navigate) ou [Navigate2](#navigate2), l’URL transmise `OnNavigateComplete2` sera «<http://www.microsoft.com/>». En outre, si le serveur a redirigé le navigateur vers une URL différente, l’URL redirigée apparaîtront ici.
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ Une expression de chaîne qui correspond à l’URL, de fichiers UNC nom ou PIDL
 
 Le paramètre d’URL peut être un PIDL dans le cas d’une entité d’espace de nom shell pour lesquels il n’existe aucune représentation de l’URL.
 
-Notez que l’URL contenue dans *strURL* peut être différent de l’URL que le navigateur a été dit vers lequel naviguer, étant donné que cette URL est l’URL au format canonique et qualifié. Par exemple, si une application spécifie une URL de « www.microsoft.com » dans un appel à [Navigate](#navigate) ou [Navigate2](#navigate2), l’URL transmise `OnNavigateComplete2` sera « http://www.microsoft.com/». En outre, si le serveur a redirigé le navigateur vers une URL différente, l’URL redirigée apparaîtront ici.
+Notez que l’URL contenue dans *strURL* peut être différent de l’URL que le navigateur a été dit vers lequel naviguer, étant donné que cette URL est l’URL au format canonique et qualifié. Par exemple, si une application spécifie une URL de « www.microsoft.com » dans un appel à [Navigate](#navigate) ou [Navigate2](#navigate2), l’URL transmise `OnNavigateComplete2` sera «<http://www.microsoft.com/>». En outre, si le serveur a redirigé le navigateur vers une URL différente, l’URL redirigée apparaîtront ici.
 
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
 

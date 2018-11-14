@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 2106f7dda6ecc71478b29cfad3f15dfee0483025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f84e5c1a1455e35992aa4b118c345bc1fa6ae587
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523899"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331618"
 ---
 # <a name="trigraphs"></a>Trigraphes
 
@@ -34,29 +34,29 @@ Le tableau suivant indique les neuf séquences de trigraphe. Dans un fichier sou
 
 ### <a name="trigraph-sequences"></a>Séquences de trigraphe
 
-|Trigraphe|Caractère de ponctuation|
-|--------------|---------------------------|
-|??=|#|
-|??(|[|
-|??/|\|
-|??)|]|
-|??'|^|
-|??\<|{|
-|??!|&#124;|
-|??>|}|
-|??-|~|
+| Trigraphe | Caractère de ponctuation |
+|----------|-----------------------|
+| ??= | # |
+| ??( | \[ |
+| ??/ | \\ |
+| ??) | ] |
+| ??' | ^ |
+| ??\< | { |
+| ??! | &#124; |
+| ??> | } |
+| ??- | ~ |
 
 Un trigraphe est toujours traité comme un caractère source unique. La traduction des trigraphes a lieu dans la première [phase de traduction](../preprocessor/phases-of-translation.md), avant la reconnaissance des caractères d’échappement dans les littéraux de chaîne et des constantes de caractère. Seuls les neuf trigraphes indiqués dans le tableau ci-dessus sont identifiés. Toutes les autres séquences de caractères restent inchangées.
 
 La séquence d’échappement de caractère, **\\?**, évite que les séquences de caractères qui s’apparentent à un trigraphe ne soient mal interprétées. (Pour plus d’informations sur les séquences d’échappement, consultez [Séquences d’échappement](../c-language/escape-sequences.md).) Par exemple, si vous essayez d'imprimer la chaîne `What??!` avec cette instruction `printf`
 
-```
+```C
 printf( "What??!\n" );
 ```
 
 la chaîne imprimée est `What|`, car `??!` est une séquence de trigraphe qui est remplacée par le caractère `|`. Entrez l'instruction comme suit pour imprimer correctement la chaîne :
 
-```
+```C
 printf( "What?\?!\n" );
 ```
 

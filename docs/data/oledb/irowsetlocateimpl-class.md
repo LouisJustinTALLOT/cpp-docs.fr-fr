@@ -32,16 +32,16 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: c4f3ba26fd2b4d6c33b6ba63e501c4011c32a09a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e43f9c1761e92120a577f097fb3303a6641f5b5f
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552154"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556957"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl, classe
 
-Implémente la norme OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190) interface, qui extrait des lignes arbitraires à partir d’un ensemble de lignes.
+Implémente la norme OLE DB [IRowsetLocate](https://docs.microsoft.com/previous-versions/windows/desktop/ms721190(v=vs.85)) interface, qui extrait des lignes arbitraires à partir d’un ensemble de lignes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,7 +76,7 @@ L’unité de stockage pour le `HROW`.
 L’unité de stockage pour tous les handles de ligne détenus par le fournisseur.
 
 *BookmarkKeyType*<br/>
-Le type du signet, telles qu’un LONG ou une chaîne. Signets ordinaires doivent avoir une longueur au moins deux octets. (Longueur d’octet est réservé pour OLE DB [signets standards](/previous-versions/windows/desktop/ms712954)`DBBMK_FIRST`, `DBBMK_LAST`, et `DBBMK_INVALID`.)
+Le type du signet, telles qu’un LONG ou une chaîne. Signets ordinaires doivent avoir une longueur au moins deux octets. (Longueur d’octet est réservé pour OLE DB [signets standards](https://docs.microsoft.com/previous-versions/windows/desktop/ms712954(v=vs.85))`DBBMK_FIRST`, `DBBMK_LAST`, et `DBBMK_INVALID`.)
 
 *BookmarkType*<br/>
 Le mécanisme de mappage pour gérer les relations de signet des données.
@@ -107,13 +107,13 @@ L’unité de stockage pour tous les handles de ligne détenus par le signet.
 
 ## <a name="remarks"></a>Notes
 
-`IRowsetLocateImpl` est l’implémentation de modèles OLE DB de la [IRowsetLocate](/previous-versions/windows/desktop/ms721190) interface. `IRowsetLocate` est utilisé pour extraire des lignes arbitraires à partir d’un ensemble de lignes. Un ensemble de lignes qui n’implémente pas cette interface est un `sequential` ensemble de lignes. Lorsque `IRowsetLocate` est présent sur un ensemble de lignes, la colonne 0 est le signet pour les lignes ; en lisant cette rubrique Obtient une valeur de signet qui peut être utilisée pour les repositionner à la même ligne.
+`IRowsetLocateImpl` est l’implémentation de modèles OLE DB de la [IRowsetLocate](https://docs.microsoft.com/previous-versions/windows/desktop/ms721190(v=vs.85)) interface. `IRowsetLocate` est utilisé pour extraire des lignes arbitraires à partir d’un ensemble de lignes. Un ensemble de lignes qui n’implémente pas cette interface est un `sequential` ensemble de lignes. Lorsque `IRowsetLocate` est présent sur un ensemble de lignes, la colonne 0 est le signet pour les lignes ; en lisant cette rubrique Obtient une valeur de signet qui peut être utilisée pour les repositionner à la même ligne.
 
 `IRowsetLocateImpl` est utilisé pour implémenter la prise en charge de signet dans les fournisseurs. Les signets sont des espaces réservés (index sur un ensemble de lignes) qui permettent au consommateur de revenir rapidement à une ligne, ce qui permet un accès rapide aux données. Le fournisseur détermine que signets peuvent uniquement identifier une ligne. À l’aide de `IRowsetLocateImpl` méthodes, vous pouvez comparer des signets, les lignes de l’extraction en décalage, l’extraction des lignes par signet et retournent des valeurs de hachage de signets.
 
 Pour prendre en charge des signets de OLE DB dans un ensemble de lignes, vérifiez l’ensemble de lignes à hériter de cette classe.
 
-Pour plus d’informations sur l’implémentation de prise en charge de signet, consultez [fournisseur prend en charge des signets par](../../data/oledb/provider-support-for-bookmarks.md) dans le *-Guide du programmeur Visual C++* et [signets](/previous-versions/windows/desktop/ms709728) dans les *Référence du programmeur OLE DB* dans le kit Platform SDK.
+Pour plus d’informations sur l’implémentation de prise en charge de signet, consultez [fournisseur prend en charge des signets par](../../data/oledb/provider-support-for-bookmarks.md) dans le *-Guide du programmeur Visual C++* et [signets](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85)) dans les *Référence du programmeur OLE DB* dans le kit Platform SDK.
 
 ## <a name="compare"></a> IRowsetLocateImpl::Compare
 
@@ -132,11 +132,11 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ### <a name="remarks"></a>Notes
 
-Une des signets peuvent être une norme définie par OLE DB [signet standard](/previous-versions/windows/desktop/ms712954) (`DBBMK_FIRST`, `DBBMK_LAST`, ou `DBBMK_INVALID`). La valeur retournée dans `pComparison` indique la relation entre les deux signets :
+Une des signets peuvent être une norme définie par OLE DB [signet standard](https://docs.microsoft.com/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST`, `DBBMK_LAST`, ou `DBBMK_INVALID`). La valeur retournée dans `pComparison` indique la relation entre les deux signets :
 
 - DBCOMPARE_LT (`cbBookmark1` est avant `cbBookmark2`.)
 
@@ -167,11 +167,11 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetLocate::GetRowsAt](/previous-versions/windows/desktop/ms723031) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetLocate::GetRowsAt](https://docs.microsoft.com/previous-versions/windows/desktop/ms723031(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ### <a name="remarks"></a>Notes
 
-Pour extraire à partir de la position du curseur au lieu de cela, utilisez [IRowset::GetRowsAt](/previous-versions/windows/desktop/ms723031).
+Pour extraire à partir de la position du curseur au lieu de cela, utilisez [IRowset::GetRowsAt](https://docs.microsoft.com/previous-versions/windows/desktop/ms723031(v=vs.85)).
 
 `IRowsetLocateImpl::GetRowsAt` ne modifie pas la position du curseur.
 
@@ -193,13 +193,13 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Paramètres
 
 *hReserved*<br/>
-[in] Correspond à *hChapter* paramètre [IRowsetLocate::GetRowsByBookmark](/previous-versions/windows/desktop/ms725420).
+[in] Correspond à *hChapter* paramètre [IRowsetLocate::GetRowsByBookmark](https://docs.microsoft.com/previous-versions/windows/desktop/ms725420(v=vs.85)).
 
-Pour les autres paramètres, consultez [IRowsetLocate::GetRowsByBookmark](/previous-versions/windows/desktop/ms725420) dans le *de référence du programmeur OLE DB*.
+Pour les autres paramètres, consultez [IRowsetLocate::GetRowsByBookmark](https://docs.microsoft.com/previous-versions/windows/desktop/ms725420(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ### <a name="remarks"></a>Notes
 
-Le signet peut être une valeur que vous définissez ou OLE DB [signets standards](/previous-versions/windows/desktop/ms712954) (`DBBMK_FIRST` ou `DBBMK_LAST`). ne modifie pas la position du curseur.
+Le signet peut être une valeur que vous définissez ou OLE DB [signets standards](https://docs.microsoft.com/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST` ou `DBBMK_LAST`). ne modifie pas la position du curseur.
 
 ## <a name="hash"></a> IRowsetLocateImpl::Hash
 
@@ -219,9 +219,9 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Paramètres
 
 *hReserved*<br/>
-[in] Correspond à *hChapter* paramètre [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697).
+[in] Correspond à *hChapter* paramètre [IRowsetLocate::Hash](https://docs.microsoft.com/previous-versions/windows/desktop/ms709697(v=vs.85)).
 
-Pour les autres paramètres, consultez [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697) dans le *de référence du programmeur OLE DB*.
+Pour les autres paramètres, consultez [IRowsetLocate::Hash](https://docs.microsoft.com/previous-versions/windows/desktop/ms709697(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="rgbookmarks"></a> IRowsetLocateImpl::m_rgBookmarks
 
@@ -237,6 +237,6 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 
 [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190)
+[IRowsetLocate:IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721190(v=vs.85))
 [prise en charge de fournisseur pour les signets](../../data/oledb/provider-support-for-bookmarks.md)<br/>
-[Signets](/previous-versions/windows/desktop/ms709728)
+[Signets](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))

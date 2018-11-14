@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474267"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327445"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de table des messages (MFC)
 
@@ -250,27 +250,8 @@ Le nom de la fonction de gestionnaire de messages à laquelle la commande est ma
 
 ### <a name="remarks"></a>Notes
 
-Une forme étendue de gestionnaires de messages de commande est disponible pour les utilisations avancées. L’ON_COMMAND_EX (macro) est utilisé pour ces gestionnaires de messages, et il fournit un sur-ensemble de la fonctionnalité [ON_COMMAND] (#on_command).  Fonctions membres de gestionnaire de commandes étendue acceptent un seul paramètre, UINT contenant l’ID de commande et retournent une valeur Booléenne. La valeur de retour doit être TRUE pour
-
-Cette macro est mappé à un message de commande à une fonction membre de gestionnaire de commandes étendu.
-
-### <a name="syntax"></a>Syntaxe
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>Paramètres
-
-*ID*<br/>
-ID de la commande.
-
-*memberFxn*<br/>
-Le nom de la fonction de gestionnaire de messages à laquelle la commande est mappée.
-
-### <a name="remarks"></a>Notes
-
 Une forme étendue de gestionnaires de messages de commande est disponible pour les utilisations avancées. La macro ON_COMMAND_EX est utilisée pour ces gestionnaires de messages, et il fournit un sur-ensemble de la [ON_COMMAND](message-map-macros-mfc.md#on_command) fonctionnalité. Fonctions membres de gestionnaire de commandes étendue acceptent un seul paramètre, UINT contenant l’ID de commande et retournent une valeur Booléenne. La valeur de retour doit être TRUE pour indiquer que la commande a été gérée ; routage dans le cas contraire, il continuera à d’autres objets de cible de commande.
+
 Pour plus d’informations, consultez la Note technique [TN006 : tables des messages] tm006-message-maps.md).
 
 ### <a name="requirements"></a>Configuration requise

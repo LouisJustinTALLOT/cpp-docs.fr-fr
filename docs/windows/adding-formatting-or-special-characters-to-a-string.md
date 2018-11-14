@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b60f48983913f4dc146af1b4645710cd1393d072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493845"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328329"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>Ajoutez des caractères spéciaux ou de mise en forme à une ressource de chaîne (C++)
 
@@ -29,12 +29,12 @@ ms.locfileid: "50493845"
 
    |Pour résoudre ce|Ce type|
    |-----------------|---------------|
-   |Nouvelle ligne|\n|
-   |Retour chariot|\r|
-   |Onglet|\t|
-   |Barre oblique inverse (\\)|\\\|
-   |Caractère ASCII|\ddd (notation octale)|
-   |alerte (clochette)|\a|
+   | Nouvelle ligne | \\n |
+   | Retour chariot | \\R |
+   | Onglet | \\t |
+   | Barre oblique inverse (\\) | \\\\ |
+   | Caractère ASCII | \\ddd (notation octale) |
+   | alerte (clochette) | \\a |
 
 > [!NOTE]
 > Le **chaîne** éditeur ne prend pas en charge l’ensemble complet d’échappement des caractères d’ASCII. Vous ne pouvez utiliser que ceux répertoriés ci-dessus.

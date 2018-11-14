@@ -29,12 +29,12 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 44e1cb14032d004e63825bf7b551d5f43ae400d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cdc16f21882c32933868000c6fd1d66accc74b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567594"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326510"
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
 
@@ -91,12 +91,12 @@ Si un des *pFile*, *chemin d’accès*, *mode*, ou *flux* sont **NULL**, ou si *
 
 |*mode*|Accès|
 |-|-|
-**"r"**|Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **freopen_s** appeler échoue.
-**"w"**|Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.
-**"a"**|S'ouvre pour écriture à la fin du fichier (ajout) sans supprimer le marqueur de fin de fichier (EOF) avant que de nouvelles données soient écrites dans le fichier. Crée le fichier s'il n'existe pas.
-**"r+"**|Ouvre pour l'accès en lecture et en écriture. Le fichier doit exister.
-**"w+"**|Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier existe, son contenu est détruit.
-**"a+"**|S'ouvre pour lecture et ajout. L'opération d'ajout inclut la suppression du marqueur EOF avant que de nouvelles données soient écrites dans le fichier. Le marqueur EOF n'est pas restauré une fois l'écriture terminée. Crée le fichier s'il n'existe pas.
+| **"r"** | Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **freopen_s** appeler échoue. |
+| **"w"** | Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit. |
+| **"a"** | S'ouvre pour écriture à la fin du fichier (ajout) sans supprimer le marqueur de fin de fichier (EOF) avant que de nouvelles données soient écrites dans le fichier. Crée le fichier s'il n'existe pas. |
+| **"r+"** | Ouvre pour l'accès en lecture et en écriture. Le fichier doit exister. |
+| **"w+"** | Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier existe, son contenu est détruit. |
+| **"a+"** | S'ouvre pour lecture et ajout. L'opération d'ajout inclut la suppression du marqueur EOF avant que de nouvelles données soient écrites dans le fichier. Le marqueur EOF n'est pas restauré une fois l'écriture terminée. Crée le fichier s'il n'existe pas. |
 
 Utilisez le **« w »** et **« w + »** types avec précaution, car ils peuvent détruire les fichiers existants.
 
@@ -108,8 +108,8 @@ Lorsque le **« r + »**, **« w + »**, ou **« a + »** type d’accès 
 
 |*mode* modificateur|Mode de traduction|
 |-|-|
-**t**|Ouvrir en mode texte (traduit).
-**b**|Ouvrir en mode binaire (non traduit) ; les traductions implique la suppression des caractères de retour chariot et de saut de ligne.
+| **t** | Ouvrir en mode texte (traduit). |
+| **b** | Ouvrir en mode binaire (non traduit) ; les traductions implique la suppression des caractères de retour chariot et de saut de ligne. |
 
 En mode texte (traduit), les combinaisons de sauts de ligne (CR-LF) de chariot sont traduites en caractères de saut de ligne (LF) unique d’entrée ; Les caractères de saut de ligne sont traduits en combinaisons retour chariot / saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture ou de lecture et écriture avec **« a + »**, la bibliothèque runtime recherche un CTRL + Z à la fin du fichier et le supprime, si possible. En effet à l’aide de [fseek](fseek-fseeki64.md) et [ftell](ftell-ftelli64.md) pour se déplacer dans un fichier risque de [fseek](fseek-fseeki64.md) au comportement incorrect vers la fin du fichier. Le **t** option est une extension Microsoft qui ne doit pas être utilisée lorsque la portabilité ANSI est souhaitée.
 

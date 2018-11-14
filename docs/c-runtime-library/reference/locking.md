@@ -25,12 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523806"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327042"
 ---
 # <a name="locking"></a>_locking
 
@@ -63,10 +63,10 @@ Nombre d’octets à verrouiller.
 
 |Valeur de la variable errno|Condition|
 |-|-|
-**EACCES**|Violation de verrouillage (fichier déjà verrouillé ou déverrouillé).
-**EBADF**|Descripteur de fichier non valide.
-**EDEADLOCK**|Violation de verrouillage. Retourné lorsque la **_LK_LOCK** ou **_LK_RLCK** indicateur est spécifié et le fichier ne peut pas être verrouillé après 10 tentatives.
-**EINVAL**|Un argument non valide a été donné à **_locking**.
+| **EACCES** | Violation de verrouillage (fichier déjà verrouillé ou déverrouillé). |
+| **EBADF** | Descripteur de fichier non valide. |
+| **EDEADLOCK** | Violation de verrouillage. Retourné lorsque la **_LK_LOCK** ou **_LK_RLCK** indicateur est spécifié et le fichier ne peut pas être verrouillé après 10 tentatives. |
+| **EINVAL** | Un argument non valide a été donné à **_locking**. |
 
 Si l’échec est dû à un paramètre incorrect, tel qu’un descripteur de fichier non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
@@ -78,11 +78,11 @@ Le **_locking** fonction verrouille ou déverrouille *nbytes* octets du fichier 
 
 |*mode* valeur|Effet|
 |-|-|
-**_LK_LOCK**|Verrouille les octets spécifiés. Si les octets ne peuvent pas être verrouillés, le programme réessaie après 1 seconde. Si, après 10 tentatives, les octets ne peuvent pas être verrouillés, la constante retourne une erreur.
-**_LK_NBLCK**|Verrouille les octets spécifiés. Si les octets ne peuvent pas être verrouillés, la constante retourne une erreur.
-**_LK_NBRLCK**|Identique à **_LK_NBLCK**.
-**_LK_RLCK**|Identique à **_LK_LOCK**.
-**_LK_UNLCK**|Déverrouille les octets spécifiés, qui doivent avoir été verrouillés auparavant.
+| **_LK_LOCK** | Verrouille les octets spécifiés. Si les octets ne peuvent pas être verrouillés, le programme réessaie après 1 seconde. Si, après 10 tentatives, les octets ne peuvent pas être verrouillés, la constante retourne une erreur. |
+| **_LK_NBLCK** | Verrouille les octets spécifiés. Si les octets ne peuvent pas être verrouillés, la constante retourne une erreur. |
+| **_LK_NBRLCK** | Identique à **_LK_NBLCK**. |
+| **_LK_RLCK** | Identique à **_LK_LOCK**. |
+| **_LK_UNLCK** | Déverrouille les octets spécifiés, qui doivent avoir été verrouillés auparavant. |
 
 Vous ne pouvez pas verrouiller plusieurs zones d’un fichier qui ne se chevauchent pas. Une zone ne peut être déverrouillée que si elle a été verrouillée. **_Locking** ne pas fusionner les zones adjacentes ; Si deux zones verrouillées sont adjacentes, chaque région doit être déverrouillée séparément. Le verrouillage des zones doit être de courte durée et celles-ci doivent être déverrouillées avant de fermer un fichier ou de quitter le programme.
 

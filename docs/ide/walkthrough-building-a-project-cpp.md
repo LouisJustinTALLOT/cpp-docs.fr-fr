@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 53f9d1ca823385c17bf2b235d844e40886092e44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618360"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524155"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Procédure pas à pas : génération d’un projet (C++)
 
@@ -27,15 +27,15 @@ Dans cette procédure pas à pas, vous introduisez délibérément une erreur de
 
 1. Dans Game.cpp, supprimez le point-virgule de la dernière ligne pour obtenir l’instruction suivante :
 
-    `return 0`
+   `return 0`
 
 1. Dans la barre de menus, choisissez **Générer**  >  **Générer la solution**.
 
 1. Un message dans la fenêtre **Liste d’erreurs** indique qu’une erreur s’est produite pendant la génération du projet. La description ressemble au message d’erreur suivant :
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  Pour afficher des informations d’aide concernant cette erreur, sélectionnez-la dans la fenêtre **Liste d’erreurs**, puis appuyez sur **F1**.
+   Pour afficher des informations d’aide concernant cette erreur, sélectionnez-la dans la fenêtre **Liste d’erreurs**, puis appuyez sur **F1**.
 
 1. Replacez le point-virgule à la fin de la ligne où se situe l'erreur de syntaxe :
 
@@ -43,7 +43,7 @@ Dans cette procédure pas à pas, vous introduisez délibérément une erreur de
 
 1. Dans la barre de menus, choisissez **Générer**  >  **Générer la solution**.
 
-  Un message dans la fenêtre **Sortie** indique que le projet a été compilé.
+   Un message dans la fenêtre **Sortie** indique que le projet a été compilé.
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

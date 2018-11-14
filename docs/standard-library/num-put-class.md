@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: c6866358cde7d381ec8a703d50aeb3193bef9d5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441858"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327328"
 ---
 # <a name="numput-class"></a>num_put, classe
 
@@ -258,7 +258,7 @@ virtual iter_type do_put(iter_type next,
 
 se comporte comme la première, sauf qu’elle génère un champ de sortie booléen à partir de *val*.
 
-Un champ de sortie booléen peut avoir deux formes. Si **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) est **false**, la fonction membre retourne `do_put`(_ *Next*, \_ *Iosbase*, \_ *Fill*, ( **long**) `val`), ce qui donne généralement une séquence générée de 0 (pour **false**) ou 1 (pour **true**). Dans le cas contraire, la séquence générée est **fac**. [falsename](../standard-library/numpunct-class.md#falsename)`)` (pour **false**) ou **fac**. [truename](../standard-library/numpunct-class.md#truename) (pour **true**).
+Un champ de sortie booléen peut avoir deux formes. Si `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha) est **false**, la fonction membre retourne `do_put(_Next, _Iosbase, _Fill, (long)val)`, ce qui génère en général une séquence générée de 0 (pour **false**) ou 1 (pour **true**). Sinon, la séquence générée est *fac*.[ falsename](../standard-library/numpunct-class.md#falsename) (pour **false**), ou *fac*.[ TrueName](../standard-library/numpunct-class.md#truename) (pour **true**).
 
 La septième fonction membre protégée virtuelle :
 

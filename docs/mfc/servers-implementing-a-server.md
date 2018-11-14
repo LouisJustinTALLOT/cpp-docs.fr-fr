@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566753"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518955"
 ---
 # <a name="servers-implementing-a-server"></a>Serveurs : implémentation d'un serveur
 
@@ -22,11 +22,11 @@ Le code du serveur qui fournit l’Assistant application se divise en plusieurs 
 
 - Définition des ressources serveur :
 
-   - La ressource de menu utilisée quand le serveur modifie un élément incorporé dans sa propre fenêtre.
+  - La ressource de menu utilisée quand le serveur modifie un élément incorporé dans sa propre fenêtre.
 
-   - Les ressources de menu et barre d’outils utilisés lorsque le serveur est actif en place.
+  - Les ressources de menu et barre d’outils utilisés lorsque le serveur est actif en place.
 
-   Pour plus d’informations sur ces ressources, consultez [Menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
+  Pour plus d’informations sur ces ressources, consultez [Menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
 
 - Définition d’une classe d’élément dérivé `COleServerItem`. Pour plus d’informations sur les éléments de serveur, consultez [serveurs : éléments de serveur](../mfc/servers-server-items.md).
 

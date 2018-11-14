@@ -7,12 +7,12 @@ helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: 9e93fb5e6e9a9ad926a13a4b69c1dddbfb55f2f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11b289deeb2fd4aadf9b5d500a3379d8af26fbb9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431250"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330435"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x
 
@@ -23,9 +23,9 @@ Génère la movnti, instruction. Écrit les données `Source` vers un emplacemen
 ## <a name="syntax"></a>Syntaxe
 
 ```
-void _mm_stream_si64x( 
-   __int64 * Dest, 
-   __int64 Source 
+void _mm_stream_si64x(
+   __int64 * Dest,
+   __int64 Source
 );
 ```
 

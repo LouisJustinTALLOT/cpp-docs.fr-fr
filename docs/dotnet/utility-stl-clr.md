@@ -39,12 +39,12 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: 817e4224e926ea305312aaebc6d94bc19e51e82f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a884a75fbc3ba979402c94c67d2915863a847e9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633569"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331462"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -56,7 +56,7 @@ Incluez l’en-tête STL/CLR `<cliext/utility>` pour définir la classe de modè
 #include <utility>
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<cliext/utilitaire >
 
@@ -83,7 +83,7 @@ Incluez l’en-tête STL/CLR `<cliext/utility>` pour définir la classe de modè
 
 ## <a name="members"></a>Membres
 
-##<a name="pair"></a> paire (STL/CLR)
+## <a name="pair"></a> paire (STL/CLR)
 La classe de modèle décrit un objet qui encapsule une paire de valeurs.
 
 ### <a name="syntax"></a>Syntaxe

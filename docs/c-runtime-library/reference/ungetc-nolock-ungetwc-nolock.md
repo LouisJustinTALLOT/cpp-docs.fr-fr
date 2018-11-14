@@ -32,12 +32,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 17fadee825aff7b691db74eaaa7b695ba5a49a42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482860"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331501"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -66,7 +66,7 @@ Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si réussite, chacune de ces fonctions retourne l’argument de caractère *c*. Si *c* ne peut pas être déplacé ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et **_ungetc_nolock** retourne ** EOF`; **_ungetwc_nolock` retourne **WEOF**. Si *flux* est **NULL**, **EOF** ou **WEOF** est retourné et **errno** est défini sur  **EINVAL**.
+Si réussite, chacune de ces fonctions retourne l’argument de caractère *c*. Si *c* ne peut pas être déplacé ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et **_ungetc_nolock** retourne **EOF**; **_ungetwc_nolock** retourne **WEOF**. Si *flux* est **NULL**, **EOF** ou **WEOF** est retourné et **errno** est défini sur  **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
