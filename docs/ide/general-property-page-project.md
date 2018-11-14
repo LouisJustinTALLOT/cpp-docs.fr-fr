@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 5479b892a2cb97fb645dba4ffac70dd9ac4aeffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f7af0f3dd9ff373a458a6f93fb78fda443bd8e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594513"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520476"
 ---
 # <a name="general-property-page-project"></a>Général, page de propriétés (Projet)
 
@@ -110,29 +110,29 @@ Les propriétés de la section Paramètres par défaut du projet représentent l
 
 - **Type de configuration**
 
-   Vous pouvez choisir parmi plusieurs types de configuration :
+  Vous pouvez choisir parmi plusieurs types de configuration :
 
-   - **Application (.exe)**
+  - **Application (.exe)**
 
-      Affiche l’ensemble d’outils de l’éditeur de liens (compilateur C/C++, MIDL, compilateur de ressources, éditeur de liens, BSCMake, Générateur proxy du service web XML, événements de build/prebuild/préliaison/postbuild personnalisés).
+     Affiche l’ensemble d’outils de l’éditeur de liens (compilateur C/C++, MIDL, compilateur de ressources, éditeur de liens, BSCMake, Générateur proxy du service web XML, événements de build/prebuild/préliaison/postbuild personnalisés).
 
-   - **Bibliothèque dynamique (.dll)**
+  - **Bibliothèque dynamique (.dll)**
 
-      Affiche l’ensemble d’outils de l’éditeur de liens, spécifie l’option /DLL de l’éditeur de liens et ajoute la définition _WINDLL à CL.
+     Affiche l’ensemble d’outils de l’éditeur de liens, spécifie l’option /DLL de l’éditeur de liens et ajoute la définition _WINDLL à CL.
 
-   - **Makefile**
+  - **Makefile**
 
-      Affiche l’ensemble d’outils makefile (NMake).
+     Affiche l’ensemble d’outils makefile (NMake).
 
-   - **Bibliothèque statique (.lib)**
+  - **Bibliothèque statique (.lib)**
 
-      Affiche l’ensemble d’outils du Générateur de bibliothèques (identique à celui de l’éditeur de liens, sauf qu’il contient le Générateur de bibliothèques au lieu de l’éditeur de liens et qu’il ne contient pas le Générateur proxy du service web XML).
+     Affiche l’ensemble d’outils du Générateur de bibliothèques (identique à celui de l’éditeur de liens, sauf qu’il contient le Générateur de bibliothèques au lieu de l’éditeur de liens et qu’il ne contient pas le Générateur proxy du service web XML).
 
-   - **Utilitaire**
+  - **Utilitaire**
 
-      Affiche l’ensemble d’outils d’utilitaires (MIDL, événements de build/prebuild/postbuild personnalisés).
+     Affiche l’ensemble d’outils d’utilitaires (MIDL, événements de build/prebuild/postbuild personnalisés).
 
-   Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
+  Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Utilisation des MFC**
 
