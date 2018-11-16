@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: 9c669d856db895be7a9d0dafd0fda21879e7ff2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72c8fa3a0773a67c32a0652eb048885564a734be
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644650"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694606"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -50,4 +50,4 @@ Pour obtenir un exemple de l’utilisation de ce gestionnaire de messages dans u
 
 [Implémentation d’une fenêtre](../atl/implementing-a-window.md)<br/>
 [Tables des messages](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
+[WM_NOTIFY](/windows/desktop/controls/wm-notify)

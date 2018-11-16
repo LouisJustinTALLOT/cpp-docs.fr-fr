@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525301"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694775"
 ---
 # <a name="styles-used-by-mfc"></a>Styles utilisés par MFC
 
@@ -445,7 +445,7 @@ Styles statiques s’appliquent à [cstatic, classe](../../mfc/reference/cstatic
 
 ## <a name="window-styles"></a> Styles de fenêtre
 
-Appliquent des styles de fenêtre à [classe CWnd](../../mfc/reference/cwnd-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CWnd::Create](../../mfc/reference/cwnd-class.md#create) ou [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Pour plus d’informations sur les styles de fenêtre dans Windows, consultez [Styles de fenêtre (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600).
+Appliquent des styles de fenêtre à [classe CWnd](../../mfc/reference/cwnd-class.md) objets. Spécifiez une combinaison de styles dans le *dwStyle* paramètre de [CWnd::Create](../../mfc/reference/cwnd-class.md#create) ou [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Pour plus d’informations sur les styles de fenêtre dans Windows, consultez [Styles de fenêtre (Windows)](/windows/desktop/winmsg/window-styles).
 
 |Style|Description|
 |-----------|-----------------|
@@ -524,5 +524,5 @@ Appliquent des styles de fenêtre étendus à [classe CWnd](../../mfc/reference/
 [MessageBox (fonction) (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox)<br/>
 [Styles de contrôle de barre de défilement (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)<br/>
 [Styles de contrôle statique (Windows)](/windows/desktop/Controls/static-control-styles)<br/>
-[Styles de fenêtre (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)<br/>
+[Styles de fenêtre (Windows)](/windows/desktop/winmsg/window-styles)<br/>
 [Styles de fenêtre étendus (Windows)](/windows/desktop/winmsg/extended-window-styles)

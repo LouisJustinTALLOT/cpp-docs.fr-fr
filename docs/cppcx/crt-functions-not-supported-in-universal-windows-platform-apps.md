@@ -2,12 +2,12 @@
 title: Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle
 ms.date: 12/30/2016
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-ms.openlocfilehash: 2de3edb11d65236f14c4c8fdf52fe6c855399dba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 763d76dd9eb139c10f4147e5fa069a0901fe5398
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527684"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694125"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle
 

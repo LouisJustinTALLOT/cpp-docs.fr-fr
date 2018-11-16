@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: f325423c940df46940d7074c599eb8e502e90586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669077"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694385"
 ---
 # <a name="cview-class"></a>CView (classe)
 
@@ -548,7 +548,7 @@ L’implémentation par défaut consiste à ne rien faire et retourner une valeu
 
 Remplacez cette fonction pour implémenter l’effet d’un droit de bouton de souris glisser -déplacer. Droit de bouton de souris glisser -déplacer affiche généralement un menu de choix lorsque vous relâchez le bouton de la souris de droite.
 
-Votre substitution de `OnDropEx` doit interroger pour le bouton de la souris de droite. Vous pouvez appeler [GetKeyState](https://msdn.microsoft.com/library/windows/desktop/ms646301) ou stocker l’état du bouton de la souris de droite à partir de votre [OnDragEnter](#ondragenter) gestionnaire.
+Votre substitution de `OnDropEx` doit interroger pour le bouton de la souris de droite. Vous pouvez appeler [GetKeyState](/windows/desktop/api/winuser/nf-winuser-getkeystate) ou stocker l’état du bouton de la souris de droite à partir de votre [OnDragEnter](#ondragenter) gestionnaire.
 
 - Si le bouton de la souris de droite est arrêté, la substitution doit afficher un menu contextuel qui offre que les effets de la liste prend en charge par la source de dépôt.
 

@@ -2,12 +2,12 @@
 title: Gestion des exceptions ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: b2b6b9b3508dd7a4dd42a2e22ad1052851c7c0c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522267"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694346"
 ---
 # <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
@@ -15,7 +15,7 @@ Windows on ARM utilise le même mécanisme de gestion des exceptions structurée
 
 ## <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
-Utilise Windows sur ARM *codes de déroulement* pour contrôler le déroulement de pile pendant [structurée des exceptions](https://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). Les codes de déroulement consistent en une séquence d’octets stockés dans la section .xdata de l’image exécutable. Ils décrivent l'opération du code de prologue et d'épilogue de la fonction de manière abstraite, ce qui permet d'annuler les effets du prologue d'une fonction en préparation du déroulement dans le frame de pile de l'appelant.
+Utilise Windows sur ARM *codes de déroulement* pour contrôler le déroulement de pile pendant [structurée des exceptions](/windows/desktop/debug/structured-exception-handling) (SEH). Les codes de déroulement consistent en une séquence d’octets stockés dans la section .xdata de l’image exécutable. Ils décrivent l'opération du code de prologue et d'épilogue de la fonction de manière abstraite, ce qui permet d'annuler les effets du prologue d'une fonction en préparation du déroulement dans le frame de pile de l'appelant.
 
 L'interface EABI (Embedded Application Binary Interface) ARM spécifie un modèle de déroulement d'exception qui utilise les codes de déroulement, mais cela n'est pas suffisant pour le déroulement SEH dans Windows, qui doit gérer les cas asynchrones où le processeur se situe au milieu du prologue ou de l'épilogue d'une fonction. De même, Windows sépare le contrôle du déroulement en déroulement au niveau de la fonction et en déroulement de portée propre au langage, qui est unifié dans l'interface EABI ARM. Pour ces raisons, Windows on ARM spécifie plus de détails pour les données et la procédure de déroulement.
 

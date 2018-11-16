@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 495d30f9fabcb3a9586504282dee881362988c3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523479"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694307"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (structure)
 
@@ -259,10 +259,10 @@ Utilisez le [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedat
 [in] Pointeur vers un contexte de périphérique.
 
 *iPartId*<br/>
-[in] La partie de contrôle qui a l’apparence du texte de votre choix. Pour plus d’informations, consultez la colonne Composants de la table figurant dans [Composants et états](https://msdn.microsoft.com/library/windows/desktop/bb773210). Si cette valeur est égale à 0, le texte est dessiné avec la police par défaut ou une police sélectionnée dans le contexte de l’appareil.
+[in] La partie de contrôle qui a l’apparence du texte de votre choix. Pour plus d’informations, consultez la colonne Composants de la table figurant dans [Composants et états](/windows/desktop/controls/parts-and-states). Si cette valeur est égale à 0, le texte est dessiné avec la police par défaut ou une police sélectionnée dans le contexte de l’appareil.
 
 *iStateId*<br/>
-[in] L’état du contrôle qui a l’apparence du texte de votre choix. Pour plus d’informations, consultez la colonne États de la table figurant dans [Composants et états](https://msdn.microsoft.com/library/windows/desktop/bb773210).
+[in] L’état du contrôle qui a l’apparence du texte de votre choix. Pour plus d’informations, consultez la colonne États de la table figurant dans [Composants et états](/windows/desktop/controls/parts-and-states).
 
 *strText*<br/>
 [in] Le texte à dessiner.
@@ -293,7 +293,7 @@ Un thème définit le style visuel d’une application. Un thème n’est pas ut
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Composants et États](https://msdn.microsoft.com/library/windows/desktop/bb773210)<br/>
+[Composants et États](/windows/desktop/controls/parts-and-states)<br/>
 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
 [Gestionnaire de fenêtrage](/windows/desktop/dwm/dwm-overview)<br/>
@@ -431,7 +431,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="parameters"></a>Paramètres
 
 *Info*<br/>
-[in, out] Un [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) structure qui contient les mesures évolutives associées à la zone non cliente d’une fenêtre non réduite.
+[in, out] Un [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) structure qui contient les mesures évolutives associées à la zone non cliente d’une fenêtre non réduite.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -439,7 +439,7 @@ TRUE si cette méthode réussit ; Sinon, FALSE.
 
 ### <a name="see-also"></a>Voir aussi
 
-[Structure NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
+[Structure NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 

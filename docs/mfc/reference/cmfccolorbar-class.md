@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6dc3044d1ca402ca099184eced2e5615ff161804
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636876"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694840"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar, classe
 
@@ -144,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`m_bInternal`|Un champ booléen qui détermine si les événements de souris sont traités. En règle générale, les événements de souris sont traitées lorsque ce champ a la valeur TRUE et le mode de personnalisation a la valeur FALSE.|
 |`m_bIsEnabled`|Valeur booléenne qui indique si un contrôle est activé.|
@@ -227,7 +227,7 @@ L’exemple suivant montre comment configurer une barre de couleurs à l’aide 
 
 [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcolorbar.h
 

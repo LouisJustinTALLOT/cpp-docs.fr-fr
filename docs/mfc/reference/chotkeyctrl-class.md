@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 1ab89c860813996360cddbf0caf5d4ebc395603d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452713"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694723"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 
@@ -67,7 +67,7 @@ Ce contrôle (et par conséquent la `CHotKeyCtrl` classe) est disponible uniquem
 
 Lorsque l’utilisateur a choisi une combinaison de touches, l’application peut récupérer la combinaison de touches spécifiée à partir du contrôle et le message de message WM_SETHOTKEY permet de configurer la touche d’accès rapide dans le système. Chaque fois que l’utilisateur appuie sur la touche d’accès rapide par la suite, à partir de n’importe quelle partie du système, la fenêtre spécifiée dans le message de message WM_SETHOTKEY reçoit un message WM_SYSCOMMAND spécifiant SC_HOTKEY. Ce message Active la fenêtre qui le reçoit. La touche d’accès rapide reste valide jusqu'à ce que l’application qui a appelé message WM_SETHOTKEY quitte.
 
-Ce mécanisme est différent de la prise en charge clé chaud varie selon le message WM_HOTKEY et le Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) et [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) fonctions.
+Ce mécanisme est différent de la prise en charge clé chaud varie selon le message WM_HOTKEY et le Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) et [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) fonctions.
 
 Pour plus d’informations sur l’utilisation de `CHotKeyCtrl`, consultez [contrôles](../../mfc/controls-mfc.md) et [à l’aide de CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 

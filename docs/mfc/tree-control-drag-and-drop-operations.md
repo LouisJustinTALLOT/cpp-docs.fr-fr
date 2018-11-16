@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: 5dc498008c6b019635cd361a950c6d2926e26541
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0adce847c514a41389d3c6a0a86651ee9dc486
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519364"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693306"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Opérations de glisser-déplacer pour le contrôle d’arborescence
 
@@ -19,7 +19,7 @@ Un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))
 
 Vous obtenez une image à afficher pendant une opération glisser en appelant le [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) fonction membre. L’arborescence crée une image bitmap de glissement basée sur le nom de l’élément déplacé. Ensuite, le contrôle d’arborescence crée une liste d’images, lui ajoute l’image bitmap et retourne un pointeur vers le [CImageList](../mfc/reference/cimagelist-class.md) objet.
 
-Vous devez fournir du code faisant glisser réellement l'élément. Cela implique généralement en utilisant les fonctions de déplacement des fonctions de liste d’image et de traitement le [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) et [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (ou [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) messages envoyés après que l’opération glisser a commencé. Pour plus d’informations sur les fonctions de liste d’images, consultez [CImageList](../mfc/reference/cimagelist-class.md) dans le *référence MFC* et [listes d’images](https://msdn.microsoft.com/library/windows/desktop/bb761389) dans le SDK Windows. Pour plus d’informations sur le déplacement d’un élément de contrôle d’arborescence, consultez [en faisant glisser l’élément d’arborescence](/windows/desktop/Controls/tree-view-controls), également dans le Kit de développement Windows.
+Vous devez fournir du code faisant glisser réellement l'élément. Cela implique généralement en utilisant les fonctions de déplacement des fonctions de liste d’image et de traitement le [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) et [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (ou [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) messages envoyés après que l’opération glisser a commencé. Pour plus d’informations sur les fonctions de liste d’images, consultez [CImageList](../mfc/reference/cimagelist-class.md) dans le *référence MFC* et [listes d’images](/windows/desktop/controls/image-lists) dans le SDK Windows. Pour plus d’informations sur le déplacement d’un élément de contrôle d’arborescence, consultez [en faisant glisser l’élément d’arborescence](/windows/desktop/Controls/tree-view-controls), également dans le Kit de développement Windows.
 
 Si les éléments d’un contrôle d’arborescence vont être des cibles d’opérations de type Glisser-déplacer, vous devez savoir quand le curseur de la souris est sur un élément cible. Vous trouverez en appelant le [HitTest](../mfc/reference/ctreectrl-class.md#hittest) fonction membre. Vous spécifiez un point et entier ou l’adresse d’un [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) structure qui contient les coordonnées actuelles du curseur de la souris. Après le retour de la fonction, l’entier ou la structure contient un indicateur qui fournit l’emplacement du curseur de la souris par rapport au contrôle d’arborescence. Si le curseur est sur un élément de l’arborescence, la structure contiendra également le handle de l’élément.
 

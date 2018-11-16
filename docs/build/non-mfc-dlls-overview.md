@@ -5,18 +5,18 @@ helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 5646f346ad8ccc62b838962b677b7f1947783ea9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15cceb80b0f771c0c304572e2263b1479d6b0db7
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649784"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693020"
 ---
 # <a name="non-mfc-dlls-overview"></a>DLL non-MFC : vue d'ensemble
 
 Une DLL non - MFC est une DLL qui n’utilise pas MFC en interne, et les fonctions exportées dans la DLL peuvent être appelées par les fichiers exécutables MFC ou non-MFC. Les fonctions sont généralement exportées à partir d’une DLL non - MFC à l’aide de l’interface C standard.
 
-Pour plus d’informations sur les DLL non - MFC, consultez [Dynamic-Link Libraries](https://msdn.microsoft.com/library/windows/desktop/ms682589) dans le SDK Windows.
+Pour plus d’informations sur les DLL non - MFC, consultez [Dynamic-Link Libraries](/windows/desktop/dlls/dynamic-link-libraries) dans le SDK Windows.
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 

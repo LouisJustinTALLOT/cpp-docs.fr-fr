@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 6453e68b07013bc5f5799b7252ad9a88e73250f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac354ed34bc3ab849eecf9256b447308f449abfe
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532936"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693566"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Concepts d'applications isolées et d'assemblys côte à côte
 
@@ -22,7 +22,7 @@ Un assembly côte à côte peut ou être partagé ou privé. Les[assemblys côte
 
 ## <a name="manifests-and-search-order"></a>Manifestes et ordre de recherche
 
-Les applications isolées et les assemblys côte à côte sont décrits par des [manifestes](https://msdn.microsoft.com/library/aa375365). Un manifeste est un document XML qui peut être un fichier externe ou qui peut être incorporé dans une application ou un assembly en tant que ressource. Le fichier manifeste d'une application isolée sert à gérer les noms et les versions des assemblys partagés côte à côte auxquels l'application doit se lier au moment de l'exécution. Le manifeste d'un assembly côte à côte spécifie les noms, les versions, les ressources et les assemblys dépendants d'assemblys côte à côte. Dans le cas d'un assembly partagé côte à côte, le manifeste est installé dans le dossier %WINDIR%\WinSxS\Manifests\. Dans le cas d'un assembly privé, il est recommandé d'inclure le manifeste dans la DLL en tant que ressource dont l'ID est égal à 1. Vous pouvez également donner à l'assembly privé le même nom que celui de la DLL. Pour plus d’informations, consultez [sur les assemblys privés](/windows/desktop/SbsCs/about-private-assemblies-).
+Les applications isolées et les assemblys côte à côte sont décrits par des [manifestes](/windows/desktop/sbscs/manifests). Un manifeste est un document XML qui peut être un fichier externe ou qui peut être incorporé dans une application ou un assembly en tant que ressource. Le fichier manifeste d'une application isolée sert à gérer les noms et les versions des assemblys partagés côte à côte auxquels l'application doit se lier au moment de l'exécution. Le manifeste d'un assembly côte à côte spécifie les noms, les versions, les ressources et les assemblys dépendants d'assemblys côte à côte. Dans le cas d'un assembly partagé côte à côte, le manifeste est installé dans le dossier %WINDIR%\WinSxS\Manifests\. Dans le cas d'un assembly privé, il est recommandé d'inclure le manifeste dans la DLL en tant que ressource dont l'ID est égal à 1. Vous pouvez également donner à l'assembly privé le même nom que celui de la DLL. Pour plus d’informations, consultez [sur les assemblys privés](/windows/desktop/SbsCs/about-private-assemblies-).
 
 Au moment de l'exécution, Windows utilise les informations d'assembly provenant du manifeste de l'application pour rechercher et charger l'assembly côte à côte correspondant. Si une application isolée spécifie une dépendance d'assembly, le système d'exploitation recherche d'abord l'assembly parmi les assemblys partagés contenus dans le cache d'assembly natif au sein du dossier %WINDIR%\WinSxS\. Si l'assembly requis n'y figure pas, le système d'exploitation recherche un assembly privé dans un dossier de la structure de répertoire de l'application. Pour plus d’informations, consultez [Séquence de recherche d’assemblys](/windows/desktop/SbsCs/assembly-searching-sequence).
 

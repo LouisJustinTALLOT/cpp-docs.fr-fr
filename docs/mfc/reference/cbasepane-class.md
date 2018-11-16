@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525416"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694788"
 ---
 # <a name="cbasepane-class"></a>Cbasepane, classe
 
@@ -1566,7 +1566,7 @@ Handle vers une structure de fenêtre différé, ou NULL.
 
 ### <a name="remarks"></a>Notes
 
-Si vous passez null comme valeur le *hdwp* paramètre, cette méthode déplace la fenêtre normalement. Si vous passez un handle, cette méthode effectue un déplacement différée. Vous pouvez obtenir un handle en appelant [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) ou en stockant la valeur de retour d’un appel précédent à cette méthode.
+Si vous passez null comme valeur le *hdwp* paramètre, cette méthode déplace la fenêtre normalement. Si vous passez un handle, cette méthode effectue un déplacement différée. Vous pouvez obtenir un handle en appelant [BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos) ou en stockant la valeur de retour d’un appel précédent à cette méthode.
 
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
 

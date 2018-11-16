@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: a9d1e3638df46f9a60af54ae4c402337710c7561
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 58d8453cc50c28527c1f777db1b47ea23299d38f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474735"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693943"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Dépannage d'applications isolées C/C++ et d'assemblys côte à côte
 
@@ -37,7 +37,7 @@ Si votre application est déployée sur un ordinateur qui ne dispose pas de Visu
 
 1. Si votre application dépend d'assemblys côte à côte et qu'un manifeste n'est pas présent, vous devez vous assurer que l'éditeur de liens génère un manifeste pour votre projet. Activez l’option de l’éditeur de liens **générer manifeste** dans le **propriétés du projet** boîte de dialogue pour le projet.
 
-1. Si le manifeste est incorporé dans le fichier binaire, assurez-vous que l'ID de RT_MANIFEST est correct pour ce type de fichier binaire. Pour plus d’informations sur l’ID de ressource à utiliser, consultez [utilisation d’assemblys côte à côte en tant que ressource (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Si le manifeste est dans un fichier distinct, ouvrez-le dans un éditeur XML ou un éditeur de texte. Pour plus d’informations sur les manifestes et les règles de déploiement, consultez [manifestes](https://msdn.microsoft.com/library/aa375365).
+1. Si le manifeste est incorporé dans le fichier binaire, assurez-vous que l'ID de RT_MANIFEST est correct pour ce type de fichier binaire. Pour plus d’informations sur l’ID de ressource à utiliser, consultez [utilisation d’assemblys côte à côte en tant que ressource (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Si le manifeste est dans un fichier distinct, ouvrez-le dans un éditeur XML ou un éditeur de texte. Pour plus d’informations sur les manifestes et les règles de déploiement, consultez [manifestes](/windows/desktop/sbscs/manifests).
 
    > [!NOTE]
    > Si un manifeste incorporé et un fichier manifeste distinct sont tous les deux présents, le chargeur du système d'exploitation utilise le manifeste incorporé et ignore le fichier distinct. Toutefois, Windows XP fonctionne de manière inverse : le fichier manifeste distinct est utilisé et le manifeste incorporé est ignoré.

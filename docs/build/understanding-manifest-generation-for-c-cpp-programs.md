@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: d4dceec94a8868ed9b6d744a9f481825bf6af58a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4391ffd3b7d293ed04a4852582444550570e577
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660439"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693358"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Fonctionnement de la génération de manifestes pour les programmes C/C++
 
-Un [manifeste](https://msdn.microsoft.com/library/aa375365) est un document XML qui peut être un fichier XML externe ou une ressource incorporé dans une application ou un assembly. Le manifeste d’un [application isolée](/windows/desktop/SbsCs/isolated-applications) est utilisé pour gérer les noms et les versions des assemblys côte à côte partagés auxquels l’application doit se lier au moment de l’exécution. Le manifeste d’un assembly côte à côte spécifie ses dépendances sur les noms, les versions, les ressources et les autres assemblys.
+Un [manifeste](/windows/desktop/sbscs/manifests) est un document XML qui peut être un fichier XML externe ou une ressource incorporé dans une application ou un assembly. Le manifeste d’un [application isolée](/windows/desktop/SbsCs/isolated-applications) est utilisé pour gérer les noms et les versions des assemblys côte à côte partagés auxquels l’application doit se lier au moment de l’exécution. Le manifeste d’un assembly côte à côte spécifie ses dépendances sur les noms, les versions, les ressources et les autres assemblys.
 
 Il existe deux façons de créer un manifeste pour une application isolée ou un assembly côte à côte. Tout d’abord, l’auteur de l’assembly peut créer manuellement un fichier de manifeste suivant les règles et conventions de dénomination. Vous pouvez également, si un programme dépend uniquement des assemblys Visual C++ telles que la bibliothèque CRT, MFC, ATL ou d’autres, un manifeste peut être généré automatiquement par l’éditeur de liens.
 

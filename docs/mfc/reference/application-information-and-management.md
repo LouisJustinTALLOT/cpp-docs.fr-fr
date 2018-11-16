@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596662"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694333"
 ---
 # <a name="application-information-and-management"></a>Informations sur l'application et gestion
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>Paramètres
 
 *lpWndClass*<br/>
-Pointeur vers un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) structure contenant des informations sur la classe de fenêtre à inscrire. Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.
+Pointeur vers un [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) structure contenant des informations sur la classe de fenêtre à inscrire. Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Paramètres
 
 *nClassStyle*<br/>
-Spécifie le style de classe Windows ou une combinaison de styles, créée à l’aide de l’opération de bits OR ( **&#124;**) opérateur, pour la classe de fenêtre. Pour obtenir la liste des styles de classe, consultez le [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) structure dans le SDK Windows. Si NULL, les valeurs par défaut seront définies comme suit :
+Spécifie le style de classe Windows ou une combinaison de styles, créée à l’aide de l’opération de bits OR ( **&#124;**) opérateur, pour la classe de fenêtre. Pour obtenir la liste des styles de classe, consultez le [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) structure dans le SDK Windows. Si NULL, les valeurs par défaut seront définies comme suit :
 
 - Définit le style de la souris sur CS_DBLCLKS, qui envoie des messages à la procédure de fenêtre de double lorsque l’utilisateur double-clique sur la souris.
 

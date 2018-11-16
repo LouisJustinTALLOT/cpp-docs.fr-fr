@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: fcc233b2cc0bfeeb589fec10c94343839f2c8032
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623442"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694554"
 ---
 # <a name="exception-handling-in-mfc"></a>Gestion des exceptions dans MFC
 
@@ -103,7 +103,7 @@ Le tableau suivant montre les exceptions prédéfinies fournies par MFC.
 |[CUserException, classe](../mfc/reference/cuserexception-class.md)|Exception qui avertit l’utilisateur avec une boîte de message, puis lève un générique [CException (classe)](../mfc/reference/cexception-class.md)|
 
 > [!NOTE]
->  MFC prend en charge les exceptions C++ et les macros d’exception MFC. MFC ne gère pas directement les gestionnaires d’exceptions NT Windows structurée (SEH), comme indiqué dans [Structured Exception Handling](https://msdn.microsoft.com/library/windows/desktop/ms680657).
+>  MFC prend en charge les exceptions C++ et les macros d’exception MFC. MFC ne gère pas directement les gestionnaires d’exceptions NT Windows structurée (SEH), comme indiqué dans [Structured Exception Handling](/windows/desktop/debug/structured-exception-handling).
 
 ##  <a name="_core_further_reading_about_exceptions"></a> Obtenir des informations supplémentaires sur les Exceptions
 
