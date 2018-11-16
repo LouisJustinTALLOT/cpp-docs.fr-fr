@@ -2,12 +2,12 @@
 title: Applications de plateforme Windows universelle (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-ms.openlocfilehash: e6e294b45e183e5e8baebcaad65cece846adb07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ffcc38dfd849c9cd5eaf9e6466d53731becdd9a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481898"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693085"
 ---
 # <a name="universal-windows-apps-c"></a>Applications de plateforme Windows universelle (C++)
 
@@ -32,8 +32,9 @@ C++ / c++ / WinRT est une nouveau et à en-tête uniquement en fonction de bibli
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Applications UWP qui utilisent la bibliothèque de modèle C++ Windows Runtime (WRL)
 
-La bibliothèque de modèles Windows Runtime C++ fournit les interfaces COM de bas niveau par lequel code C++ ISO peut accéder à l’exécution de Windows dans un environnement sans exception. Dans la plupart des cas, nous vous recommandons d’utiliser C++ / c++ / WinRT ou C / c++ / CX au lieu de la bibliothèque de modèles Windows Runtime C++ pour le développement d’applications UWP. Pour plus d’informations sur la bibliothèque de modèles Windows Runtime C++, consultez [bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+La bibliothèque de modèles Windows Runtime C++ fournit les interfaces COM de bas niveau par lequel code C++ ISO peut accéder à l’exécution de Windows dans un environnement sans exception. Dans la plupart des cas, nous vous recommandons d’utiliser C++ / c++ / WinRT ou C / c++ / CX au lieu de la bibliothèque de modèles Windows Runtime C++ pour le développement d’applications UWP. Pour plus d’informations sur la bibliothèque de modèles Windows Runtime C++, consultez [bibliothèque de modèles Windows Runtime C++ (WRL)](windows-runtime-cpp-template-library-wrl.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[Vue d’ensemble de la programmation Windows en C++](overview-of-windows-programming-in-cpp.md)<br/>

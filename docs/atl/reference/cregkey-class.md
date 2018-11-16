@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605077"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694853"
 ---
 # <a name="cregkey-class"></a>CRegKey, classe
 
@@ -892,7 +892,7 @@ Spécifie les composants du descripteur de sécurité à définir. La valeur peu
 |DACL_SECURITY_INFORMATION|Définit la liste de contrôle d’accès discrétionnaire de la clé (DACL). La clé doit avoir l’accès WRITE_DAC, ou le processus appelant doit être propriétaire de l’objet.|
 |GROUP_SECURITY_INFORMATION|Définit l’identificateur de sécurité de groupe principal de la clé (SID). La clé doit avoir l’accès WRITE_OWNER, ou le processus appelant doit être propriétaire de l’objet.|
 |OWNER_SECURITY_INFORMATION|Définit le SID du propriétaire de la clé. La clé doit avoir l’accès WRITE_OWNER, ou le processus appelant doit être propriétaire de l’objet ou avoir le privilège SE_TAKE_OWNERSHIP_NAME activé.|
-|SACL_SECURITY_INFORMATION|Définit la liste de contrôle d’accès de la clé système (SACL). La clé doit avoir accès aux ACCESS_SYSTEM_SECURITY. La méthode appropriée pour obtenir cet accès consiste à activer le SE_SECURITY_NAME [privilège](https://msdn.microsoft.com/library/windows/desktop/aa379306) dans le jeton d’accès actuel de l’appelant, ouvrir un handle pour un accès ACCESS_SYSTEM_SECURITY et désactivez le privilège.|
+|SACL_SECURITY_INFORMATION|Définit la liste de contrôle d’accès de la clé système (SACL). La clé doit avoir accès aux ACCESS_SYSTEM_SECURITY. La méthode appropriée pour obtenir cet accès consiste à activer le SE_SECURITY_NAME [privilège](/windows/desktop/secauthz/privileges) dans le jeton d’accès actuel de l’appelant, ouvrir un handle pour un accès ACCESS_SYSTEM_SECURITY et désactivez le privilège.|
 
 *PSD*<br/>
 Pointeur vers un [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) structure qui spécifie les attributs de sécurité à définir pour la clé spécifiée.

@@ -2,18 +2,18 @@
 title: Applications de bureau (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 78f50948e96ede8c15e0ac89a591197722dd5b1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80b85afc52819a742c85512e8e6031b9b2e26e9a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584026"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694567"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau (Visual C++)
 
 Un *application de bureau* en C++ est une application native qui peut accéder à l’ensemble des API de Windows et s’exécute dans une fenêtre ou dans la console système. Applications de bureau en C++ peuvent exécuter sur XP de Windows via Windows 10 (bien que Windows XP n’est ne sont plus officiellement pris en charge et il existe de nombreuses API Windows qui ont été introduites depuis).
 
-Une application de bureau est distincte à partir d’une application de plateforme universelle Windows (UWP), ce qui peut s’exécuter sur les PC exécutant Windows 10, ainsi que sur la XBox, Windows Phone, Surface Hub et autres appareils. Pour plus d’informations sur les postes de travail Visual Studio. Les applications UWP, consultez [choisir votre technologie](https://msdn.microsoft.com/library/windows/desktop/dn614993).
+Une application de bureau est distincte à partir d’une application de plateforme universelle Windows (UWP), ce qui peut s’exécuter sur les PC exécutant Windows 10, ainsi que sur la XBox, Windows Phone, Surface Hub et autres appareils. Pour plus d’informations sur les postes de travail Visual Studio. Les applications UWP, consultez [choisir votre technologie](/windows/desktop/choose-your-technology).
 
 ### <a name="desktop-bridge"></a>Pont du bureau
 
@@ -23,7 +23,7 @@ Dans Visual Studio 2017 version 15.4 ou ultérieure, vous pouvez créer un proje
 
 ### <a name="terminology"></a>Terminologie
 
-- Un *Win32* application est une application de bureau C++ qui peuvent rendre utiliser native de Windows [API C de Windows et/ou APIs COM](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT et API de bibliothèque Standard et des bibliothèques tierces 3e. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur à utiliser explicitement des messages de Windows à l’intérieur d’une fonction de procédure de Windows. Malgré son nom, une application Win32 peut être compilée comme un (x86) 32 bits ou 64 bits (x64) binaire. Dans l’IDE de Visual Studio, les conditions x86 Win32 sont synonymes.
+- Un *Win32* application est une application de bureau C++ qui peuvent rendre utiliser native de Windows [API C de Windows et/ou APIs COM](/windows/desktop/apiindex/windows-api-list) CRT et API de bibliothèque Standard et des bibliothèques tierces 3e. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur à utiliser explicitement des messages de Windows à l’intérieur d’une fonction de procédure de Windows. Malgré son nom, une application Win32 peut être compilée comme un (x86) 32 bits ou 64 bits (x64) binaire. Dans l’IDE de Visual Studio, les conditions x86 Win32 sont synonymes.
 
 - Le [composant COM (Object Model)](/windows/desktop/com/the-component-object-model) est une spécification qui permet aux programmes écrits dans différents langages pour communiquer entre eux. Windows de nombreux composants sont implémentés en tant qu’objets COM et suivez les règles COM standard pour la création des objets interface destruction de découverte et d’objet.  À l’aide des objets COM à partir d’applications de bureau C++ est relativement simple, écrivez votre propre objet COM est toutefois plus avancée. Le [bibliothèque ATL (Active Template)](../atl/atl-com-desktop-components.md) fournit des macros et fonctions d’assistance qui simplifient le développement de COM.
 
@@ -31,25 +31,28 @@ Dans Visual Studio 2017 version 15.4 ou ultérieure, vous pouvez créer un proje
 
 - C++ / c++ / CLI application ou un composant utilise les extensions à la syntaxe C++ (comme autorisé par la spécification C++) pour permettre l’interaction entre .NET et le code C++ natif.  C++ / c++ / application de l’interface CLI peut avoir des composants qui s’exécutent en mode natif et les composants qui s’exécutent sur le .NET Framework avec un accès à la bibliothèque de classes de Base .NET. C++ / c++ / CLI est l’option recommandée lorsque vous avez le code C++ natif qui doit fonctionner avec le code écrit en c# ou Visual Basic. Il s’adresse principalement pour une utilisation dans des DLL .NET plutôt que dans le code d’interface utilisateur. Pour plus d’informations, consultez [programmation .NET avec C++ / c++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-Toute application de bureau en C++ peut utiliser C Runtime (CRT) et la bibliothèque Standard classes et fonctions, des objets COM et les fonctions Windows publiques, appelées collectivement comme l’API Windows. Pour obtenir une introduction aux applications de bureau Windows en C++, consultez [Apprendre à programmer pour Windows en C++](http://go.microsoft.com/fwlink/p/?LinkId=262281).
+Toute application de bureau en C++ peut utiliser C Runtime (CRT) et la bibliothèque Standard classes et fonctions, des objets COM et les fonctions Windows publiques, appelées collectivement comme l’API Windows. Pour une introduction aux applications de bureau Windows en C++, consultez [prise en main Win32 et C++](/windows/desktop/LearnWin32/learn-to-program-for-windows).
 
 ## <a name="in-this-section"></a>Dans cette section
 
 |Titre|Description|
 |-----------|-----------------|
-|[Applications console](../windows/console-applications-in-visual-cpp.md)|Contient des informations sur les applications console. Une application console Win32 (ou Win64) n’a aucune fenêtre et aucune boucle de message. Elle s'exécute dans la fenêtre de console et l'entrée et la sortie sont gérées via la ligne de commande.|
-|[Applications de bureau Windows](../windows/windows-desktop-applications-cpp.md)|Comment créer des applications de bureau qui s’exécutent dans windows, par opposition à la console.|
-|[Ressources pour la création d’un jeu à l’aide de DirectX (C++)](../windows/resources-for-creating-a-game-using-directx.md)|Liens vers du contenu pour la création de jeux en C++.|
-|[Procédure pas à pas : Création et utilisation d’une bibliothèque statique](../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Comment créer un fichier binaire .lib.|
-|[Procédure : utilisation du kit SDK Windows 10 dans une application de bureau Windows](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
+|[Application console Windows en C++](console-applications-in-visual-cpp.md)|Contient des informations sur les applications console. Une application console Win32 (ou Win64) n’a aucune fenêtre et aucune boucle de message. Elle s'exécute dans la fenêtre de console et l'entrée et la sortie sont gérées via la ligne de commande.|
+|[Procédure pas à pas : création d’applications de bureau Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Créer une simple application de bureau Windows.|
+|[Création d’une application de bureau Windows vide](creating-an-empty-windows-desktop-application.md)|Comment créer un projet de bureau Windows qui ne comporte aucun fichier par défaut.|
+|[Ajout de fichiers à des applications Win32 vides](adding-files-to-an-empty-win32-applications.md)|Comment ajouter des fichiers à un projet vide.|
+|[Utilisation des fichiers de ressources](working-with-resource-files.md)|Comment ajouter des images, des icônes, des tables de chaînes et d’autres ressources pour une application de bureau.|
+|[Ressources pour la création d’un jeu à l’aide de DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Liens vers du contenu pour la création de jeux en C++.|
+|[Procédure pas à pas : Création et utilisation d’une bibliothèque statique](walkthrough-creating-and-using-a-static-library-cpp.md)|Comment créer un fichier binaire .lib.|
+|[Procédure : utilisation du kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
 
 ## <a name="related-articles"></a>Articles connexes
 
 |Titre|Description|
 |-----------|-----------------|
-|[Développement Windows](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Contient des informations sur l'API Windows et COM. (Certaines API Windows et DLL tierces sont implémentées comme objets COM.)|
-|[Hilo : développement d’applications C++ pour Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Explique comment créer une application de bureau Windows cliente enrichie, qui utilise l’animation Windows et Direct2D pour créer une interface utilisateur de type carrousel.  Ce didacticiel n’a pas été mis à jour depuis Windows 7, mais fournit malgré tout une présentation détaillée de la programmation Win32.|
-|[Visual C++](../visual-cpp-in-visual-studio.md)|Décrit les principales fonctionnalités de Visual C++ dans Visual Studio et fournit un lien vers le reste de la documentation Visual C++.|
+|[Développement Windows](/windows/desktop/index)|Contient des informations sur l'API Windows et COM. (Certaines API Windows et DLL tierces sont implémentées comme objets COM.)|
+|[Hilo : développement d’applications C++ pour Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Explique comment créer une application de bureau Windows cliente enrichie, qui utilise l’animation Windows et Direct2D pour créer une interface utilisateur de type carrousel.  Ce didacticiel n’a pas été mis à jour depuis Windows 7, mais fournit malgré tout une présentation détaillée de la programmation Win32.|
+|[Vue d’ensemble de la programmation Windows en C++](overview-of-windows-programming-in-cpp.md)|Décrit les principales fonctionnalités de bureau Windows de programmation en C++.|
 
 ## <a name="see-also"></a>Voir aussi
 

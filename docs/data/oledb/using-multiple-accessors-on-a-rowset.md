@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: 3ce150375b98c697c32767001911eade53ed2f8c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ac2b7e323fff5d3baa80b509586178a48dbe1f8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522023"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693618"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilisation de plusieurs accesseurs dans un jeu de lignes
 
@@ -84,7 +84,7 @@ Voici le code principal. Appel `MoveNext` récupère automatiquement les donnée
 ```cpp
 int main(int argc, char* argv[])
 {
-    // Initalize COM
+    // Initialize COM
     ::CoInitialize(NULL);
 
     // Create instances of the data source and session

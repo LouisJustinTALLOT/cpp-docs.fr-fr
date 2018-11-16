@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: fa7562f49834bf71da6bd095aec19360a43f1538
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447955"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694580"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase, classe
 
@@ -1547,7 +1547,7 @@ Retourne la valeur TRUE si le contrôle reçoit correctement le focus ; Sinon, 
 
 ### <a name="remarks"></a>Notes
 
-Pour un contrôle avec fenêtres, la fonction Windows API [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) est appelée. Pour un contrôle sans fenêtre, [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) est appelée. Via cet appel, un contrôle sans fenêtre Obtient le focus clavier et peut répondre aux messages de fenêtre.
+Pour un contrôle avec fenêtres, la fonction Windows API [SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) est appelée. Pour un contrôle sans fenêtre, [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) est appelée. Via cet appel, un contrôle sans fenêtre Obtient le focus clavier et peut répondre aux messages de fenêtre.
 
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty
 

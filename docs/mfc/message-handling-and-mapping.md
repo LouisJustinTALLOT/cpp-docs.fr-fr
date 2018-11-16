@@ -6,12 +6,12 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: 1b109a3f85ffd3311d08c3d749d543b1e625e77c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f76e9b2ef25c8a6c046cb6c47f0f5761854453c9
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628616"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694710"
 ---
 # <a name="message-handling-and-mapping"></a>Gestion et mappage des messages
 
@@ -23,7 +23,7 @@ Messages WM_COMMAND, généralement généré par les menus, des boutons de barr
 
 Tables des messages également fournissent un moyen pour mettre à jour des objets d’interface utilisateur (par exemple, les menus et boutons de barre d’outils), l’activation ou de les désactiver en fonction du contexte actuel.
 
-Pour obtenir des informations générales sur les messages et les files d’attente dans Windows, consultez [Messages et les files d’attente](https://msdn.microsoft.com/library/windows/desktop/ms632590) dans le SDK Windows.
+Pour obtenir des informations générales sur les messages et les files d’attente dans Windows, consultez [Messages et les files d’attente](/windows/desktop/winmsg/messages-and-message-queues) dans le SDK Windows.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 

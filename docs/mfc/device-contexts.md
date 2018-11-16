@@ -32,12 +32,12 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: 8eca18795fac96e5cbddb404b901eb35da2de4b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 105e438a9ed3e8f7de7edc813fec516c0e99700a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585976"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694684"
 ---
 # <a name="device-contexts"></a>Contextes de périphérique
 
@@ -57,21 +57,21 @@ Dans ce cas, vous pouvez utiliser un [CClientDC](../mfc/reference/cclientdc-clas
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 
-- [Contextes de périphérique (définition)](https://msdn.microsoft.com/library/windows/desktop/dd183553)
+- [Contextes de périphérique (définition)](/windows/desktop/gdi/device-contexts)
 
 - [Dessin dans une vue](../mfc/drawing-in-a-view.md)
 
 - [Interprétation de l’entrée utilisateur via une vue](../mfc/interpreting-user-input-through-a-view.md)
 
-- [Lignes et courbes](https://msdn.microsoft.com/library/windows/desktop/dd145028)
+- [Lignes et courbes](/windows/desktop/gdi/lines-and-curves)
 
-- [Remplissage de formes](https://msdn.microsoft.com/library/windows/desktop/dd162714)
+- [Remplissage de formes](/windows/desktop/gdi/filled-shapes)
 
 - [Polices et texte](/windows/desktop/gdi/fonts-and-text)
 
-- [Couleurs](https://msdn.microsoft.com/library/windows/desktop/dd183450)
+- [Couleurs](/windows/desktop/gdi/colors)
 
-- [Transformations et les espaces de coordonnées](https://msdn.microsoft.com/library/windows/desktop/dd183475)
+- [Transformations et les espaces de coordonnées](/windows/desktop/gdi/coordinate-spaces-and-transformations)
 
 ## <a name="see-also"></a>Voir aussi
 

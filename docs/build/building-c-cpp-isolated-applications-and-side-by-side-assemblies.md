@@ -9,16 +9,16 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: da8bd6d583d6f9d714853e545979d54ddcb79ce5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d487e8a124d2edd7ce5a658d4965f1567756d5a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694151"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Génération d'applications isolées C/C++ et d'assemblys côte à côte
 
-Visual C++ prend en charge un modèle de déploiement pour les applications clientes Windows qui s’appuie sur l’idée des [applications isolées](/windows/desktop/SbsCs/isolated-applications) et des [assemblys côte à côte](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Par défaut, Visual C++ génère toutes les applications C/C++ natives en tant qu’applications isolées qui utilisent des [manifestes](https://msdn.microsoft.com/library/aa375365) pour décrire leurs dépendances envers des bibliothèques Visual C++.
+Visual C++ prend en charge un modèle de déploiement pour les applications clientes Windows qui s’appuie sur l’idée des [applications isolées](/windows/desktop/SbsCs/isolated-applications) et des [assemblys côte à côte](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Par défaut, Visual C++ génère toutes les applications C/C++ natives en tant qu’applications isolées qui utilisent des [manifestes](/windows/desktop/sbscs/manifests) pour décrire leurs dépendances envers des bibliothèques Visual C++.
 
 La création des programmes C/C++ en tant qu'applications isolées présente toute une palette d'avantages. Par exemple, une application isolée n'est pas affectée quand d'autres applications C/C++ installent ou désinstallent des bibliothèques Visual C++. Les bibliothèques Visual C++ utilisées par une application isolée peuvent encore être redistribuées dans le dossier local de l’application ou en étant installées dans le cache d’assembly natif (WinSxS). Toutefois, la maintenance des bibliothèques Visual C++ pour des applications déjà déployées peut-être simplifiée à l’aide d’un [fichier de configuration d’éditeur](/windows/desktop/SbsCs/publisher-configuration). Le modèle de déploiement d'applications isolées permet de garantir plus aisément que les applications C/C++ qui s'exécutent sur un ordinateur spécifique utilisent la version la plus récente des bibliothèques Visual C++, tout en continuant de permettre aux administrateurs système et aux auteurs d'applications de contrôler la liaison explicite des versions des applications avec leur DLL dépendantes.
 

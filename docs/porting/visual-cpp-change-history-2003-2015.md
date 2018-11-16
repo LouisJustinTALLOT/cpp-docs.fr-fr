@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 1025b3469611ee1e880a2abd5a4e553a1317a0d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570714"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525520"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 
@@ -64,19 +64,19 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
    Fonctions déplacées :
 
-   - double abs(double) et float abs(float)
+  - double abs(double) et float abs(float)
 
-   - double pow(double, int), float pow(float, float), float pow(float, int), long double pow(long double, long double), long double pow(long double, int)
+  - double pow(double, int), float pow(float, float), float pow(float, int), long double pow(long double, long double), long double pow(long double, int)
 
-   - versions float et long double des fonctions à virgule flottante acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc
+  - versions float et long double des fonctions à virgule flottante acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc
 
-   Si vous avez un code qui utilise abs avec un type à virgule flottante incluant uniquement l'en-tête math.h, les versions à virgule flottante ne sont plus disponibles, si bien que l'appel, même avec un argument à virgule flottante, se traduit à présent par abs(int). Cela génère l'erreur :
+  Si vous avez un code qui utilise abs avec un type à virgule flottante incluant uniquement l'en-tête math.h, les versions à virgule flottante ne sont plus disponibles, si bien que l'appel, même avec un argument à virgule flottante, se traduit à présent par abs(int). Cela génère l'erreur :
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-   Le correctif pour cet avertissement consiste à remplacer l’appel à `abs` par une version à virgule flottante de `abs`, comme `fabs` pour un argument double ou `fabsf` pour un argument float, ou à inclure l’en-tête cmath et à continuer d’utiliser `abs`.
+  Le correctif pour cet avertissement consiste à remplacer l’appel à `abs` par une version à virgule flottante de `abs`, comme `fabs` pour un argument double ou `fabsf` pour un argument float, ou à inclure l’en-tête cmath et à continuer d’utiliser `abs`.
 
 - **Conformité en matière de virgule flottante**
 
@@ -116,7 +116,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
    Pour ajouter cette bibliothèque à votre entrée d’éditeur de liens dans l’environnement IDE, ouvrez le menu contextuel du nœud du projet, choisissez **Propriétés**, puis dans la boîte de dialogue **Propriétés du projet**, choisissez **Éditeur de liens**. Ensuite, modifiez **l’entrée de l’éditeur de liens** afin d’ajouter `legacy_stdio_definitions.lib` à la liste délimitée par des points-virgules.
 
-   Si votre projet est lié à des bibliothèques statiques qui ont été compilées avec une version de Visual Studio antérieure à 2015, l’éditeur de liens peut signaler un symbole externe non résolu. Ces erreurs peuvent référencer des définitions stdio internes pour _iob, _iob_func ou des importations associées pour certaines fonctions stdio de la forme _imp\_*. Microsoft recommande de recompiler toutes les bibliothèques statiques avec la dernière version des bibliothèques et du compilateur C++ quand vous mettez à niveau un projet. Si la bibliothèque est une bibliothèque tierce dont la source n’est pas disponible, vous devez demander un fichier binaire mis à jour auprès de la tierce partie ou encapsuler votre utilisation de cette bibliothèque dans une DLL distincte que vous compilez à l’aide de l’ancienne version des bibliothèques et du compilateur.
+   Si votre projet est lié à des bibliothèques statiques qui ont été compilées avec une version de Visual Studio antérieure à 2015, l’éditeur de liens peut signaler un symbole externe non résolu. Ces erreurs peuvent référencer des définitions stdio internes pour `_iob`, `_iob_func`, ou des importations associées pour certaines fonctions stdio de la forme _imp_\*. Microsoft recommande de recompiler toutes les bibliothèques statiques avec la dernière version des bibliothèques et du compilateur C++ quand vous mettez à niveau un projet. Si la bibliothèque est une bibliothèque tierce dont la source n’est pas disponible, vous devez demander un fichier binaire mis à jour auprès de la tierce partie ou encapsuler votre utilisation de cette bibliothèque dans une DLL distincte que vous compilez à l’aide de l’ancienne version des bibliothèques et du compilateur.
 
     > [!WARNING]
     > Si vous établissez une liaison avec le Kit de développement logiciel (SDK) Windows 8.1 ou version antérieure, vous pouvez rencontrer ces erreurs de symbole externe non résolues. Dans ce cas, vous devez résoudre l'erreur en ajoutant legacy_stdio_definitions.lib à l'entrée de l'éditeur de liens, comme décrit précédemment.
@@ -139,27 +139,27 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
    Dans les versions précédentes, les valeurs infinies et NaN étaient formatées à l’aide d’un ensemble de chaînes de sentinelles propres à MSVC.
 
-   - Infinity: 1.#INF
+  - Infinity: 1.#INF
 
-   - Quiet NaN: 1.#QNAN
+  - Quiet NaN: 1.#QNAN
 
-   - Signaling NaN: 1.#SNAN
+  - Signaling NaN: 1.#SNAN
 
-   - Indefinite NaN: 1.#IND
+  - Indefinite NaN: 1.#IND
 
-   Toutes ces chaînes pouvaient être précédées d’un signe et mises en forme un peu différemment en fonction de la précision et de la largeur de champ (parfois avec des effets inhabituels, par exemple : `printf("%.2f\n", INFINITY)` affichait 1.#J, car #INF était « arrondi » avec une précision de deux chiffres). C99 a introduit de nouvelles spécifications sur la façon dont les valeurs infinies et NaN devaient être formatées. À présent, l’implémentation de MSVC est conforme à ces spécifications. Les nouvelles chaînes sont :
+  Toutes ces chaînes pouvaient être précédées d’un signe et mises en forme un peu différemment en fonction de la précision et de la largeur de champ (parfois avec des effets inhabituels, par exemple : `printf("%.2f\n", INFINITY)` affichait 1.#J, car #INF était « arrondi » avec une précision de deux chiffres). C99 a introduit de nouvelles spécifications sur la façon dont les valeurs infinies et NaN devaient être formatées. À présent, l’implémentation de MSVC est conforme à ces spécifications. Les nouvelles chaînes sont :
 
-   - Infinity: inf
+  - Infinity: inf
 
-   - Quiet NaN: nan
+  - Quiet NaN: nan
 
-   - Signaling NaN: nan(snan)
+  - Signaling NaN: nan(snan)
 
-   - Indefinite NaN:nan(ind)
+  - Indefinite NaN:nan(ind)
 
-   Elles peuvent toutes être précédées d'un signe. Si un spécificateur de format majuscule est utilisé (%F au lieu de %f), les chaînes apparaissent en majuscules (INF au lieu de inf), comme cela est requis.
+  Elles peuvent toutes être précédées d'un signe. Si un spécificateur de format majuscule est utilisé (%F au lieu de %f), les chaînes apparaissent en majuscules (INF au lieu de inf), comme cela est requis.
 
-   Les fonctions [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) ont été modifiées pour analyser ces nouvelles chaînes, afin que ces chaînes effectuent un aller-retour via printf et scanf.
+  Les fonctions [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) ont été modifiées pour analyser ces nouvelles chaînes, afin que ces chaînes effectuent un aller-retour via printf et scanf.
 
 - **Formatage et analyse avec virgule flottante**
 
@@ -171,8 +171,16 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
     printf("%.0f\n", pow(2.0, 80))
     ```
 
+   Sortie du travail :
+
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+    1208925819614629200000000
+    ```
+
+   Nouvelle sortie :
+
+    ```Output
+    1208925819614629174706176
     ```
 
    Les anciens algorithmes d'analyse prenaient en compte un maximum de 17 chiffres significatifs dans la chaîne d'entrée et ignoraient les chiffres restants. Cela est suffisant pour générer une approximation très proche de la valeur représentée par la chaîne et le résultat est généralement très proche du résultat correctement arrondi. La nouvelle implémentation prend en compte tous les chiffres présents et génère le résultat correctement arrondi pour toutes les entrées (jusqu'à 768 chiffres). En outre, ces fonctions respectent désormais le mode d'arrondi (contrôlable via fesetround).  Il s'agit potentiellement d'un comportement de rupture, car les fonctions peuvent générer des résultats différents. Les nouveaux résultats sont toujours plus exacts que les anciens.
@@ -641,7 +649,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
    Par exemple, votre code définit à la fois un opérateur **placement new** et un opérateur **placement delete** :
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 

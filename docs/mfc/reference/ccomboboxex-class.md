@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 92a81e318c74f1acd39fbfe870a7ad1277b25125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501632"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694242"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (classe)
 
@@ -247,7 +247,7 @@ Le nombre d’éléments restants dans le contrôle. Si *iIndex* est non valide,
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente les fonctionnalités du message [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), comme décrit dans le SDK Windows. Lorsque vous appelez DeleteItem, un [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) message avec notification de CBEN_DELETEITEM sera envoyé à la fenêtre parente.
+Cette fonction membre implémente les fonctionnalités du message [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), comme décrit dans le SDK Windows. Lorsque vous appelez DeleteItem, un [WM_NOTIFY](/windows/desktop/controls/wm-notify) message avec notification de CBEN_DELETEITEM sera envoyé à la fenêtre parente.
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
@@ -373,7 +373,7 @@ L’index au niveau duquel le nouvel élément a été inséré en cas de réuss
 
 ### <a name="remarks"></a>Notes
 
-Lorsque vous appelez `InsertItem`, un [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) message avec [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) notification sera envoyée à la fenêtre parente.
+Lorsque vous appelez `InsertItem`, un [WM_NOTIFY](/windows/desktop/controls/wm-notify) message avec [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) notification sera envoyée à la fenêtre parente.
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 

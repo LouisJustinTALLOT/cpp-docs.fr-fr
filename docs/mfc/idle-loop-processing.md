@@ -16,18 +16,18 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 1eff76e2e5fd98e63dccb9110882656f69da6539
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35078b944412142a07906791e74209fd5dab06d3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604265"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693436"
 ---
 # <a name="idle-loop-processing"></a>Traitement des boucles inactives
 
 De nombreuses applications effectuent le traitement lent "en arrière-plan". Parfois, les facteurs de performance exigent l'utilisation du multithreading pour un tel travail. Threads impliquent une surcharge de développement supplémentaire, afin qu’ils ne sont pas recommandés pour des tâches simples comme le travail de la durée d’inactivité que MFC effectue dans le [OnIdle](../mfc/reference/cwinthread-class.md#onidle) (fonction). Cet article se concentre sur le traitement des temps d'inactivité. Pour plus d’informations sur le multithreading, consultez [rubriques de Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Certains types de traitement en arrière-plan sont correctement effectués pendant les intervalles où l'utilisateur n'interagit pas avec l'application. Dans une application développée pour le système d'exploitation Microsoft Windows, une application peut effectuer un traitement en période d'inactivité en divisant un processus long en de nombreux petits fragments. Après avoir traité chaque fragment, l’application cède le contrôle de l’exécution à l’aide de Windows un [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) boucle.
+Certains types de traitement en arrière-plan sont correctement effectués pendant les intervalles où l'utilisateur n'interagit pas avec l'application. Dans une application développée pour le système d'exploitation Microsoft Windows, une application peut effectuer un traitement en période d'inactivité en divisant un processus long en de nombreux petits fragments. Après avoir traité chaque fragment, l’application cède le contrôle de l’exécution à l’aide de Windows un [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) boucle.
 
 Cet article décrit les deux modes de traitement des temps d'inactivité pouvant être exécutés dans votre application :
 
@@ -37,7 +37,7 @@ Cet article décrit les deux modes de traitement des temps d'inactivité pouvant
 
 ##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage dans la boucle de messages MFC
 
-Dans une application développée avec MFC, le message principal en boucle dans le `CWinThread` classe contient une boucle de messages qui appelle le [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) API Win32. Cette boucle appelle également la fonction membre `OnIdle` de `CWinThread` entre les messages. Une application peut traiter les messages dans cette durée d'inactivité en remplaçant la fonction `OnIdle`.
+Dans une application développée avec MFC, le message principal en boucle dans le `CWinThread` classe contient une boucle de messages qui appelle le [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) API Win32. Cette boucle appelle également la fonction membre `OnIdle` de `CWinThread` entre les messages. Une application peut traiter les messages dans cette durée d'inactivité en remplaçant la fonction `OnIdle`.
 
 > [!NOTE]
 >  `Run`, `OnIdle`, et certaines autres fonctions membres sont désormais des membres de classe `CWinThread` au lieu de la classe `CWinApp`. `CWinApp` est dérivé de `CWinThread`.

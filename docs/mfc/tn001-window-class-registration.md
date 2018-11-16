@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 92d55780ad309a9c8392cf86e7fa4eaefc5f407a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619152"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693856"
 ---
 # <a name="tn001-window-class-registration"></a>TN001 : inscription de classe Windows
 
-Cette note décrit les routines MFC qui s’inscrivent spéciale [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)es requis par Microsoft Windows. Spécifique `WNDCLASS` attributs utilisés par MFC et Windows sont décrits.
+Cette note décrit les routines MFC qui s’inscrivent spéciale [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es requis par Microsoft Windows. Spécifique `WNDCLASS` attributs utilisés par MFC et Windows sont décrits.
 
 ## <a name="the-problem"></a>Le problème
 
