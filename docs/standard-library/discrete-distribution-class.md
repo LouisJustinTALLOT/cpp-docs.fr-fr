@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5bf5deec5820976c742efa490bf02d0c0d830a09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464894"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693905"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution, classe
 
@@ -230,7 +230,7 @@ Le constructeur par défaut construit un objet dont la valeur de probabilité st
 
 Le constructeur de plage d’itérateurs qui a les paramètres *firstW* et *lastW* construit un objet de distribution à l’aide de valeurs de poids prises dans les itérateurs sur la séquence d’intervalle [*firstW*, *lastW*).
 
-Le constructeur de liste d’initialiseurs qui a un paramètre *weightlist* construit un objet de distribution avec des poids de la liste d’initialiseurs *weightlist*.
+Le constructeur de liste d’initialiseur qui a un *weightlist* paramètre construit un objet de distribution avec des poids de la liste d’initialiseurs *weightlist*.
 
 Le constructeur qui a les paramètres *ount*, *low*, *igh* et *weightfunc* construit un objet de distribution initialisé selon ces règles :
 
