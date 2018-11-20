@@ -4,7 +4,7 @@
 ## [Compatibilité binaire de C++ entre 2015 et 2017](binary-compat-2015-2017.md)
 ## [Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)
 ## [Portage de bibliothèques tierces](porting-third-party-libraries.md)
-## [Portage d’applications de données](porting-data-applications.md)
+## [Portage d’applications de données](../data/data-access-programming-mfc-atl.md)
 ## [Portage et mise à niveau : exemples et études de cas](porting-and-upgrading-examples-and-case-studies.md)
 ### [Guide du portage : Scribble MFC](porting-guide-mfc-scribble.md)
 ### [Guide du portage : COMSpy](porting-guide-com-spy.md)
