@@ -1,6 +1,6 @@
 ---
 title: Choix d'un arrière-plan transparent ou opaque (Éditeur d'images pour les icônes)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - opaque backgrounds [C++]
 - colors [C++], image
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [C++], transparency
 - images [C++], opaque background
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-ms.openlocfilehash: a7e4d427a6926d48b5115a1b5bb9ba2ca2d8068c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceea31b998d5c4dca52657db570ace664f7e373f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653529"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175429"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Choix d'un arrière-plan transparent ou opaque (Éditeur d'images pour les icônes)
 
@@ -21,7 +21,7 @@ Lorsque vous déplacez ou copiez une sélection d’une image, les pixels de la 
 
 Vous pouvez passer d’un arrière-plan transparent (la valeur par défaut) à un arrière-plan opaque et inversement. Lorsque vous utilisez un outil de sélection, le **arrière-plan Transparent** et **arrière-plan Opaque** options s’affichent dans le **Option** sélecteur sur le **Éditeur d’images** barre d’outils (comme indiqué ci-dessous).
 
-![Options d’arrière-plan &#45; opaque ou transparent](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
+![Options d’arrière-plan &#45; opaque ou transparent](../windows/media/vcimageeditoropaqtranspback.gif "options d’arrière-plan &#45; opaque ou transparent")<br/>
 **Options transparentes et opaques** sur la **barre d’outils Éditeur d’images**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Pour basculer entre un arrière-plan transparent et opaque
@@ -32,9 +32,9 @@ Vous pouvez passer d’un arrière-plan transparent (la valeur par défaut) à u
 
    - `Transparent Background (T)`: Illustration existant par le biais de la sélection des parties qui correspondent à la couleur d’arrière-plan actuelle.
 
-\- ou -
+   \- ou -
 
-- Sur le **Image** menu, cochez ou décochez **dessin Opaque**.
+1. Sur le **Image** menu, cochez ou décochez **dessin Opaque**.
 
 Vous pouvez modifier la couleur d’arrière-plan alors qu’une sélection est déjà en vigueur pour modifier les parties de l’image sont transparents.
 

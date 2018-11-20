@@ -1,6 +1,6 @@
 ---
 title: Création de fichiers d’en-tête précompilé
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - pch
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 3014b2da9f9d9e03e9ea791c9a97ff59f842e8ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482613"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176430"
 ---
 # <a name="creating-precompiled-header-files"></a>Création de fichiers d’en-tête précompilé
 
@@ -42,8 +42,6 @@ Cette rubrique couvre les sujets d’en-tête précompilé suivants :
 
 Pour plus d’informations de référence sur les options du compilateur relatives aux en-têtes précompilés, consultez [/Y (en-têtes précompilés)](../../build/reference/y-precompiled-headers.md).
 
-<a name="when-to-precompile-source-code"></a>
-
 ## <a name="when-to-precompile-source-code"></a>Quand précompiler le code source
 
 Code précompilé est utile au cours du cycle de développement pour réduire le temps de compilation, en particulier si :
@@ -57,11 +55,9 @@ La première compilation — celle qui crée le fichier d’en-tête précompil�
 Vous pouvez précompiler des programmes C et C++. Dans la programmation C++, il est courant pour séparer les informations d’interface de classe dans les fichiers d’en-tête. Ces fichiers d’en-tête peuvent être inclus dans les programmes qui utilisent la classe ultérieurement. En recompilant ces en-têtes, vous pouvez réduire le temps pour compiler un programme.
 
 > [!NOTE]
->  Bien que vous pouvez utiliser qu’un seul fichier d’en-tête précompilé (.pch) par fichier source, vous pouvez utiliser plusieurs fichiers .pch dans un projet.
+> Bien que vous pouvez utiliser qu’un seul fichier d’en-tête précompilé (.pch) par fichier source, vous pouvez utiliser plusieurs fichiers .pch dans un projet.
 
-<a name="two-choices-for-precompiling-code"></a>
-
-# <a name="two-choices-for-precompiling-code"></a>Deux méthodes au choix pour la précompilation du code
+## <a name="two-choices-for-precompiling-code"></a>Deux méthodes au choix pour la précompilation du code
 
 Avec Visual C++, vous pouvez précompiler n’importe quel code C ou C++ ; vous n’êtes pas limité à précompiler uniquement les fichiers d’en-tête.
 
@@ -73,13 +69,9 @@ Les options d’en-tête précompilé sont [/Yc (créer un fichier d’en-tête 
 
 Les rubriques de référence d’option du compilateur pour **/Yu** et **/Yc** expliquent comment accéder à cette fonctionnalité dans l’environnement de développement.
 
-<a name="precompiled-header-consistency-rules"></a>
-
 ## <a name="precompiled-header-consistency-rules"></a>Règles de cohérence s’appliquant aux en-têtes précompilés
 
 Étant donné que les fichiers PCH contiennent des informations sur l’environnement de machine, ainsi que des informations d’adresse de mémoire sur le programme, vous devez uniquement utiliser un fichier PCH sur l’ordinateur où il a été créé.
-
-<a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>
 
 ## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>Règles de cohérence pour l’utilisation d’en-têtes précompilés par fichier
 
@@ -134,8 +126,6 @@ Ces pragmas sont conservés dans le cadre d’un en-tête précompilé et affect
 |`data_seg`|`intrinsic`|`warning`|
 |`function`|`optimize`||
 
-<a name="consistency-rules-for-yc-and-yu"></a>
-
 ## <a name="consistency-rules-for-yc-and-yu"></a>Règles de cohérence pour /Yc et /Yu
 
 Lorsque vous utilisez un en-tête précompilé créé à l’aide de /Yc ou/Yu, le compilateur compare l’environnement de compilation actuel à celui qui existait lorsque vous avez créé le fichier PCH. Veillez à spécifier un environnement cohérent avec la précédente (à l’aide des options du compilateur cohérente, des pragmas, etc.) pour la compilation en cours. Si le compilateur détecte une incohérence, il émet un avertissement et identifie l’incohérence lorsque cela est possible. Ces avertissements n’indiquent pas nécessairement un problème avec le fichier PCH ; ils simplement vous Avertissement des éventuels conflits. Les sections suivantes décrivent les exigences de cohérence pour les en-têtes précompilés.
@@ -155,15 +145,11 @@ Ce tableau répertorie les options du compilateur pouvant déclencher un avertis
 > [!NOTE]
 >  La fonctionnalité en-têtes précompilés est destinée uniquement dans les fichiers sources C et C++.
 
-<a name="using-precompiled-headers-in-a-project"></a>
-
 ## <a name="using-precompiled-headers-in-a-project"></a>Utilisation d’en-têtes précompilés dans un projet
 
 Les sections précédentes donnent une vue d’ensemble d’en-têtes précompilés : /Yc et/Yu, l’option/Fp et le [hdrstop](../../preprocessor/hdrstop.md) pragma. Cette section décrit une méthode d’utilisation manuelle des options d’en-tête précompilé dans un projet ; Il se termine par un exemple de makefile et le code qu’il gère.
 
 Pour une autre approche pour utilisation manuelle des options d’en-têtes précompilés dans un projet, étudiez l’un des makefiles situés dans le répertoire MFC\SRC créé lors de l’installation par défaut de Visual C++. Ces fichiers Make adopter une approche similaire à celle présentée dans cette section mais tirer le meilleur parti des macros de NMAKE Microsoft Program Maintenance Utility () et offre un meilleur contrôle du processus de génération.
-
-<a name="pch-files-in-the-build-process"></a>
 
 ## <a name="pch-files-in-the-build-process"></a>Fichiers PCH utilisés dans le processus de génération
 
@@ -171,8 +157,8 @@ La base de code d’un projet de logiciel est généralement contenue dans plusi
 
 La figure utilise trois appareils schématique pour montrer le flux du processus de génération. Les rectangles nommés représentent chaque fichier ou une macro ; les trois macros représentent un ou plusieurs fichiers. Les zones ombrées représentent chaque action de compilation ou de liaison. Les flèches indiquent les fichiers et les macros sont combinées au cours de la compilation ou d’un processus de liaison.
 
-![Makefile qui utilise un fichier d’en-tête précompilé](../../build/reference/media/vc30ow1.gif "Structure d’un Makefile qui utilise un fichier d’en-tête précompilé")
-##### <a name="structure-of-a-makefile-that-uses-a-precompiled-header-file"></a>Structure d’un Makefile qui utilise un fichier d’en-tête précompilé
+![Structure d’un makefile qui utilise un fichier d’en-tête précompilé](../../build/reference/media/vc30ow1.gif "Structure d’un makefile qui utilise un fichier d’en-tête précompilé") <br/>
+Structure d’un Makefile qui utilise un fichier d’en-tête précompilé
 
 En haut du diagramme, STABLEHDRS et limite sont des macros NMAKE dans lequel vous ne listez pas susceptible d’avoir besoin de recompilation des fichiers. Ces fichiers sont compilés par la chaîne de commande
 
@@ -187,8 +173,6 @@ Continuer vers le bas le diagramme, APPLIB.obj représente le code de prise en c
 MYAPP.obj représente votre application finale. Il est créé à partir de MYAPP.cpp, les fichiers répertoriés dans la macro UNSTABLEHDRS et code précompilé à partir de l’en-tête précompilé.
 
 Enfin, le fichier exécutable (MYAPP. (EXE) est créé en liant les fichiers répertoriés dans la macro obj (APPLIB.obj et MYAPP.obj).
-
-<a name="sample-makefile-for-pch"></a>
 
 ## <a name="sample-makefile-for-pch"></a>Exemple de makefile pour PCH
 
@@ -254,8 +238,6 @@ NMAKE DEBUG=0
 ```
 
 Pour plus d’informations sur les makefiles, consultez [Référence NMAKE](../../build/nmake-reference.md). Consultez également [Options du compilateur](../../build/reference/compiler-options.md) et [les Options de l’éditeur de liens](../../build/reference/linker-options.md).
-
-<a name="example-code-for-pch"></a>
 
 ## <a name="example-code-for-pch"></a>Exemple de code pour PCH
 

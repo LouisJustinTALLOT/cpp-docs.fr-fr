@@ -1,18 +1,18 @@
 ---
 title: Conteneurs de documents actifs
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - active documents [MFC], containers
 - active document containers [MFC]
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: ec2e4d11e00040cf0b94957db8466d127e0b5420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510836"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176781"
 ---
 # <a name="active-document-containers"></a>Conteneurs de documents actifs
 
@@ -54,7 +54,7 @@ L’objet de frame, les objets de vue et l’objet conteneur peuvent éventuelle
 
 La figure suivante montre les relations conceptuelles entre un conteneur et ses composants (à gauche) et le document actif et ses vues (à droite). Le document actif gère le stockage et les données, et la vue affiche ou imprime ces données. Les interfaces en gras sont celles requises pour la participation du document actif ; ces caractères gras et italiques sont facultatifs. Toutes les autres interfaces sont nécessaires.
 
-![Interfaces de conteneur de document actif](../mfc/media/vc37gj1.gif "vc37gj1")
+![Interfaces de conteneur de document actif](../mfc/media/vc37gj1.gif "les interfaces de conteneur de documents actifs")
 
 Un document qui prend en charge qu’une seule vue peut implémenter des composants de la vue et le document (autrement dit, leurs interfaces correspondantes) sur une seule classe concrète. En outre, un site conteneur qui prend uniquement en charge une seule vue à la fois peut combiner le site de document et le site de vue dans une classe unique site concrète. Objet de frame du conteneur, cependant, doive rester deux choses distincte et composant de document du conteneur est simplement inclus ici pour donner une image complète de l’architecture ; Il n’est pas affectée par l’architecture de relation contenant-contenu de document actif.
 

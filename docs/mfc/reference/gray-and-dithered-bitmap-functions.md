@@ -1,6 +1,6 @@
 ---
 title: fonctions d'image bitmap tramée et grise
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e1d4bd0e851a14680a46d7d6ae79dcf4bd190e4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490894"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176729"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>fonctions d'image bitmap tramée et grise
 
@@ -22,7 +22,7 @@ ms.locfileid: "50490894"
 
 MFC propose deux fonctions qui permettent de donner à une image bitmap l’apparence d’un contrôle désactivé.
 
-![Comparaison des versions d’icônes d’origine et grise](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Comparaison des versions d’icônes d’origine et grise](../../mfc/reference/media/vcgraybitmap.gif "comparaison des versions d’icônes d’origine et grise")
 
 |||
 |-|-|
@@ -33,7 +33,7 @@ MFC propose deux fonctions qui permettent de donner à une image bitmap l’appa
 
 MFC propose également deux fonctions qui permettent de remplacer l’arrière-plan d’une image bitmap par un motif tramé.
 
-![Comparaison des versions d’icônes dégradées et d’origine](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Comparaison des versions d’icônes dégradées et d’origine](../../mfc/reference/media/vcditheredbitmap.gif "comparaison des versions d’icônes dégradées et d’origine")
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ Nouvelle couleur d’arrière-plan (généralement grise, comme COLOR_MENU).
 
 Une image bitmap dessinée avec `AfxDrawGrayBitmap` a l’apparence d’un contrôle désactivé.
 
-![Comparaison des versions d’icônes d’origine et grise](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Comparaison des versions d’icônes d’origine et grise](../../mfc/reference/media/vcgraybitmap.gif "comparaison des versions d’icônes d’origine et grise")
 
 ### <a name="example"></a>Exemple
 
@@ -110,7 +110,7 @@ Nouvelle couleur d’arrière-plan (généralement grise, comme COLOR_MENU).
 
 Une image bitmap copiée avec `AfxGetGrayBitmap` a l’apparence d’un contrôle désactivé.
 
-![Comparaison des versions d’icônes d’origine et grise](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Comparaison des versions d’icônes d’origine et grise](../../mfc/reference/media/vcgraybitmap.gif "comparaison des versions d’icônes d’origine et grise")
 
 ### <a name="example"></a>Exemple
 
@@ -158,7 +158,7 @@ Autres tramage couleur, généralement gris clair (COLOR_MENU).
 
 Le bitmap source est dessiné sur le DC de destination avec deux couleurs (*cr1* et *cr2*) damier en remplaçant d’arrière-plan de la bitmap. L’arrière-plan de la bitmap source est défini comme ses pixels blancs et tous les pixels correspondant à la couleur du pixel dans le coin supérieur gauche de l’image bitmap.
 
-![Comparaison des versions d’icônes dégradées et d’origine](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Comparaison des versions d’icônes dégradées et d’origine](../../mfc/reference/media/vcditheredbitmap.gif "comparaison des versions d’icônes dégradées et d’origine")
 
 ### <a name="example"></a>Exemple
 

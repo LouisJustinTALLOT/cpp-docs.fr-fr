@@ -1,18 +1,18 @@
 ---
 title: Tables des messages dérivées
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662525"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175599"
 ---
 # <a name="derived-message-maps"></a>Tables des messages dérivées
 
@@ -20,7 +20,8 @@ Au cours de la gestion des messages, la vérification d’un message de la class
 
 N’oubliez pas que `CView`, la classe de base de `CMyView`, est dérivé à son tour `CWnd`. Par conséquent `CMyView` *est* un `CView` et *est* un `CWnd`. Chacune de ces classes a sa propre table des messages. La figure « Hiérarchie d’une vue » ci-dessous montre la relation hiérarchique entre les classes, mais gardez à l’esprit qu’un `CMyView` objet est un objet unique qui présente les caractéristiques des trois classes.
 
-![Hiérarchie d’une vue](../mfc/media/vc38621.gif "vc38621") hiérarchie d’une vue
+![Hiérarchie d’une vue](../mfc/media/vc38621.gif "hiérarchie d’une vue") <br/>
+Une hiérarchie d’affichage
 
 Par conséquent, si un message ne peut pas être mis en correspondance dans la classe `CMyView`de table des messages, l’infrastructure recherche également dans la table des messages de sa classe de base immédiate. Le `BEGIN_MESSAGE_MAP` macro au début de la table des messages spécifie deux noms de classe comme arguments :
 

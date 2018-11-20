@@ -1,17 +1,17 @@
 ---
 title: 'Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: 36769fa531decaee81c73a4751f5c6ed24008ffc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525012"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175845"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML
 
@@ -100,7 +100,7 @@ Cette section montre comment utiliser le `HttpRequest` classe dans une applicati
 
 Voici l'application en cours d'exécution :
 
-![L’application Windows Runtime en cours d’exécution](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")
+![L’application Windows Runtime en cours d’exécution](../../parallel/concrt/media/concrt_usingixhr2.png "l’application Windows Runtime en cours d’exécution")
 
 ## <a name="next-steps"></a>Étapes suivantes
 

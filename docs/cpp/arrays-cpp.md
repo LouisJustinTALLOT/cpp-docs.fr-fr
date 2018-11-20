@@ -1,17 +1,17 @@
 ---
 title: Tableaux (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 746a6b5a2122a7ccdd207d278d285af3e448d7ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550668"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176877"
 ---
 # <a name="arrays-c"></a>Tableaux (C++)
 
@@ -75,7 +75,8 @@ int i2[5][7];
 
 Il spécifie un tableau de type **int**, organisé conceptuellement selon une matrice à deux dimensions de cinq lignes et sept colonnes, comme indiqué dans la figure suivante :
 
-![Disposition conceptuelle d’un multiple&#45;tableau unidimensionnel](../cpp/media/vc38rc1.gif "vc38RC1") conceptuel disposition d’un tableau multidimensionnel
+![Disposition conceptuelle d’un multiple&#45;tableau unidimensionnel](../cpp/media/vc38rc1.gif "disposition conceptuelle d’un multiple&#45;tableau unidimensionnel") <br/>
+Disposition conceptuelle d'un tableau multidimensionnel
 
 Dans les déclarations de tableaux multidimensionnels qui ont une liste d’initialiseurs (comme décrit dans [initialiseurs](../cpp/initializers.md)), l’expression constante qui spécifie les limites de la première dimension peut être omise. Exemple :
 

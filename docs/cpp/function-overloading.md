@@ -1,17 +1,17 @@
 ---
 title: Surcharge de fonction
-ms.date: 1/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333369"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176300"
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
 
@@ -280,7 +280,8 @@ La séquence dans laquelle les conversions sont tentées est la suivante :
 
    - La conversion d'un pointeur vers une classe dérivée, vers un pointeur vers une classe de base génère une correspondance d'autant meilleure que la classe de base est proche d'une classe de base directe. Supposons que la hiérarchie de classes s'apparente à celle de l'illustration ci-dessous.
 
-![Préféré conversions](../cpp/media/vc391t1.gif "vc391T1") graphique illustrant les Conversions préféré
+![Graphique des conversions préférées](../cpp/media/vc391t1.gif "graphique des conversions préférées") <br/>
+Graphique illustrant les conversions préférées
 
 La conversion du type `D*` vers le type `C*` est préférable à une conversion du type `D*` vers le type `B*`. De même, la conversion du type `D*` vers le type `B*` est préférable à une conversion du type `D*` vers le type `A*`.
 
@@ -290,7 +291,8 @@ Cette même règle s'applique aux conversions de pointeur vers membre. La conver
 
 La règle précédente s’applique uniquement à un chemin de dérivation donné. Examinez le graphique présenté dans l'illustration ci-dessous.
 
-![Plusieurs&#45;héritage illustrant les conversions préférées](../cpp/media/vc391t2.gif "vc391T2") graphique d’héritages multiples illustrant les Conversions préférées
+![Plusieurs&#45;héritage illustrant les conversions préférées](../cpp/media/vc391t2.gif "plusieurs&#45;héritage illustrant les conversions préférées") <br/>
+Graphique d’héritages multiples illustrant les conversions préférées
 
 La conversion du type `C*` vers le type `B*` est préférable à une conversion du type `C*` vers le type `A*`. Cela provient du fait qu'ils se trouvent dans le même chemin et que `B*` est plus proche. Toutefois, la conversion du type `C*` vers le type `D*` n’est pas préférable à une conversion vers le type `A*`. Il n’existe aucune préférence car les conversions suivent des chemins différents.
 

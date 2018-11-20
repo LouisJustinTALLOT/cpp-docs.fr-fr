@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 49a65680d330752679c86c47c4b142ee3153237c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533794"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693712"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn, fonctions
 
@@ -139,7 +139,7 @@ Les nouveaux processus créés par des appels aux routines `_spawn` ne conserven
 
 Si vous appelez `_spawn` à partir d'une DLL ou d'une application GUI et souhaitez rediriger la sortie vers un canal, deux options sont possibles :
 
-- Utilisez l’API Win32 pour créer un canal, appelez [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944), définissez les valeurs de handle dans la structure de démarrage, puis appelez [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
+- Utilisez l’API Win32 pour créer un canal, appelez [AllocConsole](/windows/console/allocconsole), définissez les valeurs de handle dans la structure de démarrage, puis appelez [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
 
 - Appelez [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md), ce qui crée un canal et appelle l’application à l’aide de **cmd.exe /c** (ou **command.exe /c**).
 

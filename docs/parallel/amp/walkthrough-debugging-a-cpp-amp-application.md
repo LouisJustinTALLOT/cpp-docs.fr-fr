@@ -1,18 +1,18 @@
 ---
 title: 'Procédure pas-à-pas : débogage d’une application C++ AMP'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 4f8cdc315b561b5cbb4538e8486208d6278af9df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579901"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176690"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Procédure pas-à-pas : débogage d’une application C++ AMP
 
@@ -201,7 +201,8 @@ Dans cette procédure, vous allez utiliser le débogueur Windows Local pour vous
 
 4. Définissez des points d’arrêt sur les lignes de code indiqué dans l’illustration suivante (environ 67 de lignes de ligne 70).
 
-     ![Points d’arrêt de l’UC](../../parallel/amp/media/campcpubreakpoints.png "campcpubreakpoints") points d’arrêt de l’UC
+   ![Points d’arrêt de l’UC](../../parallel/amp/media/campcpubreakpoints.png "points d’arrêt de l’UC") <br/>
+   Points d'arrêt d'UC
 
 5. Dans la barre de menus, choisissez **Débogage** > **Démarrer le débogage**.
 
@@ -229,7 +230,8 @@ Cette section montre comment déboguer le code GPU, qui est le code contenu dans
 
 6. Définissez un point d’arrêt au niveau ligne 30, comme indiqué dans l’illustration suivante.
 
-     ![Points d’arrêt GPU](../../parallel/amp/media/campgpubreakpoints.png "campgpubreakpoints") point d’arrêt GPU
+   ![Points d’arrêt GPU](../../parallel/amp/media/campgpubreakpoints.png "des points d’arrêt GPU") <br/>
+   Point d’arrêt GPU
 
 7. Dans la barre de menus, choisissez **Débogage** > **Démarrer le débogage**. Les points d’arrêt dans le code de l’UC à lignes 67 et 70 ne sont pas exécutées au cours de débogage, car ces lignes de code sont exécutées sur le processeur de GPU.
 
@@ -241,7 +243,8 @@ Cette section montre comment déboguer le code GPU, qui est le code contenu dans
 
 2. Ancrer le **Threads GPU** fenêtre en bas de Visual Studio. Choisissez le **commutateur de Thread développez** bouton pour afficher les zones de texte de mosaïque et un thread. Le **Threads GPU** fenêtre affiche le nombre total de threads GPU actifs et bloqués, comme indiqué dans l’illustration suivante.
 
-     ![Fenêtre Threads GPU avec 4 threads actifs](../../parallel/amp/media/campc.png "campc") fenêtre Threads GPU
+   ![Fenêtre Threads GPU avec 4 threads actifs](../../parallel/amp/media/campc.png "fenêtre Threads GPU avec 4 threads actifs") <br/>
+   Fenêtre Threads GPU
 
    Il existe des 313 vignettes alloués pour ce calcul. Chaque vignette contient 32 threads. Étant donné que le débogage GPU local se produit sur un émulateur de logiciel, il existe quatre threads GPU actifs. Les quatre threads exécuter les instructions simultanément et passez ensuite ensemble à l’instruction suivante.
 
@@ -263,13 +266,15 @@ Cette section montre comment déboguer le code GPU, qui est le code contenu dans
 
 3. Assurez-vous que l’option **Threads** est sélectionné dans la liste dans le coin supérieur gauche. Dans l’illustration suivante, le **piles parallèles** fenêtre affiche une vue axée-pile des appels des threads GPU que vous avez vu dans la **Threads GPU** fenêtre.
 
-     ![Fenêtre Piles parallèles avec 4 threads actifs](../../parallel/amp/media/campd.png "campd") fenêtre Piles parallèles
+   ![Fenêtre Piles parallèles avec 4 threads actifs](../../parallel/amp/media/campd.png "fenêtre Piles parallèles avec 4 threads actifs") <br/>
+   Fenêtre Piles parallèles
 
    32 threads est passé de `_kernel_stub` à l’instruction lambda dans le `parallel_for_each` appel de fonction puis au `sum_kernel_tiled` fonction, où la réduction parallèle se produit. 28 hors 32 threads ont depuis progressé à la [tile_barrier::wait](reference/tile-barrier-class.md#wait) instruction et reste bloqué à la ligne 22, tandis que les autres 4 threads restent actifs dans le `sum_kernel_tiled` (fonction) à la ligne 30.
 
    Vous pouvez inspecter les propriétés d’un thread GPU qui sont disponibles dans le **Threads GPU** fenêtre dans le DataTip rich de la **piles parallèles** fenêtre. Pour ce faire, placez le pointeur de la souris sur le frame de pile **sum_kernel_tiled**. L’illustration suivante montre le DataTip.
 
-     ![DataTip pour la fenêtre Piles parallèles](../../parallel/amp/media/campe.png "campe") thread GPU DataTip
+   ![DataTip pour la fenêtre Piles parallèles](../../parallel/amp/media/campe.png "DataTip pour la fenêtre Piles parallèles") <br/>
+   Thread GPU DataTip
 
    Pour plus d’informations sur la **piles parallèles** fenêtre, consultez [à l’aide de la fenêtre Piles parallèles](/visualstudio/debugger/using-the-parallel-stacks-window).
 
@@ -291,7 +296,8 @@ Cette section montre comment déboguer le code GPU, qui est le code contenu dans
 
    Sélectionnez le **localA [localIdx [0]]** en-tête de colonne pour trier la colonne. L’illustration suivante montre les résultats de tri par **localA [localIdx [0]]**.
 
-     ![Fenêtre Espion parallèle avec les résultats triés](../../parallel/amp/media/campf.png "campf") résultats du tri
+   ![Fenêtre Espion parallèle avec les résultats triés](../../parallel/amp/media/campf.png "fenêtre Espion parallèle avec les résultats triés") <br/>
+   Résultats du tri
 
    Vous pouvez exporter le contenu dans le **espion parallèle** fenêtre vers Excel en choisissant le **Excel** bouton, puis en choisissant **ouvrir dans Excel**. Si vous avez Excel est installé sur votre ordinateur de développement, une feuille de calcul Excel qui contient le contenu s’ouvre.
 
@@ -313,7 +319,8 @@ Vous pouvez marquer des threads GPU spécifiques en les marquant dans le **Threa
 
    L’illustration suivante montre les quatre threads avec indicateur actives dans le **Threads GPU** fenêtre.
 
-     ![Fenêtre Threads GPU avec threads avec indicateur](../../parallel/amp/media/campg.png "campg") threads actifs dans la fenêtre Threads GPU
+   ![Fenêtre Threads GPU avec threads avec indicateur](../../parallel/amp/media/campg.png "fenêtre Threads GPU avec threads avec indicateur") <br/>
+   Threads actifs dans la fenêtre Threads GPU
 
    Le **espion parallèle** fenêtre et le DataTip de la **piles parallèles** fenêtre les deux indiquent les threads avec indicateur.
 
@@ -321,8 +328,8 @@ Vous pouvez marquer des threads GPU spécifiques en les marquant dans le **Threa
 
    Choisissez le **afficher uniquement éléments avec indicateur** bouton sur n’importe quel de windows ou sur le **emplacement de débogage** barre d’outils. L’illustration suivante montre le **afficher uniquement éléments avec indicateur** bouton sur le **emplacement de débogage** barre d’outils.
 
-     ![Barre d’outils emplacement avec icône Afficher uniquement avec indicateur débogage](../../parallel/amp/media/camph.png "camph")
-**afficher uniquement éléments avec indicateur** bouton
+   ![Barre d’outils emplacement avec icône Afficher uniquement avec indicateur débogage](../../parallel/amp/media/camph.png "barre d’outils emplacement de débogage avec icône Afficher uniquement avec indicateur") <br/>
+   **Afficher uniquement éléments avec indicateur** bouton
 
    Maintenant le **Threads GPU**, **espion parallèle**, et **piles parallèles** fenêtres affichent uniquement les threads avec indicateur.
 
@@ -340,7 +347,8 @@ Vous pouvez figer (suspendre) et libérer (reprendre) GPU des threads à partir 
 
    L’illustration suivante de la **Threads GPU** fenêtre montre que tous les quatre threads sont figées.
 
-     ![Fenêtres Threads GPU indiquant les threads figés](../../parallel/amp/media/campk.png "campk") figé des threads le **Threads GPU** fenêtre
+   ![Fenêtres Threads GPU indiquant les threads figés](../../parallel/amp/media/campk.png "fenêtres Threads GPU indiquant les threads figés") <br/>
+   Figé des threads le **Threads GPU** fenêtre
 
    De même, le **espion parallèle** fenêtre montre que tous les quatre threads sont figées.
 
@@ -356,7 +364,8 @@ Vous pouvez figer (suspendre) et libérer (reprendre) GPU des threads à partir 
 
    Les threads dans le **Threads GPU** fenêtre sont regroupées par adresse. L’adresse correspond à l’instruction dans le code machine où se trouve chaque groupe de threads. 24 threads sont à la ligne 22 où le [tile_barrier::wait, méthode](reference/tile-barrier-class.md#wait) est exécutée. 12 threads sont au niveau de l’instruction de la barrière à la ligne 32. Quatre de ces threads sont signalés. Huit threads sont sur le point d’arrêt à la ligne 30. Quatre de ces threads sont figées. L’illustration suivante montre les threads groupés dans le **Threads GPU** fenêtre.
 
-     ![Fenêtre Threads GPU avec threads groupés par adresse](../../parallel/amp/media/campl.png "campl") regroupés des threads dans le **Threads GPU** fenêtre
+   ![Fenêtre Threads GPU avec threads groupés par adresse](../../parallel/amp/media/campl.png "fenêtre Threads GPU avec threads groupés par adresse") <br/>
+   Regroupement des threads dans le **Threads GPU** fenêtre
 
 2. Vous pouvez également effectuer la **Group By** opération en ouvrant le menu contextuel de la grille de données de la **espion parallèle** fenêtre, en choisissant **Group By**, puis en choisissant le menu élément qui correspond à la façon dont vous souhaitez regrouper les threads.
 

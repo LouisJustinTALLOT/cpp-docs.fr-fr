@@ -1,6 +1,6 @@
 ---
 title: Accesseurs et jeux de lignes
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651254"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175711"
 ---
 # <a name="accessors-and-rowsets"></a>Accesseurs et jeux de lignes
 
@@ -34,7 +34,7 @@ Tous les accesseurs dérivent [CAccessorBase](../../data/oledb/caccessorbase-cla
 
 La figure suivante montre les types d’accesseurs.
 
-![Types d’accesseurs](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+![Types d’accesseurs](../../data/oledb/media/vcaccessortypes.gif "types d’accesseurs")<br/>
 Classes d’accesseurs
 
 - [CAccessor](../../data/oledb/caccessor-class.md) utiliser cet accesseur lorsque vous connaissez la structure de la source de la base de données au moment du design. `CAccessor` lie statiquement un enregistrement de base de données qui contient la mémoire tampon, à la source de données.
@@ -63,7 +63,7 @@ Les modèles OLE DB prennent en charge trois types d’ensembles de lignes (voir
 
 La figure suivante montre les types de l’ensemble de lignes.
 
-![Graphique de RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+![Graphique de RowsetType](../../data/oledb/media/vcrowsettypes.gif "graphique de RowsetType")<br/>
 Classes de l’ensemble de lignes
 
 [Ensembles de lignes de schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) n’accéder aux données dans les données stocker, mais à la place accéder aux informations sur le magasin de données, appelée métadonnées. Ensembles de lignes de schéma sont généralement utilisés dans les situations dans lesquelles la structure de base de données n’est pas connue au moment de la compilation et doit être obtenue en cours d’exécution.

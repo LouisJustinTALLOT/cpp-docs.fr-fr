@@ -1,14 +1,14 @@
 ---
 title: Système de type C++ (Modern C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521090"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176339"
 ---
 # <a name="c-type-system-modern-c"></a>Système de type C++ (Modern C++)
 
@@ -59,7 +59,7 @@ Les types fondamentaux sont identifiés par le compilateur, qui dispose de règl
 
 L'illustration suivante montre les tailles relatives des types intégrés :
 
-![Créé de la taille en octets de&#45;dans les types](../cpp/media/built-intypesizes.png "Built-inTYpeSizes")
+![Généré de la taille en octets de&#45;dans les types](../cpp/media/built-intypesizes.png "généré de la taille en octets de&#45;dans les types")
 
 Le tableau suivant répertorie les types fondamentaux les plus souvent utilisés :
 
@@ -70,13 +70,13 @@ Le tableau suivant répertorie les types fondamentaux les plus souvent utilisés
 |bool|1 octet|Représente des valeurs qui peuvent être true ou false.|
 |char|1 octet|À utiliser pour les caractères ASCII dans les chaînes de style C plus anciennes ou les objets std::string qui ne devront jamais être convertis en UNICODE.|
 |wchar_t|2 octets|Représente les valeurs à caractères « larges » qui peuvent être encodées au format UNICODE (UTF-16 sur Windows, mais peut varier sur les autres systèmes d'exploitation). Type de caractère utilisé dans les chaînes de type `std::wstring`.|
-|unsigned char|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|
+|non signé&nbsp;char|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|
 |unsigned int|4 octets|Option par défaut pour les bits indicateurs.|
 |long long|8 octets|Représente des valeurs entières très grandes.|
 
 ## <a name="the-void-type"></a>Type void
 
-Le **void** type est un type spécial ; vous ne pouvez pas déclarer une variable de type **void**, mais vous pouvez déclarer une variable de type `void *` (pointeur vers **void**), qui est parfois nécessaire lors de l’allocation de mémoire (non typé) brute. Toutefois, des pointeurs vers **void** ne sont pas de type sécurisé et généralement leur utilisation est fortement déconseillée en C++ moderne. Dans une déclaration de fonction, un **void** valeur de retour signifie que la fonction ne retourne pas de valeur ; il s’agit d’une utilisation courante et acceptable de **void**. Tandis que les fonctions de langue requise C qui ont des paramètres nuls pour déclarer **void** dans la liste de paramètres, par exemple, `fou(void)`, cette pratique est déconseillée en C++ moderne et doit être déclarée `fou()`. Pour plus d’informations, consultez [les Conversions de Type et sécurité de Type](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Le **void** type est un type spécial ; vous ne pouvez pas déclarer une variable de type **void**, mais vous pouvez déclarer une variable de type __void \*__  (pointeur vers **void**), ce qui est parfois nécessaire lors de l’allocation de mémoire (non typé) brute. Toutefois, des pointeurs vers **void** ne sont pas de type sécurisé et généralement leur utilisation est fortement déconseillée en C++ moderne. Dans une déclaration de fonction, un **void** valeur de retour signifie que la fonction ne retourne pas de valeur ; il s’agit d’une utilisation courante et acceptable de **void**. Tandis que les fonctions de langue requise C qui ont des paramètres nuls pour déclarer **void** dans la liste de paramètres, par exemple, `fou(void)`, cette pratique est déconseillée en C++ moderne et doit être déclarée `fou()`. Pour plus d’informations, consultez [les Conversions de Type et sécurité de Type](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>qualificateur de type const
 

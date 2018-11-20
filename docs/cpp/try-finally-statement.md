@@ -1,6 +1,6 @@
 ---
 title: try-finally, instruction
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326916"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175919"
 ---
 # <a name="try-finally-statement"></a>try-finally, instruction
 
@@ -68,7 +68,8 @@ Si une exception se produit dans le **__try** bloc, le système d’exploitation
 
 Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à la fonction D, comme indiqué dans l'illustration suivante. Chaque fonction a un gestionnaire de terminaisons. Si une exception est levée dans la fonction D et gérée dans A, les gestionnaires de terminaisons sont appelés dans l'ordre suivant à mesure que le système déroule la pile : D, C, B.
 
-![Commande d’arrêt&#45;l’exécution du gestionnaire](../cpp/media/vc38cx1.gif "vc38CX1") ordre d’exécution de gestionnaire de terminaisons
+![Commande d’arrêt&#45;l’exécution du gestionnaire](../cpp/media/vc38cx1.gif "commande d’arrêt&#45;l’exécution du Gestionnaire") <br/>
+Fin de l'ordre d'exécution du gestionnaire
 
 > [!NOTE]
 > Le comportement de try-finally est différent d’autres langages qui prennent en charge l’utilisation de **enfin**, tel que c#.  Un seul **__try** peut-être, mais pas les deux de **__finally** et **__except**.  Si les deux doivent être utilisés conjointement, une instruction try-except externe doit entourer l'instruction try-finally interne.  Les règles qui spécifient le moment d'exécution de chaque blocs sont également différentes.

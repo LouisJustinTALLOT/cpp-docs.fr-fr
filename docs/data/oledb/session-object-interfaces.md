@@ -1,6 +1,6 @@
 ---
 title: Interfaces de l'objet session
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - session objects [OLE DB]
 - session objects [OLE DB], interfaces
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 6b4748b804572c72b75f63b8ea2473818bdac989
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 284f93d96b974a616e957a65ef0c8aa39b33a564
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556619"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176898"
 ---
 # <a name="session-object-interfaces"></a>Interfaces de l'objet session
 
@@ -42,7 +42,7 @@ Le tableau suivant montre les interfaces obligatoires et facultatives définies 
 
 L’objet session crée un objet d’ensemble de lignes. Si le fournisseur prend en charge les commandes, la session crée également un objet de commande (`CCommand`, implémentation OLE DB `TCommand`). Implémente l’objet de commande le `ICommand` interface et utilise le `ICommand::Execute` méthode à exécuter des commandes sur l’ensemble de lignes, comme indiqué dans l’illustration suivante.
 
-![Diagramme conceptuel des fournisseurs](../../data/oledb/media/vc4u551.gif "vc4u551")
+![Diagramme conceptuel des fournisseurs](../../data/oledb/media/vc4u551.gif "diagramme conceptuel des fournisseurs")
 
 ## <a name="see-also"></a>Voir aussi
 

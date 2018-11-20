@@ -1,17 +1,17 @@
 ---
 title: Contrôle d'accès aux membres (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: ee4e9d89878aab4be2e4daf45525f9e951d214f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611417"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176223"
 ---
 # <a name="member-access-control-c"></a>Contrôle d'accès aux membres (C++)
 
@@ -234,7 +234,8 @@ Dans l'exemple précédent, l'appel de la fonction virtuelle `GetState` à l'aid
 
 Dans les treillis à héritage multiple impliquant des classes de base virtuelles, un nom donné est accessible via plusieurs chemins. Comme un contrôle d’accès différent peut être appliqué le long de ces différents chemins, le compilateur choisit le chemin qui fournit le plus souvent l’accès. Voir l'illustration suivante.
 
-![Accès avec les chemins d’accès d’un graphique d’héritage](../cpp/media/vc38v91.gif "vc38V91") le long de chemins d’accès d’un graphique d’héritage
+![Accès avec les chemins d’accès d’un graphique d’héritage](../cpp/media/vc38v91.gif "accès le long des chemins d’accès d’un graphique d’héritage") <br/>
+Chemins d’accès d’un graphique d’héritage
 
 Dans cette figure, un nom déclaré dans la classe `VBase` est toujours accessible via la classe `RightPath`. Le chemin d’accès correct est plus accessible car `RightPath` déclare `VBase` en tant que classe de base publique, tandis que `LeftPath` déclare `VBase` comme classe privée.
 

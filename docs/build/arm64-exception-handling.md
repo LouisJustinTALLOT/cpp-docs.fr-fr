@@ -1,12 +1,12 @@
 ---
 title: La gestion des exceptions ARM64
-ms.date: 07/11/2018
-ms.openlocfilehash: 5189c399a4cbff071d2ec846008229ba76306882
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.date: 11/19/2018
+ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333587"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176677"
 ---
 # <a name="arm64-exception-handling"></a>La gestion des exceptions ARM64
 

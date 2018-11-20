@@ -1,16 +1,16 @@
 ---
 title: 'Procédure pas à pas : création des agents de flux de données'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-ms.openlocfilehash: 35532fd01259bcbf64a70aaca16c621f875bb43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26ea7d520c3dbc4935699e5d52871d21739a3d88
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487644"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176079"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Procédure pas à pas : création des agents de flux de données
 
@@ -84,7 +84,7 @@ L’agent de flux de données fonctionne en créant un réseau de mémoires tamp
 
 Le diagramme suivant illustre le réseau de flux de données complète pour la `dataflow_agent` classe :
 
-![Le réseau de flux de données](../../parallel/concrt/media/concrt_dataflow.png "concrt_dataflow")
+![Le réseau de flux de données](../../parallel/concrt/media/concrt_dataflow.png "le réseau de flux de données")
 
 Le tableau ci-dessous décrit les membres du réseau.
 

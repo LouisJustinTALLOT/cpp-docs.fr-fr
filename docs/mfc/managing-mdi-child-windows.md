@@ -1,6 +1,6 @@
 ---
 title: Gérer les fenêtres enfants MDI
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - MDICLIENT
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: 2055c215392c6805791de729ff6ab8c6a9057308
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629409"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176794"
 ---
 # <a name="managing-mdi-child-windows"></a>Gérer les fenêtres enfants MDI
 
@@ -25,7 +25,8 @@ La fenêtre frame principale MDI (une par application) contient une fenêtre enf
 
 Dans une fenêtre frame MDI, la fenêtre frame gère la fenêtre MDICLIENT, il conjointement avec les barres de contrôles. Cette dernière, à son tour, gère toutes les fenêtres de frame enfant MDI. La figure suivante montre la relation entre une fenêtre frame MDI, sa fenêtre MDICLIENT et ses fenêtres enfants du frame de document.
 
-![Fenêtres enfants dans une fenêtre frame MDI](../mfc/media/vc37gb1.gif "vc37gb1") Windows de Frame MDI et enfants
+![Fenêtres enfants dans une fenêtre frame MDI](../mfc/media/vc37gb1.gif "fenêtres enfants dans une fenêtre frame MDI") <br/>
+Enfants et Windows de Frame MDI
 
 Une fenêtre frame MDI fonctionne également conjointement avec la fenêtre enfant MDI en cours, le cas échéant. La fenêtre frame MDI délègue les messages de commande à l’enfant MDI avant d’essayer de les gérer lui-même.
 

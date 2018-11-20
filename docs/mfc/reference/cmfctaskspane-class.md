@@ -1,6 +1,6 @@
 ---
 title: Cmfctaskspane, classe
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563655"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176807"
 ---
 # <a name="cmfctaskspane-class"></a>Cmfctaskspane, classe
 
@@ -350,11 +350,11 @@ Pour utiliser le contrôle `CMFCTasksPane` dans votre application, procédez com
 
 L’illustration suivante représente un contrôle de volet de tâches standard. Le premier groupe est un *spéciale* groupe et sa légende est une couleur plus sombre. Le troisième groupe est réduit. Le dernier groupe est aligné au bas du volet des tâches et n’a pas de légende ; la dernière tâche du groupe est une simple étiquette :
 
-![Exemple de volet de tâches](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")
+![Exemple de volet de tâches](../../mfc/reference/media/nexttaskpane.png "exemple du volet Office")
 
 Vous pouvez personnaliser l’apparence du volet des tâches en ajustant les marges et les décalages. L'illustration suivante permet de mieux comprendre la fonction de ces variables :
 
-![Groupe de tâches personnalisées](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")
+![Groupe de tâches personnalisées](../../mfc/reference/media/nexttaskgrpcustom.png "groupe de tâches personnalisée")
 
 ## <a name="example"></a>Exemple
 

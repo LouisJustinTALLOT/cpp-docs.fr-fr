@@ -1,16 +1,16 @@
 ---
 title: Personnalisation du clavier et de la souris
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 8bb685974ed4020611ffe275ba504951d132afac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487385"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175677"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personnalisation du clavier et de la souris
 
@@ -22,7 +22,8 @@ Dans le **personnalisation** boîte de dialogue, l’utilisateur peut modifier l
 
 L’illustration suivante montre le **clavier** onglet de la **personnalisation** boîte de dialogue.
 
-![Onglet clavier de la boîte de dialogue Personnalisation](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab") onglet Personnalisation du clavier
+![Onglet clavier de la boîte de dialogue Personnalisation](../mfc/media/mfcnextkeyboardtab.png "onglet clavier de la boîte de dialogue Personnalisation") <br/>
+Onglet Personnalisation du clavier
 
 L'utilisateur interagit avec l'onglet Clavier pour affecter un ou plusieurs raccourcis clavier à une commande. Les commandes disponibles sont répertoriées sur le côté gauche de l'onglet. L'utilisateur peut choisir n'importe quelle commande disponible dans le menu. Seules les commandes de menu peuvent être associées à un raccourci clavier. Une fois que l’utilisateur entre un nouveau raccourci, le **affecter** bouton devient disponible. Lorsque l'utilisateur clique sur ce bouton, l'application associe la commande sélectionnée à ce raccourci.
 
@@ -36,7 +37,8 @@ Si vous utilisez l'Assistant pour créer votre application, il initialisera le g
 
 L’illustration suivante montre le **souris** onglet de la **personnalisation** boîte de dialogue.
 
-![Onglet de la souris dans la boîte de dialogue Personnaliser](../mfc/media/mfcnextmousetab.png "mfcnextmousetab") onglet de personnalisation de la souris
+![Onglet de la souris dans la boîte de dialogue Personnaliser](../mfc/media/mfcnextmousetab.png "onglet de la souris dans la boîte de dialogue Personnaliser") <br/>
+Onglet de personnalisation de la souris
 
 L'utilisateur interagit avec cet onglet pour assigner une commande de menu à l'action de double-clic de la souris. L'utilisateur sélectionne une vue sur le côté gauche de la fenêtre, puis utilise les contrôles à droite pour associer une commande à l'action de double-clic. Une fois que l’utilisateur clique sur **fermer**, l’application exécute la commande associée à chaque fois que l’utilisateur double-clique n’importe où dans la vue.
 
