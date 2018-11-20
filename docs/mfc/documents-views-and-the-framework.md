@@ -1,6 +1,6 @@
 ---
 title: Documents, vues et le Framework
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662369"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175754"
 ---
 # <a name="documents-views-and-the-framework"></a>Documents, vues et le Framework
 
@@ -59,7 +59,8 @@ Les objets principaux dans une application active sont :
 
 Dans une application active, ces objets répondent en coopération aux actions de l'utilisateur, liés par des commandes et d'autres messages. Un objet d'application gère un ou plusieurs modèles de document. Chaque modèle de document crée et gère un ou plusieurs documents (selon que l'application est de type SDI ou MDI). L'utilisateur voit et manipule un document dans une vue contenue dans une fenêtre frame. L'illustration suivante montre les relations entre les objets pour une application SDI.
 
-![Objets dans une application SDI en cours d’exécution](../mfc/media/vc386v1.gif "vc386v1") objets dans une Application SDI en cours d’exécution
+![Objets dans une application SDI en cours d’exécution](../mfc/media/vc386v1.gif "objets dans une application SDI en cours d’exécution") <br/>
+Objets dans une application SDI en cours d'exécution
 
 Le reste de cette famille d'articles explique comment les outils de framework, l'Assistant Application MFC et les éditeurs de ressources créent ces objets, comment ils fonctionnement conjointement et comment les utiliser dans votre programmation. Documents, vues et fenêtres frame sont présentés plus en détail dans [objets fenêtres](../mfc/window-objects.md) et [Architecture Document/vue](../mfc/document-view-architecture.md).
 

@@ -1,6 +1,6 @@
 ---
 title: CMFCPropertySheet, classe
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531610"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176404"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet, classe
 
@@ -112,15 +112,15 @@ Pour utiliser la classe `CMFCPropertySheet` dans votre application, procédez co
 
 L'illustration suivante représente une feuille de propriétés dont le style est celui d'une barre d'outils Microsoft Outlook incorporée. La barre d'outils Outlook s'affiche sur le côté gauche de la feuille de propriétés.
 
-![Des couleurs CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![Des couleurs CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "des couleurs CMFCPropertySheet")
 
 L’illustration suivante représente une feuille de propriétés qui contient un [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) objet. Cet objet est une feuille de propriétés dont le style est celui d'une feuille de propriétés de contrôles communs standard.
 
-![Contrôles de liste et de propriété CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![Contrôles de liste et de propriété CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "contrôles de liste et de propriété CMFCPropertySheet")
 
 L’illustration suivante représente une feuille de propriétés dont le style est celui d’un contrôle d’arborescence.
 
-![Arborescence de propriétés](../../mfc/reference/media/proptree.png "proptree")
+![Arborescence de la propriété](../../mfc/reference/media/proptree.png "arborescence de propriété")
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 

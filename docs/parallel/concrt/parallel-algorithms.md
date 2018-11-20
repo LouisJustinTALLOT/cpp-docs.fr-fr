@@ -1,15 +1,15 @@
 ---
 title: Algorithmes parallèles
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: 0ad7f67016dcb7d4638de0f159feb23cd1282b19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445589"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176443"
 ---
 # <a name="parallel-algorithms"></a>Algorithmes parallèles
 
@@ -247,7 +247,7 @@ Le tableau suivant récapitule les propriétés importantes des trois algorithme
 
 L’illustration suivante montre les propriétés importantes des trois algorithmes de tri parallèle plus graphiquement.
 
-![Comparaison des algorithmes de tri](../../parallel/concrt/media/concrt_parallel_sorting.png "concrt_parallel_sorting")
+![Comparaison des algorithmes de tri](../../parallel/concrt/media/concrt_parallel_sorting.png "comparaison des algorithmes de tri")
 
 Ces algorithmes de tri parallèle suivent les règles de l’annulation et la gestion des exceptions. Pour plus d’informations sur l’annulation et la gestion des exceptions dans le Runtime d’accès concurrentiel, consultez [annulation d’algorithmes parallèles](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms) et [gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 

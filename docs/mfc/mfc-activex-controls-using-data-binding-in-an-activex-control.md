@@ -1,6 +1,6 @@
 ---
 title: 'Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518487"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175806"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX
 
@@ -30,7 +30,8 @@ Une des utilisations plus puissantes de contrôles ActiveX est la liaison de don
 
 Cet article traite du côté du contrôle de votre tâche. Mise en œuvre les interactions de liaison de données avec la base de données est la responsabilité du conteneur de contrôle. Comment gérer les interactions de la base de données dans votre conteneur est dépasse le cadre de cette documentation. Comment vous préparez le contrôle pour la liaison de données est expliquée dans le reste de cet article.
 
-![Diagramme conceptuel d’un data&#45;contrôle lié aux](../mfc/media/vc374v1.gif "vc374v1") diagramme conceptuel d’un contrôle lié aux données
+![Diagramme conceptuel d’un data&#45;contrôle lié aux](../mfc/media/vc374v1.gif "diagramme conceptuel de données&#45;contrôle dépendant") <br/>
+Diagramme conceptuel d’un contrôle lié aux données
 
 Le `COleControl` classe fournit deux fonctions membres qui rendent un implémentation du processus de liaison de données. La première fonction [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), est utilisé pour demander l’autorisation de modifier la valeur de propriété. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), la deuxième fonction est appelée une fois que la valeur de propriété a été modifiée.
 

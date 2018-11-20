@@ -1,6 +1,6 @@
 ---
-title: Effectuer un cast
-ms.date: 11/04/2016
+title: Cast
+ms.date: 11/19/2018
 helpviewer_keywords:
 - casting [C++]
 - coercion [C++]
@@ -10,24 +10,26 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: eb309319a4af6d604d8558552ce313ba1d0fb629
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02ade663ee92d3a301fda95bb385c3ffa48ead12
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560795"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175546"
 ---
-# <a name="casting"></a>Effectuer un cast
+# <a name="casting"></a>Cast
 
 Le langage C++ prévoit que si une classe est dérivée d'une classe de base contenant des fonctions virtuelles, un pointeur vers ce type de classe de base peut être utilisé pour appeler les implémentations des fonctions virtuelles résidant dans l'objet classe dérivé. Une classe contenant des fonctions virtuelles est parfois appelée une classe polymorphe.
 
 Étant donné qu'une classe dérivée contient les définitions de toutes les classes de base dont elle est dérivée, il est possible de convertir un pointeur qui va jusqu'en haut de la hiérarchie de classes en l'une de ces classes de base. S'il existe un pointeur vers une classe de base, il est possible de le convertit jusqu'en bas de la hiérarchie. Cela est possible si l'objet qui est pointé est réellement d'un type dérivé de la classe de base. Dans ce cas, l'objet lui-même est appelé l'objet complet. On dit que le pointeur vers la classe de base pointe vers un sous-objet de l'objet complet. Considérons, par exemple, la hiérarchie de classe représentée dans l'illustration ci-dessous.
 
-![Hiérarchie de classes](../cpp/media/vc38zz1.gif "vc38ZZ1") hiérarchie de classes
+![Hiérarchie de classes](../cpp/media/vc38zz1.gif "hiérarchie de classes") <br/>
+Hiérarchie de classes
 
 Un objet de type `C` peut être visualisé comme indiqué dans l'illustration ci-dessous.
 
-![Classe C avec sub&#45;objets B et A](../cpp/media/vc38zz2.gif "vc38ZZ2") classe C avec sous-objet B et un sous-objet
+![Classe C avec sub&#45;objets B et A](../cpp/media/vc38zz2.gif "classe C avec sub&#45;objets B et A") <br/>
+Classe C avec les sous-objets B et A
 
 Avec une instance de classe `C`, il y a un sous-objet `B` et un sous-objet `A`. L'instance de `C`, avec les sous-objets `A` et `B` forme l'objet complet.
 

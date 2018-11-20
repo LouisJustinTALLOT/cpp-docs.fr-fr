@@ -1,17 +1,17 @@
 ---
 title: Attributs de C++ pour COM et .NET
 ms.custom: index-page
-ms.date: 10/02/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589278"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175767"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributs de C++ pour COM et .NET
 
@@ -55,7 +55,7 @@ Comme précédemment, lorsque le projet est généré, le compilateur analyse ch
 
 La figure suivante montre la relation entre le compilateur et le fournisseur d’attributs.
 
-![Communication des attributs de composant](../media/vccompattrcomm.gif "vcCompAttrComm")
+![Communication des attributs de composant](../media/vccompattrcomm.gif "communication des attributs de composant")
 
 > [!NOTE]
 > L’utilisation d’attribut ne modifie pas le contenu du fichier source. Le seul moment où que le code généré d’attribut est visible est au cours de sessions de débogage. En outre, pour chaque fichier source dans le projet, vous pouvez générer un fichier texte qui affiche les résultats de la substitution de l’attribut. Pour plus d’informations sur cette procédure, consultez [/Fx (fusionner le Code injecté)](../../build/reference/fx-merge-injected-code.md) et [débogage de Code injecté](/visualstudio/debugger/how-to-debug-injected-code).

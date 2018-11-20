@@ -1,24 +1,24 @@
 ---
 title: Concepteur de ruban (MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - vc.editors.ribbon.F1
 helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 3b28783cb12aeeb03bf1687e5922b276af0d52c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521396"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175832"
 ---
 # <a name="ribbon-designer-mfc"></a>Concepteur de ruban (MFC)
 
 Le Concepteur de ruban permet de créer et de personnaliser des rubans dans les applications MFC. Un ruban est un élément d'interface utilisateur (IU) qui organise les commandes en groupes logiques. Ces groupes apparaissent sous des onglets distincts dans une bande transversale située dans la partie supérieure de la fenêtre. Le ruban remplace la barre de menus et les barres d'outils. Un ruban peut considérablement améliorer la convivialité d'une l'application. Pour plus d’informations, consultez [rubans](/windows/desktop/uxguide/cmd-ribbons). L'illustration suivante représente un ruban.
 
-![Contrôle des ressources de ruban MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")
+![Contrôle des ressources de ruban MFC](../mfc/media/ribbon_no_callouts.png "contrôle de ressource de ruban MFC")
 
 Dans les versions antérieures de Visual Studio, les rubans devaient être créés en écrivant du code qui utilise les classes de ruban MFC telles que [classe CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md). Dans Visual Studio 2010 et versions ultérieures, le Concepteur de ruban fournit une méthode alternative pour générer des rubans. Dans un premier temps, il convient de créer et de personnaliser un ruban en tant que ressource. Chargez ensuite la ressource de ruban à partir du code de l'application MFC. Vous pouvez même utiliser les ressources de ruban et les classes de ruban MFC conjointement. Par exemple, vous pouvez créer une ressource de ruban et puis ajouter par programmation des éléments à celui-ci lors de l’exécution à l’aide de code.
 
@@ -71,7 +71,7 @@ Pour ouvrir un ruban dans le Concepteur de ruban, double-cliquez sur la ressourc
 
 L'illustration suivante représente les différents composants du Concepteur de ruban.
 
-![Concepteur de ruban MFC](../mfc/media/ribbon_designer.png "ribbon_designer")
+![Concepteur de ruban MFC](../mfc/media/ribbon_designer.png "Concepteur de ruban MFC")
 
 - **Boîte à outils :** contient des contrôles qui peuvent être déplacés dans l’aire du concepteur.
 
@@ -95,7 +95,7 @@ Les rubriques suivantes expliquent comment utiliser les fonctionnalités du Conc
 
 ## <a name="definitions-of-ribbon-elements"></a>Définition des éléments de ruban
 
-![Ruban MFC](../mfc/media/ribbon.png "ruban")
+![Ruban MFC](../mfc/media/ribbon.png "ruban MFC")
 
 - **Bouton d’application :** le bouton qui apparaît dans l’angle supérieur gauche d’un ruban. Le bouton d'application remplace le menu Fichier et est visible même quand le ruban est réduit. Quand vous cliquez sur ce bouton, vous obtenez un menu qui contient une liste de commandes.
 

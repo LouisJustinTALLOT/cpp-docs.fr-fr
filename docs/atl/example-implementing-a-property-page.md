@@ -1,15 +1,15 @@
 ---
 title: Implémentation d’une Page de propriétés (ATL)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 6eb65ca3ddff79262c2f2b53d84d2f964f273c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669090"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176469"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemple : Implémentation d’une Page de propriétés
 
@@ -41,7 +41,7 @@ Pour terminer cet exemple, vous allez :
 
 Tout d’abord, créez un nouveau projet ATL pour un serveur DLL appelé `ATLPages7`. Utilisez maintenant le [Assistant Page de propriétés ATL](../atl/reference/atl-property-page-wizard.md) pour générer une page de propriétés. Donnez à la page de propriétés un **nom court** de **DocProperties** puis basculez vers le **chaînes** page pour définir les éléments spécifiques de page de propriété comme indiqué dans le tableau ci-dessous.
 
-|Élément|Valeur|
+|Élément|Value|
 |----------|-----------|
 |Titre|TextDocument|
 |Chaîne doc|Propriétés VCUE TextDocument|
@@ -58,7 +58,7 @@ Cliquez sur **OK** pour que l’Assistant de générer votre page de propriété
 
 Maintenant que votre page de propriétés a été généré, vous devez ajouter quelques contrôles à la ressource de boîte de dialogue représentant votre page. Ajouter une zone d’édition, un contrôle de texte statique et une case à cocher et définissez leurs ID comme indiqué ci-dessous :
 
-![Modification d’une ressource de boîte de dialogue](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")
+![Modification d’une ressource de boîte de dialogue](../atl/media/ppgresourcelabeled.gif "modification d’une ressource de boîte de dialogue")
 
 Ces contrôles doit être utilisées pour afficher le nom de fichier du document et son état en lecture seule.
 
@@ -127,7 +127,7 @@ Pour afficher cette page, vous devez créer un objet d’assistance simple. L’
 
 Utiliser le [boîte de dialogue Ajouter une classe](../ide/add-class-dialog-box.md) et [Assistant objet Simple ATL](../atl/reference/atl-simple-object-wizard.md) pour générer une nouvelle classe et utilisez `Helper` comme son nom court. Une fois créé, ajoutez une méthode comme indiqué dans le tableau ci-dessous.
 
-|Élément|Valeur|
+|Élément|Value|
 |----------|-----------|
 |Nom de la méthode|`ShowPage`|
 |Paramètres|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|

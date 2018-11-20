@@ -1,17 +1,17 @@
 ---
 title: Architecture des modèles du fournisseur OLE DB
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 6256328caa11d188f3a50445f62df096b6f6acb3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 099c29e141d721645c416e60be240c22d22cd869
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557035"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175637"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architecture des modèles du fournisseur OLE DB
 
@@ -19,7 +19,7 @@ ms.locfileid: "51557035"
 
 L’architecture du fournisseur OLE DB inclut un objet de source de données et une ou plusieurs sessions. L’objet de source de données est l’objet initial que chaque fournisseur doit instancier. Quand une application consommateur a besoin de données, il crée l’objet de source de données pour démarrer le fournisseur. L’objet de source de données crée un objet session (à l’aide de la `IDBCreateSession` interface) via lequel le consommateur se connecte à l’objet de source de données. Les programmeurs ODBC peuvent considérer que l’objet de source de données comme étant équivalent à la `HENV` et l’objet de session comme étant équivalents à le `HDBC`.
 
-![Architecture du fournisseur](../../data/oledb/media/vc4twb1.gif "vc4twb1")
+![Architecture du fournisseur](../../data/oledb/media/vc4twb1.gif "architecture du fournisseur")
 
 Avec les fichiers sources créés par le **Assistant fournisseur OLE DB**, les modèles OLE DB implémentent un objet de source de données. Une session est un objet qui correspond à la norme OLE DB `TSession`.
 

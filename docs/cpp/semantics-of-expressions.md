@@ -1,18 +1,18 @@
 ---
 title: Sémantique des expressions
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490959"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175782"
 ---
 # <a name="semantics-of-expressions"></a>Sémantique des expressions
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![Ordre d’évaluation dans une expression](../cpp/media/vc38zv1.gif "vc38ZV1") ordre Expression-évaluation
+![Ordre d’évaluation dans une expression](../cpp/media/vc38zv1.gif "ordre d’évaluation dans une expression") <br/>
+Ordre expression-évaluation
 
 L'ordre dans lequel l'expression affichée dans l'illustration ci-dessus est évaluée est déterminé par la priorité et l'associativité des opérateurs :
 
@@ -55,7 +56,8 @@ L'ordre dans lequel l'expression affichée dans l'illustration ci-dessus est év
 
 Lorsque les parenthèses sont utilisées pour grouper les sous-expressions, elles modifient la priorité et également l'ordre dans lequel l'expression est évaluée, comme indiqué dans l'illustration suivante.
 
-![Ordre d’évaluation d’expression avec parenthèses](../cpp/media/vc38zv2.gif "vc38ZV2") ordre Expression-évaluation avec parenthèses
+![Ordre d’évaluation d’expression avec parenthèses](../cpp/media/vc38zv2.gif "ordre d’évaluation d’expression avec parenthèses") <br/>
+Ordre expression-évaluation avec parenthèses
 
 Les expressions telles qu'elles existent dans l'illustration ci-dessus sont purement évaluées pour leurs effets secondaires, dans ce cas pour transférer des informations au périphérique de sortie standard.
 
@@ -68,7 +70,7 @@ Le langage C++ spécifie certaines compatibilités lors de la spécification des
 |Type attendu|Types autorisés|
 |-------------------|-------------------|
 |*type*|`const` *Type*<br /> `volatile` *Type*<br /> *type*&<br /> `const` *Type*&<br /> `volatile` *Type*&<br /> `volatile const` *Type*<br /> `volatile const` *Type*&|
-|*type*\*|*type*\*<br /> `const` *Type*\*<br /> `volatile` *Type*\*<br /> `volatile const` *Type*\*|
+|*Type* \*|*Type* \*<br /> `const` *Type* \*<br /> `volatile` *Type* \*<br /> `volatile const` *Type* \*|
 |`const` *Type*|*type*<br /> `const` *Type*<br />`const` *Type*&|
 |`volatile` *Type*|*type*<br /> `volatile` *Type*<br /> `volatile` *Type*&|
 

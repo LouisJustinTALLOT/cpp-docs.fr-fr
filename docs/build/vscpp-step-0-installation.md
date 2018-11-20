@@ -2,16 +2,16 @@
 title: Installer la prise en charge C++ dans Visual Studio 2017
 description: Installer la prise en charge de Visual Studio pour Visual C++
 ms.custom: mvc
-ms.date: 09/17/2018
+ms.date: 11/19/2018
 ms.topic: tutorial
 ms.devlang: C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 019eadee35829bb546de0a69707520dc98f4077e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0dd1c25cd17c67c310840396c80fe05dfc2b7e1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507235"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175741"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installer la prise en charge C++ dans Visual Studio
 
@@ -45,11 +45,11 @@ En règle générale, nous vous recommandons vivement d’utiliser Visual Studio
 
 1. Recherchez le fichier de programme d’installation téléchargé et l’exécuter. Il peut s’afficher dans votre navigateur, ou il peut s’avérer dans votre dossier Téléchargements. Le programme d’installation a besoin de privilèges d’administrateur pour s’exécuter. Vous pouvez voir un **contrôle de compte d’utilisateur** boîte de dialogue vous demandant d’accorder l’autorisation pour vous permettre du programme d’installation apporter des modifications à votre système ; choisissez **Oui**. Si vous rencontrez des problèmes, recherchez le fichier téléchargé dans l’Explorateur de fichiers, avec le bouton droit sur l’icône de programme d’installation et choisissez **exécuter en tant qu’administrateur** dans le menu contextuel.
 
-   ![Exécutez le programme d’installation de Visual Studio 2017](../build/media/vscpp-concierge-run-installer.gif "exécuter le programme d’installation de Visual Studio")
+   ![Téléchargez et installez Visual Studio Installer](../build/media/vscpp-concierge-run-installer.gif "télécharger et installer Visual Studio Installer")
 
 1. Le programme d’installation vous présente une liste de charges de travail, qui sont des groupes d’options connexes pour des types de développement spécifiques. Prise en charge de C++ fait désormais partie des charges de travail facultatifs qui ne sont pas installés par défaut.
 
-   ![Développement Desktop en C++](../build/media/desktop-development-with-cpp.png "développement Desktop en C++")
+   ![Développement Desktop en charge de travail C++](../build/media/desktop-development-with-cpp.png "développement Desktop en C++")
 
    Pour C++, sélectionnez le **développement Desktop en C++** charge de travail, puis choisissez **installer**.
 

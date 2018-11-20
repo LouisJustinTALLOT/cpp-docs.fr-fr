@@ -1,18 +1,18 @@
 ---
 title: 'Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b98c2deb158b9b9fc71caa7133aeaeb2acfd369c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498817"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175911"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage
 
@@ -48,7 +48,7 @@ Cette procédure pas à pas contient les sections suivantes :
 
 Problème dîner des philosophes illustre la façon dont le blocage se produit dans une application. Dans ce problème, cinq philosophes sont assis à une table ronde. Chaque philosophe alterne pense et mange. Chaque philosophe doit partager une baguette avec son voisin de gauche et une autre baguette avec son voisin à droite. L’illustration suivante montre cette disposition.
 
-![Le problème dîner des philosophes](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")
+![Problème dîner des philosophes](../../parallel/concrt/media/dining_philosophersproblem.png "problème dîner des philosophes")
 
 Pour manger, un philosophe doit tenir deux baguettes. Si chaque philosophe tient une seule baguette et attend un autre, puis aucun philosophe ne peut manger et priver les tous.
 

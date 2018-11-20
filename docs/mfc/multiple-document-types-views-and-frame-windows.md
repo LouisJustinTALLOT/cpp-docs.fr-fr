@@ -1,6 +1,6 @@
 ---
 title: Types multidocuments, vues et fenêtres frame
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - static splitter windows [MFC]
 - multiple views [MFC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 3c1422aed5535d30a2f9fb79300f6093326d2ef3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9c26413d45dfa03087bf9909bf8004064766a00
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669103"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175789"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Types multidocuments, vues et fenêtres frame
 
@@ -64,7 +64,8 @@ MFC prend en charge trois interfaces utilisateur courantes nécessitant des vues
 
 La figure suivante, divisée en plusieurs parties (a, b et c), présente les trois modèles d’interface utilisateur dans l’ordre indiqué ci-dessus.
 
-![Plusieurs&#45;afficher les interfaces utilisateur](../mfc/media/vc37a71.gif "vc37a71") Interfaces utilisateur à plusieurs vues
+![Plusieurs&#45;afficher les interfaces utilisateur](../mfc/media/vc37a71.gif "plusieurs&#45;afficher des interfaces utilisateur") <br/>
+Interfaces utilisateur à plusieurs vues
 
 Pour proposer ces modèles, l’infrastructure implémente la commande Nouvelle fenêtre et fournit la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), comme indiqué dans [Fenêtres fractionnées](#_core_splitter_windows). Vous pouvez implémenter d’autres modèles en utilisant ceux-ci comme point de départ. Pour obtenir des exemples de programmes qui illustrent différentes configurations de vues, de fenêtres frame et de fenêtres fractionnées, consultez [Exemples MFC](../visual-cpp-samples.md).
 

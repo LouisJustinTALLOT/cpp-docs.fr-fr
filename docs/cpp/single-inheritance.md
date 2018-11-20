@@ -1,6 +1,6 @@
 ---
 title: Héritage simple
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -10,18 +10,19 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: a188780201c00451b125288b37c7c62fbe2322c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461852"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175624"
 ---
 # <a name="single-inheritance"></a>Héritage simple
 
 Dans « l'héritage unique », une forme courante d'héritage, les classes possèdent une seule classe de base. Considérons la relation illustrée à la figure ci-dessous.
 
-![Base unique&#45;graphique d’héritage](../cpp/media/vc38xj1.gif "vc38XJ1") graphique d’héritage unique Simple
+![Base unique&#45;graphique d’héritage](../cpp/media/vc38xj1.gif "unique base&#45;graphique d’héritage") <br/>
+Graphique simple illustrant un héritage unique
 
 Notez la progression d'un niveau général à un niveau spécifique dans la figure. Un autre attribut courant figurant dans la conception de la plupart des hiérarchies de classes est que la classe dérivée possède une « sorte » de relation avec la classe de base. Dans la figure ci-dessus, un objet `Book` est une sorte d'objet `PrintedDocument` et un objet `PaperbackBook` est une sorte d'objet `book`.
 
@@ -47,12 +48,13 @@ Dans l’exemple précédent, le spécificateur d’accès **public** est utilis
 
 Une classe peut servir de classe de base pour de nombreuses classes spécifiques, comme illustré à la figure suivante.
 
-![Graphique acyclique suggérés](../cpp/media/vc38xj2.gif "vc38XJ2") exemple de graphique acyclique dirigé
+![Graphique acyclique suggérés](../cpp/media/vc38xj2.gif "graphique acyclique suggérés") <br/>
+Exemple de graphique acyclique dirigé
 
 Dans le diagramme ci-dessus, appelé « graphique acyclique dirigé », certaines classes sont des classes de base pour plusieurs classes dérivées. Toutefois, l'inverse n'est pas vrai : il existe une seule classe de base directe pour chaque classe dérivée. Le graphique de la figure représente une structure « d'héritage unique ».
 
 > [!NOTE]
->  Les graphiques acycliques dirigés ne sont pas propres à l'héritage unique. Ils sont également utilisés pour représenter des cas d'héritage multiple.
+> Les graphiques acycliques dirigés ne sont pas propres à l'héritage unique. Ils sont également utilisés pour représenter des cas d'héritage multiple.
 
 Dans un héritage, la classe dérivée contient les membres de la classe de base, ainsi que tous les nouveaux membres que vous ajoutez. Par conséquent, une classe dérivée peut faire référence à des membres de la classe de base (à moins que ces membres soient redéfinis dans la classe dérivée). L’opérateur de résolution de portée (`::`) peut être utilisé pour faire référence à des membres de classes de base directes ou indirectes, lorsque ces membres ont été redéfinis dans la classe dérivée. Considérez cet exemple :
 

@@ -1,16 +1,16 @@
 ---
 title: Agents asynchrones
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: 949074981d77702fd23ee3ff70f219c013fa6543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467598"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176534"
 ---
 # <a name="asynchronous-agents"></a>Agents asynchrones
 
@@ -22,7 +22,7 @@ La bibliothèque d’Agents définit le [concurrency::agent](../../parallel/conc
 
 Agents ont un cycle de vie défini. Le [concurrency::agent_status](reference/concurrency-namespace-enums.md#agent_status) énumération définit les différents États d’un agent. L’illustration suivante est un diagramme d’état qui montre l’avancement des agents d’un état à un autre. Dans cette illustration, les lignes pleines représentent les méthodes que vous appelez à partir de votre application ; lignes pointillées représentent les méthodes qui sont appelées à partir de l’exécution.
 
-![Diagramme d’état de l’agent](../../parallel/concrt/media/agentstate.png "agentstate")
+![Diagramme d’état de l’agent](../../parallel/concrt/media/agentstate.png "diagramme d’état de l’Agent")
 
 Le tableau suivant décrit chaque état dans le `agent_status` énumération.
 

@@ -1,15 +1,15 @@
 ---
 title: Outils définis par l'utilisateur
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607075"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175728"
 ---
 # <a name="user-defined-tools"></a>Outils définis par l'utilisateur
 
@@ -17,7 +17,8 @@ MFC prend en charge les outils définis par l'utilisateur. Un outil défini par 
 
 Si vous avez activé la prise en charge des outils définis par l’utilisateur, la boîte de dialogue de personnalisation inclut automatiquement la **outils** onglet. L’illustration suivante montre le **outils** page.
 
-![Onglet des outils dans la boîte de dialogue Personnaliser](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab") personnalisation boîte de dialogue Outils onglet
+![Onglet des outils dans la boîte de dialogue Personnaliser](../mfc/media/custdialogboxtoolstab.png "onglet des outils de la boîte de dialogue Personnalisation") <br/>
+Onglet Outils de la boîte de dialogue de personnalisation
 
 ## <a name="enabling-user-defined-tools-support"></a>Activation de la prise en charge des outils définis par l'utilisateur
 
@@ -57,4 +58,3 @@ Si vous souhaitez prédéfinir certains outils au démarrage de l’application,
 [CUserTool, classe](../mfc/reference/cusertool-class.md)<br/>
 [CUserToolsManager, classe](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [CWinAppEx, classe](../mfc/reference/cwinappex-class.md)
-

@@ -1,6 +1,6 @@
 ---
 title: "Contrôles ActiveX MFC : gestion des licences d'un contrôle ActiveX"
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 4001d49da8477ab9dd481d0eb3ee02cb10e1e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465622"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176355"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Contrôles ActiveX MFC : gestion des licences d'un contrôle ActiveX
 
 Gestion des licences prise en charge, une fonctionnalité facultative de contrôles ActiveX, vous permet de contrôler qui peut utiliser ou distribuer le contrôle. (Pour plus d’informations sur des problèmes de licence, consultez les problèmes de licence dans [la mise à niveau d’un contrôle ActiveX](../mfc/upgrading-an-existing-activex-control.md).)
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 Cet article aborde les rubriques suivantes :
@@ -43,13 +43,15 @@ Pour fournir un support de licence pour les contrôles ActiveX, les [COleObjectF
 
 La figure ci-dessous illustre la vérification de licence d’un contrôle ActiveX qui sera utilisé pendant le développement d’une application conteneur. Comme mentionné précédemment, le développeur d’applications de conteneur doit avoir la bonne. LIC approprié sur l’ordinateur de développement pour créer une instance du contrôle.
 
-![Contrôle ActiveX vérifié au développement d’une licence](../mfc/media/vc374d1.gif "vc374d1") vérification d’une licence au cours de développement de contrôles ActiveX
+![Contrôle ActiveX vérifié au développement d’une licence](../mfc/media/vc374d1.gif "contrôle ActiveX sous licence vérifié au développement") <br/>
+Vérification d’un contrôle ActiveX sous licence pendant le développement
 
 Le processus suivant, illustré dans la figure suivante, se produit lorsque l’utilisateur final exécute l’application de conteneur.
 
 Lorsque l’application est démarrée, une instance du contrôle doit généralement être créé. Le conteneur pour cela, en effectuant un appel à `CreateInstanceLic`, en passant de la clé de licence incorporée en tant que paramètre. Une comparaison de chaînes est ensuite effectuée entre la clé de licence incorporée et la copie du contrôle de la clé de licence. Si la correspondance est réussie, une instance du contrôle est créée et l’application continue à s’exécuter normalement. Notez que le. Fichier de contrat de licence ne sont pas nécessairement présent sur l’ordinateur de l’utilisateur contrôle.
 
-![Contrôle ActiveX vérifié lors de l’exécution d’une licence](../mfc/media/vc374d2.gif "vc374d2") vérification d’une licence contrôle ActiveX pendant l’exécution
+![Contrôle ActiveX vérifié lors de l’exécution d’une licence](../mfc/media/vc374d2.gif "contrôle ActiveX sous licence vérifié lors de l’exécution") <br/>
+Vérification d’un contrôle ActiveX sous licence pendant l’exécution
 
 Licences de contrôle se compose de deux composants de base : un code spécifique dans l’implémentation du contrôle DLL et le fichier de licence. Le code est composé de deux (ou peut-être trois) appels de fonction et une chaîne de caractères, ci-après dénommé « chaîne de licence », contenant une mention de copyright. Ces appels et la chaîne de licence se trouvent dans l’implémentation du contrôle (. Fichier CPP). Le fichier de licence, généré par l’Assistant contrôle ActiveX, est un fichier texte avec une déclaration de copyright. Il est nommé en utilisant le nom de projet avec un. LIC, par exemple SAMPLE. CONTRAT DE LICENCE. Doit être accompagné d’un contrôle sous licence par le fichier de licence si vous avez besoin des utiliser au moment du design.
 

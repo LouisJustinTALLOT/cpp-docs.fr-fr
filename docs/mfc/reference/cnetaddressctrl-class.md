@@ -1,6 +1,6 @@
 ---
 title: Classe CNetAddressCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CNetAddressCtrl
 - AFXCMN/CNetAddressCtrl
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 09dfdb57fb22b958edc64ec8cbdce95527a304d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654673"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176236"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 
@@ -64,7 +64,7 @@ Le `CNetAddressCtrl` classe est dérivée de la [CEdit](../../mfc/reference/cedi
 
 L’illustration suivante représente une boîte de dialogue qui contient un contrôle d’adresse réseau. Le texte boîte (1) pour le contrôle d’adresse réseau contient une adresse réseau non valide. Le message d’info-bulle (2) s’affiche si l’adresse réseau n’est pas valide.
 
-![Boîte de dialogue avec un contrôle d’adresse réseau et l’info-bulle. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")
+![Boîte de dialogue avec un contrôle d’adresse réseau et l’info-bulle. ](../../mfc/reference/media/cnetaddctrl.png "Boîte de dialogue avec un contrôle d’adresse réseau et l’info-bulle.")
 
 ## <a name="example"></a>Exemple
 

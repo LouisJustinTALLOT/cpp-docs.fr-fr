@@ -1,18 +1,18 @@
 ---
 title: Vue d'ensemble du runtime d'accès concurrentiel
-ms.date: 07/20/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693640"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176664"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Vue d'ensemble du runtime d'accès concurrentiel
 
@@ -60,10 +60,10 @@ Le runtime d’accès concurrentiel se divise en quatre composants : la bibliot
 
 **Architecture de Runtime d’accès concurrentiel**
 
-![L’Architecture de Runtime d’accès concurrentiel](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")
+![L’Architecture de Runtime d’accès concurrentiel](../../parallel/concrt/media/concurrencyrun.png "l’Architecture de Runtime d’accès concurrentiel")
 
 > [!IMPORTANT]
->  Les composants du Planificateur de tâches et le Gestionnaire de ressources ne sont pas disponibles à partir d’une application de plateforme universelle Windows (UWP), ou lorsque vous utilisez la classe de tâche ou d’autres types dans ppltasks.h.
+> Les composants du Planificateur de tâches et le Gestionnaire de ressources ne sont pas disponibles à partir d’une application de plateforme universelle Windows (UWP), ou lorsque vous utilisez la classe de tâche ou d’autres types dans ppltasks.h.
 
 Le Runtime d’accès concurrentiel est hautement *composable*, autrement dit, vous pouvez combiner les fonctionnalités existantes pour plus d’informations. Le runtime d’accès concurrentiel compose de nombreuses fonctionnalités, telles que des algorithmes parallèles, à partir de composants de niveau inférieur.
 

@@ -1,6 +1,6 @@
 ---
 title: Points de connexion
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - IConnectionPoint
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: cddbdb30cbc5f5ddb5fa98524ad067655f262be1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517635"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175481"
 ---
 # <a name="connection-points"></a>Points de connexion
 
@@ -30,7 +30,8 @@ Dans le passé, le composant COM (Object Model) définissait un mécanisme gén�
 
 Une connexion est composée de deux parties : l'objet qui appelle l'interface, appelé la source, et l'objet implémentant l'interface, appelé le récepteur. Un point de connexion est l'interface exposée par la source. En exposant un point de connexion, une source permet à des récepteurs d'établir des connexions à elle-même (source). Mécanisme de point de via la connexion (le `IConnectionPoint` interface), un pointeur vers l’interface du récepteur est passé à l’objet source. Ce pointeur assure à la source l'accès à l'implémentation du récepteur d'un ensemble de fonctions membres. Par exemple, pour déclencher un événement implémenté par le récepteur, la source peut appeler la méthode appropriée de l'implémentation du récepteur. L'illustration suivante montre le point de connexion qui vient d'être décrit.
 
-![Implémenté de point de connexion](../mfc/media/vc37lh1.gif "vc37lh1") une implémentation de Point de connexion
+![Implémenté de point de connexion](../mfc/media/vc37lh1.gif "implémenté le point de connexion") <br/>
+Un Point de connexion implémenté
 
 MFC implémente ce modèle dans le [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) et [CCmdTarget](../mfc/reference/ccmdtarget-class.md) classes. Les classes dérivées de `CConnectionPoint` implémenter la `IConnectionPoint` interface, utilisée pour exposer des points de connexion à d’autres objets. Les classes dérivées de `CCmdTarget` implémenter la `IConnectionPointContainer` interface, ce qui peut énumérer tous les points de connexion disponibles d’un objet ou trouver un point de connexion spécifique.
 
@@ -54,7 +55,8 @@ Enfin, ajoutez un appel à la méthode `EnableConnections` dans le constructeur 
 
 Une fois ce code a été inséré, votre `CCmdTarget`-classe dérivée expose un point de connexion pour le `ISampleSink` interface. La figure suivante illustre cet exemple:
 
-![Point de connexion implémenté à l’aide de MFC](../mfc/media/vc37lh2.gif "vc37lh2") une connexion Point implémenté avec MFC
+![Point de connexion implémenté à l’aide de MFC](../mfc/media/vc37lh2.gif "point de connexion implémenté à l’aide de MFC") <br/>
+Un point de connexion implémenté avec MFC
 
 Généralement, les points de connexion prennent en charge la "multidiffusion" : la capacité de distribution à plusieurs récepteurs connectés à la même interface. Le fragment de l'exemple suivant montre comment utiliser la multidiffusion en parcourant chaque destinataire sur un point de connexion :
 

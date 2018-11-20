@@ -1,6 +1,6 @@
 ---
 title: Fonctions (C++)
-ms.date: 01/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: 777bffab922bc7122444110a32874f9b77171b0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626146"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176482"
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 
@@ -125,7 +125,8 @@ Les éléments facultatifs d'une déclaration de fonction sont les suivants :
 
 L'illustration suivante montre les parties d'une définition de fonction. La zone grisée est le corps de la fonction.
 
-![Parties d’une définition de fonction](../cpp/media/vc38ru1.gif "vc38RU1") parties d’une définition de fonction
+![Parties d’une définition de fonction](../cpp/media/vc38ru1.gif "parties d’une définition de fonction") <br/>
+Éléments de définition de fonction
 
 ## <a name="function-definitions"></a>Définitions de fonction
 

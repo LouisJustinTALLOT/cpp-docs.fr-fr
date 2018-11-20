@@ -1,6 +1,6 @@
 ---
 title: Csmartdockinginfo, classe
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524657"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176768"
 ---
 # <a name="csmartdockinginfo-class"></a>Csmartdockinginfo, classe
 
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 Les handles de framework intelligent des marqueurs d’ancrage en interne. L’illustration suivante montre les marqueurs d’ancrage actifs standards :
 
-![Les marqueurs d’ancrage actifs standards](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")
+![Les marqueurs d’ancrage actifs standards](../../mfc/reference/media/nextsdmarkers.png "les marqueurs d’ancrage actifs Standard")
 
 Dans cette figure, l’image sur la gauche montre un marqueur d’ancrage intelligents groupe central qui n’a pas d’ancrage à un onglet est activé. L’image du milieu affiche un marqueur d’ancrage intelligents du bord droit. L’image de droite montre un marqueur d’ancrage intelligents groupe central qui possède l’ancrage à un onglet est activé. Le marqueur d’ancrage intelligents groupe central a un bitmap principale et cinq smart bitmaps de marqueur d’ancrage.
 
@@ -93,7 +93,7 @@ Vous pouvez personnaliser les paramètres suivants de marqueurs d’ancrage acti
 
 L’illustration suivante montre un exemple de marqueurs d’ancrage actifs qui ont été personnalisées :
 
-![Personnalisé marqueurs d’ancrage actifs](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")
+![Personnalisé marqueurs d’ancrage actifs](../../mfc/reference/media/nextsdmarkerscustom.png "marqueurs personnalisé d’ancrage actif")
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 

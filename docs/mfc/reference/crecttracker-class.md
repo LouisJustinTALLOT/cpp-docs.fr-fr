@@ -1,6 +1,6 @@
 ---
 title: CRectTracker (classe)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473370"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176508"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (classe)
 
@@ -237,7 +237,7 @@ Les poignées de redimensionnement apparaissent sur les côtés et les angles du
 
 Un rectangle doté de poignées de redimensionnement 8 numérotées de 0 à 7. Chaque poignée de redimensionnement est représentée par un peu dans le masque ; la valeur de ce bit est 2 ^ *n*, où *n* est le nombre de poignée de redimensionnement. Bits 0-3 correspondent aux poignées de redimensionnement, en commençant à l’angle supérieur gauche de déplacement dans le sens horaire. En commençant par le haut aiguilles de poignées de redimensionnement de bits correspondent à la partie 4-7. L’illustration suivante montre les poignées de redimensionnement d’un rectangle et leur correspondant redimensionner les nombres de handle et les valeurs :
 
-![Nombres de la poignée de redimensionnement](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![Nombres de la poignée de redimensionnement](../../mfc/reference/media/vc35dp1.gif "numéros de poignée de redimensionnement")
 
 L’implémentation par défaut de `GetHandleMask` retourne le masque de bits pour que les poignées de redimensionnement apparaissent. Si le bit unique est activé, la poignée de redimensionnement correspondant sera dessinée.
 

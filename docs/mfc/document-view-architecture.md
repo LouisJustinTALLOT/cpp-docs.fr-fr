@@ -1,6 +1,6 @@
 ---
 title: Architecture document / vue
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
 - CDocument class [MFC]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: 943199e2398bcb49c7dddf6b3a67f5556c9c81a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0886f364637c8844aceb5d5d7b6b2ed7175225d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509277"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176847"
 ---
 # <a name="documentview-architecture"></a>Architecture document/vue
 
@@ -47,7 +47,8 @@ Le [CView](../mfc/reference/cview-class.md) (ou un de ses nombreuses classes dé
 
 La figure suivante montre la relation entre un document et sa vue.
 
-![Vue est la partie du document qui s’affiche](../mfc/media/vc379n1.gif "vc379n1") Document et la vue
+![Vue est la partie du document qui s’affiche](../mfc/media/vc379n1.gif "vue est la partie du document qui s’affiche") <br/>
+Document et la vue
 
 L’implémentation de document/vue dans la bibliothèque de classes sépare les données elles-mêmes à partir de son affichage et d’opérations sur les données de l’utilisateur. Toutes les modifications apportées aux données sont gérées via la classe de document. La vue appelle cette interface pour accéder à et mettre à jour les données.
 

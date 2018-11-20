@@ -1,21 +1,21 @@
 ---
 title: "Comment : personnaliser la barre d'outils Accès rapide"
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: d9bdc523218c7fad217d066eabd518aaff011df3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aced2e732b68f838c679518ef67b1d6bdd361964
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558481"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176326"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Comment : personnaliser la barre d'outils Accès rapide
 
 La barre d’outils d’accès (rapide) est une barre d’outils personnalisable qui contient un ensemble de commandes qui sont que soit affichée en regard du bouton de l’Application ou sous les onglets de catégorie. L’illustration suivante montre une barre d’outils Accès rapide typique.
 
-![Barre d’outils Accès rapide MFC ruban](../mfc/media/quick_access_toolbar.png "quick_access_toolbar")
+![Barre d’outils Accès rapide de ruban MFC](../mfc/media/quick_access_toolbar.png "barre d’outils Accès rapide de ruban MFC")
 
 Pour personnaliser la barre d’outils Accès rapide, ouvrez-le dans le **propriétés** fenêtre, modifiez ses commandes, puis affichez l’aperçu du contrôle de ruban.
 
@@ -55,4 +55,3 @@ Les commandes de barre d’outils accès rapides n’apparaissent pas sur l’ai
 ## <a name="see-also"></a>Voir aussi
 
 [Concepteur de ruban (MFC)](../mfc/ribbon-designer-mfc.md)
-

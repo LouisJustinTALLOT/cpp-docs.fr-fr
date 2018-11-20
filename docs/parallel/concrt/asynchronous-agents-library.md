@@ -1,16 +1,16 @@
 ---
 title: bibliothèque d’agents asynchrones
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 9086734b22523d395022299fb75b7a130a8e7a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629279"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175858"
 ---
 # <a name="asynchronous-agents-library"></a>bibliothèque d’agents asynchrones
 
@@ -26,7 +26,7 @@ La bibliothèque d’Agents est composée de trois composants : *agents asynchr
 
 L’illustration suivante montre comment deux agents, utilisez des blocs de messages et des fonctions de passage de messages pour communiquer. Dans cette illustration, `agent1` envoie un message à `agent2` à l’aide de la [concurrency::send](reference/concurrency-namespace-functions.md#send) (fonction) et un [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objet. `agent2` utilise le [concurrency::receive](reference/concurrency-namespace-functions.md#receive) fonction permettant de lire le message. `agent2` utilise la même méthode pour envoyer un message à `agent1`. Flèches en pointillés représentent le flux de données entre les agents. Flèches pleines connectent les agents aux blocs de messages qui ils écrire ou de lire à partir de.
 
-![Les composants de la bibliothèque d’Agents](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")
+![Les composants de la bibliothèque d’Agents](../../parallel/concrt/media/agent_librarycomp.png "les composants de la bibliothèque d’Agents")
 
 Un exemple de code qui implémente cette illustration est présenté plus loin dans cette rubrique.
 

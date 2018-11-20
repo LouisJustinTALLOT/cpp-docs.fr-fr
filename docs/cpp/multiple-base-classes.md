@@ -1,18 +1,18 @@
 ---
 title: Plusieurs classes de base
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483458"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176359"
 ---
 # <a name="multiple-base-classes"></a>Plusieurs classes de base
 
@@ -52,11 +52,13 @@ Lors de la déclaration de classe de base virtuelle, le **virtuel** mot clé app
 
 Dans la figure ci-dessous, la hiérarchie de classes illustre un objet Lunch-Line simulé.
 
-![Graphique de Lunch-line simulé](../cpp/media/vc38xp1.gif "vc38XP1") graphique de Lunch-Line simulé
+![Graphique de Lunch-line simulé](../cpp/media/vc38xp1.gif "graphique Lunch-Line simulé") <br/>
+Graphique de lunch-line simulé
 
 Dans la figure, `Queue` représente la classe de base de `CashierQueue` et `LunchQueue`. Toutefois, lorsque les deux classes sont combinées pour former `LunchCashierQueue`, le problème suivant survient : la nouvelle classe contient deux sous-objets de type `Queue`, l'un provenant de `CashierQueue` et l'autre de `LunchQueue`. La figure suivante montre la disposition de mémoire conceptuelle (la disposition de mémoire réelle peut être optimisée).
 
-![Simulated déjeuner&#45;objet line](../cpp/media/vc38xp2.gif "vc38XP2") objet de Lunch-Line simulé
+![Simulated déjeuner&#45;objet line](../cpp/media/vc38xp2.gif "Simulated déjeuner&#45;objet line") <br/>
+Objet Lunch-Line simulé
 
 Notez que deux sous-objets `Queue` figurent dans l'objet `LunchCashierQueue`. Le code suivant déclare `Queue` en tant que classe de base virtuelle :
 
@@ -71,15 +73,18 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 
 Le **virtuels** mot clé permet de s’assurer que qu’une seule copie du sous-objet `Queue` est inclus (voir la figure suivante).
 
-![Simulated déjeuner&#45;objet de ligne, les classes de base virtuelles](../cpp/media/vc38xp3.gif "vc38XP3") objet de Lunch-Line simulé avec Classes de Base virtuelles
+![Simulated déjeuner&#45;objet de ligne, les classes de base virtuelles](../cpp/media/vc38xp3.gif "Simulated déjeuner&#45;objet de ligne, les classes de base virtuelles") <br/>
+Objet lunch-line simulé avec classes de base virtuelles
 
 Une classe peut avoir à la fois un composant virtuel et un composant non virtuel d'un type donné. Cela se produit dans les conditions illustrées à la figure suivante.
 
-![Virtuelles et des composants d’une classe](../cpp/media/vc38xp4.gif "vc38XP4") virtuelles et des composants non virtuelle de la même classe
+![Virtuel et non&#45;composants virtuels d’une classe](../cpp/media/vc38xp4.gif "virtuel et non&#45;composants virtuels d’une classe") <br/>
+Composants non virtuels et de la même classe
 
 Dans cette figure, `CashierQueue` et `LunchQueue` utilisent `Queue` comme classe de base virtuelle. Toutefois, `TakeoutQueue` spécifie `Queue` en tant que classe de base, et non pas comme classe de base virtuelle. Par conséquent, `LunchTakeoutCashierQueue` a deux sous-objets de type `Queue` : l'un provenant du chemin d'héritage qui inclut `LunchCashierQueue` et l'autre provenant du chemin qui inclut `TakeoutQueue`. La figure ci-dessous illustre cela.
 
-![L’héritage virtuel et non virtuel dans la disposition des objets](../cpp/media/vc38xp5.gif "vc38XP5") disposition des objets avec virtuelle et l’héritage non virtuel
+![Virtuel & non&#45;l’héritage virtuel dans la disposition des objets](../cpp/media/vc38xp5.gif "virtuel & non&#45;l’héritage virtuel dans la disposition des objets") <br/>
+Disposition des objets avec l’héritage virtuel et non virtuel
 
 > [!NOTE]
 >  L'héritage virtuel fournit des avantages de taille significatifs par rapport à l'héritage non virtuel. Toutefois, il peut introduire une certaine surcharge de traitement.
@@ -187,7 +192,8 @@ Les conversions explicites et implicites à partir de pointeurs ou de référenc
 
 - L'effet de la conversion explicite du pointeur obtenu à l'aide de l'opérateur d'adresse vers le type de classe de base `A`. Notez que forcer l'adresse de l'objet en type `A*` ne fournit pas toujours au compilateur suffisamment d'informations concernant le sous-objet de type `A` à sélectionner ; dans ce cas, deux sous-objets existent.
 
-![Conversion ambiguë de pointeurs vers des classes de base](../cpp/media/vc38xt1.gif "vc38XT1") Conversion ambiguë des pointeurs vers des Classes de Base
+![Conversion ambiguë de pointeurs vers des classes de base](../cpp/media/vc38xt1.gif "conversion ambiguë de pointeurs vers des classes de base") <br/>
+Conversion ambiguë de pointeurs vers les classes de base
 
 La conversion vers le type `A*` (pointeur vers `A`) est ambiguë car il n'y a aucun moyen de déterminer quel est le sous-objet de type `A` correct. Notez que vous pouvez éviter toute ambiguïté en spécifiant explicitement le sous-objet que vous souhaitez utiliser, comme suit :
 
@@ -202,7 +208,8 @@ Si des classes de base virtuelles sont utilisées, les fonctions, les objets, le
 
 L'illustration suivante montre comment les objets sont composés à l'aide de l'héritage virtuel et non virtuel.
 
-![Dérivation virtuelle et non virtuelle](../cpp/media/vc38xr1.gif "vc38XR1") virtuelles vs. et non virtuelle
+![Dérivation virtuelle et non&#45;dérivation virtuelle](../cpp/media/vc38xr1.gif "les dérivation virtuelle et non&#45;dérivation virtuelle") <br/>
+Virtuelle et non virtuelle dérivation
 
 Dans l'illustration, accéder à un membre de classe `A` via des classes de base non virtuelles provoque une ambiguïté ; le compilateur ne propose aucune information indiquant s'il convient d'utiliser le sous-objet associé à `B` ou le sous-objet associé à `C`. Toutefois, lorsque `A` est spécifié comme classe de base virtuelle, il n'y a aucune interrogation quant au sous-objet faisant l'objet d'un accès.
 

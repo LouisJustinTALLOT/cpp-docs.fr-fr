@@ -6,18 +6,18 @@ helpviewer_keywords:
 - ATL, connection points
 - connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-ms.openlocfilehash: 5d203d228ed2171a901f65cd01af8bd0d9703517
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 520537f5d562450dc4ea2a5e5a0c68af513da509
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511590"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175054"
 ---
 # <a name="atl-connection-points"></a>ATL, points de connexion
 
 Un objet connectable est un objet qui prend en charge les interfaces sortantes. Une interface sortante permet à l'objet de communiquer avec un client. Pour chaque interface sortante, l'objet connectable expose un point de connexion. Chaque interface sortante est implémentée par un client sur un objet appelé récepteur.
 
-![Points de connexion](../atl/media/vc2zw31.gif "vc2zw31")
+![Points de connexion](../atl/media/vc2zw31.gif "points de connexion")
 
 Chaque point de connexion prend en charge la [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interface. L’objet connectable expose ses points de connexion au client via le [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer) interface.
 

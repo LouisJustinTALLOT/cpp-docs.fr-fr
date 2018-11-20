@@ -1,23 +1,24 @@
 ---
 title: Sources de données et sessions
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - data sources [C++], OLE DB
 - connections [C++], data source
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-ms.openlocfilehash: 04b274677d98f1a544bcc190ce7155c00c4ee8d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c43061ccb462fe472821c76251430b5e3b0f0809
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650326"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175299"
 ---
 # <a name="data-sources-and-sessions"></a>Sources de données et sessions
 
 La figure suivante montre les classes qui prennent en charge la connexion et l’accès à une source de données. Chaque classe est basée sur une implémentation de composant OLE DB standard.
 
-![Classes de données source et de la session](../../data/oledb/media/vcdatasourcesessionclasses.gif "vcdatasourcesessionclasses") Source de données et les Classes de Session
+![Classes de données source et de la session](../../data/oledb/media/vcdatasourcesessionclasses.gif "des classes de données source et de session") <br/>
+Classes de source de données et de session
 
 Les classes sont :
 

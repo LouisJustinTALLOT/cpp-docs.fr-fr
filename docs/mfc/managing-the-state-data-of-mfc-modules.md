@@ -1,6 +1,6 @@
 ---
 title: Gestion des données d'état des modules MFC
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - global state [MFC]
 - data management [MFC], MFC modules
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multiple modules [MFC]
 - module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
-ms.openlocfilehash: 757fe9d8b4c9985cd3fa36d399cdc92057c03011
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bed6f3b0dddf0d4ae5e8309d683e52c9e82410
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562212"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174868"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Gestion des données d'état des modules MFC
 
@@ -28,11 +28,13 @@ Cet article décrit les données d’état des modules MFC et le mode de mise à
 
 Comme illustré ci-dessous, MFC contient des données d'état pour chaque module utilisé dans une application. Les exemples de ces données sont les handles d'instance Windows (permettant de charger les ressources), les pointeurs vers les objets `CWinApp` et `CWinThread` actuels d'une application, le nombre de références de module OLE et plusieurs mappages qui maintiennent les connexions entre les handles d'objet Windows et les instances correspondantes d'objets MFC. Toutefois, lorsqu'une application utilise plusieurs modules, les données d'état de chaque module ne concernent pas toute l'application. En revanche, chaque module possède sa propre copie privée des données d'état de MFC.
 
-![État des données d’un module unique &#40;application&#41;](../mfc/media/vc387n1.gif "vc387n1") des données d’état d’un Module unique (Application)
+![État des données d’un module unique &#40;application&#41;](../mfc/media/vc387n1.gif "des données d’un seul module d’état &#40;application&#41;") <br/>
+Données d'état d'un module unique (application)
 
 Les données d'état d'un module sont contenus dans une structure et sont toujours disponibles via un pointeur à cette structure. Lorsque le flux d'exécution entre dans un module particulier, comme le montre l'illustration suivante, l'état du module doit être "actuel" ou "effectif". Par conséquent, chaque objet thread a un pointeur vers la structure d'état effectif de cette application. Conserver ce pointeur mis à niveau à tout moment est essentiel pour gérer l'état global de l'application et maintenir l'intégrité de l'état de chaque module. La gestion incorrecte de l'état global peut provoquer un comportement imprévisible de l'application.
 
-![Données de plusieurs modules d’état](../mfc/media/vc387n2.gif "vc387n2") données de plusieurs Modules d’état
+![Données de plusieurs modules d’état](../mfc/media/vc387n2.gif "des données de plusieurs modules d’état") <br/>
+Données d'état de plusieurs modules
 
 En d'autres termes, chaque module est chargé de basculer correctement entre les états de module à tous ses points d'entrée. Un "point d'entrée" correspond à n'importe quel emplacement où le flux d'exécution peut accéder au code du module. Les points d'entrée sont les suivants :
 
@@ -45,4 +47,3 @@ En d'autres termes, chaque module est chargé de basculer correctement entre les
 ## <a name="see-also"></a>Voir aussi
 
 [Rubriques MFC générales](../mfc/general-mfc-topics.md)
-

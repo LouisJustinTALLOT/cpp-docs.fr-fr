@@ -1,6 +1,6 @@
 ---
 title: Création de documents, fenêtres et vues
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MDI [MFC], creating windows
 - window objects [MFC], creating
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 20bc94c7a688d3cf88fa89fff060ab155d327606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643896"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175390"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Création de documents, fenêtres et vues
 
@@ -37,11 +37,14 @@ Les illustrations suivantes donnent une vue d’ensemble du processus de créati
 
 À la fin de ce processus, les objets coopérant existent et stockent les pointeurs vers les uns des autres. Les figures suivantes illustrent la séquence dans laquelle les objets sont créés. Vous pouvez suivre la séquence à partir d’une illustration à.
 
-![Séquence de création d’un document](../mfc/media/vc387l1.gif "vc387l1") séquence de création d’un Document
+![Séquence de création d’un document](../mfc/media/vc387l1.gif "séquence pour la création d’un document") <br/>
+Séquence de création d’un Document
 
-![Séquence de création de fenêtre de frame](../mfc/media/vc387l2.png "vc387l2") séquence de création d’une fenêtre Frame
+![Séquence de création de fenêtre de frame](../mfc/media/vc387l2.png "séquence de création de fenêtre de Frame") <br/>
+Séquence de création d’une fenêtre Frame
 
-![Séquence de création d’une vue](../mfc/media/vc387l3.gif "vc387l3") séquence de création d’une vue
+![Séquence de création d’une vue](../mfc/media/vc387l3.gif "séquence pour la création d’une vue") <br/>
+Séquence de création d’une vue
 
 Pour plus d’informations sur la façon dont le framework initialise le nouveau document, vue et les objets de fenêtre frame, consultez la section classes [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), et [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) dans la référence de la bibliothèque MFC. Consultez également [Note technique 22](../mfc/tn022-standard-commands-implementation.md), qui explique les processus de création et d’initialisation supplémentaires sous sa discussion des commandes standard de l’infrastructure pour le **New** et **ouvrir** éléments sur le **fichier** menu.
 

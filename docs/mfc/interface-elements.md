@@ -1,16 +1,16 @@
 ---
 title: Éléments de l'interface
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 564f0baa34cfb0fe682c2a761fcf8c0d41cd6cb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668687"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175897"
 ---
 # <a name="interface-elements"></a>Éléments de l'interface
 
@@ -18,7 +18,7 @@ Ce document décrit les éléments d’interface qui ont été introduites dans 
 
 L'illustration suivante montre une application générée à l'aide des nouveaux éléments d'interface.
 
-![Exemple d’application MFC Feature Pack](../mfc/media/mfc_featurepack.png "mfc_featurepack")
+![Exemple d’application MFC Feature Pack](../mfc/media/mfc_featurepack.png "exemple d’application MFC Feature Pack")
 
 ## <a name="window-docking"></a>Ancrage de fenêtre
 

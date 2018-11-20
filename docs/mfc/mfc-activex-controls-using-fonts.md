@@ -1,6 +1,6 @@
 ---
 title: 'Contrôles ActiveX MFC : utilisation des polices'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608911"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175819"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Contrôles ActiveX MFC : utilisation des polices
 
@@ -204,7 +204,8 @@ Dans la plupart des cas, le contrôle a besoin de savoir quand les caractéristi
 
 Si le contrôle utilise la propriété stock Font, ses notifications sont gérées par le `OnFontChanged` fonction membre de `COleControl`. Lorsque vous ajoutez des propriétés de police personnalisée, vous pouvez demandez-leur d’utiliser la même implémentation. Dans l’exemple dans la section précédente, cela a été accompli en passant &*m_xFontNotification* lors de l’initialisation du *m_fontHeading* variable membre.
 
-![Implémentation de plusieurs interfaces d’objet font](../mfc/media/vc373q1.gif "vc373q1") implémentant plusieurs Interfaces objet Font
+![Implémentation de plusieurs interfaces d’objet font](../mfc/media/vc373q1.gif "implémenter plusieurs interfaces d’objet font") <br/>
+Implémentation de plusieurs Interfaces d’objet Font
 
 Les lignes pleines dans la figure ci-dessus montrent que les deux objets de police sont à l’aide de la même implémentation de `IFontNotification`. Cela peut entraîner des problèmes si vous voulez distinguer la police est modifiée.
 

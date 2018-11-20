@@ -1,6 +1,6 @@
 ---
 title: Cmfctaskspanetaskgroup, classe
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
 - AFXTASKSPANE/CMFCTasksPaneTaskGroup
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 25e714aa617cdccc4e02e288f1a24f636e05cb0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539605"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176586"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Cmfctaskspanetaskgroup, classe
 
@@ -72,19 +72,19 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 L’illustration suivante montre un groupe de tâches développé :
 
-![Groupe de tâches, développé](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")
+![Groupe de tâches, développé](../../mfc/reference/media/nexttaskgrpexpand.png "groupe de tâches, développé")
 
 L’illustration suivante montre un groupe de tâches réduit :
 
-![Groupe de tâches réduit](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")
+![Groupe de tâches réduit](../../mfc/reference/media/nexttaskgrpcollapse.png "groupe de tâches réduit")
 
 L’illustration suivante montre un groupe de tâches sans légende :
 
-![Groupe de tâches sans légende](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")
+![Groupe de tâches sans légende](../../mfc/reference/media/nexttaskgrpnocapt.png "groupe de tâches sans légende")
 
 L’illustration suivante montre deux groupes de tâches. Le premier groupe de tâches est marqué comme étant spéciaux en définissant le `m_bIsSpecial` indicateur sur TRUE, alors que le deuxième groupe de tâches n’est pas spécial. Notez que la légende du premier groupe de tâches plus sombre que le deuxième groupe de tâches :
 
-![Groupe de tâches spéciales](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")
+![Groupe de tâches spéciales](../../mfc/reference/media/nexttaskgrpspecial.png "groupe de tâches spéciales")
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 

@@ -1,6 +1,6 @@
 ---
 title: Initialiseurs
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544662"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176287"
 ---
 # <a name="initializers"></a>Initialiseurs
 
@@ -528,7 +528,8 @@ Les variables de type référence peuvent être déclarées sans initialiseurs u
 
 Lors de l'initialisation d'une variable de type référence, le compilateur utilise le graphique de décision représenté dans l'illustration suivante pour choisir entre la création d'une référence à un objet et la création d'un objet temporaire vers lequel pointe la référence.
 
-![Graphique de décision pour l’initialisation des types ref](../cpp/media/vc38s71.gif "vc38S71") graphique de décision pour l’initialisation des Types de référence
+![Graphique de décision pour l’initialisation des types référence](../cpp/media/vc38s71.gif "graphique de décision pour l’initialisation des types référence") <br/>
+Graphique de décision pour l’initialisation des types référence
 
 Références à **volatile** types (déclarés comme **volatile** *typename* <strong>&</strong> *identificateur*) peut être initialisée avec **volatile** objets du même type ou avec des objets qui n’ont pas été déclarés comme **volatile**. Ils ne peuvent pas, toutefois, être initialisées avec **const** objets de ce type. De même, les références aux **const** types (déclarés comme **const** *typename* <strong>&</strong> *identificateur* ) peut être initialisée avec **const** objets du même type (ou tout élément ayant une conversion vers ce type ou avec des objets qui n’ont pas été déclarés comme **const**). Ils ne peuvent pas, toutefois, être initialisées avec **volatile** objets de ce type.
 

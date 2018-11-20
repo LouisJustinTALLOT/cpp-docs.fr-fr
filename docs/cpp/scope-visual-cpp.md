@@ -1,6 +1,6 @@
 ---
 title: Portée (C++)
-ms.date: 04/08/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506611"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176755"
 ---
 # <a name="scope-c"></a>Portée (C++)
 
@@ -41,7 +41,8 @@ Il existe six types de portée :
 
 Vous pouvez masquer un nom en le déclarant dans un bloc englobé. Dans l’illustration suivante, `i` est redéclaré dans le bloc interne, masquant ainsi la variable associée à `i` dans la portée de bloc externe.
 
-![Bloc&#45;masquage de nom d’étendue](../cpp/media/vc38sf1.png "vc38SF1") portée de bloc et le masquage de nom
+![Bloc&#45;masquage de nom d’étendue](../cpp/media/vc38sf1.png "bloc&#45;masquage de nom d’étendue") <br/>
+Portée de bloc et de masquage de nom
 
 La sortie du programme représentée dans l'illustration est la suivante :
 
