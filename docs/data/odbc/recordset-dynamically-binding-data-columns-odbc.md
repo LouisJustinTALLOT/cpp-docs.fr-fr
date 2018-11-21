@@ -1,6 +1,6 @@
 ---
 title: 'Recordset : liaison dynamique de colonnes de données (ODBC)'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469678"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175663"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset : liaison dynamique de colonnes de données (ODBC)
 
@@ -78,7 +78,7 @@ Liaison dynamique ajouté des colonnes au moment de l’exécution nécessite le
 
    Une approche consiste à créer une ou plusieurs listes dynamiques, un pour les nouveaux noms de colonnes, un autre pour leurs valeurs de résultat et une troisième pour leurs types de données (si nécessaire). Ces listes, en particulier la liste de valeurs, fournissent les informations et le stockage nécessaire pour la liaison. La figure suivante illustre la création de ces listes.
 
-   ![Création des listes de colonnes pour une liaison dynamique](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![Création des listes de colonnes pour une liaison dynamique](../../data/odbc/media/vc37w61.gif "création des listes de colonnes pour une liaison dynamique")<br/>
    Création des listes de colonnes pour la liaison dynamiquement
 
 1. Ajoutez un appel de fonction RFX dans votre recordset principal `DoFieldExchange` fonction pour chaque colonne ajoutée. Ces appels RFX effectuent le travail d’extraction d’un enregistrement, y compris les colonnes supplémentaires et liaison des colonnes aux membres de données de jeu d’enregistrements ou dans votre stockage dynamiquement fourni pour eux.

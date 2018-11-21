@@ -1,21 +1,21 @@
 ---
 title: 'Comment : personnaliser le bouton Application'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592788"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175325"
 ---
 # <a name="how-to-customize-the-application-button"></a>Comment : personnaliser le bouton Application
 
 Lorsque vous cliquez sur le bouton d’Application, un menu de commandes s’affiche. En règle générale, le menu contient des commandes relatives aux fichiers tels que **Open**, **enregistrer**, **impression**, et **Exit**.
 
-![Bouton Application de ruban MFC](../mfc/media/application_button.png "application_button")
+![Bouton Application de ruban MFC](../mfc/media/application_button.png "bouton Application de ruban MFC")
 
 Pour personnaliser le bouton d’Application, ouvrez-le dans le **propriétés** fenêtre, modifier ses propriétés, puis affichez l’aperçu du contrôle de ruban.
 
@@ -57,4 +57,3 @@ Le menu de l’Application n’apparaît pas sur l’aire de conception. Pour l�
 ## <a name="see-also"></a>Voir aussi
 
 [Concepteur de ruban (MFC)](../mfc/ribbon-designer-mfc.md)
-

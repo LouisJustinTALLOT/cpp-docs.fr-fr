@@ -1,6 +1,6 @@
 ---
 title: Exemple de résultats de l'appel
-ms.date: 09/05/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - examples [C++], results of calling
 - results, thiscall call
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - results, __cdecl call
 - results, __stdcall call
 ms.assetid: aa70a7cb-ba1d-4aa6-bd0a-ba783da2e642
-ms.openlocfilehash: 96582e48912bb591d869bbc4df179299e6459f1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcd1f9002362b7726883c6ce4f74fda9ab593544
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500934"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175408"
 ---
 # <a name="results-of-calling-example"></a>Exemple de résultats de l'appel
 
@@ -23,19 +23,22 @@ ms.locfileid: "50500934"
 
 Le nom de fonction décoré C est `_MyFunc`.
 
-![Convention d’appel CDECL](../cpp/media/vc37i01.gif "vc37I01") le **__cdecl** convention d’appel
+![Convention d’appel CDECL](../cpp/media/vc37i01.gif "convention d’appel CDECL") <br/>
+Le **__cdecl** convention d’appel
 
 ## <a name="stdcall-and-thiscall"></a>__stdcall et thiscall
 
 Le nom décoré C (**__stdcall**) est `_MyFunc@20`. Le nom décoré C++ est spécifique à l’implémentation.
 
-![&#95;&#95;STDCALL et conventions d’appel thiscall](../cpp/media/vc37i02.gif "vc37I02") __stdcall et thiscall conventions d’appel
+![&#95;&#95;STDCALL et conventions d’appel thiscall](../cpp/media/vc37i02.gif "&#95;&#95;stdcall et conventions d’appel thiscall") <br/>
+Conventions d’appel __stdcall et thiscall
 
 ## <a name="fastcall"></a>__fastcall
 
 Le nom décoré C (**__fastcall**) est `@MyFunc@20`. Le nom décoré C++ est spécifique à l’implémentation.
 
-![Convention pour l’appel &#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03") la convention d’appel __fastcall
+![Convention pour l’appel &#95; &#95;fastcall](../cpp/media/vc37i03.gif "appelant convention pour &#95; &#95;fastcall") <br/>
+Convention d’appel __fastcall
 
 **FIN de la section spécifique à Microsoft**
 

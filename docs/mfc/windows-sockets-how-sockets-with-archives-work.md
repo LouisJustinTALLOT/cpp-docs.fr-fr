@@ -1,6 +1,6 @@
 ---
 title: 'Windows Sockets : fonctionnement des sockets avec des archives'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
 - sockets [MFC], synchronous operation
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: e87ee1467946003580ffa75e36e39b2c747892b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510758"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174910"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets : fonctionnement des sockets avec des archives
 
@@ -30,7 +30,8 @@ Le `CSocketFile` objet appelle les fonctions de membres son `CSocket` objet pour
 
 La figure suivante montre les relations entre ces objets des deux côtés de la communication.
 
-![CArchive, CSocketFile et CSocket](../mfc/media/vc38ia1.gif "vc38ia1") CArchive, CSocketFile et CSocket
+![CArchive, CSocketFile et CSocket](../mfc/media/vc38ia1.gif "CArchive, CSocketFile et CSocket") <br/>
+CArchive, CSocketFile et CSocket
 
 L’objectif de cette complexité apparente consiste à vous protègent contre la nécessité de gérer les détails du socket vous-même. Vous créez le socket, le fichier et l’archive et ensuite commencez à envoyer ou recevoir des données en les insérant dans l’archive ou en l’extrayant à partir de l’archive. [CArchive](../mfc/reference/carchive-class.md), [CSocketFile](../mfc/reference/csocketfile-class.md), et [CSocket](../mfc/reference/csocket-class.md) gérer les détails en arrière-plan.
 
@@ -41,7 +42,7 @@ Un `CSocket` objet est en fait un objet de deux états : parfois asynchrone (é
 Si `CSocket` n’étaient pas implémentées en tant qu’objet deux États, il est parfois possible de recevoir des notifications supplémentaires pour le même type d’événement pendant que vous ont été traite une notification précédente. Par exemple, vous pouvez obtenir un `OnReceive` notification lors du traitement un `OnReceive`. Dans le fragment de code ci-dessus, extraction `str` à partir de l’archive peut entraîner la récursivité. En basculant les États, `CSocket` empêche la récurrence tout en empêchant des notifications supplémentaires. La règle générale n’est aucune notification au sein de notifications.
 
 > [!NOTE]
->  Un `CSocketFile` peut également être utilisé comme un fichier (limité) sans un `CArchive` objet. Par défaut, le `CSocketFile` du constructeur *bArchiveCompatible* paramètre est **TRUE**. Spécifie que l’objet de fichier doit être utilisé avec une archive. Pour utiliser l’objet fichier sans archive, passez **FALSE** dans le *bArchiveCompatible* paramètre.
+> Un `CSocketFile` peut également être utilisé comme un fichier (limité) sans un `CArchive` objet. Par défaut, le `CSocketFile` du constructeur *bArchiveCompatible* paramètre est **TRUE**. Spécifie que l’objet de fichier doit être utilisé avec une archive. Pour utiliser l’objet fichier sans archive, passez **FALSE** dans le *bArchiveCompatible* paramètre.
 
 En mode « compatible archive », un `CSocketFile` objet offre de meilleures performances et réduit le risque d’un « blocage ». Un blocage se produit lorsque les sockets émettrices et réceptrices sont en attente sur eux ou en attente pour une ressource commune. Cette situation peut se produire si le `CArchive` objet travaillé avec le `CSocketFile` comme il le fait avec un `CFile` objet. Avec `CFile`, l’archive peut supposer que s’il reçoit le moins d’octets qu’il est demandé, la fin du fichier a été atteinte. Avec `CSocketFile`, toutefois, données en fonction de message ; la mémoire tampon peut contenir plusieurs messages, jusqu'à réception de moins que le nombre d’octets demandés n’implique pas la fin du fichier. L’application ne bloque pas, dans ce cas, comme cela pourrait être avec `CFile`, et il peut continuer à lire des messages à partir de la mémoire tampon jusqu'à ce que la mémoire tampon est vide. Le [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) fonctionner dans `CArchive` est utile pour surveiller l’état de la mémoire tampon de l’archive dans ce cas.
 
@@ -51,4 +52,3 @@ Pour plus d’informations, consultez [Windows Sockets : utilisation de Sockets
 
 [Windows Sockets dans MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
-

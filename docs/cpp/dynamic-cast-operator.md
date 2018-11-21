@@ -1,17 +1,17 @@
 ---
 title: dynamic_cast, opérateur
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 75085fe6dd1478fee769e23938c55c6300429d86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529153"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176963"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast, opérateur
 
@@ -121,7 +121,8 @@ int main() {
 }
 ```
 
-![Hiérarchie qui montre l’héritage multiple de classes](../cpp/media/vc39011.gif "vc39011") hiérarchie de classes montrant un héritage Multiple
+![Hiérarchie qui montre l’héritage multiple de classes](../cpp/media/vc39011.gif "hiérarchie qui montre l’héritage multiple de classes") <br/>
+Hiérarchie de classes montrant un héritage multiple
 
 Un pointeur vers un objet de type `D` pouvant être casté en toute sécurité en `B` ou `C`. Toutefois, si `D` est converti pour pointer vers un `A` de l’objet, instance de `A` provoquerait ? Cela entraînerait une erreur de conversion ambiguë. Pour contourner ce problème, vous pouvez effectuer deux casts non équivoque. Exemple :
 
@@ -141,13 +142,15 @@ void f() {
 
 Ambiguïtés supplémentaires peuvent être introduites lorsque vous utilisez des classes de base virtuelles. Envisagez la hiérarchie de classes illustrée à la figure suivante.
 
-![Classe de hiérarchie qui montre les classes de base virtuelles](../cpp/media/vc39012.gif "vc39012") hiérarchie classe montrant les Classes de Base virtuelles
+![Classe de hiérarchie qui montre les classes de base virtuelles](../cpp/media/vc39012.gif "classe hiérarchie qui montre les classes de base virtuelles") <br/>
+Hiérarchie de classes montrant des classes de base virtuelles
 
 Dans cette hiérarchie, `A` est une classe de base virtuelle. Une instance donnée de la classe `E` et un pointeur vers le `A` sous-objet, un **dynamic_cast** vers un autre pointeur vers `B` échoue en raison de l’ambiguïté. Vous devez commencer par caster à l’ensemble `E` de l’objet, puis progressez sauvegarder la hiérarchie, de manière non équivoque, pour atteindre le bon `B` objet.
 
 Envisagez la hiérarchie de classes illustrée à la figure suivante.
 
-![Hiérarchie montrant des classes de base en double de classes](../cpp/media/vc39013.gif "vc39013") classe hiérarchie affichant en double Classes de Base
+![Hiérarchie montrant des classes de base en double de classes](../cpp/media/vc39013.gif "hiérarchie montrant des classes de base en double de classes") <br/>
+Hiérarchie de classes montrant des classes de base en double
 
 Étant donné un objet de type `E` et un pointeur vers le `D` sous-objet, accéder à partir de la `D` sous-objet à l’extrême gauche `A` sous-objet, trois conversions peuvent être effectuées. Vous pouvez effectuer un **dynamic_cast** conversion à partir de la `D` pointeur vers un `E` pointeur, puis une conversion (soit **dynamic_cast** ou une conversion implicite) à partir de `E`à `B`et enfin une conversion implicite de `B` à `A`. Exemple :
 

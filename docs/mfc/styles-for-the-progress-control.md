@@ -1,18 +1,18 @@
 ---
 title: Styles du contrôle Progress
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - PBS_SMOOTH style
 - progress controls [MFC], styles
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-ms.openlocfilehash: 494f5df03d15e1662f20aff644fb414a7254ad5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d33e9306c1d70bb58ad628297360bc6e34e6ce2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451725"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174952"
 ---
 # <a name="styles-for-the-progress-control"></a>Styles du contrôle Progress
 
@@ -34,11 +34,11 @@ Utilisez PBS_VERTICAL pour orienter le contrôle verticalement, et non horizonta
 
 Sans PBS_SMOOTH (style) :
 
-![Style de barre de progression standard](../mfc/media/vc4ruw1.gif "vc4ruw1")
+![Style de barre de progression standard](../mfc/media/vc4ruw1.gif "style de barre de progression Standard")
 
 Avec les styles PBS_SMOOTH et PBS_VERTICAL :
 
-![Style, lisse et vertical de la barre de progression](../mfc/media/vc4ruw2.gif "vc4ruw2")
+![Style, lisse et vertical de la barre de progression](../mfc/media/vc4ruw2.gif "style, lisse et vertical de la barre de progression")
 
 Pour plus d’informations, consultez [Styles de fenêtre](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc) dans le *référence MFC*.
 

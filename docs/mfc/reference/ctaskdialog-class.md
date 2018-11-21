@@ -1,6 +1,6 @@
 ---
 title: CTaskDialog Class
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CTaskDialog
 - AFXTASKDIALOG/CTaskDialog
@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: cbfb0a355b4901907b5df0a0b42ac28d5a76c551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441949"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177067"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -242,7 +242,8 @@ Le `CTaskDialog` possède deux constructeurs différents. Un constructeur vous p
 
 L’illustration suivante montre un exemple `CTaskDialog` pour illustrer l’emplacement de certains contrôles.
 
-![Exemple de CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "ctaskdialogsample") exemple de CTaskDialog
+![Exemple de CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "exemple de CTaskDialog") <br/>
+Exemple de CTaskDialog
 
 ## <a name="requirements"></a>Configuration requise
 

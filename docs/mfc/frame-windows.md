@@ -1,6 +1,6 @@
 ---
 title: Fenêtres frame
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document frame windows [MFC]
 - windows [MFC], MDI
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 09db7bab392778297f17c14f7bb807f91af4d896
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619932"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175373"
 ---
 # <a name="frame-windows"></a>Fenêtres frame
 
@@ -30,7 +30,8 @@ Lorsqu’une application s’exécute sous Windows, l’utilisateur interagit av
 
 L’infrastructure MFC utilise des fenêtres frame qui contient des vues. Les deux composants — frame et contenu — sont représentées et gérées par deux classes différentes de MFC. Une classe de fenêtre frame gère le frame, et une classe de vue gère le contenu. La fenêtre d’affichage est un enfant de la fenêtre frame. Dessin et toute autre interaction utilisateur avec le document ont lieu dans la zone cliente de la vue pas la zone fenêtre frame du client. La fenêtre frame fournit un cadre visible autour d’une vue, avec une barre de légende et les contrôles de fenêtre standard tel qu’un menu de contrôle, boutons réduire et agrandir la fenêtre et les contrôles de redimensionnement de la fenêtre. Le « contenu » se composent de la zone cliente de la fenêtre qui est entièrement occupée par une fenêtre enfant, la vue. La figure suivante montre la relation entre une fenêtre frame et une vue.
 
-![Affichage de la fenêtre de frame](../mfc/media/vc37fx1.gif "vc37fx1") fenêtre Frame et vue
+![Affichage de la fenêtre de frame](../mfc/media/vc37fx1.gif "Frame d’affichage de la fenêtre") <br/>
+Affichage et fenêtre frame
 
 ## <a name="frame-windows-and-splitter-windows"></a>Frame Windows et Windows de séparateur
 

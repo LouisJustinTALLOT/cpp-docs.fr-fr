@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCPropertyGridCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertyGridCtrl
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl
@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 764a1fc33d91888c8c32111eca41666d9d0abbd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557324"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177054"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 
@@ -293,7 +293,7 @@ Le tableau suivant répertorie les quatre types de propriété de sélection :
 
 Les illustrations suivantes décrivent un contrôle de grille de propriétés qui affiche les propriétés de deux manières. La première illustration affiche les propriétés hiérarchiquement et la seconde affiche les propriétés par ordre alphabétique.
 
-![Feuille de propriétés de liste propriété](../../mfc/reference/media/proplist.png "proplist")
+![Feuille de propriétés de liste propriété](../../mfc/reference/media/proplist.png "propriété liste feuille de propriétés")
 
 ## <a name="example"></a>Exemple
 

@@ -1,21 +1,22 @@
 ---
 title: Vue d'ensemble des déclarateurs
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-ms.openlocfilehash: 66f1068fd3f69d3e4546f159ec22b34024bd2057
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326756"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177080"
 ---
 # <a name="overview-of-declarators"></a>Vue d'ensemble des déclarateurs
 
 Les déclarateurs sont les composants d'une déclaration qui spécifient les noms des objets ou des fonctions. Les déclarateurs spécifient également si l'objet nommé est un objet, un pointeur, une référence ou un tableau.  Les déclarateurs ne spécifient pas le type de base, mais ils modifient les informations de type dans le type de base pour spécifier les types dérivés, tels que des pointeurs, des références et des tableaux.  Appliqué aux fonctions, le déclarateur utilise le spécificateur de type pour spécifier complètement le type de retour d'une fonction comme étant un objet, un pointeur ou une référence. (Spécificateurs, présentés dans [déclarations et définitions](declarations-and-definitions-cpp.md), transmettre des propriétés telles que la classe de type et de stockage. Modificateurs, décrits dans cette section et dans [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md), modifient les déclarateurs.) La figure ci-dessous illustre une déclaration complète de `MyFunction` et répertorie les composants de la déclaration.
 
-![Modificateurs, spécificateurs et déclarateurs](../cpp/media/vc38qy1.gif "vc38QY1") spécificateurs, modificateurs et déclarateurs
+![Modificateurs, spécificateurs et déclarateurs](../cpp/media/vc38qy1.gif "modificateurs, spécificateurs et déclarateurs") <br/>
+Spécificateurs, modificateurs et déclarateurs
 
 **Section spécifique à Microsoft**
 

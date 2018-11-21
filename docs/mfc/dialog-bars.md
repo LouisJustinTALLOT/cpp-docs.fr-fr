@@ -1,6 +1,6 @@
 ---
 title: Barres de boîte de dialogue
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MFC, control bars
 - CDialogBar class [MFC], dialog bars
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: 3a3276e9b5d0e1ab8d8e77fae983d24ff1e4b4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800cc208df7299cf440508c2705b0b0ddb9ae665
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557396"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175351"
 ---
 # <a name="dialog-bars"></a>Barres de boîte de dialogue
 
@@ -21,7 +21,8 @@ Une barre de boîte de dialogue est une barre d’outils, un type de [barre de c
 
 Il existe plusieurs différences clés entre une barre d’outils et un `CDialogBar` objet. Un `CDialogBar` objet est créé à partir d’une ressource de modèle de boîte de dialogue, que vous pouvez créer avec l’éditeur de boîtes de dialogue Visual C++ et qui peut contenir n’importe quel type de contrôle de Windows. L’utilisateur peut tabuler de contrôle au contrôle. Et vous pouvez spécifier un style d’alignement pour aligner la barre de boîte de dialogue avec n’importe quelle partie de la fenêtre frame parente ou même à laisser en place si le parent est redimensionné. La figure suivante illustre une barre de boîte de dialogue avec un large éventail de contrôles.
 
-![Barre de boîte de dialogue VC](../mfc/media/vc378t1.gif "vc378t1") une barre de boîte de dialogue
+![Barre de boîte de dialogue VC](../mfc/media/vc378t1.gif "barre de boîte de dialogue VC") <br/>
+Une barre de boîte de dialogue
 
 Dans les autres égards, travaillez sur un `CDialogBar` objet est semblable à l’utilisation avec une boîte de dialogue non modale. Utiliser l’éditeur de boîtes de dialogue pour concevoir et créer la ressource de boîte de dialogue.
 
