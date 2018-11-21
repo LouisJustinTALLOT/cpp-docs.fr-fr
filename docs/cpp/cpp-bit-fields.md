@@ -1,17 +1,17 @@
 ---
 title: Champs de bits C++
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: df4e5a068f76c35dc22b3915ad7e4ace421ca10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644959"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175091"
 ---
 # <a name="c-bit-fields"></a>Champs de bits C++
 
@@ -43,7 +43,8 @@ struct Date {
 
 La disposition de mémoire conceptuelle d'un objet de type `Date` est illustrée dans la figure suivante.
 
-![Disposition de mémoire d’un objet date](../cpp/media/vc38uq1.png "vc38UQ1") mise en mémoire d’objet Date
+![Disposition de mémoire d’un objet date](../cpp/media/vc38uq1.png "disposition de mémoire d’un objet date") <br/>
+Disposition de la mémoire d'un objet Date
 
 Notez que `nYear` est de 8 bits et provoquerait un dépassement de la limite de mot du type déclaré, **non signé** **court**. Par conséquent, il est lancé au début d’un nouveau **non signé** **court**. Il n'est pas nécessaire que tous les champs de bits tiennent dans un objet du type sous-jacent ; de nouvelles unités de stockage sont allouées en fonction du nombre de bits demandé dans la déclaration.
 
@@ -69,7 +70,8 @@ struct Date {
 
 puis la disposition de mémoire se présente comme dans l’illustration suivante :
 
-![Disposition d’un objet Date avec zéro&#45;champ de bits de longueur](../cpp/media/vc38uq2.png "vc38UQ2") disposition d’objet de Date avec un champ de bits de longueur nulle
+![Disposition d’un objet Date avec zéro&#45;champ de bits de longueur](../cpp/media/vc38uq2.png "objet disposition de Date avec un zéro&#45;champ de bits de longueur") <br/>
+Disposition d'un objet Date avec un champ de bits de longueur 0
 
 Le type sous-jacent d’un champ de bits doit être un type intégral, comme décrit dans [Types fondamentaux](../cpp/fundamental-types-cpp.md).
 

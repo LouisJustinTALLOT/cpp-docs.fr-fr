@@ -1,6 +1,6 @@
 ---
 title: CMFCColorPickerCtrl, classe
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCColorPickerCtrl
 - AFXCOLORPICKERCTRL/CMFCColorPickerCtrl
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 073012642597d0b38dcb0f76cf5662666447adc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38fe09b5fdde85dad485e126f6c094196fe68ff4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519052"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176924"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl, classe
 
@@ -97,7 +97,7 @@ Couleurs standard sont sélectionnées à partir d’une palette de couleurs hex
 
 L’illustration suivante représente plusieurs `CMFCColorPickerCtrl` objets.
 
-![Boîte de dialogue CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "colorpicker")
+![Boîte de dialogue CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "boîte de dialogue CMFCColorPickerCtrl")
 
 Le `CMFCColorPickerCtrl` prend en charge deux paires de styles. Les styles HEX et HEX_GREYSCALE sont appropriés pour la sélection de couleur standard. Les styles de sélecteur et la LUMINANCE sont appropriés pour la sélection de couleur personnalisée.
 
@@ -128,7 +128,7 @@ L’exemple suivant montre comment configurer un `CMFCColorPickerCtrl` objet à 
 
 [CMFCColorPickerCtrl](../../mfc/reference/cmfccolorpickerctrl-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcolorpickerctrl.h
 

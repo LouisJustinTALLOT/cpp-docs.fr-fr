@@ -1,6 +1,6 @@
 ---
 title: Présentation de C++ AMP
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 070f0885f11f29413aca3028d4f747e0edfd2413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663786"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176989"
 ---
 # <a name="c-amp-overview"></a>Présentation de C++ AMP
 
@@ -362,7 +362,7 @@ Dans les applications classiques, les éléments dans une mosaïque sont associ�
 
 Le diagramme suivant représente un tableau à deux dimensions de données qui sont organisées en mosaïques d’échantillonnage.
 
-![Indexer les valeurs dans une étendue en mosaïque](../../parallel/amp/media/camptiledgridexample.png "camptiledgridexample")
+![Indexer les valeurs dans une étendue en mosaïque](../../parallel/amp/media/camptiledgridexample.png "indexer les valeurs dans une étendue en mosaïque")
 
 L’exemple de code suivant utilise les données d’échantillonnage à partir du diagramme précédent. Le code remplace chaque valeur dans la mosaïque par la moyenne des valeurs dans la vignette.
 

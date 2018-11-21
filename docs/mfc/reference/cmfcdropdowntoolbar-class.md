@@ -1,6 +1,6 @@
 ---
 title: CMFCDropDownToolbar, classe
-ms.date: 10/188/2018
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCDropDownToolBar
 - AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: ccbdd69baea104f306cfdca69efb46985ee97b91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c5115d2453f21d83eda39950ac45a0290e9bfa8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581998"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176937"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolbar, classe
 
@@ -60,7 +60,7 @@ Une barre d’outils de la liste déroulante ne peut pas être personnalisé ou 
 
 L’illustration suivante montre un `CMFCDropDownToolBar` objet :
 
-![Exemple de CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")
+![Exemple de CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "exemple de CMFCDropDownToolbar")
 
 Vous créez un `CMFCDropDownToolBar` objet de la même façon que vous créez une barre d’outils ordinaire (consultez [cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md)).
 

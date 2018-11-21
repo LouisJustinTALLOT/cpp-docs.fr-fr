@@ -1,6 +1,6 @@
 ---
 title: Contrôles ActiveX MFC
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - MFC ActiveX Controls (MFC)
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 95e1e1cc47d9c14448635fae5d6a9added8e15e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553269"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174867"
 ---
 # <a name="mfc-activex-controls"></a>Contrôles ActiveX MFC
 
@@ -39,7 +39,8 @@ Vous pouvez créer des contrôles ActiveX sans fenêtre et des contrôles qui cr
 
 Un contrôle ActiveX est implémenté comme un serveur in-process (généralement un petit objet) qui peut être utilisé dans n’importe quel conteneur OLE. Notez que toutes les fonctionnalités d’un contrôle ActiveX sont disponible uniquement lorsque utilisé au sein d’un conteneur OLE compatible avec des contrôles ActiveX. Consultez [contrôles ActiveX de Port à d’autres Applications](../mfc/containers-for-activex-controls.md) pour obtenir la liste des conteneurs qui prennent en charge les contrôles ActiveX. Ce type de conteneur, dénommé « conteneur de contrôle », peut exploiter un contrôle ActiveX à l’aide des propriétés et des méthodes du contrôle et reçoit des notifications à partir du contrôle ActiveX sous la forme d’événements. La figure suivante illustre cette interaction.
 
-![Interaction du conteneur de contrôles ActiveX et le contrôle](../mfc/media/vc37221.gif "vc37221") Interaction entre un conteneur de contrôles ActiveX et un contrôle ActiveX avec fenêtres
+![Interaction du conteneur de contrôles ActiveX et le contrôle](../mfc/media/vc37221.gif "interaction d’ActiveX contrôle conteneur et contrôle") <br/>
+Interaction entre un conteneur de contrôles ActiveX et un contrôle ActiveX avec fenêtres
 
 Pour obtenir des informations récentes sur l’optimisation de vos contrôles ActiveX, consultez [contrôles ActiveX MFC : optimisation](../mfc/mfc-activex-controls-optimization.md).
 
@@ -69,7 +70,8 @@ Le dernier élément est une table de dispatch, qui est utilisée pour exposer u
 
 Lorsqu’un contrôle est utilisé dans un conteneur de contrôle, il utilise deux mécanismes pour communiquer : il expose les propriétés et méthodes, et il déclenche des événements. La figure suivante montre comment ces deux mécanismes sont implémentés.
 
-![Contrôle ActiveX communique avec son conteneur](../mfc/media/vc37222.gif "vc37222") Communication entre un conteneur de contrôles ActiveX et un contrôle ActiveX
+![Contrôle ActiveX communique avec son conteneur](../mfc/media/vc37222.gif "contrôle ActiveX communique avec son conteneur") <br/>
+Communication entre un conteneur de contrôles ActiveX et un contrôle ActiveX
 
 La figure précédente illustre également comment les autres interfaces OLE (outre l’automation et les événements) sont gérées par les contrôles.
 
@@ -83,7 +85,8 @@ Quand un [contrôle sans fenêtre](../mfc/providing-windowless-activation.md) va
 
 Lorsqu’un contrôle avec une fenêtre devienne actif, il est en mesure d’interagir entièrement avec le conteneur de contrôle, l’utilisateur et Windows. La figure ci-dessous montre les chemins d’accès de communication entre le contrôle ActiveX, le contrôle conteneur et le système d’exploitation.
 
-![Dans le contrôle ActiveX avec fenêtres d’active le traitement des messages](../mfc/media/vc37223.gif "vc37223") le traitement des messages Windows dans un contrôle ActiveX avec fenêtres (d’un niveau de Active lorsque)
+![Dans le contrôle ActiveX avec fenêtres d’active le traitement des messages](../mfc/media/vc37223.gif "dans des contrôle ActiveX avec fenêtres active le traitement des messages") <br/>
+Windows traitement des messages dans un contrôle ActiveX avec fenêtres (lorsqu’il est actif)
 
 ##  <a name="_core_serializing_activex_elements"></a> Sérialisation
 

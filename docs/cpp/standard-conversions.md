@@ -1,17 +1,17 @@
 ---
 title: Conversions standard
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575446"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176976"
 ---
 # <a name="standard-conversions"></a>Conversions standard
 
@@ -189,7 +189,8 @@ Dans le premier cas, la classe de base spécifiée est accessible et la conversi
 
 L'accessibilité d'une classe de base dépend du type d'héritage utilisé dans la dérivation. Prenons l'héritage illustré dans l'illustration suivante.
 
-![Graphique d’héritage base&#45;d’accessibilité de classe](../cpp/media/vc38xa1.gif "vc38XA1") graphique d’héritage pour une Illustration de l’accessibilité de classe de Base
+![Graphique d’héritage base&#45;d’accessibilité de classe](../cpp/media/vc38xa1.gif "graphique d’héritage base&#45;d’accessibilité de classe") <br/>
+Graphique d'héritage pour l'illustration de l'accessibilité de la classe de base
 
 Le tableau suivant indique l'accessibilité de la classe de base d'après la situation illustrée.
 

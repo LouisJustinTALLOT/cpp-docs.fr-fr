@@ -1,6 +1,6 @@
 ---
 title: Annulation dans la bibliothèque de modèles parallèles
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms, canceling [Concurrency Runtime]
 - canceling parallel algorithms [Concurrency Runtime]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327419"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177015"
 ---
 # <a name="cancellation-in-the-ppl"></a>Annulation dans la bibliothèque de modèles parallèles
 
@@ -57,7 +57,7 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
 
 La bibliothèque de modèles parallèles (PPL) utilise des tâches et des groupes de tâches pour gérer les tâches et les calculs affinés. Vous pouvez imbriquer des groupes de tâches pour le formulaire *arborescences* de travail parallèle. L’illustration suivante montre une arborescence de travail parallèle. Dans cette illustration, `tg1` et `tg2` représentent des groupes de tâches ; `t1`, `t2`, `t3`, `t4` et `t5` représentent le travail que les groupes de tâches effectuent.
 
-![Une arborescence de travail parallèle](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")
+![Une arborescence de travail parallèle](../../parallel/concrt/media/parallelwork_trees.png "une arborescence de travail parallèle")
 
 L’exemple suivant montre le code requis pour créer l’arborescence dans l’illustration. Dans cet exemple, `tg1` et `tg2` sont [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objets ; `t1`, `t2`, `t3`, `t4`, et `t5` sont [concurrency::task_handle](../../parallel/concrt/reference/task-handle-class.md) objets.
 
