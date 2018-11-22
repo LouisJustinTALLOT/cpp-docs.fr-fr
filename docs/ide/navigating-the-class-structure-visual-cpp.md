@@ -1,30 +1,21 @@
 ---
-title: Parcours de la structures de classes (Visual C++)
-ms.date: 11/04/2016
+title: Parcourir la structure de classe
+ms.date: 11/12/2018
 f1_keywords:
 - vc.codewiz.classes.structure
 helpviewer_keywords:
 - classes [C++], structure
 - Object Browser, navigating
 ms.assetid: 3bd9427d-c920-41fd-b27c-3063dd924e0c
-ms.openlocfilehash: 1273604038c28240e16d2f2003de00e63d4426d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b9dffb5738d85899b832694c534eb13f5a57339
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537720"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693033"
 ---
-# <a name="navigating-the-class-structure-visual-c"></a>Parcours de la structures de classes (Visual C++)
+# <a name="navigate-the-class-structure"></a>Parcourir la structure de classe
 
-Vous pouvez parcourir la structure de classe d’un projet, notamment les fonctions, les héritages et les interfaces, à l’aide de **l’affichage de classes** ou de **l’Explorateur d’objets**. Pour plus d’informations, consultez [Affichage de la structure du code](/visualstudio/ide/viewing-the-structure-of-code).
+Vous pouvez parcourir la structure de classe d’un projet à l’aide de l’**Affichage de classes** ou de l’**Explorateur d’objets**. La structure de classe d’un projet peut inclure des fonctions, l’héritage et des interfaces. Pour plus d’informations, consultez [Afficher la structure du code](/visualstudio/ide/viewing-the-structure-of-code).
 
-Vous pouvez accéder à une déclaration de fonction en double-cliquant sur le nom de la fonction dans l’affichage de classes. Pour accéder à une définition de classe, double-cliquez sur le nom de la classe dans l’affichage de classes.
-
-## <a name="see-also"></a>Voir aussi
-
-[Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)<br>
-[Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)<br>
-[Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)<br>
-[Substitution d’une fonction virtuelle](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+Pour accéder à une déclaration de fonction, double-cliquez sur le nom de la fonction dans Affichage de classes. Pour accéder à une définition de classe, double-cliquez sur un nom de classe dans Affichage de classes.
