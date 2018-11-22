@@ -1,13 +1,13 @@
 ---
 title: 'Guide du portage : Spy++'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 9e36bbefb2ab851350e17c0561addb680593f457
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487813"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177002"
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 
@@ -25,7 +25,7 @@ Le fichier projet, constitué de deux anciens fichiers .dsw de Visual C++ 6.0, 
 
 Une fois la mise à niveau des deux projets terminée, notre solution se présentait ainsi :
 
-![Solution Spy&#43;&#43;](../porting/media/spyxxsolution.PNG "SpyxxSolution")
+![Solution Spy&#43;&#43;](../porting/media/spyxxsolution.PNG "Solution Spy&#43;&#43;")
 
 Nous avons ici deux projets, l'un avec un grand nombre de fichiers C++ et l'autre une DLL écrite en C.
 

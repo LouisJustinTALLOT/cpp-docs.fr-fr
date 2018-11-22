@@ -1,21 +1,21 @@
 ---
 title: États de flux
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: d51f24b82c10d58e91f5d20b6656eb16621004ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481170"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175559"
 ---
 # <a name="stream-states"></a>États de flux
 
 Les états valides et les transitions d’état d’un flux de données sont indiqués dans l’illustration suivante.
 
-![Flux](../c-runtime-library/media/stream.gif "flux")
+![Diagramme d’état de flux](../c-runtime-library/media/stream.gif "Diagramme d’état de flux")
 
 Chaque cercle indique un état stable. Chacune des lignes dénote une transition qui peut se produire à la suite d’un appel de fonction opérant sur le flux de données. Cinq groupes de fonctions peuvent entraîner des transitions d’état.
 

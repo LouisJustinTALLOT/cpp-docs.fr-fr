@@ -1,13 +1,13 @@
 ---
 title: 'Guide du portage : Scribble MFC'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: b41689b1e0207029f4494cfd91c261705789a733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539761"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175650"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guide du portage : Scribble MFC
 
@@ -31,7 +31,7 @@ Notez que vous pouvez aussi exécuter devenv avec l'option `/Upgrade` sur la lig
 
 Quand vous ouvrez un ancien fichier projet dans Visual Studio 2017, Visual Studio propose de le convertir vers la version la plus récente, ce que nous avons choisi de faire. La boîte de dialogue suivante s'est affichée :
 
-![Voir les modifications apportées au projet et à la solution](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")
+![Passer en revue les modifications apportées au projet et à la solution](../porting/media/scribbleprojectupgrade.PNG "Passer en revue les modifications apportées au projet et à la solution")
 
 Une erreur s'est produite. Le message nous informe que la cible Itanium n'est pas disponible et ne sera donc pas convertie.
 
@@ -43,7 +43,7 @@ Au moment de la création du projet Scribble précédent, Itanium était une pla
 
 Visual Studio affiche ensuite un rapport de migration qui répertorie tous les problèmes rencontrés avec l'ancien fichier projet.
 
-![Rapport de mise à niveau](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")
+![Rapport de mise à niveau](../porting/media/scribblemigrationreport.PNG "Rapport de mise à niveau")
 
 Dans ce cas, les problèmes signalés étaient tous des avertissements, et Visual Studio a effectué les modifications appropriées dans le fichier projet. La grande différence en ce qui concerne le projet est que l'outil de build utilisé est maintenant msbuild au lieu de vcbuild. Cette modification a été introduite dans Visual Studio 2010. D'autres modifications ont été apportées, notamment une réorganisation de la séquence d'éléments dans le fichier projet. Aucun des problèmes signalés ne nécessitait une attention particulière pour ce projet simple.
 

@@ -1,39 +1,83 @@
 ---
-title: Ajout d'un événement (Visual C++)
-ms.date: 11/04/2016
+title: Ajouter un événement
+ms.date: 11/12/2018
+f1_keywords:
+- vc.codewiz.event.overview
 helpviewer_keywords:
 - ActiveX controls [C++], adding events to
 - MFC ActiveX controls [C++], adding events
 - events [C++], ActiveX controls
+- add event wizard [C++]
 ms.assetid: fe34832a-edfc-4f86-aacb-8df77001873d
-ms.openlocfilehash: 6dd4ecd249e47523b08433bda12838fb8b220157
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d5a8f5666dd04e00f8a438fdbf00320c37e14f4
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444783"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693423"
 ---
-# <a name="adding-an-event-visual-c"></a>Ajout d'un événement (Visual C++)
+# <a name="add-an-event"></a>Ajouter un événement
 
-À partir de l’affichage de classes, vous ne pouvez ajouter un événement à l’aide de [l’Assistant Ajout d’événement](../ide/add-event-wizard.md) qu’à la classe de contrôle de votre projet de [contrôle ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md). Si vous souhaitez ajouter un événement à un autre type de projet, utilisez le bouton **Événements** de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
+À partir d’Affichage de classes, vous pouvez ajouter un événement à l’aide de l’[Assistant Ajout d’événement](#add-event-wizard) uniquement à la classe de contrôle de votre projet de [contrôle ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md). Si vous souhaitez ajouter un événement à un autre type de projet, utilisez le bouton **Événements** de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
 
-### <a name="to-add-an-event-to-your-mfc-activex-control-project"></a>Pour ajouter un événement à votre projet de contrôle ActiveX MFC
+**Pour ajouter un événement à votre projet de contrôle ActiveX MFC**
 
 1. Dans l’affichage de classes, développez le nœud du projet afin d’afficher ses classes.
 
 1. Cliquez avec le bouton droit sur la classe de contrôle du projet.
 
-1. Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter un événement** afin d’afficher l’Assistant Ajout d’événement.
+1. Dans le menu contextuel, choisissez **Ajouter**, puis **Ajouter un événement** pour afficher l’Assistant Ajout d’événement.
 
 1. Indiquez les informations sur l’événement dans les zones appropriées de l’Assistant.
 
-1. Cliquez sur **Terminer** pour ajouter l’événement au projet.
+1. Sélectionnez **Terminer** pour ajouter l’événement au projet.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="in-this-section"></a>Dans cette section
 
-[Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)<br>
-[Ajout d’une variable membre](../ide/adding-a-member-variable-visual-cpp.md)<br>
-[Ajout d’une fonction membre](../ide/adding-a-member-function-visual-cpp.md)<br>
-[Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)<br>
-[Parcours de la structure de classe](../ide/navigating-the-class-structure-visual-cpp.md)
+- [Assistant Ajout d’événement](#add-event-wizard)
+
+## <a name="add-event-wizard"></a>Assistant Ajout d’événement
+
+Cet Assistant ajoute un événement à un projet de contrôle ActiveX MFC. Vous pouvez spécifier votre propre événement, personnaliser un événement stock standard ou sélectionner un événement stock dans une liste.
+
+- **Nom de l’événement**
+
+   Définit le nom utilisé par les clients Automation pour demander un événement de la classe. Entrez un nom ou sélectionnez-en un dans la liste.
+
+- **Type de l’événement**
+
+   Indique le type d’événement à ajouter. Disponible uniquement si la sélection est effectuée dans la liste **Nom de l’événement**.
+
+   |Option|Description|
+   |------------|-----------------|
+   |**Stock**|Spécifie qu’un événement stock, tel qu’un clic sur un bouton, est implémenté pour cette classe. Les événements stock sont définis dans la bibliothèque MFC (Microsoft Foundation Class).|
+   |**Personnalisé**|Indique que vous utilisez votre propre implémentation de l’événement.|
+
+- **Nom interne**
+
+   Définit le nom de la fonction membre qui envoie l’événement. Disponible uniquement pour les événements personnalisés. Le nom est basé sur le **Nom de l’événement**. Vous pouvez changer le nom interne si vous souhaitez attribuer un nom différent du **Nom de l’événement**.
+
+- **Type de paramètre**
+
+   Définit le type du **Nom du paramètre**. Sélectionnez le type dans la liste.
+
+- **Nom du paramètre**
+
+   Définit le nom d’un paramètre à passer par l’intermédiaire de votre événement. Après avoir tapé le nom, vous devez sélectionner **Ajouter** pour l’ajouter à la liste de paramètres.
+
+   Dès que vous sélectionnez **Ajouter**, le nom du paramètre s’affiche dans **Liste de paramètres**.
+
+   > [!NOTE]
+   > Si vous fournissez un nom de paramètre et sélectionnez **Terminer** avant de sélectionner **Ajouter**, le paramètre n’est pas ajouté à l’événement. Vous devez rechercher la méthode et insérer le paramètre manuellement.
+
+- **Ajouter**
+
+   Ajoute le paramètre que vous spécifiez dans **Nom du paramètre** et son type à **Liste de paramètres**. Sélectionnez **Ajouter** pour ajouter un paramètre à la liste.
+
+- **Supprimer**
+
+   Supprime de la liste le paramètre que vous sélectionnez dans **Liste de paramètres**.
+
+- **Liste de paramètres**
+
+   Affiche tous les paramètres et leurs types actuellement ajoutés pour la méthode. Quand vous ajoutez des paramètres, l’Assistant met à jour la **Liste de paramètres** pour afficher chaque paramètre avec son type.
