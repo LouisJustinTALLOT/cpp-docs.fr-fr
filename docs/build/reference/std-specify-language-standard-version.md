@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 28796826a7c312b92b3ec0510513ad4804800ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c91f02fe044b5e6afccfc075c5d73ec004b8222
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476037"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389953"
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (spécifier la Version de langue Standard)
 
@@ -19,11 +19,11 @@ Activer prise en charge des fonctionnalités du langage C++ à partir de la vers
 
 ## <a name="syntax"></a>Syntaxe
 
-> / std : [c ++ 14 | c ++ 17 | c ++ latest]
+> / std :\[c ++ 14\|c ++ 17\|c ++ latest]
 
 ## <a name="remarks"></a>Notes
 
-Le **/STD** option est disponible dans Visual Studio 2017 et versions ultérieures. Il est utilisé pour contrôler les fonctionnalités de langage standard est activées pendant la compilation de votre code de programmation spécifique à la version ISO C++. Cette option vous permet de désactiver la prise en charge de certaines nouvelles fonctionnalités de langage et la bibliothèque qui peut entraîner la rupture votre code existant qui est conforme à une version particulière du langage standard. Par défaut, **/std : c ++ 14** est spécifié, qui désactive les fonctionnalités de langage et bibliothèque standard trouvées dans les versions ultérieures du langage C++ standards. Utilisez **/std : c ++ 17** pour activer les fonctionnalités de spécifique à la norme C ++ 17 et le comportement. Pour activer explicitement le dernier pris en charge de compilateur et les fonctionnalités de la bibliothèque standard, utilisez **/std : c ++ dernière**.
+Le **/STD** option est disponible dans Visual Studio 2017 et versions ultérieures. Il est utilisé pour contrôler les fonctionnalités de langage standard est activées pendant la compilation de votre code de programmation spécifique à la version ISO C++. Cette option vous permet de désactiver la prise en charge de certaines nouvelles fonctionnalités de langage et la bibliothèque qui peut entraîner la rupture votre code existant qui est conforme à une version particulière du langage standard. Par défaut, **/std : c ++ 14** est spécifié, qui désactive les fonctionnalités de langage et bibliothèque standard trouvées dans les versions ultérieures du langage C++ standards. Utilisez **/std : c ++ 17** pour activer les fonctionnalités de spécifique à la norme C ++ 17 et le comportement. Pour activer explicitement le compilateur actuellement implémenté et les fonctionnalités de la bibliothèque standard proposées pour le projet de norme suivant, utilisez **/std : c ++ dernière**.
 
 La valeur par défaut **/std : c ++ 14** option Active l’ensemble des fonctionnalités C ++ 14 implémentées par le compilateur Visual C++. Cette option désactive la prise en charge de bibliothèque standard pour les fonctionnalités qui sont modifiées ou nouvelles dans les versions plus récentes du langage standard, à l’exception de certaines fonctionnalités C ++ 17 déjà implémentées dans les versions précédentes du compilateur Visual C++ et de compilateur. Pour éviter d’interrompre des modifications pour les utilisateurs qui ont déjà pris des dépendances sur les fonctionnalités disponibles à compter de Visual Studio 2015 Update 2, ces fonctionnalités restent activées, lorsque le **/std : c ++ 14** option est spécifiée :
 
@@ -41,7 +41,10 @@ Pour plus d’informations sur les fonctionnalités C ++ 14 et C ++ 17 sont acti
 
 Le **/std : c ++ 17** option permet à l’ensemble complet des fonctionnalités C ++ 17 implémentées par le compilateur Visual C++. Cette option désactive la prise en charge par le compilateur et la bibliothèque standard des fonctionnalités modifiées ou nouvelles dans les versions de Working Draft et les mises à jour des défauts de C++ Standard postérieures à C++17.
 
-Le **/std : c ++ dernière** option Active l’ensemble des fonctionnalités de langage et la bibliothèque C++ implémentée par Visual C++ pour suivre le plus récent C ++ 20 Working Draft et defect mises à jour de la norme C++ qui ne figurent pas dans C ++ 17. Ce commutateur permet d’obtenir le post-fonctionnalités de langage C ++ 17 prises en charge par le compilateur et la bibliothèque standard. Pour obtenir la liste des langues prises en charge et les fonctionnalités de la bibliothèque, consultez [quelles sont les nouveautés de Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). Le **/std : c ++ dernière** option ne permet pas de fonctionnalités protégées par le **/ expérimentale** basculer.
+Le **/std : c ++ dernière** option permet la publication-C ++ 17 fonctionnalités de langage et de bibliothèque actuellement implémentées dans le compilateur et les bibliothèques. Ceux-ci peuvent inclure des fonctionnalités à partir de C ++ 20 Working Draft et defect mises à jour de la norme C++ ne sont pas inclus dans C ++ 17, ainsi que des propositions expérimentales pour le projet de norme. Pour obtenir la liste des langues prises en charge et les fonctionnalités de la bibliothèque, consultez [quelles sont les nouveautés de Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). Le **/std : c ++ dernière** option ne permet pas de fonctionnalités protégées par le **/ expérimentale** basculer, mais peut être nécessaire pour leur permettre de.
+
+> [!IMPORTANT]
+> Les compilateur et la bibliothèque les fonctionnalités activées par **/std : c ++ dernière** sont fournies en tant que-est et sans prise en charge. Ils sont soumis aux modifications avec rupture ou suppression sans préavis. Ils constituent un aperçu des fonctionnalités de langage qui peuvent apparaître dans la prochaine version de la norme, mais la norme est un travail en cours. Utilisez **/std : c ++ 17** à utiliser les fonctionnalités de la toute dernière norme ISO C++.
 
 Le **/std** option en vigueur pendant une compilation C++ peut être détectée à l’aide de la [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) macro de préprocesseur. Pour plus d’informations, consultez [Macros de préprocesseur](../../preprocessor/predefined-macros.md).
 
