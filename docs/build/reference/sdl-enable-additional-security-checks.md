@@ -1,15 +1,15 @@
 ---
 title: /sdl (activer des contrôles de sécurité supplémentaires)
-ms.date: 11/04/2016
+ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587458"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389940"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (activer des contrôles de sécurité supplémentaires)
 
@@ -49,7 +49,17 @@ Lorsque **/sdl** est activé, le compilateur génère du code pour effectuer ces
 
 - Effectue un assainissement de pointeur limité. Dans les expressions qui n'impliquent pas de déréférencements et dans les types qui n'ont aucun destructeur défini par l'utilisateur, les références de pointeur sont définies sur une adresse non valide après un appel à `delete`. Cela contribue à empêcher la réutilisation de références périmées de pointeur.
 
-- Effectue l'initialisation des membres de classe. Initialise automatiquement tous les membres de classe à zéro lors de l'instanciation d'objet (avant l'exécution du constructeur). Cela contribue à éviter l'utilisation de données non initialisées associées aux membres de classe que le constructeur n'initialise pas explicitement.
+- Effectue l’initialisation de pointeur de membre de classe. Automatiquement initialise classe les membres de type pointeur à **nullptr** lors de l’instanciation d’objet (avant l’exécution du constructeur). Cela permet d’éviter l’utilisation de pointeurs non initialisés le constructeur n’initialise pas explicitement. L’initialisation de pointeur de membre généré par le compilateur est appelée tant que :
+
+  - L’objet n’est pas allouée à l’aide d’un personnalisé (défini par l’utilisateur) `operator new`
+
+  - L’objet n’est pas allouée dans le cadre d’un tableau (par exemple `new A[x]`)
+
+  - La classe n’est pas gérée ou importée
+
+  - La classe a un constructeur par défaut défini par l’utilisateur.
+
+  Pour être initialisé par la fonction d’initialisation de classe généré par le compilateur, un membre doit être un pointeur et pas une propriété ou une constante.
 
 ## <a name="remarks"></a>Notes
 
