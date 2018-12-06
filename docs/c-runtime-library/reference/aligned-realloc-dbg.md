@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_realloc_dbg function
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
-ms.openlocfilehash: 2a261b3e578bef5464bbfda8528ffd8b491acb23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 136edf6b5c95149302920af0c8a8dc9c07458e3b
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545949"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977769"
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -70,7 +70,7 @@ Le fait de réallouer la mémoire et de modifier l'alignement d'un bloc constitu
 
 ## <a name="remarks"></a>Notes
 
-**_aligned_realloc_dbg** est une version debug de la [_aligned_realloc](aligned-realloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_realloc_dbg** est réduite à un appel à **_aligned_realloc**. Les deux **_aligned_realloc** et **_aligned_realloc_dbg** réallouer un bloc de mémoire dans le tas de base, mais **_aligned_realloc_dbg** gère plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques et *filename*/*linenumber* informations pour déterminer l’origine des demandes d’allocation.
+**_aligned_realloc_dbg** est une version debug de la [_aligned_realloc](aligned-realloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_realloc_dbg** est réduite à un appel à **_aligned_realloc**. Les deux **_aligned_realloc** et **_aligned_realloc_dbg** réallouer un bloc de mémoire dans le tas de base, mais **_aligned_realloc_dbg** gère plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, et *filename*/*linenumber* informations pour déterminer l’origine des demandes d’allocation. Suivi des types d’allocation spécifiques avec un paramètre de type de bloc ne sont pas une fonctionnalité de débogage pris en charge pour les allocations alignées. Allocations alignées apparaîtra comme un type de bloc _NORMAL_BLOCK.
 
 **_aligned_realloc_dbg** réalloue le bloc de mémoire spécifié avec un peu plus d’espace que demandé *newSize*. *newSize* peut être supérieur ou inférieur à la taille du bloc de mémoire alloué initialement. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. La réallocation peut entraîner un déplacement du bloc de mémoire initial vers un emplacement différent dans le tas, ainsi qu'une modification de la taille du bloc de mémoire. Si le bloc de mémoire est déplacé, son contenu d'origine est remplacé.
 
