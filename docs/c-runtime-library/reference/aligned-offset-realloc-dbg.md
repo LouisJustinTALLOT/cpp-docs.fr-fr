@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_realloc_dbg function
 - _aligned_offset_realloc_dbg function
 ms.assetid: 64e30a12-887e-453b-aea8-aed793fca9d8
-ms.openlocfilehash: e5ffb37227e1e20f32e065290056da05e7dcd065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7684a752f489eb726b2105b1055b6da1e86e9cd1
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625860"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977821"
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -72,7 +72,7 @@ Numéro de ligne dans le fichier source où la **aligned_offset_realloc** opéra
 
 ## <a name="remarks"></a>Notes
 
-**_aligned_offset_realloc_dbg** est une version debug de la [_aligned_offset_realloc](aligned-offset-realloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_offset_realloc_dbg** est réduite à un appel à **_aligned_offset_realloc**. Les deux **_aligned_offset_realloc** et **_aligned_offset_realloc_dbg** réallouer un bloc de mémoire dans le tas de base, mais **_aligned_offset_realloc_dbg** prend en charge plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques et *filename*/*linenumber*  informations pour déterminer l’origine des demandes d’allocation.
+**_aligned_offset_realloc_dbg** est une version debug de la [_aligned_offset_realloc](aligned-offset-realloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_offset_realloc_dbg** est réduite à un appel à **_aligned_offset_realloc**. Les deux **_aligned_offset_realloc** et **_aligned_offset_realloc_dbg** réallouer un bloc de mémoire dans le tas de base, mais **_aligned_offset_realloc_dbg** prend en charge plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, et *filename*/*linenumber* informations pour déterminer l’origine de demandes d’allocation. Suivi des types d’allocation spécifiques avec un paramètre de type de bloc ne sont pas une fonctionnalité de débogage pris en charge pour les allocations alignées. Allocations alignées apparaîtra comme un type de bloc _NORMAL_BLOCK.
 
 Comme [_aligned_offset_malloc](aligned-offset-malloc.md), **_aligned_offset_realloc_dbg** autorise une structure à être alignée au niveau d’un décalage au sein de la structure.
 

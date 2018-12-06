@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507534"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977717"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -68,7 +68,7 @@ Un pointeur vers le bloc de mémoire qui a été alloué ou **NULL** si l’opé
 
 ## <a name="remarks"></a>Notes
 
-**_aligned_offset_malloc_dbg** est une version debug de la [_aligned_offset_malloc](aligned-offset-malloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_offset_malloc_dbg** est réduite à un appel à **_aligned_offset_malloc**. Les deux **_aligned_offset_malloc** et **_aligned_offset_malloc_dbg** allouer un bloc de mémoire dans le tas de base, mais **_aligned_offset_malloc_dbg** offre plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi des types d’allocation spécifiques et *filename*/*linenumber* informations pour déterminer l’origine des demandes d’allocation.
+**_aligned_offset_malloc_dbg** est une version debug de la [_aligned_offset_malloc](aligned-offset-malloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_offset_malloc_dbg** est réduite à un appel à **_aligned_offset_malloc**. Les deux **_aligned_offset_malloc** et **_aligned_offset_malloc_dbg** allouer un bloc de mémoire dans le tas de base, mais **_aligned_offset_malloc_dbg** offre plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, et *filename*/*linenumber* informations pour déterminer l’origine de demandes d’allocation. Suivi des types d’allocation spécifiques avec un paramètre de type de bloc ne sont pas une fonctionnalité de débogage pris en charge pour les allocations alignées. Allocations alignées apparaîtra comme un type de bloc _NORMAL_BLOCK.
 
 **_aligned_offset_malloc_dbg** alloue le bloc de mémoire avec un peu plus d’espace que demandé *taille*. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. Quand le bloc est alloué, la partie utilisateur du bloc est renseignée avec la valeur 0xCD et chaque mémoire tampon de remplacement est renseignée avec la valeur 0xFD.
 

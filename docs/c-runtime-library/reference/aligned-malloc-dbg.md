@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: 4fc6789e5fecda38678052c7e805728a49219bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631868"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977808"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -64,7 +64,7 @@ Un pointeur vers le bloc de mémoire qui a été alloué ou NULL si l’opérati
 
 ## <a name="remarks"></a>Notes
 
-**_aligned_malloc_dbg** est une version debug de la [_aligned_malloc](aligned-malloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_malloc_dbg** est réduite à un appel à `_aligned_malloc`. Les deux `_aligned_malloc` et **_aligned_malloc_dbg** allouer un bloc de mémoire dans le tas de base, mais **_aligned_malloc_dbg** propose plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie de l’utilisateur de la bloc pour vérifier la présence de fuites, et *filename*/*linenumber* informations pour déterminer l’origine des demandes d’allocation.
+**_aligned_malloc_dbg** est une version debug de la [_aligned_malloc](aligned-malloc.md) (fonction). Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à **_aligned_malloc_dbg** est réduite à un appel à `_aligned_malloc`. Les deux `_aligned_malloc` et **_aligned_malloc_dbg** allouer un bloc de mémoire dans le tas de base, mais **_aligned_malloc_dbg** propose plusieurs fonctionnalités de débogage : mémoires tampons de chaque côté de la partie de l’utilisateur de la bloc pour vérifier la présence de fuites, et *filename*/*linenumber* informations pour déterminer l’origine des demandes d’allocation. Suivi des types d’allocation spécifiques avec un paramètre de type de bloc ne sont pas une fonctionnalité de débogage pris en charge pour les allocations alignées. Allocations alignées apparaîtra comme un type de bloc _NORMAL_BLOCK.
 
 **_aligned_malloc_dbg** alloue le bloc de mémoire avec un peu plus d’espace que demandé *taille*. L'espace supplémentaire est utilisé par le gestionnaire de tas de débogage pour lier les blocs de mémoire de débogage et pour fournir à l'application des informations sur les en-têtes de débogage et les mémoires tampons de remplacement. Quand le bloc est alloué, la partie utilisateur du bloc est renseignée avec la valeur 0xCD et chaque mémoire tampon de remplacement est renseignée avec la valeur 0xFD.
 
