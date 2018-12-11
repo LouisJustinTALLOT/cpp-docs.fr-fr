@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: 4f6b5db22b956584507a2979a517ff26d5364a0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbc5e36fdf613f1db2818ac6193709829e3bd001
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661641"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178705"
 ---
 # <a name="cbrush-class"></a>CBrush (classe)
 
@@ -84,7 +84,7 @@ Pour plus d’informations sur `CBrush`, consultez [objets graphiques](../../mfc
 
 `CBrush`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -185,7 +185,7 @@ BOOL CreateDIBPatternBrush(
 Identifie un objet de mémoire globale contenant une bitmap indépendante du périphérique compressé (DIB).
 
 *Nutilisation*<br/>
-Spécifie si le `bmiColors[]` champs de la [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) la structure de données (une partie de la « DIB comprimées ») contiennent des explicite de valeurs RVB ou d’index dans la palette logique actuellement réalisée. Le paramètre doit être une des valeurs suivantes :
+Spécifie si le `bmiColors[]` champs de la [BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) la structure de données (une partie de la « DIB comprimées ») contiennent des explicite de valeurs RVB ou d’index dans la palette logique actuellement réalisée. Le paramètre doit être une des valeurs suivantes :
 
 - DIB_PAL_COLORS la table des couleurs se compose d’un tableau d’index de 16 bits.
 
