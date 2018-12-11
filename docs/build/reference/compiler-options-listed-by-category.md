@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
-ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
+ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598819"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248570"
 ---
 # <a name="compiler-options-listed-by-category"></a>Options du compilateur classées par catégorie
 
@@ -62,7 +62,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Force l'écriture des paramètres passés dans les registres à leurs emplacements sur la pile lors de l'entrée de la fonction. Cette option du compilateur est uniquement pour les x64 compilateurs (compilation natives et croisée).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crée une image corrigeable en mémoire.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Génère des fonctions transcendantes rapides.|
-|[QIfist](qifist-suppress-ftol.md)|Obsolète. Supprime l'appel de la fonction d'assistance `_ftol` quand la conversion d'un type à virgule flottante vers un type intégral est requise. (x86 uniquement)|
+|[/QIfist](qifist-suppress-ftol.md)|Obsolète. Supprime l'appel de la fonction d'assistance `_ftol` quand la conversion d'un type à virgule flottante vers un type intégral est requise. (x86 uniquement)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Supprime les commandes `fwait` dans les blocs `try` .|
 |[/Qpar](qpar-auto-parallelizer.md)|Active la parallélisation automatique des boucles.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Active les niveaux de création de rapports pour la parallélisation automatique.|
@@ -207,7 +207,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Obsolète. Active les vérifications rapides. Utilisez [/RTC1](rtc-run-time-error-checks.md) à la place.|
 |[/H](h-restrict-length-of-external-names.md)|Obsolète. Limite la longueur des noms externes (publics).|
 |[/Og](og-global-optimizations.md)|Obsolète. Utilise des optimisations globales.|
-|[QIfist](qifist-suppress-ftol.md)|Obsolète. Était utilisé pour spécifier le mode de conversion d’un type à virgule flottante en type intégral.|
+|[/QIfist](qifist-suppress-ftol.md)|Obsolète. Était utilisé pour spécifier le mode de conversion d’un type à virgule flottante en type intégral.|
 |[/V](v-version-number.md)|Obsolète. Définit la chaîne de version du fichier .obj.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsolète. Détecte les problèmes de portabilité 64 bits.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Obsolète. Place des informations de débogage complètes dans tous les fichiers objets. Utilisez [/Zi](z7-zi-zi-debug-information-format.md) à la place.|
