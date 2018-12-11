@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 136f172dcd406e323afddae87d6fb234b5d4b273
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544883"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178080"
 ---
 # <a name="cpagesetupdialog-class"></a>Cpagesetupdialog, classe
 
@@ -103,7 +103,7 @@ Si `DoModal` retourne IDOK, vous pouvez utiliser plusieurs `CPageSetupDialog`de 
 
 `CPageSetupDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdlgs.h
 
@@ -142,7 +142,7 @@ Un ou plusieurs indicateurs que vous pouvez utiliser pour personnaliser les para
 
 - PSD_DISABLEORIENTATION désactive le contrôle de boîte de dialogue de l’orientation de page.
 
-- PSD_RETURNDEFAULT provoque `CPageSetupDialog` pour retourner [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures qui sont initialisés pour l’imprimante par défaut sans afficher une boîte de dialogue. Il est supposé que les deux `hDevNames` et `hDevMode` ont la valeur NULL ; sinon, la fonction retourne une erreur. Si l’imprimante par défaut du système est prise en charge par un ancien pilote d’imprimante (antérieure à Windows version 3.0), uniquement `hDevNames` est retournée ; `hDevMode` a la valeur NULL.
+- PSD_RETURNDEFAULT provoque `CPageSetupDialog` pour retourner [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) structures qui sont initialisés pour l’imprimante par défaut sans afficher une boîte de dialogue. Il est supposé que les deux `hDevNames` et `hDevMode` ont la valeur NULL ; sinon, la fonction retourne une erreur. Si l’imprimante par défaut du système est prise en charge par un ancien pilote d’imprimante (antérieure à Windows version 3.0), uniquement `hDevNames` est retournée ; `hDevMode` a la valeur NULL.
 
 - PSD_DISABLEPAPER désactive le contrôle de sélection de papier.
 
@@ -171,7 +171,7 @@ Utilisez le [DoModal](../../mfc/reference/cdialog-class.md#domodal) (fonction) p
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-Crée un contexte de périphérique à partir de la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures.
+Crée un contexte de périphérique à partir de la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) structures.
 
 ```
 HDC CreatePrinterDC();
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>Paramètres
 
 *lpRectMargins*<br/>
-Pointeur vers un [RECT](rect-structure.md) structure ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui décrit les marges d’impression pour l’imprimante actuellement sélectionnée (en pouces de 1/1000 ou 1/100 mm). Passez la valeur NULL pour ce paramètre, si vous n’êtes pas intéressé par ce rectangle.
+Pointeur vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui décrit les marges d’impression pour l’imprimante actuellement sélectionnée (en pouces de 1/1000 ou 1/100 mm). Passez la valeur NULL pour ce paramètre, si vous n’êtes pas intéressé par ce rectangle.
 
 *lpRectMinMargins*<br/>
 Pointeur vers un `RECT` structure ou `CRect` objet qui décrit les marges d’impression minimale pour l’imprimante actuellement sélectionnée (en pouces de 1/1000 ou 1/100 mm). Passez la valeur NULL pour ce paramètre, si vous n’êtes pas intéressé par ce rectangle.
@@ -341,7 +341,7 @@ Spécifie un message indiquant la zone de la page en cours de saisie. Il peut s'
 - Zone WM_PSD_YAFULLPAGERECT pour obtenir une représentation de l’adresse de retour. Cette zone s’étend sur les bords de la zone de page d’exemple.
 
 *lpRect*<br/>
-Pointeur vers un [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](rect-structure.md) objet contenant les coordonnées de la zone de dessin.
+Pointeur vers un [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect) objet contenant les coordonnées de la zone de dessin.
 
 ### <a name="return-value"></a>Valeur de retour
 

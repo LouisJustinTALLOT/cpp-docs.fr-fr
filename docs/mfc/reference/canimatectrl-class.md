@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 5bbd59101815d18cae92b9996aff54f0cadaf9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608427"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178254"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl (classe)
 
@@ -98,7 +98,7 @@ Pour plus d’informations sur l’utilisation de `CAnimateCtrl`, consultez [con
 
 `CAnimateCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -152,7 +152,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle de l’animation. Appliquer n’importe quelle combinaison de windows décrits dans la section Notes ci-dessous et les styles de contrôle d’animation de styles décrit dans [Styles de contrôle d’Animation](/windows/desktop/Controls/animation-control-styles) dans le SDK Windows.
 
 *Rect*<br/>
-Spécifie la position et la taille du contrôle d’animation. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](../../mfc/reference/rect-structure1.md) structure.
+Spécifie la position et la taille du contrôle d’animation. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.
 
 *pParentWnd*<br/>
 Spécifie l’animation fenêtre du contrôle parent, généralement un `CDialog`. Il ne doit pas être NULL.
