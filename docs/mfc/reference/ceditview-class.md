@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e0095f2c490ebde10d20ec0705b1297b976b76b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528659"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177873"
 ---
 # <a name="ceditview-class"></a>CEditView, classe
 
@@ -142,7 +142,7 @@ Pour plus d’informations sur `CEditView`, consultez [dérivées les Classes d�
 
 `CEditView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxext.h
 
@@ -401,7 +401,7 @@ UINT PrintInsideRect(
 Pointeur vers le contexte de périphérique d’imprimante.
 
 *rectLayout*<br/>
-Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [structure RECT](../../mfc/reference/rect-structure1.md) en spécifiant le rectangle dans lequel le texte doit être restitué.
+Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [structure RECT](/windows/desktop/api/windef/ns-windef-tagrect) en spécifiant le rectangle dans lequel le texte doit être restitué.
 
 *nIndexStart*<br/>
 Index dans la mémoire tampon du premier caractère doit être restitué.

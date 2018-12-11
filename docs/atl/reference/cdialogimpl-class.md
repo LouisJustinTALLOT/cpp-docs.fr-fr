@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 04acfb9c653df85be8958d7248bafd93f3e0a30b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: b4844ed2246b5e700d9dc1895c3292cdde4efe8b
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693659"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178146"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 
@@ -95,7 +95,7 @@ où `MyDlg` est la **nom court** entré dans l’Assistant **noms** page.
 |Assistant Projet ATL|[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)|
 |Boîtes de dialogue|[Boîtes de dialogue](/windows/desktop/dlgbox/dialog-boxes) et les rubriques suivantes dans le SDK Windows|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin.h
 
@@ -263,7 +263,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers un `CRect` objet ou [RECT](../../mfc/reference/rect-structure.md) structure qui doit recevoir les coordonnées clientes de la mise à jour qui englobe la région de mise à jour.
+Pointe vers un `CRect` objet ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure qui doit recevoir les coordonnées clientes de la mise à jour qui englobe la région de mise à jour.
 
 ### <a name="return-value"></a>Valeur de retour
 

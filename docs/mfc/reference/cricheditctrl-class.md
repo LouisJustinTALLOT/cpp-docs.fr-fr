@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 756f50afd9b67e4895d8d1b15652602630c24918
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949542"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178991"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (classe)
 
@@ -281,7 +281,7 @@ Pour obtenir un exemple d’utilisation d’un contrôle RichEdit dans une appli
 
 `CRichEditCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle d’édition. Appliquer une combinaison des styles de fenêtre répertoriées dans le **remarques** section ci-dessous, et [modifier les styles de contrôle](/windows/desktop/Controls/edit-control-styles), comme décrit dans le SDK Windows.
 
 *Rect*<br/>
-Spécifie la taille et la position du contrôle d’édition. Peut être un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](../../mfc/reference/rect-structure1.md) structure.
+Spécifie la taille et la position du contrôle d’édition. Peut être un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.
 
 *pParentWnd*<br/>
 Spécifie la fenêtre du parent du contrôle d’édition (souvent un [CDialog](../../mfc/reference/cdialog-class.md)). Il ne doit pas être NULL.
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>Paramètres
 
 *pDisplayRect*<br/>
-Pointeur vers un [RECT](../../mfc/reference/rect-structure1.md) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui spécifie la zone de l’appareil pour afficher le texte.
+Pointeur vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui spécifie la zone de l’appareil pour afficher le texte.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -973,7 +973,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) ou pointeur vers un [RECT](../../mfc/reference/rect-structure1.md) pour recevoir le rectangle de mise en forme de ce `CRichEditCtrl` objet.
+[CRect](../../atl-mfc-shared/reference/crect-class.md) ou pointeur vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) pour recevoir le rectangle de mise en forme de ce `CRichEditCtrl` objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -1855,7 +1855,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) ou pointeur vers un [RECT](../../mfc/reference/rect-structure1.md) qui indique les nouvelles limites du rectangle de mise en forme.
+[CRect](../../atl-mfc-shared/reference/crect-class.md) ou pointeur vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) qui indique les nouvelles limites du rectangle de mise en forme.
 
 ### <a name="remarks"></a>Notes
 

@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333265"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178777"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -258,7 +258,7 @@ Si vous incorporez un `CComboBox` objet dans une autre fenêtre de l’objet, vo
 
 `CComboBox`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -331,7 +331,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Paramètres
 
 *lpCompareItemStruct*<br/>
-Un pointeur long désignant un [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) structure.
+Un pointeur long désignant un [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) structure.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -383,7 +383,7 @@ virtual BOOL Create(
 Spécifie le style de la zone de liste déroulante. Appliquer n’importe quelle combinaison de [styles de zone de liste déroulante](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) à la zone.
 
 *Rect*<br/>
-Pointe vers la position et la taille de la zone de liste déroulante. Peut être un [structure RECT](../../mfc/reference/rect-structure1.md) ou un `CRect` objet.
+Pointe vers la position et la taille de la zone de liste déroulante. Peut être un [structure RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou un `CRect` objet.
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente de la zone de liste modifiable (généralement un `CDialog`). Il ne doit pas être NULL.
@@ -450,7 +450,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Paramètres
 
 *lpDeleteItemStruct*<br/>
-Un pointeur long désignant un Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) structure qui contient des informations sur l’élément supprimé. Consultez [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) pour obtenir une description de cette structure.
+Un pointeur long désignant un Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) structure qui contient des informations sur l’élément supprimé. Consultez [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) pour obtenir une description de cette structure.
 
 ### <a name="remarks"></a>Notes
 
@@ -542,7 +542,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Paramètres
 
 *lpDrawItemStruct*<br/>
-Un pointeur vers un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure qui contient des informations sur le type de dessin requis.
+Un pointeur vers un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) structure qui contient des informations sur le type de dessin requis.
 
 ### <a name="remarks"></a>Notes
 
@@ -674,7 +674,7 @@ BOOL GetCueBanner(
 
 Dans la première surcharge, un [CString](../../atl-mfc-shared/using-cstring.md) objet qui contient le texte de bannière de signal si elle existe ; sinon, un `CString` objet qui a une longueur nulle.
 
-- ou -
+ou
 
 Dans la seconde surcharge, TRUE si cette méthode a réussi ; Sinon, FALSE.
 
@@ -715,7 +715,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lprect*<br/>
-Pointe vers le [structure RECT](../../mfc/reference/rect-structure1.md) qui doit recevoir les coordonnées.
+Pointe vers le [structure RECT](/windows/desktop/api/windef/ns-windef-tagrect) qui doit recevoir les coordonnées.
 
 ### <a name="example"></a>Exemple
 
@@ -1028,7 +1028,7 @@ Si la réussite, le nombre maximal d’éléments que la partie de la zone de li
 
 Appelez cette fonction avant d’ajouter un grand nombre d’éléments à la partie zone de liste de la `CComboBox`.
 
-Windows 95/98 : le *wParam* paramètre est limité aux valeurs de 16 bits. Cela signifie que les zones de liste ne peut pas contenir d’éléments de plus de 32 767. Bien que le nombre d’éléments est limité, la taille totale des éléments dans une zone de liste est limitée uniquement par la mémoire disponible.
+Windows 95/98 uniquement : Le *wParam* paramètre est limité aux valeurs de 16 bits. Cela signifie que les zones de liste ne peut pas contenir d’éléments de plus de 32 767. Bien que le nombre d’éléments est limité, la taille totale des éléments dans une zone de liste est limitée uniquement par la mémoire disponible.
 
 Cette fonction permet d’accélérer l’initialisation de zones de liste qui ont un grand nombre d’éléments (plus de 100). Il pré-alloue la quantité spécifiée de mémoire suivante qui [AddString](#addstring), [InsertString](#insertstring), et [Dir](#dir) fonctions acceptent les plus brefs délais. Vous pouvez utiliser des estimations pour les paramètres. Si vous Surestimez, partie de la mémoire supplémentaire est alloué ; Si vous sous-estimez, l’allocation normale est utilisée pour les éléments qui dépassent le montant préalloué.
 
@@ -1107,7 +1107,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Paramètres
 
 *lpMeasureItemStruct*<br/>
-Un pointeur long désignant un [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.
+Un pointeur long désignant un [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) structure.
 
 ### <a name="remarks"></a>Notes
 

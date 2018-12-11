@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 79d696f89ca7474220559abbf5464f32b6e684c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb88cc39ddaffe51b80484bbe8460507a1d0aecb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543323"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178445"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx, classe
 
@@ -126,7 +126,7 @@ Pour plus d’informations sur l’utilisation de `CPrintDialogEx`, consultez [d
 
 `CPrintDialogEx`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdlgs.h
 
@@ -154,7 +154,7 @@ Cette fonction membre construit uniquement l’objet. Utilisez le `DoModal` fonc
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-Crée un contexte de périphérique (DC) à partir de la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures.
+Crée un contexte de périphérique (DC) à partir de la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) structures.
 
 ```
 HDC CreatePrinterDC();
@@ -216,9 +216,9 @@ TRUE en cas de réussite, sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Crée un contexte de périphérique (DC) à partir de la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures.
+Crée un contexte de périphérique (DC) à partir de la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) structures.
 
-`GetDefaults` n’affiche pas la feuille de propriétés d’impression. Au lieu de cela, il définit le `hDevNames` et `hDevMode` membres de [m_pdex](#m_pdex) pour les poignées pour le [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures qui sont initialisées pour le imprimante par défaut du système. Les deux `hDevNames` et `hDevMode` doit être NULL, ou `GetDefaults` échoue.
+`GetDefaults` n’affiche pas la feuille de propriétés d’impression. Au lieu de cela, il définit le `hDevNames` et `hDevMode` membres de [m_pdex](#m_pdex) pour les poignées pour le [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) et [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) structures qui sont initialisées pour le imprimante par défaut du système. Les deux `hDevNames` et `hDevMode` doit être NULL, ou `GetDefaults` échoue.
 
 Si l’indicateur PD_RETURNDC est défini, cette fonction seulement retourneront `hDevNames` et `hDevMode` (situé dans `m_pdex.hDevNames` et `m_pdex.hDevMode`) à l’appelant, mais retourne également un périphérique d’impression dans `m_pdex.hDC`. Il incombe à l’appelant de supprimer le périphérique d’impression et appelez le Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) fonction sur les poignées lorsque vous avez terminé avec le `CPrintDialogEx` objet.
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694723"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178133"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 
@@ -81,7 +81,7 @@ Pour plus d’informations sur l’utilisation de `CHotKeyCtrl`, consultez [cont
 
 `CHotKeyCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -111,7 +111,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle de clé à chaud. Appliquer n’importe quelle combinaison de styles de contrôle. Consultez [des Styles de contrôle courants](/windows/desktop/Controls/common-control-styles) dans le SDK Windows pour plus d’informations.
 
 *Rect*<br/>
-Spécifie la taille et la position du contrôle de clé à chaud. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [structure RECT](../../mfc/reference/rect-structure1.md).
+Spécifie la taille et la position du contrôle de clé à chaud. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [structure RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *pParentWnd*<br/>
 Spécifie la chaud clé fenêtre du contrôle parent, généralement un [CDialog](../../mfc/reference/cdialog-class.md). Il ne doit pas être NULL.

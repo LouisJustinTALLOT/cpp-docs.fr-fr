@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481443"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178790"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -253,7 +253,7 @@ Pour plus d’informations sur `CFrameWnd`, consultez [Frame Windows](../../mfc/
 
 `CFrameWnd`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -844,7 +844,7 @@ Contient l’une des valeurs suivantes à partir de la `enum BorderCmd`:
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-Pointeur vers un [RECT](../../mfc/reference/rect-structure1.md) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui spécifie les coordonnées de la bordure.
+Pointeur vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui spécifie les coordonnées de la bordure.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -902,7 +902,7 @@ virtual BOOL OnCreateClient(
 ### <a name="parameters"></a>Paramètres
 
 *Procedure Calls, LPC*<br/>
-Un pointeur vers un Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) structure.
+Un pointeur vers un Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) structure.
 
 *pContext*<br/>
 Un pointeur vers un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure.
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>Paramètres
 
 *tbpFlags*<br/>
-Indicateurs qui contrôlent l’état actuel du bouton de progression. Spécifiez uniquement une de ces indicateurs, car tous les États s’excluent mutuellement : TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+Indicateurs qui contrôlent l’état actuel du bouton de progression. Spécifiez une seule des indicateurs suivants, car tous les États s’excluent mutuellement : TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
 
 ### <a name="remarks"></a>Notes
 

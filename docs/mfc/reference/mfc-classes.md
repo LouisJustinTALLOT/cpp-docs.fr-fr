@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ee64ca259f2466bb02f7dd650a10dc18f8d8f8a1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525274"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178952"
 ---
 # <a name="mfc-classes"></a>Classes MFC
 
@@ -1099,7 +1099,7 @@ Représente un ensemble d'enregistrements sélectionnés à partir d'une source 
 Vue qui affiche des enregistrements de base de données dans des contrôles.
 
 [CRect, classe](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Similaire à un Windows [structure RECT](rect-structure.md).
+Similaire à un Windows [structure RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 [CRectTracker, classe](../../mfc/reference/crecttracker-class.md)<br/>
 Active un élément à afficher, déplacer et redimensionner de différentes manières.
@@ -1165,7 +1165,7 @@ Encapsule une transition de plage sinusoïdale comportant une plage d'oscillatio
 Encapsule une transition de vitesse sinusoïdale dont l’amplitude est déterminée par la rapidité initiale de la variable de l’animation.
 
 [CSize, classe](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Semblable à la structure [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) Windows, qui implémente une coordonnée ou une position relative.
+Semblable à la structure [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) Windows, qui implémente une coordonnée ou une position relative.
 
 [CSliderCtrl, classe](../../mfc/reference/csliderctrl-class.md)<br/>
 Fournit les fonctionnalités du contrôle commun de curseur Windows.

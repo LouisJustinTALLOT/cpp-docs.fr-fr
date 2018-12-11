@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 9c08b679f1423b499a5b95b260fd0fac9ddeaf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467978"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178549"
 ---
 # <a name="crgn-class"></a>CRgn (classe)
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Définit un `CRgn` objet afin qu’elle est équivalente à l’union de deux spécifié `CRgn` objets.|
 |[CRgn::CopyRgn](#copyrgn)|Définit un `CRgn` afin qu’il soit une copie d’un élément spécifié de l’objet `CRgn` objet.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Initialise un `CRgn` objet avec une zone elliptique.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialise un `CRgn` objet avec une zone elliptique définie par un [RECT](../../mfc/reference/rect-structure1.md) structure.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialise un `CRgn` objet avec une zone elliptique définie par un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.|
 |[CRgn::CreateFromData](#createfromdata)|Crée une région à partir de la région et la transformation donnée.|
 |[CRgn::CreateFromPath](#createfrompath)|Crée une région à partir du chemin qui est sélectionné dans le contexte de périphérique donné.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initialise un `CRgn` objet avec une zone polygonale. Le système ferme le polygone automatiquement, si nécessaire, en dessinant une ligne à partir du dernier sommet au premier.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Initialise un `CRgn` objet avec une région consistant en une série de polygones fermés. Les polygones peuvent être disjoints ou ils peuvent se chevaucher.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Initialise un `CRgn` objet avec une zone rectangulaire.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initialise un `CRgn` objet avec une zone rectangulaire définie par un [RECT](../../mfc/reference/rect-structure1.md) structure.|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initialise un `CRgn` objet avec une zone rectangulaire définie par un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Initialise un `CRgn` objet avec une zone rectangulaire aux angles arrondis.|
 |[CRgn::EqualRgn](#equalrgn)|Contrôle deux `CRgn` objets pour déterminer s’ils sont équivalents.|
 |[CRgn::FromHandle](#fromhandle)|Retourne un pointeur vers un `CRgn` lorsqu’un handle vers une région de Windows de l’objet.|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Paramètres
 
 *lpXForm*<br/>
-Pointe vers une [XFORM](../../mfc/reference/xform-structure.md) structure de données qui définit la transformation doivent être effectuées sur la région. Si ce pointeur est NULL, la transformation d’identité est utilisée.
+Pointe vers une [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) structure de données qui définit la transformation doivent être effectuées sur la région. Si ce pointeur est NULL, la transformation d’identité est utilisée.
 
 *nCount*<br/>
 Spécifie le nombre d’octets vers laquelle pointé *pRgnData*.
 
 *pRgnData*<br/>
-Pointe vers un [RGNDATA](../../mfc/reference/rgndata-structure.md) structure de données qui contient les données de la région.
+Pointe vers un [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) structure de données qui contient les données de la région.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Paramètres
 
 *lpRgnData*<br/>
-Pointe vers un [RGNDATA](../../mfc/reference/rgndata-structure.md) structure de données qui reçoit les informations. Si ce paramètre est NULL, la valeur de retour contient le nombre d’octets nécessaires pour les données de la région.
+Pointe vers un [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) structure de données qui reçoit les informations. Si ce paramètre est NULL, la valeur de retour contient le nombre d’octets nécessaires pour les données de la région.
 
 *nCount*<br/>
 Spécifie la taille, en octets, de la *lpRgnData* mémoire tampon.

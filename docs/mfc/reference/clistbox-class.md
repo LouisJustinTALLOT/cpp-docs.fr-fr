@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656090"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178614"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 
@@ -235,7 +235,7 @@ Si vous allouez de mémoire dans le `CListBox` d’objet, de remplacer le `CList
 
 `CListBox`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -339,7 +339,7 @@ Un pointeur long désignant un `COMPAREITEMSTRUCT` structure.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Indique la position relative des deux éléments décrits dans le [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) structure. Il peut être une des valeurs suivantes :
+Indique la position relative des deux éléments décrits dans le [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) structure. Il peut être une des valeurs suivantes :
 
 |Value|Signification|
 |-----------|-------------|
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Paramètres
 
 *lpDeleteItemStruct*<br/>
-Un pointeur long désignant un Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) structure qui contient des informations sur l’élément supprimé.
+Un pointeur long désignant un Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) structure qui contient des informations sur l’élément supprimé.
 
 ### <a name="remarks"></a>Notes
 
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Paramètres
 
 *lpDrawItemStruct*<br/>
-Un pointeur long désignant un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure qui contient des informations sur le type de dessin requis.
+Un pointeur long désignant un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) structure qui contient des informations sur le type de dessin requis.
 
 ### <a name="remarks"></a>Notes
 
@@ -770,7 +770,7 @@ int GetItemRect(
 Spécifie l’index de base zéro de l’élément.
 
 *lpRect*<br/>
-Spécifie un pointeur long désignant un [structure RECT](../../mfc/reference/rect-structure1.md) qui reçoit les coordonnées clientes de zone de liste de l’élément.
+Spécifie un pointeur long désignant un [structure RECT](/windows/desktop/api/windef/ns-windef-tagrect) qui reçoit les coordonnées clientes de zone de liste de l’élément.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -991,7 +991,7 @@ Appelez cette fonction avant d’ajouter un grand nombre d’éléments à un `C
 
 Cette fonction permet d’accélérer l’initialisation de zones de liste qui ont un grand nombre d’éléments (plus de 100). Il pré-alloue la quantité spécifiée de mémoire suivante qui [AddString](#addstring), [InsertString](#insertstring), et [Dir](#dir) fonctions acceptent les plus brefs délais. Vous pouvez utiliser des estimations pour les paramètres. Si vous Surestimez, partie de la mémoire supplémentaire est alloué ; Si vous sous-estimez, l’allocation normale est utilisée pour les éléments qui dépassent le montant préalloué.
 
-Windows 95/98 : le *nItems* paramètre est limité aux valeurs de 16 bits. Cela signifie que les zones de liste ne peut pas contenir d’éléments de plus de 32 767. Bien que le nombre d’éléments est limité, la taille totale des éléments dans une zone de liste est limitée uniquement par la mémoire disponible.
+Windows 95/98 uniquement : Le *nItems* paramètre est limité aux valeurs de 16 bits. Cela signifie que les zones de liste ne peut pas contenir d’éléments de plus de 32 767. Bien que le nombre d’éléments est limité, la taille totale des éléments dans une zone de liste est limitée uniquement par la mémoire disponible.
 
 ### <a name="example"></a>Exemple
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Paramètres
 
 *lpMeasureItemStruct*<br/>
-Un pointeur long désignant un [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.
+Un pointeur long désignant un [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) structure.
 
 ### <a name="remarks"></a>Notes
 

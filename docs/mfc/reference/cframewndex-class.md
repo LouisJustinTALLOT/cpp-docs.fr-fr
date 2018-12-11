@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 9489e1a36eac89ccff510c3c0fae467c2bb2deab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694619"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179004"
 ---
 # <a name="cframewndex-class"></a>Cframewndex, classe
 
@@ -1062,7 +1062,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Paramètres
 
 *lpCreateStruct*<br/>
-[in] Un pointeur vers le [CREATESTRUCT, Structure](../../mfc/reference/createstruct-structure.md) pour le nouveau frame.
+[in] Un pointeur vers le [CREATESTRUCT, Structure](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) pour le nouveau frame.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1704,7 +1704,7 @@ afx_msg void OnSizing(
 [in] Le bord de l’image qui est déplacé. Consultez le paramètre *wParam* dans [WM_SIZE Notification](/windows/desktop/winmsg/wm-sizing).
 
 *pRect*<br/>
-[in, out] Pointeur vers un [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](../../mfc/reference/rect-structure1.md) structure qui contient les coordonnées du cadre.
+[in, out] Pointeur vers un [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure qui contient les coordonnées du cadre.
 
 ### <a name="remarks"></a>Notes
 
@@ -1874,7 +1874,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ### <a name="parameters"></a>Paramètres
 
 *lpwndpos*<br/>
-[in] Pointeur vers un [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) structure qui contient la nouvelle taille et la position.
+[in] Pointeur vers un [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) structure qui contient la nouvelle taille et la position.
 
 ### <a name="remarks"></a>Notes
 
@@ -1934,7 +1934,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Paramètres
 
 *pMsg*<br/>
-[in] Un pointeur vers un [MSG](../../mfc/reference/msg-structure1.md) structure qui contient le message à traiter.
+[in] Un pointeur vers un [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) structure qui contient le message à traiter.
 
 ### <a name="return-value"></a>Valeur de retour
 

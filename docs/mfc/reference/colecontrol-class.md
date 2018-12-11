@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 176c076027a0b1b315fbcef3edd4104bad66ae34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534132"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179017"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 
@@ -556,7 +556,7 @@ Dans un contrôle sans fenêtre, vous devez toujours utiliser le `COleControl` d
 
 Objets de contrôle OLE peuvent également créer une fenêtre uniquement lorsqu’ils deviennent actifs, mais augmente la quantité de travail nécessaire pour la transition inactive active et la vitesse de la transition tombe en panne. Il existe des cas lorsqu’il s’agit d’un problème : par exemple, considérez une grille de zones de texte. Lorsque le curseur haut et bas dans la colonne, chaque contrôle doit être in situ activées et désactivées puis. La vitesse de la transition inactif/actif affecte directement la vitesse de défilement.
 
-Pour plus d’informations sur le développement d’une infrastructure de contrôle OLE, consultez les articles [contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md) et [vue d’ensemble : création d’un programme de contrôle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md). Pour plus d’informations sur l’optimisation des contrôles OLE, y compris les contrôles sans fenêtre et sans scintillement, consultez [contrôles ActiveX MFC : optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Pour plus d’informations sur le développement d’une infrastructure de contrôle OLE, consultez les articles [contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md) et [vue d’ensemble : Création d’un programme de contrôle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md). Pour plus d’informations sur l’optimisation des contrôles OLE, y compris les contrôles sans fenêtre et sans scintillement, consultez [contrôles ActiveX MFC : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -848,7 +848,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-En entrée, pointeur vers un [RECT](../../mfc/reference/rect-structure1.md) structure qui contient la zone de signe insertion à ajuster. Sur la sortie, la zone du signe insertion ajustée, ou NULL si le rectangle de signe insertion est complètement couvert.
+En entrée, pointeur vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure qui contient la zone de signe insertion à ajuster. Sur la sortie, la zone du signe insertion ajustée, ou NULL si le rectangle de signe insertion est complètement couvert.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -902,7 +902,7 @@ virtual void DisplayError(
 ### <a name="parameters"></a>Paramètres
 
 *SCODE*<br/>
-La valeur de code d’état soient signalés. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).
+La valeur de code d’état soient signalés. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : Rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
 La description de l’erreur signalée.
@@ -934,7 +934,7 @@ void DoClick();
 
 La méthode `COleControl::OnClick` fonction membre sera appelée et un clic événement est déclenché, si pris en charge par le contrôle.
 
-Cette fonction est prise en charge par le `COleControl` classe de base comme une méthode stockée, appelée DoClick. Pour plus d’informations, consultez l’article [contrôles ActiveX : méthodes](../../mfc/mfc-activex-controls-methods.md).
+Cette fonction est prise en charge par le `COleControl` classe de base comme une méthode stockée, appelée DoClick. Pour plus d’informations, consultez l’article [contrôles ActiveX : Méthodes](../../mfc/mfc-activex-controls-methods.md).
 
 ##  <a name="dopropexchange"></a>  COleControl::DoPropExchange
 
@@ -953,7 +953,7 @@ Pointeur vers un objet `CPropExchange` . L’infrastructure fournit cet objet po
 
 Cette fonction effectue normalement des appels à la **PX_** famille de fonctions pour charger ou stocker des propriétés spécifiques définies par l’utilisateur d’un contrôle OLE.
 
-Si l’Assistant de contrôle a été utilisé pour créer le projet de contrôle OLE, la version substituée de cette fonction sérialise les propriétés stock prises en charge par `COleControl` avec un appel à la fonction de la classe de base, `COleControl::DoPropExchange`. Lorsque vous ajoutez des propriétés définies par l’utilisateur à votre contrôle OLE, vous devrez modifier cette fonction pour sérialiser vos nouvelles propriétés. Pour plus d’informations sur la sérialisation, consultez l’article [contrôles ActiveX : sérialisation](../../mfc/mfc-activex-controls-serializing.md).
+Si l’Assistant de contrôle a été utilisé pour créer le projet de contrôle OLE, la version substituée de cette fonction sérialise les propriétés stock prises en charge par `COleControl` avec un appel à la fonction de la classe de base, `COleControl::DoPropExchange`. Lorsque vous ajoutez des propriétés définies par l’utilisateur à votre contrôle OLE, vous devrez modifier cette fonction pour sérialiser vos nouvelles propriétés. Pour plus d’informations sur la sérialisation, consultez l’article [contrôles ActiveX : Sérialisation](../../mfc/mfc-activex-controls-serializing.md).
 
 ##  <a name="dosuperclasspaint"></a>  COleControl::DoSuperclassPaint
 
@@ -977,7 +977,7 @@ La zone dans laquelle le contrôle doit être dessiné.
 
 Appelez cette fonction pour gérer correctement la peinture d’un contrôle OLE non active. Cette fonction doit être utilisée uniquement si le OLE contrôle sous-classe un contrôle Windows et doit être appelée le `OnDraw` fonction de votre contrôle.
 
-Pour plus d’informations sur cette fonction et le sous-classement d’un contrôle Windows, consultez l’article [contrôles ActiveX : sous-classement d’un contrôle Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Pour plus d’informations sur cette fonction et le sous-classement d’un contrôle Windows, consultez l’article [contrôles ActiveX : Sous-classement d’un contrôle Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
 ##  <a name="drawcontent"></a>  COleControl::DrawContent
 
@@ -1099,7 +1099,7 @@ Valeur différente de zéro de la fonction a réussi ; 0 dans le cas contraire.
 
 En règle générale, il s’agit de la première fonction appelée par une substitution de `COleControl::DoPropExchange`. Lors du chargement, cette fonction lit le numéro de version des données persistantes et définit l’attribut de version de la [CPropExchange](../../mfc/reference/cpropexchange-class.md) de l’objet en conséquence. Lors de l’enregistrement, cette fonction écrit le numéro de version des données persistantes.
 
-Pour plus d’informations sur la persistance et le contrôle de version, consultez l’article [contrôles ActiveX : sérialisation](../../mfc/mfc-activex-controls-serializing.md).
+Pour plus d’informations sur la persistance et le contrôle de version, consultez l’article [contrôles ActiveX : Sérialisation](../../mfc/mfc-activex-controls-serializing.md).
 
 ##  <a name="fireclick"></a>  COleControl::FireClick
 
@@ -1143,7 +1143,7 @@ void FireError(
 ### <a name="parameters"></a>Paramètres
 
 *SCODE*<br/>
-La valeur de code d’état soient signalés. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).
+La valeur de code d’état soient signalés. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : Rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
 La description de l’erreur signalée.
@@ -1690,7 +1690,7 @@ Par défaut, `GetControlFlags` retourne `fastBeginPaint | clipPaintDC`.
 |`windowlessActivate`|Si défini, indique à votre contrôle utilise l’activation sans fenêtre.|
 |`canOptimizeDraw`|Si défini, indique que le contrôle effectue un dessin optimisé, si le conteneur prend en charge.|
 
-Pour plus d’informations sur `GetControlFlags` et autres optimisations des contrôles OLE, consultez [contrôles ActiveX : optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Pour plus d’informations sur `GetControlFlags` et autres optimisations des contrôles OLE, consultez [contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="getcontrolsize"></a>  COleControl::GetControlSize
 
@@ -1808,7 +1808,7 @@ Pointeur vers l’interface de dispatch de police de propriété stock du contr�
 
 ### <a name="remarks"></a>Notes
 
-Notez que l’appelant doit libérer l’objet une fois. Dans l’implémentation du contrôle, utilisez `InternalGetFont` pour accéder à l’objet du contrôle stock police. Pour plus d’informations sur l’utilisation des polices dans votre contrôle, consultez l’article [contrôles ActiveX : utilisation des polices dans un contrôle ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
+Notez que l’appelant doit libérer l’objet une fois. Dans l’implémentation du contrôle, utilisez `InternalGetFont` pour accéder à l’objet du contrôle stock police. Pour plus d’informations sur l’utilisation des polices dans votre contrôle, consultez l’article [contrôles ActiveX : Utilisation des polices dans un contrôle ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ##  <a name="getfonttextmetrics"></a>  COleControl::GetFontTextMetrics
 
@@ -3565,7 +3565,7 @@ void Refresh();
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est prise en charge par le `COleControl` classe de base comme une méthode stockée, appelée actualisation. Cela permet aux utilisateurs de votre contrôle OLE de redessiner le contrôle à un moment donné. Pour plus d’informations sur cette méthode, consultez l’article [contrôles ActiveX : méthodes](../../mfc/mfc-activex-controls-methods.md).
+Cette fonction est prise en charge par le `COleControl` classe de base comme une méthode stockée, appelée actualisation. Cela permet aux utilisateurs de votre contrôle OLE de redessiner le contrôle à un moment donné. Pour plus d’informations sur cette méthode, consultez l’article [contrôles ActiveX : Méthodes](../../mfc/mfc-activex-controls-methods.md).
 
 ##  <a name="releasecapture"></a>  COleControl::ReleaseCapture
 
@@ -3636,9 +3636,9 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>Notes
 
-Les propriétés sont : apparence BackColor, BorderStyle, légende, activé, police, couleur de premier plan, hWnd et texte. Pour obtenir une description des propriétés stock, consultez [contrôles ActiveX : ajout de propriétés Stock](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Il s’agit des propriétés suivantes : Apparence, BackColor, BorderStyle, légende, activé, la police, couleur de premier plan, hWnd et texte. Pour obtenir une description des propriétés stock, consultez [contrôles ActiveX : Ajout de propriétés Stock](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Vous pouvez améliorer les performances de l’initialisation binaire d’un contrôle à l’aide de `ResetStockProps` et `ResetVersion` substituer `COleControl::OnResetState`. Lisez l'exemple ci-dessous. Pour plus d’informations sur l’optimisation de l’initialisation, consultez [contrôles ActiveX : optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Vous pouvez améliorer les performances de l’initialisation binaire d’un contrôle à l’aide de `ResetStockProps` et `ResetVersion` substituer `COleControl::OnResetState`. Lisez l'exemple ci-dessous. Pour plus d’informations sur l’optimisation de l’initialisation, consultez [contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Exemple
 
@@ -3659,7 +3659,7 @@ Le numéro de version pour être assigné au contrôle.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez améliorer les performances de l’initialisation binaire d’un contrôle à l’aide de `ResetVersion` et `ResetStockProps` substituer `COleControl::OnResetState`. Consultez l’exemple [ResetStockProps](#resetstockprops). Pour plus d’informations sur l’optimisation de l’initialisation, consultez [contrôles ActiveX : optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Vous pouvez améliorer les performances de l’initialisation binaire d’un contrôle à l’aide de `ResetVersion` et `ResetStockProps` substituer `COleControl::OnResetState`. Consultez l’exemple [ResetStockProps](#resetstockprops). Pour plus d’informations sur l’optimisation de l’initialisation, consultez [contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="scrollwindow"></a>  COleControl::ScrollWindow
 
@@ -3741,7 +3741,7 @@ Un `CArchive` objet à sérialiser à partir d’ou.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez améliorer les performances de persistance binaire d’un contrôle à l’aide de `SerializeExtent`, `SerializeStockProps`, et `SerializeVersion` substituer `COleControl::Serialize`. Lisez l'exemple ci-dessous. Pour plus d’informations sur l’optimisation de l’initialisation, consultez [contrôles ActiveX : optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Vous pouvez améliorer les performances de persistance binaire d’un contrôle à l’aide de `SerializeExtent`, `SerializeStockProps`, et `SerializeVersion` substituer `COleControl::Serialize`. Lisez l'exemple ci-dessous. Pour plus d’informations sur l’optimisation de l’initialisation, consultez [contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Exemple
 
@@ -3749,7 +3749,7 @@ Vous pouvez améliorer les performances de persistance binaire d’un contrôle 
 
 ##  <a name="serializestockprops"></a>  COleControl::SerializeStockProps
 
-Sérialise ou initialise l’état de la `COleControl` propriétés stock : apparence BackColor, BorderStyle, légende, activé, police, couleur de premier plan et texte.
+Sérialise ou initialise l’état de la `COleControl` propriétés stock : Apparence, BackColor, BorderStyle, légende, activé, la police, couleur de premier plan et texte.
 
 ```
 void SerializeStockProps(CArchive& ar);
@@ -3762,9 +3762,9 @@ Un `CArchive` objet à sérialiser à partir d’ou.
 
 ### <a name="remarks"></a>Notes
 
-Pour obtenir une description des propriétés stock, consultez [contrôles ActiveX : ajout de propriétés Stock](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Pour obtenir une description des propriétés stock, consultez [contrôles ActiveX : Ajout de propriétés Stock](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Vous pouvez améliorer les performances de persistance binaire d’un contrôle à l’aide de `SerializeStockProps`, `SerializeExtent`, et `SerializeVersion` substituer `COleControl::Serialize`. Pour obtenir un exemple, consultez le code à [SerializeExtent](#serializeextent). Pour plus d’informations sur l’optimisation de l’initialisation, consultez [contrôles ActiveX : optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Vous pouvez améliorer les performances de persistance binaire d’un contrôle à l’aide de `SerializeStockProps`, `SerializeExtent`, et `SerializeVersion` substituer `COleControl::Serialize`. Pour obtenir un exemple, consultez le code à [SerializeExtent](#serializeextent). Pour plus d’informations sur l’optimisation de l’initialisation, consultez [contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="serializeversion"></a>  COleControl::SerializeVersion
 
@@ -3794,7 +3794,7 @@ Le numéro de version du contrôle. Si la charge de l’archive spécifiée, `Se
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez améliorer les performances de persistance binaire d’un contrôle à l’aide de `SerializeVersion`, `SerializeExtent`, et `SerializeStockProps` substituer `COleControl::Serialize`. Pour obtenir un exemple, consultez le code à [SerializeExtent](#serializeextent). Pour plus d’informations sur l’optimisation de l’initialisation, consultez [contrôles ActiveX : optimisation](../../mfc/mfc-activex-controls-optimization.md).
+Vous pouvez améliorer les performances de persistance binaire d’un contrôle à l’aide de `SerializeVersion`, `SerializeExtent`, et `SerializeStockProps` substituer `COleControl::Serialize`. Pour obtenir un exemple, consultez le code à [SerializeExtent](#serializeextent). Pour plus d’informations sur l’optimisation de l’initialisation, consultez [contrôles ActiveX : Optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="setappearance"></a>  COleControl::SetAppearance
 
@@ -3811,7 +3811,7 @@ Un **court** valeur (VT_I2) à utiliser pour l’apparence de votre contrôle. U
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur les propriétés stocks, consultez [contrôles ActiveX : propriétés](../../mfc/mfc-activex-controls-properties.md).
+Pour plus d’informations sur les propriétés stocks, consultez [contrôles ActiveX : Propriétés](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setbackcolor"></a>  COleControl::SetBackColor
 
@@ -3828,7 +3828,7 @@ Une valeur OLE_COLOR à utiliser pour l’arrière-plan de votre contrôle de de
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur l’utilisation de cette propriété et autres les propriétés, consultez l’article [contrôles ActiveX : propriétés](../../mfc/mfc-activex-controls-properties.md).
+Pour plus d’informations sur l’utilisation de cette propriété et autres les propriétés, consultez l’article [contrôles ActiveX : Propriétés](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setborderstyle"></a>  COleControl::SetBorderStyle
 
@@ -3952,7 +3952,7 @@ Une valeur OLE_COLOR à utiliser pour le dessin de votre contrôle de premier pl
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur l’utilisation de cette propriété et autres les propriétés, consultez l’article [contrôles ActiveX : propriétés](../../mfc/mfc-activex-controls-properties.md).
+Pour plus d’informations sur l’utilisation de cette propriété et autres les propriétés, consultez l’article [contrôles ActiveX : Propriétés](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setinitialdataformats"></a>  COleControl::SetInitialDataFormats
 
@@ -3964,7 +3964,7 @@ virtual void SetInitialDataFormats();
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut spécifie deux formats : CF_METAFILEPICT et la propriété persistante définie.
+L’implémentation par défaut spécifie deux formats : CF_METAFILEPICT et la propriété persistante définis.
 
 ##  <a name="setinitialsize"></a>  COleControl::SetInitialSize
 
@@ -4086,7 +4086,7 @@ void ThrowError(
 ### <a name="parameters"></a>Paramètres
 
 *SC*<br/>
-La valeur de code d’état soient signalés. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).
+La valeur de code d’état soient signalés. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : Rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *nDescriptionID*<br/>
 La chaîne ID de ressource de l’exception doit être signalée.

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: d311c064d9b91967a60823fc3fd0e43f22a119c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500761"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178588"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -162,7 +162,7 @@ Pour plus d’informations sur l’utilisation de `CImageList`, consultez [contr
 
 `CImageList`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -694,7 +694,7 @@ Index de base zéro de l’image à dessiner.
 Un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure contenant les coordonnées x et y où l’image sera dessiné.
 
 *sz*<br/>
-Un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure indiquant la taille de l’image à dessiner.
+Un [taille](/windows/desktop/api/windef/ns-windef-tagsize) structure indiquant la taille de l’image à dessiner.
 
 *ptOrigin*<br/>
 Un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure contenant les coordonnées x et y spécifiant l’angle supérieur gauche de l’opération de dessin en ce qui concerne l’image elle-même. Pixels qui sont à gauche de la coordonnée x et versions ultérieures de la coordonnée y de l’image ne sont pas dessinés.
