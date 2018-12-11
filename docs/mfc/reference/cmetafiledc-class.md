@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 343ab1a5d0c38ab0d17c609fbfc134b144502553
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471810"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178302"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC (classe)
 
@@ -76,7 +76,7 @@ Pour plus d’informations sur `CMetaFileDC`, consultez [contextes de périphér
 
 `CMetaFileDC`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxext.h
 
@@ -186,7 +186,7 @@ Identifie un appareil de référence pour le métafichier amélioré.
 Pointe vers une chaîne de caractères se terminant par null. Spécifie le nom de fichier pour le métafichier amélioré doit être créé. Si ce paramètre est NULL, le métafichier amélioré est basée sur la mémoire et son contenu perdu lorsque l’objet est détruit ou lorsque Win32 `DeleteEnhMetaFile` fonction est appelée.
 
 *lpBounds*<br/>
-Pointe vers un [RECT](../../mfc/reference/rect-structure1.md) structure de données ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui spécifie les dimensions en unités HIMETRIC (par incréments de.01-millimètre) de l’image à stocker dans le métafichier amélioré.
+Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure de données ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui spécifie les dimensions en unités HIMETRIC (par incréments de.01-millimètre) de l’image à stocker dans le métafichier amélioré.
 
 *lpszDescription*<br/>
 Pointe vers une chaîne se terminant par zéro qui spécifie le nom de l’application qui a créé l’image, ainsi que le titre de l’image.

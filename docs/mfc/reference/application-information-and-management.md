@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694333"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178341"
 ---
 # <a name="application-information-and-management"></a>Informations sur l'application et gestion
 
@@ -114,13 +114,13 @@ La première forme de `AfxBeginThread` crée un thread de travail. Le deuxième 
 
 Le multithreading doit être activé par l’application ; Sinon, cette fonction échoue. Pour plus d’informations sur l’activation du multithreading, consultez [/MD, / MT, /LD (utiliser la bibliothèque Runtime)](../../build/reference/md-mt-ld-use-run-time-library.md) sous *Options du compilateur Visual C++*.
 
-Pour plus d’informations sur `AfxBeginThread`, consultez les articles [Multithreading : création de Threads de travail](../../parallel/multithreading-creating-worker-threads.md) et [Multithreading : création de Threads d’Interface utilisateur](../../parallel/multithreading-creating-user-interface-threads.md).
+Pour plus d’informations sur `AfxBeginThread`, consultez les articles [Multithreading : Création de Threads de travail](../../parallel/multithreading-creating-worker-threads.md) et [Multithreading : Création de Threads d’Interface utilisateur](../../parallel/multithreading-creating-user-interface-threads.md).
 
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple de [CSocket::Attach](../../mfc/reference/csocket-class.md#attach).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -134,7 +134,7 @@ Pointeur vers le global [Gestionnaire de menu de contexte](ccontextmenumanager-c
 CContextMenuManager* afxContextMenuManager;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcontextmenumanager.h
 
@@ -164,7 +164,7 @@ Supprime l’objet thread à partir de la mémoire.
 
 Doit être appelée depuis le thread à arrêter.
 
-Pour plus d’informations sur `AfxEndThread`, consultez l’article [Multithreading : arrêt de Threads](../../parallel/multithreading-terminating-threads.md).
+Pour plus d’informations sur `AfxEndThread`, consultez l’article [Multithreading : Arrêt des Threads](../../parallel/multithreading-terminating-threads.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -206,7 +206,7 @@ Les modules sont recherchés dans cet ordre :
 
 1. Modules du système.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -269,7 +269,7 @@ Si cette méthode retourne la valeur NULL, cela peut indiquer que la fenêtre pr
 
 [!code-cpp[NVC_MFCWindowing#126](../../mfc/reference/codesnippet/cpp/application-information-and-management_1.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -289,7 +289,7 @@ Chaîne se terminant par null qui contient le nom de l’application.
 
 [!code-cpp[NVC_MFCWindowing#127](../../mfc/reference/codesnippet/cpp/application-information-and-management_2.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -313,7 +313,7 @@ HINSTANCE à l’instance actuelle de l’application. Si l’appelé à partir 
 
 [!code-cpp[NVC_MFCWindowing#128](../../mfc/reference/codesnippet/cpp/application-information-and-management_3.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -363,7 +363,7 @@ Si vous activez la redirection du Registre, le framework redirige l’accès à 
 
 Pour modifier si l’application redirige l’accès au Registre, utilisez [AfxSetPerUserRegistration](#afxsetperuserregistration).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxstat_.h
 
@@ -383,7 +383,7 @@ Un handle HINSTANCE où les ressources par défaut de l’application sont charg
 
 [!code-cpp[NVC_MFCWindowing#130](../../mfc/reference/codesnippet/cpp/application-information-and-management_5.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -410,7 +410,7 @@ Doit être appelée depuis le thread souhaité.
 
 [!code-cpp[NVC_MFCWindowing#132](../../mfc/reference/codesnippet/cpp/application-information-and-management_6.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -432,7 +432,7 @@ Pour mettre à jour les contrôles RichEdit dans les applications Visual C++ exi
 
 Cette fonction initialise également la bibliothèque de contrôles communs, si la bibliothèque n’a pas déjà été initialisée pour le processus. Si vous utilisez le contrôle RichEdit directement à partir de votre application MFC, vous devez appeler cette fonction pour vous assurer que MFC a correctement initialisé le runtime du contrôle RichEdit. Si vous appelez la méthode Create de [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md), [CRichEditView](../../mfc/reference/cricheditview-class.md), ou [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), vous est généralement pas nécessaire d’appeler cette fonction, mais dans certains cas, il peut être nécessaire.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -448,7 +448,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 
 Appelez cette fonction pour charger le RICHED20. DLL et initialiser la version 2.0 de la richesse des contrôle d’édition. Si vous appelez la méthode Create de [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md), [CRichEditView](../../mfc/reference/cricheditview-class.md), ou [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), vous est généralement pas nécessaire d’appeler cette fonction, mais dans certains cas, il peut être nécessaire.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -518,7 +518,7 @@ TRUE si la fenêtre fournie est un objet de la barre d’outils ; Sinon, FALSE.
 
 Cette méthode retourne `TRUE` si *pWnd* dérive `CMFCToolBar`. Cette méthode est utile lorsque vous devez valider qu’un paramètre de fonction ou une méthode est un `CMFCToolBar` objet.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
@@ -537,7 +537,7 @@ Pointeur vers le global [Gestionnaire de clavier](ckeyboardmanager-class.md).
 CKeyboardManager* afxKeyboardManager;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxkeyboardmanager.h
 
@@ -567,9 +567,9 @@ Si un chemin d’accès n’est pas spécifié et que l’extension de nom de fi
 
 - Le répertoire actif.
 
-- **Windows 95/98 :** le répertoire du système Windows. **Windows NT :** le répertoire du système Windows 32 bits. Le nom de ce répertoire est SYSTEM32.
+- **Windows 95/98 :** Le répertoire du système Windows. **Windows NT :** Le répertoire du système Windows 32 bits. Le nom de ce répertoire est SYSTEM32.
 
-- **Windows NT uniquement :** répertoire du système Windows du 16 bits. Il n’existe aucune fonction Win32 qui obtient le chemin d’accès de ce répertoire, mais elle est recherchée. Le nom de ce répertoire est le système.
+- **Windows NT uniquement :** Le répertoire du système Windows 16 bits. Il n’existe aucune fonction Win32 qui obtient le chemin d’accès de ce répertoire, mais elle est recherchée. Le nom de ce répertoire est le système.
 
 - Le répertoire Windows.
 
@@ -595,7 +595,7 @@ Veillez à utiliser `AfxLoadLibrary` et `AfxFreeLibrary` (au lieu des fonctions 
 [!code-cpp[NVC_MFC_DLLUser#2](../../mfc/reference/codesnippet/cpp/application-information-and-management_8.cpp)]
 [!code-cpp[NVC_MFC_DLLUser#3](../../mfc/reference/codesnippet/cpp/application-information-and-management_9.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdll_.h
 
@@ -662,7 +662,7 @@ Dans les versions de DLL non-le `AfxRegisterClass` identificateur est défini co
 
 [!code-cpp[NVC_MFC_DLL#3](../../atl-mfc-shared/codesnippet/cpp/application-information-and-management_10.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -715,13 +715,13 @@ Le nom enregistré pour une classe par `AfxRegisterWndClass` dépend uniquement 
 
 Si vous appelez `AfxRegisterWndClass` pour plusieurs classes dérivées de CWnd avec des paramètres identiques, au lieu d'obtenir une classe de fenêtre distincte pour chaque classe, chacune partagera la même classe de fenêtre. Cela peut entraîner des problèmes si le style de classe CS_CLASSDC est utilisé. Au lieu de plusieurs classes de fenêtre CS_CLASSDC, vous vous retrouvez avec une classe de fenêtre CS_CLASSDC et toutes les fenêtres C++ qui utilisent ce partage le même contrôleur de domaine de la classe. Pour éviter ce problème, appelez [AfxRegisterClass](#afxregisterclass) pour enregistrer la classe.
 
-Consultez la Note technique [TN001 : inscription de classe de fenêtre](../../mfc/tn001-window-class-registration.md) pour plus d’informations sur l’inscription de classe de fenêtre et la `AfxRegisterWndClass` (fonction).
+Consultez la Note technique [TN001 : Inscription de classe de fenêtre](../../mfc/tn001-window-class-registration.md) pour plus d’informations sur l’inscription de classe de fenêtre et la `AfxRegisterWndClass` (fonction).
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#134](../../mfc/reference/codesnippet/cpp/application-information-and-management_11.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -748,7 +748,7 @@ Si vous activez la redirection du Registre, le framework redirige l’accès à 
 
 L’implémentation par défaut accède au Registre sous HKCR.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxstat_.h
 
@@ -769,7 +769,7 @@ Le handle d’instance ou un module à un. Fichier EXE ou DLL à partir de laque
 
 [!code-cpp[NVC_MFCWindowing#135](../../mfc/reference/codesnippet/cpp/application-information-and-management_12.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 
@@ -783,7 +783,7 @@ Pointeur vers le global [Gestionnaire de shell](cshellmanager-class.md).
 CShellManager* afxShellManager;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxshellmanager.h
 
@@ -802,7 +802,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>Paramètres
 
 *lpwsaData*<br/>
-Un pointeur vers un [WSADATA](../../mfc/reference/wsadata-structure.md) structure. Si *lpwsaData* n’est pas égal à NULL, puis l’adresse de la `WSADATA` structure est remplie par l’appel à `WSAStartup`. Cette fonction garantit également que `WSACleanup` est appelée pour vous avant que l’application se termine.
+Un pointeur vers un [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) structure. Si *lpwsaData* n’est pas égal à NULL, puis l’adresse de la `WSADATA` structure est remplie par l’appel à `WSAStartup`. Cette fonction garantit également que `WSACleanup` est appelée pour vous avant que l’application se termine.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -812,7 +812,7 @@ Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
 Lors de l’utilisation de sockets MFC dans les threads secondaires dans une application MFC liée de manière statique, vous devez appeler `AfxSocketInit` dans chaque thread qui utilise des sockets pour initialiser les bibliothèques de socket. Par défaut, `AfxSocketInit` est uniquement appelée dans le thread principal.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxsock.h
 
@@ -826,7 +826,7 @@ Pointeur vers le global [responsable des outils utilisateur](cusertoolsmanager-c
 CUserToolsManager* afxUserToolsManager;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxusertoolsmanager.h
 
@@ -873,7 +873,7 @@ Si vous appelez `AfxWinInit` vous-même, vous devez déclarer une instance d’u
 
 [!code-cpp[NVC_MFC_AfxWinInit#1](../../mfc/reference/codesnippet/cpp/application-information-and-management_13.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxwin.h
 

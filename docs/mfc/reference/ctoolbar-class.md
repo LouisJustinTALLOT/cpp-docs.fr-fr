@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 4faa067f95f43939d6dbd05837f961b3baa7f17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593243"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178536"
 ---
 # <a name="ctoolbar-class"></a>CToolBar (classe)
 
@@ -141,7 +141,7 @@ Pour créer un bouton de case à cocher, attribuez-lui le style TBBS_CHECKBOX ou
 
 Pour créer un bouton radio, appelez un [CCmdUI](../../mfc/reference/ccmdui-class.md) l’objet [SetRadio](../../mfc/reference/ccmdui-class.md#setradio) fonction membre à partir d’un gestionnaire ON_UPDATE_COMMAND_UI. Passer `SetRadio` un argument de 0 pour non contrôlé ou différente de zéro pour archivage. Pour fournir un comportement qui s’excluent mutuellement d’un groupe de cases d’option, vous devez disposer des gestionnaires ON_UPDATE_COMMAND_UI pour tous les boutons dans le groupe.
 
-Pour plus d’informations sur l’utilisation de `CToolBar`, consultez l’article [implémentation de barre d’outils MFC](../../mfc/mfc-toolbar-implementation.md) et [Technical Note 31 : barres de contrôles](../../mfc/tn031-control-bars.md).
+Pour plus d’informations sur l’utilisation de `CToolBar`, consultez l’article [implémentation de barre d’outils MFC](../../mfc/mfc-toolbar-implementation.md) et [Technical Note 31 : Barres de contrôles](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -155,7 +155,7 @@ Pour plus d’informations sur l’utilisation de `CToolBar`, consultez l’arti
 
 `CToolBar`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxext.h
 
@@ -406,7 +406,7 @@ virtual void GetItemRect(
 Index de l’élément (bouton ou un séparateur) dont les coordonnées rectangle doivent être récupérés.
 
 *lpRect*<br/>
-Adresse de la [RECT](../../mfc/reference/rect-structure1.md) structure qui contient les coordonnées de l’élément.
+Adresse de la [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure qui contient les coordonnées de l’élément.
 
 ### <a name="remarks"></a>Notes
 
@@ -565,7 +565,7 @@ Nouvel index pour l’image du bouton dans l’image bitmap.
 Pour les séparateurs, qui ont le style TBBS_SEPARATOR, cette fonction définit la largeur du séparateur en pixels à la valeur stockée dans *iImage*.
 
 > [!NOTE]
->  Vous pouvez également définir des États de bouton à l’aide de la *nStyle* paramètre ; Toutefois, étant donné que les États de bouton sont contrôlées par le [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) gestionnaire, tout état vous définissez à l’aide de `SetButtonInfo` seront perdues lors du prochain traitement inactif. Consultez [comment les objets d’Interface utilisateur mise à jour](../../mfc/how-to-update-user-interface-objects.md) et [TN031 : barres de contrôles](../../mfc/tn031-control-bars.md) pour plus d’informations.
+>  Vous pouvez également définir des États de bouton à l’aide de la *nStyle* paramètre ; Toutefois, étant donné que les États de bouton sont contrôlées par le [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) gestionnaire, tout état vous définissez à l’aide de `SetButtonInfo` seront perdues lors du prochain traitement inactif. Consultez [comment mettre à jour des objets d’Interface utilisateur](../../mfc/how-to-update-user-interface-objects.md) et [TN031 : Barres de contrôles](../../mfc/tn031-control-bars.md) pour plus d’informations.
 
 Pour plus d’informations sur les boutons et des images bitmap, consultez le [CToolBar](../../mfc/reference/ctoolbar-class.md) vue d’ensemble et [CToolBar::LoadBitmap](#loadbitmap).
 
@@ -640,7 +640,7 @@ Style d’un bouton détermine comment le bouton s’affiche et comment il répo
 Avant d’appeler `SetButtonStyle`, appelez le [GetButtonStyle](#getbuttonstyle) fonction membre pour récupérer le style de bouton ou un séparateur.
 
 > [!NOTE]
->  Vous pouvez également définir des États de bouton à l’aide de la *nStyle* paramètre ; Toutefois, étant donné que les États de bouton sont contrôlées par le [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) gestionnaire, tout état vous définissez à l’aide de `SetButtonStyle` seront perdues lors du prochain traitement inactif. Consultez [comment les objets d’Interface utilisateur mise à jour](../../mfc/how-to-update-user-interface-objects.md) et [TN031 : barres de contrôles](../../mfc/tn031-control-bars.md) pour plus d’informations.
+>  Vous pouvez également définir des États de bouton à l’aide de la *nStyle* paramètre ; Toutefois, étant donné que les États de bouton sont contrôlées par le [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) gestionnaire, tout état vous définissez à l’aide de `SetButtonStyle` seront perdues lors du prochain traitement inactif. Consultez [comment mettre à jour des objets d’Interface utilisateur](../../mfc/how-to-update-user-interface-objects.md) et [TN031 : Barres de contrôles](../../mfc/tn031-control-bars.md) pour plus d’informations.
 
 ##  <a name="setbuttontext"></a>  CToolBar::SetButtonText
 

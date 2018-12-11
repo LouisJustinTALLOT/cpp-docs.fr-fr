@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519291"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178159"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession, classe
 
@@ -101,7 +101,7 @@ Si vous ouvrez une URL sur un serveur Internet à l’aide `OpenURL`, vous pouve
 Pour plus d’informations sur les tâches de programmation de base Internet, consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md). Pour obtenir des informations générales sur l’utilisation des classes WinInet MFC, consultez l’article [Internet programmation avec WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 > [!NOTE]
-> `CInternetSession` lève une [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) pour les types de service non pris en charge. Seuls les types de service suivants ne sont actuellement gérées : FTP, HTTP, gopher et fichier.
+> `CInternetSession` lève une [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) pour les types de service non pris en charge. Seuls les types de service suivants sont actuellement pris en charge : FTP, HTTP, gopher et fichier.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -457,7 +457,7 @@ Le *dwInternetStatus* paramètre indique l’opération en cours d’exécution 
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|Recherche de l’adresse IP du nom contenu dans *lpvStatusInformation*.|
 |INTERNET_STATUS_NAME_RESOLVED|Réussi à trouver l’adresse IP du nom contenu dans *lpvStatusInformation*.|
-|INTERNET_STATUS_CONNECTING_TO_SERVER|Connexion à l’adresse de socket ([SOCKADDR](../../mfc/reference/sockaddr-structure.md)) vers lequel pointe *lpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|Connexion à l’adresse de socket ([SOCKADDR](/windows/desktop/winsock/sockaddr-2)) vers lequel pointe *lpvStatusInformation*.|
 |INTERNET_STATUS_CONNECTED_TO_SERVER|Connecté à l’adresse de socket (SOCKADDR) vers lequel pointé *lpvStatusInformation*.|
 |INTERNET_STATUS_SENDING_REQUEST|Envoi de la demande d’informations sur le serveur. Le *lpvStatusInformation* paramètre est NULL.|
 |INTERNET_STATUS_ REQUEST_SENT|Correctement envoyé la demande d’informations sur le serveur. Le *lpvStatusInformation* paramètre est NULL.|

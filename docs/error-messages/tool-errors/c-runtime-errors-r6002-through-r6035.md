@@ -4,18 +4,18 @@ ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 06d1885d01b5b3808a150e54ac68257b747c9764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74494a92d9ac8d84da64af7a896f3c32913afc40
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530932"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178255"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>Erreurs Runtime C R6002 à R6035
 
 Cette section est une référence des erreurs qui peuvent être générées par la bibliothèque Runtime C (CRT) quand votre application est chargée ou en cours d’exécution. Même si le message fait référence à l’exécution de Microsoft Visual C++, ces erreurs indiquent un bogue dans le code de votre application, ou une condition de la bibliothèque runtime ne peut pas gérer, telle que la mémoire est insuffisante. Les utilisateurs finaux de votre application peuvent recevoir ces erreurs si vous ne pas coder votre application pour empêcher les conditions qui provoquent leur ou écrire du code pour capturer ces erreurs et de présenter un message convivial à vos utilisateurs.
 
-Vous pouvez trouver une assistance supplémentaire pour les erreurs et avertissements dans les forums publics de Microsoft. Vous pouvez rechercher l’erreur ou le numéro d’avertissement sur la [Communauté de développeurs](https://developercommunity.visualstudio.com) site. Le [Visual C++-général](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral) forum est destiné aux questions sur Visual C++ qui ne sont pas abordées dans d’autres forums. Vous pouvez également rechercher des erreurs et avertissements et poser des questions sur [Stack Overflow](http://stackoverflow.com/) pour trouver des solutions.
+Vous pouvez trouver une assistance supplémentaire pour les erreurs et avertissements dans les forums publics de Microsoft. Vous pouvez rechercher l’erreur ou le numéro d’avertissement sur la [Communauté de développeurs](https://developercommunity.visualstudio.com) site. Le [Visual C++-général](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) forum est destiné aux questions sur Visual C++ qui ne sont pas abordées dans d’autres forums. Vous pouvez également rechercher des erreurs et avertissements et poser des questions sur [Stack Overflow](http://stackoverflow.com/) pour trouver des solutions.
 
 Pour obtenir des liens pour obtenir une aide supplémentaire et des ressources de la Communauté, consultez [aide de Visual C++ et de la Communauté](../../visual-cpp-help-and-community.md).
 

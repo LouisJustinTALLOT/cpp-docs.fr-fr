@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693216"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177902"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Modification des styles d'une fenêtre créée par MFC
 
@@ -46,7 +46,7 @@ Pour la fenêtre frame principale, vous pouvez également spécifier si la fenê
 
 Si vous modifiez les attributs de fenêtre dans une application existante, suivez les instructions dans le reste de cet article à la place.
 
-Pour modifier les attributs de fenêtre par défaut utilisés par une application framework créée avec l’Assistant Application, substituez la fenêtre [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) fonction membre virtuelle. `PreCreateWindow` permet à une application à accéder au processus de création normalement géré en interne par le [CDocTemplate](../mfc/reference/cdoctemplate-class.md) classe. Le framework appelle `PreCreateWindow` juste avant la création de la fenêtre. En modifiant le [CREATESTRUCT](../mfc/reference/createstruct-structure.md) structure passée au `PreCreateWindow`, votre application peut modifier les attributs utilisés pour créer la fenêtre. Par exemple, pour vous assurer qu’une fenêtre n’utilise pas une légende, utilisez l’opération de bits suivante :
+Pour modifier les attributs de fenêtre par défaut utilisés par une application framework créée avec l’Assistant Application, substituez la fenêtre [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) fonction membre virtuelle. `PreCreateWindow` permet à une application à accéder au processus de création normalement géré en interne par le [CDocTemplate](../mfc/reference/cdoctemplate-class.md) classe. Le framework appelle `PreCreateWindow` juste avant la création de la fenêtre. En modifiant le [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) structure passée au `PreCreateWindow`, votre application peut modifier les attributs utilisés pour créer la fenêtre. Par exemple, pour vous assurer qu’une fenêtre n’utilise pas une légende, utilisez l’opération de bits suivante :
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 

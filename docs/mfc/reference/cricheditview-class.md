@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2eebfe18275aa63ac26c0c898a5d796300860db8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476611"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178738"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
 
@@ -933,7 +933,7 @@ virtual void OnReplaceSel(
 Texte à remplacer.
 
 *bsuivant*<br/>
-Indique la direction de la recherche : TRUE est arrêté ; FALSE, le haut.
+Indique la direction de la recherche : La valeur TRUE est arrêté ; FALSE, le haut.
 
 *bCase*<br/>
 Indique si la recherche respecte la casse.
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 Pointeur vers un contexte de périphérique pour la zone de sortie.
 
 *rectLayout*<br/>
-[RECT](../../mfc/reference/rect-structure1.md) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) qui définit la zone de sortie.
+[RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) qui définit la zone de sortie.
 
 *nIndexStart*<br/>
 Index de base zéro du premier caractère à mettre en forme.

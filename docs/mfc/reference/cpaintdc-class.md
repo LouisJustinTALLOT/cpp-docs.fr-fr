@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 991ea39ccf03cd4f2921a759d3278576c7a1fd92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e6ded945bac15b6584eadc21d8648f1a0f9ab3
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525747"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178328"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (classe)
 
@@ -41,7 +41,7 @@ class CPaintDC : public CDC
 
 |Nom|Description|
 |----------|-----------------|
-|[CPaintDC::m_ps](#m_ps)|Contient le [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) utilisé pour peindre la zone cliente.|
+|[CPaintDC::m_ps](#m_ps)|Contient le [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) utilisé pour peindre la zone cliente.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
@@ -65,13 +65,13 @@ Pour plus d’informations sur l’utilisation de `CPaintDC`, consultez [context
 
 `CPaintDC`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC
 
-Construit un `CPaintDC` objet, prépare la fenêtre d’application pour la peinture et stocke le [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) structure dans le [m_ps](#m_ps) variable membre.
+Construit un `CPaintDC` objet, prépare la fenêtre d’application pour la peinture et stocke le [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) structure dans le [m_ps](#m_ps) variable membre.
 
 ```
 explicit CPaintDC(CWnd* pWnd);
@@ -108,7 +108,7 @@ HWND m_hWnd;
 
 ##  <a name="m_ps"></a>  CPaintDC::m_ps
 
-`m_ps` est une variable de membre public de type [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md).
+`m_ps` est une variable de membre public de type [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct).
 
 ```
 PAINTSTRUCT m_ps;

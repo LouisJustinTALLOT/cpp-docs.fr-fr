@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 451ae70745a3f8bcad3bb48cda0e1b731b4fd0ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578618"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177847"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject, classe
 
@@ -96,7 +96,7 @@ Pour plus d’informations sur `CGdiObject`, consultez [objets graphiques](../..
 
 `CGdiObject`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -247,10 +247,10 @@ La fonction récupère une structure de données dont le type varie selon le typ
 
 |Object|Type de tampon|
 |------------|-----------------|
-|`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|
-|`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|
+|`CPen`|[LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
+|`CBrush`|[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|
-|`CBitmap`|[BITMAP](../../mfc/reference/bitmap-structure.md)|
+|`CBitmap`|[BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
 |`CPalette`|WORD|
 |`CRgn`|Non pris en charge|
 

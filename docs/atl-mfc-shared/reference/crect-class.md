@@ -34,16 +34,16 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: f2ecaeb4f3b434ef7b57573f2ea379719aebcbff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520034"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178751"
 ---
 # <a name="crect-class"></a>CRect, classe
 
-Similaire à un Windows [RECT](../../mfc/reference/rect-structure.md) structure.
+Similaire à un Windows [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -120,7 +120,7 @@ Lorsque vous spécifiez un `CRect`, vous devez être attentif à la construire a
 
 Soyez prudent lors de la manipulation un `CRect` avec la [CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp) et [CDC::LPtoDP](../../mfc/reference/cdc-class.md#lptodp) fonctions membres. Si le mode de mappage d’un contexte d’affichage est comme l’étendue y est négatif, comme dans `MM_LOENGLISH`, puis `CDC::DPtoLP` transformera le `CRect` afin que son supérieur est supérieure à la partie inférieure. Les fonctions comme `Height` et `Size` retournera ensuite les valeurs négatives pour la hauteur de transformée `CRect`, et le rectangle sera non normalisée.
 
-Quand à l’aide de surchargé `CRect` opérateurs, le premier opérande doit être un `CRect`; la seconde peut être soit un [RECT](../../mfc/reference/rect-structure.md) structure ou un `CRect` objet.
+Quand à l’aide de surchargé `CRect` opérateurs, le premier opérande doit être un `CRect`; la seconde peut être soit un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou un `CRect` objet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -128,7 +128,7 @@ Quand à l’aide de surchargé `CRect` opérateurs, le premier opérande doit �
 
 `CRect`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atltypes.h
 
@@ -249,7 +249,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ### <a name="parameters"></a>Paramètres
 
 *lpSrcRect*<br/>
-Pointe vers le [RECT](../../mfc/reference/rect-structure.md) structure ou `CRect` objet doit être copié.
+Pointe vers le [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou `CRect` objet doit être copié.
 
 ### <a name="example"></a>Exemple
 
@@ -301,7 +301,7 @@ Spécifie la position droite de `CRect`.
 Spécifie la partie inférieure de `CRect`.
 
 *srcRect*<br/>
-Fait référence à la [RECT](../../mfc/reference/rect-structure.md) structure avec les coordonnées pour `CRect`.
+Fait référence à la [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure avec les coordonnées pour `CRect`.
 
 *lpSrcRect*<br/>
 Pointe vers le `RECT` structure avec les coordonnées pour `CRect`.
@@ -382,10 +382,10 @@ Spécifie le nombre d’unités à deflate gauche et droite du `CRect`.
 Spécifie le nombre d’unités à deflate haut et bas de `CRect`.
 
 *size*<br/>
-Un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) ou [CSize](csize-class.md) qui spécifie le nombre d’unités à deflate `CRect`. Le `cx` valeur spécifie le nombre d’unités à compresser les côtés gauche et droite et la `cy` valeur spécifie le nombre d’unités à deflate haut et bas.
+Un [taille](/windows/desktop/api/windef/ns-windef-tagsize) ou [CSize](csize-class.md) qui spécifie le nombre d’unités à deflate `CRect`. Le `cx` valeur spécifie le nombre d’unités à compresser les côtés gauche et droite et la `cy` valeur spécifie le nombre d’unités à deflate haut et bas.
 
 *lpRect*<br/>
-Pointe vers un [RECT](../../mfc/reference/rect-structure.md) structure ou `CRect` qui spécifie le nombre d’unités à deflate chaque côté.
+Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou `CRect` qui spécifie le nombre d’unités à deflate chaque côté.
 
 *l*<br/>
 Spécifie le nombre d’unités à compresser le côté gauche de `CRect`.
@@ -431,7 +431,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers un [RECT](../../mfc/reference/rect-structure.md) structure ou `CRect` objet qui contient les coordonnées du coin supérieur gauche et inférieur droit d’un rectangle.
+Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou `CRect` objet qui contient les coordonnées du coin supérieur gauche et inférieur droit d’un rectangle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -508,10 +508,10 @@ Spécifie le nombre d’unités augmentation de la gauche et droite du `CRect`.
 Spécifie le nombre d’unités vers le haut et bas de la majoration `CRect`.
 
 *size*<br/>
-Un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) ou [CSize](csize-class.md) qui spécifie le nombre d’unités de la majoration `CRect`. Le `cx` valeur spécifie le nombre d’unités pour les côtés gauche et droit de la majoration et `cy` valeur spécifie le nombre d’unités de la majoration haut et bas.
+Un [taille](/windows/desktop/api/windef/ns-windef-tagsize) ou [CSize](csize-class.md) qui spécifie le nombre d’unités de la majoration `CRect`. Le `cx` valeur spécifie le nombre d’unités pour les côtés gauche et droit de la majoration et `cy` valeur spécifie le nombre d’unités de la majoration haut et bas.
 
 *lpRect*<br/>
-Pointe vers un [RECT](../../mfc/reference/rect-structure.md) structure ou `CRect` qui spécifie le nombre d’unités de chaque côté de la majoration.
+Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou `CRect` qui spécifie le nombre d’unités de chaque côté de la majoration.
 
 *l*<br/>
 Spécifie le nombre d’unités pour le côté gauche de la majoration `CRect`.
@@ -552,7 +552,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Paramètres
 
 *lpRect1*<br/>
-Pointe vers un [RECT](../../mfc/reference/rect-structure.md) structure ou `CRect` objet qui contient un rectangle source.
+Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou `CRect` objet qui contient un rectangle source.
 
 *lpRect2*<br/>
 Pointe vers un `RECT` structure ou `CRect` objet qui contient un rectangle source.
@@ -746,7 +746,7 @@ void NormalizeRect() throw();
 Le rectangle est normalisé pour le positionnement de la quatrième-quadrant, Windows utilise généralement des coordonnées. `NormalizeRect` Compare les valeurs supérieure et inférieure et les échanges si le haut est supérieur à la partie inférieure. De même, il échange les valeurs de gauche et droit si gauche est supérieure à droite. Cette fonction est utile lorsque vous traitez des modes de mappage différents et inversée rectangles.
 
 > [!NOTE]
-> Ce qui suit `CRect` fonctions membres requièrent des rectangles normalisées pour pouvoir fonctionner correctement : [hauteur](#height), [largeur](#width), [taille](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [opérateur ==](#operator_eq_eq), [opérateur ! =](#operator_neq), [opérateur &#124; ](#operator_or), [opérateur &#124;=](#operator_or_eq), [opérateur &](#operator_amp), et [opérateur & =](#operator_amp_eq).
+> Ce qui suit `CRect` fonctions membres requièrent des rectangles normalisées pour pouvoir fonctionner correctement : [Hauteur](#height), [largeur](#width), [taille](#size), [IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [SubtractRect](#subtractrect), [opérateur ==](#operator_eq_eq), [opérateur ! =](#operator_neq), [opérateur &#124; ](#operator_or), [opérateur &#124;=](#operator_or_eq), [opérateur &](#operator_amp), et [opérateur & =](#operator_amp_eq).
 
 ### <a name="example"></a>Exemple
 
@@ -777,10 +777,10 @@ Spécifie la quantité à déplacer vers la gauche ou droite. Il doit être nég
 Spécifie la quantité pour faire monter ou Descendre. Il doit être négatif pour le déplacer vers le haut.
 
 *point*<br/>
-Contient un [POINT](../../mfc/reference/point-structure.md) structure ou [CPoint](cpoint-class.md) objet spécifiant les deux dimensions de déplacement.
+Contient un [POINT](/windows/desktop/api/windef/ns-windef-tagpoint) structure ou [CPoint](cpoint-class.md) objet spécifiant les deux dimensions de déplacement.
 
 *size*<br/>
-Contient un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure ou [CSize](csize-class.md) objet spécifiant les deux dimensions de déplacement.
+Contient un [taille](/windows/desktop/api/windef/ns-windef-tagsize) structure ou [CSize](csize-class.md) objet spécifiant les deux dimensions de déplacement.
 
 ### <a name="remarks"></a>Notes
 
@@ -833,7 +833,7 @@ void operator=(const RECT& srcRect) throw();
 ### <a name="parameters"></a>Paramètres
 
 *srcRect*<br/>
-Fait référence à un rectangle source. Peut être un [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
+Fait référence à un rectangle source. Peut être un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="example"></a>Exemple
 
@@ -856,7 +856,7 @@ BOOL operator==(const RECT& rect) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *Rect*<br/>
-Fait référence à un rectangle source. Peut être un [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
+Fait référence à un rectangle source. Peut être un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -896,7 +896,7 @@ BOOL operator!=(const RECT& rect) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *Rect*<br/>
-Fait référence à un rectangle source. Peut être un [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
+Fait référence à un rectangle source. Peut être un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -938,13 +938,13 @@ void operator+=(LPCRECT lpRect) throw();
 ### <a name="parameters"></a>Paramètres
 
 *point*<br/>
-Un [POINT](../../mfc/reference/point-structure.md) structure ou [CPoint](cpoint-class.md) objet qui spécifie le nombre d’unités à déplacer le rectangle.
+Un [POINT](/windows/desktop/api/windef/ns-windef-tagpoint) structure ou [CPoint](cpoint-class.md) objet qui spécifie le nombre d’unités à déplacer le rectangle.
 
 *size*<br/>
-Un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure ou [CSize](csize-class.md) objet qui spécifie le nombre d’unités à déplacer le rectangle.
+Un [taille](/windows/desktop/api/windef/ns-windef-tagsize) structure ou [CSize](csize-class.md) objet qui spécifie le nombre d’unités à déplacer le rectangle.
 
 *lpRect*<br/>
-Pointe vers un [RECT](../../mfc/reference/rect-structure.md) structure ou `CRect` objet qui contient le nombre d’unités de chaque côté de la majoration `CRect`.
+Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou `CRect` objet qui contient le nombre d’unités de chaque côté de la majoration `CRect`.
 
 ### <a name="remarks"></a>Notes
 
@@ -976,13 +976,13 @@ void operator-=(LPCRECT lpRect) throw();
 ### <a name="parameters"></a>Paramètres
 
 *point*<br/>
-Un [POINT](../../mfc/reference/point-structure.md) structure ou [CPoint](cpoint-class.md) objet qui spécifie le nombre d’unités à déplacer le rectangle.
+Un [POINT](/windows/desktop/api/windef/ns-windef-tagpoint) structure ou [CPoint](cpoint-class.md) objet qui spécifie le nombre d’unités à déplacer le rectangle.
 
 *size*<br/>
-Un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure ou [CSize](csize-class.md) objet qui spécifie le nombre d’unités à déplacer le rectangle.
+Un [taille](/windows/desktop/api/windef/ns-windef-tagsize) structure ou [CSize](csize-class.md) objet qui spécifie le nombre d’unités à déplacer le rectangle.
 
 *lpRect*<br/>
-Pointe vers un [RECT](../../mfc/reference/rect-structure.md) structure ou `CRect` objet qui contient le nombre d’unités à deflate de chaque côté de `CRect`.
+Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou `CRect` objet qui contient le nombre d’unités à deflate de chaque côté de `CRect`.
 
 ### <a name="remarks"></a>Notes
 
@@ -1012,7 +1012,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="parameters"></a>Paramètres
 
 *Rect*<br/>
-Contient un [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
+Contient un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="remarks"></a>Notes
 
@@ -1036,7 +1036,7 @@ void operator|=(const RECT& rect) throw();
 ### <a name="parameters"></a>Paramètres
 
 *Rect*<br/>
-Contient un `CRect` ou [RECT](../../mfc/reference/rect-structure.md).
+Contient un `CRect` ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 ### <a name="remarks"></a>Notes
 
@@ -1069,13 +1069,13 @@ CRect operator+(SIZE size) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *point*<br/>
-Un [POINT](../../mfc/reference/point-structure.md) structure ou [CPoint](cpoint-class.md) objet qui spécifie le nombre d’unités à déplacer la valeur de retour.
+Un [POINT](/windows/desktop/api/windef/ns-windef-tagpoint) structure ou [CPoint](cpoint-class.md) objet qui spécifie le nombre d’unités à déplacer la valeur de retour.
 
 *size*<br/>
-Un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure ou [CSize](csize-class.md) objet qui spécifie le nombre d’unités à déplacer la valeur de retour.
+Un [taille](/windows/desktop/api/windef/ns-windef-tagsize) structure ou [CSize](csize-class.md) objet qui spécifie le nombre d’unités à déplacer la valeur de retour.
 
 *lpRect*<br/>
-Pointe vers un [RECT](../../mfc/reference/rect-structure.md) structure ou `CRect` objet qui contient le nombre d’unités de chaque côté de la valeur de retour de la majoration.
+Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou `CRect` objet qui contient le nombre d’unités de chaque côté de la valeur de retour de la majoration.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1112,13 +1112,13 @@ CRect operator-(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *point*<br/>
-Un [POINT](../../mfc/reference/point-structure.md) structure ou `CPoint` objet qui spécifie le nombre d’unités à déplacer la valeur de retour.
+Un [POINT](/windows/desktop/api/windef/ns-windef-tagpoint) structure ou `CPoint` objet qui spécifie le nombre d’unités à déplacer la valeur de retour.
 
 *size*<br/>
-Un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure ou `CSize` objet qui spécifie le nombre d’unités à déplacer la valeur de retour.
+Un [taille](/windows/desktop/api/windef/ns-windef-tagsize) structure ou `CSize` objet qui spécifie le nombre d’unités à déplacer la valeur de retour.
 
 *lpRect*<br/>
-Pointe vers un [RECT](../../mfc/reference/rect-structure.md) structure ou `CRect` objet qui contient le nombre d’unités à deflate de chaque côté de la valeur de retour.
+Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou `CRect` objet qui contient le nombre d’unités à deflate de chaque côté de la valeur de retour.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1153,7 +1153,7 @@ CRect operator&(const RECT& rect2) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *rect2*<br/>
-Contient un [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
+Contient un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1190,7 +1190,7 @@ rect2) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *rect2*<br/>
-Contient un [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
+Contient un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1226,7 +1226,7 @@ BOOL PtInRect(POINT point) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *point*<br/>
-Contient un [POINT](../../mfc/reference/point-structure.md) structure ou [CPoint](cpoint-class.md) objet.
+Contient un [POINT](/windows/desktop/api/windef/ns-windef-tagpoint) structure ou [CPoint](cpoint-class.md) objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1353,7 +1353,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ### <a name="parameters"></a>Paramètres
 
 *lpRectSrc1*<br/>
-Pointe vers le [RECT](../../mfc/reference/rect-structure.md) structure ou `CRect` objet à partir de laquelle un rectangle doit être soustrait.
+Pointe vers le [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure ou `CRect` objet à partir de laquelle un rectangle doit être soustrait.
 
 *lpRectSrc2*<br/>
 Pointe vers le `RECT` structure ou `CRect` objet doit être soustrait du rectangle vers lequel pointe le *lpRectSrc1* paramètre.
@@ -1441,7 +1441,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Paramètres
 
 *lpRect1*<br/>
-Pointe vers un [RECT](../../mfc/reference/rect-structure.md) ou `CRect` qui contient un rectangle source.
+Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect` qui contient un rectangle source.
 
 *lpRect2*<br/>
 Pointe vers un `RECT` ou `CRect` qui contient un rectangle source.
@@ -1503,5 +1503,5 @@ La largeur peut être négative.
 
 [CPoint, classe](cpoint-class.md)<br/>
 [CSize, classe](csize-class.md)<br/>
-[RECT](../../mfc/reference/rect-structure.md)
+[RECT](/windows/desktop/api/windef/ns-windef-tagrect)
 

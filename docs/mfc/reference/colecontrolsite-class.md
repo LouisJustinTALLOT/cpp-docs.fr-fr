@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437802"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178917"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite, classe
 
@@ -209,7 +209,7 @@ Pour créer un site de contrôle ActiveX à l’aide `COleControlSite`, dérivez
 
 `COleControlSite`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxocc.h
 
@@ -444,7 +444,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="parameters"></a>Paramètres
 
 *bActivez*<br/>
-Spécifie s’il faut activer ou désactiver la fenêtre : « true » si l’entrée de la fenêtre doit être activé, sinon FALSE.
+Spécifie s’il faut activer ou désactiver la fenêtre : TRUE si l’entrée de la fenêtre doit être activé, sinon FALSE.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>Paramètres
 
 *lpmsg*<br/>
-Un pointeur vers un [structure MSG](../../mfc/reference/msg-structure1.md). Cette structure contient le déclenchement de message Windows le `SetFocus` demande pour le contrôle contenu dans le site de contrôle actuel.
+Un pointeur vers un [structure MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg). Cette structure contient le déclenchement de message Windows le `SetFocus` demande pour le contrôle contenu dans le site de contrôle actuel.
 
 ### <a name="return-value"></a>Valeur de retour
 

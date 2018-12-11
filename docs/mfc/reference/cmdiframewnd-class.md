@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a565e1c9d9c9e4d3773763b0ee78c49f61696723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617540"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178380"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (classe)
 
@@ -127,7 +127,7 @@ Pour plus d’informations sur `CMDIFrameWnd`, consultez [Frame Windows](../../m
 
 `CMDIFrameWnd`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -160,7 +160,7 @@ virtual BOOL CreateClient(
 ### <a name="parameters"></a>Paramètres
 
 *lpCreateStruct*<br/>
-Un pointeur long désignant un [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) structure.
+Un pointeur long désignant un [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) structure.
 
 *pWindowMenu*<br/>
 Pointeur vers le menu contextuel de la fenêtre.
@@ -276,7 +276,7 @@ void MDICascade(int nType);
 ### <a name="parameters"></a>Paramètres
 
 *%nLes*<br/>
-Spécifie un indicateur en cascade. Vous pouvez spécifier uniquement l’indicateur suivant : MDITILE_SKIPDISABLED, ce qui empêche que des fenêtres MDI enfants désactivés en cours en cascade.
+Spécifie un indicateur en cascade. Peut être spécifié uniquement l’indicateur suivant : MDITILE_SKIPDISABLED, ce qui empêche des fenêtres MDI enfants désactivés en cours en cascade.
 
 ### <a name="remarks"></a>Notes
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547483"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178237"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl, classe
 
@@ -71,7 +71,7 @@ Votre code MFC ne doit pas mettre en cache des handles de fenêtre (généraleme
 > [!NOTE]
 >  Intégration de MFC Windows Forms fonctionne uniquement dans les projets qui se lient dynamiquement avec MFC (dans lequel AFXDLL est défini).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwinforms.h
 
@@ -111,10 +111,10 @@ inline BOOL CreateManagedControl(
 Le type de données du contrôle à créer. Doit être un [Type](https://msdn.microsoft.com/library/system.type) type de données.
 
 *dwStyle*<br/>
-Le style de fenêtre à appliquer au contrôle. Spécifiez une combinaison de [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles). Actuellement, seuls les styles suivants sont pris en charge : WS_TABSTOP, WS_VISIBLE, WS_DISABLED et WS_GROUP.
+Le style de fenêtre à appliquer au contrôle. Spécifiez une combinaison de [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles). Actuellement, seuls les styles suivants sont pris en charge : WS_TABSTOP WS_VISIBLE, WS_DISABLED et WS_GROUP.
 
 *Rect*<br/>
-Un [Structure RECT](../../mfc/reference/rect-structure1.md) qui définit les coordonnées des angles supérieur gauche et inférieur droit du contrôle (première surcharge uniquement).
+Un [Structure RECT](/windows/desktop/api/windef/ns-windef-tagrect) qui définit les coordonnées des angles supérieur gauche et inférieur droit du contrôle (première surcharge uniquement).
 
 *nPlaceHolderID*<br/>
 Le handle du contrôle statique titulaire placé dans l’éditeur de ressources. Le contrôle Windows Forms nouvellement créé remplace le contrôle statique, en supposant que sa position, ordre de plan et des styles (seconde surcharge uniquement).

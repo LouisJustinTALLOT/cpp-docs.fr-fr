@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597559"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178043"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl, classe
 
@@ -134,7 +134,7 @@ Pointeur vers une chaîne se terminant par zéro contenant le texte marqué le t
 Spécifie le style du contrôle de lien. Appliquer n’importe quelle combinaison de styles de contrôle. Consultez [des Styles de contrôle courants](/windows/desktop/Controls/common-control-styles) dans le `Windows SDK` pour plus d’informations.
 
 *Rect*<br/>
-Spécifie la taille et la position du contrôle de lien. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](../../mfc/reference/rect-structure1.md) structure.
+Spécifie la taille et la position du contrôle de lien. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente du contrôle de lien. Il ne doit pas être NULL.
@@ -196,7 +196,7 @@ Spécifie le style étendu du contrôle de lien. Pour obtenir la liste des style
 Spécifie le style du contrôle de lien. Appliquer n’importe quelle combinaison de styles de contrôle. Pour plus d’informations, consultez [des Styles de contrôle courants](/windows/desktop/Controls/common-control-styles) dans le SDK Windows.
 
 *Rect*<br/>
-Spécifie la taille et la position du contrôle de lien. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](../../mfc/reference/rect-structure1.md) structure.
+Spécifie la taille et la position du contrôle de lien. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente du contrôle de lien. Il ne doit pas être NULL.
@@ -245,7 +245,7 @@ int GetIdealSize(
 |Paramètre|Description|
 |---------------|-----------------|
 |*cxMaxWidth*|[in] La largeur maximale de la liaison, en pixels.|
-|[out] \* *pSize*|Un pointeur vers un Windows [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure. Lorsque cette méthode est retournée, le *cy* membre de la `SIZE` structure contient la hauteur du texte de lien idéal pour la largeur de texte de lien spécifié par *cxMaxWidth*. Le *cx* membre de la structure contient la largeur de texte de lien qui est réellement nécessaire.|
+|[out] \* *pSize*|Un pointeur vers un Windows [taille](/windows/desktop/api/windef/ns-windef-tagsize) structure. Lorsque cette méthode est retournée, le *cy* membre de la `SIZE` structure contient la hauteur du texte de lien idéal pour la largeur de texte de lien spécifié par *cxMaxWidth*. Le *cx* membre de la structure contient la largeur de texte de lien qui est réellement nécessaire.|
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694190"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178419"
 ---
 # <a name="cwinthread-class"></a>CWinThread (classe)
 
@@ -126,7 +126,7 @@ Pour créer un thread, appelez [AfxBeginThread](application-information-and-mana
 
 Au lieu d’appeler `AfxBeginThread`, vous pouvez construire un `CWinThread`-dérivés d’objet, puis appelez `CreateThread`. Cette méthode de construction en deux étapes est utile si vous souhaitez réutiliser le `CWinThread` objet entre la création successive et arrêts d’exécutions de thread.
 
-Pour plus d’informations sur `CWinThread`, consultez les articles [Multithreading à l’aide de C++ et MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading : création de Threads d’Interface utilisateur](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading : création d’un travail Threads](../../parallel/multithreading-creating-worker-threads.md), et [Multithreading : comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Pour plus d’informations sur `CWinThread`, consultez les articles [Multithreading à l’aide de C++ et MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [le Multithreading : Création de Threads d’Interface utilisateur](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading : Création de Threads de travail](../../parallel/multithreading-creating-worker-threads.md), et [Multithreading : Comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -136,7 +136,7 @@ Pour plus d’informations sur `CWinThread`, consultez les articles [Multithread
 
 `CWinThread`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -458,7 +458,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Paramètres
 
 *pMsg*<br/>
-Pointe vers un [structure MSG](../../mfc/reference/msg-structure1.md) contenant le message à traiter.
+Pointe vers un [structure MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) contenant le message à traiter.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -484,7 +484,7 @@ virtual BOOL ProcessMessageFilter(
 Spécifie un code de raccordement. Cette fonction membre utilise le code pour déterminer comment traiter *lpMsg.*
 
 *lpMsg*<br/>
-Un pointeur vers un Windows [structure MSG](../../mfc/reference/msg-structure1.md).
+Un pointeur vers un Windows [structure MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -512,7 +512,7 @@ virtual LRESULT ProcessWndProcException(
 Pointe vers une exception non gérée.
 
 *pMsg*<br/>
-Pointe vers un [structure MSG](../../mfc/reference/msg-structure1.md) contenant des informations sur le message windows qui a provoqué l’infrastructure lever une exception.
+Pointe vers un [structure MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) contenant des informations sur le message windows qui a provoqué l’infrastructure lever une exception.
 
 ### <a name="return-value"></a>Valeur de retour
 

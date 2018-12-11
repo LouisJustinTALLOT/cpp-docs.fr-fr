@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694801"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178641"
 ---
 # <a name="cbutton-class"></a>CButton, classe
 
@@ -182,7 +182,7 @@ Si vous créez un `CButton` de l’objet dans une fenêtre, vous devrez peut-êt
 
 `CButton`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Paramètres
 
 *lpDrawItemStruct*<br/>
-Un pointeur long désignant un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure. La structure contient des informations sur l’élément à dessiner et le type de dessin requis.
+Un pointeur long désignant un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) structure. La structure contient des informations sur l’élément à dessiner et le type de dessin requis.
 
 ### <a name="remarks"></a>Notes
 
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 Dans la première surcharge, un [CString](../../atl-mfc-shared/using-cstring.md) objet qui contient le texte de note associé au contrôle de lien de commande actuelle.
 
-- ou -
+ou
 
 Dans la seconde surcharge, TRUE si cette méthode a réussi ; Sinon, FALSE.
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*pSize*|[out] Pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui reçoit la description d’un rectangle.|
+|*pSize*|[out] Pointeur vers un [taille](/windows/desktop/api/windef/ns-windef-tagsize) structure qui reçoit la description d’un rectangle.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*pSize*|[in] Pointeur vers un [taille](https://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui décrit un rectangle englobant.|
+|*pSize*|[in] Pointeur vers un [taille](/windows/desktop/api/windef/ns-windef-tagsize) structure qui décrit un rectangle englobant.|
 
 ### <a name="return-value"></a>Valeur de retour
 
