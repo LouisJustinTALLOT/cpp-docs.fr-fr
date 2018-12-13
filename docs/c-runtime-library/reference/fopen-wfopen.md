@@ -143,7 +143,7 @@ En mode texte, combinaisons de sauts de ligne de chariot sont traduites en sauts
 
 Si **t** ou **b** n’est pas spécifié dans *mode*, le mode de traduction par défaut est défini par la variable globale [_fmode](../../c-runtime-library/fmode.md). Si **t** ou **b** est préfixé à l’argument, la fonction échoue et le retourne **NULL**.
 
-Pour plus d’informations sur la façon d’utiliser les modes texte et binaire dans les E/S de flux multioctets et Unicode, consultez [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) et [Unicode Stream I/O in Text and Binary Modes](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Pour plus d’informations sur la façon d’utiliser les modes texte et binaire dans les E/S de flux multioctets et Unicode, consultez [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) et [E/S de flux Unicode en modes texte et binaire](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 Les options suivantes peuvent être ajoutées aux *mode* pour spécifier des comportements supplémentaires.
 
