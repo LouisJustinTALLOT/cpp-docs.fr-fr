@@ -36,7 +36,7 @@ expression % expression
 
 Les opérateurs de multiplication sont :
 
-- Multiplication (<strong>\**</strong>)
+- Multiplication (<strong>\*</strong>)
 
 - Division (**/**)
 
