@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: 6f32519e56e42620caec755e6c250d0ee93c6677
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518966"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657524"
 ---
 # <a name="array-class-c-standard-library"></a>array, classe (Bibliothèque C++ standard)
 
@@ -162,7 +162,7 @@ class array;
 |Opérateur|Description|
 |-|-|
 |[array::operator=](#op_eq)|Remplace la séquence contrôlée.|
-|[array::operator[]](#op_at)|Accède à un élément à une position spécifiée.|
+|[Array::operator\[\]](#op_at)|Accède à un élément à une position spécifiée.|
 
 ## <a name="remarks"></a>Notes
 
@@ -174,7 +174,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 crée l'objet `ai` qui contient quatre valeurs entières, initialise les trois premiers éléments respectivement aux valeurs 1, 2 et 3, et initialise le quatrième élément à la valeur 0.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<array>
 

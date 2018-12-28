@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 6c637e06-bba8-4c08-b0fc-cf8cb067ce34
-ms.openlocfilehash: cf4d489661516271e1d21487aaa3b69fe3580e62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f96c9eee1ca1d0d89a4ce401c8705984efabfeaa
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560197"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657355"
 ---
 # <a name="cstringarray-class"></a>Cstringarray, classe
 
@@ -109,7 +109,7 @@ se traduit par
 
 |Nom|Description|
 |----------|-----------------|
-|[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|
+|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|
 
 ## <a name="remarks"></a>Notes
 
@@ -130,7 +130,7 @@ Pour plus d’informations sur l’utilisation de `CStringArray`, consultez l’
 
 `CStringArray`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcoll.h
 

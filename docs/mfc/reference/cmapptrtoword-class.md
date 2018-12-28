@@ -34,16 +34,16 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-ms.openlocfilehash: 77ae3c333285c08d4cfd714fae2974133758caed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcec1edf010b6d39fa9ddf973599639710f63d35
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663851"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657342"
 ---
 # <a name="cmapptrtoword-class"></a>CMapPtrToWord, classe
 
-Prend en charge les mappages de mots 16 bits indexés par des pointeurs void.
+Prend en charge les mappages de mots 16 bits indexés par des pointeurs void.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,7 +89,7 @@ par exemple, se traduit par
 
 |Nom|Description|
 |----------|-----------------|
-|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe map, substitution d’opérateur pour `SetAt`.|
+|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe map, substitution d’opérateur pour `SetAt`.|
 
 ## <a name="remarks"></a>Notes
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437933"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627265"
 ---
 # <a name="unicode-programming-summary"></a>Synthèse de la programmation Unicode
 
@@ -22,11 +22,11 @@ Pour tirer parti de la prise en charge runtime C et MFC pour Unicode, vous devez
 
 - Spécifier le point d’entrée.
 
-   Sur le **sortie** page de la **l’éditeur de liens** dossier dans le projet [Pages de propriétés](../ide/property-pages-visual-cpp.md) boîte de dialogue, définissez la **Point d’entrée** symbole à `wWinMainCRTStartup`.
+   Sur le **avancé** page de la **l’éditeur de liens** dossier dans le projet [Pages de propriétés](../ide/property-pages-visual-cpp.md) boîte de dialogue, définissez la **Point d’entrée** symbole à `wWinMainCRTStartup`.
 
 - Utiliser des types et des fonctions runtime portables.
 
-   Utilisez les fonctions d’exécution C correctes pour la gestion des chaînes Unicode. Vous pouvez utiliser la `wcs` famille de fonctions, mais vous préférerez peut-être portable entièrement (est-elle activée) `_TCHAR` macros. Ces macros sont toutes le préfixe `_tcs`; ils remplacement, une pour l’une, pour le `str` famille de fonctions. Ces fonctions sont décrites en détail dans le [internationalisation](../c-runtime-library/internationalization.md) section de la *Run-Time Library Reference*. Pour plus d’informations, consultez [des mappages de texte générique dans Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+   Utilisez les fonctions d’exécution C correctes pour la gestion des chaînes Unicode. Vous pouvez utiliser la `wcs` famille de fonctions, mais vous préférerez peut-être portable entièrement (est-elle activée) `_TCHAR` macros. Ces macros sont toutes le préfixe `_tcs`; ils remplacement, une pour l’une, pour le `str` famille de fonctions. Ces fonctions sont décrites en détail dans le [internationalisation](../c-runtime-library/internationalization.md) section de la *Run-Time Library Reference*. Pour plus d’informations, consultez [des mappages de texte générique dans tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    Utilisez `_TCHAR` et les types de données portables associées décrites dans [prise en charge Unicode](../text/support-for-unicode.md).
 
@@ -87,7 +87,7 @@ Pour résumer, MFC et la bibliothèque Runtime fournissent la prise en charge su
 
 - La bibliothèque Runtime fournit les versions Unicode de toutes les fonctions de gestion des chaînes. (La bibliothèque Runtime fournit également des versions portables utilisables pour Unicode ou pour MBCS. Il s’agit de la `_tcs` macros.)
 
-- Tchar.h fournit des types de données portables et `_T` macro pour la traduction des caractères et des chaînes littérales. Pour plus d’informations, consultez [des mappages de texte générique dans Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- Tchar.h fournit des types de données portables et `_T` macro pour la traduction des caractères et des chaînes littérales. Pour plus d’informations, consultez [des mappages de texte générique dans tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 - La bibliothèque d’exécution fournit une version à caractères larges de `main`. Utilisez `wmain` pour rendre votre application prenant en charge Unicode.
 

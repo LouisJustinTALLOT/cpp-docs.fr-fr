@@ -1,6 +1,6 @@
 ---
 title: _InterlockedExchangeAdd, fonctions intrinsèques
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedExchangeAdd64_nf
 - _InterlockedExchangeAdd64_rel
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd16_nf intrinsic
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
-ms.openlocfilehash: 620f8d3b790f33ecea6b00860fd2611bd601f7a1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8cb4c4a5f1b8048995684e3f5c630acecc74000b
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519420"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627437"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd, fonctions intrinsèques
 
@@ -165,7 +165,7 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 
 La valeur de retour est la valeur initiale de la variable vers laquelle pointe le paramètre `Addend`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Intrinsèque|Architecture|En-tête|
 |---------------|------------------|------------|
@@ -195,4 +195,4 @@ Pour obtenir un exemple montrant comment utiliser `_InterlockedExchangeAdd`, con
 
 [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
-[Conflits avec le compilateur x86](../build/conflicts-with-the-x86-compiler.md)
+[Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

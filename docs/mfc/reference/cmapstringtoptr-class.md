@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 1ac11143-eb0a-4511-a662-2df0d1d9005b
-ms.openlocfilehash: e162101b9e3169bc9fff11e0180bbd295403c357
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09b6a41c5dd2a60821d3ca25f565f31de4c30dca
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564708"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657433"
 ---
 # <a name="cmapstringtoptr-class"></a>CMapStringToPtr, classe
 
@@ -89,7 +89,7 @@ par exemple, se traduit par
 
 |Nom|Description|
 |----------|-----------------|
-|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe map, substitution d’opérateur pour `SetAt`.|
+|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe map, substitution d’opérateur pour `SetAt`.|
 
 ## <a name="remarks"></a>Notes
 
@@ -105,7 +105,7 @@ Quand un `CMapStringToPtr` objet est supprimé, ou lorsque ses éléments sont s
 
 `CMapStringToPtr`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcoll.h
 

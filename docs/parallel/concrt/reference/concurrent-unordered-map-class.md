@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 31eec71dd134a5c675f70070ce1457462d10b739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509368"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657589"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map, classe
 
@@ -107,7 +107,7 @@ Type qui représente l’objet allocateur stocké qui encapsule des informations
 
 |Nom|Description|
 |----------|-----------------|
-|[operator[]](#operator_at)|Surchargé. Recherche ou insère un élément avec la clé spécifiée. Cette méthode est concurrentiel.|
+|[operator\[\]](#operator_at)|Surchargé. Recherche ou insère un élément avec la clé spécifiée. Cette méthode est concurrentiel.|
 |[operator=](#operator_eq)|Surchargé. Assigne le contenu d’un autre `concurrent_unordered_map` objet à celui-ci. Cette méthode n’est pas concurrentiel.|
 
 ## <a name="remarks"></a>Notes
@@ -425,7 +425,7 @@ Le type d’itérateur utilisé pour l’insertion.
 *V*<br/>
 Le type de la valeur insérée dans la table.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à insérer.
 
 *_WHERE*<br/>

@@ -1,6 +1,6 @@
 ---
 title: Passage des arguments et conventions de dénomination
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 735e703e3e7d3ddb55a04fb0d29b3899682fe24e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473292"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627239"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Passage des arguments et conventions de dénomination
 
@@ -31,11 +31,11 @@ Sur les plateformes x86, tous les arguments sont élargis à 32 bits lorsqu’i
 Le compilateur génère du code de prologue et d'épilogue pour enregistrer et restaurer les registres ESI, EDI, EBX et EBP, s'ils sont utilisés dans la fonction.
 
 > [!NOTE]
->  Lorsqu'un struct, une union ou une classe est retourné(e) à partir d'une fonction par valeur, toutes les définitions du type doivent être identiques, sinon le programme peut échouer au moment de l'exécution.
+> Lorsqu'un struct, une union ou une classe est retourné(e) à partir d'une fonction par valeur, toutes les définitions du type doivent être identiques, sinon le programme peut échouer au moment de l'exécution.
 
 Pour plus d’informations sur la façon de définir votre propre code de prologue et épilogue de fonction, consultez [des appels de fonction Naked](../cpp/naked-function-calls.md).
 
-Pour plus d’informations sur la valeur par défaut conventions d’appel dans le code plateformes cibles x64, consultez [vue d’ensemble de x64 Conventions d’appel](../build/overview-of-x64-calling-conventions.md). Pour plus d’informations sur l’appel des problèmes de convention dans le code qui cible les plateformes ARM, consultez [problèmes courants de Visual C++ ARM Migration](../build/common-visual-cpp-arm-migration-issues.md).
+Pour plus d’informations sur la valeur par défaut conventions d’appel dans le code plateformes cibles x64, consultez [x64 Convention d’appel](../build/x64-calling-convention.md). Pour plus d’informations sur l’appel des problèmes de convention dans le code qui cible les plateformes ARM, consultez [problèmes courants de Visual C++ ARM Migration](../build/common-visual-cpp-arm-migration-issues.md).
 
 Les conventions d’appel suivantes sont prises en charge par le compilateur Visual C/C++.
 

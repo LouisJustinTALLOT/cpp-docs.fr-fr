@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 675112e108f57ad5208899005865570491e0d055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486584"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657537"
 ---
 # <a name="texture-class"></a>texture, classe
 
@@ -76,7 +76,7 @@ Le rang de la texture.
 |Nom|Description|
 |----------|-----------------|
 |[operator()](#operator_call)|Retourne la valeur de l’élément qui est spécifiée par les paramètres.|
-|[operator[]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|
+|[operator\[\]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|
 |[operator=](#operator_eq)|Copie le texte spécifié [texture](texture-class.md) objet à celui-ci.|
 
 ### <a name="public-constants"></a>Constantes publiques
@@ -99,11 +99,11 @@ Le rang de la texture.
 
 `texture`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_graphics.h
 
-**Namespace :** Concurrency::graphics
+**Namespace :** Concurrency::Graphics
 
 ##  <a name="dtor"></a> ~texture
 
@@ -335,7 +335,7 @@ L’index de l’élément.
 *_Rank*<br/>
 Le rang de l’index.
 
-*valeur*<br/>
+*value*<br/>
 Nouvelle valeur de l’élément.
 
 ##  <a name="ctor"></a> Texture

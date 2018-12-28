@@ -11,12 +11,12 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-ms.openlocfilehash: 615ad42d5a1e4cb6076877e1d1b5de4bd11fdf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f4805152944202b7d3f7f45fce494f7e9d81af
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501320"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626680"
 ---
 # <a name="internationalization-strategies"></a>Stratégies d'internationalisation
 
@@ -30,7 +30,7 @@ En fonction de vos systèmes d’exploitation cible et les marchés, vous avez p
 
    Vous utilisez des fonctionnalités spécifique à MBCS. Chaînes peuvent contenir des caractères codés sur un octet, les caractères codés sur deux ou les deux. La bibliothèque Runtime C fournit des fonctions, macros et types de données pour la programmation MBCS uniquement. MFC est entièrement compatible MBCS.
 
-- Le code source pour votre application est écrit pour une portabilité totale, en recompilant avec le symbole `_UNICODE` ou le symbole `_MBCS` défini, vous pouvez produire des versions qui utilisent l’un. Pour plus d’informations, consultez [des mappages de texte générique dans Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- Le code source pour votre application est écrit pour une portabilité totale, en recompilant avec le symbole `_UNICODE` ou le symbole `_MBCS` défini, vous pouvez produire des versions qui utilisent l’un. Pour plus d’informations, consultez [des mappages de texte générique dans tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    Vous utilisez entièrement portables C Runtime fonctions, macros et types de données. La flexibilité MFC prend en charge ces stratégies.
 

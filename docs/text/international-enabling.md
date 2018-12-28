@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 4476b0805c8806d344a9290ba190aed7c7697a8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514632"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627425"
 ---
 # <a name="international-enabling"></a>Compatibilité internationale
 
@@ -27,7 +27,7 @@ La plupart des code C et C++ sur les hypothèses sur la manipulation de caractè
 
    - Utilisez les mêmes fonctions runtime portables qui rendent MFC portable sous les deux environnements.
 
-   - Améliorer la portabilité sous les deux environnements, des chaînes littérales et les caractères à l’aide de la `_T` (macro). Pour plus d’informations, consultez [des mappages de texte générique dans Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+   - Améliorer la portabilité sous les deux environnements, des chaînes littérales et les caractères à l’aide de la `_T` (macro). Pour plus d’informations, consultez [des mappages de texte générique dans tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    - Prenez des précautions lors de l’analyse de chaînes sous MBCS. Ces précautions ne sont pas nécessaires sous Unicode. Pour plus d’informations, consultez [conseils de programmation de MBCS](../text/mbcs-programming-tips.md).
 

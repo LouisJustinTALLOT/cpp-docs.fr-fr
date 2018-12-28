@@ -24,12 +24,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: bb658db157433aadce183e7fab437f15251ff54c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631294"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626719"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texte et chaînes en Visual C++
 
@@ -46,10 +46,10 @@ Décrit l’Unicode, une spécification pour prendre en charge tous les jeux de 
 [Prise en charge des jeux de caractères multioctets (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 Explique MBCS, une alternative au format Unicode pour prendre en charge les jeux de caractères japonais et chinois, qui ne peut pas être représentée dans un seul octet.
 
-[Mappages de texte générique dans Tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[Mappages de texte générique dans tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Fournit des mappages de texte générique spécifiques à Microsoft pour nombreux types de données, routines et autres objets.
 
-[Guide pratique pour effectuer une conversion entre différents types de chaînes](../text/how-to-convert-between-various-string-types.md)<br/>
+[Guide pratique pour Effectuer une conversion entre différents Types de chaînes](../text/how-to-convert-between-various-string-types.md)<br/>
 Montre comment convertir différents types de chaînes Visual C++ en d’autres chaînes.
 
 ## <a name="related-sections"></a>Rubriques connexes

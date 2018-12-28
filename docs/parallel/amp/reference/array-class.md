@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 7543249719cd7fab10bac7824e69023fefbc35f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523726"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657550"
 ---
 # <a name="array-class"></a>array, classe
 
@@ -77,7 +77,7 @@ Le rang du tableau.
 |----------|-----------------|
 |[opérateur std::vector&lt;value_type&gt;](#operator_vec)|Utilise `copy(*this, vector)` convertir implicitement le tableau std ::[vecteur](../../../standard-library/vector-class.md) objet.|
 |[operator()](#operator_call)|Retourne la valeur de l’élément qui est spécifiée par les paramètres.|
-|[operator[]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|
+|[operator\[\]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|
 |[operator=](#operator_eq)|Copie le contenu de l’objet `array` objet dans celui-ci.|
 
 ### <a name="public-constants"></a>Constantes publiques
@@ -121,7 +121,7 @@ Le `array<T,N>` type est utilisé dans plusieurs scénarios :
 
 **En-tête :** amp.h
 
-**Espace de noms :** Concurrency
+**Namespace :** Concurrence
 
 ##  <a name="dtor"></a> ~ tableau
 

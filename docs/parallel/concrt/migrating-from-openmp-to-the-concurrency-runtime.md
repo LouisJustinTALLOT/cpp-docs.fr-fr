@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 4b70aa57a6485fefe0dbb678e72ba127502c89e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
+ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481924"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737622"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migration d'OpenMP au runtime d'accès concurrentiel
 
@@ -34,7 +34,7 @@ Il peut être avantageux de migration du code OpenMP existant pour utiliser le R
 |Vous avez besoin de prise en charge de la gestion des exceptions.|La bibliothèque PPL vous permet d’intercepter les exceptions à l’intérieur et en dehors d’une boucle ou une région parallèle. OpenMP, vous devez gérer l’exception à l’intérieur de la boucle ou une région parallèle.|
 |Vous avez besoin d’un mécanisme d’annulation.|La bibliothèque PPL permet aux applications d’annuler les tâches individuelles et les arborescences de travail parallèle. OpenMP, l’application doit implémenter son propre mécanisme d’annulation.|
 |Vous avez besoin de code parallèle se termine dans un contexte différent à partir de laquelle il démarre.|Le Runtime d’accès concurrentiel vous permet de démarrer une tâche dans un contexte et puis d’attendre ou annuler cette tâche dans un autre contexte. OpenMP, tout le travail parallèle doit se terminer dans le contexte à partir de laquelle il démarre.|
-|Vous avez besoin de prise en charge du débogage améliorée.|Visual Studio fournit le **piles parallèles** et **tâches parallèles** windows afin que vous pouvez déboguer plus facilement des applications multithread.<br /><br /> Pour plus d’informations sur le débogage de prise en charge pour le Runtime d’accès concurrentiel, consultez [à l’aide de la fenêtre tâches](/visualstudio/debugger/using-the-tasks-window), [à l’aide de la fenêtre Piles parallèles](/visualstudio/debugger/using-the-parallel-stacks-window), et [procédure pas à pas : débogage d’une action parallèle Application](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
+|Vous avez besoin de prise en charge du débogage améliorée.|Visual Studio fournit le **piles parallèles** et **tâches parallèles** windows afin que vous pouvez déboguer plus facilement des applications multithread.<br /><br /> Pour plus d’informations sur le débogage de prise en charge pour le Runtime d’accès concurrentiel, consultez [à l’aide de la fenêtre tâches](/visualstudio/debugger/using-the-tasks-window), [à l’aide de la fenêtre Piles parallèles](/visualstudio/debugger/using-the-parallel-stacks-window), et [procédure pas à pas : Débogage d’une Application parallèle](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
 
 ## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Quand ne pas migrer d’OpenMP au Runtime d’accès concurrentiel
 
@@ -48,17 +48,17 @@ Les cas suivants décrivent lorsqu’il n’est peut-être pas approprié pour l
 
 ## <a name="related-topics"></a>Rubriques connexes
 
-[Guide pratique pour convertir une boucle OpenMP parallèle pour utiliser le runtime d’accès concurrentiel](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Guide pratique pour Convertir une boucle utiliser le Runtime d’accès concurrentiel OpenMP parallèle](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Étant donné une boucle de base qui utilise le OpenMP [parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) et [pour](../../parallel/openmp/reference/for-openmp.md) directives, montre comment convertir pour utiliser le Runtime d’accès concurrentiel [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithme.
 
-[Guide pratique pour convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[Guide pratique pour Convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le Runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Étant donné une OpenMP [parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pour](../../parallel/openmp/reference/for-openmp.md) boucle ne nécessitant pas de toutes les itérations à exécuter, montre comment convertir pour utiliser le mécanisme d’annulation de Runtime d’accès concurrentiel.
 
-[Guide pratique pour convertir une boucle OpenMP qui a recours à la gestion des exceptions pour utiliser le runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)<br/>
+[Guide pratique pour Convertir une boucle OpenMP qui utilise la gestion des exceptions pour utiliser le Runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Étant donné une OpenMP [parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pour](../../parallel/openmp/reference/for-openmp.md) boucle qui effectue la gestion des exceptions, montre comment convertir pour utiliser le mécanisme de gestion des exceptions de Runtime d’accès concurrentiel.
 
-[Guide pratique pour convertir une boucle OpenMP qui a recours à une variable de réduction pour utiliser le runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[Guide pratique pour Convertir une boucle OpenMP qui utilise une Variable de réduction pour utiliser le Runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Étant donné une OpenMP [parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pour](../../parallel/openmp/reference/for-openmp.md) boucle qui utilise le [réduction](../../parallel/openmp/reference/reduction.md) clause, montre comment convertir pour utiliser le Runtime d’accès concurrentiel.
 
 ## <a name="see-also"></a>Voir aussi
