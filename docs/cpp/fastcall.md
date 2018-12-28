@@ -1,6 +1,6 @@
 ---
 title: __fastcall
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __fastcall_cpp
 - __fastcall
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 19cc8efb98660e8cdb3f6d9b03f0b7bd85a34949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480039"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627362"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -29,11 +29,11 @@ Le **__fastcall** convention d’appel spécifie que les arguments des fonctions
 |Convention de conversion de casse|Aucune conversion de casse n'est effectuée.|
 
 > [!NOTE]
->  Les futures versions du compilateur peuvent utiliser des registres pour stocker les paramètres.
+> Les futures versions du compilateur peuvent utiliser des registres pour stocker les paramètres.
 
 À l’aide de la [/GR](../build/reference/gd-gr-gv-gz-calling-convention.md) option du compilateur provoque de chaque fonction dans le module pour compiler en **__fastcall** à moins que la fonction est déclarée à l’aide d’un attribut en conflit, ou le nom de la fonction `main` .
 
-Le **__fastcall** mot clé est accepté et ignoré par les compilateurs qui ciblent ARM et x64 architectures ; sur un x64 de processeur, par convention, les quatre premiers arguments sont passés dans les registres quand cela est possible, et les arguments supplémentaires sont passés sur la pile. Pour plus d’informations, consultez [vue d’ensemble de x64 Conventions d’appel](../build/overview-of-x64-calling-conventions.md). Sur un processeur ARM, jusqu’à quatre arguments entiers et huit arguments à virgule flottante peuvent être transmis dans les registres, et des arguments supplémentaires sont transmis sur la pile.
+Le **__fastcall** mot clé est accepté et ignoré par les compilateurs qui ciblent ARM et x64 architectures ; sur un x64 de processeur, par convention, les quatre premiers arguments sont passés dans les registres quand cela est possible, et les arguments supplémentaires sont passés sur la pile. Pour plus d’informations, consultez [x64 Convention d’appel](../build/x64-calling-convention.md). Sur un processeur ARM, jusqu’à quatre arguments entiers et huit arguments à virgule flottante peuvent être transmis dans les registres, et des arguments supplémentaires sont transmis sur la pile.
 
 Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d’autres termes, pour les méthodes membres non statiques de classe, la convention d’appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Compte tenu de la définition de classe suivante :
 

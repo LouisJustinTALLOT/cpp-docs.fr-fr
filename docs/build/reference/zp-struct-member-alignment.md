@@ -1,6 +1,6 @@
 ---
 title: /Zp (Alignement des membres de la structure)
-ms.date: 04/30/2018
+ms.date: 12/17/2018
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: 7b9176d42b2dac0082b6627f5338799660ded1f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1821d8dc5eab202a918893a1e7895151629b551
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518220"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627525"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Alignement des membres de la structure)
 
@@ -53,7 +53,7 @@ Vous pouvez également utiliser [pack](../../preprocessor/pack.md) à la compres
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [Exemples d’alignement de Structure](../../build/examples-of-structure-alignment.md) (x64 spécifique)
+- [Exemples d’alignement de Structure](../../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 spécifique)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 

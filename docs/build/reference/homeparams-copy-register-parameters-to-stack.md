@@ -1,48 +1,44 @@
 ---
 title: /Homeparams (Copier les paramètres des registres vers la pile)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - /homeparams
 helpviewer_keywords:
 - /homeparams compiler option [C++]
 - -homeparams compiler option [C++]
 ms.assetid: 51067de4-24f7-436b-b8d9-bc867a7d53aa
-ms.openlocfilehash: 952a38d2ab1268ee3dc1fda0899a3ba047281b44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffb5ca602feb7a369bb31d0277834786d66ac12a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518454"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627433"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/Homeparams (Copier les paramètres des registres vers la pile)
 
-Force l'écriture des paramètres passés dans les registres à leurs emplacements sur la pile lors de l'entrée de la fonction.
+Paramètres de force passés dans les registres également d’être écrites dans leurs emplacements sur la pile lors de l’entrée de fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-/homeparams
-```
+> **/homeparams**
 
 ## <a name="remarks"></a>Notes
 
-Cette option du compilateur est uniquement pour les x64 compilateurs (compilation natives et croisée).
+Cette option du compilateur est uniquement disponible dans les compilateurs croisés qui ciblent x64 natif.
 
-Lorsque les paramètres sont passés dans un x64 compilation, conventions d’appel requièrent une pile pour les paramètres, même pour les paramètres passés dans les registres. Pour plus d’informations, consultez [passage de paramètres](../../build/parameter-passing.md). Toutefois, par défaut dans une version Release, les paramètres de Registre ne seront pas être écrites dans la pile, dans l’espace qui est déjà fourni pour les paramètres. Cela rend difficile à déboguer une version optimisée (version) de votre programme.
+La convention d’appel de x64 nécessite de l’espace de pile doit être allouée pour tous les paramètres, même pour les paramètres passés dans les registres. Pour plus d’informations, consultez [passage de paramètres](../../build/x64-calling-convention.md#parameter-passing). Par défaut, les paramètres de Registre ne sont pas copiés dans l’espace de pile alloué pour eux dans les versions release. Cela rend difficile à déboguer une version Release optimisée de votre programme.
 
-Pour une version Release, utilisez **/homeparams** pour vous assurer que vous pouvez déboguer votre application. **/Homeparams** implique un inconvénient de performances, car elle ne nécessite pas un cycle pour charger les paramètres de Registre sur la pile.
+Pour les versions release, vous pouvez utiliser la **/homeparams** option pour forcer le compilateur pour copier les paramètres à la pile, pour vous assurer que vous pouvez déboguer votre application de Registre. **/Homeparams** implique un inconvénient de performances, car elle requiert un cycle supplémentaire pour charger les paramètres de Registre dans la pile.
 
-Dans une version debug, la pile est toujours remplie avec les paramètres passés dans les registres.
+Dans les versions debug, la pile est toujours remplie avec les paramètres passés dans les registres.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
-1. Cliquez sur le dossier **C/C++** .
+1. Ouvrez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
 
-1. Cliquez sur la page de propriétés **Ligne de commande** .
-
-1. Tapez l'option de compilateur dans la zone **Options supplémentaires** .
+1. Entrez l’option du compilateur dans le **des Options supplémentaires** boîte.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
-ms.openlocfilehash: 9aa25598674aa52502d5d3619e5015eb13b6fff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc79a0636f900aa49e31f0dc35ee19657c3e1ccb
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532780"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626732"
 ---
 # <a name="calling-conventions"></a>Conventions d’appel
 
@@ -17,13 +17,13 @@ Le compilateur Visual C/C++ fournit diverses conventions pour appeler des foncti
 
 Les rubriques se rapportant à ce sujet expliquent les différences entre les conventions d'appel, la façon dont les arguments sont passés et la manière dont les valeurs sont retournées par les fonctions. Elles présentent également les appels de fonction naked, une fonctionnalité avancée qui vous permet d’écrire votre propre code de prologue et d’épilogue.
 
-Pour plus d’informations sur les conventions d’appel de x64 processeurs, consultez [Convention d’appel](../build/calling-convention.md).
+Pour plus d’informations sur les conventions d’appel de x64 processeurs, consultez [Convention d’appel](../build/x64-calling-convention.md).
 
 ## <a name="topics-in-this-section"></a>Rubriques de cette section
 
 - [Passage d’arguments et Conventions d’affectation de noms](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`, etc.)
 
-- [Exemple d’appel : prototype et appel de fonction](../cpp/calling-example-function-prototype-and-call.md)
+- [Exemple d’appel : Appel et Prototype de fonction](../cpp/calling-example-function-prototype-and-call.md)
 
 - [À l’aide d’appels de fonction naked pour écrire du code de prologue/épilogue personnalisées](../cpp/naked-function-calls.md)
 

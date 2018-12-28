@@ -1,6 +1,6 @@
 ---
 title: _InterlockedAdd, fonctions intrinsèques
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 0952a7727a433a718eac2f1873249327647599dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 473d113ff9af3b009075dfef657082034b1bbcb6
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461592"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626904"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd, fonctions intrinsèques
 
 **Section spécifique à Microsoft**
 
-Effectuer une addition atomique, ce qui permet de s'assurer que l'opération se termine avec succès quand plusieurs threads ont accès à une variable partagée.
+Ces fonctions effectuent une addition atomique, ce qui permet de s’assurer que l’opération termine avec succès lorsque plusieurs threads a accès à une variable partagée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -88,7 +88,7 @@ __int64 _InterlockedAdd64_rel(
 
 Ces deux fonctions renvoient le résultat de l'addition.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
@@ -105,13 +105,13 @@ Ces deux fonctions renvoient le résultat de l'addition.
 
 ## <a name="remarks"></a>Notes
 
-Les versions de ces fonctions avec le suffixe `_acq` ou `_rel` effectuent une addition verrouillée respectant la sémantique acquire ou release. La sémantique acquire signifie que le résultat de l'opération est rendu visible à tous les threads et les processeurs avant toute lecture ou écriture en mémoire ultérieure. Elle est utile lors de l'entrée d'une section critique. La sémantique release signifie que toutes les lectures et écritures en mémoire sont obligatoirement rendues visibles à tous les threads et les processeurs avant que le résultat de l'opération soit lui-même rendu visible. Elle est utile quand vous quittez une section critique. Les fonctions intrinsèques avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.
+Les versions de ces fonctions avec le suffixe `_acq` ou `_rel` effectuent une addition verrouillée respectant la sémantique acquire ou release. *Des sémantiques acquire* signifie que le résultat de l’opération est effectué visible à tous les threads et les processeurs avant toute mémoire ultérieure lit et écrit. Elle est utile lors de l'entrée d'une section critique. *Sémantique de libération* signifie que toute la mémoire, lectures et écritures est obligatoirement rendues visibles par tous les threads et processeurs avant que le résultat de l’opération soit lui-même rendu visible. Elle est utile quand vous quittez une section critique. Les fonctions intrinsèques avec un `_nf` suffixe de (« aucune isolation ») n’agissent comme une barrière de mémoire.
 
 Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // interlockedadd.cpp
 // Compile with: /Oi /EHsc
 // processor: ARM
@@ -132,13 +132,13 @@ int main()
 
 ## <a name="output"></a>Sortie
 
-```
+```Output
 0xffffff00 0xff0000 0xffffff00
 ```
 
 ## <a name="example"></a>Exemple
 
-```
+```cpp
 // interlockedadd64.cpp
 // compile with: /Oi /EHsc
 // processor: ARM
@@ -162,7 +162,7 @@ int main()
 
 ## <a name="output"></a>Sortie
 
-```
+```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
@@ -172,4 +172,4 @@ Return value: ffff00ffffffff
 ## <a name="see-also"></a>Voir aussi
 
 [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
-[Conflits avec le compilateur x86](../build/conflicts-with-the-x86-compiler.md)
+[Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

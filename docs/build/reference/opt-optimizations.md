@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: ad89dfa29df6e4ef500e01e53f203fa3c401602b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638228"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587887"
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimisations)
 
@@ -67,7 +67,7 @@ Par défaut, le **/OPT : LBR** option est définie lors de l’édition des lie
 
 ## <a name="remarks"></a>Notes
 
-Lorsqu’il est utilisé à la ligne de commande, l’éditeur de liens par défaut est **/OPT : REF, ICF, LBR**. Si **/DEBUG** est spécifié, la valeur par défaut est **/OPT : NOREF, NOICR, NOLBR**.
+Lorsqu’il est utilisé à la ligne de commande, l’éditeur de liens par défaut est **/OPT : REF, ICF, LBR**. Si **/DEBUG** est spécifié, la valeur par défaut est **/OPT : NOREF, NOICF, NOLBR**.
 
 Le **/OPT** optimisations généralement la taille de l’image et d’augmenter la vitesse du programme. Ces améliorations peuvent être importantes dans des programmes plus volumineux, c’est pourquoi elles sont activées par défaut pour les versions commerciales.
 

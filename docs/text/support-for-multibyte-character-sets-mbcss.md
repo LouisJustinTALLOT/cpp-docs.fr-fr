@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: b6c8dc5548eb1082866b7a069fb38fd329effc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437251"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627343"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Prise en charge des jeux de caractères multioctets (MBCS)
 
@@ -46,7 +46,7 @@ La bibliothèque Runtime C et MFC prennent en charge la programmation sur un oct
 
 ### <a name="mbcsunicode-portability"></a>Portabilité MBCS/Unicode
 
-Avec le fichier d'en-tête Tchar.h, vous pouvez créer des applications codées sur un octet, MBCS et Unicode à partir des mêmes sources. Tchar.h définit des macros ayant pour préfixe *_tcs* , qui est mappé à `str`, `_mbs`, ou `wcs` fonctions, comme il convient. Pour générer du MBCS, définissez le symbole `_MBCS`. Pour générer du Unicode, définissez le symbole `_UNICODE`. Par défaut, `_MBCS` est défini pour les applications MFC. Pour plus d’informations, consultez [des mappages de texte générique dans Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+Le fichier d’en-tête tchar.h, vous pouvez générer un octet, MBCS et Unicode applications à partir des mêmes sources. Tchar.h définit des macros ayant pour préfixe *_tcs* , qui est mappé à `str`, `_mbs`, ou `wcs` fonctions, comme il convient. Pour générer du MBCS, définissez le symbole `_MBCS`. Pour générer du Unicode, définissez le symbole `_UNICODE`. Par défaut, `_UNICODE` est défini pour les applications MFC. Pour plus d’informations, consultez [des mappages de texte générique dans tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
 >  Comportement n’est pas défini si vous définissez à la fois `_UNICODE` et `_MBCS`.

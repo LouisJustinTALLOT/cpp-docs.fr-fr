@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 29f60748f8ff0681a3a73e31cbb049c27c3a45be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e9b49bca6b94595186e69a900a28fe5e38522c
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656151"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657615"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb (classe)
 
@@ -81,7 +81,7 @@ class CMapStringToOb : public CObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CMapStringToOb::operator [ ]](#operator_at)|Insère un élément dans la classe map, substitution d’opérateur pour `SetAt`.|
+|[CMapStringToOb::operator \[ \]](#operator_at)|Insère un élément dans la classe map, substitution d’opérateur pour `SetAt`.|
 
 ## <a name="remarks"></a>Notes
 
@@ -103,7 +103,7 @@ Dérivation de classe Map est similaire à la dérivation de la liste. Consultez
 
 `CMapStringToOb`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcoll.h
 

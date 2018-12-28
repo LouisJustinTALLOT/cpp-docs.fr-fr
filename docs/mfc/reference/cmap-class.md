@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 3991ae4c7455aa8e6eb377112cb89c057e9567e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627316"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657576"
 ---
 # <a name="cmap-class"></a>CMap (classe)
 
@@ -106,7 +106,7 @@ Type de données utilisé pour *valeur* arguments ; généralement une référe
 
 |Nom|Description|
 |----------|-----------------|
-|[[] CMap::operator](#operator_at)|Insère un élément dans la classe map, substitution d’opérateur pour `SetAt`.|
+|[CMap::operator \[ \]](#operator_at)|Insère un élément dans la classe map, substitution d’opérateur pour `SetAt`.|
 
 ## <a name="remarks"></a>Notes
 
@@ -116,7 +116,7 @@ Une variable de type de que position est utilisée pour un autre accès aux entr
 
 Certaines fonctions de membre de cet appel de la classe d’assistance globales des fonctions qui doivent être personnalisées pour la plupart des utilisations de la `CMap` classe. Consultez [Assistants de classe de Collection](../../mfc/reference/collection-class-helpers.md) dans la section de Macros et objet Globals de la **référence MFC**.
 
-`CMap` substitue [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) pour prendre en charge la sérialisation et le vidage de ses éléments. Si un mappage est stocké dans une archive à l’aide `Serialize`, chaque élément cartographique est sérialisé à son tour. L’implémentation par défaut de la `SerializeElements` fonction d’assistance effectue une écriture au niveau du bit. Pour plus d’informations sur la sérialisation des éléments de collecte de pointeur dérivé `CObject` ou autres types définis par l’utilisateur, consultez [Comment : définir une Collection de Type sécurisé](../../mfc/how-to-make-a-type-safe-collection.md).
+`CMap` substitue [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) pour prendre en charge la sérialisation et le vidage de ses éléments. Si un mappage est stocké dans une archive à l’aide `Serialize`, chaque élément cartographique est sérialisé à son tour. L’implémentation par défaut de la `SerializeElements` fonction d’assistance effectue une écriture au niveau du bit. Pour plus d’informations sur la sérialisation des éléments de collecte de pointeur dérivé `CObject` ou autres types définis par l’utilisateur, consultez [Comment : Définir une Collection de Type sécurisé](../../mfc/how-to-make-a-type-safe-collection.md).
 
 Si vous avez besoin d’un vidage de diagnostic des éléments individuels dans le mappage (les clés et valeurs), vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.
 
@@ -130,7 +130,7 @@ Dérivation de classe Map est similaire à la dérivation de la liste. Consultez
 
 `CMap`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtempl.h
 

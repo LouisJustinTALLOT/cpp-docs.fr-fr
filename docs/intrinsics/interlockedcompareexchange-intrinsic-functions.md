@@ -1,6 +1,6 @@
 ---
 title: Fonctions intrinsèques _InterlockedCompareExchangePointer
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
 - _InterlockedCompareExchange8_nf
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 2a583c953c98df49b45eecd2040905b253567cfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 545bbeec545b37324ff9c15512b27073f5ffc1c7
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577231"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627293"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Fonctions intrinsèques _InterlockedCompareExchangePointer
 
@@ -439,4 +439,4 @@ int main(
 [_InterlockedCompareExchangePointer, fonctions intrinsèques](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
 [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
-[Conflits avec le compilateur x86](../build/conflicts-with-the-x86-compiler.md)
+[Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
