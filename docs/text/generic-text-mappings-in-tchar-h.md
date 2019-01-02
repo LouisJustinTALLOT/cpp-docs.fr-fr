@@ -12,18 +12,18 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627449"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978294"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mappages de texte générique dans tchar.h
 
 Pour simplifier le transport de code pour une utilisation internationale, la bibliothèque Runtime Microsoft fournit des mappages de texte générique spécifiques à Microsoft pour nombreux types de données, routines et autres objets. Vous pouvez utiliser ces mappages, qui sont définis dans tchar.h, pour écrire du code générique qui peut être compilé sur un octet, multioctet, ou de caractère Unicode définit, en fonction d’une constante de manifeste que vous définissez à l’aide un `#define` instruction. Les mappages de texte générique sont des extensions Microsoft non compatibles ANSI.
 
-En utilisant le fichier tchar.h, vous pouvez générer un octet, jeu de caractères multioctets (MBCS) et les applications Unicode à partir des mêmes sources. Tchar.h définit des macros (qui ont le préfixe `_tcs`) qui, avec les définitions de préprocesseur, correspondent aux `str`, `_mbs`, ou `wcs` fonctions, comme il convient. Pour générer du MBCS, définissez le symbole `_MBCS`. Pour générer du Unicode, définissez le symbole `_UNICODE`. Pour générer une application d’un octet, définissez ni (la valeur par défaut). Par défaut, `_MBCS` est défini pour les applications MFC.
+En utilisant le fichier tchar.h, vous pouvez générer un octet, jeu de caractères multioctets (MBCS) et les applications Unicode à partir des mêmes sources. Tchar.h définit des macros (qui ont le préfixe `_tcs`) qui, avec les définitions de préprocesseur, correspondent aux `str`, `_mbs`, ou `wcs` fonctions, comme il convient. Pour générer du MBCS, définissez le symbole `_MBCS`. Pour générer du Unicode, définissez le symbole `_UNICODE`. Pour générer une application d’un octet, définissez ni (la valeur par défaut). Par défaut, `_UNICODE` est défini pour les applications MFC.
 
 Le `_TCHAR` type de données est défini de façon conditionnelle dans tchar.h. Si le symbole `_UNICODE` est défini pour votre build, `_TCHAR` est défini comme **wchar_t**; sinon, pour un octet et MBCS builds, il est défini comme **char**. (**wchar_t**, type de données à caractère élargi Unicode de base, est l’équivalent de 16 bits de 8 bits signé **char**.) Dans les applications internationales, utilisez le `_tcs` famille de fonctions qui opèrent dans `_TCHAR` unités, non en octets. Par exemple, `_tcsncpy` copies `n` `_TCHARs`, et non `n` octets.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176261"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978307"
 ---
 # <a name="lambda-expressions-in-c"></a>Expressions lambda en C++
 
@@ -55,7 +55,7 @@ Cette illustration montre les éléments d'une expression lambda :
 
 1. *Trailing-return-type* facultatif.
 
-1. *corps du lambda*)
+1. *corps du lambda*.
 
 ### <a name="capture-clause"></a>Clause de capture
 
@@ -102,9 +102,9 @@ void f(Args... args) {
 
 Pour utiliser des expressions lambda dans le corps d’une méthode de classe, passez le **cela** pointeur à la clause de capture pour fournir l’accès aux méthodes et des données membres de la classe englobante.
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : le **cela** pointeur peut être capturé par sa valeur en spécifiant `*this` dans la clause de capture. Capture par valeur signifie que l’intégralité de *fermeture*, qui est l’objet de fonction anonyme qu’encapulates l’expression lambda, est copié dans chaque site d’appel où l’expression lambda est invoquée. Capture par valeur est utile lorsque l’expression lambda s’exécutera dans les opérations parallèles ou asynchrones, en particulier sur certaines architectures matérielles telles que NUMA.
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Le **cela** pointeur peut être capturé par sa valeur en spécifiant `*this` dans la clause de capture. Capture par valeur signifie que l’intégralité de *fermeture*, qui est l’objet de fonction anonyme qu’encapulates l’expression lambda, est copié dans chaque site d’appel où l’expression lambda est invoquée. Capture par valeur est utile lorsque l’expression lambda s’exécutera dans les opérations parallèles ou asynchrones, en particulier sur certaines architectures matérielles telles que NUMA.
 
-Pour obtenir un exemple qui montre comment utiliser des expressions lambda avec des méthodes de classe, consultez « Exemple : à l’aide un Lambda Expression dans une méthode » dans [exemples d’Expressions Lambda](../cpp/examples-of-lambda-expressions.md).
+Pour obtenir un exemple qui montre comment utiliser des expressions lambda avec des méthodes de classe, consultez « exemple : Utilisation d’une Expression Lambda dans une méthode » dans [exemples d’Expressions Lambda](../cpp/examples-of-lambda-expressions.md).
 
 Quand vous utilisez une clause de capture, nous vous conseillons de garder les points suivants à l'esprit, en particulier si vous utilisez des expressions lambda avec le multithreading :
 
@@ -324,7 +324,7 @@ Pour plus d’informations, consultez [generate_n](../standard-library/algorithm
 
 ## <a name="constexpr-lambda-expressions"></a>expressions lambda de constexpr
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : une expression lambda peut être déclarée comme `constexpr` ou utilisées dans une expression constante lors de l’initialisation de chaque membre de données qu’elle capture, ou introduit est autorisé dans une expression constante.
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Une expression lambda peut être déclarée comme `constexpr` ou utilisées dans une expression constante lors de l’initialisation de chaque membre de données qu’elle capture ou introduit est autorisée dans une expression constante.
 
 ```cpp
     int y = 32;
