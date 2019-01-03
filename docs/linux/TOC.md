@@ -12,5 +12,6 @@
 ## [C/C++, propriétés (Linux)](prop-pages/c-cpp-linux.md)
 ## [Éditeur de liens, propriétés (Linux)](prop-pages/linker-linux.md)
 ## [Événement de build, propriétés (Linux)](prop-pages/build-events-linux.md)
-## [Étape de build personnalisée, propriétés (Linux)](prop-pages/custom-build-step-linux.md) 
+## [Étape de build personnalisée, propriétés (Linux)](prop-pages/custom-build-step-linux.md)
 ## [Projet Makefile, propriétés (Linux)](prop-pages/makefile-linux.md)
+## [Propriétés d’archive distante (Linux)](prop-pages/remote-ar-linux.md)
