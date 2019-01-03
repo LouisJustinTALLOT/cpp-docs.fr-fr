@@ -1,5 +1,5 @@
 # [Classes MFC](mfc-classes.md)
-## [CAccelerateDecelerateTransition, classe1](cacceleratedeceleratetransition-class1.md)
+## [Classe CAccelerateDecelerateTransition](cacceleratedeceleratetransition-class.md)
 ## [CAnimateCtrl, classe](canimatectrl-class.md)
 ## [CAnimationBaseObject, classe](canimationbaseobject-class.md)
 ## [CAnimationColor, classe](canimationcolor-class.md)
