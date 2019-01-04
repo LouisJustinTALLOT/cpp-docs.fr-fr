@@ -26,12 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617436"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031276"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -66,12 +66,17 @@ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno
 
 Le **_setmode** fonction affecte *mode* le mode de traduction de fichier spécifié par *fd*. En passant **_O_TEXT** comme *mode* définit le texte (autrement dit, traduit) mode. Combinaisons de (CR-LF) flux de transport retour de ligne sont traduites en une seule ligne, caractère de saut en entrée. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. En passant **_O_BINARY** définit binaire (non traduit) le mode, dans lequel ces traductions sont supprimées.
 
-Vous pouvez également passer **_O_U16TEXT**, **_O_U8TEXT**, ou **_O_WTEXT** pour activer le mode Unicode, comme illustré dans le deuxième exemple plus loin dans ce document. **_setmode** est généralement utilisé pour modifier le mode de traduction par défaut **stdin** et **stdout**, mais vous pouvez l’utiliser sur n’importe quel fichier. Si vous appliquez **_setmode** au descripteur de fichier pour un flux de données, appelez **_setmode** avant d’effectuer des opérations d’entrée ou de sortie sur le flux de données.
+Vous pouvez également passer **_O_U16TEXT**, **_O_U8TEXT**, ou **_O_WTEXT** pour activer le mode Unicode, comme illustré dans le deuxième exemple plus loin dans ce document.
+
+> [!CAUTION]
+> Mode Unicode concerne les fonctions d’impression large (par exemple, `wprintf`) et n’est pas pris en charge pour les fonctions d’impression étroites. Utilisation d’une fonction d’impression étroite sur un flux de mode Unicode déclenche une assertion.
+
+**_setmode** est généralement utilisé pour modifier le mode de traduction par défaut **stdin** et **stdout**, mais vous pouvez l’utiliser sur n’importe quel fichier. Si vous appliquez **_setmode** au descripteur de fichier pour un flux de données, appelez **_setmode** avant d’effectuer des opérations d’entrée ou de sortie sur le flux de données.
 
 > [!CAUTION]
 > Si vous écrivez des données dans un flux de fichier, explicitement videz le code à l’aide de [fflush](fflush.md) avant d’utiliser **_setmode** pour modifier le mode. Si vous ne videz pas le code, un comportement inattendu peut se produire. Si vous n'avez pas écrit de données dans le flux, vous n'avez pas à vider le code.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
