@@ -18,6 +18,6 @@
 #### [Comparaison de caractères](character-comparison.md)
 #### [Dépassement de mémoire tampon](buffer-overflow.md)
 ## [Prise en charge du format ANSI](support-for-ansi.md)
-## [Mappages de texte générique dans Tchar.h](generic-text-mappings-in-tchar-h.md)
+## [Mappages de texte générique dans tchar.h](generic-text-mappings-in-tchar-h.md)
 ### [Utilisation de types de données TCHAR.H avec _MBCS](using-tchar-h-data-types-with-mbcs-code.md)
 ## [Guide pratique pour effectuer une conversion entre différents types de chaînes](how-to-convert-between-various-string-types.md)
