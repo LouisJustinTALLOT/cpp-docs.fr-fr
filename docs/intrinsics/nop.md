@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: 25ba27485990ceaae77e1827f0c74680914e2f40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0033b0e3a62a16c2856b0e25daeebdb5df0c81f
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651722"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220385"
 ---
 # <a name="nop"></a>__nop
 
@@ -26,11 +26,11 @@ Génère du code machine spécifique à la plateforme qui n’effectue aucune op
 void __nop();
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
-|`__nop`|x86, x64|
+|`__nop`|x86, ARM, x64, ARM64|
 
 **Fichier d’en-tête** \<intrin.h >
 
@@ -38,7 +38,7 @@ void __nop();
 
 ## <a name="remarks"></a>Notes
 
-La fonction `__nop` est équivalente à l’instruction machine `NOP` . Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : référence de jeu d’instructions, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+La fonction `__nop` est équivalente à l’instruction machine `NOP` . Pour plus d’informations sur x86 et x64, recherchez le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : Instruction Set Reference, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
 ## <a name="see-also"></a>Voir aussi
 

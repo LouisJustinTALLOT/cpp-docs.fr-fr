@@ -1,17 +1,17 @@
 ---
-title: 'Comment : créer et utiliser des instances unique_ptr'
+title: 'Procédure : Créer et utiliser des Instances unique_ptr'
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174874"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220580"
 ---
-# <a name="how-to-create-and-use-uniqueptr-instances"></a>Comment : créer et utiliser des instances unique_ptr
+# <a name="how-to-create-and-use-uniqueptr-instances"></a>Procédure : Créer et utiliser des Instances unique_ptr
 
 Un [unique_ptr](../standard-library/unique-ptr-class.md) ne partage pas son pointeur. Il ne peut pas être copié vers un autre `unique_ptr`, passé par valeur à une fonction ou utilisés dans n’importe quel algorithme de bibliothèque C++ Standard qui nécessite des clichés. Un `unique_ptr` peut uniquement être déplacé. Cela signifie que la propriété de la ressource mémoire est transférée à un autre `unique_ptr` et que le `unique_ptr` d'origine ne le possède plus. Il est recommandé de restreindre un objet à un seul propriétaire, car la multiplicité des propriétaires ajoute de la complexité à la logique du programme. Par conséquent, lorsque vous avez besoin d’un pointeur intelligent pour un objet ordinaire C++, utilisez `unique_ptr`, et lorsque vous construisez un `unique_ptr`, utilisez le [make_unique](../standard-library/memory-functions.md#make_unique) fonction d’assistance.
 
@@ -53,5 +53,5 @@ Pour plus d’exemples, consultez [make_unique](../standard-library/memory-funct
 
 ## <a name="see-also"></a>Voir aussi
 
-[Pointeurs intelligents](../cpp/smart-pointers-modern-cpp.md)<br/>
+[Pointeurs intelligents (C++ moderne)](../cpp/smart-pointers-modern-cpp.md)<br/>
 [make_unique](../standard-library/memory-functions.md#make_unique)

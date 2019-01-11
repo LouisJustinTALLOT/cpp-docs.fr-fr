@@ -16,12 +16,12 @@ helpviewer_keywords:
 - __incgsqword intrinsic
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-ms.openlocfilehash: d1b394a578ada8afaec18cf3437fce4e654e89de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c0fb12a56a8c6e0220818d54ee5ec7413fe56b43
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326138"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220255"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 
@@ -51,7 +51,7 @@ void __incgsqword(
 *Décalage*<br/>
 [in] Le décalage à partir du début de `GS`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
@@ -62,7 +62,7 @@ void __incgsqword(
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions intrinsèques sont disponibles uniquement en mode noyau, et les routines sont uniquement disponibles en tant que fonctions intrinsèques.
+Ces routines sont uniquement disponibles comme intrinsèque.
 
 **FIN de la section spécifique à Microsoft**
 

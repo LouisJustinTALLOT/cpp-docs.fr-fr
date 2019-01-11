@@ -3,12 +3,12 @@ title: Gestion de la durée de vie et des ressources de l'objet (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: d7bf45881ef82ecf0d11892e5ddf3d3c16a437cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609935"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220626"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Gestion de la durée de vie et des ressources de l'objet (Modern C++)
 
@@ -22,7 +22,7 @@ Un point essentiel de la gestion de la durée de vie des objets est l'encapsulat
 
 Un autre concept important dans la gestion de la durée de vie : les destructeurs. Les destructeurs encapsulent la mise en production de la ressource.  (La mnémonique utilisée couramment est RRID, Resource Release Is Destruction.)  Une ressource est un élément que vous obtenez du "système" et que vous devez rendre plus ultérieurement.  La mémoire est la ressource la plus courante, mais il existe également des fichiers, des sockets, des textures et d'autres ressources non liées à la mémoire. Être "propriétaire" d'une ressource signifie que vous pouvez l'utiliser en cas de besoin, mais que vous devez également la libérer lorsque vous avez fini de l'utiliser.  Lorsqu’un objet est détruit, le destructeur libère les ressources dont il était propriétaire.
 
-Le concept final est le DAG (Directed Acyclic Graph).  La structure de la propriété dans un programme forme un DAG. Aucun objet ne peut se posséder lui-même, c'est non seulement impossible mais cela n'a aucun sens. En revanche, deux objets peuvent partager la propriété d'un troisième objet.  Plusieurs types de liens sont possibles dans un DAG comme suit : A est un membre de B (B possède A), C stocke `vector<D>` (C possède chaque élément de D), E stocke `shared_ptr<F>` (E partage la propriété de F, éventuellement d'autres objets), etc.  Tant qu'il n'y a pas de cycles et que chaque lien dans le DAG est représenté par un objet qui possède un destructeur (au lieu d'un pointeur brut, d'un handle ou de tout autre mécanisme), d'éventuelles fuites de ressources sont impossibles car le langage les évite. Les ressources sont libérées dès qu’elles ne sont plus nécessaires, sans exécution du garbage collector. Le suivi de la durée de vie est sans surcharge pour la place de pile, les bases, les membres, les cas associés, et peu coûteuse pour `shared_ptr`.
+Le concept final est le DAG (Directed Acyclic Graph).  La structure de la propriété dans un programme forme un DAG. Aucun objet ne peut se posséder lui-même, c'est non seulement impossible mais cela n'a aucun sens. En revanche, deux objets peuvent partager la propriété d'un troisième objet.  Plusieurs types de liens sont possibles dans un DAG comme suit : A est un membre de B (B possède A), C stocke un `vector<D>` (C possède chaque élément D), E stocke un `shared_ptr<F>` (E partage la propriété de F, éventuellement avec d’autres objets), et ainsi de suite.  Tant qu'il n'y a pas de cycles et que chaque lien dans le DAG est représenté par un objet qui possède un destructeur (au lieu d'un pointeur brut, d'un handle ou de tout autre mécanisme), d'éventuelles fuites de ressources sont impossibles car le langage les évite. Les ressources sont libérées dès qu’elles ne sont plus nécessaires, sans exécution du garbage collector. Le suivi de la durée de vie est sans surcharge pour la place de pile, les bases, les membres, les cas associés, et peu coûteuse pour `shared_ptr`.
 
 ### <a name="heap-based-lifetime"></a>Durée de vie basée sur un tas
 
@@ -85,6 +85,6 @@ Utilisez la durée de vie statique avec parcimonie (statique globale, fonction s
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bienvenue dans C++ (C++ moderne)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: 4e248d8a500dd7c855213ef87198f0227b3749a6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9276c727d93491e3d85cbae26f6b3df9c0384c59
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326938"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220242"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
@@ -54,7 +54,7 @@ void __writegsqword(
 *Données*<br/>
 [in] Valeur à écrire.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
@@ -67,7 +67,7 @@ void __writegsqword(
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions intrinsèques sont disponibles en mode noyau uniquement, et ces routines sont uniquement disponibles en tant que fonctions intrinsèques.
+Ces routines sont uniquement disponibles comme intrinsèque.
 
 **FIN de la section spécifique à Microsoft**
 
