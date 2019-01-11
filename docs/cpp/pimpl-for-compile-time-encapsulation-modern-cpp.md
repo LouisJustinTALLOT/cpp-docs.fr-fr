@@ -3,12 +3,12 @@ title: Pimpl pour l’encapsulation au moment de la compilation (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-ms.openlocfilehash: 9a73ea1df099003061081d108a3f3f6eef601fb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e114e2802dd4b2e5d1497867e2224be90c4752d
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594361"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220684"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl pour l’encapsulation au moment de la compilation (Modern C++)
 
@@ -53,12 +53,12 @@ my_class::my_class(): pimpl( new impl )
 }
 ```
 
-## <a name="best-practices"></a>Recommandations
+## <a name="best-practices"></a>meilleures pratiques recommandées.
 
 Pensez à ajouter la prise en charge pour la spécialisation de permutation non lanceurs.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bienvenue dans C++ (C++ moderne)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

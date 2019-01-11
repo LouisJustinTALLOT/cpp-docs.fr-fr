@@ -3,12 +3,12 @@ title: Système de type C++ (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176339"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220671"
 ---
 # <a name="c-type-system-modern-c"></a>Système de type C++ (Modern C++)
 
@@ -16,11 +16,11 @@ Le concept de *type* est très important en C++. Chaque variable, argument de fo
 
 ## <a name="terminology"></a>Terminologie
 
-**Variable**: le lien symbolique nom d’une quantité de données afin que le nom peut être utilisé pour accéder aux données qu’il fait référence à tout au long de l’étendue du code dans laquelle il est défini. En C++, *variable* est généralement utilisée pour faire référence à des instances de types de données scalaires, alors que les instances d’autres types sont généralement appelées *objets*.
+**Variable**: Le lien symbolique nom d’une quantité de données afin que le nom peut être utilisé pour accéder aux données qu’il fait référence à tout au long de l’étendue du code dans laquelle il est défini. En C++, *variable* est généralement utilisée pour faire référence à des instances de types de données scalaires, alors que les instances d’autres types sont généralement appelées *objets*.
 
-**Objet**: pour plus de simplicité et de cohérence, cet article utilise le terme *objet* pour faire référence à n’importe quelle instance d’une classe ou une structure, et lorsqu’elle est utilisée dans le sens général inclut tous les types, y compris les variables scalaires.
+**Objet**: Pour plus de simplicité et de cohérence, cet article utilise le terme *objet* pour faire référence à n’importe quelle instance d’une classe ou une structure, et lorsqu’elle est utilisée dans le sens général inclut tous les types, y compris les variables scalaires.
 
-**Type POD** (données) : cette catégorie informelle de types de données en C++ fait référence aux types qui sont scalaires (voir la section types fondamentaux) ou sont *classes POD*. Une classe POD ne comporte pas de données membres static qui ne sont pas également des POD et ne comporte également aucun constructeur défini par l'utilisateur, aucun destructeur défini par l'utilisateur ou aucun opérateur d'assignation défini par l'utilisateur. En outre, une classe POD n'a aucune fonction virtuelle, aucune classe de base et aucune donnée membre non static privée ou protégée. Les types POD sont souvent utilisés pour l'échange de données externes, par exemple avec un module écrit en langage C (disposant de types POD uniquement).
+**Type POD** (données) : Cette catégorie informelle de types de données en C++ fait référence aux types qui sont scalaires (voir la section types fondamentaux) ou sont *classes POD*. Une classe POD ne comporte pas de données membres static qui ne sont pas également des POD et ne comporte également aucun constructeur défini par l'utilisateur, aucun destructeur défini par l'utilisateur ou aucun opérateur d'assignation défini par l'utilisateur. En outre, une classe POD n'a aucune fonction virtuelle, aucune classe de base et aucune donnée membre non static privée ou protégée. Les types POD sont souvent utilisés pour l'échange de données externes, par exemple avec un module écrit en langage C (disposant de types POD uniquement).
 
 ## <a name="specifying-variable-and-function-types"></a>Spécification des types de variable et de fonction
 
@@ -159,7 +159,7 @@ Pour plus d’informations sur les pointeurs en général, consultez [pointeurs]
 
 Dans la programmation Win32 classique pour C et C++, la plupart des fonctions utilisent des typedefs spécifiques de Windows et des macros #define (définies dans `windef.h`) pour spécifier les types des paramètres et valeurs de retour. Ces types de données Windows sont essentiellement de simples noms spéciaux (alias) tenus des types intégrés C/C++. Pour obtenir une liste complète de ces typedefs et les définitions de préprocesseur, consultez [les Types de données Windows](/windows/desktop/WinProg/windows-data-types). Certains de ces typedefs, par exemple HRESULT et LCID, sont utiles et descriptifs. D'autres, par exemple INT, n'ont aucune signification particulière et sont simplement des alias pour les types C++ fondamentaux. D'autres types de données Windows ont des noms qui proviennent de l'époque de la programmation en C et des processeurs 16 bits ; ils n'ont aucune finalité ou signification particulière par rapport au matériel ou aux systèmes d'exploitation modernes. Il existe également des types de données spéciaux associés à la bibliothèque Runtime de Windows, répertorié comme [les types de base de données de Windows Runtime](/windows/desktop/WinRT/base-data-types). En C++ moderne, la règle générale consiste à préférer les types fondamentaux C++ sauf si le type Windows communique une certaine signification supplémentaire sur la manière dont la valeur doit être interprétée.
 
-## <a name="more-information"></a>Plus d'infos
+## <a name="more-information"></a>Informations complémentaires
 
 Pour plus d'informations sur le système de types C++, consultez les rubriques suivantes.
 
@@ -170,6 +170,6 @@ Pour plus d'informations sur le système de types C++, consultez les rubriques s
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bienvenue dans C++ (C++ moderne)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

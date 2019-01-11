@@ -3,12 +3,12 @@ title: Chaîne et les e / S mise en forme (C++ moderne)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 816eb71dae011f853a6e7ade1a1a2a8144a457c5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326184"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220502"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Mise en forme des chaînes et E/S (Modern C++)
 
@@ -46,7 +46,7 @@ Voici certains avantages de Boost.Format sont :
 
 - Extensible : Fonctionne pour n’importe quel type puisse être diffusé en continu.
 
-- Pratique : Norme Posix standard et chaînes de format similaires.
+- Pratique : Posix standard et chaînes de format similaires.
 
 Bien que Boost.Format soit généré en C++ [iostreams](../standard-library/iostream-programming.md), qui est sécurisé et extensible, ils ne sont pas optimisé pour les performances. Lorsque vous avez besoin d’optimisation des performances, tenez compte des C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) et [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), qui sont rapides et faciles à utiliser. Toutefois, ils ne sont pas extensibles ou protégés contre les vulnérabilités. (Les versions sécurisées existent, mais elles entraînent une baisse des performances légères. Pour plus d’informations, consultez [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) et [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
@@ -64,7 +64,7 @@ Le code suivant illustre certaines de la valorisation de fonctionnalités de mis
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bienvenue dans C++ (C++ moderne)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>

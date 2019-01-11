@@ -3,12 +3,12 @@ title: Gestion des erreurs et des exceptions (Modern C++)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523286"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220567"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Gestion des erreurs et des exceptions (Modern C++)
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-Les exceptions en C++ ressemblent à celles des langages tels que c# et Java. Dans le **essayez** bloquer, si une exception est *levée* il sera *interceptée* par le premier associé **catch** bloc dont le type correspond à celui de la exception. En d’autres termes, l’exécution passe à partir de la **lever** instruction à la **catch** instruction. Si aucun bloc catch utilisable n’est trouvée, `std::terminate` est appelé et le programme se termine. En C++, n’importe quel type peut être levé ; Toutefois, nous vous recommandons de lever un type qui dérive directement ou indirectement de `std::exception`. Dans l’exemple précédent, le type d’exception, [invalid_argument](../standard-library/invalid-argument-class.md), est défini dans la bibliothèque standard dans le [ \<stdexcept >](../standard-library/stdexcept.md) fichier d’en-tête. C++ ne fournit pas et ne requiert pas, un **enfin** bloc pour vous assurer que toutes les ressources sont libérées si une exception est levée. Resource acquisition is idiome RAII (initialization), qui utilise des pointeurs intelligents, fournit les fonctionnalités requises pour le nettoyage des ressources. Pour plus d’informations, consultez [Comment : conception pour la sécurité de l’Exception](../cpp/how-to-design-for-exception-safety.md). Pour plus d’informations sur le mécanisme de déroulement de pile C++, consultez [Exceptions et déroulement de pile](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
+Les exceptions en C++ ressemblent à celles des langages tels que c# et Java. Dans le **essayez** bloquer, si une exception est *levée* il sera *interceptée* par le premier associé **catch** bloc dont le type correspond à celui de la exception. En d’autres termes, l’exécution passe à partir de la **lever** instruction à la **catch** instruction. Si aucun bloc catch utilisable n’est trouvée, `std::terminate` est appelé et le programme se termine. En C++, n’importe quel type peut être levé ; Toutefois, nous vous recommandons de lever un type qui dérive directement ou indirectement de `std::exception`. Dans l’exemple précédent, le type d’exception, [invalid_argument](../standard-library/invalid-argument-class.md), est défini dans la bibliothèque standard dans le [ \<stdexcept >](../standard-library/stdexcept.md) fichier d’en-tête. C++ ne fournit pas et ne requiert pas, un **enfin** bloc pour vous assurer que toutes les ressources sont libérées si une exception est levée. Resource acquisition is idiome RAII (initialization), qui utilise des pointeurs intelligents, fournit les fonctionnalités requises pour le nettoyage des ressources. Pour plus d'informations, voir [Procédure : Conception pour la sécurité de l’Exception](../cpp/how-to-design-for-exception-safety.md). Pour plus d’informations sur le mécanisme de déroulement de pile C++, consultez [Exceptions et déroulement de pile](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
 
 ## <a name="basic-guidelines"></a>Recommandations de base
 
@@ -70,7 +70,7 @@ Gestion des erreurs fiable sont difficile dans n’importe quel langage de progr
 
 - Utiliser des exceptions lorsque le code qui gère l’erreur peut être séparé du code qui détecte l’erreur par un ou plusieurs appels de fonction intermédiaires. Pensez à utiliser à la place des codes d’erreur dans des boucles critiques pour les performances lorsque le code qui gère l’erreur est étroitement lié au code qui détecte que celui-ci.
 
-- Pour chaque fonction qui peut lever ou propager une exception, vous pouvez fournir d’une des trois garanties d’exception : la garantie forte, la garantie de base ou la garantie nothrow (noexcept). Pour plus d’informations, consultez [Comment : conception pour la sécurité de l’Exception](../cpp/how-to-design-for-exception-safety.md).
+- Pour chaque fonction qui peut lever ou propager une exception, vous pouvez fournir d’une des trois garanties d’exception : la garantie forte, la garantie de base ou la garantie nothrow (noexcept). Pour plus d'informations, voir [Procédure : Conception pour la sécurité de l’Exception](../cpp/how-to-design-for-exception-safety.md).
 
 - Lever des exceptions par valeur, les intercepter par référence. N’interceptez ne peut pas gérer.
 
@@ -100,7 +100,7 @@ Les spécifications d’exceptions ont été introduites dans C++ qui permet de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour établir une interface entre le code exceptionnel et le code non exceptionnel](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Guide pratique pour Interface entre le Code exceptionnel et Non exceptionnel](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[Bienvenue dans C++ (C++ moderne)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

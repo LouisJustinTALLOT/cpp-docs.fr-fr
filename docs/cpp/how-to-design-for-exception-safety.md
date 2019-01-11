@@ -1,17 +1,17 @@
 ---
-title: 'Comment : conception pour la sécurité des exceptions'
+title: 'Procédure : Conception pour la sécurité de l’Exception'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: f384da3eee0c7bca80d8d6c61f8d8cf0cfaece92
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327003"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220547"
 ---
-# <a name="how-to-design-for-exception-safety"></a>Comment : conception pour la sécurité des exceptions
+# <a name="how-to-design-for-exception-safety"></a>Procédure : Conception pour la sécurité de l’Exception
 
 Un des avantages du mécanisme d'exception est que l'exécution, associée aux données sur l'exception, passe directement de l'instruction qui lève l'exception à la première instruction catch qui la gère. Le gestionnaire peut concerner n'importe quels niveaux de la pile des appels. Les fonctions qui sont appelées entre l'instruction try et l'instruction throw n'ont pas besoin de connaître quoi que ce soit concernant l'exception levée.  Toutefois, elles doivent être conçues afin qu'elles puissent être "inopinément" mises hors de portée lorsqu'une exception peut se propager en remontant. Il faut donc veiller à ne pas laisser des objets, de la mémoire perdue, ou des structures de données partiellement créés qui seraient inutilisables.
 
@@ -95,7 +95,7 @@ En règle générale, sécurité des exceptions est décrite en termes de trois 
 
 La garantie sans échec est la garantie la plus puissante qu'une fonction puisse fournir. Elle indique que la fonction ne lèvera pas d'exception ou n'autorisera aucune propagation. Toutefois, vous ne pouvez pas de manière fiable fournir une telle garantie sauf si (a) vous savez que toutes les fonctions que cette fonction appelle sont également sans échec, ou (b) vous savez que toutes les exceptions levées seront interceptées avant qu'elles n'atteignent cette fonction, ou (c) vous savez comment intercepter et gérer correctement toutes les exceptions pouvant atteindre cette fonction.
 
-La garantie forte et la garantie de base reposent sur l'hypothèse que les destructeurs sont sans échec. Tous les conteneurs et types de la bibliothèque standard garantissent que leurs destructeurs ne lèvent pas. Il existe également une exigence inverse : La bibliothèque standard requiert que les types définis par l’utilisateur qui lui sont fournis, par exemple, les arguments de modèle, aient des destructeurs non lanceurs.
+La garantie forte et la garantie de base reposent sur l'hypothèse que les destructeurs sont sans échec. Tous les conteneurs et types de la bibliothèque standard garantissent que leurs destructeurs ne lèvent pas. Il existe également une exigence inverse : La bibliothèque Standard requiert que défini par l’utilisateur les types qui sont fournis, par exemple, comme arguments template, doit avoir des destructeurs non lanceurs.
 
 ### <a name="strong-guarantee"></a>Garantie forte
 
@@ -121,5 +121,5 @@ Les types intégrés sont tous sans échec, et les types de la bibliothèque sta
 
 ## <a name="see-also"></a>Voir aussi
 
-[Erreurs et exceptions](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Guide pratique pour établir une interface entre le code exceptionnel et le code non exceptionnel](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Gestion des erreurs et des exceptions (C++ moderne)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Guide pratique pour Interface entre le Code exceptionnel et Non exceptionnel](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

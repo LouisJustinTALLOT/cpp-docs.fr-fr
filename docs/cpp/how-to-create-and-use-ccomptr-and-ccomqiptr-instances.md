@@ -1,17 +1,17 @@
 ---
-title: 'Comment : créer et utiliser des instances CComPtr et CComQIPtr'
+title: 'Procédure : Créer et utiliser des Instances CComPtr et CComQIPtr'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8065e0b8782c1c28d83aa6fc9690150793fe51ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518701"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220544"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Comment : créer et utiliser des instances CComPtr et CComQIPtr
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procédure : Créer et utiliser des Instances CComPtr et CComQIPtr
 
 En programmation Windows classique, les bibliothèques sont souvent implémentées en tant qu'objets COM (Component Object Model), ou plus précisément, en tant que serveurs COM. De nombreux composants du système d'exploitation Windows sont implémentés en tant que serveurs COM, et de nombreux collaborateurs fournissent des bibliothèques sous cette forme. Pour plus d’informations sur les bases du modèle COM, consultez [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
 
@@ -39,4 +39,4 @@ La bibliothèque ATL fournit également `CComQIPtr`, qui a une syntaxe plus simp
 
 ## <a name="see-also"></a>Voir aussi
 
-[Pointeurs intelligents](../cpp/smart-pointers-modern-cpp.md)
+[Pointeurs intelligents (C++ moderne)](../cpp/smart-pointers-modern-cpp.md)

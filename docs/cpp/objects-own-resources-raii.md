@@ -3,12 +3,12 @@ title: Ressources propres objets (RAII)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f86b484e-5a27-4c3b-a92a-dfaa5dd6d93a
-ms.openlocfilehash: a10d6c2177c391ead6065767994b09fb6236ee3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5705fc1996343141b13e37d1267b2e8c981c1eba
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593607"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220424"
 ---
 # <a name="objects-own-resources-raii"></a>Ressources propres objets (RAII)
 
@@ -39,6 +39,6 @@ void g() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bienvenue dans C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bienvenue dans C++ (C++ moderne)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

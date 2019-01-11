@@ -1,17 +1,17 @@
 ---
-title: 'Comment : établir une interface entre le code exceptionnel et le code non exceptionnel'
+title: 'Procédure : Interface entre le Code exceptionnel et Non exceptionnel'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: b6da1142ee04668033a516f2c20c4a2354ff5598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576681"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220622"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Comment : établir une interface entre le code exceptionnel et le code non exceptionnel
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Procédure : Interface entre le Code exceptionnel et Non exceptionnel
 
 Cet article explique comment implémenter une gestion cohérente des exceptions dans un module C++, et comment convertir ces exceptions vers et depuis des codes d'erreur aux limites de l'exception.
 
@@ -19,7 +19,7 @@ Parfois, un module C++ doit interagir avec du code qui n'utilise pas d'exceptio
 
 ## <a name="calling-non-exceptional-functions-from-c"></a>Appel de fonctions non exceptionnelles depuis C++
 
-Lorsque vous appelez une fonction non exceptionnelle depuis C++, l'idée est d'encapsuler cette fonction dans une fonction C++ qui détecte les erreurs et lève éventuellement une exception. Lorsque vous concevez cette fonction wrapper, choisissez d'abord le type de garantie d'exception à fournir : pas de levée, fort ou de base. Ensuite, créez la fonction de manière à ce que toutes les ressources, par exemple, les handles de fichiers, soient correctement libérées si une exception est levée. En général, cela signifie que vous utilisez des pointeurs intelligents ou des gestionnaires de ressources semblables pour posséder les ressources. Pour plus d’informations sur les considérations de conception, consultez [Comment : conception pour la sécurité de l’Exception](../cpp/how-to-design-for-exception-safety.md).
+Lorsque vous appelez une fonction non exceptionnelle depuis C++, l'idée est d'encapsuler cette fonction dans une fonction C++ qui détecte les erreurs et lève éventuellement une exception. Lorsque vous concevez cette fonction wrapper, choisissez d'abord le type de garantie d'exception à fournir : pas de levée, fort ou de base. Ensuite, créez la fonction de manière à ce que toutes les ressources, par exemple, les handles de fichiers, soient correctement libérées si une exception est levée. En général, cela signifie que vous utilisez des pointeurs intelligents ou des gestionnaires de ressources semblables pour posséder les ressources. Pour plus d’informations sur les considérations de conception, consultez [Comment : Conception pour la sécurité de l’Exception](../cpp/how-to-design-for-exception-safety.md).
 
 ### <a name="example"></a>Exemple
 
@@ -236,5 +236,5 @@ Pour plus d’informations sur les expressions lambda, consultez [Expressions La
 
 ## <a name="see-also"></a>Voir aussi
 
-[Erreurs et exceptions](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Guide pratique de conception pour la sécurité des exceptions](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Gestion des erreurs et des exceptions (C++ moderne)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Guide pratique pour Conception pour la sécurité de l’Exception](../cpp/how-to-design-for-exception-safety.md)<br/>
