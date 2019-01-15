@@ -9,12 +9,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: d7879f3382016e098db0c8073322b99d596e8f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bde8ecdfa7e93160a86829c466ab9a78b71d48e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664917"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220372"
 ---
 # <a name="c-floating-point-constants"></a>Constantes à virgule flottante C
 
@@ -48,7 +48,7 @@ Vous pouvez omettre les chiffres avant la virgule (la partie entière de la vale
 
 Les exemples suivants illustrent certaines formes de constantes et expressions à virgule flottante :
 
-```
+```C
 15.75
 1.575E1   /* = 15.75   */
 1575e-2   /* = 15.75   */
@@ -58,18 +58,18 @@ Les exemples suivants illustrent certaines formes de constantes et expressions �
 
 Les constantes à virgule flottante sont positives, à moins d’être précédées du signe moins (**-**). Dans ce cas, le signe moins est considéré comme un opérateur de négation arithmétique unaire. Les constantes à virgule flottante sont de type `float`, `double` ou `long double`.
 
-Une constante à virgule flottante sans suffixe **f**, **F**, **l** ou **L** est de type `double`. Si la lettre **f** ou **F** est le suffixe, la constante est de type `float`. Si elle est suivie de la lettre **l** ou **L**, elle est de type `long double`. Exemple :
+Une constante à virgule flottante sans suffixe **f**, **F**, **l** ou **L** est de type `double`. Si la lettre **f** ou **F** est le suffixe, la constante est de type `float`. Si elle est suivie de la lettre **l** ou **L**, elle est de type `long double`. Par exemple :
 
-```
-100L  /* Has type long double  */
-100F  /* Has type float        */
+```C
+10.0L  /* Has type long double  */
+10.0F  /* Has type float        */
 ```
 
 Notez que le compilateur Microsoft C en interne représente `long double` de la même façon que le type `double`. Consultez [Stockage des types de base](../c-language/storage-of-basic-types.md) pour plus d’informations sur le type `double`, `float` et `long double`.
 
 Vous pouvez omettre la partie entière de la constante à virgule flottante, comme indiqué dans les exemples suivants. Le nombre .75 peut être exprimé de plusieurs façons, notamment :
 
-```
+```C
 .0075e2
 0.075e1
 .075e1
