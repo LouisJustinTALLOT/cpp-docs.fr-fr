@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597562"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334675"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
 
@@ -432,7 +432,7 @@ Itérateur vers l'avant ciblant la position du premier élément de la plage dan
 *last*<br/>
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*valeur*<br/>
+*value*<br/>
 Valeur qui doit correspondre à la valeur de l’élément ou qui doit satisfaire la condition avec la valeur d’élément spécifiée par le prédicat binaire.
 
 *comp*<br/>
@@ -809,7 +809,7 @@ Itérateur d’entrée ciblant la position du premier élément de la plage à t
 *last*<br/>
 Itérateur d’entrée ciblant la position juste après le dernier élément de la plage à traverser.
 
-*Val*<br/>
+*val*<br/>
 Valeur des éléments à compter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -973,19 +973,19 @@ bool equal(
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*<br/>
+*First1*<br/>
 Itérateur d'entrée qui traite la position du premier élément de la première plage à tester.
 
-*last1*<br/>
+*Last1*<br/>
 Itérateur d'entrée qui traite la position qui suit le dernier élément de la première plage à tester.
 
-*first2*<br/>
+*First2*<br/>
 Itérateur d'entrée qui traite la position du premier élément de la deuxième plage à tester.
 
-*first2*<br/>
+*First2*<br/>
 Itérateur d'entrée qui traite la position qui suit le dernier élément de la deuxième plage à tester.
 
-*Comp.*<br/>
+*Comp*<br/>
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1060,7 +1060,7 @@ Itérateur vers l'avant ciblant la position du premier élément de la plage dan
 *last*<br/>
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*Val*<br/>
+*val*<br/>
 Valeur recherchée dans la plage ordonnée.
 
 *comp*<br/>
@@ -1219,7 +1219,7 @@ Itérateur vers l’avant ciblant la position du premier élément de la plage �
 *last*<br/>
 Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage à traverser.
 
-*Val*<br/>
+*val*<br/>
 La valeur à affecter aux éléments dans la plage [ *première*, *dernière*).
 
 ### <a name="remarks"></a>Notes
@@ -1281,7 +1281,7 @@ OutputIterator fill_n(
 
 ### <a name="parameters"></a>Paramètres
 
-*Premier*<br/>
+*First*<br/>
 Itérateur de sortie ciblant la position du premier élément de la plage à affecter la valeur *Val*.
 
 *Nombre*<br/>
@@ -1366,7 +1366,7 @@ Itérateur d'entrée qui traite la position du premier élément de la plage où
 *last*<br/>
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage où effectuer la recherche de la valeur spécifiée.
 
-*Val*<br/>
+*val*<br/>
 Valeur à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1402,19 +1402,19 @@ ForwardIterator1 find_end(
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*<br/>
+*First1*<br/>
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
-*last1*<br/>
+*Last1*<br/>
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*first2*<br/>
+*First2*<br/>
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
-*last2*<br/>
+*Last2*<br/>
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*Comp.*<br/>
+*Comp*<br/>
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1690,7 +1690,7 @@ Itérateur d'entrée qui traite la position du premier élément de la plage à 
 *last*<br/>
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.
 
-*Pred*<br/>
+*pred*<br/>
 Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à satisfaire par l’élément recherché. Un prédicat accepte un seul argument et retourne **true** (satisfaite) ou **false** (ne pas satisfaite). La signature de *pred* doit être efficacement `bool pred(const T& arg);`, où `T` est un type auquel `InputIterator` peut être converti implicitement quand il est déréférencé. Le **const** mot clé s’affiche uniquement pour montrer que l’objet de fonction ou une expression lambda ne devez pas modifier l’argument.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1806,7 +1806,7 @@ Itérateur d'entrée qui traite la position du premier élément de la plage à 
 *last*<br/>
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.
 
-*Pred*<br/>
+*pred*<br/>
 Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à ne pas satisfaire par l’élément recherché. Un prédicat accepte un seul argument et retourne **true** (satisfaite) ou **false** (ne pas satisfaite). La signature de *pred* doit être efficacement `bool pred(const T& arg);`, où `T` est un type auquel `InputIterator` peut être converti implicitement quand il est déréférencé. Le **const** mot clé s’affiche uniquement pour montrer que l’objet de fonction ou une expression lambda ne devez pas modifier l’argument.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2055,7 +2055,7 @@ void generate_n(
 
 ### <a name="parameters"></a>Paramètres
 
-*Premier*<br/>
+*First*<br/>
 Itérateur de sortie se rapportant à la position du premier élément dans la plage auquel les valeurs doivent être assignées.
 
 *Nombre*<br/>
@@ -2344,7 +2344,7 @@ void inplace_merge(
 *first*<br/>
 Itérateur bidirectionnel ciblant la position du premier élément de la première de deux plages triées consécutives à regrouper en une seule plage et trier.
 
-*Milieu*<br/>
+*middle*<br/>
 Itérateur bidirectionnel ciblant la position du premier élément de la deuxième de deux plages triées consécutives à regrouper en une seule plage et trier.
 
 *last*<br/>
@@ -2618,16 +2618,16 @@ bool is_permutation(
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*<br/>
+*First1*<br/>
 Itérateur vers l'avant qui fait référence au premier élément de la plage.
 
-*last1*<br/>
+*Last1*<br/>
 Itérateur vers l'avant qui fait référence à l'élément qui suit le dernier élément de la plage.
 
-*first2*<br/>
+*First2*<br/>
 Itérateur vers l'avant qui fait référence au premier élément d'une deuxième plage, utilisé à des fins de comparaison.
 
-*last2*<br/>
+*Last2*<br/>
 Itérateur vers l'avant qui fait référence à l'élément qui suit le dernier élément d'une deuxième plage, utilisé à des fins de comparaison.
 
 *Pred*<br/>
@@ -3104,7 +3104,7 @@ Itérateur vers l'avant ciblant la position du premier élément de la plage dan
 *last*<br/>
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*valeur*<br/>
+*value*<br/>
 Valeur dont la première position ou la première position possible est recherchée dans la plage ordonnée.
 
 *comp*<br/>
@@ -3681,7 +3681,7 @@ Itérateur d’entrée ciblant la position du premier élément de la deuxième 
 *last2*<br/>
 Itérateur d’entrée ciblant la position située de suite après le dernier élément de la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie ciblant la position du premier élément de la plage de destination quand les deux plages sources doivent être regroupées au sein d’une même plage triée.
 
 *comp*<br/>
@@ -4310,19 +4310,19 @@ mismatch(
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*<br/>
+*First1*<br/>
 Itérateur d'entrée qui traite la position du premier élément de la première plage à tester.
 
-*last1*<br/>
+*Last1*<br/>
 Itérateur d'entrée qui traite la position qui suit le dernier élément de la première plage à tester.
 
-*first2*<br/>
+*First2*<br/>
 Itérateur d'entrée qui traite la position du premier élément de la deuxième plage à tester.
 
-*last2*<br/>
+*Last2*<br/>
 Itérateur d'entrée qui traite la position qui suit le dernier élément de la deuxième plage à tester.
 
-*Comp.*<br/>
+*Comp*<br/>
 Objet de fonction de prédicat défini par l’utilisateur qui compare les éléments actuels dans chaque plage et détermine s’ils sont équivalents. Retourne **true** si la condition est satisfaite et **false** dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>  random_shuffle
 
-La fonction std ::random_shuffle() est déconseillée et remplacée par [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Pour un exemple de code et plus d’informations, consultez [ \<aléatoire >](../standard-library/random.md) et la publication sur [pourquoi sont méthodes std::random_shuffle déconseillées dans C ++ 14 ?](http://go.microsoft.com/fwlink/p/?linkid=397954).
+La fonction std ::random_shuffle() est déconseillée et remplacée par [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Pour un exemple de code et plus d’informations, consultez [ \<aléatoire >](../standard-library/random.md) et la publication de Stack Overflow [pourquoi sont méthodes std::random_shuffle déconseillées dans C ++ 14 ?](http://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a>  remove
 
@@ -5580,7 +5580,7 @@ Itérateur de transfert se rapportant à la position du premier élément dans l
 *last*<br/>
 Itérateur de transfert se rapportant à la position située immédiatement après l'élément final dans la plage de laquelle les éléments sont supprimés.
 
-*Val*<br/>
+*val*<br/>
 Valeur qui doit être supprimée de la plage.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -5662,10 +5662,10 @@ Itérateur d’entrée ciblant la position du premier élément dans la plage de
 *last*<br/>
 Itérateur d’entrée ciblant la position située de suite après le dernier élément de la plage de laquelle les éléments sont supprimés.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans laquelle les éléments sont supprimés.
 
-*Val*<br/>
+*val*<br/>
 Valeur qui doit être supprimée de la plage.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -5744,7 +5744,7 @@ Itérateur d’entrée ciblant la position du premier élément dans la plage de
 *last*<br/>
 Itérateur d’entrée ciblant la position située de suite après le dernier élément de la plage de laquelle les éléments sont supprimés.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans laquelle les éléments sont supprimés.
 
 *_Pred*<br/>
@@ -6004,7 +6004,7 @@ Itérateur d’entrée pointant vers la position du premier élément de la plag
 *last*<br/>
 Itérateur d’entrée pointant vers la position située de suite après le dernier élément de la plage dont les éléments sont remplacés.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie pointant vers le premier élément de la plage de destination dans laquelle la séquence d’éléments modifiée est copiée.
 
 *_OldVal*<br/>
@@ -6106,13 +6106,13 @@ Itérateur d’entrée pointant vers la position du premier élément de la plag
 *last*<br/>
 Itérateur d’entrée pointant vers la position située de suite après le dernier élément de la plage dont les éléments sont remplacés.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie pointant vers la position du premier élément de la plage de destination dans laquelle les éléments sont copiés.
 
 *_Pred*<br/>
 Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.
 
-*Val*<br/>
+*val*<br/>
 Nouvelle valeur assignée aux éléments dont l’ancienne valeur satisfait au prédicat.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -6217,7 +6217,7 @@ Itérateur pointant sur la position juste après le dernier élément de la plag
 *_Pred*<br/>
 Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.
 
-*Val*<br/>
+*val*<br/>
 Nouvelle valeur assignée aux éléments dont l’ancienne valeur satisfait au prédicat.
 
 ### <a name="remarks"></a>Notes
@@ -6359,7 +6359,7 @@ Itérateur bidirectionnel pointant vers la position du premier élément de la p
 *last*<br/>
 Itérateur bidirectionnel pointant vers la position située de suite après le dernier élément de la plage source dont les éléments sont permutés.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie pointant vers la position du premier élément de la plage de destination dans laquelle les éléments sont copiés.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -6427,10 +6427,10 @@ void rotate(
 *first*<br/>
 Itérateur vers l’avant ciblant la position du premier élément de la plage à faire pivoter.
 
-*Milieu*<br/>
+*middle*<br/>
 Itérateur vers l’avant définissant la limite au sein de la plage qui cible la position du premier élément dans la deuxième partie de la plage dont les éléments doivent être échangés avec ceux de la première partie de la plage.
 
-*Dernière*<br/>
+*Last*<br/>
 Itérateur vers l’avant ciblant la position située de suite après le dernier élément de la plage à faire pivoter.
 
 ### <a name="remarks"></a>Notes
@@ -6532,12 +6532,12 @@ OutputIterator rotate_copy(
 *first*<br/>
 Itérateur vers l’avant ciblant la position du premier élément de la plage à faire pivoter.
 
-*Milieu*<br/>
+*middle*<br/>
 Itérateur vers l’avant définissant la limite au sein de la plage qui cible la position du premier élément dans la deuxième partie de la plage dont les éléments doivent être échangés avec ceux de la première partie de la plage.
 
 _ *Dernière* un itérateur vers l’avant ciblant la position juste après le dernier élément dans la plage à permuter.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie qui traite la position du premier élément dans la plage de destination.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -6789,7 +6789,7 @@ Itérateur vers l'avant ciblant la position juste après le dernier élément de
 *count*<br/>
 Taille de la sous-séquence recherchée.
 
-*Val*<br/>
+*val*<br/>
 Valeur des éléments de la séquence recherchée.
 
 *comp*<br/>
@@ -6927,7 +6927,7 @@ Itérateur d’entrée ciblant la position du premier élément dans la deuxièm
 *last2*<br/>
 Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant la différence des deux plages sources.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant la différence des deux plages sources.
 
 *comp*<br/>
@@ -7601,7 +7601,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  lecture aléatoire
+## <a name="shuffle"></a>  shuffle
 
 Lit de façon aléatoire (réorganise) les éléments pour une plage donnée à l'aide d'un générateur de nombres aléatoires.
 
@@ -7620,7 +7620,7 @@ Itérateur sur le premier élément de la plage à lire de façon aléatoire, co
 *last*<br/>
 Itérateur sur le dernier élément de la plage à lire de façon aléatoire, non compris. Doit remplir les conditions de `RandomAccessIterator` et `ValueSwappable`.
 
-*Gen*<br/>
+*gen*<br/>
 Générateur de nombres aléatoires que la fonction `shuffle()` utilisera pour l'opération. Doit remplir les conditions d'un `UniformRandomNumberGenerator`.
 
 ### <a name="remarks"></a>Notes
@@ -8215,7 +8215,7 @@ Itérateur d’entrée ciblant la position juste après le dernier élément de 
 *first2*<br/>
 Itérateur d'entrée qui traite la position du premier élément de la seconde plage source à traiter.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie qui traite la position du premier élément dans la plage de destination.
 
 *_Func*<br/>
@@ -8478,7 +8478,7 @@ Itérateur vers l’avant ciblant la position du premier élément de la plage s
 *last*<br/>
 Itérateur vers l’avant ciblant la position située de suite après le dernier élément de la plage source à copier.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination recevant la copie avec suppression des doublons consécutifs.
 
 *comp*<br/>
@@ -8597,7 +8597,7 @@ Position du premier élément de la plage dans laquelle effectuer la recherche.
 *last*<br/>
 Position juste après le dernier élément de la plage dans laquelle effectuer la recherche.
 
-*valeur*<br/>
+*value*<br/>
 Valeur dans la plage ordonnée qui doit être dépassée par la valeur de l’élément ciblé par l’itérateur retourné.
 
 *comp*<br/>

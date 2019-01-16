@@ -1,18 +1,18 @@
 ---
 title: Classe de valeur Platform::Guid
-ms.date: 12/30/2016
+ms.date: 01/15/2019
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Guid
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: 0a339de3aec14b6bd1dc461f53c1a7417db738ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad71ed4965a3dd4846c9ba5d8ed2627ed8f7e056
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482925"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334649"
 ---
 # <a name="platformguid-value-class"></a>Classe de valeur Platform::Guid
 
@@ -26,32 +26,33 @@ public value struct Guid
 
 ### <a name="members"></a>Membres
 
-Le Guid contient les méthodes Equals(), GetHashCode(), et ToString() dérivées de la [Platform::Object Class](../cppcx/platform-object-class.md), et la méthode GetTypeCode() dérivée de la [Platform::Type Class](../cppcx/platform-type-class.md). Le GUID comporte également les membres suivants.
+`Platform::Guid` a la `Equals()`, `GetHashCode()`, et `ToString()` méthodes dérivées de la [Platform::Object Class](../cppcx/platform-object-class.md)et le `GetTypeCode()` méthode dérivée la [classe Platform::Type](../cppcx/platform-type-class.md). `Platform::Guid` possède également les membres suivants.
 
 |Membre|Description|
 |------------|-----------------|
-|[Guid](#ctor)|Initialise une nouvelle instance du struct GUID.|
+|[Guid](#ctor)|Initialise une nouvelle instance d'une classe `Platform::Guid`.|
 |[operator==](#operator-equality)|Opérateur Equals.|
-|[!=, opérateur](#operator-not-equal)|Opérateur Not Equals.|
-|[operator()](#operator-call)|Convertit un Guid en GUID.|
+|[!=, opérateur](#operator-inequality)|Opérateur Not Equals.|
+|[operator&lt;](#operator-less)|Opérateur d’infériorité.|
+|[operator()](#operator-call)|Convertit une `Platform::Guid` en une `GUID`.|
 
 ### <a name="remarks"></a>Notes
 
-Pour un exemple de génération d'un nouveau Platform::Guid à l'aide de la fonction Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), consultez [Composant WinRT : comment générer un GUID ?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
+Pour obtenir un exemple montrant comment générer un nouveau `Platform::Guid` à l’aide de la fonction Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), consultez [les composant WinRT : Comment générer un GUID ?](https://www.eternalcoding.com/?p=383)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 
 ## <a name="ctor"></a> GUID::GUID, constructeurs
 
-Initialise une nouvelle instance d'une structure de Guid.
+Initialise une nouvelle instance d'une classe `Platform::Guid`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -81,85 +82,125 @@ Guid(
 ### <a name="parameters"></a>Paramètres
 
 *a*<br/>
-Quatre premiers octets du GUID.
+Les 4 premiers octets de la `GUID`.
 
 *b*<br/>
-Deux octets suivants du GUID.
+Les 2 octets suivants de la `GUID`.
 
 *c*<br/>
-Deux octets suivants du GUID.
+Les 2 octets suivants de la `GUID`.
 
 *d*<br/>
-Octet suivant du GUID.
+L’octet suivant de la `GUID`.
 
 *e*<br/>
-Octet suivant du GUID.
+L’octet suivant de la `GUID`.
 
 *f*<br/>
-Octet suivant du GUID.
+L’octet suivant de la `GUID`.
 
 *g*<br/>
-Octet suivant du GUID.
+L’octet suivant de la `GUID`.
 
 *h*<br/>
-Octet suivant du GUID.
+L’octet suivant de la `GUID`.
 
 *i*<br/>
-Octet suivant du GUID.
+L’octet suivant de la `GUID`.
 
-*J*<br/>
-Octet suivant du GUID.
+*j*<br/>
+L’octet suivant de la `GUID`.
 
 *k*<br/>
-Octet suivant du GUID.
+L’octet suivant de la `GUID`.
 
 *m*<br/>
-GUID défini.
+Un `GUID` sous la forme un [structure GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931).
 
 *n*<br/>
-Huit octets restants du GUID.
+Les 8 octets restants de la `GUID`.
 
 ## <a name="operator-equality"></a> GUID::operator ==, opérateur
 
-Compare deux GUID.
+Compare si deux instances `Platform::Guid` sont égales.
 
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-Platform::Guid::operator==
+static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid2);
 ```
+
+### <a name="parameters"></a>Paramètres
+
+*guid1*<br/>
+Premier `Platform::Guid` à comparer.
+
+*guid2*<br/>
+Deuxième `Platform::Guid` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-True si les deux GUID sont égaux.
+True si les deux `Platform::Guid` instances sont égales.
 
 ## <a name="operator-inequality"></a> GUID::operator ! =, opérateur
 
-Compare deux GUID.
+Compare deux `Platform::Guid` instances pour vérifier leur inégalité.
 
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-Platform::Guid::operator!=
+static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid2);
 ```
+
+### <a name="parameters"></a>Paramètres
+
+*guid1*<br/>
+Premier `Platform::Guid` à comparer.
+
+*guid2*<br/>
+Deuxième `Platform::Guid` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-True si les deux GUID ne sont pas égaux.
+True si les deux `Platform::Guid` instances ne sont pas égales.
+
+## <a name="operator-less"></a> GUID::operator&lt; opérateur
+
+Compare deux `Platform::Guid` instances pour le classement.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*guid1*<br/>
+Premier `Platform::Guid` à comparer.
+
+*guid2*<br/>
+Deuxième `Platform::Guid` à comparer.
+
+### <a name="return-value"></a>Valeur de retour
+
+True si *guid1* est classé avant *guid2*. Le classement est lexicographique après chaque traitement `Platform::Guid` comme s’il est un tableau de quatre valeurs non signées de 32 bits. Cela n’est pas le classement utilisé par SQL Server ou le .NET Framework, ni est identique à l’ordre lexicographique en représentation sous forme de chaîne.
+
+Cet opérateur est fourni afin que `Guid` objets peuvent être plus facilement utilisées par la bibliothèque C++ standard.
 
 ## <a name="operator-call"></a> Opérateur de GUID::operator
 
-Convertit implicitement un [structure GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)en un Platform::Guid.
+Convertit implicitement un `Platform::Guid` à un [structure GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931).
 
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-Platform::Guid operator();
+const GUID& Platform::Guid::operator();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Structure de GUID.
+Un [structure GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931).
 
 ## <a name="see-also"></a>Voir aussi
 
