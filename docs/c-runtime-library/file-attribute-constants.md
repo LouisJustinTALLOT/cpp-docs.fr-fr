@@ -25,19 +25,18 @@ helpviewer_keywords:
 - _A_HIDDEN constant
 - _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
-ms.openlocfilehash: 9aceef7f9c28da3ed3d0d98f4fc579a3c17480e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90aacc1e1e8c45f739c1f6aec973f55e7fab67d9
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660341"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220177"
 ---
 # <a name="file-attribute-constants"></a>Constantes d'attributs de fichier
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
 #include <io.h>
 ```
 
@@ -49,12 +48,12 @@ Les attributs sont représentés par les constantes manifestes suivantes :
 
 |Constante|Description|
 |-|-|
-|`_A_ARCH`| Archive. Défini chaque fois que le fichier est modifié et supprimé par la commande BACKUP. Valeur : 0x20|
-|`_A_HIDDEN`| Fichier caché. Normalement non utilisé avec la commande DIR, sauf si l’option /AH est utilisée. Retourne des informations sur les fichiers normaux, ainsi que les fichiers avec cet attribut. Valeur : 0x02|
-|`_A_NORMAL`| Normal. Le fichier peut être lu et écrit sans restriction. Valeur : 0x00|
-|`_A_RDONLY`| Lecture seule. Impossible d’ouvrir le fichier pour des opérations d’écriture ou de créer un fichier portant le même nom. Valeur : 0x01|
-|`_A_SUBDIR`| Sous-répertoire. Valeur : 0x10|
-|`_A_SYSTEM`| Fichier système. Normalement non utilisé avec la commande DIR, sauf si l’option /AS est utilisée. Valeur : 0x04|
+|`_A_ARCH`| Archive. Défini chaque fois que le fichier est modifié et supprimé par la commande BACKUP. Valeur : 0x20|
+|`_A_HIDDEN`| Fichier caché. Normalement non utilisé avec la commande DIR, sauf si l’option /AH est utilisée. Retourne des informations sur les fichiers normaux, ainsi que les fichiers avec cet attribut. Valeur : 0x02|
+|`_A_NORMAL`| Normal. Le fichier peut être lu et écrit sans restriction. Valeur : 0x00|
+|`_A_RDONLY`| Lecture seule. Impossible d’ouvrir le fichier pour des opérations d’écriture ou de créer un fichier portant le même nom. Valeur : 0x01|
+|`_A_SUBDIR`| Sous-répertoire. Valeur : 0x10|
+|`_A_SYSTEM`| Fichier système. Normalement non utilisé avec la commande DIR, sauf si l’option /AS est utilisée. Valeur : 0x04|
 
 Plusieurs constantes peuvent être combinées avec l’opérateur OR (&#124;).
 
