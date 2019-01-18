@@ -1,13 +1,15 @@
+---
+ms.openlocfilehash: 5f74861f75ed3cd431379f26f9802c0fb29a8bea
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397314"
+---
 # [OpenMP dans Visual C++](openmp-in-visual-cpp.md)
 # [API OpenMP C et C++](openmp-c-and-cpp-application-program-interface.md)
 ## [Sommaire](contents.md)
 ## [1. Introduction](1-introduction.md)
-### [1.1 Portée](1-1-scope.md)
-### [1.2 Définition des termes](1-2-definition-of-terms.md)
-### [1.3 Modèle d’exécution](1-3-execution-model.md)
-### [1.4 Conformité](1-4-compliance.md)
-### [1.5 Références normatives](1-5-normative-references.md)
-### [1.6 Organisation](1-6-organization.md)
 ## [2. Directives](2-directives.md)
 ### [2.1 Format des directives](2-1-directive-format.md)
 ### [2.2 Compilation conditionnelle](2-2-conditional-compilation.md)
@@ -61,10 +63,6 @@
 #### [3.3.1 Fonction omp_get_wtime](3-3-1-omp-get-wtime-function.md)
 #### [3.3.2 Fonction omp_get_wtick](3-3-2-omp-get-wtick-function.md)
 ## [4. Variables d’environnement](4-environment-variables.md)
-### [4.1 OMP_SCHEDULE](4-1-omp-schedule.md)
-### [4.2 OMP_NUM_THREADS](4-2-omp-num-threads.md)
-### [4.3 OMP_DYNAMIC](4-3-omp-dynamic.md)
-### [4.4 OMP_NESTED](4-4-omp-nested.md)
 ## [A. Exemples](a-examples.md)
 ### [A.1   Exécution d’une boucle simple en parallèle](a-1-executing-a-simple-loop-in-parallel.md)
 ### [A.2   Spécification de compilation conditionnelle](a-2-specifying-conditional-compilation.md)
@@ -99,8 +97,6 @@
 ### [A.31   Fonctions de verrouillage thread-safe](a-31-thread-safe-lock-functions.md)
 ## [B. B. Stubs pour les fonctions de la bibliothèque du run-time](b-stubs-for-run-time-library-functions.md)
 ## [C. Grammaire OpenMP C et C++](c-openmp-c-and-cpp-grammar.md)
-### [C.1 Notation](c-1-notation.md)
-### [C.2 Règles](c-2-rules.md)
 ## [D. Utilisation de la clause schedule](d-using-the-schedule-clause.md)
 ## [E. Comportements définis par l’implémentation dans OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 ## [F. Nouvelles fonctionnalités et clarifications de la version 2.0](f-new-features-and-clarifications-in-version-2-0.md)
