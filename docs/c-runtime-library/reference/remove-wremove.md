@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613967"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417601"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -59,7 +59,7 @@ Chemin du fichier à supprimer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne 0 si le fichier est bien supprimé. Sinon, elle retourne -1 et définit **errno** à **EACCES** pour indiquer que le chemin d’accès spécifie un fichier en lecture seule ou que le fichier est ouvert, ou la valeur **ENOENT** pour indiquer que le nom de fichier ou chemin d’accès est introuvable ou que le chemin d’accès spécifie un répertoire.
+Chacune de ces fonctions retourne 0 si le fichier est bien supprimé. Sinon, elle retourne -1 et définit **errno** à **EACCES** pour indiquer que le chemin d’accès spécifie un fichier en lecture seule, spécifie un répertoire ou le fichier est ouvert, ou la valeur **ENOENT** pour indiquer que le nom de fichier ou le chemin d’accès est introuvable.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -73,7 +73,7 @@ La fonction **remove** supprime le fichier spécifié par *path.* **_wremove** e
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tremove**|**remove**|**remove**|**_wremove**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
