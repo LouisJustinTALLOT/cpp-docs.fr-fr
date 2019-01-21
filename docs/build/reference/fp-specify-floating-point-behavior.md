@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 78abe5e3b491ec0d658a40628dadc81e334c212f
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597536"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417640"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (spécifier le comportement de virgule flottante)
 
@@ -24,7 +24,7 @@ Spécifie la manière dont le compilateur traite les exceptions, les optimisatio
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ fp :**[**précise** | **strict** | **rapide** | **sauf**[ **-**]]
+> **/fp:**[**precise** | **strict** | **fast** | **except**[**-**]]
 
 ### <a name="arguments"></a>Arguments
 
@@ -57,7 +57,7 @@ Sous **Fast**, le compilateur génère du code destiné à s’exécuter dans l�
 
 **Fast** est conçue pour les programmes qui ne nécessitent pas de classement de code source strict et arrondi des expressions en virgule flottante et ne reposent pas sur les règles standard pour la gestion des valeurs spéciales telles que NaN. Si votre code en virgule flottante nécessite la conservation du code source classement et arrondi ou repose sur un comportement standard de valeurs spéciales, utilisez [/fp : precise](#precise). Si votre code accède ou modifie l’environnement à virgule flottante pour changer de mode d’arrondi, démasquer les exceptions de virgule flottante, ou vérifier l’état à virgule flottante, utilisez [/fp : strict](#strict).
 
-#### <a name="except"></a>À l’exception
+#### <a name="except"></a>except
 
 Le **/fp : sauf** option génère du code pour garantir que toutes les exceptions à virgule flottante non masquées sont déclenchées sur le point exact auquel ils se produisent, et qu’aucune exception de virgule flottante supplémentaires n’est déclenchées. Par défaut, le **/fp : strict** option permet **/fp : sauf**, et **/fp : precise** pas. Le **/fp : sauf** option n’est pas compatible avec **Fast**. L’option peut être désactivée explicitement par nous de **/fp : à l’exception de-**.
 
@@ -71,13 +71,13 @@ Le [/Za](../../build/reference/za-ze-disable-language-extensions.md) option (com
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>À l’aide des Pragmas pour contrôler le comportement à virgule flottante
 
-Le compilateur fournit trois directivess pragma pour remplacer le comportement de virgule flottante spécifié sur la ligne de commande : [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), et [fp_contract](../../preprocessor/fp-contract.md). Vous pouvez utiliser ces pragmas pour contrôler le comportement de virgule flottante au niveau de fonction, pas dans une fonction. Notez que ces pragmas ne correspondent pas directement à la **/FP** options. Ce tableau montre comment la **/FP** pragmas et options de mapper les unes aux autres. Pour plus d’informations, consultez la documentation pour les pragmas et options individuelles.
+Le compilateur fournit trois directives pragma pour substituer le comportement de virgule flottante spécifié sur la ligne de commande : [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), et [fp_contract](../../preprocessor/fp-contract.md). Vous pouvez utiliser ces pragmas pour contrôler le comportement de virgule flottante au niveau de fonction, pas dans une fonction. Notez que ces pragmas ne correspondent pas directement à la **/FP** options. Ce tableau montre comment la **/FP** pragmas et options de mapper les unes aux autres. Pour plus d’informations, consultez la documentation pour les pragmas et options individuelles.
 
-||float_control(precise)|float_control|fenv_access|fp_contract|
+||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**Fast**|Hors tension|Hors tension|Hors tension|actif|
-|**/ fp : precise**|actif|Hors tension|Hors tension|actif|
-|**/ fp : à l’exception**|actif|actif|actif|Hors tension|
+|**/fp:fast**|Hors tension|Hors tension|Hors tension|actif|
+|**/fp:precise**|actif|Hors tension|Hors tension|actif|
+|**/fp:except**|actif|actif|actif|Hors tension|
 
 ### <a name="the-default-floating-point-environment"></a>L’environnement à virgule flottante par défaut
 
