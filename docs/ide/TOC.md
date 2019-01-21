@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 429e20c77c2a5715d1d45b74b3d020ee52daec97
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397366"
+---
 # [IDE et outils de développement Visual C++](ide-and-tools-for-visual-cpp-development.md)
 # [Écriture et refactorisation du code (C++)](writing-and-refactoring-code-cpp.md)
 ## [Modifier la signature](refactoring/change-signature.md)
@@ -29,12 +37,8 @@
 ### [Création d’un projet Makefile](creating-a-makefile-project.md)
 #### [Projet Makefile (Assistant)](makefile-project-wizard.md)
 ##### [Paramètres de l’application, Assistant Projet Makefile](application-settings-makefile-project-wizard.md)
-#### [Guide pratique pour activer IntelliSense pour des projets Makefile](how-to-enable-intellisense-for-makefile-projects.md)
-### [Guide pratique pour créer un projet C++ à partir d’un code existant](how-to-create-a-cpp-project-from-existing-code.md)
-#### [Spécifier l’emplacement du projet et les fichiers sources, Assistant Créer un projet à partir de fichiers de code existants](specify-project-location-and-source-files.md)
-#### [Spécifier les paramètres du projet, Assistant Créer un projet à partir de fichiers de code existants](specify-project-settings-create-new-project-from-existing-code-files-wizard.md)
-#### [Spécifier les paramètres de configuration Debug, Assistant Créer un projet à partir de fichiers de code existants](specify-debug-configuration-settings.md)
-#### [Spécifier les paramètres de configuration Release, Assistant Créer un projet à partir de fichiers de code existants](specify-release-configuration.md)
+#### [Guide pratique pour Activer IntelliSense pour des projets Makefile](how-to-enable-intellisense-for-makefile-projects.md)
+### [Guide pratique pour Créer un projet C++ à partir de code existant](how-to-create-a-cpp-project-from-existing-code.md)
 ## [Utilisation des propriétés de projet](working-with-project-properties.md)
 ### [Pages de propriétés (Visual C++)](property-pages-visual-cpp.md)
 #### [Général, page de propriétés (Projet)](general-property-page-project.md)
@@ -57,11 +61,11 @@
 #### [Références web, page de propriétés](web-references-property-page.md)
 #### [XML Data Generator Tool, page de propriétés](xml-data-generator-tool-property-page.md)
 #### [Outil Générateur de documents XML, page de propriétés](xml-document-generator-tool-property-pages.md)
-#### [Étape de génération personnalisée, page de propriétés : général](custom-build-step-property-page-general.md)
+#### [Étape de génération personnalisée, page de propriétés : Général](custom-build-step-property-page-general.md)
 #### [HLSL, page de propriétés](hlsl-property-pages.md)
 ##### [HLSL, page de propriétés : Général](hlsl-property-pages-general.md)
 ##### [HLSL, page de propriétés : Avancé](hlsl-property-pages-advanced.md)
-##### [HLSL, page de propriétés : fichiers de sortie](hlsl-property-pages-output-files.md)
+##### [HLSL, page de propriétés : Fichiers de sortie](hlsl-property-pages-output-files.md)
 ## [Ajout de références aux projets Visual C++](adding-references-in-visual-cpp-projects.md)
 ## [Guide pratique pour organiser des fichiers de sortie de projet pour les générations](how-to-organize-project-output-files-for-builds.md)
 # [Déploiement des applications de bureau natives (Visual C++)](deploying-native-desktop-applications-visual-cpp.md)
@@ -77,9 +81,9 @@
 ### [Redistribution de la bibliothèque MFC](redistributing-the-mfc-library.md)
 ### [Redistribution d’une application ATL](redistributing-an-atl-application.md)
 ## [Exemples de déploiement](deployment-examples.md)
-### [Procédure pas à pas : déploiement d’une application Visual C++ à l’aide d’un projet d’installation](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
-### [Procédure pas à pas : déploiement d’une application Visual C++ dans un dossier local de l’application](walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
-### [Procédure pas à pas : déploiement d’une application Visual C++ à l’aide de Visual C++ Redistributable Package](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
+### [Procédure pas à pas : Déploiement d’une application Visual C++ à l’aide d’un projet d’installation](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
+### [Procédure pas à pas : Déploiement d’une application Visual C++ dans un dossier propre à l’application](walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
+### [Procédure pas à pas : Déploiement d’une application Visual C++ à l’aide du package redistribuable Visual C++](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
 ### [Préparation d’un ordinateur de test pour lancer un exécutable de débogage](preparing-a-test-machine-to-run-a-debug-executable.md)
 ## [Redistribution d’applications clientes web](redistributing-web-client-applications.md)
 ## [Déploiement de ClickOnce pour les applications Visual C++](clickonce-deployment-for-visual-cpp-applications.md)
@@ -131,7 +135,7 @@
 ## [Procédure pas à pas : compilation d’un programme C++ qui cible le CLR dans Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [Utilisation de l’IDE de Visual Studio pour le développement de bureau C++](using-the-visual-studio-ide-for-cpp-desktop-development.md)
 ## [Procédure pas à pas : utilisation de projets et de solutions (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
-## [Procédure pas à pas : génération d’un projet (C++)](walkthrough-building-a-project-cpp.md)
-## [Procédure pas à pas : test d’un projet (C++)](walkthrough-testing-a-project-cpp.md)
-## [Procédure pas à pas : débogage d’un projet (C++)](walkthrough-debugging-a-project-cpp.md)
-## [Procédure pas à pas : déploiement de votre programme (C++)](walkthrough-deploying-your-program-cpp.md)
+## [Procédure pas à pas : Génération d’un projet (C++)](walkthrough-building-a-project-cpp.md)
+## [Procédure pas à pas : Test d’un projet (C++)](walkthrough-testing-a-project-cpp.md)
+## [Procédure pas à pas : Débogage d'un projet (C++)](walkthrough-debugging-a-project-cpp.md)
+## [Procédure pas à pas : Déploiement de votre programme (C++)](walkthrough-deploying-your-program-cpp.md)
