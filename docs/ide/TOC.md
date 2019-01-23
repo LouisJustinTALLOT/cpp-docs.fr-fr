@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 429e20c77c2a5715d1d45b74b3d020ee52daec97
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397366"
----
 # [IDE et outils de développement Visual C++](ide-and-tools-for-visual-cpp-development.md)
 # [Écriture et refactorisation du code (C++)](writing-and-refactoring-code-cpp.md)
 ## [Modifier la signature](refactoring/change-signature.md)
