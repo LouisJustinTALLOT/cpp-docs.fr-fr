@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: ff7610d85d73a99d55d6181fad178d0b12be0c32
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a22a419018f3f4b2b7e6cee2471bf0f162b65f2e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332424"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894001"
 ---
 # <a name="cstockpropimpl-class"></a>Cstockpropimpl, classe
 
@@ -98,7 +98,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 *T*<br/>
 La classe d’implémentation du contrôle et la dérivation `CStockPropImpl`.
 
-*Nom_interface*<br/>
+*InterfaceName*<br/>
 Une interface double qui exposent les propriétés stocks.
 
 *piid*<br/>
@@ -146,7 +146,7 @@ La classe utilisée pour gérer les informations de type pour *T*. La valeur par
 |[get_ReadyState](#get_readystate)|Appelez cette méthode pour obtenir l’état du contrôle prêt, par exemple, le chargement ou chargé.|
 |[get_TabStop](#get_tabstop)|Appelez cette méthode pour obtenir l’indicateur qui indique si le contrôle est un taquet de tabulation ou non.|
 |[get_Text](#get_text)|Appelez cette méthode pour obtenir le texte qui s’affiche avec le contrôle.|
-|[GetValid](#get_valid)|Appelez cette méthode pour obtenir l’état de l’indicateur qui indique si le contrôle est valide ou non.|
+|[getvalid](#get_valid)|Appelez cette méthode pour obtenir l’état de l’indicateur qui indique si le contrôle est valide ou non.|
 |[get_Window](#get_window)|Appelez cette méthode pour obtenir le handle de fenêtre associé au contrôle. Identique à [CStockPropImpl::get_HWND](#get_hwnd).|
 |[put_Appearance](#put_appearance)|Appelez cette méthode pour définir le style de peinture utilisée par le contrôle, par exemple, plate ou 3D.|
 |[put_AutoSize](#put_autosize)|Appelez cette méthode pour définir la valeur de l’indicateur qui indique si le contrôle ne peut pas être une autre taille.|
@@ -204,7 +204,7 @@ Les trois propriétés stocks mêmes nécessitent leur membre correspondant de d
 
 `CStockPropImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl.h
 
@@ -559,7 +559,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 ### <a name="parameters"></a>Paramètres
 
 *ppPicture*<br/>
-Variable qui reçoit un pointeur vers les propriétés de l’image. Consultez [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) pour plus d’informations.
+Variable qui reçoit un pointeur vers les propriétés de l’image. Consultez [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) pour plus d’informations.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -864,7 +864,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Paramètres
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 TRUE si le contrôle est activé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1005,7 +1005,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Paramètres
 
 *pPicture*<br/>
-Pointeur vers les propriétés de l’image. Consultez [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) pour plus d’informations.
+Pointeur vers les propriétés de l’image. Consultez [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) pour plus d’informations.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1153,7 +1153,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Paramètres
 
 *pPicture*<br/>
-Pointeur vers les propriétés de l’image. Consultez [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) pour plus d’informations.
+Pointeur vers les propriétés de l’image. Consultez [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) pour plus d’informations.
 
 ### <a name="return-value"></a>Valeur de retour
 
