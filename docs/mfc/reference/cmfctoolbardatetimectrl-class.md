@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-ms.openlocfilehash: 570611c335130039495b13624737b820144cb7f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1252f97a93e67348a00c9809e3f216d4ed63c4d8
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545832"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893677"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Cmfctoolbardatetimectrl, classe
 
@@ -87,7 +87,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Retourne un pointeur vers le contrôle de sélecteur de date et d’heure.|
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Récupère le handle de fenêtre qui est associé au bouton de barre d’outils. (Substitue [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|
 |`CMFCToolBarDateTimeCtrl::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Obtient l’heure sélectionnée à partir d’un contrôle de sélecteur de date et l’heure et le place dans une certaine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure.|
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Obtient l’heure sélectionnée à partir d’un contrôle de sélecteur de date et l’heure et le place dans une certaine [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure.|
 |[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Retourne l’heure sélectionnée à partir du bouton de contrôle de sélecteur de temps qui a un ID de commande spécifié.|
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Détermine si une bordure du bouton est affichée lorsqu’un utilisateur sélectionne le bouton. (Substitue [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|
 |[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Spécifie si le bouton traite le [WM_COMMAND](/windows/desktop/menurc/wm-command) message. (Substitue [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|
@@ -110,7 +110,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 
 ## <a name="remarks"></a>Notes
 
-Pour obtenir un exemple montrant comment utiliser un contrôle de sélecteur de date et d’heure, consultez l’exemple de projet ToolbarDateTimePicker. Pour plus d’informations sur la façon d’ajouter des boutons de contrôle, consultez [procédure pas à pas : placer le contrôle sur la barre de d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md).
+Pour obtenir un exemple montrant comment utiliser un contrôle de sélecteur de date et d’heure, consultez l’exemple de projet ToolbarDateTimePicker. Pour plus d’informations sur la façon d’ajouter des boutons de contrôle, consultez [procédure pas à pas : Placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -120,7 +120,7 @@ Pour obtenir un exemple montrant comment utiliser un contrôle de sélecteur de 
 
 [CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtoolbardatetimectrl.h
 
@@ -163,7 +163,7 @@ CMFCToolBarDateTimeCtrl(
 *dwStyle*<br/>
 [in] Le style de la `CMFCToolBarDateTimeCtrlImpl` fenêtre qui est créé quand un utilisateur clique sur le bouton.
 
-*iLargeur Argument de type*<br/>
+*iWidth*<br/>
 [in] La largeur du contrôle, en pixels.
 
 ### <a name="remarks"></a>Notes
@@ -203,7 +203,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Bouton de menu*<br/>
+*menuButton*<br/>
 [in] Une référence au bouton de menu cible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -269,7 +269,7 @@ Cette méthode remplace la [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfc
 
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime
 
-Obtient l’heure sélectionnée à partir de la date associée et le contrôle de sélecteur de temps et le place dans une certaine [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure
+Obtient l’heure sélectionnée à partir de la date associée et le contrôle de sélecteur de temps et le place dans une certaine [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure
 
 ```
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -283,7 +283,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 [out] Dans la première surcharge, un [COleDateTime, classe](../../atl-mfc-shared/reference/coledatetime-class.md) objet qui recevra les informations d’heure système. Dans la seconde surcharge, un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet qui recevra les informations d’heure système.
 
 *pTimeDest*<br/>
-[out] Un pointeur vers le [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure qui doit recevoir les informations d’heure système. Ne doit pas être NULL.
+[out] Un pointeur vers le [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure qui doit recevoir les informations d’heure système. Ne doit pas être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -320,7 +320,7 @@ static DWORD GetTimeAll(
 [out] Dans la première surcharge, un [COleDateTime, classe](../../atl-mfc-shared/reference/coledatetime-class.md) objet qui recevra les informations d’heure système. Dans la seconde surcharge, un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet qui recevra les informations d’heure système.
 
 *pTimeDest*<br/>
-[out] Un pointeur vers le [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure qui doit recevoir les informations d’heure système. Ne doit pas être NULL.
+[out] Un pointeur vers le [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure qui doit recevoir les informations d’heure système. Ne doit pas être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -560,11 +560,11 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-*transfertnouvelle*<br/>
+*timeNew*<br/>
 [in] Dans la première version, une référence à un [COleDateTime, classe](../../atl-mfc-shared/reference/coledatetime-class.md) objet qui contient l’heure défini pour le contrôle. Dans la deuxième version, un pointeur vers un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet qui contient l’heure défini pour le contrôle.
 
 *pTimeNew*<br/>
-[in] Un pointeur vers le [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure qui contient l’heure défini pour le contrôle.
+[in] Un pointeur vers le [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure qui contient l’heure défini pour le contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -597,11 +597,11 @@ static BOOL SetTimeAll(
 *uiCmd*<br/>
 [in] Spécifie l’ID de commande. d’un bouton de barre d’outils
 
-*transfertnouvelle*<br/>
+*timeNew*<br/>
 [in] Dans la première version, un [COleDateTime, classe](../../atl-mfc-shared/reference/coledatetime-class.md) objet qui contient l’heure défini pour le contrôle. Dans la deuxième version, un pointeur vers un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet qui contient l’heure défini pour le contrôle.
 
 *pTimeNew*<br/>
-[in] Un pointeur vers le [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure qui contient l’heure défini pour le contrôle.
+[in] Un pointeur vers le [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure qui contient l’heure défini pour le contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -616,5 +616,5 @@ Recherche un bouton de barre d’outils avec l’ID de commande spécifié et d�
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBarButton, classe](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
-[Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Procédure pas à pas : Placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

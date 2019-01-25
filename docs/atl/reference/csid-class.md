@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465362"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894313"
 ---
 # <a name="csid-class"></a>CSid, classe
 
@@ -77,19 +77,19 @@ class CSid
 
 |||
 |-|-|
-|[opérateur =](#operator_eq)|Opérateur d'assignation.|
+|[operator =](#operator_eq)|Opérateur d'assignation.|
 |[SID const opérateur *](#operator_const_sid__star)|Les casts un `CSid` objet vers un autre pointeur vers un `SID` structure.|
 
 ### <a name="global-operators"></a>Opérateurs globaux
 
 |||
 |-|-|
-|[opérateur ==](#operator_eq_eq)|Teste si deux objets de descripteur de sécurité pour l’égalité|
-|[opérateur ! =](#operator_neq)|Teste si deux objets de descripteur de sécurité pour vérifier leur inégalité|
+|[operator ==](#operator_eq_eq)|Teste si deux objets de descripteur de sécurité pour l’égalité|
+|[operator !=](#operator_neq)|Teste si deux objets de descripteur de sécurité pour vérifier leur inégalité|
 |[Opérateur \<](#operator_lt_)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
 |[opérateur >](#operator_gt_)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
 |[Opérateur \<=](#operator_lt__eq)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
-|[opérateur > =](#operator_gt__eq)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
+|[operator >=](#operator_gt__eq)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
 
 ## <a name="remarks"></a>Notes
 
@@ -99,7 +99,7 @@ Les applications ne doivent pas modifier le `SID` structure directement, mais pl
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -146,7 +146,7 @@ explicit CSid(
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Un existant `CSid` objet ou `SID` structure de (l’identificateur de sécurité).
 
 *IdentifierAuthority*<br/>
@@ -223,7 +223,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `SID` structure de (l’identificateur de sécurité) ou `CSid` objet à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -232,7 +232,7 @@ Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) dans le SDK Windows pour plus d’informations.
+Consultez [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) dans le SDK Windows pour plus d’informations.
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -381,7 +381,7 @@ CSid& operator= (const SID& rhs) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` à affecter à la `CSid` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -400,10 +400,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté gauche de l’opérateur ==.
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté droit de l’opérateur ==.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -422,10 +422,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté gauche de la ! =, opérateur.
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté droit de la ! =, opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -444,10 +444,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté gauche de la ! =, opérateur.
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté droit de la ! =, opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -466,10 +466,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté gauche de la ! =, opérateur.
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté droit de la ! =, opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -488,10 +488,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté gauche de la ! =, opérateur.
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté droit de la ! =, opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -510,17 +510,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté gauche de la ! =, opérateur.
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `SID` (identificateur de sécurité) ou `CSid` qui apparaît sur le côté droit de la ! =, opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
 TRUE si *lhs* est supérieur ou égal à *rhs*; sinon, FALSE.
 
-##  <a name="operator_const_sid__star"></a>  SID const CSid::operator \*
+##  <a name="operator_const_sid__star"></a>  CSid::operator const SID \*
 
 Les casts un `CSid` objet vers un autre pointeur vers un `SID` structure de (l’identificateur de sécurité).
 

@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: bd0bdd1a3f423257b2f73745d7260d1fac12a0d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93189c5c9301e513cfbdf110cf7753e211420fef
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556661"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894131"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController, classe
 
@@ -137,7 +137,7 @@ class CAnimationController : public CObject;
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Ajoute une image clé au groupe.|
 |[CAnimationController::AnimateGroup](#animategroup)|Prépare un groupe pour exécuter l’animation et le planifie si vous le souhaitez.|
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|Surchargé. Appelé par l’infrastructure pour nettoyer le groupe lors de l’animation a été planifiée.|
-|[CAnimationController::CreateKeyframe de préférence](#createkeyframe)|Surchargé. Crée une image clé qui dépend de la transition et l’ajoute au groupe spécifié.|
+|[CAnimationController::CreateKeyframe](#createkeyframe)|Surchargé. Crée une image clé qui dépend de la transition et l’ajoute au groupe spécifié.|
 |[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|Définit ou libère un gestionnaire à appeler lorsque l’état du Gestionnaire d’animations.|
 |[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|Définit ou libère un gestionnaire d’événements de minutage et Gestionnaire de synchronisation de mises à jour.|
 |[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Définit ou libère le Gestionnaire de comparaison de priorité à appeler pour déterminer si un storyboard planifié peut être annulé, conclu, supprimé ou compressé.|
@@ -202,11 +202,11 @@ La classe CAnimationController est la classe clé qui gère les animations. Vous
 
 `CAnimationController`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationcontroller"></a>  CAnimationController :: ~ CAnimationController
+##  <a name="_dtorcanimationcontroller"></a>  CAnimationController::~CAnimationController
 
 Destructeur. Appelée lorsque l’objet de contrôleur de l’animation est détruit.
 
@@ -316,7 +316,7 @@ Pointeur vers le groupe d’animation à nettoyer.
 
 Cette méthode supprime toutes les transitions et les images clés du groupe spécifié, car ils ne sont pas pertinentes après qu’une animation a été planifiée.
 
-##  <a name="createkeyframe"></a>  CAnimationController::CreateKeyframe de préférence
+##  <a name="createkeyframe"></a>  CAnimationController::CreateKeyframe
 
 Crée une image clé qui dépend de la transition et l’ajoute au groupe spécifié.
 
@@ -363,7 +363,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie s’il faut définir ou de libérer un gestionnaire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -386,7 +386,7 @@ virtual BOOL EnableAnimationTimerEventHandler(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie s’il faut définir ou de libérer les gestionnaires.
 
 *idleBehavior*<br/>
@@ -419,7 +419,7 @@ TRUE si le gestionnaire a été correctement défini ou publié.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un gestionnaire est défini (activé) Windows Animation appelle les méthodes virtuelles suivantes dwHandlerType : OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler peut être une combinaison des indicateurs suivants : UI_ANIMATION_PHT_NONE - libère tous les gestionnaires UI_ANIMATION_PHT_CANCEL - définit annuler le Gestionnaire de comparaison UI_ANIMATION_PHT_CONCLUDE - définir la comparaison Conclude UI_ANIMATION_PHT_COMPRESS : définir Gestionnaire de comparaison Compress UI_ANIMATION_PHT_TRIM - définir le Gestionnaire de comparaison Trim UI_ANIMATION_PHT_CANCEL_REMOVE défini - supprimer le Gestionnaire de comparaison Cancel UI_ANIMATION_PHT_CONCLUDE_REMOVE - supprimer comparaison Conclude UI_ANIMATION_PHT_COMPRESS_ Supprimer : supprimer le Gestionnaire de comparaison Compress UI_ANIMATION_PHT_TRIM_REMOVE - supprimer le Gestionnaire de comparaison Trim
+Lorsqu’un gestionnaire est ensemble (activé) Windows Animation appelle les méthodes virtuelles suivantes dwHandlerType : OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler peut être une combinaison des indicateurs suivants : UI_ANIMATION_PHT_NONE - libère tous les gestionnaires UI_ANIMATION_PHT_CANCEL - définit Annuler Gestionnaire comparaison UI_ANIMATION_PHT_CONCLUDE - définir Conclude Gestionnaire comparaison UI_ANIMATION_PHT_COMPRESS - définir le Gestionnaire de comparaison Compress UI_ANIMATION_PHT_TRIM - définir Supprimer le Gestionnaire de comparaison UI_ANIMATION_PHT_CANCEL_REMOVE défini - supprimer annuler comparaison Gestionnaire UI_ANIMATION_PHT_CONCLUDE_REMOVE - remove comparaison Conclude UI_ANIMATION_PHT_COMPRESS_REMOVE - supprimer le Gestionnaire de comparaison Compress UI_ANIMATION_PHT _TRIM_REMOVE - supprimer le Gestionnaire de comparaison Trim
 
 ##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler
 
@@ -436,7 +436,7 @@ virtual BOOL EnableStoryboardEventHandler(
 *nGroupID*<br/>
 Spécifie l’ID de groupe.
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie s’il faut définir ou de libérer un gestionnaire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -716,7 +716,7 @@ Un pointeur vers un groupe d’animation qui contient un objet d’animation don
 *pObject*<br/>
 Pointeur vers un objet d’animation qui contient une variable de l’animation dont la valeur a changé.
 
-*Variable*<br/>
+*variable*<br/>
 Pointeur vers une variable de l’animation.
 
 *newValue*<br/>
@@ -785,7 +785,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 
 ### <a name="parameters"></a>Paramètres
 
-*i/s*<br/>
+*fps*<br/>
 La fréquence d’images actuelle dans les images par seconde.
 
 ### <a name="remarks"></a>Notes
@@ -813,7 +813,7 @@ Un pointeur vers un groupe d’animation qui contient un objet d’animation don
 *pObject*<br/>
 Pointeur vers un objet d’animation qui contient une variable de l’animation dont la valeur a changé.
 
-*Variable*<br/>
+*variable*<br/>
 Pointeur vers une variable de l’animation.
 
 *newValue*<br/>
@@ -871,7 +871,7 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CANCEL. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](https://msdn.microsoft.com/library/dd371759).
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CANCEL. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -901,7 +901,7 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_COMPRESS. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](https://msdn.microsoft.com/library/dd371759).
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_COMPRESS. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -931,7 +931,7 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CONCLUDE. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](https://msdn.microsoft.com/library/dd371759).
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CONCLUDE. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -961,7 +961,7 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_TRIM. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](https://msdn.microsoft.com/library/dd371759).
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_TRIM. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Documentation des API d’Animation Windows en lecture pour plus d’informations sur [gestion des conflits](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

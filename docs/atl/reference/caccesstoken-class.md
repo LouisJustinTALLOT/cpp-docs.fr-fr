@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694528"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894238"
 ---
 # <a name="caccesstoken-class"></a>Caccesstoken, classe
 
@@ -136,7 +136,7 @@ Un [jeton d’accès](/windows/desktop/SecAuthZ/access-tokens) est un objet qui 
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -215,7 +215,7 @@ bool CreateImpersonationToken(
 *pImp*<br/>
 Pointeur vers le nouveau `CAccessToken` objet.
 
-*Sil*<br/>
+*sil*<br/>
 Spécifie un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) type énuméré qui fournit le niveau d’emprunt d’identité du nouveau jeton.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -224,7 +224,7 @@ Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-`CreateImpersonationToken` appels [DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616) pour créer un nouveau jeton d’emprunt d’identité.
+`CreateImpersonationToken` appels [DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) pour créer un nouveau jeton d’emprunt d’identité.
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -300,7 +300,7 @@ Pointeur vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/window
 *pThreadAttributes*<br/>
 Pointeur vers un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau thread et détermine si les processus enfants peuvent hériter le handle retourné. Si *pThreadAttributes* est NULL, le thread obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.
 
-*case bHériter*<br/>
+*bInherit*<br/>
 Indique si le nouveau processus hérite des handles du processus appelant. Si la valeur est TRUE, chaque handle ouvert peut être hérité dans le processus appelant est héritée par le nouveau processus. Handles hérités ont les mêmes privilèges d’accès et la valeur en tant que les handles d’origine.
 
 *pCurrentDirectory*<br/>
@@ -661,7 +661,7 @@ Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Appelle le [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) fonction Win32.
+Appelle le [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) fonction Win32.
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -781,7 +781,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*PTapez*<br/>
+*pType*<br/>
 Adresse de la [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) variable qui, en cas de réussite, reçoit le type du jeton.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1056,7 +1056,7 @@ Indique si la vérification d’accès doit être effectuée par rapport au cont
 
 Si ce paramètre est FALSE, la vérification d’accès est effectuée à l’aide du contexte de sécurité pour le thread appelant. Si le thread emprunte un client, ce contexte de sécurité peut être celui d’un processus client. Si ce paramètre est TRUE, la vérification d’accès est effectuée à l’aide du contexte de sécurité du processus pour le thread appelant.
 
-*Sil*<br/>
+*sil*<br/>
 Spécifie un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) type énuméré qui fournit le niveau d’emprunt d’identité du jeton.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1093,7 +1093,7 @@ Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque `PrivilegeCheck` retourne, le `Attributes` membre de chaque [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) structure est définie à SE_PRIVILEGE_USED_FOR_ACCESS si le privilège correspondant est activé. Cette méthode appelle la [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) fonction Win32.
+Lorsque `PrivilegeCheck` retourne, le `Attributes` membre de chaque [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) structure est définie à SE_PRIVILEGE_USED_FOR_ACCESS si le privilège correspondant est activé. Cette méthode appelle la [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) fonction Win32.
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

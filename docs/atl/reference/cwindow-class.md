@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694593"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894456"
 ---
 # <a name="cwindow-class"></a>CWindow, classe
 
@@ -349,7 +349,7 @@ class CWindow
 
 |CWindow (méthode)|Fonction Win32|
 |--------------------|--------------------|
-|**BOOL ShowWindow (int** `nCmdShow` **) ;**|**BOOL ShowWindow (HWND** `hWnd` **, int** `nCmdShow` **) ;**|
+|**BOOL ShowWindow( int** `nCmdShow` **);**|**BOOL ShowWindow( HWND** `hWnd` **, int** `nCmdShow` **);**|
 
 `CWindow::ShowWindow` appelle la fonction Win32 `ShowWindow` en passant `CWindow::m_hWnd` comme premier paramètre. Chaque `CWindow` méthode qui encapsule directement une fonction Win32 passe le `m_hWnd` membre ; par conséquent, une grande partie de la `CWindow` documentation vous renvoie vers le Kit de développement Windows.
 
@@ -374,7 +374,7 @@ class CWindow
 
 Pour plus d’informations sur windows, consultez [Windows](/windows/desktop/winmsg/windows) et les rubriques suivantes dans le SDK Windows. Pour plus d’informations sur l’utilisation des fenêtres dans ATL, consultez l’article [Classes de fenêtre ATL](../../atl/atl-window-classes.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin.h
 
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>Notes
 
-Consultez [ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) dans le Kit de développement logiciel Windows.
+Consultez [ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) dans le Kit de développement logiciel Windows.
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -562,7 +562,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] Le handle vers la fenêtre parente ou propriétaire.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Une variable de type [_U_RECT](../../atl/reference/u-rect-class.md) spécifiant la position de la fenêtre. La valeur par défaut est NULL. Lorsque ce paramètre est NULL, la valeur de `CWindow::rcDefault` est utilisé.
 
 *szWindowName*<br/>
@@ -669,7 +669,7 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>Notes
 
-Consultez [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) dans le Kit de développement logiciel Windows.
+Consultez [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) dans le Kit de développement logiciel Windows.
 
 ##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
@@ -928,7 +928,7 @@ HRESULT GetDlgControl(
 *nID*<br/>
 [in] L’ID de ressource du contrôle en cours de récupération.
 
-*IID*<br/>
+*iid*<br/>
 [in] L’ID de l’interface que vous souhaitez obtenir à partir du contrôle.
 
 *ppCtrl*<br/>
@@ -970,7 +970,7 @@ HRESULT GetDlgHost(
 *nID*<br/>
 [in] L’ID de ressource du contrôle en cours de récupération.
 
-*IID*<br/>
+*iid*<br/>
 [in] L’ID de l’interface que vous souhaitez obtenir à partir du contrôle.
 
 *ppHost*<br/>
@@ -1456,7 +1456,7 @@ Si le texte est copié avec succès, la valeur de retour est TRUE ; Sinon, la v
 
 ### <a name="remarks"></a>Notes
 
-Consultez [GetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633520) dans le Kit de développement logiciel Windows.
+Consultez [GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) dans le Kit de développement logiciel Windows.
 
 La deuxième version de cette méthode vous permet de stocker le texte dans un BSTR ; la troisième version vous permet de stocker le résultat dans un [CString](../../atl-mfc-shared/reference/cstringt-class.md), étant donné que `CSimpleString` est la classe de base de `CString`.
 
@@ -1751,7 +1751,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Bloc*<br/>
+*bLock*<br/>
 [in] Si TRUE (valeur par défaut), la fenêtre sera verrouillée. Sinon, il sera déverrouillé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1829,7 +1829,7 @@ BOOL ModifyStyle(
 *dwAdd*<br/>
 [in] Spécifie les styles de fenêtre à ajouter lors de la modification du style.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 [in] Indicateurs de positionnement de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) fonction dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1875,7 +1875,7 @@ BOOL ModifyStyleEx(
 *dwAdd*<br/>
 [in] Spécifie les styles étendus à ajouter lors de la modification du style.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 [in] Indicateurs de positionnement de fenêtre. Pour obtenir la liste des valeurs possibles, consultez le [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) fonction dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Notes
 
-Consultez [SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) dans le Kit de développement logiciel Windows.
+Consultez [SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) dans le Kit de développement logiciel Windows.
 
 ### <a name="example"></a>Exemple
 

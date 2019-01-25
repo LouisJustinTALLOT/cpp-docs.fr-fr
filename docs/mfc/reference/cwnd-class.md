@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179082"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894534"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -1111,7 +1111,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|Envoyé quand le contenu du Presse-papiers a changé.|
 |[CWnd::OnClose](#onclose)|Appelé pour signaler que `CWnd` doit être fermé.|
 |[CWnd::OnColorizationColorChanged](#oncolorizationcolorchanged)|Appelé quand la stratégie de rendu de la zone non cliente a changé.|
-|[Fonction membre CWnd::OnCommand](#oncommand)|Appelé quand l'utilisateur sélectionne une commande.|
+|[CWnd::OnCommand](#oncommand)|Appelé quand l'utilisateur sélectionne une commande.|
 |[CWnd::OnCompacting](#oncompacting)|Appelé quand Windows détecte que la mémoire système est insuffisante.|
 |[CWnd::OnCompareItem](#oncompareitem)|Appelé pour déterminer la position relative d'un nouvel élément dans une zone de liste modifiable ou une zone de liste enfant triée en mode owner-draw.|
 |[CWnd::OnCompositionChanged](#oncompositionchanged)|Appelé pour toutes les fenêtres de niveau supérieur quand la composition du Gestionnaire de fenêtrage est activée ou désactivée.|
@@ -1202,7 +1202,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnPaintClipboard](#onpaintclipboard)|Appelé quand la zone cliente de la visionneuse de Presse-papiers doit être repeinte.|
 |[CWnd::OnPaletteChanged](#onpalettechanged)|Appelé pour permettre aux fenêtres qui utilisent une palette de couleurs de réaliser leurs palettes logiques et de mettre à jour leurs zones clientes.|
 |[CWnd::OnPaletteIsChanging](#onpaletteischanging)|Informe les autres applications qu'une application va réaliser sa palette logique.|
-|[Fonction membre CWnd::OnParentNotify](#onparentnotify)|Appelé quand une fenêtre enfant est créée ou détruite ou quand l’utilisateur clique avec un bouton de la souris pendant que le curseur se trouve dans la fenêtre enfant.|
+|[CWnd::OnParentNotify](#onparentnotify)|Appelé quand une fenêtre enfant est créée ou détruite ou quand l’utilisateur clique avec un bouton de la souris pendant que le curseur se trouve dans la fenêtre enfant.|
 |[CWnd::OnPowerBroadcast](#onpowerbroadcast)|Appelé quand un événement de gestion de l'alimentation se produit.|
 |[CWnd::OnQueryDragIcon](#onquerydragicon)|Appelé quand un `CWnd` réduit (sous forme d'icône) est sur le point d'être déplacé par l'utilisateur.|
 |[CWnd::OnQueryEndSession](#onqueryendsession)|Appelé quand l'utilisateur choisit de mettre fin à la session Windows.|
@@ -1262,7 +1262,7 @@ class CWnd : public CCmdTarget
 |Nom|Description|
 |----------|-----------------|
 |[CWnd::operator HWND](#operator_hwnd)|Appelé pour obtenir un handle de fenêtre.|
-|[CWnd::operator ! =](#operator_neq)|Détermine si une fenêtre n’est pas identique à la fenêtre dont le handle est [m_hWnd](#m_hwnd).|
+|[CWnd::operator !=](#operator_neq)|Détermine si une fenêtre n’est pas identique à la fenêtre dont le handle est [m_hWnd](#m_hwnd).|
 |[CWnd::operator ==](#operator_eq_eq)|Détermine si une fenêtre est identique à la fenêtre dont le handle est [m_hWnd](#m_hwnd).|
 
 ### <a name="public-data-members"></a>Membres de données publics
@@ -1761,7 +1761,7 @@ void CheckDlgButton(
 *nIDButton*<br/>
 Spécifie le bouton à modifier.
 
-*nVérifiez*<br/>
+*nCheck*<br/>
 Spécifie l’action à entreprendre. Si *nVérifiez* est différent de zéro, le `CheckDlgButton` fonction membre place une coche en regard du bouton ; si 0, la case à cocher est supprimée. Pour les boutons de trois états, si *nVérifiez* est 2, l’état du bouton est indéterminé.
 
 ### <a name="remarks"></a>Notes
@@ -1819,7 +1819,7 @@ CWnd* ChildWindowFromPoint(
 *point*<br/>
 Spécifie les coordonnées clientes du point à tester.
 
-*nIndicateurs*<br/>
+*nflags*<br/>
 Spécifie les fenêtres enfants à ignorer. Ce paramètre peut être une combinaison des valeurs suivantes :
 
 |Value|Signification|
@@ -1923,7 +1923,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Combinaison au niveau du bit (ou) de [styles de fenêtre](styles-used-by-mfc.md#window-styles). L’option WS_POPUP n’est pas un style valid.
 
-*Rect*<br/>
+*rect*<br/>
 [in] La taille et l’emplacement de la fenêtre par rapport à l’angle supérieur gauche de la fenêtre parente.
 
 *pParentWnd*<br/>
@@ -2060,7 +2060,7 @@ Un pointeur vers le texte à afficher dans le contrôle. Définit la valeur de p
 *dwStyle*<br/>
 Styles de Windows. Les styles disponibles sont répertoriés sous la section Remarques.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [structure RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *ppt*<br/>
@@ -2175,7 +2175,7 @@ Pour une fenêtre enfant, l’ID de la fenêtre ; Sinon, l’ID d’un menu de 
 *lpParam*<br/>
 Pointeur vers les données utilisateur qui sont passées à la [CWnd::OnCreate](#oncreate) méthode dans le *lpCreateParams* champ.
 
-*Rect*<br/>
+*rect*<br/>
 La taille et l’emplacement de la fenêtre par rapport à l’écran ou la fenêtre parente.
 
 *pParentWnd*<br/>
@@ -2766,7 +2766,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 TRUE pour activer la disposition dynamique ; FALSE pour la désactiver.
 
 ### <a name="remarks"></a>Notes
@@ -2785,7 +2785,7 @@ void EnableD2DSupport(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si la prise en charge D2D est activée ou désactivée.
 
 *bUseDCRenderTarget*<br/>
@@ -2842,7 +2842,7 @@ void EnableScrollBarCtrl(
 *nBar*<br/>
 L’identificateur de la barre de défilement.
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si la barre de défilement doit être activé ou désactivé.
 
 ### <a name="remarks"></a>Notes
@@ -2859,7 +2859,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si le contrôle info-bulle est activé ou désactivé. La valeur TRUE Active le contrôle ; La valeur FALSE désactive le contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2895,7 +2895,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si l’outil conseils sont activées ou désactivées de suivi. Si ce paramètre est TRUE, l’outil de suivi des conseils seront activées. Si ce paramètre est FALSE, l’outil de suivi des conseils va être désactivés.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2916,7 +2916,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si la fenêtre donnée doit être activé ou désactivé. Si ce paramètre est TRUE, la fenêtre est activée. Si ce paramètre est FALSE, la fenêtre sera désactivée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2951,7 +2951,7 @@ virtual void EndModalLoop(int nResult);
 
 ### <a name="parameters"></a>Paramètres
 
-*%nrésultat*<br/>
+*nResult*<br/>
 Contient la valeur à retourner à l’appelant de [RunModalLoop](#runmodalloop).
 
 ### <a name="remarks"></a>Notes
@@ -3086,7 +3086,7 @@ Handle de la fenêtre parente dont les fenêtres enfants sont à rechercher.
 Handle vers une fenêtre enfant. La recherche commence par la fenêtre enfant suivante dans l’ordre de plan. La fenêtre enfant doit être une fenêtre enfant direct de *hwndParent*, pas seulement une fenêtre de descendante.
 
 *lpszClass*<br/>
-Pointeur vers une chaîne se terminant par null qui spécifie le nom de classe ou une classe atom créé par un appel précédent à la [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586) ou [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
+Pointeur vers une chaîne se terminant par null qui spécifie le nom de classe ou une classe atom créé par un appel précédent à la [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa) ou [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
 
 *lpszWindow*<br/>
 Pointeur vers une chaîne se terminant par null qui spécifie le nom de fenêtre (titre de la fenêtre). Si ce paramètre est NULL, tous les noms de fenêtre correspondent.
@@ -4741,7 +4741,7 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*bRestaurer*<br/>
+*bRevert*<br/>
 Spécifie l’action à entreprendre. Si *bRestaurer* est FALSE, `GetSystemMenu` retourne un handle vers une copie du menu contrôle en cours d’utilisation. Cette copie est initialement identique au menu de contrôle, mais peut être modifiée. Si *bRestaurer* a la valeur TRUE, `GetSystemMenu` réinitialise le menu de contrôle à l’état par défaut. Précédemment, et éventuellement modifiées, le contrôle menu, si une, est détruit. La valeur de retour est non définie dans ce cas.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -5673,7 +5673,7 @@ Pointe vers un `CString` objet ou une chaîne se terminant par null qui contient
 *lpszCaption*<br/>
 Pointe vers un `CString` objet ou se terminant par null de chaîne à utiliser pour la légende de la boîte de message. Si *lpszCaption* est NULL, la légende par défaut « Erreur » est utilisé.
 
-*%nLes*<br/>
+*nType*<br/>
 Spécifie le contenu et le comportement de la boîte de message.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -5716,7 +5716,7 @@ Spécifie les styles de fenêtre doit être supprimé lors de la modification du
 *dwAdd*<br/>
 Spécifie les styles de fenêtre à ajouter lors de la modification du style.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indicateurs à passer à [SetWindowPos](#setwindowpos), ou zéro si `SetWindowPos` ne doit pas être appelée. La valeur par défaut est zéro. Consultez la section Notes pour obtenir la liste d’indicateurs prédéfinis.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -5765,7 +5765,7 @@ Spécifie les styles étendus à supprimer lors de la modification du style.
 *dwAdd*<br/>
 Spécifie les styles étendus à ajouter lors de la modification du style.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indicateurs à passer à [SetWindowPos](#setwindowpos), ou zéro si `SetWindowPos` ne doit pas être appelée. La valeur par défaut est zéro. Consultez la section Notes pour obtenir la liste d’indicateurs prédéfinis.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -5941,10 +5941,10 @@ virtual BOOL OnAmbientProperty(
 *pSite*<br/>
 Pointeur vers le site du contrôle qui a demandé la propriété ambiante.
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch de la propriété ambiante demandée.
 
-*pVar*<br/>
+*pvar*<br/>
 Pointeur vers un allouée par l’appelant `VARIANT` structure, via laquelle la valeur de la propriété ambiante sera retournée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -6022,7 +6022,7 @@ afx_msg void OnCancelMode();
 
 Si le `CWnd` objet a le focus, son `OnCancelMode` fonction membre est appelée lorsqu’une boîte de dialogue ou la boîte de message s’affiche. Cela donne le `CWnd` la possibilité d’annuler les modes de capture de la souris.
 
-L’implémentation par défaut répond en appelant le [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) (fonction) Windows. Remplacez cette fonction membre dans votre classe dérivée pour gérer les autres modes.
+L’implémentation par défaut répond en appelant le [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) (fonction) Windows. Remplacez cette fonction membre dans votre classe dérivée pour gérer les autres modes.
 
 ##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged
 
@@ -6039,7 +6039,7 @@ Un pointeur vers la fenêtre pour obtenir la capture de la souris
 
 ### <a name="remarks"></a>Notes
 
-Une fenêtre reçoit le message même si elle appelle [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) lui-même. Une application ne doit pas tenter de définir la capture de la souris en réponse à ce message. Lorsqu’il reçoit ce message, une fenêtre doit se redessiner, si nécessaire, afin de refléter le nouvel état de capture de la souris.
+Une fenêtre reçoit le message même si elle appelle [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) lui-même. Une application ne doit pas tenter de définir la capture de la souris en réponse à ce message. Lorsqu’il reçoit ce message, une fenêtre doit se redessiner, si nécessaire, afin de refléter le nouvel état de capture de la souris.
 
 Consultez le Kit de développement logiciel Windows pour plus d’informations sur la `ReleaseCapture` (fonction) Windows.
 
@@ -6083,7 +6083,7 @@ afx_msg void OnChangeUIState(
 
 ### <a name="parameters"></a>Paramètres
 
-*%4%nsortie de l’action*<br/>
+*nAction*<br/>
 Spécifie l’action à entreprendre. Peut avoir l'une des valeurs suivantes :
 
 - Élément d’état de l’interface utilisateur de UIS_CLEAR (spécifié par *nUIElement*) doit être masqué.
@@ -6118,13 +6118,13 @@ afx_msg void OnChar(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Contient la valeur de code de caractère de la clé.
 
 *nRepCnt*<br/>
 Contient le nombre de répétitions, le nombre de fois que la séquence de touches est répété lorsque l’utilisateur appuie sur la touche enfoncée.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Contient le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
 |Value|Signification|
@@ -6161,7 +6161,7 @@ afx_msg int OnCharToItem(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Spécifie la valeur de la touche enfoncée par l’utilisateur.
 
 *pListBox*<br/>
@@ -6269,7 +6269,7 @@ Cette méthode reçoit le [WM_DWMNCRENDERINGCHANGED](/windows/desktop/dwm/wm-dwm
 > [!NOTE]
 > Cette fonction membre est appelée par l’infrastructure pour permettre à votre application de traiter un message Windows. Les paramètres passés à votre fonction reflètent les paramètres reçus par l’infrastructure au moment où le message a été reçu. Si vous appelez l’implémentation de classe de base de cette fonction, cette implémentation utilise les paramètres passés initialement avec le message et non les paramètres que vous fournissez à la fonction.
 
-##  <a name="oncommand"></a>  Fonction membre CWnd::OnCommand
+##  <a name="oncommand"></a>  CWnd::OnCommand
 
 L’infrastructure appelle cette fonction membre lorsque l’utilisateur sélectionne un élément dans un menu, lorsqu’un contrôle enfant envoie un message de notification, ou lors de la traduction d’une séquence de touches accélérateur.
 
@@ -6391,7 +6391,7 @@ afx_msg void OnContextMenu(
 *pWnd*<br/>
 Handle de la fenêtre dans laquelle l’utilisateur avec le bouton droit cliqué avec la souris. Cela peut être une fenêtre enfant de la fenêtre de réception du message. Pour plus d’informations sur le traitement de ce message, consultez la section Notes.
 
-*points de vente*<br/>
+*pos*<br/>
 Position du curseur, en coordonnées d’écran, au moment de la souris, cliquez sur.
 
 ### <a name="remarks"></a>Notes
@@ -6533,13 +6533,13 @@ afx_msg void OnDeadChar(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Spécifie la valeur de caractère de la clé de lettres mortes.
 
 *nRepCnt*<br/>
 Spécifie le nombre de répétitions.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
 |Value|Description|
@@ -6713,7 +6713,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 *dc*<br/>
 Spécifie le contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie le rectangle englobant de la zone à restituer.
 
 *szRequiredThumbnailSize*<br/>
@@ -6788,7 +6788,7 @@ afx_msg void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si le `CWnd` objet a été activé ou désactivé. Ce paramètre a la valeur TRUE si le `CWnd` a été activée ; il a la valeur FALSE si le `CWnd` a été désactivé.
 
 ### <a name="remarks"></a>Notes
@@ -6808,7 +6808,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 ### <a name="parameters"></a>Paramètres
 
-*Pliage*<br/>
+*bEnding*<br/>
 Spécifie si la session est en cours terminée. Il a la valeur TRUE si la session est en cours s’est terminée ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
@@ -7119,7 +7119,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode reçoit le [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) notification, qui est décrit dans le SDK Windows. Ce message est placé en haut de la file d’attente de message associé au thread qui inscrit la touche d’accès rapide. Utilisez le [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) (fonction) pour inscrire une touche d’accès rapide de l’échelle du système.
+Cette méthode reçoit le [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) notification, qui est décrit dans le SDK Windows. Ce message est placé en haut de la file d’attente de message associé au thread qui inscrit la touche d’accès rapide. Utilisez le [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) (fonction) pour inscrire une touche d’accès rapide de l’échelle du système.
 
 > [!NOTE]
 > Cette fonction membre est appelée par l’infrastructure pour permettre à votre application de traiter un message Windows. Les paramètres passés à votre fonction reflètent les paramètres reçus par l’infrastructure au moment où le message a été reçu. Si vous appelez l’implémentation de classe de base de cette fonction, cette implémentation utilise les paramètres passés initialement avec le message et non les paramètres que vous fournissez à la fonction.
@@ -7354,7 +7354,7 @@ afx_msg void OnInputLangChangeRequest(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*nIndicateurs*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les nouveaux paramètres régionaux a été sélectionné dans les paramètres régionaux au précédent ou suivant dans la liste installée des paramètres régionaux, ou que la disposition du clavier des nouveaux paramètres régionaux peut être utilisée avec le jeu de caractères du système.<br /><br /> Les valeurs possibles sont INPUTLANGCHANGE_BACKWARD, INPUTLANGCHANGE_FORWARD et INPUTLANGCHANGE_SYSCHARSET.|
+|*nFlags*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les nouveaux paramètres régionaux a été sélectionné dans les paramètres régionaux au précédent ou suivant dans la liste installée des paramètres régionaux, ou que la disposition du clavier des nouveaux paramètres régionaux peut être utilisée avec le jeu de caractères du système.<br /><br /> Les valeurs possibles sont INPUTLANGCHANGE_BACKWARD, INPUTLANGCHANGE_FORWARD et INPUTLANGCHANGE_SYSCHARSET.|
 |*nLocaleId*|[in] Identificateur de paramètres régionaux d’entrée. Pour plus d’informations, consultez [constantes d’identificateur de langue et de chaînes](/windows/desktop/Intl/language-identifier-constants-and-strings).|
 
 ### <a name="remarks"></a>Notes
@@ -7377,13 +7377,13 @@ afx_msg void OnKeyDown(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Spécifie le code de touche virtuelle de la clé donnée. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h
 
 *nRepCnt*<br/>
 Répétition (le nombre de fois où que la séquence de touches est répété à la suite de l’utilisateur enfoncée la touche).
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
 |Value|Description|
@@ -7422,13 +7422,13 @@ afx_msg void OnKeyUp(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Spécifie le code de touche virtuelle de la clé donnée. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h
 
 *nRepCnt*<br/>
 Répétition (le nombre de fois où que la séquence de touches est répété à la suite de l’utilisateur enfoncée la touche).
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
 |Value|Description|
@@ -7484,7 +7484,7 @@ afx_msg void OnLButtonDblClk(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -7519,7 +7519,7 @@ afx_msg void OnLButtonDown(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -7552,7 +7552,7 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -7583,7 +7583,7 @@ afx_msg void OnMButtonDblClk(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -7618,7 +7618,7 @@ afx_msg void OnMButtonDown(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -7651,7 +7651,7 @@ afx_msg void OnMButtonUp(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -7744,10 +7744,10 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Selon les paramètres de build, spécifie le caractère ANSI ou Unicode que l’utilisateur a appuyé.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Contient l’indicateur MF_POPUP si le menu est un menu contextuel. Il contient l’indicateur MF_SYSMENU si le menu est un menu de contrôle.
 
 *pMenu*<br/>
@@ -7871,7 +7871,7 @@ afx_msg void OnMenuSelect(
 *nItemID*<br/>
 Identifie l’élément sélectionné. Si l’élément sélectionné est un élément de menu, *nItemID* contient l’ID d’élément de menu. Si l’élément sélectionné contienne un menu contextuel, *nItemID* contient l’index du menu contextuel, et *hSysMenu* contient le handle du menu (cliqué sur) principal.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Contient une combinaison des indicateurs de menu suivantes :
 
 - Élément de MF_BITMAP est un bitmap.
@@ -7963,7 +7963,7 @@ afx_msg void OnMouseHover(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*nIndicateurs*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification sont enfoncées. Par exemple, l’indicateur MK_CONTROL indique que la touche CTRL est enfoncée.|
+|*nFlags*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification sont enfoncées. Par exemple, l’indicateur MK_CONTROL indique que la touche CTRL est enfoncée.|
 |*point*|[in] Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui spécifie le *x* et *y* coordonnées du curseur par rapport à l’angle supérieur gauche de la zone cliente.|
 
 ### <a name="remarks"></a>Notes
@@ -8000,7 +8000,7 @@ afx_msg void OnMouseHWheel(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*nIndicateurs*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification sont enfoncées. Par exemple, l’indicateur MK_CONTROL indique que la touche CTRL est enfoncée.<br /><br /> Pour obtenir la liste d’indicateurs, consultez la section « Paramètres de Message » dans [sur l’entrée de la souris](/windows/desktop/inputdev/about-mouse-input).|
+|*nFlags*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification sont enfoncées. Par exemple, l’indicateur MK_CONTROL indique que la touche CTRL est enfoncée.<br /><br /> Pour obtenir la liste d’indicateurs, consultez la section « Paramètres de Message » dans [sur l’entrée de la souris](/windows/desktop/inputdev/about-mouse-input).|
 |*zDelta*|[in] Indique la distance que la roulette de la rotation, exprimée en multiples ou les divisions de WHEEL_DELTA, qui est 120. Une valeur positive indique que la roulette a été tournée vers la droite. une valeur négative indique que la roulette a été tournée vers la gauche.|
 |*pt*|[in] Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui spécifie le *x* et *y* coordonnées du curseur par rapport à l’angle supérieur gauche de la zone cliente.|
 
@@ -8038,7 +8038,7 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -8074,7 +8074,7 @@ afx_msg BOOL OnMouseWheel(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -8597,7 +8597,7 @@ void OnNcXButtonDblClk(
 |Paramètre|Description|
 |---------------|-----------------|
 |*nHitTest*|[in] La valeur de test de positionnement retournée par la [CWnd::DefWindowProc](#defwindowproc) fonction par le traitement de la [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) message.|
-|*Nbouton*|[in] Une valeur de bouton XBUTTON1 si un double-clic est effectué sur le premier bouton Microsoft Intellimouse X ou XBUTTON2 si le second bouton X est le double-clic.|
+|*nButton*|[in] Une valeur de bouton XBUTTON1 si un double-clic est effectué sur le premier bouton Microsoft Intellimouse X ou XBUTTON2 si le second bouton X est le double-clic.|
 |*point*|[in] Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui spécifie le *x* et *y* coordonnées du curseur par rapport à l’angle supérieur gauche de la zone cliente.|
 
 ### <a name="remarks"></a>Notes
@@ -8623,7 +8623,7 @@ afx_msg void OnNcXButtonDown(
 |Paramètre|Description|
 |---------------|-----------------|
 |*nHitTest*|[in] La valeur de test de positionnement retournée par la [CWnd::DefWindowProc](#defwindowproc) fonction par le traitement de la [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) message.|
-|*Nbouton*|[in] Une valeur de bouton XBUTTON1 si le premier bouton X de la souris est enfoncé ou XBUTTON2 si le second bouton X.|
+|*nButton*|[in] Une valeur de bouton XBUTTON1 si le premier bouton X de la souris est enfoncé ou XBUTTON2 si le second bouton X.|
 |*point*|[in] Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui spécifie le *x* et *y* coordonnées du curseur par rapport à l’angle supérieur gauche de l’écran.|
 
 ### <a name="remarks"></a>Notes
@@ -8649,7 +8649,7 @@ afx_msg void OnNcXButtonUp(
 |Paramètre|Description|
 |---------------|-----------------|
 |*nHitTest*|[in] La valeur de test de positionnement retournée par la [CWnd::DefWindowProc](#defwindowproc) fonction par le traitement de la [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) message.|
-|*Nbouton*|[in] Une valeur de bouton XBUTTON1 si le premier bouton X de la souris est relâché ou XBUTTON2 si le second bouton X est libéré.|
+|*nButton*|[in] Une valeur de bouton XBUTTON1 si le premier bouton X de la souris est relâché ou XBUTTON2 si le second bouton X est libéré.|
 |*point*|[in] Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui spécifie le *x* et *y* coordonnées du curseur par rapport à l’angle supérieur gauche de l’écran.|
 
 ### <a name="remarks"></a>Notes
@@ -8732,7 +8732,7 @@ afx_msg UINT OnNotifyFormat(
 |Paramètre|Description|
 |---------------|-----------------|
 |*pWnd*|[in] Un pointeur vers un `CWnd` objet qui représente l’envoi de la fenêtre la [WM_NOTIFY](/windows/desktop/controls/wm-notify) message.<br /><br /> Ce paramètre est le pointeur vers un contrôle si le *%n%ncommande* paramètre est NF_QUERY ou le pointeur vers la fenêtre parente d’un contrôle si *%n%ncommande* est NF_REQUERY.|
-|*%n%ncommande*|[in] Une valeur de commande qui se spécialise le message WM_NOTIFY. Les valeurs possibles sont :<br /><br /> -NF_QUERY-<br />     Le message est une requête pour déterminer si les structures ANSI ou Unicode doivent être utilisés dans les messages WM_NOTIFY. Ce message est envoyé à partir d’un contrôle à sa fenêtre parente lors de la création d’un contrôle et en réponse au formulaire NF_REQUERY de ce message.<br />-NF_REQUERY-<br />     Le message est une demande d’un contrôle à envoyer le formulaire NF_QUERY de ce message à sa fenêtre parente. Cette demande est envoyée à partir de la fenêtre parente et vous demande de contrôle à actualiser le parent sur le type de structure à utiliser dans les messages WM_NOTIFY. Si le *%n%ncommande* paramètre est NF_REQUERY, la valeur de retour est le résultat de l’opération Actualiser.|
+|*nCommand*|[in] Une valeur de commande qui se spécialise le message WM_NOTIFY. Les valeurs possibles sont :<br /><br /> -NF_QUERY-<br />     Le message est une requête pour déterminer si les structures ANSI ou Unicode doivent être utilisés dans les messages WM_NOTIFY. Ce message est envoyé à partir d’un contrôle à sa fenêtre parente lors de la création d’un contrôle et en réponse au formulaire NF_REQUERY de ce message.<br />-NF_REQUERY-<br />     Le message est une demande d’un contrôle à envoyer le formulaire NF_QUERY de ce message à sa fenêtre parente. Cette demande est envoyée à partir de la fenêtre parente et vous demande de contrôle à actualiser le parent sur le type de structure à utiliser dans les messages WM_NOTIFY. Si le *%n%ncommande* paramètre est NF_REQUERY, la valeur de retour est le résultat de l’opération Actualiser.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -9030,7 +9030,7 @@ afx_msg void OnRButtonDblClk(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -9065,7 +9065,7 @@ afx_msg void OnRButtonDown(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -9097,7 +9097,7 @@ afx_msg void OnRButtonUp(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indique si les touches virtuelles différents sont arrêtés. Ce paramètre peut être n’importe quelle combinaison des valeurs suivantes :
 
 - MK_CONTROL définir si la touche CTRL est enfoncée.
@@ -9310,7 +9310,7 @@ afx_msg void OnShowWindow(
 *bShow*<br/>
 Spécifie si une fenêtre est affichée. Il a la valeur TRUE si la fenêtre est affichée ; Il a la valeur FALSE si la fenêtre est masquée.
 
-*État*<br/>
+*nStatus*<br/>
 Spécifie l’état de la fenêtre est affichée. Il est 0 si le message est envoyé en raison d’un `ShowWindow` appel de fonction membre ; sinon *état* est une des opérations suivantes :
 
 - La fermeture de fenêtre parente de SW_PARENTCLOSING (qui est rendue sous forme d’icône) ou une fenêtre contextuelle est masquée.
@@ -9337,7 +9337,7 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>Paramètres
 
-*%nLes*<br/>
+*nType*<br/>
 Spécifie le type de redimensionnement demandé. Ce paramètre peut être une des valeurs suivantes :
 
 - La fenêtre SIZE_MAXIMIZED a été agrandie.
@@ -9350,10 +9350,10 @@ Spécifie le type de redimensionnement demandé. Ce paramètre peut être une de
 
 - SIZE_MAXSHOW Message est envoyé à toutes les fenêtres publicitaires lorsque certains autres fenêtre a été restaurée à sa taille précédente.
 
-*CX*<br/>
+*cx*<br/>
 Spécifie la nouvelle largeur de la zone cliente.
 
-*CY*<br/>
+*cy*<br/>
 Spécifie la nouvelle hauteur de la zone cliente.
 
 ### <a name="remarks"></a>Notes
@@ -9435,7 +9435,7 @@ afx_msg void OnSpoolerStatus(
 
 ### <a name="parameters"></a>Paramètres
 
-*État*<br/>
+*nStatus*<br/>
 Spécifie l’indicateur SP_JOBSTATUS.
 
 *nJobs*<br/>
@@ -9468,7 +9468,7 @@ Spécifie si l’étendue de la fenêtre ou nonextended styles ont été modifi�
 - GWL_STYLE styles nonextended de la fenêtre ont changé.
 
 *lpStyleStruct*<br/>
-Pointe vers un [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) structure qui contient les nouveaux styles de la fenêtre. Une application peut examiner les styles, mais elle ne peut pas modifier les.
+Pointe vers un [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) structure qui contient les nouveaux styles de la fenêtre. Une application peut examiner les styles, mais elle ne peut pas modifier les.
 
 ### <a name="remarks"></a>Notes
 
@@ -9495,7 +9495,7 @@ Spécifie si l’étendue de la fenêtre ou nonextended styles ont été modifi�
 - GWL_STYLE styles nonextended de la fenêtre ont changé.
 
 *lpStyleStruct*<br/>
-Pointe vers un [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) structure qui contient les nouveaux styles de la fenêtre. Une application peut examiner les styles et les modifier.
+Pointe vers un [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) structure qui contient les nouveaux styles de la fenêtre. Une application peut examiner les styles et les modifier.
 
 ### <a name="remarks"></a>Notes
 
@@ -9515,13 +9515,13 @@ afx_msg void OnSysChar(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Spécifie le code de touche de caractère ASCII d’une clé de menu du contrôle.
 
 *nRepCnt*<br/>
 Spécifie le nombre de répétitions (le nombre de fois où que la séquence de touches est répété à la suite de l’utilisateur enfoncée la touche).
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Le *nIndicateurs* paramètre peut avoir les valeurs suivantes :
 
 |Value|Signification|
@@ -9639,13 +9639,13 @@ afx_msg void OnSysDeadChar(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Spécifie la valeur de caractère de la clé de lettres mortes.
 
 *nRepCnt*<br/>
 Spécifie le nombre de répétitions.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
 |Value|Signification|
@@ -9678,13 +9678,13 @@ afx_msg void OnSysKeyDown(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Spécifie le code de touche virtuelle de la touche est enfoncée. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h
 
 *nRepCnt*<br/>
 Spécifie le nombre de répétitions.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
 |Value|Signification|
@@ -9725,13 +9725,13 @@ afx_msg void OnSysKeyUp(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Spécifie le code de touche virtuelle de la touche est enfoncée. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h
 
 *nRepCnt*<br/>
 Spécifie le nombre de répétitions.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le code d’analyse de code de transition de la clé, état de la clé précédente et code de contexte, comme indiqué dans la liste suivante :
 
 |Value|Signification|
@@ -9863,7 +9863,7 @@ virtual INT_PTR OnToolHitTest(
 *point*<br/>
 Spécifie la coordonnée x et y du curseur. Ces coordonnées sont toujours relatives à l’angle supérieur gauche de la fenêtre
 
-*PTI*<br/>
+*pTI*<br/>
 Un pointeur vers un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) structure. Les valeurs suivantes de la structure sont définies par défaut :
 
 - *HWND*  =  `m_hWnd` descripteur désignant une fenêtre
@@ -9959,9 +9959,9 @@ afx_msg void OnUniChar(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*NChar*|[in] Spécifie le code de caractère de la touche enfoncée.|
+|*nChar*|[in] Spécifie le code de caractère de la touche enfoncée.|
 |*nRepCnt*|[in] Spécifie le nombre de répétitions pour le message en cours. La valeur est le nombre de fois que la séquence de touches est autorepeated suite à l’utilisateur de maintenir la touche enfoncée. Si la séquence de touches est suffisamment longue, plusieurs messages sont envoyés. Toutefois, le nombre de répétitions n’est pas cumulatif.|
-|*nIndicateurs*|[in] Indicateurs qui spécifient le code d’analyse de clé étendue, code de contexte, état de la clé précédente et état de transition, comme indiqué dans le tableau suivant :<br /><br /> **0-7 :** Spécifie le code d’analyse. La valeur varie selon le fabricant (OEM).<br /><br /> **8 :** Spécifie une clé étendue, telles que les touches ALT et CTRL droite qui apparaissent sur un clavier étendu 101 ou 102 touches. L’indicateur est 1 si la clé est une clé étendue ; Sinon, il est 0.<br /><br /> **9-12 :**  Utilisé en interne par Windows.<br /><br /> **13 :**  Spécifie le code de contexte. L’indicateur est 1 si la touche ALT est enfoncée alors que la touche est enfoncée ; Sinon, la valeur est 0.<br /><br /> **14 :**  Spécifie l’état de la clé précédente. L’indicateur est 1 si la touche est enfoncée avant que le message est envoyé, ou 0 si la touche est relâchée.<br /><br /> **15 :**  Spécifie l’état de transition. L’indicateur est 1 si la libération de la clé, ou 0 si la touche est enfoncée.|
+|*nFlags*|[in] Indicateurs qui spécifient le code d’analyse de clé étendue, code de contexte, état de la clé précédente et état de transition, comme indiqué dans le tableau suivant :<br /><br /> **0-7:** Spécifie le code d’analyse. La valeur varie selon le fabricant (OEM).<br /><br /> **8:** Spécifie une clé étendue, telles que les touches ALT et CTRL droite qui apparaissent sur un clavier étendu 101 ou 102 touches. L’indicateur est 1 si la clé est une clé étendue ; Sinon, il est 0.<br /><br /> **9-12:**  Utilisé en interne par Windows.<br /><br /> **13:**  Spécifie le code de contexte. L’indicateur est 1 si la touche ALT est enfoncée alors que la touche est enfoncée ; Sinon, la valeur est 0.<br /><br /> **14:**  Spécifie l’état de la clé précédente. L’indicateur est 1 si la touche est enfoncée avant que le message est envoyé, ou 0 si la touche est relâchée.<br /><br /> **15:**  Spécifie l’état de transition. L’indicateur est 1 si la libération de la clé, ou 0 si la touche est enfoncée.|
 
 ### <a name="remarks"></a>Notes
 
@@ -9985,7 +9985,7 @@ afx_msg void OnUnInitMenuPopup(
 |Paramètre|Description|
 |---------------|-----------------|
 |*pMenu*|[in] Pointeur vers le [CMenu](../../mfc/reference/cmenu-class.md) objet qui représente le menu ou sous-menu.|
-|*nIndicateurs*|[in] Le menu qui a été détruit. Actuellement, il peut uniquement être le menu Fenêtre, MF_SYSMENU.|
+|*nFlags*|[in] Le menu qui a été détruit. Actuellement, il peut uniquement être le menu Fenêtre, MF_SYSMENU.|
 
 ### <a name="remarks"></a>Notes
 
@@ -10006,7 +10006,7 @@ afx_msg void OnUpdateUIState(
 
 ### <a name="parameters"></a>Paramètres
 
-*%4%nsortie de l’action*<br/>
+*nAction*<br/>
 Spécifie l’action à effectuer. Peut avoir l'une des valeurs suivantes :
 
 - Élément d’état de l’interface utilisateur de UIS_CLEAR (spécifié par *nUIElement*) doit être masqué.
@@ -10310,8 +10310,8 @@ afx_msg void OnXButtonDblClk(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*nIndicateurs*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification sont enfoncées. Par exemple, l’indicateur MK_CONTROL indique que la touche CTRL est enfoncée.|
-|*Nbouton*|[in] Une valeur de bouton XBUTTON1 si un double-clic est effectué sur le premier bouton Microsoft Intellimouse X ou XBUTTON2 si le second bouton X est le double-clic.|
+|*nFlags*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification sont enfoncées. Par exemple, l’indicateur MK_CONTROL indique que la touche CTRL est enfoncée.|
+|*nButton*|[in] Une valeur de bouton XBUTTON1 si un double-clic est effectué sur le premier bouton Microsoft Intellimouse X ou XBUTTON2 si le second bouton X est le double-clic.|
 |*point*|[in] Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui spécifie le *x* et *y* coordonnées du curseur par rapport à l’angle supérieur gauche de la zone cliente.|
 
 ### <a name="remarks"></a>Notes
@@ -10348,8 +10348,8 @@ afx_msg void OnXButtonDown(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*nIndicateurs*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification sont enfoncées. Par exemple, l’indicateur MK_CONTROL indique que la touche CTRL est enfoncée.|
-|*Nbouton*|[in] Une valeur de bouton XBUTTON1 si l’utilisateur a cliqué sur le premier bouton Microsoft Intellimouse X ou XBUTTON2 si le second bouton X.|
+|*nFlags*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification sont enfoncées. Par exemple, l’indicateur MK_CONTROL indique que la touche CTRL est enfoncée.|
+|*nButton*|[in] Une valeur de bouton XBUTTON1 si l’utilisateur a cliqué sur le premier bouton Microsoft Intellimouse X ou XBUTTON2 si le second bouton X.|
 |*point*|[in] Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui spécifie le *x* et *y* coordonnées du curseur par rapport à l’angle supérieur gauche de la zone cliente.|
 
 ### <a name="remarks"></a>Notes
@@ -10386,8 +10386,8 @@ afx_msg void OnXButtonUp(
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*nIndicateurs*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification sont enfoncées. Par exemple, l’indicateur MK_CONTROL indique que la touche CTRL est enfoncée.|
-|*Nbouton*|[in] Une valeur de bouton XBUTTON1 si le premier bouton Microsoft Intellimouse X l’utilisateur a double-cliqué ou XBUTTON2 si le second bouton X l’utilisateur a double-cliqué.|
+|*nFlags*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui indiquent les touches de modification sont enfoncées. Par exemple, l’indicateur MK_CONTROL indique que la touche CTRL est enfoncée.|
+|*nButton*|[in] Une valeur de bouton XBUTTON1 si le premier bouton Microsoft Intellimouse X l’utilisateur a double-cliqué ou XBUTTON2 si le second bouton X l’utilisateur a double-cliqué.|
 |*point*|[in] Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui spécifie le *x* et *y* coordonnées du curseur par rapport à l’angle supérieur gauche de la zone cliente.|
 
 ### <a name="remarks"></a>Notes
@@ -10439,7 +10439,7 @@ Utilisez cet opérateur pour obtenir le handle pour le `CWnd` objet.
 operator HWND() const;
 ```
 
-##  <a name="operator_neq"></a>  CWnd::operator ! =
+##  <a name="operator_neq"></a>  CWnd::operator !=
 
 Compare deux `CWnd` objets pour déterminer si elles n’ont pas le même [m_hWnd](#m_hwnd).
 
@@ -10694,7 +10694,7 @@ BOOL PrintWindow(
 *pDC*<br/>
 Pointeur vers le contexte de périphérique d’impression à.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie les options de dessins. Pour obtenir la liste des valeurs possibles, consultez [PrintWindow](/windows/desktop/api/winuser/nf-winuser-printwindow).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -11005,7 +11005,7 @@ int ScrollWindowEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 Spécifie la quantité, en unités de périphérique, de défilement horizontal. Ce paramètre doit avoir une valeur négative pour faire défiler vers la gauche.
 
 *dy*<br/>
@@ -11044,7 +11044,7 @@ Si [SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) et [S
 
 Si la fenêtre a le [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa) style, les zones retournés spécifiées par *prgnUpdate* et *lpRectUpdate* représentent la zone totale de la fenêtre défilée doit mettre à jour, y compris toutes les zones dans les fenêtres enfants nécessitant la mise à jour.
 
-Si le [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) indicateur est spécifié, Windows ne sera pas correctement mise à jour l’écran si le défile de la partie d’une fenêtre enfant. La partie de la fenêtre enfant défilé qui se trouve en dehors du rectangle source n’est pas effacée et ne sera pas redessinée correctement dans sa nouvelle destination. Utilisez le [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) fonction Windows aux fenêtres enfants de déplacement qui ne se trouvent pas complètement dans le *lpRectScroll* rectangle. Le curseur est repositionné si l’indicateur SW_SCROLLCHILDREN est défini et que le rectangle de signe insertion entre en intersection avec le rectangle de défilement.
+Si le [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) indicateur est spécifié, Windows ne sera pas correctement mise à jour l’écran si le défile de la partie d’une fenêtre enfant. La partie de la fenêtre enfant défilé qui se trouve en dehors du rectangle source n’est pas effacée et ne sera pas redessinée correctement dans sa nouvelle destination. Utilisez le [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) fonction Windows aux fenêtres enfants de déplacement qui ne se trouvent pas complètement dans le *lpRectScroll* rectangle. Le curseur est repositionné si l’indicateur SW_SCROLLCHILDREN est défini et que le rectangle de signe insertion entre en intersection avec le rectangle de défilement.
 
 Toutes les coordonnées d’entrée et de sortie (pour *lpRectScroll*, *lpRectClip*, *lpRectUpdate*, et *prgnUpdate*) sont supposés pour être dans coordonnées clientes, la fenêtre qu’ait ou non le style de classe CS_OWNDC ou CS_CLASSDC. Utilisez le [LPtoDP](/windows/desktop/api/wingdi/nf-wingdi-lptodp) et [DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp) des fonctions de Windows pour convertir vers et depuis les coordonnées logiques, si nécessaire.
 
@@ -11247,7 +11247,7 @@ Pointeur vers l’objet de fenêtre qui a précédemment reçu toutes les entré
 
 ### <a name="remarks"></a>Notes
 
-Lorsque `CWnd` ne requiert plus toutes les entrées de la souris, l’application doit appeler la [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) fonction afin que les autres fenêtres peuvent recevoir l’entrée de la souris.
+Lorsque `CWnd` ne requiert plus toutes les entrées de la souris, l’application doit appeler la [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) fonction afin que les autres fenêtres peuvent recevoir l’entrée de la souris.
 
 Tandis que l’entrée de la souris est capturée, aucun message WM_NCHITTEST ou WM_SETCURSOR n’est envoyés à la fenêtre active.
 
@@ -11331,7 +11331,7 @@ void SetDlgItemInt(
 *nID*<br/>
 Spécifie l’ID entier du contrôle à modifier.
 
-*%n%nValeur*<br/>
+*nValue*<br/>
 Spécifie la valeur entière utilisée pour générer le texte de l’élément.
 
 *bSigned*<br/>
@@ -11852,13 +11852,13 @@ Spécifie la nouvelle position du côté gauche de la fenêtre.
 *y*<br/>
 Spécifie la nouvelle position du haut de la fenêtre.
 
-*CX*<br/>
+*cx*<br/>
 Spécifie la nouvelle largeur de la fenêtre.
 
-*CY*<br/>
+*cy*<br/>
 Spécifie la nouvelle hauteur de la fenêtre.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le dimensionnement et options de positionnement. Ce paramètre peut être une combinaison des indicateurs suivants :
 
 - SWP_DRAWFRAME Dessine un frame (défini lors de la création de la fenêtre) autour de la fenêtre.

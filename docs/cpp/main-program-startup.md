@@ -1,5 +1,5 @@
 ---
-title: 'main : démarrage du programme'
+title: 'principal : Démarrage du programme'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.main.startup
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - startup code, main function
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
-ms.openlocfilehash: 76c580d4b48e1651803ae9bf62f0e2346e19e06c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 358ae8ec88281bab741393b1196ee2a1e615e896
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603279"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894300"
 ---
-# <a name="main-program-startup"></a>main : démarrage du programme
+# <a name="main-program-startup"></a>principal : Démarrage du programme
 
 Une fonction spéciale nommée **principal** est le point de départ de l’exécution de tous les programmes C et C++. Si vous êtes écrire du code qui suit le modèle de programmation Unicode, vous pouvez utiliser `wmain`, qui est la version à caractères larges de **principal**.
 
@@ -51,7 +51,7 @@ ou, éventuellement,
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 ```
 
-Vous pouvez également utiliser `_tmain`, qui est définie dans TCHAR.h. `_tmain` correspond à **principal** , sauf si _UNICODE est défini. Dans ce cas, `_tmain` est résolu à `wmain`.
+Vous pouvez également utiliser `_tmain`, qui est définie dans tchar.h. `_tmain` correspond à **principal** , sauf si _UNICODE est défini. Dans ce cas, `_tmain` est résolu à `wmain`.
 
 Vous pouvez également le **principal** et `wmain` fonctions peuvent être déclarées comme retournant **void** (aucune valeur de retour). Si vous déclarez **principal** ou `wmain` comme retournant **void**, vous ne peut pas retourner un code de sortie pour le processus parent ou le système d’exploitation en utilisant un [retourner](../cpp/return-statement-in-program-termination-cpp.md) instruction. Pour retourner un code de sortie lorsque **principal** ou `wmain` est déclaré comme **void**, vous devez utiliser le [quitter](../cpp/exit-function.md) (fonction).
 

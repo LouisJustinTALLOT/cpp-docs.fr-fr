@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564456"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893650"
 ---
 # <a name="chttpfile-class"></a>CHttpFile, classe
 
@@ -83,7 +83,7 @@ Pour en savoir plus sur la façon `CHttpFile` fonctionne avec les autres classes
 
 `CHttpFile`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxinet.h
 
@@ -293,7 +293,7 @@ Une combinaison de l’attribut à la requête et les indicateurs suivants qui s
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS en règle générale, l’application interroge les en-têtes de réponse, mais une application peut également interroger les en-têtes de demande à l’aide de cet indicateur.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME pour ces en-têtes dont la valeur est une chaîne de date/heure, tels que « Last-Modified-Time, » cet indicateur retourne la valeur d’en-tête en tant que Win32 standard [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure qui ne nécessite pas l’application analyser les données. Si vous utilisez cet indicateur, il pouvez que vous souhaitez utiliser le `SYSTEMTIME` la substitution de la fonction.
+- HTTP_QUERY_FLAG_SYSTEMTIME pour ces en-têtes dont la valeur est une chaîne de date/heure, tels que « Last-Modified-Time, » cet indicateur retourne la valeur d’en-tête en tant que Win32 standard [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure qui ne nécessite pas l’application analyser les données. Si vous utilisez cet indicateur, il pouvez que vous souhaitez utiliser le `SYSTEMTIME` la substitution de la fonction.
 
 - HTTP_QUERY_FLAG_NUMBER pour ces en-têtes dont la valeur est un nombre, tels que le code d’état, cet indicateur retourne les données sous forme de nombre 32 bits.
 
@@ -315,7 +315,7 @@ Une référence à la [CString](../../atl-mfc-shared/reference/cstringt-class.md
 Une valeur d’index. Consultez *lpdwIndex*.
 
 *pSysTime*<br/>
-Un pointeur vers un Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure.
+Un pointeur vers un Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure.
 
 ### <a name="return-value"></a>Valeur de retour
 

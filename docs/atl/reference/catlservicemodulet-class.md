@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: b577ee002e34fa051b6e1dd5ffca71f935d93433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad682980fbc885d79598b41a5dcc094bb65db8cf
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619139"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893533"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT, classe
 
@@ -127,7 +127,7 @@ Cette classe remplace obsolète [CComModule (classe)](../../atl/reference/ccommo
 
 `CAtlServiceModuleT`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Paramètres
 
 *nShowCmd*<br/>
-Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) section. La valeur par défaut est SW_HIDE.
+Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) section. La valeur par défaut est SW_HIDE.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Paramètres
 
 *nShowCmd*<br/>
-Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) section.
+Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) section.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Paramètres
 
 *nShowCmd*<br/>
-Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) section.
+Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) section.
 
 ### <a name="return-value"></a>Valeur de retour
 

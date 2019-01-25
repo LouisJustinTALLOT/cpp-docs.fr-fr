@@ -1,5 +1,5 @@
 ---
-title: 'TN001 : inscription de classe Windows'
+title: 'TN001 : Inscription de classe de fenêtre'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.registration
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693856"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894261"
 ---
-# <a name="tn001-window-class-registration"></a>TN001 : inscription de classe Windows
+# <a name="tn001-window-class-registration"></a>TN001 : Inscription de classe de fenêtre
 
 Cette note décrit les routines MFC qui s’inscrivent spéciale [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es requis par Microsoft Windows. Spécifique `WNDCLASS` attributs utilisés par MFC et Windows sont décrits.
 
@@ -31,7 +31,7 @@ Cela `WNDCLASS` doivent être inscrits via un des quatre moyens :
 
 - Explicitement en appelant la bibliothèque MFC [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) ou [AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-- Explicitement en appelant la routine Windows [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586).
+- Explicitement en appelant la routine Windows [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa).
 
 ## <a name="wndclass-fields"></a>Champs WNDCLASS
 
@@ -40,7 +40,7 @@ Le `WNDCLASS` structure se compose des différents champs qui décrivent une cla
 |Champ|Description|
 |-----------|-----------------|
 |*lpfnWndProc*|procédure de fenêtre doit être un `AfxWndProc`|
-|*membres cbClsExtra*|ne pas utilisé (doit être le zéro)|
+|*cbClsExtra*|ne pas utilisé (doit être le zéro)|
 |*cbWndExtra*|ne pas utilisé (doit être le zéro)|
 |*hInstance*|automatiquement renseignée avec [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|
 |*hIcon*|icône de fenêtres frame, voir ci-dessous|
@@ -59,9 +59,9 @@ Deux icônes prennent en charge les applications MDI avec des types de document 
 
 `CFrameWnd::LoadFrame` enregistre un `WNDCLASS` à l’aide de l’ID d’icône que vous spécifiez en tant que premier paramètre et les attributs standards suivants :
 
-- style de classe : CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW ;
+- style de classe : CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
 
-- icône AFX_IDI_STD_FRAME
+- icon AFX_IDI_STD_FRAME
 
 - curseur en flèche
 

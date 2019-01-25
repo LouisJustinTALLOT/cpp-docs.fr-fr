@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d7e98ae38d91fbc0c1d428e94c6fa29fd8651e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626783"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894209"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -121,7 +121,7 @@ Il est préférable d’utiliser **_beginthreadex** à **_beginthread**. Si le t
 
 Vous pouvez appeler [_endthread](endthread-endthreadex.md) ou **_endthreadex** explicitement pour terminer un thread ; Toutefois, **_endthread** ou **_endthreadex** est appelée Lorsque le thread retourne automatiquement à partir de la routine qui est passée en tant que paramètre. Arrêt d’un thread avec un appel à **_endthread** ou **_endthreadex** permet de garantir une récupération correcte des ressources allouées pour le thread.
 
-**_endthread** ferme automatiquement le handle du thread, tandis que **_endthreadex** pas. Par conséquent, lorsque vous utilisez **_beginthread** et **_endthread**, ne fermez pas explicitement le handle du thread en appelant Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Ce comportement diffère de l’API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) Win32.
+**_endthread** ferme automatiquement le handle du thread, tandis que **_endthreadex** pas. Par conséquent, lorsque vous utilisez **_beginthread** et **_endthread**, ne fermez pas explicitement le handle du thread en appelant Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API. Ce comportement diffère de l’API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) Win32.
 
 > [!NOTE]
 > Pour un fichier exécutable lié à Libcmt.lib, n’appelez pas Win32 **ExitThread** API afin que vous n’empêchent pas le système d’exécution ne peut pas récupérer de ressources affectées. **_endthread** et **_endthreadex** récupèrent les ressources de thread allouées, puis appellent **ExitThread**.
@@ -134,7 +134,7 @@ Les paramètres régionaux du nouveau thread sont initialisé en utilisant les i
 
 Pour **/CLR** code, **_beginthread** et **_beginthreadex** ont chacun deux surcharges. Une prend un pointeur de fonction de convention d’appel native, et l’autre prend un **__clrcall** pointeur de fonction. La première surcharge n'est pas sécurisée au niveau du domaine d'application et ne le sera jamais. Si vous écrivez **/CLR** code, vous devez vous assurer que le nouveau thread accède le domaine d’application correct avant d’accéder à des ressources managées. Pour cela, vous pouvez par exemple utiliser la [fonction call_in_appdomain](../../dotnet/call-in-appdomain-function.md). La deuxième surcharge est application domaine-safe. le nouveau thread finit toujours dans le domaine d’application de l’appelant de **_beginthread** ou **_beginthreadex**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
