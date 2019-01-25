@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694580"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894430"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase, classe
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE CComControlBase
 |Nom|Description|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Constructeur.|
-|[CComControlBase :: ~ CComControlBase](#dtor)|Destructeur.|
+|[CComControlBase::~CComControlBase](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -124,7 +124,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Vérifie que le *iVerb* paramètre utilisé par `IOleObjectImpl::DoVerb` provoque l’interface du contrôle utilisateur à activer et retourne la valeur TRUE.|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|Affiche les pages de propriétés du contrôle.|
 |[CComControlBase::FireViewChange](#fireviewchange)|Appelez cette méthode pour indiquer au conteneur doit redessiner le contrôle, ou informer les récepteurs de notifications enregistrés l’affichage du contrôle a changé.|
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Récupère les DISPID_AMBIENT_APPEARANCE, l’apparence actuelle définition du contrôle : 0 pour plat et 1 pour 3D.|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Récupère le DISPID_AMBIENT_APPEARANCE, l’apparence actuelle définition du contrôle : 0 pour plat et 1 pour 3D.|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Récupère les DISPID_AMBIENT_AUTOCLIP, un indicateur qui spécifie si le conteneur prend en charge le découpage automatique de la zone d’affichage de contrôle.|
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Récupère les DISPID_AMBIENT_BACKCOLOR, la couleur d’arrière-plan ambiante pour tous les contrôles, définis par le conteneur.|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Récupère les DISPID_AMBIENT_CHARSET, ambiante jeu de caractères pour tous les contrôles, définis par le conteneur.|
@@ -143,7 +143,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|Récupère les DISPID_AMBIENT_SHOWGRABHANDLES, un indicateur qui spécifie si le conteneur autorise le contrôle afficher les poignées de manipulation pour lui-même lorsqu’il est actif.|
 |[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|Récupère les DISPID_AMBIENT_SHOWHATCHING, un indicateur qui spécifie si le conteneur autorise le contrôle lui-même affiche un motif hachuré lors de l’interface utilisateur est active.|
 |[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|Récupère les DISPID_AMBIENT_SUPPORTSMNEMONICS, un indicateur qui spécifie si le conteneur prend en charge les mnémoniques clavier.|
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Récupère les DISPID_AMBIENT_TEXTALIGN, l’alignement de texte préféré par le conteneur : 0 pour l’alignement général (texte de droite, de chiffres à gauche), 1 pour l’alignement à gauche, 2 pour l’alignement au centre et 3 pour l’alignement à droite.|
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Récupère le DISPID_AMBIENT_TEXTALIGN, l’alignement de texte préféré par le conteneur : 0 pour l’alignement général (texte de droite, de chiffres à gauche), 1 pour l’alignement à gauche, 2 pour l’alignement au centre et 3 pour l’alignement à droite.|
 |[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|Récupère les DISPID_AMBIENT_TOPTOBOTTOM, la direction dans laquelle le contenu est affiché par le conteneur.|
 |[CComControlBase::GetAmbientUIDead](#getambientuidead)|Récupère les DISPID_AMBIENT_UIDEAD, un indicateur qui spécifie si le conteneur puisse exiger le contrôle de répondre aux actions de l’interface utilisateur.|
 |[CComControlBase::GetAmbientUserMode](#getambientusermode)|Récupère les DISPID_AMBIENT_USERMODE, un indicateur indiquant si le conteneur est en mode exécution (TRUE) ou en mode design (FALSE).|
@@ -202,7 +202,7 @@ Cette classe fournit des méthodes pour créer et gérer des contrôles ATL. [CC
 
 Pour plus d’informations sur la création d’un contrôle, consultez le [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md). Pour plus d’informations sur l’Assistant Projet ATL, consultez l’article [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl.h
 
@@ -235,7 +235,7 @@ Le handle vers la fenêtre associé au contrôle.
 
 Initialise la taille de contrôle aux unités HIMETRIC de 5080 X 5080 (2 « X 2 ») et initialise le `CComControlBase` des valeurs de membres de données à NULL ou à FALSE.
 
-##  <a name="dtor"></a>  CComControlBase :: ~ CComControlBase
+##  <a name="dtor"></a>  CComControlBase::~CComControlBase
 
 Destructeur.
 
@@ -258,10 +258,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 Le GUID de l’interface demandée.
 
-*PPV*<br/>
+*ppv*<br/>
 Un pointeur vers le pointeur d’interface identifié par *iid*, ou NULL si l’interface est introuvable.
 
 ### <a name="remarks"></a>Notes
@@ -358,7 +358,7 @@ Si le contrôle est actif (le membre de données de classe de contrôle [CComCon
 
 ##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance
 
-Récupère les DISPID_AMBIENT_APPEARANCE, l’apparence actuelle définition du contrôle : 0 pour plat et 1 pour 3D.
+Récupère le DISPID_AMBIENT_APPEARANCE, l’apparence actuelle définition du contrôle : 0 pour plat et 1 pour 3D.
 
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>Paramètres
 
 *ppFont*<br/>
-Un pointeur vers le conteneur d’ambiant [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) interface de dispatch.
+Un pointeur vers le conteneur d’ambiant [IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp) interface de dispatch.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -531,7 +531,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur de premier plan*<br/>
+*ForeColor*<br/>
 La propriété DISPID_AMBIENT_FORECOLOR.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -603,7 +603,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificateur de la propriété de conteneur à récupérer.
 
 *var*<br/>
@@ -704,7 +704,7 @@ Une des valeurs HRESULT standards.
 
 ##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign
 
-Récupère les DISPID_AMBIENT_TEXTALIGN, l’alignement de texte préféré par le conteneur : 0 pour l’alignement général (texte de droite, de chiffres à gauche), 1 pour l’alignement à gauche, 2 pour l’alignement au centre et 3 pour l’alignement à droite.
+Récupère le DISPID_AMBIENT_TEXTALIGN, l’alignement de texte préféré par le conteneur : 0 pour l’alignement général (texte de droite, de chiffres à gauche), 1 pour l’alignement à gauche, 2 pour l’alignement au centre et 3 pour l’alignement à droite.
 
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -800,7 +800,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Paramètres
 
-*injection de dépendances*<br/>
+*di*<br/>
 La structure qui contiendra le facteur de zoom numérateur et dénominateur. Pour plus d’informations, consultez [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).
 
 ### <a name="remarks"></a>Notes
@@ -1217,7 +1217,7 @@ Le `m_spInPlaceSite` pointeur est valide uniquement si le [m_bNegotiatedWnd](#m_
 
 Le tableau suivant indique comment la `m_spInPlaceSite` type pointeur varie selon le [m_bWndLess](#m_bwndless) et [m_bInPlaceSiteEx](#m_binplacesiteex) indicateurs de membres de données :
 
-|m_spInPlaceSite Type|m_bWndLess valeur|m_bInPlaceSiteEx valeur|
+|m_spInPlaceSite Type|m_bWndLess valeur|m_bInPlaceSiteEx Value|
 |---------------------------|-----------------------|-----------------------------|
 |`IOleInPlaceSiteWindowless`|true|TRUE ou FALSE|
 |`IOleInPlaceSiteEx`|false|true|
@@ -1249,7 +1249,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Paramètres
 
-*injection de dépendances*<br/>
+*di*<br/>
 Une référence à la [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) structure qui contient des informations de dessin de l’aspect de dessin, les limites du contrôle, et indique si le dessin est optimisé ou non.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1276,7 +1276,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Paramètres
 
-*injection de dépendances*<br/>
+*di*<br/>
 Une référence à la [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) structure qui contient des informations de dessin de l’aspect de dessin, les limites du contrôle, et indique si le dessin est optimisé ou non.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1302,7 +1302,7 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Paramètres
 
-*nMsg indique*<br/>
+*nMsg*<br/>
 Réservé.
 
 *wParam*<br/>
@@ -1331,7 +1331,7 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Paramètres
 
-*nMsg indique*<br/>
+*nMsg*<br/>
 Réservé.
 
 *wParam*<br/>
@@ -1360,7 +1360,7 @@ LRESULT OnPaint(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Paramètres
 
-*nMsg indique*<br/>
+*nMsg*<br/>
 Réservé.
 
 *wParam*<br/>
@@ -1393,7 +1393,7 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Paramètres
 
-*nMsg indique*<br/>
+*nMsg*<br/>
 Réservé.
 
 *wParam*<br/>
@@ -1460,7 +1460,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*ADVF*<br/>
+*advf*<br/>
 Informez les indicateurs qui spécifient comment l’appel à [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) est effectuée. Les valeurs vont de la [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) énumération.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1477,7 +1477,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>Paramètres
 
-*PMK*<br/>
+*pmk*<br/>
 Pointeur vers le nouveau moniker du contrôle.
 
 ### <a name="return-value"></a>Valeur de retour

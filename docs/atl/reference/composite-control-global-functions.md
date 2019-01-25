@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26d8d004c933e48833047f85727ae6282c4b43d7
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694177"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893858"
 ---
 # <a name="composite-control-global-functions"></a>Fonctions globales de contrôle composite
 
@@ -35,7 +35,7 @@ Ces fonctions prennent en charge pour la création de boîtes de dialogue et de 
 |||
 |-|-|
 |[AtlAxDialogBox](#atlaxdialogbox)|Crée une boîte de dialogue modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur. La boîte de dialogue qui en résulte peut contenir des contrôles ActiveX.|
-|[API AtlAxCreateDialog](#atlaxcreatedialog)|Crée une boîte de dialogue non modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur. La boîte de dialogue qui en résulte peut contenir des contrôles ActiveX.|
+|[AtlAxCreateDialog](#atlaxcreatedialog)|Crée une boîte de dialogue non modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur. La boîte de dialogue qui en résulte peut contenir des contrôles ActiveX.|
 |[AtlAxCreateControl](#atlaxcreatecontrol)|Crée un contrôle ActiveX, puis initialise et héberge ce dernier dans la fenêtre spécifiée.|
 |[AtlAxCreateControlEx](#atlaxcreatecontrolex)|Crée un contrôle ActiveX, il initialise, héberge ce dernier dans la fenêtre spécifiée et récupère un pointeur d’interface (ou pointeurs) à partir du contrôle.|
 |[AtlAxCreateControlLic](#atlaxcreatecontrollic)|Crée un contrôle ActiveX sous licence, puis initialise et héberge ce dernier dans la fenêtre spécifiée.|
@@ -48,7 +48,7 @@ Ces fonctions prennent en charge pour la création de boîtes de dialogue et de 
 |[AtlAxWinTerm](#atlaxwinterm)|N’initialise pas le code d’hébergement pour les objets de AxWin.|
 |[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Retourne des informations sur l’interface source par défaut d’un objet.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlhost.h
 
@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifie la fenêtre propriétaire de la boîte de dialogue.
 
 *lpDialogProc*<br/>
-[in] Pointe vers la procédure de boîte de dialogue. Pour plus d’informations sur la procédure de boîte de dialogue, consultez [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Pointe vers la procédure de boîte de dialogue. Pour plus d’informations sur la procédure de boîte de dialogue, consultez [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.
@@ -95,11 +95,11 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Pour plus d’informations sur la modification des scripts de ressources, consultez [Comment : ouvrir un fichier de Script de ressources au Format texte](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Pour plus d’informations sur les instructions de définition de ressource de contrôle, consultez [les paramètres de contrôle communs](/windows/desktop/menurc/common-control-parameters) sous Windows SDK : SDK Tools.
+Pour plus d’informations sur la modification des scripts de ressources, consultez [Comment : Ouvrir un fichier de Script de ressources au Format texte](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Pour plus d’informations sur les instructions de définition de ressource de contrôle, consultez [les paramètres de contrôle communs](/windows/desktop/menurc/common-control-parameters) sous Windows SDK : SDK Tools.
 
 Pour plus d’informations sur les boîtes de dialogue en général, consultez [boîte de dialogue](/windows/desktop/api/winuser/nf-winuser-dialogboxa) et [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) dans le SDK Windows.
 
-##  <a name="atlaxcreatedialog"></a>  API AtlAxCreateDialog
+##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog
 
 Crée une boîte de dialogue non modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur.
 
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifie la fenêtre propriétaire de la boîte de dialogue.
 
 *lpDialogProc*<br/>
-[in] Pointe vers la procédure de boîte de dialogue. Pour plus d’informations sur la procédure de boîte de dialogue, consultez [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Pointe vers la procédure de boîte de dialogue. Pour plus d’informations sur la procédure de boîte de dialogue, consultez [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Spécifie la valeur à passer à la boîte de dialogue dans le *lParam* paramètre du message WM_INITDIALOG.
@@ -153,12 +153,12 @@ ATLAPI AtlAxCreateControl(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dans une des manières suivantes :
 
 - Un ProgID tels que « MSCAL. Calendar.7 »
 
-- Un CLSID tels que « {8E27C92B-1264-101C-8A2F-040224009C02} »
+- A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
 - Une URL comme «<http://www.microsoft.com>»
 
@@ -205,12 +205,12 @@ ATLAPI AtlAxCreateControlEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dans une des manières suivantes :
 
 - Un ProgID tels que « MSCAL. Calendar.7 »
 
-- Un CLSID tels que « {8E27C92B-1264-101C-8A2F-040224009C02} »
+- A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
 - Une URL comme «<http://www.microsoft.com>»
 
@@ -264,12 +264,12 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dans une des manières suivantes :
 
 - Un ProgID tels que « MSCAL. Calendar.7 »
 
-- Un CLSID tels que « {8E27C92B-1264-101C-8A2F-040224009C02} »
+- A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
 - Une URL comme «<http://www.microsoft.com>»
 
@@ -318,12 +318,12 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers une chaîne à passer au contrôle. Doit être mis en forme dans une des manières suivantes :
 
 - Un ProgID tels que « MSCAL. Calendar.7 »
 
-- Un CLSID tels que « {8E27C92B-1264-101C-8A2F-040224009C02} »
+- A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
 - Une URL comme «<http://www.microsoft.com>»
 
@@ -413,7 +413,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Handle vers la fenêtre qui héberge le contrôle.
 
-*PP*<br/>
+*pp*<br/>
 [out] Le `IUnknown` du conteneur du contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -433,7 +433,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Handle vers la fenêtre qui héberge le contrôle.
 
-*PP*<br/>
+*pp*<br/>
 [out] Le `IUnknown` du contrôle hébergé.
 
 ### <a name="return-value"></a>Valeur de retour

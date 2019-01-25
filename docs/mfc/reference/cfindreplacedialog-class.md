@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: e891a6694f0a85715a7d76d196865e3238695753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571182"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894404"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog, classe
 
@@ -81,7 +81,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ## <a name="remarks"></a>Notes
 
-Contrairement à d’autres Windows courantes boîtes de dialogue, `CFindReplaceDialog` objets sont non modales, ce qui permet aux utilisateurs d’interagir avec d’autres fenêtres pendant qu’ils se trouvent sur l’écran. Il existe deux types de `CFindReplaceDialog` objets : rechercher des boîtes de dialogue et les boîtes de dialogue Rechercher/Remplacer. Bien que les boîtes de dialogue Autoriser l’utilisateur à la recherche d’entrée et les chaînes de recherche/remplacement, elles n’effectuent pas un de la recherche ou du remplacement des fonctions. Vous devez les ajouter à l’application.
+Contrairement à d’autres Windows courantes boîtes de dialogue, `CFindReplaceDialog` objets sont non modales, ce qui permet aux utilisateurs d’interagir avec d’autres fenêtres pendant qu’ils se trouvent sur l’écran. Il existe deux types de `CFindReplaceDialog` objets : Trouvez des boîtes de dialogue et les boîtes de dialogue Rechercher/Remplacer. Bien que les boîtes de dialogue Autoriser l’utilisateur à la recherche d’entrée et les chaînes de recherche/remplacement, elles n’effectuent pas un de la recherche ou du remplacement des fonctions. Vous devez les ajouter à l’application.
 
 Pour construire un `CFindReplaceDialog` d’objet, utilisez le constructeur fourni (qui n’a aucun argument). Dans la mesure où il s’agit d’une boîte de dialogue non modale, allouer l’objet sur le tas en utilisant le **nouveau** opérateur, plutôt que sur la pile.
 
@@ -89,7 +89,7 @@ Une fois un `CFindReplaceDialog` objet a été construit, vous devez appeler la 
 
 Utilisez le [m_fr](#m_fr) structure pour initialiser la boîte de dialogue avant d’appeler `Create`. Le `m_fr` structure est de type [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Pour plus d’informations sur cette structure, consultez le Kit de développement Windows.
 
-Dans l’ordre de la fenêtre parente à être informé des demandes de recherche/remplacement, vous devez utiliser le Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) de fonction et utiliser le [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro de table des messages dans le cadre de votre fenêtre qui gère ce message enregistré.
+Dans l’ordre de la fenêtre parente à être informé des demandes de recherche/remplacement, vous devez utiliser le Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) de fonction et utiliser le [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro de table des messages dans le cadre de votre fenêtre qui gère ce message enregistré.
 
 Vous pouvez déterminer si l’utilisateur a décidé de mettre fin à la boîte de dialogue avec le `IsTerminating` fonction membre.
 
@@ -175,7 +175,7 @@ Différent de zéro si l’objet de boîte de dialogue a été créé avec succ�
 
 ### <a name="remarks"></a>Notes
 
-Dans l’ordre de la fenêtre parente à être informé des demandes de recherche/remplacement, vous devez utiliser le Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) dont la valeur renvoyée est un message unique à l’instance de l’application de fonction. Votre fenêtre frame doit avoir une entrée de mappage de message qui déclare la fonction de rappel ( `OnFindReplace` dans l’exemple qui suit) qui gère ce message enregistré. Le fragment de code suivant est un exemple de procédure à suivre pour une classe de fenêtre frame nommée `CMyRichEditView`:
+Dans l’ordre de la fenêtre parente à être informé des demandes de recherche/remplacement, vous devez utiliser le Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) dont la valeur renvoyée est un message unique à l’instance de l’application de fonction. Votre fenêtre frame doit avoir une entrée de mappage de message qui déclare la fonction de rappel ( `OnFindReplace` dans l’exemple qui suit) qui gère ce message enregistré. Le fragment de code suivant est un exemple de procédure à suivre pour une classe de fenêtre frame nommée `CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 

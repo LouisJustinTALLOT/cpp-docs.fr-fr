@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614376"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894014"
 ---
 # <a name="catlfilemappingbase-class"></a>Catlfilemappingbase, classe
 
@@ -43,7 +43,7 @@ class CAtlFileMappingBase
 |Nom|Description|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Constructeur.|
-|[CAtlFileMappingBase :: ~ CAtlFileMappingBase](#dtor)|Destructeur.|
+|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -70,7 +70,7 @@ Mappage de fichier est l’association du contenu d’un fichier avec une partie
 
 Pour plus d’informations, consultez [fichier mappage](/windows/desktop/Memory/file-mapping) dans le SDK Windows.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlfile.h
 
@@ -96,7 +96,7 @@ Crée un nouvel objet de mappage de fichier, éventuellement à l’aide d’un 
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlFileMappingBase :: ~ CAtlFileMappingBase
+##  <a name="dtor"></a>  CAtlFileMappingBase::~CAtlFileMappingBase
 
 Destructeur.
 
@@ -193,7 +193,7 @@ Le décalage de fichier dans lequel le mappage doit commencer. La valeur de déc
 La protection souhaitée pour l’affichage des fichiers quand le fichier est mappé. Consultez *flProtect* dans [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) dans le SDK Windows.
 
 *dwViewDesiredAccess*<br/>
-Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.
+Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -201,7 +201,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Une fois un objet de mappage de fichier a été créé, la taille du fichier ne doit pas dépasser la taille de l’objet de mappage de fichier ; le cas échéant, tous le contenu du fichier sera disponible pour le partage. Pour plus d’informations, consultez [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) et [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.
+Une fois un objet de mappage de fichier a été créé, la taille du fichier ne doit pas dépasser la taille de l’objet de mappage de fichier ; le cas échéant, tous le contenu du fichier sera disponible pour le partage. Pour plus d’informations, consultez [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) et [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -239,7 +239,7 @@ Le pointeur vers un `SECURITY_ATTRIBUTES` structure qui détermine si le handle 
 La protection souhaitée pour l’affichage des fichiers, quand le fichier est mappé. Consultez *flProtect* dans `CreateFileMapping` dans le SDK Windows.
 
 *dwViewDesiredAccess*<br/>
-Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.
+Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -273,7 +273,7 @@ La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichie
 Le décalage de fichier dans lequel le mappage doit commencer. La valeur de décalage doit être un multiple de granularité d’allocation de mémoire du système.
 
 *dwViewDesiredAccess*<br/>
-Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) dans le SDK Windows.
+Spécifie le type d’accès à l’affichage des fichiers et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -314,7 +314,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) dans le SDK Windows pour plus d’informations.
+Consultez [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) dans le SDK Windows pour plus d’informations.
 
 ## <a name="see-also"></a>Voir aussi
 

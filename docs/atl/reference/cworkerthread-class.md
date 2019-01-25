@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: 9469770dc0538b968cfaafa2de45f28bd864193c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecde92cbd9fb9e028e79c9a0ce75859ce85790a
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532000"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893455"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread, classe
 
@@ -54,7 +54,7 @@ La classe de fournir la fonction de création de thread, tel que [CRTThreadTrait
 |Nom|Description|
 |----------|-----------------|
 |[CWorkerThread::CWorkerThread](#cworkerthread)|Le constructeur pour le thread de travail.|
-|[CWorkerThread :: ~ CWorkerThread](#dtor)|Le destructeur pour le thread de travail.|
+|[CWorkerThread::~CWorkerThread](#dtor)|Le destructeur pour le thread de travail.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -88,7 +88,7 @@ La classe de fournir la fonction de création de thread, tel que [CRTThreadTrait
 
 1. Pour mettre fin au thread, appelez [CWorkerThread::Shutdown](#shutdown).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlutil.h
 
@@ -166,7 +166,7 @@ Constructeur.
 CWorkerThread() throw();
 ```
 
-##  <a name="dtor"></a>  CWorkerThread :: ~ CWorkerThread
+##  <a name="dtor"></a>  CWorkerThread::~CWorkerThread
 
 Destructeur.
 
@@ -248,7 +248,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque le handle est supprimé [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) est appelée sur l’objet associé a été passé à [AddHandle](#addhandle). Si cet appel échoue, `CWorkerThread` appellera le Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) fonction sur le handle.
+Lorsque le handle est supprimé [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) est appelée sur l’objet associé a été passé à [AddHandle](#addhandle). Si cet appel échoue, `CWorkerThread` appellera le Windows [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) fonction sur le handle.
 
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown
 
@@ -277,5 +277,5 @@ Notez que l’appel `Shutdown` sur un objet initialisé avec un pointeur vers un
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Classes](../../atl/reference/atl-classes.md)<br/>
-[Multithreading : création de threads de travail](../../parallel/multithreading-creating-worker-threads.md)<br/>
+[Multithreading : Création de Threads de travail](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [IWorkerThreadClient, interface](../../atl/reference/iworkerthreadclient-interface.md)

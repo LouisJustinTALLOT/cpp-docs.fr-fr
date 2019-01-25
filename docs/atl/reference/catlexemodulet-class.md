@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: cec3a0fce1147ca58f2ee2c51b9d728d81dddda4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d31dd9ed1d30633b8f7078794dad06d51ec119f2
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601407"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893433"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT, classe
 
@@ -52,7 +52,7 @@ Votre classe dérivée de `CAtlExeModuleT`.
 |Nom|Description|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Constructeur.|
-|[CAtlExeModuleT :: ~ CAtlExeModuleT](#dtor)|Destructeur.|
+|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -114,7 +114,7 @@ CAtlExeModuleT() throw();
 
 Si le module EXE n’a pas pu être initialisé, WinMain retournera immédiatement sans traitement supplémentaire.
 
-##  <a name="dtor"></a>  CAtlExeModuleT :: ~ CAtlExeModuleT
+##  <a name="dtor"></a>  CAtlExeModuleT::~CAtlExeModuleT
 
 Destructeur.
 
@@ -284,7 +284,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Paramètres
 
 *nShowCmd*<br/>
-Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) section. La valeur par défaut est SW_HIDE.
+Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) section. La valeur par défaut est SW_HIDE.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Paramètres
 
 *nShowCmd*<br/>
-Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) section.
+Spécifie la manière dont la fenêtre doit être indiqué. Ce paramètre peut prendre l’une des valeurs présentées dans le [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) section.
 
 ### <a name="return-value"></a>Valeur de retour
 

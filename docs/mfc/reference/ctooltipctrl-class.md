@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500410"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894144"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -156,7 +156,7 @@ Pour plus d’informations sur l’utilisation de `CToolTipCtrl`, consultez [con
 
 `CToolTipCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Paramètres
 
 *lpMsg*<br/>
-Pointeur vers un [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) structure qui contient le message à prendre le relais.
+Pointeur vers un [MSG](/windows/desktop/api/winuser/ns-winuser-msg) structure qui contient le message à prendre le relais.
 
 ### <a name="remarks"></a>Notes
 
@@ -763,7 +763,7 @@ int SetMaxTipWidth(int iWidth);
 
 ### <a name="parameters"></a>Paramètres
 
-*iLargeur Argument de type*<br/>
+*iWidth*<br/>
 Largeur de la fenêtre d’info-bulle outil maximale à définir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -784,7 +784,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CLR*<br/>
+*clr*<br/>
 La nouvelle couleur d’arrière-plan.
 
 ### <a name="remarks"></a>Notes
@@ -801,7 +801,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CLR*<br/>
+*clr*<br/>
 La nouvelle couleur de texte.
 
 ### <a name="remarks"></a>Notes

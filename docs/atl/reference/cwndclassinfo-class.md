@@ -1,5 +1,5 @@
 ---
-title: CWndClassInfo, classe
+title: CWndClassInfo Class
 ms.date: 11/04/2016
 f1_keywords:
 - CWndClassInfo
@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: 2ffe37059eb6ab81eb9dd67243ba125766b92dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f831980c803fcbce45e502321e39440b72382f95
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467298"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893741"
 ---
-# <a name="cwndclassinfo-class"></a>CWndClassInfo, classe
+# <a name="cwndclassinfo-class"></a>CWndClassInfo Class
 
 Cette classe fournit des méthodes pour l’inscription des informations pour une classe de fenêtre.
 
@@ -75,7 +75,7 @@ Pour plus d’informations sur les classes de fenêtre, consultez [Classes de fe
 
 Pour plus d’informations sur l’utilisation des fenêtres dans ATL, consultez l’article [Classes de fenêtre ATL](../../atl/atl-window-classes.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin.h
 
@@ -141,7 +141,7 @@ TCHAR m_szAutoName[13];
 
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc
 
-Conserve les informations de classe de fenêtre dans un [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577) structure.
+Conserve les informations de classe de fenêtre dans un [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa) structure.
 
 ```
 WNDCLASSEX m_wc;

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 0415fb98cec6b1d92f6a5a43ff705f1b5a7cd348
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4e93f167b9cb28a83c42220fa58b17d5c4845a75
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523817"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894287"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget (classe)
 
@@ -113,7 +113,7 @@ Tables dispatch, similaires aux mappages de message, sont utilisées pour expose
 
 `CCmdTarget`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -163,7 +163,7 @@ BOOL DoOleVerb(
 Identificateur numérique du verbe.
 
 *lpMsg*<br/>
-Pointeur vers le [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) structure décrivant l’événement (par exemple, un double-clic) qui a appelé le verbe.
+Pointeur vers le [MSG](/windows/desktop/api/winuser/ns-winuser-msg) structure décrivant l’événement (par exemple, un double-clic) qui a appelé le verbe.
 
 *hWndParent*<br/>
 Handle de la fenêtre de document contenant l'objet.
@@ -411,7 +411,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 Un ID de distribution.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -486,7 +486,7 @@ Si vous substituez `OnCmdMsg`, vous devez fournir la valeur appropriée pour *nC
 
 |*nCode* valeur|*pExtra* valeur|
 |-------------------|--------------------|
-|CAS|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
 |CN_EVENT|AFX_EVENT\*|
 |CN_UPDATE_COMMAND_UI|CCmdUI\*|
 |CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|

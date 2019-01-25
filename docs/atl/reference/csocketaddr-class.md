@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-ms.openlocfilehash: 9ab0367d5a83096c1bb6e9166ee2b43fe2000ab4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc0c5f0abc125138c5068682c828a3438dec5102
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570454"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893351"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr, classe
 
@@ -56,7 +56,7 @@ Les membres de cette classe qui sont utilisés pour rechercher des adresses rés
 
 Cette classe prend en charge les deux adresses de réseau IPv4 andIPv6.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsocket.h
 
@@ -204,7 +204,7 @@ addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-Une référence à un élément spécifique dans le [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) liste.
+Une référence à un élément spécifique dans le [addrinfo](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa) liste.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -220,7 +220,7 @@ addrinfo* const GetAddrInfoList() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers une liste liée d’une ou plusieurs `addrinfo` structures contenant des informations de réponse sur l’hôte. Pour plus d’informations, consultez [addrinfo structure](https://msdn.microsoft.com/library/windows/desktop/ms737530).
+Pointeur vers une liste liée d’une ou plusieurs `addrinfo` structures contenant des informations de réponse sur l’hôte. Pour plus d’informations, consultez [addrinfo structure](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa).
 
 ## <a name="see-also"></a>Voir aussi
 

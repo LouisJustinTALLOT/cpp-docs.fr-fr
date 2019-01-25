@@ -1,22 +1,22 @@
 ---
-title: 'Comment : gérer une instance de planificateur'
+title: 'Procédure : Gérer une Instance de planificateur'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: 8c19eb801c7761b85580526e1ff8bed89112cc5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437815"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893988"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>Comment : gérer une instance de planificateur
+# <a name="how-to-manage-a-scheduler-instance"></a>Procédure : Gérer une Instance de planificateur
 
 Instances de planificateur vous permettent d’associer des stratégies de planification spécifiques à différents types de charges de travail. Cette rubrique contient deux exemples simples qui montrent comment créer et gérer une instance du planificateur.
 
-Les exemples créent des planificateurs qui utilisent les stratégies de planificateur par défaut. Pour un exemple qui crée un planificateur qui utilise une stratégie personnalisée, consultez [Comment : spécifier des stratégies de planificateur spécifiques](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Les exemples créent des planificateurs qui utilisent les stratégies de planificateur par défaut. Pour un exemple qui crée un planificateur qui utilise une stratégie personnalisée, consultez [Comment : Spécifier des stratégies de planificateur](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Pour gérer une instance du planificateur dans votre application
 
@@ -38,7 +38,7 @@ Les exemples créent des planificateurs qui utilisent les stratégies de planifi
 
 1. Passez le handle vers l’événement à la [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) fonction pour attendre l’arrêt du planificateur.
 
-1. Appelez le [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) (fonction) pour fermer le handle vers l’objet d’événement.
+1. Appelez le [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) (fonction) pour fermer le handle vers l’objet d’événement.
 
 ## <a name="example"></a>Exemple
 
@@ -78,5 +78,5 @@ Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-l
 ## <a name="see-also"></a>Voir aussi
 
 [Instances de planificateur](../../parallel/concrt/scheduler-instances.md)<br/>
-[Guide pratique pour spécifier des stratégies de planificateur](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
+[Guide pratique pour spécifier des stratégies de Scheduler](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
 

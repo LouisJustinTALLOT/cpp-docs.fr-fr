@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: 5692e07e71683b1c24f86a43e989ee3df1fbe904
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570610"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893520"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -101,11 +101,11 @@ Si vous utilisez cet attribut dans un projet qui utilise ATL, le comportement de
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) est utilisé comme classe de base et comme point d’entrée d’exécutable standard [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) est utilisé comme classe de base et comme point d’entrée d’exécutable standard [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) est utilisé comme classe de base et comme point d’entrée d’exécutable standard [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) est utilisé comme classe de base et comme point d’entrée d’exécutable standard [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
 - `type` = **unspecified**
 
@@ -146,14 +146,14 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
 |**S'applique à**|N'importe où|
-|**Renouvelable**|Non|
+|**Renouvelable**|Aucune|
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
@@ -166,7 +166,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs autonomes](stand-alone-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[Bibliothèque](/windows/desktop/Midl/library)<br/>
+[library](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

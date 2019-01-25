@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178133"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894508"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 
@@ -67,7 +67,7 @@ Ce contrôle (et par conséquent la `CHotKeyCtrl` classe) est disponible uniquem
 
 Lorsque l’utilisateur a choisi une combinaison de touches, l’application peut récupérer la combinaison de touches spécifiée à partir du contrôle et le message de message WM_SETHOTKEY permet de configurer la touche d’accès rapide dans le système. Chaque fois que l’utilisateur appuie sur la touche d’accès rapide par la suite, à partir de n’importe quelle partie du système, la fenêtre spécifiée dans le message de message WM_SETHOTKEY reçoit un message WM_SYSCOMMAND spécifiant SC_HOTKEY. Ce message Active la fenêtre qui le reçoit. La touche d’accès rapide reste valide jusqu'à ce que l’application qui a appelé message WM_SETHOTKEY quitte.
 
-Ce mécanisme est différent de la prise en charge clé chaud varie selon le message WM_HOTKEY et le Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) et [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) fonctions.
+Ce mécanisme est différent de la prise en charge clé chaud varie selon le message WM_HOTKEY et le Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) et [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) fonctions.
 
 Pour plus d’informations sur l’utilisation de `CHotKeyCtrl`, consultez [contrôles](../../mfc/controls-mfc.md) et [à l’aide de CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 
@@ -110,7 +110,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle de clé à chaud. Appliquer n’importe quelle combinaison de styles de contrôle. Consultez [des Styles de contrôle courants](/windows/desktop/Controls/common-control-styles) dans le SDK Windows pour plus d’informations.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle de clé à chaud. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [structure RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *pParentWnd*<br/>
@@ -150,7 +150,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Spécifie le style du contrôle de clé à chaud. Appliquer n’importe quelle combinaison de styles de contrôle. Pour plus d’informations, consultez [des Styles de contrôle courants](/windows/desktop/Controls/common-control-styles) dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -232,7 +232,7 @@ static CString GetKeyName(
 
 ### <a name="parameters"></a>Paramètres
 
-*VK*<br/>
+*vk*<br/>
 Le code de touche virtuelle.
 
 *fExtended*<br/>

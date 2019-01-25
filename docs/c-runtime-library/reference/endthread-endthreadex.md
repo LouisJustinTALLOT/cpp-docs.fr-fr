@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 48a2ce90b6bc90d40f6071898e1e5182502e938f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597481"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893299"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -62,14 +62,14 @@ Vous pouvez appeler **_endthread** ou **_endthreadex** explicitement pour termin
 > [!NOTE]
 > Pour un fichier exécutable lié à Libcmt.lib, n’appelez pas l’API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) Win32, car elle empêche le système runtime de récupérer les ressources allouées. **_endthread** et **_endthreadex** récupèrent les ressources de thread allouées, puis appellent **ExitThread**.
 
-**_endthread** ferme automatiquement le handle du thread. (Ce comportement diffère de Win32 **ExitThread** API.) Par conséquent, lorsque vous utilisez **_beginthread** et **_endthread**, ne fermez pas explicitement le handle du thread en appelant Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
+**_endthread** ferme automatiquement le handle du thread. (Ce comportement diffère de Win32 **ExitThread** API.) Par conséquent, lorsque vous utilisez **_beginthread** et **_endthread**, ne fermez pas explicitement le handle du thread en appelant Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API.
 
 Comme Win32 **ExitThread** API, **_endthreadex** ne ferme pas le handle du thread. Par conséquent, lorsque vous utilisez **_beginthreadex** et **_endthreadex**, vous devez fermer le handle du thread en appelant Win32 **CloseHandle** API.
 
 > [!NOTE]
 > **_endthread** et **_endthreadex** provoquer des destructeurs C++ en attente dans le thread d’appel.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

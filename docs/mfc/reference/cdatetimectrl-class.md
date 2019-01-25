@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178523"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894339"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl (classe)
 
@@ -104,7 +104,7 @@ Le contrôle de sélecteur de date et d’heure utilise également des notificat
 
 `CDateTimeCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdtctl.h
 
@@ -157,7 +157,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie la combinaison de styles de contrôle de temps de date. Consultez [Styles de Date et heure sélecteur contrôle](/windows/desktop/Controls/date-and-time-picker-control-styles) dans le SDK Windows pour plus d’informations sur les styles de sélecteur de date et d’heure.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure, qui est la position et la taille du contrôle de sélecteur de date et d’heure.
 
 *pParentWnd*<br/>
@@ -353,7 +353,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 Dans la première version, une référence à un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objet qui recevra les informations d’heure système. Dans la deuxième version, une référence à un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet qui recevra les informations d’heure système.
 
 *pTimeDest*<br/>
-Un pointeur vers le [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure qui doit recevoir les informations d’heure système. Ne doit pas être NULL.
+Un pointeur vers le [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure qui doit recevoir les informations d’heure système. Ne doit pas être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -579,11 +579,11 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-*transfertnouvelle*<br/>
+*timeNew*<br/>
 Une référence à un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objet contenant l’à laquelle le contrôle est défini.
 
 *pTimeNew*<br/>
-Dans la deuxième version ci-dessus, un pointeur vers un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet contenant l’heure défini pour le contrôle. Dans la troisième version ci-dessus, un pointeur vers un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) structure contenant l’heure défini pour le contrôle.
+Dans la deuxième version ci-dessus, un pointeur vers un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objet contenant l’heure défini pour le contrôle. Dans la troisième version ci-dessus, un pointeur vers un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure contenant l’heure défini pour le contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
