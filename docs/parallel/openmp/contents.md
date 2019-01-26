@@ -2,12 +2,12 @@
 title: Sommaire
 ms.date: 11/04/2016
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-ms.openlocfilehash: 2cc9ff535939a3da623b99b769e520b739aabc8c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: ec387a0a4bd30905f27c11dfd66a511e1b0f1b71
+ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894378"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55064981"
 ---
 # <a name="contents"></a>Sommaire
 
@@ -16,46 +16,6 @@ ms.locfileid: "54894378"
 [2. Directives](../../parallel/openmp/2-directives.md)
 
 [3. Fonctions de la bibliothèque du run-time](../../parallel/openmp/3-run-time-library-functions.md)
-
-[3.1 Exécution des fonctions d’environnement](../../parallel/openmp/3-1-execution-environment-functions.md)
-
-[3.1.1 Fonction omp_set_num_threads](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)
-
-[3.1.2 Fonction omp_get_num_threads](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)
-
-[3.1.3 Fonction omp_get_max_threads](../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)
-
-[3.1.4 Fonction omp_get_thread_num](../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)
-
-[3.1.5 Fonction omp_get_num_procs](../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)
-
-[3.1.6 Fonction omp_in_parallel](../../parallel/openmp/3-1-6-omp-in-parallel-function.md)
-
-[3.1.7 Fonction omp_set_dynamic](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)
-
-[3.1.8 Fonction omp_get_dynamic](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md)
-
-[3.1.9 Fonction omp_set_nested](../../parallel/openmp/3-1-9-omp-set-nested-function.md)
-
-[3.1.10 Fonction omp_get_nested](../../parallel/openmp/3-1-10-omp-get-nested-function.md)
-
-[3.2 Fonctions de verrouillage](../../parallel/openmp/3-2-lock-functions.md)
-
-[3.2.1 Fonctions omp_init_lock et omp_init_nest_lock](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)
-
-[3.2.2 Fonctions omp_destroy_lock et omp_destroy_nest_lock](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)
-
-[3.2.3 Fonctions omp_set_lock et omp_set_nest_lock](../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)
-
-[3.2.4 Fonctions omp_unset_lock et omp_unset_nest_lock](../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)
-
-[3.2.5 Fonctions omp_test_lock et omp_test_nest_lock](../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)
-
-[3.3 Routines de minutage](../../parallel/openmp/3-3-timing-routines.md)
-
-[3.3.1 Fonction omp_get_wtime](../../parallel/openmp/3-3-1-omp-get-wtime-function.md)
-
-[3.3.2 Fonction omp_get_wtick](../../parallel/openmp/3-3-2-omp-get-wtick-function.md)
 
 [4. Variables d’environnement](../../parallel/openmp/4-environment-variables.md)
 
