@@ -2,12 +2,12 @@
 title: 4. Variables d’environnement
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 5d08031c252d1f3c45fc45c021d24476b393fe33
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 558b835c36253fb67339fba9b46cb0170dd6d1d0
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397327"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087195"
 ---
 # <a name="4-environment-variables"></a>4. Variables d’environnement
 
@@ -46,14 +46,14 @@ setenv OMP_SCHEDULE "dynamic"
 
 ### <a name="cross-references"></a>Références croisées
 
-- [pour](2-4-1-for-construct.md) (directive)
-- [parallèle pour](2-5-1-parallel-for-construct.md) (directive)
+- [pour](2-directives.md#241-for-construct) (directive)
+- [parallèle pour](2-directives.md#251-parallel-for-construct) (directive)
 
 ## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 
 Le `OMP_NUM_THREADS` variable d’environnement définit le nombre de threads à utiliser lors de l’exécution par défaut. `OMP_NUM_THREADS` est ignoré si ce nombre est modifié explicitement en appelant le `omp_set_num_threads` routine de bibliothèque. Il est également ignoré s’il existe une explicite `num_threads` clause sur une `parallel` directive.
 
-La valeur de la `OMP_NUM_THREADS` variable d’environnement doit être un entier positif. Son effet dépend de si l’ajustement dynamique du nombre de threads est activé. Pour un ensemble complet de règles sur l’interaction entre le `OMP_NUM_THREADS` environnement ajustement variable et dynamique de threads, consultez la Section 2.3.
+La valeur de la `OMP_NUM_THREADS` variable d’environnement doit être un entier positif. Son effet dépend de si l’ajustement dynamique du nombre de threads est activé. Pour un ensemble complet de règles sur l’interaction entre le `OMP_NUM_THREADS` environnement ajustement variable et dynamique de threads, consultez [section 2.3](2-directives.md#23-parallel-construct).
 
 Le nombre de threads à utiliser est défini par l’implémentation si :
 
@@ -69,9 +69,9 @@ setenv OMP_NUM_THREADS 16
 
 ### <a name="cross-references"></a>Références croisées
 
-- [num_threads](2-3-parallel-construct.md) clause
-- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md) function
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) function
+- [num_threads](2-directives.md#23-parallel-construct) clause
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) function
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
 ## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 
@@ -87,8 +87,8 @@ setenv OMP_DYNAMIC TRUE
 
 ### <a name="cross-references"></a>Références croisées
 
-- [Régions parallèles](2-3-parallel-construct.md)
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) function
+- [Régions parallèles](2-directives.md#23-parallel-construct)
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
 ## <a name="44-ompnested"></a>4.4 OMP_NESTED
 
@@ -102,4 +102,4 @@ setenv OMP_NESTED TRUE
 
 ### <a name="cross-reference"></a>Références croisées
 
-- [omp_set_nested](3-1-9-omp-set-nested-function.md) (fonction)
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) (fonction)

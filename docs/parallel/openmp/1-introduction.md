@@ -2,12 +2,12 @@
 title: 1. Introduction
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
-ms.openlocfilehash: 99020e9cf8c38bcfaeefdf5c31663b3e66352556
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397301"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087273"
 ---
 # <a name="1-introduction"></a>1. Introduction
 
@@ -134,4 +134,4 @@ Lorsque cette spécification de l’API OpenMP fait référence à C, il est fai
 - [Fonctions de bibliothèque du Run-time](3-run-time-library-functions.md)
 - [Variables d’environnement](4-environment-variables.md)
 - [Comportements définis par l’implémentation dans OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
-- [Nouvelles fonctionnalités d’OpenMP C/C++ Version 2.0](f-new-features-and-clarifications-in-version-2-0.md)
+- [Nouvelles fonctionnalités dans OpenMP C/C++ version 2.0](f-new-features-and-clarifications-in-version-2-0.md)
