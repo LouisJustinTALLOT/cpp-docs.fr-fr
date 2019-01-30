@@ -2,12 +2,12 @@
 title: Nouveautés de Visual C++ entre 2003 et 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51520175"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894352"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -1797,7 +1797,7 @@ Un trigraphe se compose de deux points d’interrogation consécutifs (??) suivi
 
 **Nouvelle option du Common Language Runtime (CLR) /clr:nostdlib.** Une nouvelle option est ajoutée pour `/clr` (Compilation pour le Common Language Runtime). Si différentes versions des mêmes bibliothèques sont incluses, une erreur de compilation est émise. La nouvelle option vous permet d’exclure les bibliothèques CLR par défaut afin que votre programme puisse utiliser une version spécifiée.
 
-**Nouvelle directive de pragma detect_mistmatch.** La directive de pragma detect_mismatch vous permet de placer dans vos fichiers une balise qui est comparé à d’autres balises qui portent le même nom. S’il existe plusieurs valeurs pour le même nom, l’éditeur de liens génère une erreur.
+**Nouvelle directive de pragma detect_mismatch.** La directive de pragma detect_mismatch vous permet de placer dans vos fichiers une balise qui est comparé à d’autres balises qui portent le même nom. S’il existe plusieurs valeurs pour le même nom, l’éditeur de liens génère une erreur.
 
 **Intrinsèques XOP, intrinsèques FMA4 et intrinsèques LWP.** De nouvelles fonctions intrinsèques ont été ajoutées pour prendre en charge les intrinsèques XOP ajoutées pour Visual Studio 2010 SP1, les intrinsèques FMA4 ajoutées pour Visual Studio 2010 SP1 et les intrinsèques LWP ajoutées pour les technologies de processeur Visual Studio 2010 SP1. Utilisez __cpuid, __cpuidex pour déterminer quelles technologies de processeur sont prises en charge sur un ordinateur particulier.
 
@@ -1854,7 +1854,7 @@ La plupart des avertissements `/analyze` (analyse du code d’entreprise) ont é
 
 #### <a name="animation-and-d2d-support"></a>Prise en charge de l’animation et prise en charge D2D
 
-MFC prend désormais en charge l’animation et les graphiques Direct2D. La bibliothèque MFC comprend plusieurs nouvelles classes et fonctions MFC pour prendre en charge cette fonctionnalité. Il existe également deux nouvelles procédures pas à pas montrant comment ajouter un objet D2D et un objet d’animation à un projet. Ces procédures pas à pas sont **Procédure pas à pas : ajout d’un objet D2D à un projet MFC** et **Procédure pas à pas : ajout d’une animation à un projet MFC**.
+MFC prend désormais en charge l’animation et les graphiques Direct2D. La bibliothèque MFC comprend plusieurs nouvelles classes et fonctions MFC pour prendre en charge cette fonctionnalité. Il existe également deux nouvelles procédures pas à pas montrant comment ajouter un objet D2D et un objet d’animation à un projet. Ces procédures pas à pas sont **Procédure pas à pas : ajout d’un objet D2D à un projet MFC (MFC)** et **Procédure pas à pas : ajout d’une animation à un projet MFC**.
 
 ### <a name="ide"></a>IDE
 
@@ -2197,7 +2197,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 
 - Informations sur la façon d’exécuter une application Extensions managées pour C++ générée avec le compilateur de la version actuelle sur une version précédente du runtime.
 - Questions fréquentes (FAQ) sur les extensions managées pour C++.
-- Une procédure pas à pas a été ajoutée, indiquant comment porter une application native existante pour utiliser les extensions managées pour C++ : Procédure pas à pas : Portage d’une application C++ native pour interagir avec les composants .NET Framework.
+- Une procédure pas à pas a été ajoutée afin de savoir comment porter une application native existante pour utiliser des Extensions managées pour C++ : Procédure pas à pas : portage d’une application C++ native pour interagir avec les composants du .NET Framework.
 - Vous pouvez maintenant créer un délégué sur une méthode d’un type valeur.
 - La conformité du compilateur à la norme C++ a été considérablement améliorée pour Visual C++ .NET 2003.
 - L’option de compilateur `/arch` a été ajoutée.
