@@ -1,10 +1,11 @@
 ---
-title: _mbclen, mblen, _mblen_l
-ms.date: 11/04/2016
+title: _mbclen, mblen, _mblen_l, _mbclen_l
+ms.date: 01/22/2019
 apiname:
 - _mbclen
 - mblen
 - _mblen_l
+- _mbclen_l
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,6 +24,7 @@ f1_keywords:
 - mblen
 - ftclen
 - _mbclen
+- _mbclen_l
 - tclen
 - _ftclen
 - _tclen
@@ -33,17 +35,18 @@ helpviewer_keywords:
 - _tclen function
 - mblen_l function
 - _mbclen function
+- _mbclen_l function
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434384"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702958"
 ---
-# <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
+# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
 Obtient la longueur et détermine la validité d’un caractère multioctet.
 
@@ -55,6 +58,10 @@ Obtient la longueur et détermine la validité d’un caractère multioctet.
 ```C
 size_t _mbclen(
    const unsigned char *c
+);
+size_t _mbclen_l(
+   unsigned char const* c,
+   _locale_t locale
 );
 int mblen(
    const char *mbstr,
@@ -83,7 +90,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_mbclen** retourne 1 ou 2, selon que le caractère multioctet *c* est 1 ou 2 octets. Aucune erreur n’est renvoyée pour **_mbclen**. Si *mbstr* n’est pas **NULL**, **mblen** retourne la longueur, en octets, du caractère multioctet. Si *mbstr* est **NULL** ou qu’il pointe vers le caractère null de caractères larges, **mblen** retourne 0. Si l’objet qui *mbstr* pointe vers ne forment pas un caractère multioctet valide au sein du premier *nombre* caractères, **mblen** retourne -1.
+**_mbclen** retourne 1 ou 2, selon que le caractère multioctet *c* est 1 ou 2 octets. Aucune erreur n’est renvoyée pour **_mbclen**. Si *mbstr* n’est pas **NULL**, **mblen** retourne la longueur, en octets, du caractère multioctet. Si *mbstr* est **NULL** ou qu’il pointe vers le caractère null de caractères larges, **mblen** retourne 0. Lorsque l’objet qui *mbstr* pointe vers ne forme pas un caractère multioctet valide au sein du premier *nombre* caractères, **mblen** retourne -1.
 
 ## <a name="remarks"></a>Notes
 
@@ -91,7 +98,7 @@ Le **_mbclen** fonction retourne la longueur, en octets, du caractère multiocte
 
 **mblen** retourne la longueur en octets de *mbstr* si elle est un caractère multioctet valide et détermine la validité des caractères multioctets associée à la page de codes. **mblen** examine *nombre* ou moins d’octets contenus dans *mbstr*, mais pas plus de **MB_CUR_MAX** octets.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par le **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions sans le **_l** suffixe utiliser les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Le **_l** versions suffixes ont le même comportement, mais ils utilisent les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -99,7 +106,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tclen**|Mappe à la macro ou à la fonction inline|**_mbclen**|Mappe à la macro ou à la fonction inline|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

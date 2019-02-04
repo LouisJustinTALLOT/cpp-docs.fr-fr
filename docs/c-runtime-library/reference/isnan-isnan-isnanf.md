@@ -1,6 +1,6 @@
 ---
 title: isnan, _isnan, _isnanf
-ms.date: 04/05/2018
+ms.date: 01/31/2019
 apiname:
 - _isnan
 - _isnanf
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650864"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703088"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
 
@@ -73,21 +73,21 @@ Valeur à virgule flottante à tester.
 
 En C, le **isnan** macro et **_isnan** et **_isnanf** fonctions retournent une valeur différente de zéro si l’argument *x* est une valeur NAN ; sinon ils retourne 0.
 
-En C++, le **isnan** retour des fonctions de modèle **true** si l’argument *x* est une valeur NAN ; sinon, elles retournent **false**.
+En C++, le **isnan** fonction de modèle retourne **true** si l’argument *x* est une valeur NaN ; sinon, elle retourne **false**.
 
 ## <a name="remarks"></a>Notes
 
-Le C **isnan** macro et **_isnan** et **_isnanf** fonctions testent la valeur à virgule flottante *x*, qui retourne une valeur différente de zéro si *x* n’est pas une valeur de nombre (NAN). Une valeur NAN est générée quand le résultat d’une opération à virgule flottante ne peut pas être représenté dans un format à virgule flottante IEEE-754 pour le type spécifié. Pour plus d’informations sur la représentation d’une valeur NAN dans la sortie, consultez [printf](printf-printf-l-wprintf-wprintf-l.md).
+Car une valeur NaN n’est pas considéré comme étant égale à toute autre valeur NaN, vous devez utiliser une de ces fonctions ou les macros pour détecter une. Une valeur NaN est générée lorsque le résultat d’une opération à virgule flottante ne peut pas être représenté au format de virgule flottante IEEE-754 pour le type spécifié. Pour plus d’informations sur la façon dont une valeur NaN est représentée pour la sortie, consultez [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Lors de la compilation en C++, le **isnan** macro n’est pas définie et un **isnan** fonction avec modèle est définie à la place. Elle retourne une valeur de type **bool** au lieu d’un entier.
+Lors de la compilation en C++, le **isnan** macro n’est pas définie et un **isnan** fonction avec modèle est définie à la place. Il se comporte de la même façon que la macro, mais retourne une valeur de type **bool** au lieu d’un entier.
 
-Le **_isnan** et **_isnanf** fonctions sont propres à Microsoft. Le **_isnanf** fonction est uniquement disponible lors de la compilation pour x64.
+Le **_isnan** et **_isnanf** fonctions sont spécifiques à Microsoft. Le **_isnanf** fonction est uniquement disponible lors de la compilation pour x64.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------------|-------------------------------|
-|**isNaN**, **_isnanf**|\<math.h>|\<math.h> ou \<cmath>|
+|**isnan**, **_isnanf**|\<math.h>|\<math.h> ou \<cmath>|
 |**_isnan**|\<float.h>|\<float.h> ou \<cfloat>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
@@ -95,5 +95,8 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 ## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[_finite, _finitef](finite-finitef.md)<br/>
+[fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
+[isfinite, _finite, _finitef](finite-finitef.md)<br/>
+[isinf](isinf.md)<br/>
+[isnormal](isnormal.md)<br/>
