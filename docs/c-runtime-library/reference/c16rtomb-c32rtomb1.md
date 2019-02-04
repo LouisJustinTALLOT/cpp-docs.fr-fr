@@ -1,6 +1,6 @@
 ---
-title: c16rtomb, c32rtomb1
-ms.date: 11/04/2016
+title: c16rtomb, c32rtomb
+ms.date: 01/22/2018
 apiname:
 - c16rtomb
 - c32rtomb
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: 0d735363bbb317b06c1ebc73a2b0678479a243ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad58184c7bab6f95a842bda5f9eb545f09434a3e
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536589"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702776"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -75,7 +75,7 @@ Si *mbchar* est un pointeur null, le comportement équivaut à un appel à la fo
 
 Le *état* objet d’état de conversion vous permet de faire des appels ultérieurs à cette fonction et d’autres fonctions redémarrables qui maintiennent l’état du décalage de caractères multioctets de sortie. Résultats ne sont pas définis lorsque vous combinez l’utilisation de fonctions redémarrables et non redémarrables, ou si un appel à **setlocale** est faite entre les appels de fonctions redémarrables.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,6 +1,6 @@
 ---
 title: nan, nanf, nanl
-ms.date: 94/05/2018
+ms.date: 01/31/2019
 apiname:
 - nanf
 - nan
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: 22b0e14094a0b6f0f3571c4d7551552210177a22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df3985a28bc351bdf196c0a1561bd3e25b661c87
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610260"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702978"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -48,7 +48,7 @@ long double nanl( const char* input );
 
 ### <a name="parameters"></a>Paramètres
 
-*entrée*<br/>
+*input*<br/>
 Valeur de chaîne.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -59,15 +59,18 @@ Le **nan** fonctions retournent une valeur NaN silencieuse.
 
 Le **nan** fonctions retournent une valeur à virgule flottante qui correspond à une valeur NaN silencieux (sans signalisation). Le *d’entrée* valeur est ignorée. Pour plus d’informations sur la façon dont une valeur NaN est représentée pour la sortie, consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**NaN**, **nanf**, **nanl**|\<math.h>|\<cmath> ou \<math.h>|
+|**nan**, **nanf**, **nanl**|\<math.h>|\<cmath> ou \<math.h>|
 
 ## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[_finite, _finitef](finite-finitef.md)<br/>
+[fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
+[isfinite, _finite, _finitef](finite-finitef.md)<br/>
+[isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
+[isnormal](isnormal.md)<br/>

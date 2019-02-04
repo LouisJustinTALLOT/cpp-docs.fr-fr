@@ -1,9 +1,10 @@
 ---
-title: strcat_s, wcscat_s, _mbscat_s
-ms.date: 11/04/2016
+title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
+ms.date: 01/22/2019
 apiname:
 - strcat_s
 - _mbscat_s
+- _mbscat_s_l
 - wcscat_s
 apilocation:
 - msvcrt.dll
@@ -23,27 +24,29 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
+- _mbscat_s_l
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
 - mbscat_s function
 - strings [C++], appending
 - _mbscat_s function
+- _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92829421cc0adac0ff9bbd2354fe4438a7b22871
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621310"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702919"
 ---
-# <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
+# <a name="strcats-wcscats-mbscats-mbscatsl"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
 Ajoute une chaîne. Ces versions de [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** et **_mbscat_s_l** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,6 +66,12 @@ errno_t _mbscat_s(
    size_t numberOfElements,
    const unsigned char *strSource
 );
+errno_t _mbscat_s_l(
+   unsigned char *strDestination,
+   size_t numberOfElements,
+   const unsigned char *strSource,
+   _locale_t locale
+);
 template <size_t size>
 errno_t strcat_s(
    char (&strDestination)[size],
@@ -78,6 +87,12 @@ errno_t _mbscat_s(
    unsigned char (&strDestination)[size],
    const unsigned char *strSource
 ); // C++ only
+template <size_t size>
+errno_t _mbscat_s_l(
+   unsigned char (&strDestination)[size],
+   const unsigned char *strSource,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -90,6 +105,9 @@ Taille de la mémoire tampon de la chaîne de destination.
 
 *strSource*<br/>
 Mémoire tampon de chaîne source se terminant par null.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -120,6 +138,8 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 
 Si *strDestination* est un pointeur null ou n’est pas nul, ou si *strSource* est un **NULL** pointeur, ou si la chaîne de destination est trop petite, le paramètre non valide gestionnaire est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et définissez **errno** à **EINVAL**.
 
+Les versions de fonctions qui ont le **_l** suffixe ont le même comportement, mais utilisez les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
@@ -130,7 +150,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat_s**|**strcat_s**|**_mbscat_s**|**wcscat_s**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

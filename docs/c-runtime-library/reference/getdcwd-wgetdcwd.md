@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wgetdcwd
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677017"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702932"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -61,26 +62,26 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>Paramètres
 
-*Lecteur*<br/>
-Entier non négatif qui spécifie le lecteur (0 = lecteur par défaut, 1 = A, 2 = B, etc.).
+*drive*<br/>
+Entier non négatif qui spécifie le lecteur (0 = lecteur par défaut, 1 = A, 2 = B, etc.).
 
-Si le lecteur spécifié n’est pas disponible, ou le type de lecteur (par exemple, amovible, fixe, CD-ROM, disque virtuel ou lecteur réseau) ne peut pas être déterminé, le gestionnaire de paramètre non valide, décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md), est appelé.
+Si le lecteur spécifié n’est pas disponible, ou le type de lecteur (par exemple, amovible, fixe, CD-ROM, disque virtuel ou lecteur réseau) ne peut pas être déterminé, le Gestionnaire de paramètre non valide est appelé. Pour plus d’informations, consultez [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 *buffer*<br/>
 Emplacement de stockage pour le chemin d'accès, ou **NULL**.
 
 Si **NULL** est spécifiée, cette fonction alloue une mémoire tampon d’au moins *maxlen* taille à l’aide de **malloc**et la valeur de retour de **_getdcwd**est un pointeur vers la mémoire tampon allouée. La mémoire tampon peut être libérée en appelant **gratuit** et en lui passant le pointeur.
 
-*MAXLEN*<br/>
+*maxlen*<br/>
 Entier positif différent de zéro qui spécifie la longueur maximale du chemin d’accès, en caractères : **char** pour **_getdcwd** et **wchar_t** pour **_wgetdcwd**.
 
-Si *maxlen* n’est pas supérieure à zéro, le Gestionnaire de paramètre non valide, ce qui est décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md), est appelé.
+Si *maxlen* est inférieure ou égale à zéro, le Gestionnaire de paramètre non valide est appelé. Pour plus d’informations, consultez [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="return-value"></a>Valeur de retour
 
 Pointeur vers une chaîne qui représente le chemin complet du répertoire de travail actuel sur le lecteur spécifié, ou **NULL**, ce qui indique une erreur.
 
-Si *tampon* est spécifié en tant que **NULL** et de la mémoire est insuffisante pour allouer *maxlen* caractères, une erreur se produit et **errno** est la valeur **ENOMEM**. Si la longueur du chemin d’accès, qui inclut le caractère null de fin, dépasse *maxlen*, une erreur se produit et **errno** a la valeur **ERANGE**. Pour plus d’informations sur ces codes d’erreur, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si *tampon* est spécifié en tant que **NULL** et de la mémoire est insuffisante pour allouer *maxlen* caractères, une erreur se produit et **errno** est la valeur **ENOMEM**. Si la longueur du chemin d’accès, y compris le caractère null de fin dépasse *maxlen*, une erreur se produit, et **errno** a la valeur **ERANGE**. Pour plus d’informations sur ces codes d’erreur, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
