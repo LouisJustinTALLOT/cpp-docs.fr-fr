@@ -193,6 +193,7 @@
 ### [/ASSEMBLYMODULE (Ajouter un module MSIL à l’assembly)](assemblymodule-add-a-msil-module-to-the-assembly.md)
 ### [/ASSEMBLYRESOURCE (Incorporer une ressource managée)](assemblyresource-embed-a-managed-resource.md)
 ### [/BASE (Adresse de base)](base-base-address.md)
+### [/CETCOMPAT (compatible avec la technologie de mise en œuvre de flux de contrôle)](cetcompat.md)
 ### [/CGTHREADS (Threads du compilateur)](cgthreads-compiler-threads.md)
 ### [/CLRIMAGETYPE (Spécifier le type d’une image CLR)](clrimagetype-specify-type-of-clr-image.md)
 ### [/CLRSUPPORTLASTERROR (Conserver le dernier code d’erreur pour les appels PInvoke)](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
