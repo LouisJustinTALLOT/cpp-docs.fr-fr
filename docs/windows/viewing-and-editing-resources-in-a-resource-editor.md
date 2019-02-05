@@ -3,25 +3,29 @@ title: Affichage et modification de ressources dans un éditeur de ressources (C
 ms.date: 11/04/2016
 f1_keywords:
 - vs.resourceview
+- vc.resvw.resource.previewing
+- vs.resvw.resource.previewing
 helpviewer_keywords:
 - resources [C++], viewing
 - layouts, previewing resource
 - resource editors [C++], viewing resources
 - .rc files [C++], viewing resources
 - resources [C++], editing
+- properties [C++], resources
+- resources [C++], properties
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
-ms.openlocfilehash: b33b7b52f494971451298e0827327cc86e60e7f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02ab58d37f3f188c3d65740b218cb9b2ac799714
+ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582623"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742659"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor-c"></a>Affichage et modification de ressources dans un éditeur de ressources (C++)
 
 Chaque type de ressource a un **ressource** éditeur spécifique à ce type de ressource. Vous pouvez réorganiser, redimensionner, ajouter des contrôles et fonctionnalités ou bien modifier les aspects d’une ressource à l’aide de l’éditeur associé. Vous pouvez également modifier une ressource dans [au format texte](../windows/how-to-open-a-resource-script-file-in-text-format.md) et [format binaire](../windows/opening-a-resource-for-binary-editing.md).
 
-Certains types de ressources sont des fichiers individuels qui peuvent être importés et utilisés de différentes manières. Citons notamment les bitmaps, icônes, curseurs, barres d’outils et les fichiers html. Ces ressources ont des noms de fichiers ainsi que [identificateurs de ressource](../windows/symbols-resource-identifiers.md). D’autres, telles que les boîtes de dialogue, des menus et des tables de chaînes dans les projets Win32, existent uniquement dans le cadre d’un fichier de script (.rc) de ressource ou un fichier de ressources (.rct) de modèle.
+Certains types de ressources sont des fichiers individuels qui peuvent être importés et utilisés de différentes manières. Citons notamment les bitmaps, icônes, curseurs, barres d’outils et les fichiers html. Ces ressources ont des noms de fichiers et [identificateurs de ressource](../windows/symbols-resource-identifiers.md). D’autres, telles que les boîtes de dialogue, des menus et des tables de chaînes dans les projets Win32, existent uniquement dans le cadre d’un fichier de script (.rc) de ressource ou un fichier de ressources (.rct) de modèle.
 
 > [!NOTE]
 > Propriétés d’une ressource [peut être modifié à l’aide de la fenêtre Propriétés](../windows/changing-the-properties-of-a-resource.md).
@@ -34,14 +38,14 @@ Vous pouvez accéder à des ressources Win32 dans le [affichage des ressources](
 
 1. Sélectionnez **affichage des ressources** à partir de la **vue** menu.
 
-2. Si le **affichage des ressources** fenêtre n’est pas la fenêtre de premier niveau, cliquez sur le **affichage des ressources** onglet pour les importer vers le haut.
+1. Si le **affichage des ressources** fenêtre n’est pas la fenêtre supérieure, sélectionnez le **affichage des ressources** onglet pour les importer vers le haut.
 
-3. À partir de **affichage des ressources**, développez le dossier du projet qui contient les ressources que vous souhaitez afficher. Par exemple, si vous souhaitez afficher une ressource de boîte de dialogue, développez le **boîte de dialogue** dossier.
+1. À partir de **affichage des ressources**, développez le dossier du projet qui contient les ressources que vous souhaitez afficher. Par exemple, si vous souhaitez afficher une ressource de boîte de dialogue, développez le **boîte de dialogue** dossier.
 
    > [!NOTE]
    > Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
 
-4. Double-cliquez sur la ressource, par exemple, **IDD_ABOUTBOX**.
+1. Double-cliquez sur la ressource, par exemple, **IDD_ABOUTBOX**.
 
    La ressource s’ouvre dans l’éditeur approprié. Par exemple, pour les ressources de la boîte de dialogue, la ressource s’ouvre à l’intérieur de la **boîte de dialogue** éditeur.
 
@@ -58,24 +62,80 @@ Vous pouvez accéder à des ressources Win32 dans le [affichage des ressources](
 
 ## <a name="resources-in-managed-projects"></a>Ressources dans les projets managés
 
-Étant donné que les projets managés n’utilisent pas les fichiers de script de ressources, vous devez ouvrir vos ressources à partir de **l’Explorateur de solutions**. Vous pouvez utiliser l’ [éditeur d’images](../windows/image-editor-for-icons.md) et l’ [éditeur binaire](binary-editor.md) pour travailler avec des fichiers de ressources dans des projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
+Étant donné que les projets managés n’utilisent des fichiers de script de ressources, vous devez ouvrir vos ressources à partir de **l’Explorateur de solutions**. Vous pouvez utiliser l’ [éditeur d’images](../windows/image-editor-for-icons.md) et l’ [éditeur binaire](binary-editor.md) pour travailler avec des fichiers de ressources dans des projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
 
 Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>Pour afficher une ressource managée dans un éditeur de ressources
 
-1. Dans **l’Explorateur de solutions**, double-cliquez sur la ressource, par exemple, **Bitmap1.bmp**.
+Dans **l’Explorateur de solutions**, double-cliquez sur la ressource, par exemple, **Bitmap1.bmp**.
 
    La ressource s’ouvre dans l’éditeur approprié.
 
 ### <a name="to-delete-an-existing-managed-resource"></a>Pour supprimer une ressource managée existante
 
-1. Dans **l’Explorateur de solutions**, avec le bouton droit de la ressource que vous souhaitez supprimer, puis sélectionnez **supprimer** dans le menu contextuel.
+Dans **l’Explorateur de solutions**, avec le bouton droit de la ressource que vous souhaitez supprimer, puis sélectionnez **supprimer** dans le menu contextuel.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="changing-the-properties-of-resources"></a>Modification des propriétés de ressources
+
+### <a name="to-edit-the-properties-of-a-resource"></a>Pour modifier les propriétés d'une ressource
+
+1. Dans [affichage des ressources](../windows/resource-view-window.md), avec le bouton droit de la ressource que vous souhaitez modifier, puis choisissez **propriétés** dans le menu contextuel.
+
+   > [!NOTE]
+   > Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
+
+1. Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), modifier les propriétés de votre ressource.
+
+### <a name="to-undo-a-change-made-to-the-properties-of-a-resource"></a>Pour annuler une modification apportée aux propriétés d’une ressource
+
+1. Assurez-vous que votre ressource a le focus dans **affichage des ressources**.
+
+1. Choisissez **Annuler** à partir de la **modifier** menu.
+
+## <a name="previewing-resources"></a>Aperçu des ressources
+
+Afficher un aperçu de vos ressources afin que vous puissiez afficher des ressources graphiques sans les ouvrir. L’aperçu est également utile pour les exécutables une fois que vous les avez compilé, car les identificateurs de ressource se transformer en nombres. Dans la mesure où ces identificateurs numériques ne fournissent pas suffisamment d’informations, l’aperçu des ressources vous aide à identifier rapidement les.
+
+Vous pouvez afficher un aperçu de la présentation visuelle des types de ressources suivants :
+
+- Bitmap
+
+- Boîte de dialogue
+
+- Icône
+
+- Menu
+
+- Curseur
+
+- ToolBar
+
+La fonction d’aperçu visuel ne s’applique pas aux ressources accélérateur, manifeste, Table de chaînes et informations de Version.
+
+### <a name="to-preview-resources"></a>Pour afficher un aperçu des ressources
+
+1. Dans [affichage des ressources](../windows/resource-view-window.md) ou une fenêtre de document, sélectionnez votre ressource, par exemple, **IDD_ABOUTBOX**.
+
+   > [!NOTE]
+   > Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
+
+1. Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), sélectionnez le **Pages de propriétés** bouton.
+
+   \- ou -
+
+   Sur le **vue** menu, sélectionnez **Pages de propriétés**.
+
+   Le **Page de propriétés** pour la ressource s’ouvre affichant un aperçu de cette ressource. Vous pouvez ensuite utiliser le **des** et **vers le bas** dans contrôlent des touches de direction pour parcourir l’arborescence **affichage des ressources** ou la fenêtre de document. Le **Page de propriétés** reste ouverte et affiche toutes les ressources qui a le focus et peuvent être visualisés.
+
+> [!NOTE]
+> Pour afficher un aperçu des ressources nécessite Win32.
+
+## <a name="requirements"></a>Spécifications
 
 Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
+[Guide pratique pour ouvrir un fichier de script de ressources en dehors d’un projet (autonome)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)<br/>
 [Éditeurs de ressources](../windows/resource-editors.md)

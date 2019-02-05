@@ -11,6 +11,7 @@ apilocation:
 - msvcr110.dll
 - msvcr100.dll
 - msvcr90.dll
+- api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - CIatan2
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - _CIatan2 intrinsic
 - CIatan2 intrinsic
 ms.assetid: 31f8cc78-b79f-4576-b73b-8add18e08680
-ms.openlocfilehash: 31cb17b0e71751defba349500de9098cf9d095ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a09bc8af5ab6ef6d99efea8448098d1a2f03d580
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602135"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703257"
 ---
 # <a name="ciatan2"></a>_CIatan2
 
@@ -42,7 +43,7 @@ Cette version de la fonction `atan2` a une convention d’appel spécialisée qu
 
 La valeur obtenue est placée en haut de la pile.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **Plateforme :** x86
 
