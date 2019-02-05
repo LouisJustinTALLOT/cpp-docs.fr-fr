@@ -11,6 +11,7 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcrt.dll
 - msvcr110.dll
+- api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - CIlog10
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: 29052a2398186bb8ac39ba6e3361c9cbc977f8b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0814043f56122e5e5363940ead338f8617279b09
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646100"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702945"
 ---
 # <a name="cilog10"></a>_CIlog10
 
@@ -42,7 +43,7 @@ Cette version de la fonction `log10` a une convention d’appel spécialisée qu
 
 La valeur obtenue est placée en haut de la pile.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **Plateforme :** x86
 

@@ -11,6 +11,7 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110_clr0400.dll
+- api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - CIsin
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - _CIsin intrinsic
 - CIsin intrinsic
 ms.assetid: f215f39a-2341-4f1c-ba8e-cb522451ceb2
-ms.openlocfilehash: 89350cdc61b7c96b09242731f89c934727e44a19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a76aa2b0e0438afa5728d26451c2a146ed262cab
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481301"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702880"
 ---
 # <a name="cisin"></a>_CIsin
 
@@ -42,7 +43,7 @@ Cette version intrinsèque de la fonction [sin](../c-runtime-library/reference/s
 
 La valeur obtenue est envoyée (push) en haut de la pile virgule flottante.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **Plateforme :** x86
 
