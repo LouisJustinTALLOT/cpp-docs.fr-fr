@@ -1,6 +1,6 @@
 ---
 title: Prise en charge des fonctions mathématiques et à virgule flottante
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558234"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703127"
 ---
 # <a name="math-and-floating-point-support"></a>Prise en charge des fonctions mathématiques et à virgule flottante
 
@@ -69,7 +69,6 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|Définit le mode d’arrondi de virgule flottante spécifié
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|Détermine les indicateurs d’état d’exception de virgule flottante à définir
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|Restaure un environnement à virgule flottante, puis lève les exceptions précédentes
-[_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Détermine si une valeur est finie
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Calcule la valeur plancher
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Calcule une multiplication-addition fusionnées
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Calcule la valeur maximale des arguments
@@ -87,7 +86,11 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 [ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|Calcule l’exposant de base 2 entier
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|Calcule la valeur absolue d’un type integer
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Calcule le quotient et le reste de deux valeurs entières
+[isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Détermine si une valeur est finie
+[isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Compare l’ordre de deux valeurs à virgule flottante
+[isinf](../c-runtime-library/reference/isinf.md)|Détermine si une valeur à virgule flottante est infinie
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Teste une valeur à virgule flottante pour une valeur NaN
+[isnormal](../c-runtime-library/reference/isnormal.md)|Teste si une valeur à virgule flottante est à la fois finie et non subnormale
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcule la fonction de Bessel
 [ldexp, ldexpf, ldexpl](../c-runtime-library/reference/ldexp.md)|Calcule x*2<sup>n</sup>
 [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Calcule le logarithme népérien de la valeur absolue de la fonction gamma
@@ -118,6 +121,7 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Multiplie un nombre à virgule flottante par une puissance intégrale de **FLT_RADIX**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Définit le mot de contrôle à virgule flottante
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Active ou désactive les instructions SSE2
+[signbit](../c-runtime-library/reference/signbit.md)|Teste le bit de signe d’une valeur à virgule flottante
 [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Calcule le sinus
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Calcule le sinus hyperbolique
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcule la racine carrée
@@ -134,3 +138,4 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 ## <a name="see-also"></a>Voir aussi
 
 [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Primitives à virgule flottante](../c-runtime-library/reference/floating-point-primitives.md)<br/>
