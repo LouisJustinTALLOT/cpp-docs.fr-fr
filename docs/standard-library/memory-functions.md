@@ -1,6 +1,6 @@
 ---
 title: '&lt;memory&gt;, fonctions'
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: e0a62b7afd215a9cad62ba1d0469f68459e6f403
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519176"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763932"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;, fonctions
 
@@ -135,7 +135,7 @@ Limite d'alignement à tenter.
 *Taille*<br/>
 Taille en octets du stockage aligné.
 
-*PTR*<br/>
+*Ptr*<br/>
 Adresse de départ du pool de stockage contigu disponible à utiliser. Ce paramètre est également un paramètre de sortie et est défini pour contenir la nouvelle adresse de départ si l’alignement est réussi. Si `align()` échoue, ce paramètre n'est pas modifié.
 
 *Espace*<br/>
@@ -261,7 +261,7 @@ void declare_no_pointers(
 |Paramètre|Description|
 |---------------|-----------------|
 |*ptr*|Adresse du premier caractère qui ne contient plus de pointeur traçable.|
-|*_Taille*|Taille de bloc qui commence à *ptr* ne contenant aucun pointeur traçable.|
+|*_Size*|Taille de bloc qui commence à *ptr* ne contenant aucun pointeur traçable.|
 
 ### <a name="remarks"></a>Notes
 
@@ -269,7 +269,7 @@ La fonction informe tout RÉCUPÉRATEUR de mémoire que la plage d’adresses `[
 
 ## <a name="declare_reachable"></a>  declare_reachable
 
-Informe une opération garbage collection que l’adresse indiquée est dédiée au stockage alloué et est accessible.
+Informe une opération garbage collection que l'adresse indiquée est dédiée au stockage alloué et est accessible.
 
 ```cpp
 void declare_reachable(void* ptr);
@@ -299,7 +299,7 @@ struct default_delete {
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR*<br/>
+*Ptr*<br/>
 Pointeur vers l'objet à supprimer.
 
 *Autre*<br/>
@@ -327,7 +327,7 @@ Type contrôlé par le pointeur partagé retourné.
 *Autre*<br/>
 Type contrôlé par le pointeur partagé d’argument.
 
-*SP*<br/>
+*sp*<br/>
 Pointeur partagé d’argument.
 
 ### <a name="remarks"></a>Notes
@@ -387,7 +387,7 @@ Type du suppresseur.
 *Ty*<br/>
 Type contrôlé par le pointeur partagé.
 
-*SP*<br/>
+*sp*<br/>
 Pointeur partagé.
 
 ### <a name="remarks"></a>Notes
@@ -647,13 +647,13 @@ Nombre d’éléments pour lesquels allouer de l’espace dans le nouveau tablea
 
 ### <a name="remarks"></a>Notes
 
-La première surcharge est utilisée pour les objets uniques, la deuxième surcharge est appelée pour les tableaux, et la troisième surcharge vous empêche de spécifier une taille de tableau dans l’argument de type (make_unique\<T[N]>) ; cette construction n’est pas prise en charge par la norme actuelle. Quand vous utilisez `make_unique` pour créer un `unique_ptr` dans un tableau, vous devez initialiser les éléments du tableau séparément. Si vous envisagez d’utiliser cette surcharge, un meilleur choix peut consister à utiliser un [std::vector](../standard-library/vector-class.md).
+La première surcharge est utilisée pour les objets uniques, la deuxième surcharge est appelée pour les tableaux, et la troisième surcharge vous empêche de spécifier une taille de tableau dans l’argument de type (make_unique\<T [N] >) ; cette construction n’est pas pris en charge par l’actuel standard. Quand vous utilisez `make_unique` pour créer un `unique_ptr` dans un tableau, vous devez initialiser les éléments du tableau séparément. Si vous envisagez d’utiliser cette surcharge, un meilleur choix peut consister à utiliser un [std::vector](../standard-library/vector-class.md).
 
 `make_unique` étant implémentée soigneusement pour la protection contre les exceptions, nous vous recommandons d’utiliser `make_unique` au lieu d’appeler directement des constructeurs `unique_ptr`.
 
 ### <a name="example"></a>Exemple
 
-L'exemple suivant montre comment utiliser `make_unique`. Pour obtenir plus d’exemples, consultez [Guide pratique pour créer et utiliser des instances unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
+L'exemple suivant montre comment utiliser `make_unique`. Pour plus d'exemples, consultez [Procédure : Créer et utiliser des Instances unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -700,7 +700,7 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Paramètres
 
-*à gauc_he*<br/>
+*_left*<br/>
 Pointeur partagé ou faible.
 
 *right*<br/>
@@ -954,13 +954,13 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 ### <a name="parameters"></a>Paramètres
 
 *first*<br/>
-Itérateur d'entrée qui traite le premier élément de la plage source.
+Itérateur d'entrée qui traite le premier élément d'une plage source.
 
 *last*<br/>
-Itérateur d'entrée qui traite le dernier élément de la plage source.
+Itérateur d'entrée qui traite le dernier élément d'une plage source.
 
 *dest*<br/>
-Itérateur vers l’avant qui traite le premier élément de la plage de destination.
+Itérateur forward qui traite le premier élément d'une plage de destination.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1068,11 +1068,11 @@ Itérateur d'entrée qui fait référence à l'objet à copier.
 Type entier signé ou non signé spécifiant le nombre de fois que l'objet doit être copié.
 
 *dest*<br/>
-Itérateur vers l’avant qui fait référence à l'emplacement des nouvelles copies.
+Itérateur forward qui fait référence à l'emplacement des nouvelles copies.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Itérateur vers l’avant qui traite la première position au-delà de la destination. Si la plage source est vide, l’itérateur traite *premier*.
+Itérateur forward qui traite la première position au-delà de la destination. Si la plage source est vide, l’itérateur traite *premier*.
 
 ### <a name="remarks"></a>Notes
 
@@ -1085,7 +1085,7 @@ La fonction de modèle effectue les opérations suivantes :
     return dest;
 ```
 
-à moins que le code ne provoque la levée d'une exception. Dans ce cas, tous les objets construits sont détruits et l’exception est de nouveau levée.
+à moins que le code ne provoque la levée d'une exception. Dans ce cas, tous les objets construits sont détruits et l'exception est de nouveau levée.
 
 ## <a name="uninitialized_fill"></a>  uninitialized_fill
 
@@ -1104,7 +1104,7 @@ Itérateur vers l’avant qui traite le premier élément de la plage de destina
 *last*<br/>
 Itérateur vers l’avant qui traite le dernier élément de la plage de destination devant être initialisée.
 
-*Val*<br/>
+*val*<br/>
 Valeur à utiliser pour initialiser la plage de destination.
 
 ### <a name="remarks"></a>Notes
@@ -1171,12 +1171,12 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 ### <a name="parameters"></a>Paramètres
 
 *first*<br/>
-Itérateur vers l’avant qui traite le premier élément de la plage de destination devant être initialisée.
+Itérateur forward qui traite le premier élément de la plage de destination devant être initialisée.
 
 *count*<br/>
 Nombre d'éléments à initialiser.
 
-*Val*<br/>
+*val*<br/>
 Valeur à utiliser pour initialiser la plage de destination.
 
 ### <a name="remarks"></a>Notes
