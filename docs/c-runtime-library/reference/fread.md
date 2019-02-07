@@ -24,12 +24,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: 4f9cb6940d1708dffd5d5ca03fac28397f1db846
-ms.sourcegitcommit: 53bfb772c43319d49686c167f492606348ad362b
+ms.openlocfilehash: 7248eb08409b50d855dbb70c7638a856302b345b
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819694"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849969"
 ---
 # <a name="fread"></a>fread
 
@@ -57,7 +57,7 @@ Taille de l’élément en octets.
 *count*<br/>
 Nombre maximal d’éléments à lire.
 
-*flux de données*<br/>
+*stream*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -74,7 +74,7 @@ Lorsqu’il est utilisé sur un flux en mode texte, si la quantité de données 
 
 Cette fonction verrouille les autres threads. Si vous avez besoin d’une version sans verrouillage, utilisez **_fread_nolock**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
@@ -135,7 +135,7 @@ Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 ## <a name="see-also"></a>Voir aussi
 
 [E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
-[E/s de fichier texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br />
-[fopen](fopen-wfopen.md)<br />
+[E/s de fichier texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[fopen](fopen-wfopen.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

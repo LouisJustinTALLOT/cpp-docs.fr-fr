@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 6c6364dcf5d558bcdd25a2957721df1863d1f73f
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893663"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850270"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de table des messages (MFC)
 
@@ -258,11 +258,6 @@ Pour plus d’informations, consultez la Note technique [TN006 : Tables des mes
 
 Fichier d’en-tête : afxmsg_.h
 
-### <a name="see-also"></a>Voir aussi
-
-[ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006 : Tables des messages](../tn006-message-maps.md)
-
 ## <a name="on_control"></a>  ON_CONTROL
 
 Indique la fonction qui gérera un message de notification de contrôles personnalisés.
@@ -483,11 +478,6 @@ Distribue la commande Modifier Annuler. Implémenté en tant que :
 
 **En-tête :** afxdocob.h
 
-### <a name="see-also"></a>Voir aussi
-
-[COleCmdUI, classe](colecmdui-class.md)<br/>
-[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
-
 ## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE
 
 Le Windows `RegisterWindowMessage` fonction est utilisée pour définir un nouveau message de fenêtre est garanti être unique dans tout le système.
@@ -525,11 +515,6 @@ END_MESSAGE_MAP()
 ### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmsg_.h
-
-### <a name="see-also"></a>Voir aussi
-
-[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
-[Gestionnaires définis par l’utilisateur](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
 
@@ -610,10 +595,6 @@ Pour plus d’informations et des exemples, consultez [gestion des messages et m
 ### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
-
-### <a name="see-also"></a>Voir aussi
-
-[CCmdUI, classe](ccmdui-class.md)
 
 ## <a name="on_command_range"></a>  ON_COMMAND_RANGE
 
@@ -736,3 +717,13 @@ Pour plus d’informations sur l’implémentation des fonctions du gestionnaire
 ### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmsg_.h
+
+## <a name="see-also"></a>Voir aussi
+
+[ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
+[TN006 : Tables des messages](../tn006-message-maps.md)<br/>
+[COleCmdUI, classe](colecmdui-class.md)<br/>
+[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)<br/>
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
+[Gestionnaires définis par l’utilisateur](user-defined-handlers.md)<br/>
+[CCmdUI, classe](ccmdui-class.md)

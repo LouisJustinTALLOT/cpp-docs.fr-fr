@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 144ca5cddb70dd04bf25d790c493d15d75b8163a
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477153"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850132"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Programmes d’assistance et objet Globals d’analyse URL Internet
 
@@ -86,10 +86,10 @@ Indique le type de service Internet. Les valeurs possibles sont les suivantes :
 *strServer*<br/>
 Le premier segment de l’URL après le type de service.
 
-*%{strObject/}*<br/>
+*strObject*<br/>
 Un objet qui désigne l’URL (peut être vide).
 
-*%nPort*<br/>
+*nPort*<br/>
 Déterminé à partir du serveur ou l’objet des portions de l’URL, si elles existent.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -102,18 +102,18 @@ Il analyse une chaîne URL et retourne le type de service et ses composants.
 
 Par exemple, `AfxParseURL` analyse des URL sous la forme *service://server/dir/dir/object.ext:port* et retourne ses composants stockés comme suit :
 
-*strServer* == « server »
+*strServer* == "server"
 
-*%{strObject/}* == « / dir/dir/object/object.ext »
+*strObject* == "/dir/dir/object/object.ext"
 
-*%nPort* == #port
+*nPort* == #port
 
 *dwServiceType* == #service
 
 > [!NOTE]
 >  Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxinet.h
 
@@ -174,10 +174,10 @@ Indique le type de service Internet. Les valeurs possibles sont les suivantes :
 *strServer*<br/>
 Le premier segment de l’URL après le type de service.
 
-*%{strObject/}*<br/>
+*strObject*<br/>
 Un objet qui désigne l’URL (peut être vide).
 
-*%nPort*<br/>
+*nPort*<br/>
 Déterminé à partir du serveur ou l’objet des portions de l’URL, si elles existent.
 
 *strUsername*<br/>
@@ -210,13 +210,9 @@ Il analyse une chaîne URL et retourne le type de service et ses composants, mai
 > [!NOTE]
 >  Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxinet.h
-
-## <a name="see-also"></a>Voir aussi
-
-[Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 
@@ -270,14 +266,9 @@ La liste suivante inclut les types Internet possibles retournées par `AfxGetInt
 > [!NOTE]
 >  Pour pouvoir appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxinet.h
-
-### <a name="see-also"></a>Voir aussi
-
-[Macros et objet Globals](mfc-macros-and-globals.md)<br/>
-[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
 
 ## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 
@@ -304,13 +295,13 @@ Vous êtes chargé de déterminer la cause en fonction du code d’erreur de sys
 > [!NOTE]
 >  Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxinet.h
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [CInternetException, classe](cinternetexception-class.md)<br/>
-[THROW](#throw)
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
 

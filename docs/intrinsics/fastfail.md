@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521383"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849474"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -41,6 +41,7 @@ En interne, `__fastfail` est implémentée à l'aide de plusieurs mécanismes sp
 |x86|int 0x29|ecx|
 |X64|int 0x29|rcx|
 |ARM|Opcode 0xDEFB|r0|
+|ARM64|Opcode 0xF003|x0|
 
 Une demande de basculement rapide est autonome et son exécution ne nécessite généralement que deux instructions. Une fois qu'une demande de basculement rapide a été exécutée, le noyau exécute l'action appropriée. Dans le code en mode utilisateur, il n'existe aucune dépendance de mémoire au-delà du pointeur d'instruction proprement dit quand un événement de basculement rapide est déclenché. Cela permet d'optimiser la fiabilité même en cas de grave endommagement de la mémoire.
 
@@ -52,11 +53,11 @@ La prise en charge du mécanisme de basculement rapide natif est apparue dans Wi
 
 `__fastfail` est uniquement disponible en tant qu'intrinsèque.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
-|`__fastfail`|x86, x 64, ARM|
+|`__fastfail`|x86, x64, ARM, ARM64|
 
 **Fichier d’en-tête** \<intrin.h >
 

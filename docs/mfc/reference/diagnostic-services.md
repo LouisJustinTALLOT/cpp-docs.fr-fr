@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: dbb243453b6d869082a4232b12b27f5510d84aa5
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657628"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850438"
 ---
 # <a name="diagnostic-services"></a>Services de diagnostic
 
@@ -186,7 +186,7 @@ ASSERT_KINDOF(classname, pobject)
 *classname*<br/>
 Le nom d’un `CObject`-classe dérivée.
 
-*pObject*<br/>
+*pobject*<br/>
 Pointeur vers un objet de classe.
 
 ### <a name="remarks"></a>Notes
@@ -316,15 +316,9 @@ La macro ENSURE_ARG agit comme la macro Vérifiez.
 ENSURE_VALID appelle la macro ASSERT_VALID (ce qui a un effet uniquement dans les versions Debug). En outre, ENSURE_VALID lève une exception si le pointeur est NULL. Le test de la valeur NULL est effectué dans les configurations Debug et Release.
 
 Si un de ces tests échoue, un message d’alerte s’affiche dans la même manière que l’assertion. La macro lève une exception d’argument non valide si nécessaire.
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
-
-### <a name="see-also"></a>Voir aussi
-
-[Macros et objet Globals](mfc-macros-and-globals.md)<br/>
-[VERIFY](#verify)<br/>
-[ATLENSURE](#altensure)
 
 ## <a name="this_file"></a> THIS_FILE
 
@@ -356,12 +350,6 @@ static char THIS_FILE[] = __FILE__;
 
 **En-tête :** afx.h
 
-### <a name="see-also"></a>Voir aussi
-
-[Macros et objet Globals](mfc-macros-and-globals.md)<br/>
-[ASSERT](#assert)<br/>
-[VERIFY](#verify)
-
 ##  <a name="trace"></a>  TRACE
 
 Envoie la chaîne spécifiée pour le débogueur de l’application actuelle.
@@ -379,7 +367,7 @@ Dans la version debug des MFC, cette macro envoie la chaîne spécifiée pour le
 
 Pour plus d’informations, consultez [débogage des Applications MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -452,7 +440,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Paramètres
 
-*boîte postale*<br/>
+*pOb*<br/>
 Un pointeur vers un objet d’une classe dérivée de `CObject`.
 
 ### <a name="remarks"></a>Notes
@@ -464,10 +452,6 @@ Code de votre programme ne doit pas appeler `AfxDump`, mais vous devez plutôt a
 ### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
-
-### <a name="see-also"></a>Voir aussi
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -491,7 +475,7 @@ int  afxMemDF;
 
 [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -518,7 +502,7 @@ Cette fonction peut être utilisée pour vérifier les valeurs de retour d’app
 
 [!code-cpp[NVC_MFCOleContainer#33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -555,7 +539,7 @@ Cette fonction fonctionne uniquement dans la version Debug des MFC.
 
 [!code-cpp[NVC_MFCCObjectSample#26](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -569,7 +553,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Paramètres
 
-*boîte postale*<br/>
+*pOb*<br/>
 Un pointeur vers un objet d’une classe dérivée de `CObject`.
 
 ### <a name="remarks"></a>Notes
@@ -581,10 +565,6 @@ Code de votre programme ne doit pas appeler `AfxDump`, mais vous devez plutôt a
 ### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
-
-### <a name="see-also"></a>Voir aussi
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
@@ -687,7 +667,7 @@ Si votre application charge une autre bibliothèque avant la bibliothèque MFC, 
 > [!NOTE]
 >  Si vous utilisez cette méthode pour désactiver l’image des fuites de mémoire, vous ne recevez pas d’indication des fuites de mémoire valides dans votre application. Vous devez utiliser cette méthode seulement si vous êtes certain que le rapport sur les fuites de mémoire contient des fausses fuites de mémoire.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -721,7 +701,7 @@ Pour plus d’informations sur `AfxEnableMemoryTracking`, consultez [débogage d
 
 [!code-cpp[NVC_MFC_Utilities#24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -776,7 +756,7 @@ BOOL AfxIsValidAddress(
 
 ### <a name="parameters"></a>Paramètres
 
-*LP*<br/>
+*lp*<br/>
 Pointe vers l’adresse de mémoire doit être testée.
 
 *nBytes*<br/>
@@ -799,7 +779,7 @@ L’adresse n’est pas limité aux blocs alloués par **nouveau**.
 
 [!code-cpp[NVC_MFC_Utilities#28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -831,7 +811,7 @@ Dans les versions non debug, différent de zéro si *lpsz* n’est pas NULL ; s
 
 [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -856,12 +836,12 @@ Différent de zéro si vous souhaitez autoriser l’allocation ; sinon 0.
 
 L’allocateur de mémoire de débogage Microsoft Foundation Class Library peut appeler une fonction de raccordement définies par l’utilisateur pour autoriser l’utilisateur pour surveiller une allocation de mémoire et de contrôler si l’allocation est autorisée. Fonctions de raccordement d’allocation sont prototypées comme suit :
 
-**BOOL sur AllocHook (size_t** `nSize` **, BOOL** `bObject` **, LONG** `lRequestNumber` **) ;**
+**BOOL AFXAPI AllocHook( size_t** `nSize`**, BOOL** `bObject`**, LONG** `lRequestNumber` **);**
 
 *nSize*<br/>
 La taille de l’allocation de mémoire proposée.
 
-*bLe*<br/>
+*bObject*<br/>
 TRUE si l’allocation est destiné à un `CObject`-objet dérivé ; sinon, FALSE.
 
 *lRequestNumber*<br/>
@@ -886,7 +866,7 @@ AFXAPI AfxDoForAllClasses(
 
 ### <a name="parameters"></a>Paramètres
 
-*NFP*<br/>
+*pfn*<br/>
 Pointe vers une fonction itération doit être appelée pour chaque classe. Les arguments de fonction sont un pointeur vers un `CRuntimeClass` objet et un pointeur void vers des données supplémentaires que l’appelant fournit à la fonction.
 
 *pContext*<br/>
@@ -921,7 +901,7 @@ void AfxDoForAllObjects(
 
 ### <a name="parameters"></a>Paramètres
 
-*NFP*<br/>
+*pfn*<br/>
 Pointe vers une fonction de l’itération à exécuter pour chaque objet. Les arguments de fonction sont un pointeur vers un `CObject` et un pointeur void vers les données supplémentaires connues par l’appelant fournit à la fonction.
 
 *pContext*<br/>
@@ -942,4 +922,5 @@ Pile, global, ou des objets incorporés ne sont pas énumérées. Le pointeur pa
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)
+[Macros et objet Globals](mfc-macros-and-globals.md)<br/>
+[CObject::Dump](cobject-class.md#dump)

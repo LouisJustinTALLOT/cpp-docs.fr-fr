@@ -1,18 +1,18 @@
 ---
 title: / Validate-CharSet (valider les caractères compatibles)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - /validate-charset
 - validate-charset
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-ms.openlocfilehash: 243d225f5acde0c6099050539687726ea082c898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b43b603ef4711e1acc0bd612e0e1c949722dc9
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590487"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850076"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate-CharSet (valider les caractères compatibles)
 
@@ -38,7 +38,7 @@ Visual Studio utilise UTF-8 en tant que l’encodage de caractères interne lors
 
 1. Développez le **propriétés de Configuration**, **C/C++**, **ligne de commande** dossier.
 
-1. Dans **Options avancées**, ajoutez le **/Validate-CharSet** option et spécifiez votre encodage préféré.
+1. Dans **des Options supplémentaires**, ajoutez le **/Validate-CharSet** option et spécifiez votre encodage préféré.
 
 1. Choisissez **OK** pour enregistrer vos modifications.
 
