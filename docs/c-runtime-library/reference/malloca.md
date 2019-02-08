@@ -23,12 +23,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 8c8ce8bdf8ab40cae45ecec9c4b182bdf3d6bc82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563980"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850408"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -51,13 +51,13 @@ Octets à allouer à partir de la pile.
 
 Le **_malloca** routine retourne un **void** pointeur vers l’espace alloué, qui est obligatoirement correctement aligné pour le stockage de n’importe quel type d’objet. Si *taille* est 0, **_malloca** alloue un élément de longueur nulle et retourne un pointeur valide vers cet élément.
 
-Une exception de dépassement de capacité de pile est générée si l’espace ne peut pas être alloué. L’exception de dépassement de capacité de pile n’est pas une exception C++ ; il s’agit d’une exception structurée. Au lieu d’utiliser la gestion des exceptions C++, vous devez utiliser la [gestion des exceptions structurée](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
+Si *taille* est supérieur à **_ALLOCA_S_THRESHOLD**, puis **_malloca** tente d’allouer sur le tas et retourne un pointeur null si l’espace ne peut pas être alloué. Si *taille* est inférieure ou égale à **_ALLOCA_S_THRESHOLD**, puis **_malloca** tente d’allouer de la pile et une exception de dépassement de capacité de pile est générée si l’espace ne peut pas être allouée. L’exception de dépassement de capacité de pile n’est pas une exception C++ ; Il est une exception structurée. Au lieu d’utiliser la gestion des exceptions C++, vous devez utiliser [Structured Exception Handling](../../cpp/structured-exception-handling-c-cpp.md) (SEH) pour intercepter cette exception.
 
 ## <a name="remarks"></a>Notes
 
 **_malloca** alloue *taille* octets à partir de la pile du programme ou le tas si la demande dépasse une certaine taille en octets fournie par **_ALLOCA_S_THRESHOLD**. La différence entre **_malloca** et **_alloca** qui est **_alloca** alloue toujours sur la pile, quelle que soit la taille. Contrairement aux **_alloca**, qui ne requièrent pas ou n’autoriser un appel à **gratuit** pour libérer la mémoire ainsi allouée, **_malloca** nécessite l’utilisation de [_freea](freea.md)pour libérer la mémoire. En mode débogage, **_malloca** toujours alloue de la mémoire à partir du tas.
 
-Il existe des restrictions à l’appel explicite **_malloca** dans un gestionnaire d’exceptions (EH). Les routines EH qui s’exécutent sur des processeurs de classe x86 opèrent dans le cadre de leur propre mémoire : elles effectuent leurs tâches dans un espace mémoire qui n’est pas basé sur l’emplacement actuel du pointeur de pile de la fonction englobante. Les implémentations les plus courantes incluent les expressions de gestion des exceptions structurées Windows NT (SEH) et les expressions de clause catch C++. Par conséquent, appeler explicitement **_malloca** dans un des scénarios suivants entraîne l’échec du programme pendant le retour à la routine EH appelante :
+Il existe des restrictions à l’appel explicite **_malloca** dans un gestionnaire d’exceptions (EH). Les routines EH qui s’exécutent sur des processeurs de classe x86 fonctionnent dans le cadre de leur propre mémoire : Elles effectuent leurs tâches dans l’espace de mémoire qui n’est pas basé sur l’emplacement actuel du pointeur de pile de la fonction englobante. Les implémentations les plus courantes incluent les expressions de gestion des exceptions structurées Windows NT (SEH) et les expressions de clause catch C++. Par conséquent, appeler explicitement **_malloca** dans un des scénarios suivants entraîne l’échec du programme pendant le retour à la routine EH appelante :
 
 - Expression de filtre d’exception SEH Windows NT : **__except** (`_malloca ()` )
 
@@ -72,7 +72,7 @@ Toutefois, **_malloca** peut être appelée directement à partir d’une routin
 
 Outre les restrictions ci-dessus, lorsque vous utilisez le [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) option, **_malloca** ne peut pas être utilisé dans **__except** blocs. Pour plus d'informations, consultez [/clr Restrictions](../../build/reference/clr-restrictions.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

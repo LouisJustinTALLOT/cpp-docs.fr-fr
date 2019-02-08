@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: a97f914905c2f98bc948b76e1d79d4af0f5dbadd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2a076b666577920c940413fba4951f7de5f24fc6
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327497"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850257"
 ---
 # <a name="atl-text-encoding-functions"></a>Fonctions de codage de texte ATL
 
@@ -62,7 +62,7 @@ Ces fonctions prennent en charge l’encodage et décodage de texte.
 |[UUEncode](#uuencode)|Appelez cette fonction pour convertir des données au format UUEncode. |
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|Appelez cette fonction pour obtenir la taille en caractères d'une mémoire tampon qui peut contenir une chaîne encodée à partir des données de la taille spécifiée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlenc.h ainsi que
 
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>Paramètres
 
-*Conservés*<br/>
+*pReserved*<br/>
 Un pointeur réservé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -106,7 +106,7 @@ La fonction doit être appelée comme suit.
 
 [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -721,7 +721,7 @@ Le nombre de caractères requis pour une mémoire tampon qui peut contenir des d
 
 Cette implémentation uuencoding suit la spécification de POSIX P1003.2b/D11.
 
-### <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 
-[Concepts](../../atl/active-template-library-atl-concepts.md)<br/>
-[Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)
+[Concepts](../active-template-library-atl-concepts.md)<br/>
+[Composants de bureau COM ATL](../atl-com-desktop-components.md)

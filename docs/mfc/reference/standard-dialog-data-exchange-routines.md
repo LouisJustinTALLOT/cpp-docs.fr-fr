@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 06153a72ce6ed6e5422022255eec333110709778
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618307"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850175"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Routines d'échange de données de boîte de dialogue standard
 
@@ -67,7 +67,7 @@ Lorsque `DDX_CBIndex` est appelée, *index* est définie à l’index de la sél
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -90,7 +90,7 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 L’ID de ressource du contrôle de zone de liste déroulante associé à la propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Une référence à une variable membre de la boîte de dialogue, vue de formulaire ou objet de vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -102,7 +102,7 @@ Lorsque `DDX_CBString` est appelée, *valeur* est définie sur la sélection de 
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -125,7 +125,7 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 L’ID de ressource du contrôle de zone de liste déroulante associé à la propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Une référence à une variable membre de la boîte de dialogue, vue de formulaire ou objet de vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -137,7 +137,7 @@ Lorsque `DDX_CBStringExact` est appelée, *valeur* est définie sur la sélectio
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -160,7 +160,7 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 L’ID de ressource du contrôle de case à cocher associé à la propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Une référence à une variable membre de la boîte de dialogue, vue de formulaire ou objet de vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -169,7 +169,7 @@ Lorsque `DDX_Check` est appelée, *valeur* est définie sur l’état actuel du 
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -201,7 +201,7 @@ Le *pDX* objet est fourni par le framework lorsque le `DoDataExchange` fonction 
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -234,7 +234,7 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 L’ID de ressource du contrôle de sélecteur de date et l’heure associé à la variable de membre.
 
-*valeur*<br/>
+*value*<br/>
 Dans les deux premières versions, une référence à un `CTime` ou `COleDateTime` membre variable, boîte de dialogue, vue de formulaire ou objet de vue de contrôle avec lequel les données sont échangées. Dans la troisième version, une référence à un `CString` objet de vue de données membre contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -245,7 +245,7 @@ Dans la troisième version ci-dessus, `DDX_DateTimeCtrl` gère le transfert de `
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -278,16 +278,11 @@ Une référence à un [CWinFormsControl, classe](cwinformscontrol-class.md) obje
 
 `DDX_ManagedControl` appels [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) pour créer un contrôle correspondant à l’ID de contrôle de ressource. Utilisez `DDX_ManagedControl` pour créer des contrôles à partir de l’ID de ressource dans [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Échange de données, vous n’avez pas besoin d’utiliser les fonctions DDX/DDV avec les contrôles Windows Forms.
 
-Pour plus d’informations, consultez [Comment : effectuer une liaison de données DDX/DDV avec Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Pour plus d'informations, voir [Procédure : Liaison des données DDX/DDV avec Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwinforms.h
-
-### <a name="see-also"></a>Voir aussi
-
-[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
-[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -308,7 +303,7 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 L’ID de ressource du contrôle d’adresse IP associé à la propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Une référence à la valeur DWORD contenant la valeur de champ de quatre du contrôle d’adresse IP. Les champs sont remplis ou comme suits.
 
 |Champ|Contenant la valeur du champ de bits|
@@ -326,7 +321,7 @@ Lorsque `DDX_IPAddress` est appelée, *valeur* est soit en lecture à partir du 
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -358,7 +353,7 @@ Lorsque `DDX_LBIndex` est appelée, *index* est définie à l’index de la sél
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -381,7 +376,7 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 L’ID de ressource du contrôle de zone de liste associé à la propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Une référence à une variable membre de la boîte de dialogue, vue de formulaire ou objet de vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -395,7 +390,7 @@ Lorsque `DDX_LBString` est appelée pour transférer des données à partir d’
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -418,7 +413,7 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 L’ID de ressource du contrôle de zone de liste associé à la propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Une référence à une variable membre de la boîte de dialogue, vue de formulaire ou objet de vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -432,7 +427,7 @@ Lorsque `DDX_CBStringExact` est appelée pour transférer des données à partir
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -460,7 +455,7 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 L’ID de ressource de contrôle month calendar associé à la variable membre.
 
-*valeur*<br/>
+*value*<br/>
 Une référence à un `CTime` ou `COleDateTime` variable membre de la boîte de dialogue, vue de formulaire ou objet de vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -472,7 +467,7 @@ Lorsque `DDX_MonthCalCtrl` est appelée, *valeur* est définie sur l’état act
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -495,7 +490,7 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 L’ID de ressource du premier contrôle de case d’option dans le groupe.
 
-*valeur*<br/>
+*value*<br/>
 Une référence à une variable membre de la boîte de dialogue, vue de formulaire ou objet de vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -506,7 +501,7 @@ Par exemple, dans les cas où le premier bouton de case d’option dans le group
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -529,7 +524,7 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 L’ID de ressource du contrôle de barre de défilement associé à la propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -538,7 +533,7 @@ Lorsque `DDX_Scroll` est appelée, *valeur* est définie sur la position actuell
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -561,7 +556,7 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 L’ID de ressource du contrôle slider.
 
-*valeur*<br/>
+*value*<br/>
 Une référence à la valeur à échanger. Ce paramètre contienne ou définit la position actuelle du contrôle slider.
 
 ### <a name="remarks"></a>Notes
@@ -570,7 +565,7 @@ Lorsque `DDX_Slider` est appelée, *valeur* est définie sur la position actuell
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md). Pour plus d’informations sur les contrôles de curseur, consultez [à l’aide de CSliderCtrl](../../mfc/using-csliderctrl.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
@@ -643,18 +638,20 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *nIDC*<br/>
 L’ID d’un contrôle d’édition dans la boîte de dialogue, vue de formulaire ou objet de vue de contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Une référence à un membre de données dans la boîte de dialogue, vue de formulaire ou objet de vue de contrôle. Le type de données de *valeur* varie en fonction des versions surchargées de `DDX_Text` vous utilisez.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdd_.h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Routines de validation des données de boîte de dialogue standard](../../mfc/reference/standard-dialog-data-validation-routines.md)<br/>
-[Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)
+[Routines de validation des données de boîte de dialogue standard](standard-dialog-data-validation-routines.md)<br/>
+[Macros et objet Globals](mfc-macros-and-globals.md)<br/>
+[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
+[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)

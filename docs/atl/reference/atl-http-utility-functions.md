@@ -2,12 +2,12 @@
 title: Fonctions utilitaires ATL HTTP
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be38dc8b8547574ea47021f8b14f21060a0755f0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481712"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849646"
 ---
 # <a name="atl-http-utility-functions"></a>Fonctions utilitaires ATL HTTP
 
@@ -24,7 +24,7 @@ Ces fonctions prennent en charge la manipulation d’URL.
 |[RGBToHtml](#rgbtohtml)|Convertit un [COLORREF](/windows/desktop/gdi/colorref) le texte HTML correspondant à cette valeur de couleur à la valeur.|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|Appelez cette fonction pour convertir une heure système en une chaîne au format approprié pour être utilisée dans les en-têtes HTTP.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlutil.h
 
@@ -75,10 +75,6 @@ Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
 ### <a name="remarks"></a>Notes
 
 Se comporte comme la version actuelle de [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) mais ne nécessite ne pas de WinInet ou Internet Explorer soit installé.
-
-### <a name="see-also"></a>Voir aussi
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -250,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 Une valeur de couleur RVB.
 
 *pbOut*<br/>
@@ -279,7 +275,7 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>Paramètres
 
-*St*<br/>
+*st*<br/>
 L’heure système à être obtenus sous forme d’une chaîne de format HTTP.
 
 *strTime*<br/>
@@ -287,5 +283,6 @@ Une référence à une variable chaîne à l’heure de réception HTTP date tel
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepts](../../atl/active-template-library-atl-concepts.md)<br/>
-[Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)
+[Concepts](../active-template-library-atl-concepts.md)<br/>
+[Composants de bureau COM ATL](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)

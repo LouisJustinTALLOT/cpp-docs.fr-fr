@@ -1,5 +1,5 @@
 ---
-title: 'MFC : utilisation de classes de bases de données avec des documents et des vues'
+title: 'MFC : À l’aide des Classes de base de données des Documents et vues'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [C++], database applications
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 5e4610af199f1fd19c1edd71a8fd67bd82ab9a8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624833"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849742"
 ---
-# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC : utilisation de classes de bases de données avec des documents et des vues
+# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC : À l’aide des Classes de base de données des Documents et vues
 
 Vous pouvez utiliser les classes de base de données MFC avec ou sans l’architecture document/vue. Cette rubrique met l’accent sur l’utilisation des documents et vues. Il explique :
 
@@ -31,7 +31,7 @@ Vous pouvez utiliser les classes de base de données MFC avec ou sans l’archit
 
 - [Autres considérations](#_core_other_factors).
 
-Pour les solutions, consultez [MFC : à l’aide de Classes de base de données sans document ni vue](../data/mfc-using-database-classes-without-documents-and-views.md).
+Pour les solutions, consultez [MFC : À l’aide des Classes de base de données sans document ni vue](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ##  <a name="_core_writing_a_form.2d.based_application"></a> Écriture d’une Application basée sur un formulaire
 
@@ -63,14 +63,14 @@ De nombreuses applications formulaire simples n’avez pas besoin de documents. 
 
 ##  <a name="_core_other_factors"></a> Autres facteurs
 
-Applications basées sur le formulaire n’ont généralement pas toutes l’utilisation de mécanisme de sérialisation de document de l’infrastructure, vous pouvez donc supprimer, désactiver, ou remplacer le **New** et **Open** commandes sur le **Fichier** menu. Consultez l’article [sérialisation : sérialisation et. Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md).
+Applications basées sur le formulaire n’ont généralement pas toutes l’utilisation de mécanisme de sérialisation de document de l’infrastructure, vous pouvez donc supprimer, désactiver, ou remplacer le **New** et **Open** commandes sur le **Fichier** menu. Consultez l’article [sérialisation : Visual Studio de sérialisation. Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Vous pourriez également s’utiliser de nombreuses possibilités de l’interface utilisateur que l’infrastructure peut prendre en charge. Par exemple, vous pouvez utiliser plusieurs `CRecordView` objets dans une fenêtre fractionnée, ouvrir plusieurs jeux d’enregistrements dans différentes plusieurs fenêtres enfants de l’interface (multidocument MDI) document et ainsi de suite.
 
 Vous pouvez souhaiter implémenter l’impression de tout ce qui est visible, que ce soit un formulaire implémenté avec `CRecordView` ou autre chose. Comme les classes dérivées de `CFormView`, `CRecordView` ne prend pas en charge l’impression, mais vous pouvez remplacer le `OnPrint` fonction membre permettant à l’impression. Pour plus d’informations, consultez la classe [CFormView](../mfc/reference/cformview-class.md).
 
-Vous souhaiterez pas utiliser des documents et vues du tout. Dans ce cas, consultez [MFC : à l’aide de Classes de base de données sans document ni vue](../data/mfc-using-database-classes-without-documents-and-views.md).
+Vous souhaiterez pas utiliser des documents et vues du tout. Dans ce cas, consultez [MFC : À l’aide des Classes de base de données sans document ni vue](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Les Classes de base de données MFC (.. / data/mfc-database-classes-odbc-and-dao.md)
+[Classes de base de données MFC](../data/mfc-database-classes-odbc-and-dao.md)

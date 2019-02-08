@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493611"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850089"
 ---
 # <a name="platformobject-class"></a>Platform::Object, classe
 
@@ -53,11 +53,11 @@ public ref class Object : Object
 
 `Object`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** vccorlib.h
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 ## <a name="equals"></a> Object::Equals, méthode
 
@@ -124,12 +124,6 @@ Utilisez le [typeid](../windows/typeid-cpp-component-extensions.md) opérateur p
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="see-also"></a>Voir aussi
-
-[Platform::Type, classe](../cppcx/platform-type-class.md)<br/>
-[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)<br/>
-(Type System) (.. /cppcx/type-System-c-CX.MD
-
 ## <a name="ctor"></a>  Object::Object, constructeur
 
 Initialise une nouvelle instance de la classe Object.
@@ -191,4 +185,6 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)
+[Plateforme Namespace](platform-namespace-c-cx.md)<br/>
+[Platform::Type, classe](platform-type-class.md)<br/>
+[Système de type](type-system-c-cx.md)
