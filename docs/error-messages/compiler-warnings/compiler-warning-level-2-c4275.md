@@ -1,41 +1,41 @@
 ---
 title: Avertissement du compilateur (niveau 2) C4275
-ms.date: 11/04/2016
+ms.date: 02/08/2019
 f1_keywords:
 - C4275
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-ms.openlocfilehash: 985a622e2c89306c453ae6c860d21e6265d0fff1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e0e80d465d77bd4fe99fbcaa98e289b8a4c8b63
+ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594322"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55987025"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Avertissement du compilateur (niveau 2) C4275
 
-non - une interface DLL classkey 'identificateur' utilisée comme base pour l’identificateur' une interface DLL classkey'
+> non - classe de l’interface de la DLL*class_1*'utilisé comme base pour la classe d’interface de la DLL'*class_2*'
 
-Une classe exportée a été dérivée d’une classe qui le n'a pas été exportée.
+Une classe exportée a été dérivée d’une classe qui n’a pas été exportée.
 
-Pour minimiser le risque d’altération des données lors de l’exportation d’une classe avec [__declspec (dllexport)](../../cpp/dllexport-dllimport.md), vérifiez que :
+Pour minimiser le risque d’altération des données lors de l’exportation d’une classe avec [__declspec (dllexport)](../../cpp/dllexport-dllimport.md), assurez-vous que :
 
 - Toutes vos données statiques est accessible via les fonctions exportées à partir de la DLL.
 
 - Aucune méthode inline de votre classe ne peut modifier des données statiques.
 
-- Aucune méthode inline de votre classe n’utilise des fonctions CRT ou d’autres fonctions de bibliothèque utilisent des données statiques.
+- Aucune méthode inline de votre classe d’utiliser des fonctions CRT ou autres fonctions de bibliothèque qui utilisent des données statiques.
 
-- Aucune fonction de classe inline n’utiliser des fonctions CRT, ou autres fonctions de bibliothèque, où, par exemple, vous accéder aux données statiques.
+- Aucune fonction de classe inline n’utiliser des fonctions CRT, ou autres fonctions de bibliothèque, où vous accéder aux données statiques.
 
 - Aucune méthode de votre classe (indépendamment du incorporation (inlining)) peuvent utiliser des types où l’instanciation de l’EXE et DLL présentent les différences de données statiques.
 
 Vous pouvez éviter d’exporter des classes en définissant une DLL qui définit une classe avec des fonctions virtuelles et les fonctions que vous pouvez appeler pour instancier et de supprimer des objets du type.  Vous pouvez ensuite simplement appeler des fonctions virtuelles sur le type.
 
-Erreur C4275 peut être ignorée dans Visual C++ si vous dérivez d’un type dans la bibliothèque Standard C++, compilez une version debug (**/MTd**) et où le message d’erreur du compilateur fait référence à _Container_base.
+Erreur C4275 peut être ignorée dans Visual C++ si vous dérivez d’un type dans la bibliothèque Standard C++, compilez une version debug (**/MTd**) et où le message d’erreur du compilateur fait référence à `_Container_base`.
 
-```
+```cpp
 // C4275.cpp
 // compile with: /EHsc /MTd /W2 /c
 #include <vector>

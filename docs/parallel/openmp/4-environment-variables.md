@@ -2,12 +2,12 @@
 title: 4. Variables d’environnement
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 558b835c36253fb67339fba9b46cb0170dd6d1d0
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
+ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087195"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55987054"
 ---
 # <a name="4-environment-variables"></a>4. Variables d’environnement
 
@@ -31,7 +31,7 @@ ksh :
 DÉNI DE SERVICE :  
 `set OMP_SCHEDULE="dynamic"`
 
-## <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
+## <a name="41-omp_schedule"></a>4.1 OMP_SCHEDULE
 
 `OMP_SCHEDULE` s’applique uniquement aux `for` et `parallel for` directives qui ont le type de planification `runtime`. La taille de type et le segment de planification pour toutes les boucles de ce type peut être définie au moment de l’exécution. Définissez cette variable d’environnement pour n’importe quel type de planification reconnu et facultative *chunk_size*.
 
@@ -49,7 +49,7 @@ setenv OMP_SCHEDULE "dynamic"
 - [pour](2-directives.md#241-for-construct) (directive)
 - [parallèle pour](2-directives.md#251-parallel-for-construct) (directive)
 
-## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
+## <a name="42-omp_num_threads"></a>4.2 OMP_NUM_THREADS
 
 Le `OMP_NUM_THREADS` variable d’environnement définit le nombre de threads à utiliser lors de l’exécution par défaut. `OMP_NUM_THREADS` est ignoré si ce nombre est modifié explicitement en appelant le `omp_set_num_threads` routine de bibliothèque. Il est également ignoré s’il existe une explicite `num_threads` clause sur une `parallel` directive.
 
@@ -73,7 +73,7 @@ setenv OMP_NUM_THREADS 16
 - [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) function
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
-## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
+## <a name="43-omp_dynamic"></a>4.3 OMP_DYNAMIC
 
 Le `OMP_DYNAMIC` variable d’environnement Active ou désactive l’ajustement dynamique du nombre de threads disponibles pour l’exécution des régions parallèles. `OMP_DYNAMIC` est ignoré lors de l’ajustement dynamique est explicitement activé ou désactivé en appelant le `omp_set_dynamic` routine de bibliothèque. Sa valeur doit être `TRUE` ou `FALSE`.
 
@@ -90,7 +90,7 @@ setenv OMP_DYNAMIC TRUE
 - [Régions parallèles](2-directives.md#23-parallel-construct)
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
-## <a name="44-ompnested"></a>4.4 OMP_NESTED
+## <a name="44-omp_nested"></a>4.4 OMP_NESTED
 
 Le `OMP_NESTED` variable d’environnement Active ou désactive le parallélisme imbriquée à moins que le parallélisme imbriqué est activé ou désactivé en appelant le `omp_set_nested` routine de bibliothèque. Si `OMP_NESTED` a la valeur `TRUE`, parallélisme imbriquée est activée. Si `OMP_NESTED` a la valeur `FALSE`, imbriquée parallélisme est désactivé. La valeur par défaut est `FALSE`.
 
