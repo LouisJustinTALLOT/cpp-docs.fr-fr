@@ -1,6 +1,8 @@
 ---
 title: Fichiers de ressources (C++)
 ms.date: 11/04/2016
+f1_keywords:
+- vc.editors.resource
 helpviewer_keywords:
 - resources [C++]
 - .rc files [C++]
@@ -14,13 +16,20 @@ helpviewer_keywords:
 - resource files [C++], types of
 - .rct files [C++]
 - resource script files [C++], unsupported types
+- manifest resources [C++]
+- resources [C++], manifest
+- resources [C++], opening
+- file types [C++], for resources
+- resources [C++], editing
+- files [C++], editable types
+- resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 9ad36f19185bc5b3430e7644ef55164d3cb0839a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65500644b70841f372edcc6911edefc6c7b9f432
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461695"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152688"
 ---
 # <a name="resource-files-c"></a>Fichiers de ressources (C++)
 
@@ -41,7 +50,7 @@ Le terme « fichier de ressource » peut faire référence à différents types 
 
 - Un fichier d’en-tête généré par l’environnement de développement, par exemple Resource.h, référencé à partir d’un fichier .rc
 
-Il existe aussi des ressources dans d’ [autres types de fichiers](../windows/editable-file-types-for-resources.md) , tels que les fichiers .exe, .dll et .res. Vous pouvez travailler avec des ressources et des fichiers de ressources à partir de votre projet et avec ceux qui ne font pas partie de votre projet actif. Vous pouvez également travailler avec des fichiers de ressources qui n’ont pas été créés dans l’environnement de développement de Visual Studio. Par exemple, vous pouvez :
+Ressources sont trouvent également dans [autres types de fichiers](../windows/editable-file-types-for-resources.md) tels que les fichiers .exe, .dll et .res. Vous pouvez travailler avec les ressources et à partir des fichiers de ressources au sein de votre projet et celles qui ne font pas partie de votre projet actuel. Vous pouvez également travailler avec des fichiers de ressources qui n’ont pas été créés dans l’environnement de développement de Visual Studio. Par exemple, vous pouvez :
 
 - Travailler avec des fichiers de ressources imbriqués et inclus de manière conditionnelle
 
@@ -51,33 +60,72 @@ Il existe aussi des ressources dans d’ [autres types de fichiers](../windows/e
 
 - Inclure des identificateurs partagés ou en lecture seule  (symboles) qui ne peuvent pas être modifiés par l’environnement de développement
 
-- Inclure dans votre fichier exécutable (.exe) des ressources qui ne nécessitent pas de modification (ou que vous ne voulez pas voir modifiées) pendant votre projet actif, telles que des ressources partagées entre plusieurs projets
+- Inclure des ressources dans votre fichier exécutable (.exe) qui ne nécessitent une modification (ou qui ne doit pas être modifiée) lors de votre projet actuel, telles que des ressources partagées entre plusieurs projets.
 
 - Inclure des types de ressources non pris en charge par l’environnement de développement
 
-Cette section traite des sujets suivants :
+Vous pouvez ouvrir les types de fichiers suivants et modifier les ressources qu’ils contiennent :
 
-- [Création d’un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md)
+|Nom de fichier|Description|
+|---------------|-----------------|
+|.rc|Fichiers de script de ressources.|
+|.rct|Fichiers modèles de ressources.|
+|.res|Fichiers de ressources.|
+|.resx|Fichiers de ressources managées.|
+|.exe|Fichiers exécutables.|
+|.dll|Fichiers bibliothèques de liens dynamiques.|
+|.bmp, .ico, .dib et .cur|Fichiers bitmap, icône, barre d'outils et curseur.|
 
-- [Création d’une ressource](../windows/how-to-create-a-resource.md)
+L’environnement Visual Studio fonctionne avec et affecte les fichiers indiqués dans le tableau ci-dessous pendant votre session d’édition de ressource :
 
-- [Affichage de ressources dans un fichier de script de ressources](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)
+|Nom de fichier|Description|
+|---------------|-----------------|
+|Resource.h|Fichier d'en-tête généré par l'environnement de développement. Il contient les définitions de symbole. (Inclure ce fichier dans le contrôle de code source.)|
+|Filename.aps|Version binaire du fichier de script de ressources actif. Ce fichier est utilisé pour le chargement rapide.<br /><br /> Les éditeurs de ressources ne lisent pas directement les fichiers .rc ou resource.h. Le compilateur de ressources les compile en fichiers .aps, qui sont consommés par les éditeurs de ressources. Ce fichier est une étape de compilation, qui stocke uniquement les données symboliques. Comme le processus de compilation avec un élément normal, informations non symboliques (par exemple, les commentaires) sont ignorées pendant le processus de compilation. Chaque fois que le fichier .aps n'est plus synchronisé au fichier .rc, le fichier .rc est régénéré (par exemple, quand vous effectuez un enregistrement, l'éditeur de ressources remplace les fichiers .rc et resource.h). Les changements apportés aux ressources sont conservés dans le fichier .rc, mais les commentaires disparaissent une fois le fichier .rc remplacé. Pour plus d’informations sur la façon de conserver les commentaires, consultez [inclusion des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md). (En règle générale, vous ne doit pas inclure le fichier .aps dans le contrôle de code source.)|
+|.rc|Fichier de script de ressources qui contient le script des ressources de votre projet actif. Ce fichier est remplacé par le fichier .aps à chaque enregistrement. (Inclure ce fichier dans le contrôle de code source.)|
 
-- [Ouverture d’un fichier de script de ressources au format texte](../windows/how-to-open-a-resource-script-file-in-text-format.md)
+Cette section explique comment :
 
-- [Inclusion de ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)
+- [Créer des ressources](../windows/how-to-create-a-resource-script-file.md)
 
-- [Copie de ressources](../windows/how-to-copy-resources.md)
+- [Gérer les ressources](../windows/how-to-copy-resources.md)
 
-- [Utilisation de modèles de ressources (.rct)](../windows/how-to-use-resource-templates.md)
+- [Inclure des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)
 
-- [Importation et exportation de ressources](../windows/how-to-import-and-export-resources.md)
+## <a name="manifest-resources"></a>Ressources de manifeste
 
-- [Types de fichier modifiables pour les ressources](../windows/editable-file-types-for-resources.md)
+Dans les projets de bureau C++, les ressources de manifeste sont des fichiers XML qui décrivent les dépendances qu’une application utilise. Par exemple, dans Visual Studio, le fichier manifeste généré par l'Assistant MFC définit la DLL de contrôle commun Windows que l'application doit utiliser, version 5.0 ou 6.0 :
 
-- [Fichiers affectés par la modification des ressources](../windows/files-affected-by-resource-editing.md)
+```xml
+<description>Your app description here</description>
+<dependency>
+    <dependentAssembly>
+        <assemblyIdentity
+            type="win32"
+            name="Microsoft.Windows.Common-Controls"
+            version="6.0.0.0"
+            processorArchitecture="X86"
+            publicKeyToken="6595b64144ccf1df"
+            language="*"
+        />
+    </dependentAssembly>
+</dependency>
+```
 
-## <a name="requirements"></a>Configuration requise
+Pour une application Windows XP ou Windows Vista, la ressource de manifeste indique non seulement que l’application utiliser la version la plus récente des contrôles communs Windows, version 6.0, comme indiqué ci-dessus, mais il prend également en charge la [contrôle Syslink](/windows/desktop/Controls/syslink-overview).
+
+Pour afficher la version et tapez les informations contenues dans une ressource de manifeste, vous pouvez ouvrir le fichier dans une visionneuse XML ou dans l’éditeur de texte Visual Studio. Si vous ouvrez une ressource de manifeste à partir de la fenêtre [Affichage des ressources](../windows/resource-view-window.md), la ressource s'ouvre au format binaire. Pour afficher le contenu d’une ressource de manifeste dans un format plus lisible, vous devez ouvrir la ressource à partir de **l’Explorateur de solutions**.
+
+Pour ouvrir une ressource de manifeste, choisissez parmi les étapes suivantes :
+
+- Pour l’éditeur de texte, avec votre projet ouvert dans **l’Explorateur de solutions**, développez le **fichiers de ressources** dossier et double-cliquez sur le fichier .manifest.
+
+- Pour un autre éditeur, dans **l’Explorateur de solutions**, cliquez sur le fichier .manifest et choisissez **ouvrir avec...**  dans le menu contextuel. Dans le **ouvrir avec** boîte de dialogue, spécifiez l’éditeur que vous souhaitez utiliser, puis sélectionnez **Open**.
+
+> [!NOTE]
+> Vous ne pouvez avoir qu'une seule ressource de manifeste par module.
+
+## <a name="requirements"></a>Spécifications
 
 Win32
 
@@ -85,4 +133,5 @@ Win32
 
 [Éditeurs de ressources](../windows/resource-editors.md)<br/>
 [Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)<br/>
-[Menus et autres ressources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menus et autres ressources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
+[Contrôles](../mfc/controls-mfc.md)<br/>

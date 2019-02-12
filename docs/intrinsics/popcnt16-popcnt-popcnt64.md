@@ -11,18 +11,18 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a0a5a51bfcb5265f7b415433c3f6b64423840ebe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522457"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146890"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Section spécifique à Microsoft**
 
-Compte le nombre de bits (peuplement) dans un 16, 32 ou entier non signé de 64 octets.
+Compte le nombre de bits (peuplement) dans un 16, 32 ou entier non signé 64 bits.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,14 +40,14 @@ unsigned __int64 __popcnt64(
 
 #### <a name="parameters"></a>Paramètres
 
-*valeur*<br/>
+*value*<br/>
 [in] Le 16, 32 ou entier non signé 64 bits pour lequel nous voulons le volume de peuplement.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Le nombre de bits un dans le `value` paramètre.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
@@ -59,7 +59,7 @@ Le nombre de bits un dans le `value` paramètre.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions intrinsèques génère la `popcnt` instruction.  La taille de la valeur que la `popcnt` instruction retourne est identique à la taille de son argument.  En mode 32 bits il n’existe aucune registres 64 bits à usage général, par conséquent, ne 64 bits `popcnt`.
+Chacune de ces fonctions intrinsèques génère la `popcnt` instruction. En mode 32 bits il n’existe aucune registres 64 bits à usage général, par conséquent, ne 64 bits `popcnt`.
 
 Pour déterminer la prise en charge matérielle pour le `popcnt` instruction, appelez le `__cpuid` intrinsèque avec `InfoType=0x00000001` et vérifiez le bit 23 de `CPUInfo[2] (ECX)`. Ce bit est 1 si l’instruction est pris en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `popcnt` instruction, les résultats sont imprévisibles.
 

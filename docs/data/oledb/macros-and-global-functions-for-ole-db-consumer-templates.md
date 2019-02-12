@@ -1,6 +1,6 @@
 ---
 title: Macros et fonctions globales pour les modèles du consommateur OLE DB
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557113"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148996"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macros et fonctions globales pour les modèles du consommateur OLE DB
 
@@ -198,11 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>Notes
 
-Si *hErr* n’est pas S_OK, `AtlTraceErrorRecords` exporte les informations de l’enregistrement d’erreur OLE DB à l’unité de vidage (le **déboguer** onglet de la fenêtre Sortie ou un fichier). Les informations de l’enregistrement d’erreur, qui sont obtenues à partir du fournisseur, incluent le numéro de ligne source, description, fichier d’aide, contexte et GUID pour chaque entrée d’enregistrement erreur. `AtlTraceErrorRecords` exporte ces informations uniquement dans les versions debug. Dans les versions release, il est un stub vide qui est optimisé out.
-
-#### <a name="see-also"></a>Voir aussi
-
-[CDBErrorInfo, classe](../../data/oledb/cdberrorinfo-class.md)
+Si *hErr* n’est pas S_OK, `AtlTraceErrorRecords` exporte les informations de l’enregistrement d’erreur OLE DB à l’unité de vidage (le **déboguer** onglet de la fenêtre Sortie ou un fichier). Les informations de l’enregistrement d’erreur, qui sont obtenues à partir du fournisseur, incluent le numéro de ligne source, description, fichier d’aide, contexte et GUID pour chaque entrée d’enregistrement erreur. `AtlTraceErrorRecords` exporte ces informations uniquement dans les versions debug. Dans les versions release, il est un stub vide qui est optimisé out. Pour plus d’informations, consultez [cdberrorinfo, classe](../../data/oledb/cdberrorinfo-class.md).
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -618,7 +614,7 @@ BOOKMARK_ENTRY(variable)
 
 #### <a name="parameters"></a>Paramètres
 
-*Variable*<br/>
+*variable*<br/>
 [in] La variable doit être lié à la colonne de signet.
 
 #### <a name="example"></a>Exemple
@@ -669,10 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-#### <a name="see-also"></a>Voir aussi
-
-[CBookmark, classe](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+Pour plus d’informations, consultez [à l’aide de signets](using-bookmarks.md) et [CBookmark, classe](../../data/oledb/cbookmark-class.md).
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -1636,7 +1629,7 @@ END_COLUMN_MAP()
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 

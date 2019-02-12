@@ -1,6 +1,6 @@
 ---
 title: Macros pour les modèles du fournisseur OLE DB
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - BEGIN_PROPERTY_SET
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557049"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151115"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macros pour les modèles du fournisseur OLE DB
 
@@ -98,7 +98,7 @@ Les macros de fournisseur de modèles OLE DB offrent des fonctionnalités dans l
 |[END_SCHEMA_MAP](#end_schema_map)|Marque la fin d’un mappage de schéma.|
 |[SCHEMA_ENTRY](#schema_entry)|Associe un GUID à une classe.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -298,7 +298,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *dwPropID*<br/>
 [in] Valeur [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) qui peut être utilisée en combinaison avec le GUID du jeu de propriétés pour identifier une propriété.
 
-*valeur*<br/>
+*value*<br/>
 [in] Valeur de propriété de type `DWORD`.
 
 #### <a name="remarks"></a>Notes
@@ -359,7 +359,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *name*<br/>
 [in] Le nom de colonne.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.
 
 *member*<br/>
@@ -380,10 +380,10 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *name*<br/>
 [in] Le nom de colonne.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] Le type de données dans [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *member*<br/>
@@ -412,7 +412,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *name*<br/>
 [in] Le nom de colonne.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.
 
 *flags*<br/>
@@ -421,13 +421,13 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *colSize*<br/>
 [in] La taille de la colonne.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] Indique le type de données de la valeur. Consultez le `wType` description dans [Structures DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *precision*<br/>
 [in] Indique la précision à utiliser lors de l’obtention des données si *dbType* soit DBTYPE_NUMERIC DBTYPE_DECIMAL. Consultez le `bPrecision` description dans [Structures DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*Mise à l’échelle*<br/>
+*scale*<br/>
 [in] Indique l’échelle à utiliser lors de l’obtention des données si dbType est DBTYPE_NUMERIC ou DBTYPE_DECIMAL. Consultez le `bScale` description dans [Structures DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *guid*<br/>
@@ -452,7 +452,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *name*<br/>
 [in] Le nom de colonne.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.
 
 *size*<br/>
@@ -484,7 +484,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *name*<br/>
 [in] Le nom de colonne.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.
 
 *member*<br/>
@@ -513,10 +513,10 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *name*<br/>
 [in] Le nom de colonne.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] Le type de données dans [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *size*<br/>
@@ -544,7 +544,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *name*<br/>
 [in] Le nom de colonne.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] Le numéro de colonne. À moins que la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.
 
 *member*<br/>
@@ -566,7 +566,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 
 #### <a name="parameters"></a>Paramètres
 
-*F*<br/>
+*SchemaClass*<br/>
 La classe qui contient le mappage. En général, il s’agit de la classe session.
 
 #### <a name="remarks"></a>Notes
@@ -583,9 +583,9 @@ Indique la fin du mappage de schéma.
 END_SCHEMA_MAP()
 ```
 
-#### <a name="see-also"></a>Voir aussi
+#### <a name="remarks"></a>Notes
 
-[IDBSchemaRowsetImpl, classe](../../data/oledb/idbschemarowsetimpl-class.md)
+Pour plus d’informations, consultez [IDBSchemaRowsetImpl, classe](../../data/oledb/idbschemarowsetimpl-class.md).
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 
