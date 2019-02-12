@@ -1,13 +1,13 @@
 ---
 title: Applications UWP, Windows Runtime et Runtime C
-ms.date: 11/04/2016
+ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: ea6e3e5017fcbef997a1e844e9f84e9c385bd31d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae57390dc916116b8d799b9f937ff882abaef970
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441130"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763886"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Applications UWP, Windows Runtime et Runtime C
 
@@ -24,10 +24,6 @@ Windows Runtime ne prend pas en charge les fonctionnalités CRT suivantes :
 - La plupart des fonctions de chaînes et de caractères multioctets.
 
    Cependant, le texte Unicode et ANSI est pris en charge.
-
-- Applications de console et arguments de ligne de commande.
-
-   Toutefois, les applications de bureau traditionnelles prennent toujours en charge la console et les arguments de ligne de commande.
 
 - Variables d'environnement.
 
@@ -48,3 +44,4 @@ Pour obtenir la liste complète des fonctions CRT non disponibles pour une appli
 [Compatibilité](../c-runtime-library/compatibility.md)<br/>
 [Fonctions CRT non prises en charge par Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
 [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Créer une application console de plateforme Windows universelle](/windows/uwp/launch-resume/console-uwp)
