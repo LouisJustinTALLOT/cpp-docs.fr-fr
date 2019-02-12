@@ -20,15 +20,17 @@ helpviewer_keywords:
 - directories [C++], specifying include paths for resources
 - include files [C++], specifying for resources
 - resources [C++], including in projects
+- symbols [C++], finding
+- resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 52145d2a656a7cac0d07a43ceaf298fbebb5ad40
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 8df5a8ee6583b1e9f5c50a428b69babb0d56961b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764075"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152376"
 ---
-# <a name="how-to-include-resources-at-compile-time"></a>Procédure : Inclure des ressources au moment de la compilation
+# <a name="how-to-include-resources-at-compile-time-c"></a>Procédure : Inclure des ressources au moment de la compilation (C++)
 
 Normalement, il est facile et pratique d’utiliser la disposition par défaut de toutes les ressources dans un fichier de script (.rc) de ressources. Toutefois, vous pouvez ajouter des ressources dans d’autres fichiers à votre projet actif au moment de la compilation en les répertoriant dans la **directives de compilation** zone le **Include des ressources** boîte de dialogue.
 
@@ -42,7 +44,7 @@ Il existe plusieurs raisons qui justifient le placement des ressources dans un a
 
 - Pour inclure les ressources qui sont utilisés par plusieurs projets différents, ou qui font partie d’un système de contrôle de version du code source et donc il doit exister dans un emplacement central où les modifications affectent tous les projets.
 
-- Vous souhaitez inclure des ressources (par exemple des ressources RCDATA) qui ont un format personnalisé. Les ressources RCDATA peuvent avoir des spécifications particulières. Par exemple, vous ne pouvez pas utiliser une expression en tant que valeur pour le champ nameID. Consultez la documentation du Kit de développement logiciel Windows pour plus d’informations.
+- Vous souhaitez inclure des ressources (par exemple des ressources RCDATA) qui ont un format personnalisé. Les ressources RCDATA peuvent avoir des spécifications particulières. Par exemple, vous ne pouvez pas utiliser une expression en tant que valeur pour le champ nameID. Pour plus d’informations, consultez la documentation du SDK Windows.
 
 Si vous avez des sections dans vos fichiers .rc existants qui répondent à ces conditions, vous devez placer les sections dans un ou plusieurs fichiers .rc distincts et les incluent dans votre projet en utilisant le **Include des ressources** boîte de dialogue. Le *nom_projet*fichier .rc2 créé dans le sous-répertoire \res d’un nouveau projet est utilisé à cet effet.
 
@@ -59,7 +61,7 @@ Pour ouvrir le **Include des ressources** de fichiers dans la boîte de dialogue
 > [!NOTE]
 > Entrées de ces zones de texte apparaissent dans le fichier .rc marqué par `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, et `TEXTINCLUDE 3` respectivement. Pour plus d’informations, consultez [TN035 : À l’aide de plusieurs fichiers de ressources et les fichiers d’en-tête avec Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
 
-Une fois que vous avez apporté des modifications à votre fichier de ressources en utilisant le **Include des ressources** boîte de dialogue, vous devez fermer le fichier .rc et puis le rouvrir pour que les modifications entrent en vigueur. Pour plus d’informations, consultez [inclusion des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md).
+Une fois que vous avez apporté des modifications à votre fichier de ressources en utilisant le **Include des ressources** boîte de dialogue, vous devez fermer le fichier .rc et puis le rouvrir pour que les modifications entrent en vigueur.
 
 Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le Guide du développeur .NET Framework.
 
@@ -73,11 +75,27 @@ Pour plus d’informations sur l’ajout de ressources aux projets managés, con
 
    Les ressources des fichiers inclus de cette façon sont intégrées à votre fichier exécutable au moment de la compilation. Ils ne sont pas directement disponibles pour l’édition ou la modification lorsque vous travaillez sur un fichier .rc principal de votre projet. Ouvrir les fichiers .rc inclus séparément. Tous les fichiers inclus mais dépourvus d’extension .rc ne sont pas modifiables par les éditeurs de ressources.
 
-## <a name="to-specify-include-directories-for-a-specific-resource-rc-file-c"></a>Pour spécifier les répertoires include d’une ressource spécifique (fichier .rc) (C++)
+## <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>Pour spécifier les répertoires include d’une ressource spécifique (fichier .rc)
 
 1. Cliquez sur le fichier .rc dans l’Explorateur de solutions et sélectionnez **propriétés** dans le menu contextuel.
 
 1. Dans le **Pages de propriétés** boîte de dialogue, sélectionnez le **ressources** nœud dans le volet gauche, puis spécifiez les répertoires dans include supplémentaires le **autres répertoiresinclude**propriété.
+
+## <a name="to-find-symbols-in-resources"></a>Pour rechercher des symboles dans les ressources
+
+1. À partir de la **modifier** menu, choisissez **rechercher un symbole**.
+
+1. Dans le [boîte de dialogue Rechercher un symbole](/visualstudio/ide/go-to), dans le **rechercher** zone, sélectionnez une chaîne de recherche précédente à partir de la liste déroulante ou tapez la touche accélérateur à rechercher (par exemple, ID_ACCEL1).
+
+   > [!TIP]
+   > À utiliser [expressions régulières](/visualstudio/ide/using-regular-expressions-in-visual-studio) pour votre recherche, vous devez utiliser le [rechercher dans les fichiers, commande](/visualstudio/ide/reference/find-command) à partir de la **modifier** menu au lieu du **rechercher un symbole**commande. Pour activer les expressions régulières, vous devez disposer du **utilisation : Les Expressions régulières** case cochée dans la [boîte de dialogue Rechercher](/visualstudio/ide/finding-and-replacing-text). Vous pouvez ensuite sélectionner le bouton de flèche droite à droite de la **rechercher** à cocher pour afficher une liste des expressions régulières de recherche. Lorsque vous sélectionnez une expression à partir de cette liste, elle se substitue le texte de recherche dans les **rechercher** boîte.
+
+1. Sélectionnez un de la **trouver** options.
+
+1. Choisissez **Suivant**.
+
+> [!NOTE]
+> Vous ne pouvez pas rechercher de symboles dans les ressources de type chaîne, accélérateur ou binaire.
 
 ## <a name="requirements"></a>Spécifications
 
@@ -87,5 +105,4 @@ Win32
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 [Éditeurs de ressources](../windows/resource-editors.md)<br/>
-[TN035 : À l’aide de plusieurs fichiers de ressources et les fichiers d’en-tête avec Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
 [Symboles : identificateurs de ressources](../windows/symbols-resource-identifiers.md)<br/>
