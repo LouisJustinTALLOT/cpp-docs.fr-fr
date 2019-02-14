@@ -1,19 +1,19 @@
 ---
-title: Conventions d’appel, paramètres et type de retour
-ms.date: 11/04/2016
+title: Conventions d'appel, paramètres et type de retour
+ms.date: 02/13/2019
 helpviewer_keywords:
 - calling conventions, helper functions
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 8343c17828040ca36b042cb99e0c51c37548d3b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654426"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264801"
 ---
-# <a name="calling-conventions-parameters-and-return-type"></a>Conventions d’appel, paramètres et type de retour
+# <a name="calling-conventions-parameters-and-return-type"></a>Conventions d'appel, paramètres et type de retour
 
 Le prototype d'une routine d'assistance est :
 
@@ -27,12 +27,12 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>Paramètres
 
 *pidd*<br/>
-Pointeur `const` vers un `ImgDelayDescr` (voir delayimp.h) qui contient les décalages de diverses données liées aux importations, un horodatage pour les informations de liaison, ainsi qu’un ensemble d’attributs qui fournissent des informations supplémentaires sur le contenu du descripteur. Actuellement, il n’existe qu’un seul attribut, `dlattrRva`, ce qui indique que les adresses dans le descripteur sont des adresses virtuelles relatives (par opposition à des adresses virtuelles).
+Un `const` pointeur vers un `ImgDelayDescr` qui contient les décalages de diverses données liées aux importations, un horodatage pour les informations de liaison et un ensemble d’attributs qui fournissent des informations supplémentaires sur le contenu du descripteur. Actuellement, il n'est qu’un seul attribut, `dlattrRva`, ce qui indique que les adresses dans le descripteur sont des adresses virtuelles relatives. Pour plus d’informations, consultez les déclarations dans *delayimp.h*.
 
 Pour la définition de la `PCImgDelayDescr` structure, consultez [définitions des structures et constantes](../../build/reference/structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
-Pointeur vers l'emplacement dans la table IAT (Import Address Table) de chargement différé qui doit être mis à jour avec l'adresse de la fonction importée. La routine d'assistance doit stocker la même valeur qu'elle retournera dans cet emplacement.
+Pointeur vers l’emplacement dans le délai charge adresse table d’importation (IAT) qui est mis à jour avec l’adresse de la fonction importée. La routine d’assistance doit stocker la même valeur qu’il renvoie dans cet emplacement.
 
 ## <a name="expected-return-values"></a>Valeurs de retour attendues
 
@@ -46,11 +46,11 @@ Si la fonction échoue, elle lève une exception et retourne 0. Trois types d'e
 
 - échec de `GetProcAddress`.
 
-La gestion de ces exceptions est de votre responsabilité.
+Il vous incombe de gérer ces exceptions.
 
 ## <a name="remarks"></a>Notes
 
-La convention d'appel pour la fonction d'assistance est `__stdcall`. Le type de la valeur de retour n'est pas pertinent, si bien que FARPROC est utilisé. Cette fonction dispose d'une liaison C.
+La convention d’appel pour la fonction d’assistance est `__stdcall`. Le type de la valeur de retour n’est pas pertinent, donc FARPROC est utilisé. Cette fonction dispose d'une liaison C.
 
 La valeur de retour de l'assistant de chargement différé doit être stockée dans l'emplacement du pointeur de fonction fourni, à moins que vous vouliez que votre routine d'assistance soit utilisée en tant que hook de notification. Dans ce cas, votre code a la responsabilité de trouver le pointeur de fonction approprié à retourner. Le code thunk que l'éditeur de liens génère prend ensuite cette valeur de retour comme cible réelle de l'importation et y accède directement.
 
@@ -131,7 +131,7 @@ FARPROC WINAPI delayHook(unsigned dliNotify, PDelayLoadInfo pdli)
 
 /*
 and then at global scope somewhere
-PfnDliHook __pfnDliNotifyHook2 = delayHook;
+const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 
