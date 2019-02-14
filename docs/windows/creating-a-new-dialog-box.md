@@ -8,15 +8,37 @@ helpviewer_keywords:
 - Dialog Editor [C++], creating dialog boxes
 - modal dialog boxes [C++], logon screens
 - logon screens
+- Test Dialog command
+- testing, dialog boxes
+- dialog boxes [C++], testing
+- dialog boxes [C++], size
+- dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 928432000fb9a6347433b78b224e15f07ce810d2
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742646"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264814"
 ---
 # <a name="creating-a-dialog-box-c"></a>Création d’une boîte de dialogue (C++)
+
+L’emplacement et la taille d’une boîte de dialogue C++ et que l’emplacement et la taille des contrôles qu’il contient, sont mesurés en unités de boîte de dialogue. Les valeurs pour les contrôles individuels et de la boîte de dialogue s’affichent dans le coin inférieur droit de l’état de Visual Studio barre lorsque vous les sélectionnez.
+
+Lorsque vous créez une boîte de dialogue, vous pouvez également simuler et tester son comportement au moment de l’exécution sans compiler votre programme. Dans ce mode, vous pouvez :
+
+- Taper du texte, effectuer des sélections dans des listes de zone de liste déroulante, activer ou désactiver des options, et choisir des commandes
+
+- Tester l’ordre de tabulation
+
+- Tester le groupement des contrôles tels que les cases à cocher et les cases d’option
+
+- Tester les raccourcis clavier pour les contrôles dans la boîte de dialogue
+
+   > [!NOTE]
+   > Les connexions au code de boîte de dialogue effectuées à l’aide des Assistants ne sont pas incluses dans la simulation.
+
+Quand vous testez une boîte de dialogue, elle s’affiche généralement à un emplacement qui est relatif à la fenêtre principale du programme. Si vous avez défini la boîte de dialogue **Absolute Align** propriété **True**, la boîte de dialogue affiche à une position qui est relative à l’angle supérieur gauche de l’écran.
 
 Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
@@ -52,7 +74,15 @@ Pour activer le test de ce type de boîte de dialogue, la fonction de boîte de 
 > [!NOTE]
 > Pour les applications MFC, pour créer une boîte de dialogue que les utilisateurs ne peuvent pas quitter, vous devez substituer le comportement par défaut de `OnOK` et `OnCancel` , car même si vous supprimez les boutons associés, la boîte de dialogue peut toujours être ignorée en appuyant sur  **Entrez** ou **ÉCHAP**.
 
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index).
+## <a name="to-specify-the-location-and-size-of-a-dialog-box"></a>Pour spécifier l’emplacement et la taille d’une boîte de dialogue
+
+Il existe trois propriétés que vous pouvez définir dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) pour spécifier où une boîte de dialogue s’affiche à l’écran. Le **Center** propriété est la valeur booléenne ; si vous définissez la valeur sur **True**, la boîte de dialogue s’affiche toujours dans le centre de l’écran. Si vous le définissez sur **False**, vous pouvez ensuite définir le **XPos** et **YPos** propriétés à définir explicitement l’emplacement à l’écran la boîte de dialogue s’affiche. Les propriétés de position sont des valeurs de décalage à partir de l’angle supérieur gauche de la zone d’affichage, qui est définie comme `{X=0, Y=0}`. La position est également basée sur le **Absolute Align** propriété : si **True**, les coordonnées sont exprimées par rapport à l’écran ; si **False**, les coordonnées sont exprimées par rapport à la boîte de dialogue fenêtre propriétaire.
+
+## <a name="to-test-a-dialog-box"></a>Pour tester une boîte de dialogue
+
+1. Lorsque le **boîte de dialogue** éditeur est la fenêtre active, dans la barre de menus, choisissez **Format** > **boîte de dialogue Test**.
+
+1. Pour arrêter la simulation, appuyez sur **ÉCHAP**, ou sélectionnez simplement le **fermer** bouton dans la boîte de dialogue que vous testez.
 
 ## <a name="requirements"></a>Spécifications
 
@@ -62,4 +92,5 @@ Win32
 
 [Guide pratique pour créer une ressource](../windows/how-to-create-a-resource.md)<br/>
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
-[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)
+[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)<br/>
+[Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)<br/>

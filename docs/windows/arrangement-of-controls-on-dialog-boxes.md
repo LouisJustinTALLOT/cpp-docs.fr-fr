@@ -3,6 +3,7 @@ title: Organisation des contrôles dans les boîtes de dialogue (C++) | Microsof
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.dialog.grouping
+- vc.editors.dialog.combo
 helpviewer_keywords:
 - controls [C++], positioning
 - dialog box controls [C++], placement
@@ -57,13 +58,34 @@ helpviewer_keywords:
 - Tabstop property for controls
 - controls [C++], focus
 - dialog box controls [C++], tab order
+- Dialog Editor [C++], selecting controls
+- dominant controls
+- dialog box controls [C++], selecting in editor
+- controls [C++], selecting
+- size, controls
+- controls [C++], dominant
+- controls [C++], removing from groups
+- Dialog Editor [C++], dominant control
+- Size to Content command
+- size, controls
+- text, autosizing controls to fit text
+- controls [C++], sizing
+- Make Same Size command
+- combo boxes, sizing
+- list controls [C++], scroll bar width
+- CListBox::SetHorizontalExtent
+- controls [C++], scroll bar
+- scroll bars [C++], displaying in controls
+- horizontal scroll bar width
+- CListBox class, scroll bar width
+- scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 210fbf8e062b4dd8c469f9c40a015bbc19bc2843
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 99667898428fe9532d59277bfedafd24927304dc
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152740"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264879"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes-c"></a>Organisation des contrôles dans les boîtes de dialogue (C++)
 
@@ -116,7 +138,7 @@ Les poignées de redimensionnement de contrôles alignent sur les repères lorsq
 
 Les graduations dans les règles qui déterminent l’espacement des guides et des contrôles sont définies par les unités de boîte de dialogue (DLU). Une DLU est basée sur la taille de la police de la boîte de dialogue, normalement 8 points MS Shell Dlg. Une DLU horizontale est la largeur moyenne de la police de la boîte de dialogue divisée en quatre parties. Une DLU verticale est la hauteur moyenne de la police divisée par huit.
 
-#### <a name="to-size-a-group-of-controls-with-guides"></a>Pour dimensionner un groupe de contrôles avec les repères
+Pour dimensionner un groupe de contrôles avec des guides :
 
 1. À un repère d’alignement côté « un » de contrôle (ou des contrôles).
 
@@ -126,7 +148,7 @@ Les graduations dans les règles qui déterminent l’espacement des guides et d
 
 1. Déplacez des repères de dimensionner le contrôle (ou les contrôles).
 
-#### <a name="to-change-the-intervals-of-the-tick-marks"></a>Pour modifier les intervalles entre les graduations
+Pour modifier les intervalles des graduations :
 
 1. À partir de la **Format** menu, choisissez **Guide paramètres**.
 
@@ -136,32 +158,23 @@ Les graduations dans les règles qui déterminent l’espacement des guides et d
 
 Vous pouvez utiliser les touches spéciales conjointement avec la souris pour désactiver l’alignement sur les guides. À l’aide de la **Alt** clé désactive les effets d’alignement du guide sélectionnée. Déplacement d’un repère avec le **MAJ** clé empêche le déplacement avec le guide de contrôles alignés.
 
-#### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Pour désactiver l’alignement sur les repères
+- Pour désactiver l’alignement sur les repères, faites glisser le contrôle tout en maintenant enfoncée la **Alt** clé.
 
-Faites glisser le contrôle tout en maintenant enfoncée la **Alt** clé.
+- Pour déplacer des repères sans déplacer les contrôles alignés, faites glisser le repère tout en maintenant enfoncée la **MAJ** clé.
 
-#### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Pour déplacer des repères sans déplacer les contrôles alignés
-
-Faites glisser le repère tout en maintenant enfoncée la **MAJ** clé.
-
-#### <a name="to-turn-off-the-guides"></a>Pour désactiver les repères
-
-1. À partir de la **Format** menu, choisissez **Guide paramètres**.
-
-1. Dans le **Guide paramètres** boîte de dialogue **repères de disposition**, sélectionnez **aucun**.
+- Pour désactiver les repères, à partir de la **Format** menu, choisissez **Guide paramètres**. Ensuite, dans le **Guide paramètres** boîte de dialogue **repères de disposition**, sélectionnez **aucun**.
 
    > [!NOTE]
    > Vous pouvez également double-cliquer sur la règle pour accéder à la **Guide paramètres** boîte de dialogue.
 
-\- ou -
-
-Sur le **Format** menu, sélectionnez **activer/désactiver les repères**.
+> [!TIP]
+> Un raccourci pour désactiver les repères se trouve sur le **Format** menu, sélectionnez **activer/désactiver les repères**.
 
 ### <a name="modify-the-layout-grid"></a>Modifier la grille de disposition
 
 Lorsque vous êtes placement ou réorganiser les contrôles dans une boîte de dialogue, vous pouvez utiliser la grille de disposition pour un positionnement plus précis. Lorsque la grille est activée, les contrôles apparaissent comme « aligne » sur les lignes en pointillés de la grille comme si elle était aimantée. Vous pouvez activer cette fonctionnalité « Aligner sur la grille » et de désactiver et modifier la taille des disposition des cellules de grille.
 
-#### <a name="to-turn-the-layout-grid-on-or-off"></a>Pour activer ou désactiver le la grille de disposition
+Pour activer ou désactiver les la grille de disposition :
 
 1. À partir de la **Format** menu, choisissez **Guide paramètres**.
 
@@ -169,11 +182,120 @@ Lorsque vous êtes placement ou réorganiser les contrôles dans une boîte de d
 
    Vous pouvez toujours contrôler la grille de l’individu **boîte de dialogue** fenêtres de l’éditeur à l’aide de la **bascule grille** bouton sur le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-#### <a name="to-change-the-size-of-the-layout-grid"></a>Pour modifier la taille de la grille de disposition
+Pour modifier la taille de la grille de disposition :
 
 1. À partir de la **Format** menu, choisissez **Guide paramètres**.
 
 1. Dans le **Guide paramètres** boîte de dialogue, tapez la hauteur et largeur dans DLU pour les cellules dans la grille. La largeur ou hauteur minimale est 4 DLU.
+
+## <a name="selecting-controls"></a>Sélection de contrôles
+
+Sélectionner des contrôles à la taille, aligner, déplacer, copier, ou supprimez-les, puis terminez l’opération que vous souhaitez. Dans la plupart des cas, vous devez sélectionner plusieurs contrôles à utiliser les outils de dimensionnement et d’alignement sur le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+Lorsqu’un contrôle est sélectionné, elle comporte une bordure ombrée autour d’elle avec solide (actif) ou vides (inactives) « poignées de dimensionnement » petits carrés qui apparaissent dans la bordure de sélection. Lorsque plusieurs contrôles sont sélectionnés, le contrôle dominant doté de poignées de redimensionnement solide et tous les autres contrôles sélectionnés ont des poignées de redimensionnement creux.
+
+Lorsque vous êtes de dimensionnement ou aligner plusieurs contrôles, la **boîte de dialogue** éditeur utilise le « contrôle dominant » pour déterminer comment les autres contrôles sont dimensionnés ou alignés. Par défaut, le contrôle dominant est le premier contrôle sélectionné.
+
+### <a name="to-select-multiple-controls"></a>Pour sélectionner plusieurs contrôles
+
+1. Dans le [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox), sélectionnez le **pointeur** outil.
+
+1. Utilisez une des étapes suivantes pour effectuer votre sélection :
+
+   - Faites glisser le pointeur pour dessiner une zone de sélection autour des contrôles que vous souhaitez sélectionner dans votre boîte de dialogue. Lorsque vous relâchez le bouton de la souris, tous les contrôles à l’intérieur ou à l’intersection de la zone de sélection sont sélectionnés.
+
+   - Maintenez la **MAJ** la clé, sélectionnez les contrôles que vous souhaitez inclure dans la sélection.
+
+   - Maintenez la **Ctrl** la clé, sélectionnez les contrôles que vous souhaitez inclure dans la sélection.
+
+### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Pour supprimer un contrôle d’un groupe de contrôles sélectionnés ou pour ajouter un contrôle à un groupe de contrôles sélectionnés
+
+Avec un groupe de contrôles sélectionnés, maintenez la **MAJ** la clé, sélectionnez le contrôle que vous souhaitez supprimer ou ajouter à la sélection existante.
+
+   > [!NOTE]
+   > Maintenant enfoncé le **Ctrl** clé et la sélection d’un contrôle au sein d’une sélection rendra qui contrôlent le contrôle dominant dans cette sélection.
+
+### <a name="to-specify-the-dominant-control"></a>Pour spécifier le contrôle dominant
+
+Maintenez la **Ctrl** la clé, sélectionnez le contrôle que vous souhaitez utiliser pour influencer la taille ou l’emplacement d’autres contrôles *premier*.
+
+> [!NOTE]
+> Les poignées de redimensionnement du contrôle dominant sont pleines tandis que celles des contrôles secondaires sont vides. Le dimensionnement ou l’alignement est basé sur le contrôle dominant.
+
+### <a name="to-change-the-dominant-control"></a>Pour modifier le contrôle dominant
+
+1. Effacer la sélection actuelle, cliquez en dehors de tous les contrôles actuellement sélectionnés.
+
+1. Répétez la procédure précédente, en sélectionnant un autre contrôle en premier.
+
+## <a name="sizing-controls"></a>Dimensionnement de contrôles
+
+Utilisez les poignées de redimensionnement pour redimensionner un contrôle. Lorsque le pointeur est positionné sur une poignée de redimensionnement, il change de forme pour indiquer les sens dans lequel le contrôle peut être redimensionné. Poignées de redimensionnement active sont correctes ; Si une poignée de redimensionnement est vide, le contrôle ne peut pas être redimensionné le long de cet axe.
+
+Vous pouvez également modifier la taille d’un contrôle par le contrôle à des guides ou les marges d’alignement, ou en déplaçant un accroché guide en dehors d’un autre et contrôle.
+
+### <a name="to-size-an-individual-control"></a>Pour dimensionner un contrôle individuel
+
+1. Sélectionnez le contrôle.
+
+1. Faites glisser les poignées de redimensionnement pour modifier la taille du contrôle :
+
+   - Poignées de redimensionnement en haut et côtés modifier la taille horizontale ou verticale.
+
+   - Poignées de redimensionnement dans les angles modifier la taille horizontale et verticale.
+
+   > [!TIP]
+   > Vous pouvez redimensionner le contrôle d’unité une boîte de dialogue (DLU) à la fois en maintenant enfoncée la **MAJ** clés et à l’aide la **flèche droite** et **bas** clés.
+
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Pour dimensionner automatiquement un contrôle pour s’adapter au texte qu’il contient
+
+Choisissez **ajuster au contenu** à partir de la **Format** menu ou cliquez sur le contrôle et choisissez **ajuster au contenu** dans le menu contextuel.
+
+### <a name="to-make-controls-the-same-width-height-or-size"></a>Pour rendre les contrôles la même largeur, hauteur ou taille
+
+Vous pouvez redimensionner un groupe de contrôles en fonction de la taille du contrôle dominant.
+
+1. Sélectionnez les contrôles que vous voulez redimensionner.
+
+   Le contrôle sélectionné en premier dans la série est le contrôle dominant. La taille finale des contrôles dans le groupe dépend de la taille du contrôle dominant.
+
+1. À partir de la **Format** menu, choisissez **Uniformiser la taille**, puis choisissez **à la fois**, **hauteur**, ou **largeur**.
+
+### <a name="to-set-the-size-of-the-combo-box-and-its-drop-down-list"></a>Pour définir la taille de la liste déroulante de zone et sa liste déroulante
+
+Vous pouvez dimensionner une zone de liste déroulante lorsque vous l’ajoutez à la boîte de dialogue. Vous pouvez également spécifier la taille de la zone de liste déroulante. Pour plus d’informations, consultez [Ajout de valeurs à un contrôle Combo Box](../windows/adding-values-to-a-combo-box-control.md).
+
+#### <a name="to-size-a-combo-box"></a>Pour dimensionner une zone de liste déroulante
+
+1. Sélectionnez le contrôle de zone de liste déroulante dans votre boîte de dialogue.
+
+   Initialement, seuls les poignées de redimensionnement de gauche et droite sont actifs.
+
+1. Utilisez les poignées de redimensionnement pour définir la largeur de la zone de liste déroulante.
+
+Vous pouvez également définir la taille verticale de la partie de la liste déroulante de la zone de liste déroulante.
+
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Pour définir la taille de la liste déroulante zone de liste déroulante
+
+1. Sélectionnez le bouton de flèche de déroulement à droite de la zone de liste déroulante.
+
+   ![Flèche sur une zone de liste déroulante dans un projet MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")
+
+   Le contour du contrôle change pour afficher la taille de la zone de liste déroulante avec la zone de liste déroulante étendue.
+
+1. Utilisez la poignée de redimensionnement inférieure pour modifier la taille initiale de la zone de liste déroulante.
+
+   ![Liste déroulante&#45;redimensionnement de la zone dans un projet MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
+
+1. Sélectionnez la flèche déroulante à nouveau pour fermer la partie de la liste déroulante de la zone de liste déroulante.
+
+### <a name="to-set-the-width-of-a-horizontal-scroll-bar-and-make-it-appear"></a>Pour définir la largeur d’une barre de défilement horizontale et faire apparaître
+
+Lorsque vous ajoutez une zone de liste avec une barre de défilement horizontale à une boîte de dialogue à l’aide des classes MFC, la barre de défilement ne s’affichent automatiquement dans votre application.
+
+Définissez une largeur maximale pour l’élément le plus large en appelant [CListBox::SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) dans votre code.
+
+   Sans cette valeur est définie, la barre de défilement ne s’affichent, même lorsque les éléments dans la zone de liste sont plus larges que la zone.
 
 ## <a name="group-radio-buttons-on-a-dialog-box"></a>Boutons de case d’option de groupe sur une boîte de dialogue
 
@@ -208,29 +330,22 @@ Vous pouvez ajouter plusieurs groupes de cases d’option à une boîte de dialo
 
 1. Vous pouvez maintenant modifier votre code pour spécifier la case d’option qui doit apparaître sélectionnée. Par exemple, `m_radioBox1 = 0;` sélectionne le premier bouton de case d’option dans le groupe.
 
-## <a name="align-groups-of-controls"></a>Aligner des groupes de contrôles
+## <a name="to-align-groups-of-controls"></a>Pour aligner des groupes de contrôles
 
-Les procédures suivantes vous montrent comment aligner les contrôles :
-
-### <a name="to-align-groups-of-controls"></a>Pour aligner des groupes de contrôles
-
-1. [Sélectionnez les contrôles](../windows/selecting-multiple-controls.md) à aligner. Veillez à sélectionner le contrôle que vous souhaitez d’abord être le contrôle dominant ou définissez-le comme contrôle dominant avant d’exécuter l’alignement ou de dimensionnement de commande.
+1. Sélectionnez les contrôles que vous souhaitez aligner. Veillez à sélectionner le contrôle que vous souhaitez d’abord être le contrôle dominant ou définissez-le comme contrôle dominant avant d’exécuter l’alignement ou de dimensionnement de commande.
 
    La position finale du groupe de contrôles dépend de la position du contrôle dominant. Pour plus d’informations sur la sélection du contrôle dominant, consultez [spécification du contrôle Dominant](../windows/specifying-the-dominant-control.md).
 
 1. À partir de la **Format** menu, choisissez **Align**, puis choisissez un des alignements suivants :
 
-   - `Lefts`: aligne les contrôles sélectionnés sur leurs côtés gauches.
-
-   - `Centers`: aligne les contrôles sélectionnés sur leur centre horizontalement.
-
-   - `Rights`: aligne les contrôles sélectionnés sur leurs côtés.
-
-   - `Tops`: aligne les contrôles sélectionnés sur leurs bords supérieurs.
-
-   - `Middles`: aligne les contrôles sélectionnés verticalement sur leur milieu.
-
-   - `Bottoms`: aligne les contrôles sélectionnés sur le bord inférieur.
+   |Value|Description|
+   |-----|-----------|
+   |`Lefts`|Aligne les contrôles sélectionnés sur leurs côtés gauches.|
+   |`Centers`|Aligne les contrôles sélectionnés sur leur centre horizontalement.|
+   |`Rights`|Aligne les contrôles sélectionnés sur leurs côtés.|
+   |`Tops`|Aligne les contrôles sélectionnés sur leurs bords supérieurs.|
+   |`Middles`|Aligne les contrôles sélectionnés verticalement sur leur milieu.|
+   |`Bottoms`|Aligne les contrôles sélectionnés sur le bord inférieur.|
 
 ### <a name="to-even-the-spacing-between-controls"></a>De même, l’espacement entre les contrôles
 
@@ -265,55 +380,6 @@ Le **boîte de dialogue** éditeur vous permet aux contrôles d’espace uniform
    - `Bottom`: aligne le bord inférieur de la boîte de dialogue de boutons.
 
        Si vous sélectionnez un contrôle autre qu’un bouton de commande, sa position n’est pas affectée.
-
-## <a name="change-the-tab-order-of-controls"></a>Modifier l’ordre de tabulation des contrôles
-
-L’ordre de tabulation est l’ordre dans lequel le **onglet** touche déplace le focus d’entrée d’un contrôle à l’autre dans une boîte de dialogue. Généralement, l’ordre de tabulation se déroule de gauche à droite et de haut en bas dans une boîte de dialogue. Chaque contrôle possède une **Tabstop** propriété qui détermine si un contrôle reçoit le focus d’entrée.
-
-### <a name="to-set-input-focus-for-a-control"></a>Pour définir le focus d’entrée pour un contrôle
-
-Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), sélectionnez **True** ou **False** dans le **Tabstop** propriété.
-
-Même les contrôles qui n’ont pas la **Tabstop** propriété définie sur **True** doivent faire partie de l’ordre de tabulation. Ordre de tabulation est important, par exemple, lorsque vous [définir des touches d’accès rapide (mnémoniques)](../windows/defining-mnemonics-access-keys.md) pour les contrôles qui n’ont pas des légendes. Texte statique qui contient une clé d’accès pour un contrôle lié doit précéder immédiatement le contrôle concerné dans l’ordre de tabulation.
-
-> [!NOTE]
-> Si votre boîte de dialogue contient des contrôles qui se chevauchent, la modification de l’ordre de tabulation peut changer la façon des que contrôles sont affichés. Contrôles fournis plus loin dans l’ordre de tabulation sont toujours affichés au-dessus des contrôles superposés qui les précèdent dans l’ordre de tabulation.
-
-### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Pour afficher l’ordre de tabulation actuel pour tous les contrôles dans une boîte de dialogue
-
-Sur le **Format** menu, sélectionnez **l’ordre de tabulation**.
-
-\- ou -
-
-- Appuyez sur **Ctrl** + **D**.
-
-### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Pour modifier l’ordre de tabulation pour tous les contrôles dans une boîte de dialogue
-
-1. Sur le **Format** menu, sélectionnez **l’ordre de tabulation**.
-
-   Un nombre dans le coin supérieur gauche de chaque contrôle affiche sa place dans l’ordre de tabulation en cours.
-
-1. Définir l’ordre de tabulation en cliquant sur chaque contrôle dans l’ordre que vous souhaitez que le **onglet** clé à suivre.
-
-1. Appuyez sur **entrée** pour quitter **l’ordre de tabulation** mode.
-
-   > [!TIP]
-   > Une fois que vous entrez **l’ordre de tabulation** mode, vous pouvez appuyer sur **ÉCHAP** ou **entrée** pour désactiver la possibilité de modifier l’ordre de tabulation.
-
-### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Pour modifier l’ordre de tabulation pour deux ou plusieurs contrôles
-
-1. À partir de la **Format** menu, choisissez **l’ordre de tabulation**.
-
-1. Spécifier où commence la modification dans l’ordre. Maintenez tout d’abord le **Ctrl** de clé et sélectionnez le contrôle, puis sélectionnez celui dans lequel vous souhaitez modifier l’ordre.
-
-   Par exemple, si vous souhaitez modifier l’ordre des contrôles `7` via `9`, maintenez la touche **Ctrl**, puis sélectionnez le contrôle `6` première.
-
-   > [!NOTE]
-   > Pour affecter à un contrôle spécifique numéro `1` (tout d’abord dans l’ordre de tabulation), double-cliquez sur le contrôle.
-
-1. Mise en production la **Ctrl** de clé, puis sélectionnez les contrôles dans l’ordre que vous souhaitez que le **onglet** à partir de ce point.
-
-1. Appuyez sur **entrée** pour quitter **l’ordre de tabulation** mode.
 
 Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
