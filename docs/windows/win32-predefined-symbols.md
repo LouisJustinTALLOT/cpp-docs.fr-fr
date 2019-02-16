@@ -1,17 +1,17 @@
 ---
 title: Symboles Win32 prédéfinis
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - Win32 [C++], predefined symbols
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: 703e00ebcf50c987fe3a0a9399cd7497bb9c95f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b282db2680b2459fdbece41d3c0e0d15f523e44
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434695"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320443"
 ---
 # <a name="win32-predefined-symbols"></a>Symboles Win32 prédéfinis
 
@@ -21,24 +21,25 @@ Ces symboles sont définis dans les fichiers d’en-tête Win32 et ils prennent 
 |-|-|
 |IDABORT|Contrôle : Bouton d’abandon de boîte de dialogue|
 |IDC_STATIC|Contrôle : Texte statique dans une boîte de dialogue|
-|IDCANCEL|Contrôle : Bouton Annuler de boîte de dialogue|
-|IDD_ABOUTBOX|Boîte de dialogue : Produit à propos de la boîte de dialogue|
+|IDCANCEL|Contrôle : Bouton d’annulation de boîte de dialogue|
+|IDD_ABOUTBOX|Boîte de dialogue : Produit sur la boîte de dialogue|
 |IDI_PROJECTNAME|Icône : Icône du projet actuel|
-|IDI_SMALL|Icône : Petite icône de projet actuel|
+|IDI_SMALL|Icône : Icône du petit projet actuel|
 |IDIGNORE|Contrôle : Utilisé avec le bouton Ignorer dans les boîtes de dialogue|
-|IDM_ABOUT|Élément de menu : Utilisé avec aide... Sur...|
-|IDM_EXIT|Élément de menu : Utilisé avec fichier... Sortie...|
-|IDNO|Contrôle : ne boîte de dialogue aucun bouton|
+|IDM_ABOUT|Élément de menu : Utilisé avec l’aide... Sur...|
+|IDM_EXIT|Élément de menu : Utilisé avec un fichier... Sortie...|
+|IDNO|Contrôle : Aucun bouton de la boîte de dialogue|
 |IDOK|Contrôle : Bouton OK de boîte de dialogue|
 |IDRETRY|Contrôle : Bouton de nouvelle tentative de boîte de dialogue|
-|IDS_APP_TITLE|Chaîne : Nom actuel de l’application|
-|IDYES|Contrôle : Bouton de la boîte de dialogue Oui|
+|IDS_APP_TITLE|Chaîne : Nom de l’application en cours|
+|IDYES|Contrôle : Bouton Oui boîte de dialogue|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
 [ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)<br/>
-[Symboles : identificateurs de ressources](../windows/symbols-resource-identifiers.md)
+[Symboles MFC prédéfinis](../windows/mfc-predefined-symbols.md)<br/>
+[Symboles ATL prédéfinis](../windows/atl-predefined-symbols.md)<br/>

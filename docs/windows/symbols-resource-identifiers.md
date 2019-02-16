@@ -1,6 +1,6 @@
 ---
-title: 'Symboles : Identificateurs de ressources (C++)'
-ms.date: 11/04/2016
+title: Identificateurs de ressource (symboles) (C++)
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.identifiers
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: abe6297d74df4941328d3e606fb3b0f646d36265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7359fdfd1007cb49025908ffea51093622943052
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529998"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320495"
 ---
-# <a name="symbols-resource-identifiers-c"></a>Symboles : Identificateurs de ressources (C++)
+# <a name="resource-identifiers-symbols-c"></a>Identificateurs de ressource (symboles) (C++)
 
 Un symbole est un identificateur de ressource (ID) composé de deux parties : une chaîne de texte (nom du symbole) mappée à une valeur entière (valeur du symbole). Exemple :
 
@@ -36,34 +36,18 @@ Lorsque vous créez une ressource ou un objet de ressource, les [éditeurs de re
 
 Le nombre de ressources et de symboles de votre application augmente à mesure qu’elle augmente en taille et en complexité. Le suivi d’un grand nombre de symboles éparpillés dans plusieurs fichiers peut être difficile. La boîte de dialogue [Symboles des ressources](../windows/resource-symbols-dialog-box.md) simplifie la gestion des symboles en offrant un outil centralisé qui vous permet d’effectuer les tâches suivantes :
 
-- [Afficher les symboles des ressources](../windows/viewing-resource-symbols.md)
-
 - [Créer des symboles](../windows/creating-new-symbols.md)
 
-- [Modifier des symboles non assignés](../windows/changing-unassigned-symbols.md)
-
-- [Supprimer des symboles non assignés](../windows/deleting-unassigned-symbols.md)
-
-- [Ouvrir l’Éditeur de ressources pour un symbole donné](../windows/opening-the-resource-editor-for-a-given-symbol.md)
-
-- [Modifier un symbole ou un nom de symbole (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)
-
-- [Modifier la valeur numérique d’un symbole](../windows/changing-a-symbol-s-numeric-value.md)
-
-- [Modifier les noms des fichiers d’en-têtes de symboles](../windows/changing-the-names-of-symbol-header-files.md)
-
-- [Inclure des symboles partagés (en lecture seule) ou calculés](../windows/including-shared-read-only-or-calculated-symbols.md)
+- [Gérer les symboles](../windows/changing-a-symbol-or-symbol-name-id.md)
 
 - [Afficher des ID de symboles prédéfinis](../windows/predefined-symbol-ids.md)
 
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour rechercher des symboles dans les ressources](../windows/how-to-search-for-symbols-in-resources.md)<br/>
+[Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)<br/>
+[Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 [Éditeurs de ressources](../windows/resource-editors.md)<br/>
-[Fichiers de ressources](../windows/resource-files-visual-studio.md)

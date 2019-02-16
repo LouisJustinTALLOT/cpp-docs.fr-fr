@@ -1,16 +1,16 @@
 ---
 title: Symboles ATL prédéfinis
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 37d24dcfb65566b2b13c8b1ba8c826ec68271477
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8b0db77b2add584e2fa8716a2d1821f5cae1fc
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654400"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320456"
 ---
 # <a name="atl-predefined-symbols"></a>Symboles ATL prédéfinis
 
@@ -20,20 +20,21 @@ Ces symboles sont définis dans les fichiers d’en-tête ATL, mais ils prennent
 |-|-|
 |IDABORT|Contrôle : Bouton d’abandon de boîte de dialogue|
 |IDC_STATIC|Contrôle : Contrôle statique|
-|IDCANCEL|Contrôle : Bouton Annuler de boîte de dialogue|
-|IDIGNORE|Contrôle : Bouton Ignorer de boîte de dialogue|
-|IDNO|Contrôle : ne boîte de dialogue aucun bouton|
+|IDCANCEL|Contrôle : Bouton d’annulation de boîte de dialogue|
+|IDIGNORE|Contrôle : Bouton Ignorer boîte de dialogue|
+|IDNO|Contrôle : Aucun bouton de la boîte de dialogue|
 |IDOK|Contrôle : Bouton OK de boîte de dialogue|
 |IDR_ACCELERATOR1|Ressource : Table d’accélérateurs|
 |IDRETRY|Contrôle : Bouton de nouvelle tentative de boîte de dialogue|
-|IDS_PROJNAME|Chaîne : Nom actuel de l’application|
-|IDYES|Contrôle : Bouton de la boîte de dialogue Oui|
+|IDS_PROJNAME|Chaîne : Nom de l’application en cours|
+|IDYES|Contrôle : Bouton Oui boîte de dialogue|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ATL
 
 ## <a name="see-also"></a>Voir aussi
 
 [ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)<br/>
-[Symboles : identificateurs de ressources](../windows/symbols-resource-identifiers.md)
+[Symboles MFC prédéfinis](../windows/mfc-predefined-symbols.md)<br/>
+[Symboles Win32 prédéfinis](../windows/win32-predefined-symbols.md)<br/>

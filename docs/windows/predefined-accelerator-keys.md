@@ -1,6 +1,6 @@
 ---
 title: Touches accélérateur (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 1e87d80b8995760eecda34334dab702480bd9669
-ms.sourcegitcommit: 5beace7dcc6bf0e8b8cc96a930e7424f9daa05cb
+ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55232121"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320508"
 ---
 # <a name="accelerator-keys-c"></a>Touches accélérateur (C++)
-
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.
 
 ## <a name="predefined-accelerator-keys"></a>Touches accélérateur prédéfinies
 
@@ -79,7 +77,7 @@ Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent
 |VK_XBUTTON1|Windows : Bouton de souris x1|
 |VK_XBUTTON2|Windows : Bouton de souris x2|
 
-## <a name="associating-an-accelerator-key-with-a-menu-item"></a>Association d'une touche accélérateur à un élément de menu
+## <a name="accelerator-key-association"></a>Association de clé d’accès rapide
 
 Bien souvent, vous souhaitez qu'un élément de menu et une combinaison de touches du clavier permettent d'exécuter la même commande de programme. Pour ce faire, vous assignez le même identificateur (ID) de ressource à l'élément de menu et à une entrée de la table d'accélérateurs de votre application. Vous modifiez ensuite la légende de l'élément de menu pour afficher le nom de l'accélérateur. Pour plus d’informations sur les éléments de menu et les touches d’accès rapide, consultez [association d’un élément de Menu à une touche accélérateur](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
@@ -90,4 +88,3 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Éditeur d’accélérateurs](../windows/accelerator-editor.md)<br/>
-[Éditeurs de ressources](../windows/resource-editors.md)

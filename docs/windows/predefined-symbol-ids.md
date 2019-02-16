@@ -1,16 +1,16 @@
 ---
 title: ID de symbole prédéfinis
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: cb2f80315e0480c3fcb73092123cad88712dff05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7402bf7aaaf7c72382b57963d5d759adaa71115
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477296"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320794"
 ---
 # <a name="predefined-symbol-ids"></a>ID de symbole prédéfinis
 
@@ -29,10 +29,12 @@ Ces bibliothèques comportent des symboles prédéfinis qui s'affichent dans le 
    > [!NOTE]
    > Les symboles prédéfinis sont toujours en lecture seule.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32, MFC ou ATL
 
 ## <a name="see-also"></a>Voir aussi
 
-[Symboles : identificateurs de ressources](../windows/symbols-resource-identifiers.md)
+[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[Créer des symboles](../windows/creating-new-symbols.md)<br/>
+[Gérer les symboles](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
