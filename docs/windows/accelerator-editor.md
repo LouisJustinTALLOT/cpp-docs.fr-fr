@@ -1,6 +1,6 @@
 ---
 title: Éditeur d’accélérateurs (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
 - vc.editors.accelerator
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 5ece5c7e85a3ef59b728474746e9553a751d43c6
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 90ef142336cf88c5e40f78f6cc651b2bb35a0f6c
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226343"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320638"
 ---
 # <a name="accelerator-editor-c"></a>Éditeur d’accélérateurs (C++)
 
@@ -55,8 +55,6 @@ Pour une liste des touches accélérateur prédéfinies, consultez [touches d’
 
    > [!NOTE]
    > Windows ne vous permet pas de créer des tables d’accélérateurs vides. Si vous créez une table d’accélérateurs sans entrée, elle est supprimée automatiquement lorsque vous l’enregistrez.
-
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="accelerator-properties"></a>Propriétés d’un accélérateur
 
@@ -123,9 +121,6 @@ Le **Type** propriété détermine si la combinaison de touches de raccourci ass
 Dans un projet C++, vous pouvez modifier une table d’accélérateurs directement avec la modification sur place dans le **Accelerator** éditeur.
 
 Les procédures ci-dessous font référence à l’utilisation des pages de propriétés standard, toutefois, la modification sur place et la méthode de page de propriété ont le même résultat. Modifications apportées à l’aide des pages de propriétés ou à l’aide de la modification sur place sont immédiatement répercutées dans la table d’accélérateurs.
-
-> [!NOTE]
-> Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Pour modifier une table d'accélérateurs
 
@@ -211,7 +206,5 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeurs de ressources](../windows/resource-editors.md)
-
-[Modification d’une table d’accélérateurs](../windows/editing-in-an-accelerator-table.md)<br/>
+[Éditeurs de ressources](../windows/resource-editors.md)<br/>
 [Touches accélérateur prédéfinies](../windows/predefined-accelerator-keys.md)<br/>

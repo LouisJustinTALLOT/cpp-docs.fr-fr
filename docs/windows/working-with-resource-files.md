@@ -1,37 +1,37 @@
 ---
 title: Utilisation des fichiers de ressources (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 276a63f01eba3cfc8c4fd45e0f875d78ada1942a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a989eddd0800062ecfaabf9de857e4ab04e873bd
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483315"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320482"
 ---
 # <a name="working-with-resource-files"></a>Utilisation des fichiers de ressources
 
 > [!WARNING]
 > Cette section concerne les applications de bureau Windows écrites en C++. Pour plus d’informations sur les ressources dans les applications de plateforme Windows universelle écrites en C++, consultez [définition des ressources d’application](/windows/uwp/app-resources/).
 >
-> Pour plus d’informations sur l’ajout de ressources à C++ / c++ / projets de l’interface CLI, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.
+> Pour plus d’informations sur l’ajout de ressources à C++ / c++ / CLI (géré), projets, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.
 
-Les ressources peuvent être composées d'un large éventail d'éléments, notamment les éléments d'interface qui fournissent des informations à l'utilisateur (par exemple, une image bitmap, une icône ou un curseur), les ressources personnalisées qui contiennent les données nécessaires à une application, les ressources de type version utilisées par les API d'installation, ainsi que les ressources des menus et des boîtes de dialogue.
+Ressources peuvent être composées d’un large éventail d’éléments, y compris les éléments d’interface qui fournissent des informations à l’utilisateur (par exemple un bitmap, icône ou curseur), des ressources personnalisées qui contiennent des données de qu'une application a besoin, les ressources de version utilisées par l’API, d’installation et les ressources de zone de menu et de la boîte de dialogue.
 
 Vous pouvez ajouter de nouvelles ressources à votre projet et modifier ces ressources à l'aide de l'éditeur de ressources approprié. La plupart des Assistants Visual C++ génèrent automatiquement un fichier .rc pour votre projet.
 
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
+Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="in-this-section"></a>Dans cette section
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
-Décrit les fichiers de ressources et la façon dont ils sont utilisés dans les applications de bureau Windows. Propose également des liens vers des rubriques qui expliquent comment utiliser les fichiers de ressources.
+Décrit les fichiers de ressources et comment ils sont utilisés dans les applications de bureau Windows. Fournit également des liens vers des articles qui expliquent comment utiliser des fichiers de ressources.
 
-[Symboles : identificateurs de ressources](../windows/symbols-resource-identifiers.md)<br/>
+[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
 Décrit les symboles et fournit des informations sur l'utilisation de la boîte de dialogue **Symboles des ressources** pour gérer les symboles dans vos projets.
 
 [Éditeurs de ressources](../windows/resource-editors.md)<br/>

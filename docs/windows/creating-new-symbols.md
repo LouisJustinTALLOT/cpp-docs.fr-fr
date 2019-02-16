@@ -1,6 +1,6 @@
 ---
 title: 'Procédure : Créer des symboles (C++)'
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.creating
 - vc.editors.symbol.managing
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 49860f2277dbb462c7e1cd8cb59b86a3edbd3cc9
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 01b810d162da4d59c2044fe02a1da5c0929d41b9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226330"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320599"
 ---
 # <a name="how-to-create-symbols-c"></a>Procédure : Créer des symboles (C++)
 
@@ -35,7 +35,7 @@ Le **symboles des ressources** boîte de dialogue C++ vous permet d’ajouter de
 La boîte de dialogue contient les propriétés suivantes :
 
 |Propriété|Description|
-|---|---|
+|--------------------------|------------------------------------------|
 |**Name**|Affiche le nom du symbole. Pour plus d’informations, consultez [restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md).|
 |**Valeur**|Affiche la valeur numérique du symbole. Pour plus d’informations, consultez [Restrictions de valeur de symbole](../windows/symbol-value-restrictions.md).|
 |**En cours d’utilisation**|En cas de sélection, indique que le symbole est utilisé par une ou plusieurs ressources. La ou les ressources sont répertoriées dans la zone Utilisé par.|
@@ -45,9 +45,9 @@ La boîte de dialogue contient les propriétés suivantes :
 |**Change**|Ouvre le **modifier le symbole** boîte de dialogue qui vous permet de modifier le nom ou la valeur d’un symbole. Si le symbole est destiné à un contrôle ou une ressource en cours d'utilisation, il ne peut être modifié qu'à partir de l'éditeur de ressources correspondant. Pour plus d’informations, consultez [modification des symboles non assignés](../windows/changing-unassigned-symbols.md).|
 |**Afficher l’utilisation**|Ouvre la ressource qui contient le symbole dans l'éditeur de ressources correspondant.|
 
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*.
+## <a name="create-symbols"></a>Créer des symboles
 
-## <a name="to-create-a-new-symbol"></a>Pour créer un nouveau symbole
+### <a name="to-create-a-new-symbol"></a>Pour créer un nouveau symbole
 
 1. Dans le **symboles des ressources** boîte de dialogue, sélectionnez **New**.
 
@@ -60,7 +60,7 @@ Pour plus d’informations sur l’ajout de ressources aux projets managés, con
 > [!NOTE]
 > Si vous tapez un nom de symbole qui existe déjà, un message s'affiche en indiquant qu'un symbole portant le même nom est déjà défini. Vous ne pouvez pas définir plusieurs symboles avec le même nom. Toutefois, vous pouvez définir des symboles distincts avec la même valeur numérique. Pour plus d’informations, consultez [restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md) et [Restrictions de valeur de symbole](../windows/symbol-value-restrictions.md).
 
-## <a name="to-view-resource-symbols"></a>Pour afficher les symboles des ressources
+### <a name="to-view-resource-symbols"></a>Pour afficher les symboles des ressources
 
 1. Dans [affichage des ressources](../windows/resource-view-window.md), avec le bouton droit de votre fichier .rc.
 
@@ -72,11 +72,11 @@ Pour plus d’informations sur l’ajout de ressources aux projets managés, con
    > [!NOTE]
    > Pour afficher les symboles prédéfinis, cochez la **afficher les symboles en lecture seule** case à cocher.
 
-## <a name="to-open-the-resource-editor-for-a-given-symbol"></a>Pour ouvrir l’éditeur de ressources pour un symbole donné
+### <a name="to-open-the-resource-editor-for-a-given-symbol"></a>Pour ouvrir l’éditeur de ressources pour un symbole donné
 
 Lorsque que vous parcourez les symboles dans le **symboles des ressources**, vous souhaiterez peut-être plus d’informations sur l’utilisation d’un symbole particulier. Le **afficher l’utilisation** bouton offre un moyen rapide pour obtenir ces informations.
 
-### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>Pour passer à l'éditeur de ressources où un symbole est utilisé
+#### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>Pour passer à l'éditeur de ressources où un symbole est utilisé
 
 1. Sélectionnez un symbole dans le **nom** zone de la **symboles des ressources** boîte de dialogue.
 
@@ -92,5 +92,6 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Symboles : identificateurs de ressources](../windows/symbols-resource-identifiers.md)<br/>
-[ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)
+[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[Gérer les symboles](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)<br/>

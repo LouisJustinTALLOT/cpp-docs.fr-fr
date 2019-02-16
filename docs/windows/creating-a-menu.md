@@ -23,13 +23,23 @@ helpviewer_keywords:
 - context menus [C++], connecting to applications
 - shortcut menus [C++], connecting to applications
 - pop-up menus
+- menu commands [C++], selecting
+- menus [C++], selecting
+- commands [C++], menu commands
+- commands [C++], copying on menus
+- menu items, moving
+- commands [C++], moving on menus
+- menu items, copying
+- menu items, deleting
+- commands [C++], deleting from menus
+- menus [C++], deleting
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: da5fc355ae11ee5efb1c58be9e33bd4fb8bff02d
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905769"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320521"
 ---
 # <a name="creating-menus-c"></a>Création de Menus (C++)
 
@@ -38,7 +48,7 @@ ms.locfileid: "55905769"
 
 Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
-## <a name="to-create-a-standard-menu"></a>Pour créer un menu standard
+## <a name="create-a-standard-menu"></a>Créer un menu standard
 
 1. À partir de la **vue** menu, sélectionnez **affichage des ressources** et ensuite avec le bouton droit sur le **Menu** du titre et choisissez **ajouter une ressource**. Choisissez **Menu**.
 
@@ -59,7 +69,7 @@ Pour plus d’informations sur l’ajout de ressources aux projets managés, con
    > [!NOTE]
    > Pour créer un seul élément de menu sur la barre de menus, définissez le **contextuelle** propriété **False**.
 
-## <a name="to-create-a-submenu"></a>Pour créer un sous-menu
+## <a name="create-a-submenu"></a>Créer un sous-menu
 
 1. Sélectionnez la commande de menu pour lequel vous souhaitez créer un sous-menu.
 
@@ -75,7 +85,7 @@ Sélectionnez un nom de menu d’existant et appuyez sur la **insérer** clé. L
 
 Avec le bouton droit sur la barre de menus, choisissez **Insérer nouveau** dans le menu contextuel.
 
-## <a name="to-add-commands-to-a-menu"></a>Pour ajouter des commandes à un menu
+## <a name="add-commands-to-a-menu"></a>Ajouter des commandes à un menu
 
 1. Créer un menu.
 
@@ -104,7 +114,7 @@ Avec le bouton droit sur la barre de menus, choisissez **Insérer nouveau** dans
 
    La zone Nouvel élément est sélectionnée pour vous permettre de créer des commandes de menu supplémentaires.
 
-## <a name="to-create-pop-up-menus"></a>Pour créer des menus contextuels
+## <a name="create-pop-up-menus"></a>Créer des menus contextuels
 
 Les[menus contextuels](../mfc/menus-mfc.md) affichent les commandes fréquemment utilisées. Ils dépendent du contexte selon l'emplacement du pointeur. L'utilisation de menus contextuels dans votre application nécessite la création du menu en question, puis sa connexion au code de l'application.
 
@@ -150,6 +160,52 @@ Le menu contextuel et choisissez **afficher comme Popup** dans le menu contextue
 
    > [!NOTE]
    > Pour revenir à la vue de la barre de menus, cliquez sur **afficher comme Popup** à nouveau (ce qui supprime la coche et retourne l’affichage de la barre de menus).
+
+## <a name="edit-multiple-menus-or-menu-commands"></a>Modifier plusieurs menus ou commandes de menu
+
+### <a name="to-select-multiple-menu-commands"></a>Pour sélectionner plusieurs commandes de menu
+
+Vous pouvez sélectionner plusieurs noms de menus ou commandes de menu pour exécuter des opérations en bloc telles que la suppression ou modification des propriétés.
+
+Tout en maintenant enfoncée la **Ctrl** enfoncée, sélectionnez les menus ou les commandes de sous-menu souhaitées.
+
+### <a name="to-move-and-copy-menus-and-menu-commands"></a>Déplacer et copier des menus et commandes de menu
+
+Vous pouvez déplacer ou copier des menus et des commandes de menu par glisser-déplacer ou à l'aide des commandes du menu contextuel.
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Pour déplacer ou copier des menus ou des commandes de menu par glisser-déplacer
+
+1. Faites glisser ou copiez l'élément que vous souhaitez déplacer vers :
+
+   - Un nouvel emplacement dans le menu actuel.
+
+   - Un autre menu. (Vous pouvez naviguer vers d'autres menus en faisant glisser le pointeur de la souris au-dessus de ces derniers.)
+
+1. Déplacez la commande de menu quand le guide d'insertion affiche la position souhaitée.
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Pour déplacer ou copier des menus ou des commandes de menu à l'aide des commandes de menu contextuel
+
+1. Cliquez avec le bouton droit sur un ou plusieurs menus ou commandes de menu.
+
+1. Dans le menu contextuel, choisissez **Couper** (pour déplacer) ou **Copier**.
+
+1. Si vous souhaitez déplacer les éléments vers un autre menu ressource ou le fichier de script de ressources, [ouvrir dans une autre fenêtre](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+1. Sélectionnez la position du menu ou de la commande de menu où vous souhaitez effectuer le déplacement ou la copie.
+
+1. Dans le menu contextuel, choisissez **Coller**. L'élément déplacé ou copié est placé avant l'élément sélectionné.
+
+   > [!NOTE]
+   > Vous pouvez également faire glisser, copier et coller des éléments vers d'autres menus dans d'autres fenêtres de menu.
+
+### <a name="to-delete-a-menu-or-menu-command"></a>Pour supprimer un menu ou une commande de menu
+
+1. Cliquez avec le bouton droit sur le nom ou la commande de menu.
+
+1. Choisissez **Supprimer** dans le menu contextuel.
+
+   > [!NOTE]
+   > De même, vous pouvez utiliser le menu contextuel pour effectuer d'autres actions telles que Copier, Couper, Coller, Insérer nouveau, Insérer un séparateur, Modifier ID, Afficher comme Popup, Vérifier les mnémoniques, etc.
 
 ## <a name="requirements"></a>Spécifications
 
