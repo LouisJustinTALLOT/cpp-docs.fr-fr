@@ -1,6 +1,6 @@
 ---
-title: Éditeur d'images pour les icônes
-ms.date: 10/17/2018
+title: Éditeur d’images pour les icônes (C++)
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 48b363b7b9021042fe6242be70c74f0daeade0c2
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 782462a4aeba72252c4d6043bd192f6892a3966f
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320703"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336577"
 ---
-# <a name="image-editor-for-icons"></a>Éditeur d'images pour les icônes
+# <a name="image-editor-for-icons-c"></a>Éditeur d’images pour les icônes (C++)
 
 Lorsque vous cliquez sur un fichier image (par exemple, .ico, .bmp, .png) dans l’Explorateur de solutions, l’image s’ouvre dans l’éditeur d’images de la même façon que les fichiers de code ouverts dans l’éditeur de Code. Lorsqu’un onglet de l’éditeur d’images est actif, vous voyez des barres d’outils avec de nombreux outils pour créer et modifier des images. En même temps que les bitmaps, icônes et curseurs, vous pouvez modifier des images au format GIF ou JPEG en utilisant les commandes le **Image** menu Outils et sur le **Éditeur d’images** barre d’outils.
 
@@ -231,8 +231,6 @@ Vous pouvez télécharger gratuitement le **bibliothèque d’images Visual Stud
 ## <a name="managed-resources"></a>Ressources managées
 
 Vous pouvez utiliser la **Image** éditeur et le [éditeur binaire](binary-editor.md) pour travailler avec des fichiers de ressources dans les projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
-
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Spécifications
 

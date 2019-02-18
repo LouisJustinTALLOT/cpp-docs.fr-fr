@@ -1,6 +1,6 @@
 ---
-title: Création d’une boîte de dialogue (C++)
-ms.date: 11/04/2016
+title: 'Procédure : Créer une boîte de dialogue (C++)'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: c757c82978a5107374e6de2f8cff24319ed64f9c
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264814"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336473"
 ---
-# <a name="creating-a-dialog-box-c"></a>Création d’une boîte de dialogue (C++)
+# <a name="how-to-create-a-dialog-box-c"></a>Procédure : Créer une boîte de dialogue (C++)
 
 L’emplacement et la taille d’une boîte de dialogue C++ et que l’emplacement et la taille des contrôles qu’il contient, sont mesurés en unités de boîte de dialogue. Les valeurs pour les contrôles individuels et de la boîte de dialogue s’affichent dans le coin inférieur droit de l’état de Visual Studio barre lorsque vous les sélectionnez.
 
@@ -39,8 +39,6 @@ Lorsque vous créez une boîte de dialogue, vous pouvez également simuler et te
    > Les connexions au code de boîte de dialogue effectuées à l’aide des Assistants ne sont pas incluses dans la simulation.
 
 Quand vous testez une boîte de dialogue, elle s’affiche généralement à un emplacement qui est relatif à la fenêtre principale du programme. Si vous avez défini la boîte de dialogue **Absolute Align** propriété **True**, la boîte de dialogue affiche à une position qui est relative à l’angle supérieur gauche de l’écran.
-
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="to-create-a-new-dialog-box"></a>Pour créer une nouvelle boîte de dialogue
 
@@ -82,7 +80,7 @@ Il existe trois propriétés que vous pouvez définir dans le [fenêtre Proprié
 
 1. Lorsque le **boîte de dialogue** éditeur est la fenêtre active, dans la barre de menus, choisissez **Format** > **boîte de dialogue Test**.
 
-1. Pour arrêter la simulation, appuyez sur **ÉCHAP**, ou sélectionnez simplement le **fermer** bouton dans la boîte de dialogue que vous testez.
+1. Pour arrêter la simulation, appuyez sur **ÉCHAP** ou sélectionnez le **fermer** bouton dans la boîte de dialogue que vous testez.
 
 ## <a name="requirements"></a>Spécifications
 

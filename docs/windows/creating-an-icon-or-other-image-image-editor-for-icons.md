@@ -1,6 +1,6 @@
 ---
-title: Création d'une icône ou d'une autre image
-ms.date: 11/04/2016
+title: 'Procédure : Créez une icône ou une autre Image'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -87,14 +87,14 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 3ce4d10c9ab085973f1ab00dba205c22ff17f42f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320729"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336590"
 ---
-# <a name="creating-an-icon-or-other-image"></a>Création d'une icône ou d'une autre image
+# <a name="how-to-create-an-icon-or-other-image"></a>Procédure : Créez une icône ou une autre Image
 
 Vous pouvez créer une nouvelle image (bitmap, icône, curseur ou barre d’outils), puis utiliser l’éditeur d’images pour personnaliser son apparence. Vous pouvez également créer une nouvelle image bitmap modélisé d’après un [modèle](../windows/how-to-use-resource-templates.md).
 
@@ -133,13 +133,9 @@ Lorsque vous créez une nouvelle icône ou une ressource du curseur, la **Image*
 
 Lorsque vous ouvrez la ressource icône ou curseur dans le [Éditeur d’images](../windows/image-editor-for-icons.md), l’image de la plupart des étroitement le périphérique d’affichage actuel est ouverte par défaut.
 
-#### <a name="new-ltdevicegt-image-type-dialog-box"></a>Nouvelle &lt;appareil&gt; boîte de dialogue Type d’Image
-
 Le **New &lt;appareil&gt; Type d’Image** boîte de dialogue vous permet de créer une nouvelle image de périphérique d’un type spécifié. Pour ouvrir le **New \<appareil > Image** boîte de dialogue, sélectionnez **nouveau Type d’Image** sur le **Image** menu. Les propriétés suivantes incluses sont **Type d’Image cible** et **personnalisé**.
 
-##### <a name="target-image-type"></a>Type d’Image cible
-
-Répertorie les types d’images disponibles. Sélectionnez le type d’image que vous souhaitez ouvrir :
+Le **Type d’Image cible** propriété répertorie les types d’images disponibles. Sélectionnez le type d’image que vous souhaitez ouvrir :
 
 ||||
 |-|-|-|
@@ -153,9 +149,7 @@ Répertorie les types d’images disponibles. Sélectionnez le type d’image qu
 > [!NOTE]
 > Toutes les images existantes seront affichera pas dans cette liste.
 
-##### <a name="custom"></a>Personnalisé
-
-Ouvre le **Image personnalisée** boîte de dialogue dans laquelle vous pouvez créer une nouvelle image avec une taille personnalisée et le nombre de couleurs.
+Le **personnalisé** propriété ouvre le **Image personnalisée** boîte de dialogue dans laquelle vous pouvez créer une nouvelle image avec une taille personnalisée et le nombre de couleurs.
 
 Le **Image personnalisée** boîte de dialogue vous permet de créer une nouvelle image avec une taille personnalisée et le nombre de couleurs. Les propriétés suivantes incluses sont :
 
@@ -164,8 +158,6 @@ Le **Image personnalisée** boîte de dialogue vous permet de créer une nouvell
 |**Width**|Fournit un espace vous permettant d’entrer la largeur de l’image personnalisée en pixels (1-512, limite de 2048).|
 |**Height**|Fournit un espace vous permettant d’entrer la hauteur de l’image personnalisée en pixels (1-512, limite de 2048).|
 |**Couleurs**|Fournit un espace vous permettant de choisir le nombre de couleurs pour l’image personnalisée : 2, 16 ou 256.|
-
-#### <a name="open-ltdevicegt-image-dialog-box"></a>Ouvrez &lt;appareil&gt; Image boîte de dialogue
 
 Utilisez le **ouvrir &lt;appareil&gt; Image** boîte de dialogue pour ouvrir des images de périphérique dans les projets C++. Il répertorie les images de périphérique existantes dans la ressource actuelle (les images qui font partie de la ressource actuelle). La propriété suivante incluse est :
 
@@ -184,13 +176,13 @@ Utilisez le **ouvrir &lt;appareil&gt; Image** boîte de dialogue pour ouvrir des
 
    Si un signe plus (**+**) s’affiche en regard du type de ressource d’image dans le **insérer la ressource** boîte de dialogue, cela signifie que les modèles de la barre d’outils sont disponibles. Sélectionnez le signe plus pour développer la liste des modèles, sélectionnez un modèle et choisissez **New**.
 
-### <a name="add-an-image-for-a-different-display-device"></a>Ajouter une image pour un autre périphérique d’affichage
+### <a name="to-add-an-image-for-a-different-display-device"></a>Pour ajouter une image pour un autre périphérique d’affichage
 
 1. Sur le **Image** menu, sélectionnez **nouvelle Image de périphérique** (ou avec le bouton droit dans le **Éditeur d’images** volet et choisissez **nouvelle Image de périphérique** à partir de la menu contextuel).
 
 1. Sélectionnez le type d’image que vous souhaitez ajouter. Vous pouvez également sélectionner **personnalisé** pour créer une icône dont la taille n’est pas disponible dans la liste par défaut.
 
-### <a name="copy-a-device-image"></a>Copier une image de périphérique
+### <a name="to-copy-a-device-image"></a>Pour copier une image de périphérique
 
 1. Sur le **Image** menu, sélectionnez **nouveau type d’Image** et choisir une image à partir de la liste des images. Par exemple, choisir la version 16 couleurs d’une icône 32 x 32.
 
@@ -200,14 +192,14 @@ Utilisez le **ouvrir &lt;appareil&gt; Image** boîte de dialogue pour ouvrir des
 
 1. Collez l’image d’icône (**Ctrl**+**V**) à partir d’un **Éditeur d’images** fenêtre à l’autre. Si vous collez une plus grande taille dans une plus petite taille, vous pouvez utiliser les poignées de l’icône pour redimensionner l’image.
 
-### <a name="delete-a-device-image"></a>Supprimer une image de périphérique
+### <a name="to-delete-a-device-image"></a>Pour supprimer une image de périphérique
 
 Tandis que l’image d’icône s’affiche dans le **Image** éditeur, sélectionnez **supprimer une Image de périphérique** à partir de la **Image** menu. Lorsque vous supprimez la dernière image d’icône dans la ressource, la ressource est également supprimée.
 
    > [!NOTE]
    > Quand vous appuyez sur la **Del** clé, que les images et les couleurs que vous avez dessiné sur une icône sont supprimées mais l’icône reste ; vous pouvez la redessiner. Si vous appuyez sur **Del** par erreur, vous pouvez appuyer sur **Ctrl**+**Z** annuler l’action.
 
-### <a name="create-transparent-or-inverse-regions-in-device-images"></a>Créer des régions transparentes ou inversées dans des images de périphérique
+### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Pour créer des régions transparentes ou inversées dans des images de périphérique
 
 Dans le [Éditeur d’images](../windows/image-editor-for-icons.md), l’image d’icône ou curseur a un attribut transparent. Bien que les images d’icône et curseur sont rectangulaires, nombreuses n’apparaissent pas, car les parties de l’image sont transparents ; l’image sous-jacente à l’écran affiche via l’icône ou un curseur. Lorsque vous faites glisser une icône, les parties de l’image peuvent apparaître dans une couleur inversée. Vous créez cet effet en définissant la couleur de l’écran et inverse dans le [fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md).
 
@@ -343,8 +335,6 @@ Vous pouvez ouvrir des images GIF ou JPEG dans la **Image** éditeur et enregist
 
    > [!NOTE]
    > Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées. Pour plus d’informations, consultez [Creating Resource Files](/dotnet/framework/resources/creating-resource-files-for-desktop-apps) dans le *Guide du développeur .NET Framework*.
-
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Spécifications
 
