@@ -1,6 +1,6 @@
 ---
-title: Utilisation d'un outil de dessin
-ms.date: 11/04/2016
+title: 'Procédure : Utiliser un outil de dessin'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
 helpviewer_keywords:
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 72224581e021a22b31ec5e6fa5940ff5a568a4e0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320547"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336551"
 ---
-# <a name="using-a-drawing-tool"></a>Utilisation d'un outil de dessin
+# <a name="how-to-use-a-drawing-tool"></a>Procédure : Utiliser un outil de dessin
 
 Le **Image** mot du rédacteur à main levée de dessin et effacement outils fonctionnent tous de la même façon : vous sélectionnez l’outil et, si nécessaire, [sélectionner des couleurs de premier plan et arrière-plan](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) et options de taille et la forme. Vous placez le pointeur sur l’image et cliquez sur ou faites glisser pour dessiner et effacer.
+
+## <a name="drawing-tools"></a>Outils de dessin
 
 Lorsque vous sélectionnez le **gomme** outil, **pinceau** outil, ou **aérographe** outil, le sélecteur d’options affiche les options de l’outil.
 
@@ -34,7 +36,7 @@ Lorsque vous sélectionnez le **gomme** outil, **pinceau** outil, ou **aérograp
 
 Vous pouvez sélectionner les outils de dessin à partir du **Éditeur d’images** barre d’outils ou le **Image** menu.
 
-## <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Pour sélectionner et utiliser un outil de dessin à partir de la barre d’outils Éditeur d’images
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Pour sélectionner et utiliser un outil de dessin à partir de la barre d’outils Éditeur d’images
 
 1. Sélectionnez un bouton sur le **Éditeur d’images** barre d’outils.
 
@@ -65,7 +67,7 @@ Vous pouvez sélectionner les outils de dessin à partir du **Éditeur d’image
 
 1. Dans le sous-menu en cascade, choisissez l’outil que vous souhaitez utiliser.
 
-## <a name="drawing-lines-or-closed-figures"></a>Dessin de ligne ou de figures fermées
+## <a name="lines-or-closed-figures"></a>Lignes ou Figures fermées
 
 Outils de l’éditeur d’images pour dessiner des lignes et de figures fermées fonctionnent tous de la même façon : vous placez le point d’insertion à un moment donné et que vous faites glisser vers un autre. Pour les lignes, ces points sont les points de terminaison. Pour les figures fermées, ces points sont les angles opposés du rectangle englobant de la figure.
 
@@ -97,7 +99,7 @@ Les lignes sont dessinées dans une largeur déterminée par la sélection de pi
 
 1. Faites glisser le pointeur vers le coin en diagonale opposé.
 
-## <a name="create-a-custom-brush"></a>Créer une brosse personnalisée
+## <a name="custom-brushes"></a>Pinceaux personnalisés
 
 Un pinceau personnalisé est une partie rectangulaire d’une image que vous sélectionnez et utilisez comme l’un de le **Image** pinceaux prêtes à l’emploi de l’éditeur. Toutes les opérations que vous pouvez effectuer sur une sélection, vous pouvez effectuer sur un pinceau personnalisé.
 
@@ -105,11 +107,7 @@ Un pinceau personnalisé est une partie rectangulaire d’une image que vous sé
 
 1. [Sélectionnez la partie de l’image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) que vous souhaitez utiliser pour un pinceau.
 
-1. Contenant le **MAJ** clé vers le bas, choisissez dans la sélection et faites-la glisser sur l’image.
-
-   \- ou -
-
-1. À partir de la **Image** menu, choisissez **utiliser la sélection comme pinceau**.
+1. Maintenez la **MAJ** clé vers le bas, choisissez dans la sélection et faites-la glisser sur l’image. Ou à partir de la **Image** menu, choisissez **utiliser la sélection comme pinceau**.
 
    Votre sélection devient un pinceau personnalisé qui distribue les couleurs dans la sélection sur l’image. Copies de la sélection sont laissées sur le tracé de glissement. Vous faites glisser plus lentement, le nombre de copies est effectuées.
 
@@ -137,8 +135,6 @@ Appuyez sur la **signe** (**+**) pour doubler la taille du pinceau, ou le **sign
 ### <a name="to-cancel-the-custom-brush"></a>Pour annuler un pinceau personnalisé
 
 Appuyez sur **ÉCHAP** ou choisissez un autre outil de dessin.
-
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Spécifications
 

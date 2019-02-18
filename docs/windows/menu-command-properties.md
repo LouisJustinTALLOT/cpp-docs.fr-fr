@@ -1,6 +1,6 @@
 ---
-title: Propriétés de commande de menu (C++)
-ms.date: 11/04/2016
+title: Commandes de menu (C++)
+ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
 - keyboard shortcuts [C++], menu association
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 8989b96640bbb64eb5dcba09d60363dd0989263f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 9f91973fdf2d5a45c631f24d3eed41482a91a834
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320573"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336603"
 ---
-# <a name="menu-command-properties-c"></a>Propriétés de commande de menu (C++)
+# <a name="menu-commands-c"></a>Commandes de menu (C++)
 
 Les informations ci-dessous sont organisées en fonction de la **Menu** propriétés qui apparaissent dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) lorsque vous sélectionnez une commande de menu. Celles-ci sont répertoriées par ordre alphabétique bien que le **propriétés** fenêtre vous permet également d’afficher ces propriétés par catégorie.
 
@@ -43,11 +43,9 @@ Les informations ci-dessous sont organisées en fonction de la **Menu** proprié
 |**Ordre de droite à gauche**|Permet d'afficher les commandes de menu de droite à gauche quand l'interface est localisée dans une langue qui se lit de droite à gauche, par exemple l'hébreu ou l'arabe.|
 |**Separator**|Si **True**, la commande de menu est un séparateur. Type : **Bool**. Par défaut : **False**.|
 
-## <a name="associate-menu-commands"></a>Associer des commandes de menu
+## <a name="associate-menu-commands"></a>Associer des commandes de Menu
 
 Bien souvent, vous souhaitez qu’une commande de menu et une combinaison de touches du clavier exécutent la même commande de programme. Les commandes identiques sont émises à l’aide de la **Menu** éditeur pour assigner le même identificateur de ressource à la commande de menu et à une entrée dans la table d’accélérateurs de votre application. Ensuite, vous modifiez la [Légende](../windows/menu-command-properties.md) de la commande de menu pour afficher le nom de la touche accélérateur.
-
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Pour associer une commande de menu à une touche accélérateur
 
@@ -59,13 +57,13 @@ Pour plus d’informations sur l’ajout de ressources aux projets managés, con
 
    - Tapez le nom de la touche de modification (**Ctrl**, **Alt**, ou **MAJ**) suivie d’un signe plus (**+**) et le nom, une lettre, ou symbole de l’autre touche.
 
-       Par exemple, pour attribuer **Ctrl**+**O** à la **Open** commande sur le **fichier** menu, vous modifiez la commande de menu  **Légende** afin qu’il ressemble au texte suivant :
+   Par exemple, pour attribuer **Ctrl**+**O** à la **Open** commande sur le **fichier** menu, vous modifiez la commande de menu  **Légende** afin qu’il ressemble au texte suivant :
 
-        ```
-        &Open...\tCtrl+O
-        ```
+   ```
+   &Open...\tCtrl+O
+   ```
 
-       La commande de menu dans le **Menu** éditeur est mis à jour pour refléter la nouvelle légende que vous le tapez.
+   La commande de menu dans le **Menu** éditeur est mis à jour pour refléter la nouvelle légende que vous le tapez.
 
 1. [Créez l’entrée de table d’accélérateurs](../windows/adding-an-entry-to-an-accelerator-table.md) dans l’éditeur d’ **accélérateurs** et attribuez-lui le même identificateur que la commande de menu. Utilisez une combinaison de touches facile à mémoriser.
 
@@ -98,5 +96,4 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Éditeur de menus](../windows/menu-editor.md)<br/>
-[Ajout de commandes à un menu](../windows/adding-commands-to-a-menu.md)<br/>
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>

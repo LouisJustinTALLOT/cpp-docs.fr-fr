@@ -1,6 +1,6 @@
 ---
 title: Contrôles dans les boîtes de dialogue (C++) | Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
 helpviewer_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 1f231a376b335d7fb711ef2039c13f49624e6bfb
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264840"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336512"
 ---
 # <a name="controls-in-dialog-boxes-c"></a>Contrôles dans les boîtes de dialogue (C++)
 
@@ -30,25 +30,11 @@ Lorsque vous ajoutez un contrôle à une boîte de dialogue ou repositionnez, so
 
 Une fois que vous avez ajouté un contrôle à la boîte de dialogue, vous pouvez modifier les propriétés telles que sa légende dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez sélectionner plusieurs contrôles et modifier leurs propriétés à la fois.
 
-- [Ajout, modification ou suppression de contrôles](adding-editing-or-deleting-controls.md)
+- [Guide pratique pour Ajouter, modifier, ou supprimer des contrôles](adding-editing-or-deleting-controls.md)
 
-- [Sélection de contrôles](../windows/selecting-controls.md)
+- [Guide pratique pour Organiser les contrôles](../windows/arrangement-of-controls-on-dialog-boxes.md)
 
-- [Dimensionnement de contrôles individuels](../windows/sizing-individual-controls.md)
-
-- [Définition de la même largeur, hauteur ou taille pour des contrôles](../windows/making-controls-the-same-width-height-or-size.md)
-
-- [Définition de la taille d’une zone de liste déroulante et de sa liste déroulante](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)
-
-- [Ajout de valeurs à un contrôle Combo Box](../windows/adding-values-to-a-combo-box-control.md)
-
-- [Définition de la largeur d’une barre de défilement horizontale](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)
-
-- [L’organisation des contrôles sur les boîtes de dialogue](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [Définition des mnémoniques (Touches d’accès rapide)](../windows/defining-mnemonics-access-keys.md)
-
-- [Spécification de l’emplacement et de la taille d’une boîte de dialogue](../windows/specifying-the-location-and-size-of-a-dialog-box.md)
+- [Guide pratique pour Définir les valeurs et contrôler l’accès](../windows/defining-mnemonics-access-keys.md)
 
 Les contrôles standards disponibles dans le **boîte à outils** valeur par défaut, les événements sont :
 
@@ -110,8 +96,6 @@ Pour ces contrôles personnalisés, vous êtes limité à :
 - Taper une valeur hexadécimale 32 bits qui définit le style du contrôle.
 
 - Définir le style étendu.
-
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Spécifications
 

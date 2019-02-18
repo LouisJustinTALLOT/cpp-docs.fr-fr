@@ -1,6 +1,6 @@
 ---
 title: Éditeur de boîtes de dialogue (C++)
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: fef4a7f0d4c785a40ea946127d8e3c84c797e1aa
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264892"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336694"
 ---
 # <a name="dialog-editor-c"></a>Éditeur de boîtes de dialogue (C++)
 
@@ -38,28 +38,18 @@ L'une des premières étapes de la création d'une boîte de dialogue (ou d'un m
 
 Vous pouvez stocker une boîte de dialogue en tant que modèle pour pouvoir la réutiliser. Vous pouvez aussi facilement basculer entre la conception de la boîte de dialogue et la modification du code qui l'implémente.
 
-Il est également possible de modifier les propriétés d'un ou plusieurs contrôles dans l'Éditeur de boîtes de dialogue. Vous pouvez modifier l’ordre de tabulation, autrement dit, l’ordre dans lequel les contrôles obtiennent focus lorsque la **onglet** touche est enfoncée ou vous pouvez définir une clé d’accès (une combinaison de touches) qui permet aux utilisateurs de choisir un contrôle à l’aide du clavier. Pour obtenir une liste des touches d'accès rapide prédéfinies, consultez [Touches accélérateur pour l'Éditeur de boîtes de dialogue](../windows/accelerator-keys-for-the-dialog-editor.md).
+Il est également possible de modifier les propriétés d'un ou plusieurs contrôles dans l'Éditeur de boîtes de dialogue. Vous pouvez modifier l’ordre de tabulation, autrement dit, l’ordre dans lequel les contrôles obtiennent focus lorsque la **onglet** touche est enfoncée ou vous pouvez définir une clé d’accès (une combinaison de touches) qui permet aux utilisateurs de choisir un contrôle à l’aide du clavier.
 
 Le **boîte de dialogue** éditeur vous permet également d’utiliser des contrôles personnalisés, notamment des contrôles ActiveX. En outre, vous pouvez modifier un [mode formulaire](../mfc/reference/cformview-class.md), des [vues d'enregistrements](../data/record-views-mfc-data-access.md)ou des [barres de boîte de dialogue](../mfc/dialog-bars.md).
 
 À compter de Visual Studio 2015, vous pouvez utiliser l’éditeur de boîtes de dialogue pour définir des dispositions dynamiques qui spécifient comment les contrôles déplacent et redimensionnent lorsque l’utilisateur redimensionne une boîte de dialogue. Pour plus d’informations, consultez [Dynamic Layout](../mfc/dynamic-layout.md).
 
-- [Création d’une nouvelle boîte de dialogue](../windows/creating-a-new-dialog-box.md)
-
-- [Création d’une boîte de dialogue que les utilisateurs ne peuvent pas quitter au moment de l’exécution](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
+- [Guide pratique pour Créer une boîte de dialogue](../windows/creating-a-new-dialog-box.md)
 
 - [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)
 
-- [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md)
-
-- [Test d’une boîte de dialogue](../windows/testing-a-dialog-box.md)
-
-- [Dépannage de l’Éditeur de boîtes de dialogue](../windows/troubleshooting-the-dialog-editor.md)
-
    > [!TIP]
-   > Lors de l’utilisation du **boîte de dialogue** éditeur, dans de nombreux cas, vous pouvez cliquer sur le bouton droit de la souris pour afficher un menu contextuel des commandes fréquemment utilisées.
-
-Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Resources in Desktop Apps](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework*. Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création des fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation de ressources dans les applications gérées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).
+   > Lors de l’utilisation du **boîte de dialogue** éditeur, dans de nombreux cas, vous pouvez sélectionner le bouton droit de la souris pour afficher un menu contextuel des commandes fréquemment utilisées.
 
 ## <a name="dialog-editor-toolbar"></a>Barre d'outils de l'Éditeur de boîtes de dialogue
 
