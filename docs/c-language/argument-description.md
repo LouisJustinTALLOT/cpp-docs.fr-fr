@@ -8,18 +8,18 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-ms.openlocfilehash: 64c94798587ad64f369ca0ed03a7251d0eb9acb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71301bd5eedf2806e97b8d24d95beaf2843427ad
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447149"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148502"
 ---
 # <a name="argument-description"></a>Description des arguments
 
 Le paramètre `argc` dans les fonctions **main** et **wmain** est un entier spécifiant le nombre d’arguments passés au programme depuis la ligne de commande. Le nom du programme étant considéré comme un argument, la valeur `argc` est d'au moins un.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Le paramètre `argv` est un tableau de pointeurs vers des chaînes terminées par le caractère NULL qui représente les arguments de programme. Chaque élément du tableau pointe vers une représentation sous forme de chaîne d’un argument passé à **main** (ou **wmain**). (Pour plus d'informations sur les tableaux, consultez [Déclarations de tableau](../c-language/array-declarations.md).) Le paramètre `argv` peut être déclaré soit comme tableau de pointeurs en type `char` (`char *argv[]`) soit comme pointeur vers des pointeurs en type `char` (`char **argv`). Pour **wmain**, le paramètre `argv` peut être déclaré soit comme tableau de pointeurs en type `wchar_t` (`wchar_t *argv[]`) soit comme pointeur vers des pointeurs en type `wchar_t` (`wchar_t **argv`).
 

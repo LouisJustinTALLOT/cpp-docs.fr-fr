@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: 064e630d5ca74476c79522e39130e75f741d8946
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c227640e45943fb57b1029a4f03329241d1d6b34
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463685"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146864"
 ---
 # <a name="function-body"></a>Corps de fonction
 

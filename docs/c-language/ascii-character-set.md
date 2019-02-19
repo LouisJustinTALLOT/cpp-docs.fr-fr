@@ -2,12 +2,12 @@
 title: Jeu de caractères ASCII
 ms.date: 11/04/2016
 ms.assetid: 2390fd40-5fe2-4410-a06c-ccc0fea2709b
-ms.openlocfilehash: 85ec88af65a1a719da1871c2c64409f9a918a03f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 637f605f839b363dd85278f4b85fd832ca5f8e08
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661562"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147164"
 ---
 # <a name="ascii-character-set"></a>Jeu de caractères ASCII
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-ms.openlocfilehash: aaf4236815632c9c764ffcf0a800cc02cf7ab501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f358d0a6d9369aed27dc7e3efa1ce88fbacee343
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541165"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150114"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Appels avec un nombre variable d’arguments
 

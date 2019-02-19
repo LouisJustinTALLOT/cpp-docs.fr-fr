@@ -22,7 +22,7 @@ helpviewer_keywords:
 - "newline character \n escape sequence"
 - nongraphic control characters
 - question mark, literal
-- "\nescape sequence"
+- "\n escape sequence"
 - "vertical tab \v escape sequence"
 - "\a escape sequence"
 - '? symbol'
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-ms.openlocfilehash: 810d091b923bd976a4a8bbe6814e8ddc0b243bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9aeb8ca549cce8bddbf5d6ddadb6292c05f573d5
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431198"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151414"
 ---
 # <a name="escape-sequences"></a>Séquences d'échappement
 
@@ -72,7 +72,7 @@ Si une barre oblique inverse précède un caractère qui n'apparaît pas dans le
 
 Les séquences d'échappement vous permettent d'envoyer des caractères de contrôle non graphiques à un périphérique d'affichage. Par exemple, le caractère ESC (**\033**) est souvent utilisé comme le premier caractère d'une commande de contrôle pour un terminal ou une imprimante. Certaines séquences d'échappement sont spécifiques au périphérique. Par exemple, les séquences d'échappement de tabulation verticale et de saut de page (**\v** et **\f**) n'affectent pas la sortie sur l'écran, mais elles exécutent des opérations d'imprimante appropriées.
 
-Vous pouvez également utiliser la barre oblique inverse (**\\**) comme caractère de continuation. Lorsqu'un caractère de saut de ligne (équivalent à une pression sur la touche RETOUR) suit immédiatement la barre oblique inverse, le compilateur ignore la barre oblique inverse et le caractère de saut de ligne et traite la ligne suivante dans le cadre de la ligne précédente. Cela est surtout utile pour les définitions de préprocesseur plus longues qu'une ligne. Exemple :
+Vous pouvez également utiliser la barre oblique inverse (**\\**) comme caractère de continuation. Lorsqu'un caractère de saut de ligne (équivalent à une pression sur la touche RETOUR) suit immédiatement la barre oblique inverse, le compilateur ignore la barre oblique inverse et le caractère de saut de ligne et traite la ligne suivante dans le cadre de la ligne précédente. Cela est surtout utile pour les définitions de préprocesseur plus longues qu'une ligne. Par exemple :
 
 ```
 #define assert(exp) \

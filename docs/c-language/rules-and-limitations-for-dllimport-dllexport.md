@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], limitations and rules
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
-ms.openlocfilehash: 123ccf583fe5e07d9f2610ec621b48d8a8c39be8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622026"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150556"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>Règles et limitations pour dllimport/dllexport
 
@@ -19,7 +19,7 @@ ms.locfileid: "50622026"
 
 - Si vous déclarez une fonction sans l'attribut **dllimport** ou `dllexport`, elle n'est pas considérée comme faisant partie de l'interface DLL. Par conséquent, la définition de la fonction doit être présente dans ce module ou dans un autre module du même programme. Pour que la fonction fasse partie de l'interface DLL, vous devez déclarer la définition de la fonction dans l'autre module en tant que `dllexport`. Sinon, une erreur de l'Éditeur de liens est générée lorsque le client est construit.
 
-- Si un seul module de votre programme contient des déclarations **dllimport** et `dllexport` pour une même fonction, l'attribut `dllexport` est prioritaire sur l'attribut **dllimport**. Toutefois, un avertissement du compilateur est généré. Exemple :
+- Si un seul module de votre programme contient des déclarations **dllimport** et `dllexport` pour une même fonction, l'attribut `dllexport` est prioritaire sur l'attribut **dllimport**. Toutefois, un avertissement du compilateur est généré. Par exemple :
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -69,7 +69,7 @@ ms.locfileid: "50622026"
 
     ```
 
-- Comme un programme qui inclut l'attribut `dllexport` dans la déclaration d'un objet doit fournir la définition de cet objet, vous pouvez initialiser un pointeur de fonction statique global ou local avec l'adresse d'une fonction `dllexport`. De même, vous pouvez initialiser un pointeur de données statiques global ou local avec l'adresse d'un objet de données `dllexport`. Exemple :
+- Comme un programme qui inclut l'attribut `dllexport` dans la déclaration d'un objet doit fournir la définition de cet objet, vous pouvez initialiser un pointeur de fonction statique global ou local avec l'adresse d'une fonction `dllexport`. De même, vous pouvez initialiser un pointeur de données statiques global ou local avec l'adresse d'un objet de données `dllexport`. Par exemple :
 
     ```
     #define DllImport   __declspec( dllimport )

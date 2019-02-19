@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expanding wildcard arguments
 - wildcards, expanding
 ms.assetid: 80a11c4b-0199-420e-a342-cf1d803be5bc
-ms.openlocfilehash: 2224d01eeb3ec54a9c0ff895dfa45574135f7c0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1fb964fe98223fb7187b83c7101027ed1f9cbea
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443418"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149048"
 ---
 # <a name="expanding-wildcard-arguments"></a>Développement des arguments avec caractères génériques
 
@@ -22,7 +22,7 @@ Lors de l’exécution d’un programme C, vous pouvez utiliser l’un des deux 
 
 Par défaut, les caractères génériques ne sont pas développés dans les arguments de ligne de commande. Vous pouvez remplacer la routine de chargement `argv` normale de vecteur des arguments par une version qui développe les caractères génériques en effectuant une liaison avec le fichier setargv.obj ou wsetargv.obj. Si votre programme utilise une fonction `main` , établissez une liaison avec setargv.obj. Si votre programme utilise une fonction `wmain` , établissez une liaison avec wsetargv.obj. Ces deux éléments ont un comportement équivalent.
 
-Pour effectuer une liaison avec setargv.obj ou wsetargv.obj, utilisez l’option **/link** . Exemple :
+Pour effectuer une liaison avec setargv.obj ou wsetargv.obj, utilisez l’option **/link** . Par exemple :
 
 **cl example.c /link setargv.obj**
 

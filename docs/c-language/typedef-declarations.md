@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: 6493c5240ca66fc1f12c9617e05072f8399d4786
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468898"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149620"
 ---
 # <a name="typedef-declarations"></a>Déclarations typedef
 
@@ -51,7 +51,7 @@ Une déclaration typedef est interprétée de la même façon qu'une déclaratio
 
 Notez qu'une déclaration typedef ne crée pas de types. Elle crée des synonymes pour des types existants ou des noms pour des types qui peuvent être spécifiés d'autres manières. Lorsqu'un nom typedef est utilisé comme spécificateur de type, il peut être combiné avec certains spécificateurs de type, mais pas d'autres. Les modificateurs acceptables sont **const** et `volatile`.
 
-Les noms typedef partagent l'espace de noms avec les identificateurs ordinaires (pour plus d'informations, consultez [Espaces de noms](../c-language/name-spaces.md)). Par conséquent, un programme peut avoir un nom typedef et un identificateur de portée locale du même nom. Exemple :
+Les noms typedef partagent l'espace de noms avec les identificateurs ordinaires (pour plus d'informations, consultez [Espaces de noms](../c-language/name-spaces.md)). Par conséquent, un programme peut avoir un nom typedef et un identificateur de portée locale du même nom. Par exemple :
 
 ```C
 typedef char FlagType;

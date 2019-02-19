@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: e7bfeccf41b9e4dace49e9ab209a94598c492b41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52403fc45bbb68d693ef154bf39c5dd366dd10c5
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515529"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146480"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Considérations relatives à l'écriture du code de prologue/épilogue
 
@@ -46,7 +46,7 @@ La pile se réduit toujours (des adresses de mémoire supérieures aux adresses 
 
 Le compilateur fournit une constante, **__LOCAL_SIZE**, à utiliser dans le bloc assembleur inline de code de prologue de fonction. Cette constante est utilisée pour allouer de l'espace pour les variables locales sur le frame de pile dans le code de prologue personnalisé.
 
-Le compilateur détermine la valeur de **__LOCAL_SIZE**. Cette valeur est le nombre total d'octets de toutes les variables locales définies par l'utilisateur et des variables temporaires générées par le compilateur. La constante **__LOCAL_SIZE** peut être utilisée uniquement comme opérande immédiat. Elle ne peut pas être utilisée dans une expression. Vous ne devez pas modifier ou redéfinir la valeur de cette constante. Exemple :
+Le compilateur détermine la valeur de **__LOCAL_SIZE**. Cette valeur est le nombre total d'octets de toutes les variables locales définies par l'utilisateur et des variables temporaires générées par le compilateur. La constante **__LOCAL_SIZE** peut être utilisée uniquement comme opérande immédiat. Elle ne peut pas être utilisée dans une expression. Vous ne devez pas modifier ou redéfinir la valeur de cette constante. Par exemple :
 
 ```
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
