@@ -6,12 +6,12 @@ helpviewer_keywords:
 - scalar operators
 - types [C], scalar
 ms.assetid: 56ba218d-65f9-405f-8684-caccc0ca33aa
-ms.openlocfilehash: 8d45ce34457779e668124d9f48b82a5b74da1c56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c2e3ba50ce3e768b377a588cd3e82ad29df79ee
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506844"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150635"
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>Opérateurs suffixés d'incrémentation et de décrémentation C
 

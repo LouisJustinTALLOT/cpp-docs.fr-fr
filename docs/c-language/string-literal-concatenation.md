@@ -5,12 +5,12 @@ helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-ms.openlocfilehash: 167ebd2cf9f7f8f2f073b5de68f36aebd1a3951a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654494"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152571"
 ---
 # <a name="string-literal-concatenation"></a>Concaténation de littéraux chaîne
 
@@ -35,7 +35,7 @@ Pour forcer une nouvelle ligne dans un littéral de chaîne, entrez la séquence
 "Enter a number between 1 and 100\nOr press Return"
 ```
 
-Les chaînes pouvant commencer dans toute colonne du code source et les chaînes longues pouvant être continuées dans toute colonne d'une ligne suivante, vous pouvez positionner les chaînes pour améliorer la lisibilité du code source. Dans les deux cas, leur représentation à l'écran reste inchangée. Exemple :
+Les chaînes pouvant commencer dans toute colonne du code source et les chaînes longues pouvant être continuées dans toute colonne d'une ligne suivante, vous pouvez positionner les chaînes pour améliorer la lisibilité du code source. Dans les deux cas, leur représentation à l'écran reste inchangée. Par exemple :
 
 ```
 printf_s ( "This is the first half of the string, "

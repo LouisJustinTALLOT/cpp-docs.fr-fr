@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: 8a20e337cddcc45701f20941ac5d7fea5e4324a5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4b1aa32b384f3a5db5203883c1cc03bd61de7b19
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330305"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152129"
 ---
 # <a name="thread-local-storage"></a>stockage local des threads
 
@@ -75,7 +75,7 @@ Ces instructions doivent être observées lors de la déclaration de variables e
     int *p = &tls_i;      /* Error */
     ```
 
-- Le langage C permet l'initialisation d'une variable à l'aide d'une expression impliquant une auto-référence, mais uniquement pour les objets d'étendue non statique. Exemple :
+- Le langage C permet l'initialisation d'une variable à l'aide d'une expression impliquant une auto-référence, mais uniquement pour les objets d'étendue non statique. Par exemple :
 
     ```C
     #define Thread   __declspec( thread )

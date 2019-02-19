@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: 4822ee75c9a1112aff7c7b54dffb745325f56001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed6ee67194aa208f77a8d43dcc17ac43b0d74278
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444237"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148008"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Formes obsolètes des déclarations et définitions de fonctions
 
@@ -28,7 +28,7 @@ double alt_style( a , real )  /* Obsolete function definition */
 
 Les fonctions qui retournent un entier ou un pointeur de même taille qu'un `int` ne doivent pas impérativement contenir une déclaration, mais cette dernière est recommandée.
 
-En conformité avec la norme C ANSI, les anciennes déclarations de fonction utilisant des points de suspension génèrent désormais une erreur lors de la compilation avec l'option /Za et un avertissement de niveau 4 lors de la compilation avec /Ze. Exemple :
+En conformité avec la norme C ANSI, les anciennes déclarations de fonction utilisant des points de suspension génèrent désormais une erreur lors de la compilation avec l'option /Za et un avertissement de niveau 4 lors de la compilation avec /Ze. Par exemple :
 
 ```
 void funct1( a, ... )  /* Generates a warning under /Ze or */

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: be6a60d5765954efbc4a1cc6b991ac989e20b8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615317"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149984"
 ---
 # <a name="simple-variable-declarations"></a>Déclarations de variables simples
 
@@ -33,7 +33,7 @@ Les classes de stockage ou les types (ou les deux) sont requis sur les déclarat
 
 Pour les types arithmétiques, de structure, d'union, d'énumération et void, ainsi que pour les types représentés par des noms `typedef`, des déclarateurs simples peuvent être utilisés dans une déclaration car le spécificateur de type fournit toutes les informations de saisie. Les types de pointeur, de tableau et de fonction nécessitent des déclarateurs plus complexes.
 
-Vous pouvez utiliser une liste d'identificateurs séparés par une virgule (**,**) pour spécifier plusieurs variables dans la même déclaration. Toutes les variables définies dans la déclaration ont le même type de base. Exemple :
+Vous pouvez utiliser une liste d'identificateurs séparés par une virgule (**,**) pour spécifier plusieurs variables dans la même déclaration. Toutes les variables définies dans la déclaration ont le même type de base. Par exemple :
 
 ```C
 int x, y;        /* Declares two simple variables of type int */

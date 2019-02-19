@@ -2,12 +2,12 @@
 title: Séquences de caractères
 ms.date: 11/04/2016
 ms.assetid: 1e6961a9-150e-4c13-b427-9af4b6a1fb7a
-ms.openlocfilehash: dea24a2ae5887ea8c0111d8251ba4d9d03ccba0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42fb6b61771feb3eaedfb4ce1e674003df91b263
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489659"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149927"
 ---
 # <a name="character-sequences"></a>Séquences de caractères
 
