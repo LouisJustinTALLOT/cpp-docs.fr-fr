@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 8d2e298a2e4c6eb16a1851b3a9ce7ddc886a76f2
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678468"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418716"
 ---
 # <a name="multiset-class"></a>multiset, classe
 
@@ -205,7 +205,7 @@ Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le pr�
 |-|-|
 |[operator=](#op_eq)|Remplace les éléments d'un `multiset` par une copie d'un autre `multiset`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<set>
 
@@ -482,7 +482,7 @@ Nombre d'éléments du multiset dont la clé de tri correspond à la clé de par
 
 La fonction membre retourne le nombre d’éléments *x* dans la plage
 
-\[ lower_bound (*clé*), upper_bound (*clé*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 ### <a name="example"></a>Exemple
 
@@ -953,10 +953,10 @@ size_type erase(
 *Where*<br/>
 Position de l’élément à supprimer.
 
-*Premier*<br/>
+*First*<br/>
 Position du premier élément à supprimer.
 
-*Dernière*<br/>
+*Last*<br/>
 Position juste après le dernier élément à supprimer.
 
 *Key*<br/>
@@ -1171,8 +1171,8 @@ IList);
 |*Val*|Valeur d'un élément à insérer dans la classe multiset.|
 |*Where*|Emplacement où commencer à rechercher le point d'insertion correct. (Si ce point précède immédiatement *où*, insertion peut se produire dans le temps fixe amorti au lieu de temps logarithmique.)|
 |*ValTy*|Paramètre de modèle qui spécifie le type d’argument que l’objet multiset peut utiliser pour construire un élément de [value_type](../standard-library/map-class.md#value_type)et effectue un transfert parfait *Val* en tant qu’argument.|
-|*Premier*|Position du premier élément à copier.|
-|*Dernière*|Position juste au-delà du dernier élément à copier.|
+|*First*|Position du premier élément à copier.|
+|*Last*|Position juste au-delà du dernier élément à copier.|
 |*InputIterator*|Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|[initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.|
 
@@ -1565,10 +1565,10 @@ multiset (
 |Paramètre|Description|
 |-|-|
 |*Al*|Classe d’allocateur de stockage à utiliser pour cet objet multiset, qui est par défaut `Allocator`.|
-|*Comp.*|Fonction de comparaison de type `const Compare` utilisée pour ordonner les éléments dans le multiset (par défaut, `Compare`).|
+|*Comp*|Fonction de comparaison de type `const Compare` utilisée pour ordonner les éléments dans le multiset (par défaut, `Compare`).|
 |*Droite*|Multiset dont le multiset construit doit être une copie.|
-|*Premier*|Position du premier élément de la plage d'éléments à copier.|
-|*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
+|*First*|Position du premier élément de la plage d'éléments à copier.|
+|*Last*|Position du premier élément au-delà de la plage d'éléments à copier.|
 |*IList*|Initializer_list depuis laquelle copier les éléments.|
 
 ### <a name="remarks"></a>Notes
@@ -1929,7 +1929,7 @@ int main() {
       cout << *ms1_Iter << " ";
    cout << "." << endl;
 
-   // rend can be used to terminate an interation
+   // rend can be used to terminate an iteration
    // through a multiset in a reverse order
    cout << "The reversed multiset is: ";
    for ( ms1_rIter = ms1.rbegin( ) ; ms1_rIter != ms1.rend( ); ms1_rIter++ )

@@ -1,17 +1,17 @@
 ---
 title: / CETCOMPAT (compatible avec la technologie de mise en œuvre de flux de contrôle)
-ms.date: 02/01/2019
+ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 3adb147804674b52a5d77030c48567ec04da6aa6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703431"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418690"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (compatible avec la technologie de mise en œuvre de flux de contrôle)
 
@@ -24,7 +24,7 @@ Spécifie s’il faut marquer une image exécutable comme étant compatible avec
 ## <a name="arguments"></a>Arguments
 
 **NO**<br/>
-Spécifie que l’executalbe ne doit pas être marqué compatible avec Europe centrale.
+Spécifie que le fichier exécutable ne doit pas être marqué compatible avec Europe centrale.
 
 ## <a name="remarks"></a>Notes
 
@@ -44,7 +44,7 @@ Le **/CETCOMPAT** option est disponible à compter de l’ensemble d’outils Vi
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 
-- Cette option n’a pas un équivalent de programmation.
+Cette option n’a pas un équivalent de programmation.
 
 ## <a name="see-also"></a>Voir aussi
 
