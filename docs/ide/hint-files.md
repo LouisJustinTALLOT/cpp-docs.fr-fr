@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 0b3ca7c6b09d85cddb519242e63af0b8097e3fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44566408a3afcfee7a15299a5845b5af385aeef8
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558780"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320690"
 ---
 # <a name="hint-files"></a>Fichiers hint
 
@@ -99,7 +99,7 @@ Les indicateurs utilisent la syntaxe suivante.
 
 |Syntaxe|Signification|
 |------------|-------------|
-|`#define` *nom de l’indicateur* *chaîne de remplacement*<br /><br /> `#define` *nom de l’indicateur* `(` *paramètre*, ...`)`*chaîne de remplacement*|Directive de préprocesseur qui définit un nouvel indicateur ou redéfinit un indicateur existant. Après la directive, le préprocesseur remplace chaque occurrence de *nom de l’indicateur* dans le code source par *chaîne de remplacement*.<br /><br /> La deuxième forme de la syntaxe définit un indicateur de type fonction. Si un indicateur de type fonction apparaît dans le code source, le préprocesseur remplace d’abord chaque occurrence de *paramètre* dans *chaîne de remplacement* par l’argument correspondant dans le code source, puis remplace *nom de l’indicateur* par *chaîne de remplacement*.|
+|`#define` *nom de l’indicateur* *chaîne de remplacement*<br /><br /> `#define` *nom de l’indicateur* `(` *paramètre*, ...`)`*chaîne de remplacement*|Une directive de préprocesseur qui définit un nouvel indicateur ou redéfinit un indicateur existant. Après la directive, le préprocesseur remplace chaque occurrence de *nom de l’indicateur* dans le code source par *chaîne de remplacement*.<br /><br /> La deuxième forme de la syntaxe définit un indicateur de type fonction. Si un indicateur de type fonction apparaît dans le code source, le préprocesseur remplace d’abord chaque occurrence de *paramètre* dans *chaîne de remplacement* par l’argument correspondant dans le code source, puis remplace *nom de l’indicateur* par *chaîne de remplacement*.|
 |`@<`|*Chaîne de remplacement* spécifique à un fichier hint qui indique le début d’un ensemble d’éléments de mappage.|
 |`@=`|*Chaîne de remplacement* spécifique à un fichier hint qui indique un élément de table intermédiaire. Une table peut avoir plusieurs éléments de table.|
 |`@>`|*Chaîne de remplacement* spécifique à un fichier hint qui indique la fin d’un ensemble d’éléments de mappage.|
@@ -123,7 +123,7 @@ Dans le code source suivant, le type de paramètre pour la fonction `FormatWindo
 static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 ```
 
-**Stratégie :** définition de null
+**Stratégie :** Définition Null
 
 La stratégie dans cette situation consiste à traiter les annotations SAL comme si elles n’existaient pas. Pour cela, spécifiez un indicateur dont la chaîne de remplacement est null. Le système d’analyse ignore donc les annotations et le navigateur **Affichage de classes** ne les montre pas. (Visual C++ inclut un fichier hint intégré qui masque les annotations SAL.)
 
@@ -145,7 +145,7 @@ Dans le code source suivant, la macro `START_NAMESPACE` masque une accolade ouvr
 #define START_NAMESPACE namespace MyProject {
 ```
 
-**Stratégie :** copie directe
+**Stratégie :** Copie directe
 
 Si la sémantique d’une macro est critique pour l’expérience de navigation, créez un indicateur qui est identique à la macro. Le système d’analyse résout la macro en utilisant la définition dans le fichier hint.
 
@@ -175,7 +175,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
    return( pMap ); }
 ```
 
-**Stratégie :** identifier les éléments du mappage
+**Stratégie :** identifier les éléments du mappage
 
 Spécifiez des indicateurs pour les éléments de début, intermédiaires (le cas échéant) et de fin pour un mappage. Utilisez les chaînes de remplacement de mappage spéciales, `@<`, `@=` et `@>`. Pour plus d’informations, consultez la section `Syntax` de cette rubrique.
 
@@ -204,7 +204,7 @@ Le code source suivant contient la macro `START_NAMESPACE`, qui spécifie le dé
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
 ```
 
-**Stratégie :** copie directe
+**Stratégie :** Copie directe
 
 Créez des indicateurs pour les macros `START_NAMESPACE` et `BEGIN_CATEGORY_MAP`, puis créez un indicateur pour la macro `NSandMAP`, qui est identique à celle indiquée précédemment pour le code source. Si une macro composite est constituée seulement de macros provoquant des problèmes et d’espaces, vous pouvez aussi définir un indicateur dont la chaîne de remplacement est une définition null.
 
@@ -226,7 +226,7 @@ Certaines macros peuvent être interprétées par le système d’analyse, mais 
 #define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
 ```
 
-**Stratégie :** simplification
+**Stratégie :** Simplification
 
 Créez un indicateur qui affiche une définition de macro plus simple.
 
@@ -292,7 +292,7 @@ La liste suivante montre les répertoires de ce projet qui contiennent des fichi
 
 Le tableau suivant répertorie les indicateurs effectifs pour les fichiers sources de ce projet.
 
-- Fichier source : A1_A2_B.cpp
+- Fichier source : A1_A2_B.cpp
 
 - Indicateurs effectifs :
 

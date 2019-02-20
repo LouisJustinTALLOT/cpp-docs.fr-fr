@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: 6391e167ad214bb793b8d6b3b62637a113039afc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 848c9799e7ab5cfdfd2b25cc84e55de02c673f3e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437191"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150010"
 ---
 # <a name="type-int"></a>Type int
 
@@ -22,7 +22,7 @@ Les spécificateurs de type `int` et `unsigned int` (ou simplement `unsigned`) d
 
 **Section spécifique à Microsoft**
 
-Les entiers signés sont représentés sous la forme d'un complément à deux. Le bit le plus significatif indique le signe : 1 pour les nombres négatifs, 0 pour les nombres positifs et zéro. La plage de valeurs est fournie dans les [Limites d’entier C++](../c-language/cpp-integer-limits.md), qui proviennent du fichier d'en-tête LIMITS.H.
+Les entiers signés sont représentés sous la forme d'un complément à deux. Le bit le plus significatif contient le signe : 1 pour les nombres négatifs, 0 pour les nombres positifs et zéro. La plage de valeurs est fournie dans les [Limites d’entier C++](../c-language/cpp-integer-limits.md), qui proviennent du fichier d'en-tête LIMITS.H.
 
 **FIN de la section spécifique à Microsoft**
 
