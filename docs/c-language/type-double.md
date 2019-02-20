@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type double
 - double data type
 ms.assetid: 17c85b24-1475-4d41-a03c-ddf2d6561d34
-ms.openlocfilehash: 42f8ed943fd9d034d5cae8cb057e094363b27d8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43e6cc444f4d6a973fc58b5ce550e468066aca1b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532260"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151856"
 ---
 # <a name="type-double"></a>double, type
 
@@ -20,7 +20,7 @@ Les valeurs à double précision avec type double possèdent 8 octets. Le forma
 
 **Section spécifique à Microsoft**
 
-Le type double contient 64 bits : 1 pour le signe, 11 pour l'exposant et 52 pour la mantisse. Sa plage est +/-1,7E308 avec au moins 15 chiffres de précision.
+Le type double contient 64 bits : 1 pour le signe, 11 pour l'exposant et 52 pour la mantisse. Sa plage est +/-1,7E308 avec au moins 15 chiffres de précision.
 
 **FIN de la section spécifique à Microsoft**
 

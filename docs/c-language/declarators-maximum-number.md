@@ -1,17 +1,17 @@
 ---
-title: 'Déclarateurs : nombre maximal'
+title: 'Déclarateurs : Nombre maximal'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarators, maximum number of
 ms.assetid: f8410673-e11a-4830-89a3-3ffb7bb6562d
-ms.openlocfilehash: 785002fb4fe7e6ed2e7567a461d1e47c4fb4cd7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c56f0169f1cccf21cdb46e0929c20ee5cca3eece
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548926"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149828"
 ---
-# <a name="declarators-maximum-number"></a>Déclarateurs : nombre maximal
+# <a name="declarators-maximum-number"></a>Déclarateurs : Nombre maximal
 
 **ANSI 3.5.4** Quantité maximale de déclarateurs qui peuvent modifier un type arithmétique, structure ou union
 
