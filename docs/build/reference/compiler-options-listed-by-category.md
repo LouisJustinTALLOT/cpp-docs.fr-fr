@@ -4,18 +4,18 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248570"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676498"
 ---
 # <a name="compiler-options-listed-by-category"></a>Options du compilateur classées par catégorie
 
 Cet article contient une liste par catégorie d'options du compilateur. Pour obtenir une liste alphabétique, consultez [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
 
-### <a name="optimization"></a>Optimisation
+## <a name="optimization"></a>Optimisation
 
 |Option|Objectif|
 |------------|-------------|
@@ -31,7 +31,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/Oy](oy-frame-pointer-omission.md)|Omet le pointeur de frame. (x86 uniquement)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Produit du code optimisé pour une architecture spécifiée ou pour une plage d'architectures.|
 
-### <a name="code-generation"></a>Génération de code
+## <a name="code-generation"></a>Génération de code
 
 |Option|Objectif|
 |------------|-------------|
@@ -72,7 +72,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/RTC](rtc-run-time-error-checks.md)|Active les vérifications des erreurs au moment de l'exécution.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Sélectionne comment le mot clé volatile est interprété.|
 
-### <a name="output-files"></a>Fichiers de sortie
+## <a name="output-files"></a>Fichiers de sortie
 
 |Option|Objectif|
 |------------|-------------|
@@ -85,9 +85,9 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/Fm](fm-name-mapfile.md)|Crée un fichier de mappage.|
 |[/Fo](fo-object-file-name.md)|Crée un fichier objet.|
 |[/Fp](fp-name-dot-pch-file.md)|Spécifie un nom de fichier d'en-tête précompilé.|
-|[/ FR, /Fr](fr-fr-create-dot-sbr-file.md)|Nom généré des fichiers .sbr navigateur.|
+|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|Nom généré des fichiers .sbr navigateur.|
 
-### <a name="preprocessor"></a>Préprocesseur
+## <a name="preprocessor"></a>Préprocesseur
 
 |Option|Objectif|
 |------------|-------------|
@@ -105,7 +105,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/u](u-u-undefine-symbols.md)|Supprime toutes les macros prédéfinies.|
 |[/X](x-ignore-standard-include-paths.md)|Ignore le répertoire Include standard.|
 
-### <a name="language"></a>Langage
+## <a name="language"></a>Langage
 
 |Option|Objectif|
 |------------|-------------|
@@ -129,7 +129,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/Zs](zs-syntax-check-only.md)|Vérifie la syntaxe uniquement.|
 |[/ZW](zw-windows-runtime-compilation.md)|Génère un fichier de sortie à exécuter sur le Runtime de Windows.|
 
-### <a name="linking"></a>Liaison
+## <a name="linking"></a>Liaison
 
 |Option|Objectif|
 |------------|-------------|
@@ -143,7 +143,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/MT](md-mt-ld-use-run-time-library.md)|Compile pour créer un fichier exécutable multithread, à l'aide de LIBCMT.lib.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Compile pour créer un fichier exécutable multithread de débogage, à l'aide de LIBCMTD.lib.|
 
-### <a name="miscellaneous"></a>Divers
+## <a name="miscellaneous"></a>Divers
 
 |Option|Objectif|
 |------------|-------------|
@@ -159,7 +159,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/H](h-restrict-length-of-external-names.md)|Obsolète. Limite la longueur des noms externes (publics).|
 |[/HELP](help-compiler-command-line-help.md)|Affiche la liste des options du compilateur.|
 |[/J](j-default-char-type-is-unsigned.md)|Change le type `char` par défaut.|
-|[/ JMC](jmc.md)|Prend en charge le débogage uniquement mon Code C++ natif.|
+|[/JMC](jmc.md)|Prend en charge le débogage uniquement mon Code C++ natif.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Le compilateur et l'éditeur de liens créeront un binaire qui peut être exécuté dans le noyau Windows.|
 |[/MP](mp-build-with-multiple-processes.md)|Génère plusieurs fichiers sources simultanément.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Supprime l'affichage de la bannière d'ouverture de session.|
@@ -186,16 +186,16 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/Yu](yu-use-precompiled-header-file.md)|Utilise un fichier d'en-tête précompilé pendant la génération.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Ignore toutes les autres options d'en-tête précompilé pour la génération en cours.|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Spécifie la limite d'allocation de mémoire de l'en-tête précompilé.|
-|[/ await](await-enable-coroutine-support.md)|Activer les extensions de coroutines (fonctions pouvant être reprises).|
+|[/await](await-enable-coroutine-support.md)|Activer les extensions de coroutines (fonctions pouvant être reprises).|
 |[/source-charset](source-charset-set-source-character-set.md)|Définir le jeu de caractères source.|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|Définir le jeu de caractères d’exécution.|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Jeux de caractères de source et d’exécution de jeu au format UTF-8.|
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Valider des fichiers UTF-8 pour uniquement les caractères compatibles.|
-|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Contrôle le format des messages de diagnostic.|
-|[/ permissive-](permissive-standards-conformance.md)|Définir le mode de conformité à la norme.|
+|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Contrôle le format des messages de diagnostic.|
+|[/permissive-](permissive-standards-conformance.md)|Définir le mode de conformité à la norme.|
 |[/std](std-specify-language-standard-version.md)|Sélecteur de compatibilité de version de la norme C++.|
 
-### <a name="deprecated-and-removed-compiler-options"></a>Options du compilateur déconseillées et supprimées
+## <a name="deprecated-and-removed-compiler-options"></a>Options du compilateur déconseillées et supprimées
 
 |Option|Objectif|
 |------------|-------------|
