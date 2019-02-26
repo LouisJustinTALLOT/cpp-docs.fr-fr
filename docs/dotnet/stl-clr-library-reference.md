@@ -1,18 +1,18 @@
 ---
 title: Référence de bibliothèque STL/CLR
-ms.date: 09/18/2018"
+ms.date: 09/18/2018
 ms.topic: reference
 helpviewer_keywords:
 - STL/CLR Library
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-ms.openlocfilehash: 6914b61597e38c94a214089ecc3aeed17aec46d3
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: d5a2f3f9ceb62cf127d63c15131bf99646ebae4a
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949516"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809613"
 ---
 # <a name="stlclr-library-reference"></a>Référence de bibliothèque STL/CLR
 
