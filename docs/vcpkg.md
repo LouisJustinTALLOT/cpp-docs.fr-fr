@@ -3,18 +3,17 @@ title: 'vcpkg : Gestionnaire de package C++ pour Windows, Linux et MacOS'
 description: vcpkg est un gestionnaire de package en ligne de commande qui simplifie considérablement l’acquisition et l’installation des bibliothèques C++ open source sur Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 05/14/2018
-ms.technology:
-- cpp-ide
+ms.date: 02/22/2019
+ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518682"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809709"
 ---
-# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg : Gestionnaire de package C++ pour Windows, Linux et MacOS
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg : Gestionnaire de package C++ pour Windows, Linux et MacOS
 
 vcpkg est un gestionnaire de package en ligne de commande qui simplifie considérablement l’acquisition et l’installation des bibliothèques tierces sur Windows, Linux et MacOS. Si votre projet utilise des bibliothèques tierces, nous vous recommandons d’utiliser vcpkg pour les installer. vcpkg prend en charge les bibliothèques open source et propriétaires. La compatibilité de toutes les bibliothèques du catalogue Windows vcpkg a été testée avec Visual Studio 2015 et Visual Studio 2017. En mai 2018, le catalogue Windows compte plus de 900 bibliothèques et le catalogue Linux/MacOS plus de 350. La communauté C++ ajoute régulièrement de nouvelles bibliothèques dans les deux catalogues.
 
@@ -32,7 +31,7 @@ Si vous créez un clone de vcpkg avec les bibliothèques privées dans la collec
 
 ## <a name="installation"></a>Installation
 
-Clonez le dépôt vcpkg à partir de GitHub : https://github.com/Microsoft/vcpkg. Vous pouvez télécharger vers n’importe quel emplacement de dossier de votre choix.
+Clonez le dépôt vcpkg à partir de GitHub : [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). Vous pouvez télécharger vers n’importe quel emplacement de dossier de votre choix.
 
 Exécutez le programme d’amorçage dans le dossier racine :
 
@@ -82,7 +81,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-Pour les projets CMAKE, utilisez CMAKE_TOOLCHAIN_FILE afin de rendre les bibliothèques accessibles avec `find_package()`. Exemple :
+Pour les projets CMAKE, utilisez CMAKE_TOOLCHAIN_FILE afin de rendre les bibliothèques accessibles avec `find_package()`. Par exemple :
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)

@@ -1,17 +1,16 @@
 ---
 title: Améliorations de la conformité de C++
 ms.date: 10/31/2018
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694398"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809748"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Améliorations de la conformité de C++ dans Visual Studio 2017 versions 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159)
 
@@ -790,7 +789,7 @@ void f()
 
 Les arguments par défaut ne sont pas autorisés sur les définitions hors ligne des fonctions membres dans les classes de modèles. Le compilateur émet un avertissement sous **/permissive** et une erreur matérielle sous **/permissive-**.
 
-Dans les versions précédentes de Visual Studio, le code incorrect suivant peut entraîner un incident lors de l’exécution. Visual Studio 2017 version 15.3 génère l’avertissement C5034 : 'A\<T>::f' : une définition hors ligne d’un membre d’un modèle de classe ne peut pas avoir d’arguments par défaut :
+Dans les versions précédentes de Visual Studio, le code incorrect suivant peut entraîner un incident lors de l’exécution. Visual Studio 2017 version 15.3 génère l’avertissement C5034 : 'A\<::f' : une définition hors ligne d’un membre d’un modèle de classe ne peut pas avoir d’arguments par défaut :
 
 ```cpp
 template <typename T>
@@ -865,7 +864,7 @@ Cet avertissement est désactivé par défaut dans la version  15.3 (mais activ
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype et appels à des destructeurs supprimés
 
-Dans les versions précédentes de Visual Studio, le compilateur ne détectait pas quand un appel à un destructeur supprimé se produisait dans le contexte de l’expression associée à « decltype ». Dans Visual Studio 2017 version 15.3, le code suivant génère « erreur C2280 : 'A\<T>::~A(void)' : tentative de référencement d’une fonction supprimée » :
+Dans les versions précédentes de Visual Studio, le compilateur ne détectait pas quand un appel à un destructeur supprimé se produisait dans le contexte de l’expression associée à « decltype ». Dans Visual Studio 2017 version 15.3, le code suivant génère « l’erreur C2280 : 'A\<T>::~A(void)' : tentative de référencement d’une fonction supprimée » :
 
 ```cpp
 template<typename T>
@@ -888,7 +887,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>Variables const non initialisées
 
-La version Visual Studio 2017 RTW avait une régression dans laquelle le compilateur C++ n’émettait pas de diagnostic si une variable 'const' n’était pas initialisée. Cette régression a été corrigée dans Visual Studio 2017 version 15.3. Le code suivant génère désormais « avertissement C4132 : 'Value' : un objet const doit être initialisé » :
+La version Visual Studio 2017 RTW avait une régression dans laquelle le compilateur C++ n’émettait pas de diagnostic si une variable 'const' n’était pas initialisée. Cette régression a été corrigée dans Visual Studio 2017 version 15.3. Le code suivant génère désormais « l’avertissement C4132 : 'Value' : un objet const doit être initialisé »:
 
 ```cpp
 const int Value; //C4132
@@ -1532,7 +1531,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 version 15.7, en mode **/std:c++17**, nécessite le mot clé `typename` dans l’instruction `using` dans D. Sans `typename`, le compilateur génère l’avertissement C4346 : *'B<T\*>::type' : le nom dépendant n’est pas un type* et l’erreur C2061 : *erreur de syntaxe : identificateur 'type'* :
+Visual Studio 2017 version 15.7, en mode **/std:c++17**, nécessite le mot clé `typename` dans l’instruction `using` en D. Sans `typename`, le compilateur génère l’avertissement C4346 : *'B<T\*>::type' : le nom dépendant n’est pas un type* et erreur C2061 : *erreur de syntaxe : 'type' d’identificateur* :
 
 ```cpp
 template<typename T>
@@ -1563,7 +1562,7 @@ int main() {
 
 Dans les éditions précédentes de Visual Studio, une liste d’initialisation de classe de base du constructeur de modèle variadique dont des arguments de modèle étaient manquants était autorisée par erreur sans signaler d’erreur. Dans Visual Studio 2017 version 15.7, une erreur de compilateur est générée.
 
-L’exemple de code suivant dans Visual Studio 2017 version 15.7 déclenche *l’erreur C2614: D\<int> : initialisation de membre non conforme : 'B' n’est pas une base ni un membre*
+L’exemple de code suivant dans Visual Studio 2017 version 15.7 déclenche l’*erreur C2614 : D\<int> : Initialisation de membre non conforme : 'B' n’est ni une base ni un membre*
 
 ```cpp
 template<typename T>
@@ -1677,7 +1676,7 @@ struct S : Base<T> {
 
 Pour corriger cette erreur, remplacez l’instruction `return` par `return this->base_value;`.
 
-**Remarque :** dans la bibliothèque python Boost, il a existé pendant longtemps une solution de contournement spécifique à MSVC pour une déclaration anticipée de modèle dans [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). Sous le mode [/permissive-](build/reference/permissive-standards-conformance.md) à partir de Visual Studio 2017 version 15.8 (_MSC_VER=1915), le compilateur MSVC effectue la recherche de nom dépendante d’un argument (ADL) correctement et est cohérent avec d’autres compilateurs, rendant cette solution de contournement inutile. Afin d’éviter cette erreur *C3861: 'unwind_type': identificateur introuvable*, consultez [PR 229](https://github.com/boostorg/python/pull/229) dans le référentiel Boostorg pour mettre à jour le fichier d’en-tête. Nous avons déjà corrigé le package Boost [vcpkg](vcpkg.md), donc si vous obtenez ou mettez à niveau vos sources Boost à partir de vcpkg, il est inutile d’appliquer le correctif séparément.
+**Remarque :** Dans la bibliothèque python Boost, il a existé pendant longtemps une solution de contournement spécifique à MSVC pour une déclaration anticipée de modèle dans [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). Sous le mode [/permissive-](build/reference/permissive-standards-conformance.md) à partir de Visual Studio 2017 version 15.8 (_MSC_VER=1915), le compilateur MSVC effectue la recherche de nom dépendante d’un argument (ADL) correctement et est cohérent avec d’autres compilateurs, rendant cette solution de contournement inutile. Afin d’éviter cette erreur *C3861: 'unwind_type': identificateur introuvable*, consultez [PR 229](https://github.com/boostorg/python/pull/229) dans le référentiel Boostorg pour mettre à jour le fichier d’en-tête. Nous avons déjà corrigé le package Boost [vcpkg](vcpkg.md), donc si vous obtenez ou mettez à niveau vos sources Boost à partir de vcpkg, il est inutile d’appliquer le correctif séparément.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>définitions et déclarations anticipées dans l’espace de noms std
 
@@ -1685,7 +1684,7 @@ La norme C++ ne permet pas à un utilisateur d’ajouter des définitions ou des
 
 Il est prévu que Microsoft affecte la définition de certains types STL à un autre emplacement. Ce changement entraînera l’arrêt de tout code existant qui ajoute des déclarations anticipées à l’espace de noms `std`. Un nouvel avertissement, C4643, vous aide à identifier de tels problèmes liés la source. Cet avertissement est activé dans le mode **/default** (il est désactivé par défaut). Il impacte les programmes compilés avec **/Wall** ou **/WX**.
 
-Le code suivant génère désormais l’erreur C4643 *La déclaration anticipée de 'vector' dans l’espace de noms std n’est pas autorisée par la norme C++*.
+Le code suivant génère maintenant l’erreur C4643 : *La déclaration anticipée de 'vector' dans l’espace de noms std n’est pas autorisée par la norme C++*.
 
 ```cpp
 namespace std {
@@ -1701,7 +1700,7 @@ Pour corriger cette erreur, utilisez une directive **include** plutôt qu’une 
 
 ### <a name="constructors-that-delegate-to-themselves"></a>Constructeurs déléguant à eux-mêmes
 
-La norme C++ suggère qu’un compilateur doit émettre un diagnostic quand un constructeur de délégation délègue à lui-même. Le compilateur Microsoft C++ dans les modes [/std:c++17](build/reference/std-specify-language-standard-version.md) et [/std:c++latest](build/reference/std-specify-language-standard-version.md) génère désormais l’erreur C7535 : *'X::X': le constructeur de délégation s'appelle lui-même*.
+La norme C++ suggère qu’un compilateur doit émettre un diagnostic quand un constructeur de délégation délègue à lui-même. Le compilateur Microsoft C++ en mode [/std:c++17](build/reference/std-specify-language-standard-version.md) et [/std:c++latest](build/reference/std-specify-language-standard-version.md) génère désormais l’erreur C7535 : *'X::X': le constructeur de délégation s’appelle lui-même*.
 
 Sans cette erreur, la compilation du programme suivant aboutit, mais une boucle infinie est générée :
 
@@ -1865,9 +1864,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-Le compilateur génère C5050 dans ces deux cas : *avertissement C5050 : Environnement potentiellement incompatible durant l’importation du module 'm' : versions de C++ incompatibles.  Version actuelle "201402", version du module "201703"*.
+Le compilateur génère l’avertissement C5050 pour ces deux cas : *avertissement C5050 : Environnement potentiellement incompatible durant l’importation du module 'm' : incompatibilité des versions C++.  Version actuelle "201402", version du module "201703"*.
 
-De plus, le compilateur génère C7536 chaque fois que le fichier .ifc est falsifié. L’en-tête de l’interface de module contient un hachage SHA2 du contenu situé en dessous. Durant l’importation, le fichier .ifc est haché de la même façon et comparé au hachage fourni dans l’en-tête. S’ils diffèrent, l’erreur C7536 est générée : *ifc n’a pas réussi les vérifications de l’intégrité.  SHA2 attendu : '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'*.
+De plus, le compilateur génère C7536 chaque fois que le fichier .ifc est falsifié. L’en-tête de l’interface de module contient un hachage SHA2 du contenu situé en dessous. Durant l’importation, le fichier .ifc est haché de la même façon et comparé au hachage fourni dans l’en-tête. S’ils diffèrent, l’erreur C7536 est générée : *ifc n’a pas réussi les vérifications de l’intégrité.  SHA2 attendu : '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'*.
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Classement partiel impliquant des alias et des contextes non déduits
 

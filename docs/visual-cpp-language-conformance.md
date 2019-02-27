@@ -1,17 +1,16 @@
 ---
 title: Conformité du langage Visual C++
 ms.date: 11/15/2017
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 78c4be98ecc8e0a42e2cd0967f2bedece9dabc86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 604057753e67d08c12204f9d3b09bce0e1212966
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630410"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809761"
 ---
 # <a name="visual-c-language-conformance"></a>Conformité du langage Visual C++
 
@@ -93,7 +92,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |__Fonctionnalités du langage principal C++17 (rapport de défauts)__|__Prise en charge__|
 |&nbsp;&nbsp;[P0702R1 Résolution de la déduction d’argument de modèle de classe pour les ctors de la liste d’initialiseurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0588R1 Simplification de la capture lambda implicite](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Non|
-|&nbsp;&nbsp;[CWG 1581 : Quand les fonctions membres constexpr sont-elles définies ?](https://wg21.cmeerw.net/cwg/issue1581)|Non|
+|&nbsp;&nbsp;[CWG 1581 : Quand les fonctions membres constexpr sont-elles définies ?](https://wg21.cmeerw.net/cwg/issue1581)|Non|
 |&nbsp;&nbsp;[P0962R1 Assouplissement des règles de recherche d’un point de personnalisation de liaisons structurées](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|Non|
 |&nbsp;&nbsp;[P0962R2 Assouplissement des règles de recherche d’un point de personnalisation de boucle range-for](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Non|
 |&nbsp;&nbsp;[P0969R0 Autorisation des liaisons structurées aux membres accessibles](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|Non|
@@ -157,7 +156,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[P0521R0 Dépréciation de shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0607R0 Variables inline pour la bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 Dépréciation de \<codecvt>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4562 Notions de base des bibliothèques : Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Résolution des types de retour de la fonction de recherche](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4562 Library Fundamentals: Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Résolution des types de retour de la fonction de recherche](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0031R0 constexpr pour \<array> (de nouveau) et \<iterator>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0031r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0040R3 Extension des outils de gestion de mémoire](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0084R2 Type de retour emplace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
@@ -296,7 +295,7 @@ L’option de compilateur /Zc:noexceptTypes- demande l’ancien comportement de 
 
 <a name="note_charconv"></a>__charconv__ from_chars() et to_chars() sont disponibles pour les entiers. Nous travaillons actuellement sur from_chars() à virgule flottante, qui sera suivi de to_chars() à virgule flottante.
 
-<a name ="note_parallel"></a> __parallel__ La bibliothèque d’algorithmes parallèles de C++17 est terminée. Notez que cela ne signifie pas que chaque algorithme est parallélisé dans chaque cas. Les algorithmes les plus importants ont été parallélisés, et des signatures de stratégie d’exécution sont fournies même où les algorithmes ne sont pas parallélisés. L’en-tête interne central de notre implémentation STL, yvals.h, contient les notes suivantes sur les algorithmes parallèles : C++ permet à une implémentation d’implémenter des algorithmes parallèles en tant qu’appels aux algorithmes de série.   Cette implémentation parallélise plusieurs appels d’algorithme courants, mais pas tous.
+<a name ="note_parallel"></a> __parallel__ La bibliothèque d’algorithmes parallèles de C++17 est terminée. Notez que cela ne signifie pas que chaque algorithme est parallélisé dans chaque cas. Les algorithmes les plus importants ont été parallélisés, et des signatures de stratégie d’exécution sont fournies même où les algorithmes ne sont pas parallélisés. L’en-tête interne central de notre implémentation STL, yvals.h, contient les « notes d’algorithmes parallèles » suivantes : C++ permet une implémentation qui implémente des algorithmes parallèles comme appels aux algorithmes de série.   Cette implémentation parallélise plusieurs appels d’algorithme courants, mais pas tous.
 
 Les algorithmes suivants sont parallélisés :
 
