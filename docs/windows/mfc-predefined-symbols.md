@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 2f36f42ce24c2cdf1f3ac4c93248d430ec75f30a
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320859"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954950"
 ---
 # <a name="mfc-predefined-symbols"></a>Symboles MFC prédéfinis
 
@@ -23,12 +23,12 @@ Projets MFC toujours incluent plusieurs fichiers d’en-tête qui prennent en ch
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
 #include <afxext.h>      //MFC extensions
-#include <afxdisp.h      //MFC automation classes
+#include <afxdisp.h>      //MFC automation classes
 #include <afxdtctl.h>   //MFC support for Internet Explorer common controls
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-Les fichiers d’en-tête incluent des valeurs d’ID de symbole pour les valeurs courantes de MFC. Ces symboles sont disponibles uniquement lorsque vous travaillez dans un projet MFC. Le préfixe AFX_ est suivi par les préfixes de nom de symbole standard.
+Les fichiers d’en-tête incluent des valeurs d’ID de symbole pour les valeurs courantes de MFC. Ces symboles sont disponibles uniquement lorsque vous travaillez dans un projet MFC. Le `AFX_` préfixe est suivi par les préfixes de nom de symbole standard.
 
 |||
 |-|-|
@@ -211,7 +211,7 @@ Les fichiers d’en-tête incluent des valeurs d’ID de symbole pour les valeur
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming-symbols"></a>symboles de programmation de base de données MFC
+## <a name="mfc-database-programming"></a>MFC programmation de base de données
 
 Les symboles dans ce tableau s’affichent uniquement dans un projet MFC lors de la prise en charge de la base de données a été ajoutée. Ils prennent en charge la connexion MFC aux serveurs SQL et la programmation de base de données.
 
@@ -232,9 +232,11 @@ Les symboles dans ce tableau s’affichent uniquement dans un projet MFC lors de
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
 
-## <a name="mfc-windows-programming-symbols"></a>Symboles de programmation Windows de MFC
+## <a name="mfc-windows-programming"></a>Programmation de Windows MFC
 
-Ces symboles font également partie des fichiers de prise en charge MFC, mais ils prennent en charge les actions et fonctions d’application Windows standard. Ces symboles sont utilisés avec les menus. Lorsque vous travaillez avec des menus dans le **éditeur de menus**, ces symboles s’affichent dans le **fenêtre des propriétés** associées aux commandes de menu courantes. Par exemple, si votre application comporte un **fichier** menu avec une **Exit** commande, que la commande sera associée au symbole ID_APP_EXIT dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
+Ces symboles font également partie des fichiers de prise en charge MFC, mais ils prennent en charge les actions et fonctions d’application Windows standard. Ces symboles sont utilisés avec les menus.
+
+Lorsque vous travaillez avec des menus dans le **éditeur de menus**, ces symboles s’affichent dans le **fenêtre des propriétés** associées aux commandes de menu courantes. Par exemple, si votre application comporte un **fichier** menu avec une **Exit** commande, que la commande sera associée au symbole ID_APP_EXIT dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|
