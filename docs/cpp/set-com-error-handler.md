@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 7c7c9d572dcb8e1323df003e15e44adc8491c058
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 864236e86b4aeb6ce7b3315df57af1b577693c26
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567789"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954937"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 
@@ -33,7 +33,7 @@ void __stdcall _set_com_error_handler(
 *pHandler*<br/>
 Pointeur vers la fonction de remplacement.
 
-*ressources humaines*<br/>
+*hr*<br/>
 Informations HRESULT.
 
 *perrinfo*<br/>
@@ -86,11 +86,11 @@ int main()
 Exception raised: Unable to establish the connection!
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<comdef.h >
 
-**Lib :** si le **wchar_t est un Type natif** option du compilateur est activé, utilisez comsuppw.lib ou comsuppwd.lib. Si **wchar_t est un Type natif** est désactivée, utilisez comsupp.lib. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib :** Si le **/Zc : wchar_t** option du compilateur est spécifiée (la valeur par défaut), utilisez comsuppw.lib ou comsuppwd.lib. Si le **/Zc :wchar_t-)** option du compilateur est spécifiée, utilisez comsupp.lib. Pour plus d’informations, y compris comment définir cette option dans l’IDE, consultez [/Zc : wchar_t (wchar_t est un Type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="see-also"></a>Voir aussi
 

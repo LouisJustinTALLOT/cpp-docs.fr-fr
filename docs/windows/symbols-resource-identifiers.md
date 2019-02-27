@@ -10,12 +10,12 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: 7359fdfd1007cb49025908ffea51093622943052
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: c76b870ad1fdfeda7370af03c6396bedba9530ab
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320495"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954859"
 ---
 # <a name="resource-identifiers-symbols-c"></a>Identificateurs de ressource (symboles) (C++)
 
@@ -29,12 +29,12 @@ Les noms de symboles sont souvent appelés « identificateurs ».
 
 Les symboles permettent de faire référence aux ressources et aux objets d’interface utilisateur d’une manière descriptive, à la fois dans votre code source et quand vous travaillez avec eux dans les éditeurs de ressources. Vous pouvez afficher et manipuler les symboles dans un emplacement pratique par le biais de la boîte de dialogue [Symboles des ressources](../windows/viewing-resource-symbols.md).
 
-Lorsque vous créez une ressource ou un objet de ressource, les [éditeurs de ressources](../windows/resource-editors.md) fournissent un nom par défaut pour la ressource, par exemple `IDC_RADIO1`, et lui affectent une valeur. La définition nom-plus-valeur est stockée dans le fichier Resource.h.
+Lorsque vous créez une ressource ou un objet de ressource, les [éditeurs de ressources](../windows/resource-editors.md) fournissent un nom par défaut pour la ressource, par exemple `IDC_RADIO1`, et lui affectent une valeur. La définition nom-plus-valeur est stockée dans le `Resource.h` fichier.
 
 > [!NOTE]
 > Lorsque vous copiez des ressources ou des objets de ressources d’un fichier .rc vers un autre, Visual C++ peut modifier la valeur du symbole de la ressource transférée, ou le nom et la valeur du symbole, pour éviter les conflits avec les noms de symboles ou les valeurs dans le fichier existant.
 
-Le nombre de ressources et de symboles de votre application augmente à mesure qu’elle augmente en taille et en complexité. Le suivi d’un grand nombre de symboles éparpillés dans plusieurs fichiers peut être difficile. La boîte de dialogue [Symboles des ressources](../windows/resource-symbols-dialog-box.md) simplifie la gestion des symboles en offrant un outil centralisé qui vous permet d’effectuer les tâches suivantes :
+Le nombre de ressources et de symboles de votre application augmente à mesure qu’elle augmente en taille et en complexité. Le suivi d’un grand nombre de symboles éparpillés dans plusieurs fichiers peut être difficile. Le **symboles des ressources** boîte de dialogue simplifie la gestion des symboles en offrant un outil centralisé qui vous permet :
 
 - [Créer des symboles](../windows/creating-new-symbols.md)
 
