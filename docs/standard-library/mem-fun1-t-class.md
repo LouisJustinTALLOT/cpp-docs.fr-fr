@@ -1,21 +1,21 @@
 ---
 title: mem_fun1_t, classe
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::mem_fun1_t
+- functional/std::mem_fun1_t
 helpviewer_keywords:
 - mem_fun1_t class
 ms.assetid: 01a8c2c2-b2f7-4e3f-869c-5b5b9f06ea54
-ms.openlocfilehash: 9a1fe26e66eb2ad20e6889b95640fadd2b3c45a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42a6ee7c169d078e216b82365ab26d10838798c6
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613193"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006433"
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t, classe
 
-Classe d’adaptateur qui permet un `non_const` fonction membre qui accepte un seul argument d’être appelée comme objet de fonction binaire lors de l’initialisation avec un argument de pointeur.
+Classe d’adaptateur qui permet un `non_const` fonction membre qui accepte un seul argument d’être appelée comme objet de fonction binaire lors de l’initialisation avec un argument de pointeur. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,7 +55,7 @@ La classe de modèle stocke une copie de *_Pm*, qui doit être un pointeur vers 
 
 Le constructeur de `mem_fun1_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun](../standard-library/functional-functions.md#mem_fun).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<functional>
 

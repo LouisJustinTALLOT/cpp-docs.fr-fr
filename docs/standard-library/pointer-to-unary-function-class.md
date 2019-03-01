@@ -1,22 +1,22 @@
 ---
 title: pointer_to_unary_function, classe
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::pointer_to_unary
+- functional/std::pointer_to_unary
 helpviewer_keywords:
 - pointer_to_unary_function function
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
-ms.openlocfilehash: dc8a324d27870f615b810a3e86c355fadaf5c78d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 710453711e60f4607a20eb3e71b65127c8dd5316
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558325"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006654"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function, classe
 
-Convertit un pointeur de fonction unaire en fonction unaire adaptable.
+Convertit un pointeur de fonction unaire en fonction unaire adaptable. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,7 +51,7 @@ Un pointeur de fonction unaire est un objet de fonction. Il peut être passé à
 
 Le constructeur de `pointer_to_unary_function` est rarement utilisé directement. Consultez la fonction d’assistance [ptr_fun](../standard-library/functional-functions.md#ptr_fun) pour obtenir un exemple montrant comment déclarer et utiliser le prédicat de l’adaptateur `pointer_to_unary_function`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<functional>
 

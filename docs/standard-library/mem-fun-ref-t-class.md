@@ -1,21 +1,21 @@
 ---
 title: mem_fun_ref_t, classe
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::mem_fun_ref_t
+- functional/std::mem_fun_ref_t
 helpviewer_keywords:
 - mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-ms.openlocfilehash: 752b3aeb4126ba41b7a0741ed9de68db018dd6c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0eb7d20037598e1fa03fa7bf8e1d6b79a788ae1e
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488034"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006316"
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t, classe
 
-Classe d’adaptateur qui permet un `non_const` fonction membre qui n’accepte aucun argument d’être appelée comme objet de fonction unaire lors de l’initialisation avec un argument de référence.
+Classe d’adaptateur qui permet un `non_const` fonction membre qui n’accepte aucun argument d’être appelée comme objet de fonction unaire lors de l’initialisation avec un argument de référence. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,7 +50,7 @@ La classe de modèle stocke une copie de *_Pm*, qui doit être un pointeur vers 
 
 Le constructeur de `mem_fun_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<functional>
 
