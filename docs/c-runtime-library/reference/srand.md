@@ -15,6 +15,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - srand
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: e1670c030d8f073d928ccf23f38ac4b611e68632
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6545d4eba6c17fd55bb2b8cf23fb0319d1c96bee
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530219"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57209819"
 ---
 # <a name="srand"></a>srand
 
@@ -49,14 +50,14 @@ void srand(
 
 ### <a name="parameters"></a>Paramètres
 
-*Valeur initiale*<br/>
+*seed*<br/>
 Valeur initiale pour la génération de nombres pseudo-aléatoires
 
 ## <a name="remarks"></a>Notes
 
 Le **srand** fonction définit le point de départ pour la génération d’une série d’entiers pseudo-aléatoires dans le thread actuel. Pour réinitialiser le générateur pour créer la même séquence de résultats, appelez le **srand** de fonction et utilisent le même *seed* argument à nouveau. Toute autre valeur pour *seed* définit le Générateur à un autre point de départ dans la séquence pseudo-aléatoire. **RAND** récupère les nombres pseudo-aléatoires qui sont générés. Appel **rand** avant tout appel à **srand** génère la même séquence que si vous appelez **srand** avec *seed* passé en tant que 1.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

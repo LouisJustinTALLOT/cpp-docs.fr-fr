@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _wsplitpath_s
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 5a6770b7f5f0f8ee82cf86757d14e03b33c1f5d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87af8bac525844c06fdfc16d7d13a06eef4d61ab
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602902"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210443"
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 
@@ -89,7 +90,7 @@ errno_t _wsplitpath_s(
 *path*<br/>
 Chemin complet.
 
-*Lecteur*<br/>
+*drive*<br/>
 Lecteur de lettre, suivie par un signe deux-points (**:**). Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin de la lettre de lecteur.
 
 *driveNumberOfElements*<br/>
@@ -107,7 +108,7 @@ Nom de fichier de base (sans extension). Vous pouvez transmettre **NULL** pour c
 *nameNumberOfElements*<br/>
 La taille de la *fname* mémoire tampon en caractères larges ou codés sur un octet. Si *fname* est **NULL**, cette valeur doit être 0.
 
-*Ext*<br/>
+*ext*<br/>
 Extension de nom de fichier, y compris le point de début (**.**). Vous pouvez transmettre **NULL** pour ce paramètre si vous n’avez pas besoin de l’extension de nom de fichier.
 
 *extNumberOfElements*<br/>
@@ -162,7 +163,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 
 Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

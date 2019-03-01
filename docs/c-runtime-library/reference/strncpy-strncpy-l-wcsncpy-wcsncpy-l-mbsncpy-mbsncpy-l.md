@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _fstrncpy
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 5260d120fe1e5826bb4b9ebc8410a8bd1040ff3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507732"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210430"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -195,7 +196,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 > [!NOTE]
 > **_strncpy_l** et **_wcsncpy_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux ; elles sont uniquement fournies pour **_tcsncpy_l** et ne sont pas destinées à être appelées directement.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -207,7 +208,7 @@ Pour plus d'informations sur la compatibilité de plateforme, consultez [Compati
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre l’utilisation de **strncpy** et comment elle peut être utilisée à mauvais escient pour entraîner des problèmes de sécurité et les bogues de programme. Le compilateur génère un avertissement pour chaque appel à **strncpy** similaire à **crt_strncpy_x86.c (15) : avertissement C4996 : 'strncpy' : cette fonction ou cette variable peut présenter un risque. Envisagez d’utiliser strncpy_s à la place. Pour désactiver le message déconseillant l’utilisation, utilisez _CRT_SECURE_NO_WARNINGS. Consultez l’aide en ligne pour plus d’informations.**
+L’exemple suivant illustre l’utilisation de **strncpy** et comment elle peut être utilisée à mauvais escient pour entraîner des problèmes de sécurité et les bogues de programme. Le compilateur génère un avertissement pour chaque appel à **strncpy** similaire à **crt_strncpy_x86.c (15) : avertissement C4996 : 'strncpy' : Cette fonction ou cette variable peut être non sécurisée. Envisagez d’utiliser strncpy_s à la place. Pour désactiver le message déconseillant l’utilisation, utilisez _CRT_SECURE_NO_WARNINGS. Consultez l’aide en ligne pour plus d’informations.**
 
 ```C
 // crt_strncpy_x86.c

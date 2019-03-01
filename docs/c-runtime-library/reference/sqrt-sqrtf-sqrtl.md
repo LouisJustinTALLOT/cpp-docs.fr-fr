@@ -17,6 +17,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - sqrt
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: c44f8813812b2aeffc2680a0a666d968bb2b4da6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c17c973b98638195e2e2d2a5f793578437d11ae
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560574"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210222"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -74,17 +75,17 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **s
 
 Le **sqrt** fonctions retournent la racine carrée de *x*. Par défaut, si *x* est négatif, **sqrt** retourne une valeur NaN indéfinie.
 
-|Entrée|Exception SEH|**_matherr** exception|
+|Entrée|Exception SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
 |± QNAN,IND|aucun|_DOMAIN|
 |- ∞|aucun|_DOMAIN|
 |x<0|aucun|_DOMAIN|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**SQRT**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

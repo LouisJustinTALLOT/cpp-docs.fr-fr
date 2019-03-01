@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607153"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210872"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 
@@ -77,7 +78,7 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 |any|any|any|0|0|Non modifiée|
 |**NULL**|any|any|Différent de zéro|**EINVAL**|Non modifiée|
 |any|any|**NULL**|Différent de zéro|**EINVAL**|*dest* est remis à zéro|
-|any|< *Nombre*|any|Différent de zéro|**ERANGE**|*dest* est remis à zéro|
+|any|< *count*|any|Différent de zéro|**ERANGE**|*dest* est remis à zéro|
 
 ## <a name="remarks"></a>Notes
 
@@ -85,7 +86,7 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
 Ces fonctions valident leurs paramètres. Si *nombre* est différente de zéro et *dest* ou *src* est un pointeur null, ou *destSize* est inférieure à *nombre*, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** ou **ERANGE** et définissez **errno** à la valeur de retour.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

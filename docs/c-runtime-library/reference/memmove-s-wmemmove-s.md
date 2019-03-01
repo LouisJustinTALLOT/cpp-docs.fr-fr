@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wmemmove_s
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28d879a205790d1f132caca1022d0740e317c342
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561185"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210599"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 
@@ -76,7 +77,7 @@ Zéro si l’opération a réussi ; code d’erreur en cas de échec.
 |------------|------------------------|-----------|------------------|------------------------|
 |**NULL**|any|any|**EINVAL**|non modifié|
 |any|any|**NULL**|**EINVAL**|non modifié|
-|any|< *Nombre*|any|**ERANGE**|non modifié|
+|any|< *count*|any|**ERANGE**|non modifié|
 
 ## <a name="remarks"></a>Notes
 
@@ -84,7 +85,7 @@ Copies *nombre* octets de caractères à partir de *src* à *dest*. Si certaines
 
 Si *dest* ou si *src* est un pointeur null, ou si la chaîne de destination est trop petite, ces fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et définissez **errno** à **EINVAL**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

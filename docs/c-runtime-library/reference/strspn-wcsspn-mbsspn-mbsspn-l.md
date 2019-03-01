@@ -19,6 +19,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _ftcsspn
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd3f27387fa180c7de9260e7cf8b7f6102915049
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477311"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210625"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
@@ -106,7 +107,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 |**_tcsspn**|**strspn**|**_mbsspn**|**wcsspn**|
 |**n/a**|**n/a**|**_mbsspn_l**|**n/a**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

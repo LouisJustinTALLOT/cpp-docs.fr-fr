@@ -18,6 +18,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tstoi
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: 5c03f2766701f7e360ad0bf4f0fc701d2a7e983c
-ms.sourcegitcommit: b401a05c5c0f5cc4b32893d7382c05a51e4ab783
+ms.openlocfilehash: b6a1f52e6c83f53230c736db3a506aed4b52e434
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50999984"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210690"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -90,7 +91,7 @@ Ces fonctions convertissent une chaîne de caractères en une valeur entière (*
 
 Le *str* l’argument de **atoi** et **_wtoi** a la forme suivante :
 
-> [*espace blanc*] [*connexion*] [*chiffres*]]
+> [*whitespace*] [*sign*] [*digits*]]
 
 Un *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *connexion* est soit plus (+) ou moins (-) ; et *chiffres* sont un ou plusieurs chiffres.
 
@@ -103,7 +104,7 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 |**_tstoi**|**atoi**|**atoi**|**_wtoi**|
 |**_ttoi**|**atoi**|**atoi**|**_wtoi**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routines|En-tête requis|
 |--------------|---------------------|

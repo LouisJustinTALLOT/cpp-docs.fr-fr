@@ -20,6 +20,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _ftcsnccmp
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: b8b5472289bacc940bb0cbea7876f246243660bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f022dec6c161814ade5c6be5aaccfcd239a4af4
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523762"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210911"
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -94,7 +95,7 @@ int _mbsncmp_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*string1*, *chaîne2*<br/>
+*string1*, *string2*<br/>
 Chaînes à comparer.
 
 *count*<br/>
@@ -134,7 +135,7 @@ Le comportement de comparaison de **_mbsncmp** et **_mbsncmp_l** est affectée p
 |**_tccmp**|Mappe à la macro ou à la fonction inline|**_mbsncmp**|Mappe à la macro ou à la fonction inline|
 |**non applicable**|**non applicable**|**_mbsncmp_l**|**non applicable**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

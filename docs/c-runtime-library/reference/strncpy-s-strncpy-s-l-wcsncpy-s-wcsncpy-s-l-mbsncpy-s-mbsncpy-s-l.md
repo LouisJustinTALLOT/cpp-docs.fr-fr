@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tcsncpy_s
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 8a6fc997ed874ba976e96f87df377e6fafd84a6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2372cab4cfb689aa52de81d9e15602f2478ddde7
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430067"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210820"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -218,7 +219,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 > [!NOTE]
 > **_strncpy_s_l**, **_wcsncpy_s_l** et **_mbsncpy_s_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux et sont uniquement fournies pour **_tcsncpy_s_l** et ne sont pas destinées à être appelée directement.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
