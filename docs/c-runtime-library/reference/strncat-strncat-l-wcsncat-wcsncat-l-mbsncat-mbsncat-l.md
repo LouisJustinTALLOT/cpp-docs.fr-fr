@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tcsncat_l
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 6d44ec9f75ef1c6677c2f6053746592ba6e86382
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 477d80ec170463a2315e2e891998ed32d84c75dd
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574276"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210261"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -163,7 +164,7 @@ En C++, ces fonctions ont des surcharges de modèle. Pour plus d'informations, c
 > [!NOTE]
 > **_strncat_l** et **_wcsncat_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux et ne sont pas destinés à être appelée directement. Elles sont fournies pour une utilisation interne par **_tcsncat_l**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

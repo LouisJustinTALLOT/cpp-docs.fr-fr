@@ -17,6 +17,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - mbtowc
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: e5ef6db0f0986b102214229155e1c43c5d029284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c02d1a636db75b4a26891a93fa20327b7430443d
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506195"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210638"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
 
@@ -74,7 +75,7 @@ Si **mbchar** n’est pas **NULL** et si l’objet qui *mbchar* pointe vers les 
 
 Le **mbtowc** fonction convertit *nombre* ou octets désignés par *mbchar*si *mbchar* n’est pas **NULL**, à un caractère large correspondant. **mbtowc** stocke le caractère large résultant dans *wchar,* si *wchar* n’est pas **NULL**. **mbtowc** n’examine pas plus de **MB_CUR_MAX** octets. **mbtowc** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux ; **_mbtowc_l** est identique, sauf qu’elle utilise les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

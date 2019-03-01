@@ -17,6 +17,7 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - memset
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: 7e7fb493de7f5fcf5604b3c5fd8bce2963b59334
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519195"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210066"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -72,7 +73,7 @@ Définit le premier *nombre* caractères de *dest* au caractère *c*.
 
 **Note de sécurité** vous assurer que la mémoire tampon de destination a suffisamment d’espace au moins *nombre* caractères. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

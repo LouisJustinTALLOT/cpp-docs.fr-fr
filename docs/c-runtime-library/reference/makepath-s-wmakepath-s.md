@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _wmakepath_s
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 6914299dd7ede97c9004dcc95e01b1a35188f5c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3536569fd3e77a353003e1372d5dc4ee6e4ee3fb
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471914"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210651"
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 
@@ -88,7 +89,7 @@ Taille, en mots, de la mémoire tampon.
 *sizeInBytes*<br/>
 Taille, en octets, de la mémoire tampon.
 
-*Lecteur*<br/>
+*drive*<br/>
 Contient une lettre (A, B, etc.) correspondant au lecteur souhaité et un signe deux-points de fin facultatif. **_makepath_s** insère automatiquement le signe deux-points dans le chemin d’accès composite s’il est manquant. Si *lecteur* est **NULL** ou pointe vers une chaîne vide, aucune lettre de lecteur s’affiche dans le service composite *chemin d’accès* chaîne.
 
 *dir*<br/>
@@ -97,7 +98,7 @@ Contient le chemin d’accès des répertoires, sans l’indicateur de lecteur o
 *fname*<br/>
 Contient le nom de fichier de base sans les extensions du nom de fichier. Si *fname* est **NULL** ou pointe vers une chaîne vide, aucun nom de fichier est inséré dans le service composite *chemin d’accès* chaîne.
 
-*Ext*<br/>
+*ext*<br/>
 Contient l’extension de nom de fichier réelle, avec ou sans point initial (.). **_makepath_s** insère automatiquement la période si elle n’apparaît pas dans *ext*. Si *ext* est **NULL** ou pointe vers une chaîne vide, aucune extension est inséré dans le service composite *chemin d’accès* chaîne.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -131,7 +132,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 
 Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

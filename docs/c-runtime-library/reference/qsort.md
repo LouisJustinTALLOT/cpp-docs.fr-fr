@@ -16,6 +16,7 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - qsort
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 8a770965a03e43227b99f122924c723691f79c61
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327549"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57209780"
 ---
 # <a name="qsort"></a>qsort
 
@@ -52,7 +53,7 @@ void qsort(
 *base*<br/>
 Début du tableau cible.
 
-*Nombre*<br/>
+*number*<br/>
 Taille du tableau dans les éléments.
 
 *width*<br/>
@@ -83,7 +84,7 @@ Le tableau est trié par ordre croissant, comme défini par la fonction de compa
 
 Cette fonction valide ses paramètres. Si *comparer* ou *nombre* est **NULL**, ou si *base* est **NULL** et *nombre* est différent de zéro, ou si *largeur* est inférieur à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne et **errno** a la valeur **EINVAL**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

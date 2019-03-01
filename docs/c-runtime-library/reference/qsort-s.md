@@ -15,6 +15,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - qsort_s
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: 1f0064fd9cf0a3c52456197568adf693fcdaa9a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3b8bbfeb8079322a174233f3d8048a6d1b51804
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581868"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210924"
 ---
 # <a name="qsorts"></a>qsort_s
 
@@ -52,7 +53,7 @@ void qsort_s(
 *base*<br/>
 Début du tableau cible.
 
-*Nombre*<br/>
+*number*<br/>
 Taille du tableau dans les éléments.
 
 *width*<br/>
@@ -95,7 +96,7 @@ Si des paramètres non valides sont passés à la fonction, le gestionnaire de p
 
 **qsort_s** a le même comportement que **qsort** mais a le *contexte* paramètre et définit **errno**. En passant un *contexte* paramètre, les fonctions de comparaison peuvent utiliser un pointeur d’objet pour accéder aux fonctionnalités de l’objet ou d’autres informations non accessibles via un pointeur d’élément. L’ajout de la *contexte* paramètre rend **qsort_s** plus sécurisé car *contexte* peut être utilisé pour éviter les bogues de réentrance introduits par des variables statiques et pour rendre les informations disponibles à partagé le *comparer* (fonction).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -103,7 +104,7 @@ Si des paramètres non valides sont passés à la fonction, le gestionnaire de p
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-**Bibliothèques :** toutes les versions des [fonctionnalités de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliothèques :** Toutes les versions de la [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Exemple
 

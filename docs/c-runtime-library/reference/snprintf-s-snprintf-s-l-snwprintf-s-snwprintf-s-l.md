@@ -17,6 +17,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _snwprintf_s_l
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-ms.openlocfilehash: 5918ab1dd9b7108248e638f267ceb8757802231a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae298e9143a9ce79efe49c2055299f8d74070999
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560028"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210157"
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 
@@ -158,7 +159,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |**_sntprintf_s**|**_snprintf_s**|**_snprintf_s**|**_snwprintf_s**|
 |**_sntprintf_s_l**|**_snprintf_s_l**|**_snprintf_s_l**|**_snwprintf_s_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

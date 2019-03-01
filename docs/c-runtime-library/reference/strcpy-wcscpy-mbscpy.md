@@ -18,6 +18,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _mbscpy
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa6c0122f2e62c5b39b3da7b9b7c25aa8974f768
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640061"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210807"
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
 
@@ -112,7 +113,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy**|**strcpy**|**_mbscpy**|**wcscpy**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

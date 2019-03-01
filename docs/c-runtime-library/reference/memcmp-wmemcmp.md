@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - memcmp
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4feaa692ced7777d757b579c1b131b541dccea66
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610464"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210235"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -75,7 +76,7 @@ La valeur de retour indique la relation entre les mémoires tampons.
 
 Compare la première *nombre* caractères de *buffer1* et *buffer2* et retourne une valeur qui indique leur relation. Le signe d’une valeur de retour non Nulle est le signe de la différence entre la première paire de valeurs différente dans les mémoires tampons. Les valeurs sont interprétées en tant que **non signé** **char** pour **memcmp**et en tant que **wchar_t** pour **wmemcmp**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

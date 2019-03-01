@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tcstok_s_l
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: a8b87e0b2d4ecf9dc6fb1b52f512406a6df0622c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24a945742f3db82e41f662a337eef1f79ef13bd6
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517453"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210586"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -109,7 +110,7 @@ unsigned char* _mbstok_s(
 *str*<br/>
 Chaîne contenant l’ou les jetons à rechercher.
 
-*Délimiteurs*<br/>
+*delimiters*<br/>
 Le jeu de caractères de séparation à utiliser.
 
 *context*<br/>
@@ -124,7 +125,7 @@ Retourne un pointeur vers le prochain jeton trouvé dans *str*. Retourne **NULL*
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*str*|*Délimiteurs*|*context*|Valeur de retour|**errno**|
+|*str*|*delimiters*|*context*|Valeur de retour|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
 |**NULL**|any|pointeur vers un pointeur Null|**NULL**|**EINVAL**|
 |any|**NULL**|any|**NULL**|**EINVAL**|
@@ -144,7 +145,7 @@ Dans la mesure où le *contexte* paramètre remplace les mémoires tampons stati
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le **_l** suffixe utiliser des paramètres régionaux du thread actuel pour ce comportement dépendant des paramètres régionaux. Les versions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent à la place la *paramètres régionaux* paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

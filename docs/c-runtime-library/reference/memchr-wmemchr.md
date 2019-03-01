@@ -15,6 +15,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - memchr
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 1de8826d2f072c689ed3363902d1e4742cf187b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbd8b80ed42a6532fb7161fab7217a772a2cb777
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438543"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57209897"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -90,7 +91,7 @@ En cas de réussite, retourne un pointeur vers le premier emplacement de *c* dan
 
 En C, ces fonctions prennent une **const** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non -**const** retourne un pointeur vers non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le **const** et non-**const** versions de ces fonctions sont disponibles. Si vous avez besoin non -**const** comportement pour les deux surcharges C++ dans C++, définissez le symbole _CONST_RETURN.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

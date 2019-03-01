@@ -19,6 +19,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _vsnprintf_s
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 6654588754bbd8a8d6f6ac4c5dcd8361e932a5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 255c3b760dec1495a4f9a82915878a5504844f24
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480559"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210703"
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -138,11 +139,11 @@ Si *tampon* ou *format* est un **NULL** pointeur, ou si *nombre* est inférieure
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|**condition**|Retourner|**errno**|
+|**Condition**|Retourner|**errno**|
 |-----------------|------------|-------------|
 |*mémoire tampon* est **NULL**|-1|**EINVAL**|
 |*format* est **NULL**|-1|**EINVAL**|
-|*nombre* < = 0|-1|**EINVAL**|
+|*count* <= 0|-1|**EINVAL**|
 |*sizeOfBuffer* trop petit (et *nombre* ! = **_TRUNCATE**)|-1 (et *tampon* définie sur une chaîne vide)|**ERANGE**|
 
 ## <a name="remarks"></a>Notes
@@ -168,7 +169,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 |**_vsntprintf_s**|**_vsnprintf_s**|**_vsnprintf_s**|**_vsnwprintf_s**|
 |**_vsntprintf_s_l**|**_vsnprintf_s_l**|**_vsnprintf_s_l**|**_vsnwprintf_s_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

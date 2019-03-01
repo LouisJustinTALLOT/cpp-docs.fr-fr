@@ -21,16 +21,16 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: aeeca87ceb5b2c5e54da7087b5020ccbc1c39039
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 118744f70242b511930399c5786035493e9b7cf0
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320807"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210742"
 ---
 # <a name="resource-editors-c"></a>Éditeurs de ressources (C++)
 
-Un **ressource** éditeur est un environnement spécialisé pour créer ou modifier des ressources qui sont inclus dans un projet Visual Studio. Les éditeurs de ressources de Visual Studio partagent des techniques et des interfaces pour vous aider à créer et à modifier rapidement et facilement des ressources d’application. Éditeurs de ressources permettent d’afficher et modifier les ressources dans les ressources appropriées de l’éditeur et l’aperçu.
+Un **éditeur de ressources** est un environnement spécialisé pour créer ou modifier des ressources qui sont inclus dans un projet Visual Studio. Les éditeurs de ressources de Visual Studio partagent des techniques et des interfaces pour vous aider à créer et à modifier rapidement et facilement des ressources d’application. Éditeurs de ressources permettent d’afficher et modifier les ressources dans les ressources appropriées de l’éditeur et l’aperçu.
 
 L’éditeur approprié s’ouvre automatiquement quand vous créez ou que vous ouvrez une ressource.
 
@@ -46,40 +46,32 @@ L’éditeur approprié s’ouvre automatiquement quand vous créez ou que vous 
 |[Éditeur de menus](../windows/menu-editor.md)|Ressources de menu dans des projets Visual C++.|
 |[Éditeur Ribbon](../mfc/ribbon-designer-mfc.md)|Ressources de ruban dans les projets MFC.|
 |[Éditeur de chaînes](../windows/string-editor.md)|Tableaux de chaînes dans des projets Visual C++.|
-|[Éditeur de barres d’outils](../windows/toolbar-editor.md)|Ressources de barre d’outils dans des projets Visual C++. L’éditeur de barres d’outils fait partie de l’éditeur d’images.|
+|[Éditeur de barres d’outils](../windows/toolbar-editor.md)|Ressources de barre d’outils dans des projets Visual C++. L’éditeur de la barre d’outils fait partie de l’éditeur d’images.|
 |[Éditeur d’informations sur la version](../windows/version-information-editor.md)|Informations de version dans des projets Visual C++.|
 
 > [!NOTE]
-> Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
+> Si votre projet ne contient pas déjà un fichier .rc, consultez [Comment : Créer des ressources](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="view-and-edit-resources"></a>Affichage et ressources pour la modification
 
-Chaque type de ressource a un **ressource** éditeur spécifique à ce type de ressource. Vous pouvez réorganiser, redimensionner, ajouter des contrôles et fonctionnalités ou bien modifier les aspects d’une ressource à l’aide de l’éditeur associé. Vous pouvez également modifier une ressource dans [au format texte](../windows/how-to-open-a-resource-script-file-in-text-format.md) et [format binaire](../windows/opening-a-resource-for-binary-editing.md).
+Chaque type de ressource a un **éditeur de ressources** spécifiques à ce type de ressource. Vous pouvez réorganiser, redimensionner, ajouter des contrôles et fonctionnalités ou bien modifier les aspects d’une ressource à l’aide de l’éditeur associé. Vous pouvez également modifier une ressource dans [au format texte](../windows/how-to-open-a-resource-script-file-in-text-format.md) et [format binaire](../windows/opening-a-resource-for-binary-editing.md).
 
 Certains types de ressources sont des fichiers individuels qui peuvent être importés et utilisés de différentes manières. Citons notamment les bitmaps, icônes, curseurs, barres d’outils et les fichiers html. Ces ressources ont des noms de fichiers et [identificateurs de ressource](../windows/symbols-resource-identifiers.md). D’autres, telles que les boîtes de dialogue, des menus et des tables de chaînes dans les projets Win32, existent uniquement dans le cadre d’un fichier de script (.rc) de ressource ou un fichier de ressources (.rct) de modèle.
 
-Ressources peuvent également être modifiées en dehors du projet, consultez [Comment : Ouvrir un fichier de Script de ressources en dehors d’un projet (autonome)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+Les ressources peuvent également être modifié en dehors du projet sans ouvrir le projet, consultez [Comment : Créer des ressources](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
 > [!NOTE]
-> Propriétés d’une ressource [peut être modifié à l’aide de la fenêtre Propriétés](../windows/changing-the-properties-of-a-resource.md).
+> Propriétés d’une ressource peuvent être modifiées à l’aide de la **propriétés** fenêtre.
 
-### <a name="to-edit-the-properties-of-a-resource"></a>Pour modifier les propriétés d'une ressource
+- Pour modifier les propriétés d’une ressource, dans [affichage des ressources](../windows/resource-view-window.md), avec le bouton droit de la ressource que vous souhaitez modifier, puis choisissez **propriétés**.  Ensuite, dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), modifier les propriétés de votre ressource.
 
-1. Dans [affichage des ressources](../windows/resource-view-window.md), avec le bouton droit de la ressource que vous souhaitez modifier, puis choisissez **propriétés** dans le menu contextuel.
-
-1. Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), modifier les propriétés de votre ressource.
-
-### <a name="to-undo-a-change-made-to-the-properties-of-a-resource"></a>Pour annuler une modification apportée aux propriétés d’une ressource
-
-1. Assurez-vous que votre ressource a le focus dans **affichage des ressources**.
-
-1. Choisissez **Annuler** à partir de la **modifier** menu.
+- Pour annuler une modification apportée aux propriétés d’une ressource, vérifiez que votre ressource a le focus dans **affichage des ressources** et choisissez **Annuler** à partir de la **modifier** menu.
 
 ### <a name="win32-resources"></a>Ressources Win32
 
 Vous pouvez accéder à des ressources Win32 dans le [affichage des ressources](../windows/resource-view-window.md) volet.
 
-#### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Pour afficher une ressource Win32 dans un éditeur de ressources
+Pour afficher une ressource Win32 dans un éditeur de ressources :
 
 1. Sélectionnez **affichage des ressources** à partir de la **vue** menu.
 
@@ -91,48 +83,44 @@ Vous pouvez accéder à des ressources Win32 dans le [affichage des ressources](
 
    La ressource s’ouvre dans l’éditeur approprié. Par exemple, pour les ressources de la boîte de dialogue, la ressource s’ouvre à l’intérieur de la **boîte de dialogue** éditeur.
 
-   Vous pouvez également [afficher des ressources dans un fichier .rc (script de ressources) sans ouvrir de projet](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
-
-#### <a name="to-delete-an-existing-win-32-resource"></a>Pour supprimer une ressource Win 32 existante
+Pour supprimer une ressource Win32 existante :
 
 1. Dans **affichage des ressources**, développez le nœud pour un type de ressource.
 
-1. Avec le bouton droit sur la ressource que vous souhaitez supprimer, puis sélectionnez **supprimer** dans le menu contextuel.
+1. Avec le bouton droit sur la ressource que vous souhaitez supprimer, puis sélectionnez **supprimer**.
 
-   > [!NOTE]
-   > Vous pouvez supprimer une ressource à l’aide de la même commande de menu contextuel lorsque vous avez ouvert dans une fenêtre de document en dehors d’un projet le fichier .rc.
+   > [!TIP]
+   > Vous pouvez également utiliser cette méthode lorsque vous avez ouvert dans une fenêtre de document en dehors d’un projet le fichier .rc.
 
 ### <a name="managed-project-resources"></a>Ressources de projet managé
 
-Étant donné que les projets managés n’utilisent des fichiers de script de ressources, vous devez ouvrir vos ressources à partir de **l’Explorateur de solutions**. Vous pouvez utiliser l’ [éditeur d’images](../windows/image-editor-for-icons.md) et l’ [éditeur binaire](binary-editor.md) pour travailler avec des fichiers de ressources dans des projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
+Étant donné que les projets managés n’utilisent des fichiers de script de ressources, vous devez ouvrir vos ressources à partir de **l’Explorateur de solutions**. Utilisez le [Éditeur d’images](../windows/image-editor-for-icons.md) et [éditeur binaire](binary-editor.md) pour travailler avec des fichiers de ressources dans les projets managés. Toutes les ressources managées vous souhaitez modifier doivent être liées et éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
 
-- Pour afficher une ressource managée dans un éditeur de ressources dans **l’Explorateur de solutions**, double-cliquez sur la ressource, par exemple, *Bitmap1.bmp*.
+- Pour afficher une ressource managée dans un éditeur de ressources dans **l’Explorateur de solutions**, double-cliquez sur la ressource, par exemple, *Bitmap1.bmp*. La ressource s’ouvre dans l’éditeur approprié.
 
-   La ressource s’ouvre dans l’éditeur approprié.
-
-- Pour supprimer une ressource managée existante, dans **l’Explorateur de solutions**, avec le bouton droit de la ressource que vous souhaitez supprimer, puis sélectionnez **supprimer** dans le menu contextuel.
+- Pour supprimer une ressource managée existante, dans **l’Explorateur de solutions**, avec le bouton droit de la ressource que vous souhaitez supprimer, puis sélectionnez **supprimer**.
 
 ## <a name="preview-resources"></a>Ressources de la version préliminaire
 
-Afficher un aperçu de vos ressources afin que vous puissiez afficher des ressources graphiques sans les ouvrir. L’aperçu est également utile pour les exécutables une fois que vous les avez compilé, car les identificateurs de ressource se transformer en nombres. Dans la mesure où ces identificateurs numériques ne fournissent pas suffisamment d’informations, l’aperçu des ressources vous aide à identifier rapidement les.
+Afficher un aperçu de vos ressources afin que vous puissiez afficher des ressources graphiques sans les ouvrir. L’aperçu est également utile pour les exécutables une fois que vous avez compilé, étant donné que les identificateurs de ressource se transformer en nombres. Dans la mesure où ces identificateurs numériques ne fournissent pas suffisamment d’informations, l’aperçu des ressources vous aide à identifier rapidement les.
 
-Vous pouvez afficher un aperçu de la présentation visuelle des types de ressources suivants : Image bitmap, boîte de dialogue, icône, Menu, curseur, barre d’outils
+Les types de ressources suivantes fournissent un aperçu de la disposition visuelle : Image bitmap, boîte de dialogue, icône, Menu, curseur, barre d’outils
 
-La fonction d’aperçu visuel ne s’applique pas aux ressources : Accélérateur, manifeste, Table de chaînes et informations de Version
+Un aperçu visuel ne fournissent pas les ressources suivantes : Accélérateur, manifeste, la Table de chaînes, les informations de Version
 
 > [!NOTE]
 > Pour afficher un aperçu des ressources nécessite Win32.
 
-### <a name="to-preview-resources"></a>Pour afficher un aperçu des ressources
+Pour afficher un aperçu des ressources :
 
-1. Dans [affichage des ressources](../windows/resource-view-window.md) ou une fenêtre de document, sélectionnez votre ressource, par exemple, `IDD_ABOUTBOX`.
+1. Dans [affichage des ressources](../windows/resource-view-window.md) ou une fenêtre de document, sélectionnez votre ressource, par exemple, **IDD_ABOUTBOX**.
 
 1. Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), sélectionnez le **Pages de propriétés** bouton.
 
    > [!TIP]
-   > Pour créer un raccourci, sur le **vue** menu, sélectionnez **Pages de propriétés**.
+   > Utilisez un raccourci, accédez au menu **vue** > **Pages de propriétés**.
 
-   Le **Page de propriétés** pour la ressource s’ouvre affichant un aperçu de cette ressource. Vous pouvez ensuite utiliser le **des** et **vers le bas** dans contrôlent des touches de direction pour parcourir l’arborescence **affichage des ressources** ou la fenêtre de document. Le **Page de propriétés** reste ouverte et affiche toutes les ressources qui a le focus et peuvent être visualisés.
+   Le **Page de propriétés** pour la ressource s’ouvre affichant un aperçu de cette ressource. Vous pouvez utiliser la **des** et **vers le bas** dans contrôlent des touches de direction pour parcourir l’arborescence **affichage des ressources** ou la fenêtre de document. Le **Page de propriétés** reste ouverte et affiche toutes les ressources qui a le focus et peuvent être visualisés.
 
 ## <a name="requirements"></a>Spécifications
 
@@ -142,4 +130,4 @@ Aucun.
 
 [Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)<br/>
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
-[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
