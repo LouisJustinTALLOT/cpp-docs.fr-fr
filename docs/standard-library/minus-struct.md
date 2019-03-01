@@ -2,17 +2,17 @@
 title: minus (struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::minus
+- functional/std::minus
 helpviewer_keywords:
 - minus struct
 - minus class
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
-ms.openlocfilehash: 90bfe62e01b0e49b9998682d3f1d6d19393e7cc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8683aca2656a4fd519be1dd7929448dfd221feac
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566181"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006400"
 ---
 # <a name="minus-struct"></a>minus (struct)
 
@@ -106,7 +106,7 @@ The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
 */
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<functional>
 

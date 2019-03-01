@@ -1,21 +1,22 @@
 ---
 title: '&lt;functional&gt;, fonctions'
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
 - functional/std::bind
-- xfunctional/std::bind1st
-- xfunctional/std::bind2nd
-- xfunctional/std::bit_and
-- xfunctional/std::bit_not
-- xfunctional/std::bit_or
-- xfunctional/std::bit_xor
+- functional/std::bind1st
+- functional/std::bind2nd
+- functional/std::bit_and
+- functional/std::bit_not
+- functional/std::bit_or
+- functional/std::bit_xor
 - functional/std::cref
 - type_traits/std::cref
-- xfunctional/std::mem_fn
-- xfunctional/std::mem_fun_ref
-- xfunctional/std::not1
-- xfunctional/std::not2
-- xfunctional/std::ptr_fun
+- functional/std::mem_fn
+- functional/std::mem_fun_ref
+- functional/std::not1
+- functional/std::not2
+- functional/std::not_fn
+- functional/std::ptr_fun
 - functional/std::ref
 - functional/std::swap
 helpviewer_keywords:
@@ -28,25 +29,36 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: cd89386ff421c199705856b9cf5f6b58ff25f7f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 559110361b9d3d8c66ff261860f8885ff56d44d5
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519696"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006725"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt;, fonctions
 
 ||||
 |-|-|-|
-|[bind](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|
-|[bit_and](#bit_and)|[bit_not](#bit_not)|[bit_or](#bit_or)|
-|[bit_xor](#bit_xor)|[cref](#cref)|[mem_fn](#mem_fn)|
-|[mem_fun](#mem_fun)|[mem_fun_ref](#mem_fun_ref)|[not1](#not1)|
-|[not2](#not2)|[ptr_fun](#ptr_fun)|[ref](#ref)|
-|[swap](#swap)|
+| [bind](#bind) | [bit_and](#bit_and) | [bit_not](#bit_not) |
+| [bit_or](#bit_or) | [bit_xor](#bit_xor) | [cref](#cref) |
+| [invoke](#invoke) | [mem_fn](#mem_fn) | [not_fn](#not_fn) |
+| [ref](#ref) | [swap](#swap) | |
 
-## <a name="bind"></a>  bind
+Ces fonctions sont déconseillées dans C ++ 11 et supprimées dans C ++ 17 :
+
+||||
+|-|-|-|
+| [bind1st](#bind1st) | [bind2nd](#bind2nd) | [mem_fun](#mem_fun) |
+| [mem_fun_ref](#mem_fun_ref) | [ptr_fun](#ptr_fun) | |
+
+Ces fonctions sont déconseillées dans C ++ 17 :
+
+|||
+|-|-|
+| [not1](#not1) | [not2](#not2) |
+
+## <a name="bind"></a> Lier
 
 Lie des arguments à un objet pouvant être appelé.
 
@@ -76,7 +88,7 @@ N-ième argument de l’appel.
 
 Les types `Fty, T1, T2, ..., TN` doivent être constructibles par copie et `INVOKE(fn, t1, ..., tN)` doit être une expression valide pour certaines valeurs `w1, w2, ..., wN`.
 
-La première fonction de modèle retourne un wrapper d’appel de transfert `g` avec un type de résultat faible. L’effet de `g(u1, u2, ..., uM)` est `INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, où `cv` désigne les qualificateurs cv de `g` et les valeurs et les types des arguments liés `v1, v2, ..., vN` sont déterminées en tant que spécifiées ci-dessous. Vous l’utilisez pour lier des arguments à un objet pouvant être appelé afin de créer un objet pouvant être appelé avec une liste d’arguments personnalisés.
+La première fonction de modèle retourne un wrapper d’appel de transfert `g` avec un type de résultat faible. L’effet de `g(u1, u2, ..., uM)` est `INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, où `cv` désigne les qualificateurs cv de `g` et les valeurs et les types des arguments liés `v1, v2, ..., vN` sont déterminées comme indiqué ci-dessous. Vous l’utilisez pour lier des arguments à un objet pouvant être appelé afin de créer un objet pouvant être appelé avec une liste d’arguments personnalisés.
 
 La deuxième fonction de modèle retourne un wrapper d’appel de transfert `g` avec un type imbriqué `result_type` qui est un synonyme de `Ret`. L’effet de `g(u1, u2, ..., uM)` est `INVOKE(f, v1, v2, ..., vN, Ret)`, où `cv` désigne les qualificateurs cv de `g`, et les valeurs et types des arguments liés `v1, v2, ..., vN` sont déterminés comme indiqué ci-dessous. Vous l’utilisez pour lier des arguments à un objet pouvant être appelé afin de créer un objet pouvant être appelé avec une liste d’arguments personnalisés et un type de retour spécifié.
 
@@ -147,9 +159,9 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>  bind1st
+## <a name="bind1st"></a> bind1st
 
-Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée.
+Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
 
 ```cpp
 template <class Operation, class Type>
@@ -241,9 +253,9 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>  bind2nd
+## <a name="bind2nd"></a> bind2nd
 
-Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le second argument de la fonction binaire à une valeur spécifiée.
+Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le second argument de la fonction binaire à une valeur spécifiée. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
 
 ```cpp
 template <class Operation, class Type>
@@ -335,7 +347,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>  bit_and
+## <a name="bit_and"></a> bit_and
 
 Objet de fonction prédéfini qui effectue l’opération AND au niveau du bit (`operator&` binaire) sur ses arguments.
 
@@ -375,9 +387,9 @@ Résultat de `Left & Right`. Le modèle spécialisé effectue un transfert parfa
 
 Le foncteur `bit_and` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator&` binaire.
 
-## <a name="bit_not"></a>  bit_not
+## <a name="bit_not"></a> bit_not
 
-Objet de fonction prédéfini qui effectue l’opération de complément (NOT) au niveau du bit (`operator~` unaire) sur ses arguments.
+Objet de fonction prédéfini qui effectue l’opération de complément (NOT) au niveau du bit (`operator~` unaire) sur ses arguments. Ajouté dans C ++ 14.
 
 ```cpp
 template <class Type = void>
@@ -391,7 +403,7 @@ template <>
 struct bit_not<void>
 {
     template <class Type>
-    auto operator()(Type&& Right) const  ->  decltype(~std::forward<Type>(Right));
+    auto operator()(Type&& Right) const -> decltype(~std::forward<Type>(Right));
 };
 ```
 
@@ -411,9 +423,9 @@ Résultat de `~ Right`. Le modèle spécialisé effectue un transfert parfait du
 
 Le foncteur `bit_not` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator~` binaire.
 
-## <a name="bit_or"></a>  bit_or
+## <a name="bit_or"></a> bit_or
 
-Objet de fonction prédéfini qui effectue l’opération OR au niveau du bit (`operator|`) sur ses arguments.
+Objet de fonction prédéfini qui effectue l'opération OR au niveau du bit (`operator|`) sur ses arguments.
 
 ```cpp
 template <class Type = void>
@@ -429,7 +441,7 @@ struct bit_or<void>
 {
     template <class T, class U>
     auto operator()(T&& Left, U&& Right) const
-        ->  decltype(std::forward<T>(Left) | std::forward<U>(Right));
+        -> decltype(std::forward<T>(Left) | std::forward<U>(Right));
 };
 ```
 
@@ -451,7 +463,7 @@ Résultat de `Left | Right`. Le modèle spécialisé effectue un transfert parfa
 
 Le foncteur `bit_or` est limité aux types intégraux pour les types de données de base ou aux types définis par l'utilisateur qui implémentent `operator|`.
 
-## <a name="bit_xor"></a>  bit_xor
+## <a name="bit_xor"></a> bit_xor
 
 Objet de fonction prédéfini qui effectue l’opération XOR au niveau du bit (`operator^` binaire) sur ses arguments.
 
@@ -491,7 +503,7 @@ Résultat de `Left ^ Right`. Le modèle spécialisé effectue un transfert parfa
 
 Le foncteur `bit_xor` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator^` binaire.
 
-## <a name="cref"></a>  cref
+## <a name="cref"></a> cref
 
 Construit un `reference_wrapper` const à partir d'un argument.
 
@@ -547,7 +559,114 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="mem_fn"></a>  mem_fn
+## <a name="invoke"></a> Appeler
+
+Appelle un objet pouvant être appelé avec les arguments donnés. Ajouté dans C ++ 17.
+
+```cpp
+template <class Callable, class... Args>
+invoke_result_t<Callable, Args...>
+    invoke(Callable&& fn, Args&&... args) noexcept(/* specification */);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Callable*<br/>
+Type de l’objet à appeler.
+
+*Args*<br/>
+Les types des arguments d’appel.
+
+*fn*<br/>
+Objet à appeler.
+
+*args*<br/>
+Arguments d'appel.
+
+*specification*<br/>
+Le **noexcept** spécification `std::is_nothrow_invocable_v<Callable, Args>)`.
+
+### <a name="remarks"></a>Notes
+
+Appelle l’objet pouvant être *fn* en utilisant les paramètres *args*. En effet, `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`, où la pseudo-fonction `INVOKE(f, t1, t2, ..., tN)` peut être l’une des opérations suivantes :
+
+- `(t1.*f)(t2, ..., tN)` quand `f` est un pointeur vers une fonction membre de classe `T` et `t1` est un objet de type `T` ou une référence à un objet de type `T` ou une référence à un objet d'un type dérivé de `T`. Autrement dit, lorsque `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` a la valeur true.
+
+- `(t1.get().*f)(t2, ..., tN)` Lorsque `f` est un pointeur vers fonction membre de classe `T` et `std::decay_t<decltype(t1)>` est une spécialisation de `std::reference_wrapper`.
+
+- `((*t1).*f)(t2, ..., tN)` Lorsque `f` est un pointeur vers fonction membre de classe `T` et `t1` ne fait pas partie des types précédents.
+
+- `t1.*f` quand N == 1 et `f` est un pointeur vers des données de membre d'une classe `T` et `t1` est un objet de type `T` ou une référence à un objet de type `T` ou une référence à un objet d'un type dérivé de `T`.  Autrement dit, lorsque `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` a la valeur true.
+
+- `t1.get().*f` quand N == 1 et `f` est un pointeur vers les données de membre d’une classe `T` et `std::decay_t<decltype(t1)>` est une spécialisation de `std::reference_wrapper`.
+
+- `(*t1).*f` quand N == 1 et `f` est un pointeur vers les données de membre d’une classe `T` et `t1` ne fait pas partie des types précédents.
+
+- `f(t1, t2, ..., tN)` dans tous les autres cas.
+
+Pour plus d’informations sur le type de résultat d’un objet pouvant être appelé, consultez [invoke_result](invoke-result-class.md). Pour les prédicats sur les types pouvant être appelés, consultez [is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r classes](is-invocable-classes.md).
+
+### <a name="example"></a>Exemple
+
+```cpp
+// functional_invoke.cpp
+// compile using: cl /EHsc /std:c++17 functional_invoke.cpp
+#include <functional>
+#include <iostream>
+
+struct Demo
+{
+    int n_;
+
+    Demo(int const n) : n_{n} {}
+
+    void operator()(int const i, int const j) const
+    {
+        std::cout << "Demo operator( " << i << ", "
+            << j << " ) is " << i * j << std::endl;
+    }
+
+    void difference(int const i) const 
+    {
+        std::cout << "Demo.difference( " << i << " ) is "
+            << n_ - i << std::endl;
+    }
+};
+
+void divisible_by_3(int const i)
+{
+    std::cout << i;
+    (i % 3) ? std::cout << " isn't divisible by 3."
+        : std::cout << " is divisible by 3.";
+    std::cout << std::endl;
+}
+
+int main()
+{
+    // Invoke a function object (call operator).
+    Demo d{ 42 };
+    std::invoke( d, 3, -7 );
+
+    // Invoke a member function.
+    std::invoke(&Demo::difference, d, 29);
+
+    // Invoke a data member.
+    std::cout << "n_: " << std::invoke(&Demo::n_, d) << '\n';
+
+    // Invoke a stand-alone (free) function.
+    std::invoke( divisible_by_3, 42 );
+
+    // Invoke a lambda.
+    std::invoke( [](int const i){
+        std::cout << i; 
+        (i % 7) ? std::cout << " isn't divisible by 7."
+            : std::cout << " is divisible by 7.";
+        std::cout << std::endl;
+    }, 42 );
+}
+```
+
+## <a name="mem_fn"></a> mem_fn
 
 Génère un wrapper d'appel simple.
 
@@ -610,9 +729,9 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>  mem_fun
+## <a name="mem_fun"></a> mem_fun
 
-Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de pointeur.
+Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de pointeur. Dépréciées dans C ++ 11 en faveur du [mem_fn](#mem_fn) et [lier](#bind)et supprimée dans C ++ 17.
 
 ```cpp
 template <class Result, class Type>
@@ -630,7 +749,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>Paramètres
 
-*pMem*<br/>
+*pmem*<br/>
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -697,9 +816,9 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>  mem_fun_ref
+## <a name="mem_fun_ref"></a> mem_fun_ref
 
-Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objet de fonction pour des fonctions membres en cas d’initialisation avec des arguments de référence.
+Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objet de fonction pour des fonctions membres en cas d’initialisation avec des arguments de référence. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
 
 ```cpp
 template <class Result, class Type>
@@ -717,7 +836,7 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>Paramètres
 
-*pMem*<br/>
+*pmem*<br/>
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -802,9 +921,9 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>  not1
+## <a name="not1"></a> not1
 
-Retourne le complément d’un prédicat unaire.
+Retourne le complément d’un prédicat unaire. Déconseillé en faveur de [not_fn](#not_fn) dans C ++ 17.
 
 ```cpp
 template <class UnaryPredicate>
@@ -813,7 +932,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>Paramètres
 
-*Pred*<br/>
+*pred*<br/>
 Prédicat unaire à rendre négatif.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -874,9 +993,9 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>  not2
+## <a name="not2"></a> not2
 
-Retourne le complément d’un prédicat binaire.
+Retourne le complément d’un prédicat binaire. Déconseillé en faveur de [not_fn](#not_fn) dans C ++ 17.
 
 ```cpp
 template <class BinaryPredicate>
@@ -950,9 +1069,109 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="ptr_fun"></a>  ptr_fun
+## <a name="not_fn"></a> not_fn
 
-Fonctions de modèle d’assistance utilisées pour convertir des pointeurs de fonction unaires et binaires, respectivement, en fonctions adaptables unaires et binaires.
+Le `not_fn` modèle de fonction prend un objet pouvant être appelé et retourne un objet pouvant être appelé. Lorsque l’objet pouvant être retourné est appelée ultérieurement avec des arguments, il les transmet à l’objet d’origine pouvant être appelé et logiquement inverse le résultat. Il conserve le comportement const de catégorie en qualification et la valeur de l’objet encapsulé pouvant être appelé. `not_fn` est une nouveauté dans C ++ 17 et remplace déconseillées `std::not1`, `std::not2`, `std::unary_negate` et `std::binary_negate`.
+
+```cpp
+template <class Callable>
+/* unspecified */ not_fn(Callable&& func);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*func*<br/>
+Un objet pouvant être appelé utilisé pour construire l’appel de transfert wrapper.
+
+### <a name="remarks"></a>Notes
+
+La fonction de modèle retourne un wrapper d’appel équivalent à `return call_wrapper(std::forward<Callable>(func))` basé sur cette classe de démonstration uniquement :
+
+```cpp
+class call_wrapper
+{
+   using FD = decay_t<Callable>;
+   explicit call_wrapper(Callable&& func);
+
+public:
+   call_wrapper(call_wrapper&&) = default;
+   call_wrapper(call_wrapper const&) = default;
+
+   template<class... Args>
+     auto operator()(Args&&...) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
+
+   template<class... Args>
+     auto operator()(Args&&...) const& -> decltype(!declval<invoke_result_t<FD const&(Args...)>>());
+
+   template<class... Args>
+     auto operator()(Args&&...) && -> decltype(!declval<invoke_result_t<FD(Args...)>>());
+
+   template<class... Args>
+     auto operator()(Args&&...) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
+
+private:
+  FD fd;
+};
+```
+
+Le constructeur explicite sur l’objet pouvant être *func* nécessite type `std::decay_t<Callable>` satisfaire les exigences de `MoveConstructible`, et `is_constructible_v<FD, Callable>` doivent être remplies. Il initialise l’objet encapsulé pouvant être appelé `fd` de `std::forward<Callable>(func)`et lève une exception levée par la construction de `fd`.
+
+Le wrapper expose des opérateurs d’appel distingués par catégorie de référence rvalue ou lvalue et par qualification const, comme indiqué ici,
+
+```cpp
+template<class... Args> auto operator()(Args&&... args) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
+template<class... Args> auto operator()(Args&&... args) const& -> decltype(!declval<invoke_result_t<FD const&(Args...)>>());
+template<class... Args> auto operator()(Args&&... args) && -> decltype(!declval<invoke_result_t<FD(Args...)>>());
+template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
+```
+
+Les deux premières sont équivalentes à `return !INVOKE(fd, std::forward<Args>(args)...)`, et les deux sont équivalentes aux `return !INVOKE(std::move(fd), std::forward<Args>(args)...)`.
+
+### <a name="example"></a>Exemple
+
+```cpp
+// functional_not_fn_.cpp
+// compile with: /EHsc /std:c++17
+#include <vector>
+#include <algorithm>
+#include <functional>
+#include <iostream>
+
+int main()
+{
+    std::vector<int> v1 = { 99, 6264, 41, 18467, 6334, 26500, 19169 };
+    auto divisible_by_3 = [](int i){ return i % 3 == 0; };
+
+    std::cout << "Vector v1 = ( " ;
+    for (const auto& item : v1)
+    {
+        std::cout << item << " ";
+    }
+    std::cout << ")" << std::endl;
+
+    // Count the number of vector elements divisible by 3.
+    int divisible =
+        std::count_if(v1.begin(), v1.end(), divisible_by_3);
+    std::cout << "Elements divisible by three: "
+        << divisible << std::endl;
+
+    // Count the number of vector elements not divisible by 3.
+    int not_divisible =
+        std::count_if(v1.begin(), v1.end(), std::not_fn(divisible_by_3));
+    std::cout << "Elements not divisible by three: "
+        << not_divisible << std::endl;
+}
+```
+
+```Output
+Vector v1 = ( 99 6264 41 18467 6334 26500 19169 )
+Elements divisible by three: 2
+Elements not divisible by three: 5
+```
+
+## <a name="ptr_fun"></a> ptr_fun
+
+Fonctions de modèle d’assistance utilisées pour convertir des pointeurs de fonction unaires et binaires, respectivement, en fonctions adaptables unaires et binaires. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
 
 ```cpp
 template <class Arg, class Result>
@@ -981,7 +1200,7 @@ Un pointeur de fonction est un objet de fonction. Il peut être passé à n’im
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>  ref
+## <a name="ref"></a> ref
 
 Construit un `reference_wrapper` à partir d'un argument.
 
@@ -1073,7 +1292,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> swap
 
 Échange deux objets `function`.
 
@@ -1087,10 +1306,10 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 *Fty*<br/>
 Type contrôlé par les objets de fonction.
 
-*F1*<br/>
+*f1*<br/>
 Premier objet de fonction.
 
-*F2*<br/>
+*f2*<br/>
 Deuxième objet de fonction.
 
 ### <a name="remarks"></a>Notes

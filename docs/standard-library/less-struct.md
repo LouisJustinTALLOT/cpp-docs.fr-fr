@@ -2,17 +2,17 @@
 title: less (struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::less
+- functional/std::less
 helpviewer_keywords:
 - less struct
 - less function
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
-ms.openlocfilehash: 60a78859a9d218afa11174ef4117e86cbd2edea3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e24c7fb238c9c05d91cbdba7fab277878e6f5e24
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475125"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006602"
 ---
 # <a name="less-struct"></a>less (struct)
 
@@ -107,7 +107,7 @@ Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<functional>
 

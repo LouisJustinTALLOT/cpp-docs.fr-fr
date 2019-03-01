@@ -1,22 +1,22 @@
 ---
 title: pointer_to_binary_function, classe
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::pointer_to_binary
+- functional/std::pointer_to_binary
 helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: dd96aa1bf7f1f19b84e2e83e3ab5b33c4a0c5bfc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 88d38be258c6ceb1054e0d31cc52e4d8d25186ec
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332099"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006797"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function, classe
 
-Convertit un pointeur de fonction binaire en fonction binaire adaptable.
+Convertit un pointeur de fonction binaire en fonction binaire adaptable. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,7 +55,7 @@ Un pointeur de fonction binaire est un objet de fonction. Il peut être passé �
 
 Le constructeur de `pointer_to_binary_function` est rarement utilisé directement. Consultez la fonction d’assistance [ptr_fun](../standard-library/functional-functions.md#ptr_fun) pour obtenir un exemple montrant comment déclarer et utiliser le prédicat de l’adaptateur `pointer_to_binary_function`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<functional>
 
