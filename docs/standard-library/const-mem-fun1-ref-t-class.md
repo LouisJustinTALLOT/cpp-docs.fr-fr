@@ -1,21 +1,21 @@
 ---
 title: const_mem_fun1_ref_t, classe
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun1_ref_t
+- functional/std::const_mem_fun1_ref_t
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: e90ac09543c0704cf900e0fc5448e295034dcb66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21d53178bf7ed80b5e0b170619e6221826393dab
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516441"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006446"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t, classe
 
-Classe d’adaptateur qui permet à une fonction membre **const** qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de référence.
+Classe d’adaptateur qui permet à une fonction membre **const** qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de référence. Dépréciées dans C ++ 11, supprimée dans C ++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,7 +31,7 @@ class const_mem_fun1_ref_t
 
 ### <a name="parameters"></a>Paramètres
 
-*PM*<br/>
+*Pm*<br/>
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
 *left*<br/>
@@ -46,13 +46,13 @@ Fonction binaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-La classe de modèle stocke une copie de *Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( `left`.\* Pm)( `right`) **const**.
+La classe de modèle stocke une copie de *Pm*, qui doit être un pointeur vers une fonction membre de classe `Type`, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( `left`.\* *Pm*)( `right`) **const**.
 
 ## <a name="example"></a>Exemple
 
 Le constructeur de `const_mem_fun1_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir des exemples d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<functional>
 
