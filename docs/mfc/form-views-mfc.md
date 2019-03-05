@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-ms.openlocfilehash: d5bb61aaad767b1322c12f57ec16ae59cb75148c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f93f65e949c18ddb1ad5dba859ba8c4832abac8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331540"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289271"
 ---
 # <a name="form-views-mfc"></a>Mode Formulaire (MFC)
 
@@ -32,13 +32,13 @@ Lorsque vous insérez un nouveau formulaire dans votre application, Visual C++ e
 
    Si vous choisissez une ressource existante de la boîte de dialogue, vous devrez peut-être définir ces styles à l’aide de la page de propriétés pour la boîte de dialogue. Styles pour une boîte de dialogue doivent inclure :
 
-     **WS_CHILD**= On
+     **WS_CHILD**=On
 
-     **WS_BORDER**= désactivé
+     **WS_BORDER**=Off
 
      **WS_VISIBLE**= désactivé
 
-     **WS_CAPTION**= désactivé
+     **WS_CAPTION**=Off
 
 Pour les applications basées sur l’architecture document/vue, le **nouveau formulaire** commande (clic droit dans l’affichage de classes) également :
 

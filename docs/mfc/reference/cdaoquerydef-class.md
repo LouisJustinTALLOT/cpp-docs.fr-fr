@@ -1,5 +1,5 @@
 ---
-title: CDaoQueryDef, classe
+title: CDaoQueryDef Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDaoQueryDef
@@ -66,14 +66,14 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 07c508dcf4bd57855d09be5a305847d0b2981305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664527"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283642"
 ---
-# <a name="cdaoquerydef-class"></a>CDaoQueryDef, classe
+# <a name="cdaoquerydef-class"></a>CDaoQueryDef Class
 
 Représente une définition de requête, ou « querydef », généralement stockée dans une base de données.
 
@@ -187,7 +187,7 @@ Pour plus d’informations, consultez les rubriques « Objet QueryDef », « 
 
 `CDaoQueryDef`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 
@@ -278,7 +278,7 @@ virtual void Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom unique de la requête enregistrée dans la base de données. Pour plus d’informations sur la chaîne, consultez la rubrique « Méthode CreateQueryDef » dans l’aide de DAO. Si vous acceptez la valeur par défaut, une chaîne vide, un objet querydef temporaire est créée. Une telle requête n’est pas enregistrée dans la collection QueryDefs.
 
 *lpszSQL*<br/>
@@ -427,7 +427,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Index de base zéro du champ souhaité dans la collection de champs de la querydef, pour la recherche par index.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Une référence à un `CDaoFieldInfo` objet qui retourne les informations demandées.
 
 *dwInfoOptions*<br/>
@@ -435,11 +435,11 @@ Options qui spécifient les informations sur le champ à extraire. Les options d
 
 - Taille du nom, Type, AFX_DAO_PRIMARY_INFO (valeur par défaut), attributs
 
-- Informations AFX_DAO_SECONDARY_INFO principal plus (+) : Position Ordinal, requis, autoriser une longueur de zéro, champ Source, nom étrangère, Table Source, ordre de classement
+- Informations de AFX_DAO_SECONDARY_INFO primaire plus (+) : Position ordinale, obligatoire, autoriser zéro caractères, le champ Source, l’étrangère nom, la Table Source, ordre de classement
 
-- AFX_DAO_ALL_INFO primaire et secondaire informations plus (+) : règle de Validation de valeur par défaut, le texte de Validation,
+- AFX_DAO_ALL_INFO primaire et secondaire informations plus (+) : Règle de Validation de valeur, le texte de Validation, par défaut
 
-*Caractère*<br/>
+*lpszName*<br/>
 Chaîne contenant le nom du champ de votre choix, pour la recherche par nom. Vous pouvez utiliser un [CString](../../atl-mfc-shared/reference/cstringt-class.md).
 
 ### <a name="remarks"></a>Notes
@@ -520,7 +520,7 @@ void GetParameterInfo(
 *nIndex*<br/>
 Index de base zéro du paramètre souhaité dans la collection de paramètres de la querydef, pour la recherche par index.
 
-*paraminfo et*<br/>
+*paraminfo*<br/>
 Une référence à un [CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md) objet qui retourne les informations demandées.
 
 *dwInfoOptions*<br/>
@@ -528,7 +528,7 @@ Options qui spécifient les informations sur le paramètre à récupérer. L’o
 
 - Nom AFX_DAO_PRIMARY_INFO (valeur par défaut), Type
 
-*Caractère*<br/>
+*lpszName*<br/>
 Chaîne contenant le nom du paramètre souhaité, pour la recherche par nom. Vous pouvez utiliser un [CString](../../atl-mfc-shared/reference/cstringt-class.md).
 
 ### <a name="remarks"></a>Notes
@@ -548,7 +548,7 @@ virtual COleVariant GetParamValue(int nIndex);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom du paramètre dont la valeur souhaitée pour la recherche par nom.
 
 *nIndex*<br/>
@@ -638,7 +638,7 @@ Le type de requête est défini par ce que vous spécifiez dans la chaîne SQL d
 
 - Action `dbQAction`
 
-- `dbQCrosstab` Analyse croisée
+- `dbQCrosstab` Crosstab
 
 - `dbQDelete` Supprimer
 
@@ -703,7 +703,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Chaîne qui contient le nom de la querydef enregistrée à ouvrir. Vous pouvez utiliser un [CString](../../atl-mfc-shared/reference/cstringt-class.md).
 
 ### <a name="remarks"></a>Notes
@@ -744,7 +744,7 @@ void SetName(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Chaîne qui contient le nouveau nom pour une requête les dans associé [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objet.
 
 ### <a name="remarks"></a>Notes
@@ -786,7 +786,7 @@ virtual void SetParamValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom du paramètre dont vous souhaitez définir la valeur.
 
 *varValue*<br/>

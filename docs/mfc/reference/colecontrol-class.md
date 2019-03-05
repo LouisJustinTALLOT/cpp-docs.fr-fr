@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179017"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283421"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 
@@ -568,7 +568,7 @@ Pour plus d’informations sur le développement d’une infrastructure de contr
 
 `COleControl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl.h
 
@@ -738,7 +738,7 @@ Voici une liste valides des valeurs de retour :
 |------------------|-------------|
 |0|Alignement général (nombres pour le texte de droite, à gauche).|
 |1|Aligner à gauche|
-|2|Centre|
+|2|Center|
 |3|Justifier à droite|
 
 ### <a name="remarks"></a>Notes
@@ -787,7 +787,7 @@ void BoundPropertyChanged(DISPID dispid);
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch d’une propriété liée du contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -804,7 +804,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch d’une propriété liée du contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -901,7 +901,7 @@ virtual void DisplayError(
 
 ### <a name="parameters"></a>Paramètres
 
-*SCODE*<br/>
+*scode*<br/>
 La valeur de code d’état soient signalés. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : Rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
@@ -1142,7 +1142,7 @@ void FireError(
 
 ### <a name="parameters"></a>Paramètres
 
-*SCODE*<br/>
+*scode*<br/>
 La valeur de code d’état soient signalés. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : Rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
@@ -1174,7 +1174,7 @@ void AFX_CDECL FireEvent(
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch de l’événement à déclencher.
 
 *pbParams*<br/>
@@ -1192,7 +1192,7 @@ Le *pbParams* argument est une liste séparée par des espaces de **VTS_**. Une 
 |VTS_FONT|`IFontDisp*`|
 |VTS_HANDLE|HWND|
 |VTS_PICTURE|`IPictureDisp*`|
-|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE *|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE*|
 |VTS_TRISTATE|OLE_TRISTATE|
 |VTS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
 |VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
@@ -1301,7 +1301,7 @@ void FireMouseDown(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nbouton*<br/>
+*nButton*<br/>
 La valeur numérique du bouton de la souris est enfoncé. Il peut contenir une des valeurs suivantes :
 
 - LEFT_BUTTON le bouton gauche de la souris a été enfoncé.
@@ -1345,7 +1345,7 @@ void FireMouseMove(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nbouton*<br/>
+*nButton*<br/>
 La valeur numérique de boutons de la souris est enfoncé. Contient une combinaison des valeurs suivantes :
 
 - LEFT_BUTTON le bouton gauche de la souris a été enfoncé lors de l’action.
@@ -1389,7 +1389,7 @@ void FireMouseUp(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nbouton*<br/>
+*nButton*<br/>
 La valeur numérique de la souris du bouton. Il peut avoir l’une des valeurs suivantes :
 
 - LEFT_BUTTON le bouton gauche de la souris a été relâché.
@@ -1989,7 +1989,7 @@ Pointeur vers l’objet `IDropTarget` interface. Dans la mesure où il n’est p
 
 ### <a name="remarks"></a>Notes
 
-Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que cible de dépôt. Mais puisque le contrôle n’a pas de fenêtre, le conteneur utilise sa propre fenêtre comme cible de dépôt. Le contrôle a simplement besoin de fournir une implémentation de la `IDropTarget` interface à laquelle le conteneur peut déléguer des appels au moment opportun. Exemple :
+Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que cible de déplacement. Mais puisque le contrôle n’a pas de fenêtre, le conteneur utilise sa propre fenêtre comme cible de dépôt. Le contrôle a simplement besoin de fournir une implémentation de la `IDropTarget` interface à laquelle le conteneur peut déléguer des appels au moment opportun. Exemple :
 
 [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]
 
@@ -2211,7 +2211,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 *strNewPath*<br/>
 Un pointeur vers une chaîne contenant le chemin d’accès qui fait référence à l’emplacement absolu de la propriété de contrôle asynchrone.
 
-*propriétés de l’abonnement*<br/>
+*prop*<br/>
 Un [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) objet qui implémente une propriété de contrôle asynchrone.
 
 ##  <a name="lockinplaceactive"></a>  COleControl::LockInPlaceActive
@@ -2224,7 +2224,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 ### <a name="parameters"></a>Paramètres
 
-*Bloc*<br/>
+*bLock*<br/>
 TRUE si l’état actif sur place du contrôle doit être verrouillée ; FALSE s’il doit être déverrouillé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2614,7 +2614,7 @@ virtual BOOL OnGetDisplayString(
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
 *strValue*<br/>
@@ -2714,7 +2714,7 @@ virtual BOOL OnGetPredefinedStrings(
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
 *pStringArray*<br/>
@@ -2744,7 +2744,7 @@ virtual BOOL OnGetPredefinedValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
 *dwCookie*<br/>
@@ -2936,7 +2936,7 @@ virtual void OnKeyDownEvent(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 La valeur de code de touche virtuelle de la touche enfoncée. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h
 
 *nShiftState*<br/>
@@ -2962,7 +2962,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Contient la valeur de code de touche virtuelle de la touche enfoncée. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h
 
 ### <a name="remarks"></a>Notes
@@ -2983,7 +2983,7 @@ virtual void OnKeyUpEvent(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 La valeur de code de touche virtuelle de la touche enfoncée. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h
 
 *nShiftState*<br/>
@@ -3012,7 +3012,7 @@ virtual BOOL OnMapPropertyToPage(
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
 *lpclsid*<br/>
@@ -3409,7 +3409,7 @@ virtual BOOL OnWindowlessMessage(
 
 ### <a name="parameters"></a>Paramètres
 
-*Msg*<br/>
+*msg*<br/>
 Identificateur de message comme passé par Windows.
 
 *wParam*<br/>
@@ -3873,10 +3873,10 @@ BOOL SetControlSize(int cx, int cy);
 
 ### <a name="parameters"></a>Paramètres
 
-*CX*<br/>
+*cx*<br/>
 Spécifie la nouvelle largeur du contrôle en pixels.
 
-*CY*<br/>
+*cy*<br/>
 Spécifie la nouvelle hauteur du contrôle en pixels.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3899,7 +3899,7 @@ void SetEnabled(BOOL bEnabled);
 
 ### <a name="parameters"></a>Paramètres
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 TRUE si le contrôle doit être activé ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
@@ -3978,10 +3978,10 @@ void SetInitialSize(
 
 ### <a name="parameters"></a>Paramètres
 
-*CX*<br/>
+*cx*<br/>
 Largeur initiale du contrôle OLE en pixels.
 
-*CY*<br/>
+*cy*<br/>
 La hauteur initiale du contrôle OLE en pixels.
 
 ### <a name="remarks"></a>Notes
@@ -4085,7 +4085,7 @@ void ThrowError(
 
 ### <a name="parameters"></a>Paramètres
 
-*SC*<br/>
+*sc*<br/>
 La valeur de code d’état soient signalés. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : Rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *nDescriptionID*<br/>
@@ -4150,7 +4150,7 @@ COLORREF TranslateColor(
 *clrColor*<br/>
 Un type de données OLE_COLOR. Pour plus d’informations, consultez le Windows [OleTranslateColor](/windows/desktop/api/olectl/nf-olectl-oletranslatecolor) (fonction).
 
-*hPal*<br/>
+*hpal*<br/>
 Un handle vers une palette facultatif ; peut être NULL.
 
 ### <a name="return-value"></a>Valeur de retour

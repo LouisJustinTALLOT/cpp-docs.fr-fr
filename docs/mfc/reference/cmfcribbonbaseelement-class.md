@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: dee5d8c57bfff99e1b558f09c8df53c73e844f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514359"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289973"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Cmfcribbonbaseelement, classe
 
@@ -405,7 +405,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxbaseribbonelement.h
 
@@ -1660,7 +1660,7 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 *pPanelMenuBar*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
-*photorésine*<br/>
+*pHot*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
 ### <a name="remarks"></a>Notes
@@ -1700,7 +1700,7 @@ virtual void OnDrawKeyTip(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectangle de limite pour la touche d’accès.
 
 *bIsMenu*<br/>
@@ -1723,7 +1723,7 @@ virtual BOOL OnDrawMenuImage(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectangle d’image de menu.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1757,7 +1757,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Distance, en pixels, du côté gauche de la zone de liste pour afficher un texte.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle d’affichage de l’élément Ruban.
 
 *bIsSelected*<br/>
@@ -1820,7 +1820,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2135,7 +2135,7 @@ void SetRect(CRect rect);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [in] Les dimensions du rectangle.
 
 ### <a name="remarks"></a>Notes

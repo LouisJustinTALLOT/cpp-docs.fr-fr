@@ -1,5 +1,5 @@
 ---
-title: 'Exceptions : exceptions de base de données'
+title: 'Exceptions : Exceptions de base de données'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DAO [MFC], exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 17a52787462301e839cb2e960fad8b480380ba49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492795"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285553"
 ---
-# <a name="exceptions-database-exceptions"></a>Exceptions : exceptions de base de données
+# <a name="exceptions-database-exceptions"></a>Exceptions : Exceptions de base de données
 
 Cet article explique comment gérer les exceptions de base de données. La plupart des informations présentées dans cet article s’applique si vous travaillez avec les classes MFC pour Open Database Connectivity (ODBC) ou les classes MFC pour les objets DAO (Data Access). Matériel spécifique à un ou l’autre modèle est explicitement marqué. Les rubriques traitées ici sont les suivantes :
 
@@ -77,4 +77,3 @@ Lorsque vous travaillez avec des bases de données Microsoft Jet (.mdb) et dans 
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion des exceptions](../mfc/exception-handling-in-mfc.md)
-

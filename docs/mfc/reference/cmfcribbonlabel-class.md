@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-ms.openlocfilehash: ae185a81267dce68cda6bc27c5e327b3335a1018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b79d6191d2deb0a295e81da1150cc7b38fd81232
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283460"
 ---
 # <a name="cmfcribbonlabel-class"></a>Cmfcribbonlabel, classe
 
@@ -60,7 +60,7 @@ Vous ne pouvez pas ajouter une étiquette de ruban à la barre d’outils Accès
 
 [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxRibbonLabel.h
 

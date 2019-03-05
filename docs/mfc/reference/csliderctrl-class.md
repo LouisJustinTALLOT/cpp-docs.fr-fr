@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: c8c8971e467b2b8063bb5bb5d8e953fc48bcc42e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666100"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283603"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (classe)
 
@@ -161,7 +161,7 @@ Pour plus d’informations sur l’utilisation de `CSliderCtrl`, consultez [cont
 
 `CSliderCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -208,7 +208,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](/windows/desktop/Controls/trackbar-control-styles), comme décrit dans le Kit de développement logiciel Windows, au contrôle.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du curseur. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
 
 *pParentWnd*<br/>
@@ -250,7 +250,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](/windows/desktop/Controls/trackbar-control-styles), comme décrit dans le Kit de développement logiciel Windows, au contrôle.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -388,7 +388,7 @@ void GetRange(
 *nMin*<br/>
 Référence à un entier qui reçoit la position minimale.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Référence à un entier qui reçoit la position maximale.
 
 ### <a name="remarks"></a>Notes
@@ -434,7 +434,7 @@ void GetSelection(
 *nMin*<br/>
 Référence à un entier qui reçoit la position de départ de la sélection actuelle.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Référence à un entier qui reçoit la position de fin de la sélection actuelle.
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -633,7 +633,7 @@ void SetRange(
 *nMin*<br/>
 Position minimale pour le curseur.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Position maximale pour le curseur.
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Position maximale pour le curseur.
 
 *bRedraw*<br/>
@@ -690,7 +690,7 @@ void SetSelection(
 *nMin*<br/>
 Position de départ pour le curseur.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Position de fin pour le curseur.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Paramètres
 
-*%nemplacement*<br/>
+*nLocation*<br/>
 Valeur représentant l’emplacement auquel afficher le contrôle d’info-bulle. Pour obtenir la liste des valeurs possibles, consultez le message Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), comme décrit dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour

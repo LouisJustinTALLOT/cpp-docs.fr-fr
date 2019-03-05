@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: f183bb21d6a23b4e8ac4284894cfa2fcc7bb1dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c9bd78257a06e123d47a0110375e7f448f90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538151"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290081"
 ---
 # <a name="cheapptrbase-class"></a>Cheapptrbase, classe
 
@@ -48,7 +48,7 @@ La classe d’allocation de mémoire à utiliser. Par défaut, les routines CRT 
 
 |Nom|Description|
 |----------|-----------------|
-|[CHeapPtrBase :: ~ CHeapPtrBase](#dtor)|Destructeur.|
+|[CHeapPtrBase::~CHeapPtrBase](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -78,7 +78,7 @@ La classe d’allocation de mémoire à utiliser. Par défaut, les routines CRT 
 
 Cette classe constitue la base pour plusieurs classes de pointeur intelligent de segment de mémoire. Les classes dérivées, par exemple, [CHeapPtr](../../atl/reference/cheapptr-class.md) et [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), ajouter leurs propres constructeurs et des opérateurs. Consultez ces classes pour des exemples d’implémentation.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcore.h
 
@@ -122,7 +122,7 @@ Quand un `CHeapPtrBase` objet prend possession d’un pointeur, il supprime auto
 
 Dans les versions debug, un échec d’assertion se produit si le [CHeapPtrBase::m_pData](#m_pdata) variable membre pointe actuellement vers une valeur existante ; autrement dit, il n’est pas égal à NULL.
 
-##  <a name="dtor"></a>  CHeapPtrBase :: ~ CHeapPtrBase
+##  <a name="dtor"></a>  CHeapPtrBase::~CHeapPtrBase
 
 Destructeur.
 
@@ -186,7 +186,7 @@ T** operator&() throw();
 
 Retourne l’adresse de l’objet vers lequel pointé le `CHeapPtrBase` objet.
 
-##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;
+##  <a name="operator_ptr"></a>  CHeapPtrBase::operator -&gt;
 
 L’opérateur pointeur vers membre.
 
@@ -202,7 +202,7 @@ Retourne la valeur de la [CHeapPtrBase::m_pData](#m_pdata) variable membre.
 
 Utilisez cet opérateur pour appeler une méthode dans une classe vers laquelle pointée le `CHeapPtrBase` objet. Dans les versions debug, un échec d’assertion se produit si le `CHeapPtrBase` pointe sur la valeur NULL.
 
-##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *
+##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T*
 
 L’opérateur de cast.
 

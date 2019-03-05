@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514398"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289572"
 ---
 # <a name="class-factories-and-licensing"></a>Fabriques de classes et gestion des licences
 
 Pour créer une instance de votre contrôle OLE, une application de conteneur appelle une fonction membre de la fabrique de classe du contrôle. Étant donné que votre contrôle est un objet OLE réel, la fabrique de classe est responsable de la création d’instances de votre contrôle. Chaque classe de contrôle OLE doit avoir une fabrique de classe.
 
-Une autre fonctionnalité importante des contrôles OLE est leur capacité à appliquer une licence. ControlWizard vous permet d’incorporer la gestion des licences pendant la création de votre projet de contrôle. Pour plus d’informations sur les licences de contrôle, consultez l’article [contrôles ActiveX : gestion des licences An ActiveX Control](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
+Une autre fonctionnalité importante des contrôles OLE est leur capacité à appliquer une licence. ControlWizard vous permet d’incorporer la gestion des licences pendant la création de votre projet de contrôle. Pour plus d’informations sur les licences de contrôle, consultez l’article [contrôles ActiveX : Licences des contrôles ActiveX](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
 
 Le tableau suivant répertorie plusieurs macros et fonctions utilisées pour déclarer et implémenter la fabrique de classe de votre contrôle et à la licence de votre contrôle.
 
@@ -41,7 +41,7 @@ DECLARE_OLECREATE_EX(class_name)
 
 ### <a name="parameters"></a>Paramètres
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Le nom de la classe de contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -52,7 +52,7 @@ Notez que cette macro a le même objectif que l’exemple de code suivant :
 
 [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -79,7 +79,7 @@ IMPLEMENT_OLECREATE_EX(
 
 ### <a name="parameters"></a>Paramètres
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Le nom de la classe de page de propriété de contrôle.
 
 *external_name*<br/>
@@ -92,7 +92,7 @@ Composants du CLSID de la classe. Pour plus d’informations sur ces paramètres
 
 Cette macro doit apparaître dans le fichier d’implémentation pour n’importe quelle classe de contrôle qui utilise le declare_olecreate_ex (macro) ou les macros BEGIN_OLEFACTORY et END_OLEFACTORY. Le nom externe est l’identificateur du contrôle OLE qui est exposé à d’autres applications. Conteneurs utilisent ce nom pour demander un objet de cette classe de contrôle.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -106,14 +106,14 @@ BEGIN_OLEFACTORY(class_name)
 
 ### <a name="parameters"></a>Paramètres
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Spécifie le nom de la classe de contrôle dont il s’agit de fabrique de classe.
 
 ### <a name="remarks"></a>Notes
 
 Les déclarations de fonctions de gestion de licences de fabrique de classe doivent commencer immédiatement après BEGIN_OLEFACTORY.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -127,10 +127,10 @@ END_OLEFACTORY(class_name)
 
 ### <a name="parameters"></a>Paramètres
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Le nom de la classe de contrôle dont il s’agit de fabrique de classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -157,7 +157,7 @@ Pointe vers une chaîne de caractères se terminant par null qui contient le nom
 *pszLicFileContents*<br/>
 Pointe vers une séquence d’octets qui doit correspondre à la séquence trouvée au début du fichier de licence.
 
-*CCH*<br/>
+*cch*<br/>
 Nombre de caractères dans *pszLicFileContents*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -170,7 +170,7 @@ Si *cch* est -1, cette fonction utilise :
 
 [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 

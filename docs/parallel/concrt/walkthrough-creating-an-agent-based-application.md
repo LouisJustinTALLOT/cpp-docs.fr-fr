@@ -1,18 +1,18 @@
 ---
-title: 'Procédure pas à pas : création d’une application basée sur un agent'
+title: 'Procédure pas à pas : Création d’une Application basée sur Agent'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d5e7ed085481b714423760cebf2984084626645
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509342"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290090"
 ---
-# <a name="walkthrough-creating-an-agent-based-application"></a>Procédure pas à pas : création d’une application basée sur un agent
+# <a name="walkthrough-creating-an-agent-based-application"></a>Procédure pas à pas : Création d’une Application basée sur Agent
 
 Cette rubrique décrit comment créer une application basée sur un agent de base. Dans cette procédure pas à pas, vous pouvez créer un agent qui lit des données à partir d’un fichier texte en mode asynchrone. L’application utilise l’algorithme de somme de contrôle Adler-32 pour calculer la somme de contrôle du contenu de ce fichier.
 
@@ -180,7 +180,7 @@ Appelez toujours le [concurrency::agent :: fait](reference/agent-class.md#done)
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour un autre exemple d’une application basée sur agent, consultez [procédure pas à pas : à l’aide de la classe join pour empêcher l’interblocage](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Pour un autre exemple d’une application basée sur agent, consultez [procédure pas à pas : À l’aide de la classe join pour empêcher l’interblocage](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -188,5 +188,4 @@ Pour un autre exemple d’une application basée sur agent, consultez [procédur
 [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Fonctions de passage de messages](../../parallel/concrt/message-passing-functions.md)<br/>
 [Structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md)<br/>
-[Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
-
+[Procédure pas à pas : Utilisation de jointures pour prévenir les interblocages](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)

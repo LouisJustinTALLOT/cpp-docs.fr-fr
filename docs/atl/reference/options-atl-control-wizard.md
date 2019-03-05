@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1dd136739162c72d8064deb9b1498794f1985e1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282979"
 ---
 # <a name="options-atl-control-wizard"></a>Options, Assistant contrôle ATL
 
@@ -23,9 +23,9 @@ Utilisez cette page de l’Assistant pour définir le type de contrôle que vous
 
 Le type de contrôle que vous souhaitez créer.
 
-- **Contrôle standard**: contrôle ActiveX.
+- **Contrôle standard**: Un contrôle ActiveX.
 
-- **Contrôle composite**: contrôle ActiveX qui peut contenir (semblable à une boîte de dialogue) autres contrôles ActiveX ou Windows. Un contrôle composite inclut les éléments suivants :
+- **Contrôle composite**: Un contrôle ActiveX qui peut contenir (semblable à une boîte de dialogue) autres contrôles ActiveX ou Windows. Un contrôle composite inclut les éléments suivants :
 
   - Un modèle pour la boîte de dialogue qui implémente le contrôle composite.
 
@@ -39,7 +39,7 @@ Le type de contrôle que vous souhaitez créer.
 
     Par défaut, ce contrôle définit [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres. Il implémente une table de récepteur. Pour plus d’informations, consultez [prise en charge pour le contrôle DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
-- **Contrôle DHTML**: contrôle ATL DHTML spécifie l’interface utilisateur, à l’aide de HTML. La classe UI DHTML contient un mappage COM. Par défaut, ce contrôle définit [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres.
+- **Contrôle DHTML**: Un contrôle ATL DHTML spécifie l’interface utilisateur, à l’aide de HTML. La classe UI DHTML contient un mappage COM. Par défaut, ce contrôle définit [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres.
 
    Pour plus d’informations, consultez [identification des éléments du projet de contrôle DHTML Edit](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
@@ -51,27 +51,27 @@ Prend en charge uniquement les interfaces qui sont absolument nécessaires par l
 
 Ajoute la prise en charge de l’agrégation pour le contrôle que vous créez. Pour plus d’informations, consultez [agrégation](../../atl/aggregation.md).
 
-- **Oui**: créer un contrôle qui peut être agrégé.
+- **Oui**: Créer un contrôle qui peut être agrégé.
 
-- **Ne**: créer un contrôle qui ne peut pas être agrégé.
+- **Ne**: Créer un contrôle qui ne peut pas être agrégé.
 
-- **Uniquement**: créer un contrôle qui ne peut être instancié par le biais d’agrégation.
+- **Uniquement**: Créer un contrôle qui ne peut être instancié par le biais d’agrégation.
 
 ### <a name="threading-model"></a>Modèle de thread
 
 Spécifie que le modèle de thread utilisé par le contrôle.
 
-- **Seul**: le contrôle s’exécute uniquement dans le thread COM principal.
+- **Seul**: Le contrôle s’exécute uniquement dans le thread COM principal.
 
-- **Cloisonnement**: le contrôle peut être créé dans n’importe quel thread unique cloisonné. Valeur par défaut.
+- **Cloisonnement**: Le contrôle peut être créé dans n’importe quel thread unique cloisonné. Valeur par défaut.
 
 ### <a name="interface"></a>Interface
 
 Le type d’interface de ce contrôle expose au conteneur.
 
-- **Double**: crée une interface qui expose les propriétés et méthodes via `IDispatch` et directement par le biais de la VTBL.
+- **Double**: Crée une interface qui expose les propriétés et méthodes via `IDispatch` et directement par le biais de la VTBL.
 
-- **Custom**: crée une interface qui expose des méthodes directement par le biais d’un VTBL.
+- **Personnalisé** : Crée une interface qui expose des méthodes directement par le biais d’un VTBL.
 
    Si vous sélectionnez **personnalisé**, vous pouvez spécifier que le contrôle est **Automation compatible**. Si vous sélectionnez **Automation compatible**, l’Assistant ajoute les [oleautomation](../../windows/oleautomation.md) attribut à l’interface dans le fichier IDL, et l’interface peut être marshalée par le marshaleur universel dans oleaut32.dll. Consultez [détails Marshaling](/windows/desktop/com/marshaling-details) dans le SDK Windows pour plus d’informations.
 
@@ -83,9 +83,8 @@ Définit la prise en charge de divers supplémentaire pour le contrôle.
 
 - **Points de connexion**: Active les points de connexion pour votre objet en faisant dériver la classe de l’objet [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) et ce qui lui permet d’exposer une interface source.
 
-- **Une licence**: ajoute la prise en charge pour le contrôle pour [licences](/windows/desktop/com/licensing). Contrôles sous licence ne peuvent être hébergés que si l’ordinateur client possède la licence appropriée.
+- **Une licence**: Ajoute la prise en charge pour le contrôle pour [licences](/windows/desktop/com/licensing). Contrôles sous licence ne peuvent être hébergés que si l’ordinateur client possède la licence appropriée.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Assistant Contrôle ATL](../../atl/reference/atl-control-wizard.md)
-

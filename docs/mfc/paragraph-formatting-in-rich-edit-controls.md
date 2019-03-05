@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CRichEditCtrl class [MFC], paragraph formatting in
 - formatting [MFC], paragraphs
 ms.assetid: 0df2e4c9-2074-4e41-b913-87cb8c1b4d43
-ms.openlocfilehash: f79d9a97554e2f73b42746c9e9094b07a37513d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baee4863bee9b96e7a850e70b8f13388f69b41cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581972"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285228"
 ---
 # <a name="paragraph-formatting-in-rich-edit-controls"></a>Mise en forme des paragraphes dans les contrôles RichEdit
 
@@ -24,4 +24,3 @@ Vous pouvez appliquer la mise en forme à l’aide de la [SetParaFormat](../mfc/
 
 [Utilisation de CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c2ac1df322a2778356ce8acca90392fc9f6a17f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482076"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289297"
 ---
 # <a name="task-class-concurrency-runtime"></a>task (Concurrency Runtime), classe
 
@@ -67,9 +67,9 @@ Type de résultat de cette tâche.
 |[get](#get)|Surchargé. Retourne le résultat produit par cette tâche. Si la tâche n'est pas dans un état terminal, un appel à `get` attendra que la tâche se termine. Cette méthode ne retourne pas de valeur lorsqu’elle est appelée sur une tâche dont le `result_type` a la valeur `void`.|
 |[is_apartment_aware](#is_apartment_aware)|Détermine si la tâche désencapsule une interface `IAsyncInfo` Windows Runtime ou descend de cette tâche.|
 |[is_done](#is_done)|Détermine si la tâche est terminée.|
-|[Planificateur](#scheduler)|Retourne le planificateur pour cette tâche.|
-|[Puis](#then)|Surchargé. Ajoute une tâche de continuation à cette tâche.|
-|[attente](#wait)|Attend que cette tâche atteigne un état terminal. Il est possible que `wait` exécute la tâche inline si toutes les dépendances de tâches sont remplies et si elle n'a pas déjà été sélectionnée pour être exécutée par un processus de travail d'arrière-plan.|
+|[scheduler](#scheduler)|Retourne le planificateur pour cette tâche.|
+|[then](#then)|Surchargé. Ajoute une tâche de continuation à cette tâche.|
+|[wait](#wait)|Attend que cette tâche atteigne un état terminal. Il est possible que `wait` exécute la tâche inline si toutes les dépendances de tâches sont remplies et si elle n'a pas déjà été sélectionnée pour être exécutée par un processus de travail d'arrière-plan.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -87,7 +87,7 @@ Pour plus d’informations, consultez [parallélisme des tâches](../../../paral
 
 `task`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ppltasks.h
 
@@ -109,7 +109,7 @@ Résultat de la tâche.
 
 ### <a name="remarks"></a>Notes
 
-Si la tâche est annulée, un appel à `get` lèvera une [task_canceled](task-canceled-class.md) exception. Si la tâche rencontre une exception différente ou si une exception est propagée à cette tâche à partir d’une tâche précédente, un appel à `get` lève cette exception.
+Si la tâche est annulée, un appel à `get` lèvera une [task_canceled](task-canceled-class.md) exception. Si la tâche rencontre une exception différente ou si une exception est propagée à cette tâche à partir d'une tâche précédente, un appel à `get` lève cette exception.
 
 > [!IMPORTANT]
 >  Dans une application Universal Windows Platform (UWP), n’appelez pas [Concurrency::Task :: wait](#wait) ou `get` ( `wait` appels `get`) dans le code qui s’exécute sur le STA. Sinon, le runtime lève [concurrency::invalid_operation](invalid-operation-class.md) , car ces méthodes bloque le thread actuel et peut entraîner l’application à cesser de répondre. Toutefois, vous pouvez appeler la `get` méthode pour recevoir le résultat de la tâche antécédente dans une continuation basée sur des tâches, car le résultat est immédiatement disponible.
@@ -142,7 +142,7 @@ True si la tâche est terminée, false sinon.
 
 La fonction retourne la valeur true si la tâche est terminée ou annulée (avec ou sans exception utilisateur).
 
-##  <a name="operator_neq"></a> opérateur ! =
+##  <a name="operator_neq"></a> operator!=
 
 Détermine si deux objets `task` représentent différentes tâches internes.
 
@@ -161,7 +161,7 @@ La tâche à comparer.
 
 **true** si les objets font référence à différentes tâches sous-jacentes, et **false** dans le cas contraire.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Remplace le contenu d'un objet `task` par un autre.
 
@@ -173,7 +173,7 @@ task& operator= (task&& _Other);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Objet `task` source.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -182,7 +182,7 @@ Objet `task` source.
 
 Étant donné que `task` se comporte comme un pointeur intelligent, après une assignation de copie, cet objet `task` représente la même tâche réelle que `_Other`.
 
-##  <a name="operator_eq_eq"></a> opérateur ==
+##  <a name="operator_eq_eq"></a> operator==
 
 Détermine si deux objets `task` représentent la même tâche interne.
 
@@ -246,7 +246,7 @@ Paramètre à partir duquel la tâche doit être construite. Cela peut être une
 *_TaskOptions*<br/>
 Les options de tâche incluent le jeton d’annulation, le planificateur, etc.
 
-*_Autre*<br/>
+*_Other*<br/>
 Objet `task` source.
 
 ### <a name="remarks"></a>Notes
@@ -257,7 +257,7 @@ Une tâche créée à partir d’un objet `task_completion_event` s’achève (e
 
 La version du constructeur qui accepte un jeton d’annulation crée une tâche qui peut être annulée en utilisant la classe `cancellation_token_source` à partir de laquelle le jeton a été obtenu. Les tâches créées sans jeton d'annulation ne sont pas annulables.
 
-Les tâches créées à partir d’une interface `Windows::Foundation::IAsyncInfo` ou d’une expression lambda qui retourne une interface `IAsyncInfo` atteignent leur état terminal lorsque l’opération ou l’action asynchrone Windows Runtime se termine. De même, les tâches créées à partir d'une expression lamda qui retourne un objet `task<result_type>` atteignent leur état terminal lorsque la tâche interne atteint son état terminal, et non lorsque le résultat de l'expression lamda est retourné.
+Les tâches créées à partir d’une interface `Windows::Foundation::IAsyncInfo` ou d’une expression lambda qui retourne une interface `IAsyncInfo` atteignent leur état terminal lorsque l’opération ou l’action asynchrone Windows Runtime se termine. De même, les tâches créées à partir d’une expression lamda qui retourne un objet `task<result_type>` atteignent leur état terminal lorsque la tâche interne atteint son état terminal, et non lorsque le résultat de l’expression lamda est retourné.
 
 `task` se comporte comme un pointeur intelligent dont le passage par valeur est sécurisé. Il est accessible par plusieurs threads sans nécessiter de verrous.
 
@@ -311,10 +311,10 @@ Type de l’objet fonction qui sera appelé par cette tâche.
 Fonction de continuation à exécuter lorsque cette tâche se termine. Cette fonction de continuation doit accepter comme entrée une variable `result_type` ou `task<result_type>`, où `result_type` correspond au type du résultat produit par cette tâche.
 
 *_TaskOptions*<br/>
-Les options de la tâche incluent le jeton d’annulation, le planificateur et le contexte de continuation. Par défaut, les 3 options précédentes sont héritées de la tâche précédente.
+Les options de la tâche incluent le jeton d'annulation, le planificateur et le contexte de continuation. Par défaut, les 3 options précédentes sont héritées de la tâche précédente.
 
 *_CancellationToken*<br/>
-Jeton d’annulation à associer à la tâche de continuation. Une tâche de continuation créée sans jeton d’annulation hérite du jeton de son antécédent.
+Jeton d'annulation à associer à la tâche de continuation. Une tâche de continuation créée sans jeton d‘annulation hérite du jeton de son antécédent.
 
 *_ContinuationContext*<br/>
 Variable qui spécifie où la continuation doit s'exécuter. Cette variable est uniquement utile lorsqu’il est utilisé dans une application UWP. Pour plus d’informations, consultez [task_continuation_context](task-continuation-context-class.md)
@@ -339,7 +339,7 @@ task_status wait() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur `task_status` qui peut être `completed` ou `canceled`. Si la tâche rencontre une exception pendant l’exécution, ou si une exception y est propagée à partir d’une tâche précédente, `wait` lèvera cette exception.
+Valeur `task_status` qui peut être `completed` ou `canceled`. Si la tâche rencontre une exception pendant l‘exécution, ou si une exception y est propagée à partir d‘une tâche précédente, `wait` lèvera cette exception.
 
 ### <a name="remarks"></a>Notes
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: e92489499a3a5aaaf2fb97e8908cb30d5e168240
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3772a180e35a57c997446fcf2268d84bec2daa5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577617"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291104"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>Cycle de vie d'une boîte de dialogue
 
@@ -52,4 +52,3 @@ Pour les boîtes de dialogue non modale, vous pouvez souvent extraire des donné
 ## <a name="see-also"></a>Voir aussi
 
 [Boîtes de dialogue](../mfc/dialog-boxes.md)
-

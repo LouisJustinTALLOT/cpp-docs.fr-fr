@@ -19,12 +19,12 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-ms.openlocfilehash: 59cbed32d9be8fac84284b621bd4d1e17d5d92cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d03961c1c905689af5894897a59262c8f00e73fa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453465"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290762"
 ---
 # <a name="tree-control-styles"></a>Styles de contrôle d’arborescence
 
@@ -32,9 +32,9 @@ Contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) st
 
 Le **TVS_HASLINES** style améliore la représentation graphique de la hiérarchie d’un contrôle d’arborescence en traçant des lignes qui lient les éléments enfants à l’élément parent correspondant. Ce style ne lie pas les éléments à la racine de la hiérarchie. Pour ce faire, vous devez combiner les **TVS_HASLINES** et **TVS_LINESATROOT** styles.
 
-L’utilisateur peut développer ou réduire la liste des éléments enfants d’un élément parent en double-cliquant sur l’élément parent. Un contrôle d’arborescence qui a le **TVS_SINGLEEXPAND** style provoque l’élément sélectionné pour développer et l’élément en cours non sélectionné. Si vous utilisez la souris pour cliquer une fois sur l’élément sélectionné et que cet élément est fermé, il sera développé. Si vous cliquez une fois sur l‘élément sélectionné quand il est ouvert, il sera réduit.
+L‘utilisateur peut développer ou réduire la liste des éléments enfants d‘un élément parent en double-cliquant sur l‘élément parent. Un contrôle d’arborescence qui a le **TVS_SINGLEEXPAND** style provoque l’élément sélectionné pour développer et l’élément en cours non sélectionné. Si vous utilisez la souris pour cliquer une fois sur l’élément sélectionné et que cet élément est fermé, il sera développé. Si vous cliquez une fois sur l‘élément sélectionné quand il est ouvert, il sera réduit.
 
-Un contrôle d’arborescence qui a le **TVS_HASBUTTONS** style ajoute un bouton à gauche de chaque élément parent. L’utilisateur peut cliquer sur le bouton pour développer ou réduire les éléments enfants au lieu de double-cliquer sur l’élément parent. **TVS_HASBUTTONS** n’ajoute pas de boutons aux éléments à la racine de la hiérarchie. Pour ce faire, vous devez combiner **TVS_HASLINES**, **TVS_LINESATROOT**, et **TVS_HASBUTTONS**.
+Un contrôle d’arborescence qui a le **TVS_HASBUTTONS** style ajoute un bouton à gauche de chaque élément parent. L'utilisateur peut cliquer sur le bouton pour développer ou réduire les éléments enfants au lieu de double-cliquer sur l'élément parent. **TVS_HASBUTTONS** n’ajoute pas de boutons aux éléments à la racine de la hiérarchie. Pour ce faire, vous devez combiner **TVS_HASLINES**, **TVS_LINESATROOT**, et **TVS_HASBUTTONS**.
 
 Le **TVS_EDITLABELS** style permet à l’utilisateur de modifier les étiquettes des éléments de contrôle d’arborescence. Pour plus d’informations sur la modification des étiquettes, consultez [modification d’arborescence de contrôle étiquette](../mfc/tree-control-label-editing.md) plus loin dans cette rubrique.
 
@@ -44,4 +44,3 @@ Le **TVS_NOTOOLTIPS** style désactive la fonctionnalité d’info-bulle automat
 
 [Utilisation de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

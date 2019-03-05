@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694853"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283655"
 ---
 # <a name="cregkey-class"></a>CRegKey, classe
 
@@ -129,7 +129,7 @@ Lorsque vous fermez une clé, ses données de Registre sont écrit (vidées) sur
 > [!IMPORTANT]
 >  Les méthodes qui permettent à l’appelant de spécifier un emplacement de Registre ont la possibilité de lire les données qui ne peut pas être approuvées. Utilisent des méthodes qui permettent de [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) à prendre en compte cette fonction ne gère pas explicitement les chaînes qui ont la valeur NULL s’est arrêté. Les deux conditions de doivent être vérifiées par le code appelant.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -143,7 +143,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*<br/>
+*hKey*<br/>
 Le handle d’une clé de Registre.
 
 ### <a name="remarks"></a>Notes
@@ -224,7 +224,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 *key*<br/>
 Référence à un objet `CRegKey`.
 
-*clé hKey*<br/>
+*hKey*<br/>
 Handle vers une clé de Registre.
 
 *pTM*<br/>
@@ -359,10 +359,10 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Paramètres
 
-*Si*<br/>
+*si*<br/>
 Le [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) valeur qui indique les informations de sécurité demandé.
 
-*PSD*<br/>
+*psd*<br/>
 Pointeur vers une mémoire tampon qui reçoit une copie du descripteur de sécurité demandé.
 
 *pnBytes*<br/>
@@ -884,7 +884,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Si*<br/>
+*si*<br/>
 Spécifie les composants du descripteur de sécurité à définir. La valeur peut être une combinaison des valeurs suivantes :
 
 |Value|Signification|
@@ -894,7 +894,7 @@ Spécifie les composants du descripteur de sécurité à définir. La valeur peu
 |OWNER_SECURITY_INFORMATION|Définit le SID du propriétaire de la clé. La clé doit avoir l’accès WRITE_OWNER, ou le processus appelant doit être propriétaire de l’objet ou avoir le privilège SE_TAKE_OWNERSHIP_NAME activé.|
 |SACL_SECURITY_INFORMATION|Définit la liste de contrôle d’accès de la clé système (SACL). La clé doit avoir accès aux ACCESS_SYSTEM_SECURITY. La méthode appropriée pour obtenir cet accès consiste à activer le SE_SECURITY_NAME [privilège](/windows/desktop/secauthz/privileges) dans le jeton d’accès actuel de l’appelant, ouvrir un handle pour un accès ACCESS_SYSTEM_SECURITY et désactivez le privilège.|
 
-*PSD*<br/>
+*psd*<br/>
 Pointeur vers un [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) structure qui spécifie les attributs de sécurité à définir pour la clé spécifiée.
 
 ### <a name="return-value"></a>Valeur de retour

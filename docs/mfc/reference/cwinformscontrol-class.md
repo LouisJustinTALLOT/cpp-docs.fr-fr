@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178237"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289310"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl, classe
 
@@ -57,8 +57,8 @@ Un contrôle Windows Forms de .NET Framework à afficher dans l’application MF
 
 |Nom|Description|
 |----------|-----------------|
-|[CWinFormsControl::operator-&gt;](#operator_-_gt)|Remplace [CWinFormsControl::GetControl](#getcontrol) dans les expressions.|
-|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Effectue un cast d’un type en un pointeur vers un contrôle Windows Forms.|
+|[CWinFormsControl::operator -&gt;](#operator_-_gt)|Remplace [CWinFormsControl::GetControl](#getcontrol) dans les expressions.|
+|[CWinFormsControl::operator TManagedControl^](#operator_tmanagedcontrol)|Effectue un cast d’un type en un pointeur vers un contrôle Windows Forms.|
 
 ## <a name="remarks"></a>Notes
 
@@ -107,13 +107,13 @@ inline BOOL CreateManagedControl(
 
 ### <a name="parameters"></a>Paramètres
 
-*PTapez*<br/>
+*pType*<br/>
 Le type de données du contrôle à créer. Doit être un [Type](https://msdn.microsoft.com/library/system.type) type de données.
 
 *dwStyle*<br/>
 Le style de fenêtre à appliquer au contrôle. Spécifiez une combinaison de [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles). Actuellement, seuls les styles suivants sont pris en charge : WS_TABSTOP WS_VISIBLE, WS_DISABLED et WS_GROUP.
 
-*Rect*<br/>
+*rect*<br/>
 Un [Structure RECT](/windows/desktop/api/windef/ns-windef-tagrect) qui définit les coordonnées des angles supérieur gauche et inférieur droit du contrôle (première surcharge uniquement).
 
 *nPlaceHolderID*<br/>
@@ -190,7 +190,7 @@ Retourne un handle pour le contrôle Windows Forms.
 
 `GetControlHandle` est une méthode d’assistance qui retourne le handle de fenêtre stocké dans les propriétés de contrôle de .NET Framework. La valeur de handle de fenêtre est copiée vers [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) pendant l’appel à [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).
 
-##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator -&gt;
 
 Remplace [CWinFormsControl::GetControl](#getcontrol) dans les expressions.
 
@@ -204,7 +204,7 @@ Cet opérateur fournit une syntaxe pratique qui remplace `GetControl` dans les e
 
 Pour plus d’informations sur les Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl^
 
 Effectue un cast d’un type en un pointeur vers un contrôle Windows Forms.
 

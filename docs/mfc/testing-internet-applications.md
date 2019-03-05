@@ -8,12 +8,12 @@ helpviewer_keywords:
 - debugging [MFC], Web applications
 - Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
-ms.openlocfilehash: 934d336f8c7544bafa412a7b52404a657e8dc9ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e582fd006a49e672fb21c86b054b8d35f489698f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439362"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290938"
 ---
 # <a name="testing-internet-applications"></a>Test des applications Internet
 
@@ -27,4 +27,3 @@ Un des défis de la programmation Internet est sa visibilité. Nombre d’accès
 
 [Tâches de programmation Internet MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Notions de base de la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)
-

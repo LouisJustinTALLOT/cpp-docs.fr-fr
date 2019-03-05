@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178965"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283135"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar, classe
 
@@ -519,7 +519,7 @@ Pour incorporer un `CMFCToolBar` de l’objet dans votre application, procédez 
 
 1. Appelez [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) pour spécifier le style d’ancrage.
 
-Pour insérer un bouton spécial, par exemple une zone de liste déroulante ou de la barre d’outils de la liste déroulante, réserver un bouton factice dans la ressource parente et remplacez le bouton fictif lors de l’exécution à l’aide de [CMFCToolBar::ReplaceButton](#replacebutton). Pour plus d’informations, consultez [procédure pas à pas : Placement de contrôles dans les barres d’outils](../walkthrough-putting-controls-on-toolbars.md).
+Pour insérer un bouton spécial, par exemple une zone de liste déroulante ou de la barre d’outils de la liste déroulante, réserver un bouton factice dans la ressource parente et remplacez le bouton fictif lors de l’exécution à l’aide de [CMFCToolBar::ReplaceButton](#replacebutton). Pour plus d’informations, consultez [Procédure pas à pas : Placement de contrôles dans les barres d’outils](../walkthrough-putting-controls-on-toolbars.md).
 
 `CMFCToolBar` est la classe de base pour les classes de bibliothèque MFC [cmfcmenubar, classe](../../mfc/reference/cmfcmenubar-class.md), [cmfcpopupmenubar, classe](../../mfc/reference/cmfcpopupmenubar-class.md), et [CMFCDropDownToolbar, classe](../../mfc/reference/cmfcdropdowntoolbar-class.md).
 
@@ -530,7 +530,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtoolbar.h
 
@@ -729,7 +729,7 @@ static void AutoGrayInactiveImages(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Une valeur booléenne qui spécifie s’il faut dim images inactives. Si ce paramètre est TRUE, les images inactifs sont grisés. Sinon, les images inactives ne sont pas estompés.
 
 *nGrayImagePercentage*<br/>
@@ -1123,7 +1123,7 @@ virtual void DrawSeparator(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant de l’emplacement où le séparateur est dessiné, en pixels.
 
 *bHorz*<br/>
@@ -1155,7 +1155,7 @@ void EnableCustomizeButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Active ou désactive le bouton Personnaliser.
 
 *iCustomizeCmd*<br/>
@@ -1205,7 +1205,7 @@ void EnableLargeIcons(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer les grandes icônes, FALSE pour désactiver les grandes icônes.
 
 ### <a name="remarks"></a>Notes
@@ -1222,7 +1222,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Valeur TRUE pour activer la personnalisation rapide, FALSE pour désactiver la personnalisation rapide.
 
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections
@@ -1235,7 +1235,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer la réflexion de la commande ; FALSE pour désactiver la réflexion de la commande.
 
 ### <a name="remarks"></a>Notes
@@ -1254,7 +1254,7 @@ void EnableTextLabels(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 TRUE si les étiquettes de texte apparaissent sous les images de bouton de barre d’outils ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
@@ -1271,7 +1271,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Le handle de fenêtre à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2169,7 +2169,7 @@ virtual int InsertButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*Bouton*<br/>
+*button*<br/>
 [in] Spécifie le bouton à insérer.
 
 *iInsertAt*<br/>
@@ -2586,7 +2586,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] L’ID de ressource de la bitmap qui fait référence aux images de menu standard.
 
-*Bloqué*<br/>
+*bLocked*<br/>
 [in] TRUE pour verrouiller la barre d’outils ; Sinon, FALSE.
 
 *uiDisabledResID*<br/>
@@ -2616,7 +2616,7 @@ virtual BOOL LoadBitmapEx(
 ### <a name="parameters"></a>Paramètres
 
 [in] *params*<br/>
-[in] *bloqué*<br/>
+[in] *bLocked*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2715,7 +2715,7 @@ virtual BOOL LoadToolBar(
 *uiMenuResID*<br/>
 [in] L’ID de ressource de la bitmap qui fait référence aux images de menu standard.
 
-*Bloqué*<br/>
+*bLocked*<br/>
 [in] Valeur booléenne qui spécifie si la barre d’outils est verrouillé ou non. Si ce paramètre est *TRUE*, la barre d’outils est verrouillé. Sinon, la barre d’outils n’est pas verrouillé.
 
 *uiDisabledResID*<br/>
@@ -2761,7 +2761,7 @@ virtual BOOL LoadToolBarEx(
 *params*<br/>
 [in] Une référence à un `CMFCToolBarInfo` objet qui contient les ID de ressource pour les images de barre d’outils.
 
-*Bloqué*<br/>
+*bLocked*<br/>
 [in] Valeur booléenne qui spécifie si la barre d’outils est verrouillé ou non. Si ce paramètre est TRUE, la barre d’outils est verrouillé. Sinon, la barre d’outils n’est pas verrouillé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3063,10 +3063,10 @@ int ReplaceButton(
 *uiCmd*<br/>
 [in] ID de commande du bouton à remplacer.
 
-*Bouton*<br/>
+*button*<br/>
 [in] Une référence à la `CMFCToolBarButton` à insérer.
 
-*Balle*<br/>
+*bAll*<br/>
 [in] Valeur booléenne qui spécifie s’il faut remplacer tous les boutons ayant l’ID de commande spécifié par *uiCmd*. Si ce paramètre est TRUE, tous les boutons ayant l’ID de commande spécifiée sont remplacés. Sinon, le premier bouton est remplacé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3825,7 +3825,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Spécifie un code de touche virtuelle. Pour obtenir la liste de codes de touches virtuelles, consultez Winuser.h
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3906,4 +3906,3 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCPopupMenuBar, classe](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar, classe](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [Procédure pas à pas : Placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

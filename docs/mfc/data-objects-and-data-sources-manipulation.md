@@ -1,5 +1,5 @@
 ---
-title: 'Objets de données et sources de données : manipulation'
+title: 'Objets de données et Sources de données : Manipulation'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636148"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286749"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>Objets de données et sources de données : manipulation
+# <a name="data-objects-and-data-sources-manipulation"></a>Objets de données et Sources de données : Manipulation
 
 Une fois un objet de données ou d’une source de données a été créé, vous pouvez effectuer un nombre d’opérations courantes sur les données, telles que l’insertion et la suppression des données, énumérer les formats de que données sont dans et bien plus encore. Cet article décrit les techniques nécessaires pour effectuer des opérations les plus courantes. Les rubriques traitées ici sont les suivantes :
 
@@ -37,7 +37,7 @@ Comment les données sont insérées dans une source de données varie selon que
 
 - Appelez `COleDataSource::CacheGlobalData` à plusieurs reprises pour chaque format de Presse-papiers dans lequel vous fournissez des données. Passer le format de Presse-papiers à utiliser, un handle vers la mémoire contenant les données et, éventuellement, un **FORMATETC** décrivant les données de structure.
 
-     - ou -
+     ou
 
 - Si vous souhaitez travailler directement avec **STGMEDIUM** structures, vous appelez `COleDataSource::CacheData` au lieu de `COleDataSource::CacheGlobalData` dans l’option ci-dessus.
 
@@ -47,7 +47,7 @@ Il s’agit d’une rubrique avancée.
 
 - Appelez `COleDataSource::DelayRenderData` à plusieurs reprises pour chaque format de Presse-papiers dans lequel vous fournissez des données. Passer le format de Presse-papiers à utiliser et, éventuellement, un **FORMATETC** décrivant les données de structure. Lorsque les données sont demandées, l’infrastructure appellera `COleDataSource::OnRenderData`, que vous devez substituer.
 
-     - ou -
+     ou
 
 - Si vous utilisez un `CFile` objet pour fournir les données, appelez `COleDataSource::DelayRenderFileData` au lieu de `COleDataSource::DelayRenderData` dans l’option précédente. Lorsque les données sont demandées, l’infrastructure appellera `COleDataSource::OnRenderFileData`, que vous devez substituer.
 
@@ -67,7 +67,7 @@ Avant d’une application permet à l’utilisateur coller des données, il doit
 
    - Appeler l’objet de données `BeginEnumFormats` fonction membre à énumérer les formats disponibles dans le Presse-papiers. Appelez ensuite `GetNextFormat` jusqu'à ce que le Presse-papiers renvoie un format de votre application prend en charge ou il n’existe aucun format plus.
 
-Si vous utilisez **ON_UPDATE_COMMAND_UI**, vous pouvez désormais activer le collage et, éventuellement, des éléments de collage spécial dans le menu Edition. Pour ce faire, appelez `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Pour plus d’informations sur le conteneur applications doivent faire avec les éléments de menu et quand, consultez [Menus et ressources : ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).
+Si vous utilisez **ON_UPDATE_COMMAND_UI**, vous pouvez désormais activer le collage et, éventuellement, des éléments de collage spécial dans le menu Edition. Pour ce faire, appelez `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Pour plus d’informations sur le conteneur applications doivent faire avec les éléments de menu et quand, consultez [Menus et ressources : Ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).
 
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Récupération des données à partir d’un objet de données
 

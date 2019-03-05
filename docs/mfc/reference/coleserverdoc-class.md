@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604943"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285280"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc, classe
 
@@ -168,7 +168,7 @@ Pour prendre en charge les éléments liés, `COleServerDoc` fournit le [OnGetLi
 
 Vous avez besoin d’un `COleServerDoc`-classe dérivée pour chaque type de serveur de documenter votre application prend en charge. Par exemple, si votre application serveur prend en charge les feuilles de calcul et graphiques, vous avez besoin de deux `COleServerDoc`-classes dérivées.
 
-Pour plus d’informations sur les serveurs, consultez l’article [serveurs : implémentation d’un serveur](../../mfc/servers-implementing-a-server.md).
+Pour plus d’informations sur les serveurs, consultez l’article [serveurs : Implémentation d’un serveur](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -180,7 +180,7 @@ Pour plus d’informations sur les serveurs, consultez l’article [serveurs : 
 
 [COleDocument](../../mfc/reference/coledocument-class.md)
 
-[COleLinkingDoc plutôt](../../mfc/reference/colelinkingdoc-class.md)
+[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)
 
 `COleServerDoc`
 
@@ -642,7 +642,7 @@ Pointeur vers un VARIANTARG pour recevoir la sortie des valeurs de retour à par
 
 Retourne S_OK en cas de réussite ; Sinon, l’une des codes d’erreur suivants :
 
-|Valeur|Description|
+|Value|Description|
 |-----------|-----------------|
 |E_UNEXPECTED|Une erreur inattendue s’est produite|
 |E_FAIL|Erreur s’est produite|

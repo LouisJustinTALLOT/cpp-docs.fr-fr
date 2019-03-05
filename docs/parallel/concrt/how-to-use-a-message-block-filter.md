@@ -1,18 +1,18 @@
 ---
-title: 'Comment : utiliser un filtre de bloc de message'
+title: 'Procédure : Utiliser un filtre de bloc de Message'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: 512dda6503d5980dbdcc20a55ca0ee836d4d08e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfa11953d27dc7e013e715b3f58111f124caeaf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660133"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284292"
 ---
-# <a name="how-to-use-a-message-block-filter"></a>Comment : utiliser un filtre de bloc de message
+# <a name="how-to-use-a-message-block-filter"></a>Procédure : Utiliser un filtre de bloc de Message
 
 Ce document montre comment utiliser une fonction de filtre pour permettre à un bloc de message asynchrone accepter ou rejeter un message en fonction de la charge utile de ce message.
 
@@ -20,7 +20,7 @@ Lorsque vous créez un objet de bloc de message comme un [concurrency::unbounded
 
 Fonctions de filtre sont importantes, car ils vous permettent de connecter des blocs de messages pour former *les réseaux de flux de données*. Dans un réseau de flux de données, les blocs de messages contrôlent le flux de données en traitant uniquement les messages qui répondent aux critères spécifiques. Comparez cela au modèle de flux de contrôle, lorsque le flux de données est organisée à l’aide de structures de contrôle telles que les instructions conditionnelles, des boucles et ainsi de suite.
 
-Ce document fournit un exemple de base de l’utilisation d’un filtre de messages. Pour obtenir des exemples supplémentaires qui utilisent des filtres de messages et le modèle de flux de données à connecter des blocs de message, consultez [procédure pas à pas : création d’un Agent de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) et [procédure pas à pas : création d’un réseau de traitement d’Image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md) .
+Ce document fournit un exemple de base de l’utilisation d’un filtre de messages. Pour obtenir des exemples supplémentaires qui utilisent des filtres de messages et le modèle de flux de données à connecter des blocs de message, consultez [procédure pas à pas : Création d’un Agent de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) et [procédure pas à pas : Création d’un réseau de traitement d’Image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 ## <a name="example"></a>Exemple
 
@@ -50,7 +50,7 @@ L'exemple de code suivant illustre l'exemple complet. L’exemple appelle à la 
 
 Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `primes-filter.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-**CL.exe /EHsc primes-Filter.cpp**
+**cl.exe /EHsc primes-filter.cpp**
 
 ## <a name="robust-programming"></a>Programmation fiable
 
@@ -66,6 +66,6 @@ Pour éliminer la copie inutile des données, utilisez la deuxième forme lorsqu
 ## <a name="see-also"></a>Voir aussi
 
 [Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Procédure pas à pas : création des agents de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Procédure pas à pas : création d’un agent de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
 [Procédure pas à pas : création d’un réseau de traitement d’image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [transformer, classe](../../parallel/concrt/reference/transformer-class.md)

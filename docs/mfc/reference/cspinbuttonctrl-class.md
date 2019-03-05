@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526404"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290428"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 
@@ -98,7 +98,7 @@ Pour plus d’informations sur l’utilisation de `CSpinButtonCtrl`, consultez [
 
 `CSpinButtonCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -119,7 +119,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle de bouton toupie (spin). Appliquer n’importe quelle combinaison de styles de contrôle de bouton toupie (spin) au contrôle. Ces styles sont décrites dans [Styles de contrôle Up-Down](/windows/desktop/Controls/up-down-control-styles) dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle de bouton toupie (spin). Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure
 
 *pParentWnd*<br/>
@@ -159,7 +159,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Spécifie le style du contrôle de bouton toupie (spin). Appliquer n’importe quelle combinaison de styles de contrôle de bouton toupie (spin) au contrôle. Ces styles sont décrites dans [Styles de contrôle Up-Down](/windows/desktop/Controls/up-down-control-styles) dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>Paramètres
 
-*inférieur*<br/>
+*lower*<br/>
 Référence à un entier qui reçoit la limite inférieure pour le contrôle.
 
-*supérieur*<br/>
+*upper*<br/>
 Référence à un entier qui reçoit la limite supérieure pour le contrôle.
 
 ### <a name="return-value"></a>Valeur de retour

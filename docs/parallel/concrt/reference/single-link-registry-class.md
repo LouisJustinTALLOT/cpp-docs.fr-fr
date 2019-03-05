@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 4f706b4551d71c77e136e4d65d2d6a3183293d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454494"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290129"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry, classe
 
@@ -33,7 +33,7 @@ class single_link_registry : public network_link_registry<_Block>;
 
 #### <a name="parameters"></a>Paramètres
 
-*_Bloc*<br/>
+*_Block*<br/>
 Le bloc type de données sont stockées dans le `single_link_registry` objet.
 
 ## <a name="members"></a>Membres
@@ -51,7 +51,7 @@ Le bloc type de données sont stockées dans le `single_link_registry` objet.
 |----------|-----------------|
 |[add](#add)|Ajoute un lien vers le `single_link_registry` objet. (Substitue [network_link_registry::add](network-link-registry-class.md#add).)|
 |[begin](#begin)|Retourne un itérateur au premier élément dans le `single_link_registry` objet. (Substitue [network_link_registry::begin](network-link-registry-class.md#begin).)|
-|[contient](#contains)|Recherche le `single_link_registry` objet pour un bloc spécifié. (Substitue [network_link_registry::contains](network-link-registry-class.md#contains).)|
+|[contains](#contains)|Recherche le `single_link_registry` objet pour un bloc spécifié. (Substitue [network_link_registry::contains](network-link-registry-class.md#contains).)|
 |[count](#count)|Compte le nombre d’éléments dans le `single_link_registry` objet. (Substitue [network_link_registry::count](network-link-registry-class.md#count).)|
 |[remove](#remove)|Supprime un lien à partir de la `single_link_registry` objet. (Substitue [network_link_registry::remove](network-link-registry-class.md#remove).)|
 
@@ -61,13 +61,13 @@ Le bloc type de données sont stockées dans le `single_link_registry` objet.
 
 `single_link_registry`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
 **Espace de noms :** concurrency
 
-##  <a name="add"></a> Ajouter
+##  <a name="add"></a> add
 
 Ajoute un lien vers le `single_link_registry` objet.
 
@@ -77,7 +77,7 @@ virtual void add(_EType _Link);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Lier*<br/>
+*_Link*<br/>
 Pointeur vers un bloc à ajouter.
 
 ### <a name="remarks"></a>Notes
@@ -110,7 +110,7 @@ virtual bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Lier*<br/>
+*_Link*<br/>
 Un pointeur désignant un bloc qui consiste à rechercher dans le `single_link_registry` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -139,7 +139,7 @@ virtual bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Lier*<br/>
+*_Link*<br/>
 Un pointeur vers un bloc à supprimer, si trouvé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -154,7 +154,7 @@ Construit un objet `single_link_registry`.
 single_link_registry();
 ```
 
-##  <a name="dtor"></a> ~ single_link_registry
+##  <a name="dtor"></a> ~single_link_registry
 
 Détruit le `single_link_registry` objet.
 

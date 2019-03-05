@@ -7,12 +7,12 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-ms.openlocfilehash: 14e543946be50c39020d46ab00e702a4f2b7a815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290532"
 ---
 # <a name="service-map-macros"></a>Macros de mappage de service
 
@@ -25,7 +25,7 @@ Ces macros définissent des cartes de services et les entrées.
 |[SERVICE_ENTRY](#service_entry)|Indique que l’objet prend en charge un ID de service spécifique.|
 |[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Indique à [méthode IServiceProviderImpl::QueryService](#queryservice) à chaîne à l’objet spécifié.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -93,14 +93,14 @@ SERVICE_ENTRY_CHAIN( punk )
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnk*<br/>
+*punk*<br/>
 Un pointeur vers le **IUnknown** interface à laquelle à chaîne.
 
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple de [BEGIN_SERVICE_MAP](#begin_service_map).
 
-##  <a name="queryservice"></a>  Méthode IServiceProviderImpl::QueryService
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
 
 Crée ou accède au service spécifié et retourne un pointeur d’interface vers l’interface spécifiée pour le service.
 

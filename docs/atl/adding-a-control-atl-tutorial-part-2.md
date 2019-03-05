@@ -3,12 +3,12 @@ title: Ajout d'un contrôle (Didacticiel ATL, Partie 2)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-ms.openlocfilehash: b59d8f05e151e1d543f6aa6bb2b62ae0f59dc36a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428650"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283226"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Ajout d'un contrôle (Didacticiel ATL, Partie 2)
 
@@ -38,7 +38,7 @@ Le **contrôle ATL** l’Assistant **noms** page contient les champs suivants :
 |**Classe**|Le nom de classe C++ créé pour implémenter le contrôle.|
 |**Fichier .h**|Le fichier est créé pour contenir la définition de la classe C++.|
 |**Fichier .cpp**|Le fichier est créé pour contenir l’implémentation de la classe C++.|
-|**Coclasse**|Le nom de la classe de composant pour ce contrôle.|
+|**CoClass**|Le nom de la classe de composant pour ce contrôle.|
 |**Interface**|Le nom de l’interface sur laquelle le contrôle implémente ses méthodes et propriétés personnalisées.|
 |**Type**|Une description pour le contrôle.|
 |**ProgID**|Nom lisible qui peut être utilisé pour rechercher le CLSID du contrôle.|
@@ -118,4 +118,4 @@ Ensuite, vous allez ajouter une propriété personnalisée au contrôle.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Didacticiel](../atl/active-template-library-atl-tutorial.md)
+[Tutoriel](../atl/active-template-library-atl-tutorial.md)

@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289960"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -187,7 +187,7 @@ où `id` Spécifie l’ID de fenêtre enfant du contrôle d’édition envoie la
 
 Prototype de fonction du parent est la suivante :
 
-**afx_msg** memberFxn void **() ;**
+**afx_msg** void memberFxn **( );**
 
 Voici une liste des entrées de table des messages potentielles et une description des cas dans lequel ils seraient envoyées au parent :
 
@@ -227,7 +227,7 @@ Pour plus d’informations sur `CEdit`, consultez [contrôles](../../mfc/control
 
 `CEdit`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -348,7 +348,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle d’édition. Appliquer n’importe quelle combinaison de [modifier les styles](styles-used-by-mfc.md#edit-styles) au contrôle.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle d’édition. Peut être un `CRect` objet ou `RECT` structure.
 
 *pParentWnd*<br/>
@@ -605,7 +605,7 @@ int GetLine(
 *nIndex*<br/>
 Spécifie le numéro de ligne à récupérer à partir de plusieurs lignes de contrôle edit. Numéros de ligne sont de base zéro ; la valeur 0 spécifie la première ligne. Ce paramètre est ignoré par un contrôle d’édition sur une ligne.
 
-*lpszbuffer a été*<br/>
+*lpszBuffer*<br/>
 Pointe vers la mémoire tampon qui reçoit une copie de la ligne. Le premier mot de la mémoire tampon doit spécifier le nombre maximal de caractères qui peuvent être copiées vers la mémoire tampon.
 
 *nMaxLength*<br/>
@@ -966,7 +966,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Index de base zéro du caractère spécifié.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre maximal*<br/>
+*nMax*<br/>
 La nouvelle limite de texte en caractères.
 
 ### <a name="remarks"></a>Notes

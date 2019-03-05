@@ -11,12 +11,12 @@ helpviewer_keywords:
 - threading [C++], synchronization
 - multithreading [C++], synchronization classes
 ms.assetid: 4914f54e-68ac-438f-93c9-c013455a657e
-ms.openlocfilehash: 63555236ec41ce0a28d82aa676318b53a24169c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72cf5310704c1ae959cc012146a03dd32cff4068
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502841"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284370"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Multithreading : Quand utiliser les Classes de synchronisation MFC
 
@@ -42,17 +42,17 @@ Pour déterminer quelle classe de synchronisation que vous devez utiliser, deman
 
 `CSyncObject` est jamais utilisé directement. Il est la classe de base pour les quatre autres classes de synchronisation.
 
-## <a name="example-1-using-three-synchronization-classes"></a>Exemple 1 : Utilisation de trois Classes de synchronisation
+## <a name="example-1-using-three-synchronization-classes"></a>Exemple 1 : À l’aide de trois Classes de synchronisation
 
 Par exemple, prenez une application qui gère une liste liée de comptes. Cette application permet jusqu'à trois comptes doit être examinée dans des fenêtres distinctes, mais seul l’un peut être mis à jour à un moment donné. Lorsqu’un compte est mis à jour, les données mises à jour sont envoyées sur le réseau à une archive de données.
 
 Cet exemple d’application utilise les trois types de classes de synchronisation. Comme il autorise jusqu'à trois comptes doit être examinée à la fois, il utilise `CSemaphore` pour limiter l’accès à trois objets de vue. Lorsqu’une tentative d’afficher un quatrième compte se produit, l’application attend jusqu'à ce qu’une des trois premières fenêtres se ferme ou elle échoue. Lorsqu’un compte est mis à jour, l’application utilise `CCriticalSection` pour vous assurer qu’un seul compte est mis à jour à la fois. Une fois la mise à jour réussit, il signale `CEvent`, ce qui libère un thread en attente de l’événement soit signalé. Ce thread envoie les nouvelles données à l’archive de données.
 
-## <a name="example-2-using-synchronization-access-classes"></a>Exemple 2 : Utilisation des Classes d’accès de synchronisation
+## <a name="example-2-using-synchronization-access-classes"></a>Exemple 2 : À l’aide des Classes d’accès de synchronisation
 
 Choisir les classes d’accès de synchronisation à utiliser sont encore plus simple. Si votre application est concernée par l’accès à une seule ressource contrôlée, utilisez `CSingleLock`. Si elle a besoin d’accéder à l’une des nombreuses ressources contrôlées, utilisez `CMultiLock`. Dans l’exemple 1, `CSingleLock` aurait été utilisé, car dans chaque cas qu’une seule ressource est nécessaire à un moment donné.
 
-Pour plus d’informations sur l’utilisation des classes de synchronisation, consultez [Multithreading : comment utiliser les Classes de synchronisation](multithreading-how-to-use-the-synchronization-classes.md). Pour plus d’informations sur la synchronisation, consultez [synchronisation](/windows/desktop/Sync/synchronization) dans le SDK Windows. Pour plus d’informations sur la prise en charge le multithreading dans MFC, consultez [Multithreading à l’aide de C++ et MFC](multithreading-with-cpp-and-mfc.md).
+Pour plus d’informations sur l’utilisation des classes de synchronisation, consultez [Multithreading : Comment utiliser les Classes de synchronisation](multithreading-how-to-use-the-synchronization-classes.md). Pour plus d’informations sur la synchronisation, consultez [synchronisation](/windows/desktop/Sync/synchronization) dans le SDK Windows. Pour plus d’informations sur la prise en charge le multithreading dans MFC, consultez [Multithreading à l’aide de C++ et MFC](multithreading-with-cpp-and-mfc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
