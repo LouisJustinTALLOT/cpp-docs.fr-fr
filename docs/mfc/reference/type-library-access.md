@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 4dc5a445f4a7736182350c16720686ca7e0bc27c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5aa92d520e2a806837ceb5208ca1262504ee02e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301972"
 ---
 # <a name="type-library-access"></a>Accès à la bibliothèque de types
 
@@ -36,14 +36,14 @@ DECLARE_OLETYPELIB(class_name)
 
 ### <a name="parameters"></a>Paramètres
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Le nom de la classe de contrôle lié à la bibliothèque de types.
 
 ### <a name="remarks"></a>Notes
 
 Utilisez cette macro dans le fichier d’en-tête de classe contrôle.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
@@ -57,7 +57,7 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 
 ### <a name="parameters"></a>Paramètres
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Le nom de la classe de contrôle lié à la bibliothèque de types.
 
 *tlid*<br/>
@@ -73,7 +73,7 @@ Le numéro de version mineure de bibliothèque de types.
 
 Cette macro doit apparaître dans le fichier d’implémentation pour n’importe quelle classe de contrôle qui utilise le declare_oletypelib (macro).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-ms.openlocfilehash: f3c5792a13d9e63a05ce6710dea77828f2510f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 372773926903da32f1690904b34cd143a04940dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522445"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301270"
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner, classe
 
@@ -38,13 +38,13 @@ class simple_partitioner;
 
 `simple_partitioner`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ppl.h
 
 **Espace de noms :** concurrency
 
-##  <a name="dtor"></a> ~ simple_partitioner
+##  <a name="dtor"></a> ~simple_partitioner
 
 Détruit un objet `simple_partitioner`.
 
