@@ -9,12 +9,12 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: 231c65d92ff287e35d5475109e70d21f5a047baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609883"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298670"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl, classe
 
@@ -38,7 +38,7 @@ Votre classe, dérivée de `IServiceProviderImpl`.
 
 |Nom|Description|
 |----------|-----------------|
-|[Méthode IServiceProviderImpl::QueryService](#queryservice)|Crée ou accède au service spécifié et retourne un pointeur d’interface vers l’interface spécifiée pour le service.|
+|[IServiceProviderImpl::QueryService](#queryservice)|Crée ou accède au service spécifié et retourne un pointeur d’interface vers l’interface spécifiée pour le service.|
 
 ## <a name="remarks"></a>Notes
 
@@ -48,7 +48,7 @@ Le `IServiceProvider` interface recherche un service spécifié par son GUID et 
 
 `IServiceProviderImpl` utilise une carte de service, en commençant par [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) et se terminant par [END_SERVICE_MAP](service-map-macros.md#end_service_map).
 
-La carte de service contient deux entrées : [SERVICE_ENTRY](service-map-macros.md#service_entry), ce qui indique un id de service spécifié (SID) pris en charge par l’objet, et [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), qui appelle `QueryService` à chaîne vers un autre objet.
+La carte de service contient deux entrées : [SERVICE_ENTRY](service-map-macros.md#service_entry), ce qui indique un id de service spécifié (SID) pris en charge par l’objet, et [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), qui appelle `QueryService` à chaîne à un autre objet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -56,11 +56,11 @@ La carte de service contient deux entrées : [SERVICE_ENTRY](service-map-macros
 
 `IServiceProviderImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
-##  <a name="queryservice"></a>  Méthode IServiceProviderImpl::QueryService
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
 
 Crée ou accède au service spécifié et retourne un pointeur d’interface vers l’interface spécifiée pour le service.
 

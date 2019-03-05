@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630748"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299971"
 ---
 # <a name="combinable-class"></a>combinable, classe
 
@@ -102,7 +102,7 @@ Le type de l’objet de functor d’initialisation.
 *_FnInitialize*<br/>
 Une fonction qui sera appelée pour initialiser chaque nouvelle valeur de thread privée du type `T`. Il doit prendre en charge un opérateur d’appel de fonction avec la signature `T ()`.
 
-*_Copier*<br/>
+*_Copy*<br/>
 Un existant `combinable` objet doit être copié dans celui-ci.
 
 ### <a name="remarks"></a>Notes
@@ -113,7 +113,7 @@ Le deuxième constructeur initialise de nouveaux éléments à l’aide du funct
 
 Le troisième constructeur est le constructeur de copie.
 
-##  <a name="dtor"></a> ~ combinable
+##  <a name="dtor"></a> ~combinable
 
 Détruit un objet `combinable`.
 
@@ -178,7 +178,7 @@ Une référence à une valeur booléenne. La valeur booléenne référencée par
 
 Une référence au calcul secondaire privées de thread.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Assigne à un `combinable` objet à partir d’un autre `combinable` objet.
 
@@ -188,7 +188,7 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Copier*<br/>
+*_Copy*<br/>
 Un existant `combinable` objet doit être copié dans celui-ci.
 
 ### <a name="return-value"></a>Valeur de retour

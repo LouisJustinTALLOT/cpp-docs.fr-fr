@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: c6b219eabd008114f40401c64465e44607c2ee9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9074dad572a3a74a5b456e9790dc359ddf8b7c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555075"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293951"
 ---
 # <a name="context-class"></a>Context, classe
 
@@ -59,7 +59,7 @@ class Context;
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Détermine si le contexte est bloqué de façon synchrone. Un contexte est considéré comme bloqué de façon synchrone s’il a exécuté une action qui a conduit au blocage explicitement.|
 |[Manquer d’abonnements](#oversubscribe)|Injecte un processeur virtuel supplémentaire dans un planificateur pour la durée d’un bloc de code lorsqu’elle est appelée sur un contexte de l’exécution sur l’un des processeurs virtuels dans ce planificateur.|
 |[ScheduleGroupId](#schedulegroupid)|Retourne un identificateur pour le groupe de planification qui fonctionne sur le contexte actuel.|
-|[Débloquer](#unblock)|Débloque le contexte et oblige ce dernier soit exécutable.|
+|[Unblock](#unblock)|Débloque le contexte et oblige ce dernier soit exécutable.|
 |[VirtualProcessorId](#virtualprocessorid)|Retourne un identificateur pour le processeur virtuel d’exécution sur le contexte actuel.|
 |[Yield](#yield)|Produit l'exécution pour qu'un autre contexte puisse s'exécuter. Si aucun autre contexte n'est disponible pour la production, le planificateur peut produire dans un autre thread du système d'exploitation.|
 
@@ -75,7 +75,7 @@ Le planificateur est coopératif par nature et un contexte d’exécution peut g
 
 `Context`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt.h
 
@@ -99,7 +99,7 @@ Après le `Block` méthode a été appelée ou sera appelée, vous devez l’ass
 
 Cette méthode peut lever diverses exceptions, y compris [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).
 
-##  <a name="dtor"></a> ~ Contexte de
+##  <a name="dtor"></a> ~Context
 
 ```
 virtual ~Context();
@@ -165,7 +165,7 @@ Si le contexte est en cours d’exécution sur un processeur virtuel, un identif
 
 La valeur de retour à partir de cette méthode est un échantillonnage instantané du processeur virtuel sur lequel le contexte s’exécute. Cette valeur peut être obsolète au moment où elle est retournée et ne peut pas se reposer. En règle générale, cette méthode est utilisée pour le débogage ou uniquement à des fins de suivi.
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Retourne un identificateur pour le contexte actuel qui est unique dans le planificateur auquel appartient le contexte actuel.
 
@@ -308,4 +308,3 @@ Cette fonction est une nouveauté de Visual Studio 2015 et est identique à la [
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [Scheduler, classe](scheduler-class.md)<br/>
 [Planificateur de tâches](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

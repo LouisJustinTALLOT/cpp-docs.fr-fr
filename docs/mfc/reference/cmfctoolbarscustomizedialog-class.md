@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628993"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295030"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Cmfctoolbarscustomizedialog, classe
 
 Une boîte de dialogue onglets non modale ( [CPropertySheet, classe](../../mfc/reference/cpropertysheet-class.md)) qui permet à l’utilisateur de personnaliser les barres d’outils, les menus, les raccourcis clavier, les outils définis par l’utilisateur et les style visuel dans une application. En général, l'utilisateur accède à cette boîte de dialogue en sélectionnant **Personnaliser** dans le menu **Outils** .
 
-Le **personnaliser** boîte de dialogue comporte six onglets : **commandes**, **barres d’outils**, **outils**, **clavier**,  **Menu**, et **Options**.
+Le **personnaliser** boîte de dialogue comporte six onglets : **Commandes**, **barres d’outils**, **outils**, **clavier**, **Menu**, et **Options**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -112,7 +112,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 `CMFCToolBarsCustomizeDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxToolBarsCustomizeDialog.h
 
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Spécifie l’ID de catégorie dans laquelle insérer le bouton.
 
-*Bouton*<br/>
+*button*<br/>
 [in] Spécifie le bouton à insérer.
 
 *iInsertBefore*<br/>
@@ -357,7 +357,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer les barres d’outils définies par l’utilisateur ; FALSE pour désactiver les barres d’outils.
 
 ### <a name="remarks"></a>Notes
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Spécifie la commande du bouton à remplacer.
 
-*Bouton*<br/>
+*button*<br/>
 [in] Un **const** référence à l’objet de bouton de barre d’outils qui remplace l’ancien bouton.
 
 ### <a name="remarks"></a>Notes

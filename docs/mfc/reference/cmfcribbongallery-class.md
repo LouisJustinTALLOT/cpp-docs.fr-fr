@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: c6ebfc39c3fcfb467774fb898d9188c2dd3e69e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618855"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298631"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery, classe
 
@@ -165,7 +165,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRi
 
 [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxRibbonPaletteGallery.h
 
@@ -328,7 +328,7 @@ void EnableMenuResize(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le redimensionnement du menu ; Sinon, FALSE.
 
 *bVertcalOnly*<br/>
@@ -348,7 +348,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour spécifier que la barre latérale est activée ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes

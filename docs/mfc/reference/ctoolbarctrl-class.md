@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178978"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302495"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 
@@ -579,7 +579,7 @@ BOOL CheckButton(
 *nID*<br/>
 Identificateur du bouton pour activer ou désactiver la commande.
 
-*bvérifier*<br/>
+*bCheck*<br/>
 True pour cocher le bouton, FALSE afin de le supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -626,7 +626,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle de barre d’outils. Barres d’outils doivent toujours avoir le style WS_CHILD. En outre, vous pouvez spécifier n’importe quelle combinaison des styles de barre d’outils et des styles de fenêtre comme décrit sous **notes**.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie éventuellement la taille et la position du contrôle de barre d’outils. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
 
 *pParentWnd*<br/>
@@ -680,7 +680,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Spécifie le style du contrôle de barre d’outils. Barres d’outils doivent toujours avoir le style WS_CHILD. En outre, vous pouvez spécifier n’importe quelle combinaison des styles de barre d’outils et des styles de fenêtre comme décrit dans la **remarques** section de [créer](#create).
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Identificateur du bouton pour activer ou désactiver la commande.
 
-*bActivez*<br/>
+*bEnable*<br/>
 TRUE pour activer le bouton ; FALSE pour désactiver le bouton.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nchaîne*<br/>
+*nString*<br/>
 Index de la chaîne.
 
 *lpstrString*<br/>
@@ -1587,7 +1587,7 @@ ID d’une image bitmap qui contient les images à charger. Pour spécifier votr
 |IDB_VIEW_LARGE_COLOR|Afficher les bitmaps de grande taille|
 |IDB_VIEW_SMALL_COLOR|Affichage des bitmaps de petite taille|
 
-*HINST*<br/>
+*hinst*<br/>
 Handle d’instance de programme à l’application appelante. Ce paramètre peut être HINST_COMMCTRL pour charger une liste d’images standard.
 
 ### <a name="remarks"></a>Notes

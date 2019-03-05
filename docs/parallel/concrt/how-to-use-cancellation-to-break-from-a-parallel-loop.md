@@ -1,18 +1,18 @@
 ---
-title: "Comment : utiliser l'annulation pour rompre une boucle parallèle"
+title: 'Procédure : Utiliser l’annulation pour rompre une boucle parallèle'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel search algorithm [Concurrency Runtime]
 - parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
-ms.openlocfilehash: 2a19c2874ce331be2d4f5840f61cabf7bca9abf6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08f33a75bc5c5391333a2d9368d4ed6563e117c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612743"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299567"
 ---
-# <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>Comment : utiliser l'annulation pour rompre une boucle parallèle
+# <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>Procédure : Utiliser l’annulation pour rompre une boucle parallèle
 
 Cet exemple montre comment utiliser l’annulation pour implémenter un algorithme de recherche parallèle de base.
 

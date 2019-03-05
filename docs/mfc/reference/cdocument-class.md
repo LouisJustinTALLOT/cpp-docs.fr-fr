@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299073"
 ---
 # <a name="cdocument-class"></a>CDocument (classe)
 
@@ -252,7 +252,7 @@ Pour plus d’informations sur `CDocument`, consultez [sérialisation](../../mfc
 
 `CDocument`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -506,7 +506,7 @@ virtual BOOL GetThumbnail(
 
 ### <a name="parameters"></a>Paramètres
 
-*CX*<br/>
+*cx*<br/>
 Spécifie la largeur et la hauteur de la bitmap.
 
 *phbmp*<br/>
@@ -895,7 +895,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
 
 ### <a name="parameters"></a>Paramètres
 
-*pMsg*<br/>
+*pmsg*<br/>
 [in] Pointeur vers un message de fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1073,7 +1073,7 @@ virtual void RemoveChunk(
 *Guid*<br/>
 Spécifie le GUID d’un segment à supprimer.
 
-*PID*<br/>
+*Pid*<br/>
 Spécifie le PID d’un segment à supprimer.
 
 ### <a name="remarks"></a>Notes
@@ -1119,7 +1119,7 @@ Pointe vers le nom du document qui était en cours d’enregistrement ou chargem
 *e*<br/>
 Points à l’exception qui a été levée. Peut être NULL.
 
-*benregistrement des*<br/>
+*bSaving*<br/>
 Indicateur qui indique quelle opération était en cours ; différent de zéro si le document a été enregistré, 0 si le document a été chargé.
 
 *nIDPDefault*<br/>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: ed96d0a88755827bff27255326db8262698fcfb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300403"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc, classe
 
@@ -77,7 +77,7 @@ Connecter votre `COleTemplateServer` objet à vos modèles de document en appela
 
 Pour obtenir un exemple `CWinApp`-dérivée de définition de classe et `InitInstance` de fonction, consultez OCLIENT. H et OCLIENT. CPP dans l’exemple MFC [OCLIENT](../../visual-cpp-samples.md).
 
-Pour plus d’informations sur l’utilisation de `COleLinkingDoc`, consultez les articles [conteneurs : implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md) et [conteneurs : fonctionnalités avancées](../../mfc/containers-advanced-features.md).
+Pour plus d’informations sur l’utilisation de `COleLinkingDoc`, consultez les articles [conteneurs : Implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md) et [conteneurs : Fonctionnalités avancées](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -91,7 +91,7 @@ Pour plus d’informations sur l’utilisation de `COleLinkingDoc`, consultez le
 
 `COleLinkingDoc`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 

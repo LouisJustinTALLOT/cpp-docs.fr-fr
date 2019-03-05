@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455998"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299307"
 ---
 # <a name="overwritebuffer-class"></a>Classe overwrite_buffer
 
@@ -57,7 +57,7 @@ Le type de charge utile des messages stockés et propagés par la mémoire tampo
 |Nom|Description|
 |----------|-----------------|
 |[has_value](#has_value)|Vérifie si cela `overwrite_buffer` bloc de messagerie a déjà une valeur.|
-|[valeur](#value)|Obtient une référence à la charge utile actuelle du message qui est stocké dans le `overwrite_buffer` bloc de messagerie.|
+|[value](#value)|Obtient une référence à la charge utile actuelle du message qui est stocké dans le `overwrite_buffer` bloc de messagerie.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
@@ -92,7 +92,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `overwrite_buffer`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -200,7 +200,7 @@ overwrite_buffer(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Filtre*<br/>
+*_Filter*<br/>
 Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
 
 *_PScheduler*<br/>
@@ -349,5 +349,5 @@ La valeur stockée dans le `overwrite_buffer` peut changer immédiatement après
 ## <a name="see-also"></a>Voir aussi
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
-[unbounded_buffer, classe](unbounded-buffer-class.md)<br/>
+[Classe unbounded_buffer](unbounded-buffer-class.md)<br/>
 [single_assignment, classe](single-assignment-class.md)

@@ -46,16 +46,16 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 238fafee5201ec01e24be21512c73d1b33b706f1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693553"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302089"
 ---
 # <a name="reflected-window-message-ids"></a>ID des messages de fenêtre réfléchis
 
-Il est un moyen rapide de créer un contrôle ActiveX, ou un autre contrôle spécialisé, pour sous-classer une fenêtre. Pour plus d’informations, consultez [contrôles ActiveX MFC : sous-classement d’un contrôle Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Il est un moyen rapide de créer un contrôle ActiveX, ou un autre contrôle spécialisé, pour sous-classer une fenêtre. Pour plus d’informations, consultez [contrôles ActiveX MFC : Sous-classement d’un contrôle Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
 Pour empêcher le conteneur du contrôle de recevoir les messages de fenêtre envoyés par un contrôle Windows sous-classé, [COleControl](../mfc/reference/colecontrol-class.md) crée une fenêtre « reflector » pour intercepter certains messages de fenêtre et les envoyer au contrôle. Le contrôle, dans sa procédure de fenêtre peut ensuite traiter ces messages réfléchis en prenant les mesures appropriées pour un contrôle ActiveX.
 
@@ -76,7 +76,7 @@ Le tableau suivant montre les messages qui sont interceptées et les messages co
 |[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
 |[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM|
 |[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM|
-|[MESSAGES WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
+|[WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
 |[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL|
 |[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
 |[WM_NOTIFY](/windows/desktop/controls/wm-notify)|OCM_NOTIFY|
@@ -86,6 +86,5 @@ Le tableau suivant montre les messages qui sont interceptées et les messages co
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles ActiveX MFC : sous-classement d’un contrôle Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
-[TN062 : réflexion de message pour les contrôles Windows](../mfc/tn062-message-reflection-for-windows-controls.md)
-
+[Contrôles ActiveX MFC : Sous-classement d’un contrôle Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[TN062 : Réflexion de message pour les contrôles Windows](../mfc/tn062-message-reflection-for-windows-controls.md)

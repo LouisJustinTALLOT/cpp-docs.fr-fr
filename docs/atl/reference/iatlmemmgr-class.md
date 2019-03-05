@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: ed1dfd1dc8767b4f198ec6cc8dd626a04800bffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9b6ac6dc265378f617e053bc48ac6030425cef4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596766"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297916"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr, classe
 
@@ -39,7 +39,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 |[allouer](#allocate)|Appelez cette méthode pour allouer un bloc de mémoire.|
 |[Gratuit](#free)|Appelez cette méthode pour libérer un bloc de mémoire.|
 |[GetSize](#getsize)|Appelez cette méthode pour récupérer la taille d’un bloc de mémoire allouée.|
-|[Réallouer](#reallocate)|Appelez cette méthode pour réallouer un bloc de mémoire.|
+|[Reallocate](#reallocate)|Appelez cette méthode pour réallouer un bloc de mémoire.|
 
 ## <a name="remarks"></a>Notes
 
@@ -52,7 +52,7 @@ Cette interface est implémentée par [CComHeap](../../atl/reference/ccomheap-cl
 
 [!code-cpp[NVC_ATL_Utilities#94](../../atl/codesnippet/cpp/iatlmemmgr-class_1.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlmem.h
 
@@ -884,7 +884,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*<br/>
+*pDisp*<br/>
 [in] Un pointeur vers un `IDispatch` interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -901,7 +901,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*<br/>
+*pDisp*<br/>
 [in] Un pointeur vers un `IDocHostUIHandlerDispatch` interface.
 
 ### <a name="return-value"></a>Valeur de retour

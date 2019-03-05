@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: 5cd94ad6d400cf2db60131e822f430f87a129cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548016"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301583"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Ajout d'une classe MFC à partir d'une bibliothèque de types
 
@@ -20,7 +20,7 @@ Utilisez cet Assistant pour créer une classe MFC à partir d’une interface da
 > [!NOTE]
 >  Vous n’avez pas besoin de créer votre projet MFC avec Automation activée pour ajouter une classe à partir d’une bibliothèque de types.
 
-Une bibliothèque de types contient une description binaire des interfaces exposées par un composant, en définissant les méthodes, ainsi que leurs paramètres et les types de retour. Votre bibliothèque de types doit être inscrite pour qu’il apparaisse dans le **bibliothèques de types disponibles** liste dans Ajouter une classe à partir d’une Typelib, Assistant. Consultez « À l’intérieur de Distributed COM : Type de bibliothèques et langue intégration » dans la bibliothèque MSDN pour plus d’informations.
+Une bibliothèque de types contient une description binaire des interfaces exposées par un composant, en définissant les méthodes, ainsi que leurs paramètres et les types de retour. Votre bibliothèque de types doit être inscrite pour qu’il apparaisse dans le **bibliothèques de types disponibles** liste dans Ajouter une classe à partir d’une Typelib, Assistant. Consultez « Inside Distributed COM : Type Libraries and Language Integration » dans MSDN library pour plus d’informations.
 
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Pour ajouter une classe MFC à partir d’une bibliothèque de types
 
@@ -37,5 +37,4 @@ L’Assistant crée une classe MFC, dérivée de [COleDispatchDriver](../../mfc/
 ## <a name="see-also"></a>Voir aussi
 
 [Clients Automation](../../mfc/automation-clients.md)<br/>
-[Clients Automation : utilisation des bibliothèques de types](../../mfc/automation-clients-using-type-libraries.md)
-
+[Clients Automation : À l’aide de bibliothèques de types](../../mfc/automation-clients-using-type-libraries.md)

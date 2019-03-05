@@ -6,12 +6,12 @@ helpviewer_keywords:
 - COM objects, creating in ATL
 - ATL
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
-ms.openlocfilehash: 50cbf5496569485b32eb1b3e9df932c4e8096d0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c2dcab962cd9863acf0f8e7070727f3b18117d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444770"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299255"
 ---
 # <a name="introduction-to-atl"></a>Introduction à ATL
 
@@ -30,4 +30,3 @@ Les sujets abordés dans cette section sont les suivantes :
 ## <a name="see-also"></a>Voir aussi
 
 [Introduction à COM et ATL](../atl/introduction-to-com-and-atl.md)
-

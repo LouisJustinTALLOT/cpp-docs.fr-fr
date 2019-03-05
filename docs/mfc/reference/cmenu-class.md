@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178918"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293860"
 ---
 # <a name="cmenu-class"></a>CMenu (classe)
 
@@ -201,7 +201,7 @@ BOOL AppendMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie les informations sur l’état du nouvel élément de menu lorsqu’il est ajouté au menu. Il se compose d’un ou plusieurs des valeurs répertoriées dans la section Notes.
 
 *nIDNewItem*<br/>
@@ -210,7 +210,7 @@ Spécifie l’ID de commande du nouvel élément de menu ou, si *nIndicateurs* M
 *lpszNewItem*<br/>
 Spécifie le contenu du nouvel élément de menu. Le *nIndicateurs* paramètre est utilisé pour interpréter *lpszNewItem* de la façon suivante :
 
-|nIndicateurs|Interprétation de lpszNewItem|
+|nFlags|Interprétation de lpszNewItem|
 |------------|-----------------------------------|
 |MF_OWNERDRAW|Contient une valeur de 32 bits fournie par l’application que l’application peut utiliser pour mettre à jour les données supplémentaires associées à l’élément de menu. Cette valeur de 32 bits est disponible à l’application lorsqu’elle traite les messages WM_MEASUREITEM et WM_DRAWITEM. La valeur est stockée dans le `itemData` membre de la structure fournie avec ces messages.|
 |MF_STRING|Contient un pointeur vers une chaîne se terminant par null. Il s’agit de l’interprétation par défaut.|
@@ -309,7 +309,7 @@ UINT CheckMenuItem(
 *nIDCheckItem*<br/>
 Spécifie l’élément de menu doit être vérifié, comme déterminé par *nVérifiez*.
 
-*nVérifiez*<br/>
+*nCheck*<br/>
 Spécifie la vérification de l’élément de menu et comment déterminer la position de l’élément dans le menu. Le *nVérifiez* paramètre peut être une combinaison de MF_CHECKED ou MF_UNCHECKED avec indicateurs MF_BYPOSITION ou MF_BYCOMMAND. Ces indicateurs peuvent être combinés à l’aide de l’opérateur OR au niveau du bit. Ils ont les significations suivantes :
 
 - MF_BYCOMMAND Spécifie que le paramètre fournit l’ID de commande de l’élément de menu existant. Il s'agit de la valeur par défaut.
@@ -357,10 +357,10 @@ Spécifie (en tant qu’ID ou offset, en fonction de la valeur de *nIndicateurs*
 *nIDItem*<br/>
 Spécifie (en tant qu’ID ou offset, en fonction de la valeur de *nIndicateurs*) l’élément dans le groupe qui sera vérifié avec un bouton radio.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie l’interprétation de *nIDFirst*, *nIDLast*, et *nIDItem* de la façon suivante :
 
-|nIndicateurs|Interprétation|
+|nFlags|Interprétation|
 |------------|--------------------|
 |MF_BYCOMMAND|Spécifie que le paramètre fournit l’ID de commande de l’élément de menu existant. Il s’agit de la valeur par défaut si aucune MF_BYCOMMAND ou MF_BYPOSITION est définie.|
 |MF_BYPOSITION|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|
@@ -462,10 +462,10 @@ BOOL DeleteMenu(
 *nPosition*<br/>
 Spécifie l’élément de menu qui doit être supprimé, comme déterminé par *nIndicateurs*.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Est utilisé pour interpréter *nPosition* de la façon suivante :
 
-|nIndicateurs|Interprétation de nPosition|
+|nFlags|Interprétation de nPosition|
 |------------|---------------------------------|
 |MF_BYCOMMAND|Spécifie que le paramètre fournit l’ID de commande de l’élément de menu existant. Il s’agit de la valeur par défaut si aucune MF_BYCOMMAND ou MF_BYPOSITION est définie.|
 |MF_BYPOSITION|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|
@@ -794,7 +794,7 @@ UINT GetMenuState(
 *nID*<br/>
 Spécifie l’ID d’élément de menu, comme déterminé par *nIndicateurs*.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie la nature de *nID*. Il peut prendre l’une des valeurs suivantes :
 
 - MF_BYCOMMAND Spécifie que le paramètre fournit l’ID de commande de l’élément de menu existant. Il s'agit de la valeur par défaut.
@@ -856,10 +856,10 @@ Une référence à un `CString` objet devant recevoir la chaîne de menu copié.
 *nMaxCount*<br/>
 Spécifie la longueur maximale (en caractères) de l’étiquette doit être copié. Si l’étiquette est plus longue que le maximum spécifié dans *nMaxCount*, les caractères supplémentaires sont tronqués.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie l’interprétation de la *nIDItem* paramètre. Il peut prendre l’une des valeurs suivantes :
 
-|nIndicateurs|Interprétation de nIDItem|
+|nFlags|Interprétation de nIDItem|
 |------------|-------------------------------|
 |MF_BYCOMMAND|Spécifie que le paramètre fournit l’ID de commande de l’élément de menu existant. Il s’agit de la valeur par défaut si aucune MF_BYCOMMAND ou MF_BYPOSITION est définie.|
 |MF_BYPOSITION|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|
@@ -932,12 +932,12 @@ BOOL InsertMenu(
 *nPosition*<br/>
 Spécifie l’élément de menu avant laquelle le nouvel élément de menu doit être inséré. Le *nIndicateurs* paramètre peut être utilisé pour interpréter *nPosition* comme suit :
 
-|nIndicateurs|Interprétation de nPosition|
+|nFlags|Interprétation de nPosition|
 |------------|---------------------------------|
 |MF_BYCOMMAND|Spécifie que le paramètre fournit l’ID de commande de l’élément de menu existant. Il s’agit de la valeur par défaut si aucune MF_BYCOMMAND ou MF_BYPOSITION est définie.|
 |MF_BYPOSITION|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0. Si *nPosition* est -1, le nouvel élément de menu est ajouté à la fin du menu.|
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie comment *nPosition* est interprété et spécifie des informations sur l’état du nouvel élément de menu lorsqu’il est ajouté au menu. Pour obtenir la liste des indicateurs qui peuvent être définies, consultez le [AppendMenu](#appendmenu) fonction membre. Pour spécifier plusieurs valeurs, utilisez l’opérateur OR au niveau du bit de les combiner avec l’indicateur MF_BYCOMMAND ou MF_BYPOSITION.
 
 *nIDNewItem*<br/>
@@ -946,7 +946,7 @@ Spécifie l’ID de commande du nouvel élément de menu ou, si *nIndicateurs* e
 *lpszNewItem*<br/>
 Spécifie le contenu du nouvel élément de menu. *nIndicateurs* peut être utilisé pour interpréter *lpszNewItem* comme suit :
 
-|nIndicateurs|Interprétation de lpszNewItem|
+|nFlags|Interprétation de lpszNewItem|
 |------------|-----------------------------------|
 |MF_OWNERDRAW|Contient une valeur de 32 bits fournie par l’application que l’application peut utiliser pour mettre à jour les données supplémentaires associées à l’élément de menu. Cette valeur de 32 bits est disponible à l’application dans le `itemData` membre de la structure fournie par le [WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem) et [WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem) messages. Ces messages sont envoyés lorsque l’élément de menu est initialement affiché ou est modifié.|
 |MF_STRING|Contient un pointeur long vers une chaîne se terminant par null. Il s’agit de l’interprétation par défaut.|
@@ -1121,12 +1121,12 @@ BOOL ModifyMenu(
 *nPosition*<br/>
 Spécifie l’élément de menu à modifier. Le *nIndicateurs* paramètre peut être utilisé pour interpréter *nPosition* comme suit :
 
-|nIndicateurs|Interprétation de nPosition|
+|nFlags|Interprétation de nPosition|
 |------------|---------------------------------|
 |MF_BYCOMMAND|Spécifie que le paramètre fournit l’ID de commande de l’élément de menu existant. Il s’agit de la valeur par défaut si aucune MF_BYCOMMAND ou MF_BYPOSITION est définie.|
 |MF_BYPOSITION|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie comment *nPosition* est interprété et donne des informations sur les modifications à apporter à l’élément de menu. Pour obtenir la liste d’indicateurs qui peuvent être définies, consultez le [AppendMenu](#appendmenu) fonction membre.
 
 *nIDNewItem*<br/>
@@ -1135,7 +1135,7 @@ Spécifie l’ID de commande de l’élément de menu modifié ou si *nIndicateu
 *lpszNewItem*<br/>
 Spécifie le contenu du nouvel élément de menu. Le *nIndicateurs* paramètre peut être utilisé pour interpréter *lpszNewItem* comme suit :
 
-|nIndicateurs|Interprétation de lpszNewItem|
+|nFlags|Interprétation de lpszNewItem|
 |------------|-----------------------------------|
 |MF_OWNERDRAW|Contient une valeur de 32 bits fournie par l’application que l’application peut utiliser pour mettre à jour les données supplémentaires associées à l’élément de menu. Cette valeur de 32 bits est disponible à l’application lorsqu’il traite MF_MEASUREITEM et MF_DRAWITEM.|
 |MF_STRING|Contient un pointeur long vers une chaîne se terminant par null ou à un `CString`.|
@@ -1186,7 +1186,7 @@ BOOL operator!=(const CMenu& menu) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Menu*<br/>
+*menu*<br/>
 Un `CMenu` objet pour la comparaison.
 
 ### <a name="remarks"></a>Notes
@@ -1203,7 +1203,7 @@ BOOL operator==(const CMenu& menu) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Menu*<br/>
+*menu*<br/>
 Un `CMenu` objet pour la comparaison.
 
 ### <a name="remarks"></a>Notes
@@ -1225,12 +1225,12 @@ BOOL RemoveMenu(
 *nPosition*<br/>
 Spécifie l’élément de menu à supprimer. Le *nIndicateurs* paramètre peut être utilisé pour interpréter *nPosition* comme suit :
 
-|nIndicateurs|Interprétation de nPosition|
+|nFlags|Interprétation de nPosition|
 |------------|---------------------------------|
 |MF_BYCOMMAND|Spécifie que le paramètre fournit l’ID de commande de l’élément de menu existant. Il s’agit de la valeur par défaut si aucune MF_BYCOMMAND ou MF_BYPOSITION est définie.|
 |MF_BYPOSITION|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie comment *nPosition* est interprétée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1340,12 +1340,12 @@ BOOL SetMenuItemBitmaps(
 *nPosition*<br/>
 Spécifie l’élément de menu à modifier. Le *nIndicateurs* paramètre peut être utilisé pour interpréter *nPosition* comme suit :
 
-|nIndicateurs|Interprétation de nPosition|
+|nFlags|Interprétation de nPosition|
 |------------|---------------------------------|
 |MF_BYCOMMAND|Spécifie que le paramètre fournit l’ID de commande de l’élément de menu existant. Il s’agit de la valeur par défaut si aucune MF_BYCOMMAND ou MF_BYPOSITION est définie.|
 |MF_BYPOSITION|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie comment *nPosition* est interprétée.
 
 *pBmpUnchecked*<br/>
@@ -1415,7 +1415,7 @@ BOOL TrackPopupMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie les indicateurs de position à l’écran et la position de la souris. Consultez [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) pour obtenir la liste des indicateurs disponibles.
 
 *x*<br/>

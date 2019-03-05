@@ -1,5 +1,5 @@
 ---
-title: Iworkerthreadclient, Interface
+title: IWorkerThreadClient Interface
 ms.date: 11/04/2016
 f1_keywords:
 - IWorkerThreadClient
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: 22ea136dd91a514ff10e13cd02b796565b7b0307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fa8a5e42d002260076f737d3d33cfa191ff297a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295277"
 ---
-# <a name="iworkerthreadclient-interface"></a>Iworkerthreadclient, Interface
+# <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient Interface
 
 `IWorkerThreadClient` est l’interface implémentée par les clients de la [CWorkerThread](../../atl/reference/cworkerthread-class.md) classe.
 
@@ -42,7 +42,7 @@ __interface IWorkerThreadClient
 
 Implémentez cette interface lorsque vous avez du code qui doit s’exécuter sur un thread de travail en réponse à un handle ne soit signalé.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlutil.h
 

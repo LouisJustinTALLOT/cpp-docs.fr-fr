@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-ms.openlocfilehash: e677a5d12918649597db9614b965118f8d6b7da6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b7e32ddab5b2f0667b17b0f127ac2e7e5d9a426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656221"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293249"
 ---
 # <a name="csimplearrayequalhelper-class"></a>Csimplearrayequalhelper, classe
 
@@ -43,7 +43,7 @@ Une classe dérivée.
 
 Cette classe de traits constitue un supplément pour le `CSimpleArray` classe. Il fournit une méthode de comparaison de deux éléments stockés dans un `CSimpleArray` objet. Par défaut, les éléments sont comparés à l’aide de **operator=()**, mais si le tableau contient les types de données complexes qui ne disposent pas de leur propre opérateur d’égalité, vous devez substituer cette classe.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsimpcoll.h
 
@@ -59,10 +59,10 @@ static bool IsEqual(
 
 ### <a name="parameters"></a>Paramètres
 
-*T1*<br/>
+*t1*<br/>
 Un objet de type T.
 
-*T2*<br/>
+*t2*<br/>
 Un objet de type T.
 
 ### <a name="return-value"></a>Valeur de retour

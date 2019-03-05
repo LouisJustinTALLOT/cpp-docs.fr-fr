@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 799ec11fd8542a8b30ef3aa95f1a20700c5c9796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444913"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299099"
 ---
 # <a name="cautorevertimpersonation-class"></a>Cautorevertimpersonation, classe
 
@@ -53,7 +53,7 @@ Il est parfois nécessaire d’emprunter l’identité des jetons d’accès. Ce
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -67,7 +67,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*PAT*<br/>
+*pAT*<br/>
 L’adresse de la [CAccessToken](../../atl/reference/caccesstoken-class.md) objet à être rétablis automatiquement
 
 ### <a name="remarks"></a>Notes
@@ -84,14 +84,14 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*PAT*<br/>
+*pAT*<br/>
 L’adresse de la [CAccessToken](../../atl/reference/caccesstoken-class.md) objet à être restauré automatiquement.
 
 ### <a name="remarks"></a>Notes
 
 L’emprunt d’identité réelle du jeton d’accès doit s’effectuer séparément à partir d’et de préférence avant la création d’un `CAutoRevertImpersonation` objet. Cet emprunt d’identité est automatiquement restauré lorsque la `CAutoRevertImpersonation` objet est hors de portée.
 
-##  <a name="dtor"></a>  CAutoRevertImpersonation :: ~ CAutoRevertImpersonation
+##  <a name="dtor"></a>  CAutoRevertImpersonation::~CAutoRevertImpersonation
 
 Détruit l’objet et rétablit le jeton d’emprunt d’identité de l’accès.
 

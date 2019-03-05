@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [Concurrency Runtime]
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
-ms.openlocfilehash: 2307581dc1cda3ed75ee1cea9fc4ff504a0a98b3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d176049bb3b03ae0f55170e45e20e7c2c0e322ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519488"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296408"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>Procédures pas à pas relatives au runtime d'accès concurrentiel
 
@@ -21,25 +21,25 @@ Les rubriques basées sur des scénarios de cette section montrent comment utili
 [Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Montre comment utiliser le [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) et [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces avec des tâches pour envoyer des demandes HTTP GET et POST à un service web dans une application de plateforme universelle Windows (UWP).
 
-[Procédure pas à pas : création d’une application basée sur un agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
+[Procédure pas à pas : création d'une application basée sur des agents](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
 Décrit comment créer une application basée sur un agent de base.
 
-[Procédure pas à pas : création des agents de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Procédure pas à pas : création d’un agent de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
 Montre comment créer des applications basées sur l’agent qui reposent sur le flux de données, au lieu de flux de contrôle.
 
 [Procédure pas à pas : création d’un réseau de traitement d’image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 Montre comment créer un réseau de blocs de messages asynchrones qui effectuent le traitement d’image.
 
-[Procédure pas à pas : implémentation d’objets future](../../parallel/concrt/walkthrough-implementing-futures.md)<br/>
+[Procédure pas à pas : implémentation de tâches futures](../../parallel/concrt/walkthrough-implementing-futures.md)<br/>
 Montre comment calculer des valeurs pour une utilisation ultérieure de façon asynchrone.
 
-[Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)<br/>
+[Procédure pas à pas : Utilisation de jointures pour prévenir les interblocages](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)<br/>
 Utilise le problème dîner des philosophes pour illustrer comment utiliser le [concurrency::join](../../parallel/concrt/reference/join-class.md) classe pour empêcher tout interblocage dans votre application.
 
 [Procédure pas à pas : suppression de travail d’un thread d’interface utilisateur](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 Montre comment améliorer les performances d’une application MFC qui dessine une fractale de Mandelbrot.
 
-[Procédure pas à pas : utilisation du runtime d’accès concurrentiel routage dans une application COM](../../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md)<br/>
+[Procédure pas à pas : utilisation du runtime d'accès concurrentiel dans une application COM](../../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md)<br/>
 Montre comment utiliser le Runtime d’accès concurrentiel dans une application qui utilise le composant COM (Object Model).
 
 [Procédure pas à pas : adaptation d’un code existant pour l’utilisation de tâches légères](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)<br/>
@@ -52,4 +52,3 @@ Décrit comment créer un type de bloc de message personnalisé qui classe les m
 
 [Le runtime d’accès concurrentiel](../../parallel/concrt/concurrency-runtime.md)<br/>
 Présente l’infrastructure de programmation simultanée pour Visual C++.
-

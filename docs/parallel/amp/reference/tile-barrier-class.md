@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 7902ba2315fe348789527e755e124e7fc0ba965f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509052"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301166"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier, classe
 
@@ -41,7 +41,7 @@ class tile_barrier;
 
 |Nom|Description|
 |----------|-----------------|
-|[attente](#wait)|Indique à tous les threads dans le groupe de threads (mosaïque) d’arrêter l’exécution jusqu'à ce que tous les threads dans la mosaïque aient terminé l’attente.|
+|[wait](#wait)|Indique à tous les threads dans le groupe de threads (mosaïque) d’arrêter l’exécution jusqu'à ce que tous les threads dans la mosaïque aient terminé l’attente.|
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les accès mémoire aient été effectués et tous les threads dans la mosaïque aient atteint cet appel.|
 |[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les accès mémoire globaux aient été effectués et que tous les threads dans la mosaïque aient atteint cet appel.|
 |[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous `tile_static` accès mémoire aient été effectués et que tous les threads dans la mosaïque aient atteint cet appel.|
@@ -50,11 +50,11 @@ class tile_barrier;
 
 `tile_barrier`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp.h
 
-**Espace de noms :** Concurrency
+**Espace de noms :** Concurrence
 
 ## <a name="tile_barrier__ctor"></a>  tile_barrier, constructeur
 
@@ -69,10 +69,10 @@ tile_barrier(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `tile_barrier` objet à copier.
 
-## <a name="wait"></a>  attente
+## <a name="wait"></a>  wait
 
 Indique à tous les threads dans le groupe de threads (mosaïque) pour arrêter l’exécution jusqu'à ce que tous les threads dans la mosaïque aient terminé l’attente.
 

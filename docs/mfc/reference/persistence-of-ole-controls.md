@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: e510cdb2ae64b5b3ed5f8b69bc8ad9c22800a167
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8bcba63c8e09873fe7f30e4fd07d652850be1f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609417"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299645"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistance des contrôles OLE
 
@@ -111,7 +111,7 @@ Le nom de la propriété qui est échangé.
 *bValue*<br/>
 Référence à la variable dans laquelle la propriété est stockée (généralement une variable membre de votre classe).
 
-*bNiveau par défaut*<br/>
+*bDefault*<br/>
 Valeur par défaut pour la propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -294,7 +294,7 @@ Pointeur vers le [CPropExchange](../../mfc/reference/cpropexchange-class.md) obj
 *pszPropName*<br/>
 Le nom de la propriété qui est échangé.
 
-*police*<br/>
+*font*<br/>
 Une référence à un `CFontHolder` objet qui contient la propriété de police.
 
 *pFontDesc*<br/>
@@ -374,7 +374,7 @@ Le nom de la propriété qui est échangé.
 *pUnk*<br/>
 Référence à une variable contenant l’interface de l’objet qui représente la valeur de la propriété.
 
-*IID*<br/>
+*iid*<br/>
 Un ID d’interface indiquant quelle interface de l’objet de propriété est utilisée par le contrôle.
 
 *pUnkDefault*<br/>
@@ -452,7 +452,7 @@ Pointeur vers le [CPropExchange](../../mfc/reference/cpropexchange-class.md) obj
 *pszPropName*<br/>
 Le nom de la propriété qui est échangé.
 
-*PICT*<br/>
+*pict*<br/>
 Référence à un [CPictureHolder](../../mfc/reference/cpictureholder-class.md) objet où la propriété est stockée (généralement une variable membre de votre classe).
 
 *pictDefault*<br/>
@@ -637,7 +637,7 @@ BOOL PX_VBXFontConvert(
 *pPX*<br/>
 Pointeur vers le [CPropExchange](../../mfc/reference/cpropexchange-class.md) objet (généralement passé en tant que paramètre à `DoPropExchange`).
 
-*police*<br/>
+*font*<br/>
 La propriété de police du contrôle OLE qui contiendra les propriétés liées à la police VBX converties.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 24a33aafa279f47bcfabd1ac3f3ee8d4abd4c731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 623ce5da46716e3f9a562862fc0375fb8704bb21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297877"
 ---
 # <a name="cfontholder-class"></a>Cfontholder, classe
 
@@ -74,13 +74,13 @@ class CFontHolder
 
 `CFontHolder` n’a pas d’une classe de base.
 
-Utilisez cette classe pour implémenter les propriétés de police personnalisée pour votre contrôle. Pour plus d’informations sur la création de ces propriétés, consultez l’article [contrôles ActiveX : utilisation des polices](../../mfc/mfc-activex-controls-using-fonts.md).
+Utilisez cette classe pour implémenter les propriétés de police personnalisée pour votre contrôle. Pour plus d’informations sur la création de ces propriétés, consultez l’article [contrôles ActiveX : Utilisation des polices](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `CFontHolder`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl.h
 
@@ -162,7 +162,7 @@ Un handle vers l’objet de police ; Sinon, NULL.
 
 Le rapport entre *cyLogical* et *cyHimetric* est utilisée pour calculer la taille d’affichage approprié, en unités logiques, de la taille de police point exprimé en unités MM_HIMETRIC :
 
-Taille d’affichage = ( *cyLogical* / *cyHimetric*) X taille de police
+Display size = ( *cyLogical* / *cyHimetric*) X font size
 
 La version sans paramètres retourne un handle vers une police dimensionnée correctement pour l’écran.
 

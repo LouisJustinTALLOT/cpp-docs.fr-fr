@@ -16,12 +16,12 @@ helpviewer_keywords:
 - run-time class [MFC]
 - RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
-ms.openlocfilehash: 061cc04857b0d1763fb4ee975912bcca1b9d014f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e4f8685033fc7a8a2f49dafa7ef4e4e019d8989
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298826"
 ---
 # <a name="accessing-run-time-class-information"></a>Accès aux informations de classe d'exécution
 
@@ -32,9 +32,9 @@ Cet article explique comment accéder aux informations sur la classe d'un objet 
 
 Si vous avez dérivé votre classe de [CObject](../mfc/reference/cobject-class.md) et utilisé la **DECLARE**_**dynamique** et `IMPLEMENT_DYNAMIC`, le `DECLARE_DYNCREATE` et `IMPLEMENT_DYNCREATE`, ou le `DECLARE_SERIAL` et `IMPLEMENT_SERIAL` macros expliqué dans l’article [dérivant une classe de CObject](../mfc/deriving-a-class-from-cobject.md), la `CObject` classe a la possibilité de déterminer la classe exacte d’un objet au moment de l’exécution.
 
-Cette option est très pratique lorsqu’une vérification de type supplémentaire des arguments de fonction est nécessaire et lorsque vous devez écrire un code spécial en fonction de la classe d’un autre objet. Toutefois, cette pratique n'est généralement pas recommandée car elle duplique les fonctionnalités des fonctions virtuelles.
+Cette option est très pratique lorsqu'une vérification de type supplémentaire des arguments de fonction est nécessaire et lorsque vous devez écrire un code spécial en fonction de la classe d'un autre objet. Toutefois, cette pratique n'est généralement pas recommandée car elle duplique les fonctionnalités des fonctions virtuelles.
 
-La fonction membre `CObject` `IsKindOf` peut permettre de déterminer si un objet particulier appartient à une classe spécifiée ou si elle est dérivée d'une classe spécifique. L'argument pour `IsKindOf` est un objet `CRuntimeClass` que vous pouvez obtenir à l'aide de la macro `RUNTIME_CLASS` avec le nom de la classe.
+La fonction membre `CObject``IsKindOf` peut permettre de déterminer si un objet particulier appartient à une classe spécifiée ou si elle est dérivée d'une classe spécifique. L'argument pour `IsKindOf` est un objet `CRuntimeClass` que vous pouvez obtenir à l'aide de la macro `RUNTIME_CLASS` avec le nom de la classe.
 
 ### <a name="to-use-the-runtimeclass-macro"></a>Pour utiliser la macro RUNTIME_CLASS
 
@@ -64,4 +64,3 @@ Pour plus d’informations sur la sérialisation et les informations de classe d
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CObject](../mfc/using-cobject.md)
-

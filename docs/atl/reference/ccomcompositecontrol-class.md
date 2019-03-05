@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: 370f0bb2fc76e1377dce6ae4616861085ad44562
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1a9a2d0628b3683f047ce9858d809040438db03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429040"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301998"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl, classe
 
@@ -49,7 +49,7 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 |Nom|Description|
 |----------|-----------------|
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|Constructeur.|
-|[CComCompositeControl :: ~ CComCompositeControl](#dtor)|Destructeur.|
+|[CComCompositeControl::~CComCompositeControl](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -98,7 +98,7 @@ Un contrôle implémenté par un `CComCompositeControl`-classe dérivée a inté
 
 `CComCompositeControl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl.h
 
@@ -193,7 +193,7 @@ CComCompositeControl();
 
 Initialise le [CComCompositeControl::m_hbrBackground](#m_hbrbackground) et [CComCompositeControl::m_hWndFocus](#m_hwndfocus) les membres de données avec la valeur NULL.
 
-##  <a name="dtor"></a>  CComCompositeControl :: ~ CComCompositeControl
+##  <a name="dtor"></a>  CComCompositeControl::~CComCompositeControl
 
 Destructeur.
 

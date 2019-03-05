@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: 8ab0d7b8a0eda44adc900884ef5337b22e621806
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c12a58adc846e0db6d7ee23f19984acbcfa861
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297253"
 ---
 # <a name="cwin32heap-class"></a>Classe de CWin32Heap
 
@@ -43,7 +43,7 @@ class CWin32Heap : public IAtlMemMgr
 |Nom|Description|
 |----------|-----------------|
 |[CWin32Heap::CWin32Heap](#cwin32heap)|Constructeur.|
-|[CWin32Heap :: ~ CWin32Heap](#dtor)|Destructeur.|
+|[CWin32Heap::~CWin32Heap](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -77,7 +77,7 @@ Consultez l’exemple de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 `CWin32Heap`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlmem.h
 
@@ -169,7 +169,7 @@ Le paramètre HEAP_NO_SERIALIZE Spécifie que l’exclusion mutuelle ne sera pas
 
 Le troisième paramètre est 0 par défaut, ce qui permet au tas de s'accroître en fonction des besoins. Consultez [HeapCreate](/windows/desktop/api/heapapi/nf-heapapi-heapcreate) pour une explication sur les tailles de mémoire et les indicateurs.
 
-##  <a name="dtor"></a>  CWin32Heap :: ~ CWin32Heap
+##  <a name="dtor"></a>  CWin32Heap::~CWin32Heap
 
 Destructeur.
 

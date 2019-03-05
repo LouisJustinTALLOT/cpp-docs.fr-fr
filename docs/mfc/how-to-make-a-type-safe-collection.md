@@ -1,5 +1,5 @@
 ---
-title: 'Comment : définir une collection de type sécurisé'
+title: 'Procédure : Définir une Collection de Type sécurisé'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type-safe collections [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 12ecec7562a9241fab30b859727a22e467e6eeb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581790"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295186"
 ---
-# <a name="how-to-make-a-type-safe-collection"></a>Comment : définir une collection de type sécurisé
+# <a name="how-to-make-a-type-safe-collection"></a>Procédure : Définir une Collection de Type sécurisé
 
 Cet article explique comment créer des collections de types cohérents pour vos propres types de données. Les rubriques traitées ici sont les suivantes :
 
@@ -81,11 +81,11 @@ Il existe deux manières de créer des collections de types cohérents avec les 
 
    [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-   Cette technique d’utilisation d’un type de collection prédéfini et de la conversion si nécessaire peut être adéquate pour vos besoins en matière de collection. Si vous avez d'une fonctionnalité avancée ou de la cohérence des types, utilisez une classe basée sur un modèle, ou suivez la procédure ci-après.
+   Cette technique d'utilisation d'un type de collection prédéfini et de la conversion si nécessaire peut être adéquate pour vos besoins en matière de collection. Si vous avez d'une fonctionnalité avancée ou de la cohérence des types, utilisez une classe basée sur un modèle, ou suivez la procédure ci-après.
 
 #### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>Pour dériver et étendre une collection de types cohérents non basés sur des modèles
 
-1. Faites dériver votre propre classe de collection de l’une des classes basées sur des modèles prédéfinis.
+1. Faites dériver votre propre classe de collection de l'une des classes basées sur des modèles prédéfinis.
 
    Lorsque vous dérivez votre classe, vous pouvez ajouter des fonctions wrapper de type cohérent pour fournir une interface de type cohérent aux fonctions existantes.
 
@@ -100,4 +100,3 @@ Il existe deux manières de créer des collections de types cohérents avec les 
 ## <a name="see-also"></a>Voir aussi
 
 [Collections](../mfc/collections.md)
-

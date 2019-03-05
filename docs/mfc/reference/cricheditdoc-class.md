@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 8e97b17a3620d75660a5ac2109bc440f8ad27b16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453455"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295134"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc (classe)
 
@@ -67,13 +67,13 @@ Pour obtenir un exemple d’utilisation d’un document RichEdit dans une applic
 
 [COleDocument](../../mfc/reference/coledocument-class.md)
 
-[COleLinkingDoc plutôt](../../mfc/reference/colelinkingdoc-class.md)
+[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)
 
 [COleServerDoc](../../mfc/reference/coleserverdoc-class.md)
 
 `CRichEditDoc`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrich.h
 

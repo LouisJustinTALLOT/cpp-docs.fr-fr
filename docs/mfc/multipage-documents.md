@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295004"
 ---
 # <a name="multipage-documents"></a>Documents multipages
 
@@ -99,11 +99,11 @@ Le [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) fonction membre es
 
 Le [OnPrint](../mfc/reference/cview-class.md#onprint) fonction membre effectue l’impression réelle de la page. L’article [par défaut d’impression procédure](../mfc/how-default-printing-is-done.md) montre comment le framework appelle [OnDraw](../mfc/reference/cview-class.md#ondraw) avec un contexte de périphérique pour effectuer une impression. Plus précisément, le framework appelle `OnPrint` avec une structure `CPrintInfo` et un contexte de périphérique, et `OnPrint` passe le contexte de périphérique à `OnDraw`. Remplacez `OnPrint` pour exécuter un rendu qui doit être effectué uniquement lors de l'impression et pas pour l'affichage à l'écran. Par exemple, pour imprimer les en-têtes ou pieds de page (voir l’article [en-têtes et pieds de page](../mfc/headers-and-footers.md) pour plus d’informations). Ensuite, appelez `OnDraw` de la substitution de `OnPrint` pour effectuer les opérations communes au rendu à l'écran et à l'impression.
 
-Le fait que `OnDraw` génère l'affichage à la fois à l'écran et à l'impression, signifie que votre application est WYSIWYG : "What you see is what you get (vous obtenez ce que vous voyez)". Toutefois, supposons que vous ne développiez pas une application WYSIWYG. Par exemple, prenez le cas d'un éditeur de texte qui utilise une police en gras pour l'impression mais affiche des codes de contrôle pour indiquer le texte en gras sur l'écran. Dans ce type de situation, vous utilisez `OnDraw` strictement pour l'écran. Lorsque vous remplacez `OnPrint`, remplacez l'appel à `OnDraw` par un appel à une fonction de dessin distincte. La fonction dessine le document de la manière dont il apparaît sur le papier, à l'aide des attributs que vous n'affichez pas sur l'écran.
+Le fait que `OnDraw` effectue le rendu à la fois l’écran et à l’impression, signifie que votre application est WYSIWYG : « Ce que vous voyez ce que vous obtenez. » Toutefois, supposons que vous ne développiez pas une application WYSIWYG. Par exemple, prenez le cas d'un éditeur de texte qui utilise une police en gras pour l'impression mais affiche des codes de contrôle pour indiquer le texte en gras sur l'écran. Dans ce type de situation, vous utilisez `OnDraw` strictement pour l'écran. Lorsque vous remplacez `OnPrint`, remplacez l'appel à `OnDraw` par un appel à une fonction de dessin distincte. La fonction dessine le document de la manière dont il apparaît sur le papier, à l'aide des attributs que vous n'affichez pas sur l'écran.
 
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> Vs de Pages d’imprimante. Pages de document
 
-Lorsque vous faites référence à des numéros de page, il est parfois nécessaire de distinguer le concept de page dans le cadre de l'imprimante et le concept de page dans le cadre d'un document. Du point de vue de l'imprimante, une page est une feuille de papier. Toutefois, une feuille de papier n'est pas nécessairement une page du document. Par exemple, si vous imprimez un bulletin d'informations, où les feuilles doivent être pliées, une feuille de papier peut contenir les première et dernière pages du document, côte à côte. De même, si vous imprimez une feuille de calcul, le document ne comprend pas les pages du tout. En revanche, une feuille de papier peut contenir des lignes allant de 1 à 20 et des colonnes de 6 à 10.
+Lorsque vous faites référence à des numéros de page, il est parfois nécessaire de distinguer le concept de page dans le cadre de l'imprimante et le concept de page dans le cadre d'un document. Du point de vue de l'imprimante, une page est une feuille de papier. Toutefois, une feuille de papier n'est pas nécessairement une page du document. Par exemple, si vous imprimez un bulletin d’informations, où les feuilles doivent être pliées, une feuille de papier peut contenir les première et dernière pages du document, côte à côte. De même, si vous imprimez une feuille de calcul, le document ne comprend pas les pages du tout. En revanche, une feuille de papier peut contenir des lignes allant de 1 à 20 et des colonnes de 6 à 10.
 
 Tous les numéros de page dans le [CPrintInfo](../mfc/reference/cprintinfo-structure.md) structure font référence aux pages d’impression. Le framework appelle `OnPrepareDC` et `OnPrint` une fois pour chaque feuille de papier qui transite par l'imprimante. Lorsque vous substituez le [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) de fonction pour spécifier la longueur du document, vous devez utiliser les pages de l’imprimante. Si une correspondance un-à-un est possible (autrement dit, une page d'impression est égale à une page de document), alors le processus est simplifié. Si, en revanche, les pages de documents et d'impression ne correspondent pas directement, vous devez les convertir entre elles. Par exemple, envisagez d'imprimer une feuille de calcul. En remplaçant `OnPreparePrinting`, vous devez calculer le nombre de feuilles de papier nécessaires pour imprimer la feuille de calcul entière, puis utiliser cette valeur en appelant la fonction membre `SetMaxPage` de `CPrintInfo`. De même, lors de la substitution `OnPrepareDC`, vous devez traduire *m_nCurPage* dans la plage de lignes et colonnes qui apparaît sur cette feuille en particulier et ensuite ajuster en conséquence l’origine de la fenêtre d’affichage.
 

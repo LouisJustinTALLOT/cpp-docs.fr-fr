@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-ms.openlocfilehash: 8662a1bc17f84c8a2513a1126b28d676d0939b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0790d9c29b50b1ac454815cd2189e0efb31b9ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474072"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293535"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog, classe
 
@@ -60,7 +60,7 @@ Consultez [mise en œuvre d’une boîte de dialogue](../../atl/implementing-a-d
 
 `CSimpleDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin.h
 

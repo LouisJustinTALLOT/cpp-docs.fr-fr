@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: cc35a4e2de2b29bb6d437dfcbf48ef361fefdfa3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299177"
 ---
 # <a name="transformer-class"></a>Classe transformer
 
@@ -42,7 +42,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 *_Input*<br/>
 Type de charge utile des messages acceptés par la mémoire tampon.
 
-*_Sortie*<br/>
+*_Output*<br/>
 Type de charge utile des messages stockés et propagée à la mémoire tampon.
 
 ## <a name="members"></a>Membres
@@ -51,7 +51,7 @@ Type de charge utile des messages stockés et propagée à la mémoire tampon.
 
 |Nom|Description|
 |----------|-----------------|
-|[transformateur](#ctor)|Surchargé. Construit un bloc de messagerie `transformer` .|
+|[transformer](#ctor)|Surchargé. Construit un bloc de messagerie `transformer` .|
 |[~ transformer, destructeur](#dtor)|Détruit le `transformer` bloc de messagerie.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
@@ -85,7 +85,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `transformer`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -288,7 +288,7 @@ Une fonction qui sera appelée pour chaque message accepté.
 *_PTarget*<br/>
 Pointeur vers un bloc cible à lier avec le transformateur.
 
-*_Filtre*<br/>
+*_Filter*<br/>
 Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
 
 *_PScheduler*<br/>
@@ -305,7 +305,7 @@ Le type `_Transform_method` est un functor avec la signature `_Output (_Input co
 
 Le type `filter_method` est un functor avec la signature `bool (_Input const &)` qui est appelé par ce `transformer` bloc de messagerie pour déterminer s’il doit accepter un message proposé.
 
-##  <a name="dtor"></a> ~ transformateur
+##  <a name="dtor"></a> ~transformer
 
 Détruit le `transformer` bloc de messagerie.
 

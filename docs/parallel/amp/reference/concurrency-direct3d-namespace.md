@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: c99aba319df6f84dbda7b9cf90a1abebdc3757f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570350"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291332"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d, espace de noms
 
@@ -60,7 +60,7 @@ namespace direct3d;
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Retourne un indicateur booléen indiquant si le délai d’attente est désactivé pour l’accelerator_view spécifié.|
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Surchargé. Effectue une opération arithmétique multiplication/addition sur trois arguments : _X \* _Y + _Z|
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Créer un tableau à partir d’un pointeur d’interface de mémoire tampon D3D.|
-|[bruit](concurrency-direct3d-namespace-functions-amp.md#noise)|Génère une valeur aléatoire à l’aide de l’algorithme de bruit de Perlin|
+|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Génère une valeur aléatoire à l’aide de l’algorithme de bruit de Perlin|
 |[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Convertit _X de degrés en radians.|
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcule une réciproque rapide et approximative de l’argument|
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverse l’ordre des bits dans _X|
@@ -71,11 +71,11 @@ namespace direct3d;
 |[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Compare deux valeurs non signées, retournant la valeur est supérieure.|
 |[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Compare deux valeurs non signées, retournant la valeur est inférieure.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp.h
 
-**Espace de noms :** Concurrency
+**Espace de noms :** Concurrence
 
 ## <a name="see-also"></a>Voir aussi
 

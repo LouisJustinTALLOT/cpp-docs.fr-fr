@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 95074860c5fc5bef02852600b51751e9a028465a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c9a6fd31850ed137167b6987ddf2f83f34c64a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555231"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295875"
 ---
 # <a name="security-global-functions"></a>Fonctions globales de sécurité
 
@@ -42,7 +42,7 @@ Ces fonctions prennent en charge la modification des objets de SID et de l’ACL
 |[AtlSetSacl](#atlsetsacl)|Appelez cette fonction pour définir les informations relatives à la liste de contrôle d'accès système (SACL) d'un objet spécifique.|
 |[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Appelez cette fonction pour récupérer le descripteur de sécurité d'un objet donné.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -115,7 +115,7 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 ### <a name="remarks"></a>Notes
 
 Dans les versions debug, une erreur d’assertion se produit si *hObject* n’est pas valide, ou si *dwInheritanceFlowControl* n’est pas une des trois valeurs autorisées.
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -148,7 +148,7 @@ Pointeur vers un `CSid` objet qui contient les nouvelles informations de sécuri
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -181,7 +181,7 @@ Le `CSid` objet contenant les nouvelles informations de sécurité.
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -214,7 +214,7 @@ Pointeur vers un `CSid` objet qui contient les nouvelles informations de sécuri
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -247,7 +247,7 @@ Le `CSid` objet contenant les nouvelles informations de sécurité.
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -288,7 +288,7 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 Si `AtlGetSacl` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* définie sur false.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -335,7 +335,7 @@ Dans les versions debug, une erreur d’assertion se produit si *hObject* n’es
 
 Si `AtlSetSacl` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* définie sur false.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -382,7 +382,7 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 Si `AtlGetSecurityDescriptor` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* définie sur false.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 

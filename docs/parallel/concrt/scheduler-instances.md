@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570168"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301296"
 ---
 # <a name="scheduler-instances"></a>Instances de planificateur
 
@@ -38,7 +38,7 @@ Un thread qui est associé à un planificateur est appelé un *contexte d’exé
 
 En règle générale, la `CurrentScheduler` classe est utilisée pour accéder au planificateur actuel. Le `Scheduler` classe est utile lorsque vous avez besoin gérer un planificateur qui n’est pas celui en cours.
 
-Les sections suivantes décrivent comment créer et gérer une instance du planificateur. Pour obtenir un exemple complet qui illustre ces tâches, consultez [Comment : gérer une Instance de planificateur](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Les sections suivantes décrivent comment créer et gérer une instance du planificateur. Pour obtenir un exemple complet qui illustre ces tâches, consultez [Comment : Gérer une Instance de planificateur](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 [[Haut](#top)]
 
@@ -93,7 +93,7 @@ Le tableau suivant présente les méthodes importantes qui sont définies par le
 
 |Méthode|Description|
 |------------|-----------------|
-|[Créer](reference/currentscheduler-class.md#create)|Crée un `Scheduler` objet qui utilise la stratégie spécifiée et l’associe avec le contexte actuel.|
+|[Create](reference/currentscheduler-class.md#create)|Crée un `Scheduler` objet qui utilise la stratégie spécifiée et l’associe avec le contexte actuel.|
 |[Get](reference/currentscheduler-class.md#get)|Récupère un pointeur vers le `Scheduler` objet qui est associé au contexte actuel. Cette méthode n’incrémente pas le décompte de références le `Scheduler` objet.|
 |[Détacher](reference/currentscheduler-class.md#detach)|Détache le planificateur actuel à partir du contexte actuel et définit le précédent comme planificateur actuel.|
 |[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|Enregistre un événement que le runtime définit lorsque le planificateur actuel est détruit.|
@@ -105,7 +105,7 @@ Le tableau suivant présente les méthodes importantes qui sont définies par le
 
 |Méthode|Description|
 |------------|-----------------|
-|[Créer](reference/scheduler-class.md#create)|Crée un `Scheduler` objet qui utilise la stratégie spécifiée.|
+|[Create](reference/scheduler-class.md#create)|Crée un `Scheduler` objet qui utilise la stratégie spécifiée.|
 |[Attacher](reference/scheduler-class.md#attach)|Associe le `Scheduler` objet au contexte actuel.|
 |[Référence](reference/scheduler-class.md#reference)|Incrémente le compteur de références de le `Scheduler` objet.|
 |[Version release](reference/scheduler-class.md#release)|Décrémente le compteur de références de le `Scheduler` objet.|
@@ -120,12 +120,11 @@ Le tableau suivant présente les méthodes importantes qui sont définies par le
 
 ##  <a name="example"></a> Exemple
 
-Pour obtenir des exemples simples montrant comment créer et gérer une instance de planificateur, consultez [Comment : gérer une Instance de planificateur](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Pour obtenir des exemples simples montrant comment créer et gérer une instance de planificateur, consultez [Comment : Gérer une Instance de planificateur](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Guide pratique pour gérer une instance de planificateur](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
+[Guide pratique pour gérer une instance de Scheduler](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [Stratégies de planificateur](../../parallel/concrt/scheduler-policies.md)<br/>
 [Groupes de planification](../../parallel/concrt/schedule-groups.md)
-

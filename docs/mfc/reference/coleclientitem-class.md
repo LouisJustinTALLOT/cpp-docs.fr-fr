@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678585"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295355"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem, classe
 
@@ -287,7 +287,7 @@ Un élément OLE peut être incorporé ou lié. S’il est incorporé, ses donn�
 
 `COleClientItem` peut être utilisé avec le [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc plutôt](../../mfc/reference/colelinkingdoc-class.md), ou [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) classe. Pour utiliser `COleClientItem`, dérivez une classe à partir de celui-ci et implémenter la [OnChange](#onchange) fonction membre, qui définit la manière dont le conteneur répond aux modifications apportées à l’élément. Pour prendre en charge l’activation sur place, vous devez remplacer le [OnGetItemPosition](#ongetitemposition) fonction membre. Cette fonction fournit des informations sur la position affichée de l’élément OLE.
 
-Pour plus d’informations sur l’utilisation de l’interface du conteneur, consultez les articles [conteneurs : implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md) et [Activation](../../mfc/activation-cpp.md).
+Pour plus d’informations sur l’utilisation de l’interface du conteneur, consultez les articles [conteneurs : Implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md) et [Activation](../../mfc/activation-cpp.md).
 
 > [!NOTE]
 >  Le Kit de développement logiciel Windows fait référence à des éléments liés et incorporés en tant que « objets » et fait référence aux types d’éléments en tant que « classes ». Cette référence utilise le terme « item » pour l’entité OLE distinguer de l’objet C++ correspondant et le terme « type » pour distinguer la catégorie OLE à partir de la classe C++.
@@ -302,7 +302,7 @@ Pour plus d’informations sur l’utilisation de l’interface du conteneur, co
 
 `COleClientItem`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rendu*<br/>
+*render*<br/>
 Indicateur qui spécifie comment le serveur affiche l’élément OLE. Pour les valeurs possibles, consultez [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) dans le SDK Windows.
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Pointeur vers le [COleDataObject](../../mfc/reference/coledataobject-class.md) objet à partir duquel l’élément OLE doit être créé.
 
-*Rendu*<br/>
+*render*<br/>
 Indicateur qui spécifie comment le serveur affiche l’élément OLE. Pour les valeurs possibles, consultez [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) dans le SDK Windows.
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ Pointeur vers le nom du fichier à partir duquel l’élément OLE doit être cr
 *clsid*<br/>
 Réservé à un usage ultérieur.
 
-*Rendu*<br/>
+*render*<br/>
 Indicateur qui spécifie comment le serveur affiche l’élément OLE. Pour les valeurs possibles, consultez [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) dans le SDK Windows.
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rendu*<br/>
+*render*<br/>
 Indicateur qui spécifie comment le serveur affiche l’élément OLE. Pour les valeurs possibles, consultez [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) dans le SDK Windows.
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Pointeur vers le [COleDataObject](../../mfc/reference/coledataobject-class.md) objet à partir duquel l’élément OLE doit être créé.
 
-*Rendu*<br/>
+*render*<br/>
 Indicateur qui spécifie comment le serveur affiche l’élément OLE. Pour les valeurs possibles, consultez [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) dans le SDK Windows.
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Pointeur vers le nom du fichier à partir duquel l’élément OLE doit être créé.
 
-*Rendu*<br/>
+*render*<br/>
 Indicateur qui spécifie comment le serveur affiche l’élément OLE. Pour les valeurs possibles, consultez [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) dans le SDK Windows.
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 ID qui identifie de façon unique le type d’élément OLE à créer.
 
-*Rendu*<br/>
+*render*<br/>
 Indicateur qui spécifie comment le serveur affiche l’élément OLE. Pour les valeurs possibles, consultez [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) dans le SDK Windows.
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rendu*<br/>
+*render*<br/>
 Indicateur qui spécifie comment le serveur affiche l’élément OLE. Pour les valeurs possibles, consultez [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) dans le SDK Windows.
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Pointeur vers le [COleDataObject](../../mfc/reference/coledataobject-class.md) objet à partir duquel l’élément OLE doit être créé.
 
-*Rendu*<br/>
+*render*<br/>
 Indicateur qui spécifie comment le serveur affiche l’élément OLE. Pour les valeurs possibles, consultez [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) dans le SDK Windows.
 
 *cfFormat*<br/>
@@ -1328,13 +1328,13 @@ UINT GetItemState() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `COleClientItem::ItemState` énumérée de valeur, qui peut prendre l’une des opérations suivantes : `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Pour plus d’informations sur ces États, consultez l’article [conteneurs : États d’élément Client](../../mfc/containers-client-item-states.md).
+Un `COleClientItem::ItemState` énumérée de valeur, qui peut prendre l’une des opérations suivantes : `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Pour plus d’informations sur ces États, consultez l’article [conteneurs : États d’élément client](../../mfc/containers-client-item-states.md).
 
 ### <a name="remarks"></a>Notes
 
 Pour être informé de l’état de l’élément OLE change, vous devez utiliser le [OnChange](#onchange) fonction membre.
 
-Pour plus d’informations, consultez l’article [conteneurs : États d’élément Client](../../mfc/containers-client-item-states.md).
+Pour plus d’informations, consultez l’article [conteneurs : États d’élément client](../../mfc/containers-client-item-states.md).
 
 ##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus
 
@@ -1780,7 +1780,7 @@ virtual void OnInsertMenus(
 Pointe vers un menu vide.
 
 *lpMenuWidths*<br/>
-Pointe vers un tableau de six longues valeurs indiquant le nombre de menus est dans chacun des groupes de menus suivants : fichier, Edition, conteneur, objet, fenêtre, aide. Il incombe à l’application de conteneur pour les groupes de menu fichier, conteneur et fenêtre, correspondant aux éléments 0, 2 et 4 de ce tableau.
+Pointe vers un tableau de six longues valeurs indiquant le nombre de menus est dans chacun des groupes de menu suivantes : Fichier, modifier, un conteneur, objet, fenêtre, aide. Il incombe à l’application de conteneur pour les groupes de menu fichier, conteneur et fenêtre, correspondant aux éléments 0, 2 et 4 de ce tableau.
 
 ### <a name="remarks"></a>Notes
 
@@ -2150,7 +2150,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Pointeur vers un [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) structure de données qui contient des informations sur le nouveau périphérique cible à l’impression. Peut être NULL.
 
-*PPD*<br/>
+*ppd*<br/>
 Pointeur vers un [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) structure de données qui contient des informations sur le nouveau périphérique cible à l’impression. Peut être NULL.
 
 ### <a name="return-value"></a>Valeur de retour

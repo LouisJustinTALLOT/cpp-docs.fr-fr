@@ -307,12 +307,12 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-ms.openlocfilehash: 706ba4cdd1a8f9d77857c52898058aa62fcca8c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae35aefefe548990eeb7fbe637839e475036c2bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435488"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300087"
 ---
 # <a name="internal-classes"></a>Classes internes
 
@@ -325,7 +325,7 @@ Les classes suivantes sont utilisées en interne dans MFC. Par souci d'exhaustiv
 |`CCommandManager Class`|Le `CCommandManager` classe gère les commandes et leur association avec des images.|
 |`CDialogImpl Class (MFC)`|Fournit des détails d’implémentation de classes basé sur la boîte de dialogue, tel que `CDialogEx`.|
 |`CDocumentAdapter Class`|Implémente l’interface IDocument requis pour rechercher et organiser les gestionnaires.|
-|`CFrameImpl Class`|Le `CFrameImpl` classe gère la personnalisation de la barre d’outils pour les classes de fenêtre frame suivantes : [cframewndex, classe](../../mfc/reference/cframewndex-class.md), [CMDIFrameWndEx, classe](../../mfc/reference/cmdiframewndex-class.md), et [coleipframewndex, classe](../../mfc/reference/coleipframewndex-class.md).|
+|`CFrameImpl Class`|Le `CFrameImpl` classe gère la personnalisation de la barre d’outils pour les classes de fenêtre frame suivantes : [Cframewndex, classe](../../mfc/reference/cframewndex-class.md), [CMDIFrameWndEx, classe](../../mfc/reference/cmdiframewndex-class.md), et [coleipframewndex, classe](../../mfc/reference/coleipframewndex-class.md).|
 |`CFullScreenImpl Class`|Implémente les fonctionnalités de plein écran communes aux applications SDI et MDI.|
 |`CMDIClientAreaWnd Class`|Le `CMDIClientAreaWnd` est une classe d’assistance qui simplifie l’implémentation des onglets MDI et des groupes avec onglet MDI.|
 |`CMemDC Class`|Une classe d’assistance pour un contexte de périphérique de mémoire. Le contexte de périphérique de mémoire prend en charge le dessin hors écran.|
@@ -412,4 +412,3 @@ Les classes suivantes sont utilisées en interne dans MFC. Par souci d'exhaustiv
 ## <a name="see-also"></a>Voir aussi
 
 [MFC, applications de bureau](../../mfc/mfc-desktop-applications.md)
-

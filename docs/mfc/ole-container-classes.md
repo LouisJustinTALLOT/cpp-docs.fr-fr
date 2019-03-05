@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-ms.openlocfilehash: 518ae4889a2c5d9dae10e5b5cba6845010ba883c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87db824e5ab4daec15870b245ea8341be7442109
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517141"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292552"
 ---
 # <a name="ole-container-classes"></a>Classes de conteneur OLE
 
@@ -30,7 +30,7 @@ Prend en charge de la relation contenant-contenu de document actif.
 [COleDocument](../mfc/reference/coledocument-class.md)<br/>
 Utilisé pour l’implémentation de document composé, ainsi que la prise en charge du conteneur de base. Sert de conteneur pour les classes dérivées de `CDocItem`. Cette classe peut être utilisée comme classe de base pour le conteneur de documents et est la classe de base pour `COleServerDoc`.
 
-[COleLinkingDoc plutôt](../mfc/reference/colelinkingdoc-class.md)<br/>
+[COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
 Une classe dérivée de `COleDocument` qui fournit l’infrastructure de la liaison. Vous devez dériver les classes de document pour vos applications de conteneur à partir de cette classe au lieu de `COleDocument` si vous voulez qu’ils prennent en charge des liens vers des objets incorporés.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
@@ -51,4 +51,3 @@ Une exception résultant d’une défaillance lors du traitement de OLE. Cette c
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
-
