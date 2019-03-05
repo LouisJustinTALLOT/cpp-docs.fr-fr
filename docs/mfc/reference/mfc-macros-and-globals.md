@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-ms.openlocfilehash: 2dfb2c1c5062f742b728ea651a292be84e33f6d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27664d4e48c0c4e09439f9e970ded9f2a630d90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566775"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268185"
 ---
 # <a name="mfc-macros-and-globals"></a>Macros et objet Globals MFC
 
-La bibliothèque Microsoft Foundation Class peut être divisée en deux sections principales : (1) le classes MFC et les macros (2) et les variables globales. Si une fonction ou une variable n’est pas un membre d’une classe, il est une fonction globale ou une variable.
+La bibliothèque Microsoft Foundation Class peut être divisée en deux sections principales : (1) les classes MFC et les macros (2) et les variables globales. Si une fonction ou une variable n’est pas un membre d’une classe, il est une fonction globale ou une variable.
 
 La bibliothèque MFC et la bibliothèque ATL (Active Template) partagent des macros de conversion de chaînes. Pour plus d’informations, consultez [Macros de Conversion de chaînes](../../atl/reference/string-conversion-macros.md) dans la documentation de ATL.
 
@@ -128,4 +128,3 @@ La première partie de cette section décrit chacune des catégories précédent
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../../mfc/class-library-overview.md)
-

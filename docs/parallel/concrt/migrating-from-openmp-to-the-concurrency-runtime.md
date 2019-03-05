@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737622"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259501"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migration d'OpenMP au runtime d'accès concurrentiel
 
@@ -48,17 +48,17 @@ Les cas suivants décrivent lorsqu’il n’est peut-être pas approprié pour l
 
 ## <a name="related-topics"></a>Rubriques connexes
 
-[Guide pratique pour Convertir une boucle utiliser le Runtime d’accès concurrentiel OpenMP parallèle](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Guide pratique pour convertir un parallèle OpenMP pour boucle pour utiliser le runtime d’accès concurrentiel](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Étant donné une boucle de base qui utilise le OpenMP [parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) et [pour](../../parallel/openmp/reference/for-openmp.md) directives, montre comment convertir pour utiliser le Runtime d’accès concurrentiel [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithme.
 
-[Guide pratique pour Convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le Runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[Guide pratique pour convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Étant donné une OpenMP [parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pour](../../parallel/openmp/reference/for-openmp.md) boucle ne nécessitant pas de toutes les itérations à exécuter, montre comment convertir pour utiliser le mécanisme d’annulation de Runtime d’accès concurrentiel.
 
-[Guide pratique pour Convertir une boucle OpenMP qui utilise la gestion des exceptions pour utiliser le Runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+[Guide pratique pour convertir une boucle OpenMP qui a recours à la gestion des exceptions pour utiliser le runtime d'accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Étant donné une OpenMP [parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pour](../../parallel/openmp/reference/for-openmp.md) boucle qui effectue la gestion des exceptions, montre comment convertir pour utiliser le mécanisme de gestion des exceptions de Runtime d’accès concurrentiel.
 
-[Guide pratique pour Convertir une boucle OpenMP qui utilise une Variable de réduction pour utiliser le Runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[Guide pratique pour Convertir une boucle OpenMP qui a recours à une variable de réduction pour utiliser le runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Étant donné une OpenMP [parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pour](../../parallel/openmp/reference/for-openmp.md) boucle qui utilise le [réduction](../../parallel/openmp/reference/reduction.md) clause, montre comment convertir pour utiliser le Runtime d’accès concurrentiel.
 
 ## <a name="see-also"></a>Voir aussi
@@ -67,4 +67,3 @@ Les cas suivants décrivent lorsqu’il n’est peut-être pas approprié pour l
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [Bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)
-

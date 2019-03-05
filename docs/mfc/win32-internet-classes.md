@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Win32 [MFC], Internet classes
 - Windows API [MFC], Internet classes
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
-ms.openlocfilehash: a655759e8e1ffdcfe422305cd39623b9d7a6ca4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c067d0c0067ee13b0e6ce6d84fd97135274c88b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486435"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260554"
 ---
 # <a name="win32-internet-classes"></a>Classes Internet Win32
 
@@ -32,7 +32,7 @@ Gère votre connexion à un serveur Internet.
 [CInternetFile](../mfc/reference/cinternetfile-class.md)<br/>
 Cette classe et ses classes dérivées autorisent l’accès aux fichiers sur des systèmes distants qui utilisent des protocoles Internet.
 
-[Objet CHttpConnection](../mfc/reference/chttpconnection-class.md)<br/>
+[CHttpConnection](../mfc/reference/chttpconnection-class.md)<br/>
 Gère votre connexion à un serveur HTTP.
 
 [CHttpFile](../mfc/reference/chttpfile-class.md)<br/>
@@ -44,7 +44,7 @@ Fournit les fonctionnalités permettant de rechercher et de lire des fichiers su
 [CFtpConnection](../mfc/reference/cftpconnection-class.md)<br/>
 Gère votre connexion à un serveur FTP.
 
-[Objet CGopherConnection](../mfc/reference/cgopherconnection-class.md)<br/>
+[CGopherConnection](../mfc/reference/cgopherconnection-class.md)<br/>
 Gère votre connexion à un serveur gopher.
 
 [CFileFind](../mfc/reference/cfilefind-class.md)<br/>
@@ -56,7 +56,7 @@ Contribue à la recherche des fichiers Internet sur les serveurs FTP.
 [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)<br/>
 Contribue à la recherche des fichiers Internet sur les serveurs Gopher.
 
-[Objet CGopherLocator](../mfc/reference/cgopherlocator-class.md)<br/>
+[CGopherLocator](../mfc/reference/cgopherlocator-class.md)<br/>
 Obtient un localisateur Gopher d'un serveur Gopher, détermine le type du localisateur et rend le localisateur accessible à `CGopherFileFind`.
 
 [CInternetException](../mfc/reference/cinternetexception-class.md)<br/>
@@ -65,4 +65,3 @@ Représente une condition d'exception liée à une opération Internet.
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
-

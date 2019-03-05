@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 63eaa9fe21b9d920aa3615f76be5822194d19b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edfa7a47fa94e659d6529706d04021dfc800c269
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462892"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280119"
 ---
 # <a name="cdacl-class"></a>CDacl, classe
 
@@ -74,7 +74,7 @@ Pour une présentation du modèle de contrôle d’accès dans Windows, consulte
 
 `CDacl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -179,7 +179,7 @@ CDacl () throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Un existant `ACL` structure (liste de contrôle d’accès).
 
 ### <a name="remarks"></a>Notes
@@ -220,7 +220,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 La liste ACL (liste de contrôle d’accès) pour affecter à l’objet existant.
 
 ### <a name="return-value"></a>Valeur de retour

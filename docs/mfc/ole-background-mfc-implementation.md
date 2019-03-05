@@ -1,5 +1,5 @@
 ---
-title: 'Arrière-plan OLE : implémentation MFC'
+title: 'Arrière-plan OLE : Implémentation MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - IMarshall
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476672"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267272"
 ---
-# <a name="ole-background-mfc-implementation"></a>Arrière-plan OLE : implémentation MFC
+# <a name="ole-background-mfc-implementation"></a>Arrière-plan OLE : Implémentation MFC
 
-En raison de la taille et de la complexité de l'API OLE brute, l'appeler directement pour écrire des applications OLE peut prendre beaucoup de temps. L'objectif de l'implémentation de la bibliothèque MFC OLE est de réduire la charge de travail dans l'écriture des applications complètes et de type OLE.
+En raison de la taille et de la complexité de l'API OLE brute, l'appeler directement pour écrire des applications OLE peut prendre beaucoup de temps. L’objectif de l’implémentation de la bibliothèque MFC OLE est de réduire la charge de travail dans l’écriture des applications complètes et de type OLE.
 
 Cet article explique les parties de l'API OLE qui n'ont pas été implémentées dans MFC. La discussion explique également comment ce qui est implémenté mappe à la section OLE du Kit de développement Windows.
 
@@ -35,7 +35,7 @@ IMoniker Interface le `IMoniker` interface est implémentée par la bibliothèqu
 
 Interfaces IUnknown et IMarshal le `IUnknown` interface est implémentée par la bibliothèque de classes mais n’est pas exposée au programmeur. Le `IMarshal` interface n’est pas implémentée par la bibliothèque de classes mais est utilisée en interne. Les serveurs d’automation générés à l’aide de la bibliothèque de classes incorporent déjà des fonctions de marshaling.
 
-Docfiles (fichiers composés) les fichiers composés sont partiellement pris en charge par la bibliothèque de classes. Aucune des fonctions qui manipulent directement les fichiers composés au delà de la création n'est prise en charge. MFC utilise la classe `COleFileStream` pour prendre en charge la manipulation des flux avec les fonctions de fichier standard. Pour plus d’informations, consultez l’article [conteneurs : fichiers composés](../mfc/containers-compound-files.md).
+Docfiles (fichiers composés) les fichiers composés sont partiellement pris en charge par la bibliothèque de classes. Aucune des fonctions qui manipulent directement les fichiers composés au delà de la création n'est prise en charge. MFC utilise la classe `COleFileStream` pour prendre en charge la manipulation des flux avec les fonctions de fichier standard. Pour plus d’informations, consultez l’article [conteneurs : Fichiers composés](../mfc/containers-compound-files.md).
 
 Les serveurs in-Process et gestionnaires d’objets serveurs In-process et gestionnaires d’objets autorisent l’implémentation de données de modification visuelle ou des objets de composant COM (Object Model) dans une bibliothèque de liens dynamiques (DLL). Pour cela, vous pouvez implémenter la DLL en appelant l'API OLE directement. Toutefois, si vous disposez d'un accès en écriture à un serveur Automation et que celui-ci n'offre pas d'interface utilisateur, vous pouvez utiliser AppWizard pour faire de votre serveur un serveur intra-processus et l'intégrer complètement dans une DLL. Pour plus d’informations sur ces sujets, consultez [serveurs Automation](../mfc/automation-servers.md).
 
@@ -47,5 +47,4 @@ Pour plus d’informations sur la façon dont les classes Microsoft Foundation O
 ## <a name="see-also"></a>Voir aussi
 
 [Arrière-plan OLE](../mfc/ole-background.md)<br/>
-[Arrière-plan OLE : stratégies d’implémentation](../mfc/ole-background-implementation-strategies.md)
-
+[Arrière-plan OLE : Stratégies d’implémentation](../mfc/ole-background-implementation-strategies.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-ms.openlocfilehash: 247013322925ad6fe246b079bcff7e0521e5561d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06baa4dac3248d783648b8ce37e51250e0de2498
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551643"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269303"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl, classe
 
@@ -60,7 +60,7 @@ Pour plus d’informations sur l’utilisation de points de connexion dans ATL, 
 
 `IConnectionPointContainerImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 

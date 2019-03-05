@@ -8,12 +8,12 @@ helpviewer_keywords:
 - I/O [MFC], options
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
-ms.openlocfilehash: 1144337df9657d63c53a13e03cf31eb487ce4068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585456"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261964"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Recommandations relatives à la gestion des entrées/sorties
 
@@ -25,9 +25,9 @@ L’utilisation d’E/S basées sur des fichiers dépend de la façon dont vous 
 
      **L’application lit le fichier entier en mémoire sur le fichier ouvert et réécrire la totalité du fichier sur le disque sur l’enregistrement du fichier**
 
-   - Oui, c'est le cas par défaut des documents MFC. Utilisez `CDocument` sérialisation.
+   - Oui : C’est le cas de document MFC par défaut. Utilisez `CDocument` sérialisation.
 
-   - Non, c’est généralement le cas de la mise à jour basée sur des transactions du fichier. Vous mettez à jour le fichier sur une base par transaction et que vous n’avez pas besoin `CDocument` sérialisation.
+   - non : C’est généralement le cas de mise à jour basée sur les transactions du fichier. Vous mettez à jour le fichier sur une base par transaction et que vous n’avez pas besoin `CDocument` sérialisation.
 
 - Non, les données principales ne résident pas dans un fichier sur disque :
 
@@ -43,10 +43,10 @@ L’utilisation d’E/S basées sur des fichiers dépend de la façon dont vous 
 
          In such cases, you won't use serialization, and your application won't have Open and Save menu items. You might still want to use a `CDocument` as a home base, just as an MFC ODBC application uses the document to store `CRecordset` objects. But you won't use the framework's default File Open/Save document serialization.
 
-Pour prendre en charge les commandes Ouvrir, Enregistrer et Enregistrer sous du menu Fichier, le framework fournit la sérialisation de document. La sérialisation lit et écrit des données, y compris les objets dérivés de la classe `CObject`, dans le stockage permanent, normalement un fichier sur disque. La sérialisation est facile à utiliser et répond à plusieurs de vos besoins, mais elle peut être inappropriée dans de nombreuses applications d'accès aux données. Les applications d'accès aux données mettent généralement à jour les données pour chaque transaction. Elles mettent à jour les enregistrements concernés par la transaction au lieu de lire et d’écrire un fichier de données entier en une seule fois.
+Pour prendre en charge les commandes Ouvrir, Enregistrer et Enregistrer sous du menu Fichier, le framework fournit la sérialisation de document. La sérialisation lit et écrit des données, y compris les objets dérivés de la classe `CObject`, dans le stockage permanent, normalement un fichier sur disque. La sérialisation est facile à utiliser et répond à plusieurs de vos besoins, mais elle peut être inappropriée dans de nombreuses applications d'accès aux données. Les applications d’accès aux données mettent généralement à jour les données pour chaque transaction. Elles mettent à jour les enregistrements concernés par la transaction au lieu de lire et d'écrire un fichier de données entier en une seule fois.
 
 Pour plus d’informations sur la sérialisation, consultez [sérialisation](../mfc/serialization-in-mfc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sérialisation : sérialisation et Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md)
+[Sérialisation : Visual Studio de sérialisation. Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md)

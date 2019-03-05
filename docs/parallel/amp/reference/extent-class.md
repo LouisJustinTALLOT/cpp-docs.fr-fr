@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476651"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270187"
 ---
 # <a name="extent-class-c-amp"></a>extent, classe (C++ AMP)
 
@@ -35,11 +35,11 @@ class extent;
 *_Rank*<br/>
 Le rang de le `extent` objet.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp.h
 
-**Espace de noms :** Concurrency
+**Espace de noms :** Concurrence
 
 ## <a name="members"></a>Membres
 
@@ -53,9 +53,9 @@ Le rang de le `extent` objet.
 
 |Nom|Description|
 |----------|-----------------|
-|[contient](#contains)|Vérifie que le texte spécifié `extent` objet a le rang spécifié.|
+|[contains](#contains)|Vérifie que le texte spécifié `extent` objet a le rang spécifié.|
 |[size](#size)|Retourne la taille totale linéaire de l’étendue (en unités d’éléments).|
-|[vignette](#tile)|Génère un `tiled_extent` objet avec les étendues de mosaïque donnée par les dimensions spécifiées.|
+|[tile](#tile)|Génère un `tiled_extent` objet avec les étendues de mosaïque donnée par les dimensions spécifiées.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -119,7 +119,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 
 ### <a name="parameters"></a>Paramètres
 
-*_ARRAY*<br/>
+*_Array*<br/>
 Un tableau de `_Rank` entiers qui est utilisé pour créer la nouvelle `extent` objet.
 
 *_I*<br/>
@@ -134,7 +134,7 @@ La longueur de la dimension suivant-à-plus significatif.
 *_I2*<br/>
 La longueur de la dimension la moins significative.
 
-*_Autre*<br/>
+*_Other*<br/>
 Un `extent` objet sur lequel la nouvelle `extent` objet est basé.
 
 ## <a name="remarks"></a>Notes
@@ -143,7 +143,7 @@ Le constructeur sans paramètre initialise un `extent` objet ayant un rang de tr
 
 Si un tableau est utilisé pour construire un `extent` de l’objet, la longueur du tableau doit correspondre au rang de le `extent` objet.
 
-##  <a name="operator_mod_eq"></a> % de l’opérateur =
+##  <a name="operator_mod_eq"></a> operator%=
 
 Calcule le modulo (reste) de chaque élément dans le « étendue » lorsque cet élément est divisé par un nombre.
 
@@ -162,7 +162,7 @@ Nombre à trouver le modulo de.
 
 Objet `extent`.
 
-##  <a name="operator_star_eq"></a> opérateur * =
+##  <a name="operator_star_eq"></a> operator*=
 
 Multiplie chaque élément dans l’objet « étendue » par le nombre spécifié.
 
@@ -215,7 +215,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 
 Pour l’opérateur de préfixe, le `extent` objet (`*this`). Pour l’opérateur de suffixe, un nouveau `extent` objet.
 
-##  <a name="operator_add_eq"></a> opérateur +=
+##  <a name="operator_add_eq"></a> operator+=
 
 Ajoute le nombre spécifié pour chaque élément de l’objet « étendue ».
 
@@ -270,7 +270,7 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 
 Pour l’opérateur de préfixe, le `extent` objet (`*this`). Pour l’opérateur de suffixe, un nouveau `extent` objet.
 
-##  <a name="operator_div_eq"></a> / =, opérateur
+##  <a name="operator_div_eq"></a> operator/=
 
 Divise chaque élément dans l’objet « étendue » par le nombre spécifié.
 
@@ -289,7 +289,7 @@ Nombre à diviser par.
 
 Objet `extent`.
 
-##  <a name="operator_min_eq"></a> opérateur =
+##  <a name="operator_min_eq"></a> operator-=
 
 Soustrait le nombre spécifié de chaque élément de l’objet « étendue ».
 
@@ -310,7 +310,7 @@ Nombre à soustraire.
 
 Objet `extent` obtenu.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Copie le contenu d’un autre objet « étendue » dans celle-ci.
 
@@ -322,7 +322,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `extent` objet à copier.
 
 ### <a name="return-value"></a>Valeur de retour

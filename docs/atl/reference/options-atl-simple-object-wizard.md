@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650502"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273390"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Options, Assistant Objet simple ATL
 
@@ -28,8 +28,8 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consultez
    |Option|Description|
    |------------|-----------------|
    |**Single**|Spécifie que l’objet s’exécute toujours dans le thread COM principal. Consultez [Single-Threaded Apartments](/windows/desktop/com/single-threaded-apartments) et [InprocServer32](/windows/desktop/com/inprocserver32) pour plus d’informations.|
-   |**Cloisonnement**|Spécifie que l’objet utilise le modèle de thread cloisonné. Cloisonnement de threads équivalent au seul. Chaque objet d’un composant avec thread cloisonné se voit assigner un cloisonnement pour son thread, pour la durée de vie de l’objet ; Toutefois, plusieurs threads peuvent être utilisés pour plusieurs objets. Chaque cloisonnement est lié à un thread spécifique et possède une pompe de messages Windows (valeur par défaut).<br /><br /> Consultez [Single-Threaded Apartments](/windows/desktop/com/single-threaded-apartments) pour plus d’informations.|
-   |**Les deux**|Spécifie que l’objet peut utiliser soit cloisonné ou libre, selon le type d’un thread est créé.|
+   |**Apartment**|Spécifie que l’objet utilise le modèle de thread cloisonné. Cloisonnement de threads équivalent au seul. Chaque objet d’un composant avec thread cloisonné se voit assigner un cloisonnement pour son thread, pour la durée de vie de l’objet ; Toutefois, plusieurs threads peuvent être utilisés pour plusieurs objets. Chaque cloisonnement est lié à un thread spécifique et possède une pompe de messages Windows (valeur par défaut).<br /><br /> Consultez [Single-Threaded Apartments](/windows/desktop/com/single-threaded-apartments) pour plus d’informations.|
+   |**Both**|Spécifie que l’objet peut utiliser soit cloisonné ou libre, selon le type d’un thread est créé.|
    |**Gratuit**|Spécifie que l’objet utilise le modèle de thread libre. Ce qui équivaut à un modèle de cloisonnement multithread. Consultez [multithreads cloisonnés](/windows/desktop/com/multithreaded-apartments) pour plus d’informations.|
    |**Neutral**|Spécifie que l’objet suit les indications des multithreads cloisonnés, mais il peut s’exécuter sur n’importe quel type de thread.|
 
@@ -41,7 +41,7 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consultez
    |------------|-----------------|
    |**Oui**|Spécifie que l’objet peut être agrégé. Valeur par défaut.|
    |**Non**|Spécifie que l’objet n’est pas agrégée.|
-   |**Uniquement**|Spécifie que l’objet doit être agrégée.|
+   |**Only**|Spécifie que l’objet doit être agrégée.|
 
 - **Interface**
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consultez
 
    |Option|Description|
    |------------|-----------------|
-   |**Double**|Spécifie que l’objet prend en charge une interface double (son vtable dispose des fonctions d’interface personnalisés, ainsi que la liaison tardive `IDispatch` méthodes). Permet les deux clients COM et [contrôleurs Automation](../../mfc/automation-clients.md) accéder à l’objet. Valeur par défaut.|
+   |**Dual**|Spécifie que l’objet prend en charge une interface double (son vtable dispose des fonctions d’interface personnalisés, ainsi que la liaison tardive `IDispatch` méthodes). Permet les deux clients COM et [contrôleurs Automation](../../mfc/automation-clients.md) accéder à l’objet. Valeur par défaut.|
    |**Personnalisé**|Spécifie que l’objet prend en charge une interface personnalisée (son vtable a des fonctions d’interface personnalisées). Une interface personnalisée peut être plus rapide qu’une interface double, en particulier les limites du processus.<br /><br /> - **Compatible Automation** contrôleurs Automation permet d’accéder à un objet qui possède la prise en charge de l’interface personnalisée.|
 
 - **Prise en charge**
@@ -68,4 +68,3 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consultez
 [Assistant Objet simple ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [Objet simple ATL](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [Problèmes liés aux threads de serveur in-Process](/windows/desktop/com/in-process-server-threading-issues)
-

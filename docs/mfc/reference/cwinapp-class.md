@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178939"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264671"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -549,7 +549,7 @@ virtual int DoMessageBox(
 *lpszPrompt*<br/>
 Adresse de texte dans la boîte de message.
 
-*%nLes*<br/>
+*nType*<br/>
 La boîte de message [style](../../mfc/reference/styles-used-by-mfc.md#message-box-styles).
 
 *nIDPrompt*<br/>
@@ -650,7 +650,7 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si l’interaction avec la barre des tâches Windows 7 doit être activée (TRUE) ou désactivé (FALSE).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -824,7 +824,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 Une référence à une valeur POSITION retournée par un appel précédent à `GetNextDocTemplate` ou [fonctions membres GetFirstDocTemplatePosition](#getfirstdoctemplateposition). La valeur est mise à jour à la position suivante par cet appel.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -887,7 +887,7 @@ Pointe vers une chaîne se terminant par null qui contient l’entrée dont la v
 *ppData*<br/>
 Pointe vers un pointeur qui reçoit l’adresse des données.
 
-*Pétaoctets*<br/>
+*pBytes*<br/>
 Pointe vers un UINT qui reçoit la taille des données (en octets).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -929,7 +929,7 @@ Pointe vers une chaîne se terminant par null qui spécifie la section contenant
 *lpszEntry*<br/>
 Pointe vers une chaîne se terminant par null qui contient l’entrée dont la valeur doit être récupéré.
 
-*nParamètre par défaut*<br/>
+*nDefault*<br/>
 Spécifie la valeur par défaut pour retourner si l’entrée est introuvable dans le framework.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1307,15 +1307,15 @@ Pour activer le Gestionnaire de redémarrage, définissez `m_dwRestartManagerSup
 |-|-|
 |Indicateur|Description|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|L’application est inscrite à l’aide de [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). Le Gestionnaire de redémarrage est responsable de la redémarrer l’application si elle ferme de façon inattendue.|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|L’application est inscrite avec le Gestionnaire de redémarrage et le Gestionnaire de redémarrage appelle la fonction de rappel de récupération lorsqu’elle redémarre l’application. La fonction de rappel de récupération par défaut est [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Enregistrement automatique est activé et le Gestionnaire de redémarrage enregistre automatiquement les documents ouverts lorsque l’application redémarre.|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Enregistrement automatique est activé et le Gestionnaire de redémarrage enregistre automatiquement les ouvrir des documents à intervalles réguliers. L’intervalle est défini par [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
-|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|Le Gestionnaire de redémarrage s’ouvre des documents précédemment ouverts après le redémarrage de l’application à partir d’une sortie inattendu. Le [cdatarecoveryhandler, classe](../../mfc/reference/cdatarecoveryhandler-class.md) gère le stockage de la liste des documents ouverts et leur restauration.|
-|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Le Gestionnaire de redémarrage invite l’utilisateur à restaurer les fichiers enregistrée automatiquement après le redémarrage de l’application. Le `CDataRecoveryHandler` classe interroge l’utilisateur.|
-|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|L’union de AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_SUPPORT_RECOVER et AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|L’union de AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL et AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|L’union de AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES et AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|L’union ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES et AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY|L’application est inscrite avec le Gestionnaire de redémarrage et le Gestionnaire de redémarrage appelle la fonction de rappel de récupération lorsqu’elle redémarre l’application. La fonction de rappel de récupération par défaut est [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Enregistrement automatique est activé et le Gestionnaire de redémarrage enregistre automatiquement les documents ouverts lorsque l’application redémarre.|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Enregistrement automatique est activé et le Gestionnaire de redémarrage enregistre automatiquement les ouvrir des documents à intervalles réguliers. L’intervalle est défini par [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
+|- AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|Le Gestionnaire de redémarrage s’ouvre des documents précédemment ouverts après le redémarrage de l’application à partir d’une sortie inattendu. Le [cdatarecoveryhandler, classe](../../mfc/reference/cdatarecoveryhandler-class.md) gère le stockage de la liste des documents ouverts et leur restauration.|
+|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Le Gestionnaire de redémarrage invite l’utilisateur à restaurer les fichiers enregistrée automatiquement après le redémarrage de l’application. Le `CDataRecoveryHandler` classe interroge l’utilisateur.|
+|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|L’union de AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_SUPPORT_RECOVER et AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|L’union de AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL et AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|L’union de AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES et AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|L’union ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES et AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
 
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType
 
@@ -2329,7 +2329,7 @@ Pointe vers une chaîne se terminant par null qui spécifie la section contenant
 *lpszEntry*<br/>
 Pointe vers une chaîne se terminant par null qui contient l’entrée dans laquelle la valeur doit être écrite. Si l’entrée n’existe pas dans la section spécifiée, il est créé.
 
-*%n%nValeur*<br/>
+*nValue*<br/>
 Contient la valeur à écrire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2395,4 +2395,4 @@ Spécifie l’ID de modèle d’Application utilisateur.
 
 [CWinThread, classe](../../mfc/reference/cwinthread-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[Comment : Ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md)
+[Guide pratique pour Ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md)

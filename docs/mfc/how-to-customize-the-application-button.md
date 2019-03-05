@@ -1,17 +1,17 @@
 ---
-title: 'Comment : personnaliser le bouton Application'
+title: 'Procédure : Personnaliser le bouton d’Application'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d45ceaf1cce21f77871e966e0e8f525f95cb4c37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175325"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269531"
 ---
-# <a name="how-to-customize-the-application-button"></a>Comment : personnaliser le bouton Application
+# <a name="how-to-customize-the-application-button"></a>Procédure : Personnaliser le bouton d’Application
 
 Lorsque vous cliquez sur le bouton d’Application, un menu de commandes s’affiche. En règle générale, le menu contient des commandes relatives aux fichiers tels que **Open**, **enregistrer**, **impression**, et **Exit**.
 
@@ -46,7 +46,7 @@ Le tableau suivant définit les propriétés du bouton d’Application.
 |**MRU Caption**|Spécifie le texte affiché dans le volet liste récente.|
 |**Petites Images**|Spécifie l’identificateur de l’image qui contient une série d’icônes 16 x 16. Les icônes sont utilisées par les boutons dans la collection de boutons.|
 |**Utilisation**|Active ou désactive le volet liste récente. Le panneau de liste récente s’affiche dans le menu de l’Application.|
-|**Largeur**|Spécifie la largeur en pixels du panneau liste récente.|
+|**Width**|Spécifie la largeur en pixels du panneau liste récente.|
 
 Le menu de l’Application n’apparaît pas sur l’aire de conception. Pour l’afficher, vous devez afficher un aperçu du ruban ou exécuter l’application.
 

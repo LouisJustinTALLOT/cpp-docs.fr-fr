@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 18641c6e25aaccd6b5d0bcbbddbf8fc73b2a3c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525799"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276978"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Mise à niveau d'un contrôle ActiveX
 
@@ -28,7 +28,7 @@ Contrôles ActiveX existant (anciennement contrôles OLE) peut être utilisé su
 
 Lorsque vous utilisez votre contrôle sur une page Web, il existe des considérations supplémentaires. Le fichier .ocx et tous les fichiers de prise en charge doivent se trouver sur l’ordinateur cible ou être téléchargés sur Internet. Cela rend la taille du code et un aspect important de temps de téléchargement. Téléchargements peuvent être empaquetés dans un fichier .cab signé. Vous pouvez marquer votre contrôle comme sûrs pour l’écriture de scripts et l’initialisation.
 
-Cet article aborde les rubriques suivantes :
+Cet article traite des sujets suivants :
 
 - [Empaqueter le Code pour le téléchargement](#_core_packaging_code_for_downloading)
 
@@ -42,7 +42,7 @@ Cet article aborde les rubriques suivantes :
 
 - [Niveaux de sécurité du navigateur Internet Explorer et de contrôler le comportement](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
 
-Vous pouvez également ajouter des optimisations, comme décrit dans [contrôles ActiveX : optimisation](../mfc/mfc-activex-controls-optimization.md). Monikers peuvent être utilisées pour télécharger des propriétés et des objets BLOB volumineux en mode asynchrone, comme décrit dans [contrôles ActiveX sur Internet](../mfc/activex-controls-on-the-internet.md).
+Vous pouvez également ajouter des optimisations, comme décrit dans [contrôles ActiveX : Optimisation](../mfc/mfc-activex-controls-optimization.md). Monikers peuvent être utilisées pour télécharger des propriétés et des objets BLOB volumineux en mode asynchrone, comme décrit dans [contrôles ActiveX sur Internet](../mfc/activex-controls-on-the-internet.md).
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Empaqueter le Code pour le téléchargement
 
@@ -220,7 +220,7 @@ Pour utiliser un contrôle sous licence dans une page HTML sur un ordinateur san
 </OBJECT>
 ```
 
-Pour plus d’informations sur les licences de contrôle, consultez [contrôles ActiveX : gestion des licences un contrôle ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).
+Pour plus d’informations sur les licences de contrôle, consultez [contrôles ActiveX : Licences des contrôles ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).
 
 ##  <a name="_core_signing_code"></a> Signature du Code
 
@@ -274,5 +274,4 @@ Un navigateur a des options de niveau de sécurité configurable par l’utilisa
 
 [Tâches de programmation Internet MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Notions de base de la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)<br/>
-[Contrôles ActiveX MFC : gestion des licences d’un contrôle ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
-
+[Contrôles ActiveX MFC : Licences des contrôles ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

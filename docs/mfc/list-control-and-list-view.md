@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-ms.openlocfilehash: 9d57e1a3370b1b868178ac9e7e40ea97bce6e3c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c9612a22eab27d568c0dbb86d29ba031fe5985e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440454"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275920"
 ---
 # <a name="list-control-and-list-view"></a>Contrôle de liste et vue Liste
 
@@ -41,4 +41,3 @@ Cette rubrique décrit les deux façons d’utiliser le contrôle de liste.
 
 [Utilisation de CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

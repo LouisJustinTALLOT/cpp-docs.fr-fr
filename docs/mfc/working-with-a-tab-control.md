@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [MFC], working with
 - tab controls [MFC], using
 ms.assetid: 819488e3-4944-44b7-9483-195edb8e0aed
-ms.openlocfilehash: faf6494fe9a1d7e5a089c4bea91b8cc4abdc590d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ff4d57f9968f79a964a57b26fc79d68245c1a3e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470809"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262959"
 ---
 # <a name="working-with-a-tab-control"></a>Utilisation d'un contrôle Tab
 
@@ -29,4 +29,3 @@ Si l’objet de contrôle d’onglet est incorporé dans une classe de vue ou de
 
 [Utilisation de CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

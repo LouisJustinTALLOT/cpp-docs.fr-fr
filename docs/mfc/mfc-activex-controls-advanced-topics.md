@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ActiveX MFC : rubriques avancées'
+title: 'Contrôles ActiveX MFC : Rubriques avancées'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 607fd1c0ee5ae35f46ef26584f7f8e3ac2f1c32f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645586"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277324"
 ---
-# <a name="mfc-activex-controls-advanced-topics"></a>Contrôles ActiveX MFC : rubriques avancées
+# <a name="mfc-activex-controls-advanced-topics"></a>Contrôles ActiveX MFC : Rubriques avancées
 
 Cet article couvre les rubriques avancées relatifs au développement de contrôles ActiveX. Elles incluent notamment :
 
@@ -130,7 +130,7 @@ Pour indiquer le type d’erreur qui s’est produite, le contrôle doit passer 
 |CTL_E_PERMISSIONDENIED|Autorisation refusée|
 |CTL_E_DISKNOTREADY|Disque non prêt|
 |CTL_E_PATHFILEACCESSERROR|Erreur dans le chemin d’accès|
-|CTL_E_PATHNOTFOUND|Chemin d’accès introuvable|
+|CTL_E_PATHNOTFOUND|Chemin d'accès introuvable|
 |CTL_E_INVALIDPATTERNSTRING|Chaîne de modèle non valide|
 |CTL_E_INVALIDUSEOFNULL|Utilisation incorrecte de NULL|
 |CTL_E_INVALIDFILEFORMAT|Format de fichier non valide|
@@ -174,7 +174,7 @@ Vous pouvez créer des contrôles de boîte de dialogue qui n’ont aucune inter
 
 - À l’aide de l’Assistant Ajout de membre Variable, sélectionnez **contrôle Variable** , puis ID. du contrôle Entrez un nom de variable de membre et sélectionnez la classe du contrôle wrapper en tant que le **Type de contrôle**.
 
-     - ou -
+     ou
 
 - Déclarez une variable locale et une sous-classe en tant que l’élément de boîte de dialogue. Insérer du code qui ressemble à celui-ci (`CMyCtrl` est la classe wrapper, IDC_MYCTRL1 est l’ID du contrôle) :
 
@@ -183,4 +183,3 @@ Vous pouvez créer des contrôles de boîte de dialogue qui n’ont aucune inter
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

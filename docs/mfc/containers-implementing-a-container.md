@@ -1,18 +1,18 @@
 ---
-title: "Conteneurs : implémentation d'un conteneur"
+title: 'Conteneurs : Implémentation d’un conteneur'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271422"
 ---
-# <a name="containers-implementing-a-container"></a>Conteneurs : implémentation d'un conteneur
+# <a name="containers-implementing-a-container"></a>Conteneurs : Implémentation d’un conteneur
 
 Cet article résume la procédure permettant d'implémenter un conteneur et vous présente d'autres articles qui fournissent des explications détaillées sur l'implémentation des conteneurs. Il répertorie également des fonctionnalités OLE optionnelles que vous pouvez souhaiter implémenter et les articles décrivant ces fonctionnalités.
 
@@ -22,7 +22,7 @@ Cet article résume la procédure permettant d'implémenter un conteneur et vous
 
 1. Appelez `CDocTemplate::SetContainerInfo` dans `InitInstance` pour affecter le menu et les ressources accélératrices utilisés lorsqu'un élément incorporé est activé en place. Pour plus d’informations sur ce sujet, consultez [Activation](../mfc/activation-cpp.md).
 
-Ces fonctionnalités sont fournies automatiquement lorsque vous utilisez l’Assistant Application MFC pour créer une application conteneur. Consultez [création d’un programme EXE MFC](../mfc/reference/mfc-application-wizard.md).
+Ces fonctionnalités sont fournies automatiquement lorsque vous utilisez l'Assistant Application MFC pour créer une application conteneur. Consultez [création d’un programme EXE MFC](../mfc/reference/mfc-application-wizard.md).
 
 #### <a name="to-prepare-your-view-class"></a>Pour préparer votre classe d'affichage
 
@@ -36,7 +36,7 @@ Ces fonctionnalités sont fournies automatiquement lorsque vous utilisez l’Ass
 
 1. Implémenter un gestionnaire de messages `OnSize` pour indiquer à un élément incorporé OLE qu'il doit modifier son rectangle pour refléter les modifications de taille de la vue conteneur.
 
-Étant donné que l'implémentation de ces fonctionnalités varie excessivement d'une application à l'autre, l'application ne fournit qu'une implémentation de base. Vous devrez vraisemblablement personnaliser ces fonctions pour que l'application fonctionne correctement. Pour obtenir un exemple de cela, consultez le [conteneur](../visual-cpp-samples.md) exemple.
+Étant donné que l’implémentation de ces fonctionnalités varie excessivement d’une application à l’autre, l’application ne fournit qu’une implémentation de base. Vous devrez vraisemblablement personnaliser ces fonctions pour que l'application fonctionne correctement. Pour obtenir un exemple de cela, consultez le [conteneur](../visual-cpp-samples.md) exemple.
 
 #### <a name="to-handle-embedded-and-linked-items"></a>Pour traiter des éléments incorporés et liés
 
@@ -46,7 +46,7 @@ Ces fonctionnalités sont fournies automatiquement lorsque vous utilisez l’Ass
 
 L’Assistant application dérivera la classe pour vous, mais vous aurez probablement besoin de substituer `OnChange` et les autres fonctions répertoriées à l’étape 2 dans la procédure précédente. Les implémentations squelette doivent être personnalisées pour la plupart des applications, car ces fonctions sont implémentées de manière différente d'une application à l'autre. Pour obtenir des exemples de cela, consultez les exemples MFC [DRAWCLI](../visual-cpp-samples.md) et [conteneur](../visual-cpp-samples.md).
 
-Vous devez ajouter plusieurs éléments à la structure du menu de l'application conteneur pour prendre en charge OLE. Pour plus d’informations, consultez [Menus et ressources : ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).
+Vous devez ajouter plusieurs éléments à la structure du menu de l'application conteneur pour prendre en charge OLE. Pour plus d’informations, consultez [Menus et ressources : Ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).
 
 Vous pouvez aussi prendre en charge certaines des fonctionnalités suivantes dans votre application conteneurs :
 
@@ -54,16 +54,15 @@ Vous pouvez aussi prendre en charge certaines des fonctionnalités suivantes dan
 
    Pour plus d’informations, consultez [Activation](../mfc/activation-cpp.md).
 
-- Création d’éléments OLE par glissement-dépôt d’une sélection depuis une application serveur.
+- Création d'éléments OLE par glissement-déplacement d'une sélection depuis une application serveur.
 
    Pour plus d’informations, consultez [glisser-déposer (OLE)](../mfc/drag-and-drop-ole.md).
 
 - Liens vers les objets incorporés ou association des applications conteneur/serveur.
 
-   Pour plus d’informations, consultez [conteneurs : fonctionnalités avancées](../mfc/containers-advanced-features.md).
+   Pour plus d’informations, consultez [conteneurs : Fonctionnalités avancées](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Conteneurs](../mfc/containers.md)<br/>
-[Conteneurs : éléments clients](../mfc/containers-client-items.md)
-
+[Conteneurs : Éléments clients](../mfc/containers-client-items.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: 067f38522c1be112d6e12200c2c10e1d439e5057
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34af1ae818125abd51b9eaf04cd98f9ac24addb3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281432"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Cmfcribboncheckbox, classe
 
@@ -83,7 +83,7 @@ Vous pouvez ajouter une case à cocher à un panneau de ruban à l’aide de [CM
 
 [CMFCRibbonCheckBox](../../mfc/reference/cmfcribboncheckbox-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxribboncheckbox.h
 
@@ -256,7 +256,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] La distance, en pixels, du côté gauche de la zone de liste pour afficher un texte.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle d’affichage pour la case à cocher.
 
 *bIsSelected*<br/>

@@ -1,23 +1,23 @@
 ---
-title: Vue d’ensemble des états d’élément de contrôle d’arborescence
+title: Vue d'ensemble des états d'élément de contrôle d'arborescence
 ms.date: 11/04/2016
 helpviewer_keywords:
 - states, CTreeCtrl items
 - tree controls [MFC], item states overview
 - CTreeCtrl class [MFC], item states
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
-ms.openlocfilehash: 389c273f7c8727ecbb4ed5455987126e21e26a63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57c6714073f4939ffb791a78454e9eac6342309b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467949"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264597"
 ---
-# <a name="tree-control-item-states-overview"></a>Vue d’ensemble des états d’élément de contrôle d’arborescence
+# <a name="tree-control-item-states-overview"></a>Vue d'ensemble des états d'élément de contrôle d'arborescence
 
-Chaque élément dans un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) a un état actuel. Par exemple, un élément peut être sélectionné, desactivé, développé, etc. Dans la plupart des cas, l’arborescence définit automatiquement l’état d’un élément de sorte à refléter toutes les actions de l’utilisateur, comme la sélection d’un élément. Toutefois, vous pouvez également définir état d’un élément à l’aide de la [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) fonction membre et récupérer l’état actuel d’un élément à l’aide de la [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) fonction membre. Pour obtenir une liste complète des États des éléments, consultez [constantes de contrôle Tree-View](/windows/desktop/Controls/tree-view-control-item-states) dans le SDK Windows.
+Chaque élément dans un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) a un état actuel. Par exemple, un élément peut être sélectionné, desactivé, développé, etc. Dans la plupart des cas, l'arborescence définit automatiquement l'état d'un élément de sorte à refléter toutes les actions de l'utilisateur, comme la sélection d'un élément. Toutefois, vous pouvez également définir état d’un élément à l’aide de la [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) fonction membre et récupérer l’état actuel d’un élément à l’aide de la [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) fonction membre. Pour obtenir une liste complète des États des éléments, consultez [constantes de contrôle Tree-View](/windows/desktop/Controls/tree-view-control-item-states) dans le SDK Windows.
 
-État actuel d’un élément est spécifié par le *nState* paramètre. Un contrôle d’arborescence peut modifier l’état d’un élément de sorte à refléter une action d’utilisateur, telle que sélectionner l’élément ou définir le focus sur l’élément. En outre, une application peut modifier l'état d'un élément pour désactiver ou masquer l'élément ou pour spécifier une image de superposition ou d'état.
+État actuel d’un élément est spécifié par le *nState* paramètre. Un contrôle d'arborescence peut modifier l'état d'un élément de sorte à refléter une action d'utilisateur, telle que sélectionner l'élément ou définir le focus sur l'élément. En outre, une application peut modifier l'état d'un élément pour désactiver ou masquer l'élément ou pour spécifier une image de superposition ou d'état.
 
 Lorsque vous définissez ou modifiez l’état d’un élément, le *nStateMask* paramètre spécifie quel état les bits à définir et le *nState* paramètre contient les nouvelles valeurs pour ces bits. Par exemple, l’exemple suivant modifie l’état actuel d’un élément parent (spécifié par *hParentItem*) dans un `CTreeCtrl` objet (`m_treeCtrl`) à `TVIS_EXPANDPARTIAL`:
 
@@ -31,4 +31,3 @@ Pour définir l’image d’état d’un élément, *nStateMask* doit inclure le
 
 [Utilisation de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

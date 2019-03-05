@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 25d3da4ac9092fe53e84e446e93ff7aa030e6709
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bc943c74f456302b13db77bf28b6e4b21a5524b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577539"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258730"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile, classe
 
@@ -62,7 +62,7 @@ Un `IStorage` objet doit exister avant que le flux peut être ouvert ou créé �
 
 `COleStreamFile` les objets sont manipulés exactement comme [CFile](../../mfc/reference/cfile-class.md) objets.
 
-Pour plus d’informations sur la manipulation des flux et les stockages, consultez l’article [conteneurs : fichiers composés](../../mfc/containers-compound-files.md)...
+Pour plus d’informations sur la manipulation des flux et les stockages, consultez l’article [conteneurs : Fichiers composés](../../mfc/containers-compound-files.md)...
 
 Pour plus d’informations, consultez [IStream](/windows/desktop/api/objidl/nn-objidl-istream) et [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) dans le SDK Windows.
 
@@ -74,7 +74,7 @@ Pour plus d’informations, consultez [IStream](/windows/desktop/api/objidl/nn-o
 
 `COleStreamFile`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 
@@ -245,4 +245,3 @@ Pour plus d’informations, consultez [IStorage::OpenStream](/windows/desktop/ap
 
 [CFile, classe](../../mfc/reference/cfile-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

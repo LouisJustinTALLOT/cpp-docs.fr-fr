@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 107f791505bc41b8dbf9c0374c5e3821abbc0fe3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d7c3b5dd1b43c7a1639c6d5c56979b422d7017
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669064"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262621"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile, classe
 
@@ -89,7 +89,7 @@ Pour plus d’informations sur l’utilisation des monikers asynchrones et des c
 
 - [Internet premières étapes : Monikers asynchrones](../../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [Internet premières étapes : Les contrôles ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Internet premières étapes : Contrôles ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -103,7 +103,7 @@ Pour plus d’informations sur l’utilisation des monikers asynchrones et des c
 
 `CAsyncMonikerFile`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 
@@ -330,7 +330,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 
 ### <a name="parameters"></a>Paramètres
 
-*HRESULT*<br/>
+*hresult*<br/>
 HRESULT qui est l’erreur ou la valeur de l’avertissement.
 
 *szErrort*<br/>

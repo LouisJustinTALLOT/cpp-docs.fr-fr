@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-ms.openlocfilehash: cb8880b66ebeef12018ef7449c9c383b99ec396c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656886"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269446"
 ---
 # <a name="targetblock-class"></a>target_block, classe
 
@@ -70,7 +70,7 @@ Le type de processeur pour le traitement du message.
 
 |Nom|Description|
 |----------|-----------------|
-|[propager](#propagate)|Passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.|
+|[propagate](#propagate)|Passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.|
 |[send](#send)|Passe de façon synchrone un message à partir d’un bloc source à ce bloc cible.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
@@ -99,7 +99,7 @@ Le type de processeur pour le traitement du message.
 
 `target_block`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -194,7 +194,7 @@ En cas de substitution dans une classe dérivée, traite un message qui a été 
 virtual void process_message(message<_Source_type> *);
 ```
 
-##  <a name="propagate"></a> propager
+##  <a name="propagate"></a> propagate
 
 Passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.
 
@@ -252,7 +252,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Filtre*<br/>
+*_Filter*<br/>
 La méthode de filtrage.
 
 ##  <a name="remove_sources"></a> remove_sources

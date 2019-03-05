@@ -1,18 +1,18 @@
 ---
-title: "Serveurs : implémentation d'un serveur"
+title: 'serveurs : Implémentation d’un serveur'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 953d157f4bbad0b460947740a2622074dfc90f4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518955"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267561"
 ---
-# <a name="servers-implementing-a-server"></a>Serveurs : implémentation d'un serveur
+# <a name="servers-implementing-a-server"></a>serveurs : Implémentation d’un serveur
 
 Cet article explique le code de que l’Assistant Application MFC crée pour une application serveur d’édition visuelle. Si vous n’utilisez pas l’Assistant application, cet article répertorie les domaines où vous devez écrire du code pour implémenter une application serveur.
 
@@ -26,13 +26,13 @@ Le code du serveur qui fournit l’Assistant application se divise en plusieurs 
 
   - Les ressources de menu et barre d’outils utilisés lorsque le serveur est actif en place.
 
-  Pour plus d’informations sur ces ressources, consultez [Menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
+  Pour plus d’informations sur ces ressources, consultez [Menus et ressources : Ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
 
-- Définition d’une classe d’élément dérivé `COleServerItem`. Pour plus d’informations sur les éléments de serveur, consultez [serveurs : éléments de serveur](../mfc/servers-server-items.md).
+- Définition d’une classe d’élément dérivé `COleServerItem`. Pour plus d’informations sur les éléments de serveur, consultez [serveurs : Éléments de serveur](../mfc/servers-server-items.md).
 
-- Modification de la classe de base de la classe de document à `COleServerDoc`. Pour plus d’informations, consultez [serveurs : implémentation des Documents serveur](../mfc/servers-implementing-server-documents.md).
+- Modification de la classe de base de la classe de document à `COleServerDoc`. Pour plus d’informations, consultez [serveurs : Implémentation des Documents serveur](../mfc/servers-implementing-server-documents.md).
 
-- Définition d’une classe de fenêtre frame dérivé `COleIPFrameWnd`. Pour plus d’informations, consultez [serveurs : implémentation de Windows de Frame sur Place](../mfc/servers-implementing-in-place-frame-windows.md).
+- Définition d’une classe de fenêtre frame dérivé `COleIPFrameWnd`. Pour plus d’informations, consultez [serveurs : Implémentation Windows du Frame en Place](../mfc/servers-implementing-in-place-frame-windows.md).
 
 - Création d’une entrée pour l’application serveur dans la base de données d’inscription Windows et l’inscription de la nouvelle instance du serveur avec le système OLE. Pour plus d’informations sur ce sujet, consultez [inscription](../mfc/registration.md).
 
@@ -46,4 +46,3 @@ Pour plus d’informations, consultez [COleServerItem](../mfc/reference/coleserv
 [Conteneurs](../mfc/containers.md)<br/>
 [Menus et ressources (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Inscription](../mfc/registration.md)
-

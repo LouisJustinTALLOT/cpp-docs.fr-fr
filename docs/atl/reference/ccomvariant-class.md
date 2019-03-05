@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522483"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281094"
 ---
 # <a name="ccomvariant-class"></a>CComVariant, classe
 
@@ -44,7 +44,7 @@ class CComVariant : public tagVARIANT
 |Nom|Description|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|Constructeur.|
-|[CComVariant :: ~ CComVariant](#dtor)|Destructeur.|
+|[CComVariant::~CComVariant](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -67,9 +67,9 @@ class CComVariant : public tagVARIANT
 |-|-|
 |[CComVariant::operator <](#operator_lt)|Indique si le `CComVariant` objet est inférieur à la variante spécifiée.|
 |[CComVariant::operator >](#operator_gt)|Indique si le `CComVariant` objet est supérieur à la variante spécifiée.|
-|[opérateur ! =](#operator_neq)|Indique si le `CComVariant` objet n’est pas égale la variante spécifiée.|
-|[opérateur =](#operator_eq)|Affecte une valeur à la `CComVariant` objet.|
-|[opérateur ==](#operator_eq_eq)|Indique si le `CComVariant` objet est égal à la variante spécifiée.|
+|[operator !=](#operator_neq)|Indique si le `CComVariant` objet n’est pas égale la variante spécifiée.|
+|[operator =](#operator_eq)|Affecte une valeur à la `CComVariant` objet.|
+|[operator ==](#operator_eq_eq)|Indique si le `CComVariant` objet est égal à la variante spécifiée.|
 
 ## <a name="remarks"></a>Notes
 
@@ -83,7 +83,7 @@ class CComVariant : public tagVARIANT
 
 `CComVariant`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcomcli.h
 
@@ -179,7 +179,7 @@ Ou, le pointeur SAFERRAY permettant d’initialiser le `CComVariant` objet. Une 
 
 Le destructeur gère le nettoyage en appelant [CComVariant::Clear](#clear).
 
-##  <a name="dtor"></a>  CComVariant :: ~ CComVariant
+##  <a name="dtor"></a>  CComVariant::~CComVariant
 
 Destructeur.
 
@@ -387,7 +387,7 @@ Retourne la valeur TRUE si la valeur et le type de *varSrc* sont égaux à la va
 
 L’opérateur compare uniquement la valeur des types variants. Il compare des chaînes, entiers et virgules flottantes, mais pas les tableaux ou les enregistrements.
 
-##  <a name="operator_neq"></a>  CComVariant::operator ! =
+##  <a name="operator_neq"></a>  CComVariant::operator !=
 
 Indique si le `CComVariant` objet n’est pas égale la variante spécifiée.
 

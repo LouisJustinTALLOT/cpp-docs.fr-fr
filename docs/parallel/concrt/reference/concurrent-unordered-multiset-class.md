@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-ms.openlocfilehash: 8b03245790bf011941cabcb18600bbb1e69c37d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7acb79bf5b7c1831027cc47f4da7faa6f1669c21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543934"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275998"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset, classe
 
@@ -111,7 +111,7 @@ Pour plus d’informations sur la `concurrent_unordered_multiset` de classe, con
 
 `concurrent_unordered_multiset`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concurrent_unordered_set.h
 
@@ -385,10 +385,10 @@ Le type d’itérateur utilisé pour l’insertion.
 *V*<br/>
 Le type de la valeur insérée.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à insérer.
 
-*_WHERE*<br/>
+*_Where*<br/>
 L’emplacement de départ pour rechercher un point d’insertion.
 
 *first*<br/>
@@ -469,7 +469,7 @@ Le nombre maximal d’éléments qui peuvent être insérées dans ce conteneur 
 
 Cette valeur de limite supérieure peut être supérieure à ce que le conteneur peut réellement contenir.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Assigne le contenu d’un autre `concurrent_unordered_multiset` objet à celui-ci. Cette méthode n’est pas concurrentiel.
 
@@ -527,7 +527,7 @@ Le nombre d’éléments dans le conteneur.
 
 En présence d’insertions simultanées, le nombre d’éléments dans le conteneur simultané peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour soit encore lu.
 
-##  <a name="swap"></a> échange
+##  <a name="swap"></a> swap
 
 Échange le contenu de deux `concurrent_unordered_multiset` objets. Cette méthode n’est pas concurrentiel.
 
@@ -552,7 +552,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -598,7 +598,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 Le compartiment à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -615,7 +615,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -632,7 +632,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -651,7 +651,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -676,7 +676,7 @@ size_type unsafe_erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE*<br/>
+*_Where*<br/>
 La position de l’itérateur à effacer à partir de.
 
 *first*<br/>
@@ -710,4 +710,3 @@ Le nombre maximal de compartiments dans ce conteneur.
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [Conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md)
-

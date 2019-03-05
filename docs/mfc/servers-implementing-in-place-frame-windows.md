@@ -1,5 +1,5 @@
 ---
-title: 'Serveurs : implémentations de fenêtres frame sur place'
+title: 'serveurs : Implémentation Windows du Frame en Place'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - frame windows [MFC], implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: 4973db6274ce800e8e1fc413ffbfd44a107a64b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637630"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278988"
 ---
-# <a name="servers-implementing-in-place-frame-windows"></a>Serveurs : implémentations de fenêtres frame sur place
+# <a name="servers-implementing-in-place-frame-windows"></a>serveurs : Implémentation Windows du Frame en Place
 
 Cet article explique ce que vous devez effectuer pour implémenter des fenêtres frame au sein de votre application serveur d'édition visuelle si vous n'utilisez pas l'Assistant d'application pour créer votre application serveur. Au lieu de suivre la procédure décrite dans cet article, vous pouvez utiliser une classe de fenêtre frame sur place existante à partir d’une application générée par l’Assistant application ou un exemple fourni avec Visual C++.
 
@@ -45,14 +45,13 @@ Cet article explique ce que vous devez effectuer pour implémenter des fenêtres
 
 La série de la fonction appelle le **si** instruction crée la barre d’outils à partir des ressources du serveur fourni. À ce stade, la barre d'outils fait partie de la hiérarchie dans la fenêtre du conteneur. Cette barre d'outils est dérivée de `CToolBar`, elle transmet les messages à son propriétaire, la fenêtre frame de l'application conteneur, sauf si vous modifiez le propriétaire. C'est pourquoi l'appel à `SetOwner` est nécessaire. Cet appel modifie la fenêtre lorsque les commandes sont envoyées à la fenêtre frame en place du serveur, ce qui fait que des messages sont transmis au serveur. Ainsi, le serveur peut réagir aux opérations dans la barre d'outils disponible.
 
-L'ID de la bitmap de la barre d'outils doit être le même que les autres ressources en place définies dans votre application serveur. Consultez [Menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md) pour plus d’informations.
+L'ID de la bitmap de la barre d'outils doit être le même que les autres ressources en place définies dans votre application serveur. Consultez [Menus et ressources : Ajouts de serveurs](../mfc/menus-and-resources-server-additions.md) pour plus d’informations.
 
 Pour plus d’informations, consultez [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), et [CDocTemplate::SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) dans le *Class Library Reference*.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Serveurs](../mfc/servers.md)<br/>
-[Serveurs : implémentation d’un serveur](../mfc/servers-implementing-a-server.md)<br/>
-[Serveurs : implémentation de documents de serveur](../mfc/servers-implementing-server-documents.md)<br/>
-[Serveurs : éléments du serveur](../mfc/servers-server-items.md)
-
+[serveurs : Implémentation d’un serveur](../mfc/servers-implementing-a-server.md)<br/>
+[serveurs : Implémentation de Documents de serveur](../mfc/servers-implementing-server-documents.md)<br/>
+[serveurs : Éléments de serveur](../mfc/servers-server-items.md)

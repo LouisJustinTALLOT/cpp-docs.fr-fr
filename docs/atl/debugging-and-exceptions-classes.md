@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - debugging and exceptions classes
 ms.assetid: d42d7649-9721-4a1a-8b38-d983a649fdb9
-ms.openlocfilehash: 8b27c62acb098a2e5c02c52165a2948e5c440dd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6e242b883689152f55c93a9e29f4e93e9f88737
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529088"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261685"
 ---
 # <a name="debugging-and-exceptions-classes"></a>Débogage et Classes d’Exceptions
 
@@ -25,4 +25,3 @@ Ces classes fournissent la prise en charge pour la gestion des exceptions et dé
 [Vue d’ensemble de la classe](../atl/atl-class-overview.md)<br/>
 [Fonctions globales de signalement d’erreurs et de débogage](../atl/reference/debugging-and-error-reporting-global-functions.md)<br/>
 [Macros de signalement d’erreurs et de débogage](../atl/reference/debugging-and-error-reporting-macros.md)
-

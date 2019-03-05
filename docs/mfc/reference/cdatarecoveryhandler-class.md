@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456041"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273034"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Cdatarecoveryhandler, classe
 
@@ -146,9 +146,9 @@ Toutes les méthodes de la `CDataRecoveryHandler` classe ne sont pas virtuelles.
 
 Avant de pouvoir utiliser un `CDataRecoveryHandler` de l’objet, vous devez appeler [CDataRecoveryHandler::Initialize](#initialize).
 
-Étant donné que le `CDataRecoveryHandler` classe est étroitement liée au Gestionnaire de redémarrage, `CDataRecoveryHandler` varie selon le paramètre global `m_dwRestartManagerSupportFlags`. Ce paramètre détermine les autorisations du Gestionnaire de redémarrage et comment elle interagit avec votre application. Pour intégrer le Gestionnaire de redémarrage dans une application existante, vous devez attribuer `m_dwRestartManagerSupportFlags` la valeur appropriée dans le constructeur de votre application principale. Pour plus d’informations sur la façon d’utiliser le Gestionnaire de redémarrage, consultez [Comment : ajouter prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md).
+Étant donné que le `CDataRecoveryHandler` classe est étroitement liée au Gestionnaire de redémarrage, `CDataRecoveryHandler` varie selon le paramètre global `m_dwRestartManagerSupportFlags`. Ce paramètre détermine les autorisations du Gestionnaire de redémarrage et comment elle interagit avec votre application. Pour intégrer le Gestionnaire de redémarrage dans une application existante, vous devez attribuer `m_dwRestartManagerSupportFlags` la valeur appropriée dans le constructeur de votre application principale. Pour plus d’informations sur la façon d’utiliser le Gestionnaire de redémarrage, consultez [Comment : ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdatarecovery.h
 
@@ -689,5 +689,4 @@ Pour utiliser cette méthode, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES doit êt
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
-[Guide pratique pour ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md)
-
+[Guide pratique pour Ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md)

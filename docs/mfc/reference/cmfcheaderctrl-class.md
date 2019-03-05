@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 10d7dda39223e1d6206d2ede96874d9d546c8776
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538500"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269433"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
@@ -100,7 +100,7 @@ Le `CMFCHeaderCtrl` classe dessine une flèche de tri sur une colonne de contrô
 
 [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxheaderctrl.h
 
@@ -136,7 +136,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le mode de tri de colonne plusieurs ; FALSE pour désactiver le mode de trier plusieurs colonnes et pour supprimer des colonnes dans la liste des colonnes triées. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -249,7 +249,7 @@ virtual void OnDrawItem(
 *iItem*<br/>
 [in] Index de base zéro de l’élément à dessiner.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant de l’élément à dessiner.
 
 *bIsPressed*<br/>
@@ -323,7 +323,7 @@ void SetSortColumn(
 *bAscending*<br/>
 [in] Spécifie l’ordre de tri de la colonne qui le *iColumn* spécifie de paramètre. TRUE pour définir l’ordre croissant ; FALSE pour définir l’ordre décroissant. La valeur par défaut est TRUE.
 
-*bAjouter*<br/>
+*bAdd*<br/>
 [in] True pour définir l’ordre de tri de la colonne qui le *iColumn* spécifie de paramètre.
 
 Si le contrôle header actuel se trouve dans *tri sur plusieurs colonnes* mode, cette méthode ajoute la colonne spécifiée à la liste des colonnes de tri. Utilisez [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) pour définir le mode de trier plusieurs colonnes.

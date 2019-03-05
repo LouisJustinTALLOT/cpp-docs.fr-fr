@@ -1,18 +1,18 @@
 ---
-title: "Procédure pas à pas : création d'une application de ruban à l'aide de MFC"
+title: 'Procédure pas à pas : Création d’une Application de ruban à l’aide de MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 16413b6027a36ec550ae2bf3e04604b32a8454c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a74e8863c32199d1c0309f70bceae867993ce721
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557489"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271331"
 ---
-# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : création d'une application de ruban à l'aide de MFC
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : Création d’une Application de ruban à l’aide de MFC
 
 Cette procédure pas à pas montre comment utiliser le **Assistant Application MFC** pour créer une application comportant un ruban par défaut. Vous pouvez ensuite développer le ruban en ajoutant un **personnalisé** catégorie de ruban qui a un **favoris** ruban du Panneau de configuration et l’ajout de certaines commandes au panneau fréquemment utilisées.
 
@@ -83,9 +83,9 @@ Cette procédure pas à pas suppose que vous avez défini Visual Studio à utili
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Guide pratique pour personnaliser la barre d’outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)
+[Guide pratique pour Personnaliser la barre d’outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[Guide pratique pour personnaliser le bouton Application](../mfc/how-to-customize-the-application-button.md)
+[Guide pratique pour Personnaliser le bouton d’Application](../mfc/how-to-customize-the-application-button.md)
 
 Pour obtenir des exemples de bout en bout, consultez [exemples (MFC Feature Pack)](../visual-cpp-samples.md).
 

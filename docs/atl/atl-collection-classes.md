@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272098"
 ---
 # <a name="atl-collection-classes"></a>Classes de collection ATL
 
@@ -84,10 +84,10 @@ Chacune des classes de collection disponibles offre des caractéristiques de per
 
 |Forme|Ordered|Indexés|Insérer un<br /><br /> d'élément|Rechercher<br /><br /> élément spécifié|Dupliquer<br /><br /> éléments|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
-|Liste|Oui|Non|Fast (temps constant)|O (n) lente|Oui|
+|Liste|Oui|Aucune|Fast (temps constant)|O (n) lente|Oui|
 |Tableau|Oui|Par int (temps constant)|Lente o (n), sauf si insertion à la fin, dans quel cas temps constant|O (n) lente|Oui|
-|Carte|Non|Par clé (temps constant)|Fast (temps constant)|Fast (temps constant)|Non (clés) Oui (valeurs)|
-|Table rouge-noire|Oui (par clé)|Par clé O (log n)|Rapide O (log n)|Rapide O (log n)|Non|
+|Carte|Aucune|Par clé (temps constant)|Fast (temps constant)|Fast (temps constant)|Non (clés) Oui (valeurs)|
+|Table rouge-noire|Oui (par clé)|Par clé O (log n)|Rapide O (log n)|Rapide O (log n)|Aucune|
 |Rouge-noire Multimap|Oui (par clé)|Par clé O(log n) (plusieurs valeurs par clé)|Rapide O (log n)|Rapide O (log n)|Oui (plusieurs valeurs par clé)|
 
 ## <a name="using-ctraits-objects"></a>Utilisation des objets CTraits

@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593477"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268956"
 ---
 # <a name="singleassignment-class"></a>Classe single_assignment
 
@@ -56,7 +56,7 @@ Le type de charge utile du message stocké et propagées par la mémoire tampon.
 |Nom|Description|
 |----------|-----------------|
 |[has_value](#has_value)|Vérifie si cela `single_assignment` bloc de messagerie a encore été initialisé avec une valeur.|
-|[valeur](#value)|Obtient une référence à la charge utile actuelle du message qui est stocké dans le `single_assignment` bloc de messagerie.|
+|[value](#value)|Obtient une référence à la charge utile actuelle du message qui est stocké dans le `single_assignment` bloc de messagerie.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
@@ -90,7 +90,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `single_assignment`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -289,7 +289,7 @@ single_assignment(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Filtre*<br/>
+*_Filter*<br/>
 Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
 
 *_PScheduler*<br/>
@@ -304,7 +304,7 @@ Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les pa
 
 Le type `filter_method` est un functor avec la signature `bool (T const &)` qui est appelé par ce `single_assignment` bloc de messagerie pour déterminer s’il doit accepter un message proposé.
 
-##  <a name="dtor"></a> ~ single_assignment
+##  <a name="dtor"></a> ~single_assignment
 
 Détruit le `single_assignment` bloc de messagerie.
 
@@ -332,5 +332,4 @@ Cette méthode attend un message arrive si aucun message n’est actuellement st
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [overwrite_buffer, classe](overwrite-buffer-class.md)<br/>
-[unbounded_buffer, classe](unbounded-buffer-class.md)
-
+[Classe unbounded_buffer](unbounded-buffer-class.md)

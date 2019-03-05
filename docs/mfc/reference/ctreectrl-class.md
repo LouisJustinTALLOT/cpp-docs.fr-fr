@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477946"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271396"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -293,7 +293,7 @@ Pour plus d’informations sur l’utilisation de `CTreeCtrl`, consultez :
 
 `CTreeCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -314,7 +314,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle arborescence de la vue. Appliquer des styles de fenêtre, décrits dans [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)et n’importe quelle combinaison de [afficher les styles de contrôle d’arborescence](/windows/desktop/Controls/tree-view-control-window-styles) comme décrit dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle arborescence de la vue. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
 
 *pParentWnd*<br/>
@@ -360,7 +360,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Spécifie le style du contrôle arborescence de la vue. Appliquer des styles de fenêtre, décrits dans [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)et n’importe quelle combinaison de [afficher les styles de contrôle d’arborescence](/windows/desktop/Controls/tree-view-control-window-styles) comme décrit dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -1713,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CLR*<br/>
+*clr*<br/>
 Valeur COLORREF qui contient la nouvelle couleur d’arrière-plan. Si cette valeur est -1, le contrôle revient à l’aide de la couleur système pour la couleur d’arrière-plan.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1739,7 +1739,7 @@ BOOL SetCheck(
 *hItem*<br/>
 HTREEITEM pour recevoir le changement d’état de vérification.
 
-*Consultez*<br/>
+*fCheck*<br/>
 Indique si l’élément de contrôle d’arborescence doit être activée ou désactivée. Par défaut, `SetCheck` définit l’élément à vérifier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2229,7 +2229,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CLR*<br/>
+*clr*<br/>
 Valeur COLORREF qui contient la nouvelle couleur de texte. Si cet argument est -1, le contrôle revient à l’aide de la couleur système pour la couleur du texte.
 
 ### <a name="return-value"></a>Valeur de retour

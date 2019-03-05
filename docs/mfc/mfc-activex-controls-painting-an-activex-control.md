@@ -1,18 +1,18 @@
 ---
-title: "Contrôles ActiveX MFC : peinture d'un contrôle ActiveX"
+title: 'Contrôles ActiveX MFC : Peinture d’un contrôle ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: 4a7cff57213cf9ba234ead9880207fd93592614f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549524"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281928"
 ---
-# <a name="mfc-activex-controls-painting-an-activex-control"></a>Contrôles ActiveX MFC : peinture d'un contrôle ActiveX
+# <a name="mfc-activex-controls-painting-an-activex-control"></a>Contrôles ActiveX MFC : Peinture d’un contrôle ActiveX
 
 Cet article décrit le processus de peinture du contrôle ActiveX et le mode de modification du code de peinture pour optimiser le processus. (Consultez [optimisation du dessin de contrôle](../mfc/optimizing-control-drawing.md) pour des techniques permettant d’optimiser le dessin sans que les contrôles individuellement de restauration des objets GDI précédemment sélectionnés. Une fois que tous les contrôles sont dessinés, le conteneur peut automatiquement restaurer les objets d'origine).
 
@@ -31,7 +31,7 @@ Les rubriques suivantes sont couvertes :
 
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> Le processus de peinture d’un contrôle ActiveX
 
-Lorsque les contrôles ActiveX sont initialement affichés ou redessinés, ils suivent un processus de peinture semblable à d'autres applications développées à l'aide de MFC, avec une distinction importante : les contrôles ActiveX peuvent être dans un état actif ou inactif.
+Lorsque les contrôles ActiveX sont initialement affichés ou redessinés, ils suivent un processus de peinture semblable à d’autres applications développées à l’aide de MFC, avec une distinction importante : Contrôles ActiveX peuvent être actif ou inactif.
 
 Un contrôle actif est représenté dans un conteneur de contrôles ActiveX par une fenêtre enfant. Comme les autres fenêtres, il est chargé de se dessiner lui-même lors de la réception d’un message WM_PAINT. Classe de base du contrôle, [COleControl](../mfc/reference/colecontrol-class.md), gère ce message dans son `OnPaint` (fonction). Cette implémentation par défaut appelle la fonction `OnDraw` de votre contrôle.
 
@@ -90,7 +90,7 @@ Etant donné que l'implémentation par défaut de `OnDrawMetafile` appelle la fo
 
 Outre les fonctions membres `CDC`, il existe plusieurs autres fonctions compatibles dans un contexte de périphérique de métafichier. Ceux-ci incluent [CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect)et trois fonctions membres de `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), et [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).
 
-Les fonctions qui ne sont pas enregistrées dans un métafichier sont : [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)et [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Étant donné qu'un contexte de périphérique de métafichier n'est pas réellement associé à un périphérique, vous ne pouvez pas utiliser SetDIBits, GetDIBits et CreateDIBitmap avec un contexte de périphérique de métafichier. Vous pouvez utiliser SetDIBitsToDevice et StretchDIBits avec un contexte de périphérique de métafichier comme destination. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), et [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) ne sont pas significatifs avec un périphérique de métafichier.
+Les fonctions qui ne sont pas enregistrées dans un métafichier sont : [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), and [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Étant donné qu'un contexte de périphérique de métafichier n'est pas réellement associé à un périphérique, vous ne pouvez pas utiliser SetDIBits, GetDIBits et CreateDIBitmap avec un contexte de périphérique de métafichier. Vous pouvez utiliser SetDIBitsToDevice et StretchDIBits avec un contexte de périphérique de métafichier comme destination. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), et [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) ne sont pas significatifs avec un périphérique de métafichier.
 
 Un autre point à prendre en considération lors de l'utilisation d'un contexte de périphérique de métafichier est que le système de coordonnées peut ne pas être exprimé en pixels. Pour cette raison, votre code de dessin doit être ajustée pour tenir dans le rectangle passé `OnDraw` dans le *rcBounds* paramètre. Cela empêche la peinture accidentelle en dehors du contrôle car *rcBounds* représente la taille de la fenêtre du contrôle.
 
@@ -111,4 +111,3 @@ Une fois que vous avez implémenté le rendu de métafichier pour le contrôle, 
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

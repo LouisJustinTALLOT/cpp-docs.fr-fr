@@ -11,12 +11,12 @@ helpviewer_keywords:
 - painting classes [MFC]
 - output classes [MFC]
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
-ms.openlocfilehash: 6bddebb17663e8d22a4bf784d2a9d08a2f912e59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d76570e7bfd4ce587b3803235394ec5406d30b2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651826"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266651"
 ---
 # <a name="output-device-context-classes"></a>Classes de sortie (contexte de périphérique)
 
@@ -24,7 +24,7 @@ Ces classes encapsulent les différents types de contextes de périphérique dis
 
 La plupart des classes suivantes encapsulent un handle vers un contexte de périphérique Windows. Un contexte de périphérique est un objet de Windows qui contient des informations sur les attributs de dessin d’un appareil tel qu’un écran ou une imprimante. Tous les appels de dessins sont effectués via un objet de contexte de périphérique. Autres classes dérivées de `CDC` encapsulent des fonctionnalités spécialisées de contexte de périphérique, y compris la prise en charge pour les métafichiers Windows.
 
-[CAPTURE DE DONNÉES MODIFIÉES](../mfc/reference/cdc-class.md)<br/>
+[CDC](../mfc/reference/cdc-class.md)<br/>
 La classe de base pour les contextes de périphérique. Utilisé directement pour accéder à l’affichage complet et pour accéder aux contextes de nondisplay tels que les imprimantes.
 
 [CPaintDC](../mfc/reference/cpaintdc-class.md)<br/>
@@ -68,4 +68,3 @@ Fournit une boîte de dialogue standard pour l’impression d’un fichier.
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
-

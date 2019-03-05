@@ -8,12 +8,12 @@ helpviewer_keywords:
 - notifications [MFC], for CMonthCalCtrl
 - notifications [MFC], month calendar control
 ms.assetid: 607c3e90-0756-493b-9503-ce835a50c7ab
-ms.openlocfilehash: 3dbf50080bea59c4df4a9c92a135a65b093f7674
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc0bb475a95450c281c92b500083c9502df50931
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511928"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280756"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Traitement des messages de notification dans les contrôles de calendrier mensuel
 
@@ -33,4 +33,3 @@ La liste suivante décrit les différentes notifications envoyées par le contr�
 
 [Utilisation de CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

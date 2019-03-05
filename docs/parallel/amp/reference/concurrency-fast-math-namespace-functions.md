@@ -46,12 +46,12 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: fa024c781804d404870a0362a027e1bc436902ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96178ee72073e5063fc009f17ab21565f3cf1ab5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667634"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259861"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Fonctions d’espace de noms Concurrency::fast_math
 
@@ -430,7 +430,7 @@ Valeur à virgule flottante
 
 Retourne la valeur absolue de l’argument
 
-##  <a name="floor"></a>  Floor
+##  <a name="floor"></a>  floor
 
 Calcule le plancher de l’argument
 
@@ -674,7 +674,7 @@ Valeur à virgule flottante
 
 Retourne une valeur différente de zéro si et seulement si l’argument a une valeur infinie
 
-##  <a name="isnan"></a>  isNaN
+##  <a name="isnan"></a>  isnan
 
 Détermine si l’argument est une valeur NaN
 
@@ -923,7 +923,7 @@ Valeur à virgule flottante, exposant
 
 ### <a name="return-value"></a>Valeur de retour
 
-##  <a name="round"></a>  arrondir
+##  <a name="round"></a>  round
 
 Arrondit _X à l’entier le plus proche
 
@@ -1273,7 +1273,7 @@ Valeur à virgule flottante
 
 Retourne la partie entière de l’argument
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_math.h **Namespace :** Concurrency::fast_math
 

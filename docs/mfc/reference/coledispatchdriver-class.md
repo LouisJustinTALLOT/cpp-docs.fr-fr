@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274573"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver, classe
 
@@ -61,7 +61,7 @@ class COleDispatchDriver
 |[COleDispatchDriver::GetProperty](#getproperty)|Obtient une propriété automation.|
 |[COleDispatchDriver::InvokeHelper](#invokehelper)|Programme d’assistance pour appeler des méthodes d’automatisation.|
 |[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|Versions une `IDispatch` connexion.|
-|[Propriétés COleDispatchDriver::SetProperty](#setproperty)|Définit une propriété automation.|
+|[COleDispatchDriver::SetProperty](#setproperty)|Définit une propriété automation.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -95,7 +95,7 @@ Pour plus d’informations sur l’utilisation de `COleDispatchDriver`, consulte
 
 `COleDispatchDriver`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
@@ -291,7 +291,7 @@ Les valeurs possibles pour le *vtRet* argument proviennent de l’énumération 
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
 |VT_BOOL|**BOOL**|
-|VT_VARIANT|**TYPE VARIANT**|
+|VT_VARIANT|**VARIANT**|
 |VT_UNKNOWN|LPUNKNOWN|
 
 Le *pbParamInfo* argument est une liste séparée par des espaces de **VTS_** constantes. Une ou plusieurs de ces valeurs, séparées par des espaces (et non par des virgules), spécifient la liste des paramètres de la fonction. Les valeurs possibles sont répertoriées avec la macro [EVENT_CUSTOM](event-maps.md#event_custom) .
@@ -381,7 +381,7 @@ Si la libération automatique a été définie pour cette connexion, cette fonct
 
   Consultez l’exemple de [COleDispatchDriver::AttachDispatch](#attachdispatch).
 
-##  <a name="setproperty"></a>  Propriétés COleDispatchDriver::SetProperty
+##  <a name="setproperty"></a>  COleDispatchDriver::SetProperty
 
 Définit la propriété d’objet OLE spécifiée par *dwDispID*.
 

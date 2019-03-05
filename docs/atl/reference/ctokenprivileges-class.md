@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: e492ada977527d5c8709dd3afbf390bc678f789e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80302d59d081b7cdf6f29960c3d8f4859b4ecbf4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519793"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280444"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges, classe
 
@@ -79,7 +79,7 @@ Le `CTokenPrivileges` classe est un wrapper pour le [TOKEN_PRIVILEGES](/windows/
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -97,7 +97,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 *pszPrivilege*<br/>
 Pointeur vers une chaîne se terminant par null qui spécifie le nom du privilège, tel que défini dans le WINNT. Fichier d’en-tête H.
 
-*bActivez*<br/>
+*bEnable*<br/>
 Si la valeur est true, le privilège est activé. Si la valeur est false, le privilège est désactivé.
 
 *rPrivileges*<br/>
@@ -119,7 +119,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `CTokenPrivileges` objet à attribuer au nouvel objet.
 
 *rPrivileges*<br/>
@@ -311,7 +311,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 *rPrivileges*<br/>
 Le [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) structure à affecter à la `CTokenPrivileges` objet.
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `CTokenPrivileges` objet à assigner à l’objet.
 
 ### <a name="return-value"></a>Valeur de retour

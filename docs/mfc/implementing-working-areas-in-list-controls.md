@@ -5,12 +5,12 @@ helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-ms.openlocfilehash: eac4c28497f4a00a333f5396fa71cdb2176106c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b166243c9032a113d46ff297b9f6e53429da21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525189"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281601"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implémentation d'espaces de travail dans des contrôles de liste
 
@@ -19,7 +19,7 @@ Par défaut, un contrôle de liste réorganise tous les éléments sous forme de
 > [!NOTE]
 >  Les zones de travail sont visibles uniquement lorsque le contrôle de liste est en mode icône ou petite icône. Toutefois, les zones de travail actives sont conservées si la vue passe en mode de rapport ou de liste.
 
-Les zones de travail peuvent être utilisées pour afficher une bordure vide (à gauche, en haut et/ou à droite des éléments), ou forcer l'affichage d'une barre de défilement horizontale lorsqu'il n'y en a pas normalement. Une autre utilisation courante consiste à créer plusieurs zones de travail dans lesquelles des éléments peuvent être déplacés ou supprimés. Avec cette méthode, vous pouvez créer des zones dans une vue unique avec différentes significations. L'utilisateur peut ensuite classer les éléments en les plaçant dans une autre zone. La vue d'un système de fichiers avec une zone pour les fichiers en lecture/écriture et une autre zone pour les fichiers en lecture seule en est un exemple. Si un élément de fichier a été déplacé dans la zone en lecture seule, il passe automatiquement en lecture seule. Le déplacement d'un fichier de la zone en lecture seule vers la zone en lecture/écriture rend le fichier accessible en lecture/écriture.
+Les zones de travail peuvent être utilisées pour afficher une bordure vide (à gauche, en haut et/ou à droite des éléments), ou forcer l'affichage d'une barre de défilement horizontale lorsqu'il n'y en a pas normalement. Une autre utilisation courante consiste à créer plusieurs zones de travail dans lesquelles des éléments peuvent être déplacés ou déposés. Avec cette méthode, vous pouvez créer des zones dans une vue unique avec différentes significations. L'utilisateur peut ensuite classer les éléments en les plaçant dans une autre zone. La vue d'un système de fichiers avec une zone pour les fichiers en lecture/écriture et une autre zone pour les fichiers en lecture seule en est un exemple. Si un élément de fichier a été déplacé dans la zone en lecture seule, il passe automatiquement en lecture seule. Le déplacement d'un fichier de la zone en lecture seule vers la zone en lecture/écriture rend le fichier accessible en lecture/écriture.
 
 `CListCtrl` fournit plusieurs fonctions membres pour créer et gérer les zones de travail dans votre contrôle de liste. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) et [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) récupérer et définir un tableau de `CRect` objets (ou `RECT` structures), qui stocke les zones de travail actuellement implémentées pour votre contrôle de liste. En outre, [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) récupère le nombre actuel de zones de travail pour votre contrôle de liste (par défaut, zéro).
 
@@ -41,4 +41,3 @@ L’exemple suivant affecte les éléments de liste existants à chaque groupe (
 
 [Utilisation de CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

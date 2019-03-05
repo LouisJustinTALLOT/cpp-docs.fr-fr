@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 286ef403ec4bd51b035945f3ca268b59fee4d9d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d356f094759775f709838de149769b1671fdf9ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567035"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260112"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045 : prise en charge MFC/Database de longs varchar/varbinary
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045 : Prise en charge MFC/Database de longs Varchar/Varbinary
 
 > [!NOTE]
 >  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -36,7 +36,7 @@ Chacune des trois méthodes présente des avantages et des inconvénients.
 
 Les colonnes de données de type long ne sont pas prises en charge pour les paramètres d'une requête. Elles le sont uniquement pour outputColumns.
 
-## <a name="binding-a-long-data-column-to-a-cstringcbytearray"></a>Liaison d’une colonne de données de type long à CString et CByteArray
+## <a name="binding-a-long-data-column-to-a-cstringcbytearray"></a>Liaison d'une colonne de données de type long à CString et CByteArray
 
 Avantages :
 
@@ -99,9 +99,9 @@ Il n'est pas nécessaire de comprendre le fonctionnement de la mise à jour de `
 > [!NOTE]
 >  Pour qu'un champ `CLongBinary` soit inclus dans une mise à jour, vous devez appeler explicitement `SetFieldDirty` pour ce champ. Si vous apportez des modifications à un champ, notamment en lui affectant la valeur Null, vous devez appeler `SetFieldDirty`. Vous devez également appeler `SetFieldNull`, avec le deuxième paramètre défini **FALSE**, pour marquer le champ comme ayant une valeur.
 
-Lors de la mise à jour un `CLongBinary` champ, les classes de base de données utilisent ODBC **DATA_AT_EXEC** mécanisme (voir la documentation ODBC `SQLSetPos`de l’argument rgbValue). Lorsque le framework prépare l’instruction insert ou update, au lieu de pointer vers le `HGLOBAL` contenant les données, le *adresse* de la `CLongBinary` est défini comme le *valeur* de la colonne au lieu de cela et l’indicateur de longueur définie sur **SQL_DATA_AT_EXEC**. Ensuite, lorsque l’instruction de mise à jour est envoyée à la source de données, `SQLExecDirect` retournera **SQL_NEED_DATA**. Cela indique à le framework que la valeur du paramètre pour cette colonne est en réalité l'adresse de `CLongBinary`. Le framework appelle `SQLGetData` qu’une seule fois, avec une petite mémoire tampon, attendant que le pilote pour retourner la longueur réelle des données. Si le pilote retourne la longueur réelle de l’objet BLOB, MFC réaffecte autant d’espace que nécessaire pour récupérer l’objet BLOB. Si la source de données retourne **SQL_NO_TOTAL**, indiquant qu’il ne peut pas déterminer la taille de l’objet BLOB, MFC crée des blocs plus petits. La taille initiale par défaut est 64 Ko, et les blocs suivants auront une taille deux fois plus grande ; par exemple, le deuxième aura une taille de 128 Ko, le troisième une taille de 256 Ko, et ainsi de suite. La taille initiale est configurable.
+Lors de la mise à jour un `CLongBinary` champ, les classes de base de données utilisent ODBC **DATA_AT_EXEC** mécanisme (voir la documentation ODBC `SQLSetPos`de l’argument rgbValue). Lorsque le framework prépare l’instruction insert ou update, au lieu de pointer vers le `HGLOBAL` contenant les données, le *adresse* de la `CLongBinary` est défini comme le *valeur* de la colonne au lieu de cela et l’indicateur de longueur définie sur **SQL_DATA_AT_EXEC**. Ensuite, lorsque l’instruction de mise à jour est envoyée à la source de données, `SQLExecDirect` retournera **SQL_NEED_DATA**. Cela indique à le framework que la valeur du paramètre pour cette colonne est en réalité l'adresse de `CLongBinary`. Le framework appelle `SQLGetData` qu’une seule fois, avec une petite mémoire tampon, attendant que le pilote pour retourner la longueur réelle des données. Si le pilote retourne la longueur réelle de l'objet BLOB, MFC réaffecte autant d'espace que nécessaire pour extraire l'objet BLOB. Si la source de données retourne **SQL_NO_TOTAL**, indiquant qu’il ne peut pas déterminer la taille de l’objet BLOB, MFC crée des blocs plus petits. La taille initiale par défaut est 64 Ko, et les blocs suivants auront une taille deux fois plus grande ; par exemple, le deuxième aura une taille de 128 Ko, le troisième une taille de 256 Ko, et ainsi de suite. La taille initiale est configurable.
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Absence de liaison : récupération et envoi des données directement depuis ODBC avec SQLGetData
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Ne pas de liaison : Récupération et envoi des données directement à partir d’ODBC avec SQLGetData
 
 Avec cette méthode, vous ignorez complètement les classes de base de données et gérez vous-même la colonne de données de type long.
 
@@ -122,4 +122,3 @@ Dans ce cas, la colonne de données de type long doit figurer dans la liste de s
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

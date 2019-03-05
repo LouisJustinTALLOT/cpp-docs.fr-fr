@@ -5,18 +5,18 @@ helpviewer_keywords:
 - common controls (MFC), build requirements
 - common controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: c9a01665339c28b58a5d528cbb9dfaa235e7f1ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a2e79d91a41ea178eeb6f74ec7fa7b22588b277
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637071"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276895"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Configuration requise pour les contrôles communs Windows Vista
 
 La bibliothèque Microsoft Foundation Class (MFC) prend en charge la version 6.1 des contrôles communs Windows. Les contrôles communs sont inclus dans Windows Vista et la bibliothèque est incluse dans le SDK Visual Studio. La bibliothèque fournit de nouvelles méthodes qui améliorent les classes existantes et de nouvelles classes et méthodes qui prennent en charge les contrôles communs Windows Vista. Lorsque vous créez votre application, vous devez respecter les exigences de compilation et de migration décrites dans les sections suivantes.
 
-## <a name="compilation-requirements"></a>Spécifications de compilation
+## <a name="compilation-requirements"></a>Exigences de compilation
 
 ### <a name="supported-versions"></a>Versions prises en charge
 
@@ -59,4 +59,3 @@ Si vous utilisez l'IDE de Visual Studio pour créer une application MFC qui util
 [Rubriques MFC générales](../mfc/general-mfc-topics.md)<br/>
 [Graphique hiérarchique](../mfc/hierarchy-chart.md)<br/>
 [API ANSI dépréciées](../mfc/deprecated-ansi-apis.md)
-

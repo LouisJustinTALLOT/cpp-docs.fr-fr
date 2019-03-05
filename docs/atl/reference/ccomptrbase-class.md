@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 8d7c96ff047a6340511ee1d67f025db0ad7c5368
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261698"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase, classe
 
@@ -46,7 +46,7 @@ Le type d’objet devant être référencé par le pointeur intelligent.
 
 |Nom|Description|
 |----------|-----------------|
-|[CComPtrBase :: ~ CComPtrBase](#dtor)|Destructeur.|
+|[CComPtrBase::~CComPtrBase](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -84,7 +84,7 @@ Le type d’objet devant être référencé par le pointeur intelligent.
 
 Cette classe fournit la base d’autres pointeurs intelligents qui utilisent les routines de gestion de mémoire COM, tel que [CComQIPtr](../../atl/reference/ccomqiptr-class.md) et [CComPtr](../../atl/reference/ccomptr-class.md). Les classes dérivées ajouter leurs propres constructeurs et des opérateurs, mais s’appuient sur les méthodes fournies par `CComPtrBase`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcomcli.h
 
@@ -104,10 +104,10 @@ HRESULT Advise(
 *pUnk*<br/>
 Un pointeur vers le client `IUnknown`.
 
-*IID*<br/>
+*iid*<br/>
 Le GUID du point de connexion. En règle générale, cela est identique à l’interface sortante managée par le point de connexion.
 
-*PDW*<br/>
+*pdw*<br/>
 Pointeur vers le cookie qui identifie de façon unique la connexion.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -128,14 +128,14 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*P2*<br/>
+*p2*<br/>
 Le `CComPtrBase` objet prendra possession de ce pointeur.
 
 ### <a name="remarks"></a>Notes
 
 `Attach` appels [CComPtrBase::Release](#release) sur existant [CComPtrBase::p](#p) variable membre, puis assigne *p2* à `CComPtrBase::p`. Quand un `CComPtrBase` objet prend possession d’un pointeur, il appellera automatiquement `Release` sur le pointeur qui supprimera le pointeur et tout allouée données si le décompte de références sur l’objet passe à 0.
 
-##  <a name="dtor"></a>  CComPtrBase :: ~ CComPtrBase
+##  <a name="dtor"></a>  CComPtrBase::~CComPtrBase
 
 Destructeur.
 
@@ -237,7 +237,8 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="parameters"></a>Paramètres
 
 *pOther*<br/>
-`IUnknown *` à comparer.
+
+  `IUnknown *` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -298,7 +299,7 @@ Pointeur vers un objet.
 
 Retourne true si `CComPtrBase` et *pT* pointent vers le même objet, false sinon.
 
-##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;
+##  <a name="operator_ptr"></a>  CComPtrBase::operator -&gt;
 
 L’opérateur pointeur vers membre.
 
@@ -369,7 +370,7 @@ template <class Q> HRESULT QueryInterface(Q
 *Q*<br/>
 Le type d’objet dont pointeur d’interface est nécessaire.
 
-*PP*<br/>
+*pp*<br/>
 Adresse de variable de sortie qui reçoit le pointeur d’interface demandé.
 
 ### <a name="return-value"></a>Valeur de retour

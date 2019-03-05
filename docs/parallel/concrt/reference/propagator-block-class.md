@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-ms.openlocfilehash: 38b7c920f8ffcab6d709d9484f308a56cd6b8425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f466ad8f474ddb73d2235d9999c3dbeae627672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613276"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272943"
 ---
 # <a name="propagatorblock-class"></a>propagator_block, classe
 
@@ -70,7 +70,7 @@ Le type de processeur pour le traitement du message.
 
 |Nom|Description|
 |----------|-----------------|
-|[propager](#propagate)|Passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.|
+|[propagate](#propagate)|Passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.|
 |[send](#send)|Démarre de façon synchrone un message à ce bloc. Appelé par un `ISource` bloc. Lorsque cette fonction est terminée, le message est déjà propagé dans le bloc.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
@@ -102,7 +102,7 @@ Pour éviter l’héritage multiple, la `propagator_block` classe hérite de la 
 
 `propagator_block`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -164,7 +164,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 *_PMessage*<br/>
 Pointeur vers le message doit être traité.
 
-##  <a name="propagate"></a> propager
+##  <a name="propagate"></a> propagate
 
 Passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.
 
@@ -222,7 +222,7 @@ Construit un objet `propagator_block`.
 propagator_block();
 ```
 
-##  <a name="dtor"></a> ~ propagator_block
+##  <a name="dtor"></a> ~propagator_block
 
 Détruit un objet `propagator_block`.
 
@@ -240,7 +240,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Filtre*<br/>
+*_Filter*<br/>
 La méthode de filtrage.
 
 ##  <a name="remove_network_links"></a> remove_network_links

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-ms.openlocfilehash: 2d65af79971aab88884efe1f92d1090194b737d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31bd43f7f7a6fbccd4680db013ac5c654123061e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459564"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259891"
 ---
 # <a name="csinglelock-class"></a>CSingleLock, classe
 
@@ -55,13 +55,13 @@ Pour pouvoir utiliser les classes de synchronisation [CSemaphore](../../mfc/refe
 
 Pour utiliser un `CSingleLock` d’objet, appeler son constructeur à l’intérieur d’une fonction membre de classe de la ressource contrôlée. Appelez ensuite la [IsLocked](#islocked) fonction membre pour déterminer si la ressource est disponible. Dans le cas, continuez avec le reste de la fonction membre. Si la ressource n’est pas disponible, attendez un laps de temps pour la ressource doit être publié ou renvoient une erreur. Une fois que l’utilisation de la ressource est terminée, vous devez soit appeler le [Unlock](#unlock) fonctionner si le `CSingleLock` objet doit être utilisé à nouveau, ou autoriser le `CSingleLock` objet à détruire.
 
-`CSingleLock` les objets nécessitent la présence d’un objet dérivé de [CSyncObject](../../mfc/reference/csyncobject-class.md). Cela est généralement un membre de données de classe de la ressource contrôlée. Pour plus d’informations sur l’utilisation `CSingleLock` objets, consultez l’article [Multithreading : comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+`CSingleLock` les objets nécessitent la présence d’un objet dérivé de [CSyncObject](../../mfc/reference/csyncobject-class.md). Cela est généralement un membre de données de classe de la ressource contrôlée. Pour plus d’informations sur l’utilisation `CSingleLock` objets, consultez l’article [Multithreading : Comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `CSingleLock`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmt.h
 

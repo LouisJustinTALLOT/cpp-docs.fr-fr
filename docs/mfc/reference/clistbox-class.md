@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178614"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280314"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 
@@ -374,7 +374,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style de la zone de liste. Appliquer n’importe quelle combinaison de [styles de zone de liste](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) à la zone.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille de la zone de liste et la position. Peut être un `CRect` objet ou un `RECT` structure.
 
 *pParentWnd*<br/>
@@ -481,13 +481,13 @@ Peut être n’importe quelle combinaison de la **enum** valeurs décrites dans 
 |Value|Signification|
 |-----------|-------------|
 |0x0000|Fichier permettre être lues ou écrit pour.|
-|0 x 0001|Fichier puisse être lues mais ne pas écrite dans.|
-|0 x 0002|Fichier est masqué et n’apparaît pas dans une liste de répertoires.|
-|0 x 0004|Fichier est un fichier système.|
+|0x0001|Fichier puisse être lues mais ne pas écrite dans.|
+|0x0002|Fichier est masqué et n’apparaît pas dans une liste de répertoires.|
+|0x0004|Fichier est un fichier système.|
 |0x0010|Le nom spécifié par *lpszWildCard* spécifie un répertoire.|
 |0x0020|Fichier a été archivé.|
-|0 x 4000|Inclure tous les lecteurs qui correspondent au nom spécifié par *lpszWildCard*.|
-|0 x 8000|Indicateur exclusive. Si l’indicateur exclusif est défini, seuls les fichiers du type spécifié sont répertoriés. Sinon, les fichiers du type spécifié sont répertoriés en plus des fichiers « normales ».|
+|0x4000|Inclure tous les lecteurs qui correspondent au nom spécifié par *lpszWildCard*.|
+|0x8000|Indicateur exclusive. Si l’indicateur exclusif est défini, seuls les fichiers du type spécifié sont répertoriés. Sinon, les fichiers du type spécifié sont répertoriés en plus des fichiers « normales ».|
 
 *lpszWildCard*<br/>
 Pointe vers une chaîne de spécification de fichier. La chaîne peut contenir des caractères génériques (par exemple, *.\*).
@@ -904,7 +904,7 @@ void GetText(
 *nIndex*<br/>
 Spécifie l’index de base zéro de la chaîne doit être récupéré.
 
-*lpszbuffer a été*<br/>
+*lpszBuffer*<br/>
 Pointe vers la mémoire tampon qui reçoit la chaîne. La mémoire tampon doit avoir suffisamment d’espace pour la chaîne et un caractère null de fin. La taille de la chaîne peut être déterminée avance en appelant le `GetTextLen` fonction membre.
 
 *rString*<br/>
@@ -1143,7 +1143,7 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Paramètres
 
-*zone bSélectionnez*<br/>
+*bSelect*<br/>
 Spécifie la manière de définir la sélection. Si *zone bSélectionnez* a la valeur TRUE, la chaîne est sélectionnée et mis en surbrillance ; si la valeur est FALSE, la mise en surbrillance est supprimé et la chaîne n’est plus sélectionnée.
 
 *nFirstItem*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Paramètres
 
-*nSélectionnez*<br/>
+*nSelect*<br/>
 Spécifie l’index de base zéro de la chaîne à être sélectionné. Si *nSélectionnez* est -1, la zone de liste est définie pour n’avoir aucune sélection.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1412,7 +1412,7 @@ int SetSel(
 *nIndex*<br/>
 Contient l’index de base zéro de la chaîne à définir. Si -1, la sélection est ajoutée ou supprimée de toutes les chaînes, selon la valeur de *zone bSélectionnez*.
 
-*zone bSélectionnez*<br/>
+*bSelect*<br/>
 Spécifie la manière de définir la sélection. Si *zone bSélectionnez* a la valeur TRUE, la chaîne est sélectionnée et mis en surbrillance ; si la valeur est FALSE, la mise en surbrillance est supprimé et la chaîne n’est plus sélectionnée. La chaîne spécifiée est sélectionnée et mis en surbrillance par défaut.
 
 ### <a name="return-value"></a>Valeur de retour

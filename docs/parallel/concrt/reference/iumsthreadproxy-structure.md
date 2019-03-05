@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 9a0fca40f353f64799c4df9001952cb668cd0678
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657123"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263030"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy, structure
 
@@ -47,13 +47,13 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 `IUMSThreadProxy`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrtrm.h
 
 **Espace de noms :** concurrency
 
-##  <a name="entercriticalregion"></a>  IUMSThreadProxy::EnterCriticalRegion, méthode
+##  <a name="entercriticalregion"></a>  IUMSThreadProxy::EnterCriticalRegion Method
 
 Appelé pour accéder à une zone critique. À l’intérieur d’une zone critique, le planificateur ne sera pas équilibrée des opérations de blocage asynchrones qui se produisent au cours de la région. Cela signifie que le planificateur ne sera pas être entrés de nouveau pour les défauts de page, arrêts de thread, appels de procédure asynchrone du noyau (APC) et ainsi de suite, pour un thread UMS.
 
@@ -65,7 +65,7 @@ virtual int EnterCriticalRegion() = 0;
 
 Nouvelle profondeur de la zone critique. Les zones critiques sont réentrants.
 
-##  <a name="enterhypercriticalregion"></a>  IUMSThreadProxy::EnterHyperCriticalRegion, méthode
+##  <a name="enterhypercriticalregion"></a>  IUMSThreadProxy::EnterHyperCriticalRegion Method
 
 Appelé pour accéder à une zone hyper critique. À l’intérieur d’une zone hyper critique, le planificateur respectent pas les opérations de blocage qui se produisent pendant la région. Cela signifie que le planificateur ne sera pas nouvelle saisie pour le blocage des appels de fonction, les tentatives d’acquisition de verrou qui se bloquent, défauts de page, thread suspensions, appels de procédure asynchrone du noyau (APC) et ainsi de suite, pour un UMS thread.
 
@@ -81,7 +81,7 @@ Nouvelle profondeur de la zone hyper critique. Régions Hyper critiques sont ré
 
 Le planificateur doit être extrêmement prudent de qu’elle appelle des méthodes et quels verrous il acquiert dans ces régions. Si le code dans ces régions se bloque sur un verrou est détenu par quelque chose sur que le planificateur est chargé de planifier, d’interblocage peut en découler.
 
-##  <a name="exitcriticalregion"></a>  IUMSThreadProxy::ExitCriticalRegion, méthode
+##  <a name="exitcriticalregion"></a>  IUMSThreadProxy::ExitCriticalRegion Method
 
 Appelé pour quitter une zone critique.
 
@@ -93,7 +93,7 @@ virtual int ExitCriticalRegion() = 0;
 
 Nouvelle profondeur de la zone critique. Les zones critiques sont réentrants.
 
-##  <a name="exithypercriticalregion"></a>  IUMSThreadProxy::ExitHyperCriticalRegion, méthode
+##  <a name="exithypercriticalregion"></a>  IUMSThreadProxy::ExitHyperCriticalRegion Method
 
 Appelé pour quitter une zone hyper critique.
 
@@ -105,7 +105,7 @@ virtual int ExitHyperCriticalRegion() = 0;
 
 Nouvelle profondeur de la zone hyper critique. Régions Hyper critiques sont réentrantes.
 
-##  <a name="getcriticalregiontype"></a>  IUMSThreadProxy::GetCriticalRegionType, méthode
+##  <a name="getcriticalregiontype"></a>  IUMSThreadProxy::GetCriticalRegionType Method
 
 Retourne le type de région critique, le proxy de thread est dans. Étant donné que hyper critiques sont un sur-ensemble de régions critiques, si le code a entré une zone critique, puis une région hyper stratégiques, `InsideHyperCriticalRegion` sera retourné.
 

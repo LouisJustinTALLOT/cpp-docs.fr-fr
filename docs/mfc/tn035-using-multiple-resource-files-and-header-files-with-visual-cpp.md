@@ -1,5 +1,5 @@
 ---
-title: 'TN035 : utilisation de plusieurs fichiers de ressources et fichiers d’en-tête avec Visual C++'
+title: 'TN035 : À l’aide de plusieurs fichiers de ressources et les fichiers d’en-tête avec Visual C++'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resources
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 6f89e10c2a05d1352dc2347af0aa0215079ea56c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567659"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279914"
 ---
-# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035 : utilisation de plusieurs fichiers de ressources et fichiers d’en-tête avec Visual C++
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035 : À l’aide de plusieurs fichiers de ressources et les fichiers d’en-tête avec Visual C++
 
 > [!NOTE]
 >  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -105,13 +105,13 @@ RES\MYAPP. RC2 contient les ressources qui ne seront pas modifiés par Visual C+
 
 Si vous utilisez des ressources mises en forme personnalisés, vous pouvez les ajouter à RES\MYAPP.RC2 et les modifier dans l'éditeur de texte Visual C++.
 
-AFXRES.RC et AFXPRINT.RC contiennent les ressources standard requises par certaines fonctionnalités de l'infrastructure. Comme RES\MYAPP.RC2, ces deux fichiers de ressources fournis par l’infrastructure sont inclus (avec #include) à la fin de MYAPP.RC et ils sont spécifiés dans les directives au moment de la compilation de la boîte de dialogue Set Includes. Ainsi, vous ne visualisez pas ou ne modifiez pas directement ces ressources d'infrastructure pendant que vous modifiez MYAPP.RC dans Visual C++, mais elles sont compilées dans le fichier .RES binaire et le fichier .EXE final de l'application. Pour plus d’informations sur les ressources framework standard, y compris les procédures de modification, consultez [Note technique 23](../mfc/tn023-standard-mfc-resources.md).
+AFXRES.RC et AFXPRINT.RC contiennent les ressources standard requises par certaines fonctionnalités de l’infrastructure. Comme RES\MYAPP.RC2, ces deux fichiers de ressources fournis par l’infrastructure sont inclus (avec #include) à la fin de MYAPP.RC et ils sont spécifiés dans les directives au moment de la compilation de la boîte de dialogue Set Includes. Ainsi, vous ne visualisez pas ou ne modifiez pas directement ces ressources d'infrastructure pendant que vous modifiez MYAPP.RC dans Visual C++, mais elles sont compilées dans le fichier .RES binaire et le fichier .EXE final de l'application. Pour plus d’informations sur les ressources framework standard, y compris les procédures de modification, consultez [Note technique 23](../mfc/tn023-standard-mfc-resources.md).
 
 AFXRES.H définit des symboles standard, par exemple `ID_FILE_NEW`, utilisés par l'infrastructure et spécifiquement dans AFXRES.RC. AFXRES.H inclut également WINRES.H, qui contient un sous-ensemble de WINDOWS.H requis par les fichiers .RC générés par Visual C++, ainsi que par AFXRES.RC. Les symboles définis dans AFXRES.H sont disponibles lorsque vous modifiez le fichier de ressources d'application (MYAPP.RC). Par exemple, `ID_FILE_NEW` est utilisé pour l'élément Nouveau du menu Fichier dans la ressource de menu de MYAPP.RC. Vous ne pouvez pas modifier ou supprimer ces symboles définis par l'infrastructure.
 
 ## <a name="_mfcnotes_tn035_including"></a> Y compris les fichiers d’en-tête supplémentaires
 
-L'application créée par AppWizard inclut uniquement deux fichiers d'en-tête : RESOURCE.H et AFXRES.H. Seul RESOURCE.H est spécifique à l'application. Vous devrez peut-être inclure des fichiers d'en-tête en lecture seule supplémentaires dans les cas suivants :
+L’application créée par AppWizard inclut uniquement deux fichiers d’en-tête : RESSOURCE. H et AFXRES. H. Seul RESOURCE.H est spécifique à l'application. Vous devrez peut-être inclure des fichiers d'en-tête en lecture seule supplémentaires dans les cas suivants :
 
 Le fichier d'en-tête est fourni par une source externe ou vous souhaitez partager le fichier d'en-tête entre plusieurs projets ou plusieurs parties du même projet.
 
@@ -179,7 +179,7 @@ Visual C++ et le compilateur de ressources prennent en charge plusieurs fichiers
 
 - Si vous devez conserver une ressource définie par l'utilisateur sous forme binaire ou texte interprétable par un autre éditeur de données spécialisé, vous devez la conserver dans un fichier .RC distinct afin que Visual C++ ne modifie pas le format en données hexadécimales. La barre d’outils. Ressources de fichiers WAV (son) dans l’exemple de Concepts avancés MFC [SPEAKN](../visual-cpp-samples.md) sont un bon exemple.
 
-Vous pouvez inclure (avec #include) un SECOND.RC dans les directives au moment de la compilation dans la boîte de dialogue Set Includes :
+Vous pouvez inclure (avec #include) un SECOND.RC dans les directives de compilation dans la boîte de dialogue Set Includes :
 
 ```
 #include "res\myapp.rc2"  // non-Visual C++ edited resources
@@ -298,9 +298,9 @@ Comme décrit ci-dessus, la commande Set Includes du menu Fichier vous permet de
 
 - Directives au moment de la compilation
 
-La section suivante décrit comment Visual C++ assure la maintenance de ces informations dans un fichier .RC. Vous n'avez pas besoin de ces informations pour utiliser Visual C++, mais elles peuvent vous permettre d'approfondir vos connaissances et d'utiliser ainsi la fonctionnalité Set Includes avec davantage de confiance.
+La section suivante décrit comment Visual C++ assure la maintenance de ces informations dans un fichier .RC. Vous n’avez pas besoin de ces informations pour utiliser Visual C++, mais elles peuvent vous permettre d’approfondir vos connaissances et d’utiliser ainsi la fonctionnalité Set Includes avec davantage de confiance.
 
-Chacun des trois types d'informations Set Includes ci-dessus est stocké dans le fichier .RC sous deux formes : (1) comme #include ou autres directives interprétables par le compilateur de ressources, et (2) comme ressources TEXTINCLUDE spéciales interprétables uniquement par Visual C++.
+Chacun des trois types d’informations Set Includes ci-dessus est stocké dans le. Fichier RC sous deux formes : (1) comme #include ou autres directives interprétables par le compilateur de ressources et (2) comme des ressources TEXTINCLUDE spéciales interprétables uniquement par Visual C++.
 
 L’objectif de la ressource TEXTINCLUDE consiste à stocker en toute sécurité les informations Set Include dans un format facilement présentable dans de Visual C++ **Set Includes** boîte de dialogue. TEXTINCLUDE est un *type de ressource* définie par Visual C++. Visual C++ reconnaît trois ressources TEXTINCLUDE spécifiques dont les numéros d'identification de ressources sont 1, 2 et 3 :
 
@@ -383,4 +383,3 @@ END
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

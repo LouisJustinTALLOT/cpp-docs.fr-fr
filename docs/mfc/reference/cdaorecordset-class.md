@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639321"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273892"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset (classe)
 
@@ -214,7 +214,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::FindNext](#findnext)|Recherche l’enregistrement suivant dans un jeu d’enregistrements de type instantané qui satisfait aux critères spécifiés et lui donne de l’enregistre actif ou de type.|
 |[CDaoRecordset::FindPrev](#findprev)|Recherche l’enregistrement précédent dans un jeu d’enregistrements de type instantané qui satisfait aux critères spécifiés et lui donne de l’enregistre actif ou de type.|
 |[CDaoRecordset::GetAbsolutePosition](#getabsoluteposition)|Retourne le numéro d’enregistrement de l’enregistrement en cours d’un objet recordset.|
-|[CDaoRecordset::CanBookmark](#getbookmark)|Retourne une valeur qui représente le signet sur un enregistrement.|
+|[CDaoRecordset::GetBookmark](#getbookmark)|Retourne une valeur qui représente le signet sur un enregistrement.|
 |[CDaoRecordset::GetCacheSize](#getcachesize)|Retourne une valeur qui spécifie le nombre d’enregistrements dans un jeu d’enregistrements de type jeu de données contenant des données à mettre en cache localement à partir d’une source de données ODBC.|
 |[CDaoRecordset::GetCacheStart](#getcachestart)|Retourne une valeur qui spécifie le signet du premier enregistrement dans le jeu d’enregistrements doit être mis en cache.|
 |[CDaoRecordset::GetCurrentIndex](#getcurrentindex)|Retourne un `CString` qui contient le nom de l’index plus récemment utilisés sur un type de table indexé, `CDaoRecordset`.|
@@ -245,7 +245,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::IsFieldNull](#isfieldnull)|Retourne une valeur différente de zéro si le champ spécifié dans l’enregistrement actif est Null (n’avoir aucune valeur).|
 |[CDaoRecordset::IsFieldNullable](#isfieldnullable)|Retourne une valeur différente de zéro si le champ spécifié dans l’enregistrement actif peut être défini avec la valeur Null (n’avoir aucune valeur).|
 |[CDaoRecordset::IsOpen](#isopen)|Retourne la valeur différente de zéro si [Open](#open) a été appelé précédemment.|
-|[Méthode CDaoRecordset::Move](#move)|Positionne le jeu d’enregistrements à un nombre spécifié d’enregistrements à partir de l’enregistrement actif dans les deux sens.|
+|[CDaoRecordset::Move](#move)|Positionne le jeu d’enregistrements à un nombre spécifié d’enregistrements à partir de l’enregistrement actif dans les deux sens.|
 |[CDaoRecordset::MoveFirst](#movefirst)|Positionne l’enregistrement en cours sur le premier enregistrement dans le jeu d’enregistrements.|
 |[CDaoRecordset::MoveLast](#movelast)|Positionne l’enregistrement en cours sur le dernier enregistrement dans le jeu d’enregistrements.|
 |[CDaoRecordset::MoveNext](#movenext)|Positionne l’enregistrement en cours sur l’enregistrement suivant dans le jeu d’enregistrements.|
@@ -325,7 +325,7 @@ Pour plus d’informations, consultez la rubrique « Recordset, objet » dans 
 
 `CDaoRecordset`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 
@@ -903,7 +903,7 @@ S’il n’existe aucun enregistrement en cours, en tant que lorsqu’il n’exi
 
 Pour plus d’informations, consultez la rubrique « AbsolutePosition, propriété » dans l’aide de DAO.
 
-##  <a name="getbookmark"></a>  CDaoRecordset::CanBookmark
+##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark
 
 Appelez cette fonction membre pour obtenir la valeur de signet dans un enregistrement particulier.
 
@@ -1122,7 +1122,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Index de base zéro du champ prédéfini dans la collection de champs du jeu d’enregistrements, pour la recherche par index.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Une référence à un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure.
 
 *dwInfoOptions*<br/>
@@ -1130,11 +1130,11 @@ Options qui spécifient les informations sur le jeu d’enregistrements à récu
 
 - `AFX_DAO_PRIMARY_INFO` (Valeur par défaut) Nom, Type, taille, attributs
 
-- `AFX_DAO_SECONDARY_INFO` Informations primaire, ainsi que : Ordinal, obligatoire, permettre de Position zéro Table de Source de nom étrangère, champ Source, de longueur, ordre de classement,
+- `AFX_DAO_SECONDARY_INFO` Informations primaire, ainsi que : Position ordinale, obligatoire, autoriser une longueur nulle, commande, nom étrangère, champ de Source de Table Source de classement
 
-- `AFX_DAO_ALL_INFO` Informations primaires et secondaires, ainsi que : texte de Validation de valeur par défaut, règle de Validation
+- `AFX_DAO_ALL_INFO` Informations primaires et secondaires, ainsi que : Texte de Validation de valeur, la règle de Validation, par défaut
 
-*Caractère*<br/>
+*lpszName*<br/>
 Nom du champ.
 
 ### <a name="remarks"></a>Notes
@@ -1164,7 +1164,7 @@ virtual COleVariant GetFieldValue(int nIndex);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers une chaîne qui contient le nom d’un champ.
 
 *varValue*<br/>
@@ -1237,11 +1237,11 @@ Options qui spécifient les informations sur l’index à récupérer. Les optio
 
 - `AFX_DAO_PRIMARY_INFO` (Valeur par défaut) Champs de noms, les informations de champ
 
-- `AFX_DAO_SECONDARY_INFO` Informations primaire, ainsi que : principal, Unique, Clustered, Ignorer Nulls, obligatoire, étranger
+- `AFX_DAO_SECONDARY_INFO` Informations primaire, ainsi que : Réplica principal, Unique, en cluster, Ignorer Nulls, obligatoire, étrangère
 
-- `AFX_DAO_ALL_INFO` Informations primaires et secondaires, ainsi que : comptage de valeurs
+- `AFX_DAO_ALL_INFO` Informations primaires et secondaires, ainsi que : Comptage de valeurs
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers le nom de l’objet index, pour la recherche par nom.
 
 ### <a name="remarks"></a>Notes
@@ -1326,7 +1326,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
 *nIndex*<br/>
 La position numérique du paramètre dans l’objet DAOParameter sous-jacent.
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom du paramètre dont la valeur souhaitée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1500,8 +1500,8 @@ Le tableau suivant répertorie les opérations de déplacement sont autorisées 
 
 ||MoveFirst, MoveLast|MovePrev,<br /><br /> Déplacer < 0|Déplacer le 0|MoveNext,<br /><br /> Déplacer > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= différent de zéro,<br /><br /> `IsEOF`=0|Allowed|Exception|Exception|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= différente de zéro|Allowed|Allowed|Exception|Exception|
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|Exception|Exception|Allowed|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|Exception|Exception|
 |Les deux différente de zéro|Exception|Exception|Exception|Exception|
 |Les deux 0|Allowed|Allowed|Allowed|Allowed|
 
@@ -1573,8 +1573,8 @@ Le tableau suivant répertorie les opérations de déplacement sont autorisées 
 
 ||MoveFirst, MoveLast|MovePrev,<br /><br /> Déplacer < 0|Déplacer le 0|MoveNext,<br /><br /> Déplacer > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= différent de zéro,<br /><br /> `IsEOF`=0|Allowed|Exception|Exception|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= différente de zéro|Allowed|Allowed|Exception|Exception|
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|Exception|Exception|Allowed|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|Exception|Exception|
 |Les deux différente de zéro|Exception|Exception|Exception|Exception|
 |Les deux 0|Allowed|Allowed|Allowed|Allowed|
 
@@ -1601,7 +1601,7 @@ BOOL IsFieldDirty(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 Pointeur vers le membre de données du champ dont vous souhaitez vérifier, ou NULL pour déterminer si les champs sont modifiés de l’état.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1624,7 +1624,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 Pointeur vers le membre de données du champ dont vous souhaitez vérifier, ou NULL pour déterminer si les champs ont la valeur Null de l’état.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1653,7 +1653,7 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 Pointeur vers le membre de données du champ dont vous souhaitez vérifier, ou NULL pour déterminer si les champs ont la valeur Null de l’état.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1766,7 +1766,7 @@ L’utilisation de *m_strSort* n’a aucun effet lors de l’ouverture d’un je
 
 Pour plus d’informations, consultez la rubrique « Propriété de tri » dans l’aide de DAO.
 
-##  <a name="move"></a>  Méthode CDaoRecordset::Move
+##  <a name="move"></a>  CDaoRecordset::Move
 
 Appelez cette fonction membre pour positionner le jeu d’enregistrements *lRows* enregistrements à partir de l’enregistrement actif.
 
@@ -2261,7 +2261,7 @@ void SetFieldDirty(
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 Contient l’adresse d’un membre de données de champ dans le jeu d’enregistrements ou NULL. Si NULL, tous les membres de données de champ dans le jeu d’enregistrements marqués. (C++ NULL n’est pas identique à la valeur Null dans la terminologie de base de données, ce qui signifie « ne having aucune valeur. »)
 
 *bDirty*<br/>
@@ -2304,7 +2304,7 @@ void SetFieldNull(
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 Contient l’adresse d’un membre de données de champ dans le jeu d’enregistrements ou NULL. Si NULL, tous les membres de données de champ dans le jeu d’enregistrements marqués. (C++ NULL n’est pas identique à la valeur Null dans la terminologie de base de données, ce qui signifie « ne having aucune valeur. »)
 
 *bNull*<br/>
@@ -2355,7 +2355,7 @@ void SetFieldValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers une chaîne contenant le nom d’un champ.
 
 *varValue*<br/>
@@ -2389,7 +2389,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
 *nIndex*<br/>
 L’index du champ dans le jeu d’enregistrements, pour la recherche par index de base zéro.
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom du champ dans le jeu d’enregistrements, pour la recherche par nom.
 
 ### <a name="remarks"></a>Notes
@@ -2445,7 +2445,7 @@ La position numérique du paramètre dans la collection de paramètres de la que
 *var*<br/>
 La valeur à définir ; consultez la section Notes.
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom du paramètre dont vous souhaitez définir la valeur.
 
 ### <a name="remarks"></a>Notes
@@ -2468,7 +2468,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 *nIndex*<br/>
 L’index du champ dans le jeu d’enregistrements, pour la recherche par index de base zéro.
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom du champ dans le jeu d’enregistrements, pour la recherche par nom.
 
 ### <a name="remarks"></a>Notes

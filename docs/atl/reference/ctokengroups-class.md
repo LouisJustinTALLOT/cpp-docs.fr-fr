@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 9bd5b5dd8f8c233ac324e4c50a6291347bb954e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 842ceab1630fc7bc08b5c27dc769a25d029886f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496331"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274516"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups, classe
 
@@ -73,7 +73,7 @@ Le `CTokenGroups` classe est un wrapper pour le [TOKEN_GROUPS](/windows/desktop/
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -113,7 +113,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `CTokenGroups` objet ou [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) structure permettant de construire le `CTokenGroups` objet.
 
 ### <a name="remarks"></a>Notes
@@ -252,7 +252,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `CTokenGroups` objet ou [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) structure à affecter à la `CTokenGroups` objet.
 
 ### <a name="return-value"></a>Valeur de retour

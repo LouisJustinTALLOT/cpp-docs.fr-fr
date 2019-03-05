@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265936"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (classe)
 
@@ -120,7 +120,7 @@ Pour une explication détaillée, conceptuelle, consultez [à l’aide de CCombo
 
 `CComboBoxEx`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie la combinaison de styles de zone de liste déroulante appliqué à la zone de liste déroulante. Consultez **notes** ci-dessous pour plus d’informations sur les styles.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure, qui est la position et la taille de la zone de liste déroulante.
 
 *pParentWnd*<br/>
@@ -209,7 +209,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Style du contrôle de zone de liste déroulante. Consultez [créer](#create) pour obtenir la liste des styles.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>

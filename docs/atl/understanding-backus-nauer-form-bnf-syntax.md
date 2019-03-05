@@ -5,12 +5,12 @@ helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: b14e2a4f1c29860b9a624b09805959a9f6b550f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b48e0b4abc8601b5173c3c7d2748c726646fbc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267106"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Syntaxe de Backus Nauer Form (BNF)
 
@@ -20,7 +20,7 @@ Les scripts utilisés par le bureau d’enregistrement ATL sont décrits dans ce
 |------------------------|-------------|
 |::=|Équivalent|
 |&#124;|OU|
-|X +|Un ou plusieurs des Xs.|
+|X+|Un ou plusieurs des Xs.|
 |[X]|X est facultatif. Les délimiteurs facultatifs sont indiqués par \[].|
 |N’importe quel **gras** texte|Un littéral de chaîne.|
 |N’importe quel *en italique* texte|Comment construire le littéral de chaîne.|
@@ -31,7 +31,7 @@ Comme indiqué dans le tableau précédent, scripts d’inscription utilisent de
 |--------------------|------------|
 |**ForceRemove**|Supprime complètement la clé suivante (si elle existe) et la recrée.|
 |**NoRemove**|Ne supprime pas la clé suivante au cours de désinscription.|
-|**Val**|Spécifie que `<Key Name>` est en fait une valeur nommée.|
+|**val**|Spécifie que `<Key Name>` est en fait une valeur nommée.|
 |**Supprimer**|Supprime la clé suivante pendant l’inscription.|
 |**s**|Spécifie que la valeur suivante est une chaîne (REG_SZ).|
 |**d**|Spécifie que la valeur suivante est un DWORD (REG_DWORD).|
@@ -101,4 +101,3 @@ Spécifie que le nom de clé `testhex` est une valeur DWORD définie à 55 hexad
 ## <a name="see-also"></a>Voir aussi
 
 [Création de scripts d’inscription](../atl/creating-registrar-scripts.md)
-

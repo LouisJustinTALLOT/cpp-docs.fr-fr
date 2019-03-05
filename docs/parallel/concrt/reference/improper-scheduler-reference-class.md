@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_reference class
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
-ms.openlocfilehash: 9bb62fbf5048766d2d11f344a401979e107ec702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 121e61447775cdcb5d7f5f1187c5d4cc6b7d68b7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597182"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265650"
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference, classe
 
@@ -39,7 +39,7 @@ class improper_scheduler_reference : public std::exception;
 
 `improper_scheduler_reference`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt.h
 

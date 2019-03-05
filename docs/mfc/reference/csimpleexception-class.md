@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-ms.openlocfilehash: 8fb5f7e2133f1055cde05b2dc1358896c9ea0c20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa36fc0ac0eed5ea760224f9e0a3af1c97e18895
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508292"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263297"
 ---
 # <a name="csimpleexception-class"></a>Csimpleexception, classe
 
@@ -65,7 +65,7 @@ Pour plus d’informations, consultez le [CException (classe)](../../mfc/referen
 
 `CSimpleException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -122,4 +122,3 @@ Pour plus d’informations, consultez [CException::GetErrorMessage](../../mfc/re
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CException, classe](../../mfc/reference/cexception-class.md)<br/>
 [Gestion des exceptions](../../mfc/exception-handling-in-mfc.md)
-

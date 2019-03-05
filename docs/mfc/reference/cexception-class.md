@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 53dac18b2ee0176eba0a869a0af254ff2978cffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562225"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270421"
 ---
 # <a name="cexception-class"></a>CException (classe)
 
@@ -80,7 +80,7 @@ Si une exception est interceptée par une des macros, le `CException` objet est 
 
 `CException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -180,7 +180,7 @@ virtual int ReportError(
 
 ### <a name="parameters"></a>Paramètres
 
-*%nLes*<br/>
+*nType*<br/>
 Spécifie le style de la boîte de message. Appliquer n’importe quelle combinaison de la [styles de zone de message](styles-used-by-mfc.md#message-box-styles) à la zone. Si vous ne spécifiez pas ce paramètre, la valeur par défaut est MB_OK.
 
 *nMessageID*<br/>
@@ -231,5 +231,4 @@ else
 [CObject, classe](cobject-class.md)<br/>
 [Graphique hiérarchique](../hierarchy-chart.md)<br/>
 [Traitement des exceptions](exception-processing.md)<br/>
-[Comment faire : créer mes propres Classes d’Exception personnalisées](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[Comment faire Créer mes propres Classes d’Exception personnalisées](http://go.microsoft.com/fwlink/p/?linkid=128045)

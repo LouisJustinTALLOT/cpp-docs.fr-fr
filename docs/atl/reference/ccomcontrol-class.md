@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 3fe01128fc5f0a9d3058df2d6f95a6c038b28062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644195"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261581"
 ---
 # <a name="ccomcontrol-class"></a>CComControl, classe
 
@@ -83,7 +83,7 @@ Pour une démonstration de `CComControl` méthodes et les membres de données, c
 
 `CComControl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl.h
 
@@ -109,10 +109,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface demandée.
 
-*PPV*<br/>
+*ppv*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par *iid*, ou NULL si l’interface est introuvable.
 
 ### <a name="remarks"></a>Notes
@@ -220,7 +220,7 @@ Le texte à afficher dans la boîte de message.
 *lpszCaption*<br/>
 Le titre de la boîte de dialogue. Si NULL (la valeur par défaut), le titre « Erreur » est utilisé.
 
-*%nLes*<br/>
+*nType*<br/>
 Spécifie le contenu et le comportement de la boîte de dialogue. Consultez le [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) entrée dans la documentation du Kit de développement logiciel Windows pour obtenir la liste des boîtes de message différents sont accessibles. La valeur par défaut fournit un simple **OK** bouton.
 
 ### <a name="return-value"></a>Valeur de retour

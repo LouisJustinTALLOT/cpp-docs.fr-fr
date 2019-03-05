@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets : arrière-plan'
+title: 'Windows Sockets : Présentation'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record-oriented data [MFC]
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-ms.openlocfilehash: 93342f734d1e475cbae1b7e3025c59e6e6f73284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468027"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274920"
 ---
-# <a name="windows-sockets-background"></a>Windows Sockets : arrière-plan
+# <a name="windows-sockets-background"></a>Windows Sockets : Présentation
 
 Cet article explique la nature et l’objectif de Windows Sockets. L’article également :
 
@@ -44,7 +44,7 @@ Nombreux éditeurs de logiciels réseau prennent en charge Windows Sockets sous 
 
 Les MFC Microsoft Foundation Class Library () prend en charge la programmation avec l’API de Sockets Windows en fournissant deux classes. Une de ces classes, `CSocket`, fournit un niveau élevé d’abstraction afin de simplifier la programmation de communications réseau.
 
-La spécification Windows Sockets, Windows Sockets : An Open Interface for Network Computing sous Microsoft Windows, désormais à la version 1.1, a été développé comme une norme ouverte mise en réseau par un grand nombre d’individus et de sociétés de la Communauté de TCP/IP et est disponible gratuitement pour une utilisation. Les sockets de programmation actuellement de modèle prend en charge un « domaine de communication », à l’aide de la Suite de protocoles Internet. La spécification est disponible dans le SDK Windows.
+La spécification Windows Sockets, Sockets de Windows : Une Interface ouvrir pour réseau informatique sous Microsoft Windows, désormais à la version 1.1, a été développée comme une norme ouverte mise en réseau par un grand nombre d’individus et de sociétés de la Communauté de TCP/IP et est disponible gratuitement pour une utilisation. Les sockets de programmation actuellement de modèle prend en charge un « domaine de communication », à l’aide de la Suite de protocoles Internet. La spécification est disponible dans le SDK Windows.
 
 > [!TIP]
 >  Étant donné que les sockets utilisent la Suite de protocoles Internet, ils sont l’itinéraire par défaut pour les applications qui prennent en charge les communications Internet sur l’autoroute « informations ».
@@ -70,7 +70,7 @@ Deux types de socket sont disponibles :
 > [!NOTE]
 >  Sous certains protocoles réseau, tels que XNS, les flux de données peut être orientés enregistrement, en tant que flux d’enregistrements au lieu du flux d’octets. Toutefois, sous le protocole TCP/IP plus courant, les flux sont des flux d’octets. Windows Sockets fournit un niveau d’abstraction indépendant du protocole sous-jacent.
 
-Pour plus d’informations sur ces types et le type de socket à utiliser dans les situations, consultez [Windows Sockets : Sockets de Stream](../mfc/windows-sockets-stream-sockets.md) et [Windows Sockets : Sockets datagramme](../mfc/windows-sockets-datagram-sockets.md).
+Pour plus d’informations sur ces types et le type de socket à utiliser dans les situations, consultez [Windows Sockets : Stream Sockets](../mfc/windows-sockets-stream-sockets.md) et [Windows Sockets : Sockets datagramme](../mfc/windows-sockets-datagram-sockets.md).
 
 ##  <a name="_core_the_socket_data_type"></a> Le Type de données SOCKET
 
@@ -89,17 +89,16 @@ Sockets sont très utiles dans au moins trois contextes de communication :
 - Effectue des appels de procédure distante (RPC) en demandant à l’application réceptrice d’interpréter un message comme un appel de fonction.
 
 > [!TIP]
->  La solution idéale pour l’utilisation de sockets MFC est lorsque vous écrivez les deux extrémités de la communication : à l’aide de MFC aux deux extrémités. Pour plus d’informations sur ce sujet, notamment comment gérer le cas lorsque vous communiquez avec les applications non-MFC, consultez [Windows Sockets : classement des octets](../mfc/windows-sockets-byte-ordering.md).
+>  La solution idéale pour l’utilisation de sockets MFC est lorsque vous écrivez les deux extrémités de la communication : à l’aide de MFC aux deux extrémités. Pour plus d’informations sur ce sujet, notamment comment gérer le cas lorsque vous communiquez avec les applications non-MFC, consultez [Windows Sockets : L’ordre des octets](../mfc/windows-sockets-byte-ordering.md).
 
 Pour plus d’informations, consultez la spécification de Windows Sockets : **ntohs**, **ntohl**, **htons**, **htonl**. En outre, consultez les rubriques suivantes :
 
-- [Windows Sockets : utilisation de sockets avec des archives](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets : Utilisation de Sockets avec des Archives](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets : exemple de sockets utilisant des archives](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows Sockets : Exemple de Sockets utilisant des Archives](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows Sockets : utilisation de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets : À l’aide de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 [Windows Sockets dans MFC](../mfc/windows-sockets-in-mfc.md)
-

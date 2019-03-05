@@ -6,20 +6,20 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: ceedf5c02d92059058bc72942a74852eb8146d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564721"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270967"
 ---
 # <a name="general-mfc-topics"></a>Rubriques MFC générales
 
 Cette série d'articles comprend des détails techniques sur la bibliothèque MFC (Microsoft Foundation Class) et fournit une vue d'ensemble de l'infrastructure MFC, ainsi que de ses principaux composants et sous-systèmes.
 
-La bibliothèque Microsoft Foundation Class est une infrastructure d'application pour la programmation dans Microsoft Windows. Écrit en C++, MFC fournit la majeure partie du code nécessaire pour la gestion des fenêtres, des menus et des boîtes de dialogue, pour la gestion des entrées/sorties de base, pour le stockage des collections d'objets de données, etc. Il vous suffit juste d'ajouter votre code d'application à cette infrastructure. Étant donné la nature de la programmation de classe C++, il est facile d’étendre ou remplacer les fonctionnalités de base qui [l’infrastructure MFC](../mfc/framework-mfc.md) fournit.
+La bibliothèque Microsoft Foundation Class est une infrastructure d'application pour la programmation dans Microsoft Windows. Écrit en C++, MFC fournit la majeure partie du code nécessaire pour la gestion des fenêtres, des menus et des boîtes de dialogue, pour la gestion des entrées/sorties de base, pour le stockage des collections d’objets de données, etc. Il vous suffit juste d'ajouter votre code d'application à cette infrastructure. Étant donné la nature de la programmation de classe C++, il est facile d’étendre ou remplacer les fonctionnalités de base qui [l’infrastructure MFC](../mfc/framework-mfc.md) fournit.
 
-L'infrastructure MFC est une approche puissante qui vous permet de vous servir du travail de programmeurs experts Windows comme base de vos créations. MFC réduit les temps de développement, rend le code plus portable, offre un support important sans réduire la liberté et la flexibilité de la programmation, et permet un accès facile aux éléments d'interface utilisateur et aux technologies « difficiles à programmer », comme la technologie Active, OLE et la programmation Internet. En outre, MFC simplifie la programmation des bases de données via DAO (Data Access Objects) et ODBC (Open Database Connectivity), ainsi que la programmation réseau via Windows Sockets. MFC facilite la programmation de fonctionnalités comme les feuilles de propriétés (« boîtes de dialogue avec onglets »), l'aperçu avant impression et les barres d'outils flottantes personnalisables.
+L'infrastructure MFC est une approche puissante qui vous permet de vous servir du travail de programmeurs experts Windows comme base de vos créations. MFC réduit les temps de développement, rend le code plus portable, offre un support important sans réduire la liberté et la flexibilité de la programmation, et permet un accès facile aux éléments d'interface utilisateur et aux technologies « difficiles à programmer », comme la technologie Active, OLE et la programmation Internet. En outre, MFC simplifie la programmation des bases de données via DAO (Data Access Objects) et ODBC (Open Database Connectivity), ainsi que la programmation réseau via Windows Sockets. MFC facilite la programmation de fonctionnalités comme les feuilles de propriétés (« boîtes de dialogue avec onglets »), l’aperçu avant impression et les barres d’outils flottantes personnalisables.
 
 ## <a name="in-this-section"></a>Dans cette section
 
@@ -33,7 +33,7 @@ L'infrastructure MFC est une approche puissante qui vous permet de vous servir d
 
 [Génération à partir du Framework](../mfc/building-on-the-framework.md)
 
-[CWinApp : classe d’application](../mfc/cwinapp-the-application-class.md)
+[CWinApp : La classe d’Application](../mfc/cwinapp-the-application-class.md)
 
 [Modèles de document et le processus de création de Document/Vue](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,7 +47,7 @@ L'infrastructure MFC est une approche puissante qui vous permet de vous servir d
 
 [Configuration requise pour les contrôles communs Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[Guide pratique pour ajouter la prise en charge du Gestionnaire de redémarrage](../mfc/how-to-add-restart-manager-support.md)
+[Guide pratique pour Ajouter la prise en charge du Gestionnaire de redémarrage](../mfc/how-to-add-restart-manager-support.md)
 
 [Disposition dynamique](../mfc/dynamic-layout.md)
 
@@ -58,4 +58,3 @@ Pour plus d’informations sur ATL, consultez [référence Active de la biblioth
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation d’objets fenêtres](../mfc/working-with-window-objects.md)
-

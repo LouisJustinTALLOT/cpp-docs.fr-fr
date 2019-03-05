@@ -1,5 +1,5 @@
 ---
-title: 'Arrière-plan OLE : liaison et incorporation'
+title: 'Arrière-plan OLE : Liaison et incorporation'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE embedded items [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 7595d87ce54b0a34dd4e5f3489dd36e3918fd8a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465479"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280964"
 ---
-# <a name="ole-background-linking-and-embedding"></a>Arrière-plan OLE : liaison et incorporation
+# <a name="ole-background-linking-and-embedding"></a>Arrière-plan OLE : Liaison et incorporation
 
 À l’aide de la commande Coller dans une application conteneur peut créer un composant incorporé ou un élément incorporé. Les données sources pour un élément incorporé sont stockées en tant que partie du document OLE qui le contient. De cette façon, un fichier de document pour un document de traitement de texte peut contenir du texte et peut également contenir les bitmaps, graphiques, formules ou tout autre type de données.
 
@@ -30,7 +30,6 @@ Chaque élément OLE, si incorporé ou lié, a un type basé sur l’application
 ## <a name="see-also"></a>Voir aussi
 
 [Arrière-plan OLE](../mfc/ole-background.md)<br/>
-[Arrière-plan OLE : conteneurs et serveurs](../mfc/ole-background-containers-and-servers.md)<br/>
-[Conteneurs : éléments clients](../mfc/containers-client-items.md)<br/>
-[Serveurs : éléments du serveur](../mfc/servers-server-items.md)
-
+[Arrière-plan OLE : Conteneurs et les serveurs](../mfc/ole-background-containers-and-servers.md)<br/>
+[Conteneurs : Éléments clients](../mfc/containers-client-items.md)<br/>
+[serveurs : Éléments de serveur](../mfc/servers-server-items.md)

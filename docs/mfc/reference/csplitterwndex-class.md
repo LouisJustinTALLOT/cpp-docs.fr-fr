@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538994"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265143"
 ---
 # <a name="csplitterwndex-class"></a>Classe de CSplitterWndEx
 
@@ -56,7 +56,7 @@ Le `CSplitterWndEx` classe est utilisée conjointement avec la [OnDrawSplitterBo
 
 [CSplitterWnd](csplitterwnd-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxsplitterwndex.h
 
@@ -77,10 +77,10 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 [in] Pointeur vers le contexte de périphérique. Si ce paramètre est NULL, le framework redessine la fenêtre active.
 
-*%nLes*<br/>
+*nType*<br/>
 [in] Parmi les `CSplitterWnd::ESplitType` des valeurs d’énumération qui spécifie l’élément de fenêtre de séparateur à dessiner. Les valeurs valides sont `splitBox`, `splitBar`, `splitIntersection` et `splitBorder`.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle englobant qui spécifie les dimensions et l’emplacement où dessiner l’élément de fenêtre de séparateur spécifié.
 
 ### <a name="remarks"></a>Notes

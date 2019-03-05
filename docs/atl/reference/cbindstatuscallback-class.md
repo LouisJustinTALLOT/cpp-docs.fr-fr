@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259202"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback, classe
 
@@ -67,7 +67,7 @@ Spécifie les indicateurs de liaison qui sont retournés par [GetBindInfo](#getb
 |Nom|Description|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Constructeur.|
-|[CBindStatusCallback :: ~ CBindStatusCallback](#dtor)|Destructeur.|
+|[CBindStatusCallback::~CBindStatusCallback](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -82,7 +82,7 @@ Spécifie les indicateurs de liaison qui sont retournés par [GetBindInfo](#getb
 |[CBindStatusCallback::OnProgress](#onprogress)|Appelé pour indiquer la progression d’un processus de téléchargement de données. L’implémentation de ATL retourne S_OK.|
 |[CBindStatusCallback::OnStartBinding](#onstartbinding)|Appelé lorsque la liaison est démarrée.|
 |[CBindStatusCallback::OnStopBinding](#onstopbinding)|Appelée lorsque le transfert de données asynchrone est arrêté.|
-|[CBindStatusCallback::StartAsyncDownload à laquelle sont](#startasyncdownload)|Initialise les octets disponibles et les octets lus à zéro, crée un objet de flux de données de type push à partir d’une URL et les appels `OnDataAvailable` chaque fois que les données sont disponibles.|
+|[CBindStatusCallback::StartAsyncDownload](#startasyncdownload)|Initialise les octets disponibles et les octets lus à zéro, crée un objet de flux de données de type push à partir d’une URL et les appels `OnDataAvailable` chaque fois que les données sont disponibles.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
@@ -117,7 +117,7 @@ Le moniker asynchrone utilise la fonction de rappel `OnData` pour appeler votre 
 
 `CBindStatusCallback`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl.h
 
@@ -135,7 +135,7 @@ Crée un objet pour recevoir des notifications concernant le transfert de donné
 
 Le constructeur initialise également [m_pT](#m_pt) et [m_pFunc](#m_pfunc) avec la valeur NULL.
 
-##  <a name="dtor"></a>  CBindStatusCallback :: ~ CBindStatusCallback
+##  <a name="dtor"></a>  CBindStatusCallback::~CBindStatusCallback
 
 Destructeur.
 
@@ -236,7 +236,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ##  <a name="m_dwavailabletoread"></a>  CBindStatusCallback::m_dwAvailableToRead
 
@@ -357,12 +357,12 @@ STDMETHOD(
 ### <a name="parameters"></a>Paramètres
 
 *grfBSCF*<br/>
-[in] Une valeur d’énumération BSCF. Un ou plusieurs des opérations suivantes : BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION ou BSCF_LASTDATANOTIFICATION.
+[in] Une valeur d’énumération BSCF. Un ou plusieurs des opérations suivantes : BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION, or BSCF_LASTDATANOTIFICATION.
 
 *dwSize*<br/>
 [in] La quantité cumulée (en octets) de données disponibles depuis le début de la liaison. Peut être égal à zéro, indiquant que la quantité de données n’est pas pertinente ou qu’aucune quantité spécifique est devenue disponible.
 
-*pFormatetc*<br/>
+*pformatetc*<br/>
 [in] Pointeur vers le [FORMATETC](/windows/desktop/com/the-formatetc-structure) structure qui contient le format des données disponibles. S’il n’existe aucun format, peut être CF_NULL.
 
 *pstgmed*<br/>
@@ -406,7 +406,7 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 *riid*<br/>
 Identificateur d’interface de l’interface demandée. Non utilisé.
 
-*pUnk*<br/>
+*punk*<br/>
 Adresse de l’interface IUnknown. Non utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -469,7 +469,7 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Paramètres
 
-*HRESULT*<br/>
+*hresult*<br/>
 Code d’état retourné à partir de l’opération de liaison.
 
 *szError*<br/>
@@ -479,7 +479,7 @@ Adresse d’une valeur de chaîne. Non utilisé.
 
 Appelé par le moniker asynchrone fourni par le système pour indiquer la fin de l’opération de liaison.
 
-##  <a name="startasyncdownload"></a>  CBindStatusCallback::StartAsyncDownload à laquelle sont
+##  <a name="startasyncdownload"></a>  CBindStatusCallback::StartAsyncDownload
 
 Démarre le téléchargement des données de façon asynchrone à partir de l’URL spécifiée.
 

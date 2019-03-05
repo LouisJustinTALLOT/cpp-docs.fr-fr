@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: f7ded70431b80257433058cc9af89bcb137c4247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b74ee8a779ad2fffa801749d9818f985bc8c352
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490855"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273307"
 ---
 # <a name="collections"></a>Collections
 
@@ -33,7 +33,7 @@ La bibliothèque MFC fournit des classes de collection pour gérer des groupes d
 - [Classes de collection non créées à partir de modèles](#_core_the_collection_classes_not_based_on_templates)
 
 > [!NOTE]
->  Si votre code utilise déjà les classes de collection basées sur des modèles, vous pouvez continuer à les utiliser. Si vous spécifiez de nouvelles classes de collection de type sécurisé pour vos propres types de données, nous vous recommandons d’utiliser les classes les plus récentes basées sur des modèles.
+>  Si votre code utilise déjà les classes de collection basées sur des modèles, vous pouvez continuer à les utiliser. Si vous spécifiez de nouvelles classes de collection de type sécurisé pour vos propres types de données, nous vous recommandons d'utiliser les classes les plus récentes basées sur des modèles.
 
 ##  <a name="_core_collection_shapes"></a> Formes de collection
 
@@ -98,7 +98,7 @@ Caractéristiques des Classes de Collection MFC table [recommandations relatives
 
 - [Recommandations relatives au choix d’une classe de collection](../mfc/recommendations-for-choosing-a-collection-class.md)
 
-- [Guide pratique pour définir une collection de type sécurisé](../mfc/how-to-make-a-type-safe-collection.md)
+- [Guide pratique pour Définir une Collection de Type sécurisé](../mfc/how-to-make-a-type-safe-collection.md)
 
 - [Création de collections de piles et de files d’attente](../mfc/creating-stack-and-queue-collections.md)
 
@@ -108,7 +108,7 @@ Caractéristiques des Classes de Collection MFC table [recommandations relatives
 
 - [Classes basées sur un modèle](../mfc/template-based-classes.md)
 
-#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Accès aux membres d’une collection (basée sur un modèle ou non)
+#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Accès aux membres d'une collection (basée sur un modèle ou non)
 
 - [Accès à tous les membres d’une collection](../mfc/accessing-all-members-of-a-collection.md)
 
@@ -118,4 +118,3 @@ Caractéristiques des Classes de Collection MFC table [recommandations relatives
 
 [Concepts](../mfc/mfc-concepts.md)<br/>
 [Rubriques MFC générales](../mfc/general-mfc-topics.md)
-

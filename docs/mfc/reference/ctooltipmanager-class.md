@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 79589cb631635f4ed8b85f4399a86e8fadf61dda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431653"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260632"
 ---
 # <a name="ctooltipmanager-class"></a>Ctooltipmanager, classe
 
@@ -55,7 +55,7 @@ Utilisez [CMFCToolTipCtrl, classe](../../mfc/reference/cmfctooltipctrl-class.md)
 
 [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtooltipmanager.h
 
@@ -78,7 +78,7 @@ static BOOL CreateToolTip(
 *pWndParent*<br/>
 [in] Parent de l’info-bulle.
 
-*%nLes*<br/>
+*nType*<br/>
 [in] Type de l’info-bulle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -175,13 +175,13 @@ static void SetTooltipText(
 
 ### <a name="parameters"></a>Paramètres
 
-*PTI*<br/>
+*pTI*<br/>
 [in] Pointeur vers un objet TOOLINFO.
 
 *pToolTip*<br/>
 [in, out] Pointeur vers le contrôle d’info-bulle pour lequel définir le texte et la description.
 
-*%nLes*<br/>
+*nType*<br/>
 [in] Spécifie le type de contrôle à laquelle cette info-bulle est associée.
 
 *strText*<br/>

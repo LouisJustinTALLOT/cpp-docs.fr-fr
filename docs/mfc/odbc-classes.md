@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: f0ff337a7193093456ab4f5de2f6087d88ca12df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e022ea3e5de4a57f0ef2b1e3f312654c2889ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518519"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267132"
 ---
 # <a name="odbc-classes"></a>Classes ODBC
 
@@ -46,4 +46,3 @@ vous permet de stocker une valeur sans se préoccuper du type de données. `CDBV
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
-

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-ms.openlocfilehash: ad7200ca53aa99104270209ca253b93d2393d8a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f52016afe39da900dca4847d29beccb97d829b60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258253"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize, classe
 
@@ -73,7 +73,7 @@ class CAnimationSize : public CAnimationBaseObject;
 |Nom|Description|
 |----------|-----------------|
 |[CAnimationSize::operator CSize](#operator_csize)|Convertit CAnimationSize CSize.|
-|[CAnimationSize::operator =](#operator_eq)|Assigne szSrc à CAnimationSize.|
+|[CAnimationSize::operator=](#operator_eq)|Assigne szSrc à CAnimationSize.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
@@ -94,7 +94,7 @@ La classe CAnimationSize encapsule deux objets CAnimationVariable et peut repré
 
 `CAnimationSize`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -268,7 +268,7 @@ Valeur actuelle de la taille de l’animation CSize.
 
 En interne, cette fonction appelle GetValue. Si GetValue échoue pour une raison quelconque, la taille retournée contient les valeurs par défaut pour la largeur et la hauteur.
 
-##  <a name="operator_eq"></a>  CAnimationSize::operator =
+##  <a name="operator_eq"></a>  CAnimationSize::operator=
 
 Assigne szSrc à CAnimationSize.
 

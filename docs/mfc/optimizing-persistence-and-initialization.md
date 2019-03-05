@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optimization, ActiveX controls
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
-ms.openlocfilehash: 6f0d888f49cf27505882e89e3cdbb469ea9e8684
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 294d9c43f5f767329c04932c574485d7dca704e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261940"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimisation de la persistance et de l'initialisation
 
@@ -46,5 +46,4 @@ Bien que les fonctions `Serialize` et `OnResetState` aient été substituées, l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles ActiveX MFC : optimisation](../mfc/mfc-activex-controls-optimization.md)
-
+[Contrôles ActiveX MFC : Optimisation](../mfc/mfc-activex-controls-optimization.md)

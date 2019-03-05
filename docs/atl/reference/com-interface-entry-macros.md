@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 8341061ba6365beb97f4413aab8bfbbfdc25e035
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693918"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276375"
 ---
 # <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY
 
@@ -47,7 +47,7 @@ Ces macros entrer des interfaces d’un objet dans son mappage COM afin qu’ils
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Identique à [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), sauf que l’interrogation pour n’importe quel IID entraîne un appel à *func*.|
 |[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Retourne E_NOINTERFACE et termine le traitement de mappage COM lors de l’interface spécifiée est interrogée pour.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -80,7 +80,7 @@ BEGIN_COM_MAP(CThisExample)
 END_COM_MAP()
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -118,7 +118,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface exposée.
 
 *x*<br/>
@@ -138,7 +138,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID que vous spécifiez pour l’interface.
 
 *x*<br/>
@@ -157,10 +157,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface interrogée pour.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Le nom d’un `IUnknown` pointeur.
 
 ### <a name="remarks"></a>Notes
@@ -181,7 +181,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Le nom d’un `IUnknown` pointeur.
 
 ### <a name="remarks"></a>Notes
@@ -202,10 +202,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface interrogée pour.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Le nom d’un `IUnknown` pointeur. Doit être un membre de la classe contenant le mappage COM.
 
 *clsid*<br/>
@@ -227,7 +227,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Le nom d’un `IUnknown` pointeur. Doit être un membre de la classe contenant le mappage COM.
 
 *clsid*<br/>
@@ -268,13 +268,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface détachable.
 
 *x*<br/>
 [in] Le nom de la classe qui implémente l’interface.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Le nom d’un `IUnknown` pointeur. Doit être un membre de la classe contenant le mappage COM. Doit être initialisé avec la valeur NULL dans le constructeur de l’objet de classe.
 
 ### <a name="remarks"></a>Notes
@@ -295,7 +295,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface détachable.
 
 *x*<br/>
@@ -342,10 +342,10 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface exposée.
 
-*entrepôt de données*<br/>
+*dw*<br/>
 [in] Un paramètre passé à la *func*.
 
 *func*<br/>
@@ -369,7 +369,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Paramètres
 
-*entrepôt de données*<br/>
+*dw*<br/>
 [in] Un paramètre passé à la *func*.
 
 *func*<br/>
@@ -397,4 +397,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 Vous pouvez utiliser cette macro pour empêcher une interface d’être utilisés dans un cas particulier. Par exemple, vous pouvez insérer cette macro dans votre mappage COM juste avant COM_INTERFACE_ENTRY_AGGREGATE_BLIND pour empêcher une requête pour l’interface de transfert en clé inconnue interne de l’agrégat.
 
 L’interface IID sera construite en ajoutant *x* à `IID_`. Par exemple, si *x* est `IPersistStorage`, l’IID sera `IID_IPersistStorage`.
-

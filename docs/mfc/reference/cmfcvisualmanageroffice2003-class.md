@@ -92,12 +92,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: 1b811de23b4a049bd462ddbb3f9b96e80ae25be0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3b0a031db8ff843bb43f7dfa69f046d6ae99a96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273268"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003, classe
 
@@ -223,7 +223,7 @@ L’exemple suivant montre comment définir le Gestionnaire visuel d’office 20
 
 [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxvisualmanageroffice2003.h
 
@@ -245,10 +245,10 @@ virtual BOOL DrawComboBorderWinXP(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectangle englobant de la bordure de zone de liste déroulante.
 
-*bDésactiver*<br/>
+*bDisabled*<br/>
 [in] Spécifie si la bordure de zone de liste déroulante est désactivée.
 
 *bIsDropped*<br/>
@@ -281,10 +281,10 @@ virtual BOOL DrawComboDropButtonWinXP(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant de bouton de liste déroulante de zone de liste déroulante.
 
-*bDésactiver*<br/>
+*bDisabled*<br/>
 [in] Spécifie si le bouton de liste déroulante de zone de liste déroulante est désactivé.
 
 *bIsDropped*<br/>
@@ -318,7 +318,7 @@ virtual void DrawCustomizeButton(
 *pDC*<br/>
 [in] Pointeur vers un contexte d’affichage.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du bouton
 
 *bIsHorz*<br/>
@@ -352,7 +352,7 @@ virtual BOOL DrawPushButtonWinXP(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du bouton push.
 
 *pButton*<br/>
@@ -586,7 +586,7 @@ virtual BOOL GetToolTipInfo(
 *params*<br/>
 [out] Une référence à un [cmfctooltipinfo, classe](../../mfc/reference/cmfctooltipinfo-class.md) objet où cette méthode retourne les informations d’info-bulle.
 
-*%nLes*<br/>
+*nType*<br/>
 [in] Informations de type pour les informations d’info-bulle à retourner.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -796,7 +796,7 @@ virtual BOOL OnDrawBrowseButton(
 [in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pEdit*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 [in] *clrText*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
@@ -823,7 +823,7 @@ virtual void OnDrawButtonBorder(
 *pButton*<br/>
 [in] Pointeur vers un bouton de barre d’outils. Le framework Dessine la bordure de ce bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du bouton de barre d’outils.
 
 *state*<br/>
@@ -856,7 +856,7 @@ virtual void OnDrawCaptionBarBorder(
 *pBar*<br/>
 [in] Un pointeur vers un [CMFCCaptionBar, classe](../../mfc/reference/cmfccaptionbar-class.md) objet. Le framework dessine cette barre de légende.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites de la barre de légende.
 
 *clrBarBorder*<br/>
@@ -888,7 +888,7 @@ virtual void OnDrawCheckBoxEx(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant de la case à cocher.
 
 *nState*<br/>
@@ -900,7 +900,7 @@ virtual void OnDrawCheckBoxEx(
 *bPressed*<br/>
 [in] TRUE si la case à cocher est activé, ou FALSE dans le cas contraire.
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 [in] TRUE si la case à cocher est activée, ou FALSE dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
@@ -924,10 +924,10 @@ virtual void OnDrawComboBorder(
 *pDC*<br/>
 [in] Pointeur vers le contexte de périphérique d’un bouton de zone de liste déroulante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du bouton de zone de liste déroulante.
 
-*bDésactiver*<br/>
+*bDisabled*<br/>
 [in] Un paramètre booléen qui indique si le bouton de zone de liste déroulante n’est pas disponible.
 
 *bIsDropped*<br/>
@@ -962,10 +962,10 @@ virtual void OnDrawComboDropButton(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du bouton de liste.
 
-*bDésactiver*<br/>
+*bDisabled*<br/>
 [in] Un paramètre booléen qui indique si le bouton de déplacement n’est pas disponible.
 
 *bIsDropped*<br/>
@@ -1013,7 +1013,7 @@ virtual void OnDrawExpandingBox(
 *pDC*<br/>
 [in] Pointeur vers le contexte d’affichage dans lequel la zone de taille doit être dessiné.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant de la zone d’expansion à dessiner.
 
 *bIsOpened*<br/>
@@ -1045,7 +1045,7 @@ virtual void OnDrawHeaderCtrlBorder(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du contrôle header.
 
 [in] *bIsPressed*<br/>
@@ -1075,7 +1075,7 @@ virtual void OnDrawMenuBorder(
 *pMenu*<br/>
 [in] Un pointeur vers un [cmfcpopupmenu, classe](../../mfc/reference/cmfcpopupmenu-class.md) objet. Le framework Dessine une bordure autour de ce menu contextuel.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du menu contextuel.
 
 ### <a name="remarks"></a>Notes
@@ -1153,7 +1153,7 @@ virtual void OnDrawPaneBorder(
 *pBar*<br/>
 [in] Pointeur vers un volet. Le Gestionnaire visuel Dessine la bordure de ce volet.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui indique les limites du volet.
 
 ### <a name="remarks"></a>Notes
@@ -1211,7 +1211,7 @@ virtual void OnDrawPopupWindowBorder(
 *pDC*<br/>
 [in] Pointeur vers le contexte de périphérique de la fenêtre contextuelle.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant de la fenêtre contextuelle.
 
 ### <a name="remarks"></a>Notes
@@ -1409,7 +1409,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 *pSeparator*<br/>
 [in] Un pointeur vers un [cmfcribbonseparator, classe](../../mfc/reference/cmfcribbonseparator-class.md) objet. Le framework Dessine ce séparateur du ruban.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du séparateur.
 
 ### <a name="remarks"></a>Notes
@@ -1435,7 +1435,7 @@ virtual void OnDrawRibbonSliderChannel(
 *pSlider*<br/>
 [in] Un pointeur vers un [cmfcribbonslider, classe](../../mfc/reference/cmfcribbonslider-class.md) objet. Le framework Dessine le canal de ce curseur de ruban.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites pour le canal du curseur du ruban.
 
 ### <a name="remarks"></a>Notes
@@ -1464,7 +1464,7 @@ virtual void OnDrawRibbonSliderThumb(
 *pSlider*<br/>
 [in] Un pointeur vers un [cmfcribbonslider, classe](../../mfc/reference/cmfcribbonslider-class.md). Le framework Dessine un curseur de défilement pour ce curseur de ruban.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du curseur de défilement pour le curseur de ruban.
 
 *bIsHighlighted*<br/>
@@ -1503,7 +1503,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 *pSlider*<br/>
 [in] Un pointeur vers un [cmfcribbonslider, classe](../../mfc/reference/cmfcribbonslider-class.md) objet. Le framework Dessine ce curseur de ruban.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites des boutons de zoom sur le curseur de ruban.
 
 *bIsZoomOut*<br/>
@@ -1570,7 +1570,7 @@ virtual void OnDrawScrollButtons(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant des boutons de défilement.
 
 *nBorderSize*<br/>
@@ -1604,7 +1604,7 @@ virtual void OnDrawSeparator(
 *pBar*<br/>
 [in] Pointeur vers un volet qui contient le séparateur.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du séparateur.
 
 *bIsHoriz*<br/>
@@ -1630,7 +1630,7 @@ virtual void OnDrawShowAllMenuItems(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du menu à dessiner.
 
 *state*<br/>
@@ -1795,7 +1795,7 @@ virtual void OnDrawTabsButtonBorder(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du bouton d’onglet.
 
 *pButton*<br/>
@@ -1862,7 +1862,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites de la zone de groupe dans le volet Office.
 
 *bSpecial*<br/>
@@ -1925,7 +1925,7 @@ virtual void OnDrawTearOffCaption(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites de la légende.
 
 *bIsActive*<br/>
@@ -1977,7 +1977,7 @@ virtual void OnEraseTabsArea(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites de la zone d’onglet.
 
 *pTabWnd*<br/>
@@ -2006,7 +2006,7 @@ virtual void OnEraseTabsButton(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du bouton d’onglet.
 
 *pButton*<br/>
@@ -2037,7 +2037,7 @@ virtual BOOL OnEraseTabsFrame(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites de la fenêtre de l’onglet.
 
 *pTabWnd*<br/>
@@ -2067,7 +2067,7 @@ virtual void OnFillAutoHideButtonBackground(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du bouton Masquer automatiquement.
 
 *pButton*<br/>
@@ -2133,7 +2133,7 @@ virtual void OnFillButtonInterior(
 *pButton*<br/>
 [in] Pointeur vers le bouton pour lequel l’infrastructure remplit l’arrière-plan.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du bouton de barre d’outils.
 
 *state*<br/>
@@ -2159,7 +2159,7 @@ virtual COLORREF OnFillCommandsListBackground(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du bouton.
 
 *bIsSelected*<br/>
@@ -2192,7 +2192,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du contrôle header.
 
 ### <a name="remarks"></a>Notes
@@ -2216,7 +2216,7 @@ virtual void OnFillHighlightedArea(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant de la zone en surbrillance à remplir.
 
 *pBrush*<br/>
@@ -2273,7 +2273,7 @@ virtual void OnFillOutlookPageButton(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du bouton de page Outlook.
 
 *bIsHighlighted*<br/>
@@ -2304,7 +2304,7 @@ virtual void OnFillPopupWindowBackground(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites de la fenêtre contextuelle.
 
 ### <a name="remarks"></a>Notes
@@ -2365,7 +2365,7 @@ virtual void OnFillTasksGroupInterior(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites du groupe de tâches.
 
 *bSpecial*<br/>
@@ -2416,7 +2416,7 @@ virtual void OnHighlightQuickCustomizeMenuButton(
 *pButton*<br/>
 [in] Pointeur vers le bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du bouton.
 
 ### <a name="remarks"></a>Notes

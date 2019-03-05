@@ -1,5 +1,5 @@
 ---
-title: 'TN059 : Utilisation des Macros de Conversion MBCS / Unicode MFC'
+title: 'TN059 : À l’aide de Macros de Conversion MBCS / Unicode MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.mbcs
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: e806cea54fcb1559b7d70b2e7672973501fc0adf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 130b459dc87f36325d0f253181a196bea868856f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476438"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262809"
 ---
-# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059 : utilisation des macros de conversion MBCS/Unicode MFC
+# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059 : Utilisation des Macros de Conversion MBCS/Unicode MFC
 
 > [!NOTE]
 >  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -29,7 +29,7 @@ Cette note explique comment utiliser les macros de conversion MBCS/Unicode, qui 
 
 ## <a name="overview"></a>Vue d'ensemble
 
-Dans MFC 3.x, une DLL spéciale a été utilisée (MFCANS32.DLL) pour effectuer une conversion automatique entre Unicode et MBCS lors de l'appel des interfaces OLE. Cette DLL est une couche quasiment transparente qui autorise l'accès en écriture pour les applications OLE, comme si les API et les interfaces OLE étaient de type MBCS, alors qu'elles sont toujours de type Unicode (sauf pour les ordinateurs Macintosh). Bien que cette couche s'avère pratique et permet la conversion rapide des applications Win16 en Win32 (les applications Microsoft MFC, Word, Excel et VBA utilisent cette technologie), elle a parfois un impact significatif sur les performances système. C'est pour cette raison que MFC 4.x n'utilise pas cette DLL mais communique directement avec les interfaces OLE Unicode. Pour cela, MFC doit effectuer une conversion Unicode/MBCS lors de l'appel à une interface OLE, et doit souvent effectuer une conversion Unicode en MBCS lors de l'implémentation d'une interface OLE. Pour réaliser les conversions efficacement et facilement, plusieurs macros ont été créées.
+Dans MFC 3.x, une DLL spéciale a été utilisée (MFCANS32.DLL) pour effectuer une conversion automatique entre Unicode et MBCS lors de l'appel des interfaces OLE. Cette DLL est une couche quasiment transparente qui autorise l’accès en écriture pour les applications OLE, comme si les API et les interfaces OLE étaient de type MBCS, alors qu’elles sont toujours de type Unicode (sauf pour les ordinateurs Macintosh). Bien que cette couche s'avère pratique et permet la conversion rapide des applications Win16 en Win32 (les applications Microsoft MFC, Word, Excel et VBA utilisent cette technologie), elle a parfois un impact significatif sur les performances système. C'est pour cette raison que MFC 4.x n'utilise pas cette DLL mais communique directement avec les interfaces OLE Unicode. Pour cela, MFC doit effectuer une conversion Unicode/MBCS lors de l'appel à une interface OLE, et doit souvent effectuer une conversion Unicode en MBCS lors de l'implémentation d'une interface OLE. Pour réaliser les conversions efficacement et facilement, plusieurs macros ont été créées.
 
 Un des plus grands obstacles dans la création d'un ensemble de macros est l'allocation de mémoire. Les chaînes ne pouvant pas être converties depuis leur emplacement, il est donc nécessaire d'allouer de la mémoire supplémentaire pour stocker les résultats de la conversion. L'opération peut être réalisée à l'aide d'un code semblable à celui-ci :
 
@@ -198,4 +198,3 @@ Les macros sont faciles à utiliser et à insérer dans votre code, mais il faut
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

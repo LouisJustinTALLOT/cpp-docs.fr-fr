@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
-ms.openlocfilehash: f9bed3814c4489cf3850ccab97efb23caeb51730
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1cc3dc734917da46af99e67da40fe243941102e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640802"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280665"
 ---
 # <a name="adding-an-mfc-class"></a>Ajout d'une classe MFC
 
@@ -36,4 +36,3 @@ Pour ajouter des classes dérivées de classes de la bibliothèque Microsoft Fou
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Vue d’ensemble de la classe](../../mfc/class-library-overview.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 3e56c08f6165f6662c30e3ecbd6eda45c6696788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95d4cec61b230df5a019655617a25b1dc309cde4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257967"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Suppression de tous les objets d’une collection CObject
 
@@ -72,7 +72,7 @@ Comme dans l'exemple de liste ci-dessus, vous pouvez appeler `RemoveAll` pour su
 
 1. Appelez la fonction `RemoveAll` pour supprimer tous les éléments du mappage après leur suppression.
 
-   Le code pour supprimer tous les éléments d'une collection `CMap` est le suivant. Chaque élément du mappage a une chaîne en tant que clé et un objet `CPerson` (dérivé de `CObject`) en tant que valeur.
+   Le code pour supprimer tous les éléments d’une collection `CMap` est le suivant. Chaque élément du mappage a une chaîne en tant que clé et un objet `CPerson` (dérivé de `CObject`) en tant que valeur.
 
    [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
@@ -81,4 +81,3 @@ Vous pouvez appeler `RemoveAll` pour supprimer tous les éléments d'un mappage 
 ## <a name="see-also"></a>Voir aussi
 
 [Accès à tous les membres d’une collection](../mfc/accessing-all-members-of-a-collection.md)
-
