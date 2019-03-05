@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 929926129ddee0efdee4f1b02494b503755811d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271227"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry, classe
 
@@ -70,7 +70,7 @@ class CD2DGeometry : public CD2DResource;
 |Nom|Description|
 |----------|-----------------|
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Construit un objet CD2DGeometry.|
-|[CD2DGeometry :: ~ CD2DGeometry](#_dtorcd2dgeometry)|Destructeur. Appelé lorsqu’un objet de géométrie D2D est détruit.|
+|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|Destructeur. Appelé lorsqu’un objet de géométrie D2D est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -93,17 +93,17 @@ class CD2DGeometry : public CD2DResource;
 |[CD2DGeometry::Simplify](#simplify)|Crée une version simplifiée de la géométrie qui contient uniquement des lignes et des courbes de Bézier cubiques (éventuellement) et écrit le résultat dans un ID2D1SimplifiedGeometrySink.|
 |[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Détermine si le trait de la géométrie contient le point spécifié selon l’épaisseur du trait spécifié, le style et la transformation.|
 |[CD2DGeometry::Tessellate](#tessellate)|Crée un ensemble de triangles enroulés dans le sens horaire qui couvrent la géométrie après avoir été transformés à l’aide de la matrice spécifiée et aplatis à l’aide de la tolérance spécifiée.|
-|[CD2DGeometry::widen](#widen)|Élargit la géométrie par le trait spécifié et écrit le résultat dans un ID2D1SimplifiedGeometrySink après qu’elle a été transformés par la matrice spécifiée et aplatis à l’aide de la tolérance spécifiée.|
+|[CD2DGeometry::Widen](#widen)|Élargit la géométrie par le trait spécifié et écrit le résultat dans un ID2D1SimplifiedGeometrySink après qu’elle a été transformés par la matrice spécifiée et aplatis à l’aide de la tolérance spécifiée.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|Renvoie l’interface ID2D1Geometry|
+|[CD2DGeometry::operator ID2D1Geometry*](#operator_id2d1geometry_star)|Renvoie l’interface ID2D1Geometry|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|Pointeur vers un ID2D1Geometry.|
 
@@ -119,7 +119,7 @@ class CD2DGeometry : public CD2DResource;
 
 **En-tête :** afxrendertarget.h
 
-##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry :: ~ CD2DGeometry
+##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry::~CD2DGeometry
 
 Destructeur. Appelé lorsqu’un objet de géométrie D2D est détruit.
 
@@ -234,7 +234,7 @@ BOOL ComputeArea(
 *worldTransform*<br/>
 La transformation à appliquer à cette géométrie avant de calculer sa zone.
 
-*Zone*<br/>
+*area*<br/>
 Lorsque cette méthode est retournée, contient un pointeur vers la zone de la version transformée et aplatie de cette géométrie. Vous devez allouer le stockage pour ce paramètre.
 
 *flatteningTolerance*<br/>
@@ -344,7 +344,7 @@ Point à tester.
 *worldTransform*<br/>
 Transformation à appliquer à la géométrie avant le test de la relation contenant-contenu.
 
-*contient*<br/>
+*contains*<br/>
 Lorsque cette méthode est retournée, contient une valeur booléenne qui est TRUE si la zone remplie par la géométrie contient le point ; Sinon, FALSE. Vous devez allouer le stockage pour ce paramètre.
 
 *flatteningTolerance*<br/>
@@ -377,7 +377,7 @@ CD2DRectF& bounds) const;
 ### <a name="parameters"></a>Paramètres
 
 *worldTransform*<br/>
-*Limites*
+*bounds*
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -405,7 +405,7 @@ Style de trait qui élargit la géométrie.
 *worldTransform*<br/>
 Une transformation à appliquer à la géométrie après la transformation de la géométrie et une fois que la géométrie a été tracée.
 
-*Limites*<br/>
+*bounds*<br/>
 Lorsque cette méthode est retournée, contient les limites de la géométrie élargie. Vous devez allouer le stockage pour ce paramètre.
 
 *flatteningTolerance*<br/>
@@ -435,7 +435,7 @@ Pointeur vers un ID2D1Geometry.
 ID2D1Geometry* m_pGeometry;
 ```
 
-##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry *
+##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry*
 
 Renvoie l’interface ID2D1Geometry
 
@@ -531,7 +531,7 @@ Style de trait à appliquer.
 *worldTransform*<br/>
 Transformation à appliquer à la géométrie de tracé.
 
-*contient*<br/>
+*contains*<br/>
 Lorsque cette méthode est retournée, contient une valeur booléenne définie sur TRUE si le trait de la géométrie contient le point spécifié ; Sinon, FALSE. Vous devez allouer le stockage pour ce paramètre.
 
 *flatteningTolerance*<br/>
@@ -567,7 +567,7 @@ Limites maximales de la distance entre les points de l’approximation polygonal
 
 Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.
 
-##  <a name="widen"></a>  CD2DGeometry::widen
+##  <a name="widen"></a>  CD2DGeometry::Widen
 
 Élargit la géométrie par le trait spécifié et écrit le résultat dans un ID2D1SimplifiedGeometrySink après qu’elle a été transformés par la matrice spécifiée et aplatis à l’aide de la tolérance spécifiée.
 

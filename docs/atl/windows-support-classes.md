@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ATL, windows
 - windows [C++], ATL
 ms.assetid: 750b14d5-d787-4d2b-9728-ac199ccad489
-ms.openlocfilehash: 9a33136c63c5bdc32dfc882e8c53ab2f5c27eb46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7e9e1f4fb94537cdd131e58ef3fc481ee1c012e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665411"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281029"
 ---
 # <a name="windows-support-classes"></a>Classes de prise en charge de Windows
 
@@ -58,4 +58,3 @@ Les classes suivantes fournissent la prise en charge pour windows :
 [Vue d’ensemble de la classe](../atl/atl-class-overview.md)<br/>
 [Macros de table des messages](../atl/reference/message-map-macros-atl.md)<br/>
 [Macros de classe de fenêtre](../atl/reference/window-class-macros.md)
-

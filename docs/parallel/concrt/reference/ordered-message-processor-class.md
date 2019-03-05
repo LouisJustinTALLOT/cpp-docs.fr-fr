@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: c6e09ff862f0725cc508e3e390dbfa3cc12f7daa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545962"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270746"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor, classe
 
@@ -57,10 +57,10 @@ Type de charge utile des messages traités par le processeur.
 |Nom|Description|
 |----------|-----------------|
 |[async_send](#async_send)|Les files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait de façon asynchrone. (Substitue [message_processor::async_send](message-processor-class.md#async_send).)|
-|[initialiser](#initialize)|Initialise le `ordered_message_processor` objet avec le groupe de fonction, le planificateur et planification de rappel appropriées.|
+|[initialize](#initialize)|Initialise le `ordered_message_processor` objet avec le groupe de fonction, le planificateur et planification de rappel appropriées.|
 |[initialize_batched_processing](#initialize_batched_processing)|Initialiser le traitement des messages par lot|
 |[sync_send](#sync_send)|Mode synchrone les files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait. (Substitue [message_processor::sync_send](message-processor-class.md#sync_send).)|
-|[attente](#wait)|Attente de rotation spécifique au processeur utilisée dans les destructeurs de blocs de messages pour vous assurer que toutes les tâches de traitement asynchrone ont le temps se termine avant de détruire le bloc. (Substitue [message_processor::wait](message-processor-class.md#wait).)|
+|[wait](#wait)|Attente de rotation spécifique au processeur utilisée dans les destructeurs de blocs de messages pour vous assurer que toutes les tâches de traitement asynchrone ont le temps se termine avant de détruire le bloc. (Substitue [message_processor::wait](message-processor-class.md#wait).)|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
@@ -74,7 +74,7 @@ Type de charge utile des messages traités par le processeur.
 
 `ordered_message_processor`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 

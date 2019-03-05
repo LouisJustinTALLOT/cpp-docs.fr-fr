@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694788"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259809"
 ---
 # <a name="cbasepane-class"></a>Cbasepane, classe
 
@@ -324,7 +324,7 @@ Les conseils de personnalisation suivantes se rapportent à la `CBasePane Class`
 
   Il s’agit des indicateurs que vous pouvez associer avec une opération OR au niveau du bit.
 
-`CBasePane` implémente les méthodes de type Boolean virtuels suivantes pour refléter ces indicateurs : [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Vous pouvez les remplacer dans les classes dérivées pour personnaliser leur comportement.
+`CBasePane` implémente les méthodes de type Boolean virtuels suivants pour refléter ces indicateurs : [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Vous pouvez les remplacer dans les classes dérivées pour personnaliser leur comportement.
 
 - Vous pouvez personnaliser le comportement d’ancrage en substituant [CBasePane::CanAcceptPane](#canacceptpane). Que votre volet renvoient la valeur FALSE à partir de cette méthode pour empêcher l’ancrage à celui-ci un autre volet.
 
@@ -356,7 +356,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CBasePane](../../mfc/reference/cbasepane-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxbasepane.h
 
@@ -699,7 +699,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Le style de fenêtre (consultez [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle initial.
 
 *pParentWnd*<br/>
@@ -730,7 +730,7 @@ La bibliothèque ajoute plusieurs nouveaux styles pour les volets. Le tableau su
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Le volet peut flotter.|
 |AFX_CBRS_AUTOHIDE|Le volet prend en charge le mode de masquage automatique|
-|AFX_CBRS_RESIZE|Le volet peut être redimensionné. **Important :** ce style n’est pas implémenté.|
+|AFX_CBRS_RESIZE|Le volet peut être redimensionné. **Important :**  Ce style n’est pas implémenté.|
 |AFX_CBRS_CLOSE|Le volet peut être fermé.|
 |AFX_CBRS_AUTO_ROLLUP|Le volet peut être report lorsqu’elle flotte.|
 |AFX_CBRS_REGULAR_TABS|Lorsqu’un volet ancré à un autre volet qui a ce style, une fenêtre à onglets régulière est créée. (Pour plus d’informations, consultez [ctabbedpane, classe](../../mfc/reference/ctabbedpane-class.md).)|
@@ -895,7 +895,7 @@ virtual void EnableGripper(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer la barre de redimensionnement ; FALSE pour la désactiver.
 
 ### <a name="remarks"></a>Notes
@@ -1275,7 +1275,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Pointeur vers le volet adjacent.
 
-*exécuteront-ils*<br/>
+*bAfter*<br/>
 [in] Si la valeur est TRUE, *pControlBar* est insérée après *pTarget*. Si la valeur est FALSE, *pControlBar* est inséré avant *pTarget*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1551,7 +1551,7 @@ virtual HDWP MoveWindow(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle en spécifiant le nouvel emplacement et la taille du volet.
 
 *bRepaint*<br/>
@@ -1633,7 +1633,7 @@ virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 
 ### <a name="parameters"></a>Paramètres
 
-*inutilisé*<br/>
+*unused*<br/>
 [in] Non utilisé.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
@@ -1925,13 +1925,13 @@ virtual HDWP SetWindowPos(
 *y*<br/>
 [in] Spécifie la position du haut de la fenêtre.
 
-*CX*<br/>
+*cx*<br/>
 [in] Spécifie la largeur de la fenêtre.
 
-*CY*<br/>
+*cy*<br/>
 [in] Spécifie la hauteur de la fenêtre.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 [in] Spécifie les options de taille et la position. Pour plus d’informations, consultez [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
 
 *hdwp*<br/>

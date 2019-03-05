@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-ms.openlocfilehash: a530254bbaabce723b97d21313abb81e1b375833
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c614cbb11376c5ae338762c0feaa54c8f1bb3e27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282771"
 ---
 # <a name="csimplemapequalhelper-class"></a>Csimplemapequalhelper, classe
 
@@ -48,7 +48,7 @@ L’élément de valeur.
 
 Cette classe de traits constitue un supplément pour le `CSimpleMap` classe. Il fournit des méthodes pour la comparaison de deux `CSimpleMap` éléments (plus précisément, les composants clé et valeur) pour l’égalité de l’objet. Par défaut, les clés et valeurs sont comparées à l’aide de **Operator == ()**, mais si le mappage contient des types de données complexes qui ne disposent pas de leur propre opérateur d’égalité, cette classe peut être substituée pour fournir la fonctionnalité supplémentaire requise.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsimpcoll.h
 
@@ -62,10 +62,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>Paramètres
 
-*K1*<br/>
+*k1*<br/>
 La première clé.
 
-*K2*<br/>
+*k2*<br/>
 La deuxième clé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -82,7 +82,7 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ### <a name="parameters"></a>Paramètres
 
-*V1*<br/>
+*v1*<br/>
 Première valeur.
 
 *v2*<br/>

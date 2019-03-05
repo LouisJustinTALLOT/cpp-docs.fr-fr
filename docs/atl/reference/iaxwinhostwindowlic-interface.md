@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-ms.openlocfilehash: 791f0e4387a54448ffcf6573cf716c5ba122bcaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aca3970d13db53ffa04fe9582bbe9b8db78e820d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511304"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257954"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic, Interface
 
@@ -41,7 +41,7 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 Consultez [hébergement ActiveX des contrôles à l’aide de ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour obtenir un exemple qui utilise les membres de cette interface.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 La définition de cette interface est disponible en tant que fichier IDL ou C++, comme indiqué ci-dessous.
 
@@ -104,4 +104,3 @@ Consultez [IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwind
 ### <a name="example"></a>Exemple
 
 Consultez [hébergement ActiveX des contrôles à l’aide de ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour obtenir un exemple qui utilise `IAxWinHostWindowLic::CreateControlLicEx`.
-

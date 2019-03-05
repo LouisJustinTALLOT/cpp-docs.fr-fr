@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-ms.openlocfilehash: 3356c5d94eaf4cef0b44c509144d0de4a5d42abf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549109"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296499"
 ---
 # <a name="activex-control-containers"></a>Conteneurs de contrôles ActiveX
 
@@ -33,19 +33,19 @@ D'autres articles décrivent plusieurs rubriques, allant de la création d'un pr
 
 - [Conteneurs pour les contrôles ActiveX](../mfc/containers-for-activex-controls.md)
 
-- [Conteneurs de contrôles ActiveX : activation manuelle d’une relation contenant-contenu de contrôle ActiveX](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
+- [Conteneurs de contrôles ActiveX : Activation manuelle de la contenance de contrôles ActiveX](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
 
-- [Conteneurs de contrôles ActiveX : insertion d’un contrôle dans une application de conteneur de contrôle](../mfc/inserting-a-control-into-a-control-container-application.md)
+- [Conteneurs de contrôles ActiveX : Insertion d’un contrôle dans une Application de conteneur de contrôle](../mfc/inserting-a-control-into-a-control-container-application.md)
 
-- [Conteneurs de contrôles ActiveX : association d’un contrôle ActiveX à une variable membre](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
+- [Conteneurs de contrôles ActiveX : Connexion d’un contrôle ActiveX à une Variable membre](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
 
-- [Conteneurs de contrôles ActiveX : Contrôler les gestion des événements à partir d’un ActiveX](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
+- [Conteneurs de contrôles ActiveX : Gestion des événements à partir d’un contrôle ActiveX](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
 
-- [Conteneurs de contrôles ActiveX : consultation et modification des propriétés de contrôle](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
+- [Conteneurs de contrôles ActiveX : Affichage et modification des propriétés de contrôle](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
 
-- [Conteneurs de contrôles ActiveX : programmation de contrôles ActiveX dans un conteneur de contrôles ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)
+- [Conteneurs de contrôles ActiveX : Programmation de contrôles ActiveX dans un conteneur de contrôles ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)
 
-- [Conteneurs de contrôles ActiveX : utilisation de contrôles dans un conteneur autre que de boîte de dialogue](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [Conteneurs de contrôles ActiveX : À l’aide de contrôles dans un conteneur sans boîte de dialogue](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
 Pour plus d’informations sur l’utilisation de contrôles ActiveX dans une boîte de dialogue, consultez la [boîte de dialogue Éditeur](../windows/dialog-editor.md) rubriques.
 
@@ -54,4 +54,3 @@ Pour obtenir la liste des articles qui expliquent les détails du développement
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

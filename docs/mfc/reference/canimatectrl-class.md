@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8c8a6d3e83534cd5670e43a9009b8919a2e57f92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178254"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281371"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl (classe)
 
@@ -151,7 +151,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle de l’animation. Appliquer n’importe quelle combinaison de windows décrits dans la section Notes ci-dessous et les styles de contrôle d’animation de styles décrit dans [Styles de contrôle d’Animation](/windows/desktop/Controls/animation-control-styles) dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la position et la taille du contrôle d’animation. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.
 
 *pParentWnd*<br/>
@@ -205,7 +205,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Spécifie le style du contrôle de l’animation. Appliquer n’importe quelle combinaison de la fenêtre et de styles de contrôle d’animation décrit dans [Styles de contrôle d’Animation](/windows/desktop/Controls/animation-control-styles) dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -288,10 +288,10 @@ BOOL Play(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ndepuis*<br/>
+*nFrom*<br/>
 Index de base zéro de l’image où la lecture commence. Valeur doit être inférieure à 65 536. Valeur 0 signifie commence par la première image dans le clip AVI.
 
-*nPour*<br/>
+*nTo*<br/>
 Index de base zéro de l’image où lecture se termine. Valeur doit être inférieure à 65 536. Une valeur de - 1 signifie que de se terminer par la dernière image dans le clip AVI.
 
 *nRep*<br/>
@@ -319,7 +319,7 @@ BOOL Seek(UINT nTo);
 
 ### <a name="parameters"></a>Paramètres
 
-*nPour*<br/>
+*nTo*<br/>
 Index de base zéro de l’image à afficher. Valeur doit être inférieure à 65 536. La valeur 0 signifie qu’affiche la première image dans le clip AVI. La valeur -1 signifie qu’affiche la dernière image dans le clip AVI.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -356,4 +356,3 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CAnimateCtrl::Create](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)
-

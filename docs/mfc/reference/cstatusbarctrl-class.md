@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 71ae39cb62da7938880973dc48b65ed69b9c8b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569729"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272839"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl (classe)
 
@@ -131,7 +131,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle de barre de statut. Appliquer n’importe quelle combinaison de styles de contrôle répertoriés dans la barre d’état [des Styles de contrôle courants](/windows/desktop/Controls/common-control-styles) dans le SDK Windows. Ce paramètre doit inclure le style WS_CHILD. Il doit également inclure le style WS_VISIBLE.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle barre d’état. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
 
 *pParentWnd*<br/>
@@ -177,7 +177,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Spécifie le style du contrôle de barre de statut. Appliquer n’importe quelle combinaison de styles de contrôle répertoriés dans la barre d’état [des Styles de contrôle courants](/windows/desktop/Controls/common-control-styles) dans le SDK Windows. Ce paramètre doit inclure le style WS_CHILD. Il doit également inclure le style WS_VISIBLE.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -244,7 +244,7 @@ Adresse d’un tableau d’entiers comportant trois éléments. Le premier élé
 *nHorz*<br/>
 Référence à un entier qui reçoit la largeur de la bordure horizontale.
 
-*nVersion*<br/>
+*nVert*<br/>
 Référence à un entier qui reçoit la largeur de la bordure verticale.
 
 *nSpacing*<br/>
@@ -377,7 +377,7 @@ Adresse de la mémoire tampon qui reçoit le texte. Ce paramètre est une chaîn
 *nPane*<br/>
 Index de base zéro de la partie à partir duquel récupérer le texte.
 
-*PTapez*<br/>
+*pType*<br/>
 Pointeur vers un entier qui reçoit les informations de type. Le type peut être une des valeurs suivantes :
 
 - **0** le texte est dessiné avec une bordure à paraître inférieures au plan de la barre d’état.
@@ -411,7 +411,7 @@ int GetTextLength(
 *nPane*<br/>
 Index de base zéro de la partie à partir duquel récupérer le texte.
 
-*PTapez*<br/>
+*pType*<br/>
 Pointeur vers un entier qui reçoit les informations de type. Le type peut être une des valeurs suivantes :
 
 - **0** le texte est dessiné avec une bordure à paraître inférieures au plan de la barre d’état.
@@ -481,7 +481,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 Valeur COLORREF qui spécifie la nouvelle couleur d’arrière-plan. Spécifiez la valeur CLR_DEFAULT pour provoquer la barre d’état à utiliser sa couleur d’arrière-plan par défaut.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -613,7 +613,7 @@ Adresse d'une chaîne se terminant par null spécifiant le texte à définir. Si
 *nPane*<br/>
 Index de base zéro de la partie à définir. Si cette valeur est égale à 255, le contrôle de barre d'état est considéré comme un simple contrôle constitué d'une seule partie.
 
-*%nLes*<br/>
+*nType*<br/>
 Type d'opération de dessin. Consultez [message SB_SETTEXT](/windows/desktop/Controls/sb-settext) pour obtenir la liste des valeurs possibles.
 
 ### <a name="return-value"></a>Valeur de retour

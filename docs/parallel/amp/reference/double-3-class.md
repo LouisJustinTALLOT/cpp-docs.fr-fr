@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 169c9ecb0fe68436a05c6c59a75a80a0d02f411c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326736"
 ---
 # <a name="double3-class"></a>double_3, classe
 
@@ -168,14 +168,14 @@ class double_3;
 |Nom|Description|
 |----------|-----------------|
 |double_3::b||
-|double_3::BG||
-|double_3::BGR||
+|double_3::bg||
+|double_3::bgr||
 |double_3::br||
 |double_3::brg||
 |double_3::g||
 |double_3::gb||
-|double_3::GBR||
-|double_3::GR||
+|double_3::gbr||
+|double_3::gr||
 |double_3::grb||
 |double_3::r||
 |double_3::rb||
@@ -183,8 +183,8 @@ class double_3;
 |double_3::rg||
 |double_3::rgb||
 |double_3::x||
-|double_3::XY||
-|double_3::XYZ||
+|double_3::xy||
+|double_3::xyz||
 |double_3::xz||
 |double_3::xzy||
 |double_3::y||
@@ -195,18 +195,18 @@ class double_3;
 |double_3::z||
 |double_3::zx||
 |double_3::zxy||
-|double_3::ZY||
+|double_3::zy||
 |double_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `double_3`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_short_vectors.h
 
-**Namespace :** Concurrency::graphics
+**Espace de noms :** Concurrency::graphics
 
 ##  <a name="ctor"></a> double_3
 
@@ -265,7 +265,7 @@ La valeur pour initialiser l’élément 2.
 *_V*<br/>
 La valeur pour l’initialisation.
 
-*_Autre*<br/>
+*_Other*<br/>
 L’objet utilisé pour initialiser.
 
 ##  <a name="double_3__size"></a> Taille

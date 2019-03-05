@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178777"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304468"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -198,7 +198,7 @@ Le tableau suivant compare la zone de liste déroulante trois [styles](../../mfc
 
 |Style|Lorsque la zone de liste est visible|Contrôle statique ou de modification|
 |-----------|-------------------------------|-----------------------------|
-|Simple|Toujours|Modifier|
+|Simple|Always|Modifier|
 |Drop-down|Lors de la suppression vers le bas|Modifier|
 |Liste déroulante|Lors de la suppression vers le bas|Statique|
 
@@ -214,7 +214,7 @@ où `id` Spécifie l’ID de fenêtre enfant du contrôle zone de liste déroula
 
 Prototype de fonction du parent est la suivante :
 
-**afx_msg** `void` `memberFxn` **() ;**
+**afx_msg** `void` `memberFxn` **( );**
 
 L’ordre dans lequel certaines notifications seront envoyées n’est pas prévisible. En particulier, une notification CBN_SELCHANGE du peut se produire avant ou après une notification CBN_CLOSEUP.
 
@@ -382,7 +382,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style de la zone de liste déroulante. Appliquer n’importe quelle combinaison de [styles de zone de liste déroulante](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) à la zone.
 
-*Rect*<br/>
+*rect*<br/>
 Pointe vers la position et la taille de la zone de liste déroulante. Peut être un [structure RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou un `CRect` objet.
 
 *pParentWnd*<br/>
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Paramètres
 
-*nSélectionnez*<br/>
+*nSelect*<br/>
 Spécifie l’index de base zéro de la chaîne à sélectionner. Si-1, une sélection actuelle dans la zone de liste est supprimée et le contrôle d’édition est désactivé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bLa*<br/>
+*bExtended*<br/>
 Spécifie si la zone de liste modifiable doit utiliser l’interface de l’étendue de l’utilisateur ou l’interface utilisateur par défaut. La valeur TRUE sélectionne l’interface utilisateur améliorée ; la valeur FALSE sélectionne l’interface utilisateur standard.
 
 ### <a name="return-value"></a>Valeur de retour

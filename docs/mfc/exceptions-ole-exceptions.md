@@ -1,5 +1,5 @@
 ---
-title: 'Exceptions : exceptions OLE'
+title: 'Exceptions : Exceptions OLE'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, exceptions
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - exception handling [MFC], OLE
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
-ms.openlocfilehash: 2732f571d305fda2b739be02661ab9558f8bc653
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e404005a88398ec909e3043cfa55c7e8fbe2f594
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515414"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297903"
 ---
-# <a name="exceptions-ole-exceptions"></a>Exceptions : exceptions OLE
+# <a name="exceptions-ole-exceptions"></a>Exceptions : Exceptions OLE
 
 Les techniques et les fonctionnalités de gestion des exceptions dans OLE sont les mêmes que celles pour gérer les autres exceptions. Pour plus d’informations sur la gestion des exceptions, consultez l’article [gestion des exceptions C++](../cpp/cpp-exception-handling.md).
 
@@ -44,4 +44,3 @@ Deux fonctions globales correspondent aux deux classes d’exception OLE : [Afx
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion des exceptions](../mfc/exception-handling-in-mfc.md)
-

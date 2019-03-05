@@ -1,19 +1,19 @@
 ---
-title: CPrintInfo (Structure)
+title: CPrintInfo Structure
 ms.date: 11/04/2016
 f1_keywords:
 - CPrintInfo
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: 259dfd6808a5e975fb22d11d0a8c569237733eae
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e08885fc9893d175e819c0acbf571d96d425a2c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524512"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273359"
 ---
-# <a name="cprintinfo-structure"></a>CPrintInfo (Structure)
+# <a name="cprintinfo-structure"></a>CPrintInfo Structure
 
 Stocke des informations sur un travail d’impression ou Aperçu avant impression.
 
@@ -73,7 +73,7 @@ Un autre exemple est le cas dans lequel la longueur du document n’est pas conn
 
 `CPrintInfo`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxext.h
 
@@ -323,6 +323,5 @@ Normalement, les numéros de page commencent à 1. Cette valeur est stockée dan
 [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)<br/>
 [CView::OnEndPrintPreview](../../mfc/reference/cview-class.md#onendprintpreview)<br/>
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
-[Comme CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
+[CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-

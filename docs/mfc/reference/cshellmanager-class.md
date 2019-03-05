@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 428f64dadb91887c4d076693e5dc939b6aff7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269381"
 ---
 # <a name="cshellmanager-class"></a>Cshellmanager, classe
 
@@ -80,7 +80,7 @@ Vous ne devez pas créer un `CShellManager` objet manuellement. Il sera créé a
 
 [CShellManager](../../mfc/reference/cshellmanager-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxshellmanager.h
 
@@ -218,7 +218,7 @@ void FreeItem(LPITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Paramètres
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Une liste d’éléments à supprimer.
 
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount
@@ -231,7 +231,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Paramètres
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Pointeur vers une liste d’éléments.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -248,7 +248,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Paramètres
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Pointeur vers une liste d’éléments.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -265,7 +265,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Paramètres
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] La liste des éléments pour effectuer une itération.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -317,7 +317,7 @@ HRESULT ItemFromPath(
 *lpszPath*<br/>
 [in] Chaîne qui spécifie le chemin d’accès pour l’élément.
 
-*PIDL*<br/>
+*pidl*<br/>
 [out] Une référence à un PIDL. La méthode utilise cette PIDL pour stocker le pointeur vers sa valeur de retour.
 
 ### <a name="return-value"></a>Valeur de retour

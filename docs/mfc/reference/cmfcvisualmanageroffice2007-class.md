@@ -230,12 +230,12 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: f26aeb94bdb392040eee1ab4795e580cbce79e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e0c1f3ca593fed939b0cf3fa0fa3085d79d156
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660435"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282433"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007, classe
 
@@ -394,7 +394,7 @@ L’exemple suivant montre comment utiliser le Gestionnaire visuel Office 2007. 
 
 [CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxvisualmanageroffice2007.h
 
@@ -674,7 +674,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 ### <a name="parameters"></a>Paramètres
 
 [in] *pButton*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -795,7 +795,7 @@ virtual void OnDrawButtonBorder(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -815,7 +815,7 @@ virtual void OnDrawButtonSeparator(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 [in] *bHorz*<br/>
 
 ### <a name="remarks"></a>Notes
@@ -1783,7 +1783,7 @@ virtual void OnDrawShowAllMenuItems(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -2034,7 +2034,7 @@ virtual void OnFillButtonInterior(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Notes
 

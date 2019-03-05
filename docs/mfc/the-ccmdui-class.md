@@ -10,12 +10,12 @@ helpviewer_keywords:
 - update handlers [MFC]
 - toolbars [MFC], updating
 ms.assetid: 2f2bae62-8c29-45a4-bbce-490eb01907d5
-ms.openlocfilehash: 47ef359f71d9dd30f2ba1ff1c4cf504bccd33ffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e0af0703924d6fae626d3753b8523efe0c56652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667946"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326615"
 ---
 # <a name="the-ccmdui-class"></a>CCmdUI, classe
 
@@ -27,5 +27,4 @@ Ce gestionnaire appelle le `Enable` fonction membre d’un objet avec un accès 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour mettre à jour des objets d’interface utilisateur](../mfc/how-to-update-user-interface-objects.md)
-
+[Guide pratique pour Mettre à jour des objets d’Interface utilisateur](../mfc/how-to-update-user-interface-objects.md)

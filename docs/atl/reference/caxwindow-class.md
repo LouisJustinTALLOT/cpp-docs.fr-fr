@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: f1a1e7fe00218efe7514fe59ea78ea30b33b878f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3cf1c773c96a2bf1bc6c67420d72052e68ee2a53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329564"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297591"
 ---
 # <a name="caxwindow-class"></a>CAxWindow, classe
 
@@ -43,7 +43,7 @@ class CAxWindow : public CWindow
 |||
 |-|-|
 |[AttachControl](#attachcontrol)|Attache un contrôle ActiveX à la `CAxWindow` objet.|
-|[Objet CAxWindow](#caxwindow)|Construit un objet `CAxWindow`.|
+|[CAxWindow](#caxwindow)|Construit un objet `CAxWindow`.|
 |[CreateControl](#createcontrol)|Crée un contrôle ActiveX, il initialise et héberge ce dernier dans la `CAxWindow` fenêtre.|
 |[CreateControlEx](#createcontrolex)|Crée un contrôle ActiveX et récupère un pointeur d’interface (ou pointeurs) à partir du contrôle.|
 |[GetWndClassName](#getwndclassname)|(Statique) Récupère le nom de la classe prédéfinie de la `CAxWindow` objet.|
@@ -56,7 +56,7 @@ class CAxWindow : public CWindow
 
 |||
 |-|-|
-|[opérateur =](#operator_eq)|Assigne un HWND à un existant `CAxWindow` objet.|
+|[operator =](#operator_eq)|Assigne un HWND à un existant `CAxWindow` objet.|
 
 ## <a name="remarks"></a>Notes
 
@@ -68,7 +68,7 @@ Classe `CAxWindow` est implémentée comme une spécialisation de la `CAxWindowT
 
 Si vous devez modifier la classe de base, vous pouvez utiliser `CAxWindowT` et spécifiez la nouvelle classe de base comme argument de modèle.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin.h
 
@@ -129,12 +129,12 @@ HRESULT CreateControl(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers une chaîne pour créer le contrôle. Doit être mis en forme dans une des manières suivantes :
 
 - Un ProgID tels que « MSCAL. Calendar.7 »
 
-- Un CLSID tels que « {8E27C92B-1264-101C-8A2F-040224009C02} »
+- A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
 - Une URL comme «<http://www.microsoft.com>»
 
@@ -196,12 +196,12 @@ HRESULT CreateControlEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers une chaîne pour créer le contrôle. Doit être mis en forme dans une des manières suivantes :
 
 - Un ProgID tels que « MSCAL. Calendar.7 »
 
-- Un CLSID tels que « {8E27C92B-1264-101C-8A2F-040224009C02} »
+- A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
 - Une URL comme «<http://www.microsoft.com>»
 
@@ -285,7 +285,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Spécifie l’IID de l’interface du contrôle.
 
 *ppUnk*<br/>
@@ -310,7 +310,7 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Spécifie l’IID de l’interface du contrôle.
 
 *ppUnk*<br/>
@@ -337,7 +337,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*<br/>
+*pDisp*<br/>
 [in] Un pointeur vers un `IDispatch` interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -372,4 +372,3 @@ Externe `IDocHostUIHandlerDispatch` interface est utilisée par les contrôles q
 [Notions fondamentales du contrôle composite](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Forum aux questions sur la contenance de contrôles](../../atl/atl-control-containment-faq.md)
-

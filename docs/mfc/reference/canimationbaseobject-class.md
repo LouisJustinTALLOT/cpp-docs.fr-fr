@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430444"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258916"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject, classe
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |Nom|Description|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Surchargé. Construit un objet d’animation.|
-|[CAnimationBaseObject :: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Destructeur. Appelé lorsqu’un objet d’animation est détruit.|
+|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Destructeur. Appelé lorsqu’un objet d’animation est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -122,11 +122,11 @@ Cette classe implémente les méthodes de base pour tous les objets d’animatio
 
 `CAnimationBaseObject`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject :: ~ CAnimationBaseObject
+##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject::~CAnimationBaseObject
 
 Destructeur. Appelé lorsqu’un objet d’animation est détruit.
 
@@ -269,7 +269,7 @@ virtual void EnableIntegerValueChangedEvent(
 *pController*<br/>
 Pointeur vers un contrôleur parent.
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie s’il faut activer ou désactiver l’événement de modification de valeur d’entier.
 
 ### <a name="remarks"></a>Notes
@@ -291,7 +291,7 @@ virtual void EnableValueChangedEvent(
 *pController*<br/>
 Pointeur vers un contrôleur parent.
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie s’il faut activer ou désactiver l’événement de modification de valeur.
 
 ### <a name="remarks"></a>Notes

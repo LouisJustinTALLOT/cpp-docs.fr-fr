@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-ms.openlocfilehash: 37ae7ca2efeb579cba388e22cf0fe450a068e721
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d1f6a19e0fb2ddb88602600e02aec45936ce599
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651956"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305105"
 ---
 # <a name="cformview-class"></a>CFormView, classe
 
@@ -39,7 +39,7 @@ class CFormView : public CScrollView
 
 |Nom|Description|
 |----------|-----------------|
-|[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|Utilisé pour la synchronisation pendant l’initialisation.|
+|[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|Utilisé pour la synchronisation pendant l'initialisation.|
 
 ## <a name="remarks"></a>Notes
 
@@ -65,7 +65,7 @@ L'Assistant Application MFC et la commande Ajouter une classe sont les méthodes
 
 `CFormView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxext.h
 

@@ -1,5 +1,5 @@
 ---
-title: "Exceptions : modifications apportées aux macros d'exception dans la version 3.0"
+title: 'Exceptions : Modifications apportées aux Macros d’Exception dans la Version 3.0'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 54826ee7a7ac129ae69715b45770a0a66596a2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607985"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291221"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceptions : modifications apportées aux macros d'exception dans la version 3.0
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceptions : Modifications apportées aux Macros d’Exception dans la Version 3.0
 
 Il s’agit d’une rubrique avancée.
 
@@ -58,9 +58,8 @@ Par exemple, ce code était valide dans les versions précédentes, mais ont des
 
 À l’aide de **lever** dans le bloc catch provoque le pointeur `e` doit être supprimé, afin que le site catch externe reçoit un pointeur non valide. Utilisez **THROW_LAST** pour lever de nouveau `e`.
 
-Pour plus d’informations, consultez [Exceptions : interception et suppression des Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Pour plus d’informations, consultez [Exceptions : Interception et suppression d’Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion des exceptions](../mfc/exception-handling-in-mfc.md)
-

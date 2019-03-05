@@ -1,18 +1,18 @@
 ---
-title: 'Procédure pas à pas : création des agents de flux de données'
+title: 'Procédure pas à pas : Création d’un Agent de flux de données'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-ms.openlocfilehash: 26ea7d520c3dbc4935699e5d52871d21739a3d88
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: bba72404b1c39ef1835b0c96883154b385181b6a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176079"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266755"
 ---
-# <a name="walkthrough-creating-a-dataflow-agent"></a>Procédure pas à pas : création des agents de flux de données
+# <a name="walkthrough-creating-a-dataflow-agent"></a>Procédure pas à pas : Création d’un Agent de flux de données
 
 Ce document montre comment créer des applications basées sur l’agent qui sont basées sur les flux de données, au lieu de flux de contrôle.
 
@@ -147,11 +147,10 @@ info: ===Logging finished.===
 
 Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `log-filter.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-**CL.exe /EHsc log-Filter.cpp**
+**cl.exe /EHsc log-filter.cpp**
 
 [[Haut](#top)]
 
 ## <a name="see-also"></a>Voir aussi
 
 [Procédures pas à pas relatives au runtime d’accès concurrentiel](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
-

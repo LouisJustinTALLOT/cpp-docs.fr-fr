@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177054"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296005"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 
@@ -315,7 +315,7 @@ L’exemple suivant montre comment configurer un objet de contrôle de grille de
 
 [CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpropertygridctrl.h
 
@@ -461,7 +461,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Coordonnées d’un rectangle englobant qui spécifie la taille et la position de la fenêtre, dans le client de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -558,7 +558,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer la zone de description ; FALSE pour désactiver la zone de description. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -578,7 +578,7 @@ void EnableHeaderCtrl(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le contrôle header ; FALSE pour désactiver le contrôle header. La valeur par défaut est TRUE.
 
 *lpszLeftColumn*<br/>
@@ -1309,7 +1309,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectangle qui spécifie l’emplacement où dessiner la zone de description.
 
 ### <a name="remarks"></a>Notes
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 [in] Une valeur de couleur RVB.
 
 ### <a name="remarks"></a>Notes

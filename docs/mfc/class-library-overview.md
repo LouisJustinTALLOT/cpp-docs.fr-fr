@@ -10,12 +10,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: 9e2bf534abcacbbb4997971376d3831705ab2310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468617"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278759"
 ---
 # <a name="class-library-overview"></a>Vue d'ensemble de la bibliothèque de classes
 
@@ -120,4 +120,3 @@ En plus des classes répertoriées dans cette vue d’ensemble, la bibliothèque
 ## <a name="see-also"></a>Voir aussi
 
 [MFC, applications de bureau](../mfc/mfc-desktop-applications.md)
-

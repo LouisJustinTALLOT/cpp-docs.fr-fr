@@ -13,12 +13,12 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: 77d16eefa61fb30614cb6527792014cc8655abe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476893"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264321"
 ---
 # <a name="tiledextent-class"></a>tiled_extent, classe
 
@@ -83,9 +83,9 @@ La longueur de la dimension la moins significative.
 
 |Name|Description|
 |----------|-----------------|
-|[tile_dim0 (constante)](#tile_dim0)|Stocke la longueur de la dimension la plus significative.|
-|[tile_dim1 (constante)](#tile_dim1)|Stocke la longueur de la prochaine-à-dimension la plus significative.|
-|[tile_dim2 (constante)](#tile_dim2)|Stocke la longueur de la dimension la moins significative.|
+|[tile_dim0 Constant](#tile_dim0)|Stocke la longueur de la dimension la plus significative.|
+|[tile_dim1 Constant](#tile_dim1)|Stocke la longueur de la prochaine-à-dimension la plus significative.|
+|[tile_dim2 Constant](#tile_dim2)|Stocke la longueur de la dimension la moins significative.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
@@ -99,11 +99,11 @@ La longueur de la dimension la moins significative.
 
 `tiled_extent`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp.h
 
-**Espace de noms :** Concurrency
+**Espace de noms :** Concurrence
 
 ## <a name="ctor"> </a>  tiled_extent, constructeur
 
@@ -123,7 +123,7 @@ tiled_extent(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `extent` ou `tiled_extent` objet à copier.
 
 ## <a name="get_tile_extent"> </a>  get_tile_extent
@@ -140,7 +140,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
 
 Un `extent` objet qui capture les dimensions de ce `tiled_extent` instance.
 
-## <a name="pad"> </a>  remplissage
+## <a name="pad"> </a>  pad
 
 Retourne un nouvel `tiled_extent` objet avec les étendues ajustée inscrire pour être également divisibles par les dimensions de la vignette.
 
@@ -153,7 +153,7 @@ tiled_extent pad() const;
 ### <a name="return-value"></a>Valeur de retour
 
 La nouvelle `tiled_extent` objet, par valeur.
-## <a name="truncate"> </a>  tronquer
+## <a name="truncate"> </a>  truncate
 
 Retourne un nouvel `tiled_extent` objet avec les étendues sous-ajustées pour être également divisibles par les dimensions de la vignette.
 
@@ -167,7 +167,7 @@ tiled_extent truncate() const;
 
 Retourne un nouvel `tiled_extent` objet avec les étendues sous-ajustées pour être également divisibles par les dimensions de la vignette.
 
-## <a name="operator_eq"> </a>  opérateur =
+## <a name="operator_eq"> </a>  operator=
 
 Copie le contenu de l’objet `tiled_index` objet dans celui-ci.
 
@@ -180,7 +180,7 @@ tiled_extent&  operator= (
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `tiled_index` objet à copier.
 
 ### <a name="return-value"></a>Valeur de retour

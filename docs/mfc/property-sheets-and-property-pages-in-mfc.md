@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property sheets, MFC
 - tab dialog boxes
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
-ms.openlocfilehash: fa5e48459b4d53ff6e5a80e7b315826f266de29f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa8ee3518ad2b32e0eace77f0961eb86ccde1822
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261191"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Pages et feuilles de propriétés dans MFC
 
@@ -30,4 +30,3 @@ Une feuille de propriétés est un type spécial de la boîte de dialogue qui es
 ## <a name="see-also"></a>Voir aussi
 
 [Feuilles de propriétés](../mfc/property-sheets-mfc.md)
-

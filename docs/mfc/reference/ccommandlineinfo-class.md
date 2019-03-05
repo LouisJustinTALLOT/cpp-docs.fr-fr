@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481469"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303025"
 ---
 # <a name="ccommandlineinfo-class"></a>Ccommandlineinfo, classe
 
@@ -85,11 +85,11 @@ Vous pouvez utiliser cet objet pour encapsuler les paramètres des options de li
 |*application* nom de fichier|Ouvrir un fichier.|
 |*application* `/p` nom de fichier|Imprimer le fichier à l’imprimante par défaut.|
 |*application* `/pt` port de pilote d’imprimante nom de fichier|Imprimer le fichier à l’imprimante spécifiée.|
-|*Application* `/dde`|Démarrer et await commande DDE.|
-|*Application* `/Automation`|Démarrer comme serveur OLE automation.|
-|*Application* `/Embedding`|Démarrer modifier un élément OLE incorporé.|
-|*Application* `/Register`<br /><br /> *Application* `/Regserver`|Informe l’application pour exécuter des tâches d’inscription.|
-|*Application* `/Unregister`<br /><br /> *Application* `/Unregserver`|Informe l’application pour exécuter des tâches de désinscription.|
+|*app* `/dde`|Démarrer et await commande DDE.|
+|*app* `/Automation`|Démarrer comme serveur OLE automation.|
+|*app* `/Embedding`|Démarrer modifier un élément OLE incorporé.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informe l’application pour exécuter des tâches d’inscription.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informe l’application pour exécuter des tâches de désinscription.|
 
 Dérivez une nouvelle classe à partir de `CCommandLineInfo` pour gérer d’autres indicateurs et les valeurs de paramètre. Substituer [ParseParam](#parseparam) pour gérer les nouveaux indicateurs.
 
@@ -99,7 +99,7 @@ Dérivez une nouvelle classe à partir de `CCommandLineInfo` pour gérer d’aut
 
 `CCommandLineInfo`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -293,7 +293,7 @@ Le paramètre ou un indicateur.
 *bFlag*<br/>
 Indique si *pszParam* est un paramètre ou un indicateur.
 
-*envoi de courriers*<br/>
+*bLast*<br/>
 Indique si c’est le dernier paramètre ou indicateur sur la ligne de commande.
 
 ### <a name="remarks"></a>Notes
@@ -308,11 +308,11 @@ L’implémentation par défaut de cette fonction reconnaît les indicateurs sui
 |*application* nom de fichier|Ouvrir un fichier.|
 |*application* `/p` nom de fichier|Imprimer le fichier à l’imprimante par défaut.|
 |*application* `/pt` port de pilote d’imprimante nom de fichier|Imprimer le fichier à l’imprimante spécifiée.|
-|*Application* `/dde`|Démarrer et await commande DDE.|
-|*Application* `/Automation`|Démarrer comme serveur OLE automation.|
-|*Application* `/Embedding`|Démarrer modifier un élément OLE incorporé.|
-|*Application* `/Register`<br /><br /> *Application* `/Regserver`|Informe l’application pour exécuter des tâches d’inscription.|
-|*Application* `/Unregister`<br /><br /> *Application* `/Unregserver`|Informe l’application pour exécuter des tâches de désinscription.|
+|*app* `/dde`|Démarrer et await commande DDE.|
+|*app* `/Automation`|Démarrer comme serveur OLE automation.|
+|*app* `/Embedding`|Démarrer modifier un élément OLE incorporé.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informe l’application pour exécuter des tâches d’inscription.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informe l’application pour exécuter des tâches de désinscription.|
 
 Ces informations sont stockées dans [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), et [m_nShellCommand](#m_nshellcommand). Les indicateurs sont marquées par soit une barre oblique « **/**'ou un trait d’union' **-**».
 
@@ -328,4 +328,3 @@ Remplacez cette fonction dans votre classe dérivée pour gérer les autres vale
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

@@ -1,19 +1,19 @@
 ---
-title: 'Contrôles ActiveX MFC : ajout de méthodes stock'
+title: 'Contrôles ActiveX MFC : Ajout de méthodes Stock'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], stock methods
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585027"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305209"
 ---
-# <a name="mfc-activex-controls-adding-stock-methods"></a>Contrôles ActiveX MFC : ajout de méthodes stock
+# <a name="mfc-activex-controls-adding-stock-methods"></a>Contrôles ActiveX MFC : Ajout de méthodes Stock
 
 Une méthode stockée diffère d’une méthode personnalisée car il est déjà implémenté par classe [COleControl](../mfc/reference/colecontrol-class.md). Par exemple, `COleControl` contient une fonction membre prédéfinie qui prend en charge de la méthode d’actualisation pour votre contrôle. L’entrée de mappage de répartition pour cette méthode stockée est DISP_STOCKFUNC_REFRESH.
 
@@ -24,8 +24,8 @@ Une méthode stockée diffère d’une méthode personnalisée car il est déjà
 
 |Méthode|Entrée de mappage de dispatch|Commentaire|
 |------------|------------------------|-------------|
-|`DoClick`|**() DISP_STOCKPROP_DOCLICK**|Déclenche un événement Click.|
-|`Refresh`|**() DISP_STOCKPROP_REFRESH**|Met immédiatement à jour de l’apparence du contrôle.|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Déclenche un événement Click.|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|Met immédiatement à jour de l’apparence du contrôle.|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Ajout d’une méthode Stock à l’aide de l’Assistant Ajout de méthode
 
@@ -64,4 +64,3 @@ Cette ligne affecte un numéro d’identification spécifique à la méthode d�
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

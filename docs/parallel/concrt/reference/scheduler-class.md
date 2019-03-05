@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638267"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287897"
 ---
 # <a name="scheduler-class"></a>Scheduler, classe
 
@@ -52,7 +52,7 @@ class Scheduler;
 |Nom|Description|
 |----------|-----------------|
 |[Attacher](#attach)|Attache le planificateur au contexte d’appel. Une fois que cette méthode est retournée, le contexte d’appel est géré par le planificateur et le planificateur devient le planificateur actuel.|
-|[Créer](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre, place une référence initiale sur le planificateur et retourne un pointeur vers elle.|
+|[Create](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre, place une référence initiale sur le planificateur et retourne un pointeur vers elle.|
 |[CreateScheduleGroup](#createschedulegroup)|Surchargé. Crée un nouveau groupe de planification dans le planificateur. La version qui prend le paramètre `_Placement` entraîne des tâches au sein du groupe de planification qui vient d’être créé pour être orienté vers l’exécution à l’emplacement spécifié par ce paramètre.|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Retourne le nombre actuel de processeurs virtuels pour le planificateur.|
 |[GetPolicy](#getpolicy)|Retourne une copie de la stratégie que le planificateur a été créé.|
@@ -75,7 +75,7 @@ Le Runtime d’accès concurrentiel créera un planificateur par défaut par pro
 
 `Scheduler`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt.h
 
@@ -109,7 +109,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Paramètres
 
-*Stratégie de _journal*<br/>
+*_Policy*<br/>
 La stratégie du planificateur qui décrit le comportement du planificateur qui vient d’être créé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -173,7 +173,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 
 Une copie de la stratégie que le planificateur a été créé.
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Retourne un identificateur unique pour le planificateur.
 
@@ -279,7 +279,7 @@ Le planificateur du processus par défaut est créé implicitement lorsque vous 
 
 Vous pouvez également créer explicitement un planificateur via soit le `CurrentScheduler::Create` méthode ou le `Scheduler::Create` (méthode).
 
-##  <a name="dtor"></a> ~ Scheduler
+##  <a name="dtor"></a> ~Scheduler
 
 Un objet de la `Scheduler` classe est détruite implicitement lorsque toutes les références externes cessent d’exister.
 
@@ -323,7 +323,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Paramètres
 
-*Stratégie de _journal*<br/>
+*_Policy*<br/>
 La stratégie à définir en tant que la stratégie du planificateur par défaut.
 
 ### <a name="remarks"></a>Notes
@@ -336,4 +336,3 @@ Si le `SetDefaultSchedulerPolicy` méthode est appelée lorsqu’un planificateu
 [Scheduler, classe](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Planificateur de tâches](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

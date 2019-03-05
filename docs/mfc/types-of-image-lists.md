@@ -6,12 +6,12 @@ helpviewer_keywords:
 - image lists [MFC], types of
 - CImageList class [MFC], types
 ms.assetid: bee5e7c3-78f5-4037-a136-9c50d67cdee5
-ms.openlocfilehash: 5f5843f25faed90c195f7f2c605027858f089fb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 939aad78b7cf8cca9c940bae11892d23dbb659cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498885"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304754"
 ---
 # <a name="types-of-image-lists"></a>Types de listes d'images
 
@@ -25,4 +25,3 @@ Lorsqu’une image non masquée est dessinée, elle est simplement copiée dans 
 
 [Utilisation de CImageList](../mfc/using-cimagelist.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-ms.openlocfilehash: 9e0ee68970b9ee3255ae72699dc185fc5de5a0f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5efd885421d8c73c191e2a5603f37d1df85a5168
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577232"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303064"
 ---
 # <a name="common-dialog-classes"></a>Classes de boîtes de dialogue communes
 
@@ -42,4 +42,3 @@ Trois autres classes dans MFC présentent des caractéristiques de boîtes de di
 [Boîtes de dialogue](../mfc/dialog-boxes.md)<br/>
 [Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Boîtes de dialogue dans OLE](../mfc/dialog-boxes-in-ole.md)
-

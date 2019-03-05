@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: b37105cf1afdcf966176a2e2615f9c141022088d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520516"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268057"
 ---
 # <a name="colevariant-class"></a>COleVariant, classe
 
@@ -64,7 +64,7 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|Convertit un `COleVariant` de l’objet dans un `LPVARIANT`.|
 |[COleVariant::operator =](#operator_eq)|Copie un `COleVariant` valeur.|
 |[COleVariant::operator ==](#operator_eq_eq)|Compare deux `COleVariant` valeurs.|
-|[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Sorties un `COleVariant` valeur `CArchive` ou `CDumpContext` et entrées un `COleVariant` à partir de l’objet `CArchive`.|
+|[COleVariant::operator &lt;&lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Sorties un `COleVariant` valeur `CArchive` ou `CDumpContext` et entrées un `COleVariant` à partir de l’objet `CArchive`.|
 
 ## <a name="remarks"></a>Notes
 
@@ -85,7 +85,7 @@ Pour plus d’informations sur la `COleVariant` classe et son utilisation dans O
 
 `COleVariant`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
@@ -169,7 +169,7 @@ Un [CByteArray](../../mfc/reference/cbytearray-class.md) objet doit être copié
 *lbSrc*<br/>
 Un [CLongBinary](../../mfc/reference/clongbinary-class.md) objet doit être copié dans le nouveau `COleVariant` objet.
 
-*PIDL*<br/>
+*pidl*<br/>
 Un pointeur vers un [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) structure doit être copié dans le nouveau `COleVariant` objet.
 
 ### <a name="remarks"></a>Notes
@@ -218,7 +218,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-*VarType*<br/>
+*vartype*<br/>
 VARTYPE pour ce `COleVariant` objet.
 
 *pSrc*<br/>
@@ -269,7 +269,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Paramètres
 
-*Octets*<br/>
+*bytes*<br/>
 Une référence à un existant [CByteArray](../../mfc/reference/cbytearray-class.md) objet.
 
 ##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT
@@ -355,7 +355,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```
 
-##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt; &lt;, &gt;&gt;
+##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt;&lt;, &gt;&gt;
 
 Sorties un `COleVariant` valeur `CArchive` ou `CdumpContext` et entrées un `COleVariant` à partir de l’objet `CArchive`.
 
@@ -390,7 +390,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 *lpszSrc*<br/>
 Une chaîne se terminant par null doit être copié dans le nouveau `COleVariant` objet.
 
-*vtSrc*<br/>
+*VtSrc*<br/>
 VARTYPE pour le nouveau `COleVariant` objet.
 
 ### <a name="remarks"></a>Notes

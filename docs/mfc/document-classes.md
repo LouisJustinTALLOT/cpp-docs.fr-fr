@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-ms.openlocfilehash: eee8cf874230874b519bbd2cb3ebb34c7d4c5c80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7034a99bfefe8f4c11cdf8f99dc4b0c31fac10a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289713"
 ---
 # <a name="document-classes"></a>Classes de documents
 
@@ -25,7 +25,7 @@ La classe de base pour les documents spécifiques à l’application. Dériver v
 [COleDocument](../mfc/reference/coledocument-class.md)<br/>
 Utilisé pour l’implémentation de document composé, ainsi que la prise en charge du conteneur de base. Sert de conteneur pour les classes dérivées de [CDocItem](../mfc/reference/cdocitem-class.md). Cette classe peut être utilisée comme classe de base pour le conteneur de documents et est la classe de base pour `COleServerDoc`.
 
-[COleLinkingDoc plutôt](../mfc/reference/colelinkingdoc-class.md)<br/>
+[COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
 Une classe dérivée de `COleDocument` qui fournit l’infrastructure de la liaison. Vous devez dériver les classes de document pour vos applications de conteneur à partir de cette classe au lieu de `COleDocument` si vous voulez qu’ils prennent en charge des liens vers des objets incorporés.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
@@ -52,4 +52,3 @@ De classe de base abstraite [COleClientItem](../mfc/reference/coleclientitem-cla
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
-

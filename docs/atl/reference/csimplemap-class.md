@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-ms.openlocfilehash: 1c1aa34d54f5754feee238fdf12fd6e55b8c32c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: afd9f017bb0fb9a95a0ed4fd135dcbd5ea4ddba2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666252"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284097"
 ---
 # <a name="csimplemap-class"></a>CSimpleMap, classe
 
@@ -66,7 +66,7 @@ Un objet de trait, en définissant le test d’égalité pour les éléments de 
 |Nom|Description|
 |----------|-----------------|
 |[CSimpleMap::CSimpleMap](#csimplemap)|Constructeur.|
-|[CSimpleMap :: ~ CSimpleMap](#dtor)|Destructeur.|
+|[CSimpleMap::~CSimpleMap](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -96,7 +96,7 @@ Les deux `CSimpleMap` et [CSimpleArray](../../atl/reference/csimplearray-class.m
 
 Contrairement à d’autres collections de mappage dans ATL et MFC, cette classe est implémentée avec un simple tableau, et les recherches de recherche nécessitent une recherche linéaire. `CAtlMap` doit être utilisé lorsque le tableau contient un grand nombre d’éléments.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsimpcoll.h
 
@@ -117,7 +117,7 @@ BOOL Add(const TKey& key, const TVal& val);
 *key*<br/>
 Clé.
 
-*Val*<br/>
+*val*<br/>
 La valeur associée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -156,7 +156,7 @@ CSimpleMap();
 
 Initialise les membres de données.
 
-##  <a name="dtor"></a>  CSimpleMap :: ~ CSimpleMap
+##  <a name="dtor"></a>  CSimpleMap::~CSimpleMap
 
 Destructeur.
 
@@ -195,7 +195,7 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
+*val*<br/>
 La valeur à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -329,7 +329,7 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
+*val*<br/>
 La valeur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -349,7 +349,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 *key*<br/>
 Clé.
 
-*Val*<br/>
+*val*<br/>
 La nouvelle valeur à affecter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -375,7 +375,7 @@ L’index, faisant référence à la clé et la valeur jumelage pour modifier.
 *key*<br/>
 La nouvelle clé.
 
-*Val*<br/>
+*val*<br/>
 Nouvelle valeur.
 
 ### <a name="return-value"></a>Valeur de retour

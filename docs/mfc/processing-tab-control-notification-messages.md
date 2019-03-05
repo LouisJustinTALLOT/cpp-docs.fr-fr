@@ -8,12 +8,12 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - tab controls [MFC], processing notifications
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
-ms.openlocfilehash: 32e1b5954bc3f09f16c5516fc1c143dac716bc41
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4be9074f3e7d7ce4321402d27fc26283a52436e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693230"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267297"
 ---
 # <a name="processing-tab-control-notification-messages"></a>Traitement des messages de notification du contrôle Tab
 
@@ -25,4 +25,3 @@ Traitez les messages WM_NOTIFY à partir du contrôle d’onglet dans votre clas
 
 [Utilisation de CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

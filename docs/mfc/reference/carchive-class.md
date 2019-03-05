@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465609"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266326"
 ---
 # <a name="carchive-class"></a>CArchive (classe)
 
@@ -132,13 +132,13 @@ L’extraction surchargée ( **>>**) et d’insertion ( **<<**) les opérateurs 
 
 `CArchive` prend également en charge la programmation avec les classes MFC Windows Sockets [CSocket](../../mfc/reference/csocket-class.md) et [CSocketFile](../../mfc/reference/csocketfile-class.md). Le [IsBufferEmpty](#isbufferempty) fonction membre prend en charge que l’utilisation.
 
-Pour plus d’informations sur `CArchive`, consultez les articles [sérialisation](../../mfc/serialization-in-mfc.md) et [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Pour plus d’informations sur `CArchive`, consultez les articles [sérialisation](../../mfc/serialization-in-mfc.md) et [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `CArchive`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -298,7 +298,7 @@ Cette fonction est fournie pour prendre en charge de la programmation avec la cl
 
 La raison pour l’utilisation de `IsBufferEmpty` avec une archive associée à un `CSocketFile` objet est que la mémoire tampon de l’archive peut contenir plusieurs messages ou enregistrement. Après avoir reçu un message, vous devez utiliser `IsBufferEmpty` pour contrôler une boucle qui continue à recevoir des données jusqu'à ce que la mémoire tampon est vide. Pour plus d’informations, consultez le [réception](../../mfc/reference/casyncsocket-class.md#receive) fonction membre de classe `CAsyncSocket`, qui montre comment utiliser `IsBufferEmpty`.
 
-Pour plus d’informations, consultez [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Pour plus d’informations, consultez [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="isloading"></a>  CArchive::IsLoading
 
@@ -352,7 +352,7 @@ void MapObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Paramètres
 
-*boîte postale*<br/>
+*pOb*<br/>
 Un pointeur constant vers l’objet stocké.
 
 ### <a name="remarks"></a>Notes
@@ -552,7 +552,7 @@ UINT Read(void* lpBuf, UINT nMax);
 *lpBuf*<br/>
 Un pointeur vers une mémoire tampon fournie par l’utilisateur qui doit recevoir les données lues à partir de l’archive.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Entier non signé spécifiant le nombre d’octets à lire à partir de l’archive.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -653,7 +653,7 @@ Une référence à un [CString](../../atl-mfc-shared/reference/cstringt-class.md
 *lpsz*<br/>
 Spécifie un pointeur vers une mémoire tampon fournie par l’utilisateur qui recevra une chaîne de texte se terminant par null.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Spécifie le nombre maximal de caractères à lire. Doit être inférieur à la taille de la *lpsz* mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -784,7 +784,7 @@ void Write(const void* lpBuf, INT nMax);
 *lpBuf*<br/>
 Un pointeur vers une mémoire tampon fournie par l’utilisateur qui contient les données à écrire dans l’archive.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Entier qui spécifie le nombre d’octets à écrire dans l’archive.
 
 ### <a name="remarks"></a>Notes
@@ -834,7 +834,7 @@ void WriteObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Paramètres
 
-*boîte postale*<br/>
+*pOb*<br/>
 Un pointeur constant vers l’objet stocké.
 
 ### <a name="remarks"></a>Notes

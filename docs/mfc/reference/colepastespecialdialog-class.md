@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530024"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303311"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog, classe
 
@@ -97,7 +97,7 @@ Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, cons
 
 `COlePasteSpecialDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxodlgs.h
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Paramètres
 
-*FMT*<br/>
+*fmt*<br/>
 Référence au type de données à ajouter.
 
 *lpszFormat*<br/>
@@ -134,10 +134,10 @@ Chaîne qui décrit le résultat si ce format est choisi dans la boîte de dialo
 *flags*<br/>
 L’autre liaison et incorporation options disponibles pour ce format. Cet indicateur est une combinaison au niveau du bit d’un ou plusieurs des valeurs différentes dans le OLEUIPASTEFLAG type énuméré.
 
-*CF*<br/>
+*cf*<br/>
 Le format de Presse-papiers à ajouter.
 
-*TYMED*<br/>
+*tymed*<br/>
 Les types de média disponibles dans ce format. Il s’agit d’une combinaison au niveau du bit d’un ou plusieurs des valeurs dans le TYMED type énuméré.
 
 *nFormatID*<br/>
@@ -146,12 +146,12 @@ L’ID de la chaîne qui identifie ce format. Le format de cette chaîne est de 
 *bEnableIcon*<br/>
 Indicateur qui détermine si la case à cocher Afficher comme icône est activée quand ce format est sélectionné dans la zone de liste.
 
-*clignotement (blink)*<br/>
+*bLink*<br/>
 Indicateur qui détermine si la case d’option Coller la liaison est activée quand ce format est sélectionné dans la zone de liste.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction peut être appelée pour ajouter des formats standards tels que CF_TEXT ou CF_TIFF ou des formats personnalisés que votre application a inscrit auprès du système. Pour plus d’informations sur le collage d’objets de données dans votre application, consultez l’article [objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
+Cette fonction peut être appelée pour ajouter des formats standards tels que CF_TEXT ou CF_TIFF ou des formats personnalisés que votre application a inscrit auprès du système. Pour plus d’informations sur le collage d’objets de données dans votre application, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Pour plus d’informations, consultez le [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) type d’énumération et la [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) structure dans le SDK Windows.
 
@@ -167,7 +167,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*<br/>
+*cf*<br/>
 Le format de Presse-papiers à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour

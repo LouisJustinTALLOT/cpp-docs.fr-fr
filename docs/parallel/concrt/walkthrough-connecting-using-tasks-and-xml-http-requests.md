@@ -1,19 +1,19 @@
 ---
-title: 'Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML'
+title: 'Procédure pas à pas : Connexion à l’aide de tâches et les requêtes HTTP XML'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175845"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266508"
 ---
-# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Procédure pas à pas : Connexion à l’aide de tâches et les requêtes HTTP XML
 
 Cet exemple montre comment utiliser le [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) et [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces avec des tâches pour envoyer des demandes HTTP GET et POST à un service web dans un Universal Windows Platform (UWP ) app. En combinant `IXMLHTTPRequest2` avec des tâches, vous pouvez écrire du code qui s’adapte à d’autres tâches. Par exemple, vous pouvez utiliser la tâche de téléchargement dans le cadre d’une chaîne des tâches. La tâche de téléchargements peut également répondre quand le travail est annulé.
 
@@ -24,7 +24,7 @@ Pour plus d’informations sur les tâches, consultez [parallélisme des tâches
 
 Ce document explique d'abord comment créer une `HttpRequest` et ses classes de prise en charge. Il montre ensuite comment utiliser cette classe à partir d’une application UWP qui utilise C++ et XAML.
 
-Pour obtenir un exemple qui utilise `IXMLHTTPRequest2` mais ne pas utiliser des tâches, consultez [Guide de démarrage rapide : connexion à l’aide de XML HTTP Request (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
+Pour obtenir un exemple qui utilise `IXMLHTTPRequest2` mais ne pas utiliser des tâches, consultez [Guide de démarrage rapide : Connexion à l’aide de XML HTTP Request (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
 >  `IXMLHTTPRequest2` et `IXMLHTTPRequest2Callback` sont les interfaces que nous recommandons d’utiliser dans une application UWP. Vous pouvez également adapter cet exemple pour l'utilisation dans une application de bureau.
@@ -77,7 +77,7 @@ Cette section montre comment utiliser le `HttpRequest` classe dans une applicati
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-4. Dans MainPage.xaml.h, déclarez la méthode `private` `ProcessHttpRequest` :
+4. Dans MainPage.xaml.h, déclarez la méthode `private``ProcessHttpRequest` :
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 

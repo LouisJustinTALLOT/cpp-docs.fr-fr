@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 96e279e8ab3080c0239f1e41895142ba23c5a7c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693971"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261659"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT, classe
 
@@ -116,7 +116,7 @@ Lorsque vous utilisez le **ajouter un contrôle basé sur** option dans l’Assi
 
 `CContainedWindowT`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin.h
 
@@ -213,7 +213,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] Le handle vers la fenêtre parente ou propriétaire.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure spécifiant la position de la fenêtre. Le `RECT` peuvent être passés par pointeur ou par référence.
 
 *szWindowName*<br/>

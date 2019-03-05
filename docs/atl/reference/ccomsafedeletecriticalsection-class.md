@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-ms.openlocfilehash: c6d7965b0f5801ed956333950e11e6b9b3eb5a0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0269079db97e2ff91767c9c0c74a9336fce81ade
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284630"
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>Ccomsafedeletecriticalsection, classe
 
@@ -36,7 +36,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 |Nom|Description|
 |----------|-----------------|
 |[CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection](#ccomsafedeletecriticalsection)|Constructeur.|
-|[CComSafeDeleteCriticalSection :: ~ CComSafeDeleteCriticalSection](#dtor)|Destructeur.|
+|[CComSafeDeleteCriticalSection::~CComSafeDeleteCriticalSection](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -66,7 +66,7 @@ Consultez [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md
 
 `CComSafeDeleteCriticalSection`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcore.h
 
@@ -82,7 +82,7 @@ CComSafeDeleteCriticalSection();
 
 Définit le [m_bInitialized](#m_binitialized) données membres à FALSE.
 
-##  <a name="dtor"></a>  CComSafeDeleteCriticalSection :: ~ CComSafeDeleteCriticalSection
+##  <a name="dtor"></a>  CComSafeDeleteCriticalSection::~CComSafeDeleteCriticalSection
 
 Destructeur.
 

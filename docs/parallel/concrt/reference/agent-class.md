@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: ad096eea3467346d85ce4249e910915cbd73488d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560249"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289141"
 ---
 # <a name="agent-class"></a>agent, classe
 
@@ -51,7 +51,7 @@ class agent;
 |[start](#start)|Déplace un agent à partir de la `agent_created` l’état le `agent_runnable` d’état et il planifie l’exécution de.|
 |[status](#status)|Une source synchrone d’informations d’état de l’agent.|
 |[status_port](#status_port)|Source asynchrone d’informations d’état de l’agent.|
-|[attente](#wait)|Attend qu’un agent effectuer sa tâche.|
+|[wait](#wait)|Attend qu’un agent effectuer sa tâche.|
 |[wait_for_all](#wait_for_all)|Attend que tous les agents spécifiés pour effectuer leurs tâches.|
 |[wait_for_one](#wait_for_one)|Attend que l’un des agents spécifiés ait terminé sa tâche.|
 
@@ -59,7 +59,7 @@ class agent;
 
 |Nom|Description|
 |----------|-----------------|
-|[Terminé](#done)|Déplace un agent dans le `agent_done` état indiquant que l’agent a terminé.|
+|[done](#done)|Déplace un agent dans le `agent_done` état indiquant que l’agent a terminé.|
 |[run](#run)|Représente la tâche principale d’un agent. `run` doit être substituée dans une classe dérivée et spécifie ce que l’agent doit faire après qu’elle a été démarré.|
 
 ## <a name="remarks"></a>Notes
@@ -70,13 +70,13 @@ Pour plus d’informations, consultez [Agents asynchrones](../../../parallel/con
 
 `agent`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
 **Espace de noms :** concurrency
 
-##  <a name="ctor"></a> Agent
+##  <a name="ctor"></a> agent
 
 Construit un agent.
 
@@ -100,7 +100,7 @@ Le `ScheduleGroup` de l’objet dans lequel la tâche d’exécution de l’agen
 
 Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les paramètres `_PScheduler` ou `_PGroup` .
 
-##  <a name="dtor"></a> ~ agent
+##  <a name="dtor"></a> ~agent
 
 Détruit l’agent.
 
@@ -203,7 +203,7 @@ static agent_status __cdecl wait(
 *_PAgent*<br/>
 Pointeur vers l’agent à attendre.
 
-*_Délai*<br/>
+*_Timeout*<br/>
 La durée maximale d’attente, en millisecondes.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -239,7 +239,7 @@ Un tableau de pointeurs vers les agents à attendre.
 *_PStatus*<br/>
 Pointeur vers un tableau d’états d’agent. Chaque valeur d’état représentera l’état de l’agent correspondant lorsque la méthode est retournée.
 
-*_Délai*<br/>
+*_Timeout*<br/>
 La durée maximale d’attente, en millisecondes.
 
 ### <a name="remarks"></a>Notes
@@ -269,13 +269,13 @@ Le nombre de pointeurs d’agent présents dans le tableau `_PAgents`.
 *_PAgents*<br/>
 Un tableau de pointeurs vers les agents à attendre.
 
-*_État*<br/>
+*_Status*<br/>
 Une référence à une variable où l’état de l’agent sera placé.
 
 *_Index*<br/>
 Une référence à une variable où l’index de l’agent sera placé.
 
-*_Délai*<br/>
+*_Timeout*<br/>
 La durée maximale d’attente, en millisecondes.
 
 ### <a name="remarks"></a>Notes

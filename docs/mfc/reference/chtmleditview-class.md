@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 9df4aa2b2418995f6e012c0baefb6dc8918eaee8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d1b28e2b3e279bc3b2e3ccb116ab24017c07cd2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559781"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301257"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView, classe
 
@@ -67,7 +67,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 `CHtmlEditView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxhtml.h
 
@@ -105,7 +105,7 @@ Pointe vers une chaîne de caractères se terminant par null qui représente le 
 *dwStyle*<br/>
 Spécifie les attributs de style de fenêtre. Par défaut, les styles WS_VISIBLE et WS_CHILD Windows sont définies.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie la taille et la position de la fenêtre. Le *rectDefault* valeur permet à Windows spécifier la taille et la position de la nouvelle fenêtre.
 
 *pParentWnd*<br/>
@@ -146,4 +146,3 @@ virtual LPCTSTR GetStartDocument();
 
 [Exemple HTMLEdit](../../visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

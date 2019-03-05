@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-ms.openlocfilehash: 66d740d7042ed2e19b6fe3a87345d7abb096f12c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1c3dc080c23ba4ac05539674047a66059ce52d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296577"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler, classe
 
@@ -61,7 +61,7 @@ Ce gestionnaire d’événements est créé et transmis à la méthode IUIAnimat
 
 `CAnimationVariableIntegerChangeHandler`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -108,16 +108,16 @@ IFACEMETHOD(OnIntegerValueChanged) (
 
 ### <a name="parameters"></a>Paramètres
 
-*table de montage séquentiel*<br/>
+*storyboard*<br/>
 La table de montage séquentiel qui anime la variable.
 
-*Variable*<br/>
+*variable*<br/>
 La variable de l’animation qui a été mis à jour.
 
 *newValue*<br/>
 La nouvelle valeur arrondie.
 
-*valeur previousValue*<br/>
+*previousValue*<br/>
 La précédente valeur arrondie.
 
 ### <a name="return-value"></a>Valeur de retour

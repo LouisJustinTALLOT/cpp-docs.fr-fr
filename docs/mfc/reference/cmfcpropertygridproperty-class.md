@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: f7a8cca3da85e3ac0b7b7e63e83d394a0e8a9899
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305066"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Cmfcpropertygridproperty, classe
 
@@ -307,7 +307,7 @@ L’exemple suivant montre comment construire un `CMFCPropertyGridProperty` obje
 
 [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpropertygridctrl.h
 
@@ -406,7 +406,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bPermettre*<br/>
+*bAllow*<br/>
 [in] TRUE si la propriété modifiable ; La valeur FALSE à la propriété en lecture seule. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -477,7 +477,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Pointeur vers la fenêtre parente de la zone de liste déroulante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant de la zone de liste déroulante.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -545,7 +545,7 @@ void Enable(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer la propriété ; FALSE pour désactiver la propriété. Propriétés désactivées ne répondent pas à la souris ou du clavier. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -563,13 +563,13 @@ void EnableSpinControl(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le contrôle de bouton toupie (spin) ; FALSE pour désactiver le contrôle de bouton toupie (spin). La valeur par défaut est TRUE.
 
 *nMin*<br/>
 [in] La valeur minimale du contrôle de bouton toupie (spin). La valeur par défaut est 0.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 [in] La valeur maximale du contrôle de bouton toupie (spin). La valeur par défaut est 0.
 
 ### <a name="remarks"></a>Notes
@@ -801,7 +801,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 
 Pointeur vers un objet de propriété qui est un élément enfant de cette propriété.
 
-- ou -
+ou
 
 En mode de vente au détail, NULL si le *nIndex* paramètre n’est pas valide. En mode débogage, cette méthode déclare.
 
@@ -1280,7 +1280,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle englobant qui spécifie où dessiner la description de la propriété.
 
 ### <a name="remarks"></a>Notes
@@ -1324,7 +1324,7 @@ virtual void OnDrawName(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle englobant qui spécifie où dessiner le nom de propriété.
 
 ### <a name="remarks"></a>Notes
@@ -1344,7 +1344,7 @@ virtual void OnDrawValue(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle englobant qui spécifie où dessiner la valeur de propriété.
 
 ### <a name="remarks"></a>Notes
@@ -1541,7 +1541,7 @@ virtual BOOL PushChar(UINT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Un caractère.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1550,7 +1550,7 @@ TRUE si la poursuite de l’opération de modification ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode prend en charge une propriété qui est une liste de valeurs ou des types variants suivants : VT_INT VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 et VT_BSTR.
+Cette méthode prend en charge une propriété qui est une liste de valeurs ou un des types variants suivants : VT_INT VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 et VT_BSTR.
 
 ##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw
 
@@ -1652,7 +1652,7 @@ void SetName(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Le nom de propriété.
 
 *bRedraw*<br/>

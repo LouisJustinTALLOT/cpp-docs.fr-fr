@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 606d70176e93de6f5526c30f182cee6f8c05499f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2377b7f6afdf78a0e8b7c8ac97a36a4920c06bb8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522367"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281185"
 ---
 # <a name="cmfcfontinfo-class"></a>Cmfcfontinfo, classe
 
@@ -69,7 +69,7 @@ L’exemple suivant montre comment utiliser les différents membres de la `CMFCF
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtoolbarfontcombobox.h
 
@@ -90,7 +90,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Le nom de la police. Pour plus d’informations, consultez le `lfFaceName` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.
 
 *lpszScript*<br/>
@@ -102,7 +102,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 *nPitchAndFamily*<br/>
 [in] Une valeur qui spécifie la hauteur et la famille de la police. Pour plus d’informations, consultez le `lfPitchAndFamily` membre de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.
 
-*%nLes*<br/>
+*nType*<br/>
 [in] Une valeur qui spécifie le type de police. Ce paramètre peut être une combinaison au niveau du bit (ou) de DEVICE_FONTTYPE, RASTER_FONTTYPE et TRUETYPE_FONTTYPE.
 
 *src*<br/>

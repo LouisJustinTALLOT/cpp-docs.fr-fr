@@ -1,5 +1,5 @@
 ---
-title: IPropertyNotifySinkCP, classe
+title: IPropertyNotifySinkCP Class
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyNotifySinkCP
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-ms.openlocfilehash: 6a80ff17b5d8083704b144686d8bff27be115b18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b96e5345923d04de74dace173a80b8c4d3ee917f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461605"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280587"
 ---
-# <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP, classe
+# <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP Class
 
 Cette classe expose [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interface comme une interface sortante sur un objet connectable.
 
@@ -49,7 +49,7 @@ Dérivez votre classe de `IPropertyNotifySinkCP` lorsque vous souhaitez créer u
 
 Pour plus d’informations sur l’utilisation de points de connexion dans ATL, consultez l’article [Points de connexion](../../atl/atl-connection-points.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl.h
 

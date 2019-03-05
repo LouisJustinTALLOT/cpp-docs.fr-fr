@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602928"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302808"
 ---
 # <a name="application-design-choices"></a>Choix en matière de conception d'applications
 
@@ -52,7 +52,7 @@ De nombreuses applications s’exécutent sur Internet et sont accessibles à to
 
 Votre application peut s’exécuter sur un ordinateur client ou sur un ordinateur serveur. Votre application peut également être stockée sur un serveur, puis téléchargée sur Internet et s’exécutent sur un ordinateur client. Pour télécharger les fichiers, les classes WinInet MFC sont utilisés pour les applications clientes. MFC et les classes de monikers asynchrones sont utilisés pour télécharger des fichiers et contrôler les propriétés. Classes de contrôles ActiveX et les documents actifs sont utilisées pour les applications clientes et pour les applications qui sont téléchargées à partir du serveur pour s’exécuter sur un client.
 
-##  <a name="_core_the_web_page"></a> La Page Web : Contrôles ActiveX HTML, les Documents actifs,
+##  <a name="_core_the_web_page"></a> La Page Web : HTML, les Documents actifs, les contrôles ActiveX
 
 Microsoft propose plusieurs manières de fournir un contenu sur une page Web. Pages Web peuvent utiliser standard HTML ou extensions, telles que la balise object, pour fournir du contenu dynamique tel que des contrôles ActiveX.
 
@@ -92,4 +92,3 @@ Le tableau suivant résume plusieurs façons d’utiliser MFC pour transférer d
 [Notions de base de la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Extension Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Monikers asynchrones sur Internet](../mfc/asynchronous-monikers-on-the-internet.md)
-

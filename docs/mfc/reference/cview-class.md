@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694385"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305014"
 ---
 # <a name="cview-class"></a>CView (classe)
 
@@ -105,7 +105,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::OnDraw](#ondraw)|Appelé pour restituer une image du document pour la capture d’écran, d’impression ou Aperçu avant impression. Implémentation requis.|
 |[CView::OnEndPrinting](#onendprinting)|Appelée lorsqu’un travail d’impression se termine ; méthode override pour libérer des ressources GDI.|
 |[CView::OnEndPrintPreview](#onendprintpreview)|Appelé lorsque le mode aperçu est fermée.|
-|[Comme CView::OnPreparePrinting](#onprepareprinting)|Appelé avant qu’un document soit imprimé ou affiché en aperçu ; méthode override pour initialiser la boîte de dialogue Imprimer.|
+|[CView::OnPreparePrinting](#onprepareprinting)|Appelé avant qu’un document soit imprimé ou affiché en aperçu ; méthode override pour initialiser la boîte de dialogue Imprimer.|
 |[CView::OnPrint](#onprint)|Appelé pour imprimer ou afficher une page du document.|
 |[CView::OnUpdate](#onupdate)|Appelé pour avertir une vue de son document a été modifié.|
 
@@ -159,7 +159,7 @@ Le `CView` classe a également une classe d’implémentation dérivée nommée 
 
 `CView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -334,7 +334,7 @@ virtual DROPEFFECT OnDragEnter(
 Pointe vers le [COleDataObject](../../mfc/reference/coledataobject-class.md) déplacé dans la zone de dépôt de la vue.
 
 *dwKeyState*<br/>
-Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
+Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de ce qui suit : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
 
 *point*<br/>
 La position de la souris actuelle par rapport à la zone cliente de la vue.
@@ -357,7 +357,7 @@ Pour plus d’informations, consultez l’exemple de Concepts avancés MFC [OCLI
 
 Implémentation par défaut consiste à ne rien faire et retourner DROPEFFECT_NONE.
 
-Remplacez cette fonction pour vous préparer à des appels ultérieurs à la [OnDragOver](#ondragover) fonction membre. Les données requises à partir de l’objet de données doivent être récupérées pour l’instant pour une utilisation ultérieure dans le `OnDragOver` fonction membre. La vue doit également être mis à jour pour l’instant pour donner la rétroaction visuelle. Pour plus d’informations, consultez l’article [glisser- déposer : implémentation d’une cible de dépôt](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Remplacez cette fonction pour vous préparer à des appels ultérieurs à la [OnDragOver](#ondragover) fonction membre. Les données requises à partir de l’objet de données doivent être récupérées pour l’instant pour une utilisation ultérieure dans le `OnDragOver` fonction membre. La vue doit également être mis à jour pour l’instant pour donner la rétroaction visuelle. Pour plus d’informations, consultez l’article [glisser -déplacer : Implémentation d’une cible de dépôt](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragleave"></a>  CView::OnDragLeave
 
@@ -388,7 +388,7 @@ virtual DROPEFFECT OnDragOver(
 Pointe vers le [COleDataObject](../../mfc/reference/coledataobject-class.md) glissé sur la cible de déplacement.
 
 *dwKeyState*<br/>
-Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
+Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de ce qui suit : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
 
 *point*<br/>
 La position actuelle de la souris par rapport à la zone d’affichage client.
@@ -411,7 +411,7 @@ Pour plus d’informations, consultez l’exemple de Concepts avancés MFC [OCLI
 
 L’implémentation par défaut consiste à ne rien faire et retourner DROPEFFECT_NONE.
 
-Remplacez cette fonction pour donner la rétroaction visuelle au cours de l’opération glisser. Dans la mesure où cette fonction est appelée en permanence, n’importe quel code qu’elle contient doit être optimisé autant que possible. Pour plus d’informations, consultez l’article [glisser- déposer : implémentation d’une cible de dépôt](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Remplacez cette fonction pour donner la rétroaction visuelle au cours de l’opération glisser. Dans la mesure où cette fonction est appelée en permanence, n’importe quel code qu’elle contient doit être optimisé autant que possible. Pour plus d’informations, consultez l’article [glisser -déplacer : Implémentation d’une cible de dépôt](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragscroll"></a>  CView::OnDragScroll
 
@@ -426,7 +426,7 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="parameters"></a>Paramètres
 
 *dwKeyState*<br/>
-Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
+Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de ce qui suit : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
 
 *point*<br/>
 Contient l’emplacement du curseur, en pixels, par rapport à l’écran.
@@ -449,7 +449,7 @@ Pour plus d’informations, consultez l’exemple de Concepts avancés MFC [OCLI
 
 ### <a name="remarks"></a>Notes
 
-Remplacez cette fonction lorsque vous souhaitez fournir un comportement spécial pour cet événement. L’implémentation par défaut fait défiler automatiquement windows lorsque le curseur est déplacé dans la zone de défilement par défaut à l’intérieur de la bordure de chaque fenêtre. Pour plus d’informations, consultez l’article [glisser- déposer : implémentation d’une cible de dépôt](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Remplacez cette fonction lorsque vous souhaitez fournir un comportement spécial pour cet événement. L’implémentation par défaut fait défiler automatiquement windows lorsque le curseur est déplacé dans la zone de défilement par défaut à l’intérieur de la bordure de chaque fenêtre. Pour plus d’informations, consultez l’article [glisser -déplacer : Implémentation d’une cible de dépôt](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondraw"></a>  CView::OnDraw
 
@@ -532,7 +532,7 @@ Pointe vers le [COleDataObject](../../mfc/reference/coledataobject-class.md) qui
 *dropDefault*<br/>
 L’effet que l’utilisateur a choisi pour l’opération de déplacement par défaut en fonction de l’état actuel de la clé. Il peut être DROPEFFECT_NONE. Effets de déplacement sont décrits dans la section Notes.
 
-*liste déroulante*<br/>
+*dropList*<br/>
 Liste des effets de déplacement qui prend en charge de la source de dépôt. Valeurs d’effet de déplacement peuvent être combinées à l’aide de l’opération OR au niveau du bit ( **&#124;**) opération. Effets de déplacement sont décrits dans la section Notes.
 
 *point*<br/>
@@ -680,7 +680,7 @@ Appeler la version de la classe de base de `OnPrepareDC` au début du remplaceme
 
 [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]
 
-##  <a name="onprepareprinting"></a>  Comme CView::OnPreparePrinting
+##  <a name="onprepareprinting"></a>  CView::OnPreparePrinting
 
 Appelé par l’infrastructure avant de l’impression ou la prévisualisation d’un document.
 

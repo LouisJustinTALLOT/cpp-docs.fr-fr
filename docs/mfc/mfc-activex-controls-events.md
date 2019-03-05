@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ActiveX MFC : événements'
+title: 'Contrôles ActiveX MFC : Événements'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-ms.openlocfilehash: 76557e64b5b53c32a7d7f63134085e86bf0138df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540671"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276765"
 ---
-# <a name="mfc-activex-controls-events"></a>Contrôles ActiveX MFC : événements
+# <a name="mfc-activex-controls-events"></a>Contrôles ActiveX MFC : Événements
 
 Les contrôles ActiveX utilisent des événements pour avertir un conteneur que quelque chose est arrivé au contrôle. Les clics sur le contrôle, les données saisies à l'aide du clavier et les modifications de l'état du contrôle sont des exemples courants d'événements. Lorsque ces actions se produisent, le contrôle déclenche un événement pour avertir le conteneur.
 
 Les événements sont également appelés des messages.
 
-MFC prend en charge deux types d'événements : stock et personnalisés. Événements stock sont des événements qui classe [COleControl](../mfc/reference/colecontrol-class.md) gère automatiquement. Pour obtenir une liste complète des événements stock, consultez l’article [contrôles ActiveX MFC : ajout d’événements Stock](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Les événements personnalisés permettent à un contrôle d'avertir le conteneur lorsqu'une action spécifique à ce contrôle se produit. Une modification de l'état interne d'un contrôle ou la réception d'un certain message de fenêtre en sont des exemples.
+MFC prend en charge deux types d'événements : stock et personnalisés. Événements stock sont des événements qui classe [COleControl](../mfc/reference/colecontrol-class.md) gère automatiquement. Pour obtenir une liste complète des événements stock, consultez l’article [contrôles ActiveX MFC : Ajout d’événements Stock](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Les événements personnalisés permettent à un contrôle d'avertir le conteneur lorsqu'une action spécifique à ce contrôle se produit. Une modification de l'état interne d'un contrôle ou la réception d'un certain message de fenêtre en sont des exemples.
 
 Pour que votre contrôle déclenche correctement des événements, votre classe de contrôle doit mapper chaque événement du contrôle à une fonction membre qui doit être appelée lorsque l'événement associé se produit. Ce mécanisme de mappage (appelé table d'événements) centralise les informations relatives à l'événement et permet à Visual Studio d'accéder et de manipuler facilement les événements du contrôle. Cette table d'événements est déclarée par la macro ci-après, située dans le fichier d'en-tête (.H) de la déclaration de classe du contrôle :
 
@@ -45,10 +45,10 @@ Deux autres articles traitent des événements en détail :
 
 - [Contrôles ActiveX MFC : Ajout d’événements Stock](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
 
-- [Contrôles ActiveX MFC : ajout d’événements personnalisés](../mfc/mfc-activex-controls-adding-custom-events.md)
+- [Contrôles ActiveX MFC : Ajout d’événements personnalisés](../mfc/mfc-activex-controls-adding-custom-events.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Contrôles ActiveX MFC : méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
+[Contrôles ActiveX MFC : Méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl, classe](../mfc/reference/colecontrol-class.md)

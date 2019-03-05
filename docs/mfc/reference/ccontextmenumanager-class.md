@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 49e9b1cd12bee562daaf4ffb40492c80d8549ec3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639332"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304329"
 ---
 # <a name="ccontextmenumanager-class"></a>Ccontextmenumanager, classe
 
@@ -91,7 +91,7 @@ L’exemple suivant montre comment ajouter un menu à un `CContextMenuManager` o
 
 `CContextMenuManager`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcontextmenumanager.h
 
@@ -117,7 +117,7 @@ BOOL AddMenu(
 *uiMenuResId*<br/>
 [in] L’ID de ressource de menu.
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Chaîne qui contient le nom du nouveau menu.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -169,7 +169,7 @@ HMENU GetMenuByName(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Chaîne qui contient le nom du menu à récupérer.
 
 *puiOrigResID*<br/>

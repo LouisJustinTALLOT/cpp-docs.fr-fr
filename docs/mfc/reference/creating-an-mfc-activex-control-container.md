@@ -9,12 +9,12 @@ helpviewer_keywords:
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-ms.openlocfilehash: 04c271db18bc8d8ba273f16f7493bbbb1da96421
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0d5fe419375535ab8c52378b9005df88634e99a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544987"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275894"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Création d'un conteneur de contrôles ActiveX MFC
 
@@ -27,7 +27,7 @@ Création d’un programme MFC conteneur à l’aide du [Assistant Application M
 
 - **Nouvelle Application MFC**. Pour créer un nouveau programme MFC qui inclut l’automatisation, modification visuelle, composée de fichiers, ou contrôle prennent en charge, utiliser l’Assistant Application MFC et choisissez les options Automation appropriées.
 
-- **Application MFC existante**. Si vous ajoutez la contenance de contrôles à une application MFC existante, consultez [conteneurs de contrôles OLE : activation manuelle de la contenance de contrôles OLE](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).
+- **Application MFC existante**. Si vous ajoutez la contenance de contrôles à une application MFC existante, consultez [conteneurs de contrôles OLE : Activation manuelle de la contenance de contrôles OLE](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).
 
 ### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>Pour créer un conteneur ActiveX pour un des types suivants d’applications
 
@@ -40,4 +40,3 @@ Création d’un programme MFC conteneur à l’aide du [Assistant Application M
 ## <a name="see-also"></a>Voir aussi
 
 [Types de projets Visual C++](../../ide/visual-cpp-project-types.md)
-

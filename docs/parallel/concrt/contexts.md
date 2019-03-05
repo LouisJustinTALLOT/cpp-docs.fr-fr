@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529169"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285904"
 ---
 # <a name="contexts"></a>Contextes
 
@@ -26,7 +26,7 @@ En passant de 0 (zéro) pour le `milliseconds` paramètre, le runtime interrompr
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise le `wait` fonction pour céder le contexte actuel et donc permettre à d’autres contextes d’exécution, consultez [Comment : utiliser des groupes de planification pour Influence ordre d’exécution](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Pour obtenir un exemple qui utilise le `wait` fonction pour céder le contexte actuel et donc permettre à d’autres contextes d’exécution, consultez [Comment : Utiliser des groupes de planification pour influencer l’ordre d’exécution](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 ## <a name="the-context-class"></a>La classe de contexte
 
@@ -46,7 +46,7 @@ Le [Concurrency::Context :: yield](reference/context-class.md#yield) méthode c
 
 #### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise le `Context::Block`, `Context::Unblock`, et `Context::Yield` méthodes à implémenter une classe de sémaphore coopératif, consultez [Comment : utiliser la classe Context pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Pour obtenir un exemple qui utilise le `Context::Block`, `Context::Unblock`, et `Context::Yield` méthodes à implémenter une classe de sémaphore coopératif, consultez [Comment : Utiliser la classe Context pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 ##### <a name="oversubscription"></a>Surabonnement
 
@@ -66,12 +66,11 @@ Vous pouvez activer le surabonnement plusieurs fois dans le contexte actuel, mai
 
 ###### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise le surabonnement pour compenser la latence provoquée par la lecture des données à partir d’une connexion réseau, consultez [Comment : le surabonnement utilisez à la latence du décalage](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Pour obtenir un exemple qui utilise le surabonnement pour compenser la latence provoquée par la lecture des données à partir d’une connexion réseau, consultez [Comment : Utiliser le surabonnement pour compenser la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Guide pratique pour utiliser des groupes de planification pour influencer l’ordre d’exécution](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
-[Guide pratique pour utiliser la classe Context pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[Guide pratique pour utiliser le surabonnement pour compenser la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-
+[Guide pratique pour utiliser la classe de contexte pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
+[Guide pratique pour utiliser le surabonnement afin de compenser la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)

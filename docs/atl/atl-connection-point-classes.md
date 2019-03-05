@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - CComUnkArray class, connection point classes
 ms.assetid: 9582ba71-7ace-4df4-9c9b-1b0636953efc
-ms.openlocfilehash: c4b2a9b295997c809acf9b037cd5f124f0752c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3794b5c9e4f6297cca6611929c75d0b0133557e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439375"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265234"
 ---
 # <a name="atl-connection-point-classes"></a>Classes de point de connexion ATL
 
@@ -39,4 +39,3 @@ ATL utilise les classes suivantes pour prendre en charge des points de connexion
 ## <a name="see-also"></a>Voir aussi
 
 [Point de connexion](../atl/atl-connection-points.md)
-

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509570"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284214"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder, classe
 
@@ -79,13 +79,13 @@ class CPictureHolder
 
 Avec la propriété Picture stockée, le développeur peut spécifier un bitmap, une icône ou un métafichier pour l’affichage.
 
-Pour plus d’informations sur la création de propriétés picture personnalisées, consultez l’article [contrôles ActiveX MFC : utilisation des images dans un contrôle ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
+Pour plus d’informations sur la création de propriétés picture personnalisées, consultez l’article [contrôles ActiveX MFC : Utilisation d’images dans un contrôle ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `CPictureHolder`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl.h
 
@@ -145,7 +145,7 @@ Indique si l’objet image prendra possession des objets bitmap et de la palette
 *hbm*<br/>
 Handle vers la bitmap à partir de laquelle le `CPictureHolder` objet est créé.
 
-*hPal*<br/>
+*hpal*<br/>
 Handle de la palette utilisée pour le rendu de l’image bitmap.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -202,7 +202,7 @@ BOOL CreateFromMetafile(
 
 ### <a name="parameters"></a>Paramètres
 
-*HMF*<br/>
+*hmf*<br/>
 Handle du métafichier utilisé pour créer le `CPictureHolder` objet.
 
 *xExt*<br/>
@@ -315,7 +315,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*<br/>
+*pDisp*<br/>
 Pointeur vers le nouveau `IPictureDisp` interface.
 
 ## <a name="see-also"></a>Voir aussi

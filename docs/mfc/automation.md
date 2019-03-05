@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: de376c6c5ab2be0da5f6b9495c6adb61e19d6622
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572755"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265560"
 ---
 # <a name="automation"></a>Automation
 
@@ -49,7 +49,7 @@ De nombreuses applications commerciales, telles que Microsoft Excel et Microsoft
 
 ##  <a name="_core_passing_parameters_in_automation"></a> Passage de paramètres dans Automation
 
-Une difficulté dans la création de méthodes Automation permet de fournir un mécanisme uniforme "sûr" pour passer des données entre les serveurs et les clients Automation. Automation utilise le type **VARIANT** pour passer des données. Le type **VARIANT** est une union avec balises. Il comprend des données membre pour la valeur (il s'agit d'une union anonyme C++) et des données membre indiquant le type d'informations stockées dans l'union. Le type **VARIANT** prend en charge plusieurs types de données standard : des entiers codés sur 2 et 4 octets, des nombres à virgule flottante codés sur 4 et 8 octets, des chaînes et des valeurs booléennes. En outre, il prend en charge la **HRESULT** (codes d’erreur OLE), **devise** (un type numérique à virgule fixe), et **DATE** (date et heure absolue) des types, ainsi que les pointeurs à `IUnknown` et `IDispatch` interfaces.
+Une difficulté dans la création de méthodes Automation permet de fournir un mécanisme uniforme "sûr" pour passer des données entre les serveurs et les clients Automation. Automation utilise le type **VARIANT** pour passer des données. Le type **VARIANT** est une union avec balises. Il comprend des données membre pour la valeur (il s'agit d'une union anonyme C++) et des données membre indiquant le type d'informations stockées dans l'union. Le **VARIANT** type prend en charge un nombre de types de données standard : 2 - 4 entiers et octets, des nombres à virgule flottante de 4 et 8 octets, des chaînes et des valeurs booléennes. En outre, il prend en charge la **HRESULT** (codes d’erreur OLE), **devise** (un type numérique à virgule fixe), et **DATE** (date et heure absolue) des types, ainsi que les pointeurs à `IUnknown` et `IDispatch` interfaces.
 
 Le type **VARIANT** est encapsulé dans la classe [COleVariant](../mfc/reference/colevariant-class.md) . Les classes **CURRENCY** et **DATE** prises en charge sont encapsulées dans les classes [COleCurrency](../mfc/reference/colecurrency-class.md) et [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) .
 

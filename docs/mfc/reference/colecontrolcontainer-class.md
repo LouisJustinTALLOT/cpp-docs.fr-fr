@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603007"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274984"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer, classe
 
@@ -153,7 +153,7 @@ En général, cette classe est utilisée conjointement avec `COccManager` et `CO
 
 `COleControlContainer`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxocc.h
 
@@ -196,7 +196,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch de la propriété ambiante en cours de modification.
 
 ### <a name="remarks"></a>Notes
@@ -218,7 +218,7 @@ virtual void CheckDlgButton(
 *nIDButton*<br/>
 L’ID du bouton à modifier.
 
-*nVérifiez*<br/>
+*nCheck*<br/>
 Spécifie l’état du bouton. Il peut s'agir d'une des valeurs suivantes :
 
 - BST_CHECKED définit l’état du bouton à vérifiée.
@@ -311,7 +311,7 @@ Un pointeur vers le texte à afficher dans le contrôle. Définit la valeur de p
 *dwStyle*<br/>
 Styles de Windows. Les styles disponibles sont répertoriés sous la **notes** section.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle. Il peut s’agir un `CRect` objet ou un `RECT` structure.
 
 *nID*<br/>
@@ -419,7 +419,7 @@ virtual BOOL GetAmbientProp(
 *pSite*<br/>
 Pointeur vers un site de contrôle à partir de laquelle la propriété ambiante est récupérée.
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch de la propriété ambiante souhaitée.
 
 *pVarResult*<br/>
@@ -737,7 +737,7 @@ virtual void ScrollChildren(
 
 ### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 La quantité, en pixels, de défilement sur l’axe x.
 
 *dy*<br/>
@@ -785,7 +785,7 @@ virtual void SetDlgItemInt(
 *nID*<br/>
 L’identificateur du contrôle.
 
-*%n%nValeur*<br/>
+*nValue*<br/>
 La valeur entière à afficher.
 
 *bSigned*<br/>

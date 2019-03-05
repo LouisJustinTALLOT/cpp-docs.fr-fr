@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657381"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266053"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap (classe)
 
@@ -74,7 +74,7 @@ Pour plus d’informations sur l’utilisation de `CTypedPtrMap`, consultez les 
 
 `CTypedPtrMap`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtempl.h
 
@@ -144,7 +144,7 @@ Différent de zéro si l’élément a été trouvé ; sinon 0.
 
 Cette fonction inline s’appelle `BASE_CLASS` **:: recherche**.
 
-##  <a name="operator_at"></a>  [] CTypedPtrMap::operator
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
 
 Cet opérateur peut être utilisé uniquement sur le côté gauche d’une instruction d’assignation (une l-value).
 

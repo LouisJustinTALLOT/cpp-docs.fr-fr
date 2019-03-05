@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 7c8915b8d82f96ed0bd1fad11e1a4f0687b40493
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530167"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259449"
 ---
 # <a name="cwordarray-class"></a>CWordArray, classe
 
@@ -101,7 +101,7 @@ par exemple, se traduit par
 
 |Nom|Description|
 |----------|-----------------|
-|[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|
+|[CObArray::operator &#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|
 
 ## <a name="remarks"></a>Notes
 
@@ -120,11 +120,11 @@ Pour plus d’informations sur l’utilisation de `CWordArray`, consultez l’ar
 
 `CWordArray`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcoll.h
 
-##  <a name="icommandsource_interface"></a>  ICommandSource, Interface
+##  <a name="icommandsource_interface"></a>  ICommandSource Interface
 
 Gère les commandes envoyées à partir d’un objet de source de commande à un contrôle utilisateur.
 
@@ -136,7 +136,7 @@ interface class ICommandSource
 
 Lorsque vous hébergez un contrôle utilisateur dans une vue de MFC, [CWinFormsView, classe](../../mfc/reference/cwinformsview-class.md) commandes d’itinéraires et mise à jour de commande des messages de l’interface utilisateur pour le contrôle utilisateur pour lui permettre de gérer les commandes MFC (par exemple, les éléments de menu de frame et boutons de barre d’outils). En mettant en œuvre, vous donner le contrôle utilisateur une référence à la `ICommandSource` objet.
 
-Consultez [Comment : ajouter routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `ICommandTarget`.
+Voir [Guide pratique pour Ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `ICommandTarget`.
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -162,7 +162,7 @@ Handle vers la méthode de gestionnaire de commande.
 
 Cette méthode ajoute le Gestionnaire de commandes *cmdHandler* à l’objet de source de commande et mappe le gestionnaire à *cmdID*.
 
-Consultez [Comment : ajouter routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `AddCommandHandler`.
+Voir [Guide pratique pour Ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `AddCommandHandler`.
 
 ##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler
 
@@ -350,7 +350,7 @@ L’ID de commande du message à envoyer.
 
 Cette méthode envoie de façon synchrone le message mappé à l’ID spécifié par *commande*. Il appelle [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) pour placer le message dans la fenêtre file d’attente de message et attend jusqu'à ce que cette procédure de fenêtre ait traité le message avant de retourner.
 
-##  <a name="icommandtarget_interface"></a>  ICommandTarget, Interface
+##  <a name="icommandtarget_interface"></a>  ICommandTarget Interface
 
 Fournit un contrôle utilisateur avec une interface pour recevoir des commandes à partir d’un objet de source de commande.
 
@@ -362,7 +362,7 @@ interface class ICommandTarget
 
 Lorsque vous hébergez un contrôle utilisateur dans une vue de MFC, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) commandes d’itinéraires et mise à jour de commande des messages de l’interface utilisateur pour le contrôle utilisateur pour lui permettre de gérer les commandes MFC (par exemple, les éléments de menu de frame et boutons de barre d’outils). En implémentant `ICommandTarget`, vous donner le contrôle utilisateur, une référence à l’objet.
 
-Consultez [Comment : ajouter routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `ICommandTarget`.
+Voir [Guide pratique pour Ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `ICommandTarget`.
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -383,9 +383,9 @@ Handle vers l’objet de source de commande.
 
 Lorsque vous hébergez un contrôle utilisateur dans une vue de MFC, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) commandes d’itinéraires et mise à jour des messages de l’interface utilisateur pour le contrôle utilisateur pour lui permettre de gérer les commandes MFC de commande.
 
-Cette méthode initialise l’objet cible de commande et l’associe à l’objet de source de commande spécifiée *cmdSource*. Il doit être appelée dans l’implémentation de classe de contrôle utilisateur. Lors de l’initialisation, vous devez inscrire des gestionnaires de commandes avec l’objet de source de commande en appelant [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) dans le `Initialize` implémentation. Consultez [Comment : ajouter routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `Initialize` pour ce faire.
+Cette méthode initialise l’objet cible de commande et l’associe à l’objet de source de commande spécifiée *cmdSource*. Il doit être appelée dans l’implémentation de classe de contrôle utilisateur. Lors de l’initialisation, vous devez inscrire des gestionnaires de commandes avec l’objet de source de commande en appelant [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) dans le `Initialize` implémentation. Voir [Guide pratique pour Ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `Initialize` pour ce faire.
 
-##  <a name="icommandui_interface"></a>  Icommandui, Interface
+##  <a name="icommandui_interface"></a>  ICommandUI Interface
 
 Gère les commandes de l’interface utilisateur.
 
@@ -399,7 +399,7 @@ Cette interface fournit des méthodes et propriétés qui gèrent des commandes 
 
 `ICommandUI` est utilisé dans un `ON_UPDATE_COMMAND_UI` gestionnaire dans-classe dérivée. Lorsqu’un utilisateur d’une application active (sélectionne ou clics) un menu, chaque élément de menu est affiché comme activé ou désactivé. La cible de chaque commande de menu fournit ces informations en implémentant un `ON_UPDATE_COMMAND_UI` gestionnaire. Pour chacun des objets d’interface utilisateur commande dans votre application, utilisez la fenêtre Propriétés pour créer une entrée de table des messages et le prototype de fonction pour chaque gestionnaire.
 
-Pour plus d’informations sur la façon dont le `ICommandUI` interface est utilisée dans le routage des commandes, consultez [Comment : ajouter routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Pour plus d’informations sur la façon dont le `ICommandUI` interface est utilisée dans le routage des commandes, consultez [Comment : Ajoutez la commande routage pour les Windows Forms contrôle](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -433,7 +433,7 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Notes
 
-Il s’agit d’une fonction membre avancé qui doit être utilisée conjointement avec un [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) gestionnaire qui retourne la valeur FALSE. Pour plus d’informations, consultez la Note technique [TN006 : tables des messages](../../mfc/tn006-message-maps.md).
+Il s’agit d’une fonction membre avancé qui doit être utilisée conjointement avec un [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) gestionnaire qui retourne la valeur FALSE. Pour plus d’informations, consultez la Note technique [TN006 : Tables des messages](../../mfc/tn006-message-maps.md).
 
 ##  <a name="enabled"></a>  ICommandUI::Enabled
 
@@ -521,7 +521,7 @@ void OnActivateView(bool activate);
 
 ### <a name="parameters"></a>Paramètres
 
-*Activer*<br/>
+*activate*<br/>
 Indique si la vue est activée ou désactivée.
 
 ##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate
@@ -549,4 +549,3 @@ Cette fonction permet l’affichage pour mettre à jour son affichage afin de re
 [Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
