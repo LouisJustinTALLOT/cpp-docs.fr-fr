@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: 4e12b4dc41c0e384025a2af567cb118d066aaa72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a06891f9413979895175808e109cc4abb7d75e09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478245"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259098"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter, classe
 
@@ -78,7 +78,7 @@ Par défaut, un `COleMessageFilter` objet est alloué lors de l’application es
 
 Il s’agit d’une classe avancée ; Vous devez rarement travailler directement dessus.
 
-Pour plus d’informations, consultez l’article [serveurs : implémentation d’un serveur](../../mfc/servers-implementing-a-server.md).
+Pour plus d’informations, consultez l’article [serveurs : Implémentation d’un serveur](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -88,7 +88,7 @@ Pour plus d’informations, consultez l’article [serveurs : implémentation d
 
 `COleMessageFilter`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 
@@ -250,7 +250,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 
 ### <a name="parameters"></a>Paramètres
 
-*%ndélai*<br/>
+*nTimeout*<br/>
 Nombre de millisecondes que le délai d’attente de message.
 
 ### <a name="remarks"></a>Notes

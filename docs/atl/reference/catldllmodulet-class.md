@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
-ms.openlocfilehash: 37f57240322c6f69fe25416866cb1b356f3c9909
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be42915c6c2e941bc5fc1de78c5c7ac26ccca6e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515867"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259215"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT, classe
 
@@ -44,7 +44,7 @@ Votre classe dérivée de `CAtlDllModuleT`.
 |Nom|Description|
 |----------|-----------------|
 |[CAtlDllModuleT::CAtlDllModuleT](#catldllmodulet)|Constructeur.|
-|[CAtlDllModuleT :: ~ CAtlDllModuleT](#dtor)|Destructeur.|
+|[CAtlDllModuleT::~CAtlDllModuleT](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -73,7 +73,7 @@ Pour plus d’informations sur les modules dans ATL, consultez [Module ATL, Clas
 
 `CAtlDllModuleT`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -85,7 +85,7 @@ Constructeur.
 CAtlDllModuleT() throw();
 ```
 
-##  <a name="dtor"></a>  CAtlDllModuleT :: ~ CAtlDllModuleT
+##  <a name="dtor"></a>  CAtlDllModuleT::~CAtlDllModuleT
 
 Destructeur.
 
@@ -124,7 +124,7 @@ Le CLSID de l’objet doit être créé.
 *riid*<br/>
 IID de l’interface demandée.
 
-*PPV*<br/>
+*ppv*<br/>
 Un pointeur vers le pointeur d’interface identifié par *riid*. Si l’objet ne prend pas en charge cette interface, *ppv* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -208,7 +208,7 @@ Le CLSID de l’objet doit être créé.
 *riid*<br/>
 IID de l’interface demandée.
 
-*PPV*<br/>
+*ppv*<br/>
 Un pointeur vers le pointeur d’interface identifié par *riid*. Si l’objet ne prend pas en charge cette interface, *ppv* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour

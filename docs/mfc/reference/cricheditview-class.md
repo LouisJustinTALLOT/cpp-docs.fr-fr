@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178738"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259514"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
 
@@ -210,7 +210,7 @@ Pour obtenir un exemple d’utilisation d’une vue RichEdit dans une applicatio
 
 `CRichEditView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrich.h
 
@@ -263,7 +263,7 @@ void DoPaste(
 *dataobj*<br/>
 Le [COleDataObject](../../mfc/reference/coledataobject-class.md) contenant les données à coller.
 
-*CF*<br/>
+*cf*<br/>
 Le format de Presse-papiers souhaité.
 
 *hMetaPict*<br/>
@@ -298,7 +298,7 @@ Indique si la recherche respecte la casse.
 *bWord*<br/>
 Indique si la recherche doit correspondre à des mots entiers uniquement, pas les parties de mots.
 
-*bsuivant*<br/>
+*bNext*<br/>
 Indique la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -336,7 +336,7 @@ Indique si la recherche respecte la casse.
 *bWord*<br/>
 Indique si la recherche doit correspondre à des mots entiers uniquement, pas les parties de mots.
 
-*bsuivant*<br/>
+*bNext*<br/>
 Indique la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -683,7 +683,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*<br/>
+*cf*<br/>
 Le format Presse-papiers pertinent.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -786,7 +786,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Chaîne à rechercher.
 
-*bsuivant*<br/>
+*bNext*<br/>
 La direction à rechercher : TRUE indique que le bas ; FALSE, le haut.
 
 *bCase*<br/>
@@ -932,7 +932,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 Texte à remplacer.
 
-*bsuivant*<br/>
+*bNext*<br/>
 Indique la direction de la recherche : La valeur TRUE est arrêté ; FALSE, le haut.
 
 *bCase*<br/>
@@ -1159,7 +1159,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*<br/>
+*cf*<br/>
 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) structure contenant le caractère par défaut nouvelle mise en forme d’attributs.
 
 ### <a name="remarks"></a>Notes

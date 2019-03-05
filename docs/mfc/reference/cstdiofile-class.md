@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258786"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile, classe
 
@@ -78,7 +78,7 @@ Pour plus d’informations sur l’utilisation de `CStdioFile`, consultez les ar
 
 `CStdioFile`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -199,7 +199,7 @@ virtual BOOL ReadString(CString& rString);
 *lpsz*<br/>
 Spécifie un pointeur vers une mémoire tampon fournie par l’utilisateur qui recevra une chaîne de texte se terminant par null.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Spécifie le nombre maximal de caractères à lire, sans compter le caractère null de fin.
 
 *rString*<br/>
@@ -237,14 +237,14 @@ virtual ULONGLONG Seek(
 *lOff*<br/>
 Nombre d’octets pour déplacer le pointeur.
 
-*Ndepuis*<br/>
+*nFrom*<br/>
 Mode de déplacement du pointeur. Doit être une des valeurs suivantes :
 
-- `CFile::begin`: Déplacer le pointeur de fichier *lOff* octets transférer à partir du début du fichier.
+- `CFile::begin`: Déplacez le pointeur de fichier *lOff* octets transférer à partir du début du fichier.
 
-- `CFile::current`: Déplacer le pointeur de fichier *lOff* octets à partir de la position actuelle dans le fichier.
+- `CFile::current`: Déplacez le pointeur de fichier *lOff* octets à partir de la position actuelle dans le fichier.
 
-- `CFile::end`: Déplacer le pointeur de fichier *lOff* octets à partir de la fin du fichier. Notez que *lOff* doit être négatif à rechercher dans l’existant de fichiers ; positif valeurs cherchera au-delà de la fin du fichier.
+- `CFile::end`: Déplacez le pointeur de fichier *lOff* octets à partir de la fin du fichier. Notez que *lOff* doit être négatif à rechercher dans l’existant de fichiers ; positif valeurs cherchera au-delà de la fin du fichier.
 
 ### <a name="return-value"></a>Valeur de retour
 

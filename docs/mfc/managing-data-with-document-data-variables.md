@@ -11,12 +11,12 @@ helpviewer_keywords:
 - document data [MFC]
 - member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
-ms.openlocfilehash: 756f0a3870f4b211cbc7bb40449733cf70610247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc21bd4b3dbe7609a33af4b4f93f15a3f5c9a64e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630019"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259969"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Gestion des données avec variables de données de document
 
@@ -33,4 +33,3 @@ Si le transfert fréquent de données nécessite un accès direct ou si vous sou
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de documents](../mfc/using-documents.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: d184b1d507579309051cd6c70ea6525463c44881
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d77ca7dc55273e6084e919323ed71e55fa68a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676510"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260593"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT, structure
 
@@ -39,7 +39,7 @@ Adresse d’une chaîne qui recevra le texte pour un outil.
 *szText*<br/>
 Mémoire tampon qui reçoit le texte info-bulle. Une application peut copier le texte à cette mémoire tampon comme alternative à la spécification d’une adresse de la chaîne.
 
-*HINST*<br/>
+*hinst*<br/>
 Handle de l’instance qui contient une chaîne à utiliser en tant que le texte info-bulle. Si *lpszText* est l’adresse du texte info-bulle, ce membre a la valeur NULL.
 
 Lorsque vous gérez le `TTN_NEEDTEXT` notification de message, spécifiez la chaîne à afficher dans une des manières suivantes :
@@ -53,4 +53,3 @@ Lorsque vous gérez le `TTN_NEEDTEXT` notification de message, spécifiez la cha
 ## <a name="see-also"></a>Voir aussi
 
 [Info-bulles dans les fenêtres non dérivées de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
-
