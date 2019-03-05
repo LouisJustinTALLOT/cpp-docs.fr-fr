@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-ms.openlocfilehash: 20e910dfa34e90af2c8a2765947ad85a2465c596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283811"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange, classe
 
@@ -73,7 +73,7 @@ La valeur de la variable d’animation fluctue entre les valeurs minimales et ma
 
 [CSinusoidalTransitionFromRange](../../mfc/reference/csinusoidaltransitionfromrange-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -111,7 +111,7 @@ CSinusoidalTransitionFromRange(
 
 ### <a name="parameters"></a>Paramètres
 
-*durée*<br/>
+*duration*<br/>
 La durée de la transition.
 
 *dblMinimumValue*<br/>
@@ -120,10 +120,10 @@ La valeur de la variable d’animation à un bac de l’onde sinusoïdale.
 *dblMaximumValue*<br/>
 La valeur de la variable d’animation à un pic de l’onde sinusoïdale.
 
-*Période*<br/>
+*period*<br/>
 La période d’oscillation de l’onde sinusoïdale en secondes.
 
-*pente*<br/>
+*slope*<br/>
 Pente au début de la transition.
 
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue

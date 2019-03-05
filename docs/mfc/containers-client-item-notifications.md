@@ -1,19 +1,19 @@
 ---
-title: "Conteneurs : notifications d'élément client"
+title: 'Conteneurs : Notifications d’élément client'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - notifications [MFC], container client item
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528893"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291052"
 ---
-# <a name="containers-client-item-notifications"></a>Conteneurs : notifications d'élément client
+# <a name="containers-client-item-notifications"></a>Conteneurs : Notifications d’élément client
 
 Cet article présente les fonctions substituables que le framework MFC appelle lorsque les applications serveur modifient des éléments dans le document de votre application cliente.
 
@@ -32,7 +32,7 @@ Le framework informe votre application conteneur des modifications via un appel 
 
 Ces valeurs sont comprises entre le **OLE_NOTIFICATION** énumération, qui est définie dans AFXOLE. H.
 
-Le deuxième argument de cette fonction spécifie la manière dont l’élément est modifié ou l’état dans lequel il est passé :
+Le deuxième argument de cette fonction spécifie la manière dont l'élément est modifié ou l'état dans lequel il est passé :
 
 |Lorsque le premier argument est|Deuxième argument|
 |----------------------------|---------------------|
@@ -40,15 +40,14 @@ Le deuxième argument de cette fonction spécifie la manière dont l’élément
 |**OLE_CHANGED**|Spécifie l'aspect de l'élément OLE modifié.|
 |**OLE_CHANGED_STATE**|Décrit l’état en cours (*emptyState*, *loadedState*, *openState*, *activeState*, ou  *activeUIState*).|
 
-Pour plus d’informations sur les États d’un élément client peut assumer, consultez [conteneurs : États d’élément Client](../mfc/containers-client-item-states.md).
+Pour plus d’informations sur les États d’un élément client peut assumer, consultez [conteneurs : États d’élément client](../mfc/containers-client-item-states.md).
 
-Le framework appelle `COleClientItem::OnGetItemPosition` lorsqu'un élément est activé pour la modification sur place. L'implémentation est requise pour les applications qui prennent en charge la modification sur place. L’Assistant Application MFC fournit une implémentation de base, qui assigne les coordonnées de l’élément à l’objet `CRect` passé comme argument à `OnGetItemPosition`.
+Le framework appelle `COleClientItem::OnGetItemPosition` lorsqu'un élément est activé pour la modification sur place. L'implémentation est requise pour les applications qui prennent en charge la modification sur place. L'Assistant Application MFC fournit une implémentation de base, qui assigne les coordonnées de l'élément à l'objet `CRect` passé comme argument à `OnGetItemPosition`.
 
 Si la position ou la taille d'un élément OLE change lors de la modification sur place, les informations du conteneur relatives aux rectangles de découpage et à la position de l'élément doivent être mises à jour et le serveur doit recevoir les informations concernant ces modifications. Le framework appelle `COleClientItem::OnChangeItemPosition` à cet effet. L'Assistant Application MFC fournit une substitution qui appelle la fonction de la classe de base. Vous devez modifier la fonction que l'Assistant Application écrit pour votre classe dérivée de `COleClientItem` afin qu'elle puisse mettre à jour les informations conservées par votre objet d'élément client.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Conteneurs](../mfc/containers.md)<br/>
-[Conteneurs : états d’élément client](../mfc/containers-client-item-states.md)<br/>
+[Conteneurs : États d’élément client](../mfc/containers-client-item-states.md)<br/>
 [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
-

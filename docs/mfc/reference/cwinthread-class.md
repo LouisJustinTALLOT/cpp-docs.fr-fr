@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270126"
 ---
 # <a name="cwinthread-class"></a>CWinThread (classe)
 
@@ -248,7 +248,7 @@ Niveau de la priorité de thread en cours au sein de sa classe de priorité. La 
 
 - THREAD_PRIORITY_BELOW_NORMAL
 
-- NIVEAU DE PRIORITÉ
+- THREAD_PRIORITY_LOWEST
 
 - THREAD_PRIORITY_IDLE
 
@@ -606,7 +606,7 @@ Spécifie le nouveau niveau de priorité de thread au sein de sa classe de prior
 
 - THREAD_PRIORITY_BELOW_NORMAL
 
-- NIVEAU DE PRIORITÉ
+- THREAD_PRIORITY_LOWEST
 
 - THREAD_PRIORITY_IDLE
 

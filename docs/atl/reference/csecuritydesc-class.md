@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3673b7ae8630a344e640df70a23698247b0ff8ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694073"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262634"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc, classe
 
@@ -109,7 +109,7 @@ Les applications ne doivent pas modifier le `SECURITY_DESCRIPTOR` structure dire
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -125,7 +125,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `CSecurityDesc` objet ou `SECURITY_DESCRIPTOR` structure à assigner au nouveau `CSecurityDesc` objet.
 
 ### <a name="remarks"></a>Notes
@@ -154,7 +154,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*pStr*<br/>
+*pstr*<br/>
 Pointeur vers une chaîne se terminant par null qui contient le [descripteur de sécurité de format de chaîne](/windows/desktop/SecAuthZ/security-descriptor-string-format) à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -525,7 +525,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `SECURITY_DESCRIPTOR` structure ou `CSecurityDesc` objet à affecter à la `CSecurityDesc` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -609,7 +609,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*SID*<br/>
+*Sid*<br/>
 Référence à un [CSid](../../atl/reference/csid-class.md) objet pour le nouveau groupe de principal du descripteur de sécurité. Ce paramètre ne doit pas être NULL. Un descripteur de sécurité peut être marqué comme n’ayant ne pas une liste DACL ou une liste SACL, mais il doit avoir un groupe et un propriétaire, même ces sont le SID NULL (qui est un identificateur de sécurité intégré ayant une signification spéciale).
 
 *bDefaulted*<br/>
@@ -629,7 +629,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*SID*<br/>
+*Sid*<br/>
 Le [CSid](../../atl/reference/csid-class.md) objet pour le nouveau propriétaire de principal du descripteur de sécurité. Ce paramètre ne doit pas être NULL.
 
 *bDefaulted*<br/>
@@ -672,10 +672,10 @@ bool ToString(
 
 ### <a name="parameters"></a>Paramètres
 
-*pStr*<br/>
+*pstr*<br/>
 Pointeur vers une chaîne se terminant par null qui recevront le [descripteur de sécurité de format de chaîne](/windows/desktop/SecAuthZ/security-descriptor-string-format).
 
-*Si*<br/>
+*si*<br/>
 Spécifie une combinaison d’indicateurs de bits SECURITY_INFORMATION indiquent les composants du descripteur de sécurité à inclure dans la chaîne de sortie.
 
 ### <a name="return-value"></a>Valeur de retour

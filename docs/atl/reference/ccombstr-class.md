@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475645"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282355"
 ---
 # <a name="ccombstr-class"></a>CComBSTR, classe
 
@@ -112,7 +112,7 @@ Un [BSTR](/previous-versions/windows/desktop/automat/bstr) est nul après le der
 
 Pour obtenir la liste des précautions à prendre lorsque vous utilisez `CComBSTR`, consultez [programmation avec CComBSTR](../../atl/programming-with-ccombstr-atl.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -346,7 +346,7 @@ Le destructeur libère la chaîne pointée par `m_str`.
 
 [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]
 
-##  <a name="dtor"></a>  CComBSTR :: ~ CComBSTR
+##  <a name="dtor"></a>  CComBSTR::~CComBSTR
 
 Destructeur.
 

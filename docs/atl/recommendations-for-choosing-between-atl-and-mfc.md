@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, vs. MFC
 ms.assetid: 269325bb-11a8-4330-ad2b-a14a2458679e
-ms.openlocfilehash: b3c01a54c1250ae97d5377cb0b1ff49a17c3f7c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e51f81bbdc54ff09980acfba22037df77abac9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468248"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259774"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>Recommandations relatives au choix entre ATL et MFC
 
@@ -31,4 +31,3 @@ Vous pouvez ajouter la prise en charge pour l’utilisation d’ATL dans un proj
 ## <a name="see-also"></a>Voir aussi
 
 [Introduction à ATL](../atl/introduction-to-atl.md)
-

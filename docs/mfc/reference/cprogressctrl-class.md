@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260268"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl (classe)
 
@@ -107,7 +107,7 @@ Pour plus d’informations sur l’utilisation de `CProgressCtrl`, consultez [co
 
 `CProgressCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -148,7 +148,7 @@ Spécifie le style du contrôle de barre de progression. Appliquer n’importe q
 
 - Progressif de PBS_SMOOTH affiche smooth remplissage dans le contrôle de barre de progression. Sans cet indicateur, le contrôle se remplira avec des blocs.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle de barre de progression. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure. Étant donné que le contrôle doit être une fenêtre enfant, les coordonnées spécifiées sont par rapport à la zone cliente de la *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -190,7 +190,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Spécifie le style du contrôle de barre de progression. Appliquer n’importe quelle combinaison de styles de fenêtre décrit dans [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -442,7 +442,7 @@ BOOL SetMarquee(
 |Paramètre|Description|
 |---------------|-----------------|
 |*fMarqueeMode*|[in] True pour activer le mode de texte défilant on, ou FALSE pour désactiver le mode de sélection.|
-|*%n%nintervalle*|[in] Durée en millisecondes entre les mises à jour de l’animation de texte défilant.|
+|*nInterval*|[in] Durée en millisecondes entre les mises à jour de l’animation de texte défilant.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -565,7 +565,7 @@ int SetStep(int nStep);
 
 ### <a name="parameters"></a>Paramètres
 
-*nEtape*<br/>
+*nStep*<br/>
 Nouvel incrément de l’étape.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -607,4 +607,3 @@ L’incrément de l’étape est définie par le `CProgressCtrl::SetStep` foncti
 [MFC exemple CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

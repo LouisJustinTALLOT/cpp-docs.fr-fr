@@ -1,18 +1,18 @@
 ---
-title: 'Comment : utiliser la gestion des exceptions pour rompre une boucle parallèle'
+title: 'Procédure : Utiliser des exceptions pour rompre une boucle parallèle'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: a9557f2fc809647215dbb5fd928f5c638af6ed62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19d732d98f24172471d96cd5e2962b2a99ab0203
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532884"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262309"
 ---
-# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Comment : utiliser la gestion des exceptions pour rompre une boucle parallèle
+# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Procédure : Utiliser des exceptions pour rompre une boucle parallèle
 
 Cette rubrique montre comment écrire un algorithme de recherche pour une arborescence de base.
 
@@ -66,7 +66,7 @@ Did not find node with value 17522.
 
 Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `task-tree-search.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-**/EHsc CL.exe task-tree-search.cpp**
+**cl.exe /EHsc task-tree-search.cpp**
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -74,7 +74,6 @@ Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-l
 [Gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md)<br/>
-[task_group, classe](reference/task-group-class.md)<br/>
+[Classe task_group](reference/task-group-class.md)<br/>
 [structured_task_group, classe](../../parallel/concrt/reference/structured-task-group-class.md)<br/>
 [parallel_for_each, fonction](reference/concurrency-namespace-functions.md#parallel_for_each)
-

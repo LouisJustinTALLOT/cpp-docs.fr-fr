@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: 4e96dc11455015a83af9be545ba15c96b5e2f779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0704f3d666eca08bafb33f9236709478d347d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620517"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288764"
 ---
 # <a name="isource-class"></a>ISource, classe
 
@@ -59,7 +59,7 @@ Le type de données de la charge utile dans les messages produits par le bloc so
 |----------|-----------------|
 |[accept](#accept)|En cas de substitution dans une classe dérivée, accepte un message qui a été proposé par ce `ISource` bloc, en transférant la propriété à l’appelant.|
 |[acquire_ref](#acquire_ref)|En cas de substitution dans une classe dérivée, acquiert un décompte de références sur ce `ISource` bloc, pour empêcher la suppression.|
-|[consommer](#consume)|En cas de substitution dans une classe dérivée, consomme un message précédemment proposé par ce `ISource` bloquer et réservé avec succès par la cible, en transférant la propriété à l’appelant.|
+|[consume](#consume)|En cas de substitution dans une classe dérivée, consomme un message précédemment proposé par ce `ISource` bloquer et réservé avec succès par la cible, en transférant la propriété à l’appelant.|
 |[link_target](#link_target)|En cas de substitution dans une classe dérivée, lie un bloc cible à ce `ISource` bloc.|
 |[release](#release)|En cas de substitution dans une classe dérivée, libère une réservation de message réussie précédente.|
 |[release_ref](#release_ref)|En cas de substitution dans une classe dérivée, libère un décompte de références sur ce `ISource` bloc.|
@@ -75,7 +75,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `ISource`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -150,7 +150,7 @@ Un pointeur vers le `message` que l’appelant a désormais la propriété de l�
 
 Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé par un appel à `reserve` qui retourné **true**.
 
-##  <a name="dtor"></a> ~ ISource
+##  <a name="dtor"></a> ~ISource
 
 Détruit le `ISource` objet.
 

@@ -40,16 +40,16 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176404"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294562"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet, classe
 
-La classe `CMFCPropertySheet` prend en charge une feuille de propriétés où chaque page de propriétés est représentée par un onglet de page, un bouton de barre d’outils, un nœud de contrôle d’arborescence ou un élément de liste.
+La classe `CMFCPropertySheet` prend en charge une feuille de propriétés où chaque page de propriétés est représentée par un onglet de page, un bouton de barre d'outils, un nœud de contrôle d'arborescence ou un élément de liste.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,8 +71,8 @@ class CMFCPropertySheet : public CPropertySheet
 |Nom|Description|
 |----------|-----------------|
 |[CMFCPropertySheet::AddPage](#addpage)|Ajoute une page à la feuille de propriétés.|
-|[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Ajoute une nouvelle page de propriétés au contrôle d’arborescence.|
-|[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|Ajoute un nouveau nœud au contrôle d’arborescence.|
+|[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Ajoute une nouvelle page de propriétés au contrôle d'arborescence.|
+|[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|Ajoute un nouveau nœud au contrôle d'arborescence.|
 |[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|Réserve de l'espace en haut de chaque page pour dessiner un en-tête personnalisé.|
 |[CMFCPropertySheet::GetHeaderHeight](#getheaderheight)|Récupère la hauteur de l'en-tête actuel.|
 |[CMFCPropertySheet::GetLook](#getlook)|Récupère une valeur d'énumération qui spécifie l'apparence de la feuille de propriétés actuelle.|
@@ -83,7 +83,7 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Appelé par l'infrastructure quand une page de propriétés est activée.|
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Appelé par l'infrastructure pour dessiner un en-tête de page de propriétés personnalisé.|
 |`CMFCPropertySheet::OnInitDialog`|Gère la [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) message. (Substitue [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|
-|[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Appelé par l’infrastructure pour supprimer une page de propriétés d’un contrôle d’arborescence.|
+|[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Appelé par l'infrastructure pour supprimer une page de propriétés d'un contrôle d'arborescence.|
 |`CMFCPropertySheet::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. (Substitue `CPropertySheet::PreTranslateMessage`.)|
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|Supprime un nœud du contrôle d’arborescence.|
 |[CMFCPropertySheet::RemovePage](#removepage)|Supprime une page de propriétés de la feuille de propriétés.|
@@ -100,7 +100,7 @@ Pour utiliser la classe `CMFCPropertySheet` dans votre application, procédez co
 
 1. Construire un [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md) objet pour chaque page de propriétés.
 
-1. Appelez le [CMFCPropertySheet::SetLook](#setlook) méthode dans le constructeur CMyPropertySheet. Un paramètre de cette méthode permet de spécifier sous quelle forme les pages de propriétés seront affichées : onglets le long de la bordure supérieure ou gauche de la feuille de propriétés ; onglets dans le style d’une feuille de propriétés Microsoft OneNote ; boutons sur un contrôle de barre d’outils Microsoft Outlook ; nœuds sur un contrôle d’arborescence ; ou liste d’éléments sur le côté gauche de la feuille de propriétés.
+1. Appelez le [CMFCPropertySheet::SetLook](#setlook) méthode dans le constructeur CMyPropertySheet. Un paramètre de cette méthode permet de spécifier sous quelle forme les pages de propriétés seront affichées : onglets le long de la bordure supérieure ou gauche de la feuille de propriétés ; onglets dans le style d'une feuille de propriétés Microsoft OneNote ; boutons sur un contrôle de barre d'outils Microsoft Outlook ; nœuds sur un contrôle d'arborescence ; ou liste d'éléments sur le côté gauche de la feuille de propriétés.
 
 1. Si vous créez une feuille de propriétés dans le style d’une barre d’outils Microsoft Outlook, appelez le [CMFCPropertySheet::SetIconsList](#seticonslist) méthode pour associer une liste d’images avec les pages de propriétés.
 
@@ -134,7 +134,7 @@ L’illustration suivante représente une feuille de propriétés dont le style 
 
 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpropertysheet.h
 
@@ -159,7 +159,7 @@ Si la feuille de propriétés est dans le style de Microsoft Outlook, l’infras
 
 ##  <a name="addpagetotree"></a>  CMFCPropertySheet::AddPageToTree
 
-Ajoute une nouvelle page de propriétés au contrôle d’arborescence.
+Ajoute une nouvelle page de propriétés au contrôle d'arborescence.
 
 ```
 void AddPageToTree(
@@ -189,7 +189,7 @@ Cette méthode ajoute une page de propriétés comme une feuille d’un contrôl
 
 ##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory
 
-Ajoute un nouveau nœud au contrôle d’arborescence.
+Ajoute un nouveau nœud au contrôle d'arborescence.
 
 ```
 CMFCPropertySheetCategoryInfo* AddTreeCategory(
@@ -395,7 +395,7 @@ Par défaut, cette méthode ne fait rien. Si vous substituez cette méthode, app
 
 ##  <a name="onremovetreepage"></a>  CMFCPropertySheet::OnRemoveTreePage
 
-Appelé par l’infrastructure pour supprimer une page de propriétés d’un contrôle d’arborescence.
+Appelé par l'infrastructure pour supprimer une page de propriétés d'un contrôle d'arborescence.
 
 ```
 virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
@@ -465,13 +465,13 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] L’ID de ressource d’une liste d’images.
 
-*CX*<br/>
+*cx*<br/>
 [in] La largeur, en pixels, des icônes dans la liste d’images.
 
 *clrTransparent*<br/>
 [in] La couleur de l’image transparente. Les parties de l’image qui sont de cette couleur est transparents. La valeur par défaut est la couleur magenta, RGB(255,0,255).
 
-*éléments HICON*<br/>
+*hIcons*<br/>
 [in] Handle vers une liste d’images existant.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -496,7 +496,7 @@ void SetLook(
 
 ### <a name="parameters"></a>Paramètres
 
-*coup de œil*<br/>
+*look*<br/>
 [in] Une des valeurs d’énumération qui spécifie l’apparence de la feuille de propriétés. Le style par défaut pour une feuille de propriétés est `CMFCPropertySheet::PropSheetLook_Tabs`. Pour plus d’informations, consultez le tableau dans la section Remarques de cette rubrique.
 
 *nNavControlWidth*<br/>

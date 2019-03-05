@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-ms.openlocfilehash: b4a47cd22026663acb1cade6f2b4c098c4887965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570571"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270109"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Didacticiel ATL (Active Template Library)
 
@@ -24,21 +24,20 @@ En suivant ce didacticiel, vous allez apprendre à ajouter un contrôle à un pr
 
 Le didacticiel est divisé en sept étapes. Vous devez effectuer chaque étape dans l’ordre comme étapes ultérieures dépendent des tâches terminées précédemment. Avant de commencer, vous devez confirmer que vous disposez des privilèges requis pour inscrire un composant ActiveX sur votre ordinateur. Cela est généralement uniquement un problème si vous exécutez Visual Studio .NET via une connexion de Services Terminal Server.
 
-- [Étape 1 : Création du projet](../atl/creating-the-project-atl-tutorial-part-1.md)
+- [Étape 1 : Création du projet](../atl/creating-the-project-atl-tutorial-part-1.md)
 
-- [Étape 2 : Ajout d’un contrôle à votre projet](../atl/adding-a-control-atl-tutorial-part-2.md)
+- [Étape 2 : Ajout d’un contrôle à votre projet](../atl/adding-a-control-atl-tutorial-part-2.md)
 
 - [Étape 3. Ajout d’une propriété à votre contrôle](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
 
-- [Étape 4 : Modifier le Code de dessin de votre contrôle](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+- [Étape 4 : Modifier le Code de dessin de votre contrôle](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-- [Étape 5 : Ajout d’un événement](../atl/adding-an-event-atl-tutorial-part-5.md)
+- [Étape 5 : Ajout d’un événement](../atl/adding-an-event-atl-tutorial-part-5.md)
 
-- [Étape 6 : Ajout d’une Page de propriétés](../atl/adding-a-property-page-atl-tutorial-part-6.md)
+- [Étape 6 : Ajout d’une Page de propriétés](../atl/adding-a-property-page-atl-tutorial-part-6.md)
 
-- [Étape 7 : Insertion de votre contrôle sur une Page Web](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
+- [Étape 7 : Placer votre contrôle sur une Page Web](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 [Concepts](../atl/active-template-library-atl-concepts.md)
-

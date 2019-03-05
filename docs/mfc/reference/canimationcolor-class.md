@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: 6037dd11ddef10500d9468bdf9fa188901aad739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536684"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304330"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor, classe
 
@@ -78,7 +78,7 @@ class CAnimationColor : public CAnimationBaseObject;
 |Nom|Description|
 |----------|-----------------|
 |[CAnimationColor::operator COLORREF](#operator_colorref)||
-|[CAnimationColor::operator =](#operator_eq)|Affecte la couleur à CAnimationColor.|
+|[CAnimationColor::operator=](#operator_eq)|Affecte la couleur à CAnimationColor.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
@@ -100,7 +100,7 @@ La classe CAnimationColor encapsule trois objets CAnimationVariable et peut repr
 
 `CAnimationColor`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -146,7 +146,7 @@ CAnimationColor(
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 Spécifie la couleur par défaut.
 
 *nGroupID*<br/>
@@ -249,7 +249,7 @@ BOOL GetValue(COLORREF& color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 Sortie. Contient la valeur actuelle lorsque cette méthode est retournée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -292,7 +292,7 @@ operator COLORREF();
 
 ### <a name="return-value"></a>Valeur de retour
 
-##  <a name="operator_eq"></a>  CAnimationColor::operator =
+##  <a name="operator_eq"></a>  CAnimationColor::operator=
 
 Affecte la couleur à CAnimationColor.
 
@@ -302,7 +302,7 @@ void operator=(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 Spécifie la nouvelle valeur de couleur de l’Animation.
 
 ### <a name="remarks"></a>Notes
@@ -319,7 +319,7 @@ void SetDefaultValue(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 Spécifie les nouvelles valeurs par défaut pour les composants rouge, verts et bleus.
 
 ### <a name="remarks"></a>Notes

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 6ae0ebb94952408aa2576d4320ce4e00308c458f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549511"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295017"
 ---
 # <a name="cdbexception-class"></a>CDBException, classe
 
@@ -44,7 +44,7 @@ class CDBException : public CException
 La classe inclut deux membres de données publiques que vous pouvez utiliser pour déterminer la cause de l’exception ou pour afficher un message décrivant l’exception. `CDBException` les objets sont construits et levées par les fonctions membres des classes de base de données.
 
 > [!NOTE]
->  Cette classe est une des classes de base de données connectivité ODBC (Open) de MFC. Si vous utilisez à la place les nouvelles classes d’objets DAO (Data Access), utilisez [CDaoException](../../mfc/reference/cdaoexception-class.md) à la place. Tous les noms de classe DAO ont « CDao » comme préfixe. Pour plus d’informations, consultez l’article [vue d’ensemble : programmation de base de données](../../data/data-access-programming-mfc-atl.md).
+>  Cette classe est une des classes de base de données connectivité ODBC (Open) de MFC. Si vous utilisez à la place les nouvelles classes d’objets DAO (Data Access), utilisez [CDaoException](../../mfc/reference/cdaoexception-class.md) à la place. Tous les noms de classe DAO ont « CDao » comme préfixe. Pour plus d’informations, consultez l’article [vue d’ensemble : Programmation de base de données](../../data/data-access-programming-mfc-atl.md).
 
 Les exceptions sont les cas d’exécution anormale impliquant des conditions en dehors du contrôle du programme, telles que de la source de données ou les erreurs d’e/s réseau. Les erreurs susceptibles de voir dans le cours normal de l’exécution de votre programme sont généralement pas considérés comme des exceptions.
 
@@ -60,7 +60,7 @@ Pour plus d’informations sur la gestion des exceptions en général, ou sur `C
 
 `CDBException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdb.h
 
@@ -132,9 +132,9 @@ Contient une chaîne décrivant l’erreur qui a provoqué l’exception.
 
 La chaîne est du formulaire « état : % s, natif : % ld, origine : % s », où les codes de format, dans l’ordre, sont remplacés par les valeurs qui décrivent :
 
-- La valeur SQLSTATE, une chaîne se terminant par null qui contient un code d’erreur à cinq caractères retournés dans le *szSqlState* paramètre de la fonction ODBC `SQLError`. Les valeurs SQLSTATE sont répertoriés dans l’annexe A, [Codes d’erreur ODBC](/previous-versions/windows/desktop/ms714687), dans le *de référence du programmeur ODBC*. Exemple : « S0022 ».
+- La valeur SQLSTATE, une chaîne se terminant par null qui contient un code d’erreur à cinq caractères retournés dans le *szSqlState* paramètre de la fonction ODBC `SQLError`. Les valeurs SQLSTATE sont répertoriés dans l’annexe A, [Codes d’erreur ODBC](/previous-versions/windows/desktop/ms714687), dans le *de référence du programmeur ODBC*. Exemple : "S0022".
 
-- Le code d’erreur natif spécifique à la source de données retournées dans le *pfNativeError* paramètre de la `SQLError` (fonction). Exemple : 207.
+- Le code d’erreur natif spécifique à la source de données retournées dans le *pfNativeError* paramètre de la `SQLError` (fonction). Exemple : 207.
 
 - Le texte de message d’erreur retourné dans le *szErrorMsg* paramètre de la `SQLError` (fonction). Ce message se compose de plusieurs noms entre crochets. En tant qu’une erreur est transmise à l’utilisateur à partir de sa source, chaque composant ODBC (source de données, pilote, le Gestionnaire de pilotes) ajoute son propre nom. Ces informations permettent d’identifier l’origine de l’erreur. Exemple : [Microsoft] [pilote ODBC SQL Server] [SQL Server]
 
@@ -144,11 +144,11 @@ Pour plus d’informations sur les codes utilisées pour créer cette chaîne, c
 
 ### <a name="example"></a>Exemple
 
-  À partir d’ODBC : « Origine, natif : 207, état : S0022 : [Microsoft] [pilote ODBC SQL Server] nom de colonne non valide [SQL Server] 'ColName' »
+  À partir d’ODBC : « Origine, natif : 207, état : S0022 : nom de colonne non valide [Microsoft] [pilote ODBC SQL Server] [SQL Server] 'ColName' »
 
-Dans `m_strStateNativeOrigin`: « origine, natif : 207, état : S0022 : [Microsoft] [pilote ODBC SQL Server] [SQL Server] »
+Dans `m_strStateNativeOrigin`: « Origine, natif : 207, état : S0022 : [Microsoft] [pilote ODBC SQL Server] [SQL Server] »
 
-Dans `m_strError`: « nom de colonne non valide 'ColName' »
+Dans `m_strError`: « Nom de colonne non valide 'ColName' »
 
 ## <a name="see-also"></a>Voir aussi
 

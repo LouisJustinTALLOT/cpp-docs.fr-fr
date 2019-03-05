@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: e858d5a481add0f3c6e61175a96a5b27133bf125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559716"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269936"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -126,7 +126,7 @@ L’exemple suivant montre comment initialiser un `CMFCOutlookBarTabCtrl` et que
 
 [CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxoutlookbartabctrl.h
 
@@ -148,7 +148,7 @@ void AddControl(
 *pWndCtrl*<br/>
 [in] Pointeur vers un contrôle à ajouter.
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Spécifie le nom de l’onglet.
 
 *bDetachable*<br/>
@@ -219,7 +219,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [in] Spécifie la taille initiale et la position, en pixels.
 
 *pParentWnd*<br/>
@@ -246,7 +246,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Spécifie si l’animation doit être activée ou désactivée.
 
 ### <a name="remarks"></a>Notes
@@ -265,7 +265,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Si la valeur est TRUE, activer la modification sur place de l’étiquette de texte. Si la valeur est FALSE, désactiver la modification sur place.
 
 ### <a name="remarks"></a>Notes
@@ -285,7 +285,7 @@ void EnableScrollButtons(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Détermine si les boutons de défilement sont affichées.
 
 *bIsUp*<br/>
@@ -476,7 +476,7 @@ BOOL SetToolbarImageList(
 *uiID*<br/>
 [in] Spécifie l’ID de ressource de l’image à charger.
 
-*CX*<br/>
+*cx*<br/>
 [in] Spécifie la largeur d’une image dans la liste d’images, en pixels.
 
 *clrTransp*<br/>

@@ -13,12 +13,12 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: d121477cf63236ee40df826a63dd7c7c9880d142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535289"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272917"
 ---
 # <a name="completionfuture-class"></a>completion_future, classe
 
@@ -44,10 +44,10 @@ class completion_future;
 |Nom|Description|
 |----------|-----------------|
 |[get](#get)|Attend que l’opération asynchrone associée se termine.|
-|[Puis](#then)|Chaîne d’un objet de fonction de rappel pour le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.|
+|[then](#then)|Chaîne d’un objet de fonction de rappel pour le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.|
 |[to_task](#to_task)|Retourne un `task` objet correspondant à l’opération asynchrone associée.|
 |[valid](#valid)|Obtient une valeur booléenne qui indique si l’objet est associé à une opération asynchrone.|
-|[attente](#wait)|Bloque jusqu'à ce que l’opération asynchrone associée se termine.|
+|[wait](#wait)|Bloque jusqu'à ce que l’opération asynchrone associée se termine.|
 |[wait_for](#wait_for)|Bloque jusqu'à ce que l’opération asynchrone associée se termine ou l’heure spécifiée par `_Rel_time` s’est écoulé.|
 |[wait_until](#wait_until)|Bloque jusqu'à ce que l’opération asynchrone associée se termine ou jusqu'à ce que l’heure actuelle dépasse la valeur spécifiée par `_Abs_time`.|
 
@@ -55,14 +55,14 @@ class completion_future;
 
 |Nom|Description|
 |----------|-----------------|
-|[opérateur std::shared_future\<void >](#operator_shared_future)|Convertit implicitement la `completion_future` de l’objet à un `std::shared_future` objet.|
+|[operator std::shared_future\<void>](#operator_shared_future)|Convertit implicitement la `completion_future` de l’objet à un `std::shared_future` objet.|
 |[operator=](#operator_eq)|Copie le contenu de l’objet `completion_future` objet dans celui-ci.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `completion_future`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amprt.h
 
@@ -86,7 +86,7 @@ completion_future(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `completion_future` objet à copier ou déplacer.
 
 ### <a name="overloads-list"></a>Liste des surcharges
@@ -121,7 +121,7 @@ operator std::shared_future<void>() const;
 
 Objet `std::shared_future`.
 
-## <a name="operator_eq"></a> opérateur =
+## <a name="operator_eq"></a> operator=
 
 Copie le contenu de l’objet `completion_future` objet dans celui-ci.
 
@@ -134,7 +134,7 @@ completion_future&  operator= (completion_future&& _Other );
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Objet à copier.
 
 ### <a name="return-value"></a>Valeur de retour

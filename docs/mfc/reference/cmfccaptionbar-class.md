@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429352"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264987"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar, classe
 
@@ -90,7 +90,7 @@ class CMFCCaptionBar : public CPane
 |Nom|Description|
 |----------|-----------------|
 |[CMFCCaptionBar::Create](#create)|Crée le contrôle de barre de légende et l’attache à la `CMFCCaptionBar` objet.|
-|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Indique si un autre volet peut être inséré dynamiquement entre la barre de légende et le cadre de son parent. (Substitue [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
+|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Indique si un autre volet peut être inséré dynamiquement entre la barre de légende et le cadre de son parent. (Overrides [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
 |[CMFCCaptionBar::EnableButton](#enablebutton)|Active ou désactive le bouton sur la barre de légende.|
 |[CMFCCaptionBar::GetAlignment](#getalignment)|Retourne l’alignement de l’élément spécifié.|
 |[CMFCCaptionBar::GetBorderSize](#getbordersize)|Retourne la taille de bordure de la barre de légende.|
@@ -167,7 +167,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcaptionbar.h
 
@@ -233,7 +233,7 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] True pour activer le bouton, FALSE pour désactiver le bouton.
 
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem*<br/>
+*elem*<br/>
 [in] Un élément de barre de légende pour lequel récupérer l’alignement.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -356,7 +356,7 @@ virtual void OnDrawBackground(
 *pDC*<br/>
 [in] Pointeur vers le contexte de périphérique de la barre de légende.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle à remplir.
 
 ### <a name="remarks"></a>Notes
@@ -380,7 +380,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Un contexte de périphérique qui est utilisé pour afficher les bordures.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant.
 
 ### <a name="remarks"></a>Notes
@@ -406,13 +406,13 @@ virtual void OnDrawButton(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique qui est utilisé pour afficher le bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du bouton.
 
 *strButton*<br/>
 [in] Étiquette de texte du bouton.
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 [in] TRUE si le bouton est activé ; FALSE sinon.
 
 ### <a name="remarks"></a>Notes
@@ -434,7 +434,7 @@ virtual void OnDrawImage(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique qui est utilisé pour afficher l’image.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Spécifie le rectangle englobant de l’image.
 
 ### <a name="remarks"></a>Notes
@@ -457,7 +457,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique qui est utilisé pour afficher le bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du texte.
 
 *strText*<br/>

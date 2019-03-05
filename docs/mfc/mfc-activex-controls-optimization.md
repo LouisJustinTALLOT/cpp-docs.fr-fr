@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ActiveX MFC : optimisation'
+title: 'Contrôles ActiveX MFC : Optimisation'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], windowless
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: cc4d210abe0bca5ba8d3a442796173111f45f6e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08cbb5ab0ff9b8c165e549bc2b250daebc1ce177
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588563"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288614"
 ---
-# <a name="mfc-activex-controls-optimization"></a>Contrôles ActiveX MFC : optimisation
+# <a name="mfc-activex-controls-optimization"></a>Contrôles ActiveX MFC : Optimisation
 
 Cet article explique les techniques que vous pouvez utiliser pour optimiser vos contrôles ActiveX pour de meilleures performances.
 
@@ -68,4 +68,3 @@ Pour plus d'informations, voir :
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

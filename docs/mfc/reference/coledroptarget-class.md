@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: f4294bbbf9563b55f2047f297eac1a33ca55141f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502893"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300118"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget, classe
 
@@ -78,7 +78,7 @@ Pour plus d’informations sur les opérations de glisser-déplacer à l’aide 
 
 `COleDropTarget`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 
@@ -115,7 +115,7 @@ Pointe vers la fenêtre que le curseur est saisie.
 Pointe vers l’objet de données contenant les données qui peuvent être supprimées.
 
 *dwKeyState*<br/>
-Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
+Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de ce qui suit : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
 
 *point*<br/>
 Contient l’emplacement actuel du curseur en coordonnées clientes.
@@ -180,7 +180,7 @@ Pointe vers la fenêtre qui est placé le curseur.
 Pointe vers l’objet de données qui contient les données à supprimer.
 
 *dwKeyState*<br/>
-Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
+Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de ce qui suit : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
 
 *point*<br/>
 Contient l’emplacement actuel du curseur en coordonnées clientes.
@@ -226,7 +226,7 @@ virtual DROPEFFECT OnDragScroll(
 Pointe vers la fenêtre, sur que le curseur se trouve actuellement.
 
 *dwKeyState*<br/>
-Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
+Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de ce qui suit : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
 
 *point*<br/>
 Contient l’emplacement du curseur, en pixels, par rapport à l’écran.
@@ -317,7 +317,7 @@ Pointe vers l’objet de données qui contient les données à supprimer.
 *dropDefault*<br/>
 L’effet que l’utilisateur a choisi pour l’opération de déplacement par défaut en fonction de l’état actuel de la clé. Il peut être DROPEFFECT_NONE. Effets de déplacement sont décrits dans la section Notes.
 
-*liste déroulante*<br/>
+*dropList*<br/>
 Liste des effets de déplacement qui prend en charge de la source de dépôt. Valeurs d’effet de déplacement peuvent être combinées à l’aide de l’opération OR au niveau du bit (**&#124;**) opération. Effets de déplacement sont décrits dans la section Notes.
 
 *point*<br/>

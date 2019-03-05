@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-ms.openlocfilehash: 152efe6b1c5e8be67a3c37cc7e56b12c88c1b4dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c89647afc8a9a8c6564d25afe20d48818a643f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641464"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291039"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection, classe
 
@@ -44,7 +44,7 @@ class CCriticalSection : public CSyncObject
 |Nom|Description|
 |----------|-----------------|
 |[CCriticalSection::Lock](#lock)|Utiliser pour accéder à la `CCriticalSection` objet.|
-|[CCriticalSection::Unlock](#unlock)|Libère l’objet `CCriticalSection`.|
+|[CCriticalSection::Unlock](#unlock)|Libère l'objet `CCriticalSection`.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -75,7 +75,7 @@ Il existe deux méthodes pour utiliser un `CCriticalSection` objet : autonome e
 
 - Incorporé de méthode, vous pouvez également partager une classe avec plusieurs threads en ajoutant un `CCriticalSection`-membre de données de type à la classe et de verrouillage le membre de données si nécessaire.
 
-Pour plus d’informations sur l’utilisation de `CCriticalSection` objets, consultez l’article [Multithreading : comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Pour plus d’informations sur l’utilisation de `CCriticalSection` objets, consultez l’article [Multithreading : Comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -85,7 +85,7 @@ Pour plus d’informations sur l’utilisation de `CCriticalSection` objets, con
 
 `CCriticalSection`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmt.h
 

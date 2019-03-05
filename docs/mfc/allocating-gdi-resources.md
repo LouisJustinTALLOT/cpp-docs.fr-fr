@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: d637d524d37dc466e15aed3b571cccf24c18216d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f5f6c6585217393a6008fafa875a83e67ab8016
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305001"
 ---
 # <a name="allocating-gdi-resources"></a>Allocation de ressources GDI
 
@@ -26,10 +26,9 @@ Pour allouer ces objets GDI, substituez le [OnBeginPrinting](../mfc/reference/cv
 
 Pour utiliser les objets GDI que vous avez créés, sélectionnez-les dans le contexte de périphérique d’imprimante dans le [OnPrint](../mfc/reference/cview-class.md#onprint) fonction membre. Si vous avez besoin d’autres objets GDI pour les différentes pages du document, vous pouvez examiner le `m_nCurPage` membre de la [CPrintInfo](../mfc/reference/cprintinfo-structure.md) structurer et sélectionnez l’objet GDI en conséquence. Si vous avez besoin d'un objet GDI pour plusieurs pages consécutives, Windows vous impose de le sélectionner dans le contexte du périphérique à chaque appel de `OnPrint`.
 
-Pour supprimer ces objets GDI, substituez le [OnEndPrinting](../mfc/reference/cview-class.md#onendprinting) fonction membre. L’infrastructure appelle cette fonction à la fin de chaque travail d’impression, ce qui vous donne la possibilité de libérer les objets GDI propres à l’impression avant que l’application revienne à d’autres tâches.
+Pour supprimer ces objets GDI, substituez le [OnEndPrinting](../mfc/reference/cview-class.md#onendprinting) fonction membre. L'infrastructure appelle cette fonction à la fin de chaque travail d'impression, ce qui vous donne la possibilité de libérer les objets GDI propres à l'impression avant que l'application revienne à d'autres tâches.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Impression](../mfc/printing.md)<br/>
 [Impression par défaut](../mfc/how-default-printing-is-done.md)
-

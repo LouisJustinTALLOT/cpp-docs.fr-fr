@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-ms.openlocfilehash: cf854bbc99ebeee55ae130b747c77fd7fe52f8d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c1c1da14d732b6aff6ae07f86ae7b9c1b690b84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437100"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291312"
 ---
 # <a name="cdocitem-class"></a>CDocItem, classe
 
@@ -40,7 +40,7 @@ class CDocItem : public CCmdTarget
 
 `CDocItem` objets sont utilisés pour représenter des éléments OLE dans les documents de client et serveur.
 
-Pour plus d’informations, consultez l’article [conteneurs : implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md).
+Pour plus d’informations, consultez l’article [conteneurs : Implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -50,7 +50,7 @@ Pour plus d’informations, consultez l’article [conteneurs : implémentation
 
 `CDocItem`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 

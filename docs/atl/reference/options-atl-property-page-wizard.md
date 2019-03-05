@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: e891bd9e37bbf2fbedcdd71649305cdc366065fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642007"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298982"
 ---
 # <a name="options-atl-property-page-wizard"></a>Options, Assistant Page de propriétés ATL
 
@@ -26,7 +26,7 @@ Utilisez cette page de l’Assistant pour définir le niveau d’agrégation et 
    |Option|Description|
    |------------|-----------------|
    |**Single**|La page de propriétés s’exécute uniquement dans le thread COM principal.|
-   |**Cloisonnement**|La page de propriétés peut être créée dans n’importe quel thread unique cloisonné. Valeur par défaut.|
+   |**Apartment**|La page de propriétés peut être créée dans n’importe quel thread unique cloisonné. Valeur par défaut.|
 
 - **Aggregation**
 
@@ -36,10 +36,9 @@ Utilisez cette page de l’Assistant pour définir le niveau d’agrégation et 
    |------------|-----------------|
    |**Oui**|Créer une page de propriétés qui peut être agrégée.|
    |**Non**|Créer une page de propriétés qui ne peut pas être agrégée.|
-   |**Uniquement**|Créer une page de propriétés qui ne peut être instanciée par le biais d’agrégation.|
+   |**Only**|Créer une page de propriétés qui ne peut être instanciée par le biais d’agrégation.|
 
 ## <a name="see-also"></a>Voir aussi
 
 [Assistant Page de propriétés ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Chaînes, Assistant Page de propriétés ATL](../../atl/reference/strings-atl-property-page-wizard.md)
-

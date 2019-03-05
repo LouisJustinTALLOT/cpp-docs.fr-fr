@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 183fd879b09595dda1dcd6caa8a8299debb20b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9911672ec139ab1598db8005e9b7b909e85dd33d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449333"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265728"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Cmfcribbonstatusbarpane, classe
 
@@ -95,7 +95,7 @@ L'exemple suivant montre comment utiliser les différentes méthodes de la class
 
 [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxribbonstatusbarpane.h
 

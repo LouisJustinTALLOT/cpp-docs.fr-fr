@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], about common controls
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
-ms.openlocfilehash: 7a526c56c15d3e61f63b0def6d462d22b3560169
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a31c783e19603eadb90fd0e6be99ff55f4eaeb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293509"
 ---
 # <a name="making-and-using-controls"></a>Création et utilisation de contrôles
 
@@ -44,4 +44,3 @@ Vous effectuez la plupart des contrôles de boîtes de dialogue dans Visual C++ 
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles](../mfc/controls-mfc.md)
-

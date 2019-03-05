@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: 1a2c9a3a98d46e263dab645805c697da42af41fe
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a44b9524324065581583bad13018b2c4479fc9f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657407"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291403"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr, classe
 
@@ -107,7 +107,7 @@ Pour plus d’informations sur `CMapPtrToPtr`, consultez l’article [Collection
 
 `CMapPtrToPtr`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcoll.h
 
@@ -115,4 +115,3 @@ Pour plus d’informations sur `CMapPtrToPtr`, consultez l’article [Collection
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

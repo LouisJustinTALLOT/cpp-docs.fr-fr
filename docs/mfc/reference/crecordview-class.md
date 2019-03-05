@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: c7013fb53562fd76744bff19d1d37ce972a52d52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643861"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262465"
 ---
 # <a name="crecordview-class"></a>CRecordView (classe)
 
@@ -62,7 +62,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 La vue est une vue de formulaire directement connectée à un `CRecordset` objet. La vue est créée à partir d’une ressource de modèle de boîte de dialogue et affiche les champs de la `CRecordset` objet dans les contrôles du modèle de boîte de dialogue. Le `CRecordView` objet utilise l’échange de données de boîtes de dialogue (DDX) et l’échange de champs d’enregistrements (RFX) pour automatiser le déplacement des données entre les contrôles sur le formulaire et les champs du recordset. `CRecordView` fournit également une implémentation par défaut pour le déplacement vers le premier, suivant, précédent ou le dernier enregistrement et une interface pour la mise à jour de l’enregistrement actuellement dans la vue.
 
 > [!NOTE]
->  Si vous travaillez avec les classes d’objets DAO (Data Access) plutôt que les classes de base de données connectivité ODBC (Open), utilisez la classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : programmation de base de données](../../data/data-access-programming-mfc-atl.md).
+>  Si vous travaillez avec les classes d’objets DAO (Data Access) plutôt que les classes de base de données connectivité ODBC (Open), utilisez la classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : Programmation de base de données](../../data/data-access-programming-mfc-atl.md).
 
 La plus courante consiste à créer votre vue de l’enregistrement avec l’Assistant Application. Assistant Création d’applications TGE crée la classe de vue d’enregistrement et sa classe de recordset associé dans le cadre de votre application squelette starter. Si vous ne créez pas la classe de vue d’enregistrement avec l’Assistant Application, vous pouvez le créer ultérieurement avec ClassWizard. Si vous avez simplement besoin d’un formulaire unique, l’approche de l’Assistant Création d’applications est plus facile. ClassWizard vous permet de décider d’utiliser une vue d’enregistrement plus loin dans le processus de développement. Pour créer une vue d’enregistrement et un jeu d’enregistrements séparément et puis de les connecter à l’aide de ClassWizard est l’approche la plus flexible, car il vous donne davantage de contrôle dans la classe de jeu d’enregistrements d’affectation de noms et sa. H /. Fichiers CPP. Cette approche vous permet également d’avoir plusieurs vues d’enregistrements sur la même classe de jeu d’enregistrements.
 
@@ -90,7 +90,7 @@ Pour plus d’informations sur la déclaration et utilisation de votre vue d’e
 
 `CRecordView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdb.h
 
@@ -180,7 +180,7 @@ Un pointeur vers un `CRecordset`-objet dérivé si l’objet a été créé avec
 
 Vous devez substituer cette fonction membre pour construire ou obtenir un objet de jeu d’enregistrements et retourner un pointeur vers elle. Si vous déclarez votre classe de vue d’enregistrement avec ClassWizard, l’Assistant écrit une valeur de remplacement par défaut pour vous. Implémentation par défaut de ClassWizard retourne le pointeur de jeu d’enregistrements stocké dans la vue de l’enregistrement s’il en existe. Si non, il construit un objet recordset du type que vous avez spécifié avec ClassWizard et appelle son `Open` membre de fonction pour ouvrir la table ou exécuter la requête, puis retourne un pointeur vers l’objet.
 
-Pour plus d’informations et des exemples, consultez l’article [vues d’enregistrements : à l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
+Pour plus d’informations et des exemples, consultez l’article [vues d’enregistrements : À l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  CRecordView::OnMove
 

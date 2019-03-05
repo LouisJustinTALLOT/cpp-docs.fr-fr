@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-ms.openlocfilehash: e4a399ffb4c0d2161479ed7c84e66eb58a9260ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11be0eba080085c507ed718ea23219ca1c93aeba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552839"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294744"
 ---
 # <a name="cmemoryexception-class"></a>CMemoryException, classe
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur `CMemoryException`, consultez l’article [gestio
 
 `CMemoryException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -69,4 +69,3 @@ N’utilisez pas ce constructeur directement, mais plutôt appeler la fonction g
 
 [CException, classe](cexception-class.md)<br/>
 [Graphique hiérarchique](../hierarchy-chart.md)
-

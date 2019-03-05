@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-ms.openlocfilehash: 0c7f3a3bd37c5f7f5696de363aa646f5376f4e75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39e870db2f5476a630a8ed3bc68944dbb164d469
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468794"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305131"
 ---
 # <a name="automation-servers"></a>Serveurs Automation
 
@@ -31,7 +31,7 @@ En exposant des fonctionnalités d'application via une interface commune et bien
 
 Visual C++ et le framework MFC fournissent la prise en charge complète des serveurs Automation. Ils gèrent une grande partie de la charge mémoire générée par un serveur Automation, donc vous pouvez concentrer vos efforts sur la fonctionnalité de votre application.
 
-Le mécanisme principal du framework pour la prise en charge de l'Automation est la table de dispatch, un ensemble de macros qui s'étend dans les déclarations et les appels nécessaires pour exposer les méthodes et les propriétés pour OLE. Une table de dispatch classique ressemble à ceci :
+Le mécanisme principal du framework pour la prise en charge de l’Automation est la table de dispatch, un ensemble de macros qui se développe en déclarations et en appels nécessaires pour exposer les méthodes et les propriétés pour OLE. Une table de dispatch classique ressemble à ceci :
 
 [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]
 
@@ -55,4 +55,3 @@ L'Assistant Application MFC simplifie les étapes d'obtention de l'application s
 
 [Automation](../mfc/automation.md)<br/>
 [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md)
-

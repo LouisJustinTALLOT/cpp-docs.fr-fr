@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541464"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302284"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase, classe
 
@@ -77,7 +77,7 @@ Ce gestionnaire est créé et transmis à `IUIAnimationTransitionFactory::Create
 
 `CInterpolatorBase`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -145,7 +145,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>Paramètres
 
-*durée*<br/>
+*duration*<br/>
 Sortie. La durée de la transition, en secondes.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -162,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="parameters"></a>Paramètres
 
-*valeur*<br/>
+*value*<br/>
 Sortie. La valeur finale d’une variable à la fin de la transition.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -184,7 +184,7 @@ IFACEMETHOD(InterpolateValue)(
 *offset*<br/>
 Le décalage à partir du début de la transition. Le décalage est toujours supérieure ou égale à zéro et inférieur à la durée de la transition. Cette méthode n’est pas appelée si la durée de la transition est égal à zéro.
 
-*valeur*<br/>
+*value*<br/>
 Sortie. La valeur interpolée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -206,7 +206,7 @@ IFACEMETHOD(InterpolateVelocity)(
 *offset*<br/>
 Le décalage à partir du début de la transition. Le décalage est toujours supérieure ou égale à zéro et inférieure ou égale à la durée de la transition. Cette méthode n’est pas appelée si la durée de la transition est égal à zéro.
 
-*Rapidité*<br/>
+*velocity*<br/>
 Sortie. La rapidité de la variable à l’offset.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -236,7 +236,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Paramètres
 
-*durée*<br/>
+*duration*<br/>
 La durée de la transition.
 
 ### <a name="return-value"></a>Valeur de retour

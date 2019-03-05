@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: ec42ab7a9dd36648b1405859cf02bc194f75a73c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39184e952475fa0f05a6fc25c433191ea22b5c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269823"
 ---
 # <a name="cadapt-class"></a>CAdapt, classe
 
@@ -65,11 +65,11 @@ Type adapté.
 
 `CAdapt`du rôle principal est de masquer l’opérateur address-of définie par la classe *T*, tout en conservant les caractéristiques de la classe adaptée. `CAdapt` remplit ce rôle en détenant un membre public, [m_T](#m_t), de type *T*et en définissant des opérateurs de conversion, opérateurs de comparaison et un constructeur de copie pour autoriser les spécialisations de `CAdapt` être traitée comme si elles sont des objets de type *T*.
 
-La classe d'adaptateur `CAdapt` est utile, car certaines classes de type conteneur sont censées être capables d'obtenir les adresses des objets contenus via l'opérateur d'adresse. La redéfinition de l'opérateur d'adresse peut confondre cette exigence, généralement en provoquant des erreurs de compilation et en empêchant l'utilisation du type non adapté avec les classes qui s'attendent à ce qu'il fonctionne « tout simplement ». `CAdapt` permet de contourner ces problèmes.
+La classe d'adaptateur `CAdapt` est utile, car certaines classes de type conteneur sont censées être capables d'obtenir les adresses des objets contenus via l'opérateur d'adresse. La redéfinition de l’opérateur d’adresse peut confondre cette exigence, généralement en provoquant des erreurs de compilation et en empêchant l’utilisation du type non adapté avec les classes qui s’attendent à ce qu’il fonctionne « tout simplement ». `CAdapt` permet de contourner ces problèmes.
 
 En règle générale, utilisez `CAdapt` lorsque vous souhaitez stocker des objets `CComBSTR`, `CComPtr`, `CComQIPtr` ou `_com_ptr_t` dans une classe de type conteneur. Ceci était le plus souvent nécessaire pour les conteneurs de bibliothèque standard C++ avant la prise en charge de la norme C++11. Toutefois, les conteneurs de bibliothèque standard C++11 fonctionnent automatiquement avec les types ayant un `operator&()` surchargé. La bibliothèque Standard pour cela en interne à l’aide de [std::addressof](../../standard-library/memory-functions.md#addressof) pour obtenir les adresses réelles des objets.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcomcli.h
 

@@ -1,25 +1,25 @@
 ---
-title: "Arrière-plan OLE : stratégies d'implémentation"
+title: 'Arrière-plan OLE : Implementation Strategies'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE [MFC], development strategy
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: a9bcbc16b08f16953df92efe5a83db39f9a33cc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40c74d48b76921f770740602a39d28804a7e3c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624391"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284812"
 ---
-# <a name="ole-background-implementation-strategies"></a>Arrière-plan OLE : stratégies d'implémentation
+# <a name="ole-background-implementation-strategies"></a>Arrière-plan OLE : Implementation Strategies
 
 Selon votre application, il existe quatre méthodes d'implémentation possibles pour ajouter la prise en charge OLE :
 
 - Vous écrivez une nouvelle application.
 
-   Ce cas de figure est généralement celui qui demande le moins le travail. Lancez l’Assistant Application MFC et sélectionnez Fonctionnalités avancées ou Prise en charge des documents composés pour créer un squelette d’application. Pour plus d’informations sur ces options et ce qu’ils font, consultez l’article [création d’un programme EXE MFC](../mfc/reference/mfc-application-wizard.md).
+   Ce cas de figure est généralement celui qui demande le moins le travail. Lancez l'Assistant Application MFC et sélectionnez Propriétés avancées ou Prise en charge des documents composés pour créer un squelette d'application. Pour plus d’informations sur ces options et ce qu’ils font, consultez l’article [création d’un programme EXE MFC](../mfc/reference/mfc-application-wizard.md).
 
 - Vous avez un programme écrit avec la version 2.0 de la bibliothèque MFC ou une version ultérieure qui ne prend pas en charge OLE.
 
@@ -38,7 +38,6 @@ Une fois que vous avez choisi une stratégie, vous devez lire le [conteneurs](..
 ## <a name="see-also"></a>Voir aussi
 
 [Arrière-plan OLE](../mfc/ole-background.md)<br/>
-[Conteneurs : implémentation d’un conteneur](../mfc/containers-implementing-a-container.md)<br/>
-[Serveurs : implémentation d’un serveur](../mfc/servers-implementing-a-server.md)<br/>
+[Conteneurs : Implémentation d’un conteneur](../mfc/containers-implementing-a-container.md)<br/>
+[serveurs : Implémentation d’un serveur](../mfc/servers-implementing-a-server.md)<br/>
 [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md)
-

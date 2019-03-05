@@ -1,5 +1,5 @@
 ---
-title: "Contrôles ActiveX MFC : localisation d'un contrôle ActiveX"
+title: 'Contrôles ActiveX MFC : Localisation d’un contrôle ActiveX'
 ms.date: 09/12/2018
 f1_keywords:
 - LocaleID
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: 0a9c45873f784cf639ccf7e886f65527a6a78f2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e9ef9a2f79bda5d41c01984f063622b3b73fb51
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613195"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268211"
 ---
-# <a name="mfc-activex-controls-localizing-an-activex-control"></a>Contrôles ActiveX MFC : localisation d'un contrôle ActiveX
+# <a name="mfc-activex-controls-localizing-an-activex-control"></a>Contrôles ActiveX MFC : Localisation d’un contrôle ActiveX
 
 Cet article décrit les procédures permettant de rechercher des interfaces de contrôle ActiveX.
 
@@ -38,7 +38,7 @@ En général, les contrôles ActiveX doivent toujours être basés sur les param
 - Utilisez le `OnAmbientChanged` fonction de notification pour charger dynamiquement les ressources appropriées des paramètres régionaux du conteneur.
 
     > [!NOTE]
-    >  Cela fonctionne pour le contrôle, mais la DLL d'exécution ne met pas à jour dynamiquement ses propres ressources lorsque la propriété LocaleID ambiante change. En outre, les DLL d’exécution des contrôles ActiveX utilisent les paramètres régionaux du thread pour déterminer les paramètres régionaux pour ses ressources.
+    >  Cela fonctionne pour le contrôle, mais la DLL d'exécution ne met pas à jour dynamiquement ses propres ressources lorsque la propriété LocaleID ambiante change. En outre, les DLL d'exécution des contrôles ActiveX utilisent les paramètres régionaux du thread pour déterminer les paramètres régionaux pour ses ressources.
 
 Le reste de cet article décrit deux stratégies localisantes. La première stratégie [localise l’interface de programmabilité du contrôle](#_core_localizing_your_control.92.s_programmability_interface) (noms des propriétés, méthodes et événements). La deuxième stratégie [localise l’interface du contrôle utilisateur](#_core_localizing_the_control.92.s_user_interface), à l’aide de la propriété de LocaleID ambiante du conteneur. Pour une démonstration de la localisation de contrôle, consultez l’exemple de contrôles ActiveX MFC [LOCALIZE](../visual-cpp-samples.md).
 
@@ -103,4 +103,3 @@ Vous pouvez utiliser une logique similaire pour localiser la page des propriét�
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

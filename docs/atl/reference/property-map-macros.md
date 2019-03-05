@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-ms.openlocfilehash: 7422c38bd21a458dccafa6d34fd4d6522f96132a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e2e7235dd924467d9d5e0613a704fedf8340ae4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513816"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264896"
 ---
 # <a name="property-map-macros"></a>Macros de mappage de propriété
 
@@ -31,7 +31,7 @@ Ces macros définissent les mappages des propriétés et des entrées.
 |[PROP_PAGE](#prop_page)|Insère une page de propriétés CLSID dans le mappage de propriété.|
 |[END_PROP_MAP](#end_prop_map)|Marque la fin de la table de propriétés ATL.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -106,7 +106,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 *szDesc*<br/>
 [in] La description de la propriété.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] DISPID de la propriété.
 
 *clsid*<br/>
@@ -138,7 +138,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 *szDesc*<br/>
 [in] La description de la propriété.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] DISPID de la propriété.
 
 *clsid*<br/>

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: b05de00697aa019382014402f7701a8341da5198
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512916"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304377"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup, classe
 
@@ -70,13 +70,13 @@ class CAnimationGroup;
 |Nom|Description|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Construit un groupe d’animation.|
-|[CAnimationGroup :: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|Destructeur. Appelé lorsqu’un groupe d’animation est détruit.|
+|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|Destructeur. Appelé lorsqu’un groupe d’animation est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[Pas CAnimationGroup::Animate](#animate)|Anime un groupe.|
+|[CAnimationGroup::Animate](#animate)|Anime un groupe.|
 |[CAnimationGroup::ApplyTransitions](#applytransitions)|Applique des transitions aux objets d’animation.|
 |[CAnimationGroup::FindAnimationObject](#findanimationobject)|Recherche un objet d’animation qui contient la variable d’animation spécifiée.|
 |[CAnimationGroup::GetGroupID](#getgroupid)|Retourne le GroupID.|
@@ -119,11 +119,11 @@ Groupes d’animation sont créés automatiquement par le contrôleur de l’ani
 
 `CAnimationGroup`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup :: ~ CAnimationGroup
+##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup::~CAnimationGroup
 
 Destructeur. Appelé lorsqu’un groupe d’animation est détruit.
 
@@ -164,7 +164,7 @@ Pointeur vers un objet COM du storyboard.
 
 *bDependOnKeyframes*
 
-##  <a name="animate"></a>  Pas CAnimationGroup::Animate
+##  <a name="animate"></a>  CAnimationGroup::Animate
 
 Anime un groupe.
 

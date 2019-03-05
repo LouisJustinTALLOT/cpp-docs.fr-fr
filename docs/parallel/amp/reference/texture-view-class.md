@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657498"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275660"
 ---
 # <a name="textureview-class"></a>texture_view, classe
 
@@ -74,7 +74,7 @@ Le rang de le `texture_view`.
 |[gather_green](#gather_green)|Surchargé. Échantillonne la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants vert (y) des quatre texels échantillonnés.|
 |[gather_red](#gather_red)|Surchargé. Échantillonne la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants rouge (x) des quatre texels échantillonnés.|
 |[get](#get)|Surchargé. Obtient la valeur de l’élément par index.|
-|[Exemple](#sample)|Surchargé. Échantillonne la texture aux coordonnées spécifiées et de niveau de détail à l’aide de la configuration d’échantillonnage spécifié.|
+|[sample](#sample)|Surchargé. Échantillonne la texture aux coordonnées spécifiées et de niveau de détail à l’aide de la configuration d’échantillonnage spécifié.|
 |[set](#set)|Définit la valeur d’un élément par index.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
@@ -97,13 +97,13 @@ Le rang de le `texture_view`.
 
 `texture_view`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_graphics.h
 
 **Namespace :** concurrency::graphics
 
-##  <a name="dtor"></a> ~ texture_view
+##  <a name="dtor"></a> ~texture_view
 
 Détruit le `texture_view` instance.
 
@@ -150,7 +150,7 @@ texture_view(// [7] copy constructor
 
 [3, 4] Constructeur le `texture` sur lequel le non inscriptibles `texture_view` est créé.
 
-*_Autre*<br/>
+*_Other*<br/>
 [5] constructeur de copie la source accessible en écriture `texture_view`.
 
 [6, 7] La source non accessible en écriture de constructeur de copie `texture_view`.
@@ -313,7 +313,7 @@ Le niveau de mipmap à partir duquel nous devrions obtenir la valeur. La valeur 
 
 Valeur de l'élément.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Assigne une vue de la même texture comme spécifié `texture_view` à ce `texture_view` instance.
 
@@ -330,7 +330,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 [1, 2] Constructeur copie accessible en écriture `texture_view` objet.
 
 [3] constructeur de copie A non inscriptibles `texture_view` objet.
@@ -476,7 +476,7 @@ Index de l’élément à définir, probablement multidimensionnel.
 *value*<br/>
 Valeur à l’élément.
 
-##  <a name="value_type"></a> Value_type
+##  <a name="value_type"></a> value_type
 
 Le type de valeur des éléments de texture_view.
 

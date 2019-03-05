@@ -30,12 +30,12 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-ms.openlocfilehash: 8dd69538cc322fe8518a33444b71171a936a02aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 910660253c9d306b13294a710021a6bbd36c1952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487527"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258084"
 ---
 # <a name="special-cwinapp-services"></a>Services CWinApp spéciaux
 
@@ -45,7 +45,7 @@ Outre la boucle de message en cours d’exécution et vous donner la possibilit�
 
 Par défaut, l'Application MFC permet à l'utilisateur d'ouvrir les fichiers de données que votre application a créés en double-cliquant dessus dans l'Explorateur de fichiers ou le gestionnaire de fichiers. Si votre application est une application MDI et que vous spécifiez une extension pour les fichiers de votre application crée, l’Assistant Application MFC ajoute des appels à la [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) et [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen)fonctions membres de [CWinApp](../mfc/reference/cwinapp-class.md) à la `InitInstance` remplacement qu’il écrit pour vous.
 
-`RegisterShellFileTypes` stocke les types de documents de votre application avec l'Explorateur de fichiers ou le gestionnaire de fichiers. La fonction ajoute des entrées à la base de données d'inscription que Windows gère. Les entrées enregistrent chaque type de document, associent une extension au type de fichier, spécifient une ligne de commande pour ouvrir l’application, puis spécifient une commande d’échange dynamique de données (DDE) pour ouvrir un document de ce type.
+`RegisterShellFileTypes` stocke les types de documents de votre application avec l'Explorateur de fichiers ou le gestionnaire de fichiers. La fonction ajoute des entrées à la base de données d'inscription que Windows gère. Les entrées enregistrent chaque type de document, associent une extension au type de fichier, spécifient une ligne de commande pour ouvrir l'application, puis spécifient une commande d'échange dynamique de données (DDE) pour ouvrir un document de ce type.
 
 `EnableShellOpen` termine le processus permettant à l'application de recevoir des commandes DDE à partir de l'Explorateur de fichiers ou du gestionnaire de fichiers pour ouvrir le fichier choisi par l'utilisateur.
 
@@ -82,4 +82,4 @@ Ces entrées sont stockées comme suit :
 
 ## <a name="see-also"></a>Voir aussi
 
-[CWinApp : classe d’application](../mfc/cwinapp-the-application-class.md)
+[CWinApp : La classe d’Application](../mfc/cwinapp-the-application-class.md)

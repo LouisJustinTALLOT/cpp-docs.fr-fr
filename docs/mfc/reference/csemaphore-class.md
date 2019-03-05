@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: e8e71af6fa33dc748bfb8d19266a72495f216502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447019"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274217"
 ---
 # <a name="csemaphore-class"></a>CSemaphore, classe
 
@@ -45,7 +45,7 @@ Pour accéder aux ressources contrôlées par `CSemaphore` objets de cette mani�
 
 Vous pouvez également créer un `CSemaphore` objet autonome et y accéder explicitement avant de tenter d’accéder à la ressource contrôlée. Cette méthode, lors de la façon la plus claire à une personne lisant votre code source, est plus sujette aux erreurs.
 
-Pour plus d’informations sur l’utilisation `CSemaphore` objets, consultez l’article [Multithreading : comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Pour plus d’informations sur l’utilisation `CSemaphore` objets, consultez l’article [Multithreading : Comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -55,7 +55,7 @@ Pour plus d’informations sur l’utilisation `CSemaphore` objets, consultez l�
 
 `CSemaphore`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmt.h
 
@@ -96,4 +96,3 @@ Pour accéder à ou libérer un `CSemaphore` d’objet, de créer un [CMultiLock
 
 [CSyncObject, classe](../../mfc/reference/csyncobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

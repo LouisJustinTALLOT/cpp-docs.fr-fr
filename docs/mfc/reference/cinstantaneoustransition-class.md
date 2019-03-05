@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CInstantaneousTransition [MFC], Create
 - CInstantaneousTransition [MFC], m_dblFinalValue
 ms.assetid: c3d5121f-2c6b-4221-9e57-10e082a31120
-ms.openlocfilehash: 5195677f741f69517a7f33b8f53ae4efd22919b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e28c7d51fd80771d0348ab42021d196f81d3474
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275112"
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition, classe
 
@@ -61,7 +61,7 @@ Pendant une transition instantanée, la valeur de la variable d’animation chan
 
 [CInstantaneousTransition](../../mfc/reference/cinstantaneoustransition-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 

@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 21a8e6ed28498756130e6ddb418e93b0e9ad86cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662772"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303336"
 ---
 # <a name="cmfctoolbarimages-class"></a>Cmfctoolbarimages, classe
 
@@ -263,7 +263,7 @@ L’exemple suivant montre comment configurer un `CMFCToolBarImages` objet à l�
 
 `CMFCToolBarImages`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtoolbarimages.h
 
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] TRUE si le `CMFCToolBarImages` objet utilise la profondeur de couleur (bits par pixel) de la nouvelle image ; FALSE si le `CMFCToolbarImages` objet conserve la profondeur de couleur actuelle.
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Une référence à un `CMFCToolbarImages` objet qui contient l’image à ajouter.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Paramètres
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] La liste d’images à utiliser en tant que source pour les images de barre d’outils.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -482,7 +482,7 @@ BOOL Draw(
 *bHilite*<br/>
 [in] TRUE si l’image doit être mis en surbrillance ; Sinon, FALSE.
 
-*bDésactiver*<br/>
+*bDisabled*<br/>
 [in] TRUE si l’image doit être dessiné dans le style désactivé ; Sinon, FALSE.
 
 *bIndeterminate*<br/>
@@ -520,7 +520,7 @@ BOOL DrawEx(
 [in] *rect*<br/>
 [in] *iImageIndex*<br/>
 [in] *horzAlign*<br/>
-[in] *AlignementVert*<br/>
+[in] *vertAlign*<br/>
 [in] *rectSrc*<br/>
 [in] *alphaSrc*<br/>
 
@@ -550,7 +550,7 @@ void EndDrawImage(CAfxDrawState& ds);
 
 ### <a name="parameters"></a>Paramètres
 
-*service d’annuaire*<br/>
+*ds*<br/>
 [in] Une référence à la `CAfxDrawState` objet qui a été passé à la `PrepareDrawImage` (méthode).
 
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon
@@ -585,7 +585,7 @@ static void FillDitheredRect(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Les coordonnées d’un rectangle à remplir.
 
 ### <a name="remarks"></a>Notes
@@ -893,7 +893,7 @@ BOOL Load(
 *hinstRes*<br/>
 [in] Une instance de la DLL de ressource.
 
-*bAjouter*<br/>
+*bAdd*<br/>
 [in] Valeur TRUE pour ajouter la bitmap chargée sur l’image bitmap existante, ou FALSE pour remplacer l’image bitmap existante.
 
 *lpszBmpFileName*<br/>
@@ -923,7 +923,7 @@ BOOL LoadStr(
 
 [in] *lpszResourceName*<br/>
 [in] *hinstRes*<br/>
-[in] *bAjouter*<br/>
+[in] *bAdd*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -939,7 +939,7 @@ static COLORREF __stdcall MapFromSysColor(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *couleur*<br/>
+[in] *color*<br/>
 [in] *bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
@@ -975,7 +975,7 @@ static COLORREF __stdcall MapToSysColor(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *couleur*<br/>
+[in] *color*<br/>
 [in] *bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
@@ -990,7 +990,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *couleur*<br/>
+[in] *color*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1120,7 +1120,7 @@ BOOL PrepareDrawImage(
 
 ### <a name="parameters"></a>Paramètres
 
-*service d’annuaire*<br/>
+*ds*<br/>
 [in] Une référence à `CAfxDrawState` structure qui stocke les ressources allouées entre les phases de rendu d’image.
 
 *sizeImageDest*<br/>
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Paramètres
 
-*%n%nValeur*<br/>
+*nValue*<br/>
 [in] La nouvelle valeur du canal alpha.
 
 ### <a name="remarks"></a>Notes

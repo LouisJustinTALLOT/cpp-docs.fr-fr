@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
-ms.openlocfilehash: 5560c40b6ae12488e9003612d567084226462b6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03a505f9d193890c9dabdd96c2dafbbbd0104b0e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260957"
 ---
 # <a name="dialog-sample-list"></a>Exemple de liste de boîte de dialogue
 
@@ -56,4 +56,3 @@ Consultez les exemples de programmes suivants qui illustrent des boîtes de dial
 ## <a name="see-also"></a>Voir aussi
 
 [Boîtes de dialogue](../mfc/dialog-boxes.md)
-

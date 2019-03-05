@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586873"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279976"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile, classe
 
@@ -103,7 +103,7 @@ Pour en savoir plus sur la façon `CInternetFile` fonctionne avec les autres cla
 
 `CInternetFile`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxinet.h
 
@@ -258,10 +258,10 @@ virtual LPTSTR ReadString(
 
 ### <a name="parameters"></a>Paramètres
 
-*pStr*<br/>
+*pstr*<br/>
 Un pointeur vers une chaîne qui reçoit la ligne en cours de lecture.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Le nombre maximal de caractères à lire.
 
 *rString*<br/>
@@ -294,7 +294,7 @@ virtual ULONGLONG Seek(
 *lOffset*<br/>
 Décalage en octets pour déplacer le pointeur de lecture/écriture dans le fichier.
 
-*Ndepuis*<br/>
+*nFrom*<br/>
 Référence relative pour le décalage. Doit être une des valeurs suivantes :
 
 - `CFile::begin` Déplacez le pointeur de fichier *lOff* octets transférer à partir du début du fichier.
@@ -402,7 +402,7 @@ virtual void WriteString(LPCTSTR pstr);
 
 ### <a name="parameters"></a>Paramètres
 
-*pStr*<br/>
+*pstr*<br/>
 Un pointeur vers une chaîne contenant le contenu à écrire.
 
 ### <a name="remarks"></a>Notes

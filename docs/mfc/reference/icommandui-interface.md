@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467096"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268172"
 ---
 # <a name="icommandui-interface"></a>Icommandui, Interface
 
@@ -51,7 +51,7 @@ Cette interface fournit des méthodes et propriétés qui gèrent des commandes 
 
 `ICommandUI` est utilisé au sein d’un gestionnaire ON_UPDATE_COMMAND_UI dans un [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-classe dérivée. Lorsqu’un utilisateur d’une application active (sélectionne ou clics) un menu, chaque élément de menu est affiché comme activé ou désactivé. La cible de chaque commande de menu fournit ces informations en implémentant un gestionnaire ON_UPDATE_COMMAND_UI. Pour chacun des objets d’interface utilisateur commande dans votre application, utilisez la fenêtre Propriétés pour créer une entrée de table des messages et le prototype de fonction pour chaque gestionnaire.
 
-Pour plus d’informations sur la façon dont le `ICommandUI` interface est utilisée dans le routage des commandes, consultez [Comment : ajouter routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Pour plus d’informations sur la façon dont le `ICommandUI` interface est utilisée dans le routage des commandes, consultez [Comment : Ajoutez la commande routage pour les Windows Forms contrôle](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Notes
 
-Il s’agit d’une fonction membre avancé qui doit être utilisée conjointement avec un gestionnaire ON_COMMAND_EX qui retourne la valeur FALSE. Pour plus d’informations, consultez Technical Note TN006 : tables des messages.
+Il s’agit d’une fonction membre avancé qui doit être utilisée conjointement avec un gestionnaire ON_COMMAND_EX qui retourne la valeur FALSE. Pour plus d’informations, consultez Technical Note TN006 : Tables des messages.
 
 ## <a name="enabled"></a> ICommandUI::Enabled
 
@@ -137,7 +137,7 @@ property String^ Text;
 
 Cette propriété définit le texte de l’élément d’interface utilisateur pour cette commande. La valeur texte est un handle de chaîne de texte.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 

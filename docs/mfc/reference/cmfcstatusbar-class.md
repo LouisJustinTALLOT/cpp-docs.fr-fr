@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176573"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326749"
 ---
 # <a name="cmfcstatusbar-class"></a>Cmfcstatusbar, classe
 
@@ -101,7 +101,7 @@ class CMFCStatusBar : public CPane
 |[CMFCStatusBar::CommandToIndex](#commandtoindex)||
 |[CMFCStatusBar::Create](#create)|Crée une barre de contrôle et l’attache à la [CPane](../../mfc/reference/cpane-class.md) objet. (Substitue [CPane::Create](../../mfc/reference/cpane-class.md#create).)|
 |[CMFCStatusBar::CreateEx](#createex)|Crée une barre de contrôle et l’attache à la [CPane](../../mfc/reference/cpane-class.md) objet. (Substitue [CPane::CreateEx](../../mfc/reference/cpane-class.md#createex).)|
-|[CMFCStatusBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Détermine si un autre volet peut être inséré dynamiquement entre ce volet et le frame parent. (Substitue [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
+|[CMFCStatusBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Détermine si un autre volet peut être inséré dynamiquement entre ce volet et le frame parent. (Overrides [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
 |[CMFCStatusBar::EnablePaneDoubleClick](#enablepanedoubleclick)|Active ou désactive la gestion de la souris double-clique sur la barre d’état.|
 |[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)|Affiche une barre de progression dans le volet spécifié.|
 |[CMFCStatusBar::GetCount](#getcount)|Retourne le nombre de volets dans la barre d’état.|
@@ -180,7 +180,7 @@ L’exemple suivant montre comment appeler les différentes méthodes la `CMFCSt
 
 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxstatusbar.h
 
@@ -275,7 +275,7 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Si la valeur est TRUE, activer le traitement du double-clic de souris. Dans le cas contraire désactiver le traitement du double-clic de souris.
 
 ### <a name="remarks"></a>Notes
@@ -301,7 +301,7 @@ void EnablePaneProgressBar(
 *nIndex*<br/>
 [in] Spécifie l’index du volet dont barre de progression à activer.
 
-*nLa*<br/>
+*nTotal*<br/>
 [in] Spécifie la valeur maximale de la barre de progression.
 
 *bDisplayText*<br/>
@@ -783,7 +783,7 @@ void SetPaneWidth(
 *nIndex*<br/>
 [in] L’index du volet de barre d’état pour lequel définir une nouvelle largeur.
 
-*CX*<br/>
+*cx*<br/>
 [in] La nouvelle largeur du volet de barre d’état, en pixels.
 
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519975"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260385"
 ---
 # <a name="cdockingmanager-class"></a>Cdockingmanager, classe
 
@@ -302,7 +302,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la `CDocki
 
 [CDockingManager](../../mfc/reference/cdockingmanager-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxDockingManager.h
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Paramètres
 
-*Info*<br/>
+*info*<br/>
 [in] Une référence à une structure d’informations contienne alignement du volet d’ancrage.
 
 *ppDockBar*<br/>
@@ -521,7 +521,7 @@ void BuildPanesMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*Menu*<br/>
+*menu*<br/>
 [in] Un menu pour ajouter les noms d’ancrage des volets et des barres d’outils.
 
 *bToolbarsOnly*<br/>
@@ -637,7 +637,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bDésactiver*<br/>
+*bDisable*<br/>
 [in] True pour désactiver le chargement de la mise en page d’accueil à partir du Registre ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
@@ -732,7 +732,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le menu site d’ancrage ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
@@ -763,7 +763,7 @@ void EnablePaneContextMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Si la valeur est TRUE, la bibliothèque Active la prise en charge pour le menu contextuel automatique ; Si la valeur FALSE la bibliothèque désactive la prise en charge pour le menu contextuel automatique.
 
 *uiCustomizeCmd*<br/>
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Paramètres
 
-*Info*<br/>
+*info*<br/>
 [in] Structure qui contient les informations d’alignement sur le volet d’ancrage.
 
 *dwAlignToInsertAfter*<br/>
@@ -1102,7 +1102,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Pointeur vers un volet de la cible.
 
-*exécuteront-ils*<br/>
+*bAfter*<br/>
 [in] TRUE pour insérer le volet après la position du volet cible. FALSE sinon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1227,7 +1227,7 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>Paramètres
 
-*Bloc*<br/>
+*bLock*<br/>
 [in] TRUE si la fenêtre est verrouillée ; FALSE sinon.
 
 ### <a name="remarks"></a>Notes
@@ -1639,7 +1639,7 @@ static void SetDockingMode(
 *dockMode*<br/>
 Spécifie le nouveau mode d’ancrage. Pour plus d'informations, consultez la section Remarques.
 
-*Thème*<br/>
+*theme*<br/>
 Spécifie le thème à utiliser pour les marqueurs d’ancrage intelligents. Il peut être une des valeurs énumérées suivantes : AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Notes

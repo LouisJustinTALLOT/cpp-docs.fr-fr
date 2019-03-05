@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-ms.openlocfilehash: 092ffff91113b42cd106fe7079b06b9482400c63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d796ac39ba29e6d286926f4975f8f6d2054e7ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557155"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297890"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat, classe
 
@@ -48,7 +48,7 @@ class CD2DTextFormat : public CD2DResource;
 |Nom|Description|
 |----------|-----------------|
 |[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Construit un objet CD2DTextFormat.|
-|[CD2DTextFormat :: ~ CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|Destructeur. Appelé lorsqu’un objet de format de texte D2D est détruit.|
+|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|Destructeur. Appelé lorsqu’un objet de format de texte D2D est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -66,7 +66,7 @@ class CD2DTextFormat : public CD2DResource;
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DTextFormat::operator IDWriteTextFormat *](#operator_idwritetextformat_star)|Renvoie l’interface IDWriteTextFormat|
+|[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|Renvoie l’interface IDWriteTextFormat|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
@@ -82,11 +82,11 @@ class CD2DTextFormat : public CD2DResource;
 
 [CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat :: ~ CD2DTextFormat
+##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat::~CD2DTextFormat
 
 Destructeur. Appelé lorsqu’un objet de format de texte D2D est détruit.
 
@@ -216,7 +216,7 @@ Pointeur vers un IDWriteTextFormat.
 IDWriteTextFormat* m_pTextFormat;
 ```
 
-##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat *
+##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat*
 
 Renvoie l’interface IDWriteTextFormat
 

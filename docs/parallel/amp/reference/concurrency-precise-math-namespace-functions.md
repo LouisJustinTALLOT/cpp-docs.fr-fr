@@ -90,12 +90,12 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7690c0629e7035d0130f0a7dbdcabf3e959ae7b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469353"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297344"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Fonctions d’espace de noms Concurrency::precise_math
 
@@ -183,7 +183,7 @@ Valeur à virgule flottante
 
 Retourne la valeur d’arc cosinus de l’argument
 
-##  <a name="acosh"></a>  ACOSH
+##  <a name="acosh"></a>  acosh
 
 Calcule le cosinus hyperbolique inverse de l’argument
 
@@ -255,7 +255,7 @@ Valeur à virgule flottante
 
 Retourne la valeur d’arc sinus de l’argument
 
-##  <a name="asinh"></a>  ASINH
+##  <a name="asinh"></a>  asinh
 
 Calcule le sinus hyperbolique inverse de l’argument
 
@@ -375,7 +375,7 @@ Valeur à virgule flottante
 
 Retourne la valeur de l’arc tangente de l’argument
 
-##  <a name="atanh"></a>  ATANH
+##  <a name="atanh"></a>  atanh
 
 Calcule la tangente hyperbolique inverse de l’argument
 
@@ -639,7 +639,7 @@ Valeur à virgule flottante
 
 Retourne la valeur de cosinus de pi \* _X
 
-##  <a name="erf"></a>  ERF
+##  <a name="erf"></a>  erf
 
 Calcule la fonction d’erreur de _X
 
@@ -658,7 +658,7 @@ Valeur à virgule flottante
 
 Retourne la fonction d’erreur de _X
 
-##  <a name="erfc"></a>  ERFC
+##  <a name="erfc"></a>  erfc
 
 Calcule la fonction d’erreur complémentaire de _X
 
@@ -836,7 +836,7 @@ Le terme exponentiel *n* de l’expression mathématique `e` <sup>n</sup>, où `
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne l’exponentielle de base e de l’argument, moins 1
+Retourne l'exponentielle de base e de l'argument, moins 1
 
 ##  <a name="expm1f"></a>  expm1f
 
@@ -853,7 +853,7 @@ Le terme exponentiel *n* de l’expression mathématique `e` <sup>n</sup>, où `
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne l’exponentielle de base e de l’argument, moins 1
+Retourne l'exponentielle de base e de l'argument, moins 1
 
 ##  <a name="exp"></a>  exp
 
@@ -1007,7 +1007,7 @@ Valeur à virgule flottante
 
 La différence entre _X et du _Y si _X est supérieure à _Y ; Sinon, + 0.
 
-##  <a name="floor"></a>  Floor
+##  <a name="floor"></a>  floor
 
 Calcule le plancher de l’argument
 
@@ -1430,7 +1430,7 @@ Valeur à virgule flottante
 
 Retourne une valeur différente de zéro si et seulement si l’argument a une valeur infinie
 
-##  <a name="isnan"></a>  isNaN
+##  <a name="isnan"></a>  isnan
 
 Détermine si l’argument est une valeur NaN
 
@@ -1535,7 +1535,7 @@ inline double lgamma(
 *_X*<br/>
 Valeur à virgule flottante
 
-*_Se*<br/>
+*_Sign*<br/>
 Retourne le signe
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1557,7 +1557,7 @@ inline float lgammaf(
 *_X*<br/>
 Valeur à virgule flottante
 
-*_Se*<br/>
+*_Sign*<br/>
 Retourne le signe
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1792,7 +1792,7 @@ La partie entière de `_X`, en tant que valeur à virgule flottante.
 
 Retourne la partie fractionnaire signée de `_X`.
 
-##  <a name="nan"></a>  NaN
+##  <a name="nan"></a>  nan
 
 Retourne une valeur NaN silencieuse
 
@@ -2062,7 +2062,7 @@ Valeur à virgule flottante
 
 Retourne la réciproque de la racine cubique de l’argument
 
-##  <a name="remainder"></a>  reste
+##  <a name="remainder"></a>  remainder
 
 Calcule le reste : _X REM _Y
 
@@ -2167,7 +2167,7 @@ Le deuxième argument à virgule flottante.
 
 Retourne le reste de `_X` divisé par `_Y`.
 
-##  <a name="round"></a>  arrondir
+##  <a name="round"></a>  round
 
 Arrondit _X à l’entier le plus proche
 

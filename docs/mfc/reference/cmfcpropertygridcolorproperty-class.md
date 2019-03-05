@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: c284906a85ec93c5c5419acb783f6f46ebcf03e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65c2c22c93dc3acb50fc4627c3710a3f0c86aeb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303961"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Cmfcpropertygridcolorproperty, classe
 
@@ -81,7 +81,7 @@ L'exemple suivant montre comment construire un objet de la classe `CMFCPropertyG
 
 [CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpropertygridctrl.h
 
@@ -103,7 +103,7 @@ CMFCPropertyGridColorProperty(
 *strName*<br/>
 [in] Le nom de la propriété.
 
-*Couleur*<br/>
+*color*<br/>
 [in] La valeur de couleur de la propriété.
 
 *pPalette*<br/>
@@ -131,10 +131,10 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] Le texte de l’étiquette du bouton automatique.
 
-*automatiqueCouleur*<br/>
+*colorAutomatic*<br/>
 [in] La valeur de couleur RVB de la couleur automatique (par défaut).
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le bouton automatique ; Sinon, FALSE. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -158,7 +158,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] True pour afficher le `CMFCColorDialog` boîte de dialogue ; FALSE pour afficher la boîte de dialogue de sélection de couleur standard. La valeur par défaut est TRUE.
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] True pour afficher le bouton autre ; Sinon, FALSE.  La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -187,7 +187,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 [in] Une valeur de couleur RVB.
 
 ### <a name="remarks"></a>Notes

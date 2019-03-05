@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL, macros
 - macros, ATL
 ms.assetid: 788bd803-e7dc-4dc5-9e8d-31649471415b
-ms.openlocfilehash: 9523ceef462dc0fbf7669467a72749a8cbd83617
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2331f100f627dcd79ba2976b44da30474d93dd3a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624940"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261399"
 ---
 # <a name="atl-macros"></a>Macros ATL
 
@@ -80,4 +80,3 @@ Transférer les messages de fenêtre.
 [Variables globales](../../atl/reference/atl-global-variables.md)<br/>
 [Les classes et structs](../../atl/reference/atl-classes.md)<br/>
 [Typedef](../../atl/reference/atl-typedefs.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-ms.openlocfilehash: 97443d4846141f4402e18bb19893fcac9b4f46da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b2ff4f312132b690223f124fd8790d0e2c172b7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524051"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289674"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Prise en charge des documents composés, Assistant Application MFC
 
@@ -21,9 +21,9 @@ Par défaut, l’application ne contient aucune prise en charge de document comp
 
   Détermine si votre application fournit la prise en charge du conteneur, prise en charge du serveur ou les deux. Pour plus d’informations sur cette zone, consultez :
 
-  - [Conteneurs : implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md)
+  - [Conteneurs : Implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md)
 
-  - [Serveurs : implémentation d’un serveur](../../mfc/servers-implementing-a-server.md)
+  - [serveurs : Implémentation d’un serveur](../../mfc/servers-implementing-a-server.md)
 
   |Option|Description|
   |------------|-----------------|
@@ -46,4 +46,3 @@ Par défaut, l’application ne contient aucune prise en charge de document comp
 ## <a name="see-also"></a>Voir aussi
 
 [Assistant Application MFC](../../mfc/reference/mfc-application-wizard.md)
-

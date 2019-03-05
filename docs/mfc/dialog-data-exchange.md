@@ -19,12 +19,12 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: f80d80dc9e212dbe0d87da65ac92943ad1f0edad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 338630aef358d9490461179288d5c45a2d3b821c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175494"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302306"
 ---
 # <a name="dialog-data-exchange"></a>Échange de données de boîtes de dialogue
 
@@ -39,7 +39,7 @@ L'illustration suivante montre l'échange de données de boîte de dialogue.
 
 `UpdateData` fonctionne dans les deux sens, comme spécifié par le **BOOL** paramètre passé à ce dernier. Pour effectuer l'échange, `UpdateData` génère un objet `CDataExchange` et appelle la fonction membre `CDialog` de la substitution de votre classe de boîte de dialogue `DoDataExchange`. `DoDataExchange` accepte un argument de type `CDataExchange`. L'objet `CDataExchange` passé à `UpdateData` représente le contexte de l'échange, et définit des informations telles que la direction de l'échange.
 
-Lorsque vous (ou un Assistant Code) remplacez `DoDataExchange`, vous spécifiez un appel à une fonction DDX par données membres (contrôle). Chaque fonction DDX sait échanger des données dans les deux directions selon le contexte fourni par l'argument `CDataExchange` passé à votre `DoDataExchange` par `UpdateData`.
+Lorsque vous (ou un Assistant Code) remplacez `DoDataExchange`, vous spécifiez un appel à une fonction DDX par données membres (contrôle). Chaque fonction DDX sait échanger des données dans les deux directions selon le contexte fourni par l’argument `CDataExchange` passé à votre `DoDataExchange` par `UpdateData`.
 
 MFC fournit de nombreuses fonctions DDX pour différents types d'échange. L'exemple suivant illustre la substitution de `DoDataExchange` dans laquelle deux fonctions DDX et une fonction DDV sont appelées :
 
@@ -54,4 +54,3 @@ Si l’utilisateur annule une boîte de dialogue modale, la `OnCancel` fonction 
 [Échange et validation de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md)<br/>
 [Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Validation de données de boîtes de dialogue](../mfc/dialog-data-validation.md)
-

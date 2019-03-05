@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-ms.openlocfilehash: 937edb799729005619325cda15f5a720264e9bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 561d6cb41ca066f5a2435b4eb1e8710ccaa99ea1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512539"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265568"
 ---
 # <a name="atl-classes-and-structs"></a>ATL, classes et structs
 
@@ -59,7 +59,7 @@ La bibliothèque ATL (Active Template) inclut les classes et structs suivantes. 
 |[CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)|Cette classe représente un objet pointeur intelligent à l’aide de vecteur nouveaux et supprimer des opérateurs.|atlbase.h|
 |[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)|Cette classe fournit des méthodes, les fonctions statiques et les typedefs utiles lors de la création de collections de pointeurs intelligents à l’aide de vecteur nouveaux et supprimer des opérateurs.|atlcoll.h|
 |[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)|Cette classe implémente une boîte de dialogue (modale ou non modale) qui héberge des contrôles ActiveX.|atlwin.h|
-|[Objet CAxWindow](../../atl/reference/caxwindow-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX.|atlwin.h|
+|[CAxWindow](../../atl/reference/caxwindow-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX.|atlwin.h|
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX et prend également en charge pour l’hébergement de contrôles ActiveX sous licence.|atlwin.h|
 |[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|Cette classe implémente l'interface `IBindStatusCallback` .|atlctl.h|
 |[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Cette classe implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pour un objet agrégé.|atlcom.h|
@@ -159,7 +159,7 @@ La bibliothèque ATL (Active Template) inclut les classes et structs suivantes. 
 |[CSnapInItemImpl](../../atl/reference/csnapinitemimpl-class.md)|Cette classe fournit des méthodes pour implémenter un objet de nœud de composant logiciel enfichable.|atlsnap.h|
 |[CSnapInPropertyPageImpl](../../atl/reference/csnapinpropertypageimpl-class.md)|Cette classe fournit des méthodes pour implémenter un objet de page de propriétés de composant logiciel enfichable.|atlsnap.h|
 |[CStockPropImpl](../../atl/reference/cstockpropimpl-class.md)|Cette classe fournit des méthodes pour prendre en charge les valeurs de propriétés stock.|atlctl.h|
-|[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)|Cette classe fournit des fonctions statiques utilisées par les classes de collection stockage `CString` objets.|CStringT.h|
+|[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)|Cette classe fournit des fonctions statiques utilisées par les classes de collection stockage `CString` objets.|cstringt.h|
 |[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)|Cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Elle est similaire à [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mais effectue des comparaisons de non-respect de la casse.|atlcoll.h|
 |[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)|Cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Les objets de chaîne sont traitées en tant que références.|atlcoll.h|
 |[CThreadPool, classe](../../atl/reference/cthreadpool-class.md)|Cette classe fournit un pool de threads de travail qui traitent une file d’attente d’éléments de travail.|atlutil.h|
@@ -226,4 +226,3 @@ La bibliothèque ATL (Active Template) inclut les classes et structs suivantes. 
 [Variables globales](../../atl/reference/atl-global-variables.md)<br/>
 [Typedef](../../atl/reference/atl-typedefs.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

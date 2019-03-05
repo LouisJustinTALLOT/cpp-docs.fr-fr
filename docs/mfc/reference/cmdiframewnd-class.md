@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178380"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282446"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (classe)
 
@@ -194,7 +194,7 @@ CMDIChildWnd* CreateNewChild(
 *pClass*<br/>
 La classe d’exécution de la fenêtre enfant doit être créé.
 
-*Nressource*<br/>
+*nResource*<br/>
 ID de ressources partagées associées à la fenêtre enfant.
 
 *hMenu*<br/>
@@ -275,7 +275,7 @@ void MDICascade(int nType);
 
 ### <a name="parameters"></a>Paramètres
 
-*%nLes*<br/>
+*nType*<br/>
 Spécifie un indicateur en cascade. Peut être spécifié uniquement l’indicateur suivant : MDITILE_SKIPDISABLED, ce qui empêche des fenêtres MDI enfants désactivés en cours en cascade.
 
 ### <a name="remarks"></a>Notes
@@ -440,7 +440,7 @@ void MDITile(int nType);
 
 ### <a name="parameters"></a>Paramètres
 
-*%nLes*<br/>
+*nType*<br/>
 Spécifie un indicateur de mosaïque. Ce paramètre peut être l’un des indicateurs suivants :
 
 - Fenêtres enfants MDI de vignettes MDITILE_HORIZONTAL afin qu’une fenêtre s’affiche au-dessus d’un autre.

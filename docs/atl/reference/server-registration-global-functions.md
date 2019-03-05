@@ -8,12 +8,12 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: f97a4ff0dc28077d42fe0f8ca4992946db4082f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2088bd938aeac70193165cdbd43bd10203ecc49e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441787"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275305"
 ---
 # <a name="server-registration-global-functions"></a>Fonctions globales de serveur d’inscription
 
@@ -30,7 +30,7 @@ Ces fonctions fournissent la prise en charge pour inscrire et désinscrire des o
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Cette fonction est appelée pour révoquer des objets de classe à partir d’un module COM.|
 |[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Cette fonction est appelée pour obtenir l’objet de classe.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -172,7 +172,7 @@ Le CLSID de l’objet doit être créé.
 *riid*<br/>
 IID de l’interface demandée.
 
-*PPV*<br/>
+*ppv*<br/>
 Un pointeur vers le pointeur d’interface identifié par *riid*. Si l’objet ne prend pas en charge cette interface, *ppv* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour

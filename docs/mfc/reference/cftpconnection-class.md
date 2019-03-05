@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 71e5c8629a1aa1c489cc51224f9d008c4cdd3397
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504245"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295121"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection, classe
 
@@ -91,7 +91,7 @@ Pour en savoir plus sur la façon `CFtpConnection` fonctionne avec les autres cl
 
 `CFtpConnection`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxinet.h
 
@@ -140,10 +140,10 @@ Un pointeur vers une chaîne se terminant par null qui spécifie le mot de passe
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL ou « »|NULL ou « »|« anonyme »|Nom de messagerie de l’utilisateur|
 |Chaîne non NULL|NULL ou « »|*pstrUserName*|" "|
-|Chaîne Non-NULL NULL|ERREUR|ERREUR||
+|Chaîne Non-NULL NULL|ERROR|ERROR||
 |Chaîne non NULL|Chaîne non NULL|*pstrUserName*|*pstrPassword*|
 
-*%nPort*<br/>
+*nPort*<br/>
 Numéro qui identifie le port TCP/IP à utiliser sur le serveur.
 
 *bPassive*<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - month calendar controls [MFC], changing the font
 - DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
-ms.openlocfilehash: 56a735f9e79ca4f5423201139adc740878afb279
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfe6fa220e19deebd86e7c8b7bd25dab60165f73
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652534"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292132"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Accès au contrôle Month Calendar Control incorporé
 
@@ -41,4 +41,3 @@ Une fois que la police a été modifiée par un appel à `CDateTimeCtrl::SetMont
 
 [Utilisation de CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

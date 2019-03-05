@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-ms.openlocfilehash: f6bcbce291aec1941359504518e26ca936edb9e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604475"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275192"
 ---
 # <a name="csettingsstoresp-class"></a>Csettingsstoresp, classe
 
@@ -53,7 +53,7 @@ class CSettingsStoreSP
 
 ## <a name="remarks"></a>Notes
 
-Vous pouvez utiliser la `CSettingsStoreSP` classe pour rediriger toutes les opérations de Registre MFC à d’autres emplacements, par exemple un fichier XML ou une base de données. Pour cela, procédez comme suit :
+Vous pouvez utiliser la `CSettingsStoreSP` classe pour rediriger toutes les opérations de Registre MFC à d’autres emplacements, par exemple un fichier XML ou une base de données. Pour ce faire, procédez comme suit :
 
 1. Créer une classe (tel que `CMyStore`) et dérivez-le de `CSettingsStore`.
 
@@ -67,7 +67,7 @@ Chaque fois que l’infrastructure accéderait généralement le Registre, il va
 
 `CSettingsStoreSP::SetRuntimeClass` utilise une variable statique globale. Par conséquent, qu’un seul magasin personnalisé est disponible à la fois.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxsettingsstore.h
 
@@ -83,7 +83,7 @@ CSettingsStore& CSettingsStoreSP Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*bCheminAdmin*<br/>
+*bAdmin*<br/>
 [in] Un paramètre booléen qui détermine si un `CSettingsStore` objet est créé en mode administrateur.
 
 *bReadOnly*<br/>

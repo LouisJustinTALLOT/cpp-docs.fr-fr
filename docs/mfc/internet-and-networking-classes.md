@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet classes [MFC]
 - networking classes [MFC]
 ms.assetid: 1acf793d-ebf2-4fac-97be-703d62e3897e
-ms.openlocfilehash: ba094bec4302bdcd92840e481392fa9d8b21410f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf153c5b4602a0f9b151f225669efbb63f3583a2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440480"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281705"
 ---
 # <a name="internet-and-networking-classes"></a>Internet et classes réseau
 
@@ -27,4 +27,3 @@ Les catégories suivantes de classes prend en charge la connectivité.
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
-

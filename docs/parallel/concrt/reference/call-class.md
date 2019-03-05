@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 5164d2787c86e6c909418f353c15c876d1397afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566099"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271955"
 ---
 # <a name="call-class"></a>call, classe
 
@@ -70,7 +70,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `call`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -112,7 +112,7 @@ call(
 *_Func*<br/>
 Une fonction qui sera appelée pour chaque message accepté.
 
-*_Filtre*<br/>
+*_Filter*<br/>
 Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
 
 *_PScheduler*<br/>
@@ -129,7 +129,7 @@ Le type `_Call_method` est un functor avec la signature `void (T const &)` qui e
 
 Le type `filter_method` est un functor avec la signature `bool (T const &)` qui est appelé par ce `call` bloc de messagerie pour déterminer s’il doit accepter un message proposé.
 
-##  <a name="dtor"></a> ~ appeler
+##  <a name="dtor"></a> ~call
 
 Détruit le `call` bloc de messagerie.
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604116"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270551"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem, classe
 
@@ -155,7 +155,7 @@ Le `COleServerItem` classe définit plusieurs fonctions membres substituables qu
 
 Pour utiliser `COleServerItem`, dérivez une classe à partir de celui-ci et implémenter la [OnDraw](#ondraw) et [Serialize](../../mfc/reference/cobject-class.md#serialize) fonctions membres. Le `OnDraw` fonction fournit la représentation sous forme de métafichier d’un élément, ce qui lui permet à afficher lorsqu’une application conteneur ouvre un document composé. Le `Serialize` fonction de `CObject` fournit la représentation native d’un élément, ce qui permet un élément incorporé à transférer entre les serveur et des applications conteneur. [OnGetExtent](#ongetextent) fournit la taille naturelle de l’élément au conteneur, activation du conteneur à la taille de l’élément.
 
-Pour plus d’informations sur les serveurs et les rubriques connexes, consultez l’article [serveurs : implémentation d’un serveur](../../mfc/servers-implementing-a-server.md) et « Création d’une Application conteneur/serveur » dans l’article [conteneurs : fonctionnalités avancées](../../mfc/containers-advanced-features.md).
+Pour plus d’informations sur les serveurs et les rubriques connexes, consultez l’article [serveurs : Implémentation d’un serveur](../../mfc/servers-implementing-a-server.md) et « Création d’une Application conteneur/serveur » dans l’article [conteneurs : Fonctionnalités avancées](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -167,7 +167,7 @@ Pour plus d’informations sur les serveurs et les rubriques connexes, consultez
 
 `COleServerItem`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 

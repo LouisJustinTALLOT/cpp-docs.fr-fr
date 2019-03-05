@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: e0b636d22eede9eb6a9d9268241f912bb80fcbf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446746"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296785"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source, classe
 
@@ -57,13 +57,13 @@ class cancellation_token_source;
 
 `cancellation_token_source`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** pplcancellation_token.h
 
 **Espace de noms :** concurrency
 
-##  <a name="dtor"></a> ~ cancellation_token_source
+##  <a name="dtor"></a> ~cancellation_token_source
 
 ```
 ~cancellation_token_source();
@@ -114,15 +114,16 @@ Type d’itérateur.
 *_Src*<br/>
 Jeton dont l'annulation provoque l'annulation de la source du jeton retourné. Notez que la source du jeton retourné peut également être annulée indépendamment de la source contenue dans ce paramètre.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Itérateur de bibliothèque Standard C++ correspondant au début de la plage de jetons à écouter pour l’annulation.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Itérateur de bibliothèque C++ Standard correspondant à la fin de la plage de jetons à écouter pour l’annulation.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`cancellation_token_source` qui est annulée lorsque le jeton fourni par le paramètre `_Src` est annulé.
+
+  `cancellation_token_source` qui est annulée lorsque le jeton fourni par le paramètre `_Src` est annulé.
 
 ##  <a name="get_token"></a> get_token
 
@@ -136,7 +137,7 @@ cancellation_token get_token() const;
 
 Jeton d'annulation associé à cette source.
 
-##  <a name="operator_neq"></a> opérateur ! =
+##  <a name="operator_neq"></a> operator!=
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;
@@ -149,7 +150,7 @@ Opérande.
 
 ### <a name="return-value"></a>Valeur de retour
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
@@ -164,7 +165,7 @@ Opérande.
 
 ### <a name="return-value"></a>Valeur de retour
 
-##  <a name="operator_eq_eq"></a> opérateur ==
+##  <a name="operator_eq_eq"></a> operator==
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;

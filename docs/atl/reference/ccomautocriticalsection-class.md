@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-ms.openlocfilehash: 1da9aeb0ff285893ed4f81277f379ad8bffcc65b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 613440eceb71f0277f4cc5de2af89fe263772797
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590903"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301608"
 ---
 # <a name="ccomautocriticalsection-class"></a>Ccomautocriticalsection, classe
 
@@ -32,7 +32,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 |Nom|Description|
 |----------|-----------------|
 |[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|Constructeur.|
-|[CComAutoCriticalSection :: ~ CComAutoCriticalSection](#dtor)|Destructeur.|
+|[CComAutoCriticalSection::~CComAutoCriticalSection](#dtor)|Destructeur.|
 
 ## <a name="remarks"></a>Notes
 
@@ -48,7 +48,7 @@ Le `Init` et `Term` méthodes à partir de [CComCriticalSection](../../atl/refer
 
 `CComAutoCriticalSection`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcore.h
 
@@ -64,7 +64,7 @@ CComAutoCriticalSection();
 
 Appelle la fonction Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), ce qui initialise l’objet de section critique.
 
-##  <a name="dtor"></a>  CComAutoCriticalSection :: ~ CComAutoCriticalSection
+##  <a name="dtor"></a>  CComAutoCriticalSection::~CComAutoCriticalSection
 
 Destructeur.
 

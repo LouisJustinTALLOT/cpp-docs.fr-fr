@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611001"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273606"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection, classe
 
@@ -59,7 +59,7 @@ Pour en savoir plus sur la façon `CHttpConnection` fonctionne avec les autres c
 
 `CHttpConnection`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxinet.h
 
@@ -106,7 +106,7 @@ Un pointeur vers une chaîne contenant le nom du serveur.
 *dwContext*<br/>
 L’identificateur de contexte pour le `CInternetConnection` objet. Consultez **remarques** pour plus d’informations sur *dwContext*.
 
-*%nPort*<br/>
+*nPort*<br/>
 Nombre qui identifie le port Internet pour cette connexion.
 
 *pstrUserName*<br/>
@@ -119,7 +119,7 @@ Un pointeur vers une chaîne se terminant par null qui spécifie le mot de passe
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL ou « »|NULL ou « »|« anonyme »|Nom de messagerie de l’utilisateur|
 |Chaîne non NULL|NULL ou « »|*pstrUserName*|" "|
-|Chaîne Non-NULL NULL|ERREUR|ERREUR||
+|Chaîne Non-NULL NULL|ERROR|ERROR||
 |Chaîne non NULL|Chaîne non NULL|*pstrUserName*|*pstrPassword*|
 
 *dwFlags*<br/>

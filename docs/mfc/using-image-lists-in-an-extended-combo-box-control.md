@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
-ms.openlocfilehash: 38f51205eea7220f0efbc2d8821fcb2b423e0add
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4d983d53e49fc8d9c80c206f1a23078eb82f61
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504597"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266989"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Utilisation de listes d'images dans un contrôle de zone de liste déroulante étendue
 
@@ -39,4 +39,3 @@ Une fois que la liste d’images a été associée au contrôle, vous pouvez sp�
 
 [Utilisation de CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

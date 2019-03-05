@@ -11,12 +11,12 @@ helpviewer_keywords:
 - protected member access
 - source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
-ms.openlocfilehash: 40decb64914167061f6538df36d086347f52e1b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac8d8ea64de9fd93487b3108857669931e31d0be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659288"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267028"
 ---
 # <a name="using-the-mfc-source-files"></a>Utilisation des fichiers sources MFC
 
@@ -55,4 +55,3 @@ Les sujets abordés dans cette série d’articles incluent :
 ## <a name="see-also"></a>Voir aussi
 
 [Rubriques MFC générales](../mfc/general-mfc-topics.md)
-

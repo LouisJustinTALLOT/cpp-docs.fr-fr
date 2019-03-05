@@ -1,5 +1,5 @@
 ---
-title: "Contrôles ActiveX MFC : retour de codes d'erreur à partir d'une méthode"
+title: 'Contrôles ActiveX MFC : Renvoi des Codes d’erreur à partir d’une méthode'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 8c5fe88cf952337a7d070eae7a5da149a8e905bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0800c1827c636dd81e2928e33c0ee2afde4c94ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676484"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259137"
 ---
-# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Contrôles ActiveX MFC : retour de codes d'erreur à partir d'une méthode
+# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Contrôles ActiveX MFC : Renvoi des Codes d’erreur à partir d’une méthode
 
 Cet article décrit comment retourner des codes d’erreur à partir d’une méthode de contrôle ActiveX.
 
@@ -28,11 +28,10 @@ Pour indiquer qu’une erreur s’est produite dans une méthode, vous devez uti
 
 Fonctions d’assistance existent pour la plus courante prédéfinies SCODEs, tel que [courants ;](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), et [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
-Pour obtenir la liste de paramètres prédéfinis SCODEs et obtenir des instructions sur la définition SCODEs personnalisés, consultez la section [gestion des erreurs dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans les contrôles ActiveX : rubriques avancées.
+Pour obtenir la liste de paramètres prédéfinis SCODEs et obtenir des instructions sur la définition SCODEs personnalisés, consultez la section [gestion des erreurs dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans les contrôles ActiveX : Rubriques avancées.
 
-Pour plus d’informations sur le rapport des exceptions dans d’autres zones de votre code, consultez [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) et la section [gestion des erreurs dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans les contrôles ActiveX : rubriques avancées.
+Pour plus d’informations sur le rapport des exceptions dans d’autres zones de votre code, consultez [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) et la section [gestion des erreurs dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans les contrôles ActiveX : Rubriques avancées.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

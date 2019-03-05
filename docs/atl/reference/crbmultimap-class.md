@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: f421848a87ea3cc38309e85eb39c9453530ce4fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659093"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267483"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap, classe
 
@@ -55,7 +55,7 @@ Le code utilisé pour copier ou déplacer des éléments de valeur.
 |Nom|Description|
 |----------|-----------------|
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|Constructeur.|
-|[CRBMultiMap :: ~ CRBMultiMap](#dtor)|Destructeur.|
+|[CRBMultiMap::~CRBMultiMap](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -87,7 +87,7 @@ Pour obtenir une description plus complète de diverses classes de collection et
 
 `CRBMultiMap`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcoll.h
 
@@ -114,7 +114,7 @@ Consultez la documentation de la classe de base [CRBTree](../../atl/reference/cr
 
 [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMultiMap :: ~ CRBMultiMap
+##  <a name="dtor"></a>  CRBMultiMap::~CRBMultiMap
 
 Destructeur.
 
@@ -170,7 +170,7 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 La valeur de position, obtenue avec soit un appel à [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) ou [CRBMultiMap::GetNextWithKey](#getnextwithkey), ou un appel précédent à `GetNextValueWithKey`.
 
 *key*<br/>
@@ -205,7 +205,7 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 La valeur de position, obtenue avec soit un appel à [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) ou [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), ou un appel précédent à `GetNextWithKey`.
 
 *key*<br/>
@@ -234,7 +234,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 *key*<br/>
 La valeur de clé à ajouter à la `CRBMultiMap` objet.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à ajouter à la `CRBMultiMap` est associé, *clé*.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -1,5 +1,5 @@
 ---
-title: CDHtmlDialog, classe
+title: CDHtmlDialog Class
 ms.date: 11/04/2016
 f1_keywords:
 - CDHtmlDialog
@@ -116,14 +116,14 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594959"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263609"
 ---
-# <a name="cdhtmldialog-class"></a>CDHtmlDialog, classe
+# <a name="cdhtmldialog-class"></a>CDHtmlDialog Class
 
 Permet de créer des boîtes de dialogue qui utilisent HTML plutôt que des ressources de boîte de dialogue pour implémenter leur interface utilisateur.
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |Nom|Description|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Construit un objet CDHtmlDialog.|
-|[CDHtmlDialog :: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Détruit un objet CDHtmlDialog.|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Détruit un objet CDHtmlDialog.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -232,7 +232,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 `CDHtmlDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdhtml.h
 
@@ -304,7 +304,7 @@ Contient le numéro d’ID d’une ressource HTML.
 
 La deuxième forme du constructeur fournit l’accès à la ressource de boîte de dialogue via le nom du modèle. La troisième forme du constructeur fournit l’accès à la ressource de boîte de dialogue via l’ID du modèle de ressource. En règle générale, l’ID commence par la **IDD_** préfixe.
 
-##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog :: ~ CDHtmlDialog
+##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog::~CDHtmlDialog
 
 Détruit un objet CDHtmlDialog.
 
@@ -370,7 +370,7 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 La valeur du paramètre d’ID de la balise object dans la source HTML pour le contrôle ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch de la propriété avec laquelle vous souhaitez échanger des données.
 
 *szPropName*<br/>
@@ -402,7 +402,7 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 La valeur que vous avez spécifié pour le paramètre d’ID du contrôle HTML.
 
-*valeur*<br/>
+*value*<br/>
 La valeur qui est échangée.
 
 ### <a name="example"></a>Exemple
@@ -465,10 +465,10 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 La valeur que vous avez spécifié pour le paramètre d’ID du contrôle HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch de l’élément HTML avec laquelle vous souhaitez échanger des données.
 
-*valeur*<br/>
+*value*<br/>
 La valeur qui est échangée.
 
 ##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio
@@ -490,7 +490,7 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 La valeur que vous avez spécifié pour le paramètre d’ID du contrôle HTML.
 
-*valeur*<br/>
+*value*<br/>
 La valeur qui est échangée.
 
 ##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex
@@ -512,7 +512,7 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 La valeur que vous avez spécifié pour le paramètre d’id du contrôle HTML.
 
-*valeur*<br/>
+*value*<br/>
 La valeur qui est échangée.
 
 ##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString
@@ -534,7 +534,7 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 La valeur que vous avez spécifié pour le paramètre d’ID du contrôle HTML.
 
-*valeur*<br/>
+*value*<br/>
 La valeur qui est échangée.
 
 ##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
@@ -556,7 +556,7 @@ Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) 
 *szId*<br/>
 La valeur que vous avez spécifié pour le paramètre d’ID du contrôle HTML.
 
-*valeur*<br/>
+*value*<br/>
 La valeur qui est échangée.
 
 ### <a name="example"></a>Exemple
@@ -586,7 +586,7 @@ Consultez *fEnable* dans [IDocHostUIHandler::EnableModeless](https://msdn.micros
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 
@@ -612,7 +612,7 @@ Consultez *ppDORet* dans `IDocHostUIHandler::FilterDataObject` dans le SDK Windo
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_FALSE.
+Returns S_FALSE.
 
 ### <a name="remarks"></a>Notes
 
@@ -669,7 +669,7 @@ Le nom d’une propriété dans les paramètres régionaux par défaut de l’ut
 *pdispControl*<br/>
 Le `IDispatch` pointeur d’un contrôle ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch d’une propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -729,7 +729,7 @@ Consultez *ppDropTarget* dans `IDocHostUIHandler::GetDropTarget` dans le SDK Win
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 L’ID d’un élément HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch d’une propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -942,12 +942,12 @@ STDMETHOD(GetOptionKeyPath)(
 *pchKey*<br/>
 Consultez *pchKey* dans [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) dans le SDK Windows.
 
-*entrepôt de données*<br/>
+*dw*<br/>
 Consultez *dw* dans `IDocHostUIHandler::GetOptionKeyPath` dans le Kit de développement logiciel Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 
@@ -963,7 +963,7 @@ STDMETHOD(HideUI)(void);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 
@@ -1108,7 +1108,7 @@ virtual void OnBeforeNavigate(
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*<br/>
+*pDisp*<br/>
 Pointeur vers un objet `IDispatch` .
 
 *szUrl*<br/>
@@ -1126,7 +1126,7 @@ virtual void OnDocumentComplete(
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*<br/>
+*pDisp*<br/>
 Pointeur vers un objet `IDispatch` .
 
 *szUrl*<br/>
@@ -1147,7 +1147,7 @@ Consultez *fActivate* dans [IDocHostUIHandler::OnDocWindowActivate](https://msdn
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 
@@ -1168,7 +1168,7 @@ Consultez *fActivate* dans [IDocHostUIHandler::OnFrameWindowActivate](https://ms
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 
@@ -1206,7 +1206,7 @@ virtual void OnNavigateComplete(
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*<br/>
+*pDisp*<br/>
 Pointeur vers un objet `IDispatch` .
 
 *szUrl*<br/>
@@ -1236,7 +1236,7 @@ Consultez *fFrameWindow* dans `IDocHostUIHandler::ResizeBorder` dans le SDK Wind
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ##  <a name="setcontrolproperty"></a>  CDHtmlDialog::SetControlProperty
 
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 L’ID HTML d’un contrôle ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch de la propriété à définir.
 
 *pVar*<br/>
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 L’ID d’un élément HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch de la propriété à définir.
 
 *pVar*<br/>
@@ -1402,7 +1402,7 @@ Consultez *pdispReserved* dans `IDocHostUIHandler::ShowContextMenu` dans le SDK 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_FALSE.
+Returns S_FALSE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1440,7 +1440,7 @@ Consultez *pDoc* dans `IDocHostUIHandler::ShowUI` dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_FALSE.
+Returns S_FALSE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1470,7 +1470,7 @@ Consultez *nCmdID* dans `IDocHostUIHandler::TranslateAccelerator` dans le SDK Wi
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_FALSE.
+Returns S_FALSE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1500,7 +1500,7 @@ Consultez *ppchURLOut* dans `IDocHostUIHandler::TranslateUrl` dans le SDK Window
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_FALSE.
+Returns S_FALSE.
 
 ### <a name="remarks"></a>Notes
 
@@ -1516,7 +1516,7 @@ STDMETHOD(UpdateUI)(void);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 
@@ -1527,4 +1527,3 @@ Cette fonction membre est l’implémentation de CDHtmlDialog de [IDocHostUIHand
 [MFC exemple DHtmlExplore](../../visual-cpp-samples.md)<br/>
 [DDX_DHtml Helper, structure](#ddx_dhtml_helper_macros)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-
