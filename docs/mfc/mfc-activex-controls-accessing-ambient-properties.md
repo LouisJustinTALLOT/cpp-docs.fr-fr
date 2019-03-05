@@ -1,18 +1,18 @@
 ---
-title: 'Contrôles ActiveX MFC : accès aux propriétés ambiantes'
+title: 'Contrôles ActiveX MFC : Accès aux propriétés ambiantes'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], accessing ambient properties
 - properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
-ms.openlocfilehash: f6daff09969e82daa4e8f76c8b1eb4972ddd6eeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 585ec8720a654bbcb728330d70ddb914f2543e41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585625"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305222"
 ---
-# <a name="mfc-activex-controls-accessing-ambient-properties"></a>Contrôles ActiveX MFC : accès aux propriétés ambiantes
+# <a name="mfc-activex-controls-accessing-ambient-properties"></a>Contrôles ActiveX MFC : Accès aux propriétés ambiantes
 
 Cet article explique comment un contrôle ActiveX peut accéder aux propriétés ambiantes de son conteneur de contrôle.
 
@@ -20,7 +20,7 @@ Un contrôle peut obtenir des informations sur son conteneur en accédant aux pr
 
 Pour accéder à une propriété ambiante, effectuez un appel à [COleControl::GetAmbientProperty](../mfc/reference/colecontrol-class.md#getambientproperty). Cette fonction attend l'ID de dispatch de la propriété ambiante en tant que premier paramètre (le fichier OLECTL.H définit les ID de dispatch pour l'ensemble standard de propriétés ambiantes).
 
-Les paramètres de la fonction `GetAmbientProperty` sont l'ID de dispatch, une balise de variante indiquant le type de propriété attendu et un pointeur vers la mémoire dans laquelle la valeur doit être retournée. Le type de données auxquelles ce pointeur fait référence varie selon l’étiquette de variante. La fonction retourne **TRUE** si le conteneur prend en charge la propriété, sinon, elle retourne **FALSE**.
+Les paramètres de la fonction `GetAmbientProperty` sont l’ID de dispatch, une étiquette de variante indiquant le type de propriété attendu et un pointeur vers la mémoire dans laquelle la valeur doit être retournée. Le type de données auxquelles ce pointeur fait référence varie selon la balise de variante. La fonction retourne **TRUE** si le conteneur prend en charge la propriété, sinon, elle retourne **FALSE**.
 
 L'exemple de code suivant obtient la valeur de la propriété ambiante appelée "UserMode". Si la propriété n’est pas pris en charge par le conteneur, la valeur par défaut **TRUE** est supposé :
 
@@ -58,4 +58,3 @@ Si la valeur d’une propriété ambiante change (via une action du conteneur), 
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

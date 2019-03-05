@@ -1,5 +1,5 @@
 ---
-title: 'TN029 : fenêtres fractionnées'
+title: 'TN029 : Fenêtres fractionnées'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.windows.splitter
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501983"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294991"
 ---
-# <a name="tn029-splitter-windows"></a>TN029 : fenêtres fractionnées
+# <a name="tn029-splitter-windows"></a>TN029 : Fenêtres fractionnées
 
 Cette note décrit la bibliothèque MFC [CSplitterWnd, classe](../mfc/reference/csplitterwnd-class.md), qui fournit la fenêtre se divise et gère le redimensionnement des autres fenêtres de volet.
 
@@ -62,7 +62,7 @@ Volet : Une fenêtre spécifique à l’application qui un `CSplitterWnd` gère
 
 Barre de fractionnement : Un contrôle qui est placé entre les lignes et colonnes de volets. Il peut servir à ajuster la taille des lignes ou colonnes de volets.
 
-: Fractionnement un contrôle de zone Dans un dynamique `CSplitterWnd` que vous pouvez utiliser pour créer de nouvelles lignes ou colonnes de volets. Il se trouve en haut à gauche des barres de défilement horizontale ou des barres de défilement verticale.
+Boîte de fractionnement : Un contrôle dans un dynamique `CSplitterWnd` que vous pouvez utiliser pour créer de nouvelles lignes ou colonnes de volets. Il se trouve en haut à gauche des barres de défilement horizontale ou des barres de défilement verticale.
 
 Intersection de fractionnement : L’intersection d’une barre de fractionnement verticale et une barre de fractionnement horizontale. Vous pouvez le faire glisser pour ajuster la taille d’une ligne et la colonne de volets simultanément.
 
@@ -140,4 +140,3 @@ Le `CView` classe utilise les commandes de haut niveau suivantes pour déléguer
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

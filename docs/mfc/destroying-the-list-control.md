@@ -5,12 +5,12 @@ helpviewer_keywords:
 - list controls [MFC], destroying
 - CListCtrl class [MFC], destroying controls
 ms.assetid: 513ec820-3a02-49d2-b073-a6a7a3fc91b3
-ms.openlocfilehash: 85089919ccb81003dad1eab439fa8a0d127fd9ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 963da9e6db2f0fe063dee1ca19ab23f545ed5e76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326710"
 ---
 # <a name="destroying-the-list-control"></a>Destruction du contrôle de liste
 
@@ -24,4 +24,3 @@ En outre, vous êtes responsable de la désallocation des listes d’images vous
 
 [Utilisation de CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

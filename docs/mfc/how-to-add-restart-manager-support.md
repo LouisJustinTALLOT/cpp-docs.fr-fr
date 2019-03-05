@@ -1,18 +1,18 @@
 ---
-title: 'Comment : ajouter la prise en charge du Gestionnaire de redémarrage'
+title: 'Procédure : Ajouter la prise en charge du Gestionnaire de redémarrage'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-ms.openlocfilehash: 77267cdad1fa976d73381ca798ca5002c09dc7ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23f860c43c63e3153f4b87f8eaf05d61709af82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565132"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279781"
 ---
-# <a name="how-to-add-restart-manager-support"></a>Comment : ajouter la prise en charge du Gestionnaire de redémarrage
+# <a name="how-to-add-restart-manager-support"></a>Procédure : Ajouter la prise en charge du Gestionnaire de redémarrage
 
 Le Gestionnaire de redémarrage est une fonctionnalité ajoutée à Visual Studio pour Windows Vista ou des systèmes d’exploitation ultérieurs. Le Gestionnaire de redémarrage prend en charge votre application, si elle se ferme ou redémarre de façon inattendue. Le comportement du Gestionnaire de redémarrage dépend du type de votre application. Si votre application est un éditeur de documents, le Gestionnaire de redémarrage permet à votre application d’enregistrer automatiquement l’état et le contenu des documents ouverts. Par ailleurs, il redémarre votre application après une fermeture inattendue. Si votre application n’est pas un éditeur de documents, le Gestionnaire de redémarrage la redémarre. Toutefois, il ne peut pas enregistrer l’état de l’application par défaut.
 
@@ -37,7 +37,7 @@ Par défaut, les applications MFC créées à l’aide de l’Assistant de proje
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
 ```
 
-1. Assurez-vous que la méthode `InitInstance` de votre application appelle sa méthode `InitInstance` parente : [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ou `CWinAppEx::InitInstance`. Le `InitInstance` (méthode) est chargée de vérifier la *m_dwRestartManagerSupportFlags* paramètre.
+1. Assurez-vous que le `InitInstance` méthode de votre application appelle son parent `InitInstance` méthode : [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ou `CWinAppEx::InitInstance`. Le `InitInstance` (méthode) est chargée de vérifier la *m_dwRestartManagerSupportFlags* paramètre.
 
 1. Compilez et exécutez votre application.
 
@@ -48,4 +48,3 @@ Par défaut, les applications MFC créées à l’aide de l’Assistant de proje
 [CWinApp, classe](../mfc/reference/cwinapp-class.md)<br/>
 [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)<br/>
 [CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
-

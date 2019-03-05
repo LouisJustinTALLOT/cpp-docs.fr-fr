@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 40c7d87e2dafa3c9b40e8ebda60b15a7b32709eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95a19b20e0acc4ae45a953eee5a1c4d2bfb3e9da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326723"
 ---
 # <a name="coledataobject-class"></a>COleDataObject, classe
 
@@ -84,7 +84,7 @@ Pour plus d’informations sur l’utilisation des objets de données dans votre
 
 `COleDataObject`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 
@@ -100,7 +100,7 @@ void Attach(
 
 ### <a name="parameters"></a>Paramètres
 
-*objet lpDataObject*<br/>
+*lpDataObject*<br/>
 Pointe vers un objet de données OLE.
 
 *bAutoRelease*<br/>

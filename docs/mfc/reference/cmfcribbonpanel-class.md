@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: a679ca48b054a545752483ff5349442e7c4a0ddd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505389"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305053"
 ---
 # <a name="cmfcribbonpanel-class"></a>Cmfcribbonpanel, classe
 
@@ -217,7 +217,7 @@ L’exemple suivant montre comment configurer un `CMFCRibbonPanel` objet à l’
 
 [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxRibbonPanel.h
 
@@ -296,7 +296,7 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Le nom du Panneau de ruban.
 
 *hIcon*<br/>
@@ -569,7 +569,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [out] Ce paramètre n’est pas utilisé.
 
 ### <a name="return-value"></a>Valeur de retour

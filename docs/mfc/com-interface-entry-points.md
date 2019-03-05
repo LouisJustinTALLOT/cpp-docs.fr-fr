@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: 0a8db9c6920b4223296f700d084e0b59b9b3ef15
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3c7b0067e66dfa8bc6f52bcd67637370f8c9a758
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521217"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288066"
 ---
 # <a name="com-interface-entry-points"></a>Interface COM, points d'entrée
 
@@ -44,4 +44,3 @@ Dans cette expression, *pointeur m_pModuleState* est supposé pour être une var
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion des données d’état des modules MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
-

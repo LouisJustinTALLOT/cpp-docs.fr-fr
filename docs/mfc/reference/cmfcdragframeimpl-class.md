@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 2769b52e03d8d3de14fdbf431279dd9226323b0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05b4426da6bee0443a407cff583f47bee60262e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640698"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301205"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Cmfcdragframeimpl, classe
 
@@ -34,7 +34,7 @@ Vous pouvez contrôler l’épaisseur de la faire glisser le rectangle en utilis
 
 [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdragframeimpl.h
 

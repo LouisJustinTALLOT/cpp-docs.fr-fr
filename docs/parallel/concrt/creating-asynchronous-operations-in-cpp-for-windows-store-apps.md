@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302271"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Création d’opérations asynchrones en C++ pour les applications UWP
 
@@ -37,7 +37,7 @@ L’utilisation de la programmation asynchrone est un composant clé dans le mod
 
 - [Création d'opérations asynchrones](#create-async)
 
-- [Exemple : Création d'un composant Windows Runtime C++](#example-component)
+- [Exemple : Création d’un composant d’exécution de Windows C++](#example-component)
 
 - [Contrôle du thread d'exécution](#exethread)
 
@@ -54,13 +54,13 @@ Le Runtime de Windows est une interface de programmation que vous pouvez utilise
 [Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
 Représente une opération asynchrone.
 
-[Windows::Foundation :: iasyncactionwithprogress\<TProgress >](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
+[Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
 Représente une action asynchrone qui rapporte la progression.
 
-[Windows::Foundation :: iasyncoperation\<TResult >](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
+[Windows::Foundation::IAsyncOperation\<TResult>](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
 Représente une opération asynchrone qui retourne une valeur.
 
-[Windows::Foundation :: iasyncoperationwithprogress\<TResult, TProgress >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
+[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
 Représente une opération asynchrone qui retourne un résultat et signale une progression.
 
 La notion d' *action* signifie que la tâche asynchrone ne produit pas de valeur (pensez à une fonction qui retourne `void`). La notion d' *opération* signifie que la tâche asynchrone produit une valeur. La notion de *progression* signifie que la tâche peut rapporter des messages de progression à l'appelant. JavaScript, .NET Framework et Visual C++ disposent chacun de leur propre façon de créer des instances de ces interfaces à utiliser dans le cadre d'ABI. Pour Visual C++, la bibliothèque de modèles parallèles fournit la fonction [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) . Cette fonction crée une opération qui représente l’achèvement d’une tâche ou une action asynchrone Windows Runtime. Le `create_async` fonction prend une fonction de travail (généralement une expression lambda), qu’il crée en interne un `task` objet et inclut cette tâche dans un des quatre interfaces asynchrones Windows Runtime.
@@ -70,7 +70,7 @@ La notion d' *action* signifie que la tâche asynchrone ne produit pas de valeur
 
 Le type de retour de `create_async` est déterminé par le type de ses arguments. Par exemple, si votre fonction de travail ne retourne pas de valeur et ne rapporte pas la progression, `create_async` renvoie `IAsyncAction`. Si votre fonction de travail ne renvoie pas de valeur et rapporte également la progression, `create_async` renvoie `IAsyncActionWithProgress`. Pour signaler la progression, utilisez un objet [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) comme paramètre de votre fonction de travail. La possibilité de signaler la progression vous permet de rapporter la quantité de travail qui a été effectuée et la quantité restante (par exemple sous forme d'un pourcentage). Elle vous permet également de rapporter les résultats à mesure qu'ils deviennent disponibles.
 
-Les interfaces `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`et `IAsyncActionOperationWithProgress<TProgress, TProgress>` fournissent chacune une méthode `Cancel` qui vous permet d'annuler l'opération asynchrone. La classe `task` fonctionne avec des jetons d'annulation. Lorsque vous utilisez un jeton d'annulation pour annuler un travail, le runtime ne démarre pas le nouveau processus qui souscrit à ce jeton. Un travail qui est déjà actif peut contrôler son jeton d'annulation et s'arrêter lorsqu'il peut. Ce mécanisme est décrit plus en détail dans le document [Cancellation in the PPL](cancellation-in-the-ppl.md). Vous pouvez vous connecter à l’annulation de tâche avec le Runtime Windows`Cancel` méthodes de deux manières. Tout d'abord, vous pouvez définir la fonction de travail que vous passez à `create_async` pour prendre un objet [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Lorsque la méthode `Cancel` est appelée, ce jeton d'annulation est annulé et les règles normales d'annulation s'appliquent à l'objet `task` sous-jacent qui prend en charge l'appel `create_async` . Si vous ne fournissez pas d'objet `cancellation_token` , l'objet `task` sous-jacent en définit un implicitement. Définissez un objet `cancellation_token` lorsque vous devez gérer de manière coopérative l'annulation dans votre fonction de travail. La section [exemple : contrôle de l’exécution dans une application de Runtime de Windows avec C++ et XAML](#example-app) montre un exemple montrant comment effectuer l’annulation dans une application de plateforme universelle Windows (UWP) avec c# et XAML qui utilise Windows Runtime C++ personnalisé composant.
+Les interfaces `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`et `IAsyncActionOperationWithProgress<TProgress, TProgress>` fournissent chacune une méthode `Cancel` qui vous permet d'annuler l'opération asynchrone. La classe `task` fonctionne avec des jetons d'annulation. Lorsque vous utilisez un jeton d'annulation pour annuler un travail, le runtime ne démarre pas le nouveau processus qui souscrit à ce jeton. Un travail qui est déjà actif peut contrôler son jeton d'annulation et s'arrêter lorsqu'il peut. Ce mécanisme est décrit plus en détail dans le document [Cancellation in the PPL](cancellation-in-the-ppl.md). Vous pouvez vous connecter à l’annulation de tâche avec le Runtime Windows`Cancel` méthodes de deux manières. Tout d'abord, vous pouvez définir la fonction de travail que vous passez à `create_async` pour prendre un objet [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Lorsque la méthode `Cancel` est appelée, ce jeton d'annulation est annulé et les règles normales d'annulation s'appliquent à l'objet `task` sous-jacent qui prend en charge l'appel `create_async` . Si vous ne fournissez pas d'objet `cancellation_token` , l'objet `task` sous-jacent en définit un implicitement. Définissez un objet `cancellation_token` lorsque vous devez gérer de manière coopérative l'annulation dans votre fonction de travail. La section [exemple : Contrôle de l’exécution dans une application de Runtime de Windows avec C++ et XAML](#example-app) montre un exemple montrant comment effectuer l’annulation dans une application de plateforme universelle Windows (UWP) avec C# et XAML qui utilise un composant Windows Runtime C++ personnalisé.
 
 > [!WARNING]
 >  Dans une chaîne de continuations de tâches, nettoyez toujours l'état, puis appelez [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) quand le jeton d'annulation est annulé. Si vous utilisez la méthode du retour rapide au lieu d'appeler `cancel_current_task`, l'opération passe à l'état Terminé au lieu de l'état Annulé.
@@ -90,7 +90,7 @@ L’exemple suivant montre les différentes façons de créer un `IAsyncAction` 
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-##  <a name="example-component"></a> Exemple : créer un composant Windows Runtime C++ et le consommer à partir de C#
+##  <a name="example-component"></a> Exemple : Création d’un composant d’exécution de Windows C++ et le consommer à partir deC#
 
 Imaginez une application qui utilise XAML et c# pour définir l’interface utilisateur et un composant C++ Windows Runtime pour effectuer des opérations de calcul intensif. Dans cet exemple, le composant C++ calcule les nombres premiers inclus dans un intervalle donné. Pour illustrer les différences entre les quatre interfaces de tâche asynchrone Windows Runtime, Démarrer, dans Visual Studio, en créant un **nouvelle Solution** et nommez-le `Primes`. Ajoutez ensuite à la solution un projet **Composant Windows Runtime** et nommez-le `PrimesLibrary`. Ajoutez le code suivant au fichier d'en-tête généré en C++ (cet exemple renomme Class1.h en Primes.h). Chaque méthode `public` définit une des quatre interfaces asynchrones. Les méthodes qui retournent une valeur retournent un [Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) objet. Les méthodes qui signalent la progression génèrent des valeurs `double` qui définissent le pourcentage de travail global effectué.
 

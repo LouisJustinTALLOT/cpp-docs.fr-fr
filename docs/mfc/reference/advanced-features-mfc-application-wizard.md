@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694294"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278221"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Fonctionnalités avancées, Assistant Application MFC
 
@@ -21,7 +21,7 @@ La rubrique répertorie les options de fonctionnalités supplémentaires de l’
 
    Génère un ensemble de fichiers d’aide pour l’aide contextuelle, disponible à l’aide F1 et un menu d’aide, ou en cliquant sur un **aide** bouton sur une boîte de dialogue. La prise en charge de l'aide nécessite le compilateur d'aide. Si vous n'en disposez pas, vous pouvez l'installer en exécutant à nouveau le programme d'installation.
 
-   Consultez [aide HTML : aide contextuelle pour vos programmes](../../mfc/html-help-context-sensitive-help-for-your-programs.md) et [fichiers d’aide (aide HTML)](../../ide/help-files-html-help.md) pour plus d’informations.
+   Consultez [aide HTML : Aide contextuelle pour vos programmes](../../mfc/html-help-context-sensitive-help-for-your-programs.md) et [fichiers d’aide (aide HTML)](../../ide/help-files-html-help.md) pour plus d’informations.
 
 - **Impression et Aperçu avant impression**
 
@@ -49,7 +49,7 @@ La rubrique répertorie les options de fonctionnalités supplémentaires de l’
 
 - **Manifeste des contrôles communs**
 
-   Activé par défaut. Génère un manifeste d'application qui active la DLL de contrôles communs incluse dans Microsoft Windows XP et des systèmes d'exploitation plus récents.
+   Activé par défaut. Génère un manifeste d’application qui active la DLL de contrôles communs incluse dans Microsoft Windows XP et des systèmes d’exploitation plus récents.
 
    La version 6 de la DLL de contrôles communs ne met pas automatiquement à jour la version précédente des contrôles communs utilisée par vos applications existantes. Pour utiliser la version 6 de la DLL de contrôles communs, vous devez créer un manifeste d'application qui commande à votre application de charger la DLL. Cette DLL de contrôles communs prend également en charge les thèmes Windows XP.
 
@@ -57,7 +57,7 @@ La rubrique répertorie les options de fonctionnalités supplémentaires de l’
 
 - **Prise en charge le Gestionnaire de redémarrage**
 
-   Ajoute la prise en charge pour le [Gestionnaire de redémarrage de Windows](/windows/desktop/RstMgr/using-restart-manager). Cette vidéo montre comment utiliser le Gestionnaire de redémarrage depuis MFC : [comment faire pour utiliser le nouveau Restart Manager](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
+   Ajoute la prise en charge pour le [Gestionnaire de redémarrage de Windows](/windows/desktop/RstMgr/using-restart-manager). Cette vidéo montre comment utiliser le Gestionnaire de redémarrage depuis MFC : [Comment faire Utilisez le nouveau gestionnaire de redémarrage](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Fenêtres frames avancées**
 
@@ -76,4 +76,3 @@ La rubrique répertorie les options de fonctionnalités supplémentaires de l’
 ## <a name="see-also"></a>Voir aussi
 
 [Assistant Application MFC](../../mfc/reference/mfc-application-wizard.md)
-

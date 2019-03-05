@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: e9f083f37c2e92172b05b907d733f9dbdb27ce45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559742"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275959"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows, classe
 
@@ -268,7 +268,7 @@ L’exemple suivant montre comment utiliser `CMFCVisualManagerWindows`. Cet extr
 
 [CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxvisualmanagerwindows.h
 
@@ -426,7 +426,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 ### <a name="parameters"></a>Paramètres
 
 [in] *pButton*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -549,7 +549,7 @@ virtual BOOL OnDrawBrowseButton(
 [in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pEdit*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 [in] *clrText*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
@@ -571,7 +571,7 @@ virtual void OnDrawButtonBorder(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Notes
 
@@ -591,7 +591,7 @@ virtual void OnDrawButtonSeparator(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 [in] *bHorz*<br/>
 
 ### <a name="remarks"></a>Notes
@@ -1336,7 +1336,7 @@ virtual void OnFillButtonInterior(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *état*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Notes
 

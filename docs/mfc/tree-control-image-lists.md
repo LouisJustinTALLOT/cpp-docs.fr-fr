@@ -1,19 +1,19 @@
 ---
-title: Listes d’images de contrôle d’arborescence
+title: Listes d'images de contrôle d'arborescence
 ms.date: 11/04/2016
 helpviewer_keywords:
 - images [MFC], lists in tree controls
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-ms.openlocfilehash: e42e601fbf803f8ccfe359a10664149ac8f11086
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f4dc4f0d7b2cfb78b07b23802054f119da9cbbc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290675"
 ---
-# <a name="tree-control-image-lists"></a>Listes d’images de contrôle d’arborescence
+# <a name="tree-control-image-lists"></a>Listes d'images de contrôle d'arborescence
 
 Chaque élément dans un contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) peut avoir une paire d’images bitmap, il est associé. Les images apparaissent à gauche de l'étiquette d'un élément. Une image est affichée lorsque l'élément est sélectionné, et l'autre est affichée lorsque l'élément n'est pas sélectionné. Par exemple, un élément peut afficher un dossier ouvert lorsqu’il est sélectionné et un dossier fermé lorsqu’il ne l’est pas.
 
@@ -31,4 +31,3 @@ Le [GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) fonction mem
 
 [Utilisation de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

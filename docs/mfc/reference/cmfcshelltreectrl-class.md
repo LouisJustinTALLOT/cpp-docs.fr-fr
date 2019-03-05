@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: cf7e5f9c9b44524491737b27098bc91bb472cb32
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3fa829c5333a87d908d36438fe8ffcd253f9fb5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279989"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl, classe
 
@@ -80,7 +80,7 @@ Cette classe étend la `CTreeCtrl` classe en activant votre programme inclure le
 
 `CMFCShellTreeCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxshelltreeCtrl.h
 
@@ -101,7 +101,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Valeur booléenne qui spécifie s’il faut activer le menu contextuel.
 
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags

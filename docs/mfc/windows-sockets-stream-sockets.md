@@ -1,19 +1,19 @@
 ---
-title: 'Windows Sockets : sockets flux'
+title: 'Windows Sockets : Sockets de Stream'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], stream sockets
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-ms.openlocfilehash: 298428bd5e81d11eb62907dfbac39acda24524f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560223"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271292"
 ---
-# <a name="windows-sockets-stream-sockets"></a>Windows Sockets : sockets flux
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets : Sockets de Stream
 
 Cet article décrit les flux de sockets, l'un des deux types de Windows Socket disponibles. (L’autre type est le [socket datagramme](../mfc/windows-sockets-datagram-sockets.md).)
 
@@ -43,5 +43,4 @@ L'utilisation de sockets de flux peut être supérieure aux applications conçue
 ## <a name="see-also"></a>Voir aussi
 
 [Windows Sockets dans MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[Windows Sockets : arrière-plan](../mfc/windows-sockets-background.md)
-
+[Windows Sockets : En arrière-plan](../mfc/windows-sockets-background.md)

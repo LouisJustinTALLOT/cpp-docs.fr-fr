@@ -1,17 +1,17 @@
 ---
-title: Meilleures pratiques en général du runtime d'accès concurrentiel
+title: Meilleures pratiques en général du runtime d’accès concurrentiel
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647693"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285605"
 ---
-# <a name="general-best-practices-in-the-concurrency-runtime"></a>Meilleures pratiques en général du runtime d'accès concurrentiel
+# <a name="general-best-practices-in-the-concurrency-runtime"></a>Meilleures pratiques en général du runtime d’accès concurrentiel
 
 Ce document décrit les meilleures pratiques qui s’appliquent à plusieurs zones du Runtime d’accès concurrentiel.
 
@@ -49,7 +49,7 @@ L’exemple suivant effectue des tâches plus que le nombre de ressources de tra
 
 Cet exemple génère la sortie suivante :
 
-1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
+1 : 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
 
 Il existe plusieurs façons d’activer la coopération entre les deux tâches. La première consiste à céder occasionnellement au planificateur de tâches dans une tâche à long terme. L’exemple suivant modifie le `task` fonction à appeler le [Concurrency::Context :: yield](reference/context-class.md#yield) méthode à céder l’exécution au planificateur de tâches afin qu’une autre tâche peut s’exécuter.
 
@@ -84,7 +84,7 @@ Considérez la fonction suivante, `download`, qui télécharge le fichier à l�
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-Étant donné que le `GetHttpFile` fonction effectue une opération potentiellement latente, le surabonnement peut permettre d’autres tâches à exécuter la tâche en cours attend des données. Pour obtenir la version complète de cet exemple, consultez [Comment : le surabonnement utilisez à la latence du décalage](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Étant donné que le `GetHttpFile` fonction effectue une opération potentiellement latente, le surabonnement peut permettre d’autres tâches à exécuter la tâche en cours attend des données. Pour obtenir la version complète de cet exemple, consultez [Comment : Utiliser le surabonnement pour compenser la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Haut](#top)]
 
@@ -92,7 +92,7 @@ Considérez la fonction suivante, `download`, qui télécharge le fichier à l�
 
 Utilisez les fonctions de gestion de mémoire, [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) et [concurrency::Free](reference/concurrency-namespace-functions.md#free), lorsque vous avez des tâches affinées qui allouent fréquemment des petits objets qui ont une durée de vie relativement courte. Le Runtime d’accès concurrentiel maintient un cache de mémoire distincts pour chaque thread en cours d’exécution. Le `Alloc` et `Free` fonctions allouent et libèrent la mémoire à partir de ces caches sans utiliser de verrous ou de barrières de mémoire.
 
-Pour plus d’informations sur ces fonctions de gestion de mémoire, consultez [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Pour obtenir un exemple qui utilise ces fonctions, consultez [Comment : utiliser Alloc et Free pour améliorer les performances de mémoire](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Pour plus d’informations sur ces fonctions de gestion de mémoire, consultez [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Pour obtenir un exemple qui utilise ces fonctions, consultez [Comment : Utiliser Alloc et Free pour améliorer les performances de la mémoire](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
 [[Haut](#top)]
 
@@ -124,7 +124,7 @@ Error details:
     negative balance: -76
 ```
 
-Pour obtenir des exemples supplémentaires qui utilisent le modèle RAII pour gérer la durée de vie des objets d’accès concurrentiel, consultez [procédure pas à pas : suppression de travail d’un Thread d’Interface utilisateur](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [Comment : utiliser la classe Context pour implémenter une coopérative Sémaphore](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), et [Comment : utiliser le surabonnement pour compenser la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Pour obtenir des exemples supplémentaires qui utilisent le modèle RAII pour gérer la durée de vie des objets d’accès concurrentiel, consultez [procédure pas à pas : Suppression de travail d’un Thread d’Interface utilisateur](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [Comment : Utiliser la classe Context pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), et [Comment : Utiliser le surabonnement pour compenser la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Haut](#top)]
 
@@ -156,9 +156,9 @@ Le Runtime d’accès concurrentiel ne prend pas en charge l’utilisation d’o
 [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md)<br/>
 [Comparaison des structures de données de synchronisation avec l’API Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)<br/>
-[Guide pratique pour utiliser Alloc et Free pour améliorer les performances de la mémoire](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
-[Guide pratique pour utiliser le surabonnement pour compenser la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
-[Guide pratique pour utiliser la classe Context pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
+[Guide pratique pour utiliser Alloc et Free afin d’améliorer les performances de la mémoire](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
+[Guide pratique pour utiliser le surabonnement afin de compenser la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
+[Guide pratique pour utiliser la classe de contexte pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
 [Procédure pas à pas : suppression de travail d’un thread d’interface utilisateur](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 [Bonnes pratiques de la Bibliothèque de modèles parallèles](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Bonnes pratiques pour la bibliothèque d’agents asynchrones](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)

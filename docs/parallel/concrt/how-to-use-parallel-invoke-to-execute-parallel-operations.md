@@ -1,18 +1,18 @@
 ---
-title: 'Comment : utiliser parallel_invoke pour exécuter des opérations parallèles'
+title: 'Procédure : Utiliser parallel_invoke pour exécuter des opérations parallèles'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-ms.openlocfilehash: 2d4cd19a3cbb02b9c18b1733f8df6f64eb956803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d618b5f202c6aaf454a60f4f37211d9000600562
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473682"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293522"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Comment : utiliser parallel_invoke pour exécuter des opérations parallèles
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Procédure : Utiliser parallel_invoke pour exécuter des opérations parallèles
 
 Cet exemple montre comment utiliser le [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorithme pour améliorer les performances d’un programme qui effectue plusieurs opérations sur une source de données partagée. Car aucune opération de modifie la source, elles peuvent être exécutées en parallèle d’une manière simple.
 
@@ -68,16 +68,15 @@ Cet exemple utilise le `parallel_invoke` algorithme pour appeler plusieurs fonct
 
 Étant donné que cet exemple effectue les trois tâches en parallèle, vous ne devriez pas les performances à l’échelle sur les ordinateurs dotés de processeurs plus de trois. Pour améliorer les performances de plus, vous pouvez diviser les tâches d’exécution la plus longue en tâches plus petites et exécuter ces tâches en parallèle.
 
-Vous pouvez utiliser la `parallel_invoke` algorithme au lieu du [concurrency::task_group](reference/task-group-class.md) et [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) classes si vous n’avez pas besoin de prise en charge l’annulation. Pour obtenir un exemple qui compare l’utilisation de la `parallel_invoke` algorithme par rapport à des groupes de tâches, consultez [Comment : utiliser parallel_invoke pour écrire une Routine de tri parallèle](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md).
+Vous pouvez utiliser la `parallel_invoke` algorithme au lieu du [concurrency::task_group](reference/task-group-class.md) et [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) classes si vous n’avez pas besoin de prise en charge l’annulation. Pour obtenir un exemple qui compare l’utilisation de la `parallel_invoke` algorithme par rapport à des groupes de tâches, consultez [Comment : Utiliser parallel_invoke pour écrire une Routine de tri parallèle](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md).
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
 Pour compiler le code, copiez-le et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `parallel-word-mining.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-**CL.exe /EHsc /MD/DUNICODE /D_AFXDLL parallèle-word-Mining.cpp**
+**cl.exe /EHsc /MD /DUNICODE /D_AFXDLL parallel-word-mining.cpp**
 
 ## <a name="see-also"></a>Voir aussi
 
 [Algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_invoke, fonction](reference/concurrency-namespace-functions.md#parallel_invoke)
-

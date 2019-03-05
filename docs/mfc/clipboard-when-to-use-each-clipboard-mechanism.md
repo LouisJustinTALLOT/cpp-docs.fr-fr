@@ -1,5 +1,5 @@
 ---
-title: 'Presse-papiers : quand utiliser chaque mécanisme de Presse-papiers'
+title: 'Presse-papiers : Quand utiliser chaque mécanisme de Presse-papiers'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], Clipboard
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - formats [MFC], Clipboard for OLE
 - Clipboard [MFC], formats
 ms.assetid: fd071996-ef8c-488b-81bd-89057095a201
-ms.openlocfilehash: 69d033199b1cfec77c05bf8d457e8398d11aa457
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f92a9a29da7f417d5ea5860c18e6ae1d9b20a05e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562004"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296512"
 ---
-# <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Presse-papiers : quand utiliser chaque mécanisme de Presse-papiers
+# <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Presse-papiers : Quand utiliser chaque mécanisme de Presse-papiers
 
 Suivez ces instructions dans l’utilisation du Presse-papiers :
 
@@ -35,4 +35,3 @@ Suivez ces instructions dans l’utilisation du Presse-papiers :
 ## <a name="see-also"></a>Voir aussi
 
 [Presse-papiers](../mfc/clipboard.md)
-

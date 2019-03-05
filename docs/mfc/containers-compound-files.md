@@ -1,5 +1,5 @@
 ---
-title: 'Conteneurs : fichiers composés'
+title: 'Conteneurs : Fichiers composés'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compound files [MFC]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 5a8ba0821d92ab41a4b95fb7b2a26da63c1df285
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643264"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326614"
 ---
-# <a name="containers-compound-files"></a>Conteneurs : fichiers composés
+# <a name="containers-compound-files"></a>Conteneurs : Fichiers composés
 
 Cet article décrit les composants et l'implémentation des fichiers composés, ainsi que les avantages et les inconvénients liés à l'utilisation de fichiers composés dans vos applications OLE.
 
@@ -58,15 +58,15 @@ L'accès incrémentiel aux fichiers est un avantage automatique de l'utilisation
 
 ###  <a name="_core_file_access_modes"></a> Modes d’accès de fichier
 
-Pouvoir déterminer quand les modifications apportées aux objets d’un fichier composé sont validées sur le disque est un autre avantage des fichiers composés. Le mode selon lequel les fichiers sont accessibles, soit de manière directe soit après traitement, détermine le moment où les modifications sont validées.
+Pouvoir déterminer quand les modifications apportées aux objets d'un fichier composé sont validées sur le disque est un autre avantage des fichiers composés. Le mode selon lequel les fichiers sont accessibles, soit de manière directe soit après traitement, détermine le moment où les modifications sont validées.
 
-- Le mode de traitement utilise une opération de validation en deux phases pour modifier les objets dans un fichier composé, en gardant ainsi disponibles les copies anciennes et nouvelles du document jusqu'à ce que l'utilisateur choisisse soit d'enregistrer soit d'annuler les modifications.
+- Le mode de traitement utilise une opération de validation en deux phases pour modifier les objets dans un fichier composé, en gardant ainsi disponibles les copies anciennes et nouvelles du document jusqu’à ce que l’utilisateur choisisse soit d’enregistrer soit d’annuler les modifications.
 
 - Le mode direct intègre les modifications apportées au document à mesure qu'elles sont effectuées, sans possibilité de les annuler ultérieurement.
 
 Pour plus d’informations sur les modes d’accès, consultez le *référence du programmeur OLE*.
 
-###  <a name="_core_standardization"></a> Normalisation
+###  <a name="_core_standardization"></a> Standardization
 
 La structure standardisée des fichiers composés permet aux applications OLE de parcourir les fichiers composés créés par votre application OLE sans savoir quelle application a réellement créé le fichier.
 
@@ -85,6 +85,6 @@ Dans le *référence du programmeur OLE*, consultez [IStream](/windows/desktop/a
 ## <a name="see-also"></a>Voir aussi
 
 [Conteneurs](../mfc/containers.md)<br/>
-[Conteneurs : problèmes d’interface utilisateur](../mfc/containers-user-interface-issues.md)<br/>
+[Conteneurs : Problèmes d’Interface utilisateur](../mfc/containers-user-interface-issues.md)<br/>
 [COleStreamFile, classe](../mfc/reference/colestreamfile-class.md)<br/>
 [COleDocument, classe](../mfc/reference/coledocument-class.md)

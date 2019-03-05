@@ -20,12 +20,12 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-ms.openlocfilehash: b7ae6488357239b4936b57764b798c625253998f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73cfe83075b9595bc98ca05ab2ec2e1771a038d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271968"
 ---
 # <a name="idataobjectimpl-class"></a>Idataobjectimpl, classe
 
@@ -79,7 +79,7 @@ Classe `IDataObjectImpl` fournit une implémentation par défaut de `IDataObject
 
 `IDataObjectImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl.h
 
@@ -147,7 +147,7 @@ Consultez [IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-ida
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ##  <a name="firedatachange"></a>  IDataObjectImpl::FireDataChange
 
@@ -171,7 +171,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 
@@ -205,7 +205,7 @@ HRESULT GetDataHere(
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 
@@ -221,7 +221,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 
@@ -240,7 +240,7 @@ HRESULT SetData(
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 

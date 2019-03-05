@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-ms.openlocfilehash: 9e60eb773573142d0a4498c42a98f6e9c4c49a7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532598"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280461"
 ---
 # <a name="cwintraits-class"></a>CWinTraits, classe
 
@@ -64,15 +64,15 @@ ATL fournit trois spécialisations prédéfinies de ce modèle pour des combinai
 
 - `CFrameWinTraits`
 
-   Conçu pour une fenêtre frame standard. Incluent les styles standards utilisées : WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Incluent les styles étendus utilisés : WS_EX_APPWINDOW et WS_EX_WINDOWEDGE.
+   Conçu pour une fenêtre frame standard. Les styles standards utilisés sont les suivantes : WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Les styles étendus utilisés sont les suivantes : WS_EX_APPWINDOW et WS_EX_WINDOWEDGE.
 
 - `CMDIChildWinTraits`
 
-   Conçu pour une fenêtre enfant MDI standard. Incluent les styles standards utilisées : WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Incluent les styles étendus utilisés : WS_EX_MDICHILD.
+   Conçu pour une fenêtre enfant MDI standard. Les styles standards utilisés sont les suivantes : WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN et WS_CLIPSIBLINGS. Les styles étendus utilisés sont les suivantes : WS_EX_MDICHILD.
 
 Si vous souhaitez vous assurer que certains styles sont définis pour toutes les instances de la classe de fenêtre tout en autorisant d’autres styles à définir sur une base par instance, utilisez [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) à la place.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin.h
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - registry, ATL services entries
 - registry, application IDs
 ms.assetid: 881989b7-61bb-459a-a13e-3bfcb33e184e
-ms.openlocfilehash: b61aae9ba9316dded1dcb11353e52eb2fffd49a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a89bc5d510d493f557b7ea74b8eabe5dfd87ac1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472876"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261934"
 ---
 # <a name="registry-entries"></a>Entrées de Registre
 
@@ -27,4 +27,3 @@ N’importe quel service DCOM doit également créer une autre clé sous `HKEY_C
 ## <a name="see-also"></a>Voir aussi
 
 [Services](../atl/atl-services.md)
-

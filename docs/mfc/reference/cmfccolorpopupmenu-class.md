@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: a3bb6f4d2926f07f61891656613c06e5690c9099
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491453"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283395"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Cmfccolorpopupmenu, classe
 
@@ -81,7 +81,7 @@ Pour plus d’informations sur `CMFCColorBar`, consultez [cmfccolorbar, classe](
 
 [CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcolorpopupmenu.h
 
@@ -127,10 +127,10 @@ CMFCColorPopupMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleurs*<br/>
+*colors*<br/>
 [in] Un tableau de couleurs affichée par l’infrastructure dans le menu contextuel.
 
-*Couleur*<br/>
+*color*<br/>
 [in] La couleur sélectionnée par défaut.
 
 *lpszAutoColor*<br/>
@@ -158,7 +158,7 @@ L’étiquette du bouton autre standard est **couleurs supplémentaires...** .
 *nVertDockColumns*<br/>
 [in] Le nombre de colonnes possédant la barre de couleur lorsqu’il est ancré verticalement.
 
-*automatiqueCouleur*<br/>
+*colorAutomatic*<br/>
 [in] La couleur par défaut que le framework s’applique lorsque vous cliquez sur le bouton automatique.
 
 *uiCommandID*<br/>
@@ -201,7 +201,7 @@ virtual CPane* CreateTearOffBar(
 |Paramètre|Description|
 |*pWndMain*|[in] Pointeur vers la fenêtre parente de la barre détachable.|
 |*uiID*|[in] L’ID de commande de la barre détachable.|
-|*Caractère*|[in] Le texte de la fenêtre de la barre détachable.|
+|*lpszName*|[in] Le texte de la fenêtre de la barre détachable.|
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: 8bf85c32093051b124d007a04eed2bbf10a56039
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4845093d3343e899a18c707846145c2630d7ac1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261490"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 
-DCOMCNFG est un utilitaire de Windows NT 4.0 qui vous permet de configurer différents paramètres spécifiques DCOM dans le Registre. La fenêtre DCOMCNFG comporte trois pages : sécurité par défaut, les propriétés par défaut et les Applications. Sous Windows 2000, une quatrième page, protocoles par défaut, est présente.
+DCOMCNFG est un utilitaire de Windows NT 4.0 qui vous permet de configurer différents paramètres spécifiques DCOM dans le Registre. La fenêtre DCOMCNFG comporte trois pages : Sécurité par défaut, les propriétés par défaut et les Applications. Sous Windows 2000, une quatrième page, protocoles par défaut, est présente.
 
 ## <a name="default-security-page"></a>Page de sécurité par défaut
 
-Vous pouvez utiliser la page de sécurité par défaut pour spécifier les autorisations par défaut pour les objets sur le système. La page de sécurité par défaut comprend trois sections : accès, de démarrage et de Configuration. Pour modifier les valeurs par défaut d’une section, cliquez sur le correspondant **modifier la valeur par défaut** bouton. Ces paramètres de sécurité par défaut sont stockés dans le Registre sous `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
+Vous pouvez utiliser la page de sécurité par défaut pour spécifier les autorisations par défaut pour les objets sur le système. La page de sécurité par défaut comprend trois sections : Accès, Launch et Configuration. Pour modifier les valeurs par défaut d’une section, cliquez sur le correspondant **modifier la valeur par défaut** bouton. Ces paramètres de sécurité par défaut sont stockés dans le Registre sous `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
 
 ## <a name="default-protocols-page"></a>Page de protocoles par défaut
 
@@ -47,4 +47,3 @@ Vous modifiez les paramètres pour un objet particulier avec la page Application
 ## <a name="see-also"></a>Voir aussi
 
 [Services](../atl/atl-services.md)
-

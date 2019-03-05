@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: f0a55fa9cb431900a0454d481a77efc4e63372ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7901619110652423a2ab00d8088d6b9213fe202
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644832"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266274"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton (classe)
 
@@ -108,7 +108,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxribboncolorbutton.h
 
@@ -125,7 +125,7 @@ void AddColorsGroup(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Le nom du groupe.
 
 *lstColors*<br/>
@@ -171,7 +171,7 @@ CMFCRibbonColorButton(
 *nSmallImageIndex*<br/>
 [in] Index de base zéro de la petite image à afficher sur le bouton.
 
-*Couleur*<br/>
+*color*<br/>
 [in] La couleur du bouton (par défaut, noir).
 
 *bSimpleButtonLook*<br/>
@@ -203,10 +203,10 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] L’étiquette pour le **automatique** bouton.
 
-*automatiqueCouleur*<br/>
+*colorAutomatic*<br/>
 [in] Une valeur RVB qui spécifie le **automatique** couleur de par défaut du bouton.
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE si le **automatique** bouton est activé ; FALSE si elle est désactivée.
 
 *lpszToolTip*<br/>
@@ -324,7 +324,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 [in] Une couleur à définir.
 
 ##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize
@@ -352,7 +352,7 @@ static void __stdcall SetColorName(
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 [in] La valeur RVB d’une couleur.
 
 *strName*<br/>
@@ -420,7 +420,7 @@ void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 [in] Une couleur sélectionnée par l’utilisateur.
 
 ### <a name="remarks"></a>Notes

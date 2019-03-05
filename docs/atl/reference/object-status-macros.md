@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::DECLARE_OLEMISC_STATUS
 ms.assetid: 727dbef2-a342-4157-9d64-a421805d9747
-ms.openlocfilehash: 9c4df80b2b9828077ec3738bc296f19aadf2df68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb5ff6d7570b03b32852fc450f58043446f721f4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267262"
 ---
 # <a name="object-status-macros"></a>Macros d’état d’objet
 
@@ -19,7 +19,7 @@ Cette macro définit des indicateurs qui appartiennent à des contrôles ActiveX
 |-|-|
 |[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Utilisé dans les contrôles ActiveX ATL pour définir les indicateurs OLEMISC.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -33,7 +33,7 @@ DECLARE_OLEMISC_STATUS( miscstatus )
 
 ### <a name="parameters"></a>Paramètres
 
-*MiscStatus*<br/>
+*miscstatus*<br/>
 Indicateurs OLEMISC tout applicables.
 
 ### <a name="remarks"></a>Notes

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: 224ce79094b174d0bd011bd89afbcfe6fb7735d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585913"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288998"
 ---
 # <a name="cdaoexception-class"></a>CDaoException, classe
 
@@ -81,7 +81,7 @@ Pour plus d’informations sur la gestion des exceptions en général, ou sur `C
 
 `CDaoException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 
@@ -191,7 +191,7 @@ Contient un pointeur vers un `CDaoErrorInfo` structure qui fournit des informati
 
 Cet objet contient les informations suivantes :
 
-|Membre de l’objet CDaoErrorInfo|Information|Signification|
+|CDaoErrorInfo member|Information|Signification|
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|Code d'erreur|Le code d’erreur DAO|
 |`m_strSource`|Source|Le nom de l’objet ou l’application qui a généré l’erreur|

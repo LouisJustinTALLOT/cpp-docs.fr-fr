@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 57c054915ce98dd8cff6bb772cdd40f4b0f2b768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299554"
 ---
 # <a name="ccomobject-class"></a>CComObject, classe
 
@@ -32,7 +32,7 @@ class CComObject : public Base
 
 #### <a name="parameters"></a>Paramètres
 
-*base de*<br/>
+*Base*<br/>
 Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge sur l’objet.
 
 ## <a name="members"></a>Membres
@@ -65,7 +65,7 @@ Pour plus d’informations sur l’utilisation de `CComObject`, consultez l’ar
 
 `CComObject`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -122,7 +122,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Paramètres
 
-*PP*<br/>
+*pp*<br/>
 [out] Un pointeur vers un **CComObject <** `Base` **>** pointeur. Si `CreateInstance` échoue, *pp* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -153,13 +153,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] L’identificateur de l’interface demandée.
 
 *ppvObject*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par *iid*. Si l’objet ne prend pas en charge cette interface, *ppvObject* est définie sur NULL.
 
-*PP*<br/>
+*pp*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par le type `Q`. Si l’objet ne prend pas en charge cette interface, *pp* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour

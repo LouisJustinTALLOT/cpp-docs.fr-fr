@@ -7,12 +7,12 @@ helpviewer_keywords:
 - relationships, MFC objects
 - MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
-ms.openlocfilehash: c02cf723ee7711ec1bfe00841c90bbde8c260ac1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8d1fcd9737b33d52038746a26f4e1bd1043e95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585508"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276967"
 ---
 # <a name="relationships-among-mfc-objects"></a>Relations entre les objets MFC
 
@@ -37,7 +37,7 @@ Ces relations sont établies lors de la création de document/vue. Le tableau su
 |À partir de l'objet|Comment accéder à d'autres objets|
 |-----------------|---------------------------------|
 |Document|Utilisez [GetFirstViewPosition](../mfc/reference/cdocument-class.md#getfirstviewposition) et [GetNextView](../mfc/reference/cdocument-class.md#getnextview) pour accéder à la liste d’affichage du document.<br /><br /> Appelez [GetDocTemplate](../mfc/reference/cdocument-class.md#getdoctemplate) pour obtenir le modèle de document.|
-|Affichage|Appelez [GetDocument](../mfc/reference/cview-class.md#getdocument) pour obtenir le document.<br /><br /> Appelez [GetParentFrame](../mfc/reference/cwnd-class.md#getparentframe) pour obtenir la fenêtre frame.|
+|Vue|Appelez [GetDocument](../mfc/reference/cview-class.md#getdocument) pour obtenir le document.<br /><br /> Appelez [GetParentFrame](../mfc/reference/cwnd-class.md#getparentframe) pour obtenir la fenêtre frame.|
 |Fenêtre frame de document|Appelez [GetActiveView](../mfc/reference/cframewnd-class.md#getactiveview) pour obtenir la vue actuelle.<br /><br /> Appelez [GetActiveDocument](../mfc/reference/cframewnd-class.md#getactivedocument) pour obtenir le document associé à la vue actuelle.|
 |Fenêtre frame MDI|Appelez [MDIGetActive](../mfc/reference/cmdiframewnd-class.md#mdigetactive) pour obtenir les actuellement actifs [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).|
 
@@ -52,4 +52,3 @@ En général, une fenêtre frame ne présente qu'une seule vue, mais dans certai
 [Création de modèle de document](../mfc/document-template-creation.md)<br/>
 [Création d’un document/vue](../mfc/document-view-creation.md)<br/>
 [Création de documents, fenêtres et vues](../mfc/creating-new-documents-windows-and-views.md)
-

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: d6e45613e0b412b6b94dba3c4a435115e32c7d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438218"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295238"
 ---
 # <a name="messageprocessor-class"></a>message_processor, classe
 
@@ -48,7 +48,7 @@ Le type de données de la charge utile dans les messages gérés par cet `messag
 |----------|-----------------|
 |[async_send](#async_send)|En cas de substitution dans une classe dérivée, place de façon asynchrone des messages dans le bloc.|
 |[sync_send](#sync_send)|En cas de substitution dans une classe dérivée, place de façon synchrone des messages dans le bloc.|
-|[attente](#wait)|En cas de substitution dans une classe dérivée, attend que toutes les opérations asynchrones se termine.|
+|[wait](#wait)|En cas de substitution dans une classe dérivée, attend que toutes les opérations asynchrones se termine.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
@@ -60,7 +60,7 @@ Le type de données de la charge utile dans les messages gérés par cet `messag
 
 `message_processor`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 

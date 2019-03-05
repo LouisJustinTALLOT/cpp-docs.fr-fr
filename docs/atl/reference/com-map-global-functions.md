@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-ms.openlocfilehash: 9f3f5e1c5ec1d845962783b8768404a89727edc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75d081674fa4b63e66f1296834d3de305665ab9a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458784"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271617"
 ---
 # <a name="com-map-global-functions"></a>Fonctions globales de mappage COM
 
@@ -23,7 +23,7 @@ Ces fonctions prennent en charge pour le mappage COM `IUnknown` implémentations
 |[AtlInternalQueryInterface](#atlinternalqueryinterface)|Délègue à la `IUnknown` d’un objet non regroupées en agrégats.|
 |[InlineIsEqualIUnknown](#inlineisequaliunknown)|Génère un code efficace pour la comparaison des interfaces à `IUnknown`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -47,7 +47,7 @@ HRESULT AtlInternalQueryInterface(
 *pEntries*<br/>
 [in] Un tableau de `_ATL_INTMAP_ENTRY` structures qui accèdent à une carte des interfaces disponibles.
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface demandée.
 
 *ppvObject*<br/>

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
-ms.openlocfilehash: f440476db3618c24f0fd1cfbfe028c959517a607
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1da5037deb0143c6d05009baccc8c1553616028
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288187"
 ---
 # <a name="catltemporaryfile-class"></a>Catltemporaryfile, classe
 
@@ -49,7 +49,7 @@ class CAtlTemporaryFile
 |Nom|Description|
 |----------|-----------------|
 |[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|Constructeur.|
-|[CAtlTemporaryFile :: ~ CAtlTemporaryFile](#dtor)|Destructeur.|
+|[CAtlTemporaryFile::~CAtlTemporaryFile](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -80,7 +80,7 @@ class CAtlTemporaryFile
 
 `CAtlTemporaryFile` rend plus facile créer et utiliser un fichier temporaire. Le fichier est automatiquement nommé ouvert, fermé et supprimé. Si le contenu du fichier est nécessaire une fois que le fichier est fermé, ils peuvent être enregistrés dans un nouveau fichier avec un nom spécifié.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlfile.h
 
@@ -104,7 +104,7 @@ Un fichier n’est pas ouvert jusqu'à ce qu’un appel est effectué pour [CAtl
 
 [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlTemporaryFile :: ~ CAtlTemporaryFile
+##  <a name="dtor"></a>  CAtlTemporaryFile::~CAtlTemporaryFile
 
 Destructeur.
 

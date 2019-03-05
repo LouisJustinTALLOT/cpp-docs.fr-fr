@@ -1,18 +1,18 @@
 ---
-title: "Procédure pas à pas : placement de contrôles dans les barres d'outils"
+title: 'Procédure pas à pas : Placement de contrôles dans les barres d’outils'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-ms.openlocfilehash: 3e0cc066e39cc71833e2061a1964619d04a80be3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580295"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291386"
 ---
-# <a name="walkthrough-putting-controls-on-toolbars"></a>Procédure pas à pas : placement de contrôles dans les barres d'outils
+# <a name="walkthrough-putting-controls-on-toolbars"></a>Procédure pas à pas : Placement de contrôles dans les barres d’outils
 
 Cet article décrit comment ajouter un bouton de barre d’outils qui contient un contrôle Windows pour une barre d’outils. Dans MFC, un bouton de barre d’outils doit être un [cmfctoolbarbutton, classe](../mfc/reference/cmfctoolbarbutton-class.md)-classe dérivée, par exemple [cmfctoolbarcomboboxbutton, classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [cmfctoolbareditboxbutton, classe](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Cmfcdropdowntoolbarbutton, classe](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [cmfctoolbarmenubutton, classe](../mfc/reference/cmfctoolbarmenubutton-class.md).
 
@@ -39,7 +39,7 @@ Le **commandes** onglet de la **personnaliser** boîte de dialogue contient une 
 
 Lorsque vous activez la personnalisation, vous créez le **personnaliser** boîte de dialogue dans le Gestionnaire de personnalisation `OnViewCustomize` à l’aide de la [cmfctoolbarscustomizedialog, classe](../mfc/reference/cmfctoolbarscustomizedialog-class.md) classe. Avant d’afficher le **personnaliser** boîte de dialogue en appelant [CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create), appelez [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) à remplacer le bouton standard avec le nouveau contrôle.
 
-## <a name="example-creating-a-find-combo-box"></a>Exemple : création d'une zone de liste déroulante Rechercher
+## <a name="example-creating-a-find-combo-box"></a>Exemple : Création d’une zone de liste déroulante Rechercher
 
 Cette section décrit comment créer un **trouver** contrôle de zone de liste déroulante qui apparaît sur une barre d’outils et contient les chaînes de recherche récemment utilisés. L'utilisateur peut entrer une chaîne du contrôle puis appuyer sur la touche d'entrée pour rechercher un document, ou appuyer sur la touche Échap pour retourner le focus au frame principal. Cet exemple suppose que le document est affiché dans un [CEditView, classe](../mfc/reference/ceditview-class.md)-vue dérivée.
 
@@ -84,7 +84,7 @@ Commencez par créer le **trouver** contrôle combo box :
 
 Pour ajouter le bouton de zone de liste déroulante à la barre d'outils, suivez ces étapes :
 
-1. Implémentez le gestionnaire de messages `AFX_WM_RESETTOOLBAR` `OnToolbarReset` dans la fenêtre frame principale.
+1. Implémentez le gestionnaire de messages `AFX_WM_RESETTOOLBAR``OnToolbarReset` dans la fenêtre frame principale.
 
     > [!NOTE]
     > Le framework envoie le message à la fenêtre frame principale lorsqu'une barre d'outils est initialisée pendant le démarrage de l'application, ou lorsqu'une barre d'outils est réinitialisée pendant la personnalisation. Dans les deux cas, vous devez remplacer le bouton de barre d’outils standard par personnalisé **trouver** bouton de zone de liste déroulante.

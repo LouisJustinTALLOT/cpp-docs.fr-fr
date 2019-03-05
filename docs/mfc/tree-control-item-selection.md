@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], item selection
 - item selection in tree controls
 ms.assetid: 7bcb3b16-b9c8-4c06-9350-7bc3c1c5009b
-ms.openlocfilehash: bd3ade31ce1e41481943659ba9a8ef8dd77117fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a88a2c8ea5b935bbcb1f40b705337ff676d8b8a5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592713"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264116"
 ---
 # <a name="tree-control-item-selection"></a>Sélection d’éléments de contrôle d’arborescence
 
@@ -24,4 +24,3 @@ Une application peut modifier la sélection en appelant le [SelectItem](../mfc/r
 
 [Utilisation de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

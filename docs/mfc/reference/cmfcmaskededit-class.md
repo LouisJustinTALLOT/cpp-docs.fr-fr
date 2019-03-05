@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: c5625c60d6c3c5037c1ef63719c63371b0ff7934
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88a9c49b55dca9d98976924127efff67c479a96a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276964"
 ---
 # <a name="cmfcmaskededit-class"></a>Cmfcmaskededit, classe
 
@@ -105,7 +105,7 @@ L’exemple suivant montre comment définir un masque (par exemple, un numéro d
 
 [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmaskededit.h
 
@@ -131,7 +131,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour spécifier que le [CMFCMaskedEdit::GetWindowText](#getwindowtext) méthode récupérer masquées uniquement des caractères ; FALSE pour indiquer que la méthode récupérer l’intégralité du texte. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -191,7 +191,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour sélectionner uniquement des groupes ; Pour sélectionner l’intégralité du texte, la valeur est FALSE. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -225,7 +225,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour valider l’utilisateur d’entrée par rapport à seulement masquées caractères ; FALSE pour valider le masque entier. La valeur par défaut est TRUE.
 
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText

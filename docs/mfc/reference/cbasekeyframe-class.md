@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-ms.openlocfilehash: 850ce46f524d9069609c1e5809c091c18bd58ee4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d36c924d30bd728fcd54b6cdf6805ade25e20b5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296603"
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame, classe
 
@@ -74,7 +74,7 @@ Encapsule la variable UI_ANIMATION_KEYFRAME. Sert de classe de base pour n’imp
 
 `CBaseKeyFrame`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -93,7 +93,7 @@ virtual BOOL AddToStoryboard(
 *pStoryboard*<br/>
 Pointeur vers une table de montage séquentiel.
 
-*que bDeepAdd*<br/>
+*bDeepAdd*<br/>
 Si ce paramètre a la valeur TRUE et que l’image clé en cours d’ajout dépend d’une autre image clé ou transition, cette méthode essaie d’ajouter cette image clé ou une transition au storyboard tout d’abord.
 
 ### <a name="return-value"></a>Valeur de retour

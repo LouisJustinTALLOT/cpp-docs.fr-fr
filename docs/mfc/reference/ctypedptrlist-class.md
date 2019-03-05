@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 485550fbd4d3fc483303cd6ba73d74e29cc7a006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555874"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286021"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList (classe)
 
@@ -99,7 +99,7 @@ Cet exemple crée une instance de `CTypedPtrList`, ajoute un objet, sérialise l
 
 `CTypedPtrList`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtempl.h
 
@@ -179,7 +179,7 @@ TYPE GetAt(POSITION position) const;
 *TYPE*<br/>
 Paramètre de modèle qui spécifie le type des éléments stockés dans la liste.
 
-*Position*<br/>
+*position*<br/>
 Une valeur POSITION retournée par une précédente `GetHeadPosition` ou `Find` appel de fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -360,7 +360,7 @@ void SetAt(POSITION pos, TYPE newElement);
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 La POSITION de l’élément à définir.
 
 *TYPE*<br/>

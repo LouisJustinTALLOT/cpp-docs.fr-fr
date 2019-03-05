@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657537"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279742"
 ---
 # <a name="texture-class"></a>texture, classe
 
@@ -103,7 +103,7 @@ Le rang de la texture.
 
 **En-tête :** amp_graphics.h
 
-**Namespace :** Concurrency::Graphics
+**Espace de noms :** Concurrency::graphics
 
 ##  <a name="dtor"></a> ~texture
 
@@ -280,7 +280,7 @@ Index.
 
 L’élément qui est à l’index spécifié.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Copie le texte spécifié [texture](texture-class.md) objet à celui-ci.
 
@@ -294,7 +294,7 @@ texture& operator= (
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `texture` objet à copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -338,7 +338,7 @@ Le rang de l’index.
 *value*<br/>
 Nouvelle valeur de l’élément.
 
-##  <a name="ctor"></a> Texture
+##  <a name="ctor"></a> texture
 
 Initialise une nouvelle instance de la classe `texture`.
 
@@ -588,7 +588,7 @@ Un itérateur de départ dans le conteneur source.
 *_Src_last*<br/>
 Un itérateur de fin dans le conteneur source.
 
-*_Autre*<br/>
+*_Other*<br/>
 Autre source de données.
 
 *_Rank*<br/>

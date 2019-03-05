@@ -8,12 +8,12 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 0da45fa18d12b3f1c93df6b8c8736ed1bfb58ade
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2373fe3bc8cac501d1b6b32ca66996eff47ba6f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524994"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295043"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr, Structure
 
@@ -50,7 +50,7 @@ struct scheduler_ptr;
 
 `scheduler_ptr`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** pplinterface.h
 
@@ -95,7 +95,7 @@ explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
 
 ### <a name="parameters"></a>Paramètres
 
-*Planificateur*<br/>
+*scheduler*<br/>
 Le planificateur à convertir.
 
 *pScheduler*<br/>

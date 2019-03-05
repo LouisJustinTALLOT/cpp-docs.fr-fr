@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ActiveX MFC : utilisation des polices'
+title: 'Contrôles ActiveX MFC : Utilisation des polices'
 ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175819"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271305"
 ---
-# <a name="mfc-activex-controls-using-fonts"></a>Contrôles ActiveX MFC : utilisation des polices
+# <a name="mfc-activex-controls-using-fonts"></a>Contrôles ActiveX MFC : Utilisation des polices
 
 Si votre contrôle ActiveX affiche du texte, vous pouvez autoriser l’utilisateur du contrôle modifier l’apparence du texte en modifiant une propriété de police. Propriétés de police sont implémentées en tant qu’objets de police et peut prendre l’une des deux types : prédéfini ou personnalisé. Propriétés stock Font sont des propriétés de polices préimplémentées que vous pouvez ajouter à l’aide de l’Assistant Ajout de propriété. Les propriétés de police personnalisées ne sont pas préimplémentées et le développeur de contrôle détermine le comportement et l’utilisation de la propriété.
 
@@ -42,7 +42,7 @@ Propriétés stock Font sont préimplémentées par la classe [COleControl](../m
 
 Accéder à l’objet de police via le [GetFont](../mfc/reference/colecontrol-class.md#getfont), [SetFont](../mfc/reference/colecontrol-class.md#setfont), et [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) fonctions de `COleControl`. L’utilisateur de contrôle aura accès à l’objet font via le `GetFont` et `SetFont` fonctions de la même manière que toute autre propriété Get/Set. Lorsque l’accès à l’objet de police est requis à partir d’un contrôle, utilisez le `InternalGetFont` (fonction).
 
-Comme indiqué dans [contrôles ActiveX MFC : propriétés](../mfc/mfc-activex-controls-properties.md), ajout de propriétés stock est facile avec le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md). Vous choisissez la propriété de police, et l’Assistant Ajout de propriété insère automatiquement l’entrée stock Font dans la table de dispatch du contrôle.
+Comme indiqué dans [contrôles ActiveX MFC : Propriétés](../mfc/mfc-activex-controls-properties.md), ajout de propriétés stock est facile avec le [Assistant Ajout de propriété](../ide/names-add-property-wizard.md). Vous choisissez la propriété de police, et l’Assistant Ajout de propriété insère automatiquement l’entrée stock Font dans la table de dispatch du contrôle.
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Pour ajouter la propriété stock Font à l’aide de l’Assistant Ajout de propriété
 
@@ -236,6 +236,5 @@ Une fois ces modifications ont été apportées à votre projet, régénérez le
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Contrôles ActiveX MFC : utilisation d’images dans un contrôle ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
-[Contrôles ActiveX MFC : utilisation des pages de propriétés stock](../mfc/mfc-activex-controls-using-stock-property-pages.md)
-
+[Contrôles ActiveX MFC : Utilisation d’images dans un contrôle ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[Contrôles ActiveX MFC : À l’aide des Pages de propriétés Stock](../mfc/mfc-activex-controls-using-stock-property-pages.md)

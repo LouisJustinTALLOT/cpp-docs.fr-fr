@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-ms.openlocfilehash: 647d233f25f27c96eeb3281272c1542057cabd4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6d68f4f5c0f3532c39fee3f513e7b3102ec075d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468092"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299476"
 ---
 # <a name="cw2wex-class"></a>Classe de CW2WEX
 
@@ -43,7 +43,7 @@ La taille de la mémoire tampon utilisée dans le processus de traduction. La lo
 |Nom|Description|
 |----------|-----------------|
 |[CW2WEX::CW2WEX](#cw2wex)|Constructeur.|
-|[CW2WEX :: ~ CW2WEX](#dtor)|Destructeur.|
+|[CW2WEX::~CW2WEX](#dtor)|Destructeur.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -84,7 +84,7 @@ Pour une description de ces macros de conversion de texte, consultez [Macros de 
 
 Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlconv.h
 
@@ -109,7 +109,7 @@ La page de codes. Pas utilisé dans cette classe.
 
 Crée la mémoire tampon requise pour la traduction.
 
-##  <a name="dtor"></a>  CW2WEX :: ~ CW2WEX
+##  <a name="dtor"></a>  CW2WEX::~CW2WEX
 
 Le destructeur...
 

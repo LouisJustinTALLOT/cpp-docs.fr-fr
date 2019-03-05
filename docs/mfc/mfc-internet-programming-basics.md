@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 5bb6a1d379ed754ed96637dfe5b3e4da983edb9f
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 37fe5486d6d41ad182779a3a15b0aca3af51d04b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175585"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288439"
 ---
 # <a name="mfc-internet-programming-basics"></a>Éléments fondamentaux relatifs à la programmation Internet MFC
 
@@ -81,4 +81,3 @@ Le [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37
 La section OLE du kit SDK Windows contient des informations supplémentaires sur la programmation OLE. Ces informations fournissent des détails sur l’utilisation des fonctions Win32 WinInet directement, plutôt que via les classes MFC. Il contient également des informations générales sur les technologies Internet.
 
 ## <a name="see-also"></a>Voir aussi
-

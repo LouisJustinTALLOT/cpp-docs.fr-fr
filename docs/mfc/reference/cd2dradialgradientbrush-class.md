@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: fbdc6e6b9e7ffff1f14da79ed207644b518910fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564331"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277272"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush, classe
 
@@ -62,7 +62,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 |Nom|Description|
 |----------|-----------------|
 |[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Construit un objet CD2DLinearGradientBrush.|
-|[CD2DRadialGradientBrush :: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Destructeur. Appelé lorsqu’un objet de pinceau dégradé radial D2D est détruit.|
+|[CD2DRadialGradientBrush::~CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Destructeur. Appelé lorsqu’un objet de pinceau dégradé radial D2D est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -86,11 +86,11 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|Renvoie l’interface ID2D1RadialGradientBrush|
+|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*](#operator_id2d1radialgradientbrush_star)|Renvoie l’interface ID2D1RadialGradientBrush|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|Pointeur vers un ID2D1RadialGradientBrush.|
 |[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Le centre, décalage d’origine du dégradé et rayon x rayon y du pinceau de messagerie du dégradé.|
@@ -111,7 +111,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 **En-tête :** afxrendertarget.h
 
-##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush :: ~ CD2DRadialGradientBrush
+##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::~CD2DRadialGradientBrush
 
 Destructeur. Appelé lorsqu’un objet de pinceau dégradé radial D2D est détruit.
 
@@ -287,7 +287,7 @@ Le centre, décalage d’origine du dégradé et rayon x rayon y du pinceau de m
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;
 ```
 
-##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *
+##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*
 
 Renvoie l’interface ID2D1RadialGradientBrush
 

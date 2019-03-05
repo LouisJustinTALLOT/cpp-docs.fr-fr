@@ -10,12 +10,12 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-ms.openlocfilehash: fd2d53c79ee372c9997e1da2b189ef18129e67f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf76182242f7b76e3a2c18f85b72674e88afa737
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617332"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287503"
 ---
 # <a name="ipropertypage2impl-class"></a>Classe de IPropertyPage2Impl
 
@@ -62,7 +62,7 @@ Lorsque vous créez une page de propriétés, votre classe est généralement d�
 
 `IPropertyPage2Impl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl.h
 
@@ -76,7 +76,7 @@ HRESULT EditProperty(DISPID dispID);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne E_NOTIMPL.
+Returns E_NOTIMPL.
 
 ### <a name="remarks"></a>Notes
 

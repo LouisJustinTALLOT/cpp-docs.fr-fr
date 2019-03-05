@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894196"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303668"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl (classe)
 

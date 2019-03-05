@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-ms.openlocfilehash: a7dbb7e38ec01743d994dafd6c7945e306de51ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260710"
 ---
 # <a name="clongbinary-class"></a>CLongBinary (classe)
 
@@ -53,7 +53,7 @@ Pour utiliser un `CLongBinary` objet, déclarez un membre de données de champ d
 
 Lorsque vous détruisez le jeu d’enregistrements, incorporée `CLongBinary` également détruit et son destructeur libère la `HGLOBAL` données handle.
 
-Pour plus d’informations sur les objets de grande taille et l’utilisation de `CLongBinary`, consultez les articles [Recordset (ODBC)](../../data/odbc/recordset-odbc.md) et [Recordset : utilisation avec les éléments de données volumineux (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
+Pour plus d’informations sur les objets de grande taille et l’utilisation de `CLongBinary`, consultez les articles [Recordset (ODBC)](../../data/odbc/recordset-odbc.md) et [jeu d’enregistrements : Utilisation des éléments de données volumineux (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur les objets de grande taille et l’utilisation de
 
 `CLongBinary`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdb_.h
 

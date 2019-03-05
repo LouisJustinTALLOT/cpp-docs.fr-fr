@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 60b09b674bec58a7d35a9a37d9a8f4c40d8cd522
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522725"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267015"
 ---
 # <a name="choice-class"></a>Classe choice
 
@@ -57,7 +57,7 @@ Un `tuple`-en fonction du type qui représente les charges utiles des sources d�
 
 |Nom|Description|
 |----------|-----------------|
-|[choix](#ctor)|Surchargé. Construit un bloc de messagerie `choice` .|
+|[choice](#ctor)|Surchargé. Construit un bloc de messagerie `choice` .|
 |[~ choice, destructeur](#dtor)|Détruit le `choice` bloc de messagerie.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
@@ -66,7 +66,7 @@ Un `tuple`-en fonction du type qui représente les charges utiles des sources d�
 |----------|-----------------|
 |[accept](#accept)|Accepte un message qui a été proposé par ce `choice` bloc, en transférant la propriété à l’appelant.|
 |[acquire_ref](#acquire_ref)|Acquiert un décompte de références sur ce `choice` bloc de messagerie, pour empêcher la suppression.|
-|[consommer](#consume)|Consomme un message précédemment proposé par ce `choice` bloc de messagerie et réservé avec succès par la cible, en transférant la propriété à l’appelant.|
+|[consume](#consume)|Consomme un message précédemment proposé par ce `choice` bloc de messagerie et réservé avec succès par la cible, en transférant la propriété à l’appelant.|
 |[has_value](#has_value)|Vérifie si cela `choice` bloc de messagerie a encore été initialisé avec une valeur.|
 |[index](#index)|Retourne un index dans le `tuple` représentant l’élément sélectionné par le `choice` bloc de messagerie.|
 |[link_target](#link_target)|Lie un bloc cible à ce `choice` bloc de messagerie.|
@@ -75,7 +75,7 @@ Un `tuple`-en fonction du type qui représente les charges utiles des sources d�
 |[reserve](#reserve)|Réserve un message précédemment proposé par ce `choice` bloc de messagerie.|
 |[unlink_target](#unlink_target)|Dissocie un bloc cible de ce `choice` bloc de messagerie.|
 |[unlink_targets](#unlink_targets)|Dissocie toutes les cibles à partir de ce `choice` bloc de messagerie. (Substitue [ISource::unlink_targets](isource-class.md#unlink_targets).)|
-|[valeur](#value)|Obtient le message dont l’index a été sélectionnée par le `choice` bloc de messagerie.|
+|[value](#value)|Obtient le message dont l’index a été sélectionnée par le `choice` bloc de messagerie.|
 
 ## <a name="remarks"></a>Notes
 
@@ -89,7 +89,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `choice`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -174,7 +174,7 @@ Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les pa
 
 La construction du déplacement ne s’exécute pas en présence d’un verrou, ce qui signifie que c’est à l’utilisateur de s’assurer qu’il n’y a pas de tâches non activables en vol au moment du déplacement. Sinon, de nombreuses courses peuvent se produire, ce qui aboutit à des exceptions ou à un état incohérent.
 
-##  <a name="dtor"></a> ~ choix
+##  <a name="dtor"></a> ~choice
 
 Détruit le `choice` bloc de messagerie.
 
@@ -220,7 +220,7 @@ bool has_value() const;
 
 **true** si le bloc a reçu une valeur, **false** dans le cas contraire.
 
-##  <a name="index"></a> Index
+##  <a name="index"></a> index
 
 Retourne un index dans le `tuple` représentant l’élément sélectionné par le `choice` bloc de messagerie.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - status bar controls [MFC], creating
 - CStatusBarCtrl class [MFC], creating
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
-ms.openlocfilehash: 05baf212f53956095af89377c0877db79b6e25ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3242986d66de7d423b8ab744a691ca1904328de8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552761"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264207"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Utilisation de CStatusBarCtrl pour créer un objet CStatusBarCtrl
 
@@ -36,4 +36,3 @@ Dans certains cas, la barre d’état doit afficher une ligne de texte. Dans ce 
 
 [Utilisation de CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

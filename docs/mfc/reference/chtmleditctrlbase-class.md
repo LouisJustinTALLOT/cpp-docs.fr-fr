@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 11bfa8304b51ed25b934a97109db7da7bb39f49a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590136"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293938"
 ---
 # <a name="chtmleditctrlbase-class"></a>Chtmleditctrlbase, classe
 
@@ -366,7 +366,7 @@ Le nom de la classe dérivée.
 
 `CHtmlEditCtrlBase`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxhtml.h
 
@@ -398,7 +398,7 @@ L’URL d’image.
 Type de balise : 0 signifie que l’image est à la balise d’ouverture. 1 signifie que l’image est la balise de fermeture uniquement. 2 signifie l’image pour l’ouverture et les balises de fermeture. Balises uniques comme br et commentaire doivent être ajoutés avec le type de balise défini sur 0.
 
 *nAlignment*<br/>
-Alignement (éléments rectangulaires uniquement) : ce paramètre indique que l’image est un élément avec un attribut d’alignement. Gauche = 0, center = 1, droite = 2 et non défini = 3. Gauche, droite ou centre attributs doivent être définie explicitement sur l’élément.
+Alignement (éléments rectangulaires uniquement) : Ce paramètre indique que l’image est un élément avec un attribut d’alignement. Gauche = 0, center = 1, droite = 2 et non défini = 3. Gauche, droite ou centre attributs doivent être définie explicitement sur l’élément.
 
 *nPosInfo*<br/>
 Informations de positionnement. Détermine la valeur de positionnement (CSS) le glyphe s’applique, où elle est statique de feuilles de style en cascade positionnement = 0, le positionnement absolu = 1, positionnement relatif = 2 et tous les = 3. Ce champ vous permet de spécifier un glyphe pour une balise lorsqu’il n’est pas placé et un autre glyphe à afficher un point d’ancrage lorsque la balise est positionnée.
@@ -1997,7 +1997,7 @@ La couleur de police.
 *crFontBgColor*<br/>
 La couleur d’arrière-plan de la police.
 
-*bgras*<br/>
+*bBold*<br/>
 Transmettez la valeur TRUE pour le texte en gras.
 
 *bItalic*<br/>
@@ -2566,4 +2566,3 @@ Cette méthode envoie le [ID de commande IDM UNORDERLIST](https://msdn.microsoft
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Exemple HTMLEdit](../../visual-cpp-samples.md)
-

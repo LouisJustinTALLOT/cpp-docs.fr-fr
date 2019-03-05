@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 56be735aa99cfebe4ec64ff76f53d28cc9b9779e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443600"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262686"
 ---
 # <a name="cdockstate-class"></a>Cdockstate, classe
 
@@ -58,7 +58,7 @@ La barre peut être n’importe quel contrôle de la barre, y compris une barre 
 
 [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) récupère les informations d’état de tous les frames de la fenêtre `CControlBar` les objets et les place dans le `CDockState` objet. Vous pouvez ensuite écrire le contenu de la `CDockState` objet vers le stockage avec [Serialize](../../mfc/reference/cobject-class.md#serialize) ou [CDockState::SaveState](#savestate). Si vous souhaitez ultérieurement restaurer l’état des barres de contrôle dans la fenêtre frame, vous pouvez charger l’état avec `Serialize` ou [CDockState::LoadState](#loadstate), puis utilisez [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) pour appliquer l’enregistré état de barres de contrôles de la fenêtre frame.
 
-Pour plus d’informations sur la station d’accueil de barres de contrôles, consultez les articles [barres de contrôles](../../mfc/control-bars.md), [barres d’outils : ancrer et rendre flottantes](../../mfc/docking-and-floating-toolbars.md), et [Frame Windows](../../mfc/frame-windows.md).
+Pour plus d’informations sur la station d’accueil de barres de contrôles, consultez les articles [barres de contrôles](../../mfc/control-bars.md), [barres d’outils : Ancrer et rendre flottantes](../../mfc/docking-and-floating-toolbars.md), et [Frame Windows](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -66,7 +66,7 @@ Pour plus d’informations sur la station d’accueil de barres de contrôles, c
 
 `CDockState`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxadv.h
 
@@ -144,4 +144,3 @@ Le nom du profil est la section de l’application. Fichier INI ou du Registre q
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

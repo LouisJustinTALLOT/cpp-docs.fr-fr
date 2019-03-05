@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 9e25095f70266e772d69f9b644f7def968157912
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 200743d41c1c45f2a957dba0716dd7aa07e3de76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572144"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266677"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation, classe
 
@@ -39,7 +39,7 @@ class invalid_oversubscribe_operation : public std::exception;
 
 `invalid_oversubscribe_operation`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt.h
 

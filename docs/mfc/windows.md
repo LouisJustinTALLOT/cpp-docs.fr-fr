@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, windows
 - window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
-ms.openlocfilehash: 8d8ffccffdf5bb27497e9bc3831f26d33ec8454f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee5e6fef58b9ddfa2172b9024d414bdb03e93283
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547301"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326658"
 ---
 # <a name="windows"></a>Windows
 
@@ -111,4 +111,3 @@ Le deuxième groupe d’articles décrit [fenêtres frames](../mfc/frame-windows
 [Barres d’outils](../mfc/toolbars.md)<br/>
 [Barres d’état](../mfc/status-bars.md)<br/>
 [Barres de boîte de dialogue](../mfc/dialog-bars.md)
-

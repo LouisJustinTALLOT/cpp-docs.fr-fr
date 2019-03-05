@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271253"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage, classe
 
@@ -103,7 +103,7 @@ Pour plus d’informations sur l’utilisation de `COlePropertyPage`, consultez 
 
 `COlePropertyPage`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl.h
 
@@ -222,7 +222,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de dispatch de la propriété en cours de modification.
 
 ### <a name="return-value"></a>Valeur de retour

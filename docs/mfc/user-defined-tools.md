@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 785e37c63653dde91176bedd0321fc58ac122c7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269706"
 ---
 # <a name="user-defined-tools"></a>Outils définis par l'utilisateur
 
@@ -28,7 +28,7 @@ Dans l'éditeur de ressources, créez une commande factice qui utilise un ID de 
 
 Vous devez mettre de côté certains ID consécutifs dans la table de chaînes pour représenter les outils définis par l'utilisateur. Le nombre de chaînes à mettre de côté est égal au nombre maximal d'outils utilisateur que les utilisateurs peuvent définir. Dans l'exemple suivant, ceux-ci sont nommés `ID_USER_TOOL1` à `ID_USER_TOOL10`.
 
-Vous pouvez faire des suggestions aux utilisateurs pour les aider à sélectionner des répertoires et des arguments pour les programmes externes qui seront appelés en tant qu'outils. Pour cela, créez deux menus contextuels dans l'éditeur de ressources. Dans l'exemple suivant, ceux-ci sont nommés `IDR_MENU_ARGS` et `IDR_MENU_DIRS`. Pour chaque commande dans ces menus, définissez une chaîne dans la table de chaînes de votre application. L'ID de ressource de la chaîne doit être égal à l'ID de commande.
+Vous pouvez faire des suggestions aux utilisateurs pour les aider à sélectionner des répertoires et des arguments pour les programmes externes qui seront appelés en tant qu’outils. Pour cela, créez deux menus contextuels dans l'éditeur de ressources. Dans l'exemple suivant, ceux-ci sont nommés `IDR_MENU_ARGS` et `IDR_MENU_DIRS`. Pour chaque commande dans ces menus, définissez une chaîne dans la table de chaînes de votre application. L'ID de ressource de la chaîne doit être égal à l'ID de commande.
 
 Vous pouvez également créer une classe dérivée de [cusertool, classe](../mfc/reference/cusertool-class.md) pour remplacer l’implémentation par défaut. Pour ce faire, transmettez les informations d’exécution pour votre classe dérivée en tant que quatrième paramètre dans CWinAppEx::EnableUserTools, au lieu de RUNTIME_CLASS ([cusertool, classe](../mfc/reference/cusertool-class.md)).
 

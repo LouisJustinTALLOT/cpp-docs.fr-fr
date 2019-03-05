@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304780"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue, classe
 
-La classe `concurrent_priority_queue` est un conteneur qui permet à plusieurs threads d'appeler simultanément des méthodes Push et Pop sur des éléments. Les éléments sont dépilés dans l’ordre de priorité dans lequel la priorité est déterminée par un functor fourni comme argument de modèle.
+La classe `concurrent_priority_queue` est un conteneur qui permet à plusieurs threads d'appeler simultanément des méthodes Push et Pop sur des éléments. Les éléments sont dépilés dans l'ordre de priorité dans lequel la priorité est déterminée par un functor fourni comme argument de modèle.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ template <typename T,
 *T*<br/>
 Le type de données des éléments à stocker dans la file d’attente de priorité.
 
-*_Comparer*<br/>
+*_Compare*<br/>
 Le type de l’objet de fonction qui peut comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif dans la file d’attente de priorité. Cet argument est facultatif et le prédicat binaire `less<T>` est la valeur par défaut.
 
 *_Ax*<br/>
@@ -91,7 +91,7 @@ Pour plus d’informations sur la `concurrent_priority_queue` de classe, consult
 
 `concurrent_priority_queue`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concurrent_priority_queue.h
 
@@ -152,10 +152,10 @@ Classe allocator à utiliser avec cet objet.
 *_Init_capacity*<br/>
 La capacité initiale de la `concurrent_priority_queue` objet.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Position du premier élément de la plage d'éléments à copier.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Position du premier élément au-delà de la plage d'éléments à copier.
 
 *_Src*<br/>
@@ -199,7 +199,7 @@ allocator_type get_allocator() const;
 
 Une copie de l’allocateur utilisé pour construire le `concurrent_priority_queue` objet.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Assigne le contenu d’un autre `concurrent_priority_queue` objet à celui-ci. Cette méthode n’est pas concurrentiel.
 
@@ -249,7 +249,7 @@ Le nombre d’éléments dans cette `concurrent_priority_queue` objet.
 
 La taille retournée est garantie pour inclure tous les éléments ajoutés par les appels à la fonction `push`. Toutefois, il ne reflète pas les résultats d’opérations simultanées en attente.
 
-##  <a name="swap"></a> échange
+##  <a name="swap"></a> swap
 
 Échange le contenu de deux files d’attente simultanées. Cette méthode n’est pas concurrentiel.
 
@@ -259,7 +259,7 @@ void swap(concurrent_priority_queue& _Queue);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Fronty*<br/>
+*_Queue*<br/>
 Le `concurrent_priority_queue` objet échanger le contenu avec.
 
 ##  <a name="try_pop"></a> try_pop
@@ -283,4 +283,3 @@ Une référence à une variable qui contiendra l’élément de priorité la plu
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [Conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md)
-

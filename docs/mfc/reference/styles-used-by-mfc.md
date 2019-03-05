@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694775"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304897"
 ---
 # <a name="styles-used-by-mfc"></a>Styles utilisés par MFC
 
@@ -360,7 +360,7 @@ Les styles de boîte de message suivants sont disponibles.
 
 |Style|Description|
 |-----------|-----------------|
-|MB_ABORTRETRYIGNORE|La boîte de message contient trois boutons de commande : abandonner, réessayer et ignorer.|
+|MB_ABORTRETRYIGNORE|La boîte de message contient trois boutons de commande : Abandonner, réessayer et ignorer.|
 |MB_OK|La boîte de message contient un bouton de commande : OK.|
 |MB_OKCANCEL|La boîte de message contient deux boutons de commande : OK et Annuler.|
 |MB_RETRYCANCEL|La boîte de message contient deux boutons de commande : Réessayer et Annuler.|
