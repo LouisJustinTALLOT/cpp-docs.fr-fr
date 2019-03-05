@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176664"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305235"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Vue d'ensemble du runtime d'accès concurrentiel
 
@@ -42,21 +42,21 @@ Dans Visual Studio 2010, 2013, le Runtime d’accès concurrentiel a été inté
 
 - concrt140.dll – le Runtime d’accès concurrentiel, fournis par le biais de Visual Studio. Requis pour les algorithmes et des conteneurs parallèles telles que `concurrency::parallel_for`. En outre, la bibliothèque STL requiert cette DLL sur Windows XP pour les primitives de synchronisation de puissance, car Windows XP n’a pas de variables conditionnelles.
 
-Dans Visual Studio 2015 et versions ultérieures, le planificateur de tâches du runtime d’accès concurrentiel n’est plus le planificateur de la classe de tâche et des types associés dans ppltasks.h. Ces types utilisent désormais le pool de threads Windows pour de meilleures performances et une meilleure interopérabilité avec les primitives de synchronisation Windows.
+Dans Visual Studio 2015 et versions ultérieures, le planificateur de tâches du runtime d'accès concurrentiel n'est plus le planificateur de la classe de tâche et des types associés dans ppltasks.h. Ces types utilisent désormais le pool de threads Windows pour de meilleures performances et une meilleure interopérabilité avec les primitives de synchronisation Windows.
 
 ##  <a name="runtime"></a> Pourquoi un Runtime d’accès concurrentiel est Important
 
 Un runtime d'accès concurrentiel fournit l'uniformité et la prévisibilité aux applications et à leurs composants qui s'exécutent simultanément. Voici deux exemples des avantages du Runtime d’accès concurrentiel *planification de tâches coopérative* et *blocage coopératif*.
 
-Le runtime d’accès concurrentiel utilise un planificateur de tâches coopératif qui implémente un algorithme de vol de travail pour distribuer efficacement le travail entre les ressources informatiques. Par exemple, considérez une application qui a deux threads gérés par le même runtime. Si un thread termine sa tâche planifiée, il peut décharger du travail de l’autre thread. Ce mécanisme équilibre la charge de travail globale de l'application.
+Le runtime d'accès concurrentiel utilise un planificateur de tâches coopératif qui implémente un algorithme de vol de travail pour distribuer efficacement le travail entre les ressources informatiques. Par exemple, considérez une application qui a deux threads gérés par le même runtime. Si un thread termine sa tâche planifiée, il peut décharger du travail de l’autre thread. Ce mécanisme équilibre la charge de travail globale de l'application.
 
-Le runtime d'accès concurrentiel fournit également des primitives de synchronisation qui utilisent le blocage coopératif pour synchroniser l'accès aux ressources. Par exemple, considérez une tâche qui doit avoir un accès exclusif à une ressource partagée. Par un blocage coopératif, le runtime peut utiliser le quantum restant pour effectuer une autre tâche, pendant que la première tâche attend la ressource. Ce mécanisme favorise l'utilisation maximale des ressources informatiques.
+Le runtime d’accès concurrentiel fournit également des primitives de synchronisation qui utilisent le blocage coopératif pour synchroniser l’accès aux ressources. Par exemple, considérez une tâche qui doit avoir un accès exclusif à une ressource partagée. Par un blocage coopératif, le runtime peut utiliser le quantum restant pour effectuer une autre tâche, pendant que la première tâche attend la ressource. Ce mécanisme favorise l'utilisation maximale des ressources informatiques.
 
 [[Haut](#top)]
 
 ##  <a name="architecture"></a> Architecture
 
-Le runtime d’accès concurrentiel se divise en quatre composants : la bibliothèque de modèles parallèles (PPL), la bibliothèque d’agents asynchrones, le planificateur de tâches et le gestionnaire des ressources. Ces composants résident entre le système d'exploitation et les applications. L'illustration suivante montre comment les composants du runtime d'accès concurrentiel interagit entre le système d'exploitation et les applications :
+Le runtime d'accès concurrentiel se divise en quatre composants : la bibliothèque de modèles parallèles (PPL), la bibliothèque d'agents asynchrones, le planificateur de tâches et le gestionnaire des ressources. Ces composants résident entre le système d'exploitation et les applications. L'illustration suivante montre comment les composants du runtime d'accès concurrentiel interagit entre le système d'exploitation et les applications :
 
 **Architecture de Runtime d’accès concurrentiel**
 
@@ -99,7 +99,7 @@ Pour plus d’informations sur le Planificateur de tâches, consultez [Planifica
 
 Le rôle du gestionnaire des ressources est de gérer les ressources informatiques, comme les processeurs et la mémoire. Le gestionnaire des ressources répond aux charges de travail à mesure qu'elles changent au moment de l'exécution en affectant des ressources là où elles peuvent être les plus efficaces.
 
-Le gestionnaire des ressources sert d'abstraction sur les ressources informatiques et interagit principalement avec le planificateur de tâches. Bien que vous puissiez utiliser le gestionnaire des ressources pour ajuster les performances de vos bibliothèques et applications, vous utilisez généralement la fonctionnalité fournie par la bibliothèque de modèles parallèles, la bibliothèque d'agents et le planificateur de tâches. Ces bibliothèques utilisent le gestionnaire des ressources pour rééquilibrer de manière dynamique les ressources à mesure que les charges de travail évoluent.
+Le gestionnaire des ressources sert d’abstraction sur les ressources informatiques et interagit principalement avec le planificateur de tâches. Bien que vous puissiez utiliser le gestionnaire des ressources pour ajuster les performances de vos bibliothèques et applications, vous utilisez généralement la fonctionnalité fournie par la bibliothèque de modèles parallèles, la bibliothèque d'agents et le planificateur de tâches. Ces bibliothèques utilisent le gestionnaire des ressources pour rééquilibrer de manière dynamique les ressources à mesure que les charges de travail évoluent.
 
 [[Haut](#top)]
 
@@ -107,7 +107,7 @@ Le gestionnaire des ressources sert d'abstraction sur les ressources informatiqu
 
 La plupart des types et algorithmes définis par le runtime d'accès concurrentiel sont implémentés en tant que modèles C++. Certains de ces types et algorithmes prennent comme paramètre une routine qui effectue le travail. Ce paramètre peut être une fonction lambda, un objet de fonction ou un pointeur de fonction. Ces entités sont également appelées *des fonctions de travail* ou *routines de travail*.
 
-Les expressions lambda sont une nouvelle fonctionnalité importante du langage Visual C++, car elles offrent un moyen concis de définir des fonctions de travail pour un traitement parallèle. Les objets de fonction et les pointeurs de fonction vous permettent d'utiliser le runtime d'accès concurrentiel avec votre code existant. Toutefois, nous vous recommandons d’utiliser des expressions lambda quand vous écrivez un nouveau code en raison des avantages en matière de sécurité et de productivité qu’elles apportent.
+Les expressions lambda sont une nouvelle fonctionnalité importante du langage Visual C++, car elles offrent un moyen concis de définir des fonctions de travail pour un traitement parallèle. Les objets de fonction et les pointeurs de fonction vous permettent d'utiliser le runtime d'accès concurrentiel avec votre code existant. Toutefois, nous vous recommandons d'utiliser des expressions lambda quand vous écrivez un nouveau code en raison des avantages en matière de sécurité et de productivité qu'elles apportent.
 
 L’exemple suivant compare la syntaxe des fonctions lambda, des objets de fonction et des pointeurs de fonction dans plusieurs appels à la [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorithme. Chaque appel à `parallel_for_each` utilise une technique différente pour calculer le carré de chaque élément dans un [std::array](../../standard-library/array-class-stl.md) objet.
 
@@ -143,4 +143,3 @@ Le Runtime d’accès concurrentiel est déclaré dans le [concurrence](../../pa
 Le runtime d'accès concurrentiel est fourni dans le cadre de la bibliothèque Runtime C (CRT). Pour plus d’informations sur la création d’une application qui utilise la bibliothèque CRT, consultez [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 
 [[Haut](#top)]
-

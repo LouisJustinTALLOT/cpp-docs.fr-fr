@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 4bc50a8a77a4964cf92d003ed1e06213398f401c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304520"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 
@@ -446,9 +446,9 @@ Contrôles d’affichage de liste peuvent afficher leur contenu de quatre maniè
 
 - Vue rapport
 
-   Chaque élément apparaît sur sa propre ligne, avec des informations supplémentaires sont disposées en colonnes à droite. La colonne de gauche contient la petite icône et une étiquette et les colonnes suivantes contiennent des sous-éléments, comme spécifié par l’application. Un contrôle header incorporé (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implémente ces colonnes. Pour plus d’informations sur le contrôle d’en-tête et les colonnes dans une vue de rapport, consultez [utilisation de CListCtrl : ajout de colonnes au contrôle (vue rapport)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Chaque élément apparaît sur sa propre ligne, avec des informations supplémentaires sont disposées en colonnes à droite. La colonne de gauche contient la petite icône et une étiquette et les colonnes suivantes contiennent des sous-éléments, comme spécifié par l’application. Un contrôle header incorporé (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implémente ces colonnes. Pour plus d’informations sur le contrôle d’en-tête et les colonnes dans une vue de rapport, consultez [CListCtrl à l’aide de : Ajout de colonnes au contrôle (vue rapport)](../../mfc/adding-columns-to-the-control-report-view.md).
 
-Le style d’affichage de liste actuel du contrôle détermine l’affichage actuel. Pour plus d’informations sur ces styles et leur utilisation, consultez [utilisation de CListCtrl : modification des Styles de contrôle liste](../../mfc/changing-list-control-styles.md).
+Le style d’affichage de liste actuel du contrôle détermine l’affichage actuel. Pour plus d’informations sur ces styles et leur utilisation, consultez [CListCtrl à l’aide de : Modification des Styles de contrôle de liste](../../mfc/changing-list-control-styles.md).
 
 ## <a name="extended-styles"></a>Styles étendus
 
@@ -460,7 +460,7 @@ Outre les styles de liste standard, classe `CListCtrl` prend en charge un large 
 
 - Vues de liste virtuelle
 
-   Lorsque l’option est activée, permet au contrôle prendre en charge les éléments DWORD au maximum. Cela est possible en plaçant la surcharge de la gestion des données de l’élément sur l’application. À l’exception de la sélection d’éléments et les informations de focus, toutes les informations de l’élément doivent être gérées par l’application. Pour plus d’informations, consultez [utilisation de CListCtrl : contrôles de liste virtuels](../../mfc/virtual-list-controls.md).
+   Lorsque l’option est activée, permet au contrôle prendre en charge les éléments DWORD au maximum. Cela est possible en plaçant la surcharge de la gestion des données de l’élément sur l’application. À l’exception de la sélection d’éléments et les informations de focus, toutes les informations de l’élément doivent être gérées par l’application. Pour plus d’informations, consultez [CListCtrl à l’aide de : Contrôles de liste virtuels](../../mfc/virtual-list-controls.md).
 
 - Activation et deux-clic
 
@@ -470,7 +470,7 @@ Outre les styles de liste standard, classe `CListCtrl` prend en charge un large 
 
    Lorsque l’option est activée, permet de glisser-déplacer la réorganisation des colonnes dans un contrôle list view. Disponible uniquement dans la vue rapport.
 
-Pour plus d’informations sur l’utilisation des nouveaux des styles étendus, consultez [utilisation de CListCtrl : modification des Styles de contrôle liste](../../mfc/changing-list-control-styles.md).
+Pour plus d’informations sur l’utilisation des nouveaux des styles étendus, consultez [CListCtrl à l’aide de : Modification des Styles de contrôle de liste](../../mfc/changing-list-control-styles.md).
 
 ## <a name="items-and-subitems"></a>Éléments et sous-éléments
 
@@ -478,7 +478,7 @@ Chaque élément dans un contrôle list view se compose d’une icône (à parti
 
 Classe `CListCtrl` fournit plusieurs fonctions pour l’insertion, la suppression, la recherche et la modification de ces éléments. Pour plus d’informations, consultez [CListCtrl::GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), et [CListCtrl::FindItem](#finditem), [Ajout d’éléments au contrôle](../adding-items-to-the-control.md), et [défilement, organisation, tri et recherche dans les contrôles de liste](../scrolling-arranging-sorting-and-finding-in-list-controls.md).
 
-Par défaut, le contrôle list view est responsable du stockage des attributs d’icône et le texte d’un élément. Toutefois, en plus de ces types d’éléments, la classe `CListCtrl` prend en charge les « éléments de rappel ». Un élément de « rappel » est un élément de liste pour lequel l’application, plutôt que le contrôle, stocke le texte, icône ou les deux. Un masque de rappel est utilisé pour spécifier les attributs de l’élément (texte et/ou l’icône) sont fournies par l’application. Si une application utilise des éléments de rappel, il doit être en mesure de fournir les attributs de texte et/ou l’icône à la demande. Éléments de rappel sont utiles lorsque votre application a déjà gère certaines de ces informations. Pour plus d’informations, consultez [utilisation de CListCtrl : éléments de rappel et masque de rappel](../callback-items-and-the-callback-mask.md).
+Par défaut, le contrôle list view est responsable du stockage des attributs d’icône et le texte d’un élément. Toutefois, en plus de ces types d’éléments, la classe `CListCtrl` prend en charge les « éléments de rappel ». Un élément de « rappel » est un élément de liste pour lequel l’application, plutôt que le contrôle, stocke le texte, icône ou les deux. Un masque de rappel est utilisé pour spécifier les attributs de l’élément (texte et/ou l’icône) sont fournies par l’application. Si une application utilise des éléments de rappel, il doit être en mesure de fournir les attributs de texte et/ou l’icône à la demande. Éléments de rappel sont utiles lorsque votre application a déjà gère certaines de ces informations. Pour plus d’informations, consultez [CListCtrl à l’aide de : Éléments de rappel et masque de rappel](../callback-items-and-the-callback-mask.md).
 
 ## <a name="image-lists"></a>Listes d’images
 
@@ -500,7 +500,7 @@ Les icônes, images d’élément en-tête et application - défini des États p
 
    Utilisé dans la vue de rapport pour les petites images qui apparaissent dans chaque élément de contrôle d’en-tête.
 
-Par défaut, un contrôle list view détruit les listes d’images qui lui est assignées lorsqu’il est détruit ; Toutefois, le développeur peut personnaliser ce comportement en détruisant chaque liste d’images lorsqu’il n’est plus utilisé, tel que déterminé par l’application. Pour plus d’informations, consultez [utilisation de CListCtrl : éléments de liste et listes d’images](../list-items-and-image-lists.md).
+Par défaut, un contrôle list view détruit les listes d’images qui lui est assignées lorsqu’il est détruit ; Toutefois, le développeur peut personnaliser ce comportement en détruisant chaque liste d’images lorsqu’il n’est plus utilisé, tel que déterminé par l’application. Pour plus d’informations, consultez [CListCtrl à l’aide de : Éléments de liste et listes d’images](../list-items-and-image-lists.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -512,7 +512,7 @@ Par défaut, un contrôle list view détruit les listes d’images qui lui est a
 
 `CListCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle de liste. Appliquer n’importe quelle combinaison de styles de contrôle de liste au contrôle. Consultez [styles de fenêtre d’affichage liste](/windows/desktop/Controls/list-view-window-styles) dans le SDK Windows pour obtenir la liste complète de ces styles. Ensemble spécifique d’un contrôle en utilisant des styles étendus [SetExtendedStyle](#setextendedstyle).
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle de liste. Il peut s’agir un `CRect` objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
 
 *pParentWnd*<br/>
@@ -666,7 +666,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Spécifie le style du contrôle de liste. Appliquer n’importe quelle combinaison de styles de contrôle de liste au contrôle. Pour obtenir une liste complète de ces styles, consultez [styles de fenêtre d’affichage liste](/windows/desktop/Controls/list-view-window-styles) dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 Un pointeur vers un [LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa) structure contenant des informations sur l’élément à rechercher.
 
-*Début*<br/>
+*nStart*<br/>
 Index de l’élément pour commencer la recherche, ou -1 pour démarrer à partir du début. L’élément à *début* est exclu de la recherche si *début* n’est pas égal à -1.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1333,7 +1333,7 @@ int GetGroupInfo(
 *iGroupId*<br/>
 L’identificateur du groupe dont les informations sont à récupérer.
 
-*PGRP*<br/>
+*pgrp*<br/>
 Un pointeur vers le [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) contenant des informations sur le groupe spécifié.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2052,7 +2052,7 @@ int GetNextItem(
 *nItem*<br/>
 Index de l’élément pour commencer la recherche à l’aide, ou -1 pour rechercher le premier élément qui correspond aux indicateurs spécifiés. L’élément spécifié lui-même est exclu de la recherche.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Relation géométrique de l’élément demandé à l’élément spécifié et l’état de l’élément demandé. La relation géométrique peut être une des valeurs suivantes :
 
 - LVNI_ABOVE recherche un élément qui se trouve au-dessus de l’élément spécifié.
@@ -2094,7 +2094,7 @@ BOOL GetNextItemIndex(
 |Paramètre|Description|
 |---------------|-----------------|
 |*pItemIndex*|[in, out] Pointeur vers le [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) structure qui décrit l’élément où la recherche commence, ou -1 pour rechercher le premier élément qui correspond aux indicateurs dans le *nIndicateurs* paramètre.<br /><br /> Si cette méthode réussite, le `LVITEMINDEX` structure décrit l’élément trouvé par la recherche.|
-|*nIndicateurs*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui spécifient comment effectuer la recherche.<br /><br /> La recherche peut dépendre de l’index, l’état ou l’apparence de l’élément cible, ou emplacement physique de l’élément cible par rapport à l’élément spécifié par le *pItemIndex* paramètre. Pour plus d’informations, consultez le *indicateurs* paramètre dans le [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) message.|
+|*nFlags*|[in] Une combinaison (OR) au niveau du bit des indicateurs qui spécifient comment effectuer la recherche.<br /><br /> La recherche peut dépendre de l’index, l’état ou l’apparence de l’élément cible, ou emplacement physique de l’élément cible par rapport à l’élément spécifié par le *pItemIndex* paramètre. Pour plus d’informations, consultez le *indicateurs* paramètre dans le [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) message.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 Une référence à une valeur POSITION retournée par un appel précédent à `GetNextSelectedItem` ou `GetFirstSelectedItemPosition`. La valeur est mise à jour à la position suivante par cet appel.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2556,7 +2556,7 @@ void GetWorkAreas(
 *nWorkAreas*<br/>
 Le nombre de `RECT` structures contenues dans le *prc* tableau.
 
-*République populaire de Chine*<br/>
+*prc*<br/>
 Un pointeur vers un tableau de `RECT` structures (ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objets) qui reçoivent les zones de travail de contrôle list view. Les valeurs dans ces structures sont dans les coordonnées clientes.
 
 ### <a name="remarks"></a>Notes
@@ -2705,7 +2705,7 @@ LRESULT InsertGroup(
 *index*<br/>
 L’index de l’élément dans lequel le groupe doit être inséré.
 
-*PGRP*<br/>
+*pgrp*<br/>
 Un pointeur vers un [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) structure qui contient le groupe à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3040,10 +3040,10 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>Paramètres
 
-*Npremier*<br/>
+*nFirst*<br/>
 Index du premier élément à être redessinée.
 
-*Ndernier*<br/>
+*nLast*<br/>
 Index du dernier élément à être redessinée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3114,7 +3114,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 Couleur d’arrière-plan pour définir, ou la valeur vous définissez CLR_NONE comme aucune couleur d’arrière-plan. Contrôles d’affichage de liste avec les couleurs d’arrière-plan redessiner considérablement plus rapides que celles sans les couleurs d’arrière-plan. Pour plus d’informations, consultez [COLORREF](/windows/desktop/gdi/colorref) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3225,7 +3225,7 @@ BOOL SetCheck(
 *nItem*<br/>
 Index de base zéro d’un élément de contrôle de liste.
 
-*Consultez*<br/>
+*fCheck*<br/>
 Spécifie si l’image d’état de l’élément doit être visible ou non. Par défaut, *consultez* a la valeur TRUE et l’image d’état est visible. Si *consultez* est FALSE, il n’est pas visible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3320,7 +3320,7 @@ BOOL SetColumnWidth(
 *nCol*<br/>
 Index de la colonne pour laquelle la largeur doit être définie. Dans la vue de liste, ce paramètre doit être 0.
 
-*CX*<br/>
+*cx*<br/>
 La nouvelle largeur de la colonne. Peut être LVSCW_AUTOSIZE ou LVSCW_AUTOSIZE_USEHEADER, comme décrit dans [LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3371,7 +3371,7 @@ int SetGroupInfo(
 *iGroupId*<br/>
 L’identificateur du groupe dont les informations sont définies.
 
-*PGRP*<br/>
+*pgrp*<br/>
 Pointeur vers un [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) structure qui contient les informations à définir. L’appelant est chargé d’allouer cette structure et de définition de ses membres.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3409,7 +3409,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>Paramètres
 
-*connexion hybride*<br/>
+*hc*<br/>
 Handle vers une ressource de curseur, utilisé pour représenter le curseur à chaud.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3490,10 +3490,10 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="parameters"></a>Paramètres
 
-*CX*<br/>
+*cx*<br/>
 La distance (en pixels) entre les icônes sur l’axe x.
 
-*CY*<br/>
+*cy*<br/>
 La distance (en pixels) entre les icônes sur l’axe y.
 
 *size*<br/>
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 Un [COLORREF](/windows/desktop/gdi/colorref) structure qui spécifie la couleur pour définir le point d’insertion.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 La nouvelle [COLORREF](/windows/desktop/gdi/colorref) structure contenant la couleur de contour.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -4022,7 +4022,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 COLORREF spécifiant la nouvelle couleur d’arrière-plan de texte. Pour plus d’informations, consultez [COLORREF](/windows/desktop/gdi/colorref) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -4048,7 +4048,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 COLORREF spécifiant la nouvelle couleur de texte. Pour plus d’informations, consultez [COLORREF](/windows/desktop/gdi/colorref) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -4426,4 +4426,3 @@ Cette fonction permet également d’organiser le contrôle list view s’il a l
 [CWnd, classe](cwnd-class.md)<br/>
 [Graphique hiérarchique](../hierarchy-chart.md)<br/>
 [CImageList, classe](cimagelist-class.md)
-

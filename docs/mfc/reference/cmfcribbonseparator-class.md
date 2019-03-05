@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 05ac8b26cb6b6e7d8e622ecbaac1d4a81bfd35e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565930"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302765"
 ---
 # <a name="cmfcribbonseparator-class"></a>Cmfcribbonseparator, classe
 
@@ -93,7 +93,7 @@ Appelez [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-clas
 
 [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxbaseribbonelement.h
 
@@ -152,7 +152,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>Paramètres
 
-*src*<br/>
+*Src*<br/>
 [in] L’élément de ruban source à copier.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize
@@ -235,7 +235,7 @@ virtual void OnDrawOnList(
 |*pDC*|[in] Pointeur vers un contexte de périphérique.|
 |*strText*|[in] Texte affiché dans la liste.|
 |*nTextOffset*|[in] Espacement entre le texte et le côté gauche du rectangle englobant.|
-|*Rect*|[in] Spécifie le rectangle englobant.|
+|*rect*|[in] Spécifie le rectangle englobant.|
 |*bIsSelected*|[in] Ignoré.|
 |*bHighlighted*|[in] Ignoré.|
 

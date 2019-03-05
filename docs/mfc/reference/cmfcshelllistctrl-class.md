@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: 4aa6da49f7d8235e0358f4fd042d3c720521eb0f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a08cfff3996d3dce617cf80293a96675083a39d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694203"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302544"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl, classe
 
@@ -112,7 +112,7 @@ L’exemple suivant montre comment créer un objet de la `CMFCShellListCtrl` cla
 
 `CMFCShellListCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxshelllistCtrl.h
 
@@ -159,7 +159,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Valeur booléenne qui spécifie si le framework Active le menu contextuel.
 
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder

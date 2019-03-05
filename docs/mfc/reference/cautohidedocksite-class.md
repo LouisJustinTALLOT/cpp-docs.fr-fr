@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 5bfff575861d92eaaef07a1f2f21b79d89cb52b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f24827e2dc1f4d1131f5b63aebeb0e2b09bc2281
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653625"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302960"
 ---
 # <a name="cautohidedocksite-class"></a>Cautohidedocksite, classe
 
@@ -94,7 +94,7 @@ L’exemple suivant montre comment récupérer un `CAutoHideDockSite` de l’obj
 
 [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxautohidedocksite.h
 
@@ -160,7 +160,7 @@ void GetAlignRect(CRect& rect) const;
 |||
 |-|-|
 |Paramètre|Description|
-|*Rect*|[in] Une référence à un rectangle. La méthode stocke la taille du site d’ancrage dans ce rectangle.|
+|*rect*|[in] Une référence à un rectangle. La méthode stocke la taille du site d’ancrage dans ce rectangle.|
 
 ### <a name="remarks"></a>Notes
 

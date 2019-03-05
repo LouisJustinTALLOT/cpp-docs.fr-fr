@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179004"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302979"
 ---
 # <a name="cframewndex-class"></a>Cframewndex, classe
 
@@ -308,7 +308,7 @@ L’exemple suivant montre comment hériter d’une classe à partir de la `CFra
 
 [CFrameWndEx](../../mfc/reference/cframewndex-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxframewndex.h
 
@@ -538,7 +538,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le chargement de l’état d’ancrage, FALSE pour désactiver le chargement de l’état d’ancrage.
 
 ##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu
@@ -557,7 +557,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer la gestion automatique du contrôle de la barre des menus contextuels ; FALSE pour désactiver la gestion automatique du contrôle barre de menus contextuels.
 
 *uiCustomizeCmd*<br/>
@@ -715,7 +715,7 @@ Pointeur vers une barre de contrôle à insérer dans la liste des barres de con
 *pTarget*<br/>
 Pointeur vers une barre de contrôle avant ou après laquelle insérer le volet.
 
-*exécuteront-ils*<br/>
+*bAfter*<br/>
 TRUE si vous souhaitez insérer *pControlBar* après *pTarget*, FALSE sinon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1150,10 +1150,10 @@ afx_msg LRESULT OnDWMCompositionChanged(
 
 ### <a name="parameters"></a>Paramètres
 
-*WP*<br/>
+*wp*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
-*LP*<br/>
+*lp*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1174,10 +1174,10 @@ LRESULT OnExitSizeMove(
 
 ### <a name="parameters"></a>Paramètres
 
-*WP*<br/>
+*wp*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
-*LP*<br/>
+*lp*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1237,7 +1237,7 @@ afx_msg void OnLButtonDown(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 [in] Indique si l’utilisateur a appuyé sur les touches de modification. Pour les valeurs possibles, consultez le paramètre *wParam* dans [WM_LBUTTONDOWN Notification](/windows/desktop/inputdev/wm-lbuttondown).
 
 *point*<br/>
@@ -1257,7 +1257,7 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 [in] Indique si l’utilisateur a appuyé sur les touches de modification. Pour les valeurs possibles, consultez le paramètre *wParam* dans [WM_LBUTTONUP Notification](/windows/desktop/inputdev/wm-lbuttonup).
 
 *point*<br/>
@@ -1280,7 +1280,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pButton*<br/>
 [in] Pointeur vers le bouton de barre d’outil.
 
-*PTI*<br/>
+*pTI*<br/>
 [out] Un pointeur vers une structure d’informations outil.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1304,10 +1304,10 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Code de caractère de la touche enfoncée.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 [in] Contient l’indicateur MF_POPUP si le menu qui s’affiché est un sous-menu ; contient l’indicateur MF_SYSMENU si le menu qui s’affiché est un menu de contrôle.
 
 *pMenu*<br/>
@@ -1335,7 +1335,7 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 [in] Indique si un utilisateur a appuyé sur les touches de modification. Pour les valeurs possibles, consultez le paramètre *wParam* dans [WM_MOUSEMOVE Notification](/windows/desktop/inputdev/wm-mousemove).
 
 *point*<br/>
@@ -1505,10 +1505,10 @@ afx_msg LRESULT OnPowerBroadcast(
 
 ### <a name="parameters"></a>Paramètres
 
-*WP*<br/>
+*wp*<br/>
 [in] L’événement de gestion d’alimentation. Pour obtenir la liste des valeurs possibles, consultez [Message WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast).
 
-*LP*<br/>
+*lp*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1531,13 +1531,13 @@ BOOL OnSetMenu(HMENU hmenu);
 
 ### <a name="parameters"></a>Paramètres
 
-*WP*<br/>
+*wp*<br/>
 [in] Handle vers le nouveau menu de la fenêtre frame.
 
-*LP*<br/>
+*lp*<br/>
 [in] Handle vers le nouveau menu fenêtre.
 
-*HMENU*<br/>
+*hmenu*<br/>
 [in] Handle vers le nouveau menu de la fenêtre frame.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1677,13 +1677,13 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>Paramètres
 
-*%nLes*<br/>
+*nType*<br/>
 [in] Le type de redimensionnement. Pour les valeurs possibles, consultez le paramètre *wParam* dans [WM_SIZE Notification](/windows/desktop/winmsg/wm-size).
 
-*CX*<br/>
+*cx*<br/>
 [in] Nouvelle largeur de l’image en pixels.
 
-*CY*<br/>
+*cy*<br/>
 [in] Nouvelle hauteur de l’image en pixels.
 
 ### <a name="remarks"></a>Notes
@@ -1758,10 +1758,10 @@ afx_msg LRESULT OnToolbarContextMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*WP*<br/>
+*wp*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
-*LP*<br/>
+*lp*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1782,10 +1782,10 @@ afx_msg LRESULT OnToolbarCreateNew(
 
 ### <a name="parameters"></a>Paramètres
 
-*WP*<br/>
+*wp*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
-*LP*<br/>
+*lp*<br/>
 [in] Pointeur vers le texte de la barre de titre de la barre d’outils.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1806,10 +1806,10 @@ afx_msg LRESULT OnToolbarDelete(
 
 ### <a name="parameters"></a>Paramètres
 
-*inutilisé*<br/>
+*unused*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
-*LP*<br/>
+*lp*<br/>
 [in] Pointeur vers une barre d’outils.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2036,7 +2036,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*Menu*<br/>
+*menu*<br/>
 [in] Un `CMenu` objet à modifier.
 
 *uiViewUserToolbarCmdFirst*<br/>

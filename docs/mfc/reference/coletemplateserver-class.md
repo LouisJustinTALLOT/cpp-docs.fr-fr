@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302879"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer, classe
 
@@ -53,7 +53,7 @@ Cette classe est dérivée de la classe [COleObjectFactory](../../mfc/reference/
 
 `COleTemplateServer` remplace le `OnCreateInstance` fonction membre définie par `COleObjectFactory`. Cette fonction membre est appelée par l’infrastructure pour créer un objet C++ du type approprié.
 
-Pour plus d’informations sur les serveurs, consultez l’article [serveurs : implémentation d’un serveur](../../mfc/servers-implementing-a-server.md).
+Pour plus d’informations sur les serveurs, consultez l’article [serveurs : Implémentation d’un serveur](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -65,7 +65,7 @@ Pour plus d’informations sur les serveurs, consultez l’article [serveurs : 
 
 `COleTemplateServer`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
