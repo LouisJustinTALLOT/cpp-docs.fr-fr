@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292187"
 ---
 # <a name="cmfcribbonedit-class"></a>Cmfcribbonedit, classe
 
@@ -144,7 +144,7 @@ L’exemple suivant montre comment construire un `CMFCRibbonEdit` de l’objet, 
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxRibbonEdit.h
 
@@ -286,7 +286,7 @@ void EnableSpinButtons(
 *nMin*<br/>
 [in] La valeur minimale du bouton toupie (spin).
 
-*nombre maximal*<br/>
+*nMax*<br/>
 [in] La valeur maximale du bouton toupie (spin).
 
 ### <a name="remarks"></a>Notes
@@ -532,7 +532,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Distance, en pixels, du côté gauche de la zone de liste pour afficher un texte.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle d’affichage pour le `CMFCRibbonEdit` contrôle.
 
 *bIsSelected*<br/>
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le contrôle ; FALSE pour désactiver le contrôle.
 
 ### <a name="remarks"></a>Notes
