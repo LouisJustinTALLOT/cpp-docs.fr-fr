@@ -1,18 +1,18 @@
 ---
-title: "Comment : ajouter des contrôles de ruban et des gestionnaires d'événements"
+title: 'Procédure : Ajouter des contrôles de ruban et des gestionnaires d’événements'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8a164101dc42241a2cc76c91a3baa66e02e4dc90
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291130"
 ---
-# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Comment : ajouter des contrôles de ruban et des gestionnaires d'événements
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Procédure : Ajouter des contrôles de ruban et des gestionnaires d’événements
 
 Contrôles de ruban sont des éléments, tels que des boutons et des zones de liste déroulante, que vous ajoutez aux panneaux. Les panneaux sont des zones de la barre du ruban qui affichent un groupe de contrôles connexes.
 
@@ -42,4 +42,3 @@ Dans cette rubrique, vous ouvrez le Concepteur de ruban, ajouter un bouton et en
 
 [Exemple RibbonGadgets : Application de Gadgets de ruban](../visual-cpp-samples.md)<br/>
 [Concepteur de ruban (MFC)](../mfc/ribbon-designer-mfc.md)
-

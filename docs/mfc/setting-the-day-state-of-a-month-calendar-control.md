@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-ms.openlocfilehash: a07808819e1cb049de7438c9e7964436e8c83802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c75b560509738e071accdc3dba31dfdea35a14aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464764"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262361"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Définition de l'état du jour d'un contrôle month calendar
 
@@ -49,4 +49,3 @@ Pour gérer correctement ce message, vous devez déterminer combien de mois les 
 
 [Utilisation de CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

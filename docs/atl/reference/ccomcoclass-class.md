@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 51da70cc1972e6a69e28d7699703f803b6fa8701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c52e1a95483807f9c842b0b904cd2314258f0e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630696"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282641"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass, classe
 
@@ -63,7 +63,7 @@ Vous pouvez remplacer ces valeurs par défaut en spécifiant une autre macro dan
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -87,7 +87,7 @@ L’interface COM qui doit être retournée par le biais de *pp*.
 *punkOuter*<br/>
 [in] Inconnu externe ou inconnu de contrôle de l’agrégat.
 
-*PP*<br/>
+*pp*<br/>
 [out] L’adresse d’une variable pointeur qui reçoit le pointeur d’interface demandé si la création réussit.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -159,7 +159,7 @@ static HRESULT Error(
 *lpszDesc*<br/>
 [in] Chaîne décrivant l’erreur. La version Unicode de `Error` Spécifie que *lpszDesc* est de type LPCOLESTR ; de la version ANSI spécifie un type de LPCSTR.
 
-*IID*<br/>
+*iid*<br/>
 [in] IID de l’interface définissant l’erreur ou GUID_NULL (la valeur par défaut) si l’erreur est définie par le système d’exploitation.
 
 *hRes*<br/>

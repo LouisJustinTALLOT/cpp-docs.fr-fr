@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f18a43fcda76bb5531434de84d97a349cb7f39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497197"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271266"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint, classe
 
@@ -73,7 +73,7 @@ class CAnimationPoint : public CAnimationBaseObject;
 |Nom|Description|
 |----------|-----------------|
 |[CAnimationPoint::operator CPoint](#operator_cpoint)|Convertit un CAnimationPoint CPoint.|
-|[CAnimationPoint::operator =](#operator_eq)|Assigne ptSrc à CAnimationPoint.|
+|[CAnimationPoint::operator=](#operator_eq)|Assigne ptSrc à CAnimationPoint.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
@@ -94,7 +94,7 @@ La classe CAnimationPoint encapsule deux objets CAnimationVariable et peut repr�
 
 `CAnimationPoint`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -266,7 +266,7 @@ Valeur actuelle de l’objet CAnimationPoint comme CPoint.
 
 En interne, cette fonction appelle GetValue. Si GetValue échoue pour une raison quelconque, le point retourné contient les valeurs par défaut pour X et Y coordonnées.
 
-##  <a name="operator_eq"></a>  CAnimationPoint::operator =
+##  <a name="operator_eq"></a>  CAnimationPoint::operator=
 
 Assigne ptSrc à CAnimationPoint.
 

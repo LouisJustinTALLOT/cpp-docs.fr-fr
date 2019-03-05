@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471511"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295654"
 ---
 # <a name="curl-class"></a>CUrl, classe
 
@@ -62,7 +62,7 @@ class CUrl
 |Nom|Description|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|Constructeur.|
-|[CUrl :: ~ CUrl](#dtor)|Destructeur.|
+|[CUrl::~CUrl](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -124,13 +124,13 @@ class CUrl
 
 - Numéro de port : 80
 
-- UrlPath : « visualc/stuff.htm »
+- UrlPath: "visualc/stuff.htm"
 
 - ExtraInfo : « #contents »
 
 Pour manipuler le champ UrlPath (par exemple), vous utiliseriez [GetUrlPath](#geturlpath), [GetUrlPathLength](#geturlpathlength), et [SetUrlPath](#seturlpath). Vous utiliseriez [CreateUrl](#createurl) pour créer la chaîne URL complète.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlutil.h
 
@@ -149,15 +149,15 @@ Les indicateurs qui contrôlent la canonisation. Si aucun indicateur n’est sp�
 
 - ATL_URL_BROWSER_MODE : Ne pas encoder ou décoder les caractères après « # » ou « » et ne supprime pas l’espace blanc de fin après « ». Si cette valeur n’est pas spécifiée, l’URL entière est encodée et espace blanc de fin est supprimé.
 
-- ATL_URL _DECODE : convertit toutes les séquences XX % en caractères, y compris les séquences d’échappement, avant que l’URL est analysée.
+- ATL_URL _DECODE : Convertit toutes les séquences XX % en caractères, y compris les séquences d’échappement, avant que l’URL est analysée.
 
-- ATL_URL _ENCODE_PERCENT : encode les signes de pourcentage rencontrées. Par défaut, les signes de pourcentage ne sont pas encodés.
+- ATL_URL _ENCODE_PERCENT : Encode les signes de pourcentage rencontrées. Par défaut, les signes de pourcentage ne sont pas encodés.
 
-- ATL_URL _ENCODE_SPACES_ONLY : encode des espaces uniquement.
+- ATL_URL _ENCODE_SPACES_ONLY : Encode des espaces uniquement.
 
-- ATL_URL _NO_ENCODE : ne convertit pas les caractères non sécurisés en séquences d’échappement.
+- ATL_URL _NO_ENCODE : Ne convertit pas les caractères non sécurisés en séquences d’échappement.
 
-- ATL_URL _NO_META : ne supprime pas les séquences de métadonnées (tel que «. « et ».. ») à partir de l’URL.
+- ATL_URL _NO_META : Ne supprime pas les séquences de métadonnées (tel que «. « et ».. ») à partir de l’URL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -225,7 +225,7 @@ Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
 
 Cette méthode ajoute des champs individuels pour construire la chaîne URL complète en utilisant le format suivant :
 
-**\<schéma >  ://\<utilisateur > :\<passer >\@\<domaine > :\<port >\<chemin d’accès >\<supplémentaires >**
+**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
 
 Lors de l’appel de cette méthode, le *pdwMaxLength* le paramètre doit contenir initialement la longueur maximale de la mémoire tampon de chaîne référencée par le *lpszUrl* paramètre. La valeur de la *pdwMaxLength* paramètre sera actualisée avec la longueur réelle de la chaîne d’URL.
 
@@ -246,10 +246,10 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*URL qui*<br/>
+*urlThat*<br/>
 Le `CUrl` objet à copier pour créer l’URL.
 
-##  <a name="dtor"></a>  CUrl :: ~ CUrl
+##  <a name="dtor"></a>  CUrl::~CUrl
 
 Destructeur.
 
@@ -447,7 +447,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*URL qui*<br/>
+*urlThat*<br/>
 Le `CUrl` objet à copier dans l’objet actuel.
 
 ### <a name="return-value"></a>Valeur de retour

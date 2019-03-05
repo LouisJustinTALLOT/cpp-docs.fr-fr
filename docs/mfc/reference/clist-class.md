@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 10991745fb5ccdac145f4b1d589e7d59c6ed6f4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513956"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297383"
 ---
 # <a name="clist-class"></a>CList (classe)
 
@@ -134,7 +134,7 @@ Pour plus d’informations sur l’utilisation de `CList`, consultez l’article
 
 `CList`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtempl.h
 
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TYPE*<br/>
 Paramètre de modèle spécifiant le type d’objet dans la liste.
 
-*Position*<br/>
+*position*<br/>
 Position dans la liste de l’élément à obtenir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Paramètres
 
-*Position*<br/>
+*position*<br/>
 Une valeur POSITION retournée par une précédente `GetNext`, `GetPrev`, ou `Find` appel de fonction membre.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Paramètres
 
-*Position*<br/>
+*position*<br/>
 Une valeur POSITION retournée par une précédente `GetNext`, `GetPrev`, ou `Find` appel de fonction membre.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Paramètres
 
-*Position*<br/>
+*position*<br/>
 La position de l’élément à supprimer de la liste.
 
 ### <a name="remarks"></a>Notes
@@ -676,7 +676,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 La POSITION de l’élément à définir.
 
 *ARG_TYPE*<br/>

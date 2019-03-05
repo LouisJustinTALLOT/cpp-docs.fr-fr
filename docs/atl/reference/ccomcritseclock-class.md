@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: e0f68f48867510c270c7c69e325a796f274198d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045e64504707fa8978c8236b376037d9f57bf12c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606997"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261230"
 ---
 # <a name="ccomcritseclock-class"></a>Ccomcritseclock, classe
 
@@ -39,7 +39,7 @@ Objet à être verrouillées et déverrouillées.
 |Nom|Description|
 |----------|-----------------|
 |[CComCritSecLock::CComCritSecLock](#ctor)|Constructeur.|
-|[CComCritSecLock :: ~ CComCritSecLock](#dtor)|Destructeur.|
+|[CComCritSecLock::~CComCritSecLock](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -76,7 +76,7 @@ L’état de verrouillage initial : **true** signifie verrouillé.
 
 Initialise l’objet de section critique.
 
-##  <a name="dtor"></a>  CComCritSecLock :: ~ CComCritSecLock
+##  <a name="dtor"></a>  CComCritSecLock::~CComCritSecLock
 
 Destructeur.
 

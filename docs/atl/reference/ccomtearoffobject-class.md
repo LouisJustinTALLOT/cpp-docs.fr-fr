@@ -15,12 +15,12 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: 78e9bda9c21ce53fa5b775b83be5c978c3fa1431
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555257"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274607"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject, classe
 
@@ -35,7 +35,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Paramètres
 
-*base de*<br/>
+*Base*<br/>
 Votre classe détachable, dérivée de `CComTearOffObjectBase` et les interfaces vous souhaitez que votre objet détachable pour prendre en charge.
 
 ATL implémente ses interfaces détachables en deux phases : la `CComTearOffObjectBase` méthodes gèrent le décompte de références et `QueryInterface`, tandis que `CComTearOffObject` implémente [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -47,7 +47,7 @@ ATL implémente ses interfaces détachables en deux phases : la `CComTearOffObj
 |Nom|Description|
 |----------|-----------------|
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Constructeur.|
-|[CComTearOffObject :: ~ CComTearOffObject](#dtor)|Destructeur.|
+|[CComTearOffObject::~CComTearOffObject](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -87,7 +87,7 @@ Par exemple, dans l’exemple BEEPER, le `CBeeper2` classe est la classe détach
 
 `CComTearOffObject`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -113,14 +113,14 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 [in] Pointeur qui sera converti en un pointeur vers un `CComObject<Owner>` objet.
 
 ### <a name="remarks"></a>Notes
 
 Incrémente le décompte de références du propriétaire d’une unité.
 
-##  <a name="dtor"></a>  CComTearOffObject :: ~ CComTearOffObject
+##  <a name="dtor"></a>  CComTearOffObject::~CComTearOffObject
 
 Destructeur.
 
@@ -171,7 +171,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] IID de l’interface demandée.
 
 *ppvObject*<br/>

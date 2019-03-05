@@ -1,5 +1,5 @@
 ---
-title: 'Conteneurs de contrôles ActiveX : utilisation de contrôles dans un conteneur autre que de boîte de dialogue'
+title: 'Conteneurs de contrôles ActiveX : À l’aide de contrôles dans un conteneur sans boîte de dialogue'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Create method [MFC], ActiveX controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b31581b77743104a92236336c4db380f1693ea55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538786"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284240"
 ---
-# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Conteneurs de contrôles ActiveX : utilisation de contrôles dans un conteneur autre que de boîte de dialogue
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Conteneurs de contrôles ActiveX : À l’aide de contrôles dans un conteneur sans boîte de dialogue
 
 Dans certaines applications, telles que SDI ou une application MDI, vous devez incorporer un contrôle dans une fenêtre de l’application. Le **créer** fonction membre de la classe wrapper, insérée par Visual C++, peut créer une instance du contrôle de manière dynamique, sans avoir besoin d’une boîte de dialogue.
 
@@ -27,7 +27,7 @@ Un pointeur vers le texte à afficher dans la propriété du contrôle Text ou C
 *dwStyle*<br/>
 Styles de Windows. Pour obtenir la liste complète, consultez [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle.
 
 *pParentWnd*<br/>
@@ -64,4 +64,3 @@ Implémentation de cette fonctionnalité est un processus en quatre étapes.
 ## <a name="see-also"></a>Voir aussi
 
 [Conteneurs de contrôles ActiveX](../mfc/activex-control-containers.md)
-

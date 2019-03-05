@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/stdx
 ms.assetid: 0e25b138-1dfa-4073-a0b6-14bed81c774c
-ms.openlocfilehash: 1eacf30c7259245ef36ece41ce621197d3c76127
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8058006f0acf96614450ec22b601756dc563df61
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449245"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275107"
 ---
 # <a name="stdx-namespace"></a>stdx, espace de noms
 
@@ -27,11 +27,10 @@ namespace stdx;
 |----------|-----------------|
 |[declval, fonction](declval-function.md)||
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ppltasks.h
 
 ## <a name="see-also"></a>Voir aussi
 
 [Référence](reference-concurrency-runtime.md)
-

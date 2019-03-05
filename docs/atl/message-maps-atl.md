@@ -6,12 +6,12 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 9e100400-65c7-4a85-8857-4e6cb6dd7340
-ms.openlocfilehash: 92d0b4887127e1803d1d3209a6a1dd51e9a98d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b8b3fcb2f10f975ebdf68a285c7d5e364b9e1b4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496107"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292573"
 ---
 # <a name="message-maps-atl"></a>Tables des messages (ATL)
 
@@ -34,4 +34,3 @@ Enfin, ATL prend en charge les mappages de message alternatifs, déclarés avec 
 ## <a name="see-also"></a>Voir aussi
 
 [Implémentation d’une fenêtre](../atl/implementing-a-window.md)
-

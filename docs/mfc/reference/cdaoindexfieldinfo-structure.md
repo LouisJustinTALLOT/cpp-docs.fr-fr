@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CDaoIndexFieldInfo structure [MFC]
 - DAO (Data Access Objects), Index Fields collection
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
-ms.openlocfilehash: 358e6654060e92e0df83b118fa70e1c3a3a990b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d03a6f6eadd4cf6ccb5279edf18675605d0b1485
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449580"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304273"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo, structure
 
@@ -44,7 +44,7 @@ Objets index et objets de champ d’index ne sont pas représentées par une cla
 
 Appelez le `GetIndexInfo` fonction membre de l’objet recordset ou tabledef contenant dans les index dont la collection est stocké l’objet index vous intéresse. Ensuite accéder à la `m_pFieldInfos` membre de la [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) objet. La longueur de la `m_pFieldInfos` tableau est stocké dans `m_nFields`. `CDaoIndexFieldInfo` définit également un `Dump` génère de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoIndexFieldInfo` objet.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 
@@ -53,4 +53,3 @@ Appelez le `GetIndexInfo` fonction membre de l’objet recordset ou tabledef con
 [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
 [CDaoRecordset::GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)
-

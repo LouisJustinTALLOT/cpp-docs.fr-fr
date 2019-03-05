@@ -1,5 +1,5 @@
 ---
-title: 'WM_, gestionnaires de messages : L - M'
+title: 'Wm, gestionnaires de messages : L - M'
 ms.date: 11/04/2016
 f1_keywords:
 - ON_WM_MENUSELECT
@@ -33,14 +33,14 @@ helpviewer_keywords:
 - ON_WM_LBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 96ecaaf1-6d13-4e12-a454-535635967489
-ms.openlocfilehash: 395bd7f627fe85b8bb763bdb1e75ae36c91b3061
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ebf5ced1f8e36dc059922b67552b19ca4672443
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550460"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290520"
 ---
-# <a name="wm-message-handlers-l---m"></a>WM_, gestionnaires de messages : L - M
+# <a name="wm-message-handlers-l---m"></a>Wm, gestionnaires de messages : L - M
 
 Les entrées de mappage suivant sur la gauche correspondent aux prototypes de fonction à droite :
 
@@ -56,20 +56,19 @@ Les entrées de mappage suivant sur la gauche correspondent aux prototypes de fo
 |ON_WM_MEASUREITEM()|afx_msg void [OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)(LPMEASUREITEMSTRUCT) ;|
 |ON_WM_MENUCHAR()|afx_msg LONG [OnMenuChar](../../mfc/reference/cwnd-class.md#onmenuchar)(UINT, UINT, CMenu\*) ;|
 |ON_WM_MENUDRAG()|afx_msg UINT [OnMenuDrag](../../mfc/reference/cwnd-class.md#onmenudrag)(UINT, CMenu\*) ;|
-|ON_WM_MENUGETOBJECT()|afx_msg UINT [OnMenuGetObject](../../mfc/reference/cwnd-class.md#onmenugetobject)(MENUGETOBJECTINFO\*) ;|
+|ON_WM_MENUGETOBJECT()|afx_msg UINT [OnMenuGetObject](../../mfc/reference/cwnd-class.md#onmenugetobject)(MENUGETOBJECTINFO\*);|
 |ON_WM_MENURBUTTONUP()|afx_msg void [OnMenuRButtonUp](../../mfc/reference/cwnd-class.md#onmenurbuttonup)(UINT, CMenu\*) ;|
 |ON_WM_MENUSELECT()|afx_msg void [OnMenuSelect](../../mfc/reference/cwnd-class.md#onmenuselect)(UINT, UINT, HMENU) ;|
 |ON_WM_MOUSEACTIVATE()|afx_msg int [OnMouseActivate](../../mfc/reference/cwnd-class.md#onmouseactivate)(CWnd\*, UINT, UINT) ;|
 |ON_WM_MOUSEHOVER()|afx_msg void [OnMouseHover](../../mfc/reference/cwnd-class.md#onmousehover)(UINT, CPoint) ;|
 |ON_WM_MOUSEHWHEEL()|afx_msg void [OnMouseHWheel](../../mfc/reference/cwnd-class.md#onmousehwheel)(UINT, short, CPoint) ;|
-|ON_WM_MOUSELEAVE()|afx_msg void [OnMouseLeave](../../mfc/reference/cwnd-class.md#onmouseleave)() ;|
-|ON_WM_MOUSEMOVE()|afx_msg void [OnMouseMove](../../mfc/reference/cwnd-class.md#onmousemove)(UINT, CPoint) ;|
+|ON_WM_MOUSELEAVE()|afx_msg void [OnMouseLeave](../../mfc/reference/cwnd-class.md#onmouseleave)();|
+|ON_WM_MOUSEMOVE()|afx_msg void [OnMouseMove](../../mfc/reference/cwnd-class.md#onmousemove)( UINT, CPoint);|
 |ON_WM_MOUSEWHEEL()|afx_msg BOOL [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)(UINT, short, CPoint) ;|
-|ON_WM_MOVE()|afx_msg void [OnMove](../../mfc/reference/cwnd-class.md#onmove)(int, int) ;|
+|ON_WM_MOVE()|afx_msg void [OnMove](../../mfc/reference/cwnd-class.md#onmove)(int, int);|
 |ON_WM_MOVING()|afx_msg void [OnMoving](../../mfc/reference/cwnd-class.md#onmoving)(UINT, LPRECT) ;|
 
 ## <a name="see-also"></a>Voir aussi
 
 [Tables des messages](../../mfc/reference/message-maps-mfc.md)<br/>
 [Gestionnaires de messages WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

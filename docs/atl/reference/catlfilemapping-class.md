@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: 58fb08ee48f3cc51a96304b9c1708dbfbf195adb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0a47a6cf0cc86409ceb9ef40d6fc6d738c86aa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429716"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263479"
 ---
 # <a name="catlfilemapping-class"></a>Catlfilemapping, classe
 
@@ -51,11 +51,11 @@ Cette classe ajoute un opérateur de conversion unique pour permettre la convers
 
 `CAtlFileMapping`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlfile.h
 
-##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *
+##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T*
 
 Permet la conversion implicite de `CAtlFileMapping` objets `T*`.
 

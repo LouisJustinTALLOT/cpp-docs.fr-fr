@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: 36ef105b79da51348a61767117b637992e1f8c47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557168"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296031"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr, classe
 
@@ -44,7 +44,7 @@ Le type de pointeur d’interface à stocker dans le GIT.
 |Nom|Description|
 |----------|-----------------|
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|Constructeur.|
-|[CComGITPtr :: ~ CComGITPtr](#dtor)|Destructeur.|
+|[CComGITPtr::~CComGITPtr](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -76,7 +76,7 @@ Les objets qui agrègent FTM et doivent utiliser des pointeurs d’interface obt
 > [!NOTE]
 >  La fonctionnalité de tableau global d’interface est uniquement disponible sur Windows 95 avec DCOM version 1.1 et versions ultérieures, Windows 98, Windows NT 4.0 avec Service Pack 3 et versions ultérieures et Windows 2000.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -123,13 +123,13 @@ CComGITPtr(CComGITPtr&& rv);
 *p*<br/>
 [in] Un pointeur d’interface à stocker dans la table d’interface globale (GIT).
 
-*GIT*<br/>
+*git*<br/>
 [in] Une référence à un existant `CComGITPtr` objet.
 
 *dwCookie*<br/>
 [in] Un cookie est utilisé pour identifier le pointeur d’interface.
 
-*RV*<br/>
+*rv*<br/>
 [in] La source `CComGITPtr` objet à déplacer des données à partir de.
 
 ### <a name="remarks"></a>Notes
@@ -138,7 +138,7 @@ Crée un `CComGITPtr` de l’objet, en utilisant éventuellement un existant `CC
 
 Le constructeur utilisant *rv* est un constructeur de déplacement. Les données sont déplacées à partir de la source, *rv*, puis *rv* est désactivée.
 
-##  <a name="dtor"></a>  CComGITPtr :: ~ CComGITPtr
+##  <a name="dtor"></a>  CComGITPtr::~CComGITPtr
 
 Destructeur.
 
@@ -160,7 +160,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*PP*<br/>
+*pp*<br/>
 Le pointeur qui doit recevoir l’interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -231,13 +231,13 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 *p*<br/>
 [in] Pointeur vers une interface.
 
-*GIT*<br/>
+*git*<br/>
 [in] Une référence à un `CComGITPtr` objet.
 
 *dwCookie*<br/>
 [in] Un cookie est utilisé pour identifier le pointeur d’interface.
 
-*RV*<br/>
+*rv*<br/>
 [in] Le `CComGITPtr` pour déplacer des données à partir de.
 
 ### <a name="return-value"></a>Valeur de retour

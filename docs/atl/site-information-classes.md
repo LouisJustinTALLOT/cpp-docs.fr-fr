@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - site information classes
 ms.assetid: 102eae20-7953-4efb-b27b-409885c9c064
-ms.openlocfilehash: 0e6430d5b45c94ec9fb031d89b1af57df23233b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f4483c9f35e2a9380bc52f60fc2fe78a28047db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594972"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280392"
 ---
 # <a name="site-information-classes"></a>Classes d’informations de site
 
@@ -25,4 +25,3 @@ Les classes suivantes permettent à un objet communiquer avec son site :
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../atl/atl-class-overview.md)
-

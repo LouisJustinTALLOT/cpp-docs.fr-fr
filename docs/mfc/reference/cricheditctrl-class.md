@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303432"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (classe)
 
@@ -426,7 +426,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle d’édition. Appliquer une combinaison des styles de fenêtre répertoriées dans le **remarques** section ci-dessous, et [modifier les styles de contrôle](/windows/desktop/Controls/edit-control-styles), comme décrit dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle d’édition. Peut être un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.
 
 *pParentWnd*<br/>
@@ -488,7 +488,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Spécifie le style du contrôle d’édition. Appliquer une combinaison des styles de fenêtre répertoriées dans le **remarques** section de [créer](#create) et [modifier les styles de contrôle](/windows/desktop/Controls/edit-control-styles), comme décrit dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -635,7 +635,7 @@ DWORD FindWordBreak(
 *nCode*<br/>
 Indique l’action à entreprendre. Pour obtenir la liste des valeurs possibles, consultez la description pour le paramètre *code* dans EM_FINDWORDBREAK dans le SDK Windows.
 
-*Début*<br/>
+*nStart*<br/>
 La position de caractère de base zéro à partir duquel commencer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -658,7 +658,7 @@ long FormatRange(
 
 ### <a name="parameters"></a>Paramètres
 
-*PFR*<br/>
+*pfr*<br/>
 Pointeur vers le [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) structure qui contient des informations sur le périphérique de sortie. NULL indique que les informations mises en cache dans le contrôle RichEdit peuvent être libérées.
 
 *bDisplay*<br/>
@@ -711,7 +711,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*<br/>
+*cf*<br/>
 Dans la première version, un pointeur vers un `CHARFORMAT` structure qui contient le caractère par défaut mise en forme d’attributs.
 
 Dans la deuxième version, un pointeur vers un `CHARFORMAT2` structure, qui est une extension Rich Edit 2.0 à le `CHARFORMAT` structure, qui contient le caractère par défaut mise en forme d’attributs.
@@ -830,7 +830,7 @@ int GetLine(
 *nIndex*<br/>
 Index de base zéro de la ligne à récupérer.
 
-*lpszbuffer a été*<br/>
+*lpszBuffer*<br/>
 Pointe vers la mémoire tampon pour recevoir le texte. Le premier mot de la mémoire tampon doit spécifier le nombre maximal d’octets qui peuvent être copiées dans la mémoire tampon.
 
 *nMaxLength*<br/>
@@ -1015,7 +1015,7 @@ void GetSel(
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 Référence à un [structure CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) structure qui doit recevoir les limites de la sélection actuelle.
 
 *nStartChar*<br/>
@@ -1050,7 +1050,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*<br/>
+*cf*<br/>
 Dans la première version, un pointeur vers un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) structure qui doit recevoir le caractère de mise en forme des attributs de la sélection actuelle.
 
 Dans la deuxième version, un pointeur vers un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) structure, qui est une extension Rich Edit 2.0 à le `CHARFORMAT` structure qui doit recevoir le caractère de mise en forme des attributs de la sélection actuelle.
@@ -1201,10 +1201,10 @@ int GetTextRange(
 
 ### <a name="parameters"></a>Paramètres
 
-*Npremier*<br/>
+*nFirst*<br/>
 L’index de position de caractère qui précède immédiatement le premier caractère dans la plage.
 
-*Ndernier*<br/>
+*nLast*<br/>
 Position du caractère immédiatement après le dernier caractère de la plage.
 
 *refString*<br/>
@@ -1477,7 +1477,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Index de base zéro du caractère.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1560,7 +1560,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si le contrôle est défini pour détecter automatiquement une URL. Si la valeur est TRUE, il est activé. Si la valeur est FALSE, il est désactivé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1589,7 +1589,7 @@ COLORREF SetBackgroundColor(
 *bSysColor*<br/>
 Indique si la couleur d’arrière-plan doit être définie sur la valeur du système. Si cette valeur est TRUE, *cr* est ignoré.
 
-*CR*<br/>
+*cr*<br/>
 La couleur d’arrière-plan demandé. Utilisé uniquement si *bSysColor* a la valeur FALSE.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1617,7 +1617,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*<br/>
+*cf*<br/>
 Dans la première version, un pointeur vers un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) structure contenant le caractère par défaut nouvelle mise en forme d’attributs.
 
 Dans la deuxième version, un pointeur vers un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) structure, qui est une extension Rich Edit 2.0 à le `CHARFORMAT` structure, qui contient le caractère par défaut mise en forme d’attributs.
@@ -1887,7 +1887,7 @@ Index de base zéro du premier caractère de la sélection.
 *nEndChar*<br/>
 Index de base zéro du dernier caractère de la sélection.
 
-*CR*<br/>
+*cr*<br/>
 [Structure CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) structure qui contient les limites de la sélection actuelle.
 
 ### <a name="remarks"></a>Notes
@@ -1919,7 +1919,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*<br/>
+*cf*<br/>
 Dans la première version, un pointeur vers un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) structure contenant la nouvelle mise en forme des caractères d’attributs pour la sélection actuelle.
 
 Dans la deuxième version, un pointeur vers un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) structure, qui est une extension Rich Edit 2.0 à le `CHARFORMAT` structure, qui contient le caractère de nouvelle mise en forme d’attributs pour la sélection actuelle.
@@ -2032,7 +2032,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*<br/>
+*cf*<br/>
 Dans la première version, un pointeur vers un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) structure contenant la nouvelle mise en forme des caractères d’attributs pour le mot actuellement sélectionné.
 
 Dans la deuxième version, un pointeur vers un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) structure, qui est une extension Rich Edit 2.0 à le `CHARFORMAT` structure, qui contient le caractère de nouvelle mise en forme d’attributs pour le mot actuellement sélectionné.

@@ -1,18 +1,18 @@
 ---
-title: 'Comment : implémenter divers modèles de producteur-consommateur'
+title: 'Procédure : Implémenter divers modèles de producteur-consommateur'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - producer-consumer patterns, implementing [Concurrency Runtime]
 - implementing producer-consumer patterns [Concurrency Runtime]
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
-ms.openlocfilehash: 1c543e2c80ff9edea417fe8c1254bf9aa5aa37fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113518e97b6715384b5e7b84b0d0eab63dfcfcc7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658287"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296278"
 ---
-# <a name="how-to-implement-various-producer-consumer-patterns"></a>Comment : implémenter divers modèles de producteur-consommateur
+# <a name="how-to-implement-various-producer-consumer-patterns"></a>Procédure : Implémenter divers modèles de producteur-consommateur
 
 Cette rubrique décrit comment implémenter le modèle de producteur-consommateur dans votre application. Dans ce modèle, le *producteur* envoie des messages à un bloc de message et le *consommateur* lit les messages de ce bloc.
 

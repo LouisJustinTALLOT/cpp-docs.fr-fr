@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 8b9c452dc3dcb157b20558a1f7cb31103dc01f84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39868ed27a0dfb8756b4829ea7c378c798bd2ff3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561263"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304208"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog, classe
 
@@ -105,7 +105,7 @@ Pour plus d’informations sur l’utilisation de `CColorDialog`, consultez [des
 
 `CColorDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdlgs.h
 
@@ -255,7 +255,7 @@ void SetCurrentColor(COLORREF clr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CLR*<br/>
+*clr*<br/>
 Une valeur de couleur RVB.
 
 ### <a name="remarks"></a>Notes
@@ -272,4 +272,3 @@ Cette fonction est appelée dans un gestionnaire de messages ou `OnColorOK`. La 
 [Exemple MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
 [CCommonDialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

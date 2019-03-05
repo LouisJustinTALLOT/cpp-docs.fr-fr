@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523167"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282550"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Solutions de remplacement de l'architecture document/vue
 
@@ -38,7 +38,7 @@ Notez que votre application générée a une classe d’affichage, `CChildView`,
 
 - Tel que fourni par l’Assistant Application MFC, le menu de votre application ne contient que **New** et **Exit** commandes sur le **fichier** menu. (Le **New** commande est prise en charge uniquement pour les applications MDI, pas les applications SDI sans Document/Vue prennent en charge.) La ressource de menu générée ne prend pas en charge la liste des derniers fichiers utilisés.
 
-- Vous devez ajouter des fonctions et des implémentations pour toutes les commandes que votre application prendra en charge, y compris **Open** et **enregistrer** sur le **fichier** menu. MFC fournit normalement du code pour prendre en charge ces fonctionnalités, mais cette prise en charge est étroitement liée à l’architecture Document/Vue.
+- Vous devez ajouter des fonctions et des implémentations pour toutes les commandes que votre application prendra en charge, y compris **Open** et **enregistrer** sur le **fichier** menu. MFC fournit normalement du code pour prendre en charge ces fonctionnalités, mais cette prise en charge est étroitement liée à l'architecture Document/Vue.
 
 - La barre d'outils de votre application, si vous en avez demandé une, est minimale.
 
@@ -62,9 +62,8 @@ Il est fortement recommandé d'utiliser l'Assistant Application MFC pour créer 
 
 - Remplacez les parties de le framework MFC qui créent le document et la vue pour éliminer les créer du tout. Le processus de création de documents commence par un appel à `CWinApp::AddDocTemplate`. Éliminez l'appel de la fonction membre `InitInstance` de la classe d'application et, à la place, créez une fenêtre frame `InitInstance` vous-même. Mettez votre code de gestion des données dans votre classe de fenêtre frame. Le processus de création de document/vue est illustré dans [création de Document/vue](../mfc/document-view-creation.md). Cette procédure requiert davantage de travail et une connaissance plus approfondie du framework, mais vous libère entièrement de la surcharge de document/vue.
 
-L’article [MFC : à l’aide de Classes de base de données sans document ni vue](../data/mfc-using-database-classes-without-documents-and-views.md) donne des exemples plus concrets d’alternatives de document/vue dans le contexte des applications de base de données.
+L’article [MFC : À l’aide des Classes de base de données sans document ni vue](../data/mfc-using-database-classes-without-documents-and-views.md) donne des exemples plus concrets d’alternatives de document/vue dans le contexte des applications de base de données.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Architecture document/vue](../mfc/document-view-architecture.md)
-

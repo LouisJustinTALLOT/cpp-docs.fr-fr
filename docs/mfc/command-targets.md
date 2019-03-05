@@ -7,12 +7,12 @@ helpviewer_keywords:
 - messages, command [MFC]
 - command routing [MFC], command targets
 ms.assetid: b0f784e5-c6dc-4391-9e71-aa7b7dcbe9f0
-ms.openlocfilehash: 3f3305e7b67f4c001861c79c76c3b43a0c5a8ef0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3d6a68967dc7f4244f887ae34760fdb99fa7f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506877"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274440"
 ---
 # <a name="command-targets"></a>Cibles de la commande
 
@@ -23,4 +23,3 @@ Windows envoie des messages qui ne sont pas des messages de commande directement
 ## <a name="see-also"></a>Voir aussi
 
 [Messages et commandes dans le Framework](../mfc/messages-and-commands-in-the-framework.md)
-

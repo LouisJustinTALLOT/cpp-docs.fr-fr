@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177834"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273060"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox, classe
 
@@ -108,7 +108,7 @@ Vous pouvez créer une zone de liste de vérification à partir d’un modèle d
 
 `CCheckListBox`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -145,7 +145,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style de la zone de liste de vérification. Le style doit être LBS_HASSTRINGS et LBS_OWNERDRAWFIXED (tous les éléments dans la liste ont la même hauteur) ou LBS_OWNERDRAWVARIABLE (éléments de la liste sont de différentes hauteurs). Ce style peut être combiné avec d’autres [styles de zone de liste](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) sauf LBS_USETABSTOPS.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille de la zone de liste de vérification et la position. Peut être un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.
 
 *pParentWnd*<br/>
@@ -220,7 +220,7 @@ void Enable(
 *nIndex*<br/>
 Index de l’élément de zone de liste de contrôle doit être activé.
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 Spécifie si l’élément est activé ou désactivé.
 
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck
@@ -337,7 +337,7 @@ void SetCheck(
 *nIndex*<br/>
 Index de base zéro d’une case à cocher qui est contenue dans la zone de liste.
 
-*nVérifiez*<br/>
+*nCheck*<br/>
 L’état du bouton de la case à cocher spécifié. Consultez la section Notes pour les valeurs possibles.
 
 ### <a name="remarks"></a>Notes

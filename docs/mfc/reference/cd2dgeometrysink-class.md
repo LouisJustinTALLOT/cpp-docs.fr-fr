@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: ff68cc737f28763e5545b0ccaf2c0122e78cb051
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271201"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink, classe
 
@@ -62,7 +62,7 @@ class CD2DGeometrySink;
 |Nom|Description|
 |----------|-----------------|
 |[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Construit un objet CD2DGeometrySink à partir de l’objet de CD2DPathGeometry.|
-|[CD2DGeometrySink :: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|Destructeur. Appelé lorsqu’un objet de récepteur de géométrie D2D est détruit.|
+|[CD2DGeometrySink::~CD2DGeometrySink](#_dtorcd2dgeometrysink)|Destructeur. Appelé lorsqu’un objet de récepteur de géométrie D2D est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -99,11 +99,11 @@ class CD2DGeometrySink;
 
 `CD2DGeometrySink`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrendertarget.h
 
-##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink :: ~ CD2DGeometrySink
+##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink::~CD2DGeometrySink
 
 Destructeur. Appelé lorsqu’un objet de récepteur de géométrie D2D est détruit.
 
@@ -121,7 +121,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Arc*<br/>
+*arc*<br/>
 Le segment d’arc à ajouter à la figure
 
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
@@ -134,7 +134,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>Paramètres
 
-*Bézier*<br/>
+*bezier*<br/>
 Structure qui décrit les points de contrôle et le point de terminaison de la courbe de Bézier à ajouter.
 
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers
@@ -177,7 +177,7 @@ void AddLines(
 
 ### <a name="parameters"></a>Paramètres
 
-*Points*<br/>
+*points*<br/>
 Tableau d’un ou plusieurs points qui décrivent les lignes à dessiner. Une ligne est dessinée à partir du point actuel du récepteur de la géométrie (le point de terminaison du dernier segment dessiné ou l’emplacement spécifié par BeginFigure) au premier point dans le tableau. Si le tableau contient des points supplémentaires, une ligne est dessinée à partir du premier point et le deuxième point dans le tableau, à partir du deuxième point pour le troisième point et ainsi de suite. Un tableau d’une séquence de points de terminaison des lignes à tracer.
 
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier
@@ -190,7 +190,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>Paramètres
 
-*Bézier*<br/>
+*bezier*<br/>
 Structure qui décrit le point de contrôle et le point de terminaison de la courbe de Bézier quadratique à ajouter.
 
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers
@@ -296,7 +296,7 @@ Pointeur vers un ID2D1GeometrySink.
 ID2D1GeometrySink* m_pSink;
 ```
 
-##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *
+##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink*
 
 Renvoie l’interface ID2D1GeometrySink
 

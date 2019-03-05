@@ -2,12 +2,12 @@
 title: Graphiques (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260879"
 ---
 # <a name="graphics-c-amp"></a>Graphiques (C++ AMP)
 
@@ -50,18 +50,18 @@ L'opération est portée entre chaque composant du vecteur court et la variable 
 |-------------------|-----------------|
 |Opérateurs binaires|Valide sur tous les types : +, -, \*, /,<br /><br /> Valide sur les types d’entiers : %, ^, &#124;, &, <\<, >><br /><br /> Les deux vecteurs doivent avoir la même taille et le résultat doit être un vecteur de la même taille.|
 |Opérateurs relationnels|Valides sur tous les types : == et !=|
-|Opérateur d'assignation composée|Valide sur tous les types : +=, -=, \*=, / =<br /><br /> Valide sur les types d’entiers : % =, ^ =, &#124;=, & =, <\<=, >> =|
+|Opérateur d'assignation composée|Valide sur tous les types : +=, -=, \*=, / =<br /><br /> Valid on integer types: %=, ^=, &#124;=, &=, <\<=, >>=|
 |Opérateurs d'incrémentation et de décrémentation|Valides sur tous les types : ++, --<br /><br /> Le préfixe et le suffixe sont valides.|
 |Opérateur de bits Not (~)|Valide sur les types d'entiers.|
 |Opérateur unaire|Valide sur tous les types hormis `unorm` et `uint`.|
 
 ### <a name="swizzling-expressions"></a>Expressions de swizzling
 
-La bibliothèque de vecteurs courts prend en charge la construction de l’accesseur `vector_type.identifier` pour accéder aux composants d’un vecteur court. Le `identifier`, qui est appelé un *expression de swizzling*, spécifie les composants du vecteur. L'expression peut être une l-value ou une r-value. Les caractères individuels dans l’identificateur peuvent être : x, y, z et w ; ou r, g, b et un. « x » et « r » désigne le composant zéro, « y » et « g » désigne le premier composant et ainsi de suite. (Notez que « x » et « r » ne peuvent être utilisés dans le même identificateur.) Par conséquent, « rgba » et « xyzw » retournent le même résultat. Les accesseurs à un composant tels que « x » et « y » sont des types de valeur scalaire. Les accesseurs à plusieurs composants sont des types de vecteurs courts. Par exemple, si vous construisez un vecteur `int_4` nommé `fourInts` et ayant les valeurs 2, 4, 6 et 8, alors `fourInts.y` retourne l'entier 4 et `fourInts.rg` retourne un objet `int_2` ayant les valeurs 2 et 4.
+La bibliothèque de vecteurs courts prend en charge la construction de l'accesseur `vector_type.identifier` pour accéder aux composants d'un vecteur court. Le `identifier`, qui est appelé un *expression de swizzling*, spécifie les composants du vecteur. L'expression peut être une l-value ou une r-value. Les caractères individuels dans l’identificateur peuvent être : x, y, z et w ; ou r, g, b et un. « x » et « r » désigne le composant zéro, « y » et « g » désigne le premier composant et ainsi de suite. (Notez que « x » et « r » ne peuvent être utilisés dans le même identificateur.) Par conséquent, « rgba » et « xyzw » retournent le même résultat. Les accesseurs à un composant tels que « x » et « y » sont des types de valeur scalaire. Les accesseurs à plusieurs composants sont des types de vecteurs courts. Par exemple, si vous construisez un vecteur `int_4` nommé `fourInts` et ayant les valeurs 2, 4, 6 et 8, alors `fourInts.y` retourne l'entier 4 et `fourInts.rg` retourne un objet `int_2` ayant les valeurs 2 et 4.
 
 ## <a name="texture-classes"></a>Classes de texture
 
-De nombreux GPU ont un matériel et des caches optimisées pour récupérer des pixels et des texels afin d’afficher des images et des textures. Le [texture\<T, N >](../../parallel/amp/reference/texture-class.md) (classe), qui est une classe de conteneur pour objets texel, expose les fonctionnalités de texture de ces GPU. Un texel peut être :
+De nombreux GPU ont un matériel et des caches optimisées pour récupérer des pixels et des texels afin d'afficher des images et des textures. Le [texture\<T, N >](../../parallel/amp/reference/texture-class.md) (classe), qui est une classe de conteneur pour objets texel, expose les fonctionnalités de texture de ces GPU. Un texel peut être :
 
 - Un **int**, `uint`, **float**, **double**, `norm`, ou `unorm` scalaire.
 
@@ -271,13 +271,14 @@ C++ AMP introduit le [texture_view, classe](../../parallel/amp/reference/texture
 
 - L'accès en lecture-écriture est fourni par la classe de modèles non spécialisée `texture_view<T, N>`, qui, comme les textures, prend en charge les éléments comportant uniquement un composant ; la vue peut accéder à un niveau de mipmap qui est déterminé lorsque la vue est instanciée. L'échantillonnage n'est pas pris en charge.
 
-Les vues de texture sont analogues aux vues de tableaux, mais ne fournissent pas les fonctionnalités de gestion et de déplacement automatique des données qui le [array_view, classe](../../parallel/amp/reference/array-view-class.md) fournit sur le [array, classe](../../parallel/amp/reference/array-class.md). `texture_view` est accessible uniquement sur la vue d'accélérateur où les données de texture sous-jacentes résident.
+Les vues de texture sont analogues aux vues de tableaux, mais ne fournissent pas les fonctionnalités de gestion et de déplacement automatique des données qui le [array_view, classe](../../parallel/amp/reference/array-view-class.md) fournit sur le [array, classe](../../parallel/amp/reference/array-class.md). 
+  `texture_view` est accessible uniquement sur la vue d'accélérateur où les données de texture sous-jacentes résident.
 
 ### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view déconseillé
 
 Pour Visual Studio 2013, C++ AMP introduit une meilleure prise en charge pour les fonctionnalités de texture matérielles telles que l’échantillonnage et les mipmaps, qui ne peut pas être pris en charge par le [writeonly_texture_view, classe](../../parallel/amp/reference/writeonly-texture-view-class.md). La classe `texture_view` récemment introduite, prend en charge un sur-ensemble de la fonctionnalité dans `writeonly_texture_view`; par conséquent, `writeonly_texture_view` est déconseillé.
 
-Nous vous recommandons (au moins pour le nouveau code) d'utiliser `texture_view` pour accéder aux fonctionnalités qui ont été précédemment fournies par `writeonly_texture_view`. Comparez les deux exemples de code suivants qui accèdent en écriture à l'objet de texture comportant deux composants (int_2). Notez que dans les deux cas, la vue, `wo_tv4`, doit être capturée par la valeur de l'expression lambda. Voici l'exemple qui utilise la nouvelle classe `texture_view` :
+Nous vous recommandons (au moins pour le nouveau code) d'utiliser `texture_view` pour accéder aux fonctionnalités qui ont été précédemment fournies par `writeonly_texture_view`. Comparez les deux exemples de code suivants qui accèdent en écriture à l'objet de texture comportant deux composants (int_2). Notez que dans les deux cas, la vue, `wo_tv4`, doit être capturée par la valeur de l’expression lambda. Voici l'exemple qui utilise la nouvelle classe `texture_view` :
 
 ```cpp
 void write2ComponentTexture() {
@@ -344,7 +345,7 @@ Le type d'élément d'une `texture_view` (son attribut const/non const et aussi 
 
 |Type|Composants|Lecture|Write|Échantillonnage|Accès aux mipmaps|
 |----------|----------------|----------|-----------|--------------|-------------------|
-|texture_view\<const T, N >|1, 2, 4|Oui|Non (1)|Oui|Oui, indexable. La plage est déterminée à l'instanciation.|
+|texture_view\<const T, N>|1, 2, 4|Oui|Non (1)|Oui|Oui, indexable. La plage est déterminée à l'instanciation.|
 |Texture_view\<T, N >|1<br /><br /> 2, 4|Oui<br /><br /> Non (2)|Oui<br /><br /> Oui|Non (1)<br /><br /> Non (1)|Oui, un niveau. Le niveau est déterminé à l'instanciation.<br /><br /> Oui, un niveau. Le niveau est déterminé à l'instanciation.|
 
 Dans ce tableau, vous pouvez constater que les vues de texture en lecture seule prennent en charge les nouvelles fonctions pour compenser l'impossibilité d'accéder en écriture à la vue. Les vues de texture accessibles en écriture sont limitées car elles peuvent uniquement accéder à un niveau de mipmap. Les vues de texture en lecture-écriture sont encore plus spécialisées que celles accessibles en écriture, car elles ajoutent l’exigence que le type d’élément de la vue de texture comporte uniquement un seul composant. Notez que l'exemple n'est pas pris en charge pour les vues de texture accessibles en écriture, car il s'agit d'une opération orientée lecture seule.

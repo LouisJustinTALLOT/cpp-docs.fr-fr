@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 43ad777b0dfb1285a82d662f37329c079410c78d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657589"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284344"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map, classe
 
@@ -122,13 +122,13 @@ Pour plus d’informations sur la `concurrent_unordered_map` de classe, consulte
 
 `concurrent_unordered_map`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concurrent_unordered_map.h
 
 **Espace de noms :** concurrency
 
-##  <a name="at"></a> à
+##  <a name="at"></a> at
 
 Recherche un élément dans un `concurrent_unordered_map` avec une valeur de clé spécifiée... Cette méthode est concurrentiel.
 
@@ -247,10 +247,10 @@ La fonction de comparaison d’égalité pour cette carte non ordonnée.
 *_Allocator*<br/>
 L’allocateur pour cette carte non ordonnée.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Position du premier élément de la plage d'éléments à copier.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Position du premier élément au-delà de la plage d'éléments à copier.
 
 *_Umap*<br/>
@@ -428,7 +428,7 @@ Le type de la valeur insérée dans la table.
 *value*<br/>
 La valeur à insérer.
 
-*_WHERE*<br/>
+*_Where*<br/>
 L’emplacement de départ pour rechercher un point d’insertion.
 
 *first*<br/>
@@ -538,7 +538,7 @@ Si la valeur de clé d’argument est introuvable, elle est insérée avec la va
 
 Lorsque vous utilisez `operator[]` pour insérer des éléments, la référence retournée n'indique pas si l'insertion va modifier un élément existant ou en créer un nouveau. Les fonctions membres `find` et [insérer](#insert) peut être utilisée pour déterminer si un élément ayant la clé spécifiée est déjà présent avant une insertion.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Assigne le contenu d’un autre `concurrent_unordered_map` objet à celui-ci. Cette méthode n’est pas concurrentiel.
 
@@ -596,7 +596,7 @@ Le nombre d’éléments dans le conteneur.
 
 En présence d’insertions simultanées, le nombre d’éléments dans le conteneur simultané peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour soit encore lu.
 
-##  <a name="swap"></a> échange
+##  <a name="swap"></a> swap
 
 Échange le contenu de deux `concurrent_unordered_map` objets. Cette méthode n’est pas concurrentiel.
 
@@ -621,7 +621,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -667,7 +667,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 Le compartiment à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -684,7 +684,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -701,7 +701,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -720,7 +720,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -745,13 +745,13 @@ size_type unsafe_erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE*<br/>
+*_Where*<br/>
 La position de l’itérateur à effacer à partir de.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 La position du premier élément dans la plage d’éléments à effacer.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 La position du premier élément au-delà de la plage d’éléments à effacer.
 
 *KVal*<br/>
@@ -783,4 +783,3 @@ Le nombre maximal de compartiments dans ce conteneur.
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [Conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md)
-

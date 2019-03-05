@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 92b2827d556583524b46f88f8bd9efeb57a5d83a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472863"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263453"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace, classe
 
@@ -189,7 +189,7 @@ Pour plus d’informations sur l’appel de DAO directement et sur la sécurité
 
 `CDaoWorkspace`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 
@@ -396,7 +396,7 @@ virtual void Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Une chaîne contenant jusqu'à 14 caractères qui identifie le nouvel objet de l’espace de travail. Vous devez fournir un nom. Pour plus d’informations, consultez la rubrique « Propriété de nom » dans l’aide de DAO.
 
 *lpszUserName*<br/>
@@ -462,11 +462,11 @@ Options qui spécifient les informations sur la base de données à récupérer.
 
 - Nom AFX_DAO_PRIMARY_INFO (valeur par défaut), être mise à jour, Transactions
 
-- Informations AFX_DAO_SECONDARY_INFO principal plus (+) : délai de requête de Version, l’ordre de classement,
+- Informations de AFX_DAO_SECONDARY_INFO primaire plus (+) : Version, l’ordre, de classement délai de requête
 
-- AFX_DAO_ALL_INFO primaire et secondaire informations plus (+) : se connecter
+- AFX_DAO_ALL_INFO primaire et secondaire informations plus (+) : Connexion
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom de l’objet de base de données, pour la recherche par nom. Le nom est une chaîne contenant jusqu'à 14 caractères qui identifie le nouvel objet de l’espace de travail.
 
 ### <a name="remarks"></a>Notes
@@ -632,11 +632,11 @@ Options qui spécifient les informations sur l’espace de travail à récupére
 
 - Nom AFX_DAO_PRIMARY_INFO (valeur par défaut)
 
-- Informations AFX_DAO_SECONDARY_INFO principal plus (+) : nom d’utilisateur
+- Informations de AFX_DAO_SECONDARY_INFO primaire plus (+) : Nom d'utilisateur
 
-- AFX_DAO_ALL_INFO primaire et secondaire informations plus (+) : ODBCTrans isoler
+- AFX_DAO_ALL_INFO primaire et secondaire informations plus (+) : Isoler ODBCTrans
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom de l’objet de l’espace de travail, pour la recherche par nom. Le nom est une chaîne contenant jusqu'à 14 caractères qui identifie le nouvel objet de l’espace de travail.
 
 ### <a name="remarks"></a>Notes
@@ -653,7 +653,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 
 ### <a name="parameters"></a>Paramètres
 
-*%4%nsortie de l’action*<br/>
+*nAction*<br/>
 Une action à entreprendre lors du traitement inactif. Actuellement la seule action valide est `dbFreeLocks`.
 
 ### <a name="remarks"></a>Notes
@@ -705,7 +705,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom de l’objet d’espace de travail DAO pour ouvrir, une chaîne contenant jusqu'à 14 caractères qui identifie de façon unique l’espace de travail. Acceptez la valeur par défaut NULL pour ouvrir explicitement l’espace de travail par défaut. Pour les conventions de dénomination, consultez le *le caractère* paramètre pour [créer](#create). Pour plus d’informations, consultez la rubrique « Propriété de nom » dans l’aide de DAO.
 
 ### <a name="remarks"></a>Notes
@@ -722,8 +722,8 @@ Bien que plusieurs `CDaoWorkspace` membre fonctions peuvent uniquement être app
 
 ||||
 |-|-|-|
-|[Créer](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
-|[GetIniPath](#getinipath)|[Inactivité](#idle)|[SetIniPath](#setinipath)|
+|[Create](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
 ##  <a name="repairdatabase"></a>  CDaoWorkspace::RepairDatabase
@@ -736,7 +736,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le chemin d’accès et le nom de fichier pour un fichier de base de données Microsoft Jet moteur existant. Si vous omettez le chemin d’accès, uniquement le répertoire actif est recherché. Si votre système prend en charge la convention d’affectation de noms uniforme (UNC), vous pouvez également spécifier un chemin d’accès réseau, tels que : «\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ». (Barres obliques inverses doubles sont requis dans la chaîne de chemin d’accès, car «\\» est le caractère d’échappement de C++.)
 
 ### <a name="remarks"></a>Notes
@@ -877,7 +877,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Paramètres
 
-*nSecondes*<br/>
+*nSeconds*<br/>
 Le nombre de secondes avant qu’une erreur se produit lorsque vous essayez de vous connecter à une base de données ODBC.
 
 ### <a name="remarks"></a>Notes

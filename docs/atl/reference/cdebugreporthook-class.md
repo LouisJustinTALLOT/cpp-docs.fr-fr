@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 370581effcd7233d0f1f474c80a273809be58551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7c5993d1b96daaa73e7fc9509c93e66daed77f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551487"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262452"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook, classe
 
@@ -37,7 +37,7 @@ class CDebugReportHook
 |Nom|Description|
 |----------|-----------------|
 |[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Appels [SetPipeName](#setpipename), [SetTimeout](#settimeout), et [SetHook](#sethook).|
-|[CDebugReportHook :: ~ CDebugReportHook](#dtor)|Appels [CDebugReportHook::RemoveHook](#removehook).|
+|[CDebugReportHook::~CDebugReportHook](#dtor)|Calls [CDebugReportHook::RemoveHook](#removehook).|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -57,7 +57,7 @@ Utilisation de cette classe vous permet de déboguer interactivement les composa
 
 Notez que les rapports de débogage sont envoyés en utilisant le contexte de sécurité sous-jacente du thread. L’emprunt d’identité est temporairement désactivé afin que les rapports de débogage peuvent être affichés dans les situations où l’emprunt d’identité des utilisateurs de faibles privilèges est en cours, comme dans les applications web.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlutil.h
 
@@ -83,9 +83,9 @@ Le nom du canal nommé auquel la sortie de débogage doit être envoyée.
 *dwTimeout*<br/>
 Durée en millisecondes que cette classe doit attendre le canal nommé soit disponible.
 
-##  <a name="dtor"></a>  CDebugReportHook :: ~ CDebugReportHook
+##  <a name="dtor"></a>  CDebugReportHook::~CDebugReportHook
 
-Appels [CDebugReportHook::RemoveHook](#removehook).
+Calls [CDebugReportHook::RemoveHook](#removehook).
 
 ```
 ~CDebugReportHook() throw();

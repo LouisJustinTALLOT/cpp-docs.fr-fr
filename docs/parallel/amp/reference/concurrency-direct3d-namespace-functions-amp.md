@@ -21,12 +21,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: b721d19cd51a9eb1d07de8898b18728854decb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281328"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Fonctions Concurrency::Direct3D de l’espace de noms (AMP)
 
@@ -37,14 +37,14 @@ ms.locfileid: "50519731"
 |[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh](#firstbithigh)|
 |[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
-|[mad](#mad)|[make_array](#make_array)|[bruit](#noise)|
+|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|
 |[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
 |[step](#step)|[umax](#umax)|[umin](#umin)|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp.h **Namespace :** accès concurrentiel
+**En-tête :** amp.h **Namespace :** Concurrence
 
 ##  <a name="abs"></a>  abs
 
@@ -63,7 +63,7 @@ Valeur entière
 
 Retourne la valeur absolue de l’argument.
 
-##  <a name="clamp"></a>  Clamp
+##  <a name="clamp"></a>  clamp
 
 Calcule la valeur du premier argument spécifié ancré dans une plage définie par les deuxième et troisième arguments spécifiés.
 
@@ -156,7 +156,7 @@ Le runtime C++ AMP fournit des informations d’erreur détaillées en mode déb
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Acquérir un verrou sur un accelerator_view pour exécuter sans risque les opérations D3D sur les ressources partagées avec l’accelerator_view. L’accelerator_view et toutes les ressources de C++ AMP associés à cet accelerator_view en interne prennent ce verrou lors des opérations et se bloquent lorsqu’un autre thread détient le verrou d’accès D3D. Ce verrou est non-récursif : il correspond à un comportement d’appeler cette fonction à partir d’un thread qui détient déjà le verrou. Il est un comportement non défini pour effectuer des opérations sur l’accelerator_view ou de n’importe quel conteneur de données associées à accelerator_view du thread qui détient le verrou d’accès D3D. Voir également scoped_d3d_access_lock, une classe de style RAII pour un verrou d’accès D3D basée sur l’étendue.
+Acquérir un verrou sur un accelerator_view pour exécuter sans risque les opérations D3D sur les ressources partagées avec l’accelerator_view. L’accelerator_view et toutes les ressources de C++ AMP associés à cet accelerator_view en interne prennent ce verrou lors des opérations et se bloquent lorsqu’un autre thread détient le verrou d’accès D3D. Ce verrou est non-récursif : Il est un comportement non défini pour appeler cette fonction à partir d’un thread qui détient déjà le verrou. Il est un comportement non défini pour effectuer des opérations sur l’accelerator_view ou de n’importe quel conteneur de données associées à accelerator_view du thread qui détient le verrou d’accès D3D. Voir également scoped_d3d_access_lock, une classe de style RAII pour un verrou d’accès D3D basée sur l’étendue.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -252,7 +252,7 @@ Type des éléments dans le tableau.
 *_Rank*<br/>
 Le rang du tableau.
 
-*_ARRAY*<br/>
+*_Array*<br/>
 Un tableau sur un accelerator_view Direct3D pour lequel l’interface de mémoire tampon Direct3D sous-jacente est retournée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -269,7 +269,7 @@ IUnknown* get_device(const accelerator_view Av);
 
 ### <a name="parameters"></a>Paramètres
 
-*Violation d’accès*<br/>
+*Av*<br/>
 L’accelerator_view D3D pour lequel l’interface de périphérique D3D sous-jacente est retournée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -484,7 +484,7 @@ Valeur entière non signée
 
 Retourne la valeur avec l’ordre des bits inversé dans _X
 
-##  <a name="saturate"></a>  saturer
+##  <a name="saturate"></a>  saturate
 
 Fixe _X dans la plage de 0 à 1
 
@@ -544,7 +544,7 @@ Valeur à virgule flottante
 
 Retourne 0 si _X est inférieure à _Min ; 1 si _X est supérieure à _Max ; Sinon, une valeur comprise entre 0 et 1 si _X se trouve dans la plage [_Min, _Max]
 
-##  <a name="step"></a>  Étape
+##  <a name="step"></a>  step
 
 Compare deux valeurs, retourne 0 ou 1 selon la valeur est supérieure
 

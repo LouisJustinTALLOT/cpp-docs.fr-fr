@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: a9653225f3057d6c5ba9fd49cf64487e766ca8d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05d9d5fe9cc344be3f903f247f34003056404c9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491544"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258565"
 ---
 # <a name="cacl-class"></a>CAcl, classe
 
@@ -57,7 +57,7 @@ class CAcl
 |Nom|Description|
 |----------|-----------------|
 |[CAcl::CAcl](#cacl)|Constructeur.|
-|[CAcl :: ~ CAcl](#dtor)|Destructeur.|
+|[CAcl::~CAcl](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -100,7 +100,7 @@ Pour plus d’informations, consultez le [ACL](/windows/desktop/SecAuthZ/access-
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -151,14 +151,14 @@ CAcl(const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Objet `CAcl` existant.
 
 ### <a name="remarks"></a>Notes
 
 Le `CAcl` objet peut être éventuellement créé à l’aide d’un existant `CAcl` objet.
 
-##  <a name="dtor"></a>  CAcl :: ~ CAcl
+##  <a name="dtor"></a>  CAcl::~CAcl
 
 Destructeur.
 
@@ -242,7 +242,7 @@ Le [CSid](../../atl/reference/csid-class.md) de l’objet auquel l’entrée ACL
 *pMask*<br/>
 Masque spécifiant des autorisations pour accorder ou refuser l’accès.
 
-*PTapez*<br/>
+*pType*<br/>
 Le type d’ACE.
 
 *pFlags*<br/>
@@ -330,7 +330,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `CAcl` à affecter à l’objet existant.
 
 ### <a name="return-value"></a>Valeur de retour

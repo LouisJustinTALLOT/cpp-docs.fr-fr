@@ -9,12 +9,12 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-ms.openlocfilehash: bf0d8e82f1a1793f4e5561e24ed9ca173511d07c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e86ca139b8470dce614564f0c0134a611adeda2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462112"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270300"
 ---
 # <a name="derived-window-classes"></a>Classes de fenêtre dérivées
 
@@ -65,4 +65,3 @@ En plus des classes de fenêtre fournis par la bibliothèque de classes, vous de
 ## <a name="see-also"></a>Voir aussi
 
 [Objets fenêtre](../mfc/window-objects.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e335c20464d8ea71fd75ce2e67f67ca14edacb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543310"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299320"
 ---
 # <a name="implementing-property-pages"></a>Implémentation des Pages de propriétés
 
@@ -38,9 +38,9 @@ Pour créer une page de propriétés à l’aide d’ATL :
    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Effectuer des vérifications de validité de base sur le nombre d’objets passés à votre page et les interfaces qui prennent en charge.|Exécuter votre propre code avant d’appeler l’implémentation de classe de base. Si les objets en cours de définition non conformes à vos attentes, vous devez échouer l’appel dès que possible.|
    |[Activer](../atl/reference/ipropertypageimpl-class.md#activate)|Initialiser l’interface utilisateur de votre page (par exemple, définir des contrôles de boîte de dialogue avec les valeurs de propriété actuelles à partir d’objets, créer dynamiquement des contrôles ou effectuer d’autres initialisations).|Appeler l’implémentation de classe de base avant votre code afin que la classe de base a la possibilité de créer la fenêtre de la boîte de dialogue et tous les contrôles avant d’essayer de les mettre à jour.|
    |[Appliquer](../atl/reference/ipropertypageimpl-class.md#apply)|Valider les paramètres de propriété et mettre à jour les objets.|Il est inutile d’appeler l’implémentation de classe de base dans la mesure où il ne fait rien en dehors de la trace de l’appel.|
-   |[Désactiver](../atl/reference/ipropertypageimpl-class.md#deactivate)|Nettoyer les éléments liés aux fenêtres.|L’implémentation de classe de base détruit la boîte de dialogue représentant la page de propriétés. Si vous avez besoin nettoyer avant la destruction de la boîte de dialogue, vous devez ajouter votre code avant d’appeler la classe de base.|
+   |[Deactivate](../atl/reference/ipropertypageimpl-class.md#deactivate)|Nettoyer les éléments liés aux fenêtres.|L’implémentation de classe de base détruit la boîte de dialogue représentant la page de propriétés. Si vous avez besoin nettoyer avant la destruction de la boîte de dialogue, vous devez ajouter votre code avant d’appeler la classe de base.|
 
-Pour un exemple d’implémentation de page de propriété, consultez [exemple : implémentation d’une Page de propriété](../atl/example-implementing-a-property-page.md).
+Pour un exemple d’implémentation de page de propriété, consultez [exemple : Implémentation d’une Page de propriété](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
 > Si vous souhaitez héberger des contrôles ActiveX dans votre page de propriétés, vous devez modifier la dérivation de votre classe générées par l’Assistant. Remplacez **CDialogImpl\<CYourClass >** avec **CAxDialogImpl\<CYourClass >** dans la liste des classes de base.

@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-ms.openlocfilehash: 1c2696695992cac9d51d547913c41234beaecf57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 111d48b9c4a575078f2342bfaa944871bbd628f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585989"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268653"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock, classe
 
@@ -66,7 +66,7 @@ Pour plus d’informations, consultez [les Structures de données de synchronisa
 
 `reader_writer_lock`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt.h
 
@@ -112,7 +112,7 @@ Construit un nouvel `reader_writer_lock` objet.
 reader_writer_lock();
 ```
 
-##  <a name="dtor"></a> ~ reader_writer_lock
+##  <a name="dtor"></a> ~reader_writer_lock
 
 Détruit le `reader_writer_lock` objet.
 
@@ -124,7 +124,7 @@ Détruit le `reader_writer_lock` objet.
 
 Il est probable que le verrou n’est plus conservé lorsque le destructeur s’exécute. Autoriser le verrou de writer de lecteur détruire avec le verrou maintenu toujours résultats dans un comportement non défini.
 
-##  <a name="scoped_lock_class"></a>  reader_writer_lock::scoped_lock, classe
+##  <a name="scoped_lock_class"></a>  reader_writer_lock::scoped_lock Class
 
 Un wrapper RAII sécurisé qui peut être utilisé pour acquérir `reader_writer_lock` verrouiller les objets en tant que rédacteur.
 

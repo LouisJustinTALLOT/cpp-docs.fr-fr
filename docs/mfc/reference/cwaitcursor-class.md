@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: 10daa8c5af84b17d70cc18c9407686d4698e98a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ce81e62ec6498ad84349108b4c4a07090b17de5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533625"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287131"
 ---
 # <a name="cwaitcursor-class"></a>Cwaitcursor, classe
 
@@ -65,7 +65,7 @@ Une autre façon d’afficher un curseur d’attente consiste à utiliser la com
 
 `CWaitCursor`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -121,5 +121,4 @@ Si vous devez restaurer le curseur d’attente tandis que dans une fonction diff
 [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
 [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
-[Comment faire : modifier le curseur de souris dans une Application de classe Microsoft Foundation](http://go.microsoft.com/fwlink/p/?linkid=128044)
-
+[Comment faire Modifier le curseur de souris dans une Application de classe Microsoft Foundation](http://go.microsoft.com/fwlink/p/?linkid=128044)

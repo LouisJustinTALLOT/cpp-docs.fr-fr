@@ -5,12 +5,12 @@ f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: 30503ffa7e5c3845af6c9f61f4e8fc2f64b74e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ef181da43bb947230aaafe82b178938c85b9a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467130"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278234"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Fonctions d’espace de noms Concurrency::Graphics
 
@@ -292,11 +292,11 @@ Un itérateur de départ dans le conteneur source.
 *last*<br/>
 Un itérateur de fin dans le conteneur source.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_graphics.h
 
-**Namespace :** Concurrency::graphics
+**Espace de noms :** Concurrency::graphics
 
 ## <a name="see-also"></a>Voir aussi
 

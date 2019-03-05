@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: e1a477e278de2e8ba0f1af43dfdb6081206d86e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450906"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294354"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap, classe
 
@@ -119,7 +119,7 @@ Pour plus d’informations sur la `concurrent_unordered_multimap` de classe, con
 
 `concurrent_unordered_multimap`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concurrent_unordered_map.h
 
@@ -221,10 +221,10 @@ La fonction de comparaison d’égalité pour cette classe multimap non triée.
 *_Allocator*<br/>
 L’allocateur pour cette classe multimap non triée.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Position du premier élément de la plage d'éléments à copier.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Position du premier élément au-delà de la plage d'éléments à copier.
 
 *_Umap*<br/>
@@ -397,10 +397,10 @@ Le type d’itérateur utilisé pour l’insertion.
 *V*<br/>
 Le type de la valeur insérée dans la table.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à insérer.
 
-*_WHERE*<br/>
+*_Where*<br/>
 L’emplacement de départ pour rechercher un point d’insertion.
 
 *first*<br/>
@@ -481,7 +481,7 @@ Le nombre maximal d’éléments qui peuvent être insérées dans ce conteneur 
 
 Cette valeur de limite supérieure peut être supérieure à ce que le conteneur peut réellement contenir.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Assigne le contenu d’un autre `concurrent_unordered_multimap` objet à celui-ci. Cette méthode n’est pas concurrentiel.
 
@@ -539,7 +539,7 @@ Le nombre d’éléments dans le conteneur.
 
 En présence d’insertions simultanées, le nombre d’éléments dans le conteneur simultané peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour soit encore lu.
 
-##  <a name="swap"></a> échange
+##  <a name="swap"></a> swap
 
 Échange le contenu de deux `concurrent_unordered_multimap` objets. Cette méthode n’est pas concurrentiel.
 
@@ -564,7 +564,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -610,7 +610,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 Le compartiment à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -627,7 +627,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -644,7 +644,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -663,7 +663,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Nombre*<br/>
+*_Bucket*<br/>
 L’index de compartiment.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -688,7 +688,7 @@ iterator unsafe_erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE*<br/>
+*_Where*<br/>
 La position de l’itérateur à effacer à partir de.
 
 *KVal*<br/>
@@ -724,4 +724,3 @@ Le nombre maximal de compartiments dans ce conteneur.
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [Conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md)
-

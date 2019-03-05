@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: db1636bebd0cc29124018b5fad2c0535079706d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541204"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277770"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView (classe)
 
@@ -85,7 +85,7 @@ Pour plus d’informations sur la déclaration et utilisation de votre vue d’e
 
 `CDaoRecordView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 
@@ -173,7 +173,7 @@ Un pointeur vers un `CDaoRecordset`-objet dérivé si l’objet a été créé a
 
 Vous devez substituer cette fonction membre pour construire ou obtenir un objet de jeu d’enregistrements et retourner un pointeur vers elle. Si vous déclarez votre classe de vue d’enregistrement avec ClassWizard, l’Assistant écrit une valeur de remplacement par défaut pour vous. Implémentation par défaut de ClassWizard retourne le pointeur de jeu d’enregistrements stocké dans la vue de l’enregistrement s’il en existe. Si non, il construit un objet recordset du type que vous avez spécifié avec ClassWizard et appelle son `Open` membre de fonction pour ouvrir la table ou exécuter la requête, puis retourne un pointeur vers l’objet.
 
-Pour plus d’informations et des exemples, consultez l’article [vues d’enregistrements : à l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
+Pour plus d’informations et des exemples, consultez l’article [vues d’enregistrements : À l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  CDaoRecordView::OnMove
 

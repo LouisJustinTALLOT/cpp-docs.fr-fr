@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-ms.openlocfilehash: 42115df5d70121d90631bf18c5d3fa83b130485b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88389d4fe913a31fce43e3c8cc95605f99701695
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487283"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326437"
 ---
 # <a name="ca2caex-class"></a>Classe de CA2CAEX
 
@@ -42,7 +42,7 @@ La taille de la mémoire tampon utilisée dans le processus de traduction. La lo
 |Nom|Description|
 |----------|-----------------|
 |[CA2CAEX::CA2CAEX](#ca2caex)|Constructeur.|
-|[CA2CAEX :: ~ CA2CAEX](#dtor)|Destructeur.|
+|[CA2CAEX::~CA2CAEX](#dtor)|Destructeur.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -78,7 +78,7 @@ Pour une description de ces macros de conversion de texte, consultez [Macros de 
 
 Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlconv.h
 
@@ -103,7 +103,7 @@ Inutilisé dans cette classe.
 
 Crée la mémoire tampon requise pour la traduction.
 
-##  <a name="dtor"></a>  CA2CAEX :: ~ CA2CAEX
+##  <a name="dtor"></a>  CA2CAEX::~CA2CAEX
 
 Destructeur.
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-ms.openlocfilehash: 612deccdf4697f366c2d40b1f4a329c015ddded9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e3e510291daa50ddcf5d63451edef0428d66ed1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432836"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280462"
 ---
 # <a name="ccomptr-class"></a>CComPtr, classe
 
@@ -63,7 +63,7 @@ Dans les versions Debug, liez atlsd.lib pour le traçage de code.
 
 `CComPtr`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -79,7 +79,7 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>Paramètres
 
-*LP*<br/>
+*lp*<br/>
 Utilisé pour initialiser le pointeur d’interface.
 
 *T*<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-ms.openlocfilehash: 880ef783316f710943fde323bc89a49d19b0a1fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79a71a4660cd49f85726d730c9fad0b2f10f83bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509004"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300425"
 ---
 # <a name="control-classes"></a>Classes de contrôle
 
@@ -148,4 +148,3 @@ Une vue qui contient un contrôle d’arborescence Windows.
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
-

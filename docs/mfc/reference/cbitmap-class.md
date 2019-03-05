@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178172"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296723"
 ---
 # <a name="cbitmap-class"></a>CBitmap (classe)
 
@@ -391,7 +391,7 @@ BOOL LoadMappedBitmap(
 *nIDBitmap*<br/>
 L’ID de la ressource bitmap.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Un indicateur pour une image bitmap. Peut être zéro ou CMB_MASKED.
 
 *lpColorMap*<br/>
@@ -524,4 +524,3 @@ L’interface GDI n’utilise pas ces valeurs, à l’exception to les retourner
 [Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
 [CGdiObject, classe](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

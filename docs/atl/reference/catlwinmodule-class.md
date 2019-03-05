@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 3e38aebf3eadceafad3e70463d5bcf2d26fef96e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561627"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269459"
 ---
 # <a name="catlwinmodule-class"></a>Catlwinmodule, classe
 
@@ -37,7 +37,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |Nom|Description|
 |----------|-----------------|
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|Constructeur.|
-|[CAtlWinModule :: ~ CAtlWinModule](#dtor)|Destructeur.|
+|[CAtlWinModule::~CAtlWinModule](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -56,7 +56,7 @@ Cette classe prend en charge toutes les classes ATL qui nécessitent des fonctio
 
 `CAtlWinModule`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -92,7 +92,7 @@ CAtlWinModule();
 
 Si l’initialisation échoue, un **EXCEPTION_NONCONTINUABLE** exception est levée.
 
-##  <a name="dtor"></a>  CAtlWinModule :: ~ CAtlWinModule
+##  <a name="dtor"></a>  CAtlWinModule::~CAtlWinModule
 
 Destructeur.
 

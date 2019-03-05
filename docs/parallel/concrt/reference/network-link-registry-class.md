@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 1d0aa8b3b5409659dee08b4e4365beac1a3a92be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2537ed857651b5210b104a270b3d827246b8339a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492263"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273346"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry, classe
 
@@ -32,7 +32,7 @@ class network_link_registry;
 
 #### <a name="parameters"></a>Paramètres
 
-*_Bloc*<br/>
+*_Block*<br/>
 Le bloc type de données sont stockées dans le `network_link_registry`.
 
 ## <a name="members"></a>Membres
@@ -52,7 +52,7 @@ Le bloc type de données sont stockées dans le `network_link_registry`.
 |----------|-----------------|
 |[add](#add)|En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.|
 |[begin](#begin)|En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.|
-|[contient](#contains)|En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet pour un bloc spécifié.|
+|[contains](#contains)|En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet pour un bloc spécifié.|
 |[count](#count)|En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.|
 |[remove](#remove)|En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.|
 
@@ -64,13 +64,13 @@ Le `network link registry` n’est pas sécurisé pour l’accès simultané.
 
 `network_link_registry`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
 **Espace de noms :** concurrency
 
-##  <a name="add"></a> Ajouter
+##  <a name="add"></a> add
 
 En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.
 
@@ -80,7 +80,7 @@ virtual void add(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Lier*<br/>
+*_Link*<br/>
 Pointeur vers un bloc à ajouter.
 
 ##  <a name="begin"></a> commencer
@@ -109,7 +109,7 @@ virtual bool contains(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Lier*<br/>
+*_Link*<br/>
 Un pointeur désignant un bloc qui est recherché dans le `network_link_registry` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -138,7 +138,7 @@ virtual bool remove(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Lier*<br/>
+*_Link*<br/>
 Un pointeur vers un bloc à supprimer, si trouvé.
 
 ### <a name="return-value"></a>Valeur de retour

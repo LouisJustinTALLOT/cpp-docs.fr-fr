@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 2f28178240f7d17e124970d91ec7eb338ef110e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452147"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259748"
 ---
 # <a name="coledocument-class"></a>COleDocument, classe
 
@@ -117,7 +117,7 @@ class COleDocument : public CDocument
 
 Si vous écrivez une application de conteneur simple, dérivez votre classe de document de `COleDocument`. Si vous écrivez une application de conteneur qui prend en charge la liaison aux éléments incorporés contenues par ses documents, dérivez votre classe de document de [COleLinkingDoc plutôt](../../mfc/reference/colelinkingdoc-class.md). Si vous écrivez un serveur d’application ou combinaison conteneur/serveur, dérivez votre classe de document de [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` et `COleServerDoc` sont dérivés de `COleDocument`, de sorte que ces classes héritent de tous les services disponibles dans `COleDocument` et `CDocument`.
 
-Pour utiliser `COleDocument`, dérivez une classe à partir de celui-ci et ajouter des fonctionnalités pour gérer l’application non-OLE données ainsi que les éléments liés ou incorporés. Si vous définissez `CDocItem`-les classes dérivées pour stocker les données d’application native, vous pouvez utiliser l’implémentation par défaut définie par `COleDocument` pour stocker votre OLE et les données non OLE. Vous pouvez également concevoir vos propres structures de données pour le stockage des données non-OLE séparément à partir des éléments OLE. Pour plus d’informations, consultez l’article [conteneurs : fichiers composés](../../mfc/containers-compound-files.md)...
+Pour utiliser `COleDocument`, dérivez une classe à partir de celui-ci et ajouter des fonctionnalités pour gérer l’application non-OLE données ainsi que les éléments liés ou incorporés. Si vous définissez `CDocItem`-les classes dérivées pour stocker les données d’application native, vous pouvez utiliser l’implémentation par défaut définie par `COleDocument` pour stocker votre OLE et les données non OLE. Vous pouvez également concevoir vos propres structures de données pour le stockage des données non-OLE séparément à partir des éléments OLE. Pour plus d’informations, consultez l’article [conteneurs : Fichiers composés](../../mfc/containers-compound-files.md)...
 
 `CDocument` prend en charge l’envoi de votre document par e-mail si la prise en charge de messagerie (MAPI) est présente. `COleDocument` a mis à jour [OnFileSendMail](#onfilesendmail) pour gérer correctement les documents composés. Pour plus d’informations, consultez les articles [MAPI](../../mfc/mapi.md) et [prise en charge MAPI dans MFC](../../mfc/mapi-support-in-mfc.md)...
 
@@ -131,7 +131,7 @@ Pour utiliser `COleDocument`, dérivez une classe à partir de celui-ci et ajout
 
 `COleDocument`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 
@@ -166,7 +166,7 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Pointeur vers un `DVTARGETDEVICE` structure de données qui contient des informations sur le nouveau périphérique cible à l’impression. Peut être NULL.
 
-*PPD*<br/>
+*ppd*<br/>
 Pointeur vers un `PRINTDLG` structure de données qui contient des informations sur le nouveau périphérique cible à l’impression. Peut être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -201,12 +201,12 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si la prise en charge de fichier composé est activé ou désactivé.
 
 ### <a name="remarks"></a>Notes
 
-Cela est également appelée stockage structuré. Vous appelez généralement cette fonction à partir du constructeur de votre `COleDocument`-classe dérivée. Pour plus d’informations sur les documents composés, consultez l’article [conteneurs : fichiers composés](../../mfc/containers-compound-files.md)...
+Cela est également appelée stockage structuré. Vous appelez généralement cette fonction à partir du constructeur de votre `COleDocument`-classe dérivée. Pour plus d’informations sur les documents composés, consultez l’article [conteneurs : Fichiers composés](../../mfc/containers-compound-files.md)...
 
 Si vous n’appelez pas cette fonction membre, les documents sont stockés dans un format non structuré (« plate »).
 
@@ -239,7 +239,7 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 Une référence à une POSITION a de valeur par un appel précédent à `GetNextClientItem`; la valeur initiale est retournée par la `GetStartPosition` fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -264,7 +264,7 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 Une référence à une POSITION a de valeur par un appel précédent à `GetNextItem`; la valeur initiale est retournée par la `GetStartPosition` fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -289,7 +289,7 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*points de vente*<br/>
+*pos*<br/>
 Une référence à une POSITION a de valeur par un appel précédent à `GetNextServerItem`; la valeur initiale est retournée par la `GetStartPosition` fonction membre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -548,4 +548,3 @@ Ainsi, l’infrastructure pour inviter l’utilisateur à enregistrer le documen
 [Exemple MFC MFCBIND](../../visual-cpp-samples.md)<br/>
 [CDocument, classe](../../mfc/reference/cdocument-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

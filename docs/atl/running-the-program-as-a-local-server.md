@@ -5,12 +5,12 @@ helpviewer_keywords:
 - debugging [ATL], running services as local server
 - ATL services, running as local servers
 ms.assetid: eb9701e6-e2a8-4666-897f-0c893aec8ac7
-ms.openlocfilehash: 9a55dba861457eae888f519fb3bbd6c7a66e623c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a412814fc5f3900a248f779501e2720b72287e57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610858"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296824"
 ---
 # <a name="running-the-program-as-a-local-server"></a>Le programme en cours d’exécution en tant qu’un serveur Local
 
@@ -19,4 +19,3 @@ Si le programme en cours d’exécution en tant que service n’est pas pratique
 ## <a name="see-also"></a>Voir aussi
 
 [Conseils de débogage](../atl/debugging-tips.md)
-

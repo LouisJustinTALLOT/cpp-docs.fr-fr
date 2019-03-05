@@ -1,5 +1,5 @@
 ---
-title: 'TN064 : modèle de thread apartment dans les contrôles ActiveX'
+title: 'TN064 : Modèle de thread dans les contrôles ActiveX Apartment'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.activex
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: 37f8af1e4bd0fedf0b1ab14a90afdda3916c5391
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6f02b2106693226f6380e935a54e04e10d5b4f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665555"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261165"
 ---
-# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064 : modèle de thread apartment dans les contrôles ActiveX
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064 : Modèle de thread dans les contrôles ActiveX Apartment
 
 > [!NOTE]
 >  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -28,7 +28,7 @@ Cette note technique explique comment activer le modèle de thread apartment dan
 
 Le modèle apartment est une approche de prise en charge d'objets incorporés, tels que les contrôles ActiveX, dans une application conteneur multithread. Bien que l'application puisse avoir plusieurs threads, chaque instance d'un objet incorporé est affectée à une "cloison", qui s'exécute sur un seul thread. En d'autres termes, tous les appels à une instance d'un contrôle se produisent sur le même thread.
 
-Toutefois, différentes instances du même type de contrôle peuvent être affectées à différentes cloisons. Par conséquent, si plusieurs instances d’un contrôle partagent des données en commun (par exemple, les données statiques ou globales), alors l’accès à ces données partagées doit être protégé par un objet de synchronisation, tel qu’une section critique.
+Toutefois, différentes instances du même type de contrôle peuvent être affectées à différentes cloisons. Par conséquent, si plusieurs instances d'un contrôle partagent des données en commun (par exemple, les données statiques ou globales), alors l'accès à ces données partagées doit être protégé par un objet de synchronisation, tel qu'une section critique.
 
 Pour plus d’informations sur le modèle de thread apartment, consultez [processus et Threads](/windows/desktop/ProcThread/processes-and-threads) dans le *référence du programmeur OLE*.
 
@@ -111,4 +111,3 @@ Si votre contrôle ne suit pas les règles de modèle de thread apartment, vous 
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

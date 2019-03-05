@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177067"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265013"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -245,9 +245,9 @@ L’illustration suivante montre un exemple `CTaskDialog` pour illustrer l’emp
 ![Exemple de CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "exemple de CTaskDialog") <br/>
 Exemple de CTaskDialog
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**Valeur minimale de système d’exploitation requis :** Windows Vista
+**Au minimum le système d’exploitation requis :** Windows Vista
 
 **En-tête :** afxtaskdialog.h
 
@@ -271,7 +271,7 @@ void AddCommandControl(
 *strCaption*<br/>
 [in] La chaîne qui le `CTaskDialog` affiche à l’utilisateur. Utilisez cette chaîne pour expliquer l’objectif de la commande.
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 [in] Un paramètre booléen qui indique si le nouveau bouton est activé ou désactivé.
 
 *bRequiresElevation*<br/>
@@ -306,7 +306,7 @@ void CTaskDialog::AddRadioButton(
 *strCaption*<br/>
 [in] La chaîne qui le `CTaskDialog` s’affiche en regard de la case d’option.
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 [in] Un paramètre booléen qui indique si la case d’option est activée.
 
 ### <a name="remarks"></a>Notes
@@ -966,7 +966,7 @@ void SetCommandControlOptions(
 *nCommandControlID*<br/>
 [in] L’ID du contrôle de commande pour mettre à jour.
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 [in] Un paramètre booléen qui indique si le contrôle de bouton de commande spécifié est activé ou désactivé.
 
 *bRequiresElevation*<br/>
@@ -1320,7 +1320,7 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>Paramètres
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 [in] TRUE pour activer la barre de texte défilant. FALSE pour désactiver la barre de type texte défilant et supprimez-le de la `CTaskDialog`.
 
 *nMarqueeSpeed*<br/>
@@ -1435,7 +1435,7 @@ void SetRadioButtonOptions(
 *nRadioButtonID*<br/>
 [in] L’ID du contrôle de bouton radio.
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 [in] TRUE pour activer la case d’option ; FALSE pour désactiver la case d’option.
 
 ### <a name="remarks"></a>Notes
@@ -1579,7 +1579,7 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>Paramètres
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Un handle vers la `m_hWnd` de structure pour le `CTaskDialog`.
 
 *uNotification*<br/>
@@ -1604,7 +1604,7 @@ L’implémentation par défaut de `TaskDialogCallback` gère le message spécif
 
 Les valeurs de *wParam* et *lParam* dépendent du message généré spécifique. Il est possible pour une ou les deux de ces valeurs à être vide. Le tableau suivant répertorie les notifications par défaut qui sont prises en charge et ce que les valeurs de *wParam* et *lParam* représentent. Si vous substituez cette méthode dans une classe dérivée, vous devez implémenter le code de rappel pour chaque message dans le tableau suivant.
 
-|Message de notification|*wParam* valeur|*lParam* valeur|
+|Message de notification|*wParam* Value|*lParam* Value|
 |--------------------------|--------------------|--------------------|
 |TDN_CREATED|Non utilisé.|Non utilisé.|
 |TDN_NAVIGATED|Non utilisé.|Non utilisé.|
@@ -1623,4 +1623,4 @@ Les valeurs de *wParam* et *lParam* dépendent du message généré spécifique.
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[Procédure pas à pas : ajout d’une classe CTaskDialog à une application](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)
+[Procédure pas à pas : Ajout d’une classe CTaskDialog à une Application](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)

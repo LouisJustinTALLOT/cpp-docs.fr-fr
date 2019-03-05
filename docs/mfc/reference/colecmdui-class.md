@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 30caf7b42cf570a5dcd92d48817ef3743cf63811
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677433"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270853"
 ---
 # <a name="colecmdui-class"></a>Colecmdui, classe
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur DocObjects, consultez [CDocObjectServer](../../mf
 
 `COleCmdUI`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdocobj.h
 
@@ -114,7 +114,7 @@ virtual void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Paramètres
 
-*nVérifiez*<br/>
+*nCheck*<br/>
 Une valeur déterminant l’état à définir un bouton bascule activé/désactivé commande. Les valeurs possibles sont :
 
 |Value|Description|
@@ -140,4 +140,3 @@ Un pointeur vers le texte à utiliser avec la commande.
 
 [CCmdUI, classe](../../mfc/reference/ccmdui-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

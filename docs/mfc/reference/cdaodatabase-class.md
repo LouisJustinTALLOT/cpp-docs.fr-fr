@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439276"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272895"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase, classe
 
@@ -160,7 +160,7 @@ Chaque base de données gère ses propres collections de tabledef, querydef, jeu
 
 `CDaoDatabase`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 
@@ -253,7 +253,7 @@ virtual void Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Une expression de chaîne qui est le nom du fichier de base de données que vous créez. Il peut être le chemin d’accès complet et le nom de fichier, tel que « C:\\\MYDB. MDB ». Vous devez fournir un nom. Si vous ne fournissez pas une extension de nom de fichier. MDB est ajouté. Si votre réseau prend en charge la convention d’affectation de noms uniforme (UNC), vous pouvez également spécifier un chemin d’accès réseau, tels que «\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB ». Uniquement Microsoft Jet (. Fichiers de base de données MDB) peuvent être créés à l’aide de cette fonction membre. (Barres obliques inverses doubles sont requis dans les littéraux de chaîne, car «\\» est le caractère d’échappement de C++.)
 
 *lpszLocale*<br/>
@@ -332,7 +332,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom unique de l’objet relation. Le nom doit commencer par une lettre et peut contenir un maximum de 40 caractères. Il peut inclure des nombres et caractères de trait de soulignement mais ne peut pas inclure de signes de ponctuation ou d’espaces.
 
 *lpszTable*<br/>
@@ -387,7 +387,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom de la requête enregistrée à supprimer.
 
 ### <a name="remarks"></a>Notes
@@ -406,7 +406,7 @@ void DeleteRelation(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom de la relation à supprimer.
 
 ### <a name="remarks"></a>Notes
@@ -425,7 +425,7 @@ void DeleteTableDef(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom de l’objet à supprimer.
 
 ### <a name="remarks"></a>Notes
@@ -587,11 +587,11 @@ Options qui spécifient les informations sur le jeu d’enregistrements à récu
 
 - Nom AFX_DAO_PRIMARY_INFO (valeur par défaut), Type
 
-- Informations AFX_DAO_SECONDARY_INFO principal plus (+) : Date de création, Date de dernière mise à jour, renvoie les enregistrements, le Updatable
+- Informations de AFX_DAO_SECONDARY_INFO primaire plus (+) : Date de création, Date de dernière mise à jour, renvoie les enregistrements, être mise à jour
 
-- AFX_DAO_ALL_INFO primaire et secondaire informations plus (+) : SQL, Connect, ODBCTimeout
+- AFX_DAO_ALL_INFO primaire et secondaire informations plus (+) : SQL, vous connecter, ODBCTimeout
 
-*Caractère*<br/>
+*lpszName*<br/>
 Chaîne contenant le nom d’une requête définie dans la base de données pour la recherche par nom.
 
 ### <a name="remarks"></a>Notes
@@ -689,7 +689,7 @@ Options qui spécifient les informations sur la relation à récupérer. Les opt
 
 Les informations de champ est un [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) objet contenant les champs à partir de la table primaire impliquée dans la relation.
 
-*Caractère*<br/>
+*lpszName*<br/>
 Chaîne contenant le nom de l’objet de relation pour la recherche par nom.
 
 ### <a name="remarks"></a>Notes
@@ -744,11 +744,11 @@ Options qui spécifient les informations sur la table à récupérer. Les option
 
 - Attributs de nom AFX_DAO_PRIMARY_INFO (valeur par défaut), être mise à jour,
 
-- Informations AFX_DAO_SECONDARY_INFO principal plus (+) : Date de création, Date de dernière mise à jour, nom de Table Source Connect
+- Informations de AFX_DAO_SECONDARY_INFO primaire plus (+) : Date de création, Date de dernière mise à jour, nom de la Table Source, se connecter
 
-- AFX_DAO_ALL_INFO primaire et secondaire informations plus (+) : nombre d’enregistrements de règle de Validation, le texte de Validation,
+- AFX_DAO_ALL_INFO primaire et secondaire informations plus (+) : Nombre d’enregistrements de règle, le texte de Validation, de validation
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom de l’objet tabledef, pour la recherche par nom.
 
 ### <a name="remarks"></a>Notes
@@ -824,7 +824,7 @@ virtual void Open(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Une expression de chaîne qui est le nom d’un existant Microsoft Jet (. Fichier de base de données MDB). Si le nom de fichier a une extension, il est nécessaire. Si votre réseau prend en charge la convention d’affectation de noms uniforme (UNC), vous pouvez également spécifier un chemin d’accès réseau, tels que «\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ». (Barres obliques inverses doubles sont requis dans les littéraux de chaîne, car «\\» est le caractère d’échappement de C++.)
 
 Certaines considérations s’appliquent lorsque vous utilisez *le caractère*. Si elle :
@@ -882,7 +882,7 @@ void SetQueryTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Paramètres
 
-*nSecondes*<br/>
+*nSeconds*<br/>
 Le nombre de secondes avant une tentative de requête arrive à expiration.
 
 ### <a name="remarks"></a>Notes

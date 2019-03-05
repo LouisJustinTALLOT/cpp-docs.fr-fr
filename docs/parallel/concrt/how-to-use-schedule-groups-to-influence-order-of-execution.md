@@ -1,18 +1,18 @@
 ---
-title: 'Comment : utiliser des groupes de planification pour influencer l’ordre d’exécution'
+title: 'Procédure : Utiliser des groupes de planification pour influencer l’ordre d’exécution'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-ms.openlocfilehash: 1117e0d24aae023fbb4dec4fbb9721e6da2ad768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642299"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284357"
 ---
-# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Comment : utiliser des groupes de planification pour influencer l’ordre d’exécution
+# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Procédure : Utiliser des groupes de planification pour influencer l’ordre d’exécution
 
 Dans le Runtime d’accès concurrentiel, l’ordre dans lequel les tâches sont planifiées est non déterministe. Toutefois, vous pouvez utiliser des stratégies de planification pour influencer l’ordre dans lequel les tâches s’exécutent. Cette rubrique montre comment utiliser des groupes de planification avec le [concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) stratégie du planificateur pour influencer l’ordre dans lequel les tâches s’exécutent.
 
@@ -112,4 +112,3 @@ Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-l
 
 [Groupes de planification](../../parallel/concrt/schedule-groups.md)<br/>
 [Agents asynchrones](../../parallel/concrt/asynchronous-agents.md)
-

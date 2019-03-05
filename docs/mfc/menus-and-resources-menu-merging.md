@@ -1,5 +1,5 @@
 ---
-title: 'Menus et ressource : fusion de menus'
+title: 'Menus et ressources : Fusion de menus'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bars [MFC], OLE document applications
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 30663afae0bfd30b42f99daf95cb8ff35979ee50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438439"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300347"
 ---
-# <a name="menus-and-resources-menu-merging"></a>Menus et ressource : fusion de menus
+# <a name="menus-and-resources-menu-merging"></a>Menus et ressources : Fusion de menus
 
 Cet article détaille les étapes nécessaires pour les applications de document OLE gérer la modification visuelle et l’activation en place correctement. Activation en place pose un défi pour le conteneur et le serveur des applications (composant). L’utilisateur reste dans la même fenêtre frame (dans le contexte du document conteneur), mais est en cours d’exécution une autre application (serveur). Cela nécessite une coordination entre les ressources des applications conteneur et serveur.
 
@@ -105,7 +105,7 @@ Lorsqu’un élément incorporé est activé sur place, le framework charge le m
 
 Serveur d’applications doit créer une nouvelle barre d’outils et stocker son image bitmap dans un fichier distinct. Les applications générées par l’Assistant d’application stockent cette image bitmap dans un fichier appelé ITOOLBAR. BMP. La nouvelle barre d’outils remplace la barre d’outils de l’application conteneur lorsque votre élément serveur est activé sur place et doit contenir les mêmes éléments que votre barre d’outils normale, mais supprimez icônes représentant des éléments dans les menus fichier et fenêtre.
 
-Cette barre d’outils est chargé dans votre `COleIPFrameWnd`-classe dérivée, créé pour vous par l’Assistant application. La barre d’état est gérée par l’application conteneur. Pour plus d’informations sur l’implémentation de fenêtres frame de la place, consultez [serveurs : implémentation d’un serveur](../mfc/servers-implementing-a-server.md).
+Cette barre d’outils est chargé dans votre `COleIPFrameWnd`-classe dérivée, créé pour vous par l’Assistant application. La barre d’état est gérée par l’application conteneur. Pour plus d’informations sur l’implémentation de fenêtres frame de la place, consultez [serveurs : Implémentation d’un serveur](../mfc/servers-implementing-a-server.md).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -113,4 +113,3 @@ Cette barre d’outils est chargé dans votre `COleIPFrameWnd`-classe dérivée,
 [Activation](../mfc/activation-cpp.md)<br/>
 [Serveurs](../mfc/servers.md)<br/>
 [Conteneurs](../mfc/containers.md)
-

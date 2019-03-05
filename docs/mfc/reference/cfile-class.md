@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644143"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289865"
 ---
 # <a name="cfile-class"></a>CFile (classe)
 
@@ -150,7 +150,7 @@ Pour plus d’informations sur l’utilisation de `CFile`, consultez les article
 
 `CFile`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -199,7 +199,7 @@ CAtlTransactionManager* pTM);
 Handle d'un fichier à attacher à l'objet `CFile`.
 
 *lpszFileName*<br/>
-Chemin d’accès relatif ou complet d’un fichier à attacher à l’objet `CFile`.
+Chemin d'accès relatif ou complet d'un fichier à attacher à l'objet `CFile`.
 
 *nOpenFlags*<br/>
 Combinaison de bits (OR) ou options d'accès au fichier pour le fichier spécifié. Consultez la section Notes pour connaître les options possibles.
@@ -264,7 +264,7 @@ Le constructeur avec un seul paramètre initialise les membres et attache un fic
 
 Le constructeur avec deux paramètres initialise les membres et tente d'ouvrir le fichier spécifié. Si ce constructeur ouvre correctement le fichier spécifié, le fichier est attaché à l'objet `CFile`. Sinon, ce constructeur émet un pointeur vers un objet `CInvalidArgException`. Pour plus d’informations sur la gestion des exceptions, consultez [Exceptions](../../mfc/exception-handling-in-mfc.md).
 
-Si un objet `CFile` ouvre correctement un fichier spécifié, ce dernier est fermé automatiquement quand l'objet `CFile` est détruit. Sinon, vous devez fermer explicitement le fichier une fois qu'il n'est plus attaché à l'objet `CFile`.
+Si un objet `CFile` ouvre correctement un fichier spécifié, ce dernier est fermé automatiquement quand l’objet `CFile` est détruit. Sinon, vous devez fermer explicitement le fichier une fois qu’il n’est plus attaché à l’objet `CFile`.
 
 ### <a name="example"></a>Exemple
 
@@ -600,8 +600,8 @@ Le tableau suivant décrit les résultats possibles de `Open`.
 
 |`pError`|Erreur rencontrée|Valeur de retour|CFileException contenu|
 |--------------|------------------------|------------------|----------------------------|
-|NULL|Non|true|N/A|
-|PTR pour `CFileException`|Non|true|inchangé|
+|NULL|Aucune|true|N/A|
+|PTR pour `CFileException`|Aucune|true|inchangé|
 |NULL|Oui|false|N/A|
 |PTR pour `CFileException`|Oui|false|initialisé pour décrire l’erreur|
 
@@ -720,7 +720,7 @@ UINT nFrom);
 *lOff*<br/>
 Nombre d’octets à déplacer le pointeur de fichier. Les valeurs positives déplacent le pointeur de fichier vers la fin du fichier ; les valeurs négatives déplacent le pointeur de fichier vers le début du fichier.
 
-*Ndepuis*<br/>
+*nFrom*<br/>
 Position à rechercher à partir de. Consultez la section Notes pour les valeurs possibles.
 
 ### <a name="return-value"></a>Valeur de retour

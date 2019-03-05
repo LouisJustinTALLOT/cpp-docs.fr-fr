@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: bd0e238dd936dfff0677e41831c72229171cb656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 099f1cccd178068f9b96bda6193b5ee9df3b66c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504375"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274958"
 ---
 # <a name="cpanecontainer-class"></a>Cpanecontainer, classe
 
@@ -225,7 +225,7 @@ L’exemple suivant montre comment construire une instance de la `CPaneContainer
 
 [CPaneContainer](../../mfc/reference/cpanecontainer-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpanecontainer.h
 

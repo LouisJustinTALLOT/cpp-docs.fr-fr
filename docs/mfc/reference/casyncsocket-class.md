@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179030"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260008"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (classe)
 
@@ -115,7 +115,7 @@ class CAsyncSocket : public CObject
 |[CAsyncSocket::GetLastError](#getlasterror)|Obtient l’état d’erreur pour la dernière opération qui a échoué.|
 |[CAsyncSocket::GetPeerName](#getpeername)|Obtient l’adresse du socket homologue auquel le socket est connecté.|
 |[CAsyncSocket::GetPeerNameEx](#getpeernameex)|Obtient l’adresse du socket homologue auquel le socket est connecté (gère les adresses IPv6).|
-|[Fonction membre CAsyncSocket::GetSockName](#getsockname)|Obtient le nom local pour un socket.|
+|[CAsyncSocket::GetSockName](#getsockname)|Obtient le nom local pour un socket.|
 |[CAsyncSocket::GetSockNameEx](#getsocknameex)|Obtient le nom local pour un socket (gère les adresses IPv6).|
 |[CAsyncSocket::GetSockOpt](#getsockopt)|Récupère une option de socket.|
 |[CAsyncSocket::IOCtl](#ioctl)|Contrôle le mode du socket.|
@@ -670,7 +670,7 @@ Différent de zéro si la fonction a réussi ; Sinon, 0 et un code d’erreur s
 
 Cette fonction est identique à [CAsyncSocket::GetPeerName](#getpeername) , à ceci près qu’il gère IPv6 résout également que les anciens protocoles.
 
-##  <a name="getsockname"></a>  Fonction membre CAsyncSocket::GetSockName
+##  <a name="getsockname"></a>  CAsyncSocket::GetSockName
 
 Appelez cette fonction membre pour obtenir le nom local pour un socket.
 
@@ -1160,7 +1160,7 @@ Une mémoire tampon pour les données entrantes.
 *nBufLen*<br/>
 La longueur de *lpBuf* en octets.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le mode dans lequel l’appel est effectué. La sémantique de cette fonction est déterminée par les options de socket et le *nIndicateurs* paramètre. Ce dernier est construit en combinant les valeurs suivantes avec le C++ **ou** opérateur :
 
 - MSG_PEEK lire les données entrantes. Les données sont copiées dans la mémoire tampon, mais ne sont pas supprimées de la file d’attente d’entrée.
@@ -1251,7 +1251,7 @@ Un pointeur vers un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) structure qu
 *lpSockAddrLen*<br/>
 Un pointeur vers la longueur de l’adresse source dans *lpSockAddr* en octets.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le mode dans lequel l’appel est effectué. La sémantique de cette fonction est déterminée par les options de socket et le *nIndicateurs* paramètre. Ce dernier est construit en combinant les valeurs suivantes avec le C++ **ou** opérateur :
 
 - MSG_PEEK lire les données entrantes. Les données sont copiées dans la mémoire tampon, mais ne sont pas supprimées de la file d’attente d’entrée.
@@ -1329,7 +1329,7 @@ Référence à un `CString` objet qui reçoit une adresse IP de nombre en pointi
 *rSocketPort*<br/>
 Référence à un UINT qui stocke un port.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le mode dans lequel l’appel est effectué. La sémantique de cette fonction est déterminée par les options de socket et le *nIndicateurs* paramètre. Ce dernier est construit en combinant les valeurs suivantes avec le C++ **ou** opérateur :
 
 - MSG_PEEK lire les données entrantes. Les données sont copiées dans la mémoire tampon, mais ne sont pas supprimées de la file d’attente d’entrée.
@@ -1399,7 +1399,7 @@ Une mémoire tampon contenant les données à transmettre.
 *nBufLen*<br/>
 La longueur des données dans *lpBuf* en octets.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le mode dans lequel l’appel est effectué. La sémantique de cette fonction est déterminée par les options de socket et le *nIndicateurs* paramètre. Ce dernier est construit en combinant les valeurs suivantes avec le C++ **ou** opérateur :
 
 - MSG_DONTROUTE Spécifie que les données ne doivent pas être soumis à routage. Un fournisseur Windows Sockets peut choisir d’ignorer cet indicateur.
@@ -1488,7 +1488,7 @@ Le port identifiant l’application de socket.
 *lpszHostAddress*<br/>
 L’adresse réseau du socket à laquelle cet objet est connecté : un nom d’ordinateur tel que « FTP.Microsoft.com », ou un nombre en pointillés tels que « 128.56.22.8 ».
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le mode dans lequel l’appel est effectué. La sémantique de cette fonction est déterminée par les options de socket et le *nIndicateurs* paramètre. Ce dernier est construit en combinant les valeurs suivantes avec le C++ **ou** opérateur :
 
 - MSG_DONTROUTE Spécifie que les données ne doivent pas être soumis à routage. Un fournisseur Windows Sockets peut choisir d’ignorer cet indicateur.
@@ -1584,7 +1584,7 @@ Le port identifiant l’application de socket.
 *lpszHostAddress*<br/>
 L’adresse réseau du socket à laquelle cet objet est connecté : un nom d’ordinateur tel que « FTP.Microsoft.com », ou un nombre en pointillés tels que « 128.56.22.8 ».
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le mode dans lequel l’appel est effectué. La sémantique de cette fonction est déterminée par les options de socket et le *nIndicateurs* paramètre. Ce dernier est construit en combinant les valeurs suivantes avec le C++ **ou** opérateur :
 
 - MSG_DONTROUTE Spécifie que les données ne doivent pas être soumis à routage. Un fournisseur Windows Sockets peut choisir d’ignorer cet indicateur.
@@ -1755,11 +1755,11 @@ BOOL ShutDown(int nHow = sends);
 *nHow*<br/>
 Un indicateur qui décrit les types d’opération sera plus autorisé, à l’aide de valeurs énumérées suivantes :
 
-- **reçoit = 0**
+- **receives = 0**
 
-- **envoie = 1**
+- **sends = 1**
 
-- **à la fois = 2**
+- **both = 2**
 
 ### <a name="return-value"></a>Valeur de retour
 

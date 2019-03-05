@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694658"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275231"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Cmfctoolbarbutton, classe
 
@@ -298,7 +298,7 @@ L’exemple suivant montre comment configurer un `CMFCToolBarButton` objet à l�
 
 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtoolbarbutton.h
 
@@ -390,7 +390,7 @@ CMFCToolBarButton(
 *bUserButton*<br/>
 [in] Valeur booléenne qui détermine si le bouton est défini par l’utilisateur. Si ce paramètre est TRUE, le bouton est défini par l’utilisateur. Sinon, l’image du bouton est chargée à partir d’une ressource.
 
-*Bloqué*<br/>
+*bLocked*<br/>
 [in] Valeur booléenne qui détermine si le bouton peut être personnalisé. Si ce paramètre est TRUE, le bouton ne peuvent pas être personnalisé. Sinon, le bouton peut être personnalisé.
 
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith
@@ -462,7 +462,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Définissez ce paramètre à True pour activer l’entrée, ou False pour désactiver l’entrée.
 
 ### <a name="remarks"></a>Notes
@@ -479,7 +479,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Bouton de menu*<br/>
+*menuButton*<br/>
 [in] Une référence au bouton de menu cible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -824,7 +824,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Un handle de fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1201,7 +1201,7 @@ Cette méthode retourne FALSE.
 
 L’implémentation par défaut de cette méthode ne fait rien et retourne FALSE. Substituez cette méthode pour retourner une valeur différente de zéro si le bouton traite le message d’aide.
 
-Pour plus d’informations sur le message WM_HELPHITTEST, consultez [TN028 : prise en charge d’aide contextuelle](../../mfc/tn028-context-sensitive-help-support.md).
+Pour plus d’informations sur le message WM_HELPHITTEST, consultez [TN028 : Prise en charge de l’aide contextuelle](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1294,7 +1294,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du bouton.
 
 *pImages*<br/>
@@ -1335,7 +1335,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du bouton.
 
 *bSelected*<br/>
@@ -1449,7 +1449,7 @@ virtual BOOL OnToolHitTest(
 *pWnd*<br/>
 [in] La fenêtre parent du bouton. Peut être NULL.
 
-*PTI*<br/>
+*pTI*<br/>
 [in] Un `TOOLINFO` structure qui contient des informations sur un outil dans un contrôle d’info-bulle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1582,7 +1582,7 @@ virtual void Serialize(CArchive& ar);
 
 Cette méthode prend en charge les processus de transfert de données telles que le Presse-papiers ou d’opérations de glisser-déplacer. Il lit ou écrit des propriétés du bouton telles que l’ID, étiquette de texte et ID de l’image à partir ou à la collection `CArchive` objet.
 
-Pour des exemples de sérialisation, consultez [sérialisation : sérialisation d’un objet](../../mfc/serialization-serializing-an-object.md).
+Pour des exemples de sérialisation, consultez [sérialisation : Sérialisation d’un objet](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 
@@ -1620,7 +1620,7 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Le nouveau nom du format de Presse-papiers global. Ne peut pas être Null.
 
 ### <a name="remarks"></a>Notes
@@ -1689,7 +1689,7 @@ void SetRect(const CRect rect);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le nouveau rectangle englobant du bouton.
 
 ### <a name="remarks"></a>Notes

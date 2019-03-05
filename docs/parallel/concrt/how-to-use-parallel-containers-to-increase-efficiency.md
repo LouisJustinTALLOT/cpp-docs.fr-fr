@@ -1,19 +1,19 @@
 ---
-title: 'Comment : utiliser des conteneurs parallèles pour une efficacité accrue'
+title: 'Procédure : Utiliser des conteneurs parallèles pour une efficacité accrue'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - increasing efficiency with parallel containers [Concurrency Runtime]
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: a9c428ee54853fbd8106901434823e69b402eace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2479915b167ee3dbc2ce43d9c2733efc74818bbe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439180"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300633"
 ---
-# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Comment : utiliser des conteneurs parallèles pour une efficacité accrue
+# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Procédure : Utiliser des conteneurs parallèles pour une efficacité accrue
 
 Cette rubrique montre comment utiliser des conteneurs parallèles pour stocker efficacement et accéder aux données en parallèle.
 
@@ -67,7 +67,7 @@ Prime factors of 1050985 are: 5 13 19 23 37.
 
 Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `carmichael-primes.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-**CL.exe /EHsc carmichael-primes.cpp**
+**cl.exe /EHsc carmichael-primes.cpp**
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -77,4 +77,4 @@ Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-l
 [concurrent_queue, classe](../../parallel/concrt/reference/concurrent-queue-class.md)<br/>
 [parallel_invoke, fonction](reference/concurrency-namespace-functions.md#parallel_invoke)<br/>
 [parallel_for (fonction)](reference/concurrency-namespace-functions.md#parallel_for)<br/>
-[task_group, classe](reference/task-group-class.md)
+[Classe task_group](reference/task-group-class.md)

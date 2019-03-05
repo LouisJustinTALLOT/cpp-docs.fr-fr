@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275426"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx, classe
 
@@ -288,7 +288,7 @@ L’exemple suivant dérive une classe de `CMDIFrameWndEx`. Cet extrait de code 
 
 [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxMDIFrameWndEx.h
 
@@ -364,7 +364,7 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 *pnMDITabsType*<br/>
 [out] Un pointeur vers une variable de type entier qui indique les fonctionnalités qui sont activées :
 
-- 0 : Toutes les fonctionnalités sont désactivées.
+- 0: Toutes les fonctionnalités sont désactivées.
 
 - 1 : Les onglets MDI est activé.
 
@@ -641,7 +641,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le chargement de l’état d’ancrage, FALSE pour désactiver le chargement de l’état d’ancrage.
 
 ### <a name="remarks"></a>Notes
@@ -658,7 +658,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Si la valeur est TRUE, la fonctionnalité de groupes avec onglet MDI est activée ; Si la valeur est FALSE, la fonctionnalité de groupes avec onglet MDI est désactivée.
 
 *params*<br/>
@@ -707,7 +707,7 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si les onglets sont activées.
 
 *bIcons*<br/>
@@ -783,7 +783,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Si la valeur est TRUE, la gestion automatique du menu de volet est activée ; Si la valeur est FALSE, la gestion automatique est désactivée.
 
 *uiCustomizeCmd*<br/>
@@ -1047,7 +1047,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Pointeur vers le volet avant ou après lequel insérer le volet.
 
-*exécuteront-ils*<br/>
+*bAfter*<br/>
 [in] Si la valeur est TRUE, *pControlBar* est insérée après *pTarget*. Si la valeur est FALSE, *pControlBar* est inséré avant *pTarget*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1238,7 +1238,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bsuivant*<br/>
+*bNext*<br/>
 [in] Si la valeur est TRUE, déplacez l’onglet au groupe d’onglets suivant. Si la valeur est FALSE, déplacez-le vers le groupe d’onglets précédent.
 
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
@@ -1501,7 +1501,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pButton*<br/>
 [in] Le bouton de barre d’outils.
 
-*PTI*<br/>
+*pTI*<br/>
 [out] Pointeur vers un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) structure.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*Menu*<br/>
+*menu*<br/>
 [in] Une référence à un [CMenu (classe)](../../mfc/reference/cmenu-class.md) objet à modifier.
 
 *uiViewUserToolbarCmdFirst*<br/>

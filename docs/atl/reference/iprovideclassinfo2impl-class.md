@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-ms.openlocfilehash: a270efa5daac8c8b608f05bdb752195f806b7935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41a0756250e749a07d48ad4f090c2f1c322aa558
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289934"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Classe de IProvideClassInfo2Impl
 
@@ -88,7 +88,7 @@ Le [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) 
 
 `IProvideClassInfo2Impl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 

@@ -1,18 +1,18 @@
 ---
-title: 'Comment : convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le runtime d’accès concurrentiel'
+title: 'Procédure : Convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le Runtime d’accès concurrentiel'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-ms.openlocfilehash: f3a53113952a12b6b25839deb20548c56a9b7e1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 618e93c18173bfe3e5f5b5f3058a8bb3d61e98ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569570"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300672"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Comment : convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le runtime d’accès concurrentiel
+# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Procédure : Convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le Runtime d’accès concurrentiel
 
 Certains des boucles parallèles ne nécessitent pas que toutes les itérations être exécuté. Par exemple, un algorithme qui recherche une valeur peut s’arrêter après que la valeur est trouvée. OpenMP ne fournit pas un mécanisme permettant de quitter une boucle parallèle. Toutefois, vous pouvez utiliser une valeur booléenne, ou indicateur, pour permettre à une itération de la boucle pour indiquer que la solution a été trouvée. Le Runtime d’accès concurrentiel fournit des fonctionnalités qui activent une tâche pour annuler d’autres tâches qui n’ont pas encore démarré.
 
@@ -45,11 +45,10 @@ Pour plus d’informations sur `parallel_for_each` et d’autres algorithmes par
 
 Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `concrt-omp-parallel-any-of.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-**CL.exe /EHsc/OpenMP concrt-omp-parallèle-any-of.cpp**
+**cl.exe /EHsc /openmp concrt-omp-parallel-any-of.cpp**
 
 ## <a name="see-also"></a>Voir aussi
 
 [Migration d’OpenMP au runtime d’accès concurrentiel](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Annulation dans la bibliothèque de modèles parallèles](cancellation-in-the-ppl.md)<br/>
 [Algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md)
-

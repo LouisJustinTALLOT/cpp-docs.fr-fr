@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176443"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262868"
 ---
 # <a name="parallel-algorithms"></a>Algorithmes parallèles
 
@@ -78,7 +78,7 @@ Cet exemple produit la sortie suivante :
 
 Étant donné que le `parallel_for` algorithme agit sur chaque élément en parallèle, l’ordre dans lequel les valeurs sont imprimées sur la console varie.
 
-Pour obtenir un exemple complet qui utilise le `parallel_for` algorithme, consultez [Comment : écrire une boucle parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
+Pour obtenir un exemple complet qui utilise le `parallel_for` algorithme, consultez [Comment : Écrire une boucle parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
 
 [[Haut](#top)]
 
@@ -104,7 +104,7 @@ Cet exemple produit la sortie suivante :
 
 Étant donné que le `parallel_for_each` algorithme agit sur chaque élément en parallèle, l’ordre dans lequel les valeurs sont imprimées sur la console varie.
 
-Pour obtenir un exemple complet qui utilise le `parallel_for_each` algorithme, consultez [Comment : écrire une boucle parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
+Pour obtenir un exemple complet qui utilise le `parallel_for_each` algorithme, consultez [Comment : Écrire une boucle parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
 
 [[Haut](#top)]
 
@@ -128,7 +128,7 @@ Cet exemple génère la sortie suivante :
 108 11.2 HelloHello
 ```
 
-Pour obtenir des exemples complets qui utilisent le `parallel_invoke` algorithme, consultez [Comment : utiliser parallel_invoke pour écrire une Routine de tri parallèle](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) et [Comment : utiliser parallel_invoke pour exécuter des opérations parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Pour obtenir des exemples complets qui utilisent le `parallel_invoke` algorithme, consultez [Comment : Utiliser parallel_invoke pour écrire une Routine de tri parallèle](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) et [Comment : Utiliser parallel_invoke pour exécuter des opérations parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
 [[Haut](#top)]
 
@@ -189,7 +189,7 @@ L’exemple suivant compare le temps nécessaire pour calculer la somme des nomb
 
 [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
 
-Pour un autre exemple qui effectue un mappage et réduire les opérations en parallèle, consultez [Comment : effectuer un mappage et réduire les opérations en parallèle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Pour un autre exemple qui effectue un mappage et réduire les opérations en parallèle, consultez [Comment : Exécuter de mappage et réduire les opérations en parallèle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 [[Haut](#top)]
 
@@ -199,16 +199,16 @@ Pour paralléliser une opération sur une source de données, une étape essenti
 
 Le `parallel_for`, `parallel_for_each`, et `parallel_transform` algorithmes fournissent des versions surchargées qui prennent un paramètre supplémentaire, `_Partitioner`. Ce paramètre définit le type de partitionneur qui divise le travail. Voici les types de partitionneurs la bibliothèque PPL définit :
 
-[Concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
+[concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
 Divise fonctionne en un nombre fixe de plages (en général, le nombre de threads de travail qui sont disponibles pour travailler sur la boucle). Ressemble à ce type de partitionneur `static_partitioner`, mais améliore l’affinité du cache selon la manière dont il est mappé à des plages aux threads de travail. Ce type de partitionneur peut améliorer les performances quand une boucle est exécutée sur le même jeu de données plusieurs fois (par exemple, une boucle dans une boucle) et les données tiennent dans le cache. Ce partitionneur ne participe pas entièrement à l’annulation. Il n’utilise pas la sémantique blocage coopérative et ne peut donc pas être utilisée avec des boucles parallèles qui ont une dépendance directe.
 
-[Concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
+[concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
 Divise fonctionne dans un nombre initial de plages (en général, le nombre de threads de travail qui sont disponibles pour travailler sur la boucle). Le runtime utilise ce type par défaut lorsque vous n’appelez pas un algorithme parallèle surchargé qui prend un `_Partitioner` paramètre. Chaque plage peut être divisé en sous-plages, et ce qui permet l’équilibrage de charge doit avoir lieu. Lorsqu’une plage de travail se termine, le runtime redistribue les sous-plages de travail à partir d’autres threads pour ce thread. Utilisez ce partitionneur si votre charge de travail n’est pas comprise dans une des autres catégories, ou vous avez besoin de prise en charge complète pour l’annulation ou de blocage coopératif.
 
-[Concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
+[concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
 Divise fonctionne en plages telles que chaque plage ait au moins le nombre d’itérations qui sont spécifiées par la taille de segment donné. Ce type de partitionneur participe à l’équilibrage de charge ; Toutefois, le runtime ne pas divise des plages en sous-plages. Pour chaque travail, le runtime vérifie l’annulation et effectue l’équilibrage de charge après `_Chunk_size` effectuer des itérations.
 
-[Concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
+[concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
 Divise fonctionne en un nombre fixe de plages (en général, le nombre de threads de travail qui sont disponibles pour travailler sur la boucle). Ce type de partitionneur peut améliorer les performances, car elle n’utilise pas de vol de travail et par conséquent a moins de surcharge. Utilisez ce type de partitionneur lors de chaque itération d’une boucle parallèle effectue une quantité fixe et uniforme de travail et ne pas besoin d’assistance pour l’annulation ou de transférer le blocage coopératif.
 
 > [!WARNING]
@@ -343,4 +343,3 @@ Dans cet exemple, ce qui suppose qu’il est acceptable d’allouer de l’espac
 [parallel_buffered_sort, fonction](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
 
 [parallel_radixsort, fonction](reference/concurrency-namespace-functions.md#parallel_radixsort)
-

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-ms.openlocfilehash: 27c0eb396ac1384b691f51bf7089f6820157cf8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 107ed227c5515cbf2fcb08e957a64a4a17d8287a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288662"
 ---
 # <a name="cmultilock-class"></a>CMultiLock, classe
 
@@ -57,13 +57,13 @@ Pour utiliser un `CMultiLock` d’objet, commencez par créer un tableau d’obj
 
 `CMultiLock` les objets sont particulièrement utiles lorsqu’un thread possède un grand nombre de `CEvent` il peut répondre à des objets. Créer un tableau contenant tous les `CEvent` pointeurs, puis appelez `Lock`. Cela entraîne le thread à attendre jusqu'à ce que l’un des événements est signalé.
 
-Pour plus d’informations sur l’utilisation `CMultiLock` objets, consultez l’article [Multithreading : comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Pour plus d’informations sur l’utilisation `CMultiLock` objets, consultez l’article [Multithreading : Comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `CMultiLock`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmt.h
 
@@ -191,4 +191,3 @@ La première forme de `Unlock` tente de déverrouiller l’objet de synchronisat
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

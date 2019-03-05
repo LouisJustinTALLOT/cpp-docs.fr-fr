@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: b3c5104038e6d715977a211af5a535cc9a5d916f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d58293b94eeaf499c48f750972b15256e9c19794
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498148"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293184"
 ---
 # <a name="cmousemanager-class"></a>Cmousemanager, classe
 
@@ -66,7 +66,7 @@ Vous ne devez pas créer un `CMouseManager` objet manuellement. Il est créé pa
 
 `CMouseManager`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmousemanager.h
 
@@ -169,7 +169,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Le nom de la vue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -273,4 +273,3 @@ Si *uiCmd* est définie sur 0, la vue spécifiée n’est plus associée à une 
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx, classe](../../mfc/reference/cwinappex-class.md)<br/>
 [Personnalisation du clavier et de la souris](../../mfc/keyboard-and-mouse-customization.md)
-
