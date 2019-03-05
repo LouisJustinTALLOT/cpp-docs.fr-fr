@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260138"
 ---
 # <a name="cbutton-class"></a>CButton, classe
 
@@ -219,7 +219,7 @@ Spécifie le texte du contrôle de bouton.
 *dwStyle*<br/>
 Spécifie le style du contrôle bouton. Appliquer n’importe quelle combinaison de [styles des boutons](../../mfc/reference/styles-used-by-mfc.md#button-styles) au bouton.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle bouton. Il peut s’agir un `CRect` objet ou un `RECT` structure.
 
 *pParentWnd*<br/>
@@ -581,9 +581,9 @@ Un champ de bits qui contient la combinaison de valeurs qui indiquent l’état 
 |État du bouton|Value|Description|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|L’état initial.|
-|BST_CHECKED|0 x 0001|Le contrôle bouton est activé.|
-|BST_INDETERMINATE|0 x 0002|L’état est indéterminé (possible uniquement lorsque le contrôle de bouton a trois états).|
-|BST_PUSHED|0 x 0004|Le contrôle bouton est enfoncé.|
+|BST_CHECKED|0x0001|Le contrôle bouton est activé.|
+|BST_INDETERMINATE|0x0002|L’état est indéterminé (possible uniquement lorsque le contrôle de bouton a trois états).|
+|BST_PUSHED|0x0004|Le contrôle bouton est enfoncé.|
 |BST_FOCUS|0x0008|Le contrôle de bouton a le focus.|
 
 ### <a name="remarks"></a>Notes
@@ -696,7 +696,7 @@ void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Paramètres
 
-*nVérifiez*<br/>
+*nCheck*<br/>
 Spécifie l’état d’activation. Ce paramètre peut être une des opérations suivantes :
 
 |Value|Signification|

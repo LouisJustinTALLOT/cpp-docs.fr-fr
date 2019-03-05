@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: 5f0bf03adff83ef25f3537291516368151a31a03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf3ecf3016fcc15bd4ada7a15208acd9a04ca0a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436285"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263804"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Accès de type sécurisé aux contrôles avec Assistants Code
 
@@ -38,4 +38,3 @@ Pour plus d’informations sur les contrôles, consultez [contrôles](../mfc/con
 [Accès de type sécurisé aux contrôles d’une boîte de dialogue](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
 [Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Accès de type sécurisé aux contrôles sans Assistants Code](../mfc/type-safe-access-to-controls-without-code-wizards.md)
-

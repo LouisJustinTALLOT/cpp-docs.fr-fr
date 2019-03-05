@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: f925940f0813e1912be9f2382b676e80db8240c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607895"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271864"
 ---
 # <a name="cfont-class"></a>CFont (classe)
 
@@ -49,7 +49,7 @@ class CFont : public CGdiObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CFont::CreateFont n'](#createfont)|Initialise un `CFont` avec les caractéristiques spécifiées.|
+|[CFont::CreateFont](#createfont)|Initialise un `CFont` avec les caractéristiques spécifiées.|
 |[CFont::CreateFontIndirect](#createfontindirect)|Initialise un `CFont` objet avec les caractéristiques donné dans un `LOGFONT` structure.|
 |[CFont::CreatePointFont](#createpointfont)|Initialise un `CFont` avec la hauteur spécifiée, mesurée en dixièmes de point et de police.|
 |[CFont::CreatePointFontIndirect](#createpointfontindirect)|Identique à `CreateFontIndirect` , à ceci près que la hauteur de police est mesurée en dixièmes d’un point plutôt qu’en unités logiques.|
@@ -78,7 +78,7 @@ Pour plus d’informations sur `CFont`, consultez [objets graphiques](../../mfc/
 
 `CFont`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -98,7 +98,7 @@ L’objet obtenu doit être initialisée avec `CreateFont`, `CreateFontIndirect`
 
 [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]
 
-##  <a name="createfont"></a>  CFont::CreateFont n'
+##  <a name="createfont"></a>  CFont::CreateFont
 
 Initialise un `CFont` objet avec les caractéristiques spécifiées.
 
@@ -362,4 +362,3 @@ Pour plus d’informations sur l’utilisation des objets graphiques, consultez 
 [Exemple MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [CGdiObject, classe](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

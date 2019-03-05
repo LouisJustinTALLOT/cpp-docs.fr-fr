@@ -1,5 +1,5 @@
 ---
-title: 'Presse-papiers : utilisation du Presse-papiers Windows'
+title: 'Presse-papiers : Utilisation du Presse-papiers Windows'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard commands
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Clipboard [MFC]
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
-ms.openlocfilehash: 67bc337af2cf55a4f39698f730ce14a3369ef742
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49111e4efd2a12264d61030fe038d80b974514c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460695"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264792"
 ---
-# <a name="clipboard-using-the-windows-clipboard"></a>Presse-papiers : utilisation du Presse-papiers Windows
+# <a name="clipboard-using-the-windows-clipboard"></a>Presse-papiers : Utilisation du Presse-papiers Windows
 
 Cette rubrique décrit comment utiliser l’API du Presse-papiers Windows standard au sein de votre application MFC.
 
@@ -30,7 +30,7 @@ La plupart des applications pour Windows prend en charge les couper ou copier de
 
 Les commandes Couper, copier et coller sont uniquement significatives dans certains contextes. Les commandes Couper et copier doivent être activées uniquement quand un élément est sélectionné, et la commande Coller uniquement lorsque quelque chose est dans le Presse-papiers. Vous pouvez fournir ce comportement en définissant des fonctions de gestionnaire de mise à jour qui activent ou désactivent ces commandes en fonction du contexte. Pour plus d’informations, consultez [comment les objets d’Interface utilisateur mise à jour](../mfc/how-to-update-user-interface-objects.md).
 
-La bibliothèque Microsoft Foundation Class fournit la prise en charge du Presse-papiers pour modifier le texte avec le `CEdit` et `CEditView` classes. Les classes OLE simplifient également l’implémentation des opérations de Presse-papiers qui impliquent des éléments OLE. Pour plus d’informations sur les classes OLE, consultez [Presse-papiers : utilisation du mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
+La bibliothèque Microsoft Foundation Class fournit la prise en charge du Presse-papiers pour modifier le texte avec le `CEdit` et `CEditView` classes. Les classes OLE simplifient également l’implémentation des opérations de Presse-papiers qui impliquent des éléments OLE. Pour plus d’informations sur les classes OLE, consultez [Presse-papiers : À l’aide du mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
 
 Implémentation d’autres de modifier les commandes de menu, telles que l’annulation (**ID_EDIT_UNDO**) et de restauration par progression (**ID_EDIT_REDO**), est également de gauche à vous. Si votre application ne prend pas en charge ces commandes, vous pouvez facilement les supprimer à partir de votre fichier de ressources en utilisant les éditeurs de ressources Visual C++.
 
@@ -43,4 +43,3 @@ Implémentation d’autres de modifier les commandes de menu, telles que l’ann
 ## <a name="see-also"></a>Voir aussi
 
 [Presse-papiers](../mfc/clipboard.md)
-

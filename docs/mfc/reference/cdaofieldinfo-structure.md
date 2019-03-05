@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-ms.openlocfilehash: 80a541028a6ba7daf60a8d1afbd6cf7ba3557202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629422"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275140"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo, structure
 
@@ -50,7 +50,7 @@ Une valeur qui indique le type de données du champ. Pour plus d’informations,
 
 - `dbBoolean` Oui/Non, identique à la valeur TRUE/FALSE
 
-- `dbByte` octets
+- `dbByte` Byte
 
 - `dbInteger` court
 
@@ -150,7 +150,7 @@ Outre son utilisation pour l’examen des propriétés de l’objet, vous pouvez
 
 Les informations récupérées par le `GetFieldInfo` fonction membre (de la classe qui contient le champ) est stockée dans un `CDaoFieldInfo` structure. Appelez le `GetFieldInfo` fonction membre de l’objet conteneur dans dont la collection de champs est stocké l’objet de champ. `CDaoFieldInfo` définit également un `Dump` génère de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoFieldInfo` objet.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 
@@ -160,4 +160,3 @@ Les informations récupérées par le `GetFieldInfo` fonction membre (de la clas
 [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
 [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
-

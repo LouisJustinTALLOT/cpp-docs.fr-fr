@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tool tips [MFC], initializing
 - tool tips [MFC], enabling
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
-ms.openlocfilehash: 270eb8bad03679cd6e605e3279c0e4ffc499a765
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 892ed76ef7e021544505600110cd2569d6078312
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571140"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285943"
 ---
 # <a name="enabling-tool-tips"></a>Activation des info-bulles
 
@@ -27,4 +27,3 @@ Vous pouvez activer la prise en charge d’outils info-bulle pour les contrôles
 ## <a name="see-also"></a>Voir aussi
 
 [Info-bulles dans les fenêtres non dérivées de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
-

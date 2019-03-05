@@ -11,12 +11,12 @@ f1_keywords:
 - atlsnap/ATL::SNAPINMENUID
 - atlsnap/ATL::SNAPINTOOLBARID_ENTRY
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-ms.openlocfilehash: e3eec62e2bea92f1f308b149046b83be1b9085b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b75dd04bed4895d722939d1bf9c0a6dfff2126e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292593"
 ---
 # <a name="snap-in-object-macros"></a>Macros d’objet du composant logiciel enfichable
 
@@ -33,7 +33,7 @@ Ces macros fournissent la prise en charge pour les extensions de composant logic
 |[SNAPINMENUID](#snapinmenuid)|Déclare l’ID du menu contextuel utilisé par l’objet Snap-In.|
 |[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Insère une barre d’outils dans le mappage de la barre d’outils de l’objet Snap-In.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsnap.h
 
@@ -68,7 +68,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 
 ### <a name="parameters"></a>Paramètres
 
-*_classe*<br/>
+*_class*<br/>
 [in] Spécifie la classe d’objet Snap-In.
 
 ### <a name="example"></a>Exemple
@@ -101,7 +101,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 
 ### <a name="parameters"></a>Paramètres
 
-*_classe*<br/>
+*_class*<br/>
 [in] Spécifie la classe d’objet Snap-In.
 
 ### <a name="example"></a>Exemple

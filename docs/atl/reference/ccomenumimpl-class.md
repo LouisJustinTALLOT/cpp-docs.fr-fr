@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 2104d98cbc068eb5d8f1408cdda0898fd55c9473
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467143"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273771"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl, classe
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 
 #### <a name="parameters"></a>Paramètres
 
-*base de*<br/>
+*Base*<br/>
 Une interface COM de l’énumérateur. Consultez [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) pour obtenir un exemple.
 
 *piid*<br/>
@@ -58,14 +58,14 @@ Un homogènes [copier la classe de stratégie](../../atl/atl-copy-policy-classes
 |Nom|Description|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|Constructeur.|
-|[CComEnumImpl :: ~ CComEnumImpl](#dtor)|Destructeur.|
+|[CComEnumImpl::~CComEnumImpl](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
 |[CComEnumImpl::Clone](#clone)|L’implémentation de la **Clone** méthode interface d’énumération.|
-|[CComEnumImpl::Init](#init)|Initialise l’énumérateur.|
+|[CComEnumImpl::Init](#init)|Initialise l'énumérateur.|
 |[CComEnumImpl::Next](#next)|L’implémentation de **suivant**.|
 |[CComEnumImpl::Reset](#reset)|L’implémentation de **réinitialiser**.|
 |[CComEnumImpl::Skip](#skip)|L’implémentation de **Skip**.|
@@ -99,7 +99,7 @@ Pour plus d’informations, consultez [Collections et énumérateurs ATL](../../
 
 `CComEnumImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -111,7 +111,7 @@ Constructeur.
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>  CComEnumImpl :: ~ CComEnumImpl
+##  <a name="dtor"></a>  CComEnumImpl::~CComEnumImpl
 
 Destructeur.
 

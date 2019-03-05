@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-ms.openlocfilehash: 9ef461124321e5e8fff11c1c7be1d90246c411a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1efa9806267958b4221ee112e56f242c7e25a8f0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563967"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260697"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed, classe
 
@@ -64,7 +64,7 @@ Pendant une transition de vitesse linéaire, la valeur de la variable d’animat
 
 [CLinearTransitionFromSpeed](../../mfc/reference/clineartransitionfromspeed-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 

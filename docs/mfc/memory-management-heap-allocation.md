@@ -1,5 +1,5 @@
 ---
-title: 'Gestion de la mémoire : allocation de tas'
+title: 'Gestion de la mémoire : Allocation de tas'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory [MFC], detecting leaks
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - heap allocation [MFC]
 - detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
-ms.openlocfilehash: 0c669fa611193b9a04e4854c84dec604e585991c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eee5cbfe1cd49042a9080f06657e751640de69
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641153"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281172"
 ---
-# <a name="memory-management-heap-allocation"></a>Gestion de la mémoire : allocation de tas
+# <a name="memory-management-heap-allocation"></a>Gestion de la mémoire : Allocation de tas
 
 Le segment de mémoire est réservée pour les besoins de l’allocation de mémoire du programme. Il est une zone en dehors du code de programme et de la pile. Les programmes C utilisent les fonctions **malloc** et **gratuit** pour allouer et libérer la mémoire de tas. La version Debug des MFC fournit des versions modifiées des opérateurs intégrés C++ **nouveau** et **supprimer** pour allouer et libérer des objets dans la mémoire de tas.
 
@@ -29,4 +29,3 @@ Notez que la taille totale des objets alloués sur le tas est limitée uniquemen
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion de la mémoire](../mfc/memory-management.md)
-

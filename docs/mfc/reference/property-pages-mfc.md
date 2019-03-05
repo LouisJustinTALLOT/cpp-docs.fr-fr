@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620907"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269212"
 ---
 # <a name="property-pages-mfc"></a>Pages de propriétés (MFC)
 
@@ -33,7 +33,7 @@ Ce mécanisme de mappage de données mappe les contrôles de page de propriété
 |[DDP_LBStringExact](#ddp_lbstringexact)|Lie la chaîne sélectionnée dans une zone de liste avec la propriété d’un contrôle. La chaîne sélectionnée et la valeur de chaîne de la propriété doivent correspondre exactement.|
 |[DDP_PostProcessing](#ddp_postprocessing)|Termine le transfert des valeurs de propriété à partir de votre contrôle.|
 |[DDP_Radio](#ddp_radio)|Un groupe de cases d’option dans la page de propriétés du contrôle avec la propriété d’un contrôle de liens.|
-|[DDP_TEXT](#ddp_text)|Lie un contrôle dans la page de propriétés du contrôle avec la propriété d’un contrôle. Cette fonction gère les différents types de propriétés, telles que **double**, **court**, BSTR, et **long**.|
+|[DDP_Text](#ddp_text)|Lie un contrôle dans la page de propriétés du contrôle avec la propriété d’un contrôle. Cette fonction gère les différents types de propriétés, telles que **double**, **court**, BSTR, et **long**.|
 
 Pour plus d’informations sur la `DoDataExchange` pages de fonction et une propriété, consultez l’article [contrôles ActiveX : Pages de propriétés](../../mfc/mfc-activex-controls-property-pages.md).
 
@@ -77,7 +77,7 @@ Le nom de propriété de la propriété de contrôle à être échangés avec le
 
 Cette fonction doit être appelée avant le correspondantes `DDX_CBIndex` appel de fonction.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -111,7 +111,7 @@ Le nom de propriété de la propriété de contrôle à être échangés avec la
 
 Cette fonction doit être appelée avant le correspondantes `DDX_CBString` appel de fonction.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -145,7 +145,7 @@ Le nom de propriété de la propriété de contrôle à être échangés avec la
 
 Cette fonction doit être appelée avant le correspondantes `DDX_CBStringExact` appel de fonction.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -179,7 +179,7 @@ Le nom de propriété de la propriété de contrôle à être échangés avec le
 
 Cette fonction doit être appelée avant le correspondantes `DDX_Check` appel de fonction.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -213,7 +213,7 @@ Le nom de propriété de la propriété de contrôle à être échangés avec la
 
 Cette fonction doit être appelée avant le correspondantes `DDX_LBIndex` appel de fonction.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -247,7 +247,7 @@ Le nom de propriété de la propriété de contrôle à être échangés avec la
 
 Cette fonction doit être appelée avant le correspondantes `DDX_LBString` appel de fonction.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -281,7 +281,7 @@ Le nom de propriété de la propriété de contrôle à être échangés avec la
 
 Cette fonction doit être appelée avant le correspondantes `DDX_LBStringExact` appel de fonction.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -304,7 +304,7 @@ Cette fonction doit être appelée une fois que toutes les fonctions d’échang
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -338,11 +338,11 @@ Le nom de propriété de la propriété de contrôle à être échangés avec le
 
 Cette fonction doit être appelée avant le correspondantes `DDX_Radio` appel de fonction.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
-##  <a name="ddp_text"></a>  DDP_TEXT
+##  <a name="ddp_text"></a>  DDP_Text
 
 Appelez cette fonction dans de votre contrôle `DoDataExchange` (fonction) pour synchroniser la valeur de la propriété avec le contrôle de page de propriété associée.
 
@@ -414,7 +414,7 @@ Le nom de propriété de la propriété de contrôle à être échangés avec le
 
 Cette fonction doit être appelée avant le correspondantes `DDX_Text` appel de fonction.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -428,7 +428,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 ### <a name="parameters"></a>Paramètres
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Le nom de la classe de contrôle pour la propriété pages sont spécifiés.
 
 *count*<br/>
@@ -440,7 +440,7 @@ Dans le fichier d’implémentation (.cpp) qui définit les fonctions membres po
 
 Pour plus d’informations sur les pages de propriétés, consultez l’article [contrôles ActiveX : Pages de propriétés](../../mfc/mfc-activex-controls-property-pages.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -454,10 +454,10 @@ END_PROPPAGEIDS(class_name)
 
 ### <a name="parameters"></a>Paramètres
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Le nom de la classe de contrôle qui possède la page de propriétés.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 
@@ -478,7 +478,7 @@ L’ID de classe unique d’une page de propriétés.
 
 Toutes les macros PROPPAGEID doivent être placés entre les macros BEGIN_PROPPAGEIDS et END_PROPPAGEIDS dans le fichier d’implémentation de votre contrôle.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxctl.h
 

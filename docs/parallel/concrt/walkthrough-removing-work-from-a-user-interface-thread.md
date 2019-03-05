@@ -1,18 +1,18 @@
 ---
-title: "Procédure pas à pas : suppression de travail d'un thread d'interface utilisateur"
+title: 'Procédure pas à pas : Suppression de travail d’un Thread d’Interface utilisateur'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1230cf2b3fa510aeca8516e41cf30f9665987d05
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176313"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304715"
 ---
-# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procédure pas à pas : suppression de travail d'un thread d'interface utilisateur
+# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procédure pas à pas : Suppression de travail d’un Thread d’Interface utilisateur
 
 Ce document montre comment utiliser le Runtime d’accès concurrentiel pour déplacer le travail effectué par le thread d’interface utilisateur (IU) dans une application Microsoft Foundation Classes (MFC) à un thread de travail. Ce document montre également comment améliorer les performances d’une longue opération de dessin.
 

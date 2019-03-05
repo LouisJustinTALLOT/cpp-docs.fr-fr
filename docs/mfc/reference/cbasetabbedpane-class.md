@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640893"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259293"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane, classe
 
@@ -129,7 +129,7 @@ class CBaseTabbedPane : public CDockablePane
 
 Cette classe est une classe abstraite et ne peut pas être instanciée. Il implémente les services qui sont communes à tous les types de volets à onglets.
 
-Actuellement, la bibliothèque inclut deux classes dérivées de volet à onglets : [ctabbedpane, classe](../../mfc/reference/ctabbedpane-class.md) et [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md).
+Actuellement, la bibliothèque inclut deux classes dérivées de volet à onglets : [Ctabbedpane, classe](../../mfc/reference/ctabbedpane-class.md) et [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md).
 
 Un `CBaseTabbedPane` objet encapsule un pointeur vers un [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) objet. [Classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) devient alors une fenêtre enfant du volet à onglets.
 
@@ -151,7 +151,7 @@ Pour plus d’informations sur la création de volets à onglets, consultez [CDo
 
 `CBaseTabbedPane`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxBaseTabbedPane.h
 
@@ -299,7 +299,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour synchroniser la légende du volet à onglets avec la légende de l’onglet actif ; Sinon, FALSE.
 
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray

@@ -6,12 +6,12 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_AUTO
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
-ms.openlocfilehash: f750b9b21a2d44a160380acb11f10864a07782e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73dc924527bac8499adefab3d0d6b51afa500a5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594413"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298605"
 ---
 # <a name="object-map-macros"></a>Macros de mappage d’objet
 
@@ -23,7 +23,7 @@ Ces macros définissent des mappages d’objet et les entrées.
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|Insère un objet ATL dans la table d’objets, met à jour le Registre et crée une instance de l’objet.|
 |[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Vous pouvez spécifier que l'objet doit être enregistré et initialisé, mais il ne doit pas pouvoir être créé en externe via `CoCreateInstance`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 

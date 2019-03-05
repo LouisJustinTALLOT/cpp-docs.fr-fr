@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: c01852c89d79b44bdae75b0ded9e2b8d1678cbd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441321"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258773"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Assistant Fournisseur OLEDB ATL
 
@@ -31,7 +31,7 @@ Le tableau suivant décrit les options de l’Assistant fournisseur OLE DB ATL 
 
    Tapez le nom court du fournisseur à créer. Les autres zones d’édition dans l’Assistant se rempliront automatiquement en fonction de ce que vous tapez ici. Vous pouvez modifier les autres zones de nom si vous le souhaitez.
 
-- **Coclasse**
+- **Coclass**
 
    Le nom de la coclasse. Le nom du ProgID sera modifié pour correspondre à ce nom.
 
@@ -88,4 +88,3 @@ Le tableau suivant décrit les options de l’Assistant fournisseur OLE DB ATL 
 ## <a name="see-also"></a>Voir aussi
 
 [Fournisseur OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
-

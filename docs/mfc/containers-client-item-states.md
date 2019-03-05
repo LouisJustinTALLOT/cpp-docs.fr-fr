@@ -1,5 +1,5 @@
 ---
-title: "Conteneurs : états d'élément client"
+title: 'Conteneurs : États d’élément client'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client-item states
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 866aa6f2265abe671ce0028e3be5f1c8ee1762a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1453ba3f96e49cefc9014a93ebcfbcfe5c6bc905
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575342"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273671"
 ---
-# <a name="containers-client-item-states"></a>Conteneurs : états d'élément client
+# <a name="containers-client-item-states"></a>Conteneurs : États d’élément client
 
 Cet article explique les différents états par lesquels passe un élément client pendant son cycle de vie.
 
@@ -42,6 +42,6 @@ Lorsqu'un élément a été activé sur place, il ne passe généralement que br
 
 [Conteneurs](../mfc/containers.md)<br/>
 [Activation](../mfc/activation-cpp.md)<br/>
-[Conteneurs : notifications d’élément client](../mfc/containers-client-item-notifications.md)<br/>
+[Conteneurs : Notifications d’élément client](../mfc/containers-client-item-notifications.md)<br/>
 [Dispositifs de suivi](../mfc/trackers.md)<br/>
 [CRectTracker, classe](../mfc/reference/crecttracker-class.md)

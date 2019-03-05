@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 1c485d1b6f2b0557243973774bf9dfb382c2595b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550434"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326775"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -260,7 +260,7 @@ Lorsque vous dérivez une classe de `CPane`, elle peut être ancrée dans un [CD
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxPane.h
 
@@ -348,7 +348,7 @@ void CalcInsideRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [out] Contient la taille et le décalage de la zone cliente du volet.
 
 *bHorz*<br/>
@@ -487,7 +487,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Spécifie les attributs de style de fenêtre. Pour plus d’informations, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Spécifie la taille initiale et la position de la *pParentWnd* fenêtre, en coordonnées clientes.
 
 *pParentWnd*<br/>
@@ -562,7 +562,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Spécifie les attributs de style de fenêtre. Pour plus d’informations, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Spécifie la taille initiale et la position de la *pParentWnd* fenêtre, en coordonnées clientes.
 
 *pParentWnd*<br/>
@@ -976,7 +976,7 @@ bool IsLeftOf(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un `CRect` objet qui est utilisé pour la comparaison.
 
 *bWindowRect*<br/>
@@ -1308,7 +1308,7 @@ TRUE si le menu peut être affiché ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Le menu contient plusieurs éléments qui vous permettent de spécifier le comportement du volet, à savoir : **flottante**, **ancrage**, **masquage automatique**, et **masquer**. Vous pouvez activer ce menu pour tous les volets en appelant [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+Le menu contient plusieurs éléments qui vous permettent de spécifier le comportement du volet, à savoir : **Flottante**, **ancrage**, **masquage automatique**, et **masquer**. Vous pouvez activer ce menu pour tous les volets en appelant [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
 ##  <a name="recalclayout"></a>  CPane::RecalcLayout
 
@@ -1494,7 +1494,7 @@ void SetVirtualRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un `CRect` objet qui spécifie le rectangle virtuel à définir.
 
 *bMapToParent*<br/>
@@ -1593,7 +1593,7 @@ void UpdateVirtualRect(CPoint ptOffset);
 *ptOffset*<br/>
 [in] Un `CPoint` objet qui spécifie un offset selon lequel décaler le volet.
 
-*hachagetaille, nouvelle*<br/>
+*sizeNew*<br/>
 [in] Un `CSize` objet qui spécifie une nouvelle taille pour le volet.
 
 ### <a name="remarks"></a>Notes

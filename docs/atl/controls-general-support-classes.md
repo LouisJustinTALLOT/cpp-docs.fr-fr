@@ -1,5 +1,5 @@
 ---
-title: 'Des contrôles ATL : Classes de prise en charge générale'
+title: 'Contrôles ATL : Classes de prise en charge générale'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [ATL]
 - general support classes
 ms.assetid: cf73f1d2-7542-48e3-b8c8-9d3abf29f85b
-ms.openlocfilehash: 49b7ff751db33ce2647ea7d4865ebea93949813b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf5c1b9e2f4fb7414cc34d457bc0d8b1e27dcd91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551435"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262998"
 ---
-# <a name="controls-general-support-classes"></a>Contrôles : Classes de prise en charge général
+# <a name="controls-general-support-classes"></a>Contrôles : Classes de prise en charge générale
 
 Les classes suivantes fournissent la prise en charge générale pour les contrôles ATL :
 
@@ -40,4 +40,3 @@ Les classes suivantes fournissent la prise en charge générale pour les contrô
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../atl/atl-class-overview.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: 6bf62cc414162a15ee685361cacad8d72fc41b06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 892e9e56b6df5bc0a3dc0aa9cf3786e36b5311c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302635"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Cmfcribbonapplicationbutton, classe
 
@@ -60,7 +60,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxRibbonBar.h
 

@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176612"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279469"
 ---
 # <a name="cmfcribboncategory-class"></a>Cmfcribboncategory, classe
 
@@ -252,7 +252,7 @@ Le diagramme suivant illustre une figure de la catégorie d’accueil à partir 
 
 `CMFCRibbonCategory`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxribboncategory.h
 
@@ -332,7 +332,7 @@ CMFCRibbonCategory(
 *pParenrRibbonBar*<br/>
 [in] Pointeur vers la barre du ruban parent de la catégorie de ruban.
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Nom de la catégorie de ruban.
 
 *uiSmallImagesResID*<br/>
@@ -1108,7 +1108,7 @@ virtual BOOL OnDrawImage(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique pour l’image.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectangle d’affichage de l’image.
 
 *pElement*<br/>
@@ -1161,7 +1161,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Le code de touche virtuelle pour un utilisateur a appuyé sur la clé.
 
 ### <a name="remarks"></a>Notes
@@ -1399,7 +1399,7 @@ void SetName(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Le nom et la touche d’accès de la catégorie de ruban.
 
 ### <a name="remarks"></a>Notes
@@ -1416,7 +1416,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 [in] Spécifie la nouvelle couleur de la catégorie de ruban.
 
 ### <a name="remarks"></a>Notes

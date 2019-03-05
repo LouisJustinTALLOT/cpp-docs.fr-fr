@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 2a600aa893ae86abebb4146eda4864e69da3c35c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41ea20bcddc53142773d474af41021e9c71af1aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485304"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289856"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant (classe)
 
@@ -99,7 +99,7 @@ Classe [CRecordset](../../mfc/reference/crecordset-class.md) utilise `CDBVariant
 
 `CDBVariant`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdb.h
 

@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 85af8504fffa980d495cef59729ff5fcb145e318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486583"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301829"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Fonctions globales du Registre et de TypeLib
 
@@ -52,7 +52,7 @@ Ces fonctions contrôlent quel nœud dans le Registre, le programme utilise pour
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|Récupère si l’application redirige l’accès au Registre vers le **HKEY_CURRENT_USER** ( **HKCU**) nœud.|
 |[AtlSetPerUserRegistration](#atlsetperuserregistration)|Définit si l’application redirige l’accès au Registre vers le **HKEY_CURRENT_USER** ( **HKCU**) nœud.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -81,7 +81,7 @@ La redirection du Registre n’est pas activée par défaut. Si vous activez cet
 
 La redirection n’est pas globale. Uniquement les infrastructures MFC et ATL sont affectés par cette redirection de Registre.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -97,7 +97,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*<br/>
+*hKey*<br/>
 Handle vers une clé de Registre ouverte.
 
 *lpSubKey*<br/>
@@ -113,7 +113,7 @@ Pointeur vers un `CAtlTransactionManager` objet.
 
 Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
@@ -129,7 +129,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*<br/>
+*hKey*<br/>
 Handle vers une clé de Registre ouverte.
 
 *lpSubKey*<br/>
@@ -142,7 +142,7 @@ Pointeur vers un `CAtlTransactionManager` objet.
 
 Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
@@ -167,7 +167,7 @@ Spécifie le ProgID du gestionnaire.
 *lpszFilterExt*<br/>
 Spécifie l’extension de fichier enregistrée avec ce gestionnaire.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
@@ -195,7 +195,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 Cette fonction d’assistance utilisée par [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) et [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -211,7 +211,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*<br/>
+*hKey*<br/>
 Handle vers une clé de Registre ouverte.
 
 *lpSubKey*<br/>
@@ -227,7 +227,7 @@ Pointeur vers un `CAtlTransactionManager` objet.
 
 Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
@@ -243,7 +243,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*<br/>
+*hKey*<br/>
 Handle vers une clé de Registre ouverte.
 
 *lpSubKey*<br/>
@@ -265,7 +265,7 @@ Pointeur vers un `CAtlTransactionManager` objet.
 
 Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
@@ -284,7 +284,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 *lpszCLSID*<br/>
 Spécifie le CLSID du gestionnaire doit être annulée.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
@@ -300,7 +300,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE indique que les informations du Registre sont dirigées vers le **HKCU** nœud ; La valeur FALSE indique que l’application écrit les informations du Registre pour le nœud par défaut. Le nœud par défaut est **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -313,7 +313,7 @@ La redirection du Registre n’est pas activée par défaut. Si vous activez cet
 
 La redirection n’est pas globale. Uniquement les infrastructures MFC et ATL sont affectés par cette redirection de Registre.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -345,7 +345,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 Cette fonction d’assistance utilisée par [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) et [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -433,7 +433,7 @@ Les valeurs enum possibles qui indiquent que l’opération la fonction doit eff
 |eWriteToReg|Écrire des données dans le Registre.|
 |eDeleteFromReg|Supprimer la clé du Registre.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 

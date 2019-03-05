@@ -12,12 +12,12 @@ helpviewer_keywords:
 - reading files
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
-ms.openlocfilehash: 14bd6d57f4b3fa9bacc46fb70cb2abd2958117c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab1ddc58ec6cc2b67e5843f46afbead3ead54eba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591180"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267669"
 ---
 # <a name="reading-and-writing-files"></a>Lecture et écriture de fichiers
 
@@ -27,7 +27,7 @@ Si vous avez utilisé les fonctions de gestion de fichiers de bibliothèque Runt
 
 1. Utilisez le `Read` et `Write` des fonctions membres pour lire et écrire des données dans le fichier.
 
-     - ou -
+     ou
 
 1. Le `Seek` fonction membre est également disponible pour passer à un décalage spécifique dans le fichier.
 
@@ -41,4 +41,3 @@ Si vous avez utilisé les fonctions de gestion de fichiers de bibliothèque Runt
 ## <a name="see-also"></a>Voir aussi
 
 [Fichiers](../mfc/files-in-mfc.md)
-

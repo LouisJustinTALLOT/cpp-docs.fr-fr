@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 939230753f25db38e6ba2f26340f40ddf74d23bf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175373"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271136"
 ---
 # <a name="frame-windows"></a>Fenêtres frame
 
@@ -71,7 +71,7 @@ Une autre disposition fréquente concerne la fenêtre frame encadrer plusieurs v
 
 - [Répondre à l’échange dynamique de données (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
 
-- [États semi-modaux : aide Windows contextuelle (orchestration d’autres actions de la fenêtre)](../mfc/orchestrating-other-window-actions.md)
+- [États semi-modaux : Aide Windows contextuelle (orchestration d’autres actions de la fenêtre)](../mfc/orchestrating-other-window-actions.md)
 
 - [États semi-modaux : impression et Aperçu avant impression (orchestration d’autres actions de la fenêtre)](../mfc/orchestrating-other-window-actions.md)
 
@@ -86,4 +86,3 @@ Une autre disposition fréquente concerne la fenêtre frame encadrer plusieurs v
 ## <a name="see-also"></a>Voir aussi
 
 [Windows](../mfc/windows.md)
-

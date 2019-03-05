@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178159"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261295"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession, classe
 
@@ -108,7 +108,7 @@ Pour plus d’informations sur les tâches de programmation de base Internet, co
 [CObject](../../mfc/reference/cobject-class.md)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`CInternetSession`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxinet.h
 
@@ -190,7 +190,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si le rappel est activé ou désactivé. La valeur par défaut est TRUE.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -325,7 +325,7 @@ Un pointeur vers une chaîne se terminant par null qui spécifie le mot de passe
 |      NULL       | Chaîne non NULL |            ERROR            |            ERROR            |
 | Chaîne non NULL | Chaîne non NULL |       *pstrUserName*        |       *pstrPassword*        |
 
-*%nPort*<br/>
+*nPort*<br/>
 Numéro qui identifie le port TCP/IP à utiliser sur le serveur.
 
 *bPassive*<br/>
@@ -366,7 +366,7 @@ Un pointeur vers une chaîne contenant le nom d’utilisateur.
 *pstrPassword*<br/>
 Un pointeur vers une chaîne contenant le mot de passe d’accès.
 
-*%nPort*<br/>
+*nPort*<br/>
 Numéro qui identifie le port TCP/IP à utiliser sur le serveur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -401,7 +401,7 @@ CHttpConnection* GetHttpConnection(
 *pstrServer*<br/>
 Un pointeur vers une chaîne contenant le nom du serveur HTTP.
 
-*%nPort*<br/>
+*nPort*<br/>
 Numéro qui identifie le port TCP/IP à utiliser sur le serveur.
 
 *pstrUserName*<br/>
@@ -410,7 +410,7 @@ Un pointeur vers une chaîne contenant le nom d’utilisateur.
 *pstrPassword*<br/>
 Un pointeur vers une chaîne contenant le mot de passe d’accès.
 
-*dwFlags*<br/>
+*dwflags*<br/>
 N’importe quelle combinaison de le `INTERNET_FLAG_*` indicateurs. Consultez le tableau dans le **remarques** section de [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) pour obtenir une description de *dwFlags* valeurs.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -532,7 +532,7 @@ Le pointeur qui `OpenURL` retourne dépend *pstrURL*du type de service. Le table
 |file://|`CStdioFile*`|
 |http://|`CHttpFile*`|
 |Gopher://|`CGopherFile*`|
-|FTP : / /|`CInternetFile*`|
+|ftp://|`CInternetFile*`|
 
 ### <a name="remarks"></a>Notes
 

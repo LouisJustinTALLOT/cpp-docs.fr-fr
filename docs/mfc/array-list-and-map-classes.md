@@ -10,12 +10,12 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-ms.openlocfilehash: 0856a9de06d07b3851dc748644e84ba9c4b56c4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b89b99abb79fe689274f9e0b89a85bb33643d324
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601043"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274373"
 ---
 # <a name="array-list-and-map-classes"></a>Classes de tableaux, listes et mappages
 
@@ -30,4 +30,3 @@ Les mappages lient une valeur clé à une valeur de données. Par exemple, la cl
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
-

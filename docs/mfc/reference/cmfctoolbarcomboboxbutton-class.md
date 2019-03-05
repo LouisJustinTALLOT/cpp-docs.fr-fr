@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303168"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Cmfctoolbarcomboboxbutton, classe
 
@@ -132,7 +132,7 @@ Pour ajouter un bouton de zone de liste déroulante à une barre d’outils, pro
 
 3. Dans le Gestionnaire de messages qui traite le message AFX_WM_RESETTOOLBAR, remplacez le bouton fictif avec le nouveau bouton de zone de liste déroulante à l’aide de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Pour plus d’informations, consultez [procédure pas à pas : placer le contrôle sur la barre de d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md). Pour obtenir un exemple d’un bouton de barre d’outils de zone de liste déroulante, consultez l’exemple de projet VisualStudioDemo.
+Pour plus d’informations, consultez [Procédure pas à pas : Placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md). Pour obtenir un exemple d’un bouton de barre d’outils de zone de liste déroulante, consultez l’exemple de projet VisualStudioDemo.
 
 ## <a name="example"></a>Exemple
 
@@ -149,7 +149,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtoolbarcomboboxbutton.h
 
@@ -242,7 +242,7 @@ CMFCToolBarComboBoxButton(
 *dwStyle*<br/>
 [in] Le style du bouton Nouveau.
 
-*iLargeur Argument de type*<br/>
+*iWidth*<br/>
 [in] La largeur, en pixels, du bouton Nouveau.
 
 ### <a name="remarks"></a>Notes
@@ -327,7 +327,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Pointeur vers la fenêtre parent du bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectangle englobant de la zone de liste déroulante.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -350,7 +350,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 *pWndParent*<br/>
 [in] Pointeur vers la fenêtre parent du bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectangle englobant de la zone d’édition.
 
 *dwEditStyle*<br/>
@@ -413,7 +413,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer les cases à modifier et de liste déroulante ; FALSE pour désactiver les cases à modifier et de la liste déroulante.
 
 ### <a name="remarks"></a>Notes
@@ -430,7 +430,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Bouton de menu*<br/>
+*menuButton*<br/>
 [out] Référence à un bouton de menu.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -825,7 +825,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Un handle de fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -990,10 +990,10 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Paramètres
 
-*Contrôleur de domaine principal*<br/>
+*Pdc*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du bouton.
 
 *pImages*<br/>
@@ -1030,7 +1030,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton de zone de liste déroulante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant la zone de liste déroulante du bouton de zone.
 
 *bSelected*<br/>
@@ -1335,5 +1335,4 @@ void SetText(LPCTSTR lpszText);
 [CMFCToolBarButton, classe](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CComboBox, classe](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Procédure pas à pas : Placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)

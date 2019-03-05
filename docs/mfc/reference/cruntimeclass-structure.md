@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521956"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274295"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass, Structure
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur l’utilisation de `CRuntimeClass`, consultez l�
 
 `CRuntimeClass`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -88,7 +88,7 @@ Un pointeur vers l’objet nouvellement créé, ou NULL si le nom de classe est 
 
 ### <a name="remarks"></a>Notes
 
-Les classes dérivées de `CObject` peut de prendre en charge la création dynamique, ce qui est la possibilité de créer un objet d’une classe spécifiée au moment de l’exécution. Classes de document, vue et image, par exemple, doivent prendre en charge la création dynamique. Pour plus d’informations sur la création dynamique et le `CreateObject` membre, consultez [CObject, classe](../../mfc/using-cobject.md) et [classe CObject : en spécifiant les niveaux de fonctionnalité](../../mfc/specifying-levels-of-functionality.md).
+Les classes dérivées de `CObject` peut de prendre en charge la création dynamique, ce qui est la possibilité de créer un objet d’une classe spécifiée au moment de l’exécution. Classes de document, vue et image, par exemple, doivent prendre en charge la création dynamique. Pour plus d’informations sur la création dynamique et le `CreateObject` membre, consultez [classe CObject](../../mfc/using-cobject.md) et [classe CObject : Spécification de niveaux de fonctionnalité](../../mfc/specifying-levels-of-functionality.md).
 
 ### <a name="example"></a>Exemple
 
@@ -141,7 +141,7 @@ La relation est déterminée par le « parcours » à partir de la classe du m
 > [!NOTE]
 >  Pour utiliser le `CRuntimeClass` structure, vous devez inclure la macro IMPLEMENT_DYNAMIC, IMPLEMENT_DYNCREATE ou IMPLEMENT_SERIAL dans l’implémentation de la classe pour laquelle vous souhaitez récupérer les informations relatives aux objets d’exécution.
 
-Pour plus d’informations sur l’utilisation de `CRuntimeClass`, consultez l’article [classe CObject : l’accès aux informations sur la classe runtime](../../mfc/accessing-run-time-class-information.md).
+Pour plus d’informations sur l’utilisation de `CRuntimeClass`, consultez l’article [classe CObject : L’accès aux informations de classe d’exécution](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="example"></a>Exemple
 
@@ -224,4 +224,3 @@ Pour plus d’informations sur les numéros de schéma, consultez le [IMPLEMENT_
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-

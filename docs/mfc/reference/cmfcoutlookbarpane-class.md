@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: f8d93362f9e341087e9213d07475501a26d79d44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492607"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288881"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Cmfcoutlookbarpane, classe
 
@@ -134,7 +134,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCOu
 
 [CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxoutlookbarpane.h
 
@@ -401,7 +401,7 @@ void SetBackColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 [in] Spécifie la nouvelle couleur d’arrière-plan.
 
 ### <a name="remarks"></a>Notes
@@ -473,7 +473,7 @@ void SetTransparentColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 Spécifie la nouvelle couleur transparente.
 
 ### <a name="remarks"></a>Notes

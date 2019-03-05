@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179056"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305079"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 
@@ -461,12 +461,12 @@ class CDC : public CObject
 |[CDC::DrawState](#drawstate)|Affiche une image et applique un effet visuel pour indiquer un état.|
 |[CDC::DrawText](#drawtext)|Dessine mis en forme le texte dans le rectangle spécifié.|
 |[CDC::DrawTextEx](#drawtextex)|Dessine mis en forme le texte dans le rectangle spécifié à l’aide des formats supplémentaires.|
-|[CDC::ellipse](#ellipse)|Dessine une ellipse.|
+|[CDC::Ellipse](#ellipse)|Dessine une ellipse.|
 |[CDC::EndDoc](#enddoc)|Met fin à un travail d’impression démarré par le `StartDoc` fonction membre.|
 |[CDC::EndPage](#endpage)|Informe le pilote de périphérique une page se termine.|
 |[CDC::EndPath](#endpath)|Ferme un crochet de chemin d’accès et sélectionne le chemin d’accès défini par le crochet dans le contexte de périphérique.|
 |[CDC::EnumObjects](#enumobjects)|Énumère les stylets et pinceaux disponibles dans un contexte de périphérique.|
-|[CDC::escape](#escape)|Permet aux applications d’accéder aux fonctionnalités qui ne sont pas directement disponibles à partir d’un appareil particulier via GDI. Autorise également l’accès aux fonctions d’échappement de Windows. Les appels d’échappement effectués par une application sont traduits et envoyées au pilote de périphérique.|
+|[CDC::Escape](#escape)|Permet aux applications d’accéder aux fonctionnalités qui ne sont pas directement disponibles à partir d’un appareil particulier via GDI. Autorise également l’accès aux fonctions d’échappement de Windows. Les appels d’échappement effectués par une application sont traduits et envoyées au pilote de périphérique.|
 |[CDC::ExcludeClipRect](#excludecliprect)|Crée une nouvelle zone de découpage qui se compose de la zone de découpage existant moins le rectangle spécifié.|
 |[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Empêche le dessin dans les zones non valides d’une fenêtre en excluant une région de mise à jour dans la fenêtre à partir d’une zone de découpage.|
 |[CDC::ExtFloodFill](#extfloodfill)|Remplit une zone avec le pinceau actuel. Fournit plus de souplesse que le [CDC::FloodFill](#floodfill) fonction membre.|
@@ -570,7 +570,7 @@ class CDC : public CObject
 |[CDC::PolyPolyline](#polypolyline)|Dessine plusieurs séries de segments de ligne connectés. La position actuelle n’est ni utilisée ni mis à jour par cette fonction.|
 |[CDC::PtVisible](#ptvisible)|Spécifie si le point donné se trouve dans la zone de découpage.|
 |[CDC::RealizePalette](#realizepalette)|Mappe des entrées de la palette dans la palette logique en cours à la palette système.|
-|[CDC::rectangle](#rectangle)|Dessine un rectangle en utilisant le stylet actuel et le remplit à l’aide de la brosse courante.|
+|[CDC::Rectangle](#rectangle)|Dessine un rectangle en utilisant le stylet actuel et le remplit à l’aide de la brosse courante.|
 |[CDC::RectVisible](#rectvisible)|Détermine si une partie du rectangle donné se trouve dans la zone de découpage.|
 |[CDC::ReleaseAttribDC](#releaseattribdc)|Les versions `m_hAttribDC`, le contexte de l’attribut.|
 |[CDC::ReleaseOutputDC](#releaseoutputdc)|Les versions `m_hDC`, le contexte de périphérique de sortie.|
@@ -661,7 +661,7 @@ Par exemple, le framework utilise ces contextes de deux périphérique pour impl
 
 Il se peut que vous devez parfois des informations de mesure de texte à la fois le `m_hDC` et `m_hAttribDC` contextes de périphérique. Les paires suivantes de fonctions fournissent cette fonctionnalité :
 
-|Utilise m_hAttribDC|Utilise m_hDC|
+|Utilise m_hAttribDC|Uses m_hDC|
 |-----------------------|-----------------|
 |[GetTextExtent](#gettextextent)|[GetOutputTextExtent](#getoutputtextextent)|
 |[GetTabbedTextExtent](#gettabbedtextextent)|[GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|
@@ -809,7 +809,7 @@ Spécifie la largeur, en unités logiques, du rectangle source.
 *nSrcHeight*<br/>
 Spécifie la hauteur, en unités logiques, du rectangle source.
 
-*Blend*<br/>
+*blend*<br/>
 Spécifie un [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) structure.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -900,13 +900,13 @@ Spécifie la coordonnée y du coin inférieur droit du rectangle englobant (en u
 *x3*<br/>
 Spécifie le point (en unités logiques) de départ de la coordonnée x du point qui définit l’arc. Ce point n’a pas à se trouvent exactement à l’arc.
 
-*Y3*<br/>
+*y3*<br/>
 Spécifie le point (en unités logiques) de départ de la coordonnée y du point qui définit l’arc. Ce point n’a pas à se trouvent exactement à l’arc.
 
-*X4*<br/>
+*x4*<br/>
 Spécifie la coordonnée x du point qui définit le point de terminaison de l’arc (en unités logiques). Ce point n’a pas à se trouvent exactement à l’arc.
 
-*Y4*<br/>
+*y4*<br/>
 Spécifie la coordonnée y du point qui définit le point de terminaison de l’arc (en unités logiques). Ce point n’a pas à se trouvent exactement à l’arc.
 
 *lpRect*<br/>
@@ -970,13 +970,13 @@ Spécifie la coordonnée y du coin inférieur droit du rectangle englobant (en u
 *x3*<br/>
 Spécifie le point (en unités logiques) de départ de la coordonnée x du point qui définit l’arc. Ce point n’a pas à se trouvent exactement à l’arc.
 
-*Y3*<br/>
+*y3*<br/>
 Spécifie le point (en unités logiques) de départ de la coordonnée y du point qui définit l’arc. Ce point n’a pas à se trouvent exactement à l’arc.
 
-*X4*<br/>
+*x4*<br/>
 Spécifie la coordonnée x du point qui définit le point de terminaison de l’arc (en unités logiques). Ce point n’a pas à se trouvent exactement à l’arc.
 
-*Y4*<br/>
+*y4*<br/>
 Spécifie la coordonnée y du point qui définit le point de terminaison de l’arc (en unités logiques). Ce point n’a pas à se trouvent exactement à l’arc.
 
 *lpRect*<br/>
@@ -1153,13 +1153,13 @@ Spécifie que la coordonnée y du coin inférieur droit de la pression simultan�
 *x3*<br/>
 Spécifie la coordonnée x du point qui définit la pression simultanée de départ de point (en unités logiques).
 
-*Y3*<br/>
+*y3*<br/>
 Spécifie la coordonnée y du point qui définit la pression simultanée de départ de point (en unités logiques).
 
-*X4*<br/>
+*x4*<br/>
 Spécifie la coordonnée x du point qui définit le point de terminaison de la pression simultanée (en unités logiques).
 
-*Y4*<br/>
+*y4*<br/>
 Spécifie la coordonnée y du point qui définit le point de terminaison de la pression simultanée (en unités logiques).
 
 *lpRect*<br/>
@@ -1434,10 +1434,10 @@ Spécifie la coordonnée x logique de l’angle supérieur gauche du rectangle e
 *y*<br/>
 Spécifie la coordonnée y logique de l’angle supérieur gauche du rectangle en trois dimensions.
 
-*CX*<br/>
+*cx*<br/>
 Spécifie la largeur du rectangle en trois dimensions.
 
-*CY*<br/>
+*cy*<br/>
 Spécifie la hauteur du rectangle en trois dimensions.
 
 ### <a name="remarks"></a>Notes
@@ -1507,7 +1507,7 @@ Un pointeur vers un `RECT` structure qui contient les coordonnées logiques du r
 *nEdge*<br/>
 Spécifie le type de la bordure interne et externe à dessiner. Ce paramètre doit être une combinaison d’un indicateur interne de bordure et un indicateur de la bordure externe. Consultez [DrawEdge](/windows/desktop/api/winuser/nf-winuser-drawedge) dans le SDK Windows pour un tableau de types du paramètre.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indicateurs qui spécifient le type de bordure à dessiner. Consultez `DrawEdge` dans le SDK Windows pour obtenir un tableau des valeurs du paramètre. Pour des lignes diagonales, les indicateurs BF_RECT spécifient le point de terminaison du vecteur limité par le paramètre de rectangle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1580,7 +1580,7 @@ BOOL DrawFrameControl(
 *lpRect*<br/>
 Un pointeur vers un `RECT` structure qui contient les coordonnées logiques du rectangle.
 
-*%nLes*<br/>
+*nType*<br/>
 Spécifie le type de contrôle frame dans lequel dessiner. Consultez le *uType* paramètre dans [DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) dans le SDK Windows pour obtenir la liste des valeurs possibles de ce paramètre.
 
 *nState*<br/>
@@ -1773,7 +1773,7 @@ Spécifie la taille de l’image.
 *hBitmap*<br/>
 Handle vers une image bitmap.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Indicateurs qui spécifient le type d’image et l’état. Consultez [DrawState](/windows/desktop/api/winuser/nf-winuser-drawstatea) dans le SDK Windows pour maximum *nIndicateurs* types et les États.
 
 *hBrush*<br/>
@@ -2429,10 +2429,10 @@ Spécifie la coordonnée x logique de l’angle supérieur gauche du rectangle.
 *y*<br/>
 Spécifie la coordonnée y logique de l’angle supérieur gauche du rectangle de destination.
 
-*CX*<br/>
+*cx*<br/>
 Spécifie la largeur du rectangle.
 
-*CY*<br/>
+*cy*<br/>
 Spécifie la hauteur du rectangle.
 
 ### <a name="remarks"></a>Notes
@@ -2807,10 +2807,10 @@ BOOL GetCharABCWidthsI(
 *giFirst*<br/>
 Spécifie le premier index de glyphe dans le groupe d’indices de glyphe consécutives à partir de la police actuelle. Ce paramètre est utilisé uniquement si le *IGP* paramètre est NULL.
 
-*CGI*<br/>
+*cgi*<br/>
 Spécifie le nombre d’indices de glyphe.
 
-*IGP*<br/>
+*pgi*<br/>
 Pointeur vers un tableau contenant les indices de glyphe. Si la valeur est NULL, le *giFirst* paramètre est utilisé à la place. Le *cgi* paramètre spécifie le nombre d’indices de glyphe de ce tableau.
 
 *lpabc*<br/>
@@ -2883,10 +2883,10 @@ BOOL GetCharWidthI(
 *giFirst*<br/>
 Spécifie le premier index de glyphe dans le groupe d’indices de glyphe consécutives à partir de la police actuelle. Ce paramètre est utilisé uniquement si le *IGP* paramètre est NULL.
 
-*CGI*<br/>
+*cgi*<br/>
 Spécifie le nombre d’indices de glyphe.
 
-*IGP*<br/>
+*pgi*<br/>
 Pointeur vers un tableau contenant les indices de glyphe. Si la valeur est NULL, le *giFirst* paramètre est utilisé à la place. Le *cgi* paramètre spécifie le nombre d’indices de glyphe de ce tableau.
 
 *lpBuffer*<br/>
@@ -3171,7 +3171,7 @@ DWORD GetGlyphOutline(
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Spécifie le caractère pour lequel les informations sont à retourner.
 
 *nFormat*<br/>
@@ -3187,7 +3187,7 @@ Lorsque la valeur de *nFormat* est 0, la fonction insère un [GLYPHMETRICS](/win
 *lpgm*<br/>
 Pointe vers une structure GLYPHMETRICS qui décrit le positionnement du glyphe dans la cellule de caractère.
 
-*cbBuffer :*<br/>
+*cbBuffer*<br/>
 Spécifie la taille de la mémoire tampon dans laquelle la fonction copie les informations sur le contour de caractère. Si cette valeur est 0 et le *nFormat* paramètre est les valeurs GGO_NATIVE ou GGO_BITMAP, la fonction retourne la taille requise de la mémoire tampon.
 
 *lpBuffer*<br/>
@@ -3828,7 +3828,7 @@ BOOL GetTextExtentExPointI(
 *pgiIn*<br/>
 Pointeur vers un tableau d’indices de glyphe pour lequel les extensions doivent être récupérés.
 
-*CGI*<br/>
+*cgi*<br/>
 Spécifie le nombre de glyphes dans le tableau vers lequel pointé *pgiIn*.
 
 *nMaxExtent*<br/>
@@ -3867,7 +3867,7 @@ BOOL GetTextExtentPointI(
 *pgiIn*<br/>
 Pointeur vers un tableau d’indices de glyphe pour lequel les extensions doivent être récupérés.
 
-*CGI*<br/>
+*cgi*<br/>
 Spécifie le nombre de glyphes dans le tableau vers lequel pointé *pgiIn*.
 
 *lpSize*<br/>
@@ -4700,13 +4700,13 @@ Spécifie la coordonnée y du coin inférieur droit du rectangle englobant (en u
 *x3*<br/>
 Spécifie la coordonnée x du point de départ de l’arc (en unités logiques). Ce point n’a pas à se trouvent exactement à l’arc.
 
-*Y3*<br/>
+*y3*<br/>
 Spécifie la coordonnée y du point de départ de l’arc (en unités logiques). Ce point n’a pas à se trouvent exactement à l’arc.
 
-*X4*<br/>
+*x4*<br/>
 Spécifie la coordonnée x du point de terminaison de l’arc (en unités logiques). Ce point n’a pas à se trouvent exactement à l’arc.
 
-*Y4*<br/>
+*y4*<br/>
 Spécifie la coordonnée y du point de terminaison de l’arc (en unités logiques). Ce point n’a pas à se trouvent exactement à l’arc.
 
 *lpRect*<br/>
@@ -5325,7 +5325,7 @@ Spécifie la coordonnée y du coin inférieur droit du rectangle (en unités log
 *x3*<br/>
 Spécifie la largeur de l’ellipse utilisée pour dessiner les angles arrondis est utilisée (en unités logiques).
 
-*Y3*<br/>
+*y3*<br/>
 Spécifie la hauteur de l’ellipse utilisée pour dessiner les angles arrondis est utilisée (en unités logiques).
 
 *lpRect*<br/>
@@ -5462,7 +5462,7 @@ BOOL ScrollDC(
 
 ### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 Spécifie le nombre d’unités de défilement horizontale.
 
 *dy*<br/>
@@ -5775,7 +5775,7 @@ Spécifie la direction d’arc de cercle ancien, en cas de réussite ; sinon 0.
 
 La direction par défaut est dans le sens inverse. Le `SetArcDirection` fonction spécifie la direction dans laquelle les fonctions suivantes dessin :
 
-|Arc|Secteur|
+|Arc|Graphique à secteurs|
 |---------|---------|
 |`ArcTo`|`Rectangle`|
 |`Chord`|`RoundRect`|
@@ -6358,7 +6358,7 @@ UINT SetTextAlign(UINT nFlags);
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie les indicateurs de l’alignement du texte. Les indicateurs spécifient la relation entre un point et un rectangle qui englobe le texte. Le point peut être soit la position actuelle ou les coordonnées spécifiées par une fonction de sortie de texte. Le rectangle qui délimite le texte est défini par les cellules adjacentes de caractère dans la chaîne de texte. Le *nIndicateurs* paramètre peut être un ou plusieurs indicateurs à partir de le des trois catégories suivantes. Choisir qu’un seul indicateur de chaque catégorie. La première catégorie affecte l’alignement du texte sur l’axe x :
 
 - TA_CENTER aligne le point avec le Centre horizontal du rectangle englobant.
@@ -6487,10 +6487,10 @@ CSize SetViewportExt(SIZE size);
 
 ### <a name="parameters"></a>Paramètres
 
-*CX*<br/>
+*cx*<br/>
 Spécifie l’étendue de x de la fenêtre d’affichage (en unités de périphérique).
 
-*CY*<br/>
+*cy*<br/>
 Spécifie l’étendue de y de la fenêtre d’affichage (en unités de périphérique).
 
 *size*<br/>
@@ -6568,10 +6568,10 @@ CSize SetWindowExt(SIZE size);
 
 ### <a name="parameters"></a>Paramètres
 
-*CX*<br/>
+*cx*<br/>
 Spécifie l’étendue-x (en unités logiques) de la fenêtre.
 
-*CY*<br/>
+*cy*<br/>
 Spécifie l’étendue-y (en unités logiques) de la fenêtre.
 
 *size*<br/>

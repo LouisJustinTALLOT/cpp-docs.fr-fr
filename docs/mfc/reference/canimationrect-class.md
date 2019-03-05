@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259488"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect, classe
 
@@ -87,7 +87,7 @@ class CAnimationRect : public CAnimationBaseObject;
 |Nom|Description|
 |----------|-----------------|
 |[CAnimationRect::operator RECT](#operator_rect)|Convertit un CAnimationRect Rect.|
-|[CAnimationRect::operator =](#operator_eq)|Assigne rect à CAnimationRect.|
+|[CAnimationRect::operator=](#operator_eq)|Assigne rect à CAnimationRect.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
@@ -117,7 +117,7 @@ La classe CAnimationRect encapsule quatre objets CAnimationVariable et peut repr
 
 `CAnimationRect`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -183,7 +183,7 @@ CAnimationRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie le rectangle par défaut.
 
 *nGroupID*<br/>
@@ -322,7 +322,7 @@ BOOL GetValue(CRect& rect);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Sortie. Contient la valeur actuelle lorsque cette méthode est retournée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -401,7 +401,7 @@ Valeur actuelle du rectangle d’animation Rect.
 
 En interne, cette fonction appelle GetValue. Si GetValue échoue pour une raison quelconque, l’objet RECT retourné contient les valeurs par défaut pour toutes les coordonnées du rectangle.
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator =
+##  <a name="operator_eq"></a>  CAnimationRect::operator=
 
 Assigne rect à CAnimationRect.
 
@@ -411,7 +411,7 @@ void operator=(const RECT& rect);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 La nouvelle valeur du rectangle de l’animation.
 
 ### <a name="remarks"></a>Notes
@@ -428,7 +428,7 @@ void SetDefaultValue(const CRect& rect);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie les nouvelles valeurs par défaut pour la gauche, haut, droite et bas.
 
 ### <a name="remarks"></a>Notes

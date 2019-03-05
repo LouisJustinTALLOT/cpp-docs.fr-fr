@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: a16d7508f273fc444be65c1e6cc176911fd28e03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643298"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273281"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl, classe
 
@@ -125,7 +125,7 @@ L’exemple suivant montre comment utiliser deux méthodes dans le `CMFCEditBrow
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxeditbrowsectrl.h
 
@@ -141,7 +141,7 @@ void EnableBrowseButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 True pour afficher le bouton Parcourir ; FALSE à ne pas afficher le bouton Parcourir. La valeur par défaut est TRUE.
 
 *szLabel*<br/>

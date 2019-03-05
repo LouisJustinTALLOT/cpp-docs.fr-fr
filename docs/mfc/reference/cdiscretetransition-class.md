@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-ms.openlocfilehash: 6092e805516d242daf6149615a8ef72df334dfd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc2311f7dae71f7c3848b7825b297ec5c9747859
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656701"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262829"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition, classe
 
@@ -67,7 +67,7 @@ Pendant une transition discrète, la variable de l’animation conserve la valeu
 
 [CDiscreteTransition](../../mfc/reference/cdiscretetransition-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -84,13 +84,13 @@ CDiscreteTransition(
 
 ### <a name="parameters"></a>Paramètres
 
-*Délai*<br/>
+*delay*<br/>
 La quantité de temps en fonction desquelles différer le changement d’instantané à la valeur finale.
 
 *dblFinalValue*<br/>
 La valeur de la variable à la fin de la transition de l’animation.
 
-*Maintenez la touche*<br/>
+*hold*<br/>
 La quantité de temps permettant de contenir la variable à sa valeur finale.
 
 ##  <a name="create"></a>  CDiscreteTransition::Create

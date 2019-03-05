@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 45ad85e5b85674be957320ef6fdb7f5a81db6503
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850283"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304676"
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
 
 Les classes [CObject](../../mfc/reference/cobject-class.md) et [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) encapsulent plusieurs services d’objet, notamment l’accès aux informations de classe d’exécution, la sérialisation et la création d’objets dynamiques. Toutes les classes dérivées de `CObject` héritent de cette fonctionnalité.
 
-L'accès aux informations sur la classe d'exécution vous permet de déterminer les informations sur une classe d'objets au moment de l'exécution. La capacité de déterminer la classe d’un objet au moment de l’exécution est utile lorsque vous avez besoin de vérifications de type supplémentaires d’arguments de fonction et lorsque vous devez écrire un code spécial en fonction de la classe d’un objet. Les informations sur la classe d'exécution ne sont pas prises en charge directement par le langage C++.
+L'accès aux informations sur la classe d'exécution vous permet de déterminer les informations sur une classe d'objets au moment de l'exécution. La capacité de déterminer la classe d'un objet au moment de l'exécution est utile lorsque vous avez besoin de vérifications de type supplémentaires d'arguments de fonction et lorsque vous devez écrire un code spécial en fonction de la classe d'un objet. Les informations sur la classe d'exécution ne sont pas prises en charge directement par le langage C++.
 
 La sérialisation est le processus d'écriture ou de lecture du contenu d'un objet vers et à partir d'un fichier. Vous pouvez utiliser la sérialisation pour stocker le contenu d'un objet même après que l'application se termine. L'objet peut ensuite être lu à partir du fichier lorsque l'application est redémarrée. De tels objets de données sont dits "persistants".
 
@@ -522,4 +522,3 @@ L’ID de classe OLE est un identificateur unique de 128 bits pour l’objet. Il
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [Isolement de la bibliothèque de contrôles communs MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [Clé de CLSID](/windows/desktop/com/clsid-key-hklm)
-

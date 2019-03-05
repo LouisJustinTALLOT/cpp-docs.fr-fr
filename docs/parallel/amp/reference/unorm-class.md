@@ -6,12 +6,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: b485d5efbfbcedbb1e11a3e212465340f0413ee4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491557"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300802"
 ---
 # <a name="unorm-class"></a>unorm, classe
 
@@ -37,22 +37,22 @@ class unorm;
 |----------|-----------------|
 |unorm::operator--||
 |unorm::operator float|Opérateur de conversion. Convertissez le nombre d’unorm flottante valeur de point.|
-|unorm::operator * =||
-|/ = unorm::operator||
-|unorm::operator ++||
-|unorm::operator +=||
-|unorm::operator =||
-|unorm::operator =||
+|unorm::operator*=||
+|unorm::operator/=||
+|unorm::operator++||
+|unorm::operator+=||
+|unorm::operator=||
+|unorm::operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `unorm`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_short_vectors.h
 
-**Namespace :** Concurrency::graphics
+**Espace de noms :** Concurrency::graphics
 
 ##  <a name="ctor"></a> unorm
 
@@ -93,7 +93,7 @@ inline explicit unorm(
 *_V*<br/>
 La valeur utilisée pour initialiser.
 
-*_Autre*<br/>
+*_Other*<br/>
 L’objet de la norme utilisée pour initialiser.
 
 ## <a name="see-also"></a>Voir aussi

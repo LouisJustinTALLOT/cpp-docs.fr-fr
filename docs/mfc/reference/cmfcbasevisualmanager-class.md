@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a9d3be75331004529ca1bd71a0d9422f45cac40b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c26c0c9c9026f8312218b2ac15f83a50a67be79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440194"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292209"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Cmfcbasevisualmanager, classe
 
@@ -93,7 +93,7 @@ S’agissant d’une classe de base pour tous les gestionnaires visuels, vous po
 
 [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxvisualmanager.h
 
@@ -138,7 +138,7 @@ virtual BOOL DrawCheckBox(
 *pDC*<br/>
 [in] Un pointeur vers un contexte de périphérique
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant de la case à cocher.
 
 *bHighlighted*<br/>
@@ -149,7 +149,7 @@ virtual BOOL DrawCheckBox(
 
 2 pour mixte normal.
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 [in] Spécifie si la case à cocher est activée.
 
 *bPressed*<br/>
@@ -187,10 +187,10 @@ virtual BOOL DrawComboBorder(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectangle englobant de la bordure de zone de liste déroulante.
 
-*bDésactiver*<br/>
+*bDisabled*<br/>
 [in] Spécifie si la bordure de zone de liste déroulante est désactivée.
 
 *bIsDropped*<br/>
@@ -221,8 +221,8 @@ virtual BOOL DrawComboDropButton(
 |Paramètre|Description|
 |---------------|-----------------|
 |*pDC*|[in] Pointeur vers un contexte de périphérique.|
-|*Rect*|[in] Le rectangle englobant de bouton de liste déroulante de zone de liste déroulante.|
-|*bDésactiver*|[in] Spécifie si le bouton de liste déroulante de zone de liste déroulante est désactivé.|
+|*rect*|[in] Le rectangle englobant de bouton de liste déroulante de zone de liste déroulante.|
+|*bDisabled*|[in] Spécifie si le bouton de liste déroulante de zone de liste déroulante est désactivé.|
 |*bIsDropped*|[in] Spécifie si le bouton de liste déroulante de zone de liste déroulante est déroulé.|
 |*bIsHighlighted*|[in] Spécifie si le bouton de liste déroulante de zone de liste déroulante est mis en surbrillance.|
 
@@ -247,7 +247,7 @@ virtual BOOL DrawPushButton(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du bouton push.
 
 *pButton*<br/>
@@ -279,7 +279,7 @@ virtual BOOL DrawRadioButton(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant de la case.
 
 *bHighlighted*<br/>
@@ -288,7 +288,7 @@ virtual BOOL DrawRadioButton(
 *bChecked*<br/>
 [in] Spécifie si la case d’option est activée.
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 [in] Spécifie si la case d’option est activée.
 
 *bPressed*<br/>

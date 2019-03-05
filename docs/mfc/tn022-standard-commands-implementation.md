@@ -1,5 +1,5 @@
 ---
-title: 'TN022 : implémentation de commandes standard'
+title: 'TN022 : Implémentation de commandes standard'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.commands
@@ -59,14 +59,14 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504336"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279350"
 ---
-# <a name="tn022-standard-commands-implementation"></a>TN022 : implémentation de commandes standard
+# <a name="tn022-standard-commands-implementation"></a>TN022 : Implémentation de commandes standard
 
 > [!NOTE]
 >  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -468,19 +468,19 @@ Pour chaque ID de commande, il existe une chaîne d’invite ligne message stand
 
 Plusieurs ID de commande standard sont utilisés comme indicateurs dans les barres d’état. Ces utilisent le même l’interface utilisateur de commande de mise à jour de mécanisme de gestion pour afficher leur état visuel en cours pendant l’inactivité de l’application. Dans la mesure où ils ne peuvent pas être sélectionnés par l’utilisateur (autrement dit, vous ne pouvez pas envoyer d’un volet de barre d’état), puis il est inutile d’avoir un gestionnaire ON_COMMAND pour ces ID de commande.
 
-- ID_INDICATOR_CAPS : Indicateur de verrou CAP.
+- ID_INDICATOR_CAPS : Indicateur de verrou de CAP.
 
 - ID_INDICATOR_NUM : Indicateur de verrou (pavé numérique).
 
 - ID_INDICATOR_SCRL : Indicateur de verrou défil.
 
-- ID_INDICATOR_KANA : Indicateur de verrou KANA (applicable uniquement aux systèmes japonais).
+- ID_INDICATOR_KANA : KANA verrouille indicateur (applicable uniquement aux systèmes japonais).
 
 Ces trois sont implémentées dans `CFrameWnd::OnUpdateKeyIndicator`, une application d’assistance de mise en œuvre qui utilise l’ID de commande pour mapper à la touche virtuelle appropriée. Une implémentation commune Active ou désactive (pour les volets de l’état désactivés ne = aucun texte) le `CCmdUI` objet selon si la touche virtuelle appropriée est actuellement verrouillée.
 
 Personnalisation de ce gestionnaire de commandes n’est pas recommandée.
 
-- ID_INDICATOR_EXT : Étendu sélectionner un indicateur.
+- ID_INDICATOR_EXT : Sélectionner un indicateur étendu.
 
 - ID_INDICATOR_OVR : Indicateur de mode Refrappe.
 
@@ -488,10 +488,9 @@ Personnalisation de ce gestionnaire de commandes n’est pas recommandée.
 
 Actuellement, il n’existe aucune implémentation standard de ces indicateurs.
 
-Si vous choisissez d’implémenter ces indicateurs, nous vous recommandons d’utiliser ces ID d’indicateur et de maintenir l’ordre des indicateurs dans votre barre d’état (autrement dit, dans cet ordre : EXT, extrémité, NUM, défil, RFP, REC).
+Si vous choisissez d’implémenter ces indicateurs, nous vous recommandons d’utiliser ces ID d’indicateur et la mise à jour l’ordre des indicateurs dans votre barre d’état (autrement dit, dans cet ordre : EXT, EXTRÉMITÉ, NUM, DÉFIL, RFP, REC).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294419"
 ---
 # <a name="ole-background"></a>Arrière-plan OLE
 
@@ -26,7 +26,7 @@ OLE incorpore différents concepts qui permettent d'atteindre l'objectif d'inter
 
 - Liaison et incorporation
 
-   La liaison et l'incorporation sont les deux méthodes permettant de stocker des éléments créés dans un document OLE alors qu'ils ont été créés dans une autre application. Pour obtenir des informations générales sur les différences entre les deux, consultez l’article [arrière-plan OLE : liaison et incorporation](../mfc/ole-background-linking-and-embedding.md). Pour plus d’informations, consultez les articles [conteneurs](../mfc/containers.md) et [serveurs](../mfc/servers.md).
+   La liaison et l'incorporation sont les deux méthodes permettant de stocker des éléments créés dans un document OLE alors qu'ils ont été créés dans une autre application. Pour obtenir des informations générales sur les différences entre les deux, consultez l’article [arrière-plan OLE : Liaison et incorporation](../mfc/ole-background-linking-and-embedding.md). Pour plus d’informations, consultez les articles [conteneurs](../mfc/containers.md) et [serveurs](../mfc/servers.md).
 
 - Activation en place (modification visuelle)
 
@@ -42,15 +42,15 @@ OLE incorpore différents concepts qui permettent d'atteindre l'objectif d'inter
 
 - Fichiers composés
 
-   Les fichiers composés fournissent un format de fichier standard qui simplifie le stockage structuré de documents composés pour les applications OLE. Dans un fichier composé, les stockages ont de nombreuses fonctionnalités de répertoires et les flux ont de nombreuses fonctionnalités de fichiers. Cette technologie est également appelée stockage structuré. Pour plus d’informations sur les fichiers composés, consultez l’article [conteneurs : fichiers composés](../mfc/containers-compound-files.md).
+   Les fichiers composés fournissent un format de fichier standard qui simplifie le stockage structuré de documents composés pour les applications OLE. Dans un fichier composé, les stockages ont de nombreuses fonctionnalités de répertoires et les flux ont de nombreuses fonctionnalités de fichiers. Cette technologie est également appelée stockage structuré. Pour plus d’informations sur les fichiers composés, consultez l’article [conteneurs : Fichiers composés](../mfc/containers-compound-files.md).
 
 - Transfert de données uniforme
 
-   Le transfert de données uniforme (UDT, Uniform Data Transfer) est un ensemble d'interfaces qui fournissent des données à envoyer et reçues en mode standard, quelle que soit la méthode active choisie pour transférer les données. Le transfert UDT forme la base des transferts de données via la méthode Glisser-déplacer. Elle sert de base pour transférer des données Windows existantes, tel que le Presse-papiers et l'échange dynamique de données (DDE). Pour plus d’informations sur UDT, consultez l’article [objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md).
+   Le transfert de données uniforme (UDT, Uniform Data Transfer) est un ensemble d'interfaces qui fournissent des données à envoyer et reçues en mode standard, quelle que soit la méthode active choisie pour transférer les données. Le transfert UDT forme la base des transferts de données via la méthode Glisser-déposer. Elle sert de base pour transférer des données Windows existantes, tel que le Presse-papiers et l'échange dynamique de données (DDE). Pour plus d’informations sur UDT, consultez l’article [objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md).
 
 - Glisser-déposer
 
-   La fonction Glisser-déplacer est une technique simple d'utilisation, de manipulation directe pour transférer des données entre les applications, les fenêtres d'une application, ou même dans une seule fenêtre d'application. Les données à transférer sont sélectionnées et déposées à la destination souhaitée. La fonction Glisser-déposer est basée sur le transfert de données uniforme. Pour plus d’informations sur la fonction glisser- déposer, consultez l’article [glisser -déplacer](../mfc/drag-and-drop-ole.md).
+   La fonction Glisser-déposer est une technique simple d’utilisation, de manipulation directe pour transférer des données entre les applications, les fenêtres d’une application, ou même dans une seule fenêtre d’application. Les données à transférer sont sélectionnées et déposées à la destination souhaitée. La fonction Glisser-déposer est basée sur le transfert de données uniforme. Pour plus d’informations sur la fonction glisser- déposer, consultez l’article [glisser -déplacer](../mfc/drag-and-drop-ole.md).
 
 - Component Object Model
 
@@ -58,17 +58,16 @@ OLE incorpore différents concepts qui permettent d'atteindre l'objectif d'inter
 
 Certaines des rubriques OLE les plus importantes sont traitées dans les articles suivants :
 
-- [Arrière-plan OLE : liaison et incorporation](../mfc/ole-background-linking-and-embedding.md)
+- [Arrière-plan OLE : Liaison et incorporation](../mfc/ole-background-linking-and-embedding.md)
 
-- [Arrière-plan OLE : conteneurs et serveurs](../mfc/ole-background-containers-and-servers.md)
+- [Arrière-plan OLE : Conteneurs et les serveurs](../mfc/ole-background-containers-and-servers.md)
 
-- [Arrière-plan OLE : stratégies d’implémentation](../mfc/ole-background-implementation-strategies.md)
+- [Arrière-plan OLE : Stratégies d’implémentation](../mfc/ole-background-implementation-strategies.md)
 
-- [Arrière-plan OLE : implémentation MFC](../mfc/ole-background-mfc-implementation.md)
+- [Arrière-plan OLE : Implémentation MFC](../mfc/ole-background-mfc-implementation.md)
 
 Pour obtenir d'autres informations OLE manquantes dans les articles ci-dessus, effectuez des recherches sur OLE dans MSDN.
 
 ## <a name="see-also"></a>Voir aussi
 
 [OLE](../mfc/ole-in-mfc.md)
-

@@ -5,12 +5,12 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d
 - amp_short_vectors/Concurrency::graphics::direct3d
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
-ms.openlocfilehash: 2a07aeab410750e38684f564df4cb89c1846b95e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb03edd63c612fd070e50e2f5d229cd8e207812
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626822"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280795"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d, espace de noms
 
@@ -34,11 +34,11 @@ namespace direct3d;
 |[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Crée un [texture](texture-class.md) objet en utilisant les paramètres spécifiés.|
 |[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Compare une valeur de référence de 4 octets et une valeur de la source de 8 octets et accumule un vecteur de 4 sommes.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_graphics.h
 
-**Namespace :** Concurrency::graphics
+**Espace de noms :** Concurrency::graphics
 
 ## <a name="see-also"></a>Voir aussi
 

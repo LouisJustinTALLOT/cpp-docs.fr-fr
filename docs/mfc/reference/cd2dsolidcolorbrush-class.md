@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: fa2114df914af07dd9baa140cc96cc94eaea6a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41d1d1b8c28335ae6207e41d696359295a83e646
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521769"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291234"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush, classe
 
@@ -50,7 +50,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 |Nom|Description|
 |----------|-----------------|
 |[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Surchargé. Construit un objet CD2DSolidColorBrush.|
-|[CD2DSolidColorBrush :: ~ CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Destructeur. Appelé lorsqu’un objet de pinceau uni D2D est détruit.|
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Destructeur. Appelé lorsqu’un objet de pinceau uni D2D est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -68,7 +68,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|Renvoie l’interface ID2D1SolidColorBrush|
+|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush*](#operator_id2d1solidcolorbrush_star)|Renvoie l’interface ID2D1SolidColorBrush|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
@@ -87,11 +87,11 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 [CD2DSolidColorBrush](../../mfc/reference/cd2dsolidcolorbrush-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrendertarget.h
 
-##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush :: ~ CD2DSolidColorBrush
+##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::~CD2DSolidColorBrush
 
 Destructeur. Appelé lorsqu’un objet de pinceau uni D2D est détruit.
 
@@ -136,7 +136,7 @@ CD2DSolidColorBrush(
 *pParentTarget*<br/>
 Pointeur vers la cible de rendu.
 
-*Couleur*<br/>
+*color*<br/>
 Les valeurs rouges, verts, bleu et alphabétiques de la couleur du pinceau.
 
 *pBrushProperties*<br/>
@@ -225,7 +225,7 @@ Stocke un pointeur vers un objet ID2D1SolidColorBrush.
 ID2D1SolidColorBrush* m_pSolidColorBrush;
 ```
 
-##  <a name="operator_id2d1solidcolorbrush_star"></a>  CD2DSolidColorBrush::operator ID2D1SolidColorBrush *
+##  <a name="operator_id2d1solidcolorbrush_star"></a>  CD2DSolidColorBrush::operator ID2D1SolidColorBrush*
 
 Renvoie l’interface ID2D1SolidColorBrush
 
@@ -247,7 +247,7 @@ void SetColor(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 La couleur de ce pinceau de couleur unie
 
 ## <a name="see-also"></a>Voir aussi

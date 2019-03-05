@@ -5,12 +5,12 @@ helpviewer_keywords:
 - connection points [C++], adding to ATL objects
 - Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-ms.openlocfilehash: bf3819f96821b8794b6bd120d63798b902eb2b9e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39943c1bb071efba4fc3f2b42b227a4516e3856c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473799"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299912"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Ajout de points de connexion à un objet
 
@@ -63,4 +63,3 @@ Dans les deux cas, Assistant Implémentation d’un Point de connexion utilise u
 ## <a name="see-also"></a>Voir aussi
 
 [Point de connexion](../atl/atl-connection-points.md)
-

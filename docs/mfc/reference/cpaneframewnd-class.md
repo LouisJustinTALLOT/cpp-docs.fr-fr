@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450165"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278819"
 ---
 # <a name="cpaneframewnd-class"></a>Cpaneframewnd, classe
 
@@ -253,7 +253,7 @@ Si vous faites dériver une classe de `CPaneFrameWnd`, vous devez indiquer à l'
 
 `CPaneFrameWnd`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxPaneFrameWnd.h
 
@@ -285,7 +285,7 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 *pWnd*<br/>
 [in] Le volet pour ajouter ou supprimer.
 
-*bAjouter*<br/>
+*bAdd*<br/>
 [in] Si non nul, ajouter le volet. Si 0, supprimer le volet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -425,7 +425,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Spécifie le style de fenêtre. Pour plus d’informations, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Spécifie la taille initiale et la position de la fenêtre mini-frame.
 
 *pParentWnd*<br/>
@@ -467,7 +467,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Spécifie le style de fenêtre. Pour plus d’informations, consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Spécifie la taille initiale et la position de la fenêtre mini-frame.
 
 *pParentWnd*<br/>
@@ -1157,7 +1157,7 @@ void SetDockingTimer(UINT nTimeOut);
 
 ### <a name="parameters"></a>Paramètres
 
-*%ndélai*<br/>
+*nTimeOut*<br/>
 [in] Valeur de délai d’expiration en millisecondes.
 
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState

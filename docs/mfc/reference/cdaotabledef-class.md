@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270226"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef, classe
 
@@ -185,7 +185,7 @@ Lorsque vous avez terminé à l’aide d’un objet tabledef, appelez sa [fermer
 
 `CDaoTableDef`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 
@@ -271,7 +271,7 @@ virtual void Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers une chaîne contenant le nom de la table.
 
 *lAttributes*<br/>
@@ -312,10 +312,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Pointeur vers une expression de chaîne spécifiant le nom de ce champ.
 
-*%nLes*<br/>
+*nType*<br/>
 Une valeur indiquant le type de données du champ. Le paramètre peut avoir une des valeurs suivantes :
 
 |Type|Taille (en octets)|Description|
@@ -346,7 +346,7 @@ Une valeur correspondant aux caractéristiques du champ et qui peut être combin
 |`dbUpdatableField`|La valeur du champ peut être modifiée.|
 |`dbDescending`|Le champ est trié dans l’ordre décroissant (Z - A ou 0-100) ordre (s’applique uniquement à un objet de champ dans une collection de champs d’un objet Index). Si vous omettez cette constante, le champ est trié dans l’ordre croissant (A - Z ou 0 - 100) ordre (par défaut).|
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Une référence à un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure.
 
 ### <a name="remarks"></a>Notes
@@ -409,7 +409,7 @@ void DeleteField(int nIndex);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Pointeur vers une expression de chaîne qui est le nom d’un champ existant.
 
 *nIndex*<br/>
@@ -432,7 +432,7 @@ void DeleteIndex(int nIndex);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Pointeur vers une expression de chaîne qui est le nom d’un index existant.
 
 *nIndex*<br/>
@@ -574,7 +574,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 L’index de l’objet de champ dans base zéro collection de champs de la table, pour la recherche par index.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Une référence à un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure.
 
 *dwInfoOptions*<br/>
@@ -582,11 +582,11 @@ Options qui spécifient les informations sur le champ à extraire. Les options d
 
 - `AFX_DAO_PRIMARY_INFO` (Valeur par défaut) Nom, Type, taille, les attributs. Utilisez cette option pour meilleures performances.
 
-- `AFX_DAO_SECONDARY_INFO` Informations primaire, ainsi que : Ordinal, obligatoire, permettre de Position zéro Table de Source de nom étrangère, champ Source, de longueur, ordre de classement,
+- `AFX_DAO_SECONDARY_INFO` Informations primaire, ainsi que : Position ordinale, obligatoire, autoriser une longueur nulle, commande, nom étrangère, champ de Source de Table Source de classement
 
-- `AFX_DAO_ALL_INFO` Informations primaires et secondaires, ainsi que : règle de Validation, le texte de Validation, la valeur par défaut
+- `AFX_DAO_ALL_INFO` Informations primaires et secondaires, ainsi que : Valeur par défaut de règle, le texte de Validation, validation
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers le nom de l’objet de champ, pour la recherche par nom. Le nom est une chaîne contenant jusqu'à 64 caractères qui identifie de façon unique le champ.
 
 ### <a name="remarks"></a>Notes
@@ -644,11 +644,11 @@ Options qui spécifient les informations sur l’index à récupérer. Les optio
 
 - `AFX_DAO_PRIMARY_INFO` Champs de noms, les informations de champ. Utilisez cette option pour meilleures performances.
 
-- `AFX_DAO_SECONDARY_INFO` Informations primaire, ainsi que : principal, Unique, Clustered, ignorer les valeurs NULL, obligatoires, étranger
+- `AFX_DAO_SECONDARY_INFO` Informations primaire, ainsi que : Primaires et uniques, en cluster, ignorer les valeurs NULL, obligatoire, étrangères
 
-- `AFX_DAO_ALL_INFO` Informations primaires et secondaires, ainsi que : comptage de valeurs
+- `AFX_DAO_ALL_INFO` Informations primaires et secondaires, ainsi que : Comptage de valeurs
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers le nom de l’objet index, pour la recherche par nom.
 
 ### <a name="remarks"></a>Notes
@@ -787,7 +787,7 @@ virtual void Open(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Un pointeur vers une chaîne qui spécifie un nom de table.
 
 ### <a name="remarks"></a>Notes
@@ -864,7 +864,7 @@ Le tableau suivant présente les types de base de données possibles et leurs sp
 |-------------------|---------------|----------|
 |Base de données en utilisant le moteur de base de données Jet|"[ `database`];"|« `drive`:\\\ *chemin d’accès*\\\ *filename*. MDB »|
 |dBASE III|« dBASE III ; »|« `drive`:\\\ *chemin d’accès*»|
-|dBASE IV|« dBASE IV ; »|« `drive`:\\\ *chemin d’accès*»|
+|dBASE IV|"dBASE IV;"|« `drive`:\\\ *chemin d’accès*»|
 |dBASE 5|« dBASE 5.0 ; »|« `drive`:\\\ *chemin d’accès*»|
 |Paradox 3.x|« Paradox 3.x ; »|« `drive`:\\\ *chemin d’accès*»|
 |Paradox 4.x|« Paradox 4.x ; »|« `drive`:\\\ *chemin d’accès*»|
@@ -877,7 +877,7 @@ Le tableau suivant présente les types de base de données possibles et leurs sp
 |Exportation HTML|« Export HTML ; »|« `drive`:\\\ *chemin d’accès*»|
 |Texte|« Text » ;|« lecteur :\\\path »|
 |ODBC|« ODBC ; Base de données = `database`; UID = *utilisateur*; PWD = *mot de passe*; DSN = *datasourcename ;* LOGINTIMEOUT = *secondes ;*» (Il peut s’agir d’une chaîne de connexion complète pour tous les serveurs ; il est juste un exemple. Il est très important de ne pas avoir des espaces entre les paramètres.)|Aucun.|
-|Exchange|« Exchange ;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1} ;]<br /><br /> [Profil = *profil*;]<br /><br /> [PWD = *mot de passe*;]<br /><br /> [BASE DE DONNÉES = `database`;] »|*« lecteur*:\\\ *chemin d’accès*\\\ *filename*. MDB »|
+|Exchange|« Exchange ;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [Profil = *profil*;]<br /><br /> [PWD = *mot de passe*;]<br /><br /> [DATABASE= `database`;]"|*« lecteur*:\\\ *chemin d’accès*\\\ *filename*. MDB »|
 
 > [!NOTE]
 >  Btrieve n’est plus pris en charge à compter de DAO 3.5.
@@ -900,7 +900,7 @@ void SetName(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Pointeur vers une expression de chaîne qui spécifie un nom pour une table.
 
 ### <a name="remarks"></a>Notes

@@ -1,18 +1,18 @@
 ---
-title: 'Comment : convertir un ruban MFC existant en ressource du ruban'
+title: 'Procédure : Convertir un ruban MFC existant à une ressource de ruban'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-ms.openlocfilehash: 627c50758b10ad18e45fc1432340c0eb2dad7b19
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b4265a7bf3ebe2c4926f21572d802b75bd525990
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524350"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295486"
 ---
-# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Comment : convertir un ruban MFC existant en ressource du ruban
+# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Procédure : Convertir un ruban MFC existant à une ressource de ruban
 
 Ressources de ruban sont plus faciles à visualiser, modifier et à gérer que les rubans codés manuellement. Cette rubrique décrit comment convertir un ruban codé manuellement dans un projet MFC dans une ressource de ruban.
 
@@ -47,4 +47,3 @@ Vous devez disposer d’un projet MFC existant qui comporte du code qui utilise 
 ## <a name="see-also"></a>Voir aussi
 
 [Concepteur de ruban (MFC)](../mfc/ribbon-designer-mfc.md)
-

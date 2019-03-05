@@ -7,12 +7,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: d76f5796bb8588cae26b17c4f6cf7aae90b354ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b665f090fc680221be70f170452d756dd5f68dc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579372"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284279"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Ajout de plusieurs vues à un seul document
 
@@ -100,4 +100,3 @@ Pour plus d’informations sur l’ajout de nouveaux éléments de menu et les f
 ## <a name="see-also"></a>Voir aussi
 
 [Architecture document/vue](../mfc/document-view-architecture.md)
-

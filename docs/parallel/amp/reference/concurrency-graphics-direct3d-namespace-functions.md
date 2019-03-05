@@ -6,12 +6,12 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: c19cc8697820c038875d55b41cde61120bda9df7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 18fb409b033ea14c3a140ea6600fc43cf3a8d603
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518371"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326086"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Fonctions d’espace de noms Concurrency::Graphics :: Direct3D
 
@@ -150,7 +150,7 @@ inline uint4 msad4(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Référence*<br/>
+*_Reference*<br/>
 Le tableau de référence de 4 octets dans une valeur uint
 
 *_Source*<br/>
@@ -163,11 +163,11 @@ Un vecteur de 4 valeurs à ajouter à la somme masquée de différences absolues
 
 Retourne un vecteur de 4 sommes. Chaque somme correspond à la somme masquée de différences absolues des alignements des octets entre la valeur de référence et la valeur source.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_graphics.h
 
-**Namespace :** Concurrency::Graphics :: Direct3D
+**Espace de noms :** Concurrency::graphics::direct3d
 
 ## <a name="see-also"></a>Voir aussi
 

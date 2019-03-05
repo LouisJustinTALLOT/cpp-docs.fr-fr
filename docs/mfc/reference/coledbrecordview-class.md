@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518578"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280367"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (classe)
 
@@ -51,7 +51,7 @@ La vue est une vue de formulaire directement connectée à un `CRowset` objet. L
 Vous pouvez utiliser des fonctions DDX avec `COleDbRecordView` pour obtenir des données directement à partir de l’ensemble d’enregistrements de base de données et les afficher dans un contrôle de boîte de dialogue. Vous devez utiliser le `DDX_*` méthodes (telles que `DDX_Text`), et non le `DDX_Field*` fonctions (telles que `DDX_FieldText`) avec `COleDbRecordView`. `DDX_FieldText` ne fonctionne pas avec `COleDbRecordView` car `DDX_FieldText` prend un argument supplémentaire de type `CRecordset*` (pour `CRecordView`) ou `CDaoRecordset*` (pour `CDaoRecordView`).
 
 > [!NOTE]
->  Si vous travaillez avec les classes d’objets DAO (Data Access) plutôt que les classes de modèle de consommateur OLE DB, utilisez la classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : programmation de base de données](../../data/data-access-programming-mfc-atl.md).
+>  Si vous travaillez avec les classes d’objets DAO (Data Access) plutôt que les classes de modèle de consommateur OLE DB, utilisez la classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : Programmation de base de données](../../data/data-access-programming-mfc-atl.md).
 
 `COleDBRecordView` effectue le suivi de position de l’utilisateur dans l’ensemble de lignes afin que la vue de l’enregistrement peut mettre à jour l’interface utilisateur. Lorsque l’utilisateur se déplace vers chaque extrémité de l’ensemble de lignes, la vue d’enregistrement désactive les objets d’interface utilisateur, tels que les éléments de menu ou des boutons de barre d’outils, de déplacement plus en détail dans la même direction.
 
@@ -73,7 +73,7 @@ Pour plus d’informations sur les classes de l’ensemble de lignes, consultez 
 
 `COleDBRecordView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxoledb.h
 
@@ -124,7 +124,7 @@ Vous devez substituer cette fonction membre pour créer ou obtenir un objet d’
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-Pour plus d’informations et des exemples, consultez l’article [vues d’enregistrements : à l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
+Pour plus d’informations et des exemples, consultez l’article [vues d’enregistrements : À l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove
 
@@ -164,4 +164,3 @@ Si vous déplacez au-delà du dernier enregistrement dans le jeu d’enregistrem
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

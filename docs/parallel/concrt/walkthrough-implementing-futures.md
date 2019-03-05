@@ -1,18 +1,18 @@
 ---
-title: 'Procédure pas à pas : implémentation d’objets future'
+title: 'Procédure pas à pas : Implémentation de futurs'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 4c43719199ef4009433ec65d54fcc238d82ac305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7164919d649751ac11fefa5be3cb2e5b7798ee4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525654"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262127"
 ---
-# <a name="walkthrough-implementing-futures"></a>Procédure pas à pas : implémentation d’objets future
+# <a name="walkthrough-implementing-futures"></a>Procédure pas à pas : Implémentation de futurs
 
 Cette rubrique montre comment implémenter des tâches futures dans votre application. La rubrique montre comment combiner les fonctionnalités existantes dans le Runtime d’accès concurrentiel en quelque chose de bien plus encore.
 
@@ -93,5 +93,5 @@ Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-l
 
 [Procédures pas à pas relatives au runtime d’accès concurrentiel](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[task_group, classe](reference/task-group-class.md)<br/>
+[Classe task_group](reference/task-group-class.md)<br/>
 [single_assignment, classe](../../parallel/concrt/reference/single-assignment-class.md)

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 4aa6d688de59884c7279b441d12dda9dcdf2ff6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25dce92f49ba9de08fcf33d54db8e97d520f5ea4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266378"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory (classe)
 
@@ -68,7 +68,7 @@ class COleObjectFactory : public CCmdTarget
 |[COleObjectFactory::GetClassID](#getclassid)|Retourne le OLE ID de classe des objets que cette fabrique crée.|
 |[COleObjectFactory::IsLicenseValid](#islicensevalid)|Détermine si la licence du contrôle est valide.|
 |[COleObjectFactory::IsRegistered](#isregistered)|Indique si la fabrique d’objet est inscrit avec les DLL système OLE.|
-|[COleObjectFactory](#register)|Inscrit cette fabrique d’objet avec les DLL système OLE.|
+|[COleObjectFactory::Register](#register)|Inscrit cette fabrique d’objet avec les DLL système OLE.|
 |[COleObjectFactory::RegisterAll](#registerall)|Enregistre toutes les fabriques d’objets de l’application avec les DLL système OLE.|
 |[COleObjectFactory::Revoke](#revoke)|Révoque l’inscription de cette fabrique d’objet avec les DLL système OLE.|
 |[COleObjectFactory::RevokeAll](#revokeall)|Révoque les enregistrements des fabriques d’objet d’une application avec les DLL système OLE.|
@@ -97,7 +97,7 @@ Le `COleObjectFactory` classe possède des fonctions de membre pour effectuer le
 
 - L’inscription de fabriques d’objet de contrôle du Registre du système OLE.
 
-Pour plus d’informations sur la création d’objets, consultez les articles [objets de données et Sources de données (OLE)](../../mfc/data-objects-and-data-sources-ole.md) et [objets de données et Sources de données : création et la Destruction](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Pour plus d’informations sur l’inscription, consultez l’article [inscription](../../mfc/registration.md).
+Pour plus d’informations sur la création d’objets, consultez les articles [objets de données et Sources de données (OLE)](../../mfc/data-objects-and-data-sources-ole.md) et [des objets de données et Sources de données : Création et la Destruction](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Pour plus d’informations sur l’inscription, consultez l’article [inscription](../../mfc/registration.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -107,7 +107,7 @@ Pour plus d’informations sur la création d’objets, consultez les articles [
 
 `COleObjectFactory`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
@@ -141,7 +141,7 @@ Pointeur vers la classe d’exécution des objets C++ que cette fabrique peut cr
 *bMultiInstance*<br/>
 Indique si une seule instance de l’application peut prendre en charge de plusieurs instanciations. Si la valeur est TRUE, plusieurs instances de l’application sont lancées pour chaque demande de création d’un objet.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Contient un ou plusieurs des indicateurs suivants :
 
 - `afxRegDefault` Définit le modèle de thread à ThreadingModel = apartment (cloisonné).
@@ -245,7 +245,7 @@ Pointeur vers l’objet créé. Il peut lever une exception de mémoire en cas d
 
 Remplacez cette fonction pour créer l’objet d’un élément autre que le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) passé au constructeur.
 
-##  <a name="register"></a>  COleObjectFactory
+##  <a name="register"></a>  COleObjectFactory::Register
 
 Inscrit cette fabrique d’objet avec les DLL système OLE.
 

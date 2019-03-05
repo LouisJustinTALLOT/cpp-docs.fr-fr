@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259878"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget, classe
 
@@ -204,7 +204,7 @@ class CRenderTarget : public CObject;
 
 |Nom|Description|
 |----------|-----------------|
-|[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Renvoie l’interface ID2D1RenderTarget|
+|[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|Renvoie l’interface ID2D1RenderTarget|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
@@ -220,11 +220,11 @@ class CRenderTarget : public CObject;
 
 [CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrendertarget.h
 
-##  <a name="_dtorcrendertarget"></a>  CRenderTarget :: ~ CRenderTarget
+##  <a name="_dtorcrendertarget"></a>  CRenderTarget::~CRenderTarget
 
 Destructeur. Appelé lorsqu’un objet de cible de rendu est détruit.
 
@@ -263,7 +263,7 @@ void Clear(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 La couleur à laquelle la zone de dessin est désactivée.
 
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
@@ -278,7 +278,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 Valeur RVB.
 
 *nAlpha*
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Les dimensions du rectangle à dessiner, en pixels indépendants du périphérique
 
 *pBrush*<br/>
@@ -567,13 +567,13 @@ void DrawText(
 *strText*<br/>
 Pointeur vers un tableau de caractères Unicode à dessiner.
 
-*Rect*<br/>
+*rect*<br/>
 La taille et la position de la zone dans laquelle le texte est dessiné.
 
 *pForegroundBrush*<br/>
 Le pinceau utilisé pour peindre le texte.
 
-*TextFormat*<br/>
+*textFormat*<br/>
 Un objet qui décrit la mise en forme du texte à dessiner, telles que la police, la taille de police et la direction du flux d’informations.
 
 *options*<br/>
@@ -720,7 +720,7 @@ void FillRectangle(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 La dimension du rectangle à peindre, en pixels indépendants du périphérique.
 
 *pBrush*<br/>
@@ -756,10 +756,10 @@ void Flush(
 
 ### <a name="parameters"></a>Paramètres
 
-*légende 1*<br/>
+*tag1*<br/>
 Contient la balise pour les opérations qui a provoqué des erreurs ou 0 si aucune erreur de dessin. Ce paramètre est passé sans être initialisé.
 
-*Légende 2*<br/>
+*tag2*<br/>
 Contient la balise pour les opérations qui a provoqué des erreurs ou 0 si aucune erreur de dessin. Ce paramètre est passé sans être initialisé.
 
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode
@@ -858,10 +858,10 @@ void GetTags(
 
 ### <a name="parameters"></a>Paramètres
 
-*légende 1*<br/>
+*tag1*<br/>
 Contient le premier contrôle label pour les opérations de dessins suivantes. Ce paramètre est passé sans être initialisé. Si NULL est spécifié, aucune valeur n’est récupérée pour ce paramètre.
 
-*Légende 2*<br/>
+*tag2*<br/>
 Contient le deuxième contrôle label pour les opérations de dessins suivantes. Ce paramètre est passé sans être initialisé. Si NULL est spécifié, aucune valeur n’est récupérée pour ce paramètre.
 
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode
@@ -955,7 +955,7 @@ Pointeur vers l’objet CD2DTextFormat qui contient un format de texte par défa
 CD2DTextFormat* m_pTextFormatDefault;
 ```
 
-##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget *
+##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget*
 
 Renvoie l’interface ID2D1RenderTarget
 
@@ -1016,7 +1016,7 @@ void PushLayer(
 *layerParameters*<br/>
 Les limites du contenu, masque géométrique, opacité, masque d’opacité et options d’anticrénelage de la couche.
 
-*Couche*<br/>
+*layer*<br/>
 La couche qui reçoit les opérations de dessin suivantes.
 
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState
@@ -1083,10 +1083,10 @@ void SetTags(
 
 ### <a name="parameters"></a>Paramètres
 
-*légende 1*<br/>
+*tag1*<br/>
 Une étiquette à appliquer aux opérations de dessin suivantes.
 
-*Légende 2*<br/>
+*tag2*<br/>
 Une étiquette à appliquer aux opérations de dessin suivantes.
 
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode

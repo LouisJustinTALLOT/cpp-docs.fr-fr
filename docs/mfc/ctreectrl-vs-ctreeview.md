@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CTreeView class [MFC], vs. CTreeCtrl class [MFC]
 - tree controls [MFC], and tree view
 ms.assetid: bba5af25-103f-4b53-84d3-071bc9bd6494
-ms.openlocfilehash: 97997a57a02ee258a50d405f7f61ed9994ccf734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29349e169e5ad8475001235d9b355da52156d683
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540411"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271630"
 ---
 # <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl et CTreeView
 
@@ -29,4 +29,3 @@ Utilisez `CTreeView` lorsque vous souhaitez que le contrôle d’arborescence d�
 
 [Utilisation de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

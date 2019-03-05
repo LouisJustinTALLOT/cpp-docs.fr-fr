@@ -1,19 +1,19 @@
 ---
-title: 'Glisser-déposer : implémentation d’une cible de dépôt'
+title: 'Glisser -déplacer : Implémentation d’une cible de dépôt'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE drag and drop [MFC], implementing drop targets
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-ms.openlocfilehash: 55c8bbe9484a71ee95d43609b29a055b4177914b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da04fa7fa84e7e5014d574583c9c95992db10f88
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599873"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281943"
 ---
-# <a name="drag-and-drop-implementing-a-drop-target"></a>Glisser-déposer : implémentation d’une cible de dépôt
+# <a name="drag-and-drop-implementing-a-drop-target"></a>Glisser -déplacer : Implémentation d’une cible de dépôt
 
 Cet article explique comment rendre votre application une cible de dépôt. Implémentation d’une cible de déplacement prend plus de temps que l’implémentation d’une source de dépôt, mais il est encore relativement simple. Ces techniques s’appliquent également aux applications non-OLE.
 

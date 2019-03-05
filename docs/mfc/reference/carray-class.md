@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: e97a50b2687029ddff3d946f634e145f6709aa48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557675"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266131"
 ---
 # <a name="carray-class"></a>CArray (classe)
 
@@ -130,7 +130,7 @@ Pour plus d’informations sur l’utilisation `CArray`, consultez l’article [
 
 `CArray`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtempl.h
 

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178549"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279359"
 ---
 # <a name="crgn-class"></a>CRgn (classe)
 
@@ -117,7 +117,7 @@ Pour plus d’informations sur l’utilisation de `CRgn`, consultez [objets grap
 
 `CRgn`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -543,7 +543,7 @@ Spécifie la coordonnée y logique de l’angle inférieur droit de la région.
 *x3*<br/>
 Spécifie la largeur de l’ellipse utilisée pour créer des angles arrondis.
 
-*Y3*<br/>
+*y3*<br/>
 Spécifie la hauteur de l’ellipse utilisée pour créer des angles arrondis.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -842,4 +842,3 @@ Utilisez cette fonction au lieu du `CreateRectRgn` fonction membre afin d’évi
 
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

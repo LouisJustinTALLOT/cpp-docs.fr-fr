@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-ms.openlocfilehash: c1a746487b799979cd83f2900a0f7a12d21a6837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b823cbcd85ebaaeb05979283ea4f8fea80f4b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524831"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290688"
 ---
 # <a name="registry-data-exchange-macros"></a>Macros d’échange de données de Registre
 
@@ -31,7 +31,7 @@ Ces macros effectuent des opérations d’échange de données de Registre.
 |[RDX_DWORD](#rdx_dword)|Associe l’entrée de Registre spécifiée à une variable de membre spécifié de type DWORD.|
 |[RDX_TEXT](#rdx_text)|Associe l’entrée de Registre spécifiée à une variable de membre spécifié de type TCHAR.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlplus.h
 
@@ -79,13 +79,13 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé racine*<br/>
+*rootkey*<br/>
 Racine de la clé de Registre.
 
-*sous-clé*<br/>
+*subkey*<br/>
 La sous-clé de Registre.
 
-*nom de valeur*<br/>
+*valuename*<br/>
 La clé de Registre.
 
 *member*<br/>
@@ -113,13 +113,13 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé racine*<br/>
+*rootkey*<br/>
 Racine de la clé de Registre.
 
-*sous-clé*<br/>
+*subkey*<br/>
 La sous-clé de Registre.
 
-*nom de valeur*<br/>
+*valuename*<br/>
 La clé de Registre.
 
 *member*<br/>
@@ -147,13 +147,13 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé racine*<br/>
+*rootkey*<br/>
 Racine de la clé de Registre.
 
-*sous-clé*<br/>
+*subkey*<br/>
 La sous-clé de Registre.
 
-*nom de valeur*<br/>
+*valuename*<br/>
 La clé de Registre.
 
 *member*<br/>
@@ -181,13 +181,13 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé racine*<br/>
+*rootkey*<br/>
 Racine de la clé de Registre.
 
-*sous-clé*<br/>
+*subkey*<br/>
 La sous-clé de Registre.
 
-*nom de valeur*<br/>
+*valuename*<br/>
 La clé de Registre.
 
 *member*<br/>
@@ -204,4 +204,3 @@ Cette macro est utilisée conjointement avec les macros BEGIN_RDX_MAP et END_RDX
 
 [Macros](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
-

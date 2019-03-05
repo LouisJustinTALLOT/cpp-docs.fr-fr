@@ -6,16 +6,16 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-ms.openlocfilehash: 3db635cfdc39f9c4166bbf3d6958f52e535d91f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1e8f9af696b6ea4cd485f4215e1c8425098e987
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578527"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296842"
 ---
 # <a name="help-menu-merging"></a>Fusion des menus Aide
 
-Lorsqu’un objet est actif dans un conteneur, le menu protocole des Documents OLE de fusion permet de contrôler l’objet de la **aide** menu. Par conséquent, les rubriques d'aide du conteneur ne sont pas disponibles à moins que l'utilisateur désactive l'objet. L’architecture de la relation contenant-contenu de document actif développe les règles de la fusion de menus sur place afin d’autoriser le conteneur et un document actif à partager le menu. Les nouvelles règles sont simplement des conventions supplémentaires sur quel composant possède quelle partie du menu et comment le menu partagé est créé.
+Lorsqu’un objet est actif dans un conteneur, le menu protocole des Documents OLE de fusion permet de contrôler l’objet de la **aide** menu. Par conséquent, les rubriques d'aide du conteneur ne sont pas disponibles à moins que l'utilisateur désactive l'objet. L'architecture de la relation contenant-contenu de document actif examine les règles de la fusion de menus sur place afin d'autoriser le conteneur et un document actif à partager le menu. Les nouvelles règles sont simplement des conventions supplémentaires sur quel composant possède quelle partie du menu et comment le menu partagé est créé.
 
 La nouvelle convention est simple. Dans les documents actifs, le **aide** menu comporte deux éléments de menu de niveau supérieur organisés comme suit :
 
@@ -35,9 +35,9 @@ Par exemple, lorsqu’une section Word est active dans le classeur Office, puis 
 
 Les deux éléments de menu sont des menus en cascade dans lesquels tous les éléments de menu supplémentaires spécifiques au conteneur et l'objet sont accessibles à l'utilisateur. Les éléments affichés ici varie avec le conteneur et les objets concernés.
 
-Pour construire ce fusionnées **aide** menu, l’architecture de relation contenant-contenu de document actif modifie la procédure de Documents OLE normale. En fonction des Documents OLE, la barre de menus fusionnée peut comporter respectivement six groupes de menus, à savoir **fichier**, **modifier**, **conteneur**, **objet**,  **Fenêtre**, **aide**, dans cet ordre. À chaque groupe, il peut y avoir zéro menus ou plus. Les groupes **fichier**, **conteneur**, et **fenêtre** appartiennent au conteneur et les groupes **modifier**, **Object,** et **aide** appartiennent à l’objet. Lorsque l'objet souhaite réaliser la fusion de menus, il crée une barre de menus vide et la passe au conteneur. Le conteneur insère ensuite ses menus, en appelant `IOleInPlaceFrame::InsertMenus`. L’objet passe également une structure qui est un tableau de six longues valeurs (**OLEMENUGROUPWIDTHS**). Après avoir inséré les menus, le conteneur marque le nombre de menus qu'il a ajoutés dans chacun de ses groupes, puis effectue un retour. L'objet insère ses menus, en tenant compte du nombre de menus dans chaque groupe de conteneurs. Enfin, l’objet passe la barre de menus fusionnée et le tableau (contenant le nombre de menus dans chaque groupe) à OLE, qui retourne un handle opaque "descripteur de menu". Plus tard l’objet passe ce handle et la barre de menus fusionnée au conteneur, via `IOleInPlaceFrame::SetMenu`. À ce stade, le conteneur affiche la barre de menus fusionnée et passe le handle à l’objet OLE, afin que ce dernier puisse distribuer des messages de menu approprié.
+Pour construire ce fusionnées **aide** menu, l’architecture de relation contenant-contenu de document actif modifie la procédure de Documents OLE normale. En fonction des Documents OLE, la barre de menus fusionnée peut comporter respectivement six groupes de menus, à savoir **fichier**, **modifier**, **conteneur**, **objet**,  **Fenêtre**, **aide**, dans cet ordre. À chaque groupe, il peut y avoir zéro menus ou plus. Les groupes **fichier**, **conteneur**, et **fenêtre** appartiennent au conteneur et les groupes **modifier**, **Object,** et **aide** appartiennent à l’objet. Lorsque l'objet souhaite réaliser la fusion de menus, il crée une barre de menus vide et la passe au conteneur. Le conteneur insère ensuite ses menus, en appelant `IOleInPlaceFrame::InsertMenus`. L’objet passe également une structure qui est un tableau de six longues valeurs (**OLEMENUGROUPWIDTHS**). Après avoir inséré les menus, le conteneur marque le nombre de menus qu'il a ajoutés dans chacun de ses groupes, puis effectue un retour. L'objet insère ses menus, en tenant compte du nombre de menus dans chaque groupe de conteneurs. Enfin, l'objet passe la barre de menus fusionnée et le tableau (contenant le nombre de menus dans chaque groupe) à OLE, qui retourne un handle opaque "descripteur de menu". Plus tard l’objet passe ce handle et la barre de menus fusionnée au conteneur, via `IOleInPlaceFrame::SetMenu`. À ce stade, le conteneur affiche la barre de menus fusionnée et passe le handle à l’objet OLE, afin que ce dernier puisse distribuer des messages de menu approprié.
 
-Dans la procédure de modification de document actif, l’objet doit tout d’abord initialiser les **OLEMENUGROUPWIDTHS** éléments à zéro avant de le transmettre au conteneur. Puis le conteneur effectue une insertion de menu normal avec une exception près : le conteneur insère un **aide** menu comme dernier élément et stocke la valeur 1 dans la dernière (sixième) entrée du **OLEMENUGROUPWIDTHS** tableau (autrement dit, width [5], qui appartient au groupe d’aide de l’objet). Cela **aide** menu aura qu’un seul élément qui est un sous-menu, le «**aide conteneur** > « menu en cascade comme décrit précédemment.
+Dans la procédure de modification de document actif, l’objet doit tout d’abord initialiser les **OLEMENUGROUPWIDTHS** éléments à zéro avant de le transmettre au conteneur. Le conteneur effectue ensuite une insertion de menu normal avec une exception près : Le conteneur insère un **aide** menu comme dernier élément et stocke la valeur 1 dans la dernière (sixième) entrée du **OLEMENUGROUPWIDTHS** tableau (autrement dit, width [5], qui appartient au groupe d’aide de l’objet). Cela **aide** menu aura qu’un seul élément qui est un sous-menu, le «**aide conteneur** > « menu en cascade comme décrit précédemment.
 
 L’objet exécute ensuite son code d’insertion de menu normal, à ceci près qu’avant d’insérer son **aide** menu, il vérifie la sixième entrée du **OLEMENUGROUPWIDTHS** tableau. Si la valeur est 1 et le nom du dernier menu est **aide** (ou chaîne localisée correcte), insère l’objet son **aide** menu comme sous-menu de du conteneur **vous aider à** menu.
 
@@ -52,4 +52,3 @@ Enfin, lorsqu’il est temps de désassembler le menu, l’objet supprime le tex
 ## <a name="see-also"></a>Voir aussi
 
 [Conteneurs de documents actifs](../mfc/active-document-containers.md)
-

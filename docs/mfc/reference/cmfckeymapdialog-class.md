@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: e1ed48c851243611b052c79d13721076d27dcf8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94c6968d2f534ed0b6d247420e67910ecf906b05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294601"
 ---
 # <a name="cmfckeymapdialog-class"></a>Cmfckeymapdialog, classe
 
@@ -90,7 +90,7 @@ Pour utiliser le `CMFCKeyMapDialog` de classe dans une application, passez un po
 
 [CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxkeymapdialog.h
 
@@ -213,7 +213,7 @@ virtual int OnPrintHeader(
 *nPage*<br/>
 [in] Le numéro de page à imprimer.
 
-*CX*<br/>
+*cx*<br/>
 [in] Le décalage horizontal de l’en-tête, en pixels.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -248,7 +248,7 @@ virtual int OnPrintItem(
 *y*<br/>
 [in] Le décalage vertical entre le haut de la page et la position de l’élément.
 
-*CX*<br/>
+*cx*<br/>
 [in] Le décalage horizontal entre la gauche de la page et la position de l’élément.
 
 *bCalcHeight*<br/>

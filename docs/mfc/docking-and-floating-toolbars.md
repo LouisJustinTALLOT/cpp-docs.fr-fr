@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 5688af1aa20589b88e2baa2f764c65fe7a417631
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599275"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294669"
 ---
 # <a name="docking-and-floating-toolbars"></a>Ancrer et rendre flottantes les barres d'outils
 
@@ -117,4 +117,3 @@ L’exemple général MFC [DOCKTOOL](../visual-cpp-samples.md) montre comment ut
 ## <a name="see-also"></a>Voir aussi
 
 [Implémentation de la barre d’outils MFC](../mfc/mfc-toolbar-implementation.md)
-

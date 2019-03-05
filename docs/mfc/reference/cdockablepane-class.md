@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 657f71e5d89f7d91d8b44836b4d478b41d041f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623013"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271904"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -309,7 +309,7 @@ L’exemple suivant montre comment configurer un `CDockablePane` objet à l’ai
 
 [CDockablePane](../../mfc/reference/cdockablepane-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxDockablePane.h
 
@@ -595,7 +595,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in, out] Spécifie la fenêtre parente.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Spécifie la taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.
 
 *bHasGripper*<br/>
@@ -700,7 +700,7 @@ virtual BOOL CreateEx(
 *pParentWnd*<br/>
 [in, out] Spécifie la fenêtre parente.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Spécifie la taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.
 
 *bHasGripper*<br/>
@@ -887,7 +887,7 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le masquage automatique de toutes les fonctionnalités pour le volet ancrable ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
@@ -906,7 +906,7 @@ virtual void EnableGripper(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer la légende ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes

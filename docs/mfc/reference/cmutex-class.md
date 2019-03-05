@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: 823f38a6292152774f72c97963b9add5d429d2f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508782"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273294"
 ---
 # <a name="cmutex-class"></a>CMutex, classe
 
@@ -43,7 +43,7 @@ Une autre méthode pour l’utilisation de `CMutex` objets consiste à ajouter u
 
 Pour accéder aux ressources contrôlées par `CMutex` objets de cette manière, créez tout d’abord une variable de type [CSingleLock](../../mfc/reference/csinglelock-class.md) ou type [CMultiLock](../../mfc/reference/cmultilock-class.md) dans la fonction membre de l’accès de votre ressource. Appelez ensuite l’objet verrou `Lock` fonction membre (par exemple, [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). À ce stade, votre thread sera soit accéder à la ressource, attendez que la ressource à libérée et y accéder ou attendez que la ressource doit être publié et le délai d’attente, ne parvient pas à accéder à la ressource. Dans tous les cas, votre ressource a accédé de manière thread-safe. Pour libérer la ressource, utilisez l’objet verrou `Unlock` fonction membre (par exemple, [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), ou autorise l’objet verrou se situent hors de portée.
 
-Pour plus d’informations sur l’utilisation de `CMutex` objets, consultez l’article [Multithreading : comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Pour plus d’informations sur l’utilisation de `CMutex` objets, consultez l’article [Multithreading : Comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -53,7 +53,7 @@ Pour plus d’informations sur l’utilisation de `CMutex` objets, consultez l�
 
 `CMutex`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmt.h
 
@@ -73,7 +73,7 @@ CMutex(
 *bInitiallyOwn*<br/>
 Spécifie si le thread créant la `CMutex` objet a initialement accès à la ressource contrôlée par le mutex.
 
-*Caractère*<br/>
+*lpszName*<br/>
 Nom de l'objet `CMutex`. Si le mutex une autre portant le même nom existe, *le caractère* doit être fourni si l’objet doit être utilisé au-delà des limites de processus. Si **NULL**, le mutex sera sans nom. Si le nom correspond à un mutex existant, le constructeur crée quand même un `CMutex` objet qui fait référence à l’exclusion mutuelle de ce nom. Si le nom correspond à un objet de synchronisation existant qui n’est pas un mutex, la construction échoue.
 
 *lpsaAttribute*<br/>
@@ -90,4 +90,3 @@ Pour accéder à ou libérer un `CMutex` d’objet, de créer un [CMultiLock](..
 
 [CSyncObject, classe](../../mfc/reference/csyncobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

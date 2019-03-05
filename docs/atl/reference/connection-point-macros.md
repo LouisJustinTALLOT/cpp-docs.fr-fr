@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
-ms.openlocfilehash: ac00b1c5a937c32ecc02e11e735541119c388588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb8d6f696980ef91d7b43c960dc50289ea8500a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605788"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258240"
 ---
 # <a name="connection-point-macros"></a>Macros de Point de connexion
 
@@ -25,7 +25,7 @@ Ces macros définissent les mappages de point de connexion et les entrées.
 |[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Mais, comme dans CONNECTION_POINT_ENTRY prend un pointeur vers l’iid.|
 |[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Marque la fin des entrées de mappage de point de connexion.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -63,7 +63,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface qui est ajoutée à la carte de point de connexion.
 
 *piid*<br/>

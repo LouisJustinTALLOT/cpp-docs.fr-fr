@@ -1,5 +1,5 @@
 ---
-title: Cmfctooltipinfo, classe
+title: CMFCToolTipInfo Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolTipInfo
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CMFCToolTipInfo [MFC], m_nGradientAngle
 - CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
-ms.openlocfilehash: 07f2882570e77d554230853dff87bc81df80e4cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b38c3a62cca376ef7a19a111fe3a34c923983d1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668622"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270213"
 ---
-# <a name="cmfctooltipinfo-class"></a>Cmfctooltipinfo, classe
+# <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo Class
 
 Stocke des informations sur l'apparence visuelle des info-bulles.
 
@@ -55,7 +55,7 @@ class CMFCToolTipInfo
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCToolTipInfo::operator =](#operator_eq)||
+|[CMFCToolTipInfo::operator=](#operator_eq)||
 
 ### <a name="data-members"></a>Membres de données
 
@@ -89,7 +89,7 @@ L'exemple suivant montre comment définir les valeurs des différentes variables
 
 [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtooltipctrl.h
 
@@ -239,7 +239,7 @@ BOOL m_bVislManagerTheme;
 
 Si `m_bVislManagerTheme` a la valeur TRUE, chaque info-bulle demande un nouveau [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) à partir du Gestionnaire visuel de l’application avant qu’ils s’affichent sur l’écran et utilise les valeurs dans cet objet pour déterminer leur apparence. Les autres membres de votre [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) sont ignorés.
 
-##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =
+##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator=
 
 Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
 

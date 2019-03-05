@@ -9,16 +9,16 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-ms.openlocfilehash: e6f8161432cc951b5e224ec28142429efbdf0726
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 519dd51ab9b46adf862999104e97c6e478ccd86b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639658"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269238"
 ---
 # <a name="active-documents"></a>Documents actifs
 
-Les documents actifs étendent la technologie de document composé OLE. Ces extensions sont fournies sous la forme d'autres interfaces qui gèrent les vues, afin que les objets puissent s'exécuter dans des conteneurs tout en conservant le contrôle de l'affichage et des fonctions d'impression. Ce processus permet d'afficher des documents dans des frames étrangers (tels que le Classeur Microsoft Office ou Microsoft Internet Explorer) et dans des frames natifs (tels que les propres ports de vue du produit).
+Les documents actifs étendent la technologie de document composé OLE. Ces extensions sont fournies sous la forme d’autres interfaces qui gèrent les vues, afin que les objets puissent s’exécuter dans des conteneurs tout en conservant le contrôle de l’affichage et des fonctions d’impression. Ce processus permet d'afficher des documents dans des frames étrangers (tels que le Classeur Microsoft Office ou Microsoft Internet Explorer) et dans des frames natifs (tels que les propres ports de vue du produit).
 
 Cette section décrit la fonctionnel [configuration requise pour les documents actifs](#requirements_for_active_documents). Le document actif possède un jeu de données et a accès au stockage dans lequel les données peuvent être enregistrées et récupérées. Il peut créer et gérer une ou plusieurs vues sur ses données. En plus de prendre en charge l'incorporation et les interfaces d'activation en place classiques des documents OLE, le document actif communique sa capacité à créer des vues via `IOleDocument`. Dans cette interface, le conteneur peut demander à créer (et énumérer) les vues que le document actif peut afficher. Dans cette interface, le document actif peut également fournir des informations diverses sur lui-même, par exemple s'il prend en charge plusieurs vues ou rectangles complexes.
 
@@ -101,4 +101,3 @@ Un objet de vue peut également être une cible de commande. En implémentant `I
 ## <a name="see-also"></a>Voir aussi
 
 [Documents actifs (contenance)](../mfc/active-document-containment.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'TN042 : Recommandations du développeur concernant le pilote ODBC'
+title: 'TN042 : Recommandations de développement du pilote ODBC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.odbc
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-ms.openlocfilehash: 2140261c2e90eaee7930d4be3282ec31bda29759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462f8229d995add79f48f34b7f81257710b4a8b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502041"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276609"
 ---
-# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042 : Recommandations du développeur concernant le pilote ODBC
+# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042 : Recommandations de développement du pilote ODBC
 
 > [!NOTE]
 >  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -120,4 +120,3 @@ En outre, si le verrouillage pessimiste est demandé, un appel à `SQLSetPos` av
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

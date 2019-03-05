@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-ms.openlocfilehash: 95fc66ba55734c415cb41151cdc9b83d1b154898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16aa707792cc1289ced380e54abef3f15289e7cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431927"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274555"
 ---
 # <a name="cpanedialog-class"></a>Cpanedialog, classe
 
@@ -73,7 +73,7 @@ Construire un `CPaneDialog` objet en deux étapes. Tout d’abord, construisez l
 
 [CPaneDialog](../../mfc/reference/cpanedialog-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpanedialog.h
 
@@ -208,4 +208,3 @@ Cette méthode prend en charge la [COccManager](../../mfc/reference/coccmanager-
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CDockablePane, classe](../../mfc/reference/cdockablepane-class.md)<br/>
 [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles)
-

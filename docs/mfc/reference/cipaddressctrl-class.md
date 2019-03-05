@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: fe5503eb78954bf39a135cd0e4acda6c37fc5fa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568699"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266290"
 ---
 # <a name="cipaddressctrl-class"></a>Cipaddressctrl, classe
 
@@ -80,7 +80,7 @@ Pour obtenir des informations plus générales sur le contrôle d’adresse IP, 
 
 `CIPAddressCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -121,7 +121,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Adresse IP style du contrôle. Appliquer une combinaison de styles de fenêtre. Vous devez inclure le style WS_CHILD, car le contrôle doit être une fenêtre enfant. Consultez [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows pour obtenir la liste des styles de windows.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à la taille et la position du contrôle d’adresse IP. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
 
 *pParentWnd*<br/>
@@ -165,7 +165,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 Adresse IP style du contrôle. Appliquer une combinaison de styles de fenêtre. Vous devez inclure le style WS_CHILD, car le contrôle doit être une fenêtre enfant. Consultez [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows pour obtenir la liste des styles de windows.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -296,7 +296,7 @@ void SetFieldFocus(WORD nField);
 
 ### <a name="parameters"></a>Paramètres
 
-*nChamp*<br/>
+*nField*<br/>
 Index du champ de base zéro à laquelle le focus doit être défini. Si cette valeur est supérieure au nombre de champs, le focus est défini sur le premier champ vide. Si tous les champs sont non vide, le focus est défini sur le premier champ.
 
 ### <a name="remarks"></a>Notes
@@ -316,7 +316,7 @@ void SetFieldRange(
 
 ### <a name="parameters"></a>Paramètres
 
-*nChamp*<br/>
+*nField*<br/>
 Index du champ de base zéro auquel la plage s’appliqueront.
 
 *nLower*<br/>
@@ -333,4 +333,3 @@ Cette fonction membre implémente le comportement du message Win32 [IPM_SETRANGE
 
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-ms.openlocfilehash: aa22c9b218b88a8834e8ba474c2aa2c203ea89dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c8ce0aefc12097a71e79933d34a116997c8105f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517115"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276358"
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling, classe
 
@@ -39,7 +39,7 @@ class invalid_multiple_scheduling : public std::exception;
 
 `invalid_multiple_scheduling`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt.h
 
@@ -64,8 +64,8 @@ Message descriptif de l'erreur.
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [task_handle, classe](task-handle-class.md)<br/>
-[task_group, classe](task-group-class.md)<br/>
+[Classe task_group](task-group-class.md)<br/>
 [run](task-group-class.md)<br/>
-[attente](task-group-class.md)<br/>
+[wait](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [structured_task_group, classe](structured-task-group-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'TN031 : Barres de contrôles'
+title: 'TN031 : Barres de contrôles'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.bars
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463304"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286463"
 ---
-# <a name="tn031-control-bars"></a>TN031 : Barres de contrôles
+# <a name="tn031-control-bars"></a>TN031 : Barres de contrôles
 
 > [!NOTE]
 >  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -167,9 +167,9 @@ Le gestionnaire ON_UPDATE_COMMAND_UI peut appeler :
 
 - `Enable`: Pour activer ou désactiver le bouton. Cela fonctionne pareillement pour les boutons de commande et les cases à cocher.
 
-- `SetCheck`: pour définir l’état d’activation d’un bouton. Si vous appelez cette fonction pour un bouton de barre d’outils, il est converti en case à cocher. `SetCheck` prend un paramètre qui peut être 0 (désactivé), 1 (activé) ou 2 (indéterminé)
+- `SetCheck`: Pour définir l’état d’activation d’un bouton. Si vous appelez cette fonction pour un bouton de barre d’outils, il est converti en case à cocher. `SetCheck` prend un paramètre qui peut être 0 (désactivé), 1 (activé) ou 2 (indéterminé)
 
-- `SetRadio`: forme abrégée de `SetCheck`.
+- `SetRadio`: Raccourci pour `SetCheck`.
 
 Les boutons de case à cocher sont des boutons de case à cocher « AUTO ». Autrement dit, quand l’utilisateur appuie dessus, ils changent d’état immédiatement. « Activé » correspond à l’état enfoncé. L’interface utilisateur n’intègre aucun moyen de faire basculer un bouton à l’état « indéterminé ». Vous devez le faire par le biais du code.
 
@@ -179,13 +179,13 @@ Boutons de barre d’outils envoie WM_COMMAND (messages) comme des boutons norma
 
 Quatre styles de boutons de barre d’outils (valeurs TBBS_) sont utilisés pour les états d’affichage :
 
-- TBBS_CHECKED : La case à cocher est actuellement activée.
+- TBBS_CHECKED :   Case à cocher est actuellement activée (bas).
 
-- TBBS_INDETERMINATE : La case à cocher est actuellement indéterminée.
+- TBBS_INDETERMINATE :   Case à cocher est actuellement indéterminée.
 
-- TBBS_DISABLED : Le bouton est actuellement désactivé.
+- TBBS_DISABLED :   Bouton est actuellement désactivé.
 
-- TBBS_PRESSED : Le bouton est actuellement enfoncé.
+- TBBS_PRESSED :   Bouton est actuellement enfoncé.
 
 Les six styles de bouton officiels du Guide de conception d’application d’interface Windows sont représentés par les valeurs TBBS suivantes :
 
@@ -227,4 +227,3 @@ Vous pouvez effectuer une personnalisation par le biais des API du gestionnaire 
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

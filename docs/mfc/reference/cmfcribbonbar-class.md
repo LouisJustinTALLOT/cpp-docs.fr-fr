@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288413"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 
@@ -313,13 +313,13 @@ class CMFCRibbonBar : public CPane
 
 ## <a name="remarks"></a>Notes
 
-Microsoft a inauguré l’Office Fluent Ribbon à l’occasion du lancement simultané de Microsoft Office 2007. Cette barre de ruban n'est pas simplement un nouveau contrôle. Elle représente un nouveau modèle d'interface utilisateur. Le ruban est un volet qui contient un ensemble d'onglets appelés catégories. Chaque catégorie est logiquement divisée en volets de ruban et chaque volet peut contenir plusieurs contrôles et boutons de commande.
+Microsoft a inauguré l'Office Fluent Ribbon à l'occasion du lancement simultané de Microsoft Office 2007. Cette barre de ruban n'est pas simplement un nouveau contrôle. Elle représente un nouveau modèle d'interface utilisateur. Le ruban est un volet qui contient un ensemble d'onglets appelés catégories. Chaque catégorie est logiquement divisée en volets de ruban et chaque volet peut contenir plusieurs contrôles et boutons de commande.
 
-Les éléments qui figurent sur la barre du ruban peuvent être développés et réduits pour utiliser au mieux l'espace disponible. Par exemple, si l'espace dont dispose un volet du ruban n'est pas suffisant pour afficher ses éléments, il devient un bouton de menu qui affiche des sous-éléments dans un menu contextuel. La barre du ruban se comporte comme une barre de contrôle (non flottante) statique qui peut être ancrée dans la partie supérieure d'un cadre.
+Les éléments qui figurent sur la barre du ruban peuvent être développés et réduits pour utiliser au mieux l’espace disponible. Par exemple, si l'espace dont dispose un volet du ruban n'est pas suffisant pour afficher ses éléments, il devient un bouton de menu qui affiche des sous-éléments dans un menu contextuel. La barre du ruban se comporte comme une barre de contrôle (non flottante) statique qui peut être ancrée dans la partie supérieure d'un cadre.
 
 Vous pouvez utiliser la classe `CMFCRibbonStatusBar` pour implémenter une barre d'état semblable à celle utilisée dans Office 2007. Une catégorie de ruban contient (et affiche) un groupe de [ruban panneaux](../../mfc/reference/cmfcribbonpanel-class.md). Chaque volet du ruban contient un ou plusieurs éléments de ruban, qui sont dérivées de [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-Pour plus d’informations sur l’ajout d’une barre de ruban à votre application MFC existante, consultez [procédure pas à pas : mise à jour de l’Application Scribble MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+Pour plus d’informations sur l’ajout d’une barre de ruban à votre application MFC existante, consultez [procédure pas à pas : La mise à jour de l’Application Scribble MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -335,7 +335,7 @@ Pour plus d’informations sur l’ajout d’une barre de ruban à votre applica
 
 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxribbonbar.h
 
@@ -375,7 +375,7 @@ CMFCRibbonCategory* AddCategory(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Nom de la catégorie de ruban.
 
 *uiSmallImagesResID*<br/>
@@ -431,7 +431,7 @@ CMFCRibbonCategory* AddContextCategory(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Nom de la catégorie.
 
 *lpszContextName*<br/>
@@ -501,7 +501,7 @@ CMFCRibbonMainPanel* AddMainCategory(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Nom de la catégorie de ruban principale.
 
 *uiSmallImagesResID*<br/>
@@ -560,7 +560,7 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Nom de la catégorie.
 
 *uiSmallImagesResID*<br/>
@@ -738,7 +738,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer la fonctionnalité des touches d’accès ; FALSE pour désactiver la fonctionnalité de touches d’accès.
 
 ### <a name="remarks"></a>Notes
@@ -755,7 +755,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] True pour activer la **Aperçu avant impression** fonctionnalité ; FALSE pour désactiver le **Aperçu avant impression** fonctionnalité.
 
 ### <a name="remarks"></a>Notes
@@ -776,7 +776,7 @@ void EnableToolTips(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer les info-bulles sur la barre du ruban ; FALSE pour désactiver les info-bulles sur la barre du ruban.
 
 *bEnableDescr*<br/>
@@ -2014,7 +2014,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Un code de caractère de séquence de touches utilisateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2155,5 +2155,4 @@ TRUE recalcule la disposition de ruban ; FALSE sinon.
 [CMFCRibbonCategory, classe](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [CMFCRibbonPanel, classe](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement, classe](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[Procédure pas à pas : Mise à jour l’Application Scribble MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-
+[Procédure pas à pas : La mise à jour de l’Application Scribble MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

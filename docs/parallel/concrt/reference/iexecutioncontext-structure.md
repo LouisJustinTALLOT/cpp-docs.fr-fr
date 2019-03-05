@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-ms.openlocfilehash: 3d546c7fb11877fbd8cd71d698869ff384b84186
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c49df5a8c7f214b574b4f6118d182b63fec5dca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457747"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264961"
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext, structure
 
@@ -49,7 +49,7 @@ Si vous implémentez un planificateur personnalisé qui sert d’interface avec 
 
 `IExecutionContext`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrtrm.h
 
@@ -86,7 +86,7 @@ Vous devez utiliser la méthode `GetExecutionContextId` pour obtenir un identifi
 
 Un identificateur obtenu à partir d’une autre source peut entraîner un comportement non défini.
 
-##  <a name="getproxy"></a>  IExecutionContext::GetProxy, méthode
+##  <a name="getproxy"></a>  IExecutionContext::GetProxy Method
 
 Retourne une interface au proxy de thread qui exécute ce contexte.
 
@@ -118,7 +118,7 @@ Interface `IScheduler`.
 
 Vous devez initialiser le contexte d’exécution avec valide `IScheduler` interface avant de l’utiliser en tant que paramètre aux méthodes fournies par le Gestionnaire de ressources.
 
-##  <a name="setproxy"></a>  IExecutionContext::SetProxy, méthode
+##  <a name="setproxy"></a>  IExecutionContext::SetProxy Method
 
 Associe un proxy de thread à ce contexte d’exécution. Le proxy de thread associé appelle cette méthode juste avant de commencer l’exécution du contexte `Dispatch` (méthode).
 

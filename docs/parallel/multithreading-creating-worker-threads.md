@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: 54bea7b42018637bf868dfdd923b94dd75aa2307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559482"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293236"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading : Création de Threads de travail dans MFC
 
@@ -55,11 +55,11 @@ La fonction de contrôle définit le thread. Lorsque cette fonction est entrée,
 UINT MyControllingFunction( LPVOID pParam );
 ```
 
-Le paramètre est une valeur unique. La valeur de que la fonction reçoit dans ce paramètre est la valeur qui a été passée au constructeur lors de l’objet thread a été créé. La fonction de contrôle peut interpréter cette valeur d’une manière quelconque. Il peut être traité comme une valeur scalaire ou un pointeur vers une structure contenant plusieurs paramètres, ou il peut être ignoré. Si le paramètre fait référence à une structure, la structure peut être utilisée pour passer des données à partir de l’appelant au thread, mais également pour passer des données du thread à l’appelant. Si vous utilisez une telle structure pour repasser les données à l’appelant, le thread doit notifier l’appelant quand les résultats sont prêts. Pour plus d’informations sur la communication entre le thread de travail à l’appelant, consultez [Multithreading : conseils de programmation](multithreading-programming-tips.md).
+Le paramètre est une valeur unique. La valeur de que la fonction reçoit dans ce paramètre est la valeur qui a été passée au constructeur lors de l’objet thread a été créé. La fonction de contrôle peut interpréter cette valeur d’une manière quelconque. Il peut être traité comme une valeur scalaire ou un pointeur vers une structure contenant plusieurs paramètres, ou il peut être ignoré. Si le paramètre fait référence à une structure, la structure peut être utilisée pour passer des données à partir de l’appelant au thread, mais également pour passer des données du thread à l’appelant. Si vous utilisez une telle structure pour repasser les données à l’appelant, le thread doit notifier l’appelant quand les résultats sont prêts. Pour plus d’informations sur la communication entre le thread de travail à l’appelant, consultez [Multithreading : Conseils de programmation](multithreading-programming-tips.md).
 
-Lorsque la fonction se termine, elle doit retourner une valeur UINT indiquant la raison de l’arrêt. En règle générale, ce code de sortie est 0 pour indiquer la réussite avec d’autres valeurs indiquant les différents types d’erreurs. Il s’agit purement dépend de l’implémentation. Certains threads peuvent mettre à jour les compteurs d’utilisation des objets et retourner le nombre actuel d’utilisations de cet objet. Pour voir comment les applications peuvent récupérer cette valeur, consultez [Multithreading : arrêt de Threads](multithreading-terminating-threads.md).
+Lorsque la fonction se termine, elle doit retourner une valeur UINT indiquant la raison de l’arrêt. En règle générale, ce code de sortie est 0 pour indiquer la réussite avec d’autres valeurs indiquant les différents types d’erreurs. Il s’agit purement dépend de l’implémentation. Certains threads peuvent mettre à jour les compteurs d’utilisation des objets et retourner le nombre actuel d’utilisations de cet objet. Pour voir comment les applications peuvent récupérer cette valeur, consultez [Multithreading : Arrêt des Threads](multithreading-terminating-threads.md).
 
-Il existe certaines restrictions sur ce que vous pouvez faire dans un programme multithread écrit avec la bibliothèque MFC. Pour obtenir une description de ces restrictions et d’autres conseils concernant l’utilisation des threads, consultez [Multithreading : conseils de programmation](multithreading-programming-tips.md).
+Il existe certaines restrictions sur ce que vous pouvez faire dans un programme multithread écrit avec la bibliothèque MFC. Pour obtenir une description de ces restrictions et d’autres conseils concernant l’utilisation des threads, consultez [Multithreading : Conseils de programmation](multithreading-programming-tips.md).
 
 ##  <a name="_core_controlling_function_example"></a> Contrôle de l’exemple de fonction
 
@@ -92,7 +92,7 @@ AfxBeginThread(MyThreadProc, pNewObject);
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [Multithreading : création de threads d’interface utilisateur](multithreading-creating-user-interface-threads.md)
+- [Multithreading : Création de Threads d’Interface utilisateur](multithreading-creating-user-interface-threads.md)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: acbf5edb0f3284195052cfb3f4447f0b2ba7fe66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554516"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275972"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Comparaison des structures de données de synchronisation avec l’API Windows
 
@@ -29,10 +29,10 @@ Le [concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writ
 |Fonctionnalité|`reader_writer_lock`|Verrou SRW|
 |-------------|--------------------------|--------------|
 |Non réentrants|Oui|Oui|
-|Peut promouvoir un lecteur à un writer (mise à niveau prise en charge)|Non|Non|
-|Peut rétrograder un enregistreur à un lecteur (prise en charge vers une version antérieure)|Non|Non|
-|Verrou de préférence d’écriture|Oui|Non|
-|Accès FIFO aux enregistreurs|Oui|Non|
+|Peut promouvoir un lecteur à un writer (mise à niveau prise en charge)|Aucune|Aucune|
+|Peut rétrograder un enregistreur à un lecteur (prise en charge vers une version antérieure)|Aucune|Aucune|
+|Verrou de préférence d’écriture|Oui|Aucune|
+|Accès FIFO aux enregistreurs|Oui|Aucune|
 
 Pour plus d’informations sur les verrous SRW, consultez [verrous Slim Reader/Writer (SRW)](https://msdn.microsoft.com/library/windows/desktop/aa904937) dans Platform SDK.
 

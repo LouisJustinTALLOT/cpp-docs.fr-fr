@@ -1,5 +1,5 @@
 ---
-title: 'Menus et ressources : ajouts de serveurs'
+title: 'Menus et ressources : Ajouts de serveurs'
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 8b4e7787029fc9401ece02860f09b8159f086afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592589"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281948"
 ---
-# <a name="menus-and-resources-server-additions"></a>Menus et ressources : ajouts de serveurs
+# <a name="menus-and-resources-server-additions"></a>Menus et ressources : Ajouts de serveurs
 
 Cet article décrit les modifications qui doivent être apportées aux menus et aux autres ressources dans une application serveur (composant) d’édition visuelle. Une application serveur requiert de nombreux ajouts à la structure de menus et d’autres ressources, car elle peut être démarrée dans un des trois modes : autonome, incorporé, ou en place. Comme décrit dans la [Menus et ressources (OLE)](../mfc/menus-and-resources-ole.md) l’article, il existe un maximum de quatre ensembles de menus. Les quatre sont utilisés pour une application de serveur complet MDI, tandis que seulement trois sont utilisées pour un mini-serveur. L’Assistant application crée la disposition du menu nécessaire pour le type de serveur souhaité. Une personnalisation peut être nécessaire.
 
@@ -44,7 +44,7 @@ Les sujets abordés dans cet article sont les suivantes :
 
 Applications serveur (composant) doivent avoir des ressources de menu ajoutées pour prendre en charge la modification visuelle OLE. Les menus utilisés lorsque l’application est exécutée en mode autonome n’ont pas à être modifié, mais vous devez ajouter deux nouvelles ressources de menu avant de générer l’application : une pour prendre en charge l’activation sur place et une pour prendre en charge le serveur étant entièrement ouvert. Les ressources de menu sont utilisés par les applications mini-serveur et intégral.
 
-- Pour prendre en charge l’activation sur place, vous devez créer une ressource de menu qui est très similaire à la ressource de menu utilisée lors de l’exécution en mode autonome. La différence dans ce menu est que les éléments de fichier et fenêtre (et tous les éléments de menu qui traitent de l’application et non les données) sont manquants. L’application conteneur fournit ces éléments de menu. Pour plus d’informations sur et un exemple de cette technique de fusion de menus, consultez l’article [Menus et ressources : fusion de menus](../mfc/menus-and-resources-menu-merging.md).
+- Pour prendre en charge l’activation sur place, vous devez créer une ressource de menu qui est très similaire à la ressource de menu utilisée lors de l’exécution en mode autonome. La différence dans ce menu est que les éléments de fichier et fenêtre (et tous les éléments de menu qui traitent de l’application et non les données) sont manquants. L’application conteneur fournit ces éléments de menu. Pour plus d’informations sur et un exemple de cette technique de fusion de menus, consultez l’article [Menus et ressources : Fusion de menus](../mfc/menus-and-resources-menu-merging.md).
 
 - Pour prendre en charge l’activation entièrement ouverte, vous devez créer une ressource de menu presque identique à la ressource de menu utilisée quand exécuter en mode autonome. La seule modification à cette ressource de menu est le remaniement de certains éléments afin de refléter le fait que le serveur fonctionne sur un élément incorporé dans un document composé.
 
@@ -73,5 +73,4 @@ Les mêmes ajouts s’appliquent aux mini-serveurs répertoriées ci-dessus pour
 ## <a name="see-also"></a>Voir aussi
 
 [Menus et ressources (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menus et ressource : fusion de menus](../mfc/menus-and-resources-menu-merging.md)
-
+[Menus et ressources : Fusion de menus](../mfc/menus-and-resources-menu-merging.md)

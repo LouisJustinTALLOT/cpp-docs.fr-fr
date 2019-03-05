@@ -1,5 +1,5 @@
 ---
-title: 'Menus et ressources : ajouts de conteneurs'
+title: 'Menus et ressources : Ajouts de conteneurs'
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ea4159f8eb60f43f60eacd5831ce148c81aeb572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546612"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279334"
 ---
-# <a name="menus-and-resources-container-additions"></a>Menus et ressources : ajouts de conteneurs
+# <a name="menus-and-resources-container-additions"></a>Menus et ressources : Ajouts de conteneurs
 
 Cet article décrit les modifications qui doivent être apportées aux menus et aux autres ressources dans une application conteneur d’édition visuelle.
 
@@ -52,7 +52,7 @@ Vous devez ajouter les éléments suivants au menu Edition :
 
 Outre les modifications répertoriées dans cet article, votre fichier source doit inclure AFXOLECL. RC, qui est requis pour l’implémentation de la bibliothèque Microsoft Foundation Class. Insérer un nouvel objet est l’ajout de menu requis uniquement. Autres éléments peuvent être ajoutés, mais ceux répertoriés ici sont les plus courantes.
 
-Si vous souhaitez prendre en charge l’activation sur place d’éléments de relation contenant-contenus, vous devez créer un nouveau menu pour votre application conteneur. Ce menu comprend les même menu fichier et les menus contextuels de fenêtre utilisés lorsque les fichiers sont ouverts, mais il comporte deux séparateurs placés entre eux. Ces séparateurs sont utilisés pour indiquer où l’élément du serveur (composant) (application) doit placer ses menus lorsqu’activé sur place. Pour plus d’informations sur cette technique de fusion de menus, consultez [Menus et ressources : fusion de menus](../mfc/menus-and-resources-menu-merging.md).
+Si vous souhaitez prendre en charge l’activation sur place d’éléments de relation contenant-contenus, vous devez créer un nouveau menu pour votre application conteneur. Ce menu comprend les même menu fichier et les menus contextuels de fenêtre utilisés lorsque les fichiers sont ouverts, mais il comporte deux séparateurs placés entre eux. Ces séparateurs sont utilisés pour indiquer où l’élément du serveur (composant) (application) doit placer ses menus lorsqu’activé sur place. Pour plus d’informations sur cette technique de fusion de menus, consultez [Menus et ressources : Fusion de menus](../mfc/menus-and-resources-menu-merging.md).
 
 ##  <a name="_core_container_application_accelerator_table_additions"></a> Ajouts à la Table conteneur Application Accelerator
 
@@ -86,5 +86,4 @@ La plupart des modifications aux tables de chaînes pour les applications de con
 ## <a name="see-also"></a>Voir aussi
 
 [Menus et ressources (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md)
-
+[Menus et ressources : Ajouts de serveurs](../mfc/menus-and-resources-server-additions.md)

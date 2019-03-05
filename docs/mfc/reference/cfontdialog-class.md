@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: 5c9e3a7de10b6ba0913b02c5f79dcc63c89adce5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dea0f2ba358582b49de107c234a66a751e8f0b0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525175"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267184"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog, classe
 
@@ -118,7 +118,7 @@ Pour plus d’informations sur l’utilisation de `CFontDialog`, consultez [des 
 
 `CFontDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdlgs.h
 
@@ -202,7 +202,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*CF*<br/>
+*cf*<br/>
 Un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) structure contenant des informations sur la mise en forme des caractères de la police sélectionnée.
 
 ##  <a name="getcolor"></a>  CFontDialog::GetColor
@@ -397,4 +397,3 @@ Après avoir construit un `CFontDialog` de l’objet, vous pouvez utiliser `m_cf
 [Exemple MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [CCommonDialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

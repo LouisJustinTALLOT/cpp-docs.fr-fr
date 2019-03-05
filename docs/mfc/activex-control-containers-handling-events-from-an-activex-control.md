@@ -1,5 +1,5 @@
 ---
-title: "Conteneurs de contrôles ActiveX : gestion d'événements à partir d'un contrôle ActiveX"
+title: 'Conteneurs de contrôles ActiveX : Gestion des événements à partir d’un contrôle ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: 5deff0a50de813cc5faa43a86e591d3003a3c03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659626"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293561"
 ---
-# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Conteneurs de contrôles ActiveX : gestion d'événements à partir d'un contrôle ActiveX
+# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Conteneurs de contrôles ActiveX : Gestion des événements à partir d’un contrôle ActiveX
 
 Cet article décrit l’utilisation de la fenêtre Propriétés pour installer des gestionnaires d’événements pour les contrôles ActiveX dans un conteneur de contrôles ActiveX. Les gestionnaires d’événements sont utilisés pour recevoir des notifications (à partir du contrôle) de certains événements et effectuer une action en réponse. Cette notification est appelée « déclenche » l’événement.
 
@@ -70,4 +70,3 @@ Pour plus d’informations sur les macros de récepteur d’événements, consul
 ## <a name="see-also"></a>Voir aussi
 
 [Conteneurs de contrôles ActiveX](../mfc/activex-control-containers.md)
-

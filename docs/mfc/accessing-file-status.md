@@ -8,12 +8,12 @@ helpviewer_keywords:
 - file status [MFC]
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
-ms.openlocfilehash: 3e16f8b11d17cd911646c3c9206d1d7deb577ef9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26c263b2d7e4e0243444925cb9416cb337dcd79d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629786"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298891"
 ---
 # <a name="accessing-file-status"></a>Accès au statut de fichier
 
@@ -32,4 +32,3 @@ Pour plus d’informations, consultez [sérialisation](../mfc/serialization-in-m
 ## <a name="see-also"></a>Voir aussi
 
 [Fichiers](../mfc/files-in-mfc.md)
-

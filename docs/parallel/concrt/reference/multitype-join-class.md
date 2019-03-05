@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 2fd94ef072fcab9af076fcdfa1b5c094d77f89c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289024"
 ---
 # <a name="multitypejoin-class"></a>multitype_join, classe
 
@@ -67,7 +67,7 @@ Le genre de `join` bloc est `greedy` ou `non_greedy`
 |----------|-----------------|
 |[accept](#accept)|Accepte un message qui a été proposé par ce `multitype_join` bloc, en transférant la propriété à l’appelant.|
 |[acquire_ref](#acquire_ref)|Acquiert un décompte de références sur ce `multitype_join` bloc de messagerie, pour empêcher la suppression.|
-|[consommer](#consume)|Consomme un message précédemment proposé par le `multitype_join` bloc de messagerie et réservé avec succès par la cible, en transférant la propriété à l’appelant.|
+|[consume](#consume)|Consomme un message précédemment proposé par le `multitype_join` bloc de messagerie et réservé avec succès par la cible, en transférant la propriété à l’appelant.|
 |[link_target](#link_target)|Lie un bloc cible à ce `multitype_join` bloc de messagerie.|
 |[release](#release)|Libère une réservation de message réussie précédente.|
 |[release_ref](#release_ref)|Libère un décompte de références sur ce `multiple_join` bloc de messagerie.|
@@ -85,7 +85,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `multitype_join`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -200,7 +200,7 @@ Objet `Scheduler` dans lequel la tâche de propagation du bloc de messagerie `mu
 *_PScheduleGroup*<br/>
 Objet `ScheduleGroup` dans lequel la tâche de propagation du bloc de messagerie `multitype_join` est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
 
-*_Joindre les*<br/>
+*_Join*<br/>
 Bloc de messagerie `multitype_join` à partir duquel la copie est effectuée. Notez que l’objet d'origine est orphelin, ce qui en fait un constructeur de déplacement.
 
 ### <a name="remarks"></a>Notes

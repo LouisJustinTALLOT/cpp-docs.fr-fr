@@ -7,12 +7,12 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 1ba7251afca80c561bd8861968c35e3242c1507a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588849"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294133"
 ---
 # <a name="taskgroup-class"></a>task_group, classe
 
@@ -41,7 +41,7 @@ class task_group;
 |[is_canceling](#is_canceling)|Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’en indique pas nécessairement que le `cancel` méthode a été appelée sur le `task_group` objet (bien que ce cas la méthode retourne `true`). Il peut arriver que le `task_group` objet exécute inline et un groupe de tâches supplémentaire en haut de l’arborescence de travail a été annulé. Dans tels cas où le runtime peut déterminer avance annulation passera via cet `task_group` objet, `true` s’affichera également.|
 |[run](#run)|Surchargé. Planifie une tâche sur le `task_group` objet. Si un `task_handle` objet est passé en tant que paramètre à `run`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet. La version de la méthode qui accepte une référence à un objet de fonction comme un paramètre implique l’allocation de tas au sein du runtime qui peut être moins performante que l’utilisation de la version qui accepte une référence à un `task_handle` objet. La version qui prend le paramètre `_Placement` force la tâche à être orientées vers l’exécution à l’emplacement spécifié par ce paramètre.|
 |[run_and_wait](#run_and_wait)|Surchargé. Planifie une tâche à exécuter inline dans le contexte d’appel avec l’aide de la `task_group` objet pour la prise en charge complète de l’annulation. La fonction attend ensuite que tout le travail sur le `task_group` objet est terminée ou annulé. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet.|
-|[attente](#wait)|Attend que tout le travail sur le `task_group` objet est terminée ou annulé.|
+|[wait](#wait)|Attend que tout le travail sur le `task_group` objet est terminée ou annulé.|
 
 ## <a name="remarks"></a>Notes
 
@@ -53,7 +53,7 @@ Pour plus d’informations, consultez [parallélisme des tâches](../task-parall
 
 `task_group`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ppl.h
 
@@ -211,7 +211,7 @@ Un jeton d’annulation à associer à ce groupe de tâches. Le groupe de tâche
 
 Le constructeur qui accepte un jeton d’annulation crée un `task_group` qui sera annulée lors de l’annulation de la source associée au jeton. En fournissant un jeton d’annulation explicite isole également ce groupe de tâches de participer à une annulation implicite d’un groupe parent avec un autre jeton ou aucun jeton.
 
-##  <a name="dtor"></a> ~ task_group
+##  <a name="dtor"></a> ~task_group
 
 Détruit un objet `task_group`. Vous êtes tenu d’appeler l’une le `wait` ou `run_and_wait` méthode sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute en tant que le résultat de déroulement en raison d’une exception de la pile.
 

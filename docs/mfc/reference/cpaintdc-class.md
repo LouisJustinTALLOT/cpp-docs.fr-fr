@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: e4e6ded945bac15b6584eadc21d8648f1a0f9ab3
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5dbe08eae911433c256d3f8dd1f60dea2db9478c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178328"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274425"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (classe)
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur l’utilisation de `CPaintDC`, consultez [context
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CAPTURE DE DONNÉES MODIFIÉES](../../mfc/reference/cdc-class.md)
+[CDC](../../mfc/reference/cdc-class.md)
 
 `CPaintDC`
 
@@ -131,4 +131,3 @@ Notez que vous pouvez accéder au handle de contexte de périphérique via le `P
 [Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
 [CDC, classe](../../mfc/reference/cdc-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

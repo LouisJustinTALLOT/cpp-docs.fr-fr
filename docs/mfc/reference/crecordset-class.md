@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: f8193e071d9c7730e85cabbcb10a701ca763085e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efb833a8d4cc0b801f75951bc648d6b83df5bae8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621392"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305183"
 ---
 # <a name="crecordset-class"></a>CRecordset, classe
 
@@ -169,7 +169,7 @@ class CRecordset : public CObject
 |[CRecordset::CanTransact](#cantransact)|Retourne une valeur différente de zéro si la source de données prend en charge les transactions.|
 |[CRecordset::CanUpdate](#canupdate)|Retourne zéro si le jeu d’enregistrements peut être mis à jour (vous pouvez ajouter, mettre à jour ou supprimer des enregistrements).|
 |[CRecordset::CheckRowsetError](#checkrowseterror)|Appelé pour gérer les erreurs générées lors de la récupération de l’enregistrement.|
-|[Préférence CRecordset::Close](#close)|Ferme le jeu d’enregistrements et le HSTMT ODBC associé.|
+|[CRecordset::Close](#close)|Ferme le jeu d’enregistrements et le HSTMT ODBC associé.|
 |[CRecordset::Delete](#delete)|Supprime l’enregistrement en cours de l’ensemble d’enregistrements. Après la suppression, vous devez explicitement faire défiler à un autre enregistrement.|
 |[CRecordset::DoBulkFieldExchange](#dobulkfieldexchange)|Appelé pour échanger des lignes en bloc des données à partir de la source de données vers le recordset. Implémente en masse d’échange de champs d’enregistrements (RFX en bloc).|
 |[CRecordset::DoFieldExchange](#dofieldexchange)|Appelé pour échanger des données (dans les deux sens) entre les membres de données de champ de l’objet recordset et l’enregistrement correspondant sur la source de données. Implémente enregistre l’échange de champs (RFX).|
@@ -231,7 +231,7 @@ class CRecordset : public CObject
 Appelé « jeux d’enregistrements, » `CRecordset` objets sont généralement utilisées dans les deux formulaires : feuilles de réponse dynamiques et les captures instantanées. Feuille de réponse dynamique reste synchronisé avec les mises à jour de données effectuées par d’autres utilisateurs. Un instantané est une vue statique des données. Chaque formulaire représente un jeu d’enregistrements fixée à la fois que le jeu d’enregistrements est ouvert, mais lorsque vous faites défiler vers un enregistrement dans une feuille de réponse dynamique, il reflète les modifications apportées par la suite à l’enregistrement, par d’autres utilisateurs ou par d’autres jeux d’enregistrements dans votre application.
 
 > [!NOTE]
->  Si vous travaillez avec les classes d’objets DAO (Data Access) plutôt que les classes de base de données connectivité ODBC (Open), utilisez la classe [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : programmation de base de données](../../data/data-access-programming-mfc-atl.md).
+>  Si vous travaillez avec les classes d’objets DAO (Data Access) plutôt que les classes de base de données connectivité ODBC (Open), utilisez la classe [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : Programmation de base de données](../../data/data-access-programming-mfc-atl.md).
 
 Pour utiliser un de ces types de jeu d’enregistrements, vous dérivez généralement une classe de jeu d’enregistrements spécifiques à l’application à partir de `CRecordset`. Jeux d’enregistrements de sélectionner des enregistrements à partir d’une source de données, et vous pouvez ensuite :
 
@@ -249,7 +249,7 @@ Pour utiliser votre classe, ouvrez une base de données et construire un objet r
 
 Dans une dérivée `CRecordset` class, enregistrer le champ RFX (exchange) ou RFX en bloc (RFX en bloc) est utilisé pour prendre en charge la lecture et mise à jour des champs d’enregistrement.
 
-Pour plus d’informations sur l’échange de champs d’enregistrement et de jeux d’enregistrements, consultez les articles [vue d’ensemble : programmation de base de données](../../data/data-access-programming-mfc-atl.md), [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [Recordset : extraction globale d’enregistrements en bloc (ODBC) ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md), et [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md). Pour se concentrant sur les feuilles de réponse dynamiques et les captures instantanées, consultez les articles [Dynaset](../../data/odbc/dynaset.md) et [instantané](../../data/odbc/snapshot.md).
+Pour plus d’informations sur l’échange de champs d’enregistrement et de jeux d’enregistrements, consultez les articles [vue d’ensemble : Programmation de base de données](../../data/data-access-programming-mfc-atl.md), [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md), et [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md). Pour se concentrant sur les feuilles de réponse dynamiques et les captures instantanées, consultez les articles [Dynaset](../../data/odbc/dynaset.md) et [instantané](../../data/odbc/snapshot.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -257,7 +257,7 @@ Pour plus d’informations sur l’échange de champs d’enregistrement et de j
 
 `CRecordset`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdb.h
 
@@ -274,7 +274,7 @@ virtual void AddNew();
 Vous devez appeler la [Requery](#requery) fonction membre pour afficher le dernier enregistrement ajouté. Champs de l’enregistrement sont initialement nulle. (Dans la terminologie de base de données, Null signifie « ne having aucune valeur » et n’est pas identique à la valeur NULL en C++.) Pour terminer l’opération, vous devez appeler la [mise à jour](#update) fonction membre. `Update` enregistre les modifications apportées à la source de données.
 
 > [!NOTE]
->  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `AddNew`. Cela entraîne un échec d’assertion. Bien que classe `CRecordset` ne fournit pas de mécanisme de mise à jour en bloc des lignes de données, vous pouvez écrire vos propres fonctions à l’aide de la fonction API ODBC `SQLSetPos`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `AddNew`. Cela entraîne un échec d’assertion. Bien que classe `CRecordset` ne fournit pas de mécanisme de mise à jour en bloc des lignes de données, vous pouvez écrire vos propres fonctions à l’aide de la fonction API ODBC `SQLSetPos`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 `AddNew` prépare un nouvel enregistrement vide à l’aide des membres de données de champ du jeu d’enregistrements. Après avoir appelé `AddNew`, définissez les valeurs souhaitées dans les membres de données de champ du jeu d’enregistrements. (Vous n’avez pas à appeler le [modifier](#edit) fonction membre à cet effet ; utilisez `Edit` uniquement pour les enregistrements existants.) Lorsque vous appelez ensuite `Update`, modifié les valeurs dans les membres de données de champ sont enregistrées sur la source de données.
 
@@ -288,11 +288,11 @@ Si la source de données prend en charge les transactions, vous pouvez rendre vo
 
 Il est illégal d’appeler `AddNew` pour un jeu d’enregistrements dont `Open` fonction membre n’a pas été appelée. Un `CDBException` est levée si vous appelez `AddNew` pour un jeu d’enregistrements qui ne peut pas être ajouté au. Vous pouvez déterminer si le jeu d’enregistrements est modifiable en appelant [CanAppend](#canappend).
 
-Pour plus d’informations, consultez les articles suivants : [Recordset : mise à jour des enregistrements par les Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [Recordset : ajout de la mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), et [(de Transaction ODBC)](../../data/odbc/transaction-odbc.md).
+Pour plus d’informations, consultez les articles suivants : [Recordset : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [jeu d’enregistrements : Ajout, la mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), et [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
 ### <a name="example"></a>Exemple
 
-Consultez l’article [Transaction : exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+Consultez l’article [Transaction : Exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="canappend"></a>  CRecordset::CanAppend
 
@@ -325,7 +325,7 @@ Cette fonction est indépendante de la `CRecordset::useBookmarks` option dans le
 > [!NOTE]
 >  Les signets ne sont pas pris en charge sur les recordsets avant uniquement.
 
-Pour plus d’informations sur les signets et de navigation de jeu d’enregistrements, consultez les articles [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) et [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Pour plus d’informations sur les signets et de navigation de jeu d’enregistrements, consultez les articles [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) et [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
 ##  <a name="cancel"></a>  CRecordset::Cancel
 
@@ -350,11 +350,11 @@ void CancelUpdate();
 ### <a name="remarks"></a>Notes
 
 > [!NOTE]
->  Cette fonction membre n’est pas applicable sur les jeux d’enregistrements qui est l’extraction de lignes en bloc, dans la mesure où ces jeux d’enregistrements ne peuvent pas appeler `Edit`, `AddNew`, ou `Update`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette fonction membre n’est pas applicable sur les jeux d’enregistrements qui est l’extraction de lignes en bloc, dans la mesure où ces jeux d’enregistrements ne peuvent pas appeler `Edit`, `AddNew`, ou `Update`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Si la vérification de champ incorrect automatique est activée, `CancelUpdate` restaurera les variables de membre pour les valeurs qu’ils avaient avant `Edit` ou `AddNew` a été appelée ; sinon, le restent des modifications de valeur. Par défaut, la vérification automatique de champ est activée lorsque le jeu d’enregistrements est ouvert. Pour le désactiver, vous devez spécifier le `CRecordset::noDirtyFieldCheck` dans le *dwOptions* paramètre de la [Open](#open) fonction membre.
 
-Pour plus d’informations sur la mise à jour des données, consultez l’article [Recordset : ajout de la mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).
+Pour plus d’informations sur la mise à jour des données, consultez l’article [jeu d’enregistrements : Ajout, la mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).
 
 ##  <a name="canrestart"></a>  CRecordset::CanRestart
 
@@ -382,7 +382,7 @@ Différent de zéro si le jeu d’enregistrements permet le défilement ; sinon
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur le défilement, consultez l’article [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Pour plus d’informations sur le défilement, consultez l’article [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
 ##  <a name="cantransact"></a>  CRecordset::CanTransact
 
@@ -444,9 +444,9 @@ Cette fonction membre virtuelle gère les erreurs qui se produisent lorsque les 
 |SQL_INVALID_HANDLE|Fonction a échoué en raison d’un handle d’environnement non valide, un handle de connexion ou un descripteur d’instruction. Cela indique une erreur de programmation. Aucune information supplémentaire n’est disponible à partir de `SQLError`.|
 |SQL_STILL_EXECUTING|Une fonction qui a été démarrée en mode asynchrone est en cours d’exécution. Notez que, par défaut, MFC ne passent jamais cette valeur pour `CheckRowsetError`; MFC continuer à appeler `SQLExtendedFetch` jusqu'à ce qu’il ne retourne plus SQL_STILL_EXECUTING.|
 
-Pour plus d’informations sur `SQLError`, consultez le kit SDK Windows. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur `SQLError`, consultez le kit SDK Windows. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-##  <a name="close"></a>  Préférence CRecordset::Close
+##  <a name="close"></a>  CRecordset::Close
 
 Ferme le jeu d’enregistrements.
 
@@ -488,7 +488,7 @@ Passez la valeur NULL au constructeur de votre recordset pour avoir un `CDatabas
 
 ### <a name="example"></a>Exemple
 
-Pour plus d’informations, consultez l’article [Recordset : déclaration de la classe d’une Table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).
+Pour plus d’informations, consultez l’article [jeu d’enregistrements : Déclaration de la classe d’une Table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).
 
 ##  <a name="delete"></a>  CRecordset::Delete
 
@@ -503,7 +503,7 @@ virtual void Delete();
 Après une suppression réussie, les membres de données de champ du jeu d’enregistrements sont définies sur une valeur Null, et vous devez appeler explicitement une de la `Move` fonctions afin de déplacer l’enregistrement supprimé. Une fois que vous quittez l’enregistrement supprimé, il n’est pas possible d’y revenir. Si la source de données prend en charge les transactions, vous pouvez rendre le `Delete` des appels, partie d’une transaction. Pour plus d’informations, consultez l’article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
 > [!NOTE]
->  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `Delete`. Cela entraîne un échec d’assertion. Bien que classe `CRecordset` ne fournit pas de mécanisme de mise à jour en bloc des lignes de données, vous pouvez écrire vos propres fonctions à l’aide de la fonction API ODBC `SQLSetPos`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `Delete`. Cela entraîne un échec d’assertion. Bien que classe `CRecordset` ne fournit pas de mécanisme de mise à jour en bloc des lignes de données, vous pouvez écrire vos propres fonctions à l’aide de la fonction API ODBC `SQLSetPos`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!CAUTION]
 >  Le jeu d’enregistrements doit être mis à jour et il doit y avoir un enregistrement valide dans le jeu d’enregistrements lorsque vous appelez `Delete`; sinon, une erreur se produit. Par exemple, si vous supprimez un enregistrement, mais ne fait pas défiler un nouvel enregistrement avant d’appeler `Delete` là encore, `Delete` lève un [CDBException](../../mfc/reference/cdbexception-class.md).
@@ -542,7 +542,7 @@ RFX en bloc (RFX en bloc) est similaire à l’échange de champs d’enregistre
 
 Notez que ClassWizard ne prend pas en charge RFX en bloc ; Par conséquent, vous devez substituer `DoBulkFieldExchange` manuellement en écrivant des appels aux fonctions RFX en bloc. Pour plus d’informations sur ces fonctions, consultez la rubrique [fonctions Record Field Exchange](../../mfc/reference/record-field-exchange-functions.md).
 
-Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Pour plus d’informations, consultez l’article [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Pour plus d’informations, consultez l’article [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ##  <a name="dofieldexchange"></a>  CRecordset::DoFieldExchange
 
@@ -568,7 +568,7 @@ Si l’extraction de lignes en bloc est implémentée, le framework appelle [DoB
 
 L’échange de données de champ, appelées échange de champs d’enregistrements (RFX), fonctionne dans les deux sens : à partir de membres de données de champ de l’objet recordset aux champs de l’enregistrement sur la source de données et à partir de l’enregistrement sur la source de données à l’objet recordset.
 
-La seule action que vous devez normalement suivre pour implémenter `DoFieldExchange` pour votre jeu d’enregistrements dérivée classe consiste à créer la classe avec ClassWizard et spécifier les types de données et les noms des membres de données du champ. Vous pouvez également ajouter le code à ce que ClassWizard écrit pour spécifier les membres de données de paramètre ou à gérer des colonnes que vous liez dynamiquement. Pour plus d’informations, consultez l’article [Recordset : liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+La seule action que vous devez normalement suivre pour implémenter `DoFieldExchange` pour votre jeu d’enregistrements dérivée classe consiste à créer la classe avec ClassWizard et spécifier les types de données et les noms des membres de données du champ. Vous pouvez également ajouter le code à ce que ClassWizard écrit pour spécifier les membres de données de paramètre ou à gérer des colonnes que vous liez dynamiquement. Pour plus d’informations, consultez l’article [jeu d’enregistrements : Liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 Lorsque vous déclarez votre classe dérivée de jeu d’enregistrements avec ClassWizard, l’Assistant écrit une substitution de `DoFieldExchange` pour vous, ce qui ressemble à l’exemple suivant :
 
@@ -576,7 +576,7 @@ Lorsque vous déclarez votre classe dérivée de jeu d’enregistrements avec Cl
 
 Pour plus d’informations sur les fonctions RFX, consultez la rubrique [fonctions Record Field Exchange](../../mfc/reference/record-field-exchange-functions.md).
 
-Pour plus d’exemples et des détails sur `DoFieldExchange`, consultez l’article [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Pour obtenir des informations générales sur RFX, consultez l’article [Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md).
+Pour plus d’exemples et des détails sur `DoFieldExchange`, consultez l’article [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Pour obtenir des informations générales sur RFX, consultez l’article [Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md).
 
 ##  <a name="edit"></a>  CRecordset::Edit
 
@@ -591,7 +591,7 @@ virtual void Edit();
 Après avoir appelé `Edit`, vous pouvez modifier les membres de données de champ en réinitialisant directement leurs valeurs. L’opération est terminée lorsque vous appelez ensuite la [mise à jour](#update) fonction membre pour enregistrer vos modifications sur la source de données.
 
 > [!NOTE]
->  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `Edit`. Cela entraîne un échec d’assertion. Bien que classe `CRecordset` ne fournit pas de mécanisme de mise à jour en bloc des lignes de données, vous pouvez écrire vos propres fonctions à l’aide de la fonction API ODBC `SQLSetPos`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `Edit`. Cela entraîne un échec d’assertion. Bien que classe `CRecordset` ne fournit pas de mécanisme de mise à jour en bloc des lignes de données, vous pouvez écrire vos propres fonctions à l’aide de la fonction API ODBC `SQLSetPos`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 `Edit` enregistre les valeurs du jeu d’enregistrements membres de données. Si vous appelez `Edit`, apporter des modifications, puis appelez `Edit` là encore, les valeurs de l’enregistrement sont restaurés sur leur valeur avant le premier `Edit` appeler.
 
@@ -603,7 +603,7 @@ Selon le mode de verrouillage en cours, l’enregistrement mis à jour est peut-
 
 La valeur précédente de l’enregistrement actif est restaurée si vous faites défiler vers un nouvel enregistrement avant d’appeler `Update`. Un `CDBException` est levée si vous appelez `Edit` pour un jeu d’enregistrements qui ne peut pas être mis à jour ou s’il n’existe aucun enregistrement actif.
 
-Pour plus d’informations, consultez les articles [Transaction (ODBC)](../../data/odbc/transaction-odbc.md) et [Recordset : verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
+Pour plus d’informations, consultez les articles [Transaction (ODBC)](../../data/odbc/transaction-odbc.md) et [jeu d’enregistrements : Verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
 
 ### <a name="example"></a>Exemple
 
@@ -664,7 +664,7 @@ Pour déterminer si les signets sont pris en charge sur le jeu d’enregistremen
 > [!NOTE]
 >  Après certaines opérations de jeu d’enregistrements, les signets peuvent ne plus être valides. Par exemple, si vous appelez `GetBookmark` suivie `Requery`, vous n’êtes peut-être pas en mesure de retourner à l’enregistrement avec `SetBookmark`. Appelez [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) pour vérifier si vous pouvez appeler en toute sécurité `SetBookmark`.
 
-Pour plus d’informations sur les signets et de navigation de jeu d’enregistrements, consultez les articles [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) et [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Pour plus d’informations sur les signets et de navigation de jeu d’enregistrements, consultez les articles [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) et [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
 ##  <a name="getdefaultconnect"></a>  CRecordset::GetDefaultConnect
 
@@ -702,7 +702,7 @@ Vous définissez indirectement l’instruction SQL par défaut en déclarant vot
 
 Si vous avez besoin de la chaîne d’instruction SQL pour votre usage personnel, appelez `GetSQL`, qui retourne l’instruction SQL utilisée pour sélectionner les enregistrements du jeu d’enregistrements lorsqu’il a été ouvert. Vous pouvez modifier la chaîne SQL par défaut dans la substitution de votre classe du `GetDefaultSQL`. Par exemple, vous pouvez spécifier un appel à une requête prédéfinie à l’aide un **appeler** instruction. (Notez, toutefois, que si vous modifiez `GetDefaultSQL`, vous devez également modifier `m_nFields` pour faire correspondre le nombre de colonnes dans la source de données.)
 
-Pour plus d’informations, consultez l’article [Recordset : déclaration de la classe d’une Table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).
+Pour plus d’informations, consultez l’article [jeu d’enregistrements : Déclaration de la classe d’une Table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).
 
 > [!CAUTION]
 >  Le nom de table sera vide si l’infrastructure n’a pas pu identifier un nom de table, si plusieurs noms de table ont été fournis, ou si un **appeler** instruction n’a pas pu être interprétée. Notez que lorsque vous utilisez un **appeler** instruction, vous ne devez pas insérer un espace blanc entre l’accolade et la **appeler** mot clé, ni vous devez insérer un espace blanc avant l’accolade ou avant le  **Sélectionnez** mot clé dans un **sélectionnez** instruction.
@@ -733,7 +733,7 @@ void GetFieldValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom d’un champ.
 
 *varValu*référence e une à une [CDBVariant](../../mfc/reference/cdbvariant-class.md) objet qui stocke la valeur du champ.
@@ -783,7 +783,7 @@ L’exemple de code suivant illustre des appels à `GetFieldValue` pour un objet
 > [!NOTE]
 >  Contrairement à la classe DAO `CDaoRecordset`, `CRecordset` n’a pas un `SetFieldValue` fonction membre. Si vous créez un objet directement à partir de `CRecordset`, il est effectivement en lecture seule.
 
-Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="getodbcfieldcount"></a>  CRecordset::GetODBCFieldCount
 
@@ -799,7 +799,7 @@ Le nombre de champs dans le jeu d’enregistrements.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur la création de jeux d’enregistrements, consultez l’article [Recordset : création et fermeture de Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).
+Pour plus d’informations sur la création de jeux d’enregistrements, consultez l’article [jeu d’enregistrements : Création et fermeture de Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).
 
 ##  <a name="getodbcfieldinfo"></a>  CRecordset::GetODBCFieldInfo
 
@@ -817,10 +817,10 @@ void GetODBCFieldInfo(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 Le nom d’un champ.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Une référence à un `CODBCFieldInfo` structure.
 
 *nIndex*<br/>
@@ -832,7 +832,7 @@ Une version de la fonction vous permet de rechercher un champ par nom. L’autre
 
 Pour obtenir une description sur les informations retournées, consultez le [CODBCFieldInfo](../../mfc/reference/codbcfieldinfo-structure.md) structure.
 
-Pour plus d’informations sur la création de jeux d’enregistrements, consultez l’article [Recordset : création et fermeture de Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).
+Pour plus d’informations sur la création de jeux d’enregistrements, consultez l’article [jeu d’enregistrements : Création et fermeture de Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).
 
 ##  <a name="getrecordcount"></a>  CRecordset::GetRecordCount
 
@@ -869,7 +869,7 @@ Si vous utilisez l’extraction de lignes en bloc, la taille d’ensemble de lig
 
 Pour implémenter l’extraction de lignes en bloc, vous devez spécifier le `CRecordset::useMultiRowFetch` option dans le *dwOptions* paramètre de la [Open](#open) fonction membre. Pour modifier le paramètre de la taille de l’ensemble de lignes, appelez [SetRowsetSize](#setrowsetsize).
 
-Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="getrowsfetched"></a>  CRecordset::GetRowsFetched
 
@@ -889,7 +889,7 @@ Cela est utile lorsque vous avez implémenté l’extraction de lignes en bloc. 
 
 Pour implémenter l’extraction de lignes en bloc, vous devez spécifier le `CRecordset::useMultiRowFetch` option dans le *dwOptions* paramètre de la [Open](#open) fonction membre. Pour spécifier la taille de l’ensemble de lignes, appelez [SetRowsetSize](#setrowsetsize).
 
-Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ### <a name="example"></a>Exemple
 
@@ -976,7 +976,7 @@ Un **const** font référence à un `CString` qui contient l’instruction SQL.
 
 Il s’agit généralement d’une instance SQL **sélectionnez** instruction. La chaîne retournée par `GetSQL` est en lecture seule.
 
-La chaîne retournée par `GetSQL` est généralement différent à partir de n’importe quelle chaîne que vous avez peut-être passé à l’ensemble d’enregistrements dans le *lpszSQL* paramètre à la `Open` fonction membre. Il s’agit, car l’objet recordset construit une instruction SQL complète basée sur ce que vous avez passé à `Open`, ce que vous avez spécifié avec ClassWizard, ce que vous avez spécifié dans le `m_strFilter` et `m_strSort` les membres de données et tous les paramètres que vous deviez spécifié. Pour plus d’informations sur la façon dont le jeu d’enregistrements construit cette instruction SQL, consultez l’article [Recordset : sélection d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+La chaîne retournée par `GetSQL` est généralement différent à partir de n’importe quelle chaîne que vous avez peut-être passé à l’ensemble d’enregistrements dans le *lpszSQL* paramètre à la `Open` fonction membre. Il s’agit, car l’objet recordset construit une instruction SQL complète basée sur ce que vous avez passé à `Open`, ce que vous avez spécifié avec ClassWizard, ce que vous avez spécifié dans le `m_strFilter` et `m_strSort` les membres de données et tous les paramètres que vous deviez spécifié. Pour plus d’informations sur la façon dont le jeu d’enregistrements construit cette instruction SQL, consultez l’article [jeu d’enregistrements : La sélection de jeux d’enregistrements d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
 
 > [!NOTE]
 >  Appelez cette fonction membre uniquement après avoir appelé [Open](#open).
@@ -1045,7 +1045,7 @@ Le résultat de `IsDeleted` dépend de nombreux facteurs, tels que le type de vo
 Pour plus d’informations sur `CRecordset::skipDeletedRecords` et pilote de livraison, consultez la [Open](#open) fonction membre.
 
 > [!NOTE]
->  Si vous avez implémenté l’extraction de lignes en bloc, vous ne devez pas appeler `IsDeleted`. Au lieu de cela, appelez le [GetRowStatus](#getrowstatus) fonction membre. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Si vous avez implémenté l’extraction de lignes en bloc, vous ne devez pas appeler `IsDeleted`. Au lieu de cela, appelez le [GetRowStatus](#getrowstatus) fonction membre. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="iseof"></a>  CRecordset::IsEOF
 
@@ -1079,7 +1079,7 @@ BOOL IsFieldDirty(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 Pointeur vers le membre de données du champ dont vous souhaitez vérifier, ou NULL pour déterminer si les champs sont modifiés de l’état.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1091,13 +1091,13 @@ Différent de zéro si le membre de données du champ spécifié a changé depui
 Les données dans tous les membres de données de champ incorrectes seront transférées à l’enregistrement sur la source de données lors de l’enregistrement actif est mis à jour par un appel à la [mise à jour](#update) fonction membre de `CRecordset` (suit un appel à `Edit` ou `AddNew`).
 
 > [!NOTE]
->  Cette fonction membre n’est pas applicable sur les jeux d’enregistrements qui est à l’aide de l’extraction de lignes en bloc. Si vous avez implémenté l’extraction de lignes en bloc, puis `IsFieldDirty` retournera toujours FALSE et entraîne un échec d’assertion. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette fonction membre n’est pas applicable sur les jeux d’enregistrements qui est à l’aide de l’extraction de lignes en bloc. Si vous avez implémenté l’extraction de lignes en bloc, puis `IsFieldDirty` retournera toujours FALSE et entraîne un échec d’assertion. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Appel `IsFieldDirty` réinitialisera les effets des appels à précédentes [SetFieldDirty](#setfielddirty) étant donné que l’état de non-intégrité du champ est réévalué. Dans le `AddNew` cas, si la valeur du champ est différente de la valeur null de pseudo, l’état du champ a la valeur incorrecte. Dans le `Edit` cas, si la valeur du champ est différente de la valeur mise en cache, puis l’état du champ est modifié.
 
 `IsFieldDirty` est implémentée via [DoFieldExchange](#dofieldexchange).
 
-Pour plus d’informations sur l’indicateur de changement, consultez l’article [Recordset : sélection d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Pour plus d’informations sur l’indicateur de changement, consultez l’article [jeu d’enregistrements : La sélection de jeux d’enregistrements d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
 
 ##  <a name="isfieldnull"></a>  CRecordset::IsFieldNull
 
@@ -1109,7 +1109,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 Pointeur vers le membre de données du champ dont vous souhaitez vérifier, ou NULL pour déterminer si les champs ont la valeur Null de l’état.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1121,7 +1121,7 @@ Différent de zéro si le membre de données du champ spécifié est marqué en 
 Appelez cette fonction membre pour déterminer si le membre de données de champ spécifié d’un jeu d’enregistrements a été marqué comme Null. (Dans la terminologie de base de données, Null signifie « ne having aucune valeur » et n’est pas identique à la valeur NULL en C++.) Si un membre de données de champ est marqué avec la valeur Null, il est interprété en tant que colonne de l’enregistrement en cours pour lequel il n’existe aucune valeur.
 
 > [!NOTE]
->  Cette fonction membre n’est pas applicable sur les jeux d’enregistrements qui est à l’aide de l’extraction de lignes en bloc. Si vous avez implémenté l’extraction de lignes en bloc, puis `IsFieldNull` retournera toujours FALSE et entraîne un échec d’assertion. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette fonction membre n’est pas applicable sur les jeux d’enregistrements qui est à l’aide de l’extraction de lignes en bloc. Si vous avez implémenté l’extraction de lignes en bloc, puis `IsFieldNull` retournera toujours FALSE et entraîne un échec d’assertion. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 `IsFieldNull` est implémentée via [DoFieldExchange](#dofieldexchange).
 
@@ -1135,7 +1135,7 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 Pointeur vers le membre de données du champ dont vous souhaitez vérifier, ou NULL pour déterminer si les champs peuvent être définis avec une valeur Null de l’état.
 
 ### <a name="remarks"></a>Notes
@@ -1143,7 +1143,7 @@ Pointeur vers le membre de données du champ dont vous souhaitez vérifier, ou N
 Appelez cette fonction membre pour déterminer si le membre de données du champ spécifié est « null » (peut être définie avec une valeur Null ; C++ NULL n’est pas identique à Null, ce qui, dans la terminologie de base de données, signifie « ne having aucune valeur »).
 
 > [!NOTE]
->  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `IsFieldNullable`. Au lieu de cela, appelez le [GetODBCFieldInfo au](#getodbcfieldinfo) fonction membre pour déterminer si un champ peut être défini avec une valeur Null. Notez que vous pouvez toujours appeler `GetODBCFieldInfo`, indépendamment de si vous avez implémenté l’extraction de lignes en bloc. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `IsFieldNullable`. Au lieu de cela, appelez le [GetODBCFieldInfo au](#getodbcfieldinfo) fonction membre pour déterminer si un champ peut être défini avec une valeur Null. Notez que vous pouvez toujours appeler `GetODBCFieldInfo`, indépendamment de si vous avez implémenté l’extraction de lignes en bloc. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Un champ qui ne peut pas être Null doit avoir une valeur. Si vous essayez de définir un tel champ avec la valeur Null lors de l’ajout ou la mise à jour un enregistrement, la source de données rejette l’ajout ou la mise à jour, et [mettre à jour](#update) lève une exception. L’exception se produit lorsque vous appelez `Update`, pas lorsque vous appelez [SetFieldNull](#setfieldnull).
 
@@ -1199,13 +1199,13 @@ L’infrastructure utilise ce nombre pour gérer l’interaction entre les membr
 > [!CAUTION]
 >  Ce numéro doit correspondre au nombre de « colonnes de sortie » inscrit dans `DoFieldExchange` ou `DoBulkFieldExchange` après un appel à [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) avec le paramètre `CFieldExchange::outputColumn`.
 
-Vous pouvez lier des colonnes dynamiquement, comme expliqué dans l’article « Recordset : dynamiquement les colonnes de données de liaison. » Si vous procédez ainsi, vous devez augmenter le nombre dans `m_nFields` afin de refléter le numéro de fonction RFX et RFX en bloc appelle votre `DoFieldExchange` ou `DoBulkFieldExchange` fonction membre pour les colonnes liées dynamiquement.
+Vous pouvez lier des colonnes dynamiquement, comme expliqué dans l’article « jeu d’enregistrements : Liaison dynamique des colonnes de données. » Si vous procédez ainsi, vous devez augmenter le nombre dans `m_nFields` afin de refléter le numéro de fonction RFX et RFX en bloc appelle votre `DoFieldExchange` ou `DoBulkFieldExchange` fonction membre pour les colonnes liées dynamiquement.
 
-Pour plus d’informations, consultez les articles [Recordset : liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) et [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations, consultez les articles [jeu d’enregistrements : Liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) et [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ### <a name="example"></a>Exemple
 
-Consultez l’article [Record Field Exchange : utilisation de RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Consultez l’article [Record Field Exchange : Utilisation de RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
 ##  <a name="m_nparams"></a>  CRecordset::m_nParams
 
@@ -1222,7 +1222,7 @@ L’infrastructure utilise ce nombre lorsqu’il paramètre la requête du recor
 
 ### <a name="example"></a>Exemple
 
-  Consultez les articles [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) et [Record Field Exchange : utilisation de RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+  Consultez les articles [jeu d’enregistrements : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) et [Record Field Exchange : Utilisation de RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
 ##  <a name="m_pdatabase"></a>  CRecordset::m_pDatabase
 
@@ -1246,9 +1246,9 @@ Le jeu d’enregistrements utilise cette chaîne pour contraindre (ou filtrer) l
 
 Notez que vous n’incluez pas le **où** mot clé dans votre chaîne. L’infrastructure lui fournit.
 
-Vous pouvez également paramétrer votre chaîne de filtre en plaçant '' des espaces réservés, déclaration d’un membre de données de paramètre dans votre classe pour chaque espace réservé et passer des paramètres à l’ensemble d’enregistrements au moment de l’exécution. Cela vous permet de construire le filtre au moment de l’exécution. Pour plus d’informations, consultez l’article [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Vous pouvez également paramétrer votre chaîne de filtre en plaçant '' des espaces réservés, déclaration d’un membre de données de paramètre dans votre classe pour chaque espace réservé et passer des paramètres à l’ensemble d’enregistrements au moment de l’exécution. Cela vous permet de construire le filtre au moment de l’exécution. Pour plus d’informations, consultez l’article [jeu d’enregistrements : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-Pour plus d’informations sur SQL **où** clauses, consultez l’article [SQL](../../data/odbc/sql.md). Pour plus d’informations sur la sélection et filtrage d’enregistrements, consultez l’article [Recordset : filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+Pour plus d’informations sur SQL **où** clauses, consultez l’article [SQL](../../data/odbc/sql.md). Pour plus d’informations sur la sélection et filtrage d’enregistrements, consultez l’article [jeu d’enregistrements : Filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
 ### <a name="example"></a>Exemple
 
@@ -1268,7 +1268,7 @@ où une spécification de tri est un entier ou un nom de colonne. Vous pouvez é
 
 Notez que vous n’incluez pas le **ORDER BY** mot clé dans votre chaîne. L’infrastructure lui fournit.
 
-Pour plus d’informations sur les clauses SQL, consultez l’article [SQL](../../data/odbc/sql.md). Pour plus d’informations sur le tri d’enregistrements, consultez l’article [Recordset : tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).
+Pour plus d’informations sur les clauses SQL, consultez l’article [SQL](../../data/odbc/sql.md). Pour plus d’informations sur le tri d’enregistrements, consultez l’article [jeu d’enregistrements : Tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).
 
 ### <a name="example"></a>Exemple
 
@@ -1327,7 +1327,7 @@ Le tableau suivant répertorie les valeurs possibles pour *wFetchType*, l’ense
 > [!NOTE]
 >  Si vous appelez `Move` pendant que l’enregistrement actif est mis à jour ou ajoutée, les mises à jour sont perdues sans avertissement.
 
-Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez les articles [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Pour plus d’informations, consultez la fonction API ODBC `SQLExtendedFetch` dans le SDK Windows.
+Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez les articles [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Pour plus d’informations, consultez la fonction API ODBC `SQLExtendedFetch` dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -1359,7 +1359,7 @@ Vous n’avez pas à appeler `MoveFirst` immédiatement après l’ouverture de 
 > [!NOTE]
 >  Si vous appelez une de le `Move` fonctions pendant que l’enregistrement actif est mis à jour ou ajoutée, les mises à jour sont perdues sans avertissement.
 
-Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez les articles [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez les articles [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ### <a name="example"></a>Exemple
 
@@ -1389,7 +1389,7 @@ Si vous n’avez pas implémenté l’extraction de lignes en bloc, le jeu d’e
 > [!NOTE]
 >  Si vous appelez une de le `Move` fonctions pendant que l’enregistrement actif est mis à jour ou ajoutée, les mises à jour sont perdues sans avertissement.
 
-Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez les articles [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez les articles [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ### <a name="example"></a>Exemple
 
@@ -1419,7 +1419,7 @@ Si vous n’avez pas implémenté l’extraction de lignes en bloc, le jeu d’e
 > [!NOTE]
 >  Si vous appelez une de le `Move` fonctions pendant que l’enregistrement actif est mis à jour ou ajoutée, les mises à jour sont perdues sans avertissement.
 
-Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez les articles [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez les articles [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ### <a name="example"></a>Exemple
 
@@ -1452,7 +1452,7 @@ Si vous n’avez pas implémenté l’extraction de lignes en bloc, le jeu d’e
 > [!NOTE]
 >  Si vous appelez une de le `Move` fonctions pendant que l’enregistrement actif est mis à jour ou ajoutée, les mises à jour sont perdues sans avertissement.
 
-Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez les articles [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez les articles [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ### <a name="example"></a>Exemple
 
@@ -1468,7 +1468,7 @@ virtual void OnSetOptions(HSTMT hstmt);
 
 ### <a name="parameters"></a>Paramètres
 
-*HStmt*<br/>
+*hstmt*<br/>
 HSTMT de l’instruction ODBC dont les options doivent être définies.
 
 ### <a name="remarks"></a>Notes
@@ -1489,7 +1489,7 @@ virtual void OnSetUpdateOptions(HSTMT hstmt);
 
 ### <a name="parameters"></a>Paramètres
 
-*HStmt*<br/>
+*hstmt*<br/>
 HSTMT de l’instruction ODBC dont les options doivent être définies.
 
 ### <a name="remarks"></a>Notes
@@ -1558,11 +1558,11 @@ Masque de bits qui peut spécifier une combinaison des valeurs répertoriées ci
 
 - `CRecordset::optimizeBulkAdd` Utiliser une instruction SQL préparée pour optimiser l’ajout de plusieurs enregistrements en même temps. S’applique uniquement si vous n’utilisez pas la fonction API ODBC `SQLSetPos` pour mettre à jour le jeu d’enregistrements. La première mise à jour détermine quels champs sont marqués modifiés. Cette option s’exclut mutuellement avec `CRecordset::useMultiRowFetch`.
 
-- `CRecordset::useMultiRowFetch` Implémenter l’extraction de lignes en bloc pour autoriser plusieurs lignes doivent être extraites par une opération d’extraction unique. Il s’agit d’une fonctionnalité avancée conçue pour améliorer les performances. Toutefois, RFX en bloc n’est pas pris en charge par ClassWizard. Cette option s’exclut mutuellement avec `CRecordset::optimizeBulkAdd`. Notez que si vous spécifiez `CRecordset::useMultiRowFetch`, puis l’option `CRecordset::noDirtyFieldCheck` est activé automatiquement (double mise en tampon sera pas disponible) ; sur les recordsets avant uniquement, l’option `CRecordset::useExtendedFetch` est activé automatiquement. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+- `CRecordset::useMultiRowFetch` Implémenter l’extraction de lignes en bloc pour autoriser plusieurs lignes doivent être extraites par une opération d’extraction unique. Il s’agit d’une fonctionnalité avancée conçue pour améliorer les performances. Toutefois, RFX en bloc n’est pas pris en charge par ClassWizard. Cette option s’exclut mutuellement avec `CRecordset::optimizeBulkAdd`. Notez que si vous spécifiez `CRecordset::useMultiRowFetch`, puis l’option `CRecordset::noDirtyFieldCheck` est activé automatiquement (double mise en tampon sera pas disponible) ; sur les recordsets avant uniquement, l’option `CRecordset::useExtendedFetch` est activé automatiquement. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 - `CRecordset::skipDeletedRecords` Ignorer les enregistrements supprimés de tous les lors de la navigation dans le jeu d’enregistrements. Cela ralentit les performances dans certaines extractions relatives. Cette option n’est pas valide sur les recordsets avant uniquement. Si vous appelez [déplacer](#move) avec la *nRows* paramètre défini sur 0 et le `CRecordset::skipDeletedRecords` option set, `Move` déclarera. Notez que `CRecordset::skipDeletedRecords` est similaire à *compression du pilote*, ce qui signifie que les lignes supprimées est supprimés du jeu d’enregistrements. Toutefois, si votre pilote packs d’enregistrements, puis il ignore uniquement les enregistrements que vous supprimer ; elle ignore pas les enregistrements supprimés par d’autres utilisateurs, tandis que le jeu d’enregistrements est ouvert. `CRecordset::skipDeletedRecords` ignore les lignes supprimées par d’autres utilisateurs.
 
-- `CRecordset::useBookmarks` Peut utiliser des signets sur le jeu d’enregistrements, si pris en charge. Signets ralentissement la récupération des données mais améliorent les performances pour la navigation dans les données. Non valide sur les recordsets avant uniquement. Pour plus d’informations, consultez l’article [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+- `CRecordset::useBookmarks` Peut utiliser des signets sur le jeu d’enregistrements, si pris en charge. Signets ralentissement la récupération des données mais améliorent les performances pour la navigation dans les données. Non valide sur les recordsets avant uniquement. Pour plus d’informations, consultez l’article [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 - `CRecordset::noDirtyFieldCheck` Désactiver la vérification (double mise en mémoire tampon) automatique de champ incorrecte. Cela améliorera les performances ; Toutefois, vous devez marquer manuellement les champs comme modifié en appelant le `SetFieldDirty` et `SetFieldNull` fonctions membres. Notez ce mécanisme de double tampon dans la classe `CRecordset` est similaire à la double mise en tampon dans la classe `CDaoRecordset`. Toutefois, dans `CRecordset`, vous ne pouvez pas activer la double mise en tampon sur des champs individuels ; vous l’activer pour tous les champs ou le désactiver pour tous les champs. Notez que si vous spécifiez l’option `CRecordset::useMultiRowFetch`, puis `CRecordset::noDirtyFieldCheck` sera activé automatiquement ; Toutefois, `SetFieldDirty` et `SetFieldNull` ne peut pas être utilisé sur les jeux d’enregistrements qui implémentent l’extraction de lignes en bloc.
 
@@ -1570,7 +1570,7 @@ Masque de bits qui peut spécifier une combinaison des valeurs répertoriées ci
 
 - `CRecordset::useExtendedFetch` Implémentez `SQLExtendedFetch` au lieu de `SQLFetch`. Il est conçu pour l’implémentation de l’extraction de lignes en bloc sur les recordsets avant uniquement. Si vous spécifiez l’option `CRecordset::useMultiRowFetch` sur un recordset avant uniquement, puis `CRecordset::useExtendedFetch` est activé automatiquement.
 
-- `CRecordset::userAllocMultiRowBuffers` L’utilisateur sera allouer des mémoires tampons de stockage pour les données. Utilisez cette option conjointement avec `CRecordset::useMultiRowFetch` si vous souhaitez allouer votre propre stockage ; sinon, le framework automatiquement alloue le stockage nécessaire. Pour plus d’informations, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Notez que la spécification `CRecordset::userAllocMultiRowBuffers` sans spécifier `CRecordset::useMultiRowFetch` entraîne un échec d’assertion.
+- `CRecordset::userAllocMultiRowBuffers` L’utilisateur sera allouer des mémoires tampons de stockage pour les données. Utilisez cette option conjointement avec `CRecordset::useMultiRowFetch` si vous souhaitez allouer votre propre stockage ; sinon, le framework automatiquement alloue le stockage nécessaire. Pour plus d’informations, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Notez que la spécification `CRecordset::userAllocMultiRowBuffers` sans spécifier `CRecordset::useMultiRowFetch` entraîne un échec d’assertion.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1599,13 +1599,13 @@ Lorsque vous appelez `Open`, une requête, généralement une SQL **sélectionne
 
 La procédure habituelle consiste à passer NULL pour `Open`; dans ce cas, `Open` appels [GetDefaultSQL](#getdefaultsql). Si vous utilisez une dérivée `CRecordset` classe, `GetDefaultSQL` donne les noms de table spécifié dans ClassWizard. Vous pouvez spécifier à la place d’autres informations dans le `lpszSQL` paramètre.
 
-Ce que vous transmettez `Open` construit une chaîne SQL finale pour la requête (la chaîne peut avoir SQL **où** et **ORDER BY** clauses ajouté à la `lpszSQL` chaîne que vous avez passé), puis l’exécute la requête. Vous pouvez examiner la chaîne construite en appelant [GetSQL](#getsql) après avoir appelé `Open`. Pour des détails supplémentaires sur la façon dont le jeu d’enregistrements construit une instruction SQL et sélectionne les enregistrements, consultez l’article [Recordset : sélection d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Ce que vous transmettez `Open` construit une chaîne SQL finale pour la requête (la chaîne peut avoir SQL **où** et **ORDER BY** clauses ajouté à la `lpszSQL` chaîne que vous avez passé), puis l’exécute la requête. Vous pouvez examiner la chaîne construite en appelant [GetSQL](#getsql) après avoir appelé `Open`. Pour des détails supplémentaires sur la façon dont le jeu d’enregistrements construit une instruction SQL et sélectionne les enregistrements, consultez l’article [jeu d’enregistrements : La sélection de jeux d’enregistrements d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
 
 Les membres de données de champ de votre classe de jeu d’enregistrements sont liés aux colonnes de données sélectionnées. Si tous les enregistrements sont retournés, le premier enregistrement devient l’enregistrement actif.
 
 Si vous souhaitez définir des options pour le jeu d’enregistrements, tel qu’un filtre ou un tri, spécifiez-les après avoir construit l’objet recordset, mais avant d’appeler `Open`. Si vous souhaitez actualiser les enregistrements dans le jeu d’enregistrements après le jeu d’enregistrements est déjà ouvert, appelez [Requery](#requery).
 
-Pour plus d’informations, y compris des exemples supplémentaires, consultez les articles [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [Recordset : sélection d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md), et [Recordset : création et fermeture Jeux d’enregistrements (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).
+Pour plus d’informations, y compris des exemples supplémentaires, consultez les articles [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [jeu d’enregistrements : La sélection de jeux d’enregistrements d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md), et [jeu d’enregistrements : Création et fermeture de Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).
 
 ### <a name="example"></a>Exemple
 
@@ -1645,7 +1645,7 @@ Pour utiliser `RefreshRowset`, vous devez avoir implémenté l’extraction de l
 |SQL_LOCK_EXCLUSIVE|La source de données ou de pilote verrouille exclusivement la ligne. Toutes les données sources ne prennent en charge ce type de verrou.|
 |SQL_LOCK_UNLOCK|La source de données ou de pilote déverrouille la ligne. Toutes les données sources ne prennent en charge ce type de verrou.|
 
-Pour plus d’informations sur `SQLSetPos`, consultez le kit SDK Windows. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur `SQLSetPos`, consultez le kit SDK Windows. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="requery"></a>  CRecordset::Requery
 
@@ -1705,7 +1705,7 @@ Vous pouvez également transmettre des valeurs négatives pour `SetAbsolutePosit
 > [!NOTE]
 >  Position absolue n’est pas destinée à être utilisé comme un numéro d’enregistrement de substitution. Les signets sont toujours recommandé de conserver et revenir à une position donnée, depuis les changements de position d’un enregistrement lorsque des enregistrements précédents sont supprimés. En outre, vous ne peut pas être sûr qu’un enregistrement donné aura la même position absolue si le jeu d’enregistrements est recréé à nouveau, car l’ordre des enregistrements individuels dans un jeu d’enregistrements n’est pas garanti, sauf si elle est créée avec une instruction SQL à l’aide d’un **ORDER BY** clause.
 
-Pour plus d’informations sur la navigation de jeu d’enregistrements et les signets, consultez les articles [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Pour plus d’informations sur la navigation de jeu d’enregistrements et les signets, consultez les articles [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="setbookmark"></a>  CRecordset::SetBookmark
 
@@ -1732,7 +1732,7 @@ Pour tout d’abord récupérer le signet de l’enregistrement en cours, appele
 > [!NOTE]
 >  Après certaines opérations de jeu d’enregistrements, vous devez vérifier la persistance de signet avant d’appeler `SetBookmark`. Par exemple, si vous récupérez un signet avec `GetBookmark` , puis appelez `Requery`, le signet peut ne plus être valid. Appelez [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) pour vérifier si vous pouvez appeler en toute sécurité `SetBookmark`.
 
-Pour plus d’informations sur les signets et de navigation de jeu d’enregistrements, consultez les articles [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) et [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Pour plus d’informations sur les signets et de navigation de jeu d’enregistrements, consultez les articles [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) et [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
 ##  <a name="setfielddirty"></a>  CRecordset::SetFieldDirty
 
@@ -1744,7 +1744,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 Contient l’adresse d’un membre de données de champ dans le jeu d’enregistrements ou NULL. Si NULL, tous les membres de données de champ dans le jeu d’enregistrements marqués. (C++ NULL n’est pas identique à la valeur Null dans la terminologie de base de données, ce qui signifie « ne having aucune valeur. »)
 
 *bDirty*<br/>
@@ -1755,7 +1755,7 @@ TRUE si le membre de données de champ doit être marqué comme « modifié »
 Marquage des champs restent inchangés garantit que le champ n’est pas mis à jour et entraîne moins de trafic SQL.
 
 > [!NOTE]
->  Cette fonction membre n’est pas applicable sur les jeux d’enregistrements qui est à l’aide de l’extraction de lignes en bloc. Si vous avez implémenté l’extraction de lignes en bloc, puis `SetFieldDirty` entraîne un échec d’assertion. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette fonction membre n’est pas applicable sur les jeux d’enregistrements qui est à l’aide de l’extraction de lignes en bloc. Si vous avez implémenté l’extraction de lignes en bloc, puis `SetFieldDirty` entraîne un échec d’assertion. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Les marques de framework modifié des données membres de champ pour vous assurer qu’ils seront écrites à l’enregistrement sur la source de données par le mécanisme record field exchange (RFX). Modification de la valeur d’un champ généralement définit le champ modifié automatiquement, donc vous serez rarement nécessaire d’appeler `SetFieldDirty` vous-même, mais vous pouvez parfois faire en sorte que les colonnes seront explicitement mis à jour ou insérés, quel que soit la valeur est dans les données de champ membre.
 
@@ -1784,7 +1784,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 Contient l’adresse d’un membre de données de champ dans le jeu d’enregistrements ou NULL. Si NULL, tous les membres de données de champ dans le jeu d’enregistrements marqués. (C++ NULL n’est pas identique à la valeur Null dans la terminologie de base de données, ce qui signifie « ne having aucune valeur. »)
 
 *bNull*<br/>
@@ -1795,7 +1795,7 @@ Différent de zéro si le membre de données de champ doit être marquée comme 
 Lorsque vous ajoutez un nouvel enregistrement à un jeu d’enregistrements, tous les membres de données de champ sont initialement définies sur une valeur Null et marqués comme « modifié » (modifié). Lorsque vous récupérez un enregistrement à partir d’une source de données, ses colonnes soit déjà ont des valeurs ou ont la valeur Null.
 
 > [!NOTE]
->  N’appelez pas cette fonction membre sur les jeux d’enregistrements qui est à l’aide de l’extraction de lignes en bloc. Si vous avez implémenté l’extraction de lignes en bloc, l’appel `SetFieldNull` entraîne un échec d’assertion. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  N’appelez pas cette fonction membre sur les jeux d’enregistrements qui est à l’aide de l’extraction de lignes en bloc. Si vous avez implémenté l’extraction de lignes en bloc, l’appel `SetFieldNull` entraîne un échec d’assertion. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Si vous voulez désigner un champ de l’enregistrement actuel comme n’ayant ne pas une valeur, appelez `SetFieldNull` avec *bNull* définie sur TRUE pour marquer en tant que valeur Null. Si un champ marqué Null et que vous voulez lui donner une valeur, définissez simplement sa nouvelle valeur. Vous n’êtes pas obligé de supprimer l’indicateur Null avec `SetFieldNull`. Pour déterminer si le champ est autorisé à avoir la valeur Null, appelez `IsFieldNullable`.
 
@@ -1894,7 +1894,7 @@ Pour utiliser `SetRowsetCursorPosition`, vous devez avoir implémenté l’extra
 |SQL_LOCK_EXCLUSIVE|La source de données ou de pilote verrouille exclusivement la ligne. Toutes les données sources ne prennent en charge ce type de verrou.|
 |SQL_LOCK_UNLOCK|La source de données ou de pilote déverrouille la ligne. Toutes les données sources ne prennent en charge ce type de verrou.|
 
-Pour plus d’informations sur `SQLSetPos`, consultez le kit SDK Windows. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur `SQLSetPos`, consultez le kit SDK Windows. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="setrowsetsize"></a>  CRecordset::SetRowsetSize
 
@@ -1923,7 +1923,7 @@ Appelez `SetRowsetSize` avant d’appeler `Open` pour définir initialement la t
 
 Pour obtenir la valeur actuelle de la taille de l’ensemble de lignes, appelez [GetRowsetSize](#getrowsetsize).
 
-Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="update"></a>  CRecordset::Update
 
@@ -1942,7 +1942,7 @@ Différent de zéro si un enregistrement a été correctement mis à jour ; Sin
 Appelez cette fonction membre après un appel à la [AddNew](#addnew) ou [modifier](#edit) fonction membre. Cet appel est requis pour terminer la `AddNew` ou `Edit` opération.
 
 > [!NOTE]
->  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `Update`. Cela entraîne un échec d’assertion. Bien que classe `CRecordset` ne fournit pas de mécanisme de mise à jour en bloc des lignes de données, vous pouvez écrire vos propres fonctions à l’aide de la fonction API ODBC `SQLSetPos`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `Update`. Cela entraîne un échec d’assertion. Bien que classe `CRecordset` ne fournit pas de mécanisme de mise à jour en bloc des lignes de données, vous pouvez écrire vos propres fonctions à l’aide de la fonction API ODBC `SQLSetPos`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Les deux `AddNew` et `Edit` préparer un mémoire tampon d’édition dans lequel sont placées les données ajoutées ou modifiées pour l’enregistrement dans la source de données. `Update` enregistre les données. Seuls les champs marqués ou détecté comme étant modifiée sont mis à jour.
 
@@ -1951,11 +1951,11 @@ Si la source de données prend en charge les transactions, vous pouvez rendre le
 > [!CAUTION]
 >  Si vous appelez `Update` sans d’abord appeler `AddNew` ou `Edit`, `Update` lève un `CDBException`. Si vous appelez `AddNew` ou `Edit`, vous devez appeler `Update` avant d’appeler un `Move` opération ou avant de fermer le jeu d’enregistrements ou de la connexion de source de données. Sinon, vos modifications sont perdues sans notification.
 
-Pour plus d’informations sur la gestion des `Update` échecs, consultez l’article [Recordset : mise à jour des enregistrements par les Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+Pour plus d’informations sur la gestion des `Update` échecs, consultez l’article [jeu d’enregistrements : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 ### <a name="example"></a>Exemple
 
-Consultez l’article [Transaction : exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+Consultez l’article [Transaction : Exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -33,12 +33,12 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 7550e6f0ef44abd19b3fab89127ff898c72738f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278208"
 ---
 # <a name="concurrency-namespace-functions"></a>fonctions d’espace de noms d’accès concurrentiel
 
@@ -57,7 +57,7 @@ ms.locfileid: "50436177"
 |[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|
 |[run_with_cancellation_token](#run_with_cancellation_token)|[send](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|
-|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[attente](#wait)|
+|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|
 |[when_all](#when_all)|[when_any](#when_any)|
 
 ##  <a name="alloc"></a>  Alloc
@@ -118,7 +118,7 @@ Pour plus d’informations, consultez [fonctions de passage de messages](../../.
 
 ##  <a name="cancel_current_task"></a>  cancel_current_task
 
-Annule la tâche en cours d’exécution. Cette fonction peut être appelée à partir du corps d’une tâche pour annuler l’exécution de la tâche et la faire passer à l’état `canceled`.
+Annule la tâche en cours d’exécution. Cette fonction peut être appelée à partir du corps d'une tâche pour annuler l'exécution de la tâche et la faire passer à l'état `canceled`.
 
 L'appel de cette fonction en dehors du corps d'un objet `task` n'est pas pris en charge. Cela entraînerait un comportement non défini tel qu'un blocage dans votre application.
 
@@ -126,7 +126,7 @@ L'appel de cette fonction en dehors du corps d'un objet `task` n'est pas pris en
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```
 
-##  <a name="clear"></a>  Effacer
+##  <a name="clear"></a>  clear
 
 Efface la file d’attente simultanée, en détruisant les actuellement les éléments en file d’attente. Cette méthode n’est pas concurrentiel.
 
@@ -169,7 +169,7 @@ Le type de retour de l’objet lambda détermine si la construction est une acti
 
 Les objets lambda qui retournent void provoquent la création d'actions. Les objets lambda qui retournent un résultat de type `TResult` provoquent la création d'opérations TResult.
 
-L'objet lambda peut également retourner un résultat `task<TResult>` qui encapsule le travail asynchrone en lui-même ou qui est la continuation d'une chaîne de tâches représentant le travail asynchrone. Dans ce cas, l’objet lambda lui-même est exécuté en ligne, car les tâches sont celles exécutées de façon asynchrone et le type de retour de l’objet lambda est désencapsulé afin de produire la construction asynchrone retournée par `create_async`. Cela implique une expression lambda qui retourne une tâche\<void > provoque la création d’actions et une expression lambda qui retourne une tâche\<TResult > provoque la création d’opérations TResult.
+L'objet lambda peut également retourner un résultat `task<TResult>` qui encapsule le travail asynchrone en lui-même ou qui est la continuation d'une chaîne de tâches représentant le travail asynchrone. Dans ce cas, l'objet lambda lui-même est exécuté en ligne, car les tâches sont celles exécutées de façon asynchrone et le type de retour de l'objet lambda est désencapsulé afin de produire la construction asynchrone retournée par `create_async`. Cela implique une expression lambda qui retourne une tâche\<void > provoque la création d’actions et une expression lambda qui retourne une tâche\<TResult > provoque la création d’opérations TResult.
 
 L’objet lambda peut prendre zéro, un ou deux arguments. Les arguments valides sont `progress_reporter<TProgress>` et `cancellation_token`, dans cet ordre si les deux sont utilisés. Un objet lambda sans arguments provoque la création d’une construction asynchrone sans la capacité de créer un rapport de progression. Une expression lambda qui prend un argument progress_reporter\<TProgress > entraîne `create_async` retourne une construction asynchrone qui signale la progression de type TProgress chaque fois que le `report` méthode de l’objet progress_reporter est appelée. Un objet lambda qui prend un argument cancellation_token peut l’utiliser pour vérifier l’annulation, ou le passer aux tâches qu’il crée afin que l’annulation de la construction asynchrone provoque l’annulation de ces tâches.
 
@@ -199,7 +199,7 @@ Plusieurs appels suivants à cette méthode retourne la même instance du Gestio
 
 ##  <a name="create_task"></a>  create_task
 
-Crée une bibliothèque de modèles parallèles [tâche](task-class.md) objet. `create_task` peut être utilisé partout où vous auriez utilisé un constructeur de tâche. Il est fourni principalement pour des raisons pratiques, car il permet d’utiliser le mot clé `auto` pendant la création de tâches.
+Crée une bibliothèque de modèles parallèles [tâche](task-class.md) objet. `create_task` peut être utilisé partout où vous auriez utilisé un constructeur de tâche. Il est fourni principalement pour des raisons pratiques, car il permet d'utiliser le mot clé `auto` pendant la création de tâches.
 
 ```
 template<typename T>
@@ -267,7 +267,7 @@ Si le traçage a été correctement lancé, `S_OK` est retourné ; sinon, `E_NO
 
 ##  <a name="free"></a>  Gratuit
 
-Libère un bloc de mémoire précédemment alloué par la méthode `Alloc` au sous-allocateur de mise en cache du runtime d’accès concurrentiel.
+Libère un bloc de mémoire précédemment alloué par la méthode `Alloc` au sous-allocateur de mise en cache du runtime d'accès concurrentiel.
 
 ```
 void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
@@ -408,7 +408,7 @@ Vous ne devez pas intercepter l’exception d’annulation interne levée par le
 
 ##  <a name="is_current_task_group_canceling"></a>  is_current_task_group_canceling
 
-Retourne une indication qui détermine si le groupe de tâches qui s’exécute actuellement inline sur le contexte actuel est au beau milieu d’une annulation active (ou le sera bientôt). Notez que si aucun groupe de tâches ne s’exécute actuellement inline sur le contexte actuel, `false` est retourné.
+Retourne une indication qui détermine si le groupe de tâches qui s'exécute actuellement inline sur le contexte actuel est au beau milieu d'une annulation active (ou le sera bientôt). Notez que si aucun groupe de tâches ne s'exécute actuellement inline sur le contexte actuel, `false` est retourné.
 
 ```
 bool __cdecl is_current_task_group_canceling();
@@ -669,10 +669,10 @@ Le type d’un allocateur de mémoire compatible de bibliothèque C++ Standard.
 *_Function*<br/>
 Le type de la comparaison binaire.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à trier.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à trier.
 
 *_Alloc*<br/>
@@ -1078,10 +1078,10 @@ Le type d’un allocateur de mémoire compatible de bibliothèque C++ Standard.
 *_Function*<br/>
 Le type de la fonction de projection.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à trier.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à trier.
 
 *_Alloc*<br/>
@@ -1147,10 +1147,10 @@ Type permettant de réduire l’entrée, qui peut être différent du type d’�
 *_Range_reduce_fun*<br/>
 Le type de la fonction de réduction de la plage. Cela doit être un type de fonction avec la signature `_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`, _Reduce_type est le même que le type d’identité et le type de résultat de la réduction.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Itérateur d’entrée ciblant le premier élément dans la plage est réduite.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Un itérateur d’entrée qui traite de l’élément qui est une position après le dernier élément dans la plage est réduite.
 
 *_Identity*<br/>
@@ -1202,10 +1202,10 @@ Type d’itérateur de la plage d’entrée.
 *_Function*<br/>
 Le type de foncteur comparaison binaire.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à trier.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à trier.
 
 *_Func*<br/>
@@ -1343,13 +1343,13 @@ Itérateur de sortie qui traite la position située immédiatement après le der
 
 Pour les itérateurs ne prenant pas en charge aléatoire d’accès, uniquement [auto_partitioner](auto-partitioner-class.md) est pris en charge.
 
-Les surcharges prenant l’argument `_Unary_op` transforment la plage d’entrée en plage de sortie en appliquant le foncteur unaire à chaque élément de la plage d’entrée. `_Unary_op` doit prendre en charge l'opérateur d'appel de fonction avec la signature `operator()(T)` où `T` est le type de valeur de la plage à itérer.
+Les surcharges prenant l'argument `_Unary_op` transforment la plage d'entrée en plage de sortie en appliquant le foncteur unaire à chaque élément de la plage d'entrée. `_Unary_op` doit prendre en charge l'opérateur d'appel de fonction avec la signature `operator()(T)` où `T` est le type de valeur de la plage à itérer.
 
 Les surcharges prenant l'argument `_Binary_op` transforment deux plages d'entrée en une plage de sortie en appliquant le foncteur binaire à un élément de la première plage d'entrée et à un élément de la deuxième plage d'entrée. `_Binary_op` doit prendre en charge l'opérateur d'appel de fonction avec la signature `operator()(T, U)` où `T`, `U` sont des types de valeur des deux itérateurs d'entrée.
 
 Pour plus d’informations, consultez [algorithmes parallèles](../../../parallel/concrt/parallel-algorithms.md).
 
-##  <a name="receive"></a>  Réception
+##  <a name="receive"></a>  receive
 
 Implémentation générale de la fonction receive, qui permet à un contexte d'attendre des données en provenance d'une seule source exactement et de filtrer les valeurs qui sont acceptées.
 
@@ -1385,7 +1385,7 @@ Type de charge utile.
 *_Src*<br/>
 Pointeur ou référence à la source à partir de laquelle les données sont attendues.
 
-*_Délai*<br/>
+*_Timeout*<br/>
 La durée maximale pour laquelle la méthode doit pour les données, en millisecondes.
 
 *_Filter_proc*<br/>
@@ -1427,7 +1427,7 @@ Le jeton d’annulation qui contrôlera implicite d’annulation de l’objet de
 
 Les points d’interruption dans l’objet de fonction sera déclenchée lorsque le `cancellation_token` est annulée. Le jeton explicit `_Ct` cela isolera `_Func` à partir de l’annulation de parent si le parent a un jeton différent ou aucun jeton.
 
-##  <a name="send"></a>  Envoyer
+##  <a name="send"></a>  send
 
 Opération d’envoi synchrone qui attend que la cible accepte ou refuse le message.
 
@@ -1600,7 +1600,7 @@ Type de l'objet. Il s’agit généralement d’un bloc de message ou d’un age
 *_PObject*<br/>
 Pointeur vers le bloc de message ou d’un agent nommé dans la trace.
 
-*_Nom*<br/>
+*_Name*<br/>
 Le nom de l’objet donné.
 
 ##  <a name="try_receive"></a>  try_receive
@@ -1649,7 +1649,7 @@ Un `bool` valeur indiquant si une charge utile a été placée dans `_value`.
 
 Pour plus d’informations, consultez [fonctions de passage de messages](../../../parallel/concrt/message-passing-functions.md).
 
-##  <a name="wait"></a>  attente
+##  <a name="wait"></a>  wait
 
 Suspend le contexte actuel pendant une durée spécifiée.
 
@@ -1685,10 +1685,10 @@ auto when_all(
 *_Iterator*<br/>
 Type de l'itérateur d'entrée.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Position du premier élément dans la plage d’éléments à combiner dans la tâche obtenue.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Position du premier élément au-delà de la plage d’éléments à combiner dans la tâche obtenue.
 
 *_TaskOptions*<br/>
@@ -1708,7 +1708,7 @@ Pour plus d’informations, consultez [parallélisme des tâches](../../../paral
 
 ##  <a name="when_any"></a>  when_any
 
-Crée une tâche qui s’effectue quand l’une des tâches fournies en tant qu’arguments s’effectue.
+Crée une tâche qui s'effectue quand l'une des tâches fournies en tant qu'arguments s'effectue.
 
 ```
 template<typename _Iterator>
@@ -1737,19 +1737,19 @@ auto when_any(
 *_Iterator*<br/>
 Type de l'itérateur d'entrée.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Position du premier élément dans la plage d’éléments à combiner dans la tâche obtenue.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Position du premier élément au-delà de la plage d’éléments à combiner dans la tâche obtenue.
 
 *_TaskOptions*<br/>
 *_CancellationToken*<br/>
-Jeton d’annulation contrôlant l’annulation de la tâche retournée. Si vous ne fournissez pas de jeton d’annulation, la tâche qui en résulte recevra le jeton d’annulation de la tâche entraînant sa fin.
+Jeton d'annulation contrôlant l'annulation de la tâche retournée. Si vous ne fournissez pas de jeton d’annulation, la tâche qui en résulte recevra le jeton d’annulation de la tâche entraînant sa fin.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Tâche qui s’effectue quand l’une des deux tâches d’entrée s’est correctement déroulée. Si les tâches d'entrée sont de type `T`, la sortie de cette fonction est une `task<std::pair<T, size_t>>>`, où le premier élément de la paire est le résultat de la fin de la tâche et le deuxième élément est l'index de la tâche terminée. Si les tâches d’entrée sont de type `void`, la sortie est une `task<size_t>`, où le résultat est l’index de fin de la tâche.
+Tâche qui s'effectue quand l'une des deux tâches d'entrée s'est correctement déroulée. Si les tâches d'entrée sont de type `T`, la sortie de cette fonction est une `task<std::pair<T, size_t>>>`, où le premier élément de la paire est le résultat de la fin de la tâche et le deuxième élément est l'index de la tâche terminée. Si les tâches d’entrée sont de type `void`, la sortie est une `task<size_t>`, où le résultat est l’index de fin de la tâche.
 
 ### <a name="remarks"></a>Notes
 

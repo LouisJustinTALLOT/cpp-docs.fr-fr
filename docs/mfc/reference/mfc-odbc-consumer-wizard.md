@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 8b2d554cb6b4eaeb7ee1ddd884aefb3ab6da0f2e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523414"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259930"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Consommateur ODBC MFC (Assistant)
 
@@ -66,7 +66,7 @@ Cet Assistant définit une classe de jeu d’enregistrements ODBC et les liaison
 
    Spécifie si le recordset est une feuille de réponse dynamique (par défaut) ou un instantané.
 
-   - **Feuille de réponse dynamique**: Spécifie que le recordset est une feuille de réponse dynamique. Un jeu de données est le résultat d’une requête qui fournit une vue indexée dans les données de la base de données interrogée. Feuille de réponse dynamique met en cache qu’un index intégral pour les données d’origine et de gagner ainsi offre un performances sur un instantané. L’index pointe directement vers chaque enregistrement trouvé à la suite d’une requête et indique si un enregistrement est supprimé. Vous avez également accès aux informations mises à jour dans les enregistrements interrogées. Il s'agit de la valeur par défaut.
+   - **Feuille de réponse dynamique**: Spécifie que le jeu d’enregistrements est une feuille de réponse dynamique. Un jeu de données est le résultat d’une requête qui fournit une vue indexée dans les données de la base de données interrogée. Feuille de réponse dynamique met en cache qu’un index intégral pour les données d’origine et de gagner ainsi offre un performances sur un instantané. L’index pointe directement vers chaque enregistrement trouvé à la suite d’une requête et indique si un enregistrement est supprimé. Vous avez également accès aux informations mises à jour dans les enregistrements interrogées. Il s'agit de la valeur par défaut.
 
    - **Instantané**: Spécifie que le jeu d’enregistrements est un instantané. Un instantané est le résultat d’une requête et est une vue dans une base de données à un point dans le temps. Tous les enregistrements trouvés à la suite de la requête sont mis en cache, vous ne voyez pas les modifications apportées aux enregistrements d’origine.
 
@@ -78,4 +78,3 @@ Cet Assistant définit une classe de jeu d’enregistrements ODBC et les liaison
 
 [MFC ODBC, consommation](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)
-

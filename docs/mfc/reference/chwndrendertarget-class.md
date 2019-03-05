@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: 439ff0152ec69575f21faa332d8fac4bbe779a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551864"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270318"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget, classe
 
@@ -68,7 +68,7 @@ class CHwndRenderTarget : public CRenderTarget;
 
 |Nom|Description|
 |----------|-----------------|
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|Renvoie l’interface ID2D1HwndRenderTarget.|
+|[CHwndRenderTarget::operator ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|Renvoie l’interface ID2D1HwndRenderTarget.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
@@ -84,7 +84,7 @@ class CHwndRenderTarget : public CRenderTarget;
 
 [CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrendertarget.h
 
@@ -123,7 +123,7 @@ CHwndRenderTarget(HWND hwnd = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-*HWND*<br/>
+*hwnd*<br/>
 Le HWND associé à cette cible de rendu
 
 ##  <a name="create"></a>  CHwndRenderTarget::Create
@@ -187,7 +187,7 @@ Pointeur vers un objet ID2D1HwndRenderTarget.
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;
 ```
 
-##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget *
+##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget*
 
 Renvoie l’interface ID2D1HwndRenderTarget.
 

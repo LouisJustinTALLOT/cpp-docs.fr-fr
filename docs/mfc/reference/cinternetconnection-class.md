@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-ms.openlocfilehash: da11f62cfb453e31d3cacc1d4bc5b8a26f5b3764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f17c3ade53ec45ddde654e83c77fe1d817d8495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564799"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275348"
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection, classe
 
@@ -67,7 +67,7 @@ Pour en savoir plus sur la façon dont des classes de WinInet, consultez l’art
 
 `CInternetConnection`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxinet.h
 
@@ -91,7 +91,7 @@ Un pointeur vers un [CInternetSession](../../mfc/reference/cinternetsession-clas
 *pstrServer*<br/>
 Un pointeur vers une chaîne contenant le nom du serveur.
 
-*%nPort*<br/>
+*nPort*<br/>
 Nombre qui identifie le port Internet pour cette connexion.
 
 *dwContext*<br/>
@@ -163,4 +163,3 @@ operator HINTERNET() const;
 
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

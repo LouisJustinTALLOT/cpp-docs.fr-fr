@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-ms.openlocfilehash: 772388d069bdec274bd396b776d404711b694771
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4210399e32c2bb39008afa75b787c19e3338a7d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560369"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276349"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange, classe
 
@@ -74,7 +74,7 @@ Pour plus d’informations sur l’utilisation de `CPropExchange`, consultez l�
 
 `CPropExchange`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl.h
 
@@ -127,7 +127,7 @@ virtual BOOL ExchangeFontProp(
 *pszPropName*<br/>
 Le nom de la propriété qui est échangé.
 
-*police*<br/>
+*font*<br/>
 Une référence à un [CFontHolder](../../mfc/reference/cfontholder-class.md) objet qui contient la propriété de police.
 
 *pFontDesc*<br/>
@@ -166,7 +166,7 @@ Le nom de la propriété qui est échangé.
 *ppUnk*<br/>
 Un pointeur vers une variable qui contient un pointeur vers la propriété `IUnknown` interface (cette variable est généralement un membre de votre classe).
 
-*IID*<br/>
+*iid*<br/>
 ID de l’interface sur la propriété qui utilise le contrôle.
 
 *pUnkDefault*<br/>
@@ -294,4 +294,3 @@ Différent de zéro si les propriétés sont en cours de chargement ; sinon 0.
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-ms.openlocfilehash: 80d4f37ef8b67c2902e5d34cb4ec8aa4cf35a616
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446db94ec49859e2213f00d205df57e332c85af2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264142"
 ---
 # <a name="tree-control-label-editing"></a>Modification des étiquettes de contrôles d’arborescence
 
@@ -28,4 +28,3 @@ Au cours de la modification d’étiquette, généralement en réponse à la [TV
 
 [Utilisation de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

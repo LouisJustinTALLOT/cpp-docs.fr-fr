@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: e2deed5e3fb63f46d83cf4c6f0d3c13525e93a2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90c80dbc5c8b6788f3afad3cf77d796139fbd946
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592531"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326645"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml Helper Macros
 
@@ -41,7 +41,7 @@ Les macros d’assistance de DDX_DHtml permettent un accès facile aux propriét
 |[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|Définit ou récupère l’URL de l’image associée.|
 |[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|Définit ou récupère l’URL de l’image associée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdhtml.h
 
@@ -58,7 +58,7 @@ DDX_DHtml_Anchor_Href(
 
 #### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objet.
 
 *name*<br/>
@@ -84,7 +84,7 @@ DDX_DHtml_Anchor_Target(
 
 #### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objet.
 
 *name*<br/>
@@ -110,7 +110,7 @@ DDX_DHtml_ElementInnerHtml(
 
 #### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objet.
 
 *name*<br/>
@@ -136,7 +136,7 @@ DDX_DHtml_ElementInnerText(
 
 #### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objet.
 
 *name*<br/>
@@ -162,7 +162,7 @@ DDX_DHtml_ElementValue(
 
 #### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objet.
 
 *name*<br/>
@@ -190,7 +190,7 @@ DDX_DHtml_Frame_Src(
 
 #### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objet.
 
 *name*<br/>
@@ -216,7 +216,7 @@ DDX_DHtml_IFrame_Src(
 
 #### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objet.
 
 *name*<br/>
@@ -242,7 +242,7 @@ DDX_DHtml_Img_Src(
 
 #### <a name="parameters"></a>Paramètres
 
-*DX*<br/>
+*dx*<br/>
 Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objet.
 
 *name*<br/>

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 759f4cdb66c1e16f022731e9d3183ad1192e0975
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585131"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291637"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -134,7 +134,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCDe
 
 [CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxDesktopAlertWnd.h
 
@@ -440,7 +440,7 @@ void SetAutoCloseTime(int nTime);
 
 ### <a name="parameters"></a>Paramètres
 
-*Nintervalle*<br/>
+*nTime*<br/>
 [in] La durée, en millisecondes, qui doit s’écouler avant la fenêtre d’alerte se ferme automatiquement.
 
 ### <a name="remarks"></a>Notes

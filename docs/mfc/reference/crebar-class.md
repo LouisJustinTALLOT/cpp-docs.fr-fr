@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 344886ca4af45d55b85cc7471c1e558d73cbebf6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4216898e85ebbec748598e10ebb31ce5510f7908
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175884"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267782"
 ---
 # <a name="crebar-class"></a>CReBar (classe)
 
@@ -66,7 +66,7 @@ Un objet rebar se comporte comme un objet de barre d’outils. Un contrôle reba
 
 `CReBar`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxext.h
 
@@ -178,4 +178,3 @@ Pour plus d’informations sur l’utilisation de `CReBarCtrl` pour personnalise
 [MFC, exemple MFCIE](../../visual-cpp-samples.md)<br/>
 [CControlBar, classe](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

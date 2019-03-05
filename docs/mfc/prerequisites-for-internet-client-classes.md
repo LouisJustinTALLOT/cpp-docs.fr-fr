@@ -16,12 +16,12 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-ms.openlocfilehash: b6be476e4b9f7d1aaa09a588e1c06e72032f48c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6246db7dfb2837f5d94fa51f8433b46722c43663
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629877"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267743"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Composants requis pour les classes clientes Internet
 
@@ -39,7 +39,7 @@ Certaines actions effectuées par un client Internet (lecture d’un fichier, pa
 
 ### <a name="ftp"></a>FTP
 
-|Action|Composants requis|
+|Action|Prérequis|
 |------------|------------------|
 |Établir une connexion FTP.|Créer un [CInternetSession](../mfc/reference/cinternetsession-class.md) comme base de cette application de client Internet. Appelez [CInternetSession::GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection) pour créer un [CFtpConnection](../mfc/reference/cftpconnection-class.md) objet.|
 |Rechercher la première ressource.|Établir une connexion FTP. Créer un [CFtpFileFind](../mfc/reference/cftpfilefind-class.md) objet. Appelez [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|

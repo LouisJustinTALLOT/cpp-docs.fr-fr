@@ -1,18 +1,18 @@
 ---
-title: 'Comment : convertir une boucle OpenMP qui a recours à une variable de réduction pour utiliser le runtime d’accès concurrentiel'
+title: 'Procédure : Convertir une boucle OpenMP qui utilise une Variable de réduction pour utiliser le Runtime d’accès concurrentiel'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: b58f6025c41091b39375c566d2c1d4b4798437b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d75e115bdb1d13c9e8f45ed67d0f3993eac1b387
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633075"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257317"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>Comment : convertir une boucle OpenMP qui a recours à une variable de réduction pour utiliser le runtime d’accès concurrentiel
+# <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>Procédure : Convertir une boucle OpenMP qui utilise une Variable de réduction pour utiliser le Runtime d’accès concurrentiel
 
 Cet exemple montre comment convertir une OpenMP [parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pour](../../parallel/openmp/reference/for-openmp.md) boucle qui utilise le [réduction](../../parallel/openmp/reference/reduction.md) clause pour utiliser le Runtime d’accès concurrentiel.
 
@@ -41,10 +41,9 @@ Pour plus d’informations sur la `combinable` de classe, consultez [conteneurs 
 
 Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `concrt-omp-fibonacci-reduction.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-**CL.exe /EHsc/OpenMP concrt-omp-fibonacci-reduction.cpp**
+**cl.exe /EHsc /openmp concrt-omp-fibonacci-reduction.cpp**
 
 ## <a name="see-also"></a>Voir aussi
 
 [Migration d’OpenMP au runtime d’accès concurrentiel](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Conteneurs et objets parallèles](../../parallel/concrt/parallel-containers-and-objects.md)
-

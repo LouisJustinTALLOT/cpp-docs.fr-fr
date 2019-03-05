@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: cd3eed89753031de64d35a2b3602b1fb42356123
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613536"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270720"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl, classe
 
@@ -116,7 +116,7 @@ Le `CPagerCtrl` classe est dérivée de la [CWnd](../../mfc/reference/cwnd-class
 
 `CPagerCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Paramètre|Description|
 |---------------|-----------------|
 |*dwStyle*|[in] Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles) à appliquer au contrôle.|
-|*Rect*|[in] Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle dans les coordonnées clientes.|
+|*rect*|[in] Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle dans les coordonnées clientes.|
 |*pParentWnd*|[in] Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle. Ce paramètre ne peut pas être NULL.|
 |*nID*|[in] L’ID du contrôle.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Une combinaison au niveau du bit des styles étendus à appliquer au contrôle. Pour plus d’informations, consultez le *dwExStyle* paramètre de la [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) (fonction).|
 |*dwStyle*|[in] Une combinaison au niveau du bit (ou) de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [styles de contrôle de pagineur](/windows/desktop/Controls/pager-control-styles) à appliquer au contrôle.|
-|*Rect*|[in] Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle dans les coordonnées clientes.|
+|*rect*|[in] Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle dans les coordonnées clientes.|
 |*pParentWnd*|[in] Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle. Ce paramètre ne peut pas être NULL.|
 |*nID*|[in] L’ID du contrôle.|
 
@@ -617,4 +617,3 @@ Cette méthode envoie le [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) mess
 [CPagerCtrl, classe](../../mfc/reference/cpagerctrl-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Contrôles de pagination](/windows/desktop/Controls/pager-controls)
-

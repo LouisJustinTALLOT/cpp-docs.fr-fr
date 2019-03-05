@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-ms.openlocfilehash: ddd6c6a36c05d92d2f53bc4937826581942470dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3a4b50f8dd9bc460a209c47497e720529c40e58
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491765"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276089"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection, classe
 
@@ -61,7 +61,7 @@ En général, vous utilisez `CComCriticalSection` via la **typedef** nom [Critic
 
 Consultez [ccomcritseclock, classe](../../atl/reference/ccomcritseclock-class.md) pour un moyen plus sûr d’utiliser cette classe que l’appel `Lock` et `Unlock` directement.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcore.h
 

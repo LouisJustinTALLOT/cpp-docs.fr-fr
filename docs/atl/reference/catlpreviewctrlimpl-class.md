@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: ffa2613909145bffaf901b2d5bae4129e6d434c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c50771889381ad2288637c23930103b5925a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505051"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283267"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Catlpreviewctrlimpl, classe
 
@@ -46,7 +46,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 |Nom|Description|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl :: ~ CAtlPreviewCtrlImpl](#dtor)|Destruction d’un objet de contrôle de version préliminaire.|
+|[CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl](#dtor)|Destruction d’un objet de contrôle de version préliminaire.|
 |[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Construit un objet de contrôle de version préliminaire.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
@@ -93,13 +93,13 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 `ATL::CWindowImplBaseT<TBase,TWinTraits>`
 
-[ATL::CWindowImpl\<CAtlPreviewCtrlImpl >](../../atl/reference/cwindowimpl-class.md)
+[ATL::CWindowImpl\<CAtlPreviewCtrlImpl>](../../atl/reference/cwindowimpl-class.md)
 
 `IPreviewCtrl`
 
 `ATL::CAtlPreviewCtrlImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlpreviewctrlimpl.h
 
@@ -114,7 +114,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="dtor"></a>  CAtlPreviewCtrlImpl :: ~ CAtlPreviewCtrlImpl
+##  <a name="dtor"></a>  CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl
 
 Destruction d’un objet de contrôle de version préliminaire.
 
@@ -137,7 +137,7 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 *hWndParent*<br/>
 Handle vers la fenêtre hôte fournie par l’interpréteur de commandes pour l’aperçu riche.
 
-*République populaire de Chine*<br/>
+*prc*<br/>
 Spécifie la taille initiale et la position de la fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -166,7 +166,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Paramètres
 
-*HDC*<br/>
+*hdc*<br/>
 Handle vers un contexte de périphérique pour la peinture.
 
 ### <a name="remarks"></a>Notes
@@ -225,7 +225,7 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>Paramètres
 
-*nMsg indique*<br/>
+*nMsg*<br/>
 La valeur WM_PAINT.
 
 *wParam*<br/>
@@ -287,7 +287,7 @@ Couleur d’arrière-plan de la fenêtre d’aperçu.
 *clrText*<br/>
 Couleur du texte de la fenêtre d’aperçu.
 
-*FLP*<br/>
+*plf*<br/>
 Police utilisée pour afficher du texte dans la fenêtre d’aperçu.
 
 ### <a name="remarks"></a>Notes
@@ -302,7 +302,7 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Paramètres
 
-*République populaire de Chine*<br/>
+*prc*<br/>
 Spécifie la nouvelle taille et la position du contrôle de version préliminaire.
 
 *bRedraw*<br/>

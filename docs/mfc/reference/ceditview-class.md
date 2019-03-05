@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177873"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269849"
 ---
 # <a name="ceditview-class"></a>CEditView, classe
 
@@ -186,7 +186,7 @@ BOOL FindText(
 *lpszFind*<br/>
 Le texte à rechercher.
 
-*bsuivant*<br/>
+*bNext*<br/>
 Spécifie la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
 
 *bCase*<br/>
@@ -296,7 +296,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Le texte à rechercher.
 
-*bsuivant*<br/>
+*bNext*<br/>
 Spécifie la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
 
 *bCase*<br/>
@@ -355,7 +355,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 Le texte à rechercher.
 
-*bsuivant*<br/>
+*bNext*<br/>
 Spécifie la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
 
 *bCase*<br/>

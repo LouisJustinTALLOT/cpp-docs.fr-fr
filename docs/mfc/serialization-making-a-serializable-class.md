@@ -1,5 +1,5 @@
 ---
-title: 'Sérialisation : définir une classe sérialisable'
+title: 'Sérialisation : Définir une classe sérialisable'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - serializable class [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-ms.openlocfilehash: aa9a7f6cb1cb28c701e3954cad27e60cf9f7df4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 995744381c8f82dc637e4aa0452e37af170b168b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486968"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281458"
 ---
-# <a name="serialization-making-a-serializable-class"></a>Sérialisation : définir une classe sérialisable
+# <a name="serialization-making-a-serializable-class"></a>Sérialisation : Définir une classe sérialisable
 
 Cinq étapes principales sont requises pour rendre une classe sérialisable. Elles sont répertoriées ci-dessous et expliquées dans les sections suivantes :
 
@@ -71,7 +71,7 @@ La macro DECLARE_SERIAL est requis dans la déclaration des classes qui prendra 
 
 ##  <a name="_core_defining_a_constructor_with_no_arguments"></a> Définition d’un constructeur sans arguments
 
-MFC requiert un constructeur par défaut lorsqu'il recrée les objets tels qu'ils sont désérialisés (chargés du disque). Le processus de désérialisation complète toutes les variables membres avec les valeurs requises pour recréer l'objet.
+MFC requiert un constructeur par défaut lorsqu'il recrée les objets tels qu'ils sont désérialisés (chargés du disque). Le processus de désérialisation complète toutes les variables membres avec les valeurs requises pour recréer l’objet.
 
 Ce constructeur peut être déclaré public, protégé ou privé. Si vous le protégez ou le rendez privé, vous vous assurez qu'il sera utilisé uniquement par les fonctions de sérialisation. Le constructeur doit mettre l'objet dans un état qui l'autorise à être supprimé, si nécessaire.
 
@@ -92,9 +92,8 @@ L’exemple suivant montre comment utiliser IMPLEMENT_SERIAL pour une classe, `C
 
 [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]
 
-Une fois que vous avez une classe sérialisable, vous pouvez sérialiser des objets de la classe, comme indiqué dans l’article [sérialisation : sérialisation d’un objet](../mfc/serialization-serializing-an-object.md).
+Une fois que vous avez une classe sérialisable, vous pouvez sérialiser des objets de la classe, comme indiqué dans l’article [sérialisation : Sérialisation d’un objet](../mfc/serialization-serializing-an-object.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Sérialisation](../mfc/serialization-in-mfc.md)
-

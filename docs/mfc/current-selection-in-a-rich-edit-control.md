@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], current selection in
 - selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
-ms.openlocfilehash: 4b4b4d0b3419201cd1243bf6f846ab0e1b5ed686
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4516c4506419169ac3ab284e6c59cae71595be59
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636502"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286862"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Sélection actuelle dans un contrôle RichEdit
 
@@ -30,4 +30,3 @@ Vous pouvez rechercher une chaîne dans un contrôle rich edit à l’aide de la
 
 [Utilisation de CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

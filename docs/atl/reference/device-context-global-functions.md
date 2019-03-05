@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-ms.openlocfilehash: 25ceae897d3cc845ab06fd4d898c87518b15eacb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aeebec65def9364e56156f6bb323815da012e11f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551201"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257436"
 ---
 # <a name="device-context-global-functions"></a>Fonctions globales de contexte de périphérique
 
@@ -29,7 +29,7 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 ### <a name="parameters"></a>Paramètres
 
-*HDC*<br/>
+*hdc*<br/>
 [in] Le handle existant d’un contexte de périphérique, ou NULL.
 
 *ptd*<br/>
@@ -45,7 +45,7 @@ Si la structure est NULL et *hdc* est NULL, crée un contexte de périphérique 
 
 Si *hdc* n’est pas NULL et *ptd* est NULL, la fonction retourne existant *hdc*.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin.h
 

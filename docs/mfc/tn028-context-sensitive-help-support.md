@@ -1,5 +1,5 @@
 ---
-title: "TN028 : prise en charge de l'aide contextuelle"
+title: 'TN028 : Prise en charge de l’aide contextuelle'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288283"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>TN028 : prise en charge de l'aide contextuelle
+# <a name="tn028-context-sensitive-help-support"></a>TN028 : Prise en charge de l’aide contextuelle
 
 Cette note décrit les règles permettant d'affecter des ID d'aide contextuelle et d'autres problèmes liés à l'aide dans MFC. La prise en charge de l'aide contextuelle requiert le compilateur d'aide qui est disponible dans Visual C++.
 
 > [!NOTE]
->  En plus d'implémenter l'aide contextuelle avec WinHelp, MFC offre également un support en utilisant l'aide HTML. Pour plus d’informations sur cette prise en charge et la programmation avec l’aide HTML, consultez [aide HTML : aide contextuelle pour vos programmes](../mfc/html-help-context-sensitive-help-for-your-programs.md).
+>  En plus d'implémenter l'aide contextuelle avec WinHelp, MFC offre également un support en utilisant l'aide HTML. Pour plus d’informations sur cette prise en charge et la programmation avec l’aide HTML, consultez [aide HTML : Aide contextuelle pour vos programmes](../mfc/html-help-context-sensitive-help-for-your-programs.md).
 
 ## <a name="types-of-help-supported"></a>Types d'aide pris en charge
 
@@ -30,7 +30,7 @@ L'outil Microsoft Foundation Classes implémente ces deux formes d'aide. En outr
 
 ## <a name="help-files"></a>Fichiers d’aide
 
-Les classes Microsoft Foundation sous-entendent un seul fichier d'aide. Ce fichier d'aide doit avoir le même nom et le même chemin d'accès que l'application. Par exemple, si le fichier exécutable est C:\MyApplication\MyHelp.exe, le fichier d'aide sera C:\MyApplication\MyHelp.hlp. Vous définissez le chemin d’accès via le *m_pszHelpFilePath* variable membre de la [classe CWinApp](../mfc/reference/cwinapp-class.md).
+Les classes Microsoft Foundation sous-entendent un seul fichier d'aide. Ce fichier d’aide doit avoir le même nom et le même chemin d’accès que l’application. Par exemple, si le fichier exécutable est C:\MyApplication\MyHelp.exe, le fichier d'aide sera C:\MyApplication\MyHelp.hlp. Vous définissez le chemin d’accès via le *m_pszHelpFilePath* variable membre de la [classe CWinApp](../mfc/reference/cwinapp-class.md).
 
 ## <a name="help-context-ranges"></a>Plages contextuelles d'aide
 
@@ -152,7 +152,7 @@ Le code source de MAKEHM est disponible dans l’exemple d’utilitaires de prog
 
 ## <a name="adding-help-support-after-running-the-mfc-application-wizard"></a>Ajout de la prise en charge de l'Aide après exécution de l'Assistant Application MFC
 
-La meilleure méthode pour ajouter de l'aide à votre application consiste à activer l'option "Aide contextuelle"sur la page des fonctionnalités avancées de l'Assistant Application MFC avant de créer votre application. De cette façon, l'Assistant Application MFC ajoute automatiquement les entrées de la table des messages nécessaires à votre classe dérivée de `CWinApp` pour prendre en charge l'Aide.
+La meilleure méthode pour ajouter de l’aide à votre application consiste à activer l’option "Aide contextuelle"sur la page des fonctionnalités avancées de l’Assistant Application MFC avant de créer votre application. De cette façon, l'Assistant Application MFC ajoute automatiquement les entrées de la table des messages nécessaires à votre classe dérivée de `CWinApp` pour prendre en charge l'Aide.
 
 ## <a name="help-on-message-boxes"></a>Aide sur les boîtes de message
 
@@ -180,4 +180,3 @@ Dans le deuxième cas, la valeur par défaut de nIDHelp est -1, ce qui indique q
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

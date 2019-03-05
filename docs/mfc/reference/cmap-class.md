@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657576"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305170"
 ---
 # <a name="cmap-class"></a>CMap (classe)
 
@@ -359,7 +359,7 @@ Différent de zéro si l’élément a été trouvé ; sinon 0.
 
 [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]
 
-##  <a name="operator_at"></a>  [] CMap::operator
+##  <a name="operator_at"></a>  CMap::operator [ ]
 
 Une alternative pratique à la `SetAt` fonction membre.
 

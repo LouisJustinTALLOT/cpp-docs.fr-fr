@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df96d44cefeb15d89653538c3006d109a97a21a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531246"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298254"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Fonctions d'échange de données de boîtes de dialogue pour contrôles OLE
 
@@ -66,17 +66,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête :** afxdisp.h
 
@@ -100,17 +100,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 
@@ -134,17 +134,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 
@@ -168,17 +168,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 
@@ -208,17 +208,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 
@@ -248,17 +248,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 
@@ -288,17 +288,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 
@@ -328,17 +328,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 
@@ -362,17 +362,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 
@@ -396,17 +396,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 
@@ -430,17 +430,17 @@ Un pointeur vers un **CDataExchange** objet. L’infrastructure fournit cet obje
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 
@@ -464,17 +464,17 @@ Pointeur vers un objet `CDataExchange` . L’infrastructure fournit cet objet po
 *nIDC*<br/>
 ID d’un contrôle OLE situé dans l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution d’une propriété du contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdisp.h
 

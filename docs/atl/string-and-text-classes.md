@@ -6,12 +6,12 @@ helpviewer_keywords:
 - string conversion, ATL
 - string classes [ATL]
 ms.assetid: aa0cdc41-c953-4b17-82b6-59b908545571
-ms.openlocfilehash: 5fc4203c3d1c9ee975618b3df799a5dc6bde1c82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f694cbf9dc806cbb6ef3e5e649e91c9ad5bfa75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657780"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295257"
 ---
 # <a name="string-and-text-classes"></a>Chaîne et les Classes de texte
 
@@ -37,4 +37,3 @@ Ces classes fournissent la prise en charge pour les chaînes et les conversions 
 
 [Vue d’ensemble de la classe](../atl/atl-class-overview.md)<br/>
 [Macros de Conversion de chaîne MFC et ATL](reference/string-conversion-macros.md)
-

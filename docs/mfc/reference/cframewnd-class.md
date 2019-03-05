@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178790"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300884"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -329,7 +329,7 @@ Pointe vers une chaîne de caractères se terminant par null qui représente le 
 *dwStyle*<br/>
 Spécifie la fenêtre [style](../../mfc/reference/styles-used-by-mfc.md#window-styles) attributs. Inclure le style FWS_ADDTOTITLE si vous souhaitez que la barre de titre pour afficher automatiquement le nom du document représenté dans la fenêtre.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position de la fenêtre. Le *rectDefault* valeur permet à Windows spécifier la taille et la position de la nouvelle fenêtre.
 
 *pParentWnd*<br/>
@@ -901,7 +901,7 @@ virtual BOOL OnCreateClient(
 
 ### <a name="parameters"></a>Paramètres
 
-*Procedure Calls, LPC*<br/>
+*lpcs*<br/>
 Un pointeur vers un Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) structure.
 
 *pContext*<br/>
@@ -1115,7 +1115,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*nStyle*|[in] Spécifie si le menu par défaut est masquée, ou n’est visible et a le focus. Le *nStyle* paramètre peut avoir les valeurs suivantes :<br /><br />-AFX_MBV_KEEPVISIBLE (0 X 01)-<br />     Le menu est affiché en permanence et par défaut n’a pas le focus.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02)-<br />     Le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche ALT pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur ALT ou sur ÉCHAP pour masquer le menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (combinaison (OR)) - le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche F10 pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur la touche F10 pour activer/désactiver le focus ou désactiver le menu. Le menu s’affiche jusqu'à ce que vous appuyez sur la touche ALT ou sur ÉCHAP pour le masquer.|
+|*nStyle*|[in] Spécifie si le menu par défaut est masquée, ou n’est visible et a le focus. Le *nStyle* paramètre peut avoir les valeurs suivantes :<br /><br />- AFX_MBV_KEEPVISIBLE (0x01) -<br />     Le menu est affiché en permanence et par défaut n’a pas le focus.<br />- AFX_MBV_DISPLAYONFOCUS (0x02) -<br />     Le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche ALT pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur ALT ou sur ÉCHAP pour masquer le menu.<br />- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinaison (OR)) - le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche F10 pour afficher le menu et lui donner le focus. Si le menu s’affiche, appuyez sur la touche F10 pour activer/désactiver le focus ou désactiver le menu. Le menu s’affiche jusqu'à ce que vous appuyez sur la touche ALT ou sur ÉCHAP pour le masquer.|
 
 ### <a name="remarks"></a>Notes
 

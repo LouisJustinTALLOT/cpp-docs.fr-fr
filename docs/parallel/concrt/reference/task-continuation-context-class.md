@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-ms.openlocfilehash: 5f358dbc61fc39928e877dbc3673a8b9f51917eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582508"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280290"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context, classe
 
@@ -36,8 +36,8 @@ class task_continuation_context : public details::_ContextCallback;
 |Nom|Description|
 |----------|-----------------|
 |[get_current_winrt_context](#get_current_winrt_context)|Retourne un objet de contexte de continuation de tâche qui représente le contexte actuel du thread winrt.|
-|[use_arbitrary](#use_arbitrary)|Crée un contexte de continuation de tâche qui permet au runtime de choisir le contexte d’exécution pour une continuation.|
-|[use_current](#use_current)|Renvoie un objet de contexte de continuation de tâche représentant le contexte d’exécution actuel.|
+|[use_arbitrary](#use_arbitrary)|Crée un contexte de continuation de tâche qui permet au runtime de choisir le contexte d'exécution pour une continuation.|
+|[use_current](#use_current)|Renvoie un objet de contexte de continuation de tâche représentant le contexte d'exécution actuel.|
 |[use_default](#use_default)|Crée le contexte de continuation de tâche par défaut.|
 |[use_synchronous_execution](#use_synchronous_execution)|Retourne un objet de contexte de continuation de tâche qui représente le contexte de l’exécution synchrone.|
 
@@ -47,7 +47,7 @@ class task_continuation_context : public details::_ContextCallback;
 
 `task_continuation_context`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ppltasks.h
 
@@ -77,7 +77,7 @@ Cette méthode est similaire à la `use_current` (méthode), mais il est égalem
 
 ##  <a name="use_arbitrary"></a> use_arbitrary
 
-Crée un contexte de continuation de tâche qui permet au runtime de choisir le contexte d’exécution pour une continuation.
+Crée un contexte de continuation de tâche qui permet au runtime de choisir le contexte d'exécution pour une continuation.
 
 ```
 static task_continuation_context use_arbitrary();
@@ -97,7 +97,7 @@ Cette méthode est uniquement disponible pour les applications Windows Runtime.
 
 ##  <a name="use_current"></a> use_current
 
-Renvoie un objet de contexte de continuation de tâche représentant le contexte d’exécution actuel.
+Renvoie un objet de contexte de continuation de tâche représentant le contexte d'exécution actuel.
 
 ```
 static task_continuation_context use_current();

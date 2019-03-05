@@ -1,5 +1,5 @@
 ---
-title: "Exceptions : libération d'objets dans les exceptions"
+title: 'Exceptions : Libération d’objets dans les Exceptions'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 6e03d46a2600458f3107efa6e0b6b0d643c9b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442469"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298128"
 ---
-# <a name="exceptions-freeing-objects-in-exceptions"></a>Exceptions : libération d'objets dans les exceptions
+# <a name="exceptions-freeing-objects-in-exceptions"></a>Exceptions : Libération d’objets dans les Exceptions
 
 Cet article explique la nécessité et la méthode de libération d’objets lorsqu’une exception se produit. Les rubriques traitées ici sont les suivantes :
 
@@ -62,9 +62,8 @@ Le mécanisme d’exception désalloue automatiquement les objets d’images ; 
 
 Si vous appelez des fonctions qui peuvent lever des exceptions, vous pouvez utiliser **try/catch** blocs pour vous assurer que vous interceptez les exceptions et que vous avez la possibilité de détruire tous les objets que vous avez créé. En particulier, n’oubliez pas que de nombreuses fonctions MFC peuvent lever des exceptions.
 
-Pour plus d’informations, consultez [Exceptions : interception et suppression des Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Pour plus d’informations, consultez [Exceptions : Interception et suppression d’Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion des exceptions](../mfc/exception-handling-in-mfc.md)
-

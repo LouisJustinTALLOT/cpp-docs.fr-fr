@@ -1,5 +1,5 @@
 ---
-title: Planificateur de tâches (runtime d’accès concurrentiel)
+title: Planificateur de tâches (runtime d'accès concurrentiel)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription [Concurrency Runtime]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-ms.openlocfilehash: 91ef4ed14fa1ddc25ff494f6666a50f5b39b8a54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676705"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286807"
 ---
-# <a name="task-scheduler-concurrency-runtime"></a>Planificateur de tâches (runtime d’accès concurrentiel)
+# <a name="task-scheduler-concurrency-runtime"></a>Planificateur de tâches (runtime d'accès concurrentiel)
 
 Les rubriques de cette partie de la documentation décrivent les fonctionnalités importantes du planificateur de tâches du runtime d’accès concurrentiel. Le planificateur de tâches s’avère utile quand vous voulez affiner les performances de votre code existant qui utilise le runtime d’accès concurrentiel.
 
@@ -35,13 +35,13 @@ Les rubriques de cette partie de la documentation décrivent les fonctionnalité
 > [!TIP]
 >  Le runtime d'accès concurrentiel fournit un planificateur par défaut, et vous n'êtes donc pas obligé d'en créer un dans votre application. Étant donné que le Planificateur de tâches vous aide à optimiser les performances de vos applications, nous vous recommandons de commencer avec le [bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) ou [bibliothèque d’Agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md) si vous êtes nouvelle pour le Runtime d’accès concurrentiel.
 
-Le planificateur de tâches planifie et coordonne les tâches au moment de l’exécution. Un *tâche* est une unité de travail qui exécute un travail spécifique. En règle générale, une tâche peut s’exécuter en parallèle avec d’autres tâches. Le travail effectué par les éléments de groupe de tâches, les algorithmes parallèles et les agents asynchrones sont tous des exemples de tâches.
+Le planificateur de tâches planifie et coordonne les tâches au moment de l'exécution. Un *tâche* est une unité de travail qui exécute un travail spécifique. En règle générale, une tâche peut s’exécuter en parallèle avec d’autres tâches. Le travail effectué par les éléments de groupe de tâches, les algorithmes parallèles et les agents asynchrones sont tous des exemples de tâches.
 
-Le planificateur de tâches gère les détails liés à la planification efficace des tâches sur les ordinateurs dotés de multiples ressources informatiques. Il utilise également les nouvelles fonctionnalités du système d'exploitation sous-jacent. Par conséquent, les applications qui utilisent le runtime d’accès concurrentiel évoluent et s’améliorent automatiquement sur du matériel qui possède des capacités développées.
+Le planificateur de tâches gère les détails liés à la planification efficace des tâches sur les ordinateurs dotés de multiples ressources informatiques. Il utilise également les nouvelles fonctionnalités du système d'exploitation sous-jacent. Par conséquent, les applications qui utilisent le runtime d'accès concurrentiel évoluent et s'améliorent automatiquement sur du matériel qui possède des capacités étendues.
 
-[Comparaison aux autres modèles d’accès concurrentiel](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) décrit les différences entre les mécanismes de planification préemptifs et coopératives. Le planificateur de tâches utilise la planification coopérative et un algorithme de vol de travail avec le planificateur de préemption du système d’exploitation pour optimiser l’utilisation des ressources de traitement.
+[Comparaison aux autres modèles d’accès concurrentiel](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) décrit les différences entre les mécanismes de planification préemptifs et coopératives. Le planificateur de tâches utilise la planification coopérative et un algorithme de vol de travail avec le planificateur de préemption du système d'exploitation pour optimiser l'utilisation des ressources de traitement.
 
-Le runtime d'accès concurrentiel fournit un planificateur par défaut pour vous éviter d'avoir à gérer les détails de l'infrastructure. Ainsi, vous n'utilisez habituellement pas le planificateur de tâches directement. Toutefois, pour répondre aux besoins de qualité de votre application, vous pouvez utiliser le planificateur de tâches pour fournir votre propre stratégie de planification ou associer des planificateurs spécifiques à des tâches spécifiques. Par exemple, supposons que vous ayez une routine de tri parallèle qui n'évolue pas au-delà de quatre processeurs. Vous pouvez utiliser *des stratégies de planificateur* pour créer un planificateur qui ne génère pas plus de quatre tâches simultanées. L'exécution de la routine de tri sur ce planificateur permet aux autres planificateurs actifs d'utiliser toutes les ressources de traitement restantes.
+Le runtime d'accès concurrentiel fournit un planificateur par défaut pour que vous n'ayez pas à gérer les détails de l'infrastructure. Ainsi, vous n’utilisez habituellement pas le planificateur de tâches directement. Toutefois, pour répondre aux besoins de qualité de votre application, vous pouvez utiliser le planificateur de tâches pour fournir votre propre stratégie de planification ou associer des planificateurs spécifiques à des tâches spécifiques. Par exemple, supposons que vous ayez une routine de tri parallèle qui n'évolue pas au-delà de quatre processeurs. Vous pouvez utiliser *des stratégies de planificateur* pour créer un planificateur qui ne génère pas plus de quatre tâches simultanées. L'exécution de la routine de tri sur ce planificateur permet aux autres planificateurs actifs d'utiliser toutes les ressources de traitement restantes.
 
 ## <a name="related-topics"></a>Rubriques connexes
 
@@ -57,4 +57,3 @@ Le runtime d'accès concurrentiel fournit un planificateur par défaut pour vous
 |[Bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Décrit comment utiliser divers modèles parallèles, par exemple, des algorithmes parallèles, dans vos applications.|
 |[Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)|Décrit comment utiliser des agents asynchrones dans vos applications.|
 |[Le runtime d’accès concurrentiel](../../parallel/concrt/concurrency-runtime.md)|Décrit le runtime d'accès concurrentiel, qui simplifie la programmation parallèle, et contient des liens vers les rubriques connexes.|
-

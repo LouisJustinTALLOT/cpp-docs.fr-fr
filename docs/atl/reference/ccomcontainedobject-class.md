@@ -14,12 +14,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: 289174fbfc61b0bbca65233fe24d93537627e17d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15ea9be2a3576081901c9e744d89d33688fe838a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492571"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273580"
 ---
 # <a name="ccomcontainedobject-class"></a>Ccomcontainedobject, classe
 
@@ -37,7 +37,7 @@ class CComContainedObject : public Base
 
 #### <a name="parameters"></a>Paramètres
 
-*base de*<br/>
+*Base*<br/>
 Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
 
 ## <a name="members"></a>Membres
@@ -47,7 +47,7 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 |Nom|Description|
 |----------|-----------------|
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Constructeur. Initialise le pointeur de membre à l’objet propriétaire `IUnknown`.|
-|[CComContainedObject :: ~ CComContainedObject](#dtor)|Destructeur.|
+|[CComContainedObject::~CComContainedObject](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -68,7 +68,7 @@ ATL utilise `CComContainedObject` dans les classes [CComAggObject](../../atl/ref
 
 `CComContainedObject`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -94,14 +94,14 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 [in] L’objet propriétaire `IUnknown`.
 
 ### <a name="remarks"></a>Notes
 
 Définit le `m_pOuterUnknown` pointeur de membre (héritées par le biais du `Base` classe) à *pv*.
 
-##  <a name="dtor"></a>  CComContainedObject :: ~ CComContainedObject
+##  <a name="dtor"></a>  CComContainedObject::~CComContainedObject
 
 Destructeur.
 
@@ -141,13 +141,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] L’identificateur de l’interface demandée.
 
 *ppvObject*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par *iid*. Si l’objet ne prend pas en charge cette interface, *ppvObject* est définie sur NULL.
 
-*PP*<br/>
+*pp*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par le type `Q`. Si l’objet ne prend pas en charge cette interface, *pp* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -1,5 +1,5 @@
 ---
-title: 'TN023 : ressources MFC standard'
+title: 'TN023 : Ressources MFC standard'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.resources
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: 04789ba85a9f7c193a88ba1a0d097b3671808e9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559911"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277675"
 ---
-# <a name="tn023-standard-mfc-resources"></a>TN023 : ressources MFC standard
+# <a name="tn023-standard-mfc-resources"></a>TN023 : Ressources MFC standard
 
 Cette note décrit les ressources standard fournies et requises par la bibliothèque MFC.
 
@@ -25,9 +25,9 @@ MFC propose deux catégories de ressources prédéfinies que vous pouvez utilise
 
 Les ressources image clipart sont des ressources supplémentaires auxquelles le framework ne dépend, mais que vous pouvez souhaiter ajouter à l'interface utilisateur de l'application. Les ressources image clipart suivantes figurent dans l’exemple général MFC [CLIPART](../visual-cpp-samples.md):
 
-- Common.rc : un seul fichier de ressources qui contient :
+- Common.rc : Un seul fichier de ressources qui contient :
 
-   - Une grande collection d'icônes qui représentent une variété de tâches d'entreprise et de traitement de données.
+   - Une grande collection d’icônes qui représentent une variété de tâches d’entreprise et de traitement de données.
 
    - Plusieurs curseurs communs (voir aussi l'Afxres.rc).
 
@@ -35,23 +35,23 @@ Les ressources image clipart sont des ressources supplémentaires auxquelles le 
 
    - Ressources bitmap et icône utilisées par Commdlg.dll.
 
-- Indicate.rc : contient des ressources de chaîne pour les indicateurs d'état du bouton de la barre d'état, tels que "CAP" pour les Majuscules.
+- Indicate.rc : Contient des ressources de chaîne pour les indicateurs d’état de la clé de barre d’état, tels que « CAP » pour le verrouillage des majuscules.
 
 - Prompts.rc : Contient des ressources de chaîne d’invite de menu pour chaque commande prédéfinie, par exemple « Créer un nouveau document » pour ID_FILE_NEW.
 
-- Commdlg.rc : fichier .rc compatible Visual C++ qui contient les modèles de la boîte de dialogue COMMDLG standard.
+- COMMDLG.rc : Un fichier .rc compatible Visual C++ qui contient les modèles de boîte de dialogue COMMDLG standards.
 
 Les ressources framework standard sont des ressources avec des ID AFX auxquelles le framework dépend pour les implémentations internes. Vous devez fréquemment modifier ces ressources AFX. Dans ce cas, vous devrez suivre la procédure dont les grandes lignes sont présentées plus loin dans cette rubrique.
 
 Les ressources framework suivantes sont contenues dans le répertoire MFC\INCLUDE :
 
-- Afxres.rc : ressources communes utilisées par le framework.
+- AFXRES.rc : Ressources communes utilisées par l’infrastructure.
 
-- Afxprint.rc : ressources spécifiques à l'impression.
+- Afxprint.rc : Ressources spécifiques à l’impression.
 
-- Afxolecl.rc : ressources spécifiques aux applications clientes OLE.
+- AFXOLECL.rc : Ressources spécifiques aux applications clientes OLE.
 
-- Afxolev.rc : ressources spécifiques aux applications serveur OLE complètes.
+- Afxolev.rc : Ressources spécifiques aux applications serveur OLE complètes.
 
 ## <a name="using-clip-art-resources"></a>Utilisation des ressources image clipart
 
@@ -73,7 +73,7 @@ Pour utiliser d'autres ressources image clipart, suivez les mêmes étapes. La s
 
 ### <a name="customizing-standard-framework-resources"></a>Personnalisation des ressources framework standard
 
-Les ressources framework standard sont généralement incluses dans une application avec la commande #include dans le fichier de ressources d'une application. AppWizard génère un fichier de ressources. Ce fichier contient les ressources framework standard adéquates, en fonction des options AppWizard que vous sélectionnez. Vous pouvez examiner, ajouter ou supprimer les ressources incluses en modifiant les directives au moment de la compilation. Pour ce faire, ouvrez le **ressource** menu et sélectionnez **Set Includes**. Recherchez l’élément de modification "Compile-Time Directives". Exemple :
+Les ressources framework standard sont généralement incluses dans une application avec la commande #include dans le fichier de ressources d'une application. AppWizard génère un fichier de ressources. Ce fichier contient les ressources framework standard adéquates, en fonction des options AppWizard que vous sélectionnez. Vous pouvez examiner, ajouter ou supprimer les ressources incluses en modifiant les directives au moment de la compilation. Pour ce faire, ouvrez le **ressource** menu et sélectionnez **Set Includes**. Recherchez l'élément de modification "Compile-Time Directives". Exemple :
 
 ```
 #include "afxres.rc"
@@ -103,4 +103,3 @@ Dans certains cas exceptionnels, vous pouvez personnaliser le contenu des ressou
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

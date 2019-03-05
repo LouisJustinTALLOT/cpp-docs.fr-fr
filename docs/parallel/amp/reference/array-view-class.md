@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657485"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268467"
 ---
 # <a name="arrayview-class"></a>array_view, classe
 
@@ -147,11 +147,11 @@ Chacune des actions informe le `array_view` de l’objet que la mémoire native 
 
 `array_view`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp.h
 
-**Namespace :** Concurrence
+**Espace de noms :** Concurrence
 
 ##  <a name="dtor"></a> ~ array_view
 
@@ -345,10 +345,10 @@ Composant le moins significatif de l’étendue de cette section.
 *_Extent*<br/>
 Objet extent dans chaque dimension de ce `array_view`.
 
-*_Autre*<br/>
+*_Other*<br/>
 Un objet de type `array_view<T,N>` à partir de laquelle initialiser la nouvelle `array_view`.
 
-*_Taille*<br/>
+*_Size*<br/>
 La taille d’un tableau de style C à partir de laquelle les données sont fournies.
 
 *_Src*<br/>
@@ -512,7 +512,7 @@ Index.
 
 La valeur de l’élément à l’index, ou un `array_view` projeté sur la dimension la plus significative.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Copie le contenu de l’objet `array_view` objet à celui-ci.
 
@@ -526,7 +526,7 @@ array_view& operator= (
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `array_view` objet à copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -641,7 +641,7 @@ Composant le moins significatif de l’étendue de cette section.
 *_Ext*<br/>
 Le [étendue](extent-class.md) objet qui spécifie l’étendue de la section. L’origine est 0.
 
-*IDX*<br/>
+*_Idx*<br/>
 Le [index](index-class.md) objet qui spécifie l’emplacement d’origine. La sous-section est le reste de l’étendue.
 
 *_I0*<br/>
@@ -754,7 +754,7 @@ L’access_type souhaité sur l’accelerator_view cible. Ce paramètre a une va
 
 Un futur en attente pour l’opération se termine.
 
-##  <a name="value_type"></a> Value_type
+##  <a name="value_type"></a> value_type
 
 Le type de valeur de l’array_view et du tableau lié.
 

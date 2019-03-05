@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 5de597484db727646b80bd522f11465f442393fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522296"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287321"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de débogage et rapport d’erreurs
 
@@ -94,7 +94,7 @@ Expression (pointeurs inclus) qui prend une valeur différente de zéro ou 0.
 
 Dans les versions debug, évalue ATLASSERT ; *booleanExpression* et génère un rapport de débogage lorsque le résultat est false.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldef.h
 
@@ -112,7 +112,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 *booleanExpression*<br/>
 Spécifie une expression booléenne à tester.
 
-*ressources humaines*<br/>
+*hr*<br/>
 Spécifie un code d’erreur à retourner.
 
 ### <a name="remarks"></a>Notes
@@ -131,7 +131,7 @@ La différence entre ATLENSURE et ATLASSERT ; est que ATLENSURE lève une excep
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -156,7 +156,7 @@ Dans les versions release, renvoie simplement E_NOTIMPL.
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atltrace.h
 
@@ -181,7 +181,7 @@ ATLTRACE(
 *category*<br/>
 [in] Type d’événement ou méthode sur lequel au rapport. Consultez la section Notes pour obtenir la liste des catégories.
 
-*Niveau*<br/>
+*level*<br/>
 [in] Le niveau de suivi pour le rapport. Consultez la section Notes pour plus d’informations.
 
 *lpszFormat*<br/>
@@ -212,7 +212,7 @@ ATLTRACE2(
 *category*<br/>
 [in] Type d’événement ou méthode sur lequel au rapport. Consultez la section Notes pour obtenir la liste des catégories.
 
-*Niveau*<br/>
+*level*<br/>
 [in] Le niveau de suivi pour le rapport. Consultez la section Notes pour plus d’informations.
 
 *lpszFormat*<br/>

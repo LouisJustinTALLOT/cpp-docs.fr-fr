@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: ef88486d14ade1d5871d614069dc1c202d6ad159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d28739ced9aedd29106937cb717c87a241993036
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654218"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291026"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange, classe
 
@@ -44,7 +44,7 @@ class CDaoFieldExchange
 
 |Nom|Description|
 |----------|-----------------|
-|[Section CDaoFieldExchange::m_nOperation](#m_noperation)|L’opération DFX en cours d’exécution par l’appel actuel à l’ensemble d’enregistrements `DoFieldExchange` fonction membre.|
+|[CDaoFieldExchange::m_nOperation](#m_noperation)|L’opération DFX en cours d’exécution par l’appel actuel à l’ensemble d’enregistrements `DoFieldExchange` fonction membre.|
 |[CDaoFieldExchange::m_prs](#m_prs)|Pointeur vers le jeu d’enregistrements sur quel DFX opérations sont effectuées.|
 
 ## <a name="remarks"></a>Notes
@@ -71,7 +71,7 @@ Le [IsValidOperation](#isvalidoperation) fonction membre est fournie pour l’é
 
 `CDaoFieldExchange`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 
@@ -93,7 +93,7 @@ Certaines des opérations effectuées par le mécanisme DFX s’appliquent uniqu
 
 Pour plus d’informations sur l’écriture des routines DFX personnalisées, consultez [technique 53 Remarque](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).
 
-##  <a name="m_noperation"></a>  Section CDaoFieldExchange::m_nOperation
+##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation
 
 Identifie l’opération à effectuer sur le [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet associé à l’objet exchange du champ.
 

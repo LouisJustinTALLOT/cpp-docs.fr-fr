@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1)'
+title: 'Procédure pas à pas : La mise à jour de l’Application de Scribble MFC (partie 1)'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - examples [MFC], update existing application
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 85ff0c17f8ec523fc5cb52101fb44cfc37dd9b50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481846"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258760"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1)
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : La mise à jour de l’Application de Scribble MFC (partie 1)
 
 Cette procédure pas à pas montre comment modifier une application MFC existante à utiliser l’interface utilisateur ruban. Visual Studio prend en charge le ruban d’Office 2007 et le ruban Windows Scenic de Windows 7. Pour plus d’informations sur l’interface utilisateur ruban, consultez [rubans](/windows/desktop/uxguide/cmd-ribbons).
 
@@ -113,7 +113,7 @@ Les quatre étapes de cette procédure pas à pas qui nécessitent des ressource
 
 - Copier un fichier de ressources approprié à partir d’une autre application à votre projet, puis importez les bitmaps à partir de ce fichier.
 
-Cette procédure pas à pas copie des fichiers de ressources à partir de l’exemple créé dans [procédure pas à pas : création d’un ruban Application à l’aide de MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+Cette procédure pas à pas copie des fichiers de ressources à partir de l’exemple créé dans [procédure pas à pas : Création d’une Application de ruban à l’aide de MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
 ### <a name="to-add-bitmaps-to-the-project"></a>Pour ajouter des images bitmap au projet
 
@@ -169,7 +169,7 @@ Un ruban comporte la **Application** bouton, ce qui est le grand bouton sur le c
 
 1. Vous pouvez personnaliser le **Application** bouton en modifiant ses propriétés. Les ID de message utilisés dans ce code sont déjà définies dans le menu pour 1.0 de dessin à main levée.
 
-1. Dans la vue conception, cliquez sur le **Application** bouton pour afficher ses propriétés. Modifier les valeurs des propriétés comme suit : **Image** à `IDB_RIBBON_MAIN`, **invite** à `File`, **clés** à `f`, **degrandesImages** à `IDB_RIBBON_FILELARGE`, et **petites Images** à `IDB_RIBBON_FILESMALL`.
+1. Dans la vue conception, cliquez sur le **Application** bouton pour afficher ses propriétés. Modifier les valeurs des propriétés comme suit : **Image** à `IDB_RIBBON_MAIN`, **invite** à `File`, **clés** à `f`, **grandes Images** à `IDB_RIBBON_FILELARGE`et **Petites Images** à `IDB_RIBBON_FILESMALL`.
 
 1. Les modifications suivantes créer le menu qui s’affiche lorsque l’utilisateur clique sur le **Application** bouton. Cliquez sur le bouton de sélection (**...** ) à côté **Main éléments** pour ouvrir le **Éditeur d’éléments**.
 
@@ -238,7 +238,7 @@ Maintenant que vous avez créé le **Application** bouton, vous pouvez ajouter d
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>Pour ajouter une catégorie d’accueil et de modifier le panneau de configuration
 
-1. Le programme de dessin à main levée ne requiert qu’une seule catégorie. Dans la vue conception, dans le **boîte à outils**, double-cliquez sur **catégorie** pour ajouter un et afficher ses propriétés. Modifier les valeurs des propriétés comme suit : **légende** à `&Home`, **grandes Images** à `IDB_RIBBON_HOMELARGE`, **petites Images** à `IDB_RIBBON_HOMESMALL`.
+1. Le programme de dessin à main levée ne requiert qu’une seule catégorie. Dans la vue conception, dans le **boîte à outils**, double-cliquez sur **catégorie** pour ajouter un et afficher ses propriétés. Modifier les valeurs des propriétés comme suit : **Légende** à `&Home`, **grandes Images** à `IDB_RIBBON_HOMELARGE`, **petites Images** à `IDB_RIBBON_HOMESMALL`.
 
 1. Chaque catégorie de ruban s’articule autour des panneaux nommées. Chaque panneau contient un ensemble de contrôles que les opérations connexes terminée. Cette catégorie contient un panneau. Cliquez sur **panneau**, puis modifiez **légende** à `Edit`.
 
@@ -269,4 +269,4 @@ Vous avez modifié l’exemple Scribble des MFC 1.0 classique pour utiliser le *
 ## <a name="see-also"></a>Voir aussi
 
 [Procédures pas à pas](../mfc/walkthroughs-mfc.md)<br/>
-[Procédure pas à pas : mise à jour de l’application Scribble MFC (partie 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Procédure pas à pas : La mise à jour de l’Application de Scribble MFC (partie 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

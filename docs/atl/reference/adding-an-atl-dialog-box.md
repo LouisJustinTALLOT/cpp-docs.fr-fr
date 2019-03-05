@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC dialog boxes, ATL dialogs
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-ms.openlocfilehash: ee6f6b1b83c625b30b601275084550309e0e7c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebbb610debe5d480cd1161149f89c4d357f9cd02
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495366"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275795"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Ajout d’une boîte de dialogue ATL
 

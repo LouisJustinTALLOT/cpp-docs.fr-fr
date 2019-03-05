@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: f143b2c58159d1bb0812152c68d3c31153d4570d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b9557a76d133d81a07320f1a64482d17c955ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467429"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301591"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch, Interface
 
@@ -100,7 +100,7 @@ Si vous établissez une liaison à ATL90.dll, **AXHost** charge les informations
 
 Consultez [hébergement ActiveX des contrôles à l’aide de ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour plus d’informations.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 La définition de cette interface est disponible dans plusieurs formes, comme illustré dans le tableau ci-dessous.
 
@@ -698,4 +698,3 @@ L’implémentation d’objet hôte ATL utilise VARIANT_TRUE comme valeur par d�
 [IAxWinHostWindow, interface](../../atl/reference/iaxwinhostwindow-interface.md)<br/>
 [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-

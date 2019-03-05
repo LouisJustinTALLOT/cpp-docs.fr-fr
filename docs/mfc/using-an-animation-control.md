@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CAnimateCtrl class [MFC], animation controls
 - animation controls [MFC]
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
-ms.openlocfilehash: fa5ce6cc30d4bc31dbe52c0e559ce97e40acacba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10bd8c0c26f92ce5de2261d6aca6fc7cc3a37365
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630995"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274633"
 ---
 # <a name="using-an-animation-control"></a>Utilisation d'un contrôle Animation
 
@@ -33,4 +33,3 @@ L’utilisation normale d’un contrôle animation suit le modèle suivant :
 
 [Utilisation de CAnimateCtrl](../mfc/using-canimatectrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

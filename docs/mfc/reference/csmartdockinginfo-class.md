@@ -1,5 +1,5 @@
 ---
-title: Csmartdockinginfo, classe
+title: CSmartDockingInfo Class
 ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d5f918b591e1db9ff67288a8761f7554698fa761
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176768"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273463"
 ---
-# <a name="csmartdockinginfo-class"></a>Csmartdockinginfo, classe
+# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo Class
 
 Définit l'apparence des marqueurs d'ancrage intelligents.
 
@@ -101,7 +101,7 @@ L’illustration suivante montre un exemple de marqueurs d’ancrage actifs qui 
 
 [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxDockingManager.h
 

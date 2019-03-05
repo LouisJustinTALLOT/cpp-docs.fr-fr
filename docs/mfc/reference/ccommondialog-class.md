@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 47ef6591a69196ea93048e2ce3a77603b12ab4c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432733"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264870"
 ---
 # <a name="ccommondialog-class"></a>Ccommondialog, classe
 
@@ -65,7 +65,7 @@ Les classes suivantes encapsulent la fonctionnalité des boîtes de dialogue com
 
 `CCommonDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdlgs.h
 

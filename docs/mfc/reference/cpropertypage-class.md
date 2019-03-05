@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 1816e6ee2dc0f358cb2da4c8bab572daa33a29c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561237"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260749"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (classe)
 
@@ -78,7 +78,7 @@ class CPropertyPage : public CDialog
 |[CPropertyPage::OnOK](#onok)|Appelé par le framework lorsque le OK, appliquer ou bouton Fermer est activé.|
 |[CPropertyPage::OnQueryCancel](#onquerycancel)|Appelé par le framework lorsque l’utilisateur clique sur le bouton Annuler, et avant l’annulation a eu lieu.|
 |[CPropertyPage::OnReset](#onreset)|Appelé par le framework lorsque l’utilisateur clique sur le bouton Annuler.|
-|[Notifications CPropertyPage::OnSetActive](#onsetactive)|Appelé par l’infrastructure lors de la page devient la page active.|
+|[CPropertyPage::OnSetActive](#onsetactive)|Appelé par l’infrastructure lors de la page devient la page active.|
 |[CPropertyPage::OnWizardBack](#onwizardback)|Appelé par le framework lorsque l’utilisateur clique sur le bouton précédent lors de l’utilisation d’une feuille de propriétés de type de l’Assistant.|
 |[CPropertyPage::OnWizardFinish](#onwizardfinish)|Appelé par le framework lorsque l’utilisateur clique sur le bouton Terminer lors de l’utilisation d’une feuille de propriétés de type de l’Assistant.|
 |[CPropertyPage::OnWizardNext](#onwizardnext)|Appelé par le framework lorsque l’utilisateur clique sur le bouton suivant lors de l’utilisation d’une feuille de propriétés de type de l’Assistant.|
@@ -111,7 +111,7 @@ Pour plus d’informations sur l’établissement d’une feuille de propriété
 
 `CPropertyPage`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdlgs.h
 
@@ -419,7 +419,7 @@ L’implémentation par défaut de `OnReset` ne fait rien.
 
   Consultez l’exemple de [CPropertyPage::OnCancel](#oncancel).
 
-##  <a name="onsetactive"></a>  Notifications CPropertyPage::OnSetActive
+##  <a name="onsetactive"></a>  CPropertyPage::OnSetActive
 
 Cette fonction membre est appelée par le framework lorsque la page est choisie par l’utilisateur et devient la page active.
 

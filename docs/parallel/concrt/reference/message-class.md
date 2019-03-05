@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 6b0c37f61ef437662a4e624c3a81edb526e7464c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636854"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263076"
 ---
 # <a name="message-class"></a>message, classe
 
@@ -62,7 +62,7 @@ Le type de données de la charge utile dans le message.
 
 |Nom|Description|
 |----------|-----------------|
-|[charge utile](#payload)|La charge utile de la `message` objet.|
+|[payload](#payload)|La charge utile de la `message` objet.|
 
 ## <a name="remarks"></a>Notes
 
@@ -72,7 +72,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `message`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -114,7 +114,7 @@ message(
 *_P*<br/>
 La charge utile de ce message.
 
-*_ID*<br/>
+*_Id*<br/>
 ID unique de ce message.
 
 *_Msg*<br/>
@@ -124,7 +124,7 @@ Une référence ou un pointeur vers un `message` objet.
 
 Le constructeur qui accepte un pointeur vers un `message` de l’objet comme un argument lève une [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le paramètre `_Msg` est `NULL`.
 
-##  <a name="dtor"></a> ~ message
+##  <a name="dtor"></a> ~message
 
 Détruit le `message` objet.
 

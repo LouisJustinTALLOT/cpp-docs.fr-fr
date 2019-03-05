@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-ms.openlocfilehash: af600704f82a0cad402948286fa0d4b11dca0c71
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0e5250b27ce6b902939ebcbfa03bf022a202788
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578371"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304013"
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition, classe
 
@@ -79,7 +79,7 @@ La classe CCustomTransitions permet aux développeurs d’implémenter des trans
 
 `CCustomTransition`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 

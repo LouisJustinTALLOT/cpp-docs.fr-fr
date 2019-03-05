@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-ms.openlocfilehash: 6af732b381ab0c6c507d1d651b096e3976ab2d4b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: cba26ede01b69e4a077f1e842982adc8c2127331
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176495"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270044"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Principes de base des objets ATL COM
 
@@ -76,4 +76,3 @@ Propose des liens vers des rubriques conceptuelles traitant de la programmation 
 ## <a name="see-also"></a>Voir aussi
 
 [Concepts](../atl/active-template-library-atl-concepts.md)
-

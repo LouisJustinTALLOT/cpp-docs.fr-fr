@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 921d87de72c13e1971d9b40474bf3d91033c0580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284643"
 ---
 # <a name="index-class"></a>index, classe
 
@@ -67,11 +67,11 @@ Le rang, ou le nombre de dimensions.
 
 Le `index` structure représente un vecteur de coordonnées de *N* entiers qui spécifie une position unique dans une *N*-espace 3D. Les valeurs du vecteur sont triés du plus significatif au moins significatif. Vous pouvez récupérer les valeurs des composants à l’aide de [opérateur =](#operator_eq).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp.h
 
-**Espace de noms :** Concurrency
+**Espace de noms :** Concurrence
 
 ## <a name="index_ctor"></a> index, constructeur
 
@@ -106,7 +106,7 @@ explicit index(
 
 ### <a name="parameters"></a>Paramètres
 
-*_ARRAY*<br/>
+*_Array*<br/>
 Un tableau unidimensionnel avec les valeurs de classement.
 
 *_I*<br/>
@@ -121,7 +121,7 @@ La longueur de la dimension suivant-à-plus significatif.
 *_I2*<br/>
 La longueur de la dimension la moins significative.
 
-*_Autre*<br/>
+*_Other*<br/>
 Objet index sur lequel est basé le nouvel objet index.
 
 ## <a name="operator--"></a>  operator--
@@ -139,7 +139,7 @@ index operator--(
 
 Pour l’opérateur de préfixe, l’objet index (* cela). Pour l’opérateur de suffixe, un nouvel objet index.
 
-## <a name="operator_mod_eq"></a>  operator(MOD) =
+## <a name="operator_mod_eq"></a>  operator(mod)=
 
 Calcule le modulo (reste) de chaque élément dans l’objet index lorsque cet élément est divisé par le nombre spécifié.
 
@@ -171,7 +171,7 @@ index<_Rank>& operator*=(
 *_Rhs*<br/>
 Nombre à multiplier.
 
-## <a name="operator_div_eq"></a>  / =, opérateur
+## <a name="operator_div_eq"></a>  operator/=
 
 Divise chaque élément dans l’objet index par le nombre spécifié.
 
@@ -220,7 +220,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>  operator ++
+## <a name="operator_add_add"></a>  operator++
 
 Incrémente chaque élément de l’objet index.
 ```
@@ -235,7 +235,7 @@ index<_Rank> operator++(
 
 Pour l’opérateur de préfixe, l’objet index (* cela). Pour l’opérateur de suffixe, un nouvel objet index.
 
-## <a name="operator_add_eq"></a>  opérateur +=
+## <a name="operator_add_eq"></a>  operator+=
 
 Ajoute le nombre spécifié pour chaque élément de l’objet index.
 ```
@@ -268,7 +268,7 @@ index<_Rank>& operator=(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 L’objet index à copier.
 
 ### <a name="return-value"></a>Valeur de retour

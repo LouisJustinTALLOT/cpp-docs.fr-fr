@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: f9c2a99c30213a28f4c20ba0f4a2eebea85bef76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519663"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300718"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection, classe
 
@@ -68,7 +68,7 @@ Pour en savoir plus sur la façon `CGopherConnection` fonctionne avec les autres
 
 `CGopherConnection`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxinet.h
 
@@ -116,10 +116,10 @@ Un pointeur vers une chaîne se terminant par null qui spécifie le mot de passe
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL ou « »|NULL ou « »|« anonyme »|Nom de messagerie de l’utilisateur|
 |Chaîne non NULL|NULL ou « »|*pstrUserName*|" "|
-|Chaîne Non-NULL NULL|ERREUR|ERREUR||
+|Chaîne Non-NULL NULL|ERROR|ERROR||
 |Chaîne non NULL|Chaîne non NULL|*pstrUserName*|*pstrPassword*|
 
-*%nPort*<br/>
+*nPort*<br/>
 Numéro qui identifie le port TCP/IP à utiliser sur le serveur.
 
 ### <a name="remarks"></a>Notes
@@ -163,7 +163,7 @@ Pointeur vers une chaîne qui identifie le fichier à ouvrir. En règle généra
 *pstrServerName*<br/>
 Un pointeur vers une chaîne contenant le nom du serveur gopher.
 
-*%nPort*<br/>
+*nPort*<br/>
 Le numéro qui identifie le port Internet pour cette connexion.
 
 ### <a name="return-value"></a>Valeur de retour

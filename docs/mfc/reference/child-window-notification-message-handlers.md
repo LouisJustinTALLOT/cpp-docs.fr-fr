@@ -10,12 +10,12 @@ helpviewer_keywords:
 - windows [MFC], message handlers
 - child windows [MFC], messages
 ms.assetid: fddfdd08-8ecf-4f84-8b45-5a84616aaa8d
-ms.openlocfilehash: c270e6e7963de751b17bc629c1e5d13752a56c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06b13a7af2e73d6dc2758a342dae5beeca828ae4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437280"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298410"
 ---
 # <a name="child-window-notification-message-handlers"></a>Gestionnaires pour les messages de notification de fenêtre enfant
 
@@ -32,4 +32,3 @@ Il existe cinq catégories de messages de notification de fenêtre enfant :
 ## <a name="see-also"></a>Voir aussi
 
 [Tables des messages](../../mfc/reference/message-maps-mfc.md)
-

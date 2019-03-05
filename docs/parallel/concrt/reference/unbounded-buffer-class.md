@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694749"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288142"
 ---
 # <a name="unboundedbuffer-class"></a>Classe unbounded_buffer
 
@@ -58,7 +58,7 @@ Le type de charge utile des messages stockés et propagés par la mémoire tampo
 |Nom|Description|
 |----------|-----------------|
 |[dequeue](#dequeue)|Supprime un élément de la `unbounded_buffer` bloc de messagerie.|
-|[file d’attente](#enqueue)|Ajoute un élément à la `unbounded_buffer` bloc de messagerie.|
+|[enqueue](#enqueue)|Ajoute un élément à la `unbounded_buffer` bloc de messagerie.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
@@ -90,7 +90,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../asy
 
 `unbounded_buffer`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -162,7 +162,7 @@ bool enqueue(
 
 ### <a name="parameters"></a>Paramètres
 
-*É_lément*<br/>
+*_Item*<br/>
 Élément à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -347,7 +347,7 @@ unbounded_buffer(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Filtre*<br/>
+*_Filter*<br/>
 Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
 
 *_PScheduler*<br/>
@@ -362,7 +362,7 @@ Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les pa
 
 Le type `filter_method` est un functor avec la signature `bool (_Type const &)` qui est appelé par ce `unbounded_buffer` bloc de messagerie pour déterminer s’il doit accepter un message proposé.
 
-##  <a name="dtor"></a> ~ unbounded_buffer
+##  <a name="dtor"></a> ~unbounded_buffer
 
 Détruit le `unbounded_buffer` bloc de messagerie.
 
@@ -375,4 +375,3 @@ Détruit le `unbounded_buffer` bloc de messagerie.
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [overwrite_buffer, classe](overwrite-buffer-class.md)<br/>
 [single_assignment, classe](single-assignment-class.md)
-

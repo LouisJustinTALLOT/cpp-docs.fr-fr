@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: 80d7eefaa4b12d5aab8970f4b3c81fc644226e07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f020ed9b58f631bfff09fe54c70e36146eb03368
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510862"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288088"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Assistant Composant ASP ATL
 
@@ -71,7 +71,7 @@ Fournit des informations pour la classe C++ créée pour l’objet.
 
 Fournit des informations sur les fonctionnalités COM pour l’objet.
 
-- **Coclasse**
+- **Coclass**
 
    Définit le nom de la classe de composant qui contient une liste des interfaces prises en charge par l’objet. Si votre projet ou cet objet utilise des attributs, vous ne pouvez pas modifier cette option, car ATL n’inclut pas le **coclasse** attribut.
 

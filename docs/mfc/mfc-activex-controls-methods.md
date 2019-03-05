@@ -1,23 +1,23 @@
 ---
-title: 'Contrôles ActiveX MFC : méthodes'
+title: 'Contrôles ActiveX MFC : Méthodes'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
-ms.openlocfilehash: 9e8bc35989dc0e933cdb67c2574fb3bf6a4d99de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524577"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268406"
 ---
-# <a name="mfc-activex-controls-methods"></a>Contrôles ActiveX MFC : méthodes
+# <a name="mfc-activex-controls-methods"></a>Contrôles ActiveX MFC : Méthodes
 
 Un contrôle ActiveX déclenche des événements pour communiquer entre lui-même et son conteneur. Un conteneur peut également communiquer avec un contrôle au moyen de méthodes et propriétés. Méthodes sont également appelées fonctions.
 
-Méthodes et propriétés fournissent une interface exportée pour une utilisation par d’autres applications, telles que les clients Automation et les conteneurs de contrôles ActiveX. Pour plus d’informations sur les propriétés de contrôle ActiveX, consultez l’article [contrôles ActiveX MFC : propriétés](../mfc/mfc-activex-controls-properties.md).
+Méthodes et propriétés fournissent une interface exportée pour une utilisation par d’autres applications, telles que les clients Automation et les conteneurs de contrôles ActiveX. Pour plus d’informations sur les propriétés de contrôle ActiveX, consultez l’article [contrôles ActiveX MFC : Propriétés](../mfc/mfc-activex-controls-properties.md).
 
-Méthodes sont similaires dans l’utilisation et de fin pour les fonctions membres d’une classe C++. Il existe deux types de méthodes de votre contrôle peut implémenter : stock et personnalisés. Similaire à des événements stock, les méthodes stock sont celles qui [COleControl](../mfc/reference/colecontrol-class.md) fournit une implémentation. Pour plus d’informations sur les méthodes stock, consultez l’article [contrôles ActiveX MFC : ajout de méthodes Stock](../mfc/mfc-activex-controls-adding-stock-methods.md). Des méthodes personnalisées définies par le développeur, permettent une personnalisation supplémentaire du contrôle. Pour plus d’informations, consultez l’article [contrôles ActiveX MFC : ajout de méthodes personnalisées](../mfc/mfc-activex-controls-adding-custom-methods.md).
+Méthodes sont similaires dans l’utilisation et de fin pour les fonctions membres d’une classe C++. Il existe deux types de méthodes de votre contrôle peut implémenter : stock et personnalisés. Similaire à des événements stock, les méthodes stock sont celles qui [COleControl](../mfc/reference/colecontrol-class.md) fournit une implémentation. Pour plus d’informations sur les méthodes stock, consultez l’article [contrôles ActiveX MFC : Ajout de méthodes Stock](../mfc/mfc-activex-controls-adding-stock-methods.md). Des méthodes personnalisées définies par le développeur, permettent une personnalisation supplémentaire du contrôle. Pour plus d’informations, consultez l’article [contrôles ActiveX MFC : Ajout de méthodes personnalisées](../mfc/mfc-activex-controls-adding-custom-methods.md).
 
 Les MFC Microsoft Foundation Class Library () implémente un mécanisme qui permet à votre contrôle prenne en charge les méthodes stock et personnalisées. La première partie est la classe `COleControl`. Dérivé `CWnd`, `COleControl` fonctions membres prennent en charge les méthodes stock qui sont communes à tous les contrôles ActiveX. La deuxième partie de ce mécanisme est la table de dispatch. Une table de dispatch est similaire à une table des messages ; Toutefois, au lieu d’une fonction de mappage à un ID de message Windows, une table de dispatch mappe des fonctions membres virtuelles à des ID IDispatch.
 
@@ -34,13 +34,12 @@ Si vous avez utilisé le [Assistant contrôle ActiveX MFC](../mfc/reference/mfc-
 
 Les articles suivants traitent des méthodes en détail :
 
-- [Contrôles ActiveX MFC : ajout de méthodes stock](../mfc/mfc-activex-controls-adding-stock-methods.md)
+- [Contrôles ActiveX MFC : Ajout de méthodes Stock](../mfc/mfc-activex-controls-adding-stock-methods.md)
 
-- [Contrôles ActiveX MFC : ajout de méthodes personnalisées](../mfc/mfc-activex-controls-adding-custom-methods.md)
+- [Contrôles ActiveX MFC : Ajout de méthodes personnalisées](../mfc/mfc-activex-controls-adding-custom-methods.md)
 
-- [Contrôles ActiveX MFC : retour de codes d’erreur à partir d’une méthode](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
+- [Contrôles ActiveX MFC : Renvoi des Codes d’erreur à partir d’une méthode](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

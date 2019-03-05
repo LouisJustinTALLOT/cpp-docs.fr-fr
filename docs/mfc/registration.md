@@ -11,16 +11,16 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-ms.openlocfilehash: 1c8c0d32db202b8ba26afec708bcc8bab8e3282c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc606acfba26d27d0ab36045e4772593e760e98
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461956"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272164"
 ---
 # <a name="registration"></a>Inscription
 
-Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OLE, OLE présente une liste des types d'objets dans le but d'en choisir un. OLE obtient la liste de la base de données d'inscription du système, qui contient les informations fournies par les applications serveur. Lorsqu'un serveur s'inscrit lui-même, les entrées qu'il place dans la base de données d'inscription du système (le Registre) décrivent chaque type d'objet qu'il fournit, les extensions de fichier, le chemin d'accès à lui-même, parmi d'autres informations.
+Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OLE, OLE présente une liste des types d'objets dans le but d'en choisir un. OLE obtient la liste de la base de données d'inscription du système, qui contient les informations fournies par les applications serveur. Lorsqu’un serveur s’inscrit lui-même, les entrées qu’il place dans la base de données d’inscription du système (le Registre) décrivent chaque type d’objet qu’il fournit, les extensions de fichier, le chemin d’accès à lui-même, parmi d’autres informations.
 
 Le framework et les bibliothèques de liens dynamiques (DLL) du système OLE utilisent le Registre pour déterminer quels types d'éléments OLE sont disponibles dans le système. Les DLL système OLE utilisent également le Registre pour déterminer comment lancer une application serveur lorsqu'un objet lié ou incorporé est activé.
 
@@ -38,15 +38,15 @@ Lors de l'installation initiale de votre application serveur, tous les types d'�
 Si vous voulez enregistrer votre application pendant l'installation, utilisez le programme RegEdit.exe. Si vous incluez un programme d’installation avec votre application, ont le programme d’installation exécute « RegEdit /S *appname*.reg ». (L'indicateur /S indique l'opération silencieuse, c'est-à-dire qu'il n'affiche pas la boîte de dialogue qui signale la réussite de l'exécution de la commande.) Sinon, fournissez des instructions à l'utilisateur pour qu'il exécute le programme RegEdit manuellement.
 
 > [!NOTE]
->  Le fichier .reg créé par l'assistant Application n'inclut pas de chemin d'accès complet du fichier exécutable. Le programme d’installation doit modifier le fichier .reg pour inclure le chemin d’accès complet au fichier exécutable ou modifier la variable d’environnement PATH pour inclure le répertoire d’installation.
+>  Le fichier .reg créé par l'assistant Application n'inclut pas de chemin d'accès complet du fichier exécutable. Le programme d'installation doit modifier le fichier .reg pour inclure le chemin d'accès complet au fichier exécutable ou modifier la variable d'environnement PATH pour inclure le répertoire d'installation.
 
-RegEdit fusionne le contenu du fichier texte .reg dans la base de données d'inscription. Pour vérifier la base de données ou la réparer, utilisez l'Éditeur du Registre. Faites attention à ne pas supprimer des entrées OLE essentielles.
+RegEdit fusionne le contenu du fichier texte .reg dans la base de données d’inscription. Pour vérifier la base de données ou la réparer, utilisez l'Éditeur du Registre. Faites attention à ne pas supprimer des entrées OLE essentielles.
 
 ##  <a name="_core_server_initialization"></a> Initialisation du serveur
 
 Lorsque vous créez une application serveur avec l’assistant Application, l’assistant termine toutes les tâches d’initialisation automatiquement. Cette section explique ce que vous devez faire si vous écrivez une application serveur manuellement.
 
-Lorsqu'une application serveur est lancée par une application conteneur, les DLL système OLE ajoutent l'option "/Embedding" à la ligne de commande du serveur. Le comportement d'une application serveur diffère selon qu'elle a été exécutée par un conteneur, donc la première chose qu'une application doit effectuer lorsqu'elle commence à être exécutée est de contrôler l'option "/Embedding" ou "-Embedding" sur la ligne de commande. Si ce changement existe, chargez un autre ensemble de ressources qui montre le serveur comme étant actif sur place ou entièrement ouvert. Pour plus d’informations, consultez [Menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
+Lorsqu'une application serveur est lancée par une application conteneur, les DLL système OLE ajoutent l'option "/Embedding" à la ligne de commande du serveur. Le comportement d'une application serveur diffère selon qu'elle a été exécutée par un conteneur, donc la première chose qu'une application doit effectuer lorsqu'elle commence à être exécutée est de contrôler l'option "/Embedding" ou "-Embedding" sur la ligne de commande. Si ce changement existe, chargez un autre ensemble de ressources qui montre le serveur comme étant actif sur place ou entièrement ouvert. Pour plus d’informations, consultez [Menus et ressources : Ajouts de serveurs](../mfc/menus-and-resources-server-additions.md).
 
 Votre application serveur doit également appeler la fonction `CWinApp::RunEmbedded` pour analyser la ligne de commande. Si elle retourne une valeur différente de zéro, l'application ne doit pas afficher sa fenêtre si elle a été exécutée à partir d'une application conteneur, et non comme application autonome. Cette fonction met à jour l'entrée de serveur dans la base de données d'inscription du système et appelle la fonction membre `RegisterAll` pour vous, qui effectue l'inscription d'instance.
 

@@ -1,18 +1,18 @@
 ---
-title: 'Procédure pas à pas : adaptation d’un code existant pour l’utilisation de tâches légères'
+title: 'Procédure pas à pas : Adapter le Code existant pour utiliser des tâches légères'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: a0e724ff6f43dc0c888e787350f4841f14383f14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43e928e7d82b41b83fde5e8a7abaeeeb8d6fefa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654500"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261217"
 ---
-# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Procédure pas à pas : adaptation d’un code existant pour l’utilisation de tâches légères
+# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Procédure pas à pas : Adapter le Code existant pour utiliser des tâches légères
 
 Cette rubrique montre comment adapter du code existant qui utilise l’API Windows pour créer et exécuter un thread pour utiliser une tâche légère.
 

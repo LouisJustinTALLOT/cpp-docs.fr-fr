@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 0d1c28501abc86d09b683b0ed91f831fe8697306
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462049"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265533"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy, classe
 
@@ -59,7 +59,7 @@ Pour plus d’informations sur les stratégies qui peuvent être contrôlées à
 
 `SchedulerPolicy`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt.h, concrtrm.h
 
@@ -86,7 +86,7 @@ Si la clé spécifiée par le `key` paramètre est pris en charge, la valeur de 
 
 La méthode lèvera [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) pour une clé de stratégie non valide.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Assigne la stratégie du planificateur à partir d’une autre stratégie de planificateur.
 
@@ -138,7 +138,7 @@ Le deuxième constructeur crée une nouvelle stratégie du planificateur qui uti
 
 Le troisième constructeur est un constructeur de copie. Souvent, le plus pratique pour définir une nouvelle stratégie de planificateur consiste à copier une stratégie existante et modifiez-le à l’aide de la `SetPolicyValue` ou `SetConcurrencyLimits` méthodes.
 
-##  <a name="dtor"></a> ~ SchedulerPolicy
+##  <a name="dtor"></a> ~SchedulerPolicy
 
 Détruit une stratégie du planificateur.
 
@@ -185,7 +185,7 @@ unsigned int SetPolicyValue(
 *key*<br/>
 La clé de stratégie pour définir une valeur pour.
 
-*valeur*<br/>
+*value*<br/>
 Valeur à affecter à la clé de stratégie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -207,4 +207,3 @@ Notez que cette méthode n’est pas autorisée à définir le `MinConcurrency` 
 [CurrentScheduler, classe](currentscheduler-class.md)<br/>
 [Scheduler, classe](scheduler-class.md)<br/>
 [Planificateur de tâches](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-
