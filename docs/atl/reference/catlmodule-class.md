@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 4d1c8dbfc7606efda50637ba17790ecafc80a976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456821"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302011"
 ---
 # <a name="catlmodule-class"></a>CAtlModule, classe
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |Nom|Description|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|Constructeur.|
-|[CAtlModule :: ~ CAtlModule](#dtor)|Destructeur.|
+|[CAtlModule::~CAtlModule](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -82,7 +82,7 @@ Cette classe remplace obsolète [CComModule (classe)](../../atl/reference/ccommo
 
 `CAtlModule`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -122,7 +122,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 *pFunc*<br/>
 Pointeur vers la fonction à ajouter.
 
-*entrepôt de données*<br/>
+*dw*<br/>
 Les données définies par l’utilisateur, passé à la fonction.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -141,7 +141,7 @@ CAtlModule() throw();
 
 Initialise les membres de données et lance une section critique autour de thread du module.
 
-##  <a name="dtor"></a>  CAtlModule :: ~ CAtlModule
+##  <a name="dtor"></a>  CAtlModule::~CAtlModule
 
 Destructeur.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-ms.openlocfilehash: 680ca7a162d8fbedc793ff097663d942843887d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a3084d4655e173234d3bb6e8d411b28e8968377
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645417"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263693"
 ---
 # <a name="implementing-a-dialog-box"></a>Implémentation d’une boîte de dialogue
 
@@ -49,4 +49,3 @@ La classe suivante implémente une boîte de dialogue :
 ## <a name="see-also"></a>Voir aussi
 
 [Classes de fenêtre](../atl/atl-window-classes.md)
-

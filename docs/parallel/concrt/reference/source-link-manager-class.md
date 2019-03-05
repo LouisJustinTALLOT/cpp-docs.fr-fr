@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545988"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295199"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager, classe
 
@@ -64,7 +64,7 @@ Le Registre de lien réseau.
 |----------|-----------------|
 |[add](#add)|Ajoute un lien source vers le `source_link_manager` objet.|
 |[begin](#begin)|Retourne un itérateur au premier élément dans le `source_link_manager` objet.|
-|[contient](#contains)|Recherche le `network_link_registry` dans cet `source_link_manager` objet pour un bloc spécifié.|
+|[contains](#contains)|Recherche le `network_link_registry` dans cet `source_link_manager` objet pour un bloc spécifié.|
 |[count](#count)|Compte le nombre de blocs liés dans le `source_link_manager` objet.|
 |[reference](#reference)|Acquiert une référence sur le `source_link_manager` objet.|
 |[register_target_block](#register_target_block)|Inscrit le bloc cible qui conserve ce `source_link_manager` objet.|
@@ -80,13 +80,13 @@ Actuellement, les blocs de code source ont un décompte. C’est un wrapper sur 
 
 `source_link_manager`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
 **Espace de noms :** concurrency
 
-##  <a name="add"></a> Ajouter
+##  <a name="add"></a> add
 
 Ajoute un lien source vers le `source_link_manager` objet.
 
@@ -96,7 +96,7 @@ void add(_EType _Link);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Lier*<br/>
+*_Link*<br/>
 Pointeur vers un bloc à ajouter.
 
 ##  <a name="begin"></a> commencer
@@ -125,7 +125,7 @@ bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Lier*<br/>
+*_Link*<br/>
 Un pointeur désignant un bloc qui consiste à rechercher dans le `source_link_manager` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -183,7 +183,7 @@ bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Lier*<br/>
+*_Link*<br/>
 Un pointeur vers un bloc à supprimer, si trouvé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -211,7 +211,7 @@ Construit un objet `source_link_manager`.
 source_link_manager();
 ```
 
-##  <a name="dtor"></a> ~ source_link_manager
+##  <a name="dtor"></a> ~source_link_manager
 
 Détruit le `source_link_manager` objet.
 

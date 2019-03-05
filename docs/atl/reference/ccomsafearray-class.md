@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521412"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280678"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray, classe
 
@@ -58,7 +58,7 @@ Type de données à stocker dans le tableau.
 |Nom|Description|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|Constructeur.|
-|[CComSafeArray :: ~ CComSafeArray](#dtor)|Destructeur.|
+|[CComSafeArray::~CComSafeArray](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -104,7 +104,7 @@ Type de données à stocker dans le tableau.
 
 `CComSafeArray` simplifie le transmission de tableaux entre processus et offre en outre une sécurité renforcée en vérifiant les valeurs d’index de tableau par rapport aux limites inférieure et supérieure.
 
-La limite inférieure d’un `CComSafeArray` peut commencer à n’importe quelle valeur définie par l’utilisateur ; cependant, les tableaux accessibles via C++ doivent utiliser une limite inférieure de 0. D’autres langages comme Visual Basic peuvent utiliser d’autres valeurs de délimitation (par exemple, de -10 à 10).
+La limite inférieure d’un `CComSafeArray` peut commencer à n’importe quelle valeur définie par l’utilisateur ; cependant, les tableaux accessibles via C++ doivent utiliser une limite inférieure de 0. D’autres langages comme Visual Basic peuvent utiliser d’autres valeurs de délimitation (par exemple, de -10 à 10).
 
 Utilisez [CComSafeArray::Create](#create) pour créer un objet `CComSafeArray` et [CComSafeArray::Destroy](#destroy) pour le supprimer.
 
@@ -128,7 +128,7 @@ Un `CComSafeArray` peut contenir le sous-ensemble de types de données VARIANT s
 |VT_VARIANT|pointeur de type Variant|
 |VT_CY|Currency (type de données)|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsafe.h
 
@@ -210,7 +210,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Paramètres
 
-*lié*<br/>
+*bound*<br/>
 Structure `SAFEARRAYBOUND`.
 
 *ulCount*<br/>
@@ -235,7 +235,7 @@ Un pointeur vers un `SAFEARRAY` structure. Le constructeur utilise cette adresse
 
 Crée un objet `CComSafeArray`.
 
-##  <a name="dtor"></a>  CComSafeArray :: ~ CComSafeArray
+##  <a name="dtor"></a>  CComSafeArray::~CComSafeArray
 
 Destructeur.
 
@@ -362,7 +362,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*lIndex Valeur de type*<br/>
+*lIndex*<br/>
 Le numéro d’index de la valeur dans le tableau à retourner.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -561,7 +561,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*lIndex Valeur de type, nIndex*<br/>
+*lIndex, nIndex*<br/>
 Numéro d’index de l’élément requis dans le tableau.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -643,7 +643,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*lIndex Valeur de type*<br/>
+*lIndex*<br/>
 Numéro d’index de l’élément de tableau à définir.
 
 *t*<br/>

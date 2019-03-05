@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: df1e49ffe9e4350d2023bc471d3687bec5defa04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30fac6579d05eed276b60918b2417cd96044359a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434604"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292625"
 ---
 # <a name="creating-an-mfc-application"></a>Création d'une application MFC
 
@@ -53,4 +53,3 @@ Une fois votre projet créé, vous pouvez afficher les fichiers créés dans **l
 
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pages de propriétés](../../ide/property-pages-visual-cpp.md)
-

@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 56c694283c5143174b0ce7370d98a244c056bc1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496016"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261347"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 
@@ -96,7 +96,7 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Efface tous les filtres pour un contrôle header.|
 |[CHeaderCtrl::ClearFilter](#clearfilter)|Efface le filtre pour un contrôle header.|
 |[CHeaderCtrl::Create](#create)|Crée un contrôle header et l’attache à un `CHeaderCtrl` objet.|
-|[Fonction membre CHeaderCtrl::CreateDragImage](#createdragimage)|Crée une version transparente de l’image d’un élément au sein d’un contrôle header.|
+|[CHeaderCtrl::CreateDragImage](#createdragimage)|Crée une version transparente de l’image d’un élément au sein d’un contrôle header.|
 |[CHeaderCtrl::CreateEx](#createex)|Crée un contrôle header avec les styles étendus Windows spécifiés et l’attache à un `CListCtrl` objet.|
 |[CHeaderCtrl::DeleteItem](#deleteitem)|Supprime un élément d’un contrôle header.|
 |[CHeaderCtrl::DrawItem](#drawitem)|Dessine l’élément spécifié d’un contrôle d’en-tête.|
@@ -104,7 +104,7 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|Récupère la largeur de la marge d’une image bitmap dans un contrôle header.|
 |[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|Obtient l’identificateur de l’élément dans le contrôle header actuel qui a le focus.|
 |[CHeaderCtrl::GetImageList](#getimagelist)|Récupère le handle d’une liste d’images utilisée pour les éléments d’en-tête dessin dans un contrôle header.|
-|[Appelant CHeaderCtrl::GetItem](#getitem)|Récupère des informations sur un élément dans un contrôle header.|
+|[CHeaderCtrl::GetItem](#getitem)|Récupère des informations sur un élément dans un contrôle header.|
 |[CHeaderCtrl::GetItemCount](#getitemcount)|Récupère un nombre d’éléments dans un contrôle header.|
 |[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|Obtient les informations de rectangle englobant pour le bouton de liste déroulante spécifié dans un contrôle header.|
 |[CHeaderCtrl::GetItemRect](#getitemrect)|Récupère le rectangle englobant pour un élément donné dans un contrôle header.|
@@ -152,7 +152,7 @@ Pour plus d’informations sur l’utilisation de `CHeaderCtrl`, consultez [cont
 
 `CHeaderCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -230,7 +230,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Spécifie le style du contrôle d’en-tête. Pour obtenir une description de styles d’en-tête de contrôle, consultez [Styles d’en-tête de contrôle](/windows/desktop/Controls/header-control-styles) dans le SDK Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Spécifie la taille et la position du contrôle d’en-tête. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
 
 *pParentWnd*<br/>
@@ -300,7 +300,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 *dwStyle*<br/>
 En-tête style du contrôle. Pour obtenir une description de styles d’en-tête de contrôle, consultez [Styles d’en-tête de contrôle](/windows/desktop/Controls/header-control-styles) dans le SDK Windows. Consultez [créer](#create) pour obtenir la liste des styles supplémentaires.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -317,7 +317,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Utilisez `CreateEx` au lieu de `Create` pour appliquer des styles étendus de Windows, spécifiés par la préface de style étendu Windows **WS_EX_**.
 
-##  <a name="createdragimage"></a>  Fonction membre CHeaderCtrl::CreateDragImage
+##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage
 
 Crée une version transparente de l’image d’un élément au sein d’un contrôle header.
 
@@ -486,7 +486,7 @@ Cette fonction membre implémente le comportement du message Win32 [HDM_GETIMAGE
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]
 
-##  <a name="getitem"></a>  Appelant CHeaderCtrl::GetItem
+##  <a name="getitem"></a>  CHeaderCtrl::GetItem
 
 Récupère des informations sur un élément de contrôle d’en-tête.
 

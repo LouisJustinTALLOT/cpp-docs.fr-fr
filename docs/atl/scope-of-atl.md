@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, scope
 ms.assetid: 381adf50-3cb0-4d0f-a79a-07da093bc280
-ms.openlocfilehash: 1196d4ec0cce66e3ea62c1ee0653da649e670832
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c45516dfdfb317adde787a51194a9f9deac19887
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605775"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282680"
 ---
 # <a name="scope-of-atl"></a>Portée d’ATL
 
@@ -21,4 +21,3 @@ ATL est livré en tant que code source que vous incluez dans votre application. 
 
 [Introduction à ATL](../atl/introduction-to-atl.md)<br/>
 [Assistant Projet ATL](../atl/reference/atl-project-wizard.md)
-

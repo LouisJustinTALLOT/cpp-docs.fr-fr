@@ -1,5 +1,5 @@
 ---
-title: 'Serveurs : éléments du serveur'
+title: 'serveurs : Éléments de serveur'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - server items, implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-ms.openlocfilehash: ea04a3eefff0f127873ffbf67ea39ade3a6b9b85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0adaea1c4f1dd0525ead82dfffdf267326ac865c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453688"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262283"
 ---
-# <a name="servers-server-items"></a>Serveurs : éléments du serveur
+# <a name="servers-server-items"></a>serveurs : Éléments de serveur
 
 Lorsqu'un conteneur lance un serveur afin qu'un utilisateur puisse modifier un élément OLE incorporé ou lié, l'application serveur "crée un élément du serveur." L'élément du serveur, qui est un objet d'une classe dérivé de `COleServerItem`, fournit une interface entre le document serveur et l'application conteneur.
 
@@ -35,7 +35,7 @@ Si vous utilisez l’Assistant Application pour générer le code de démarrage 
 
    Le framework appelle `OnDraw` pour afficher l'élément OLE dans un métafichier. L'application conteneur utilise ce métafichier pour afficher l'élément. La classe d'affichage de votre application a également une fonction membre `OnDraw`, utilisée pour afficher l'élément lorsque l'application serveur est active.
 
-1. Implémentez une substitution de `OnGetEmbeddedItem` pour votre classe de document serveur. Pour plus d’informations, consultez l’article [serveurs : implémentation des Documents serveur](../mfc/servers-implementing-server-documents.md) et l’exemple OLE MFC [HIERSVR](../visual-cpp-samples.md).
+1. Implémentez une substitution de `OnGetEmbeddedItem` pour votre classe de document serveur. Pour plus d’informations, consultez l’article [serveurs : Implémentation des Documents serveur](../mfc/servers-implementing-server-documents.md) et l’exemple OLE MFC [HIERSVR](../visual-cpp-samples.md).
 
 1. Implémentez la fonction membre `OnGetExtent` de la classe d'élément du serveur. Le framework appelle cette fonction pour extraire la taille de l'élément. L'implémentation par défaut n'exécute aucune opération.
 
@@ -52,4 +52,3 @@ Pour plus d’informations, consultez [CView::OnDraw](../mfc/reference/cview-cla
 ## <a name="see-also"></a>Voir aussi
 
 [Serveurs](../mfc/servers.md)
-

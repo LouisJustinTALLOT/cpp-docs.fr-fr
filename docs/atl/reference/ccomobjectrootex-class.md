@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 63547405791f7f0391138dd2d23020c62c8a4a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655804"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280639"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx, classe
 
@@ -52,7 +52,7 @@ La classe dont les méthodes implémentent le modèle de thread souhaité. Vous 
 |[CComObjectRootEx](#ccomobjectrootex)|Constructeur.|
 |[InternalAddRef](#internaladdref)|Incrémente le décompte de références pour un objet non regroupées en agrégats.|
 |[InternalRelease](#internalrelease)|Décrémente le décompte de références pour un objet non regroupées en agrégats.|
-|[Verrou](#lock)|Si le modèle de thread est multithread, obtienne la propriété d’un objet de section critique.|
+|[Lock](#lock)|Si le modèle de thread est multithread, obtienne la propriété d’un objet de section critique.|
 |[Déverrouiller](#unlock)|Si le modèle de thread est multithread, libère la propriété d’un objet de section critique.|
 
 ### <a name="ccomobjectrootbase-methods"></a>Méthodes CComObjectRootBase
@@ -95,7 +95,7 @@ Si votre objet est agrégée, [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-i
 
 Si votre objet n’est pas agrégée, `IUnknown` est implémentée par `CComObject` ou `CComPolyObject`. Dans ce cas, les appels à `QueryInterface`, `AddRef`, et `Release` sont déléguées à `CComObjectRootEx`de `InternalQueryInterface`, `InternalAddRef`, et `InternalRelease` pour effectuer les opérations réelles.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -201,7 +201,7 @@ static HRESULT InternalQueryInterface(
 *pEntries*<br/>
 [in] Un pointeur vers le `_ATL_INTMAP_ENTRY` structure qui accède à une carte des interfaces disponibles.
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface demandée.
 
 *ppvObject*<br/>
@@ -333,7 +333,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface demandée.
 
 *ppvObject*<br/>

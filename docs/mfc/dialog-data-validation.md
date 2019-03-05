@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DDV (dialog data validation) [MFC]
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
-ms.openlocfilehash: 2283806d3fe7c4ff6bd3abc2ae6a86f5dd176d10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cef9941cccd49ca61f0a93472636656f7241a61e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289596"
 ---
 # <a name="dialog-data-validation"></a>Validation de données de boîtes de dialogue
 
@@ -29,4 +29,3 @@ Le [Assistant Ajout de Variable membre](../ide/add-member-variable-wizard.md) é
 [Échange et validation de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md)<br/>
 [Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Échange de données de boîtes de dialogue](../mfc/dialog-data-exchange.md)
-

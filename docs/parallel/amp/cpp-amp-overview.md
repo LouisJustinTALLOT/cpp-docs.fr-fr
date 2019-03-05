@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176989"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269641"
 ---
 # <a name="c-amp-overview"></a>Présentation de C++ AMP
 
@@ -56,7 +56,7 @@ Les parties importantes du code sont les suivantes :
 
 - Données : Les données se composent de trois tableaux. Tous ont les mêmes rang (un) et longueur (cinq).
 
-- Itération : La première `for` boucle fournit un mécanisme pour itérer les éléments dans les tableaux. Le code que vous souhaitez exécuter pour calculer les sommes est contenu dans la première `for` bloc.
+- Itération : Le premier `for` boucle fournit un mécanisme pour itérer les éléments dans les tableaux. Le code que vous souhaitez exécuter pour calculer les sommes est contenu dans la première `for` bloc.
 
 - Index : Le `idx` variable accède aux éléments des tableaux.
 
@@ -457,13 +457,13 @@ void MathExample() {
 
 C++ AMP inclut une bibliothèque de graphiques qui est conçue pour la programmation graphique accélérée. Cette bibliothèque est utilisée uniquement sur les appareils qui prennent en charge des fonctionnalités graphiques natives. Les méthodes sont dans le [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md) et sont contenues dans le \<amp_graphics.h > fichier d’en-tête. Les composants clés de la bibliothèque de graphiques sont :
 
-- [texture, classe](../../parallel/amp/reference/texture-class.md): vous pouvez utiliser la classe de texture pour créer des textures à partir de la mémoire ou d’un fichier. Les textures ressemblent aux tableaux car ils contiennent des données, et elles ressemblent aux conteneurs dans la bibliothèque C++ Standard en ce qui concerne l’affectation et construction de copie. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../../standard-library/stl-containers.md). Les paramètres du modèle pour la `texture` classe sont le type d’élément et le rang. Le rang peut être 1, 2 ou 3. Le type d’élément peut être un des types vectoriels courts décrits plus loin dans cet article.
+- [texture, classe](../../parallel/amp/reference/texture-class.md): Vous pouvez utiliser la classe de texture pour créer des textures à partir de la mémoire ou d’un fichier. Les textures ressemblent aux tableaux car ils contiennent des données, et elles ressemblent aux conteneurs dans la bibliothèque C++ Standard en ce qui concerne l’affectation et construction de copie. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../../standard-library/stl-containers.md). Les paramètres du modèle pour la `texture` classe sont le type d’élément et le rang. Le rang peut être 1, 2 ou 3. Le type d’élément peut être un des types vectoriels courts décrits plus loin dans cet article.
 
-- [writeonly_texture_view, classe](../../parallel/amp/reference/writeonly-texture-view-class.md): fournit l’accès en écriture seule à une texture.
+- [writeonly_texture_view, classe](../../parallel/amp/reference/writeonly-texture-view-class.md): Fournit l’accès en écriture seule à une texture.
 
-- Bibliothèque de vecteurs courts : Définit un ensemble de types de vecteurs courts de longueur 2, 3 et 4 sont basés sur **int**, `uint`, **float**, **double**, [norm ](../../parallel/amp/reference/norm-class.md), ou [unorm](../../parallel/amp/reference/unorm-class.md).
+- Bibliothèque de vecteurs courts : Définit un ensemble de types de vecteurs courts de longueur 2, 3 et 4 sont basés sur **int**, `uint`, **float**, **double**, [norm](../../parallel/amp/reference/norm-class.md), ou [unorm](../../parallel/amp/reference/unorm-class.md).
 
-## <a name="universal-windows-platform-uwp-apps"></a>Applications Universal Windows Platform (UWP)
+## <a name="universal-windows-platform-uwp-apps"></a>Applications de la plateforme Windows universelle (UWP)
 
 Comme les autres bibliothèques C++, vous pouvez utiliser C++ AMP dans vos applications UWP. Ces articles décrivent comment inclure du code C++ AMP dans les applications qui est créé à l’aide de C++, c#, Visual Basic ou JavaScript :
 

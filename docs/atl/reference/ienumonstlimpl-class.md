@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-ms.openlocfilehash: 0ec505871f057d90f6580e547c23a0879af4c3f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ff29522351b542d0b674bc173040d4468d00f1c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638748"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277444"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl, classe
 
@@ -36,7 +36,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 
 #### <a name="parameters"></a>Paramètres
 
-*base de*<br/>
+*Base*<br/>
 Un énumérateur COM. Consultez [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) pour obtenir un exemple.
 
 *piid*<br/>
@@ -58,7 +58,7 @@ Une classe de conteneur de bibliothèque C++ Standard.
 |Nom|Description|
 |----------|-----------------|
 |[IEnumOnSTLImpl::Clone](#clone)|L’implémentation de **Clone**.|
-|[IEnumOnSTLImpl::Init](#init)|Initialise l’énumérateur.|
+|[IEnumOnSTLImpl::Init](#init)|Initialise l'énumérateur.|
 |[IEnumOnSTLImpl::Next](#next)|L’implémentation de **suivant**.|
 |[IEnumOnSTLImpl::Reset](#reset)|L’implémentation de **réinitialiser**.|
 |[IEnumOnSTLImpl::Skip](#skip)|L’implémentation de **Skip**.|
@@ -88,13 +88,13 @@ Toutefois, si vous n’avez pas besoin de fournir un énumérateur personnalisé
 
 `IEnumOnSTLImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
 ##  <a name="init"></a>  IEnumOnSTLImpl::Init
 
-Initialise l’énumérateur.
+Initialise l'énumérateur.
 
 ```
 HRESULT Init(

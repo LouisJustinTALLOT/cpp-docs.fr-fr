@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622623"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304078"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar, classe
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Notes
 
-Pour obtenir un exemple d’une barre Outlook, consultez le [exemple OutlookDemo : MFC OutlookDemo Application](../../visual-cpp-samples.md).
+Pour obtenir un exemple d’une barre Outlook, consultez le [exemple OutlookDemo : Application de OutlookDemo MFC](../../visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implémentation de la barre Outlook
 
@@ -181,7 +181,7 @@ Utilisez [CMFCOutlookBar::SetMode2003](#setmode2003) pour activer le mode d’Ou
 
 [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxoutlookbar.h
 
@@ -267,7 +267,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in] Spécifie un pointeur vers une fenêtre parente. Il ne doit pas être NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Spécifie la taille et la position en pixels de la barre outlook.
 
 *nID*<br/>

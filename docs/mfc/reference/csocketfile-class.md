@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-ms.openlocfilehash: f31bbda1bb6428b6bcca25d6eddce98156fac1d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3fa73320ae34283b0cdac559111a53a879c031c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588836"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274269"
 ---
 # <a name="csocketfile-class"></a>CSocketFile, classe
 
@@ -50,7 +50,7 @@ Dans l’exemple suivant, `m_dwExpected` est le nombre approximatif d’octets q
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]
 
-Pour plus d’informations, consultez [Windows des Sockets dans MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md), ainsi que [API Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
+Pour plus d’informations, consultez [Windows des Sockets dans MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md), ainsi que [API Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -60,7 +60,7 @@ Pour plus d’informations, consultez [Windows des Sockets dans MFC](../../mfc/w
 
 `CSocketFile`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxsock.h
 
@@ -93,7 +93,7 @@ En mode « compatible archive », un `CSocketFile` objet offre de meilleures p
 
 Avec `CSocketFile`, toutefois, données en fonction de message ; la mémoire tampon peut contenir plusieurs messages, jusqu'à réception de moins que le nombre d’octets demandés n’implique pas la fin du fichier. L’application ne bloque pas, dans ce cas, comme cela pourrait être avec `CFile`, et il peut continuer à lire des messages à partir de la mémoire tampon jusqu'à ce que la mémoire tampon est vide. Le [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) fonction est utile pour surveiller l’état de la mémoire tampon de l’archive dans ce cas.
 
-Pour plus d’informations sur l’utilisation de `CSocketFile`, consultez les articles [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md) et [Windows Sockets : exemple de Sockets utilisant des Archives](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
+Pour plus d’informations sur l’utilisation de `CSocketFile`, consultez les articles [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md) et [Windows Sockets : Exemple de Sockets utilisant des Archives](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
 
 ## <a name="see-also"></a>Voir aussi
 

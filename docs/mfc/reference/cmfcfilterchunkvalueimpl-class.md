@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: a59cf087a52bd7b6a2eaa00d3091047e93e14d4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b883d442342dd9fbbd074d9f8fcab76f81ef9864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666841"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264441"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl, classe
 
@@ -69,7 +69,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl :: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destruction de l’objet.|
+|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destruction de l’objet.|
 |[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Construit l’objet.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
@@ -107,13 +107,13 @@ Pour utiliser, vous créez simplement une cmfcfilterchunkvalueimpl, classe du ty
 
 Exemple :
 
-CMFCFilterChunkValueImpl segment ;
+CMFCFilterChunkValueImpl chunk;
 
-HR = segment. SetBoolValue(PKEY_IsAttachment, true) ;
+hr = chunk.SetBoolValue(PKEY_IsAttachment, true);
 
 ou
 
-HR = segment. SetFileTimeValue (PKEY_ItemDate, ftLastModified) ;
+hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -121,7 +121,7 @@ HR = segment. SetFileTimeValue (PKEY_ItemDate, ftLastModified) ;
 
 [CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -145,7 +145,7 @@ CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl :: ~ CMFCFilterChunkValueImpl
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
 
 Destruction de l’objet.
 
@@ -318,7 +318,7 @@ HRESULT SetBoolValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*principale*<br/>
+*pkey*<br/>
 Spécifie une clé de propriété.
 
 *bVal*<br/>
@@ -361,7 +361,7 @@ HRESULT SetChunk(
 
 ### <a name="parameters"></a>Paramètres
 
-*principale*<br/>
+*pkey*<br/>
 Spécifie une clé de propriété.
 
 *chunkType*<br/>
@@ -402,7 +402,7 @@ HRESULT SetDwordValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*principale*<br/>
+*pkey*<br/>
 Spécifie une clé de propriété.
 
 *dwVal*<br/>
@@ -446,7 +446,7 @@ HRESULT SetFileTimeValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*principale*<br/>
+*pkey*<br/>
 Spécifie une clé de propriété.
 
 *dtVal*<br/>
@@ -490,7 +490,7 @@ HRESULT SetInt64Value(
 
 ### <a name="parameters"></a>Paramètres
 
-*principale*<br/>
+*pkey*<br/>
 Spécifie une clé de propriété.
 
 *nVal*<br/>
@@ -534,7 +534,7 @@ HRESULT SetIntValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*principale*<br/>
+*pkey*<br/>
 Spécifie une clé de propriété.
 
 *nVal*<br/>
@@ -578,7 +578,7 @@ HRESULT SetLongValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*principale*<br/>
+*pkey*<br/>
 Spécifie une clé de propriété.
 
 *lVal*<br/>
@@ -622,7 +622,7 @@ HRESULT SetSystemTimeValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*principale*<br/>
+*pkey*<br/>
 Spécifie une clé de propriété.
 
 *systemTime*<br/>
@@ -666,7 +666,7 @@ HRESULT SetTextValue(
 
 ### <a name="parameters"></a>Paramètres
 
-*principale*<br/>
+*pkey*<br/>
 Spécifie une clé de propriété.
 
 *pszValue*<br/>

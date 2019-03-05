@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Common Controls library
 ms.assetid: 7471e6f0-49b0-47f7-86e7-8d6bc3541694
-ms.openlocfilehash: fd47854c7073565fbe0c15ca6be7a9843af5f387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94700f850be62404f22974a1d5e76acad711555c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583610"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278741"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>Isolement de la bibliothèque de contrôles communs MFC
 
@@ -22,4 +22,3 @@ Vous pouvez utiliser la [AFX_COMCTL32_IF_EXISTS](reference/run-time-object-model
 Techniquement, vous effectuer des appels aux API de bibliothèque de contrôles courants via une classe wrapper, `CComCtlWrapper` (définies dans afxcomctl32.h). `CComCtlWrapper` est également responsable du chargement et déchargement de comctl32.dll. L’état du Module MFC contient un pointeur vers une instance de `CComCtlWrapper`. Vous pouvez accéder à la classe wrapper à l’aide du `afxComCtlWrapper` (macro).
 
 Notez que l’appel des API de contrôles courants directement (sans utiliser les fonctions de wrapper MFC) à partir d’une MFC application ou DLL utilisateur fonctionnera dans la plupart des cas, car l’application MFC ou l’utilisateur DLL est liée à la bibliothèque de contrôles communs elles demandées dans son manifeste). Toutefois, le code MFC elle-même doit utiliser les wrappers, étant donné que le code MFC peut être appelée à partir de DLL utilisateur avec différentes versions de bibliothèque de contrôles communs.
-

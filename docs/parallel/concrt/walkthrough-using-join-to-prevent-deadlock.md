@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage'
+title: 'Procédure pas à pas : À l’aide de la classe join pour empêcher l’interblocage'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 2f9e0f50866ed0635fbaa4b700dbf522f09458d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175911"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303051"
 ---
-# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage
+# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procédure pas à pas : À l’aide de la classe join pour empêcher l’interblocage
 
 Cette rubrique utilise le problème dîner des philosophes pour illustrer comment utiliser le [concurrency::join](../../parallel/concrt/reference/join-class.md) classe pour empêcher tout interblocage dans votre application. Dans une application logicielle, un *blocage* se produit lorsque au moins deux processus comportent chacun une ressource et attendent mutuellement qu’un autre processus en libère une autre.
 
@@ -26,7 +26,7 @@ Lisez les rubriques suivantes avant de commencer cette procédure pas à pas :
 
 - [Agents asynchrones](../../parallel/concrt/asynchronous-agents.md)
 
-- [Procédure pas à pas : création d’une application basée sur un agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [Procédure pas à pas : création d'une application basée sur des agents](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)
 

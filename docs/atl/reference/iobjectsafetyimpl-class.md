@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: e9035a8573a917e732f3452aeb7fd07af160517f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e75c52b016fff5bf04fefc86d4289021efc4db8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471784"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293275"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl, classe
 
@@ -75,7 +75,7 @@ Notez que l’utilisation du [IMPLEMENTED_CATEGORY](category-macros.md#implement
 
 `IObjectSafetyImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl.h
 

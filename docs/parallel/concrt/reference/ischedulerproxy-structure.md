@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-ms.openlocfilehash: a38b931da8ed2191f21d210449c100c410f74e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dddd43a5b3e68992e41f0b95893303e57e7c7ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523144"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268848"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy, structure
 
@@ -51,13 +51,13 @@ Le Gestionnaire des ressources donne une `ISchedulerProxy` interface à chaque p
 
 `ISchedulerProxy`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrtrm.h
 
 **Espace de noms :** concurrency
 
-##  <a name="bindcontext"></a>  ISchedulerProxy::BindContext, méthode
+##  <a name="bindcontext"></a>  ISchedulerProxy::BindContext Method
 
 Associe un contexte d’exécution à un proxy de thread, si elle ne l’est pas déjà.
 
@@ -99,7 +99,7 @@ Utilisez cette méthode lorsque votre planificateur souhaite manquer d’abonnem
 
 Vous pouvez même manquer d’abonnements pour une racine de processeur virtuel existante, car le `IVirtualProcessorRoot` interface hérite le `IExecutionResource` interface.
 
-##  <a name="requestinitialvirtualprocessors"></a>  ISchedulerProxy::RequestInitialVirtualProcessors, méthode
+##  <a name="requestinitialvirtualprocessors"></a>  ISchedulerProxy::RequestInitialVirtualProcessors Method
 
 Demande une allocation initiale de racines de processeur virtuel. Chaque racine de processeur virtuel représente la capacité d’exécuter un thread qui peut effectuer un travail pour le planificateur.
 
@@ -164,7 +164,7 @@ La ressource d’exécution reçue via cette méthode doit être retournée au G
 
 L’acte d’abonnement d’un thread augmente le niveau d’abonnement du thread matériel sous-jacent d’une unité. Le niveau d’abonnement est réduit d’une unité lorsque l’abonnement est terminée. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-##  <a name="unbindcontext"></a>  ISchedulerProxy::UnbindContext, méthode
+##  <a name="unbindcontext"></a>  ISchedulerProxy::UnbindContext Method
 
 Dissocie un proxy de thread du contexte d’exécution spécifié par le `pContext` paramètre et le retourne au pool libre de la fabrique de proxy de thread. Cette méthode peut uniquement être appelée sur un contexte d’exécution qui a été lié via la [ISchedulerProxy::BindContext](#bindcontext) (méthode) et n’a pas encore été démarré en étant le `pContext` paramètre d’un [IThreadProxy::SwitchTo ](ithreadproxy-structure.md#switchto) appel de méthode.
 

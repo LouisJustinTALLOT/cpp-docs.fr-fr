@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-ms.openlocfilehash: ebaec439393a67331293cbf47abd08a5e7e416af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec3abd04ce72cce98dae72a1ed8cbb8d9fe72079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485564"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267431"
 ---
 # <a name="ccomobjectglobal-class"></a>Ccomobjectglobal, classe
 
@@ -32,7 +32,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Paramètres
 
-*base de*<br/>
+*Base*<br/>
 Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que toute autre interface souhaitées prendre en charge sur l’objet.
 
 ## <a name="members"></a>Membres
@@ -42,7 +42,7 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 |Nom|Description|
 |----------|-----------------|
 |[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|Constructeur.|
-|[CComObjectGlobal :: ~ CComObjectGlobal](#dtor)|Destructeur.|
+|[CComObjectGlobal::~CComObjectGlobal](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -70,7 +70,7 @@ Par exemple, à l’aide de `CComObjectGlobal`, une fabrique de classe peut cont
 
 `CComObjectGlobal`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -102,7 +102,7 @@ CComObjectGlobal(void* = NULL));
 
 Si vous n’avez pas dérivé votre classe de base à partir de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), vous devez fournir votre propre `FinalConstruct` (méthode). Le destructeur appelle `FinalRelease`.
 
-##  <a name="dtor"></a>  CComObjectGlobal :: ~ CComObjectGlobal
+##  <a name="dtor"></a>  CComObjectGlobal::~CComObjectGlobal
 
 Destructeur.
 
@@ -132,7 +132,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface demandée.
 
 *ppvObject*<br/>

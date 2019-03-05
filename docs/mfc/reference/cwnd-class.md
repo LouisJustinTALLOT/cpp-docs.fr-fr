@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894534"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276544"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -858,7 +858,7 @@ class CWnd : public CCmdTarget
 |[CWnd::BeginModalState](#beginmodalstate)|Appelez cette fonction membre pour rendre modale une fenêtre frame.|
 |[CWnd::BeginPaint](#beginpaint)|Prépare `CWnd` pour la peinture.|
 |[CWnd::BindDefaultProperty](#binddefaultproperty)|Lie la propriété liée simple par défaut de l'objet appelant, comme indiqué dans la bibliothèque de types, à un curseur associé à un contrôle de source de données.|
-|[CWnd::BindProperty](#bindproperty)|Lie une propriété liée au curseur d’un contrôle lié aux données à un contrôle de source de données et inscrit cette relation auprès du gestionnaire de liaisons MFC.|
+|[CWnd::BindProperty](#bindproperty)|Lie une propriété liée au curseur d'un contrôle lié aux données à un contrôle de source de données et inscrit cette relation auprès du gestionnaire de liaisons MFC.|
 |[CWnd::BringWindowToTop](#bringwindowtotop)|Place `CWnd` en haut d'une pile de fenêtres superposées.|
 |[CWnd::CalcWindowRect](#calcwindowrect)|Appelé pour calculer le rectangle de la fenêtre à partir du rectangle client.|
 |[CWnd::CancelToolTips](#canceltooltips)|Désactive le contrôle d'info-bulle.|
@@ -885,7 +885,7 @@ class CWnd : public CCmdTarget
 |[CWnd::DlgDirSelect](#dlgdirselect)|Récupère la sélection actuelle d'une zone de liste.|
 |[CWnd::DlgDirSelectComboBox](#dlgdirselectcombobox)|Récupère la sélection actuelle de la zone de liste d'une zone de liste modifiable.|
 |[CWnd::DragAcceptFiles](#dragacceptfiles)|Indique que la fenêtre acceptera les fichiers déplacés.|
-|[CWnd::DragDetect](#dragdetect)|Capture la souris et suit ses déplacements jusqu’à ce que l’utilisateur relâche le bouton gauche, appuie sur la touche Échap ou déplace la souris en dehors du rectangle de glissement entourant le point spécifié.|
+|[CWnd::DragDetect](#dragdetect)|Capture la souris et suit ses déplacements jusqu'à ce que l'utilisateur relâche le bouton gauche, appuie sur la touche Échap ou déplace la souris en dehors du rectangle de glissement entourant le point spécifié.|
 |[CWnd::DrawAnimatedRects](#drawanimatedrects)|Dessine un rectangle en mode filaire et l'anime pour indiquer l'ouverture d'une icône ou la réduction ou agrandissement d'une fenêtre.|
 |[CWnd::DrawCaption](#drawcaption)|Dessine une légende.|
 |[CWnd::DrawMenuBar](#drawmenubar)|Redessine la barre de menus.|
@@ -941,7 +941,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetDlgItemInt](#getdlgitemint)|Traduit le texte d'un contrôle de la boîte de dialogue spécifiée en valeur entière.|
 |[CWnd::GetDlgItemText](#getdlgitemtext)|Récupère la légende ou le texte associé à un contrôle.|
 |[CWnd::GetDSCCursor](#getdsccursor)|Récupère un pointeur désignant le curseur sous-jacent défini par les propriétés DataSource, UserName, Password et SQL d'un contrôle de source de données.|
-|[CWnd::GetDynamicLayout](#getdynamiclayout)|Récupère un pointeur désignant l'objet gestionnaire de disposition dynamique.|
+|[CWnd::GetDynamicLayout](#getdynamiclayout)|Récupère un pointeur vers l'objet de gestionnaire de disposition dynamique.|
 |[CWnd::GetExStyle](#getexstyle)|Retourne le style étendu de la fenêtre.|
 |[CWnd::GetFocus](#getfocus)|Récupère le `CWnd` qui a actuellement le focus d'entrée.|
 |[CWnd::GetFont](#getfont)|Récupère la police actuelle.|
@@ -1032,7 +1032,7 @@ class CWnd : public CCmdTarget
 |[CWnd::PrintWindow](#printwindow)|Copie une fenêtre visuelle dans le contexte de périphérique spécifié, en général un contexte de périphérique d'impression.|
 |[CWnd::RedrawWindow](#redrawwindow)|Met à jour la région ou le rectangle spécifié dans la zone cliente.|
 |[CWnd::RegisterTouchWindow](#registertouchwindow)|Inscrit/annule l'inscription de la prise en charge de l'interface tactile Windows de fenêtre.|
-|[CWnd::ReleaseDC](#releasedc)|Libère les contextes de périphérique client et fenêtre, ce qui les libère en vue d’une utilisation par d’autres applications.|
+|[CWnd::ReleaseDC](#releasedc)|Libère les contextes de périphérique client et fenêtre, ce qui les libère en vue d'une utilisation par d'autres applications.|
 |[CWnd::RepositionBars](#repositionbars)|Repositionne les barres de contrôle dans la zone cliente.|
 |[CWnd::RunModalLoop](#runmodalloop)|Récupère, traduit ou distribue les messages pour une fenêtre qui est à l'état modal.|
 |[CWnd::ScreenToClient](#screentoclient)|Convertit les coordonnées d'écran d'un point ou rectangle donné sur l'affichage en coordonnées clientes.|
@@ -1150,7 +1150,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnInputLangChange](#oninputlangchange)|Appelé après la modification du langage d'entrée d'une application.|
 |[CWnd::OnInputLangChangeRequest](#oninputlangchangerequest)|Appelé quand l'utilisateur choisit un nouveau langage d'entrée.|
 |[CWnd::OnKeyDown](#onkeydown)|Appelé quand l'utilisateur appuie sur une touche non système.|
-|[CWnd::OnKeyUp](#onkeyup)|Appelé quand l’utilisateur relâche une touche non système.|
+|[CWnd::OnKeyUp](#onkeyup)|Appelé quand l'utilisateur relâche une touche non système.|
 |[CWnd::OnKillFocus](#onkillfocus)|Appelé juste avant que `CWnd` perde le focus d'entrée.|
 |[CWnd::OnLButtonDblClk](#onlbuttondblclk)|Appelé quand l'utilisateur double-clique avec le bouton gauche de la souris.|
 |[CWnd::OnLButtonDown](#onlbuttondown)|Appelé quand l'utilisateur appuie sur le bouton gauche de la souris.|
@@ -1190,11 +1190,11 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNcPaint](#onncpaint)|Appelé quand la zone non cliente doit être peinte.|
 |[CWnd::OnNcRButtonDblClk](#onncrbuttondblclk)|Appelé quand l'utilisateur double-clique avec le bouton droit de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
 |[CWnd::OnNcRButtonDown](#onncrbuttondown)|Appelé quand l'utilisateur appuie sur le bouton droit de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
-|[CWnd::OnNcRButtonUp](#onncrbuttonup)|Appelé quand l’utilisateur relâche le bouton droit de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
+|[CWnd::OnNcRButtonUp](#onncrbuttonup)|Appelé quand l'utilisateur relâche le bouton droit de la souris pendant que le curseur se trouve dans une zone non cliente de `CWnd`.|
 |[CWnd::OnNcRenderingChanged](#onncrenderingchanged)|Appelé quand la stratégie de rendu de la zone non cliente a changé.|
 |[CWnd::OnNcXButtonDblClk](#onncxbuttondblclk)|Appelé quand l'utilisateur double-clique sur le bouton XBUTTON1 ou XBUTTON2 pendant que le curseur se trouve dans la zone non cliente d'une fenêtre.|
 |[CWnd::OnNcXButtonDown](#onncxbuttondown)|Appelé quand l'utilisateur appuie sur le bouton XBUTTON1 ou XBUTTON2 de la souris pendant que le curseur se trouve dans la zone non cliente d'une fenêtre.|
-|[CWnd::OnNcXButtonUp](#onncxbuttonup)|Appelé quand l’utilisateur relâche le bouton XBUTTON1 ou XBUTTON2 de la souris pendant que le curseur se trouve dans la zone non cliente d’une fenêtre.|
+|[CWnd::OnNcXButtonUp](#onncxbuttonup)|Appelé quand l'utilisateur relâche le bouton XBUTTON1 ou XBUTTON2 de la souris pendant que le curseur se trouve dans la zone non cliente d'une fenêtre.|
 |[CWnd::OnNextMenu](#onnextmenu)|Appelé quand la touche de direction droite ou gauche est utilisée pour basculer entre la barre de menus et le menu système.|
 |[CWnd::OnNotify](#onnotify)|Appelé par l'infrastructure pour informer une fenêtre parente qu'un événement s'est produit dans l'un de ses contrôles ou que le contrôle a besoin d'informations.|
 |[CWnd::OnNotifyFormat](#onnotifyformat)|Appelé pour déterminer si la fenêtre active accepte les structures ANSI ou Unicode dans le message de notification WM_NOTIFY.|
@@ -1202,7 +1202,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnPaintClipboard](#onpaintclipboard)|Appelé quand la zone cliente de la visionneuse de Presse-papiers doit être repeinte.|
 |[CWnd::OnPaletteChanged](#onpalettechanged)|Appelé pour permettre aux fenêtres qui utilisent une palette de couleurs de réaliser leurs palettes logiques et de mettre à jour leurs zones clientes.|
 |[CWnd::OnPaletteIsChanging](#onpaletteischanging)|Informe les autres applications qu'une application va réaliser sa palette logique.|
-|[CWnd::OnParentNotify](#onparentnotify)|Appelé quand une fenêtre enfant est créée ou détruite ou quand l’utilisateur clique avec un bouton de la souris pendant que le curseur se trouve dans la fenêtre enfant.|
+|[CWnd::OnParentNotify](#onparentnotify)|Appelé quand une fenêtre enfant est créée ou détruite ou quand l'utilisateur clique avec un bouton de la souris pendant que le curseur se trouve dans la fenêtre enfant.|
 |[CWnd::OnPowerBroadcast](#onpowerbroadcast)|Appelé quand un événement de gestion de l'alimentation se produit.|
 |[CWnd::OnQueryDragIcon](#onquerydragicon)|Appelé quand un `CWnd` réduit (sous forme d'icône) est sur le point d'être déplacé par l'utilisateur.|
 |[CWnd::OnQueryEndSession](#onqueryendsession)|Appelé quand l'utilisateur choisit de mettre fin à la session Windows.|
@@ -1212,7 +1212,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnRawInput](#onrawinput)|Appelé quand la fenêtre active obtient une entrée brute.|
 |[CWnd::OnRButtonDblClk](#onrbuttondblclk)|Appelé quand l'utilisateur double-clique avec le bouton droit de la souris.|
 |[CWnd::OnRButtonDown](#onrbuttondown)|Appelé quand l'utilisateur appuie sur le bouton droit de la souris.|
-|[CWnd::OnRButtonUp](#onrbuttonup)|Appelé quand l’utilisateur relâche le bouton droit de la souris.|
+|[CWnd::OnRButtonUp](#onrbuttonup)|Appelé quand l'utilisateur relâche le bouton droit de la souris.|
 |[CWnd::OnRenderAllFormats](#onrenderallformats)|Appelé quand l’application propriétaire va être détruite et qu’elle doit restituer tous ses formats.|
 |[CWnd::OnRenderFormat](#onrenderformat)|Appelé pour le propriétaire du Presse-papiers quand un format particulier avec rendu retardé doit être restitué.|
 |[CWnd::OnSessionChange](#onsessionchange)|Appelé pour avertir une application d'un changement d'état de session.|
@@ -1231,7 +1231,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSysCommand](#onsyscommand)|Appelé quand l'utilisateur sélectionne une commande dans le menu Système ou qu'il sélectionne le bouton Agrandir ou Réduire.|
 |[CWnd::OnSysDeadChar](#onsysdeadchar)|Appelé quand une séquence de touches est traduite en caractère de modificateur système (tel qu'un accent).|
 |[CWnd::OnSysKeyDown](#onsyskeydown)|Appelé quand l'utilisateur maintient la touche ALT enfoncée, puis qu'il appuie sur une autre touche.|
-|[CWnd::OnSysKeyUp](#onsyskeyup)|Appelé quand l’utilisateur relâche une touche sur laquelle il avait appuyé tout en ayant maintenu la touche ALT enfoncée.|
+|[CWnd::OnSysKeyUp](#onsyskeyup)|Appelé quand l'utilisateur relâche une touche sur laquelle il avait appuyé tout en ayant maintenu la touche ALT enfoncée.|
 |[CWnd::OnTCard](#ontcard)|Appelé quand l'utilisateur clique sur un bouton autorisé.|
 |[CWnd::OnTimeChange](#ontimechange)|Appelé pour toutes les fenêtres de niveau supérieur après un changement d'heure système.|
 |[CWnd::OnTimer](#ontimer)|Appelée après chaque intervalle spécifié dans [SetTimer](#settimer).|
@@ -1250,7 +1250,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnWndMsg](#onwndmsg)|Indique si un message Windows a été traité.|
 |[CWnd::OnXButtonDblClk](#onxbuttondblclk)|Appelé quand l'utilisateur double-clique sur le bouton XBUTTON1 ou XBUTTON2 pendant que le curseur se trouve dans la zone cliente d'une fenêtre.|
 |[CWnd::OnXButtonDown](#onxbuttondown)|Appelé quand l'utilisateur appuie sur le bouton XBUTTON1 ou XBUTTON2 pendant que le curseur se trouve dans la zone cliente d'une fenêtre.|
-|[CWnd::OnXButtonUp](#onxbuttonup)|Appelé quand l’utilisateur relâche le bouton XBUTTON1 ou XBUTTON2 pendant que le curseur se trouve dans la zone cliente d’une fenêtre.|
+|[CWnd::OnXButtonUp](#onxbuttonup)|Appelé quand l'utilisateur relâche le bouton XBUTTON1 ou XBUTTON2 pendant que le curseur se trouve dans la zone cliente d'une fenêtre.|
 |[CWnd::PostNcDestroy](#postncdestroy)|Cette fonction virtuelle est appelée par la valeur par défaut [OnNcDestroy](#onncdestroy) fonctionner une fois la fenêtre a été détruite.|
 |[CWnd::ReflectChildNotify](#reflectchildnotify)|Fonction d'assistance qui reflète un message à sa source.|
 |[CWnd::ReflectLastMsg](#reflectlastmsg)|Reflète le dernier message à la fenêtre enfant.|
@@ -1281,7 +1281,7 @@ La classe `CWnd` vous permet aussi de créer une fenêtre enfant Windows pour vo
 
 Une fenêtre enfant se crée en deux étapes. Tout d’abord, appelez le constructeur `CWnd` pour construire le `CWnd` de l’objet, puis appelez le [créer](#create) fonction membre pour créer la fenêtre enfant et l’attacher à la `CWnd` objet.
 
-Quand l’utilisateur ferme votre fenêtre enfant, détruisez l’objet `CWnd` ou appelez la fonction membre `DestroyWindow` pour supprimer la fenêtre et détruire ses structures de données.
+Quand l'utilisateur ferme votre fenêtre enfant, détruisez l'objet `CWnd` ou appelez la fonction membre `DestroyWindow` pour supprimer la fenêtre et détruire ses structures de données.
 
 Dans la bibliothèque MFC (Microsoft Foundation Class), d'autres classes sont dérivées de `CWnd` pour fournir des types de fenêtres spécifiques. Nombre de ces classes, y compris [CFrameWnd](../../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md), [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md), [CView](../../mfc/reference/cview-class.md), et [CDialog](../../mfc/reference/cdialog-class.md), sont conçus pour la dérivation supplémentaire. Les classes de contrôle dérivé `CWnd`, tel que [CButton](../../mfc/reference/cbutton-class.md), peut être utilisée directement ou peut être utilisé pour la dérivation de classes supplémentaire.
 
@@ -2647,7 +2647,7 @@ Pour interrompre la réception des fichiers déplacés, appelez la fonction memb
 
 ##  <a name="dragdetect"></a>  CWnd::DragDetect
 
-Capture la souris et suit ses déplacements jusqu’à ce que l’utilisateur relâche le bouton gauche, appuie sur la touche Échap ou déplace la souris en dehors du rectangle de glissement entourant le point spécifié.
+Capture la souris et suit ses déplacements jusqu'à ce que l'utilisateur relâche le bouton gauche, appuie sur la touche Échap ou déplace la souris en dehors du rectangle de glissement entourant le point spécifié.
 
 ```
 BOOL DragDetect(POINT pt) const;
@@ -4071,7 +4071,7 @@ Utilisez le pointeur retourné pour définir la propriété ICursor d’un contr
 
 ##  <a name="getdynamiclayout"></a>  CWnd::GetDynamicLayout
 
-Récupère un pointeur désignant l'objet gestionnaire de disposition dynamique.
+Récupère un pointeur vers l'objet de gestionnaire de disposition dynamique.
 
 ```
 CMFCDynamicLayout* GetDynamicLayout();

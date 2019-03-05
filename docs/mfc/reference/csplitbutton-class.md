@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: 56c006eaa9b0c9860a973727602fd29a33d7ec43
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b73e27097a64722afd6bad5b9bc2157655bd9aad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176626"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274503"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton, classe
 
@@ -72,7 +72,7 @@ L’illustration suivante représente une boîte de dialogue qui contient un con
 
 `CSplitButton`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -97,7 +97,7 @@ virtual BOOL Create(
 |Paramètre|Description|
 |---------------|-----------------|
 |*dwStyle*|[in] Une combinaison (OR) au niveau du bit de styles à appliquer au contrôle. Pour plus d’informations, consultez [Styles de boutons](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
-|*Rect*|[in] Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle.|
+|*rect*|[in] Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle.|
 |*pParentWnd*|[in] Un pointeur non null pour un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parent du contrôle.|
 |*nID*|[in] L’ID du contrôle.|
 

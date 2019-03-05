@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600666"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299290"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group, classe
 
-La classe `structured_task_group` représente une collection très structurée de travail parallèle. Vous pouvez mettre en file d’attente des tâches parallèles individuelles dans un `structured_task_group` à l’aide d’objets `task_handle`, attendre qu’elles se terminent ou annuler le groupe de tâches avant la fin de leur exécution, ce qui annule toutes les tâches dont l’exécution n’a pas commencé.
+La classe `structured_task_group` représente une collection très structurée de travail parallèle. Vous pouvez mettre en file d'attente des tâches parallèles individuelles dans un `structured_task_group` à l'aide d'objets `task_handle`, attendre qu'elles se terminent ou annuler le groupe de tâches avant la fin de leur exécution, ce qui annule toutes les tâches dont l'exécution n'a pas commencé.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,7 +47,7 @@ class structured_task_group;
 |[is_canceling](#is_canceling)|Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’en indique pas nécessairement que le `cancel` méthode a été appelée sur le `structured_task_group` objet (bien que ce cas la méthode retourne **true**). Il peut arriver que le `structured_task_group` objet exécute inline et un groupe de tâches supplémentaire en haut de l’arborescence de travail a été annulé. Dans tels cas où le runtime peut déterminer avance annulation passera via cet `structured_task_group` objet, **true** s’affichera également.|
 |[run](#run)|Surchargé. Planifie une tâche sur le `structured_task_group` objet. L’appelant gère la durée de vie de la `task_handle` objet passé dans le `_Task_handle` paramètre. La version qui prend le paramètre `_Placement` force la tâche à être orientées vers l’exécution à l’emplacement spécifié par ce paramètre.|
 |[run_and_wait](#run_and_wait)|Surchargé. Planifie une tâche à exécuter inline dans le contexte d’appel avec l’aide de la `structured_task_group` objet pour la prise en charge complète de l’annulation. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet. La fonction attend ensuite que tout le travail sur le `structured_task_group` objet est terminée ou annulé.|
-|[attente](#wait)|Attend que tout le travail sur le `structured_task_group` terminée ou est annulée.|
+|[wait](#wait)|Attend que tout le travail sur le `structured_task_group` terminée ou est annulée.|
 
 ## <a name="remarks"></a>Notes
 
@@ -67,7 +67,7 @@ Pour plus d’informations, consultez [parallélisme des tâches](../../../paral
 
 `structured_task_group`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ppl.h
 
@@ -228,5 +228,5 @@ Dans le chemin d’accès non exceptionnel d’exécution, vous avez un mandat p
 ## <a name="see-also"></a>Voir aussi
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
-[task_group, classe](task-group-class.md)<br/>
+[Classe task_group](task-group-class.md)<br/>
 [task_handle, classe](task-handle-class.md)

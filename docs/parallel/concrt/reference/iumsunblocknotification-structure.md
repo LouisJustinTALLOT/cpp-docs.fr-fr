@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: 219e32cedb02d4ecab73390e33601de32f9b0992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf083e2ad418269e49e53dc164f2a60f693d5d6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677966"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261386"
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification, structure
 
@@ -39,13 +39,13 @@ struct IUMSUnblockNotification;
 
 `IUMSUnblockNotification`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrtrm.h
 
 **Espace de noms :** concurrency
 
-##  <a name="getcontext"></a>  IUMSUnblockNotification::GetContext, méthode
+##  <a name="getcontext"></a>  IUMSUnblockNotification::GetContext Method
 
 Retourne le `IExecutionContext` interface pour le contexte d’exécution associé au proxy de thread qui a été débloqué. Une fois que cette méthode est retournée et le contexte d’exécution sous-jacent a été replanifié via un appel à la `IThreadProxy::SwitchTo` (méthode), cette interface n’est plus valide.
 

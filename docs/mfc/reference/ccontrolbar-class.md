@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644390"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291624"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -86,7 +86,7 @@ class CControlBar : public CWnd
 |[CControlBar::GetDockingFrame](#getdockingframe)|Retourne un pointeur vers le frame auquel une barre de contrôle est ancrée.|
 |[CControlBar::IsFloating](#isfloating)|Retourne une valeur différente de zéro si la barre de contrôle en question est une barre de contrôle flottante.|
 |[CControlBar::OnUpdateCmdUI](#onupdatecmdui)|Appelle les gestionnaires d’interface utilisateur de commande.|
-|[Fonctions CControlBar::SetBarStyle](#setbarstyle)|Modifie les paramètres de style de barre de contrôle.|
+|[CControlBar::SetBarStyle](#setbarstyle)|Modifie les paramètres de style de barre de contrôle.|
 |[CControlBar::SetBorders](#setborders)|Définit les valeurs de la bordure de la barre de contrôle.|
 |[CControlBar::SetInPlaceOwner](#setinplaceowner)|Modifie le propriétaire de la place d’une barre de contrôle.|
 
@@ -119,7 +119,7 @@ Pour plus d’informations sur `CControlBar`, consultez :
 
 `CControlBar`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxext.h
 
@@ -206,7 +206,7 @@ virtual void CalcInsideRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Contient les dimensions de la barre de contrôle. y compris les bordures.
 
 *bHorz*<br/>
@@ -260,7 +260,7 @@ virtual void DrawBorders(
 *pDC*<br/>
 Pointe vers le contexte de périphérique à utiliser pour restituer les bordures de la barre de contrôle.
 
-*Rect*<br/>
+*rect*<br/>
 Un `CRect` objet qui contient les dimensions de la barre de contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -282,7 +282,7 @@ virtual void DrawGripper(
 *pDC*<br/>
 Pointe vers le contexte de périphérique à utiliser pour le rendu de la barre de redimensionnement de barre de contrôle.
 
-*Rect*<br/>
+*rect*<br/>
 Un `CRect` objet qui contient les dimensions de la barre de redimensionnement de barre de contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -446,7 +446,7 @@ Pour mettre à jour d’un bouton individuel ou un volet, utilisez la macro ON_U
 
 `OnUpdateCmdUI` est appelé par l’infrastructure lorsque l’application est inactive. La fenêtre frame à mettre à jour doit être au moins indirectement, une fenêtre enfant, d’une fenêtre frame visible. `OnUpdateCmdUI` est une avancée substituable.
 
-##  <a name="setbarstyle"></a>  Fonctions CControlBar::SetBarStyle
+##  <a name="setbarstyle"></a>  CControlBar::SetBarStyle
 
 Appelez cette fonction pour définir le texte souhaité **CBRS_** styles pour la barre de contrôle.
 

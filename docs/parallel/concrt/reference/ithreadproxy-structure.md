@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-ms.openlocfilehash: 606adf0e6984ebe93951c80620407f9f1c8775f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 906b05800711e89592e5230bec7fa0fe1640379f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533976"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265715"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy, structure
 
@@ -47,7 +47,7 @@ Les proxys de thread sont associés aux contextes d’exécution représentés p
 
 `IThreadProxy`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrtrm.h
 
@@ -75,7 +75,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 
 ### <a name="parameters"></a>Paramètres
 
-*switchState entraîne le démarrage*<br/>
+*switchState*<br/>
 Indique l’état du proxy de thread qui exécute le commutateur. Le paramètre est de type `SwitchingProxyState`.
 
 ### <a name="remarks"></a>Notes
@@ -107,7 +107,7 @@ virtual void SwitchTo(
 *pContext*<br/>
 Le contexte d’exécution pour basculer en coopération.
 
-*switchState entraîne le démarrage*<br/>
+*switchState*<br/>
 Indique l’état du proxy de thread qui exécute le commutateur. Le paramètre est de type `SwitchingProxyState`.
 
 ### <a name="remarks"></a>Notes
@@ -122,7 +122,7 @@ Utilisez la valeur `Nesting` lorsque vous souhaitez détacher temporairement ce 
 
 `SwitchTo` doit être appelée sur le `IThreadProxy` interface qui représente le thread en cours d’exécution ou les résultats ne sont pas définis. La fonction lève `invalid_argument` si le paramètre `pContext` est défini sur `NULL`.
 
-##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem, méthode
+##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem Method
 
 Oblige le thread appelant à céder l'exécution à un autre thread prêt à s'exécuter sur le processeur actuel. Le système d’exploitation sélectionne le thread suivant doit être exécuté.
 

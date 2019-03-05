@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fa649ba41a684be6ed18bd05d48954503c5db16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562056"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295971"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Assistant Composant COM+ 1.0 ATL
 
@@ -23,7 +23,7 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consultez
 
    |Option|Description|
    |------------|-----------------|
-   |**Double**|Spécifie que l’objet prend en charge une interface double (son vtable a des fonctions d’interface personnalisées et liaison tardive `IDispatch` méthodes). Permet aux clients COM et les contrôleurs Automation pour accéder à l’objet.|
+   |**Dual**|Spécifie que l’objet prend en charge une interface double (son vtable a des fonctions d’interface personnalisées et liaison tardive `IDispatch` méthodes). Permet aux clients COM et les contrôleurs Automation pour accéder à l’objet.|
    |**Personnalisé**|Spécifie que l’objet prend en charge une interface personnalisée (son vtable a des fonctions d’interface personnalisées). Une interface personnalisée peut être plus rapide qu’une interface double, en particulier les limites du processus.<br /><br /> - **Compatible Automation** ajoute la prise en charge automation à l’interface personnalisée. Pour les projets avec attributs, définit le **oleautomation** attribut dans la coclasse.|
 
 - **Pouvant**
@@ -37,7 +37,7 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consultez
    |Option|Description|
    |------------|-----------------|
    |**ISupportErrorInfo**|Crée la prise en charge pour le [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interface afin que l’objet puisse retourner les informations d’erreur au client.|
-   |**IObjectControl**|Fournit l’accès de votre objet aux trois [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) méthodes : [activer](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), et [désactiver](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+   |**IObjectControl**|Fournit l’accès de votre objet aux trois [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) méthodes : [Activer](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), et [désactiver](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
    |**IObjectConstruct**|Crée la prise en charge pour le [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) interface pour gérer en passant dans les paramètres à partir d’autres méthodes ou objets.|
 
 - **Transaction**
@@ -55,4 +55,3 @@ Pour plus d’informations sur les projets ATL et les classes ATL COM, consultez
 
 [Assistant Composant COM+ 1.0 ATL](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [Composant ATL COM + 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

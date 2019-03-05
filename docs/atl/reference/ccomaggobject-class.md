@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 3598e625351f80a1a183b3128bf46a72143a02f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626835"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301660"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject, classe
 
@@ -38,7 +38,7 @@ class CComAggObject : public IUnknown,
 
 #### <a name="parameters"></a>Paramètres
 
-*contenu*<br/>
+*contained*<br/>
 Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge sur l’objet.
 
 ## <a name="members"></a>Membres
@@ -48,7 +48,7 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 |Nom|Description|
 |----------|-----------------|
 |[CComAggObject::CComAggObject](#ccomaggobject)|Constructeur.|
-|[CComAggObject :: ~ CComAggObject](#dtor)|Destructeur.|
+|[CComAggObject::~CComAggObject](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -83,7 +83,7 @@ Pour plus d’informations sur l’agrégation, consultez l’article [principes
 
 `CComAggObject`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -109,7 +109,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Paramètres
 
-*PV*<br/>
+*pv*<br/>
 [in] Inconnu externe.
 
 ### <a name="remarks"></a>Notes
@@ -118,7 +118,7 @@ Initialise le `CComContainedObject` membre, [m_contained](#m_contained)et incré
 
 Le destructeur décrémente le module nombre de verrous.
 
-##  <a name="dtor"></a>  CComAggObject :: ~ CComAggObject
+##  <a name="dtor"></a>  CComAggObject::~CComAggObject
 
 Destructeur.
 
@@ -142,7 +142,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Paramètres
 
-*PP*<br/>
+*pp*<br/>
 [out] Un pointeur vers un **CComAggObject\<**<em>contenus</em> **>** pointeur. Si `CreateInstance` échoue, *pp* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -185,7 +185,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Paramètres
 
-*contenu*<br/>
+*contained*<br/>
 [in] Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bien que toutes les autres interfaces souhaitées prendre en charge sur l’objet.
 
 ### <a name="remarks"></a>Notes
@@ -204,13 +204,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Paramètres
 
-*IID*<br/>
+*iid*<br/>
 [in] L’identificateur de l’interface demandée.
 
 *ppvObject*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par *iid*. Si l’objet ne prend pas en charge cette interface, *ppvObject* est définie sur NULL.
 
-*PP*<br/>
+*pp*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par le type `Q`. Si l’objet ne prend pas en charge cette interface, *pp* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour

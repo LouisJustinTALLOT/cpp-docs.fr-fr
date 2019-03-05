@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationFieldInfo structure [MFC]
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
-ms.openlocfilehash: 9a00d1cbaf58729863a85d4e9053c9241e9566ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85dd853a9aae41a87bbe7ef5c69e22846678cf8a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599405"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298423"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo, structure
 
@@ -44,7 +44,7 @@ Les objets de relation et les objets de champ de relation ne sont pas représent
 
 Appelez le [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre du contenant `CDaoDatabase` dans dont Relations de collection est stocké l’objet de relation que vous êtes intéressé par l’objet. Ensuite accéder à la `m_pFieldInfos` membre de la [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objet. `CDaoRelationFieldInfo` définit également un `Dump` génère de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoRelationFieldInfo` objet.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 3ec1acd1872bc0e51117602ef723116170458afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636733"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295745"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl, classe
 
@@ -59,7 +59,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl :: ~ CMFCPreviewCtrlImpl](#dtor)|Destruction d’un objet de contrôle de version préliminaire.|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destruction d’un objet de contrôle de version préliminaire.|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Construit un objet de contrôle de version préliminaire.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
@@ -91,7 +91,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 |[CMFCPreviewCtrlImpl::m_font](#m_font)|Police utilisée pour afficher du texte dans la fenêtre d’aperçu.|
 |[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|Pointeur vers un document dont le contenu est affiché dans le contrôle.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -111,7 +111,7 @@ Construit un objet de contrôle de version préliminaire.
 
 ### <a name="syntax"></a>Syntaxe
 
-CMFCPreviewCtrlImpl() ;
+CMFCPreviewCtrlImpl();
 
 ## <a name="create"></a> CMFCPreviewCtrlImpl::Create
 
@@ -136,7 +136,7 @@ virtual BOOL Create(
 *hWndParent*<br/>
 Handle vers la fenêtre hôte fournie par l’interpréteur de commandes pour l’aperçu riche.
 
-*République populaire de Chine*<br/>
+*prc*<br/>
 Spécifie la taille initiale et la position de la fenêtre.
 
 *pContext*<br/>
@@ -301,7 +301,7 @@ Couleur d’arrière-plan de la fenêtre d’aperçu.
 *clrText*<br/>
 Couleur du texte de la fenêtre d’aperçu.
 
-*FLP*<br/>
+*plf*<br/>
 Police utilisée pour afficher du texte dans la fenêtre d’aperçu.
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect
@@ -319,7 +319,7 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*République populaire de Chine*<br/>
+*prc*<br/>
 Spécifie la nouvelle taille et la position du contrôle de version préliminaire.
 
 *bRedraw*<br/>
@@ -338,4 +338,3 @@ Destruction d’un objet de contrôle de version préliminaire.
 ```
 virtual ~CMFCPreviewCtrlImpl();
 ```
-

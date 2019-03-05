@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-ms.openlocfilehash: ba5bda2e73964e7195c4955806e897f9496c244a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3b14fa59765aa72a1142e0eef41aa84abea35de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460201"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301846"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2, classe
 
@@ -34,7 +34,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>Paramètres
 
-*licence*<br/>
+*license*<br/>
 Une classe qui implémente les fonctions statiques suivantes :
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -81,7 +81,7 @@ Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComC
 
 `CComClassFactory2`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -182,7 +182,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Paramètres
 
-*Troupeau*<br/>
+*fLock*<br/>
 [in] Si la valeur est TRUE, le nombre de verrous est incrémenté ; Sinon, le nombre de verrous est décrémenté.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -1,5 +1,5 @@
 ---
-title: "TN020 : conventions de dénomination d'ID et de numérotation"
+title: 'TN020 : ID d’affectation de noms et les Conventions de numérotation'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518669"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267392"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020 : conventions de dénomination d'ID et de numérotation
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020 : ID d’affectation de noms et les Conventions de numérotation
 
 Cette note décrit les ID d’affectation de noms et les conventions de numérotation que MFC 2.0 utilise pour les ressources, des commandes, des chaînes, des contrôles et des fenêtres enfants.
 
@@ -107,4 +107,3 @@ Raisons de ces limites de plage :
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

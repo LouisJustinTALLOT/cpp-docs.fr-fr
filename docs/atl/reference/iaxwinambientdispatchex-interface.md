@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 5b4afabe2c12dff048bc6a6fb904a82b3cea4d01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae91921ecd5f53f4551e46e1d03cf027ce3e1f3b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539436"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292400"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Iaxwinambientdispatchex, Interface
 
@@ -38,7 +38,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ## <a name="remarks"></a>Notes
 
-Inclure cette interface dans les applications ATL qui sont liées statiquement ATL et l’héberger des contrôles ActiveX, en particulier les contrôles ActiveX qui ont des propriétés ambiantes. Non compris cette interface génère cette assertion : « Vous avez oublié à passer LIBID à CComModule::Init »
+Inclure cette interface dans les applications ATL qui sont liées statiquement ATL et l’héberger des contrôles ActiveX, en particulier les contrôles ActiveX qui ont des propriétés ambiantes. Non compris cette interface génère cette assertion : « Avez-vous oublié de passer LIBID à CComModule::Init »
 
 Cette interface est exposée par le contrôle ActiveX d’ATL hébergement d’objets. Dérivé [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` ajoute une méthode qui vous permet de compléter l’interface de propriété ambiante fournie par ATL avec celle de votre choix.
 
@@ -48,7 +48,7 @@ Si vous établissez une liaison à ATL90.dll, **AXHost** charge les informations
 
 Consultez [hébergement ActiveX des contrôles à l’aide de ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour plus d’informations.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 La définition de cette interface est disponible dans plusieurs formes, comme illustré dans le tableau suivant.
 

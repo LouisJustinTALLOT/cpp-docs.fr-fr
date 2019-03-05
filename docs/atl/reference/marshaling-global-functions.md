@@ -6,12 +6,12 @@ f1_keywords:
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: dadaf119f8f1d0aefb4f5b4b740747a2794d271e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac6e316ad6b5d3f49c171c940d9129060744aee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271911"
 ---
 # <a name="marshaling-global-functions"></a>Fonctions globales de marshaling
 
@@ -49,7 +49,7 @@ Consultez l’exemple de [AtlMarshalPtrInProc](#atlmarshalptrinproc).
 
 ##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc
 
-Crée un objet de flux, écrit le CLSID du proxy dans le flux, puis marshale le pointeur d’interface spécifié en écrivant les données nécessaires pour initialiser le proxy dans le flux.
+Crée un objet de flux, écrit le CLSID du proxy dans le flux, puis marshale le pointeur d'interface spécifié en écrivant les données nécessaires pour initialiser le proxy dans le flux.
 
 ```
 HRESULT AtlMarshalPtrInProc(
@@ -63,7 +63,7 @@ HRESULT AtlMarshalPtrInProc(
 *pUnk*<br/>
 [in] Pointeur vers l’interface doivent être marshalées.
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface qui est marshalé.
 
 *ppStream*<br/>
@@ -87,7 +87,7 @@ Si le marshaling échoue, le pointeur de flux est publié.
 
 ##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr
 
-Convertit les données de marshaling du flux en un pointeur d’interface qui peut être utilisé par le client.
+Convertit les données de marshaling du flux en un pointeur d'interface qui peut être utilisé par le client.
 
 ```
 HRESULT AtlUnmarshalPtr(
@@ -101,7 +101,7 @@ HRESULT AtlUnmarshalPtr(
 *pStream*<br/>
 [in] Un pointeur vers le flux en cours démarshalée.
 
-*IID*<br/>
+*iid*<br/>
 [in] Le GUID de l’interface en cours démarshalée.
 
 *ppUnk*<br/>

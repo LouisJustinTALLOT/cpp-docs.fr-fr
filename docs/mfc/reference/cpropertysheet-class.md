@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 8ea466abe153bd31ef15c41b277b57f90cd2b50b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5fd3a682aa649091712a09a9131081c06d29ca6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450932"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300620"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (classe)
 
@@ -101,7 +101,7 @@ class CPropertySheet : public CWnd
 |[CPropertySheet::SetFinishText](#setfinishtext)|Définit le texte pour le bouton Terminer.|
 |[CPropertySheet::SetTitle](#settitle)|Définit la légende de la feuille de propriétés.|
 |[CPropertySheet::SetWizardButtons](#setwizardbuttons)|Active les boutons de l’Assistant.|
-|[Fonction CPropertySheet::SetWizardMode](#setwizardmode)|Active le mode de l’Assistant.|
+|[CPropertySheet::SetWizardMode](#setwizardmode)|Active le mode de l’Assistant.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
@@ -157,7 +157,7 @@ Pour plus d’informations sur l’utilisation `CPropertySheet` objets, consulte
 
 `CPropertySheet`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdlgs.h
 
@@ -647,8 +647,8 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Paramètres
 
-*Nbouton*<br/>
-Nbouton : identifie du bouton. Ce paramètre peut être une des valeurs suivantes :
+*nButton*<br/>
+Nbouton : Identifie du bouton. Ce paramètre peut être une des valeurs suivantes :
 
 - PSBTN_BACK choisit le bouton précédent.
 
@@ -808,7 +808,7 @@ Un `CPropertySheet` a trois pages de propriétés d’Assistant : `CStylePage`,
 
 [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]
 
-##  <a name="setwizardmode"></a>  Fonction CPropertySheet::SetWizardMode
+##  <a name="setwizardmode"></a>  CPropertySheet::SetWizardMode
 
 Établit une page de propriétés en tant qu’un Assistant.
 

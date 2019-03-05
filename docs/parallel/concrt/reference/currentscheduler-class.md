@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619178"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326788"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler, classe
 
@@ -40,7 +40,7 @@ class CurrentScheduler;
 
 |Nom|Description|
 |----------|-----------------|
-|[Créer](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre et l’attache au contexte d’appel. Le planificateur créé récemment deviendra le planificateur actuel pour le contexte d’appel.|
+|[Create](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre et l’attache au contexte d’appel. Le planificateur créé récemment deviendra le planificateur actuel pour le contexte d’appel.|
 |[CreateScheduleGroup](#createschedulegroup)|Surchargé. Crée un nouveau groupe de planification dans le planificateur associé au contexte d’appel. La version qui prend le paramètre `_Placement` entraîne des tâches au sein du groupe de planification qui vient d’être créé pour être orienté vers l’exécution à l’emplacement spécifié par ce paramètre.|
 |[Détacher](#detach)|Détache le planificateur au contexte d’appel en cours et restaure le planificateur précédemment attaché comme planificateur actuel, s’il en existe. Une fois que cette méthode est retournée, le contexte d’appel est ensuite géré par le planificateur précédemment attaché au contexte à l’aide du `CurrentScheduler::Create` ou `Scheduler::Attach` (méthode).|
 |[Get](#get)|Retourne un pointeur vers le planificateur associé au contexte d’appel, également appelé le planificateur actuel.|
@@ -59,7 +59,7 @@ S’il n’existe aucun planificateur (consultez [planificateur](scheduler-class
 
 `CurrentScheduler`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt.h
 
@@ -75,7 +75,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Paramètres
 
-*Stratégie de _journal*<br/>
+*_Policy*<br/>
 La stratégie du planificateur qui décrit le comportement du planificateur qui vient d’être créé.
 
 ### <a name="remarks"></a>Notes
@@ -181,7 +181,7 @@ Une copie de la stratégie créée avec le planificateur actuel.
 
 Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel.
 
-##  <a name="id"></a> ID
+##  <a name="id"></a> Id
 
 Retourne un identificateur unique pour le planificateur actuel.
 
@@ -273,4 +273,3 @@ Cette méthode entraîne la création du planificateur par défaut du processus 
 [Scheduler, classe](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Planificateur de tâches](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

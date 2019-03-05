@@ -1,17 +1,17 @@
 ---
-title: "Procédure pas à pas : utilisation des nouveaux contrôles d'environnement MFC"
+title: 'Procédure pas à pas : À l’aide de nouveaux contrôles d’environnement MFC'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 4ff585123fb30a4fc31460c95f8960f5cfd7b7bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507562"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288786"
 ---
-# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procédure pas à pas : utilisation des nouveaux contrôles d'environnement MFC
+# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procédure pas à pas : À l’aide de nouveaux contrôles d’environnement MFC
 
 Dans cette procédure pas à pas, vous allez créer une application qui ressemble à l’Explorateur de fichiers. Vous allez créer une fenêtre qui comporte deux volets. Le volet gauche contiendra un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objet qui affiche votre poste de travail dans une vue hiérarchique. Le volet de droite contiendra un [CMFCShellListCtrl affichant](../mfc/reference/cmfcshelllistctrl-class.md) qui affiche les fichiers dans le dossier sélectionné dans le volet gauche.
 

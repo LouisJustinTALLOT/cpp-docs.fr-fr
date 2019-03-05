@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: 59c4e5f4e55947a4eab7a5258d8fe2b943bab3ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501567"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294406"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush, classe
 
@@ -66,7 +66,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |Nom|Description|
 |----------|-----------------|
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Surchargé. Construit un objet CD2DBitmapBrush à partir du fichier.|
-|[CD2DBitmapBrush :: ~ CD2DBitmapBrush](#dtor)|Destructeur. Appelé lorsqu’un objet brush de bitmap D2D est détruit.|
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Destructeur. Appelé lorsqu’un objet brush de bitmap D2D est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -96,7 +96,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DBitmapBrush::operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|Renvoie l’interface ID2D1BitmapBrush|
+|[CD2DBitmapBrush::operator ID2D1BitmapBrush*](#operator_id2d1bitmapbrush_star)|Renvoie l’interface ID2D1BitmapBrush|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
@@ -116,11 +116,11 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 `CD2DBitmapBrush`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrendertarget.h
 
-##  <a name="dtor"></a>  CD2DBitmapBrush :: ~ CD2DBitmapBrush
+##  <a name="dtor"></a>  CD2DBitmapBrush::~CD2DBitmapBrush
 
 Destructeur. Appelé lorsqu’un objet brush de bitmap D2D est détruit.
 
@@ -330,7 +330,7 @@ Propriétés de pinceau de la bitmap.
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;
 ```
 
-##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush *
+##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush*
 
 Renvoie l’interface ID2D1BitmapBrush
 

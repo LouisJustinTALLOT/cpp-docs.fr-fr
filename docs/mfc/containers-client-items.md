@@ -1,18 +1,18 @@
 ---
-title: 'Conteneurs : éléments clients'
+title: 'Conteneurs : Éléments clients'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client items
 - client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
-ms.openlocfilehash: e0d56d4a8f25828de954a78e9bafd8df150c7ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c7f4a63cb9a31b52be2d3574ddad29313df6a4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298280"
 ---
-# <a name="containers-client-items"></a>Conteneurs : éléments clients
+# <a name="containers-client-items"></a>Conteneurs : Éléments clients
 
 Cet article décrit les éléments clients et que les classes votre application doit dériver ses éléments clients.
 
@@ -27,8 +27,8 @@ Chaque application de conteneur doit dériver au moins une classe à partir de `
 ## <a name="see-also"></a>Voir aussi
 
 [Conteneurs](../mfc/containers.md)<br/>
-[Conteneurs : fichiers composés](../mfc/containers-compound-files.md)<br/>
-[Conteneurs : problèmes d’interface utilisateur](../mfc/containers-user-interface-issues.md)<br/>
-[Conteneurs : fonctionnalités avancées](../mfc/containers-advanced-features.md)<br/>
+[Conteneurs : Fichiers composés](../mfc/containers-compound-files.md)<br/>
+[Conteneurs : Problèmes d’Interface utilisateur](../mfc/containers-user-interface-issues.md)<br/>
+[Conteneurs : Fonctionnalités avancées](../mfc/containers-advanced-features.md)<br/>
 [COleClientItem, classe](../mfc/reference/coleclientitem-class.md)<br/>
 [COleServerItem, classe](../mfc/reference/coleserveritem-class.md)

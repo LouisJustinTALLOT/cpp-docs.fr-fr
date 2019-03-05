@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: a67afdf00f0a524a94b50643d6541251feca2c2c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0a91b34dc28ace3a8fc0fe1ac1c59d86b19ece43
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520255"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290061"
 ---
 # <a name="collection-classes"></a>Classes de collection
 
@@ -92,4 +92,3 @@ Les classes suivantes fournissent la prise en charge pour les tableaux, listes, 
 
 [Vue d’ensemble de la classe](../atl/atl-class-overview.md)<br/>
 [Classes de collections](../atl/atl-collection-classes.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'TN003 : mappage des handles Windows à des objets'
+title: 'TN003 : Handles de mappage de Windows à des objets'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mapping
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows handles to objects [MFC]
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
-ms.openlocfilehash: 46421016171f61a199e6a0a04f6b9b81e260496e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7844398ebaf5a8fdf8c56ab18b33d8c7717d1ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677147"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326697"
 ---
-# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003 : mappage des handles Windows à des objets
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003 : Handles de mappage de Windows à des objets
 
 Cette note décrit la bibliothèque MFC routines qui prennent en charge le mappage Windows handles vers des objets C++ de l’objet.
 
@@ -87,4 +87,3 @@ Pour passer ces objets à partir d’un seul thread à un autre, toujours les en
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

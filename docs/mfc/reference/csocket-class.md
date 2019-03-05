@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-ms.openlocfilehash: 3c5340a8c65f804747fd8d3c8bd31fb20f80c6ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487280"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266560"
 ---
 # <a name="csocket-class"></a>CSocket (classe)
 
@@ -80,7 +80,7 @@ Dans l’exemple suivant, `m_dwExpected` est le nombre approximatif d’octets q
 > [!NOTE]
 >  Lors de l’utilisation de sockets MFC dans les threads secondaires dans une application MFC liée de manière statique, vous devez appeler `AfxSocketInit` dans chaque thread qui utilise des sockets pour initialiser les bibliothèques de socket. Par défaut, `AfxSocketInit` est uniquement appelée dans le thread principal.
 
-Pour plus d’informations, consultez [Windows des Sockets dans MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md), [Windows Sockets : fonctionnement de Sockets avec Archives travail](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Windows Sockets : ordre des opérations](../../mfc/windows-sockets-sequence-of-operations.md), [Windows Sockets : exemple de Sockets utilisant des Archives](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
+Pour plus d’informations, consultez [Windows des Sockets dans MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md), [Windows Sockets : Fonctionnement des Sockets avec des Archives](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Windows Sockets : Séquence d’opérations](../../mfc/windows-sockets-sequence-of-operations.md), [Windows Sockets : Exemple de Sockets utilisant des Archives](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -90,7 +90,7 @@ Pour plus d’informations, consultez [Windows des Sockets dans MFC](../../mfc/w
 
 `CSocket`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxsock.h
 
@@ -115,7 +115,7 @@ Valeur différente de zéro si la fonction aboutit.
 
 Le handle de SOCKET est stocké dans l’objet [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) membre de données.
 
-Pour plus d’informations, consultez [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Pour plus d’informations, consultez [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ### <a name="example"></a>Exemple
 
@@ -141,7 +141,7 @@ Dans le cas d’un blocage `Connect` opération, l’implémentation Windows Soc
 
 Annuler toute opération autre que `Accept` pouvez laisser le socket dans un état indéterminé. Si une application annule une opération de blocage sur un socket, la seule opération que l’application peut dépendre de la possibilité d’effectuer sur le socket est un appel à `Close`, bien que les autres opérations peuvent travailler sur certaines implémentations de Windows Sockets. Si vous le souhaitez une portabilité maximale pour votre application, vous devez être veiller à ne pas dépendent de l’exécution d’opérations après une annulation.
 
-Pour plus d’informations, consultez [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Pour plus d’informations, consultez [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="create"></a>  CSocket::Create
 
@@ -180,7 +180,7 @@ Différent de zéro si la fonction a réussi ; Sinon, 0 et un code d’erreur s
     > [!NOTE]
     >  Le `Accept` fonction membre prend une référence à un vide `CSocket` objet comme paramètre. Vous devez créer cet objet avant d’appeler `Accept`. N’oubliez pas que si cet objet socket est hors de portée, la connexion se ferme. N’appelez pas `Create` pour ce nouvel objet socket.
 
-Pour plus d’informations sur les sockets de flux de données et de datagramme, consultez les articles [Windows Sockets : arrière-plan](../../mfc/windows-sockets-background.md), [Windows Sockets : Ports et adresses de Socket](../../mfc/windows-sockets-ports-and-socket-addresses.md), et [Windows Sockets : à l’aide de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Pour plus d’informations sur les sockets de flux de données et de datagramme, consultez les articles [Windows Sockets : Arrière-plan](../../mfc/windows-sockets-background.md), [Windows Sockets : Ports et adresses de Socket](../../mfc/windows-sockets-ports-and-socket-addresses.md), et [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="csocket"></a>  CSocket::CSocket
 
@@ -194,7 +194,7 @@ CSocket();
 
 Après la construction, vous devez appeler la `Create` fonction membre.
 
-Pour plus d’informations, consultez [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Pour plus d’informations, consultez [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="fromhandle"></a>  CSocket::FromHandle
 
@@ -217,7 +217,7 @@ Un pointeur vers un `CSocket` de l’objet, ou NULL s’il n’existe aucun `CSo
 
 En fonction d’un handle de SOCKET, si un `CSocket` objet n’est pas attaché au handle, la fonction membre retourne la valeur NULL et ne crée pas d’un objet temporaire.
 
-Pour plus d’informations, consultez [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Pour plus d’informations, consultez [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="isblocking"></a>  CSocket::IsBlocking
 
@@ -233,7 +233,7 @@ Différent de zéro si le socket est blocage ; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Pour plus d’informations, consultez [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="onmessagepending"></a>  CSocket::OnMessagePending
 
@@ -251,9 +251,9 @@ Différent de zéro si le message a été géré ; sinon 0.
 
 Il s’agit d’une avancée substituable.
 
-Le framework appelle `OnMessagePending` tandis que le socket est pompage des messages Windows pour vous permettre de traiter les messages présentant un intérêt pour votre application. Pour obtenir des exemples d’utilisation de `OnMessagePending`, consultez l’article [Windows Sockets : dérivation à partir de Classes de sockets](../../mfc/windows-sockets-deriving-from-socket-classes.md).
+Le framework appelle `OnMessagePending` tandis que le socket est pompage des messages Windows pour vous permettre de traiter les messages présentant un intérêt pour votre application. Pour obtenir des exemples d’utilisation de `OnMessagePending`, consultez l’article [Windows Sockets : Dérivation de Classes de sockets](../../mfc/windows-sockets-deriving-from-socket-classes.md).
 
-Pour plus d’informations, consultez [Windows Sockets : utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Pour plus d’informations, consultez [Windows Sockets : Utilisation de Sockets avec des Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ## <a name="see-also"></a>Voir aussi
 

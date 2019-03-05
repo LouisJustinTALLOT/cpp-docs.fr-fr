@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 767d4782ec637a0404051e6871d584f73cefdcd2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 8a6fc0786a169f9c1e73eb8acadfc51d063334c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657472"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275335"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray (classe)
 
@@ -85,7 +85,7 @@ Pour plus d’informations sur l’utilisation de `CTypedPtrArray`, consultez le
 
 `CTypedPtrArray`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtempl.h
 
@@ -253,7 +253,7 @@ Un autre tableau qui contient les éléments à ajouter à ce tableau.
 
 Pour plus de remarques, consultez [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).
 
-##  <a name="operator_at"></a>  [] CTypedPtrArray::operator
+##  <a name="operator_at"></a>  CTypedPtrArray::operator [ ]
 
 Ces opérateurs inline appellent `BASE_CLASS` **:: [] opérateur**.
 

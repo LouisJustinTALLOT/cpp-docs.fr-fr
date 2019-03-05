@@ -1,24 +1,24 @@
 ---
-title: 'Comment : créer une table des messages pour une classe de modèle'
+title: 'Procédure : Créer une table des messages pour une classe de modèle'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - template classes [MFC], creating message maps
 - message maps [MFC], template classes
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
-ms.openlocfilehash: 437fdf59ae9c9d3428654fc412fd78bf1348a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 676e698a899327eee8305731b5d609b5b95ece76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586236"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296772"
 ---
-# <a name="how-to-create-a-message-map-for-a-template-class"></a>Comment : créer une table des messages pour une classe de modèle
+# <a name="how-to-create-a-message-map-for-a-template-class"></a>Procédure : Créer une table des messages pour une classe de modèle
 
 La création d'une table des messages dans MFC est un moyen efficace pour diriger les messages Windows vers une instance d'objet appropriée C++. Les exemples de cibles de table des messages MFC comprennent des classes d'application, des classes de document et de vue, des classes de contrôle, etc.
 
 Tables des messages MFC traditionnelles sont déclarées à l’aide de la [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro pour déterminer le début de la table des messages, une entrée macro pour chaque méthode de classe de gestionnaire de messages et enfin la [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)macro pour déclarer la fin de la table des messages.
 
-Une limitation avec les [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro se produit lorsqu’il est utilisé conjointement avec une classe contenant les arguments template. Si elle est utilisée avec une classe de modèle, la macro entraînera une erreur au moment de la compilation en raison des paramètres de modèle manquants pendant l’expansion macro. Le [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) macro a été conçue pour permettre la mappe des classes qui contiennent un seul argument de modèle pour déclarer leurs propres messages.
+Une limitation avec les [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro se produit lorsqu’il est utilisé conjointement avec une classe contenant les arguments template. Si elle est utilisée avec une classe de modèle, la macro entraînera une erreur de compilation en raison des paramètres de modèle manquants pendant l'expansion macro. Le [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) macro a été conçue pour permettre la mappe des classes qui contiennent un seul argument de modèle pour déclarer leurs propres messages.
 
 ## <a name="example"></a>Exemple
 
@@ -64,4 +64,3 @@ Pour effectuer le test, le `StringizeElement` fonction doit être spécialisée 
 
 [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map)<br/>
 [Gestion et mappage des messages](../mfc/message-handling-and-mapping.md)
-

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292274"
 ---
 # <a name="cmfcpopupmenu-class"></a>Cmfcpopupmenu, classe
 
@@ -296,7 +296,7 @@ L’exemple suivant montre comment configurer un objet de menu contextuel. L’e
 
 `CMFCPopupMenu`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpopupmenu.h
 
@@ -435,7 +435,7 @@ virtual BOOL Create(
 *hMenu*<br/>
 [in] Handle vers une ressource de menu.
 
-*Bloqué*<br/>
+*bLocked*<br/>
 [in] Un paramètre booléen qui indique si le menu est personnalisable. FALSE indique que le menu contextuel est personnalisable.
 
 *bOwnMessage*<br/>
@@ -468,7 +468,7 @@ virtual CPane* CreateTearOffBar(
 
 [in] *pWndMain*<br/>
 [in] *uiID*<br/>
-[in] *le caractère*<br/>
+[in] *lpszName*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -518,7 +518,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le son, FALSE sinon.
 
 ### <a name="remarks"></a>Notes
@@ -894,7 +894,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>Paramètres
 
-*Bouton*<br/>
+*button*<br/>
 [in] Une référence à l’élément de menu à ajouter.
 
 *iInsertAt*<br/>

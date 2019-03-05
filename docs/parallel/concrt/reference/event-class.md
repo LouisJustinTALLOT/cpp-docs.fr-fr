@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 323b9a6e2c46bea8d82f0f589d1174041c1f0780
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480104"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264663"
 ---
 # <a name="event-class"></a>event, classe
 
@@ -43,7 +43,7 @@ class event;
 |----------|-----------------|
 |[reset](#reset)|Réinitialise l’événement à un état non signalé.|
 |[set](#set)|Signale l’événement.|
-|[attente](#wait)|Attend que l’événement soit signalé.|
+|[wait](#wait)|Attend que l’événement soit signalé.|
 |[wait_for_multiple](#wait_for_multiple)|Attend que plusieurs événements soit signalé.|
 
 ### <a name="public-constants"></a>Constantes publiques
@@ -60,7 +60,7 @@ Pour plus d’informations, consultez [les Structures de données de synchronisa
 
 `event`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrt.h
 
@@ -126,7 +126,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Délai*<br/>
+*_Timeout*<br/>
 Indique le nombre de millisecondes avant l’attente expire. La valeur `COOPERATIVE_TIMEOUT_INFINITE` signifie qu’il n’existe aucun délai d’expiration.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -159,7 +159,7 @@ Le nombre d’événements dans le tableau fourni dans le `_PPEvents` paramètre
 *_FWaitAll*<br/>
 Si la valeur **true**, le paramètre spécifie que tous les événements dans le tableau fourni dans le `_PPEvents` paramètre doit être signalé pour satisfaire aux exigences de l’attente. Si la valeur **false**, il spécifie que n’importe quel événement dans le tableau fourni dans le `_PPEvents` paramètre ne soit signalé satisfait l’attente.
 
-*_Délai*<br/>
+*_Timeout*<br/>
 Indique le nombre de millisecondes avant l’attente expire. La valeur `COOPERATIVE_TIMEOUT_INFINITE` signifie qu’il n’existe aucun délai d’expiration.
 
 ### <a name="return-value"></a>Valeur de retour

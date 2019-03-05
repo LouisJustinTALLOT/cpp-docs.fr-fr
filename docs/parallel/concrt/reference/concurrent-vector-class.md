@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657563"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283174"
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 
@@ -136,13 +136,13 @@ Pour plus d’informations sur la `concurrent_vector` de classe, consultez [cont
 
 `concurrent_vector`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concurrent_vector.h
 
 **Espace de noms :** concurrency
 
-##  <a name="assign"></a> Affecter
+##  <a name="assign"></a> assign
 
 Efface les éléments du vecteur simultané et lui attribue `_N` copies de `_Item`, ou les valeurs spécifiées par la plage d’itérateurs [ `_Begin`, `_End`). Cette méthode n’est pas concurrentiel.
 
@@ -164,20 +164,20 @@ Le type de l’itérateur spécifié.
 *_N*<br/>
 Le nombre d’éléments à copier dans le vecteur simultané.
 
-*É_lément*<br/>
+*_Item*<br/>
 Référence à une valeur utilisée pour remplir le vecteur simultané.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Un itérateur au premier élément de la plage source.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Un itérateur vers l’élément suivant le dernier élément de la plage source.
 
 ### <a name="remarks"></a>Notes
 
 `assign` n’est pas concurrentiel. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette méthode.
 
-##  <a name="at"></a> à
+##  <a name="at"></a> at
 
 Fournit l’accès à l’élément à l’index donné dans le vecteur simultané. Cette méthode est concurrentiel pour les opérations de lecture, ainsi que pendant l’augmentation du vecteur, tant que vous avez vérifié que la valeur `_Index` est inférieure à la taille du vecteur simultané.
 
@@ -202,7 +202,7 @@ La version de la fonction `at` qui retourne un non - `const` référence ne peut
 
 La méthode lève `out_of_range` si `_Index` est supérieur ou égal à la taille du vecteur simultané, et `range_error` si l’index est pour une partie rompue du vecteur. Pour plus d’informations sur la façon dont un vecteur peut être endommagé, consultez [conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md).
 
-##  <a name="back"></a> Précédent
+##  <a name="back"></a> back
 
 Retourne une référence ou une `const` faire référence au dernier élément dans le vecteur simultané. Si le vecteur simultané est vide, la valeur de retour est indéfinie. Cette méthode est concurrentiel.
 
@@ -333,13 +333,13 @@ La source `concurrent_vector` objet à copier ou déplacer des éléments à par
 *_N*<br/>
 La capacité initiale de la `concurrent_vector` objet.
 
-*É_lément*<br/>
+*_Item*<br/>
 La valeur des éléments dans l’objet construit.
 
-*_Commencer l'*<br/>
+*_Begin*<br/>
 Position du premier élément dans la plage d'éléments à copier.
 
-*_Mettre fin à*<br/>
+*_End*<br/>
 Position du premier élément suivant la fin de la plage d'éléments à copier.
 
 ### <a name="remarks"></a>Notes
@@ -460,7 +460,7 @@ iterator grow_by(
 *_Delta*<br/>
 Le nombre d’éléments à ajouter à l’objet.
 
-*É_lément*<br/>
+*_Item*<br/>
 La valeur pour initialiser les nouveaux éléments avec.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -500,7 +500,7 @@ size_type max_size() const;
 
 Le nombre maximal d’éléments le `concurrent_vector` objet peut contenir.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Assigne le contenu d’un autre `concurrent_vector` objet à celui-ci. Cette méthode n’est pas concurrentiel.
 
@@ -565,7 +565,7 @@ iterator push_back(T&& _Item);
 
 ### <a name="parameters"></a>Paramètres
 
-*É_lément*<br/>
+*_Item*<br/>
 La valeur à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -635,7 +635,7 @@ void resize(
 *_N*<br/>
 La nouvelle taille de la concurrent_vector.
 
-*Val*<br/>
+*val*<br/>
 La valeur des nouveaux éléments ajoutés au vecteur si la nouvelle taille est supérieure à la taille d’origine. Si la valeur est omise, les nouveaux objets sont affectés à la valeur par défaut pour leur type.
 
 ### <a name="remarks"></a>Notes
@@ -672,7 +672,7 @@ Le nombre d’éléments dans cette `concurrent_vector` objet.
 
 La taille retournée est garantie pour inclure tous les éléments ajoutés par les appels à la fonction `push_back`, ou d’augmenter les opérations terminées avant d’appeler cette méthode. Toutefois, il peut également inclure des éléments qui sont allouées, mais toujours en cours de construction par les appels simultanés aux méthodes de croissance.
 
-##  <a name="swap"></a> échange
+##  <a name="swap"></a> swap
 
 Échange le contenu de deux vecteurs simultanés. Cette méthode n’est pas concurrentiel.
 
@@ -689,4 +689,3 @@ Le `concurrent_vector` objet échanger le contenu avec.
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [Conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md)
-

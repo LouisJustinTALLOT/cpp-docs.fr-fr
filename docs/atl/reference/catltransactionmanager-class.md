@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463776"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270200"
 ---
 # <a name="catltransactionmanager-class"></a>Catltransactionmanager, classe
 
@@ -51,7 +51,7 @@ class CAtlTransactionManager;
 
 |Nom|Description|
 |----------|-----------------|
-|[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager destructeur.|
+|[~CAtlTransactionManager](#dtor)|CAtlTransactionManager destructeur.|
 |[CAtlTransactionManager](#catltransactionmanager)|CAtlTransactionManager constructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
@@ -59,8 +59,8 @@ class CAtlTransactionManager;
 |Nom|Description|
 |----------|-----------------|
 |[Fermer](#close)|Une ferme le handle de transaction.|
-|[Validation](#commit)|Demande que la transaction soit validée.|
-|[Créer](#create)|Crée le handle de transaction.|
+|[Commit](#commit)|Demande que la transaction soit validée.|
+|[Create](#create)|Crée le handle de transaction.|
 |[CreateFile](#createfile)|Crée ou ouvre un fichier, un flux de fichier ou un répertoire en tant qu’une opération avec transaction.|
 |[DeleteFile](#deletefile)|Supprime un fichier existant en tant qu’une opération avec transaction.|
 |[FindFirstFile](#findfirstfile)|Recherche dans un répertoire pour un fichier ou du sous-répertoire en tant qu’une opération avec transaction.|
@@ -72,7 +72,7 @@ class CAtlTransactionManager;
 |[RegCreateKeyEx](#regcreatekeyex)|Crée la clé de Registre spécifiée et l’associe à une transaction. Si la clé existe déjà, la fonction l’ouvre.|
 |[RegDeleteKey](#regdeletekey)|Supprime une sous-clé et ses valeurs à partir de la vue spécifique à la plateforme spécifiée du Registre en tant qu’une opération avec transaction.|
 |[RegOpenKeyEx](#regopenkeyex)|Ouvre la clé de Registre spécifiée et l’associe à une transaction.|
-|[Restauration](#rollback)|Demande que la transaction restaurée.|
+|[Rollback](#rollback)|Demande que la transaction restaurée.|
 |[SetFileAttributes](#setfileattributes)|Définit les attributs pour un fichier ou répertoire en tant qu’une opération avec transaction.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
@@ -88,11 +88,11 @@ class CAtlTransactionManager;
 
 [ATL::CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atltransactionmanager.h
 
-##  <a name="dtor"></a>  ~ CAtlTransactionManager
+##  <a name="dtor"></a>  ~CAtlTransactionManager
 
 CAtlTransactionManager destructeur.
 
@@ -122,7 +122,7 @@ TRUE indique que le Gestionnaire de transaction est automatiquement créé dans 
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="close"></a>  Fermer
+##  <a name="close"></a>  Close
 
 Ferme le handle de transaction.
 
@@ -138,7 +138,7 @@ TRUE en cas de réussite, sinon FALSE.
 
 Ce wrapper appelle le `CloseHandle` (fonction). La méthode est appelée automatiquement dans le destructeur.
 
-##  <a name="commit"></a>  Validation
+##  <a name="commit"></a>  Commit
 
 Demande que la transaction soit validée.
 
@@ -154,7 +154,7 @@ TRUE en cas de réussite, sinon FALSE.
 
 Ce wrapper appelle le `CommitTransaction` (fonction). La méthode est appelée automatiquement dans le destructeur.
 
-##  <a name="create"></a>  Créer
+##  <a name="create"></a>  Create
 
 Crée le handle de transaction.
 
@@ -191,10 +191,10 @@ inline HANDLE CreateFile(
 Le nom d’un objet à être créé ou ouvert.
 
 *dwDesiredAccess*<br/>
-L’accès à l’objet, qui peut être résumée comme lecture, écriture, les deux ou aucune (zéro). Les valeurs couramment utilisés sont GENERIC_READ, GENERIC_WRITE ou les deux : GENERIC_READ &#124; GENERIC_WRITE.
+L’accès à l’objet, qui peut être résumée comme lecture, écriture, les deux ou aucune (zéro). Les valeurs couramment utilisés sont GENERIC_READ, GENERIC_WRITE ou les deux : GENERIC_READ &AMP;#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-Le mode de partage d’un objet, ce qui peut être de lecture, écriture, les deux, supprimer, tous ces éléments, ou none : 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
+Le mode de partage d’un objet, qui peut lire, écrire, à la fois, supprimer, tous ces éléments, ou none : 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *lpSecurityAttributes*<br/>
 Un pointeur vers une structure SECURITY_ATTRIBUTES qui contient un descripteur de sécurité facultatif et détermine également si le handle retourné peut être hérité par les processus enfants. Le paramètre peut être NULL.
@@ -389,7 +389,7 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*<br/>
+*hKey*<br/>
 Handle vers une clé de Registre ouverte.
 
 *lpSubKey*<br/>
@@ -402,7 +402,7 @@ Ce paramètre est réservé et doit être égal à zéro.
 La classe définie par l’utilisateur de cette clé. Ce paramètre peut être ignoré. Ce paramètre peut être NULL.
 
 *dwOptions*<br/>
-Ce paramètre peut prendre l’une des valeurs suivantes : REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE ou REG_OPTION_VOLATILE.
+Ce paramètre peut être une des valeurs suivantes : REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE ou REG_OPTION_VOLATILE.
 
 *samDesired*<br/>
 Masque qui spécifie les droits d’accès pour la clé.
@@ -436,7 +436,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*clé hKey*|Handle vers une clé de Registre ouverte.|
+|*hKey*|Handle vers une clé de Registre ouverte.|
 |*lpSubKey*|Le nom de la clé à supprimer.|
 
 ### <a name="return-value"></a>Valeur de retour
@@ -462,7 +462,7 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*clé hKey*<br/>
+*hKey*<br/>
 Handle vers une clé de Registre ouverte.
 
 *lpSubKey*<br/>
@@ -485,7 +485,7 @@ Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction �
 
 Ce wrapper appelle le `RegOpenKeyTransacted` (fonction).
 
-##  <a name="rollback"></a>  Restauration
+##  <a name="rollback"></a>  Rollback
 
 Demande que la transaction restaurée.
 

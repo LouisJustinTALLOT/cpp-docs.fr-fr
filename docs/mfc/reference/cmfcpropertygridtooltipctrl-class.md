@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: a7262416fa3555993ea237dd2f6b82b73ed9949c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c14ed1f11a7a414332b34566a314459d76b911b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429092"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303922"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Cmfcpropertygridtooltipctrl, classe
 
@@ -82,7 +82,7 @@ L’exemple suivant montre comment construire un objet de la `CMFCPropertyGridTo
 
 [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpropertygridtooltipctrl.h
 
@@ -133,7 +133,7 @@ void GetLastRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [out] Contient la dernière position du contrôle d’info-bulle.
 
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide
@@ -169,7 +169,7 @@ void Track(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [in] Spécifie la position et la taille du contrôle d’info-bulle.
 
 *strText*<br/>

@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: ae4cce94dd7b36cebadea5f6d05890d979cce474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0ab271b20eb02c1dc4cb8e54cf2632eead4325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498954"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293886"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event, classe
 
-La classe `task_completion_event` vous permet de retarder l’exécution d’une tâche jusqu’à ce qu’une condition soit satisfaite, ou de démarrer une tâche en réponse à un événement externe.
+La classe `task_completion_event` vous permet de retarder l'exécution d'une tâche jusqu'à ce qu'une condition soit satisfaite, ou de démarrer une tâche en réponse à un événement externe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,7 +48,7 @@ Type de résultat de cette classe `task_completion_event`.
 
 |Nom|Description|
 |----------|-----------------|
-|[set](#set)|Surchargé. Définit l’événement de fin de tâche.|
+|[set](#set)|Surchargé. Définit l'événement de fin de tâche.|
 |[set_exception](#set_exception)|Surchargé. Propage une exception à toutes les tâches associées à cet événement.|
 
 ## <a name="remarks"></a>Notes
@@ -63,7 +63,7 @@ Si l'événement de fin de tâche n'est jamais signalé, toutes les tâches cré
 
 `task_completion_event`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ppltasks.h
 
@@ -71,7 +71,7 @@ Si l'événement de fin de tâche n'est jamais signalé, toutes les tâches cré
 
 ##  <a name="set"></a> Ensemble
 
-Définit l’événement de fin de tâche.
+Définit l'événement de fin de tâche.
 
 ```
 bool set(_ResultType _Result) const ;

@@ -1,28 +1,28 @@
 ---
-title: 'Contrôles ActiveX MFC : ajout de propriétés personnalisées'
+title: 'Contrôles ActiveX MFC : Ajout de propriétés personnalisées'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284201"
 ---
-# <a name="mfc-activex-controls-adding-custom-properties"></a>Contrôles ActiveX MFC : ajout de propriétés personnalisées
+# <a name="mfc-activex-controls-adding-custom-properties"></a>Contrôles ActiveX MFC : Ajout de propriétés personnalisées
 
 Propriétés personnalisées diffèrent des propriétés stocks, propriétés personnalisées ne sont pas déjà implémentées par le `COleControl` classe. Une propriété personnalisée est utilisée pour exposer un département ou une apparence d’un contrôle ActiveX à un programmeur en utilisant le contrôle.
 
-Cet article décrit comment ajouter une propriété personnalisée au contrôle ActiveX à l’aide de l’Assistant Ajout de propriété et explique les modifications de code qui en résulte. Les rubriques traitées ici sont les suivantes :
+Cet article décrit comment ajouter une propriété personnalisée au contrôle ActiveX à l’aide de l’Assistant Ajout de propriété et explique les modifications de code qui en résulte. Les rubriques traitées ici sont les suivantes :
 
 - [À l’aide de l’Assistant Ajout de propriété pour ajouter une propriété personnalisée](#_core_using_classwizard_to_add_a_custom_property)
 
 - [Ajoutez les modifications de propriété Assistant pour les propriétés personnalisées](#_core_classwizard_changes_for_custom_properties)
 
-Propriétés personnalisées sont fournis en quatre variantes d’implémentation : une Variable membre, une Variable membre avec Notification, méthodes Get/Set et paramétrée.
+Propriétés personnalisées sont fournis en quatre variantes d’implémentation : Variable de membre, la Variable membre avec Notification, méthodes Get/Set et paramétrable.
 
 - Implémentation des variables membres
 
@@ -38,7 +38,7 @@ Propriétés personnalisées sont fournis en quatre variantes d’implémentatio
 
 - Implémentation paramétrée
 
-   Implémentation paramétrée est prise en charge par l’Assistant Ajout de propriété. Une propriété paramétrée (parfois appelée un tableau de propriétés) peut être utilisée pour accéder à un ensemble de valeurs via une propriété unique de votre contrôle. Pour cette implémentation, la macro d’entrée de la table de dispatch est DISP_PROPERTY_PARAM. Pour plus d’informations sur l’implémentation de ce type, consultez [implémentation d’une propriété paramétrée](../mfc/mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : rubriques avancées.
+   Implémentation paramétrée est prise en charge par l’Assistant Ajout de propriété. Une propriété paramétrée (parfois appelée un tableau de propriétés) peut être utilisée pour accéder à un ensemble de valeurs via une propriété unique de votre contrôle. Pour cette implémentation, la macro d’entrée de la table de dispatch est DISP_PROPERTY_PARAM. Pour plus d’informations sur l’implémentation de ce type, consultez [implémentation d’une propriété paramétrée](../mfc/mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : Rubriques avancées.
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> À l’aide de l’Assistant Ajout de propriété pour ajouter une propriété personnalisée
 
@@ -95,6 +95,6 @@ Notez que l’Assistant Ajout de propriété ajoute automatiquement un appel, à
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Contrôles ActiveX MFC : propriétés](../mfc/mfc-activex-controls-properties.md)<br/>
-[Contrôles ActiveX MFC : méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
+[Contrôles ActiveX MFC : Propriétés](../mfc/mfc-activex-controls-properties.md)<br/>
+[Contrôles ActiveX MFC : Méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl, classe](../mfc/reference/colecontrol-class.md)

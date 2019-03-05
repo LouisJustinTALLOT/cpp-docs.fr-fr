@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-ms.openlocfilehash: 1605d5fe1549ba5172f61583cce586a353c2ab56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7394250c93bcc718d50f2ea9b3522256df7c820
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485655"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296708"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty, classe
 
@@ -51,7 +51,7 @@ La classe `CCachedDataPathProperty` est dérivée de `CDataPathProperty`.
 
 Pour plus d’informations sur l’utilisation des monikers asynchrones et des contrôles ActiveX dans les applications Internet, consultez les rubriques suivantes :
 
-- [Internet premières étapes : Les contrôles ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Internet premières étapes : Contrôles ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 - [Internet premières étapes : Monikers asynchrones](../../mfc/asynchronous-monikers-on-the-internet.md)
 
@@ -71,7 +71,7 @@ Pour plus d’informations sur l’utilisation des monikers asynchrones et des c
 
 `CCachedDataPathProperty`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl.h
 

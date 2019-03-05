@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 7f1ca94423cb1ef269c7556be25b1926fa42d2a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de26ceedfd29f276693be512bd41f169fb44b94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614680"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274542"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -75,7 +75,7 @@ L’exemple suivant montre comment utiliser les méthodes d’ouverture et la le
 
 `CSettingsStore`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxsettingsstore.h
 
@@ -124,7 +124,7 @@ CSettingsStore(
 
 ### <a name="parameters"></a>Paramètres
 
-*bCheminAdmin*<br/>
+*bAdmin*<br/>
 [in] Paramètre booléen qui spécifie si le `CSettingsStore` objet agit en mode administrateur.
 
 *bReadOnly*<br/>
@@ -153,7 +153,7 @@ virtual BOOL DeleteKey(
 *pszPath*<br/>
 [in] Le nom de la clé à supprimer.
 
-*bCheminAdmin*<br/>
+*bAdmin*<br/>
 [in] Commutateur qui spécifie l’emplacement de la clé à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -299,13 +299,13 @@ virtual BOOL Read(
 *lpPoint*<br/>
 [out] Référence à un pointeur vers un `POINT` structure qui reçoit la valeur de lire à partir de la clé de Registre.
 
-*Rect*<br/>
+*rect*<br/>
 [out] Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable qui reçoit la valeur lue à partir de la clé de Registre.
 
 *ppData*<br/>
 [out] Pointeur vers un pointeur vers les données qui reçoit la valeur lus à partir de la clé de Registre.
 
-*Pétaoctets*<br/>
+*pBytes*<br/>
 [out] Pointeur vers une variable d’entier non signé. Cette variable reçoit la taille de la mémoire tampon qui *ppData* pointe vers.
 
 *liste*<br/>
@@ -399,7 +399,7 @@ virtual BOOL Write(
 *dwVal*<br/>
 [in] Référence à une variable 32 bits double mot contenant les données à stocker.
 
-*strVal*<br/>
+*pszVal*<br/>
 [in] Pointeur vers une variable de chaîne se terminant par null qui contient les données à stocker.
 
 *scStringList*<br/>
@@ -417,7 +417,7 @@ virtual BOOL Write(
 *wcArray*<br/>
 [in] Référence à une variable de tableau de mot de 16 bits qui contient les données à stocker.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable qui contient les données à stocker.
 
 *lpPoint*<br/>

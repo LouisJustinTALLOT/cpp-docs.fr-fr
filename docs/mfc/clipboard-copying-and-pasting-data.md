@@ -1,18 +1,18 @@
 ---
-title: 'Presse-papiers : copier-coller des données'
+title: 'Presse-papiers : Copier et coller des données'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437036"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270733"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : copier-coller des données
+# <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : Copier et coller des données
 
 Cette rubrique décrit les étapes nécessaires pour implémenter la copie et de collage à partir du Presse-papiers dans votre application OLE. Il est recommandé de lire le [objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md) rubriques avant de continuer.
 
@@ -69,5 +69,4 @@ Pour gérer l’option Collage spécial dans le menu Edition, consultez la rubri
 
 ## <a name="see-also"></a>Voir aussi
 
-[Presse-papiers : utilisation du mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-
+[Presse-papiers : À l’aide du mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

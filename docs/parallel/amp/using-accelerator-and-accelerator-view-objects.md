@@ -2,12 +2,12 @@
 title: Utilisation des objets accelerator et accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 4144adf288ddefd7f7dd00ada91f97aea94e6bce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668596"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272896"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Utilisation des objets accelerator et accelerator_view
 
@@ -168,11 +168,11 @@ Il existe deux façons d’utiliser plusieurs accélérateurs dans votre applica
 
 Les chemins d’accès de périphérique de trois accélérateurs spéciaux sont disponibles en tant que propriétés de la `accelerator` classe :
 
-- [Accelerator::direct3d_ref, données membres](reference/accelerator-class.md#direct3d_ref): cet accélérateur monothread utilise le logiciel sur l’UC pour émuler une carte graphique générique. Il est utilisé par défaut pour le débogage, mais il n’est pas utile dans la production, car il est plus lent que les accélérateurs matériels. En outre, il est disponible uniquement dans le SDK DirectX et le Kit de développement Windows, et il est peu susceptible d’être installé sur les ordinateurs de vos clients. Pour plus d’informations, consultez [débogage du Code GPU](/visualstudio/debugger/debugging-gpu-code).
+- [Accelerator::direct3d_ref, données membres](reference/accelerator-class.md#direct3d_ref): Cet accélérateur monothread utilise des logiciels sur le CPU pour émuler une carte graphique générique. Il est utilisé par défaut pour le débogage, mais il n’est pas utile dans la production, car il est plus lent que les accélérateurs matériels. En outre, il est disponible uniquement dans le SDK DirectX et le Kit de développement Windows, et il est peu susceptible d’être installé sur les ordinateurs de vos clients. Pour plus d’informations, consultez [débogage du Code GPU](/visualstudio/debugger/debugging-gpu-code).
 
-- [Accelerator::direct3d_warp, données membres](reference/accelerator-class.md#direct3d_warp): cet accélérateur fournit une solution de secours pour l’exécution de code C++ AMP sur les processeurs multicœurs qui utilisent des Extensions Streaming SIMD (SSE).
+- [Accelerator::direct3d_warp, données membres](reference/accelerator-class.md#direct3d_warp): Cet accélérateur fournit une solution de secours pour l’exécution de code C++ AMP sur les processeurs multicœurs qui utilisent des Extensions Streaming SIMD (SSE).
 
-- [Accelerator::cpu_accelerator, données membres](reference/accelerator-class.md#cpu_accelerator): vous pouvez utiliser cet accélérateur pour installer des tableaux temporaires. Il ne peut pas exécuter du code C++ AMP. Pour plus d’informations, consultez le [tableaux temporaires dans C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) publier sur la programmation parallèle en Code natif blog.
+- [Accelerator::cpu_accelerator, données membres](reference/accelerator-class.md#cpu_accelerator): Vous pouvez utiliser cet accélérateur pour installer des tableaux temporaires. Il ne peut pas exécuter du code C++ AMP. Pour plus d’informations, consultez le [tableaux temporaires dans C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) publier sur la programmation parallèle en Code natif blog.
 
 ## <a name="interoperability"></a>Interopérabilité
 

@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: da512b5e05f3d5ff0229cc44a0a8268148a43f82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40dedbe2737a79b7531b8acd47870ce7cb788604
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288400"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout Class
 
@@ -79,7 +79,7 @@ class CMFCDynamicLayout : public CObject
 
 [CMFCDynamicLayout](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxlayout.h
 
@@ -99,7 +99,7 @@ BOOL AddItem(
 
 ### <a name="parameters"></a>Paramètres
 
-*HWND*<br/>
+*hwnd*<br/>
 Handle de la fenêtre à ajouter.
 
 *nID*<br/>
@@ -117,7 +117,7 @@ TRUE si l'élément a bien été ajouté ; sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-La position et la taille d'un contrôle enfant change de façon dynamique quand une fenêtre hôte est redimensionnée.
+La position et la taille d'un contrôle enfant change de façon dynamique à mesure qu'une fenêtre hôte est redimensionnée.
 
 ##  <a name="adjust"></a>  CMFCDynamicLayout::Adjust
 
@@ -129,7 +129,7 @@ void Adjust();
 
 ### <a name="remarks"></a>Notes
 
-La position et la taille d'un contrôle enfant change de façon dynamique quand une fenêtre hôte est redimensionnée.
+La position et la taille d'un contrôle enfant change de façon dynamique à mesure qu'une fenêtre hôte est redimensionnée.
 
 ##  <a name="create"></a>  CMFCDynamicLayout::Create
 
@@ -192,7 +192,7 @@ void GetHostWndRect(CRect& rect,);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Une fois que la fonction a retourné une valeur, ce paramètre contient le rectangle englobant de la zone de présentation. Il s'agit d'un paramètre de sortie ; la valeur d'entrée est remplacée.
 
 ### <a name="remarks"></a>Notes
@@ -207,7 +207,7 @@ BOOL HasItem(HWND hwnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*HWND*<br/>
+*hwnd*<br/>
 Handle de fenêtre pour le contrôle.
 
 ### <a name="return-value"></a>Valeur de retour

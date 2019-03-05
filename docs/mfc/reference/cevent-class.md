@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 883f3065c9d15ad793e6c0d548b911f10d166c0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667895"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300269"
 ---
 # <a name="cevent-class"></a>CEvent, classe
 
@@ -66,7 +66,7 @@ Une autre méthode pour l’utilisation de `CEvent` objets consiste à ajouter u
 
 Pour accéder à une ressource contrôlée par un `CEvent` de l’objet de cette manière, commencez par créer une variable de type [CSingleLock](../../mfc/reference/csinglelock-class.md) ou type [CMultiLock](../../mfc/reference/cmultilock-class.md) dans la méthode d’accès de votre ressource. Appelez ensuite la `Lock` méthode de l’objet de verrouillage (par exemple, [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock)). À ce stade, votre thread sera soit accéder à la ressource, l’attente de la ressource à libérée et y accéder ou attendez que la ressource doit être publié, le délai d’expiration et ne parviennent pas à accéder à la ressource. Dans tous les cas, votre ressource a accédé de manière thread-safe. Pour libérer la ressource, appelez `SetEvent` pour signaler l’objet d’événement, puis utiliser le `Unlock` méthode de l’objet de verrouillage (par exemple, [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock)), ou laisser l’objet de verrouillage se situent hors de portée.
 
-Pour plus d’informations sur l’utilisation `CEvent` , consultez [Multithreading : comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Pour plus d’informations sur l’utilisation `CEvent` , consultez [Multithreading : Comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="example"></a>Exemple
 
@@ -82,7 +82,7 @@ Pour plus d’informations sur l’utilisation `CEvent` , consultez [Multithread
 
 `CEvent`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxmt.h
 
@@ -106,7 +106,7 @@ Si la valeur est TRUE, le thread pour le `CMultilock` ou `CSingleLock` objet est
 *bManualReset*<br/>
 Si la valeur est TRUE, spécifie que l’objet d’événement est un événement manuel, sinon l’objet d’événement est un événement automatique.
 
-*Caractère*<br/>
+*lpszName*<br/>
 Nom de l'objet `CEvent`. Doit être fourni si l’objet doit être utilisé au-delà des limites de processus. Si le nom correspond à un événement existant, le constructeur crée quand même un `CEvent` objet qui fait référence à l’événement de ce nom. Si le nom correspond à un objet de synchronisation existant qui n’est pas un événement, la construction échoue. Si NULL, le nom sera null.
 
 *lpsaAttribute*<br/>
@@ -195,4 +195,3 @@ Cette fonction membre est appelée par les threads qui possèdent actuellement u
 
 [CSyncObject, classe](../../mfc/reference/csyncobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
-

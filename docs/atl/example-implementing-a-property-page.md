@@ -4,14 +4,14 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176469"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267236"
 ---
-# <a name="example-implementing-a-property-page"></a>Exemple : Implémentation d’une Page de propriétés
+# <a name="example-implementing-a-property-page"></a>Exemple : Implémentation d’une Page de propriétés
 
 Cet exemple montre comment créer une page de propriétés qui affiche (et vous permet de modifier) les propriétés de la [Classes de documents](../mfc/document-classes.md) interface.
 
@@ -45,7 +45,7 @@ Tout d’abord, créez un nouveau projet ATL pour un serveur DLL appelé `ATLPag
 |----------|-----------|
 |Titre|TextDocument|
 |Chaîne doc|Propriétés VCUE TextDocument|
-|HelpFile|*\<vide >*|
+|HelpFile|*\<blank>*|
 
 Les valeurs que vous définissez sur cette page de l’Assistant seront affichera dans le conteneur de page de propriété lorsqu’il appelle `IPropertyPage::GetPageInfo`. Que se passe-t-il pour les chaînes après dépend du conteneur, mais en général ils seront utilisés pour identifier votre page à l’utilisateur. Le titre s’affiche généralement dans un onglet au-dessus de votre page et la chaîne Doc peut être affichée dans une barre d’état ou d’info-bulle (bien que le frame de propriété standard n’utilise pas cette chaîne du tout).
 

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442677"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301847"
 ---
 # <a name="catlarray-class"></a>CAtlArray, classe
 
@@ -61,7 +61,7 @@ Le code utilisé pour copier ou déplacer des éléments.
 |[Ajouter](#append)|Appelez cette méthode pour ajouter le contenu d’un tableau à la fin d’un autre.|
 |[AssertValid](#assertvalid)|Appelez cette méthode pour vérifier que l’objet de tableau est valide.|
 |[CAtlArray](#catlarray)|Constructeur.|
-|[~ CAtlArray](#dtor)|Destructeur.|
+|[~CAtlArray](#dtor)|Destructeur.|
 |[Copier](#copy)|Appelez cette méthode pour copier les éléments d’un tableau à un autre.|
 |[FreeExtra](#freeextra)|Appelez cette méthode pour supprimer tous les éléments vides du tableau.|
 |[GetAt](#getat)|Appelez cette méthode pour récupérer un seul élément à partir de l’objet de tableau.|
@@ -80,7 +80,7 @@ Le code utilisé pour copier ou déplacer des éléments.
 
 |||
 |-|-|
-|[opérateur&#91;&#93;](#operator_at)|Appeler cet opérateur pour retourner une référence à un élément dans le tableau.|
+|[operator &#91;&#93;](#operator_at)|Appeler cet opérateur pour retourner une référence à un élément dans le tableau.|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -99,7 +99,7 @@ Pour les tableaux avec un petit nombre d’éléments, la classe ATL [CSimpleArr
 
 Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcoll.h
 
@@ -114,7 +114,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Paramètres
 
-*Élément*<br/>
+*element*<br/>
 L’élément à ajouter au tableau.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -190,7 +190,7 @@ Initialise l’objet de tableau.
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-##  <a name="dtor"></a>  CAtlArray :: ~ CAtlArray
+##  <a name="dtor"></a>  CAtlArray::~CAtlArray
 
 Destructeur.
 
@@ -357,7 +357,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 *iElement*<br/>
 Index où l’ou les éléments doivent être insérés.
 
-*Élément*<br/>
+*element*<br/>
 La valeur de l’élément ou les éléments à insérer.
 
 *nCount*<br/>
@@ -393,7 +393,7 @@ Le tableau est dite vide s’il ne contienne aucun élément. Par conséquent, m
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-##  <a name="operator_at"></a>  [] CAtlArray::operator
+##  <a name="operator_at"></a>  CAtlArray::operator []
 
 Appeler cet opérateur pour retourner une référence à un élément dans le tableau.
 
@@ -482,7 +482,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 L’index qui pointe vers l’élément de tableau à définir.
 
-*Élément*<br/>
+*element*<br/>
 La nouvelle valeur de l’élément spécifié.
 
 ### <a name="remarks"></a>Notes
@@ -536,7 +536,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 L’index qui pointe vers l’élément de tableau à définir.
 
-*Élément*<br/>
+*element*<br/>
 La nouvelle valeur de l’élément spécifié.
 
 ### <a name="remarks"></a>Notes

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175832"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288778"
 ---
 # <a name="ribbon-designer-mfc"></a>Concepteur de ruban (MFC)
 
@@ -56,11 +56,11 @@ Pour utiliser la ressource de ruban dans votre application MFC, charger la resso
 
 Il existe deux façons d'ajouter une ressource de ruban à votre projet MFC :
 
-- Créez une application MFC et configurez l'Assistant de projet MFC pour créer le ruban. Pour plus d’informations, consultez [procédure pas à pas : création d’un ruban Application à l’aide de MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+- Créez une application MFC et configurez l'Assistant de projet MFC pour créer le ruban. Pour plus d’informations, consultez [Procédure pas à pas : Création d’une Application de ruban à l’aide de MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
-- Dans un projet MFC existant, créez une ressource de ruban et chargez-la. Pour plus d’informations, consultez [procédure pas à pas : mise à jour de l’Application de Scribble MFC (partie 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+- Dans un projet MFC existant, créez une ressource de ruban et chargez-la. Pour plus d’informations, consultez [Procédure pas à pas : La mise à jour de l’Application de Scribble MFC (partie 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
-Si votre projet contient déjà un ruban codé manuellement, vous pouvez utiliser les fonctions de MFC pour convertir le ruban existant en ressource de ruban. Pour plus d’informations, consultez [Comment : convertir un ruban MFC existant à une ressource de ruban](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
+Si votre projet contient déjà un ruban codé manuellement, vous pouvez utiliser les fonctions de MFC pour convertir le ruban existant en ressource de ruban. Pour plus d'informations, voir [Procédure : Convertir un ruban MFC existant à une ressource de ruban](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
 
 > [!NOTE]
 >  Il n'est pas possible de créer des rubans dans des applications à base de boîtes de dialogue. Pour plus d’informations, consultez [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md).
@@ -73,44 +73,43 @@ L'illustration suivante représente les différents composants du Concepteur de 
 
 ![Concepteur de ruban MFC](../mfc/media/ribbon_designer.png "Concepteur de ruban MFC")
 
-- **Boîte à outils :** contient des contrôles qui peuvent être déplacés dans l’aire du concepteur.
+- **Boîte à outils :** Contient des contrôles qui peuvent être déplacés dans l’aire du concepteur.
 
-- **Aire du concepteur :** contient la représentation visuelle de la ressource de ruban.
+- **Aire du concepteur :** Contient la représentation visuelle de la ressource de ruban.
 
-- **Fenêtre Propriétés :** répertorie les attributs de l’élément est sélectionné sur l’aire du concepteur.
+- **Fenêtre Propriétés :** Répertorie les attributs de l’élément est sélectionné sur l’aire du concepteur.
 
-- **Fenêtre Affichage des ressources :** affiche les ressources qui incluent des ressources de ruban, dans votre projet.
+- **Fenêtre Affichage des ressources :** Affiche les ressources qui incluent des ressources de ruban, dans votre projet.
 
-- **Barre d’outils Éditeur Ribbon :** contient des commandes qui vous permettent d’afficher un aperçu du ruban et modifier son thème visuel.
+- **Barre d’outils Éditeur Ribbon :** Contient des commandes qui vous permettent d’afficher un aperçu du ruban et modifier son thème visuel.
 
 Les rubriques suivantes expliquent comment utiliser les fonctionnalités du Concepteur de ruban :
 
-- [Guide pratique pour personnaliser le bouton Application](../mfc/how-to-customize-the-application-button.md)
+- [Guide pratique pour Personnaliser le bouton d’Application](../mfc/how-to-customize-the-application-button.md)
 
-- [Guide pratique pour personnaliser la barre d’outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)
+- [Guide pratique pour Personnaliser la barre d’outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-- [Guide pratique pour ajouter des contrôles de ruban et des gestionnaires d’événements](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
+- [Guide pratique pour Ajouter des contrôles de ruban et des gestionnaires d’événements](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
-- [Guide pratique pour charger une ressource du ruban à partir d’une application MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
+- [Guide pratique pour Charger une ressource de ruban à partir d’une Application MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
 ## <a name="definitions-of-ribbon-elements"></a>Définition des éléments de ruban
 
 ![Ruban MFC](../mfc/media/ribbon.png "ruban MFC")
 
-- **Bouton d’application :** le bouton qui apparaît dans l’angle supérieur gauche d’un ruban. Le bouton d'application remplace le menu Fichier et est visible même quand le ruban est réduit. Quand vous cliquez sur ce bouton, vous obtenez un menu qui contient une liste de commandes.
+- **Bouton d’application :** Le bouton qui apparaît dans l’angle supérieur gauche d’un ruban. Le bouton d'application remplace le menu Fichier et est visible même quand le ruban est réduit. Quand vous cliquez sur ce bouton, vous obtenez un menu qui contient une liste de commandes.
 
-- **Une barre d’outils Accès rapide :** une petite barre d’outils personnalisable qui affiche fréquemment utilisé des commandes.
+- **Barre d’outils Accès rapide :** Une petite barre d’outils personnalisable qui affiche fréquemment utilisé des commandes.
 
-- **Catégorie**: le regroupement logique qui représente le contenu d’un onglet de ruban.
+- **Catégorie**: Le regroupement logique qui représente le contenu d’un onglet de ruban.
 
-- **Bouton de catégorie par défaut :** le bouton qui apparaît sur le ruban lorsque le ruban est réduit. Quand vous cliquez sur ce bouton, la catégorie réapparaît sous forme de menu.
+- **Bouton par défaut de catégorie :** Le bouton qui apparaît sur le ruban lorsque le ruban est réduit. Quand vous cliquez sur ce bouton, la catégorie réapparaît sous forme de menu.
 
-- **Panneau de configuration :** une zone de la barre du ruban qui affiche un groupe de contrôles connexes. Chaque catégorie du ruban contient un ou plusieurs volets de ruban.
+- **Panneau de configuration :** Zone de la barre du ruban qui affiche un groupe de contrôles connexes. Chaque catégorie du ruban contient un ou plusieurs volets de ruban.
 
-- **Éléments de ruban :** des contrôles dans les panneaux, par exemple, boutons et des zones de liste déroulante. Pour connaître les différents contrôles qui peuvent être hébergés sur un ruban, consultez [exemple RibbonGadgets : Application de Gadgets de ruban](../visual-cpp-samples.md).
+- **Éléments de ruban :** Contrôle dans les panneaux, par exemple, boutons et des zones de liste déroulante. Pour connaître les différents contrôles qui peuvent être hébergés sur un ruban, consultez [exemple RibbonGadgets : Application de Gadgets de ruban](../visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
 [Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)
-

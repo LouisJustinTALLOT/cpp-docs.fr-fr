@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: c30ced2f19602dca17badeec6e1b27ad1e90bf5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612730"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285345"
 ---
 # <a name="coleipframewndex-class"></a>Coleipframewndex, classe
 
@@ -188,7 +188,7 @@ L’exemple suivant montre comment créer une sous-classe d’une instance de la
 
 [COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxoleipframewndex.h
 
@@ -926,7 +926,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*Menu*<br/>
+*menu*<br/>
 [in] Une référence à un [CMenu](../../mfc/reference/cmenu-class.md) objet à modifier.
 
 *uiViewUserToolbarCmdFirst*<br/>

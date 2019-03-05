@@ -1,5 +1,5 @@
 ---
-title: Prise en charge du glisser-déposer pour les éléments d’en-tête
+title: Prise en charge du glisser-déplacer pour les éléments d'en-tête
 ms.date: 11/04/2016
 helpviewer_keywords:
 - HDS_DRAGDROP style
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-ms.openlocfilehash: 21ff14982baac93fac1cf3ee441353c079f4f760
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f30ad029742a01280abda85cbd1a81104d01d8cd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602967"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263716"
 ---
-# <a name="providing-drag-and-drop-support-for-header-items"></a>Prise en charge du glisser-déposer pour les éléments d’en-tête
+# <a name="providing-drag-and-drop-support-for-header-items"></a>Prise en charge du glisser-déplacer pour les éléments d'en-tête
 
 Pour fournir la prise en charge du glisser-déplacer pour les éléments d’en-tête, spécifiez le style HDS_DRAGDROP. Prise en charge de glisser-déplacer des éléments d’en-tête donne à l’utilisateur la possibilité de réorganiser les éléments d’un contrôle d’en-tête. Le comportement par défaut fournit une image translucide de l’élément d’en-tête qui est glissé et un indicateur visuel de la nouvelle position, si l’élément d’en-tête est supprimée.
 
@@ -26,4 +26,3 @@ Avec des fonctionnalités communes glisser-déplacer, vous pouvez étendre le co
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)
-

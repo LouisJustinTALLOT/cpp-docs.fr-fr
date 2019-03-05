@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 245963d4222188f16fd334d6950e04584ac1e978
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520840"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304091"
 ---
 # <a name="mfc-add-class-wizard"></a>Assistant Ajouter une classe MFC
 

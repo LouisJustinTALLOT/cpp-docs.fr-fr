@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 1d17b121854623e9919f434a44b6ab40c2db2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61c8dfa85363509ee09eaaccdb6d45d70390c344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608181"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262764"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty, classe
 
@@ -64,7 +64,7 @@ La classe `CDataPathProperty` est dérivée de `CAysncMonikerFile`. Pour implém
 
 Pour plus d’informations sur l’utilisation des monikers asynchrones et des contrôles ActiveX dans les applications Internet, consultez les articles suivants :
 
-- [Internet premières étapes : Les contrôles ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Internet premières étapes : Contrôles ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 - [Internet premières étapes : Monikers asynchrones](../../mfc/asynchronous-monikers-on-the-internet.md)
 
@@ -82,7 +82,7 @@ Pour plus d’informations sur l’utilisation des monikers asynchrones et des c
 
 `CDataPathProperty`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl.h
 

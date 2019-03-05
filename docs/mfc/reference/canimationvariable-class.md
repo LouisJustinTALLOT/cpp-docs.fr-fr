@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 1ad14060c7607698cd647ae34fb35b6ea3ae547c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269030"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable, classe
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |Nom|Description|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Construit un objet de variable de l’animation.|
-|[CAnimationVariable :: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|Destructeur. Appelé lorsqu’un objet CAnimationVariable est détruit.|
+|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|Destructeur. Appelé lorsqu’un objet CAnimationVariable est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -116,11 +116,11 @@ La classe CAnimationVariable encapsule l’objet COM IUIAnimationVariable. Elle 
 
 `CAnimationVariable`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable :: ~ CAnimationVariable
+##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable::~CAnimationVariable
 
 Destructeur. Appelé lorsqu’un objet CAnimationVariable est détruit.
 
@@ -264,7 +264,7 @@ void EnableIntegerValueChangedEvent (
 *pController*<br/>
 Pointeur vers le contrôleur de parent.
 
-*bActivez*<br/>
+*bEnable*<br/>
 TRUE : activer l’événement, FALSE - désactiver l’événement.
 
 ### <a name="remarks"></a>Notes
@@ -286,7 +286,7 @@ void EnableValueChangedEvent (
 *pController*<br/>
 Pointeur vers le contrôleur de parent.
 
-*bActivez*<br/>
+*bEnable*<br/>
 TRUE : activer l’événement, FALSE - désactiver l’événement.
 
 ### <a name="remarks"></a>Notes
@@ -339,7 +339,7 @@ HRESULT GetValue(INT32& nValue);
 *dblValue*<br/>
 La valeur actuelle de la variable de l’animation.
 
-*%n%nValeur*<br/>
+*nValue*<br/>
 La valeur actuelle de la variable de l’animation.
 
 ### <a name="return-value"></a>Valeur de retour

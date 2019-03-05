@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto_partitioner class
 ms.assetid: 7cc08e5d-20b4-47a4-b4b5-c214a78f5a9e
-ms.openlocfilehash: 9e4701c39512613bd7525c2cc0e3d24a57e7689d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d8bbb8e8af17dd19953487c47e5fd40343fe349
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644923"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264818"
 ---
 # <a name="autopartitioner-class"></a>auto_partitioner, classe
 
@@ -32,13 +32,13 @@ class auto_partitioner;
 |Nom|Description|
 |----------|-----------------|
 |[auto_partitioner](#ctor)|Construit un objet `auto_partitioner`.|
-|[~ auto_partitioner, destructeur](#dtor)|Détruit un objet `auto_partitioner`.|
+|[~auto_partitioner Destructor](#dtor)|Détruit un objet `auto_partitioner`.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `auto_partitioner`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ppl.h
 

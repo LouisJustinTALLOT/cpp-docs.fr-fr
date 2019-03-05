@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-ms.openlocfilehash: 28b2b77ed28453f148786ba7109743a0b7baf598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ab4eece67406b1c5a52669beafc9bfd8acd32e6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429258"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283720"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Cmfctoolbarfontcombobox, classe
 
@@ -75,7 +75,7 @@ Le bouton de zone de liste déroulante Police appelle la fonction Win32 [EnumFon
 
 [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtoolbarfontcombobox.h
 
@@ -127,7 +127,7 @@ TRUETYPE_FONTTYPE
 *dwStyle*<br/>
 [in] Style de la zone de liste déroulante. (consultez [Styles de zone de liste déroulante](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))
 
-*iLargeur Argument de type*<br/>
+*iWidth*<br/>
 [in] La largeur en pixels du contrôle d’édition.
 
 *nPitchAndFamily*<br/>
@@ -188,7 +188,7 @@ BOOL SetFont(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Spécifie le nom de la police ou le préfixe.
 
 *nCharSet*<br/>
@@ -214,5 +214,4 @@ Si *bExact* a la valeur TRUE, cette méthode sélectionne une police qui corresp
 [CMFCToolBarComboBoxButton, classe](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [CMFCFontInfo, classe](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Procédure pas à pas : Placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)

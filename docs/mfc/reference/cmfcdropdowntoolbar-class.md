@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: 9c5115d2453f21d83eda39950ac45a0290e9bfa8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 704d48cc546943d818ae8b898060fe0f7e203c53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176937"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303551"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolbar, classe
 
@@ -72,7 +72,7 @@ Pour insérer la barre d’outils de la liste déroulante dans une barre d’out
 
 3. Remplacez le bouton fictif avec le `CMFCDropDownToolBarButton` objet à l’aide de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Pour plus d’informations sur les boutons de barre d’outils, consultez [procédure pas à pas : placer le contrôle sur la barre de d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md). Pour obtenir un exemple d’une barre d’outils de la liste déroulante, consultez l’exemple de projet VisualStudioDemo.
+Pour plus d’informations sur les boutons de barre d’outils, consultez [procédure pas à pas : Placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md). Pour obtenir un exemple d’une barre d’outils de la liste déroulante, consultez l’exemple de projet VisualStudioDemo.
 
 ## <a name="example"></a>Exemple
 
@@ -99,7 +99,7 @@ L’exemple suivant montre comment utiliser le `Create` méthode dans la `CMFCDr
 
 [CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdropdowntoolbar.h
 
@@ -138,7 +138,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] L’ID de ressource de la bitmap qui fait référence aux images de menu standard.
 
-*Bloqué*<br/>
+*bLocked*<br/>
 [in] TRUE pour verrouiller la barre d’outils ; Sinon, FALSE.
 
 *uiDisabledResID*<br/>
@@ -200,7 +200,7 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *nIndicateurs*<br/>
+[in] *nFlags*<br/>
 
 [in] *point*<br/>
 
@@ -216,7 +216,7 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *nIndicateurs*<br/>
+[in] *nFlags*<br/>
 
 [in] *point*<br/>
 
@@ -260,5 +260,4 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton, classe](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
-[Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Procédure pas à pas : Placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)

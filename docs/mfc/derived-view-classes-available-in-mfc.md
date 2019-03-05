@@ -7,12 +7,12 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 9972586bd0cc4059e81d81be954a8cf0cada1f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594495"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269290"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Classes d'affichage dérivées disponibles dans MFC
 
@@ -38,9 +38,8 @@ Le tableau suivant présente les classes d’affichage de MFC et leurs relations
 > [!NOTE]
 >  Depuis la version 4.0, MFC `CEditView` est dérivée de `CCtrlView`.
 
-Pour utiliser ces classes dans votre application, dérivent les classes d’affichage de l’application. Pour plus d’informations, consultez [défilement et mise à l’échelle des vues](../mfc/scrolling-and-scaling-views.md). Pour plus d’informations sur les classes de base de données, consultez [vue d’ensemble : programmation de base de données](../data/data-access-programming-mfc-atl.md).
+Pour utiliser ces classes dans votre application, dérivent les classes d’affichage de l’application. Pour plus d’informations, consultez [défilement et mise à l’échelle des vues](../mfc/scrolling-and-scaling-views.md). Pour plus d’informations sur les classes de base de données, consultez [vue d’ensemble : Programmation de base de données](../data/data-access-programming-mfc-atl.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de vues](../mfc/using-views.md)
-

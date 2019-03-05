@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178536"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301452"
 ---
 # <a name="ctoolbar-class"></a>CToolBar (classe)
 
@@ -85,7 +85,7 @@ class CToolBar : public CControlBar
 |[CToolBar::LoadBitmap](#loadbitmap)|Charge la bitmap contenant les images des boutons de bitmap.|
 |[CToolBar::LoadToolBar](#loadtoolbar)|Charge une ressource de barre d’outils créée avec l’éditeur de ressources.|
 |[CToolBar::SetBitmap](#setbitmap)|Définit une image bitmap.|
-|[CToolBar::SetButtonInfo associer](#setbuttoninfo)|Définit l’ID, le style et le numéro de l’image d’un bouton.|
+|[CToolBar::SetButtonInfo](#setbuttoninfo)|Définit l’ID, le style et le numéro de l’image d’un bouton.|
 |[CToolBar::SetButtons](#setbuttons)|Jeux de bouton styles et un index d’images de bouton dans l’image bitmap.|
 |[CToolBar::SetButtonStyle](#setbuttonstyle)|Définit le style d’un bouton.|
 |[CToolBar::SetButtonText](#setbuttontext)|Définit le texte qui apparaît sur un bouton.|
@@ -518,7 +518,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Par exemple, appeler `SetBitmap` pour modifier l’image bitmap, une fois que l’utilisateur effectue une action sur un document qui modifie l’action d’un bouton.
 
-##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo associer
+##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo
 
 Appelez cette fonction membre pour définir l’ID de commande du bouton, le style et numéro de l’image.
 
