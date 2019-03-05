@@ -6,12 +6,12 @@ f1_keywords:
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-ms.openlocfilehash: 08b6edc415d08d6dfb863fb90ff27bac6ce0960a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36c3c2cfa9d1b617e377a7e340f98875457bdf1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598443"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272462"
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock, classe
 
@@ -42,7 +42,7 @@ class scoped_d3d_access_lock;
 
 `scoped_d3d_access_lock`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amprt.h
 
@@ -72,7 +72,7 @@ Le `accelerator_view` du verrou à adopter.
 *_T*<br/>
 Objet `adopt_d3d_access_lock_t`.
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `scoped_d3d_access_lock` objet à partir duquel déplacer un verrou existant.
 
 ## <a name="construction"></a>Construction
@@ -83,7 +83,7 @@ Le `scoped_d3d_access_lock` objet à partir duquel déplacer un verrou existant.
 
 [3] constructeur de déplacement prend un verrou d’accès D3D existant d’un autre `scoped_d3d_access_lock` objet. Construction ne bloque pas.
 
-##  <a name="dtor"></a> ~ scoped_d3d_access_lock
+##  <a name="dtor"></a> ~scoped_d3d_access_lock
 
 Libère le verrou d’accès D3D sur associé `accelerator_view` objet.
 
@@ -91,7 +91,7 @@ Libère le verrou d’accès D3D sur associé `accelerator_view` objet.
 ~scoped_d3d_access_lock();
 ```
 
-## <a name="operator_eq"></a> opérateur =
+## <a name="operator_eq"></a> operator=
 
 Prend possession d’un verrou d’accès D3D à partir d’un autre `scoped_d3d_access_lock` objet, en libérant le verrou précédent.
 
@@ -101,7 +101,7 @@ scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 L’accelerator_view à partir duquel déplacer le verrou d’accès D3D.
 
 ### <a name="return-value"></a>Valeur de retour

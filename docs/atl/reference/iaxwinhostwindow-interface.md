@@ -1,5 +1,5 @@
 ---
-title: IAxWinHostWindow, Interface
+title: IAxWinHostWindow Interface
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindow
@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 1e389dc253f24eed2fee7e1d552be931a23f5e3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bdfdf76b48c1e9f2c06213ee25cd15a113525dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637318"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290155"
 ---
-# <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow, Interface
+# <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow Interface
 
 Cette interface fournit des méthodes pour manipuler un contrôle et son objet hôte.
 
@@ -50,7 +50,7 @@ interface IAxWinHostWindow : IUnknown
 
 Cette interface est exposée par le contrôle ActiveX d’ATL hébergement d’objets. Appelez les méthodes sur cette interface à créer et/ou attacher un contrôle à l’objet hôte, pour obtenir une interface à partir d’un contrôle hébergé, ou pour définir la dispinterface externe ou un gestionnaire d’interface utilisateur pour une utilisation lors de l’hébergement de navigateur Web.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 La définition de cette interface est disponible en tant que fichier IDL ou C++, comme indiqué ci-dessous.
 
@@ -189,7 +189,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*<br/>
+*pDisp*<br/>
 [in] Un pointeur vers un `IDispatch` interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -206,7 +206,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Paramètres
 
-*argument pDisp*<br/>
+*pDisp*<br/>
 [in] Un pointeur vers un `IDocHostUIHandlerDispatch` interface.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -222,4 +222,3 @@ Cette fonction est utilisée par les contrôles (par exemple, le contrôle de na
 [IAxWinAmbientDispatch, interface](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
 [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-

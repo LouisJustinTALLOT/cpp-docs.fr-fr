@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485816"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305118"
 ---
 # <a name="cfileexception-class"></a>CFileException, classe
 
@@ -81,7 +81,7 @@ Le `CFileException` classe inclut des données membres publiques qui contiennent
 
 `CFileException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
@@ -187,35 +187,35 @@ int m_cause;
 
 Ce membre de données est une variable publique de type **int**. Voici les énumérateurs et leurs significations :
 
-- `CFileException::none` 0 : aucune erreur ne s’est produite.
+- `CFileException::none` 0: Aucune erreur ne s’est produite.
 
-- `CFileException::genericException` 1 : une erreur non spécifiée s’est produite.
+- `CFileException::genericException` 1: Une erreur non spécifiée s'est produite.
 
-- `CFileException::fileNotFound` 2 : le fichier n’a pas pu être localisé.
+- `CFileException::fileNotFound` 2: Le fichier n’a pas pu être localisé.
 
-- `CFileException::badPath` 3 : tout ou partie du chemin d’accès n’est pas valide.
+- `CFileException::badPath` 3: Tout ou partie du chemin d’accès n’est pas valide.
 
-- `CFileException::tooManyOpenFiles` 4 : le nombre autorisé de fichiers ouverts a été dépassé.
+- `CFileException::tooManyOpenFiles` 4: Le nombre autorisé de fichiers ouverts a été dépassé.
 
-- `CFileException::accessDenied` 5 : le fichier n’est pas accessible.
+- `CFileException::accessDenied` 5: Le fichier n’est pas accessible.
 
-- `CFileException::invalidFile` 6 : la tentative d’utilisation d’un handle de fichier non valide a été effectuée.
+- `CFileException::invalidFile` 6: Tentative d’utilisation d’un handle de fichier non valide.
 
-- `CFileException::removeCurrentDir` 7 : Impossible de supprimer le répertoire de travail actuel.
+- `CFileException::removeCurrentDir` 7: Impossible de supprimer le répertoire de travail actuel.
 
-- `CFileException::directoryFull` 8 : il n’y a aucune autre entrée de répertoire.
+- `CFileException::directoryFull` 8: Il n’existe aucune autre entrée de répertoire.
 
-- `CFileException::badSeek` 9 : erreur, essayez de définir le pointeur de fichier.
+- `CFileException::badSeek` 9: Il était une erreur, essayez de définir le pointeur de fichier.
 
-- `CFileException::hardIO` 10 : une erreur matérielle s’est produite.
+- `CFileException::hardIO` 10: Une erreur matérielle s’est produite.
 
-- `CFileException::sharingViolation` 11 : PARTAGE. EXE n’a pas été chargé, ou une région partagée a été verrouillée.
+- `CFileException::sharingViolation` 11: Partager. EXE n’a pas été chargé, ou une région partagée a été verrouillée.
 
-- `CFileException::lockViolation` 12 : tentative de verrouillage d’une région déjà verrouillée.
+- `CFileException::lockViolation` 12: Tentative de verrouillage d’une région déjà verrouillée.
 
-- `CFileException::diskFull` 14 : le disque est plein.
+- `CFileException::diskFull` 14: Le disque est plein.
 
-- `CFileException::endOfFile` 15 : la fin du fichier a été atteinte.
+- `CFileException::endOfFile` 15: La fin du fichier a été atteinte.
 
     > [!NOTE]
     >  Ces énumérateurs de cause `CFileException` sont distincts des énumérateurs de cause `CArchiveException`.
@@ -313,4 +313,3 @@ Un pointeur vers la chaîne contenant le nom du fichier qui a provoqué l’exce
 [CException, classe](../../mfc/reference/cexception-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Traitement des exceptions](../../mfc/reference/exception-processing.md)
-

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: 6395e324d5efdba208a7f77d86ca466fb7cdbb5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c050002549fc6b7a18acb34f0e4f9a2f278db82
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460461"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263401"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray, classe
 
@@ -49,7 +49,7 @@ Un objet de trait, en définissant le test d’égalité pour les éléments de 
 |Nom|Description|
 |----------|-----------------|
 |[CSimpleArray::CSimpleArray](#csimplearray)|Le constructeur pour le tableau simple.|
-|[CSimpleArray :: ~ CSimpleArray](#dtor)|Le destructeur de tableau simple.|
+|[CSimpleArray::~CSimpleArray](#dtor)|Le destructeur de tableau simple.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -79,7 +79,7 @@ Le paramètre `TEqual` fournit un moyen de définir une fonction d’égalité p
 
 Les deux `CSimpleArray` et [CSimpleMap](../../atl/reference/csimplemap-class.md) sont conçus pour un petit nombre d’éléments. [CAtlArray](../../atl/reference/catlarray-class.md) et [CAtlMap](../../atl/reference/catlmap-class.md) doit être utilisé lorsque le tableau contient un grand nombre d’éléments.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsimpcoll.h
 
@@ -126,7 +126,7 @@ Objet `CSimpleArray` existant.
 
 Initialise les membres de données, création d’un nouveau vide `CSimpleArray` objet ou une copie d’un existant `CSimpleArray` objet.
 
-##  <a name="dtor"></a>  CSimpleArray :: ~ CSimpleArray
+##  <a name="dtor"></a>  CSimpleArray::~CSimpleArray
 
 Destructeur.
 
@@ -217,7 +217,7 @@ CSimpleArray<T, TEqual>
 ### <a name="parameters"></a>Paramètres
 
 *src*<br/>
-Tableau dans lequel copier.
+Tableau à copier.
 
 ### <a name="return-value"></a>Valeur de retour
 

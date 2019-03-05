@@ -7,12 +7,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: fd86228417234f705d3f765624cd942c982df875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456184"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289609"
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits Structure
 
@@ -103,11 +103,11 @@ struct short_vector_traits<double_4>;
 
 `short_vector_traits`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_short_vectors.h
 
-**Namespace :** Concurrency::graphics
+**Espace de noms :** Concurrency::graphics
 
 ##  <a name="ctor"></a>  short_vector_traits::short_vector_traits, constructeur
 

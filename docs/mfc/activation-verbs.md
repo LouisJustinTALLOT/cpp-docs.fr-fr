@@ -1,5 +1,5 @@
 ---
-title: 'Activation : verbes'
+title: 'Activation : Verbes'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verbs [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: f6774f1de1e7abd318e5cd38fed1a2c805270c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443327"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267912"
 ---
-# <a name="activation-verbs"></a>Activation : verbes
+# <a name="activation-verbs"></a>Activation : Verbes
 
 Cet article explique le jeu de verbes principal et secondaire de rôle dans OLE [activation](../mfc/activation-cpp.md).
 
@@ -29,7 +29,7 @@ Prend en charge de nombreux types d’éléments OLE qu’un seul verbe et Edit 
 
 Un autre verbe fréquemment utilisé est ouverte. Le verbe Open est identique à modifier, sauf l’application serveur est lancée dans une fenêtre distincte. Ce verbe doit être utilisé lors de l’application conteneur ou l’application serveur ne prend pas en charge l’activation sur place.
 
-Tous les verbes autres que le verbe principal doivent être appelés via une commande de sous-menu lorsque l’élément est sélectionné. Ce sous-menu contient tous les verbes pris en charge par l’élément et est généralement atteint par le *typename* **objet** commande sur le **modifier** menu. Pour plus d’informations sur la *typename* **objet** de commande, consultez l’article [Menus et ressources : ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).
+Tous les verbes autres que le verbe principal doivent être appelés via une commande de sous-menu lorsque l’élément est sélectionné. Ce sous-menu contient tous les verbes pris en charge par l’élément et est généralement atteint par le *typename* **objet** commande sur le **modifier** menu. Pour plus d’informations sur la *typename* **objet** de commande, consultez l’article [Menus et ressources : Ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).
 
 Les verbes de qu'une application serveur prend en charge sont répertoriées dans la base de données d’inscription Windows. Si votre application serveur est écrite avec la bibliothèque Microsoft Foundation Class, elle inscrit automatiquement tous les verbes lorsque le serveur est démarré. Si ce n’est pas le cas, vous devez les inscrire pendant la phase d’initialisation de l’application serveur. Pour plus d’informations, consultez l’article [inscription](../mfc/registration.md).
 
@@ -38,4 +38,3 @@ Les verbes de qu'une application serveur prend en charge sont répertoriées dan
 [Activation](../mfc/activation-cpp.md)<br/>
 [Conteneurs](../mfc/containers.md)<br/>
 [Serveurs](../mfc/servers.md)
-

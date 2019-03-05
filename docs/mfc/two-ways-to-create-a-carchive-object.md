@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: a97223602e9994647a8af16cc68de5394494c1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659925"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273801"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Deux manières de créer un objet CArchive
 
@@ -60,7 +60,7 @@ En plus de sérialiser un document par le biais de l’infrastructure, il existe
 
    Le deuxième argument à la `CArchive` constructeur est une valeur énumérée qui spécifie si l’archive doit être utilisée pour stocker ou de chargement des données vers ou à partir du fichier. Le `Serialize` fonction d’un objet vérifie cet état en appelant le `IsStoring` fonction pour l’objet de l’archive.
 
-Lorsque vous avez terminé de stockage ou le chargement des données vers ou depuis le `CArchive` d’objet, fermez-le. Bien que le `CArchive` (et `CFile`) objets seront ferme automatiquement l’archive (et fichier), il est conseillé de faire explicitement dans la mesure où il facilite la récupération des erreurs. Pour plus d’informations sur la gestion des erreurs, consultez l’article [Exceptions : interception et suppression des Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Lorsque vous avez terminé de stockage ou le chargement des données vers ou depuis le `CArchive` d’objet, fermez-le. Bien que le `CArchive` (et `CFile`) objets seront ferme automatiquement l’archive (et fichier), il est conseillé de faire explicitement dans la mesure où il facilite la récupération des erreurs. Pour plus d’informations sur la gestion des erreurs, consultez l’article [Exceptions : Interception et suppression d’Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 #### <a name="to-close-the-carchive-object"></a>Pour fermer l’objet CArchive
 
@@ -70,5 +70,4 @@ Lorsque vous avez terminé de stockage ou le chargement des données vers ou dep
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sérialisation : sérialisation d’un objet](../mfc/serialization-serializing-an-object.md)
-
+[Sérialisation : Sérialisation d’un objet](../mfc/serialization-serializing-an-object.md)

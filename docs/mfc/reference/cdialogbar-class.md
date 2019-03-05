@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-ms.openlocfilehash: a1b631c093ea6997d89a738b4818aaf66f561836
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ae7c941b527a7cbaa01bf43ef4d41c9a4975dac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604414"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302401"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar (classe)
 
@@ -64,7 +64,7 @@ Pour plus d’informations sur `CDialogBar`, consultez l’article [barres de bo
 
 `CDialogBar`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxext.h
 

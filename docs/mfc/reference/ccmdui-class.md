@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 7d550268fb417301116b5168d4c0ff76fdc35716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571137"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302869"
 ---
 # <a name="ccmdui-class"></a>CCmdUI, classe
 
@@ -91,7 +91,7 @@ Pour plus d’informations sur l’utilisation de cette classe, consultez [comme
 
 `CCmdUI`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -188,7 +188,7 @@ virtual void SetCheck(int nCheck = 1);
 
 ### <a name="parameters"></a>Paramètres
 
-*nVérifiez*<br/>
+*nCheck*<br/>
 Spécifie l’état de vérification à définir. Si 0, désactive ; Si 1, les contrôles ; et si 2, définit indéterminé.
 
 ### <a name="remarks"></a>Notes

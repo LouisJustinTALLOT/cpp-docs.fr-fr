@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTHeap class
 ms.assetid: 321bd6c5-1856-4ff7-8590-95044a1209f7
-ms.openlocfilehash: b761fc3d9d9874e676fad8c74a82f1f08d714d61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c5030b9cfbfd636a783d27bcc8f9469f8348acb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647315"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276271"
 ---
 # <a name="ccrtheap-class"></a>Ccrtheap, classe
 
@@ -53,7 +53,7 @@ Consultez l’exemple de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 `CCRTHeap`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlmem.h
 

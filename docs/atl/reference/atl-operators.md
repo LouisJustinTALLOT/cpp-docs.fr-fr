@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-ms.openlocfilehash: 361b0316e27ee06c64b3ed5e11c6aab10210596f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f1bd4f88b8d3a37f051a208a887c5264f61955a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476256"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293496"
 ---
 # <a name="atl-operators"></a>Opérateurs ATL
 
@@ -17,18 +17,18 @@ Cette section contient les rubriques de référence pour les opérateurs globaux
 
 |Opérateur|Description|
 |--------------|-----------------|
-|[opérateur ==](#operator_eq_eq)|Compare deux `CSid` objets ou `SID` structures sont égales.|
-|[opérateur ! =](#operator_neq)|Compare deux `CSid` objets ou `SID` inégalité des structures.|
+|[operator ==](#operator_eq_eq)|Compare deux `CSid` objets ou `SID` structures sont égales.|
+|[operator !=](#operator_neq)|Compare deux `CSid` objets ou `SID` inégalité des structures.|
 |[opérateur <](#operator_lt)|Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est inférieur au `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).|
 |[opérateur >](#operator_gt)|Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est supérieur à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).|
-|[opérateur < =](#operator_lt__eq)|Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est inférieur ou égal à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).|
-|[opérateur > =](#operator_gt__eq)|Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est supérieur ou égal à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).|
+|[operator <=](#operator_lt__eq)|Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est inférieur ou égal à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).|
+|[operator >=](#operator_gt__eq)|Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est supérieur ou égal à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h.
 
-##  <a name="operator_eq_eq"></a>  opérateur ==
+##  <a name="operator_eq_eq"></a>  operator ==
 
 Compare `CSid` objets ou `SID` égalité des structures (identificateur de sécurité).
 
@@ -38,10 +38,10 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*<br/>
+*rhs*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -58,10 +58,10 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*<br/>
+*rhs*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -78,10 +78,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*<br/>
+*rhs*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -92,7 +92,7 @@ Retourne la valeur TRUE si l’adresse de la *lhs* objet est inférieur à l’a
 
 Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` structure et est implémenté pour assurer une compatibilité avec les classes de collection de bibliothèque C++ Standard.
 
-##  <a name="operator_gt"></a>  opérateur >
+##  <a name="operator_gt"></a>  operator >
 
 Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est supérieur à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).
 
@@ -102,10 +102,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*<br/>
+*rhs*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -126,10 +126,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*<br/>
+*rhs*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -140,7 +140,7 @@ Retourne la valeur TRUE si l’adresse de la *lhs* est inférieur ou égal à l�
 
 Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` structure et est implémenté pour assurer une compatibilité avec les classes de collection de bibliothèque C++ Standard.
 
-##  <a name="operator_gt__eq"></a>  opérateur > =
+##  <a name="operator_gt__eq"></a>  operator >=
 
 Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est supérieur ou égal à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).
 
@@ -150,10 +150,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*LHS*<br/>
+*lhs*<br/>
 La première `CSid` objet ou `SID` structure à comparer.
 
-*terme de droite*<br/>
+*rhs*<br/>
 La seconde `CSid` objet ou `SID` structure à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -163,4 +163,3 @@ Retourne la valeur TRUE si l’adresse de la *lhs* est supérieur ou égal à l�
 ### <a name="remarks"></a>Notes
 
 Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` structure et est implémenté pour assurer une compatibilité avec les classes de collection de bibliothèque C++ Standard.
-

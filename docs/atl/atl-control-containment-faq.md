@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: ef175ff83fd641852b27fea8408f1bb7de69f839
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42f9b41b99e13fcfe2fb003acb348c9464e0fd05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630809"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296564"
 ---
 # <a name="atl-control-containment-faq"></a>FAQ sur la relation contenant-contenu des contrôles ATL
 
@@ -23,7 +23,7 @@ Le code d’hébergement des contrôles ATL ne vous oblige à utiliser les class
 
 |Classe|Description|
 |-----------|-----------------|
-|[Objet CAxWindow](../atl/reference/caxwindow-class.md)|Encapsule une **« AtlAxWin80 »** fenêtre, en fournissant des méthodes pour la création de la fenêtre, création d’un contrôle et/ou attacher un contrôle à la fenêtre et récupération des pointeurs d’interface sur l’objet hôte.|
+|[CAxWindow](../atl/reference/caxwindow-class.md)|Encapsule une **« AtlAxWin80 »** fenêtre, en fournissant des méthodes pour la création de la fenêtre, création d’un contrôle et/ou attacher un contrôle à la fenêtre et récupération des pointeurs d’interface sur l’objet hôte.|
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Encapsule une **« AtlAxWinLic80 »** fenêtre, en fournissant des méthodes pour la création de la fenêtre, création d’un contrôle et/ou attacher un contrôle sous licence à la fenêtre et récupération des pointeurs d’interface sur l’objet hôte.|
 |[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Agit comme une classe de base pour les classes de contrôle ActiveX basées sur une ressource de boîte de dialogue. Ces contrôles peuvent contenir d’autres contrôles ActiveX.|
 |[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Agit comme une classe de base pour les classes de boîte de dialogue basées sur une ressource de boîte de dialogue. Ces boîtes de dialogue peuvent contenir des contrôles ActiveX.|
@@ -40,7 +40,7 @@ ATL qui héberge le contrôle de l’API est l’ensemble de fonctions qui perme
 |[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)|Crée un contrôle ActiveX sous licence, il initialise et héberge ce dernier dans la fenêtre spécifiée, similaire à [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol).|
 |[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)|Crée un objet hôte, se connecte à la fenêtre fournie, puis charge un contrôle (permet également de configurer des récepteurs d’événements).|
 |[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrollicex)|Crée un contrôle ActiveX sous licence, il initialise et héberge ce dernier dans la fenêtre spécifiée, similaire à [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic).|
-|[API AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxcreatedialog)|Crée une boîte de dialogue non modale à partir d’une ressource de boîte de dialogue et retourne le handle de fenêtre.|
+|[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxcreatedialog)|Crée une boîte de dialogue non modale à partir d’une ressource de boîte de dialogue et retourne le handle de fenêtre.|
 |[AtlAxDialogBox](reference/composite-control-global-functions.md#atlaxdialogbox)|Crée une boîte de dialogue modale à partir d’une ressource de boîte de dialogue.|
 |[AtlAxGetControl](reference/composite-control-global-functions.md#atlaxgetcontrol)|Retourne le **IUnknown** pointeur d’interface du contrôle hébergé dans une fenêtre.|
 |[AtlAxGetHost](reference/composite-control-global-functions.md#atlaxgethost)|Retourne le **IUnknown** pointeur d’interface de l’objet hôte connecté à une fenêtre.|

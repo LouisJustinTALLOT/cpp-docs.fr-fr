@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481794"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284838"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Fonctions d’accès concurrentiel de l’espace de noms (AMP)
 
@@ -79,7 +79,7 @@ L’emplacement à partir duquel l’une des valeurs à comparer est lue, et à 
 *_Expected_value*<br/>
 L’emplacement à partir duquel la deuxième valeur à comparer est lue.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à stocker à l’emplacement de mémoire spécifié dans par `_Dest` si `_Dest` est égal à `_Expected_value`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -112,7 +112,7 @@ inline float atomic_exchange(
 *_Dest*<br/>
 Pointeur vers l’emplacement de destination.
 
-*valeur*<br/>
+*value*<br/>
 Nouvelle valeur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -140,7 +140,7 @@ inline unsigned int atomic_fetch_add(
 *_Dest*<br/>
 Pointeur vers l’emplacement de mémoire.
 
-*valeur*<br/>
+*value*<br/>
 Valeur à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -168,7 +168,7 @@ inline unsigned int atomic_fetch_and(
 *_Dest*<br/>
 Pointeur vers l’emplacement de mémoire.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à utiliser dans le calcul AND au niveau du bit.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -235,7 +235,7 @@ inline unsigned int atomic_fetch_max(
 *_Dest*<br/>
 L’emplacement à partir duquel l’une des valeurs à comparer est lue, et à laquelle la valeur maximale de deux valeurs doit être stocké.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à comparer à la valeur à l’emplacement spécifié.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -263,7 +263,7 @@ inline unsigned int atomic_fetch_min(
 *_Dest*<br/>
 L’emplacement à partir duquel l’une des valeurs à comparer est lue, et dans lequel la valeur minimale de deux valeurs à stocker.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à comparer à la valeur à l’emplacement spécifié.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 *_Dest*<br/>
 Pointeur vers l’emplacement de mémoire.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à utiliser dans le calcul d’OR au niveau du bit.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -319,7 +319,7 @@ inline unsigned int atomic_fetch_sub(
 *_Dest*<br/>
 Pointeur vers l’emplacement de destination.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à soustraire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -347,7 +347,7 @@ inline unsigned int atomic_fetch_xor(
 *_Dest*<br/>
 Pointeur vers l’emplacement de mémoire.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à utiliser dans le calcul XOR.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -546,7 +546,7 @@ Un `future<void>` qui peut être attendu.
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-Interrompt l’exécution d’une fonction avec la clause de restriction `restrict(amp)` . Lorsque le runtime AMP détecte l’appel, il déclenche une exception [runtime_exception](runtime-exception-class.md) avec le message d’erreur « Reference Rasterizer: Shader abort instruction hit ».
+Interrompt l’exécution d’une fonction avec la clause de restriction `restrict(amp)` . Lorsque le runtime AMP détecte l’appel, il déclenche une [runtime_exception](runtime-exception-class.md) exception avec le message d’erreur « Reference Rasterizer : Shader abort instruction hit ».
 
 ```
 void direct3d_abort() restrict(amp);

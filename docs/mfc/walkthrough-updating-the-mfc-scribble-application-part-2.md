@@ -1,17 +1,17 @@
 ---
-title: "Procédure pas à pas : mise à jour de l'application Scribble MFC (partie 2)"
+title: 'Procédure pas à pas : La mise à jour de l’Application de Scribble MFC (partie 2)'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: 6a52486658307f001001e91772dad1167730def2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c4c4ecce92bce3fbd2cb37f69b9aa02a9af4d7c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519267"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291429"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procédure pas à pas : mise à jour de l'application Scribble MFC (partie 2)
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procédure pas à pas : La mise à jour de l’Application de Scribble MFC (partie 2)
 
 [Partie 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) de cette procédure pas à pas vous a montré comment ajouter un ruban d’Office Fluent à classique Scribble application. Cette partie montre comment ajouter des panneaux de ruban et les contrôles que les utilisateurs peuvent utiliser au lieu des menus et des commandes.
 
@@ -338,4 +338,4 @@ Vous avez mis à jour l’application Scribble MFC. Utilisez cette procédure pa
 ## <a name="see-also"></a>Voir aussi
 
 [Procédures pas à pas](../mfc/walkthroughs-mfc.md)<br/>
-[Procédure pas à pas : mise à jour de l’application Scribble MFC (partie 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[Procédure pas à pas : La mise à jour de l’Application de Scribble MFC (partie 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

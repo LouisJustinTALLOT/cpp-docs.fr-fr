@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-ms.openlocfilehash: 610a69204e5cb66f2129351ab2a04bb0915a1b4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99dd7f58b862fadc86ee2515bb8ef2008bc538fa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451686"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289577"
 ---
 # <a name="ole-server-classes"></a>Classes de serveur OLE
 
@@ -30,7 +30,7 @@ Utilisé comme classe de base pour les classes de document de l’application se
 [CDocItem](../mfc/reference/cdocitem-class.md)<br/>
 De classe de base abstraite `COleClientItem` et `COleServerItem`. Les objets des classes dérivées de `CDocItem` représentent des parties de documents.
 
-[Classe dérivée COleServerItem](../mfc/reference/coleserveritem-class.md)<br/>
+[COleServerItem](../mfc/reference/coleserveritem-class.md)<br/>
 Utilisé pour représenter l’interface OLE à `COleServerDoc` éléments. Il existe généralement un `COleServerDoc` objet qui représente la partie intégrante d’un document. Dans les serveurs qui prennent en charge des liens vers des parties de documents, il peut y avoir plusieurs `COleServerItem` objets, chacun d’eux représente un lien vers une partie du document.
 
 [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
@@ -48,4 +48,3 @@ Une exception résultant d’une défaillance lors du traitement de OLE. Cette c
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la classe](../mfc/class-library-overview.md)
-

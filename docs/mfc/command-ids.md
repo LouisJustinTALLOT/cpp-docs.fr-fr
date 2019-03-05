@@ -5,12 +5,12 @@ helpviewer_keywords:
 - command IDs, MFC
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
-ms.openlocfilehash: ecec4a7bd705dc74a3f45cc07da4abcdb168f43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76071105e72f1ca4a851b9cdb76d5f1a96f44edb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274572"
 ---
 # <a name="command-ids"></a>ID de commande
 
@@ -23,4 +23,3 @@ Lorsque vous créez vos propres menus dans Visual C++ de l’éditeur de menu, i
 ## <a name="see-also"></a>Voir aussi
 
 [Objets d’interface utilisateur et ID de commande](../mfc/user-interface-objects-and-command-ids.md)
-

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
-ms.openlocfilehash: aa7fd6e2caa15a256cec2eae5ede6c6e47cd1518
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b29112b4901a1fecac37aa7ae61496e874959370
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632683"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268107"
 ---
 # <a name="cresourceexception-class"></a>Cresourceexception, classe
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur l’utilisation de `CResourceException`, consulte
 
 `CResourceException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -69,4 +69,3 @@ N’utilisez pas ce constructeur directement, mais plutôt appeler la fonction g
 
 [CException, classe](cexception-class.md)<br/>
 [Graphique hiérarchique](../hierarchy-chart.md)
-

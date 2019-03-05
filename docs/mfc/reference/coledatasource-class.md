@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 539f3f1611d4d9d83d37754b66986c6b4f59549c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc3d9f089dc6289331c79c6a1e18eccbc9ff4993
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614199"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296973"
 ---
 # <a name="coledatasource-class"></a>COleDataSource, classe
 
@@ -96,7 +96,7 @@ Pour plus d’informations sur les sources de données et de transfert de donné
 
 `COleDataSource`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxole.h
 
@@ -130,7 +130,7 @@ Fournir les données à l’aide un [STGMEDIUM](/windows/desktop/api/objidl/ns-o
 
 Après l’appel à `CacheData` le `ptd` membre `lpFormatEtc` et le contenu de *lpStgMedium* sont détenus par l’objet de données, pas par l’appelant.
 
-Pour utiliser le rendu retardé, appelez le [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) fonction membre. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
+Pour utiliser le rendu retardé, appelez le [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) fonction membre. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Pour plus d’informations, consultez le [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) et [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) structures dans le SDK Windows.
 
@@ -162,7 +162,7 @@ Pointe vers un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) s
 
 Cette fonction fournit les données à l’aide de rendu immédiat, vous devez fournir les données lors de l’appel de la fonction ; les données sont mis en cache jusqu'à ce que nécessaire. Utilisez le `CacheData` fonction membre si vous fournissez une grande quantité de données ou si vous avez besoin d’un support de stockage structuré.
 
-Pour utiliser le rendu retardé, appelez le [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) fonction membre. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
+Pour utiliser le rendu retardé, appelez le [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) fonction membre. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Pour plus d’informations, consultez le [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) structure dans le SDK Windows.
 
@@ -198,7 +198,7 @@ Pointe vers un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) s
 
 Cette fonction fournit les données à l’aide de rendu retardé, les données ne sont pas fournies immédiatement. Le [se](#onrenderdata) ou [OnRenderGlobalData](#onrenderglobaldata) fonction membre est appelée pour demander les données.
 
-Utilisez cette fonction si vous ne souhaitez pas fournir vos données via un `CFile` objet. Si vous vous apprêtez à fournir les données via un `CFile` de l’objet, appelez le [DelayRenderFileData](#delayrenderfiledata) fonction membre. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
+Utilisez cette fonction si vous ne souhaitez pas fournir vos données via un `CFile` objet. Si vous vous apprêtez à fournir les données via un `CFile` de l’objet, appelez le [DelayRenderFileData](#delayrenderfiledata) fonction membre. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Pour utiliser le rendu immédiat, appelez le [CacheData](#cachedata) ou [CacheGlobalData](#cacheglobaldata) fonction membre.
 
@@ -228,7 +228,7 @@ Pointe vers un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) s
 
 Cette fonction fournit les données à l’aide de rendu retardé, les données ne sont pas fournies immédiatement. Le [OnRenderFileData](#onrenderfiledata) fonction membre est appelée pour demander les données.
 
-Utilisez cette fonction si vous vous apprêtez à utiliser un `CFile` objet pour fournir les données. Si vous ne souhaitez pas utiliser un `CFile` de l’objet, appelez le [DelayRenderData](#delayrenderdata) fonction membre. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
+Utilisez cette fonction si vous vous apprêtez à utiliser un `CFile` objet pour fournir les données. Si vous ne souhaitez pas utiliser un `CFile` de l’objet, appelez le [DelayRenderData](#delayrenderdata) fonction membre. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Pour utiliser le rendu immédiat, appelez le [CacheData](#cachedata) ou [CacheGlobalData](#cacheglobaldata) fonction membre.
 
@@ -310,7 +310,7 @@ Le délai spécifié par un paramètre de clé de Registre. Vous pouvez modifier
 
 Pour plus d’informations sur la façon faites glisser les informations de retard sont stockées dans le Registre ou le. Fichier INI, consultez [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) dans le SDK Windows.
 
-Pour plus d’informations, consultez l’article [glisser- déposer : implémentation d’une Source Drop](../../mfc/drag-and-drop-implementing-a-drop-source.md).
+Pour plus d’informations, consultez l’article [glisser -déplacer : Implémentation d’une Source de dépôt](../../mfc/drag-and-drop-implementing-a-drop-source.md).
 
 ##  <a name="empty"></a>  COleDataSource::Empty
 
@@ -374,7 +374,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Le format spécifié est un été placé dans le `COleDataSource` à l’aide de l’objet le [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) fonction membre pour le rendu retardé. L’implémentation par défaut de cette fonction appelle [OnRenderFileData](#onrenderfiledata) ou [OnRenderGlobalData](#onrenderglobaldata) si le support de stockage fourni est un fichier ou la mémoire, respectivement. Si aucune de ces formats sont fournis, l’implémentation par défaut retourne 0 et ne rien faire. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
+Le format spécifié est un été placé dans le `COleDataSource` à l’aide de l’objet le [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) fonction membre pour le rendu retardé. L’implémentation par défaut de cette fonction appelle [OnRenderFileData](#onrenderfiledata) ou [OnRenderGlobalData](#onrenderglobaldata) si le support de stockage fourni est un fichier ou la mémoire, respectivement. Si aucune de ces formats sont fournis, l’implémentation par défaut retourne 0 et ne rien faire. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Si *lpStgMedium*-> *tymed* est TYMED_NULL, le `STGMEDIUM` doit être alloué et rempli comme spécifié par *lpFormatEtc -> tymed*. Si ce n’est pas TYMED_NULL, la `STGMEDIUM` doit être rempli en place avec les données.
 
@@ -408,7 +408,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Le format spécifié est un été placé dans le `COleDataSource` à l’aide de l’objet le [DelayRenderData](#delayrenderdata) fonction membre pour le rendu retardé. L’implémentation par défaut de cette fonction renvoie simplement FALSE.
 
-Il s’agit d’une avancée substituable. Remplacez cette fonction pour fournir vos données dans le format demandé et le support. En fonction de vos données, vous souhaiterez peut-être substituer l’une des autres versions de cette fonction à la place. Si vous souhaitez gérer plusieurs supports de stockage, substituez [se](#onrenderdata). Si vos données sont dans un fichier, ou de taille variable, substituez `OnRenderFileData`. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
+Il s’agit d’une avancée substituable. Remplacez cette fonction pour fournir vos données dans le format demandé et le support. En fonction de vos données, vous souhaiterez peut-être substituer l’une des autres versions de cette fonction à la place. Si vous souhaitez gérer plusieurs supports de stockage, substituez [se](#onrenderdata). Si vos données sont dans un fichier, ou de taille variable, substituez `OnRenderFileData`. Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Pour plus d’informations, consultez le [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) structure et [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) dans le SDK Windows.
 
@@ -440,7 +440,7 @@ Le format spécifié est un été placé dans le `COleDataSource` à l’aide de
 
 Si *phGlobal* est NULL, un nouveau HGLOBAL doit être alloué et retournée dans *phGlobal*. Sinon, HGLOBAL spécifié par *phGlobal* doit être rempli avec les données. La quantité de données placées dans HGLOBAL ne doit pas dépasser la taille actuelle du bloc de mémoire. En outre, le bloc ne peut pas être réaffecté à une plus grande taille.
 
-Il s’agit d’une avancée substituable. Remplacez cette fonction pour fournir vos données dans le format demandé et le support. En fonction de vos données, vous souhaiterez substituer l’une des autres versions de cette fonction à la place. Si vous souhaitez gérer plusieurs supports de stockage, substituez [se](#onrenderdata). Si vos données sont dans un fichier, ou de taille variable, substituez [OnRenderFileData](#onrenderfiledata). Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
+Il s’agit d’une avancée substituable. Remplacez cette fonction pour fournir vos données dans le format demandé et le support. En fonction de vos données, vous souhaiterez substituer l’une des autres versions de cette fonction à la place. Si vous souhaitez gérer plusieurs supports de stockage, substituez [se](#onrenderdata). Si vos données sont dans un fichier, ou de taille variable, substituez [OnRenderFileData](#onrenderfiledata). Pour plus d’informations sur le rendu retardé comme étant géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Pour plus d’informations, consultez le [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) structure et [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) dans le SDK Windows.
 
@@ -480,7 +480,7 @@ Pour plus d’informations, consultez le [STGMEDIUM](/windows/desktop/api/objidl
 
 ##  <a name="setclipboard"></a>  COleDataSource::SetClipboard
 
-Place les données contenues dans le `COleDataSource` objet dans le Presse-papiers après l’appel d’une des fonctions suivantes : [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), ou [DelayRenderFileData](#delayrenderfiledata).
+Place les données contenues dans le `COleDataSource` objet dans le Presse-papiers après l’appel d’une des fonctions suivantes : [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), or [DelayRenderFileData](#delayrenderfiledata).
 
 ```
 void SetClipboard();

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
-ms.openlocfilehash: e8ba740d31681de214d2a497bc2694a94d09d84d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c60148c099b34993bef0c9808e6561e37c26cc7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542621"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301673"
 ---
 # <a name="property-sheets-as-wizards"></a>Feuilles de propriétés sous forme d'assistants
 
@@ -26,4 +26,3 @@ Pour afficher tous les boutons par défaut, vous devez afficher le bouton Termin
 ## <a name="see-also"></a>Voir aussi
 
 [Feuilles de propriétés](../mfc/property-sheets-mfc.md)
-

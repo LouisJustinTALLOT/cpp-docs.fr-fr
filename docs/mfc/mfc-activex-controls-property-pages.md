@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ActiveX MFC : pages de propriétés'
+title: 'Contrôles ActiveX MFC : Pages de propriétés'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176456"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303896"
 ---
-# <a name="mfc-activex-controls-property-pages"></a>Contrôles ActiveX MFC : pages de propriétés
+# <a name="mfc-activex-controls-property-pages"></a>Contrôles ActiveX MFC : Pages de propriétés
 
 Pages de propriétés permettent à un utilisateur du contrôle ActiveX afficher et modifier les propriétés du contrôle ActiveX. Ces propriétés sont accessibles en appelant une boîte de dialogue Propriétés du contrôle, qui contient un ou plusieurs pages de propriétés qui fournissent une interface graphique personnalisée pour afficher et modifier les propriétés du contrôle.
 
@@ -45,15 +45,15 @@ Cet article traite des rubriques liées à l’utilisation des pages de proprié
 
 Pour plus d’informations sur l’utilisation des pages de propriétés dans un contrôle ActiveX, consultez les articles suivants :
 
-- [Contrôles ActiveX MFC : ajout d’une page de propriétés personnalisées](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Contrôles ActiveX MFC : Ajout d’une autre Page de propriétés personnalisées](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
-- [Contrôles ActiveX MFC : utilisation des pages de propriétés stock](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Contrôles ActiveX MFC : À l’aide des Pages de propriétés Stock](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 Pour plus d’informations sur l’utilisation des feuilles de propriétés dans une application MFC autre qu’un contrôle ActiveX, consultez [feuilles de propriétés](../mfc/property-sheets-mfc.md).
 
 ##  <a name="_core_implementing_the_default_property_page"></a> Implémentation de la Page de propriété par défaut
 
-Si vous utilisez l’Assistant contrôle ActiveX pour créer votre projet de contrôle, l’Assistant contrôle ActiveX fournit une classe de page de propriétés par défaut pour le contrôle dérivé [COlePropertyPage, classe](../mfc/reference/colepropertypage-class.md). Initialement, cette page de propriétés est vide, mais vous pouvez ajouter n’importe quel contrôle de boîte de dialogue ou un ensemble de contrôles à ce dernier. Étant donné que l’Assistant contrôle ActiveX crée la classe de page qu’une seule propriété par défaut, les classes de page de propriété supplémentaires (également dérivée de `COlePropertyPage`) doit être créé à l’aide d’affichage de classes. Pour plus d’informations sur cette procédure, consultez [contrôles ActiveX MFC : ajout d’une autre Page propriété personnalisée](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
+Si vous utilisez l’Assistant contrôle ActiveX pour créer votre projet de contrôle, l’Assistant contrôle ActiveX fournit une classe de page de propriétés par défaut pour le contrôle dérivé [COlePropertyPage, classe](../mfc/reference/colepropertypage-class.md). Initialement, cette page de propriétés est vide, mais vous pouvez ajouter n’importe quel contrôle de boîte de dialogue ou un ensemble de contrôles à ce dernier. Étant donné que l’Assistant contrôle ActiveX crée la classe de page qu’une seule propriété par défaut, les classes de page de propriété supplémentaires (également dérivée de `COlePropertyPage`) doit être créé à l’aide d’affichage de classes. Pour plus d’informations sur cette procédure, consultez [contrôles ActiveX MFC : Ajout d’une autre Page de propriété personnalisée](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
 
 Implémentation d’une propriété page (dans ce cas, la valeur par défaut) est un processus en trois étapes :
 

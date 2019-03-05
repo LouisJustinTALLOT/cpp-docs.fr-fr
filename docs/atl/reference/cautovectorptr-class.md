@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-ms.openlocfilehash: 8485f13b91c72d12c2084d2714f2acfa6dda7f01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f614318125f3c6bce4003fee5fb4a945c7c88129
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478753"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259553"
 ---
 # <a name="cautovectorptr-class"></a>Cautovectorptr, classe
 
@@ -46,7 +46,7 @@ Le type de pointeur.
 |Nom|Description|
 |----------|-----------------|
 |[CAutoVectorPtr::CAutoVectorPtr](#cautovectorptr)|Constructeur.|
-|[CAutoVectorPtr :: ~ CAutoVectorPtr](#dtor)|Destructeur.|
+|[CAutoVectorPtr::~CAutoVectorPtr](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -76,7 +76,7 @@ Cette classe fournit des méthodes pour créer et gérer un pointeur intelligent
 
 Consultez [CAutoPtr](../../atl/reference/cautoptr-class.md) pour obtenir un exemple d’utilisation d’une classe de pointeur intelligent.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -139,7 +139,7 @@ Un pointeur existant.
 
 Le `CAutoVectorPtr` objet peut être créé à l’aide d’un pointeur existant, auquel cas il transfère la propriété du pointeur.
 
-##  <a name="dtor"></a>  CAutoVectorPtr :: ~ CAutoVectorPtr
+##  <a name="dtor"></a>  CAutoVectorPtr::~CAutoVectorPtr
 
 Destructeur.
 

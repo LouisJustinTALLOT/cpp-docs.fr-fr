@@ -1,17 +1,17 @@
 ---
-title: 'Comment : implémenter le suivi dans votre code'
+title: 'Procédure : Implémenter le suivi dans votre Code'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: 0a6a8313c02566c4d1cde82b288b42e150651b02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af8e1b72bde268a15012515065853daa617936e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283980"
 ---
-# <a name="how-to-implement-tracking-in-your-code"></a>Comment : implémenter le suivi dans votre code
+# <a name="how-to-implement-tracking-in-your-code"></a>Procédure : Implémenter le suivi dans votre Code
 
 Pour suivre un élément OLE, vous devez gérer certains événements associés à l'élément, tel que cliquer sur l'élément ou mettre à jour la vue du document. Dans tous les cas, il suffit de déclarer une table temporaire [CRectTracker](../mfc/reference/crecttracker-class.md) et de manipuler l’élément au moyen de cet objet.
 
@@ -25,7 +25,7 @@ Lorsqu'un utilisateur sélectionne un élément ou insère un objet avec une com
 |Bordure pleine|L'élément est incorporé dans le document|
 |Poignées de redimensionnement|L'élément est actuellement sélectionné|
 |Bordure hachurée|L'élément est actuellement actif en place|
-|Le modèle de hachurage recouvre l'élément|Le serveur de l'élément est ouvert|
+|Le modèle de hachurage recouvre l’élément|Le serveur de l'élément est ouvert|
 
 Vous pouvez traiter cette initialisation facilement à l'aide d'une procédure qui vérifie l'état de l'élément OLE et qui définit les styles appropriés. Le `SetupTracker` fonction se trouve dans l’exemple OCLIENT illustre l’initialisation de suivi. Les paramètres de cette fonction sont l’adresse du dispositif de suivi, *pTracker*; un pointeur vers l’élément client qui est lié au dispositif de suivi, *pItem*; et un pointeur vers un rectangle, *pTrueRect* . Pour obtenir un exemple plus complet de cette fonction, consultez l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md).
 
@@ -55,5 +55,4 @@ La classe `CRectTracker` fournit différentes formes de curseur utilisées pour 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Dispositifs de suivi : implémentation de dispositifs de suivi dans votre application OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
-
+[Dispositifs de suivi : Implémentation de dispositifs de suivi dans votre Application OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)

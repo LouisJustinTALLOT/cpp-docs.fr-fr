@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: da7b1310f80bfb03645d386b59632e1c2811a367
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8820be3073c6ffaffdaa9d04a7338ad584d36ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651137"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267289"
 ---
 # <a name="csacl-class"></a>CSacl, classe
 
@@ -72,7 +72,7 @@ Pour une présentation du modèle de contrôle d’accès dans Windows, consulte
 
 `CSacl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsecurity.h
 
@@ -142,7 +142,7 @@ CSacl(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Un existant `ACL` structure (liste de contrôle d’accès).
 
 ### <a name="remarks"></a>Notes
@@ -183,7 +183,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*terme de droite*<br/>
+*rhs*<br/>
 Le `ACL` (liste de contrôle d’accès) pour affecter à l’objet existant.
 
 ### <a name="return-value"></a>Valeur de retour

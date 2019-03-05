@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 09e328171657c3c6557a5d77acae0f034e517955
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612483"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298267"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Objets de données et sources de données (OLE)
 
@@ -27,9 +27,9 @@ Lorsque vous effectuez un transfert de données à l’aide du Presse-papiers ou
 
 Les articles suivants expliquent comment utiliser des objets de données et sources de données dans vos applications. Ces informations s’appliquent aux applications de conteneur et le serveur, car les deux peuvent être appelés à copier et coller des données.
 
-- [Objets de données et sources de données : création et destruction](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+- [Objets de données et Sources de données : Création et Destruction](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
 
-- [Objets de données et sources de données : manipulation](../mfc/data-objects-and-data-sources-manipulation.md)
+- [Objets de données et Sources de données : Manipulation](../mfc/data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>Dans cette section
 

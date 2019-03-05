@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 56042c799f22b0e35bbd0d03d96d649e508f6e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f8f5c5629e9794ca8ee2cc6bedbc4ba6bfdb24d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578943"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264935"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource, structure
 
@@ -47,7 +47,7 @@ Ressources d’exécution peuvent être autonomes ou associées aux racines de p
 
 `IExecutionResource`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concrtrm.h
 

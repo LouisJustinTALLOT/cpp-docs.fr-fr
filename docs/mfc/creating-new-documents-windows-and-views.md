@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3d4ca55a9bff6ec42643db745896a2cea96dcefb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175390"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297803"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Création de documents, fenêtres et vues
 
@@ -60,4 +60,3 @@ Dans la plupart des cas, votre substitution doit appeler la version de la classe
 [Création de modèle de document](../mfc/document-template-creation.md)<br/>
 [Création d’un document/vue](../mfc/document-view-creation.md)<br/>
 [Relations entre les objets MFC](../mfc/relationships-among-mfc-objects.md)
-

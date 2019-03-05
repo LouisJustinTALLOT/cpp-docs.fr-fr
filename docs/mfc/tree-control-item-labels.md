@@ -1,5 +1,5 @@
 ---
-title: Étiquettes d’élément de contrôle d’arborescence
+title: Étiquettes d'élément de contrôle d'arborescence
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tree controls [MFC], item labels
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - item labels, tree controls
 - item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
-ms.openlocfilehash: 0abfeee170dbc9cbb4639e896e7a22d7184b35a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c945556ff9236db1ca61b15f1072efdc2f49541f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438192"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278884"
 ---
-# <a name="tree-control-item-labels"></a>Étiquettes d’élément de contrôle d’arborescence
+# <a name="tree-control-item-labels"></a>Étiquettes d'élément de contrôle d'arborescence
 
 En règle générale, vous spécifiez le texte d’étiquette de l’élément lors de l’ajout de l’élément au contrôle d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Le `InsertItem` fonction membre peut passer un [structure TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) structure qui définit les propriétés de l’élément, y compris une chaîne contenant le texte de l’étiquette. `InsertItem` a plusieurs surcharges qui peuvent être appelées avec diverses combinaisons de paramètres.
 
@@ -27,4 +27,3 @@ Un contrôle d’arborescence utilise la mémoire allouée à partir du tas du p
 
 [Utilisation de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

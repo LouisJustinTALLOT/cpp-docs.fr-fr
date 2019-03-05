@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: 9ec6177b1f2cb071a6aa284c2936f3af4dbe4634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259254"
 ---
 # <a name="cscrollview-class"></a>CScrollView, classe
 
@@ -116,7 +116,7 @@ Pour plus d’informations sur l’utilisation de `CScrollView`, consultez [Arch
 
 `CScrollView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -214,7 +214,7 @@ Retourne le mode de mappage actuel pour cette vue. Pour obtenir la liste des val
 *sizeTotal*<br/>
 Retourne la taille totale actuelle de l’affichage du défilement en unités de périphérique.
 
-*cachetaille de page*<br/>
+*sizePage*<br/>
 Retourne les montants horizontales et verticales pour faire défiler dans chaque direction en réponse à une souris cliquez dans un arbre de la barre de défilement. Le `cx` membre contient la valeur horizontale. Le `cy` membre contient la valeur verticale.
 
 *sizeLine*<br/>
@@ -348,7 +348,7 @@ Chacun de ces modes sont définis par Windows. Deux modes de mappage standard, M
 *sizeTotal*<br/>
 La taille totale de l’affichage du défilement. Le `cx` membre contient la mesure horizontale. Le `cy` membre contient l’étendue verticale. Tailles sont exprimées en unités logiques. Les deux `cx` et `cy` doit être supérieur ou égal à 0.
 
-*cachetaille de page*<br/>
+*sizePage*<br/>
 Les taux horizontal et verticales pour faire défiler dans chaque direction en réponse à une souris cliquez dans un arbre de la barre de défilement. Le `cx` membre contient la valeur horizontale. Le `cy` membre contient la valeur verticale.
 
 *sizeLine*<br/>

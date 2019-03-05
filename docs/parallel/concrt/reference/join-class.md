@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-ms.openlocfilehash: 23fc005a0c679576507c3a39ae37ce6c4545036b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668250"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281588"
 ---
 # <a name="join-class"></a>join, classe
 
@@ -82,7 +82,7 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `join`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
@@ -162,7 +162,7 @@ join(
 *_NumInputs*<br/>
 Nombre d’entrées cela `join` bloc peuvent être utilisés.
 
-*_Filtre*<br/>
+*_Filter*<br/>
 Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
 
 *_PScheduler*<br/>
@@ -177,7 +177,7 @@ Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les pa
 
 Le type `filter_method` est un functor avec la signature `bool (T const &)` qui est appelé par ce `join` bloc de messagerie pour déterminer s’il doit accepter un message proposé.
 
-##  <a name="dtor"></a> ~ join
+##  <a name="dtor"></a> ~join
 
 Détruit le `join` bloc.
 

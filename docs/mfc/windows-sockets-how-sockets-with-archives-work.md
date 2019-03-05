@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets : fonctionnement des sockets avec des archives'
+title: 'Windows Sockets : Fonctionnement des Sockets avec des Archives'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174910"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300685"
 ---
-# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets : fonctionnement des sockets avec des archives
+# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets : Fonctionnement des Sockets avec des Archives
 
 Cet article explique comment un [CSocket](../mfc/reference/csocket-class.md) objet, un [CSocketFile](../mfc/reference/csocketfile-class.md) objet et un [CArchive](../mfc/reference/carchive-class.md) objet sont combinées afin de simplifier l’envoi et réception de données via un Windows Socket.
 
-L’article [Windows Sockets : exemple de Sockets utilisant des Archives](../mfc/windows-sockets-example-of-sockets-using-archives.md) présente le `PacketSerialize` (fonction). L’objet de l’archive dans le `PacketSerialize` exemple fonctionne comme un objet archive transmis à une MFC [Serialize](../mfc/reference/cobject-class.md#serialize) (fonction). La principale différence est que pour les sockets, l’archive n'est pas attachée à une norme [CFile](../mfc/reference/cfile-class.md) objet (généralement associé à un fichier de disque), mais un `CSocketFile` objet. Au lieu de la connexion à un fichier de disque, le `CSocketFile` objet se connecte à un `CSocket` objet.
+L’article [Windows Sockets : Exemple de Sockets utilisant des Archives](../mfc/windows-sockets-example-of-sockets-using-archives.md) présente le `PacketSerialize` (fonction). L’objet de l’archive dans le `PacketSerialize` exemple fonctionne comme un objet archive transmis à une MFC [Serialize](../mfc/reference/cobject-class.md#serialize) (fonction). La principale différence est que pour les sockets, l’archive n'est pas attachée à une norme [CFile](../mfc/reference/cfile-class.md) objet (généralement associé à un fichier de disque), mais un `CSocketFile` objet. Au lieu de la connexion à un fichier de disque, le `CSocketFile` objet se connecte à un `CSocket` objet.
 
 Un `CArchive` objet gère une mémoire tampon. Lorsque la mémoire tampon d’une archive (envoi) de stockage est plein, associé à un `CFile` contenu du tampon d’objet écrit. Le vidage de la mémoire tampon d’une archive attachée à un socket est équivalent à l’envoi d’un message. Lorsque la mémoire tampon d’une archive de chargement (réception) est plein, le `CFile` objet arrête la lecture jusqu'à ce que la mémoire tampon est à nouveau disponible.
 
@@ -46,7 +46,7 @@ Si `CSocket` n’étaient pas implémentées en tant qu’objet deux États, il 
 
 En mode « compatible archive », un `CSocketFile` objet offre de meilleures performances et réduit le risque d’un « blocage ». Un blocage se produit lorsque les sockets émettrices et réceptrices sont en attente sur eux ou en attente pour une ressource commune. Cette situation peut se produire si le `CArchive` objet travaillé avec le `CSocketFile` comme il le fait avec un `CFile` objet. Avec `CFile`, l’archive peut supposer que s’il reçoit le moins d’octets qu’il est demandé, la fin du fichier a été atteinte. Avec `CSocketFile`, toutefois, données en fonction de message ; la mémoire tampon peut contenir plusieurs messages, jusqu'à réception de moins que le nombre d’octets demandés n’implique pas la fin du fichier. L’application ne bloque pas, dans ce cas, comme cela pourrait être avec `CFile`, et il peut continuer à lire des messages à partir de la mémoire tampon jusqu'à ce que la mémoire tampon est vide. Le [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) fonctionner dans `CArchive` est utile pour surveiller l’état de la mémoire tampon de l’archive dans ce cas.
 
-Pour plus d’informations, consultez [Windows Sockets : utilisation de Sockets avec des Archives](../mfc/windows-sockets-using-sockets-with-archives.md)
+Pour plus d’informations, consultez [Windows Sockets : Utilisation de Sockets avec des Archives](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>Voir aussi
 

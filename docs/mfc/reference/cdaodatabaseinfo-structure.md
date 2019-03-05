@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 43095707718fe00a746d082d30c689dbd05292bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 920301af6f660aeac010ecbf844b80ea628bbfd7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564786"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285631"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo, structure
 
@@ -100,7 +100,7 @@ La base de données est un objet DAO sous-jacent d’un objet MFC de classe [CDa
 
 Les informations récupérées par le [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) fonction membre est stockée dans un `CDaoDatabaseInfo` structure. Appelez `GetDatabaseInfo` pour le `CDaoWorkspace` objet dans dont la collection de bases de données est stocké l’objet de base de données. `CDaoDatabaseInfo` définit également un `Dump` génère de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoDatabaseInfo` objet.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao.h
 

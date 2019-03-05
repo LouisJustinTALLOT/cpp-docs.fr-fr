@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 7684ef034acd247355b3f572c86fcb80cb126b0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267821"
 ---
 # <a name="iview-interface"></a>Interface IView
 
@@ -47,7 +47,7 @@ interface class IView
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 En-tête : les afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 
@@ -60,7 +60,7 @@ void OnActivateView(bool activate);
 
 ## <a name="parameters"></a>Paramètres
 
-*Activer*<br/>
+*activate*<br/>
 Indique si la vue est activée ou désactivée.
 
 ## <a name="oninitialupdate"></a> IView::OnInitialUpdate

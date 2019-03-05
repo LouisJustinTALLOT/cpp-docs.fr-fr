@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-ms.openlocfilehash: b99a6b0e9f9728d74057d05f7ad9082017e31005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3c165a0bf495da4e6cda05c7e109b338b0a364f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278676"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Ordre des opérations pour la génération d'applications MFC
 
@@ -27,7 +27,7 @@ Le tableau suivant explique la séquence générale que vous pouvez normalement 
 |Mapper les boutons de la barre d'outils aux commandes.|Mappez chaque bouton de la barre d'outils à un menu ou une commande accélérateur en affectant au bouton l'ID de commande approprié.|Le framework contrôle le dessin, l'activation, la désactivation, la vérification et d'autres aspects visuels des boutons de la barre d'outils.|
 |Tester vos fonctions de gestionnaire.|Régénérez le programme et utilisez les outils de débogage intégrés pour vérifier que les gestionnaires fonctionnent correctement.|Vous pouvez créer une procédure ou tracer le code pour voir comment les gestionnaires sont appelées. Si vous avez rempli le code du gestionnaire, les gestionnaires exécuteront les commandes. Le framework désactive automatiquement les éléments de menu et les boutons de la barre d'outils qui ne sont pas gérés.|
 |Ajouter [boîtes de dialogue](../mfc/dialog-boxes.md).|Concevez les ressources modèles de boîte de dialogue avec l'éditeur de boîtes de dialogue. Créez une classe de boîte de dialogue et du code qui gère la boîte de dialogue.|Le framework gère la boîte de dialogue et permet de récupérer les informations écrites par l'utilisateur.|
-|Initialiser, valider et récupérer les données de la boîte de dialogue.|Vous pouvez également définir comment les contrôles de la boîte de dialogue doivent être initialisés et validés. Utilisez Visual Studio pour ajouter des variables membres à la classe de la boîte de dialogue et les mapper aux contrôles de la boîte de dialogue. Spécifiez des règles de validation à appliquer à chaque contrôle au fur et à mesure que l'utilisateur entre des données. Spécifiez vos validations personnalisées si vous le souhaitez.|Le framework gère l’initialisation et la validation de la boîte de dialogue. Si l'utilisateur entre des informations valides, le framework affichera un message et permettra à l'utilisateur de rentrer à nouveau des données.|
+|Initialiser, valider et récupérer les données de la boîte de dialogue.|Vous pouvez également définir comment les contrôles de la boîte de dialogue doivent être initialisés et validés. Utilisez Visual Studio pour ajouter des variables membres à la classe de la boîte de dialogue et les mapper aux contrôles de la boîte de dialogue. Spécifiez des règles de validation à appliquer à chaque contrôle au fur et à mesure que l’utilisateur entre des données. Spécifiez vos validations personnalisées si vous le souhaitez.|Le framework gère l’initialisation et la validation de la boîte de dialogue. Si l'utilisateur entre des informations valides, le framework affichera un message et permettra à l'utilisateur de rentrer à nouveau des données.|
 |Créer des classes supplémentaires.|Utilisez l'Affichage de classes pour créer un document, une vue et des classes de fenêtre frame supplémentaires parmi ceux générés automatiquement par l'Assistant Application MFC. Vous pouvez créer des classes de jeu d'enregistrements supplémentaires de base de données, des classes de boîte de dialogue, etc. (Avec l'Affichage de classes, vous pouvez créer des classes non dérivées des classes MFC.)|L'Affichage de classes ajoute ces classes à vos fichiers sources et vous aide à définir leurs connexions à toutes les commandes qu'ils gèrent.|
 |Ajouter des composants prêts à l'emploi à votre application.|Utilisez `New Item dialog box` pour ajouter un grand nombre d'éléments.|Ces éléments sont faciles à intégrer dans votre application et vous épargne une grande quantité de travail.|
 |Implémenter votre classe de document.|Implémentez la ou les classes de documents spécifiques à l'application. Ajoutez les variables membres pour conserver les structures de données. Ajoutez des fonctions membres pour fournir une interface aux données.|Le framework sait déjà interagir avec les fichiers de données de document. Il peut ouvrir et fermer les fichiers document, accéder en lecture et écriture aux données du document et gérer d'autres interfaces utilisateur. Vous pouvez vous concentrer sur la façon dont les données du document sont manipulées.|
@@ -47,4 +47,3 @@ Le tableau suivant explique la séquence générale que vous pouvez normalement 
 [Ordre des opérations pour la création de contrôles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
 [Ordre des opérations pour la création d’applications de base de données](../mfc/sequence-of-operations-for-creating-database-applications.md)<br/>
 [Génération à partir du Framework](../mfc/building-on-the-framework.md)
-

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: 1997e56fb0b524ffd6cca5dc9d5983fda25a42e1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518604"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269771"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound, classe
 
@@ -46,7 +46,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 
 |||
 |-|-|
-|[opérateur =](#operator_eq)|Définit le `CComSafeArrayBound` à une nouvelle valeur.|
+|[operator =](#operator_eq)|Définit le `CComSafeArrayBound` à une nouvelle valeur.|
 
 ## <a name="remarks"></a>Notes
 
@@ -54,7 +54,7 @@ Cette classe est un wrapper pour le `SAFEARRAYBOUND` structure utilisée par [CC
 
 **En-tête :** atlsafe.h
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsafe.h
 
@@ -133,7 +133,7 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*lié*<br/>
+*bound*<br/>
 Objet `CComSafeArrayBound`.
 
 *ulCount*<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: e172d175bba5b4c379f7cd29451d7ad4215d9c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541711"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268276"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget, classe
 
@@ -59,7 +59,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 |Nom|Description|
 |----------|-----------------|
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Renvoie l’interface ID2D1DCRenderTarget|
+|[CDCRenderTarget::operator ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|Renvoie l’interface ID2D1DCRenderTarget|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
@@ -75,7 +75,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrendertarget.h
 
@@ -107,7 +107,7 @@ BOOL BindDC(
 *dc*<br/>
 Le contexte de périphérique pour lequel la cible de rendu émet des commandes de dessin
 
-*Rect*<br/>
+*rect*<br/>
 Les dimensions de la poignée pour un contexte de périphérique (HDC) auquel est liée la cible de rendu
 
 ### <a name="return-value"></a>Valeur de retour
@@ -171,7 +171,7 @@ Pointeur vers un objet ID2D1DCRenderTarget.
 ID2D1DCRenderTarget* m_pDCRenderTarget;
 ```
 
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget*
 
 Renvoie l’interface ID2D1DCRenderTarget
 

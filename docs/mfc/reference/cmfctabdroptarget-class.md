@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: bd68179be21fec85c0ebb901c2a8c9a4491ff401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534824"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303935"
 ---
 # <a name="cmfctabdroptarget-class"></a>Cmfctabdroptarget, classe
 
@@ -75,7 +75,7 @@ L'exemple suivant montre comment construire un objet `CMFCTabDropTarget` et util
 
 [CMFCTabDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxbasetabctrl.h
 
@@ -98,7 +98,7 @@ virtual DROPEFFECT OnDragEnter(
 |Paramètre|Description|
 |*pWnd*|[in] Inutilisé.|
 |*pDataObject*|[in] Pointeur vers l’objet de l’utilisateur fait glisser.|
-|*dwKeyState*|[in] Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.|
+|*dwKeyState*|[in] Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de ce qui suit : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.|
 |*point*|[in] L’emplacement du curseur en coordonnées clientes.|
 
 ### <a name="return-value"></a>Valeur de retour
@@ -159,7 +159,7 @@ virtual DROPEFFECT OnDragOver(
 |Paramètre|Description|
 |*pWnd*|[in] Inutilisé.|
 |*pDataObject*|[in] Pointeur vers l’objet de l’utilisateur fait glisser.|
-|*dwKeyState*|[in] Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de la commande suivante : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.|
+|*dwKeyState*|[in] Contient l’état des touches de modification. Il s’agit d’une combinaison d’un nombre quelconque de ce qui suit : MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.|
 |*point*|[in] L’emplacement du pointeur de la souris dans les coordonnées clientes.|
 
 ### <a name="return-value"></a>Valeur de retour
@@ -203,7 +203,7 @@ virtual DROPEFFECT OnDropEx(
 |*pWnd*|[in] Inutilisé.|
 |*pDataObject*|[in] Pointeur vers l’objet de l’utilisateur fait glisser.|
 |*dropEffect*|[in] L’opération de liste par défaut.|
-|*liste déroulante*|[in] Inutilisé.|
+|*dropList*|[in] Inutilisé.|
 |*point*|[in] L’emplacement du pointeur de la souris dans les coordonnées clientes.|
 
 ### <a name="return-value"></a>Valeur de retour
@@ -254,4 +254,3 @@ Cette méthode appelle [COleDropTarget::Register](../../mfc/reference/coledropta
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Glisser-déposer (OLE)](../../mfc/drag-and-drop-ole.md)
-

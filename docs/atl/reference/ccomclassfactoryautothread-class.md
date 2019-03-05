@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-ms.openlocfilehash: 30a9d52ff661fd4fa39344382402aa6ff09d193f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 473e697dfb0203b52713fcfb359ec4f56138f560
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574822"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287308"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Ccomclassfactoryautothread, classe
 
@@ -58,7 +58,7 @@ Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComC
 
 `CComClassFactoryAutoThread`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -102,7 +102,7 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ### <a name="parameters"></a>Paramètres
 
-*Troupeau*<br/>
+*fLock*<br/>
 [in] Si la valeur est TRUE, le nombre de verrous est incrémenté ; Sinon, le nombre de verrous est décrémenté.
 
 ### <a name="return-value"></a>Valeur de retour

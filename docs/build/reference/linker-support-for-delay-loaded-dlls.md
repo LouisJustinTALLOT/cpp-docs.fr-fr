@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: 248a559735750f912030a37aea85a2cb34156887
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ff5143b8c3850386f73ff713e7986fdc3b59fd1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664540"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301387"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Prise en charge de l'éditeur de liens pour les DLL à chargement différé
 
@@ -17,7 +17,7 @@ L’éditeur de liens Visual C++ prend désormais en charge le chargement diffé
 
 Avant Visual C++ 6.0, la seule façon de charger une DLL au moment de l’exécution a été à l’aide de **LoadLibrary** et **GetProcAddress**; le système d’exploitation chargerait la DLL lorsque le fichier exécutable ou DLL à l’aide de son chargement.
 
-À partir de Visual C++ 6.0, lors de la liaison statique avec une DLL, l’éditeur de liens fournit des options pour différer le chargement de la DLL jusqu'à ce que le programme appelle une fonction dans cette DLL.
+À compter de Visual C++ 6.0, lors de la liaison implicitement avec une DLL, l’éditeur de liens fournit des options pour différer le chargement de la DLL jusqu'à ce que le programme appelle une fonction dans cette DLL.
 
 Une application peut différer de charger une DLL à l’aide de la [/DELAYLOAD (différer le chargement de l’importation)](../../build/reference/delayload-delay-load-import.md) option de l’éditeur de liens avec une fonction d’assistance (implémentation par défaut fournie par Visual C++). La fonction d’assistance charge la DLL au moment de l’exécution en appelant **LoadLibrary** et **GetProcAddress** pour vous.
 

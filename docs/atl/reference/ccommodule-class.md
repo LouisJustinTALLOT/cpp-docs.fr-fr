@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589447"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298930"
 ---
 # <a name="ccommodule-class"></a>CComModule (classe)
 
@@ -117,7 +117,7 @@ En plus de `CComModule`, ATL fournit [CComAutoThreadModule](../../atl/reference/
 
 `CComModule`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -140,7 +140,7 @@ HRESULT GetClassObject(
 *riid*<br/>
 [in] IID de l’interface demandée.
 
-*PPV*<br/>
+*ppv*<br/>
 [out] Un pointeur vers le pointeur d’interface identifié par *riid*. Si l’objet ne prend pas en charge cette interface, *ppv* est définie sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour

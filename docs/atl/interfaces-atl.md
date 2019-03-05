@@ -6,12 +6,12 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-ms.openlocfilehash: 3f6e8978c01d6689118a3a004c48e75a40151490
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5416fb8a99420f0f6c84318753ee3399ccf5db2a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594738"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287373"
 ---
 # <a name="interfaces-atl"></a>Interfaces (ATL)
 
@@ -28,4 +28,3 @@ En outre, chaque interface est dotée d’un unique ID d’interface (IID). Ce c
 
 [Présentation de COM](../atl/introduction-to-com.md)<br/>
 [Interfaces et des objets COM](/windows/desktop/com/com-objects-and-interfaces)
-

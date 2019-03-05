@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-ms.openlocfilehash: eaa1c178a8d93315d5477efa1213ed0698cd460c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8b3d7061c0ef06063d9c6993f24d23fc2e1f92e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517323"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265299"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Utilisation des classes pour l'écriture d'applications pour Windows
 
@@ -73,4 +73,3 @@ Pour obtenir une aide générale à la documentation de MFC, consultez [Rubrique
 ## <a name="see-also"></a>Voir aussi
 
 [Rubriques MFC générales](../mfc/general-mfc-topics.md)
-

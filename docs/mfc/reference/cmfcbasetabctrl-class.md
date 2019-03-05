@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51330396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261854"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -417,7 +417,7 @@ Les conseils suivants se rapportent à `CMFCBaseTabCtrl Class` et à toutes les 
 
 [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxbasetabctrl.h
 
@@ -436,7 +436,7 @@ void AddIcon(
 *hIcon*<br/>
 [in] Handle vers l’icône doit être ajouté.
 
-*Icône*<br/>
+*iIcon*<br/>
 [in] Index de base zéro de l’icône dans l’élément protégé `CImageList m_Images` membre.
 
 ### <a name="remarks"></a>Notes
@@ -618,7 +618,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Un paramètre booléen qui détermine si le framework utilise des couleurs automatique.
 
 ### <a name="remarks"></a>Notes
@@ -637,7 +637,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Valeur booléenne qui détermine s’il faut utiliser des info-bulles personnalisées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -658,7 +658,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Un paramètre booléen qui spécifie s’il faut activer la modification directe des étiquettes d’onglet.
 
 ### <a name="remarks"></a>Notes
@@ -684,7 +684,7 @@ virtual BOOL EnableTabDetach(
 *iTab*<br/>
 [in] Index de base zéro d’un onglet.
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Valeur booléenne qui indique s’il faut afficher l’onglet détachable.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -701,7 +701,7 @@ void EnableTabSwap(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Valeur booléenne qui indique s’il faut activer le remplacement de l’onglet.
 
 ### <a name="remarks"></a>Notes
@@ -1068,7 +1068,7 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Un handle de fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1204,7 +1204,7 @@ virtual BOOL GetTabRect(
 *iTab*<br/>
 [in] Index de base zéro de l’onglet.
 
-*Rect*<br/>
+*rect*<br/>
 [out] Une référence à un `CRect` objet. Cette méthode stocke la taille et la position de l’onglet dans ce paramètre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1541,7 +1541,7 @@ BOOL IsIconAdded(
 
 [in] *hIcon*<br/>
 
-[in] *icône*<br/>
+[in] *iIcon*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1761,7 +1761,7 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *source*<br/>
+[in] *nSource*<br/>
 
 [in] *nDest*<br/>
 
@@ -1860,7 +1860,7 @@ virtual BOOL OnRenameTab(int, CString&);
 
 [in] *int*<br/>
 
-[in] *CString &*<br/>
+[in] *CString&*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1991,7 +1991,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CLR*<br/>
+*clr*<br/>
 [in] Spécifie la nouvelle couleur d’arrière-plan.
 
 ### <a name="remarks"></a>Notes
@@ -2008,7 +2008,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CLR*<br/>
+*clr*<br/>
 [in] Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui spécifie la nouvelle couleur de texte.
 
 ### <a name="remarks"></a>Notes
@@ -2091,7 +2091,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] Un ID de ressource bitmap. `SetImageList` charge la liste d’images à partir de cette ressource.
 
-*CX*<br/>
+*cx*<br/>
 [in] La largeur de chaque image en pixels.
 
 *clrTransp*<br/>
@@ -2139,7 +2139,7 @@ virtual BOOL SetTabBkColor(
 *iTab*<br/>
 [in] Index de base zéro de l’onglet.
 
-*Couleur*<br/>
+*color*<br/>
 [in] Couleur à définir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2304,7 +2304,7 @@ virtual BOOL SetTabTextColor(
 *iTab*<br/>
 [in] Index de base zéro de l’onglet.
 
-*Couleur*<br/>
+*color*<br/>
 [in] Un [COLORREF](/windows/desktop/gdi/colorref) paramètre qui indique la nouvelle couleur de texte.
 
 ### <a name="return-value"></a>Valeur de retour

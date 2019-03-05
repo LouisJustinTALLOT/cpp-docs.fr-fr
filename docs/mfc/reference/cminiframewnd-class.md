@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693521"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293262"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd, classe
 
@@ -64,7 +64,7 @@ Pour plus d’informations sur l’utilisation `CMiniFrameWnd` objets, consultez
 
 `CMiniFrameWnd`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -129,7 +129,7 @@ Spécifie les attributs de style de fenêtre. Celles-ci peuvent inclure des styl
 
 Consultez [CWnd::Create](../../mfc/reference/cwnd-class.md#create) pour obtenir une description des valeurs de style de fenêtre possible. La combinaison classique utilisée pour les fenêtres mini-frame est WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU.
 
-*Rect*<br/>
+*rect*<br/>
 Un `RECT` structure qui spécifie les dimensions souhaitées de la fenêtre.
 
 *pParentWnd*<br/>
@@ -175,7 +175,7 @@ Pointe vers une chaîne de caractères se terminant par null qui contient le nom
 *dwStyle*<br/>
 Spécifie les attributs de style de fenêtre. Consultez [Styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et [CWnd::Create](../../mfc/reference/cwnd-class.md#create) pour obtenir une description des valeurs possibles.
 
-*Rect*<br/>
+*rect*<br/>
 La taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>

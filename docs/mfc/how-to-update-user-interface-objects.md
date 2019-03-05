@@ -1,5 +1,5 @@
 ---
-title: "Comment : mettre à jour des objets d'interface utilisateur"
+title: 'Procédure : Mettre à jour des objets d’Interface utilisateur'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - menus [MFC], updating as context changes
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - commands [MFC], updating UI
 - enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
-ms.openlocfilehash: 2e16d912d0fb9ac195df80846d5bd740d86e30ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dee9bb48c11cf061af60ebaf9a80c0123d339be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566060"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289700"
 ---
-# <a name="how-to-update-user-interface-objects"></a>Comment : mettre à jour des objets d'interface utilisateur
+# <a name="how-to-update-user-interface-objects"></a>Procédure : Mettre à jour des objets d’Interface utilisateur
 
 En règle générale, les éléments de menu et boutons de barre d’outils ont plusieurs États. Par exemple, un élément de menu est grisé (grisé) si elle n’est pas disponible dans le contexte actuel. Éléments de menu peuvent également être activée ou désactivée. Un bouton de barre d’outils peut également être désactivé si elle est indisponible, ou il peut être vérifié.
 
@@ -41,4 +41,3 @@ Les rubriques suivantes expliquent l’utilisation des gestionnaires de mise à 
 ## <a name="see-also"></a>Voir aussi
 
 [Menus](../mfc/menus-mfc.md)
-

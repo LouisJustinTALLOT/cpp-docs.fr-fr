@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177847"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301218"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject, classe
 
@@ -74,7 +74,7 @@ class CGdiObject : public CObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CGdiObject::operator ! =](#operator_neq)|Détermine si deux objets GDI sont logiquement pas égaux.|
+|[CGdiObject::operator !=](#operator_neq)|Détermine si deux objets GDI sont logiquement pas égaux.|
 |[CGdiObject::operator ==](#operator_eq_eq)|Détermine si deux objets GDI sont logiquement égales.|
 |[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Récupère un HANDLE vers l’objet Windows GDI attaché.|
 
@@ -272,7 +272,7 @@ Le type de l’objet, en cas de réussite ; sinon 0. Il peut avoir l’une des 
 
 - OBJ_BITMAP Bitmap
 
-- Pinceau OBJ_BRUSH
+- OBJ_BRUSH Brush
 
 - OBJ_FONT police
 
@@ -324,7 +324,7 @@ Un HANDLE contenant le HBITMAP, HRGN, HBRUSH, HPEN, HPALETTE ou HFONT attaché �
 HGDIOBJ m_hObject;
 ```
 
-##  <a name="operator_neq"></a>  CGdiObject::operator ! =
+##  <a name="operator_neq"></a>  CGdiObject::operator !=
 
 Détermine si deux objets GDI sont logiquement pas égaux.
 

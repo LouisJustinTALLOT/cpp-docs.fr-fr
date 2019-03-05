@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603708"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283004"
 ---
 # <a name="activex-controls-on-the-internet"></a>Contrôles ActiveX sur Internet
 
@@ -23,7 +23,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
 >[!IMPORTANT]
 > ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations, consultez [contrôles ActiveX](activex-controls.md).
 
-Les contrôles sont une architecture primaire pour le développement de composants logiciels programmables qui peuvent être utilisés dans plusieurs conteneurs, y compris les navigateurs Web compatibles COM sur Internet. Un contrôle ActiveX peut être un contrôle Internet et peut ajouter ses fonctionnalités dans un document actif ou faire partie d'une page Web. Les contrôles sur une page web peuvent communiquer entre eux à l’aide de scripts.
+Les contrôles sont une architecture primaire pour le développement de composants logiciels programmables qui peuvent être utilisés dans plusieurs conteneurs, y compris les navigateurs Web compatibles COM sur Internet. Un contrôle ActiveX peut être un contrôle Internet et peut ajouter ses fonctionnalités dans un document actif ou faire partie d'une page Web. Les contrôles sur une page Web peuvent communiquer entre eux à l'aide de scripts.
 
 Les contrôles ActiveX ne sont pas limités à Internet. Un contrôle ActiveX peut également être utilisé dans n'importe quel conteneur, tant que le contrôle prend en charge les interfaces requises par ce conteneur.
 
@@ -49,7 +49,7 @@ Concevoir un contrôle qui fonctionne bien dans un environnement Internet néces
 
 Pour améliorer les performances de vos contrôles, suivez ces recommandations en matière d'efficacité :
 
-- Implémentez les techniques décrites dans l’article [contrôles ActiveX : optimisation](../mfc/mfc-activex-controls-optimization.md).
+- Implémentez les techniques décrites dans l’article [contrôles ActiveX : Optimisation](../mfc/mfc-activex-controls-optimization.md).
 
 - Déterminez comment un contrôle est instancié.
 
@@ -89,7 +89,7 @@ Lors de la création d'un contrôle avec l'Assistant Application, vous pouvez ch
 
 1. Sur le **paramètres de contrôle** page, sélectionnez **charge les propriétés de façon asynchrone**. Cette option configure la propriété d'état Prêt et l'événement de modification d'état prêt pour vous.
 
-   Vous pouvez également sélectionner d’autres optimisations, telles que **l’activation sans fenêtre**, qui est décrite dans [contrôles ActiveX : optimisation](../mfc/mfc-activex-controls-optimization.md).
+   Vous pouvez également sélectionner d’autres optimisations, telles que **l’activation sans fenêtre**, qui est décrite dans [contrôles ActiveX : Optimisation](../mfc/mfc-activex-controls-optimization.md).
 
 1. Choisissez **Terminer** pour créer le projet.
 
@@ -163,7 +163,7 @@ Vous implémentez [monikers asynchrones](../mfc/asynchronous-monikers-on-the-int
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Affichage d’un contrôle sur une page web
 
-Voici un exemple de balise et d’attributs d’objet pour insérer un contrôle sur une page web.
+Voici un exemple de balise et d'attributs d'objet pour insérer un contrôle sur une page Web.
 
 ```xml
 <OBJECT
@@ -183,7 +183,7 @@ Voici un exemple de balise et d’attributs d’objet pour insérer un contrôle
 
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>Mise à jour d’un contrôle OLE existant pour utiliser les nouvelles fonctionnalités de contrôle ActiveX
 
-Si votre contrôle OLE a été créé avec une version de Visual C++ antérieure à la version 4.2, vous pouvez suivre certaines étapes pour améliorer ses performances et ses fonctionnalités. Pour obtenir une présentation détaillée de ces modifications, consultez [contrôles ActiveX : optimisation](../mfc/mfc-activex-controls-optimization.md).
+Si votre contrôle OLE a été créé avec une version de Visual C++ antérieure à la version 4.2, vous pouvez suivre certaines étapes pour améliorer ses performances et ses fonctionnalités. Pour obtenir une présentation détaillée de ces modifications, consultez [contrôles ActiveX : Optimisation](../mfc/mfc-activex-controls-optimization.md).
 
 Si vous ajoutez la prise en charge des propriétés asynchrones à un contrôle existant, vous devrez ajouter la propriété d'état Prêt et l'événement `ReadyStateChange` vous-même. Dans le constructeur de votre contrôle, ajoutez :
 
@@ -195,4 +195,3 @@ Vous mettrez à jour l’état prêt comme votre code est téléchargé en appel
 
 [Tâches de programmation Internet MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Notions de base de la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)
-

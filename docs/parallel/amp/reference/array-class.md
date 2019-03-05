@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657550"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259020"
 ---
 # <a name="array-class"></a>array, classe
 
@@ -75,7 +75,7 @@ Le rang du tableau.
 
 |Nom|Description|
 |----------|-----------------|
-|[opérateur std::vector&lt;value_type&gt;](#operator_vec)|Utilise `copy(*this, vector)` convertir implicitement le tableau std ::[vecteur](../../../standard-library/vector-class.md) objet.|
+|[operator std::vector&lt;value_type&gt;](#operator_vec)|Utilise `copy(*this, vector)` convertir implicitement le tableau std ::[vecteur](../../../standard-library/vector-class.md) objet.|
 |[operator()](#operator_call)|Retourne la valeur de l’élément qui est spécifiée par les paramètres.|
 |[operator\[\]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|
 |[operator=](#operator_eq)|Copie le contenu de l’objet `array` objet dans celui-ci.|
@@ -117,11 +117,11 @@ Le `array<T,N>` type est utilisé dans plusieurs scénarios :
 
 `array`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp.h
 
-**Namespace :** Concurrence
+**Espace de noms :** Concurrence
 
 ##  <a name="dtor"></a> ~ tableau
 
@@ -433,7 +433,7 @@ Un itérateur de départ dans le conteneur source.
 *_Src_last*<br/>
 Un itérateur de fin dans le conteneur source.
 
-*_Autre*<br/>
+*_Other*<br/>
 Autre source de données.
 
 *_Rank*<br/>
@@ -467,7 +467,7 @@ void copy_to(
 *_Dest*<br/>
 Le [array_view](array-view-class.md) objet dans lequel copier.
 
-##  <a name="cpu_access_type"></a> cpu_access_type sont
+##  <a name="cpu_access_type"></a> cpu_access_type
 
 Obtient l’access_type d’UC autorisée pour ce tableau.
 
@@ -543,7 +543,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 
 Le `extent` objet de la `array`.
 
-##  <a name="operator_vec"></a> opérateur std::vector&lt;value_type&gt;
+##  <a name="operator_vec"></a> operator std::vector&lt;value_type&gt;
 
 Utilise `copy(*this, vector)` pour convertir implicitement le tableau à un objet std::vector.
 
@@ -630,7 +630,7 @@ Index.
 
 L’élément qui est à l’index spécifié.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Copie le contenu de l’objet `array` objet.
 
@@ -645,7 +645,7 @@ array& operator= (
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `array` objet à copier.
 
 *_Src*<br/>
@@ -778,7 +778,7 @@ Composant le moins significatif de l’étendue de cette section.
 *_Ext*<br/>
 Le [étendue](extent-class.md) objet qui spécifie l’étendue de la section. L’origine est 0.
 
-*IDX*<br/>
+*_Idx*<br/>
 Le [index](index-class.md) objet qui spécifie l’emplacement d’origine. La sous-section est le reste de l’étendue.
 
 *_I0*<br/>

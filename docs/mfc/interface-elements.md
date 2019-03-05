@@ -5,12 +5,12 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175897"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262881"
 ---
 # <a name="interface-elements"></a>Éléments de l'interface
 
@@ -46,7 +46,7 @@ Chaque barre d'ancrage est divisée en lignes d'ancrage. Lignes d’ancrage sont
 
 ## <a name="mini-frame-windows"></a>Fenêtres mini-frame
 
-Un volet flottant réside dans une fenêtre mini-frame. Fenêtres mini-frame sont représentées par deux classes : [cmditabinfo, classe](../mfc/reference/cmditabinfo-class.md) (qui peut contenir qu’un seul volet) et [cmultipaneframewnd, classe](../mfc/reference/cmultipaneframewnd-class.md) (qui peut contenir plusieurs volets). Pour détacher un volet dans votre code, appelez [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Une fois qu'un volet est rendu flottant, le framework crée automatiquement une fenêtre mini-frame qui devient le parent du volet flottant. Lorsque le volet flottant est ancré, le framework réinitialise son parent, et le volet flottant devient une barre d'ancrage (pour les barres d'outils) ou un site d'ancrage (pour les volets redimensionnables).
+Un volet flottant réside dans une fenêtre mini-frame. Fenêtres mini-frame sont représentées par deux classes : [Cmditabinfo, classe](../mfc/reference/cmditabinfo-class.md) (qui peut contenir qu’un seul volet) et [cmultipaneframewnd, classe](../mfc/reference/cmultipaneframewnd-class.md) (qui peut contenir plusieurs volets). Pour détacher un volet dans votre code, appelez [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Une fois qu'un volet est rendu flottant, le framework crée automatiquement une fenêtre mini-frame qui devient le parent du volet flottant. Lorsque le volet flottant est ancré, le framework réinitialise son parent, et le volet flottant devient une barre d'ancrage (pour les barres d'outils) ou un site d'ancrage (pour les volets redimensionnables).
 
 ## <a name="pane-dividers"></a>Diviseurs de volet
 
@@ -69,4 +69,3 @@ Le contrôle de barre Outlook est également basé sur les barres avec onglets. 
 ## <a name="see-also"></a>Voir aussi
 
 [Concepts](../mfc/mfc-concepts.md)
-

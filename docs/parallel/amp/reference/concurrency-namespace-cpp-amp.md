@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-ms.openlocfilehash: 5ddafe5dd821fb21eb6dd03d63122fa98a56af51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635368"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278689"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency, espace de noms (C++ AMP)
 
@@ -107,11 +107,10 @@ namespace Concurrency;
 |[Hlsl_max_num_buffers, constante](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Le nombre maximal de mémoires tampons allouées par DirectX.|
 |[MODULENAME_MAX_LENGTH (constante)](concurrency-namespace-constants-amp.md#modulename_max_length)|Stocke la longueur maximale du nom du module. Cette valeur doit être identique sur le compilateur et le runtime.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp.h
 
 ## <a name="see-also"></a>Voir aussi
 
 [Référence (C++ AMP)](reference-cpp-amp.md)
-

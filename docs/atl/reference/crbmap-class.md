@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-ms.openlocfilehash: fc702feacff5b2f2bbe53a9ea49f664a241d788c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5dedb26544bb2755bc74894cf36a622f5141f89
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677511"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301504"
 ---
 # <a name="crbmap-class"></a>CRBMap, classe
 
@@ -53,7 +53,7 @@ Le code utilisé pour copier ou déplacer des éléments de valeur.
 |Nom|Description|
 |----------|-----------------|
 |[CRBMap::CRBMap](#crbmap)|Constructeur.|
-|[CRBMap :: ~ CRBMap](#dtor)|Destructeur.|
+|[CRBMap::~CRBMap](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -83,7 +83,7 @@ Pour obtenir une description plus complète de diverses classes de collection et
 
 `CRBMap`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcoll.h
 
@@ -110,7 +110,7 @@ Consultez la documentation de la classe de base [CRBTree](../../atl/reference/cr
 
 [!code-cpp[NVC_ATL_Utilities#81](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMap :: ~ CRBMap
+##  <a name="dtor"></a>  CRBMap::~CRBMap
 
 Destructeur.
 
@@ -139,7 +139,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 Spécifie la clé qui identifie l’élément à rechercher.
 
-*valeur*<br/>
+*value*<br/>
 Variable qui reçoit la valeur recherché.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -194,7 +194,7 @@ POSITION SetAt(
 *key*<br/>
 La valeur de clé à ajouter à la `CRBMap` objet.
 
-*valeur*<br/>
+*value*<br/>
 La valeur à ajouter à la `CRBMap` objet.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-ms.openlocfilehash: 973c4a12f3b3bdc91269736874b7193130290a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079dc26fdd355c5b5e3f89f28219902e5fd74a79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548913"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268822"
 ---
 # <a name="handling-tool-tip-notifications"></a>Gestion des notifications pour les info-bulles
 
@@ -34,7 +34,7 @@ Outre le **TTN_NEEDTEXT** notification, un contrôle info-bulle peut envoyer les
 |Notification|Signification|
 |------------------|-------------|
 |**TTN_NEEDTEXTA**|Contrôle info-bulle nécessite un texte ASCII (Windows 95 uniquement)|
-|**NOTIFICATIONS TTN_NEEDTEXTW**|Contrôle info-bulle nécessite un texte UNICODE (Windows NT uniquement)|
+|**TTN_NEEDTEXTW**|Contrôle info-bulle nécessite un texte UNICODE (Windows NT uniquement)|
 |**TBN_HOTITEMCHANGE**|Indique que l’élément réactif (en surbrillance) a changé.|
 |**NM_RCLICK**|Indique que l’utilisateur a cliqué un bouton.|
 |**TBN_DRAGOUT**|Indique l’utilisateur a cliqué sur le bouton et vous faites glisser le pointeur hors du bouton. Il permet à une application implémenter le glisser-déplacer à partir d’un bouton de barre d’outils. Lorsque vous recevez cette notification, l’application commencera le glisser-déplacer et l’opération de suppression.|
@@ -47,4 +47,3 @@ Pour un exemple de fonction de gestionnaire et plus d’informations sur l’act
 
 [Utilisation de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

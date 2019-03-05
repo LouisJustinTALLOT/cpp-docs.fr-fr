@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: b328d58116d3b26645a2b3a3981c11fa705878ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f4f446aa97f2bf3843b830bd7fb4c4a5d74ffdb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615252"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259787"
 ---
 # <a name="cautoptr-class"></a>Cautoptr, classe
 
@@ -45,7 +45,7 @@ Le type de pointeur.
 |Nom|Description|
 |----------|-----------------|
 |[CAutoPtr::CAutoPtr](#cautoptr)|Constructeur.|
-|[CAutoPtr :: ~ CAutoPtr](#dtor)|Destructeur.|
+|[CAutoPtr::~CAutoPtr](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -81,7 +81,7 @@ En outre, `CAutoPtr`du constructeur de copie transférer la propriété opérate
 
 Voir aussi [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) et [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) lorsque les tableaux ou les listes de pointeurs intelligents sont requises.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase.h
 
@@ -143,7 +143,7 @@ Le `CAutoPtr` objet peut être créé à l’aide d’un pointeur existant, auqu
 
 Consultez l’exemple dans le [vue d’ensemble de CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-##  <a name="dtor"></a>  CAutoPtr :: ~ CAutoPtr
+##  <a name="dtor"></a>  CAutoPtr::~CAutoPtr
 
 Destructeur.
 
@@ -231,7 +231,7 @@ L’opérateur d’assignation détache le `CAutoPtr` objet à partir de n’imp
 
 Consultez l’exemple dans le [vue d’ensemble de CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-##  <a name="operator_ptr"></a>  CAutoPtr::operator-&gt;
+##  <a name="operator_ptr"></a>  CAutoPtr::operator -&gt;
 
 L’opérateur pointeur vers membre.
 
@@ -251,7 +251,7 @@ Utilisez cet opérateur pour appeler une méthode dans une classe vers laquelle 
 
 Consultez l’exemple dans le [vue d’ensemble de CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-##  <a name="operator_t_star"></a>  CAutoPtr::operator T *
+##  <a name="operator_t_star"></a>  CAutoPtr::operator T*
 
 L’opérateur de cast.
 

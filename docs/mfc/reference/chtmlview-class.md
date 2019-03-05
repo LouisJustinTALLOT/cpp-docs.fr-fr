@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295992"
 ---
 # <a name="chtmlview-class"></a>CHtmlView, classe
 
@@ -359,7 +359,7 @@ En basant la classe de vue de l’application sur `CHtmlView` , la vue est fourn
 
 `CHtmlView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxhtml.h
 
@@ -389,7 +389,7 @@ Pointe vers une chaîne de caractères se terminant par null qui représente le 
 *dwStyle*<br/>
 Spécifie les attributs de style de fenêtre. Par défaut, les styles WS_VISIBLE et WS_CHILD Windows sont définies.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie la taille et la position de la fenêtre. Le *rectDefault* valeur permet à Windows spécifier la taille et la position de la nouvelle fenêtre.
 
 *pParentWnd*<br/>
@@ -1144,7 +1144,7 @@ virtual void OnBeforeNavigate2(
 *lpszURL*<br/>
 Pointeur vers une chaîne contenant l’URL à atteindre.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Réservé à un usage ultérieur.
 
 *lpszTargetFrameName*<br/>
@@ -1156,7 +1156,7 @@ Une référence à un `CByteArray` objet contenant les données à envoyer au se
 *lpszHeaders*<br/>
 Un pointeur vers une chaîne contenant les en-têtes HTTP supplémentaires à envoyer au serveur (URL HTTP uniquement). Les en-têtes peuvent spécifier des éléments tels que l’action requise du serveur, le type des données transmises sur le serveur, ou un code d’état.
 
-*variable pbCancel*<br/>
+*pbCancel*<br/>
 Un pointeur vers un indicateur d’annulation. Une application peut définir ce paramètre valeur différente de zéro pour annuler l’opération de navigation, ou à zéro pour pouvoir continuer.
 
 ##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange
@@ -1171,10 +1171,10 @@ virtual void OnCommandStateChange(
 
 ### <a name="parameters"></a>Paramètres
 
-*%n%ncommande*<br/>
+*nCommand*<br/>
 Identificateur de la commande dont l’état activé a changé.
 
-*bActivez*<br/>
+*bEnable*<br/>
 État activé. Ce paramètre est différent de zéro si la commande est activée ou zéro si elle est désactivée.
 
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete
@@ -1483,7 +1483,7 @@ Le nom du frame dans lequel la ressource doit être affichée, ou NULL si aucun 
 *dwError*<br/>
 Un code d’état erreur, s’il est disponible. Pour obtenir la liste des codes d’état HTTP et HRESULT possibles, consultez [NavigateError événement les Codes d’état.](https://msdn.microsoft.com/library/aa768365.aspx)
 
-*variable pbCancel*<br/>
+*pbCancel*<br/>
 Spécifie s’il faut annuler la navigation vers une page d’erreur ou n’importe quel autre recherche. Si TRUE (valeur par défaut), poursuivez avec la navigation vers une page d’erreur ou d’une recherche automatique ; Si la valeur est FALSE, annuler la navigation vers une page d’erreur ou d’une recherche automatique.
 
 ### <a name="remarks"></a>Notes
@@ -1867,7 +1867,7 @@ Nouvelle valeur de la propriété.
 *lpszValue*<br/>
 Un pointeur vers une chaîne contenant la nouvelle valeur de la propriété.
 
-*%n%nValeur*<br/>
+*nValue*<br/>
 Nouvelle valeur de la propriété.
 
 ### <a name="remarks"></a>Notes
@@ -2237,4 +2237,3 @@ S’applique à Internet Explorer et à WebBrowser.
 [CFormView, classe](../../mfc/reference/cformview-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
-

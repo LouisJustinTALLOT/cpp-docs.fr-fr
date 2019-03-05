@@ -13,12 +13,12 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-ms.openlocfilehash: 0f8304c3b45f87dadc2317de95a0b30b54baffa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6115d942abc61fbfc9d60ca1ccf97d4b423ff7c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604163"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304650"
 ---
 # <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading : Comment utiliser les Classes de synchronisation MFC
 
@@ -54,7 +54,7 @@ singleLock.Unlock();
 
 Les inconvénients de cette approche sont que la classe sera légèrement plus lente que la même classe sans les objets de synchronisation ajoutés. En outre, s’il est probable que plusieurs threads peuvent supprimer l’objet, l’approche de fusion ne fonctionne pas toujours. Dans ce cas, il est préférable de conserver les objets de synchronisation distinct.
 
-Pour plus d’informations sur la détermination de la classe de synchronisation à utiliser dans différentes situations, consultez [Multithreading : quand utiliser les Classes de synchronisation](multithreading-when-to-use-the-synchronization-classes.md). Pour plus d’informations sur la synchronisation, consultez [synchronisation](/windows/desktop/Sync/synchronization) dans le SDK Windows. Pour plus d’informations sur la prise en charge le multithreading dans MFC, consultez [Multithreading à l’aide de C++ et MFC](multithreading-with-cpp-and-mfc.md).
+Pour plus d’informations sur la détermination de la classe de synchronisation à utiliser dans différentes situations, consultez [Multithreading : Quand utiliser les Classes de synchronisation](multithreading-when-to-use-the-synchronization-classes.md). Pour plus d’informations sur la synchronisation, consultez [synchronisation](/windows/desktop/Sync/synchronization) dans le SDK Windows. Pour plus d’informations sur la prise en charge le multithreading dans MFC, consultez [Multithreading à l’aide de C++ et MFC](multithreading-with-cpp-and-mfc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

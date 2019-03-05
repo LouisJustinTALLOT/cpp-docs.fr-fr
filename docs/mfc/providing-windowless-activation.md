@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-ms.openlocfilehash: 1e962584faa826ce87533806edc2bed1d1248286
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d60c309d5644c106e6c85a0c7b3988916be7193
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284708"
 ---
 # <a name="providing-windowless-activation"></a>Mise à disposition de l'activation sans fenêtre
 
@@ -50,11 +50,10 @@ Lorsque l'activation sans fenêtre est opérationnelle, le conteneur délègue l
 
 Dans les contrôles sans fenêtre, vous devez toujours utiliser les fonctions membres `COleControl` au lieu des fonctions membres `CWnd` correspondantes ou leurs fonctions API Win32 associées.
 
-Vous pouvez souhaiter qu’un contrôle sans fenêtre soit la cible d’une opération glisser-déposer OLE. Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que cible de dépôt. Puisque le contrôle n’a aucune fenêtre qui lui est propre, le conteneur utilise sa propre fenêtre comme cible de dépôt. Le contrôle fournit une implémentation de l'interface de `IDropTarget` à laquelle le conteneur peut déléguer des appels au moment opportun. Pour exposer cette interface au conteneur, vous devez substituer [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Exemple :
+Vous pouvez souhaiter qu'un contrôle sans fenêtre soit la cible d'une opération glisser-déplacer OLE. Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que cible de déplacement. Puisque le contrôle n'a aucune fenêtre qui lui est propre, le conteneur utilise sa propre fenêtre comme cible de déplacement. Le contrôle fournit une implémentation de l'interface de `IDropTarget` à laquelle le conteneur peut déléguer des appels au moment opportun. Pour exposer cette interface au conteneur, vous devez substituer [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Exemple :
 
 [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles ActiveX MFC : optimisation](../mfc/mfc-activex-controls-optimization.md)
-
+[Contrôles ActiveX MFC : Optimisation](../mfc/mfc-activex-controls-optimization.md)

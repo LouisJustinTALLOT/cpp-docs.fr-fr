@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interfaces, creating
 - user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
-ms.openlocfilehash: 72087e4abef9904876de1b43044bcc59200e1356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf1c3f677ac8cd2e3ad91ef694f0637af8a6f578
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487631"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278611"
 ---
 # <a name="user-interface-elements-mfc"></a>Éléments de l'interface utilisateur (MFC)
 
@@ -43,7 +43,7 @@ Décrit la gestion des données dans la bibliothèque MFC.
 [Mode formulaire](../mfc/form-views-mfc.md)<br/>
 Décrit comment ajouter la prise en charge des formulaires dans votre application.
 
-[Aide HTML : aide contextuelle pour vos programmes](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
+[Aide HTML : Aide contextuelle pour vos programmes](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
 Décrit comment ajouter une aide contextuelle pour vos applications à l’aide de HTML Help.
 
 [Groupes avec onglet MDI](../mfc/mdi-tabbed-groups.md)<br/>
@@ -83,4 +83,3 @@ Décrit les notions de base sur l’utilisation des fenêtres dans MFC.
 
 [MFC, applications de bureau](../mfc/mfc-desktop-applications.md)<br/>
 Fournit la documentation de référence pour la bibliothèque MFC. MFC est un ensemble de classes qui constituent une infrastructure d’application, qui est l’infrastructure d’une application écrite pour l’API Windows.
-

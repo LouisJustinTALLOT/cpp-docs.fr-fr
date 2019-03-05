@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 589691f8bb2bc14eba46245082ff972ca6b97fcc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92189ce5ea76811496d4462aa4254bbd03ebb219
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604373"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257603"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler, classe
 
@@ -55,7 +55,7 @@ Ce gestionnaire d’événements est créé et transmis à `IUIAnimationVariable
 
 `CAnimationVariableChangeHandler`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -73,16 +73,16 @@ IFACEMETHOD(OnValueChanged) (
 
 ### <a name="parameters"></a>Paramètres
 
-*table de montage séquentiel*<br/>
+*storyboard*<br/>
 La table de montage séquentiel qui anime la variable.
 
-*Variable*<br/>
+*variable*<br/>
 La variable de l’animation qui a été mis à jour.
 
 *newValue*<br/>
 Nouvelle valeur.
 
-*valeur previousValue*<br/>
+*previousValue*<br/>
 La valeur précédente.
 
 ### <a name="return-value"></a>Valeur de retour

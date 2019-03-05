@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: aa1874dee72f7734c690ce9e86998a5120b2974b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643701"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273424"
 ---
 # <a name="int4-class"></a>int_4, classe
 
@@ -474,7 +474,7 @@ class int_4;
 |int_4::ab||
 |int_4::abg||
 |int_4::abgr||
-|int_4::ABR||
+|int_4::abr||
 |int_4::abrg||
 |int_4::ag||
 |int_4::agb||
@@ -492,10 +492,10 @@ class int_4;
 |int_4::bagr||
 |int_4::bar||
 |int_4::barg||
-|int_4::BG||
-|int_4::BGA||
+|int_4::bg||
+|int_4::bga||
 |int_4::bgar||
-|int_4::BGR||
+|int_4::bgr||
 |int_4::bgra||
 |int_4::br||
 |int_4::bra||
@@ -511,9 +511,9 @@ class int_4;
 |int_4::gb||
 |int_4::gba||
 |int_4::gbar||
-|int_4::GBR||
+|int_4::gbr||
 |int_4::gbra||
-|int_4::GR||
+|int_4::gr||
 |int_4::gra||
 |int_4::grab||
 |int_4::grb||
@@ -551,12 +551,12 @@ class int_4;
 |int_4::wzy||
 |int_4::wzyx||
 |int_4::x||
-|int_4::XW||
+|int_4::xw||
 |int_4::xwy||
 |int_4::xwyz||
 |int_4::xwz||
 |int_4::xwzy||
-|int_4::XY||
+|int_4::xy||
 |int_4::xyw||
 |int_4::xywz||
 |int_4::xyz||
@@ -588,12 +588,12 @@ class int_4;
 |int_4::zwxy||
 |int_4::zwy||
 |int_4::zwyx||
-|int_4::ZX||
+|int_4::zx||
 |int_4::zxw||
 |int_4::zxwy||
 |int_4::zxy||
 |int_4::zxyw||
-|int_4::ZY||
+|int_4::zy||
 |int_4::zyw||
 |int_4::zywx||
 |int_4::zyx||
@@ -603,11 +603,11 @@ class int_4;
 
 `int_4`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_short_vectors.h
 
-**Namespace :** Concurrency::graphics
+**Espace de noms :** Concurrency::graphics
 
 ##  <a name="ctor"></a> int_4
 
@@ -670,7 +670,7 @@ La valeur pour initialiser l’élément 3.
 *_V*<br/>
 La valeur pour l’initialisation.
 
-*_Autre*<br/>
+*_Other*<br/>
 L’objet utilisé pour initialiser.
 
 ##  <a name="int_4__size"></a> Taille

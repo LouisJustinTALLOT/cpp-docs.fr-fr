@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resources [MFC], creating dialog boxes
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
-ms.openlocfilehash: 8f9371ebfe352f0ab7dbed2e201ce212387b85a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0df76c506d4e6f2267e3a7628825e7b47a56c8c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517700"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303038"
 ---
 # <a name="creating-the-dialog-resource"></a>Création des ressources de boîte de dialogue
 
@@ -36,4 +36,3 @@ Lors de l’apparence de la boîte de dialogue vous convient le mieux, créez un
 
 [Boîtes de dialogue](../mfc/dialog-boxes.md)<br/>
 [Cycle de vie d’une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
-

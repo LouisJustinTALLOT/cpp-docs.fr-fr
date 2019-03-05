@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178588"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298917"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -348,13 +348,13 @@ BOOL Create(CImageList* pImageList);
 
 ### <a name="parameters"></a>Paramètres
 
-*CX*<br/>
+*cx*<br/>
 Dimensions de chaque image, en pixels.
 
-*CY*<br/>
+*cy*<br/>
 Dimensions de chaque image, en pixels.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 Spécifie le type de liste d’images à créer. Ce paramètre peut être une combinaison des valeurs suivantes, mais il peut inclure uniquement un de le `ILC_COLOR` valeurs.
 
 |Value|Signification|
@@ -383,19 +383,19 @@ Couleur utilisée pour générer un masque. Chaque pixel de cette couleur dans l
 *lpszBitmapID*<br/>
 Chaîne contenant les ID des images de ressource.
 
-*imageList1*<br/>
+*imagelist1*<br/>
 Référence à un objet `CImageList`.
 
 *nImage1*<br/>
 Index de la première image existante.
 
-*ImageList2*<br/>
+*imagelist2*<br/>
 Référence à un objet `CImageList`.
 
 *nImage2*<br/>
 Index de la deuxième image existante.
 
-*DX*<br/>
+*dx*<br/>
 Décalage de l’axe x de la deuxième image par rapport à la première image, en pixels.
 
 *dy*<br/>
@@ -715,7 +715,7 @@ La couleur d’arrière-plan image, par défaut CLR_DEFAULT. Ce paramètre peut 
 |Value|Signification|
 |-----------|-------------|
 |CLR_DEFAULT|Couleur d’arrière-plan par défaut. L’image est dessinée à l’aide de la couleur d’arrière-plan de liste image.|
-|VOUS DÉFINISSEZ CLR_NONE COMME|Aucune couleur d’arrière-plan. L’image est dessinée en toute transparence.|
+|CLR_NONE|Aucune couleur d’arrière-plan. L’image est dessinée en toute transparence.|
 
 *rgbFore*<br/>
 Couleur de premier plan image, par défaut CLR_DEFAULT. Ce paramètre peut être une valeur RVB définie par l’application ou l’une des valeurs suivantes :
@@ -723,7 +723,7 @@ Couleur de premier plan image, par défaut CLR_DEFAULT. Ce paramètre peut être
 |Value|Signification|
 |-----------|-------------|
 |CLR_DEFAULT|Couleur de premier plan par défaut. L’image est dessinée à l’aide de la couleur de surbrillance du système en tant que la couleur de premier plan.|
-|VOUS DÉFINISSEZ CLR_NONE COMME|Aucune couleur de dégradé. L’image est fusionnée avec la couleur du contexte de périphérique de destination.|
+|CLR_NONE|Aucune couleur de dégradé. L’image est fusionnée avec la couleur du contexte de périphérique de destination.|
 
 Ce paramètre est utilisé uniquement si *fStyle* inclut l’indicateur ILD_BLEND25 ou ILD_BLEND50.
 
@@ -1074,7 +1074,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Paramètres
 
-*CR*<br/>
+*cr*<br/>
 Couleur d’arrière-plan à définir. Vous définissez CLR_NONE comme possible. Dans ce cas, les images sont dessinés en toute transparence à l’aide du masque.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1097,7 +1097,7 @@ BOOL SetDragCursorImage(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nfaites*<br/>
+*nDrag*<br/>
 Index de la nouvelle image doit être combinée avec l’image glissée.
 
 *ptHotSpot*<br/>

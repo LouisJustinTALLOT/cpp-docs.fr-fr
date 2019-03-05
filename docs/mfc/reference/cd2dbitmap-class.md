@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264714"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap, classe
 
@@ -75,7 +75,7 @@ class CD2DBitmap : public CD2DResource;
 |Nom|Description|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Surchargé. Construit un objet CD2DBitmap à partir de HBITMAP.|
-|[CD2DBitmap :: ~ CD2DBitmap](#_dtorcd2dbitmap)|Destructeur. Appelé lorsqu’un objet de bitmap D2D est détruit.|
+|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|Destructeur. Appelé lorsqu’un objet de bitmap D2D est détruit.|
 
 ### <a name="protected-constructors"></a>Constructeurs protégés
 
@@ -133,11 +133,11 @@ class CD2DBitmap : public CD2DResource;
 
 `CD2DBitmap`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxrendertarget.h
 
-##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap :: ~ CD2DBitmap
+##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap::~CD2DBitmap
 
 Destructeur. Appelé lorsqu’un objet de bitmap D2D est détruit.
 
@@ -260,7 +260,7 @@ HRESULT CopyFromMemory(
 *srcData*<br/>
 Les données à copier.
 
-*Espacement*<br/>
+*pitch*<br/>
 Le stride, ou pas, de la bitmap source stockée dans srcData. Cette valeur est le nombre d’octets d’une ligne de numérisation (une ligne de pixels en mémoire). Le stride peut être calculé à partir de la formule suivante : largeur en pixels \* octets par pixel + remplissage de la mémoire.
 
 *destRect*<br/>
@@ -461,7 +461,7 @@ ID de ressource bitmap.
 UINT m_uiResID;
 ```
 
-##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap *
+##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap*
 
 Renvoie l’interface ID2D1Bitmap
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: 7b1efb3bd574edde59f6d8845d73a51dfabea433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56d0de1131791def3ea536c6e5a7f5ce0bef9617
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626614"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290506"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL, classe
 
@@ -32,7 +32,7 @@ CollType>,
 
 #### <a name="parameters"></a>Paramètres
 
-*base de*<br/>
+*Base*<br/>
 Un énumérateur COM. Consultez [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) pour obtenir un exemple.
 
 *piid*<br/>
@@ -83,7 +83,7 @@ Consultez [Collections et énumérateurs ATL](../../atl/atl-collections-and-enum
 
 `CComEnumOnSTL`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -102,7 +102,7 @@ Ce code crée un **typedef** pour `CComEnumOnSTL` qui expose un vecteur de `CCom
 ## <a name="see-also"></a>Voir aussi
 
 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[ATLCollections : Illustration ICollectionOnSTLImpl, CComEnumOnSTL et des Classes de stratégie de copie personnalisées](../../visual-cpp-samples.md)<br/>
+[Exemple ATLCollections : Montre comment ICollectionOnSTLImpl, CComEnumOnSTL et des Classes de stratégie de copie personnalisées](../../visual-cpp-samples.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>

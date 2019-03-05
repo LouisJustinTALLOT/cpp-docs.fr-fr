@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
-ms.openlocfilehash: 82dd4bac53b419b531f512aff859510d6603d462
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 874f73df3dda3a720d4346ae3fb0136c662221db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564240"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299398"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Utilisation des champs de rappel dans un contrôle de sélecteur de date et heure
 
@@ -71,4 +71,3 @@ La notification DTN_FORMAT est utilisée par l’application pour demander la ch
 
 [Utilisation de CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [Contrôles](../mfc/controls-mfc.md)
-

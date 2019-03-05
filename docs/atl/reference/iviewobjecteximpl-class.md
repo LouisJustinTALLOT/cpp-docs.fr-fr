@@ -22,12 +22,12 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-ms.openlocfilehash: 0333f7e0e0d5b91665978082f112df6d16105dd1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ed7a7e4a6070ba52c54c4dace687111cf7d33d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538513"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301933"
 ---
 # <a name="iviewobjecteximpl-class"></a>IViewObjectExImpl, classe
 
@@ -78,7 +78,7 @@ Le [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObjec
 
 `IViewObjectExImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl.h
 
@@ -350,6 +350,6 @@ Le code suivant montre une implémentation simple de `IWorkerThreadClient::Execu
 
 [CComControl, classe](../../atl/reference/ccomcontrol-class.md)<br/>
 [Interfaces de contrôles ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
-[Didacticiel](../../atl/active-template-library-atl-tutorial.md)<br/>
+[Tutoriel](../../atl/active-template-library-atl-tutorial.md)<br/>
 [Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-ms.openlocfilehash: 0730bad600190ed06c6f40a4a7cf396f0924a5fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 806cd8ec353e2111d249472fb9aa885e7548baab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265156"
 ---
 # <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT::Start, fonction
 
@@ -27,4 +27,3 @@ Lorsque le service est exécuté, `_tWinMain` appels `CAtlServiceModuleT::WinMai
 
 [Services](../atl/atl-services.md)<br/>
 [CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)
-

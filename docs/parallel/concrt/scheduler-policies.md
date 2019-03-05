@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: df045f7df9d0640b96ae1227c65c65aa7e432350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668739"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298129"
 ---
 # <a name="scheduler-policies"></a>Stratégies de planificateur
 
@@ -29,7 +29,7 @@ Le [concurrency::PolicyElementKey](reference/concurrency-namespace-enums.md#poli
 |Clé de la stratégie|Description|Valeur par défaut|
 |----------------|-----------------|-------------------|
 |`SchedulerKind`|Un [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) valeur qui spécifie le type de threads à utiliser pour planifier des tâches.|`ThreadScheduler` (utiliser des threads normaux). Il s’agit de la seule valeur valide pour cette clé.|
-|`MaxConcurrency`|Un `unsigned int` valeur qui spécifie le nombre maximal de ressources d’accès concurrentiel qui utilise le planificateur.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
+|`MaxConcurrency`|Un `unsigned int` valeur qui spécifie le nombre maximal de ressources d’accès concurrentiel qui utilise le planificateur.|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
 |`MinConcurrency`|Un `unsigned int` valeur qui spécifie le nombre minimal de ressources d’accès concurrentiel qui utilise le planificateur.|`1`|
 |`TargetOversubscriptionFactor`|Un `unsigned int` valeur qui spécifie le nombre de threads à allouer à chaque ressource de traitement.|`1`|
 |`LocalContextCacheSize`|Un `unsigned int` valeur qui spécifie le nombre maximal de contextes qui peuvent être mis en cache dans la file d’attente locale de chaque processeur virtuel.|`8`|
@@ -49,11 +49,10 @@ Utilisez le [Concurrency::CurrentScheduler :: GetPolicy](reference/currentsched
 
 ## <a name="example"></a>Exemple
 
-Pour examiner des exemples qui utilisent des stratégies de planificateur spécifiques pour contrôler le comportement du planificateur, consultez [Comment : spécifier des stratégies de planificateur spécifiques](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) et [Comment : créer des Agents qu’utiliser des stratégies de planificateur](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Pour examiner des exemples qui utilisent des stratégies de planificateur spécifiques pour contrôler le comportement du planificateur, consultez [Comment : Spécifier des stratégies de planificateur](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) et [Comment : Créer des Agents qui utilisent des stratégies de planificateur spécifiques](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Guide pratique pour spécifier des stratégies de planificateur](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
-[Guide pratique pour créer des agents qui utilisent des stratégies de planificateur spécifiques](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-
+[Guide pratique pour spécifier des stratégies de Scheduler](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
+[Guide pratique pour créer des agents qui utilisent des stratégies spécifiques de Scheduler](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

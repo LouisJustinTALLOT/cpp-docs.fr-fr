@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: b5dbe10f0fd80956b395ec385969750c3ee0c05b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d12f38491cf3aafca41756ce97e1cad44deb67d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632867"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296395"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler, classe
 
@@ -62,7 +62,7 @@ Ce gestionnaire d’événements est créé et transmis à `IUIAnimationStoryboa
 
 `CAnimationStoryboardEventHandler`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
@@ -108,7 +108,7 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 
 ### <a name="parameters"></a>Paramètres
 
-*table de montage séquentiel*<br/>
+*storyboard*<br/>
 Pointeur vers la table de montage séquentiel dont l’état a changé.
 
 *newStatus*<br/>
@@ -131,7 +131,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 
 ### <a name="parameters"></a>Paramètres
 
-*table de montage séquentiel*<br/>
+*storyboard*<br/>
 Pointeur vers le storyboard qui a été mise à jour.
 
 ### <a name="return-value"></a>Valeur de retour

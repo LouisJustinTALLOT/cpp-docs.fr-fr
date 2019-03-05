@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451153"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277716"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency, classe
 
@@ -55,21 +55,21 @@ class CComCurrency
 
 |Nom|Description|
 |----------|-----------------|
-|[CComCurrency::operator-](#operator_-)|Cet opérateur permet d'effectuer une soustraction sur un objet `CComCurrency`.|
-|[CComCurrency::operator ! =](#operator_neq)|Compare deux objets `CComCurrency` pour déterminer s'ils sont différents.|
+|[CComCurrency::operator -](#operator_-)|Cet opérateur permet d'effectuer une soustraction sur un objet `CComCurrency`.|
+|[CComCurrency::operator !=](#operator_neq)|Compare deux objets `CComCurrency` pour déterminer s'ils sont différents.|
 |[CComCurrency::operator *](#operator_star)|Cet opérateur permet d'effectuer une multiplication sur un objet `CComCurrency`.|
-|[CComCurrency::operator * =](#operator_star_eq)|Cet opérateur permet d'effectuer une multiplication sur un objet `CComCurrency` et de lui assigner le résultat.|
+|[CComCurrency::operator *=](#operator_star_eq)|Cet opérateur permet d'effectuer une multiplication sur un objet `CComCurrency` et de lui assigner le résultat.|
 |[CComCurrency::operator /](#operator_div)|Cet opérateur permet d'effectuer une division sur un objet `CComCurrency`.|
-|[CComCurrency::operator / =](#operator_div_eq)|Cet opérateur permet d'effectuer une division sur un objet `CComCurrency` et de lui assigner le résultat.|
+|[CComCurrency::operator /=](#operator_div_eq)|Cet opérateur permet d'effectuer une division sur un objet `CComCurrency` et de lui assigner le résultat.|
 |[CComCurrency::operator +](#operator_add)|Cet opérateur permet d'effectuer une addition sur un objet `CComCurrency`.|
 |[CComCurrency::operator +=](#operator_add_eq)|Cet opérateur permet d'effectuer une addition sur un objet `CComCurrency` et d'assigner le résultat à l'objet actuel.|
 |[CComCurrency::operator <](#operator_lt)|Cet opérateur compare deux objets `CComCurrency` pour déterminer le plus petit.|
 |[CComCurrency::operator < =](#operator_lt_eq)|Cet opérateur compare deux objets `CComCurrency` pour déterminer le plus petit ou leur égalité.|
 |[CComCurrency::operator =](#operator_eq)|Cet opérateur assigne l'objet `CComCurrency` à une nouvelle valeur.|
-|[CComCurrency::operator =](#operator_-_eq)|Cet opérateur permet d'effectuer une soustraction sur un objet `CComCurrency` et de lui assigner le résultat.|
+|[CComCurrency::operator -=](#operator_-_eq)|Cet opérateur permet d'effectuer une soustraction sur un objet `CComCurrency` et de lui assigner le résultat.|
 |[CComCurrency::operator ==](#operator_eq_eq)|Cet opérateur compare deux objets `CComCurrency` pour déterminer leur égalité.|
 |[CComCurrency::operator >](#operator_gt)|Cet opérateur compare deux objets `CComCurrency` pour déterminer le plus grand.|
-|[CComCurrency::operator > =](#operator_gt_eq)|Cet opérateur compare deux objets `CComCurrency` pour déterminer le plus grand ou leur égalité.|
+|[CComCurrency::operator >=](#operator_gt_eq)|Cet opérateur compare deux objets `CComCurrency` pour déterminer le plus grand ou leur égalité.|
 |[CComCurrency::operator devise](#operator_currency)|Convertit un objet de devise.|
 
 ### <a name="public-data-members"></a>Membres de données publics
@@ -95,7 +95,7 @@ Lorsque vous spécifiez les composantes entière et fractionnaire d’un `CComCu
 
 Les valeurs CY_MIN_FRACTION, CY_MAX_FRACTION et CY_SCALE sont définies dans atlcur.h.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcur.h
 
@@ -131,7 +131,7 @@ Objet `CComCurrency` existant.
 *cySrc*<br/>
 Une variable de type devise.
 
-*bSrc*, *DSRCPour*, *fSrc*, *lSrc*, *sSrc*, *ulSrc, usSrc*<br/>
+*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc, usSrc*<br/>
 La valeur initiale donnée à la variable membre `m_currency`.
 
 *cSrc*<br/>
@@ -217,7 +217,7 @@ CURRENCY m_currency;
 
 Ce membre contient la devise accessibles et manipulées par les méthodes de cette classe.
 
-##  <a name="operator_-"></a>  CComCurrency::operator-
+##  <a name="operator_-"></a>  CComCurrency::operator -
 
 Cet opérateur permet d'effectuer une soustraction sur un objet `CComCurrency`.
 
@@ -239,7 +239,7 @@ Retourne un `CComCurrency` objet représentant le résultat de la soustraction. 
 
 [!code-cpp[NVC_ATL_Utilities#55](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]
 
-##  <a name="operator_neq"></a>  CComCurrency::operator ! =
+##  <a name="operator_neq"></a>  CComCurrency::operator !=
 
 Cet opérateur compare deux objets sont inégaux.
 
@@ -331,7 +331,7 @@ Retourne un `CComCurrency` objet représentant le résultat de la division. Si l
 
 [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]
 
-##  <a name="operator_div_eq"></a>  CComCurrency::operator / =
+##  <a name="operator_div_eq"></a>  CComCurrency::operator /=
 
 Cet opérateur permet d'effectuer une division sur un objet `CComCurrency` et de lui assigner le résultat.
 
@@ -462,7 +462,7 @@ Objet `CComCurrency`.
 *cySrc*<br/>
 Une variable de type devise.
 
-*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *DSRCPour*, *cSrc* , *ulSrc*, *dSrc*<br/>
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc*, *ulSrc*, *dSrc*<br/>
 La valeur numérique à affecter à la `CComCurrency` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -473,7 +473,7 @@ Retourne la mise à jour `CComCurrency` objet. En cas d’erreur, comme un dépa
 
 [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]
 
-##  <a name="operator_-_eq"></a>  CComCurrency::operator =
+##  <a name="operator_-_eq"></a>  CComCurrency::operator -=
 
 Cet opérateur permet d'effectuer une soustraction sur un objet `CComCurrency` et de lui assigner le résultat.
 

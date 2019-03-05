@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-ms.openlocfilehash: ca664d78f80a0c335a8669454b1345955aaefcb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6ca8061181ec057110282fa297666235e898ff6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644663"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270819"
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration, classe
 
@@ -46,13 +46,13 @@ class cancellation_token_registration;
 
 `cancellation_token_registration`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** pplcancellation_token.h
 
 **Espace de noms :** concurrency
 
-##  <a name="dtor"></a> ~ cancellation_token_registration
+##  <a name="dtor"></a> ~cancellation_token_registration
 
 ```
 ~cancellation_token_registration();
@@ -73,7 +73,7 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 *_Src*<br/>
 Le `cancellation_token_registration` pour copier ou déplacer.
 
-##  <a name="operator_neq"></a> opérateur ! =
+##  <a name="operator_neq"></a> operator!=
 
 ```
 bool operator!= (const cancellation_token_registration& _Rhs) const;
@@ -82,11 +82,12 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
 ### <a name="parameters"></a>Paramètres
 
 *_Rhs*<br/>
-`cancellation_token_registration` à comparer.
+
+  `cancellation_token_registration` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 ```
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
@@ -101,7 +102,7 @@ Le `cancellation_token_registration` à affecter.
 
 ### <a name="return-value"></a>Valeur de retour
 
-##  <a name="operator_eq_eq"></a> opérateur ==
+##  <a name="operator_eq_eq"></a> operator==
 
 ```
 bool operator== (const cancellation_token_registration& _Rhs) const;
@@ -110,7 +111,8 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 ### <a name="parameters"></a>Paramètres
 
 *_Rhs*<br/>
-`cancellation_token_registration` à comparer.
+
+  `cancellation_token_registration` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 

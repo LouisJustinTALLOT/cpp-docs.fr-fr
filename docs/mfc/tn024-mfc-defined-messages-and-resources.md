@@ -1,5 +1,5 @@
 ---
-title: 'TN024 : messages et ressources définis par MFC'
+title: 'TN024 : Ressources et les Messages définis par MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.messages
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 26f6effbafd8136661f0b1dc9a6b22138a23e547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278130"
 ---
-# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024 : messages et ressources définis par MFC
+# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024 : Ressources et les Messages définis par MFC
 
 > [!NOTE]
 >  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -203,4 +203,3 @@ Il s’agit d’un format très général, ce qui permet de n’importe quel les
 
 [Notes techniques par numéro](../mfc/technical-notes-by-number.md)<br/>
 [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
-

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: afaddfcb0a75b7e753897768d993df7ab5d876c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c759dfd308beed0f04b8d8c2868abeeb1cfb45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566229"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301244"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Dérivation d'une classe de CObject
 
@@ -28,7 +28,7 @@ Dans les discussions de `CObject`, les termes « fichier d’interface » et �
 
 Vous pouvez choisir à partir de quatre niveaux de fonctionnalité lorsque vous dérivez une classe à partir de `CObject`:
 
-- Fonctionnalités de base : aucune prise en charge pour les informations de classe d’exécution ou de sérialisation mais il n’inclut la gestion de la mémoire de diagnostic.
+- Fonctionnalités de base : Aucune prise en charge pour les informations de classe d’exécution ou de sérialisation n’inclut, mais la gestion de mémoire de diagnostic.
 
 - Fonctionnalités de base et prise en charge des informations de classe d’exécution.
 
@@ -44,9 +44,9 @@ Le tableau suivant montre la relation entre les macros utilisées pour prendre e
 
 ### <a name="macros-used-for-serialization-and-run-time-information"></a>Utilisé pour la sérialisation et des informations sur l’exécution des macros
 
-|Macro utilisé|CObject::IsKindOf|CRuntimeClass ::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|
+|Macro utilisé|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator>><br /><br /> CArchive::operator <<|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
-|Base `CObject` fonctionnalités|Non|Non|Non|
+|Base `CObject` fonctionnalités|Aucune|Non|Non|
 |`DECLARE_DYNAMIC`|Oui|Non|Non|
 |`DECLARE_DYNCREATE`|Oui|Oui|Non|
 |`DECLARE_SERIAL`|Oui|Oui|Oui|
@@ -59,11 +59,10 @@ Le tableau suivant montre la relation entre les macros utilisées pour prendre e
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-Normalement, toutefois, vous voudrez peut-être substituer certaines des `CObject`de fonctions membres pour gérer les particularités de votre nouvelle classe. Par exemple, vous souhaiterez généralement remplacer le `Dump` fonction de `CObject` pour fournir la sortie de débogage pour le contenu de votre classe. Pour plus d’informations sur la procédure de remplacement `Dump`, consultez l’article [Diagnostics : dump d’objets](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Vous pouvez également substituer la `AssertValid` fonction de `CObject` pour effectuer un test personnalisé pour valider la cohérence des données membres des objets de classe. Pour obtenir une description de la procédure de remplacement `AssertValid`, consultez [MFC ASSERT_VALID et CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
+Normalement, toutefois, vous voudrez peut-être substituer certaines des `CObject`de fonctions membres pour gérer les particularités de votre nouvelle classe. Par exemple, vous souhaiterez généralement remplacer le `Dump` fonction de `CObject` pour fournir la sortie de débogage pour le contenu de votre classe. Pour plus d’informations sur la procédure de remplacement `Dump`, consultez l’article [Diagnostics : Vider le contenu de l’objet](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Vous pouvez également substituer la `AssertValid` fonction de `CObject` pour effectuer un test personnalisé pour valider la cohérence des données membres des objets de classe. Pour obtenir une description de la procédure de remplacement `AssertValid`, consultez [MFC ASSERT_VALID et CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 L’article [spécifiant les niveaux de fonctionnalité](../mfc/specifying-levels-of-functionality.md) explique comment spécifier d’autres niveaux de fonctionnalité, y compris les informations de classe d’exécution, la création d’objets dynamiques et la sérialisation.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CObject](../mfc/using-cobject.md)
-

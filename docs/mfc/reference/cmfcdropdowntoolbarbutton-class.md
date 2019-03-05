@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: 3544bbd65b5e0c754552f93b45263f768b73fe69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b33e50328fd3c8997774515f248780edda6bcc75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275491"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Cmfcdropdowntoolbarbutton, classe
 
@@ -114,7 +114,7 @@ Le `CMFCDropDownToolBarButton` objet peut être exporté vers un [cmfctoolbarmen
 
 [CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdropdowntoolbar.h
 
@@ -149,7 +149,7 @@ CMFCDropDownToolbarButton(
 
 ### <a name="parameters"></a>Paramètres
 
-*Caractère*<br/>
+*lpszName*<br/>
 [in] Le texte par défaut du bouton.
 
 *pToolBar*<br/>
@@ -202,7 +202,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Bouton de menu*<br/>
+*menuButton*<br/>
 [in] Une référence au bouton de menu cible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -391,7 +391,7 @@ Différent de zéro si le bouton traite le message d’aide ; sinon 0.
 
 Cette méthode étend l’implémentation de classe de base ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) en appelant le [CMFCDropDownToolbarButton::OnClick](#onclick) méthode avec *bDelay*défini sur FALSE. Cette méthode retourne la valeur retournée par [CMFCDropDownToolbarButton::OnClick](#onclick).
 
-Pour plus d’informations sur le message WM_HELPHITTEST, consultez [TN028 : prise en charge d’aide contextuelle](../../mfc/tn028-context-sensitive-help-support.md).
+Pour plus d’informations sur le message WM_HELPHITTEST, consultez [TN028 : Prise en charge de l’aide contextuelle](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu
 
@@ -447,7 +447,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du bouton.
 
 *pImages*<br/>
@@ -488,7 +488,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Le contexte de périphérique qui affiche le bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le rectangle englobant du bouton.
 
 *bSelected*<br/>
@@ -545,5 +545,4 @@ Appelez cette méthode pour spécifier une commande par défaut exécutée par l
 [CMFCDropDownToolBar, classe](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [CMFCToolBar, classe](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarMenuButton, classe](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
-[Procédure pas à pas : placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Procédure pas à pas : Placement de contrôles dans les barres d’outils](../../mfc/walkthrough-putting-controls-on-toolbars.md)

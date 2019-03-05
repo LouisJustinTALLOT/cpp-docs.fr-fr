@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: 7402f99148f20be4ce56c44b5ce7f66f0c24bd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591262"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279443"
 ---
 # <a name="handling-the-apply-button"></a>Gestion du bouton Appliquer
 
-Les feuilles de propriétés ont une fonction que les boîtes de dialogue standard n'ont pas : elles permettent à l'utilisateur d'appliquer les modifications qu'il a effectuées avant de fermer la feuille de propriétés. Cette opération s'effectue à l'aide du bouton Appliquer. Cet article décrit les méthodes que vous pouvez utiliser pour implémenter cette fonctionnalité correctement.
+Feuilles de propriétés ont une fonctionnalité qui n’est pas le cas des boîtes de dialogue standard : Ils permettent d’appliquer les modifications apportées avant de fermer la feuille de propriétés. Cette opération s'effectue à l'aide du bouton Appliquer. Cet article décrit les méthodes que vous pouvez utiliser pour implémenter cette fonctionnalité correctement.
 
-Les boîtes de dialogue modales sont généralement les paramètres d'un objet externe lorsque l'utilisateur clique sur OK pour fermer la boîte de dialogue. Il en va de même pour une feuille de propriétés : lorsque l'utilisateur clique sur OK, les nouveaux paramètres de la feuille de propriétés prennent effet.
+Les boîtes de dialogue modales sont généralement les paramètres d'un objet externe lorsque l'utilisateur clique sur OK pour fermer la boîte de dialogue. Cela vaut également pour une feuille de propriétés : Lorsque l’utilisateur clique sur OK, les nouveaux paramètres dans la feuille de propriétés prennent effet.
 
 Toutefois, vous pouvez permettre à l'utilisateur d'enregistrer des paramètres sans avoir à fermer la boîte de dialogue de la feuille de propriétés. Il s'agit de la fonction du bouton Appliquer. Le bouton Appliquer applique les paramètres dans toutes les pages de propriétés de l'objet externe, par opposition au fait d'appliquer uniquement les paramètres de la page actuellement active.
 
@@ -35,4 +35,3 @@ Pour obtenir un exemple de ce processus, consultez l’exemple général MFC [PR
 ## <a name="see-also"></a>Voir aussi
 
 [Feuilles de propriétés](../mfc/property-sheets-mfc.md)
-

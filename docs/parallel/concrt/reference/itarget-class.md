@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: fed6f6c9b93869602eb43dabfef4743fbce3a3d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430002"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295322"
 ---
 # <a name="itarget-class"></a>ITarget, classe
 
@@ -55,7 +55,7 @@ Le type de données de la charge utile dans les messages acceptés par le bloc c
 
 |Nom|Description|
 |----------|-----------------|
-|[propager](#propagate)|En cas de substitution dans une classe dérivée, passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.|
+|[propagate](#propagate)|En cas de substitution dans une classe dérivée, passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.|
 |[send](#send)|En cas de substitution dans une classe dérivée, passe de façon synchrone un message au bloc cible.|
 |[supports_anonymous_source](#supports_anonymous_source)|En cas de substitution dans une classe dérivée, retourne true ou false selon si le bloc de message accepte des messages offertes par une source qui n’est pas liée à celui-ci. Si la méthode substituée retourne **true**, la cible ne peut pas différer un message envoyé, car la consommation d’un message différé ultérieurement nécessite la source soit identifiée dans son Registre de lien sourse.|
 
@@ -75,13 +75,13 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `ITarget`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
 **Espace de noms :** concurrency
 
-##  <a name="dtor"></a> ~ ITarget
+##  <a name="dtor"></a> ~ITarget
 
 Détruit le `ITarget` objet.
 
@@ -106,7 +106,7 @@ Le `ISource` block qui est lié à cette `ITarget` bloc.
 
 Cette fonction ne doit pas être appelée directement sur un `ITarget` bloc. Les blocs doivent être connectés à l’aide de la `link_target` méthode sur `ISource` blocs, qui appelleront le `link_source` méthode sur la cible correspondante.
 
-##  <a name="propagate"></a> propager
+##  <a name="propagate"></a> propagate
 
 En cas de substitution dans une classe dérivée, passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.
 

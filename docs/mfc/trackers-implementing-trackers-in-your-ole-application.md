@@ -1,5 +1,5 @@
 ---
-title: 'Dispositifs de suivi : implémentation de dispositifs de suivi dans votre application OLE'
+title: 'Dispositifs de suivi : Implémentation de dispositifs de suivi dans votre Application OLE'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - trackers [MFC]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - OLE containers [MFC], trackers
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
-ms.openlocfilehash: 19ffa94b7be4b96c57317f63d9cfd9242bff061f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f42ba8f8aa987225c6b545b60e92f00a4f7e3071
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613094"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287971"
 ---
-# <a name="trackers-implementing-trackers-in-your-ole-application"></a>Dispositifs de suivi : implémentation de dispositifs de suivi dans votre application OLE
+# <a name="trackers-implementing-trackers-in-your-ole-application"></a>Dispositifs de suivi : Implémentation de dispositifs de suivi dans votre Application OLE
 
 Dispositifs de suivi fournissent une interface graphique pour permettre aux utilisateurs d’interagir avec les éléments clients OLE. À l’aide de différents styles de suivi, OLE client éléments peuvent être affichés avec une bordure hachurée, poignées de redimensionnement et diverses autres effets visuels. Cet article décrit :
 
@@ -29,4 +29,3 @@ Cet article décrit également l’utilisation de styles avec des dispositifs de
 ## <a name="see-also"></a>Voir aussi
 
 [Dispositifs de suivi](../mfc/trackers.md)
-

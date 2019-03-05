@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660380"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292912"
 ---
 # <a name="registry-macros"></a>Macros de Registre
 
@@ -25,19 +25,19 @@ Ces macros définissent les fonctionnalités de bibliothèque et du Registre de 
 
 |||
 |-|-|
-|[_ATL_STATIC_REGISTRY À](#_atl_static_registry)|Indique que vous souhaitez que le code d’inscription pour votre objet se trouve dans l’objet afin d’éviter une dépendance sur ATL. DLL.|
+|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|Indique que vous souhaitez que le code d’inscription pour votre objet se trouve dans l’objet afin d’éviter une dépendance sur ATL. DLL.|
 |[DECLARE_LIBID](#declare_libid)|Fournit un moyen pour ATL obtenir le *libid* de la bibliothèque de types.|
 |[DECLARE_NO_REGISTRY](#declare_no_registry)|Permet d’éviter l’inscription ATL par défaut.|
 |[DECLARE_REGISTRY](#declare_registry)|Insère ou supprime l’entrée de l’objet principal dans le Registre système.|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Spécifie les informations requises pour inscrire automatiquement le *appid*.|
-|[MACRO DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Recherche de la ressource nommée et exécute le script de Registre qu’il contient.|
+|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Recherche de la ressource nommée et exécute le script de Registre qu’il contient.|
 |[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Recherche de la ressource identifiée par un numéro d’identification et exécute le script de Registre qu’il contient.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
-##  <a name="_atl_static_registry"></a>  _ATL_STATIC_REGISTRY À
+##  <a name="_atl_static_registry"></a>  _ATL_STATIC_REGISTRY
 
 Un symbole indiquant que vous souhaitez que le code d’inscription pour votre objet se trouve dans l’objet afin d’éviter une dépendance sur ATL. DLL.
 
@@ -61,7 +61,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Paramètres
 
-*LIBID*<br/>
+*libid*<br/>
 GUID de la bibliothèque de types.
 
 ### <a name="remarks"></a>Notes
@@ -104,7 +104,7 @@ DECLARE_REGISTRY(
 *vpid*<br/>
 [in] LPCTSTR qui est un identificateur de programme indépendant de la version.
 
-*NID*<br/>
+*nid*<br/>
 [in] UINT qui est un index de la chaîne de ressource dans le Registre à utiliser comme la description du programme.
 
 *flags*<br/>
@@ -128,10 +128,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Paramètres
 
-*RESID*<br/>
+*resid*<br/>
 L’id de ressource du fichier .rgs qui contient des informations sur le *appid*.
 
-*ID d’application*<br/>
+*appid*<br/>
 GUID.
 
 ### <a name="remarks"></a>Notes
@@ -142,7 +142,7 @@ Utiliser DECLARE_REGISTRY_APPID_RESOURCEID dans un `CAtlModuleT`-classe dérivé
 
 Les classes ajoutées à des projets ATL avec l’Assistant code ajouter une classe aura un exemple d’utilisation de cette macro.
 
-##  <a name="declare_registry_resource"></a>  MACRO DECLARE_REGISTRY_RESOURCE
+##  <a name="declare_registry_resource"></a>  DECLARE_REGISTRY_RESOURCE
 
 Obtient la ressource nommée contenant le fichier de Registre et exécute le script pour entrer des objets dans le Registre système ou les supprimer à partir du Registre système.
 

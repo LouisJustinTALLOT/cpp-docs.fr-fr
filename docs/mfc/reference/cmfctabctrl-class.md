@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505119"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281679"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -248,7 +248,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCTa
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtabctrl.h
 
@@ -313,7 +313,7 @@ BOOL Create(
 *style*<br/>
 [in] Le style du contrôle onglet. Pour plus d'informations, consultez la section Notes.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui délimite le contrôle onglet.
 
 *pParentWnd*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] L’ID du contrôle onglet.
 
-*Emplacement*<br/>
+*location*<br/>
 [in] L’emplacement des onglets. La valeur par défaut est LOCATION_BOTTOM. Pour plus d'informations, consultez la section Notes.
 
 *bCloseBtn*<br/>
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] True pour afficher le bouton Fermer sous l’onglet actif ; FALSE pour afficher le bouton Fermer dans le coin supérieur droit de la zone d’onglet. La valeur par défaut est TRUE.
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer les étiquettes de l’onglet modifiable ; FALSE pour désactiver les étiquettes de l’onglet modifiable.
 
 ### <a name="remarks"></a>Notes
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour afficher un menu contextuel des étiquettes de fenêtre à onglets ; FALSE pour afficher des boutons de défilement vers l’avant et vers l’arrière. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -564,7 +564,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [out] Lorsque cette méthode est retournée, le *rect* paramètre contient un rectangle qui délimite la zone d’onglet.
 
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea
@@ -577,7 +577,7 @@ void GetWndArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 [in, out] Lorsque cette méthode est retournée, ce paramètre contient un rectangle qui délimite le contrôle onglet actuel.
 
 ### <a name="remarks"></a>Notes
@@ -1042,7 +1042,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] L’ID d’une ressource bitmap qui contient la liste d’images.
 
-*CX*<br/>
+*cx*<br/>
 [in] La largeur de chaque image, en pixels. La valeur par défaut est 15.
 
 *clrTransp*<br/>
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Paramètres
 
-*bAnnuler*<br/>
+*bCancel*<br/>
 [in] TRUE pour abandonner l’opération de redimensionnement en cours ; FALSE pour effectuer des opération de redimensionnement en cours. Dans les deux cas, le framework s’arrête de dessiner le rectangle de redimensionnement.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar

@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178458"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269810"
 ---
 # <a name="cmfcbutton-class"></a>Cmfcbutton, classe
 
@@ -127,7 +127,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsPushed](#ispushed)|Indique si un bouton est enfoncé.|
 |[CMFCButton::IsRadioButton](#isradiobutton)|Indique si un bouton est un bouton radio.|
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Indique si le style de la bordure du bouton correspond au thème Windows en cours.|
-|`CMFCButton::OnDrawParentBackground`|Dessine l’arrière-plan parent d’un bouton dans la zone spécifiée. (Substitue [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|
+|`CMFCButton::OnDrawParentBackground`|Dessine l’arrière-plan parent d’un bouton dans la zone spécifiée. (Overrides [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|
 |`CMFCButton::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) des fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Définit un bouton en mode auto-repeat.|
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|Définit l’image d’un bouton activé.|
@@ -258,7 +258,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour utiliser le thème Windows en cours pour dessiner les bordures du bouton ; FALSE pour ne pas utiliser le thème Windows. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -511,7 +511,7 @@ Utilisez une des opérations suivantes `CMFCButton::AlignStyle` valeurs d’énu
 
 Le `CMFCButton` constructeur initialise ce membre en ALIGN_CENTER.
 
-##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) |
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk)|
 
 Indique si vous cliquez sur le dernier événement a été un double-clic. |
 
@@ -563,7 +563,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Une référence à un rectangle qui délimite le bouton.
 
 *uiState*<br/>
@@ -639,7 +639,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Une référence à un rectangle qui délimite le bouton.
 
 *strText*<br/>

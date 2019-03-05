@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-ms.openlocfilehash: ceb92181fcf1fcb17033ac9524c0b113cbc710fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a143c8b08c73676af0d37cd2b67667e8270dc2b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552709"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259853"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Noms du contrôle, Assistant Contrôle ActiveX MFC
 
@@ -45,11 +45,11 @@ Spécifiez les noms de la classe de contrôle et de la classe de page de propri�
 
    Par défaut, l’ID de type de contrôle s’affiche comme suit :
 
-   *ProjectName.ShortName*CTRL.1.
+   *ProjectName.ShortName*Ctrl.1
 
    Si vous modifiez le nom court dans cette boîte de dialogue, l’ID de type de contrôle s’affiche comme suit :
 
-   *ProjectName.NewShortName*CTRL.1.
+   *ProjectName.NewShortName*Ctrl.1
 
 - **Nom de classe de PropPage**
 
@@ -75,11 +75,11 @@ Spécifiez les noms de la classe de contrôle et de la classe de page de propri�
 
    Par défaut, l’ID de type de page de propriété s’affiche comme suit :
 
-   *ProjectName.ShortName*PropPage.1.
+   *ProjectName.ShortName*PropPage.1
 
    Si vous modifiez le nom court dans cette boîte de dialogue, l’ID de type de page de propriété s’affiche comme suit :
 
-   *ProjectName.NewShortName*PropPage.1.
+   *ProjectName.NewShortName*PropPage.1
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -87,4 +87,3 @@ Spécifiez les noms de la classe de contrôle et de la classe de page de propri�
 [Paramètres de l’application, Assistant Contrôle ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Paramètres du contrôle, Assistant Contrôle ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
 [Types de fichiers créés pour les projets Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)
-

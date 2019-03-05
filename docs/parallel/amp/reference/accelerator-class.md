@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523921"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326616"
 ---
 # <a name="accelerator-class"></a>accelerator, classe
 
@@ -127,13 +127,13 @@ Un accélérateur est une fonctionnalité de matériel qui est optimisée pour l
 
 Vous pouvez construire un `accelerator` objet par l’énumération des périphériques disponibles, ou en obtenant le périphérique par défaut, l’appareil de référence ou le périphérique WARP.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amprt.h
 
-**Espace de noms :** Concurrency
+**Espace de noms :** Concurrence
 
-##  <a name="dtor"></a> </a> ~ accelerator
+##  <a name="dtor"></a> </a> ~accelerator
 
 Détruit le `accelerator` objet.
 
@@ -160,7 +160,7 @@ accelerator(const accelerator& _Other);
 *_Device_path*<br/>
 Le chemin d’accès de l’appareil physique.
 
-*_Autre*<br/>
+*_Other*<br/>
 L’accélérateur à copier.
 
 ##  <a name="cpu_accelerator"></a> cpu_accelerator
@@ -220,7 +220,7 @@ Obtient la vue de l’accélérateur par défaut qui est associée le `accelerat
 __declspec(property(get= get_default_view)) accelerator_view default_view;
 ```
 
-##  <a name="description"></a> Description
+##  <a name="description"></a> description
 
 Obtient une brève description de la `accelerator` appareil.
 
@@ -444,7 +444,7 @@ Obtient une valeur booléenne qui indique si le `accelerator` est émulé.
 __declspec(property(get= get_is_emulated)) bool is_emulated;
 ```
 
-##  <a name="operator_neq"></a> opérateur ! =
+##  <a name="operator_neq"></a> operator!=
 
 Compare cette `accelerator` objet avec un autre et retourne **false** si elles sont identiques ; sinon, retourne **true**.
 
@@ -454,14 +454,14 @@ bool operator!= (const accelerator& _Other) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `accelerator` objet à comparer avec celle-ci.
 
 ### <a name="return-value"></a>Valeur de retour
 
 **false** si les deux `accelerator` objets sont identiques ; sinon, **true**.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Copie le contenu de l’objet `accelerator` objet à celui-ci.
 
@@ -471,14 +471,14 @@ accelerator& operator= (const accelerator& _Other);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `accelerator` objet à copier.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Une référence à cet `accelerator` objet.
 
-##  <a name="operator_eq_eq"></a> opérateur ==
+##  <a name="operator_eq_eq"></a> operator==
 
 Compare cette `accelerator` objet avec un autre et retourne **true** si elles sont identiques ; sinon, retourne **false**.
 
@@ -488,7 +488,7 @@ bool operator== (const accelerator& _Other) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `accelerator` objet à comparer avec celle-ci.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -505,7 +505,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Chemin d’accès*<br/>
+*_Path*<br/>
 Le chemin d’accès à l’accélérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -561,7 +561,7 @@ Obtient la version de la `accelerator`.
 __declspec(property(get= get_version)) unsigned int version;
 ```
 
-##  <a name="dtor"></a> </a> ~ accelerator_view
+##  <a name="dtor"></a> </a> ~accelerator_view
 
 Détruit le [accelerator_view](accelerator-view-class.md) objet.
 
@@ -589,7 +589,7 @@ accelerator_view(const accelerator_view& _Other);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `accelerator_view` objet à copier.
 
 ##  <a name="create_marker"></a> create_marker
@@ -692,7 +692,7 @@ Obtient une valeur booléenne qui indique si le [accelerator_view](accelerator-v
 __declspec(property(get= get_is_debug)) bool is_debug;
 ```
 
-##  <a name="operator_neq"></a> opérateur ! =
+##  <a name="operator_neq"></a> operator!=
 
 Compare cette [accelerator_view](accelerator-view-class.md) objet avec un autre et retourne `false` si elles sont identiques ; sinon, retourne `true`.
 
@@ -702,14 +702,14 @@ bool operator!= (const accelerator_view& _Other) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `accelerator_view` objet à comparer avec celle-ci.
 
 ### <a name="return-value"></a>Valeur de retour
 
 **false** si les deux objets sont identiques ; sinon, **true**.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Copie le contenu de l’objet [accelerator_view](accelerator-view-class.md) objet dans celui-ci.
 
@@ -719,14 +719,14 @@ accelerator_view& operator= (const accelerator_view& _Other);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `accelerator_view` objet à copier.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Une référence à la modification `accelerator_view` objet.
 
-##  <a name="operator_eq_eq"></a> opérateur ==
+##  <a name="operator_eq_eq"></a> operator==
 
 Compare cette [accelerator_view](accelerator-view-class.md) objet avec un autre et retourne **true** si elles sont identiques ; sinon, retourne **false**.
 
@@ -736,7 +736,7 @@ bool operator== (const accelerator_view& _Other) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 Le `accelerator_view` objet à comparer avec celle-ci.
 
 ### <a name="return-value"></a>Valeur de retour

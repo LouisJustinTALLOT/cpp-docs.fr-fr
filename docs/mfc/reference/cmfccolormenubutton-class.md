@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: adb0cdbdde90ad7bdd6aef42c1e83c7ba3fd28b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624885"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301335"
 ---
 # <a name="cmfccolormenubutton-class"></a>Cmfccolormenubutton, classe
 
@@ -120,7 +120,7 @@ L’exemple suivant montre comment créer et configurer un bouton de menu de cou
 
 [CMFCColorMenuButton](../../mfc/reference/cmfccolormenubutton-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcolormenubutton.h
 
@@ -205,10 +205,10 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] Spécifie le texte du bouton qui s’affiche lorsque le bouton est automatique.
 
-*automatiqueCouleur*<br/>
+*colorAutomatic*<br/>
 [in] Spécifie une nouvelle couleur automatique.
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Spécifie si le bouton est automatique ou non.
 
 ### <a name="remarks"></a>Notes
@@ -230,7 +230,7 @@ void EnableDocumentColors(
 *lpszLabel*<br/>
 [in] Spécifie le texte du bouton.
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Valeur TRUE pour afficher les couleurs de document spécifique ou FALSE pour afficher les couleurs système.
 
 ### <a name="remarks"></a>Notes
@@ -256,7 +256,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Spécifiez TRUE pour afficher le `CMFCColorDialog` boîte de dialogue, ou FALSE pour afficher la boîte de dialogue de couleur système standard.
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Spécifiez TRUE pour afficher le bouton « autre » ; Sinon, FALSE. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -390,7 +390,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui délimite la zone à redessiner.
 
 *pImages*<br/>
@@ -429,7 +429,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Pointeur vers un contexte de périphérique.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui délimite le bouton à dessiner.
 
 *bSelected*<br/>
@@ -481,7 +481,7 @@ virtual void SetColor(
 
 ### <a name="parameters"></a>Paramètres
 
-*CLR*<br/>
+*clr*<br/>
 [in] Une valeur de couleur RVB.
 
 *bNotify*<br/>
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [in] L’ID de ressource d’un bouton de menu de couleur.
 
-*Couleur*<br/>
+*color*<br/>
 [in] Une valeur de couleur RVB.
 
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName
@@ -521,7 +521,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 [in] La valeur RVB de la couleur, dont le nom change.
 
 *strName*<br/>

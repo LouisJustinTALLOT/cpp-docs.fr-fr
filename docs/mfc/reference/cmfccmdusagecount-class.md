@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: af48451bcba9bf0d5f07cd96da99be4c2a6ae99b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549394"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275361"
 ---
 # <a name="cmfccmdusagecount-class"></a>Cmfccmdusagecount, classe
 
@@ -82,7 +82,7 @@ Vous pouvez conserver `CMFCCmdUsageCount` classe les données entre les exécuti
 
 [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmdusagecount.h
 
@@ -206,7 +206,7 @@ virtual void Serialize(CArchive& ar);
 
 Cette méthode sérialise la structure du plan du nombre de commandes, de `m_CmdUsage`et l’utilisation de la commande total, `m_nTotalUsage`, compteur depuis ou vers l’archive spécifiée.
 
-Pour des exemples de sérialisation, consultez [sérialisation : sérialisation d’un objet](../../mfc/serialization-serializing-an-object.md).
+Pour des exemples de sérialisation, consultez [sérialisation : Sérialisation d’un objet](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
 

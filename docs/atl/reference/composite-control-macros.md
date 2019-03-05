@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 10965fed5aac2eb037cf9894998688e3e7c2bffa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c6d3e350755ef4a0cf4a84561e34619ab3974be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498975"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299112"
 ---
 # <a name="composite-control-macros"></a>Macros de contrôle composite
 
@@ -23,13 +23,13 @@ Ces macros définissent des tables de récepteurs d’événements et des entré
 |-|-|
 |[BEGIN_SINK_MAP](#begin_sink_map)|Marque le début de la table de récepteur d’événements pour le contrôle composite.|
 |[END_SINK_MAP](#end_sink_map)|Marque la fin de la table de récepteur d’événements pour le contrôle composite.|
-|[AIDE DE SINK_ENTRY](#sink_entry)|Entrée de la table de récepteur d’événements.|
+|[SINK_ENTRY](#sink_entry)|Entrée de la table de récepteur d’événements.|
 |[SINK_ENTRY_EX](#sink_entry_ex)|Entrée de la table de récepteur d’événements avec un paramètre supplémentaire.|
 |[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Similaire à SINK_ENTRY_EX, à ceci près qu’elle prend un pointeur vers un iid.|
-|[MACRO SINK_ENTRY_INFO](#sink_entry_info)|Entrée à la table de récepteur d’événements avec les informations de type fourni manuellement pour une utilisation avec [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
+|[SINK_ENTRY_INFO](#sink_entry_info)|Entrée à la table de récepteur d’événements avec les informations de type fourni manuellement pour une utilisation avec [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Similaire à la macro SINK_ENTRY_INFO, à ceci près qu’elle prend un pointeur vers un iid.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom.h
 
@@ -43,7 +43,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Paramètres
 
-*_classe*<br/>
+*_class*<br/>
 [in] Spécifie le contrôle.
 
 ### <a name="example"></a>Exemple
@@ -70,7 +70,7 @@ END_SINK_MAP()
 
 Implémentation de CE ATL de ActiveX événement récepteurs uniquement prend en charge valeurs de retour de type HRESULT ou void à partir de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour est non pris en charge et son comportement est indéfini.
 
-##  <a name="sink_entry"></a>  AIDE DE SINK_ENTRY
+##  <a name="sink_entry"></a>  SINK_ENTRY
 
 Déclare la fonction de gestionnaire (*fn*) pour l’événement spécifié (*dispid*), du contrôle identifié par *id*.
 
@@ -83,7 +83,7 @@ SINK_ENTRY( id, dispid, fn )
 *ID*<br/>
 [in] Identifie le contrôle.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] Identifie l’événement spécifié.
 
 *fn*<br/>
@@ -111,13 +111,13 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 *ID*<br/>
 [in] Identifie le contrôle.
 
-*IID*<br/>
+*iid*<br/>
 [in] Identifie l’interface de dispatch.
 
 *piid*<br/>
 [in] Pointeur vers l’interface de dispatch.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] Identifie l’événement spécifié.
 
 *fn*<br/>
@@ -145,19 +145,19 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 *ID*<br/>
 [in] Entier non signé identifier la source d’événement. Cette valeur doit correspondre à la *nID* paramètre de modèle utilisé dans les [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) classe de base.
 
-*IID*<br/>
+*iid*<br/>
 [in] IID qui identifie l’interface de dispatch.
 
 *piid*<br/>
 [in] Pointeur vers l’IID qui identifie l’interface de dispatch.
 
-*DISPID*<br/>
+*dispid*<br/>
 [in] DISPID identifiant l’événement spécifié.
 
 *fn*<br/>
 [in] Nom de la fonction de gestionnaire d’événements. Cette fonction doit utiliser le `_stdcall` convention d’appel et avoir la signature dispinterface-style approprié.
 
-*Info*<br/>
+*info*<br/>
 [in] Informations de type pour la fonction de gestionnaire d’événements. Ces informations de type sont fournies sous la forme d’un pointeur vers un `_ATL_FUNC_INFO` structure. CC_CDECL est la seule option prise en charge dans Windows CE pour le champ CALLCONV de la `_ATL_FUNC_INFO` structure. Toute autre valeur est non pris en charge par conséquent, son comportement non défini.
 
 ### <a name="remarks"></a>Notes

@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288829"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx, classe
 
@@ -222,7 +222,7 @@ Dépend en grande partie des fonctionnalités fournies par l’infrastructure MF
 
 - Dérivez la classe principale de l’application de `CWinAppEx`.
 
-Une fois que vous intégrez `CWinAppEx` dans votre application, vous pouvez initialiser l’un des responsables de l’application. Avant d’utiliser un gestionnaire d’application, vous devez l’initialiser en appelant la méthode initialize approprié. Pour obtenir un pointeur vers un gestionnaire spécifique, appelez la méthode get associée. Le `CWinAppEx` classe gère les gestionnaires d’application suivants : [cmousemanager, classe](../../mfc/reference/cmousemanager-class.md), [ccontextmenumanager, classe](../../mfc/reference/ccontextmenumanager-class.md), [ckeyboardmanager, classe](../../mfc/reference/ckeyboardmanager-class.md), [ Cusertoolsmanager, classe](../../mfc/reference/cusertoolsmanager-class.md), et [cmenutearoffmanager, classe](../../mfc/reference/cmenutearoffmanager-class.md).
+Une fois que vous intégrez `CWinAppEx` dans votre application, vous pouvez initialiser l’un des responsables de l’application. Avant d’utiliser un gestionnaire d’application, vous devez l’initialiser en appelant la méthode initialize approprié. Pour obtenir un pointeur vers un gestionnaire spécifique, appelez la méthode get associée. Le `CWinAppEx` classe gère les gestionnaires d’application suivants : [Cmousemanager, classe](../../mfc/reference/cmousemanager-class.md), [ccontextmenumanager, classe](../../mfc/reference/ccontextmenumanager-class.md), [ckeyboardmanager, classe](../../mfc/reference/ckeyboardmanager-class.md), [cusertoolsmanager, classe](../../mfc/reference/cusertoolsmanager-class.md), et [ Cmenutearoffmanager, classe](../../mfc/reference/cmenutearoffmanager-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -236,7 +236,7 @@ Une fois que vous intégrez `CWinAppEx` dans votre application, vous pouvez init
 
 [CWinAppEx](../../mfc/reference/cwinappex-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwinappex.h
 
@@ -288,7 +288,7 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Spécifie si l’application charge la taille initiale et l’emplacement de la fenêtre frame principale à partir du Registre.
 
 ### <a name="remarks"></a>Notes
@@ -400,7 +400,7 @@ BOOL GetBinary(
 *ppData*<br/>
 [out] Pointeur vers la mémoire tampon que la méthode remplit avec les données binaires.
 
-*Pétaoctets*<br/>
+*pBytes*<br/>
 [out] Pointeur vers un entier non signé par la méthode pour écrire le nombre d’octets lus.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -478,7 +478,7 @@ int GetInt(
 *lpszEntry*<br/>
 [in] Chaîne qui contient le nom d’une entrée de Registre.
 
-*nParamètre par défaut*<br/>
+*nDefault*<br/>
 [in] La valeur par défaut que la méthode retourne si l’entrée de Registre spécifiée n’existe pas.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -611,7 +611,7 @@ BOOL GetSectionBinary(
 *ppData*<br/>
 [out] Pointeur vers la mémoire tampon où la méthode stocke les données.
 
-*Pétaoctets*<br/>
+*pBytes*<br/>
 [out] Pointeur vers un entier non signé. La méthode écrit la taille de *ppData* à ce paramètre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -643,7 +643,7 @@ int GetSectionInt(
 *lpszEntry*<br/>
 [in] Chaîne qui contient la valeur à lire.
 
-*nParamètre par défaut*<br/>
+*nDefault*<br/>
 [in] La valeur par défaut à retourner si la valeur spécifiée n’existe pas.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -988,7 +988,7 @@ virtual BOOL LoadWindowPlacement(
 *rectNormalPosition*<br/>
 [out] Un rectangle qui contient les coordonnées de la fenêtre frame principale lorsqu’elle est à la position restaurée.
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 [out] Indicateurs qui contrôlent la position de la fenêtre réduite et la façon dont le système d’exploitation bascule entre une fenêtre réduite et une fenêtre restaurée.
 
 *nShowCmd*<br/>
@@ -1031,7 +1031,7 @@ virtual void OnAppContextHelp(
 *pWndControl*<br/>
 [in] Pointeur vers un objet de fenêtre pour laquelle l’utilisateur appelée aide contextuelle.
 
-*[] dwHelpIDArray*<br/>
+*dwHelpIDArray[]*<br/>
 [in] Une valeur réservée.
 
 ### <a name="remarks"></a>Notes
@@ -1261,7 +1261,7 @@ virtual BOOL StoreWindowPlacement(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIndicateurs*<br/>
+*nFlags*<br/>
 [in] Indicateurs qui contrôlent la position de la fenêtre réduite et la façon dont le système d’exploitation bascule entre une fenêtre réduite et une fenêtre restaurée.
 
 *nShowCmd*<br/>
@@ -1327,7 +1327,7 @@ BOOL WriteInt(
 *lpszEntry*<br/>
 [in] Chaîne qui contient le nom d’une clé de Registre.
 
-*%n%nValeur*<br/>
+*nValue*<br/>
 [in] Les données à stocker.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1421,7 +1421,7 @@ BOOL WriteSectionInt(
 *lpszEntry*<br/>
 [in] Chaîne qui contient la valeur à définir.
 
-*%n%nValeur*<br/>
+*nValue*<br/>
 [in] Les données à écrire dans le Registre.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -1,18 +1,18 @@
 ---
-title: 'Comment : utiliser le surabonnement pour compenser la latence'
+title: 'Procédure : Utiliser le surabonnement pour compenser la latence'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: fc16fa5cfeddf82b9fcb0164796fb7f4c90aef15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653074"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257941"
 ---
-# <a name="how-to-use-oversubscription-to-offset-latency"></a>Comment : utiliser le surabonnement pour compenser la latence
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>Procédure : Utiliser le surabonnement pour compenser la latence
 
 Le surabonnement peut améliorer l’efficacité globale de certaines applications qui contiennent des tâches qui ont une grande quantité de latence. Cette rubrique montre comment utiliser le surabonnement pour compenser la latence provoquée par la lecture des données à partir d’une connexion réseau.
 
@@ -60,7 +60,7 @@ L’exemple peut s’exécuter plus rapidement lorsque le surabonnement est acti
 
 Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `download-oversubscription.cpp` et puis exécutez un de ces commandes dans un **invite de commandes Visual Studio** fenêtre.
 
-**CL.exe /EHsc /MD /D « _AFXDLL » download-oversubscription.cpp**
+**cl.exe /EHsc /MD /D "_AFXDLL" download-oversubscription.cpp**
 
 **CL.exe /EHsc/MT download-oversubscription.cpp**
 
@@ -82,4 +82,3 @@ L’exemple suivant modifie le corps de la `download` méthode à utiliser RAII 
 
 [Contextes](../../parallel/concrt/contexts.md)<br/>
 [Context::Oversubscribe, méthode](reference/context-class.md#oversubscribe)
-

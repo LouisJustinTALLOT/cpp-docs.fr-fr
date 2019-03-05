@@ -7,20 +7,20 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: bdfb7879bc926435bdcd72d6776646c449ffef80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 871db7abd2682d557bf2e80e9cb97624f0dc53a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263635"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>Construction d'objets en une et en deux étapes
 
 Vous avez le choix entre deux techniques pour créer des objets graphiques, tels que des stylets et des pinceaux :
 
-- *Construction d’une étape*: construction et initialisation de l’objet en une seule phase, le tout avec le constructeur.
+- *Construction d’une étape*: Construire et initialiser l’objet en une seule phase, toutes avec le constructeur.
 
-- *Construction en deux étapes*: construction et initialisation de l’objet en deux étapes distinctes. Le constructeur crée l’objet et l’initialise une fonction d’initialisation.
+- *Construction en deux étapes*: Construire et initialiser l’objet en deux étapes distinctes. Le constructeur crée l’objet et l’initialise une fonction d’initialisation.
 
 Construction en deux étapes est toujours plus sûre. Dans la construction d’une étape, le constructeur pouvait lever une exception si vous fournissez des arguments incorrects ou l’allocation de mémoire échoue. Ce problème est évité par construction en deux étapes, bien que vous avez à la recherche de l’échec. Dans les deux cas, la destruction de l’objet est le même processus.
 
@@ -46,4 +46,3 @@ Le court exemple suivant illustre les deux méthodes de construction d’un obje
 ## <a name="see-also"></a>Voir aussi
 
 [Objets graphiques](../mfc/graphic-objects.md)
-

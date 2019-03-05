@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302102"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd, classe
 
@@ -103,7 +103,7 @@ class CSplitterWnd : public CWnd
 |----------|-----------------|
 |[CSplitterWnd::ActivateNext](#activatenext)|Exécute la commande volet suivant ou volet précédent.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Vérifie si la commande volet suivant ou volet précédent est actuellement possible.|
-|[CSplitterWnd::Create statiques](#create)|Appel pour créer une fenêtre fractionnée dynamique et l’attacher à la `CSplitterWnd` objet.|
+|[CSplitterWnd::Create](#create)|Appel pour créer une fenêtre fractionnée dynamique et l’attacher à la `CSplitterWnd` objet.|
 |[CSplitterWnd::CreateScrollBarCtrl](#createscrollbarctrl)|Crée un contrôle de barre de défilement partagé.|
 |[CSplitterWnd::CreateStatic](#createstatic)|Appel pour créer une fenêtre fractionnée statique et l’attacher à la `CSplitterWnd` objet.|
 |[CSplitterWnd::CreateView](#createview)|Appel pour créer un volet dans une fenêtre fractionnée.|
@@ -189,7 +189,7 @@ Pour plus d’informations sur la création de fenêtres fractionnées dynamique
 
 `CSplitterWnd`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxext.h
 
@@ -231,7 +231,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Cette fonction membre est une commande de haut niveau qui est utilisée par le [CView](../../mfc/reference/cview-class.md) classe déléguer à la `CSplitterWnd` implémentation.
 
-##  <a name="create"></a>  CSplitterWnd::Create statiques
+##  <a name="create"></a>  CSplitterWnd::Create
 
 Pour créer une fenêtre fractionnée dynamique, appelez le `Create` fonction membre.
 
@@ -388,7 +388,7 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ligne*<br/>
+*row*<br/>
 Spécifie la ligne de la fenêtre fractionnée dans lequel placer la nouvelle vue.
 
 *col*<br/>
@@ -456,7 +456,7 @@ virtual void DeleteRow(int rowDelete);
 
 ### <a name="parameters"></a>Paramètres
 
-*ligneSupprimer*<br/>
+*rowDelete*<br/>
 Spécifie la ligne à supprimer.
 
 ### <a name="remarks"></a>Notes
@@ -475,7 +475,7 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ligne*<br/>
+*row*<br/>
 Spécifie la ligne de la fenêtre fractionnée à partir duquel supprimer la vue.
 
 *col*<br/>
@@ -649,7 +649,7 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ligne*<br/>
+*row*<br/>
 Spécifie une ligne.
 
 *col*<br/>
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ligne*<br/>
+*row*<br/>
 Spécifie une ligne.
 
 *cyCur*<br/>
@@ -727,7 +727,7 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ligne*<br/>
+*row*<br/>
 Spécifie la ligne de la fenêtre fractionnée.
 
 *col*<br/>
@@ -807,7 +807,7 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 Pointeur vers le contexte de périphérique dans lequel dessiner. Si *pDC* est NULL, puis [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) est appelée par le framework et aucun fractionnement fenêtre est dessinée.
 
-*%nLes*<br/>
+*nType*<br/>
 Une valeur de la `enum ESplitType`, ce qui peut prendre l’une des opérations suivantes :
 
     - `splitBox` La zone de glisser du séparateur.
@@ -818,7 +818,7 @@ Une valeur de la `enum ESplitType`, ce qui peut prendre l’une des opérations 
 
     - `splitBorder` Les bordures de fenêtre fractionné.
 
-*Rect*<br/>
+*rect*<br/>
 Une référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet spécifiant la taille et la forme des fenêtres de fractionnement.
 
 ### <a name="remarks"></a>Notes
@@ -837,7 +837,7 @@ virtual void OnInvertTracker(const CRect& rect);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Référence à un `CRect` objet qui spécifie le rectangle de suivi.
 
 ### <a name="remarks"></a>Notes
@@ -877,7 +877,7 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ligne*<br/>
+*row*<br/>
 Si *pWnd* est NULL, spécifie la ligne dans le volet qui est actif.
 
 *col*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ligne*<br/>
+*row*<br/>
 Spécifie une ligne de la fenêtre fractionnée.
 
 *cyIdeal*<br/>

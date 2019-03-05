@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: d152153ac4e379f4159c4ade5dfc044288f69720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541400"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273444"
 ---
 # <a name="cdatabase-class"></a>CDatabase, classe
 
@@ -111,11 +111,11 @@ class CDatabase : public CObject
 Une source de données est une instance spécifique de données hébergées par un système de gestion de base de données (SGBD). Et des exemples Microsoft SQL Server, Microsoft Access, Borland dBASE, xBASE. Vous pouvez avoir une ou plusieurs `CDatabase` objets actifs à la fois dans votre application.
 
 > [!NOTE]
->  Si vous travaillez avec les classes d’objets DAO (Data Access) plutôt que les classes de base de données connectivité ODBC (Open), utilisez la classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : programmation de base de données](../../data/data-access-programming-mfc-atl.md).
+>  Si vous travaillez avec les classes d’objets DAO (Data Access) plutôt que les classes de base de données connectivité ODBC (Open), utilisez la classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : Programmation de base de données](../../data/data-access-programming-mfc-atl.md).
 
 Pour utiliser `CDatabase`, construire un `CDatabase` objet et appelez ses `OpenEx` fonction membre. Cette opération ouvre une connexion. Lorsque vous construisez puis `CRecordset` objets pour l’exploitation de la source de données connectée, passez au constructeur de jeu d’enregistrements un pointeur vers votre `CDatabase` objet. Lorsque vous avez terminé à l’aide de la connexion, appelez le `Close` membre de fonction et de détruire le `CDatabase` objet. `Close` ferme les jeux d’enregistrements que vous n’avez pas fermé précédemment.
 
-Pour plus d’informations sur `CDatabase`, consultez les articles [Source de données (ODBC)](../../data/odbc/data-source-odbc.md) et [vue d’ensemble : programmation de base de données](../../data/data-access-programming-mfc-atl.md).
+Pour plus d’informations sur `CDatabase`, consultez les articles [Source de données (ODBC)](../../data/odbc/data-source-odbc.md) et [vue d’ensemble : Programmation de base de données](../../data/data-access-programming-mfc-atl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -123,7 +123,7 @@ Pour plus d’informations sur `CDatabase`, consultez les articles [Source de do
 
 `CDatabase`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdb.h
 
@@ -146,7 +146,7 @@ Une transaction se compose d’un ou plusieurs appels à la `AddNew`, `Edit`, `D
 > [!CAUTION]
 >  En fonction de votre pilote ODBC, ouverture d’un jeu d’enregistrements avant d’appeler `BeginTrans` peut provoquer des problèmes lors de l’appel `Rollback`. Vous devez vérifier le pilote spécifique que vous utilisez. Par exemple, lorsque vous utilisez le pilote Microsoft Access inclus dans Microsoft ODBC Desktop Driver Pack 3.0, vous devez tenir compte de configuration requise du moteur de base de données Jet que vous ne devez pas commencer une transaction sur une base de données qui a un curseur ouvert. Dans les classes de base de données MFC, un curseur ouvert signifie ouvert `CRecordset` objet. Pour plus d’informations, consultez [Technical Note 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md).
 
-`BeginTrans` peut également verrouiller des enregistrements de données sur le serveur, en fonction de l’accès concurrentiel demandé et les fonctionnalités de la source de données. Pour plus d’informations sur les données de verrouillage, consultez l’article [Recordset : verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
+`BeginTrans` peut également verrouiller des enregistrements de données sur le serveur, en fonction de l’accès concurrentiel demandé et les fonctionnalités de la source de données. Pour plus d’informations sur les données de verrouillage, consultez l’article [jeu d’enregistrements : Verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
 
 Transactions définies par l’utilisateur sont expliquées dans l’article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
@@ -161,7 +161,7 @@ Pour plus d’informations sur les transactions, consultez l’article [Transact
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’article [Transaction : exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Consultez l’article [Transaction : Exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="bindparameters"></a>  CDatabase::BindParameters
 
@@ -173,7 +173,7 @@ virtual void BindParameters(HSTMT hstmt);
 
 ### <a name="parameters"></a>Paramètres
 
-*HStmt*<br/>
+*hstmt*<br/>
 Le descripteur d’instruction ODBC pour lequel vous souhaitez lier les paramètres.
 
 ### <a name="remarks"></a>Notes
@@ -288,7 +288,7 @@ Pour plus d’informations sur les transactions, consultez l’article [Transact
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’article [Transaction : exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Consultez l’article [Transaction : Exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="executesql"></a>  CDatabase::ExecuteSQL
 
@@ -337,11 +337,11 @@ Le tableau suivant liste les valeurs de masque de bits qui peuvent être combin�
 |SQL_BP_DELETE|Le signet d’une ligne est valide après un `Delete` opération sur cette ligne.|
 |SQL_BP_DROP|Les signets sont valides après une `Close` opération.|
 |SQL_BP_SCROLL|Les signets sont valides après n’importe quel `Move` opération. Permet simplement de déterminer si les signets sont pris en charge sur le recordset, comme cela est retourné par `CRecordset::CanBookmark`.|
-|SQL_BP_TRANSACTION|Les signets sont valides après qu’une transaction est validée ou restaurée.|
+|SQL_BP_TRANSACTION|Les signets sont valides après qu'une transaction est validée ou restaurée.|
 |SQL_BP_UPDATE|Le signet d’une ligne est valide après un `Update` opération sur cette ligne.|
 |SQL_BP_OTHER_HSTMT|Les signets associés à un objet recordset sont valides sur un deuxième recordset.|
 
-Pour plus d’informations sur cette valeur de retour, consultez la fonction API ODBC `SQLGetInfo` dans le SDK Windows. Pour plus d’informations sur les signets, consultez l’article [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Pour plus d’informations sur cette valeur de retour, consultez la fonction API ODBC `SQLGetInfo` dans le SDK Windows. Pour plus d’informations sur les signets, consultez l’article [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="getconnect"></a>  CDatabase::GetConnect
 
@@ -461,7 +461,7 @@ virtual void OnSetOptions(HSTMT hstmt);
 
 ### <a name="parameters"></a>Paramètres
 
-*HStmt*<br/>
+*hstmt*<br/>
 Le descripteur d’instruction ODBC pour laquelle des options sont définies.
 
 ### <a name="remarks"></a>Notes
@@ -600,7 +600,7 @@ Après une restauration, l’enregistrement qui était actuel avant la restaurat
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’article [Transaction : exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Consultez l’article [Transaction : Exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout
 

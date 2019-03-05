@@ -5,12 +5,12 @@ helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-ms.openlocfilehash: ce56dd5f04312ae9e7b7f747ce81cb704f3d085d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9a195a81423417809b65b5edce32027071ad2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629201"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279118"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Menu Fichier dans une application de base de données MFC
 
@@ -34,5 +34,4 @@ Pour interpréter une commande de menu fichier d’une façon particulière, vou
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sérialisation : sérialisation et Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md)
-
+[Sérialisation : Visual Studio de sérialisation. Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md)

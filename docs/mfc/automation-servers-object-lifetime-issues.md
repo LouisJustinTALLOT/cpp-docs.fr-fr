@@ -1,5 +1,5 @@
 ---
-title: 'Serveurs Automation : problèmes liés à la durée de vie des objets'
+title: 'Serveurs Automation : Problèmes de durée de vie des objets'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], lifetime
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 904c3023d7f27bd144c306d9d92810a91a48ecfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9dbc6e4f321ba10fdffa013c158d53b84331e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637643"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293574"
 ---
-# <a name="automation-servers-object-lifetime-issues"></a>Serveurs Automation : problèmes liés à la durée de vie des objets
+# <a name="automation-servers-object-lifetime-issues"></a>Serveurs Automation : Problèmes de durée de vie des objets
 
 Lorsqu'un client Automation crée ou active un élément OLE, le serveur passe au client un pointeur vers cet objet. Le client établit une référence à l’objet via un appel à la fonction OLE [IUnknown::AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). Cette référence est en vigueur jusqu'à ce que le client appelle [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). (Les applications clientes écrites avec les classes OLE de la bibliothèque Microsoft Foundation Class n'ont pas besoin d'effectuer ces appels ; le framework s'en charge.) Le système OLE et le serveur lui-même peuvent générer des références à l'objet. Un serveur ne doit pas détruire un objet tant que les références externes à l’objet restent actives.
 
@@ -22,7 +22,7 @@ Le framework tient un décompte interne du nombre de références à un objet se
 
 Lorsque le décompte de références est 0, l’infrastructure appelle la fonction virtuelle [CCmdTarget::OnFinalRelease](../mfc/reference/ccmdtarget-class.md#onfinalrelease). L’implémentation par défaut de cette fonction appelle le **supprimer** opérateur pour supprimer cet objet.
 
-La bibliothèque MFC fournit des fonctionnalités supplémentaires pour contrôler le comportement de l'application lorsque les clients externes contiennent des références aux objets de l'application. En plus de tenir le décompte des références à chaque objet, les serveurs contiennent un compte global des objets actifs. Les fonctions globales [AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) et [AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) mettre à jour le compte de l’application des objets actifs. Si ce nombre est différent de zéro, l'application ne se termine pas lorsque l'utilisateur sélectionne Fermer dans le menu système ou Quitter dans le menu Fichier. En revanche, la fenêtre principale de l’application est masquée (mais pas détruite) jusqu’à ce que toutes les demandes clientes en attente soient traitées. En général, `AfxOleLockApp` et `AfxOleUnlockApp` sont appelés respectivement dans les constructeurs et les destructeurs des classes qui prennent en charge Automation.
+La bibliothèque MFC fournit des fonctionnalités supplémentaires pour contrôler le comportement de l'application lorsque les clients externes contiennent des références aux objets de l'application. En plus de tenir le décompte des références à chaque objet, les serveurs contiennent un compte global des objets actifs. Les fonctions globales [AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) et [AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) mettre à jour le compte de l’application des objets actifs. Si ce nombre est différent de zéro, l'application ne se termine pas lorsque l'utilisateur sélectionne Fermer dans le menu système ou Quitter dans le menu Fichier. En revanche, la fenêtre principale de l'application est masquée (mais pas détruite) jusqu'à ce que toutes les demandes clientes en attente soient traitées. En général, `AfxOleLockApp` et `AfxOleUnlockApp` sont appelés respectivement dans les constructeurs et les destructeurs des classes qui prennent en charge Automation.
 
 Parfois, des circonstances obligent le serveur à s'arrêter lorsqu'un client a toujours une référence à un objet. Par exemple, une ressource dont le serveur dépend, peut ne pas être disponible, ce qui cause une erreur du serveur. L'utilisateur peut également fermer un document serveur qui contient les objets auxquels d'autres applications ont des références.
 
@@ -32,4 +32,3 @@ Dans le SDK Windows, consultez `IUnknown::AddRef` et `IUnknown::Release`.
 
 [Serveurs Automation](../mfc/automation-servers.md)<br/>
 [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
-

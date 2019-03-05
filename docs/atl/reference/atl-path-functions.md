@@ -41,12 +41,12 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: 86ddb3c6916675a92070684a04c7a6a6ecd8a134
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 683fd9c6464187e416ea032840507b2062de1fa3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586067"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295810"
 ---
 # <a name="atl-path-functions"></a>Fonctions de chemin d’accès de l’ATL
 
@@ -107,7 +107,7 @@ ATL fournit la classe ATLPath permettant de manipuler des chemins d’accès sou
 |[ATLPath::StripToRoot](#striptoroot)|Cette fonction est un wrapper surchargé de [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).|
 |[ATLPath::UnquoteSpaces](#unquotespaces)|Cette fonction est un wrapper surchargé de [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlpath.h
 
@@ -690,4 +690,3 @@ inline void UnquoteSpaces(wchar_t* pszPath);
 ### <a name="remarks"></a>Notes
 
 Consultez [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa) pour plus d’informations.
-

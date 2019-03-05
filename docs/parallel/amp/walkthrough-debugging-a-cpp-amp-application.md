@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas-à-pas : débogage d’une application C++ AMP'
+title: 'Procédure pas à pas : Débogage d’une Application C++ AMP'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286911"
 ---
-# <a name="walkthrough-debugging-a-c-amp-application"></a>Procédure pas-à-pas : débogage d’une application C++ AMP
+# <a name="walkthrough-debugging-a-c-amp-application"></a>Procédure pas à pas : Débogage d’une Application C++ AMP
 
 Cette rubrique montre comment déboguer une application qui utilise C++ Accelerated les Massive Parallelism (C++ AMP) pour tirer parti de l’unité de traitement graphique (GPU). Il utilise un programme de réduction parallèle qui additionne un grand tableau d’entiers. Cette procédure pas à pas décrit les tâches suivantes :
 
@@ -36,7 +36,7 @@ Avant de commencer cette procédure pas à pas :
 
 - Lecture [présentation de C++ AMP](../../parallel/amp/cpp-amp-overview.md).
 
-- Assurez-vous que cette ligne chiffres sont affichés dans l’éditeur de texte. Pour plus d’informations, consultez [Comment : afficher les numéros de ligne dans l’éditeur](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
+- Assurez-vous que cette ligne chiffres sont affichés dans l’éditeur de texte. Pour plus d'informations, voir [Procédure : Afficher les numéros de ligne dans l’éditeur](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
 - Assurez-vous que vous exécutez Windows 8 ou Windows Server 2012 pour prendre en charge le débogage sur l’émulateur de logiciel.
 
@@ -220,7 +220,7 @@ Cette section montre comment déboguer le code GPU, qui est le code contenu dans
 
 2. Dans le **Pages de propriétés** boîte de dialogue **propriétés de Configuration**, choisissez **débogage**.
 
-3. Dans le **débogueur à lancer** liste, sélectionnez **débogueur Windows Local**.
+3. Dans la liste **Débogueur à lancer**, sélectionnez **Débogueur Windows local**.
 
 4. Dans le **Type de débogueur** liste, vérifiez que **automatique** est sélectionné.
 
@@ -335,7 +335,7 @@ Vous pouvez marquer des threads GPU spécifiques en les marquant dans le **Threa
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Gel et libération des Threads GPU
 
-Vous pouvez figer (suspendre) et libérer (reprendre) GPU des threads à partir de le le **Threads GPU** fenêtre ou le **espion parallèle** fenêtre. Vous pouvez figer et libérer les threads d’UC la même façon ; Pour plus d’informations, consultez [Comment : utiliser la fenêtre Threads](/visualstudio/debugger/how-to-use-the-threads-window).
+Vous pouvez figer (suspendre) et libérer (reprendre) GPU des threads à partir de le le **Threads GPU** fenêtre ou le **espion parallèle** fenêtre. Vous pouvez figer et libérer les threads d’UC la même façon ; Pour plus d’informations, consultez [Comment : Utiliser la fenêtre Threads](/visualstudio/debugger/how-to-use-the-threads-window).
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>Pour figer et libérer les threads GPU
 

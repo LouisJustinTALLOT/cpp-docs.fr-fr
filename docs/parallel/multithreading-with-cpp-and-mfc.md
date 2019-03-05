@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [MFC]
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-ms.openlocfilehash: c707c1c117bbc0005b2b3da4ed39f083ae407b27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258344"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithreading à l'aide de C++ et de MFC
 
@@ -40,17 +40,17 @@ Pour plus d’informations sur la façon dont le système d’exploitation gère
 
 Pour plus d’informations sur la prise en charge du multithreading de MFC, consultez les rubriques suivantes :
 
-- [Multithreading : création de threads d’interface utilisateur](multithreading-creating-user-interface-threads.md)
+- [Multithreading : Création de Threads d’Interface utilisateur](multithreading-creating-user-interface-threads.md)
 
-- [Multithreading : création de threads de travail](multithreading-creating-worker-threads.md)
+- [Multithreading : Création de Threads de travail](multithreading-creating-worker-threads.md)
 
-- [Multithreading : comment utiliser les classes de synchronisation](multithreading-how-to-use-the-synchronization-classes.md)
+- [Multithreading : Comment utiliser les Classes de synchronisation](multithreading-how-to-use-the-synchronization-classes.md)
 
-- [Multithreading : arrêt d’exécution des threads](multithreading-terminating-threads.md)
+- [Multithreading : Arrêt des Threads](multithreading-terminating-threads.md)
 
-- [Multithreading : conseils de programmation](multithreading-programming-tips.md)
+- [Multithreading : Conseils de programmation](multithreading-programming-tips.md)
 
-- [Multithreading : quand utiliser les classes de synchronisation](multithreading-when-to-use-the-synchronization-classes.md)
+- [Multithreading : Quand utiliser les Classes de synchronisation](multithreading-when-to-use-the-synchronization-classes.md)
 
 ## <a name="see-also"></a>Voir aussi
 

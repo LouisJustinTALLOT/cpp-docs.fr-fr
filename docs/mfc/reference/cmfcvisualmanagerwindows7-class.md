@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: b71cce32d364200e6f6a8684ffd696c4ea33f1d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 296ccc0accdf2937406d9965118c1807aeb2604c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591670"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269394"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Cmfcvisualmanagerwindows7, classe
 
@@ -49,14 +49,14 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Obtient une couleur d’arrière-plan de la ruban modifier.|
 |`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|Substitue [CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|
 |`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|Substitue [CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|Substitue [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|
-|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|Substitue [CMFCVisualManagerWindows::IsHighlightWholeMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|Overrides [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|
+|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|Overrides [CMFCVisualManagerWindows::IsHighlightWholeMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|
 |`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|Substitue [CMFCVisualManager::IsOwnerDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|
 |`CMFCVisualManagerWindows7::IsRibbonPresent`|Détermine si un `CMFCRibbonBar` est présent et visible.|
 |`CMFCVisualManagerWindows7::OnDrawButtonBorder`|Substitue [CMFCVisualManagerWindows::OnDrawButtonBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|
 |`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|Substitue [CMFCVisualManagerWindows::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|
 |`CMFCVisualManagerWindows7::OnDrawComboDropButton`|Substitue [CMFCVisualManagerWindows::OnDrawComboDropButton](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|
-|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|Substitue [CMFCVisualManager::OnDrawDefaultRibbonImage](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|
+|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|Overrides [CMFCVisualManager::OnDrawDefaultRibbonImage](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|
 |`CMFCVisualManagerWindows7::OnDrawMenuBorder`|Substitue [CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|
 |`CMFCVisualManagerWindows7::OnDrawMenuCheck`|Substitue [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|
 |`CMFCVisualManagerWindows7::OnDrawMenuLabel`|Substitue [CMFCVisualManager::OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|
@@ -85,11 +85,11 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnFillButtonInterior`|Substitue [CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|
 |[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|L’infrastructure appelle cette méthode quand il remplit la zone autour des images d’élément de menu.|
 |`CMFCVisualManagerWindows7::OnFillRibbonButton`|Substitue [CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|
-|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|Substitue [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|
-|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|Substitue [CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|
+|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|Overrides [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|
+|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|Overrides [CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|
 |`CMFCVisualManagerWindows7::OnNcActivate`|Substitue [CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|
 |`CMFCVisualManagerWindows7::OnNcPaint`|Substitue [CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|
-|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|Substitue [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|
+|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|Overrides [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|
 |`CMFCVisualManagerWindows7::SetResourceHandle`|Définit le handle de ressource qui décrit les attributs du Gestionnaire visuel.|
 |`CMFCVisualManagerWindows7::SetStyle`|Définit le jeu de couleurs de la `CMFCVisualManagerWindows7` l’interface graphique utilisateur.|
 
@@ -113,7 +113,7 @@ Le CMFCVisualManagerWindows7 hérite plusieurs méthodes à la fois le [CMFCVisu
 
 `CMFCVisualManagerWindows7`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxvisualmanagerwindows7.h
 
@@ -185,7 +185,7 @@ virtual void OnFillMenuImageRect(
 *pButton*<br/>
 [in] Un pointeur vers un `CMFCToolBarButton`. L’infrastructure complète l’arrière-plan de ce bouton.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle qui spécifie les limites de la zone d’image de bouton menu.
 
 *state*<br/>

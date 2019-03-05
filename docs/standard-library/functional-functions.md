@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 352efc31010a9fe665348ca35adfd68835407e67
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 93b61f1d0342d7d4b7ddfc7fce4d64ea5e10a2eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305157"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt;, fonctions
 
@@ -643,22 +643,25 @@ int main()
 {
     Demo d{ 42 };
     Demo * pd{ &d };
+    auto pmf = &Demo::difference;
+    auto pmd = &Demo::n_;
 
-    // Invoke a function object (call operator).
+    // Invoke a function object, like calling d( 3, -7 )
     std::invoke( d, 3, -7 );
 
-    // Invoke a member function or pointer to member function:
+    // Invoke a member function, like calling
+    // d.difference( 29 ) or (d.*pmf)( 29 )
     std::invoke( &Demo::difference, d, 29 );
-    std::invoke( &Demo::difference, pd, 13 );
+    std::invoke( pmf, pd, 13 );
 
-    // Invoke a data member on an object or pointer to object:
+    // Invoke a data member, like access to d.n_ or d.*pmd
     std::cout << "d.n_: " << std::invoke( &Demo::n_, d ) << "\n";
-    std::cout << "pd->n_: " << std::invoke( &Demo::n_, pd ) << "\n";
+    std::cout << "pd->n_: " << std::invoke( pmd, pd ) << "\n";
 
-    // Invoke a stand-alone (free) function:
+    // Invoke a stand-alone (free) function
     std::invoke( divisible_by_3, 42 );
 
-    // Invoke a lambda:
+    // Invoke a lambda
     auto divisible_by_7 = []( int const i ) {
         std::cout << i << ( i % 7 == 0 ? " is" : " isn't" )
             << " divisible by 7.\n";
@@ -1082,7 +1085,7 @@ Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 
 ## <a name="not_fn"></a> not_fn
 
-Le `not_fn` modèle de fonction prend un objet pouvant être appelé et retourne un objet pouvant être appelé. Lorsque l’objet pouvant être retourné est appelée ultérieurement avec des arguments, il les transmet à l’objet d’origine pouvant être appelé et logiquement inverse le résultat. Il conserve le comportement const de catégorie en qualification et la valeur de l’objet encapsulé pouvant être appelé. `not_fn` est une nouveauté dans C ++ 17 et remplace déconseillées `std::not1`, `std::not2`, `std::unary_negate` et `std::binary_negate`.
+Le `not_fn` modèle de fonction prend un objet pouvant être appelé et retourne un objet pouvant être appelé. Lorsque l’objet pouvant être retourné est appelée ultérieurement avec des arguments, il les transmet à l’objet d’origine pouvant être appelé et logiquement inverse le résultat. Il conserve le comportement const de catégorie en qualification et la valeur de l’objet encapsulé pouvant être appelé. `not_fn` est une nouveauté dans C ++ 17 et remplace déconseillées `std::not1`, `std::not2`, `std::unary_negate`, et `std::binary_negate`.
 
 ```cpp
 template <class Callable>

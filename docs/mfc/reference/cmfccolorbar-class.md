@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694840"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283252"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar, classe
 
@@ -227,7 +227,7 @@ L’exemple suivant montre comment configurer une barre de couleurs à l’aide 
 
 [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcolorbar.h
 
@@ -330,10 +330,10 @@ CMFCColorBar(
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleurs*<br/>
+*colors*<br/>
 [in] Un tableau de couleurs affichée par l’infrastructure sur le contrôle de barre de couleur.
 
-*Couleur*<br/>
+*color*<br/>
 [in] La couleur sélectionnée initialement.
 
 *lpszAutoColor*<br/>
@@ -361,7 +361,7 @@ L’étiquette du bouton autre standard est **couleurs supplémentaires...** .
 *nColDockVert*<br/>
 [in] Le nombre de colonnes possédant la barre de couleur lorsqu’il est ancré verticalement.
 
-*automatiqueCouleur*<br/>
+*colorAutomatic*<br/>
 [in] La couleur par défaut que le framework s’applique lorsque vous cliquez sur le bouton automatique.
 
 *nCommandID*<br/>
@@ -459,7 +459,7 @@ virtual BOOL CreateControl(
 *pParentWnd*<br/>
 [in] Pointeur vers la fenêtre parente. Ne peut pas être Null.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectangle englobant qui spécifie où dessiner le contrôle de barre de couleurs.
 
 *nID*<br/>
@@ -494,7 +494,7 @@ static BOOL CreatePalette(
 |Paramètre|Description|
 |---------------|-----------------|
 |*arColors*|[in] Un tableau de couleurs.|
-|*Palette*|[in] Une palette de couleurs.|
+|*palette*|[in] Une palette de couleurs.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -518,10 +518,10 @@ void EnableAutomaticButton(
 
 L’étiquette pour le bouton automatique standard est **automatique**.
 
-*automatiqueCouleur*<br/>
+*colorAutomatic*<br/>
 [in] La couleur par défaut que le framework s’applique lorsque vous cliquez sur le bouton automatique.
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le bouton automatique ; FALSE pour désactiver le bouton automatique. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -549,7 +549,7 @@ L’étiquette standard pour ce bouton est **couleurs supplémentaires...** .
 *bAltColorDlg*<br/>
 [in] True pour afficher le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue ; FALSE pour afficher la norme [CColorDialog](../../mfc/reference/ccolordialog-class.md) boîte de dialogue. La valeur par défaut est TRUE.
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le bouton ; FALSE pour désactiver le bouton. La valeur par défaut est TRUE.
 
 ##  <a name="getcolor"></a>  CMFCColorBar::GetColor
@@ -701,7 +701,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Le code de touche virtuelle pour un utilisateur a appuyé sur la clé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -808,7 +808,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 [in] Une valeur de couleur RVB.
 
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName
@@ -823,7 +823,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
+*color*<br/>
 [in] La valeur RVB d’une couleur.
 
 *strName*<br/>
