@@ -11,12 +11,12 @@ helpviewer_keywords:
 - assemblies [C++], linking resource files
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
-ms.openlocfilehash: 566a667ababaa67c7aff71861b111416abbbd878
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c18a014ca645cceb3196fb7efefd227e96f8e1fa
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486604"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416214"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (Incorporer une ressource managée)
 
@@ -40,7 +40,7 @@ Utilisez l’option /ASSEMBLYRESOURCE pour incorporer une ressource dans un asse
 
 Les ressources sont publiques dans l’assembly lors de la création avec l’éditeur de liens. L’éditeur de liens ne vous permet pas de renommer la ressource dans l’assembly.
 
-Si *filename* est un fichier de ressources (.resources) de .NET Framework créé, par exemple, par le [Resource File Generator (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou dans l’environnement de développement, il est accessible à l’aide des membres de la **System.Resources** espace de noms (consultez [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx) pour plus d’informations). Pour toutes les autres ressources, utilisez le **GetManifestResource** \* méthodes dans **System.Reflection.Assembly** classe pour accéder à la ressource au moment de l’exécution.
+Si *filename* est un fichier de ressources (.resources) de .NET Framework créé, par exemple, par le [Resource File Generator (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou dans l’environnement de développement, il est accessible à l’aide des membres de la **System.Resources** espace de noms (consultez [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager) pour plus d’informations). Pour toutes les autres ressources, utilisez le **GetManifestResource** \* méthodes dans **System.Reflection.Assembly** classe pour accéder à la ressource au moment de l’exécution.
 
 Autres options de l’éditeur de liens qui affectent la génération de l’assembly sont :
 

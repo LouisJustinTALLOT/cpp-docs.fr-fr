@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: d05af932d5f531a4dab02e7e0ca171f4484891a3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ee206dd6eb44acc23f30aebadb558d4f72bcd8bf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556320"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421127"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl, classe
 
-Fournit une implémentation pour le [ICommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms714914(v=vs.85)) interface.
+Fournit une implémentation pour le [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,7 +46,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 *T*<br/>
 Dérivé de la classe de commande `ICommandTextImpl`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** altdb.h
 
@@ -82,7 +82,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85)) dans le *de référence du programmeur OLE DB*. Le *pguidDialect* paramètre est ignoré par défaut.
+Consultez [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) dans le *de référence du programmeur OLE DB*. Le *pguidDialect* paramètre est ignoré par défaut.
 
 ## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 
@@ -97,7 +97,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [ICommandText::SetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 

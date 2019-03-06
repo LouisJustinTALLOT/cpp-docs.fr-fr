@@ -16,12 +16,12 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-ms.openlocfilehash: 579f83298fb272182cf6f1904af38c323bae2751
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf87023e3417a922232af60d89a21c17ad6864cc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625288"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424728"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Générer les informations de débogage)
 

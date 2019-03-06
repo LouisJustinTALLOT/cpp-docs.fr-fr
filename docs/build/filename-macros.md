@@ -6,12 +6,12 @@ helpviewer_keywords:
 - filename macros in NMAKE
 - NMAKE program, filename macros
 ms.assetid: 20afd6b3-5b6c-4e33-9d01-309ce98ef9db
-ms.openlocfilehash: 2e7552d77d753d4e93734f2fc9a35b3b68d8d55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38fe4408ebfbc2503fcb6be5b53c18d430067aa6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457692"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419680"
 ---
 # <a name="filename-macros"></a>Macros de noms de fichiers
 

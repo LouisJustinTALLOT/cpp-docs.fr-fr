@@ -1,5 +1,5 @@
 ---
-title: /X (Ignorer les chemins d’accès Include standard)
+title: /X (Ignorer les chemins d'accès Include standard)
 ms.date: 11/04/2016
 f1_keywords:
 - /x
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 23942803ae0a25aaddd7f5844b303528c2c7ccb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 615a53a7ad29527187072c3131f551a76bd18969
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663760"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421365"
 ---
-# <a name="x-ignore-standard-include-paths"></a>/X (Ignorer les chemins d’accès Include standard)
+# <a name="x-ignore-standard-include-paths"></a>/X (Ignorer les chemins d'accès Include standard)
 
 Empêche le compilateur de rechercher des fichiers include dans les répertoires spécifiés dans les variables d’environnement PATH et INCLUDE.
 

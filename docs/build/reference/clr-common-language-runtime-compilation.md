@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 9e9867e5cea8d45aefa0901798b86557b05693f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528035"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418852"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilation pour le Common Language Runtime)
 
@@ -26,7 +26,7 @@ Permet aux applications et aux composants d’utiliser les fonctionnalités du C
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ CLR**[**:**_options_]
+> **/clr**[**:**_options_]
 
 ## <a name="arguments"></a>Arguments
 
@@ -37,7 +37,7 @@ Un ou plusieurs des commutateurs suivants, séparés par des virgules.
 
    Aucune option, **/CLR** crée les métadonnées pour l’application. Ces métadonnées peuvent être utilisées par d'autres applications CLR et permettent à votre application d'utiliser les types et données des métadonnées appartenant à d'autres composants CLR. Pour plus d’informations, consultez [assemblys mixtes (natif et managé)](../../dotnet/mixed-native-and-managed-assemblies.md).
 
-- **pur**
+- **pure**
 
    **/ CLR : pure est déconseillé**. L’option est supprimée dans Visual Studio 2017. Nous vous recommandons de porter vers C# du code devant être écrit en MSIL pur.
 

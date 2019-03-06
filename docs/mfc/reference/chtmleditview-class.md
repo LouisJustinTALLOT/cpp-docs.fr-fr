@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 7d1b28e2b3e279bc3b2e3ccb116ab24017c07cd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c03d580b1b01fd0d0e858278d8b752c3e4b115b9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301257"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413379"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView, classe
 
@@ -106,7 +106,7 @@ Pointe vers une chaîne de caractères se terminant par null qui représente le 
 Spécifie les attributs de style de fenêtre. Par défaut, les styles WS_VISIBLE et WS_CHILD Windows sont définies.
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie la taille et la position de la fenêtre. Le *rectDefault* valeur permet à Windows spécifier la taille et la position de la nouvelle fenêtre.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui spécifie la taille et la position de la fenêtre. Le *rectDefault* valeur permet à Windows spécifier la taille et la position de la nouvelle fenêtre.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre parente du contrôle.
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ### <a name="parameters"></a>Paramètres
 
 *ppDocument*<br/>
-Le [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface.
+Le [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interface.
 
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
 

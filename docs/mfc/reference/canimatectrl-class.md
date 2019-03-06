@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 8c8a6d3e83534cd5670e43a9009b8919a2e57f92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 867bec619dc633b7b1fbf9785e14132ba8c493ba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281371"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417188"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl (classe)
 
@@ -206,7 +206,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 Spécifie le style du contrôle de l’animation. Appliquer n’importe quelle combinaison de la fenêtre et de styles de contrôle d’animation décrit dans [Styles de contrôle d’Animation](/windows/desktop/Controls/animation-control-styles) dans le SDK Windows.
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 3d808f86a9ea3b34da0dccae18ecc000ca364f0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518389"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417006"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Spécifier le sous-système)
 

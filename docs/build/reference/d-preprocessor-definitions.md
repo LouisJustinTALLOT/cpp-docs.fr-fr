@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 21836d2842427581cc5019a42c563a78356d1ec2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620504"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424676"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Définitions de préprocesseur)
 
@@ -46,7 +46,7 @@ Cette commande définit le symbole DEBUG dans TEST.c:
 
 Cette commande supprime toutes les occurrences du mot clé `__far` dans TEST.c :
 
-**CL /D__far = TEST. C**
+**CL /D__far=  TEST.C**
 
 Le **CL** variable d’environnement ne peut pas être définie sur une chaîne qui contient le signe égal. Pour utiliser **/D** conjointement avec la **CL** environnement variable, vous devez spécifier le signe dièse au lieu du signe égal :
 
@@ -54,7 +54,7 @@ Le **CL** variable d’environnement ne peut pas être définie sur une chaîne 
 SET CL=/DTEST#0
 ```
 
-Lorsque vous définissez un symbole de prétraitement à l'invite de commandes, tenez compte des règles d'analyse du compilateur et des règles d'analyse du shell. Par exemple, pour définir le symbole de prétraitement pourcentage (%) dans votre programme, spécifiez deux caractères pourcentage (%%) à l'invite de commandes : si vous n'en spécifiez qu'un seul, une erreur d'analyse est émise.
+Lorsque vous définissez un symbole de prétraitement à l'invite de commandes, tenez compte des règles d'analyse du compilateur et des règles d'analyse du shell. Par exemple, pour définir un symbole de prétraitement sur le signe de pourcentage (%) dans votre programme, spécifiez les caractères de signe de deux pour cent (%) à l’invite de commandes : Si vous ne spécifiez qu’un seul, une erreur d’analyse est émise.
 
 ```
 CL /DTEST=%% TEST.C

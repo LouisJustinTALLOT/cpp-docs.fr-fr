@@ -29,12 +29,12 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464907"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415407"
 ---
 # <a name="bscmake-options"></a>Options BSCMAKE
 
@@ -45,7 +45,7 @@ Uniquement **/NOLOGO** et **/o** sont disponibles dans l’environnement de dév
 **/EI (** *filename*... **)**<br/>
 Exclut le contenu des fichiers include spécifié à partir du fichier d’informations de navigation. Pour spécifier plusieurs fichiers, séparez les noms par un espace et placez la liste entre parenthèses. Parenthèses ne sont pas nécessaires si vous spécifiez une seule *filename*. Utilisez **/Ei** avec la **/es** possibilité d’exclure des fichiers non exclus par **/es**.
 
-**/EL**<br/>
+**/El**<br/>
 Exclut les symboles locaux. La valeur par défaut consiste à inclure les symboles locaux. Pour plus d’informations sur les symboles locaux, consultez [création d’un fichier .sbr](../../build/reference/creating-an-dot-sbr-file.md).
 
 **/Em**<br/>
@@ -54,10 +54,10 @@ Exclut les symboles dans le corps de macros. Utilisez **/Em** à inclure uniquem
 **/Er (** *symbole*... **)**<br/>
 Exclut les symboles spécifiés à partir du fichier d’informations de navigation. Pour spécifier plusieurs noms de symboles, séparez-les par un espace et placez la liste entre parenthèses. Parenthèses ne sont pas nécessaires si vous spécifiez une seule *symbole*.
 
-**/ Es**<br/>
+**/Es**<br/>
 Exclut le fichier d’informations de chaque fichier include spécifié avec un chemin d’accès absolu ou trouvé dans un chemin d’accès absolu spécifié dans la variable d’environnement INCLUDE. (En règle générale, il s’agit du système de fichiers include, qui contiennent un grand nombre d’informations que vous devrez peut-être pas dans votre fichier d’informations de consultation.) Cette option n’exclut pas les fichiers spécifiés sans un chemin d’accès ou avec des chemins d’accès relatifs ou des fichiers qui que se trouvent dans un chemin d’accès relatif dans INCLUDE. Vous pouvez utiliser la **/Ei** option avec **/es** pour exclure des fichiers qui **/es** n’exclut pas. Si vous souhaitez exclure certains fichiers qui **/es** exclut, utilisez **/Ei** au lieu de **/es** et répertorier les fichiers que vous souhaitez exclure.
 
-**/ errorreport :**[**aucun** &#124; **invite** &#124; **file d’attente** &#124; **envoyer**]<br/>
+**/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 Vous permet d’envoyer des informations à Microsoft concernant des erreurs internes dans bscmake.exe.
 
 Pour plus d’informations sur **/errorreport**, consultez [/errorReport (signaler les erreurs du compilateur interne)](../../build/reference/errorreport-report-internal-compiler-errors.md).
@@ -65,7 +65,7 @@ Pour plus d’informations sur **/errorreport**, consultez [/errorReport (signal
 **/HELP**<br/>
 Affiche un résumé de la syntaxe de ligne de commande BSCMAKE.
 
-**/IU**<br/>
+**/Iu**<br/>
 Inclut les symboles non référencés. Par défaut, BSCMAKE n’enregistre pas tous les symboles qui sont définies, mais non référencés. Si un fichier .sbr a été compressé, cette option n’a aucun effet sur ce fichier, car le compilateur a déjà supprimé les symboles non référencés.
 
 **/n**<br/>
@@ -74,7 +74,7 @@ Force une génération non incrémentielle. Utilisez **/n** pour forcer une gén
 **/NOLOGO**<br/>
 Supprime le message de copyright de BSCMAKE.
 
-**/ o** *nom de fichier*<br/>
+**/o** *filename*<br/>
 Spécifie un nom pour le fichier d’informations de consultation. Par défaut, BSCMAKE donne le fichier d’informations de consultation le nom de base du premier fichier .sbr et une extension .bsc.
 
 **/S (** *filename*... **)**<br/>

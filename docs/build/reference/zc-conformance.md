@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: b1f612040eea0078b0f27cf72327db94fe9e2939
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50f3e7a79b80514b6c28bd9aee86c720d6e20cf6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665430"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413912"
 ---
 # <a name="zc-conformance"></a>/Zc (Conformité)
 
@@ -22,7 +22,7 @@ Vous pouvez utiliser la **/Zc** options du compilateur pour spécifier le compor
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ Zc :**_option_{,_option_}
+> **/Zc:**_option_{,_option_}
 
 ## <a name="remarks"></a>Notes
 
@@ -44,10 +44,10 @@ Il s’agit de la `/Zc` options du compilateur :
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Appliquer les règles de conversion de type explicite Standard C++ (désactivé par défaut).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Activer les fonctions de global désallocation dimensionnée C ++ 14 (sur par défaut).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Désactiver le littéral de chaîne en `char*` ou `wchar_t*` conversion (désactivé par défaut).|
-|[ternaire\[-\]](zc-ternary.md)|Appliquer les règles de l’opérateur conditionnel sur les types d’opérande (désactivé par défaut).|
+|[ternary\[-\]](zc-ternary.md)|Appliquer les règles de l’opérateur conditionnel sur les types d’opérande (désactivé par défaut).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Activer l’initialisation statique locale thread-safe (sur par défaut).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Supposons que `operator new` lève en cas d’échec (désactivé par défaut).|
-|[Trigraphes\[-\]](zc-trigraphs-trigraphs-substitution.md)|Activer les trigraphes (obsolètes, désactivé par défaut).|
+|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Activer les trigraphes (obsolètes, désactivé par défaut).|
 |[twoPhase-](zc-twophase.md)|Utilisez l’analyse du comportement (conforme par défaut) de modèle non conforme.|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` est un type natif, et non un typedef (sur par défaut).|
 

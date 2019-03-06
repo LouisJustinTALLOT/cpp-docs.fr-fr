@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae9d18bb0fe2172886ef24250d53cf76851bbba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625089"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420425"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Incorporer des informations sur le contrôle de compte d'utilisateur dans le manifeste)
 
@@ -33,10 +33,10 @@ Spécifie si les informations de contrôle de compte d’utilisateur sont incorp
 
 ### <a name="parameters"></a>Paramètres
 
-*Fragment*<br/>
+*fragment*<br/>
 Chaîne qui contient le `level` et `uiAccess` valeurs. Pour plus d’informations, consultez la section Notes plus loin dans cette rubrique.
 
-*_niveau*<br/>
+*_level*<br/>
 Un des *asInvoker*, *highestAvailable*, ou *requireAdministrator*. La valeur par défaut est asInvoker. Pour plus d’informations, consultez la section Notes plus loin dans cette rubrique.
 
 *_uiAccess*<br/>
@@ -48,11 +48,11 @@ Si vous spécifiez plusieurs options/MANIFESTUAC sur la ligne de commande, le de
 
 Les choix pour MANIFESTUAC sont les suivantes :
 
-- `asInvoker`: L’application s’exécute avec les mêmes autorisations que le processus qui l’a démarrée. L’application peut être élevée à un niveau d’autorisation plus élevé en sélectionnant **exécuter en tant qu’administrateur**.
+- `asInvoker`: L’application s’exécutera avec les mêmes autorisations que le processus qui l’a démarrée. L’application peut être élevée à un niveau d’autorisation plus élevé en sélectionnant **exécuter en tant qu’administrateur**.
 
-- highestAvailable : l’application s’exécutera avec le niveau d’autorisation le plus élevé possible. Si l’utilisateur qui démarre l’application est membre du groupe Administrateurs, cette option est la même que requireAdministrator. Si le niveau d’autorisation disponible la plus élevé est supérieur au niveau du processus d’ouverture, le système vous invite pour les informations d’identification.
+- highestAvailable : L’application s’exécute avec le niveau d’autorisation le plus élevé possible. Si l’utilisateur qui démarre l’application est membre du groupe Administrateurs, cette option est la même que requireAdministrator. Si le niveau d’autorisation disponible la plus élevé est supérieur au niveau du processus d’ouverture, le système vous invite pour les informations d’identification.
 
-- requireAdministrator : l’application s’exécutera avec les autorisations d’administrateur. L’utilisateur qui démarre l’application doit être membre du groupe Administrateurs. Si le processus d’ouverture ne fonctionne pas avec des autorisations administratives, le système vous invite pour les informations d’identification.
+- requireAdministrator : L’application s’exécutera avec les autorisations d’administrateur. L’utilisateur qui démarre l’application doit être membre du groupe Administrateurs. Si le processus d’ouverture ne fonctionne pas avec des autorisations administratives, le système vous invite pour les informations d’identification.
 
 Vous pouvez spécifier les niveau et les valeurs uiAccess en une seule étape en utilisant l’option/MANIFESTUAC : fragment. Le fragment doit être sous la forme suivante :
 

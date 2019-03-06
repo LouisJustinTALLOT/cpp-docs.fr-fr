@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 49467b9c59d8f8861011f0f36009f4e3951871f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329850"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416746"
 ---
 # <a name="base-base-address"></a>/BASE (Adresse de base)
 
@@ -33,7 +33,7 @@ Spécifie l’adresse de base pour un programme.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ BASE :**{*adresse*[**,**<em>taille</em>] | **\@** <em>filename</em>**,**<em>clé</em>}
+> **/BASE:**{*address*[**,**<em>size</em>] | **\@**<em>filename</em>**,**<em>key</em>}
 
 ## <a name="remarks"></a>Notes
 
@@ -46,7 +46,7 @@ L’éditeur de liens génère une erreur si *adresse* n’est pas un multiple d
 
 Sur la ligne de commande, un autre pour spécifier l’adresse de base consiste à l’aide d’un fichier de réponse d’adresse de base. Un fichier de réponse d’adresse de base est un fichier texte qui contient les adresses de base et les tailles facultatifs de toutes les DLL que votre programme utilise et une clé de texte unique pour chaque adresse de base. Pour spécifier une adresse de base à l’aide d’un fichier réponse, utilisez un signe arobase (**\@**) suivie du nom du fichier réponse, *filename*, suivi par une virgule, puis le *clé*valeur pour l’adresse de base à utiliser dans le fichier. L’éditeur de liens recherche *nom de fichier* dans le chemin spécifié, ou si aucun chemin d’accès n’est spécifié, dans les répertoires spécifiés dans la variable d’environnement LIB. Chaque ligne dans *filename* représente une DLL et présente la syntaxe suivante :
 
-> *clé* *adresse* [*taille*] **;** *commentaire*
+> *key* *address* [*size*] **;** *comment*
 
 Le *clé* est une chaîne de caractères alphanumériques et n’est pas sensible à la casse. Il s’agit généralement du nom d’une DLL, mais ne sont pas nécessairement. Le *clé* est suivie d’une base de *adresse* dans la notation en langage C, hexadécimale ou décimale et une valeur maximale facultative *taille*. Les trois arguments sont séparés par des espaces ou des tabulations. L’éditeur de liens émet un avertissement si le texte spécifié *taille* est inférieur à l’espace d’adressage virtuel requis par le programme. Un *commentaire* est spécifié par un point-virgule (**;**) et peut être sur le même ou sur une ligne distincte. L’éditeur de liens ignore tout le texte du point-virgule à la fin de la ligne. Cet exemple montre une partie de ce type de fichier :
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3099
 ms.assetid: b3dded0f-76c9-42c1-991b-532eb8619661
-ms.openlocfilehash: e9a76fa2e0dc5602a88324cfd2fef85457ad7e99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: beaa34bb9bed4824383cdad32c6bfd0aea19f6b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512110"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418571"
 ---
 # <a name="compiler-error-c3099"></a>Erreur du compilateur C3099
 
@@ -19,7 +19,7 @@ ms.locfileid: "50512110"
 
 Utilisez <xref:System.AttributeUsageAttribute> pour déclarer **/CLR** attributs. Utilisez `Windows::Foundation::Metadata::AttributeUsageAttribute` pour déclarer des attributs Windows Runtime.
 
-Pour plus d’informations sur les attributs/CLR, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Pour obtenir des attributs pris en charge dans Windows Runtime, consultez [Windows.Foundation.Metadata espace de noms](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)
+Pour plus d’informations sur les attributs/CLR, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Pour obtenir des attributs pris en charge dans Windows Runtime, consultez [Windows.Foundation.Metadata espace de noms](/uwp/api/windows.foundation.metadata)
 
 ## <a name="example"></a>Exemple
 

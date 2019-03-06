@@ -25,18 +25,18 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: e5e7a60bf4607be55525b587df4942875126b50e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31570b1e6680b5af5f0a774c290eba20f3b5fdb0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556674"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413184"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Génération d'une bibliothèque d'importation et d'un fichier d'exportation
 
 Pour générer une bibliothèque d’importation et exportation de fichier, utilisez la syntaxe suivante :
 
-> **LIB /DEF**[**:**<em>deffile</em>] [*options*] [*objfiles*] [*bibliothèques*]
+> **LIB /DEF**[**:**<em>deffile</em>] [*options*] [*objfiles*] [*libraries*]
 
 Lorsque l’option /DEF est spécifiée, LIB crée les fichiers de sortie à partir de spécifications d’exportation qui sont passées dans la commande LIB. Il existe trois méthodes pour spécifier des exportations, répertoriées dans l’ordre d’utilisation recommandé :
 
@@ -54,13 +54,13 @@ Les options suivantes s’appliquent à la création d’une bibliothèque d’i
 
 Substitue le nom de fichier de sortie par défaut pour le *importer* bibliothèque en cours de création. Lorsque /OUT n’est pas spécifié, le nom par défaut est le nom de base de la bibliothèque dans la commande LIB et l’extension ou le premier fichier objet. lib. Le fichier d’exportation porte le même nom que la bibliothèque d’importation et l’extension. exp.
 
-> **/ EXPORT :** *nom d’entrée* \[ **=** *internalname*]\[,**\@** <em>ordinale</em>\[, **NONAME**]]\[, **données**]
+> **/EXPORT:** *entryname*\[**=** *internalname*]\[,**\@**<em>ordinal</em>\[, **NONAME**]]\[, **DATA**]
 
 Exporte une fonction à partir de votre programme afin d’appeler la fonction d’autres programmes. Vous pouvez également exporter des données (à l’aide de la **données** mot clé). Exportations sont généralement définies dans une DLL.
 
 Le *nom d’entrée* est le nom de la fonction ou élément de données tel qu’il doit être utilisé par le programme appelant. Si vous le souhaitez, vous pouvez spécifier le *internalname* en tant que fonction connue dans le programme de définition ; par défaut, *internalname* est identique à *nom d’entrée*. Le *ordinale* spécifie un index dans la table d’exportation dans la plage comprise entre 1 et 65 535, si vous ne spécifiez pas *ordinale*, LIB en assigne un. Le **NONAME** mot clé exporte la fonction uniquement comme ordinal, sans un *nom d’entrée*. Le **données** mot clé est utilisé pour exporter des objets de données uniquement.
 
-> **/ INCLUDE :** *symbole*
+> **/INCLUDE:** *symbol*
 
 Ajoute l’objet *symbole* à la table de symboles. Cette option est utile pour forcer l’utilisation d’un objet de bibliothèque qui sinon ne serait pas inclus.
 

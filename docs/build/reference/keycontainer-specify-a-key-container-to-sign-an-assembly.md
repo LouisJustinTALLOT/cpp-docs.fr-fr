@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /KEYCONTAINER linker option
 - -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
-ms.openlocfilehash: 3467350602d0e5b4fbb7df5f92238e18e39532bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd7c5a9cb4456a7f5cce828dc3ae05d895b1d6c6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616565"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415628"
 ---
 # <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (Spécifier un conteneur de clé pour signer un assembly)
 

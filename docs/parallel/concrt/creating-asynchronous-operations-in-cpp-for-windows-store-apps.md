@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302271"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426782"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Création d’opérations asynchrones en C++ pour les applications UWP
 
@@ -51,7 +51,7 @@ Le Runtime de Windows est une interface de programmation que vous pouvez utilise
 
 À l’aide de l’exécution de Windows, vous pouvez utiliser les meilleures fonctionnalités de divers langages de programmation et les combiner en une seule application. Par exemple, vous pouvez créer votre interface utilisateur dans JavaScript et exécuter la logique d'application nécessitant de nombreuses ressources de calcul dans un composant C++. La capacité à exécuter ces opérations nécessitant de nombreuses ressources de calcul en arrière-plan est un facteur clé pour que votre interface utilisateur reste réactive. Étant donné que la `task` classe est spécifique à C++, vous devez utiliser une interface Windows Runtime pour communiquer des opérations asynchrones à d’autres composants (qui peuvent être écrits dans d’autres langages que C++). Le Runtime Windows fournit quatre interfaces que vous pouvez utiliser pour représenter des opérations asynchrones :
 
-[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 Représente une opération asynchrone.
 
 [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
@@ -92,7 +92,7 @@ L’exemple suivant montre les différentes façons de créer un `IAsyncAction` 
 
 ##  <a name="example-component"></a> Exemple : Création d’un composant d’exécution de Windows C++ et le consommer à partir deC#
 
-Imaginez une application qui utilise XAML et c# pour définir l’interface utilisateur et un composant C++ Windows Runtime pour effectuer des opérations de calcul intensif. Dans cet exemple, le composant C++ calcule les nombres premiers inclus dans un intervalle donné. Pour illustrer les différences entre les quatre interfaces de tâche asynchrone Windows Runtime, Démarrer, dans Visual Studio, en créant un **nouvelle Solution** et nommez-le `Primes`. Ajoutez ensuite à la solution un projet **Composant Windows Runtime** et nommez-le `PrimesLibrary`. Ajoutez le code suivant au fichier d'en-tête généré en C++ (cet exemple renomme Class1.h en Primes.h). Chaque méthode `public` définit une des quatre interfaces asynchrones. Les méthodes qui retournent une valeur retournent un [Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) objet. Les méthodes qui signalent la progression génèrent des valeurs `double` qui définissent le pourcentage de travail global effectué.
+Imaginez une application qui utilise XAML et c# pour définir l’interface utilisateur et un composant C++ Windows Runtime pour effectuer des opérations de calcul intensif. Dans cet exemple, le composant C++ calcule les nombres premiers inclus dans un intervalle donné. Pour illustrer les différences entre les quatre interfaces de tâche asynchrone Windows Runtime, Démarrer, dans Visual Studio, en créant un **nouvelle Solution** et nommez-le `Primes`. Ajoutez ensuite à la solution un projet **Composant Windows Runtime** et nommez-le `PrimesLibrary`. Ajoutez le code suivant au fichier d'en-tête généré en C++ (cet exemple renomme Class1.h en Primes.h). Chaque méthode `public` définit une des quatre interfaces asynchrones. Les méthodes qui retournent une valeur retournent un [Windows::Foundation::Collections::IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_) objet. Les méthodes qui signalent la progression génèrent des valeurs `double` qui définissent le pourcentage de travail global effectué.
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -117,7 +117,7 @@ Ajoutez le code suivant à la classe `MainPage` dans MainPage.xaml. Ce code déf
 
 Ces méthodes utilisent `async` et les mots clés `await` pour mettre à jour l'interface utilisateur une fois les opérations asynchrones terminées. Pour plus d’informations sur le codage asynchrone dans les applications UWP, consultez [programmation thread et asynchrone](/windows/uwp/threading-async).
 
-Les méthodes `getPrimesCancellation` et `cancelGetPrimes` opèrent ensemble pour permettre à l'utilisateur d'annuler l'opération. Quand l’utilisateur choisit le **Annuler** bouton, le `cancelGetPrimes` les appels de méthode [IAsyncOperationWithProgress\<TResult, TProgress > :: annuler](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) pour annuler l’opération. Le Runtime d’accès concurrentiel, qui gère l’opération asynchrone sous-jacente, lève un type d’exception interne qui est intercepté par le Runtime de Windows pour communiquer que l’annulation est terminée. Pour plus d’informations sur le modèle d’annulation, consultez [l’annulation](../../parallel/concrt/cancellation-in-the-ppl.md).
+Les méthodes `getPrimesCancellation` et `cancelGetPrimes` opèrent ensemble pour permettre à l'utilisateur d'annuler l'opération. Quand l’utilisateur choisit le **Annuler** bouton, le `cancelGetPrimes` les appels de méthode [IAsyncOperationWithProgress\<TResult, TProgress > :: annuler](/uwp/api/windows.foundation.iasyncinfo.cancel) pour annuler l’opération. Le Runtime d’accès concurrentiel, qui gère l’opération asynchrone sous-jacente, lève un type d’exception interne qui est intercepté par le Runtime de Windows pour communiquer que l’annulation est terminée. Pour plus d’informations sur le modèle d’annulation, consultez [l’annulation](../../parallel/concrt/cancellation-in-the-ppl.md).
 
 > [!IMPORTANT]
 >  Pour activer la bibliothèque PPL signaler correctement à l’exécution de Windows qu’il a annulé l’opération, n’interceptez pas ce type d’exception interne. Cela signifie que vous ne devez pas non plus intercepter toutes les exceptions (`catch (...)`). Si vous devez intercepter toutes les exceptions, l’exception à nouveau pour vous assurer que le Runtime Windows peut s’effectuer l’opération d’annulation.

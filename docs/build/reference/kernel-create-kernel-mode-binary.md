@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 0df133922af90a91d5c1ae1ad3caebe11d854b8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509655"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414753"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Créer un fichier binaire pour le mode noyau)
 
@@ -27,7 +27,7 @@ Crée un fichier binaire qui peut être exécuté dans le noyau Windows.
 **/kernel**<br/>
 Le code dans le projet actuel est compilé et lié à l’aide d’un ensemble de règles de langage C++ qui sont spécifiques au code qui s’exécute en mode noyau.
 
-**/Kernel-**<br/>
+**/kernel-**<br/>
 Le code dans le projet actuel est compilé et lié sans utiliser les règles de langage C++ qui sont spécifiques au code qui s’exécute en mode noyau.
 
 ## <a name="remarks"></a>Notes
@@ -77,10 +77,10 @@ Génération avec **/kernel** passe également **/kernel** l’éditeur de liens
 
 - L’éditeur de liens inspecte chaque fichier objet (ou n’importe quel membre de l’archive inclus à partir de bibliothèques statiques) pour voir si elle pourrait ont été compilé à l’aide de la **/kernel** option mais elle ne était pas. Si toutes les instances répondent à ce critère, l’éditeur de liens lie toujours correctement mais peut émettre un avertissement, comme indiqué dans le tableau suivant.
 
-   ||**/Kernel** obj|**/Kernel-** obj, obj MASM, ou cvtresed|Un mélange de **/kernel** et **/kernel-** obj|
+   ||**/kernel** obj|**/Kernel-** obj, obj MASM, ou cvtresed|Un mélange de **/kernel** et **/kernel-** obj|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**lien /kernel**|Oui|Oui|Oui avec avertissement LNK4257|
-   |**lien**|Oui|Oui|Oui|
+   |**link /kernel**|Oui|Oui|Oui avec avertissement LNK4257|
+   |**link**|Oui|Oui|Oui|
 
    **Objet de liaison de LNK4257 ne pas compilé avec /KERNEL ; image ne peut pas s’exécuter**
 

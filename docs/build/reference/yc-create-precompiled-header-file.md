@@ -1,5 +1,5 @@
 ---
-title: /Yc (Créer un fichier d’en-tête précompilé)
+title: /Yc (Créer un fichier d'en-tête précompilé)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UsePrecompiledHeader
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: bda384152962bc59ab37b1aae138091aa6f4514c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35b8bfb30a49efa35a3af3d3b76e75f8dede9fd7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536837"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418969"
 ---
-# <a name="yc-create-precompiled-header-file"></a>/Yc (Créer un fichier d’en-tête précompilé)
+# <a name="yc-create-precompiled-header-file"></a>/Yc (Créer un fichier d'en-tête précompilé)
 
 Indique au compilateur de créer un fichier d’en-tête précompilé (.pch) qui représente l’état de la compilation à un moment donné.
 
 ## <a name="syntax"></a>Syntaxe
 
 > __/Yc__<br/>
-> __/Yc__*nom de fichier*
+> __/Yc__*filename*
 
 ## <a name="arguments"></a>Arguments
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - recursion macros
 - macros, recursion
 ms.assetid: c53e5ae7-619e-46b1-bdc2-86d8c7798b1d
-ms.openlocfilehash: 0005a4be0422ed83816eabc7b55932a81441ae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c04b23d4c8116fdf898c2f732b63c5e02adf5661
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451257"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416408"
 ---
 # <a name="recursion-macros"></a>Macros récursives
 

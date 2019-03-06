@@ -10,12 +10,12 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-ms.openlocfilehash: ecd9290336cfd6efd183bdd701f1d447b7ddaf2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a035be2080d9fe407799122f804668e0fc3ce76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492090"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413158"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Nom du fichier #using imposé)
 
@@ -23,7 +23,7 @@ Une option du compilateur que vous pouvez utiliser comme alternative au passage 
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/FU** *fichier*
+> **/FU** *file*
 
 ## <a name="arguments"></a>Arguments
 

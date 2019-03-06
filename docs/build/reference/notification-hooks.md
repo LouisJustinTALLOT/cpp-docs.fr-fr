@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 9205791995bc113e4f560ab6085fc3acf47c8182
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e4dc6331e2a957c0268e686fff7dbb3f7eb0b24
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549824"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426548"
 ---
 # <a name="notification-hooks"></a>Raccordements de notification
 
@@ -27,7 +27,7 @@ Le raccordement de notification est activé :
 
 - En fournissant une nouvelle définition du pointeur **__pfnDliNotifyHook2** qui est initialisé pour pointer vers votre propre fonction qui reçoit les notifications.
 
-   \-ou -
+   \- ou -
 
 - En définissant le pointeur **__pfnDliNotifyHook2** à votre fonction de raccordement avant tout appel à la DLL que le programme est différer le chargement.
 

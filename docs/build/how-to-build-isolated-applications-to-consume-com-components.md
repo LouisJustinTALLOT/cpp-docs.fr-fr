@@ -1,17 +1,17 @@
 ---
-title: 'Comment : générer des applications isolées pour consommer des composants COM'
+title: 'Procédure : Générer des Applications isolées pour consommer des composants COM'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 04587547-1174-44ab-bd99-1292358fba20
-ms.openlocfilehash: ba35c016996604e2b433083c2de7b9ddc807d52c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b5c7056bd10a7c1f88df74b5c6b4aa78ff3fde
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587536"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417877"
 ---
-# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Comment : générer des applications isolées pour consommer des composants COM
+# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Procédure : Générer des Applications isolées pour consommer des composants COM
 
 Applications isolées sont des applications qui ont des manifestes générés dans le programme. Vous pouvez créer des applications isolées pour consommer des composants COM.
 

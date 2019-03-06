@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0042fffb0eaa383909edd6647bcdb4375341d8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605853"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419668"
 ---
 # <a name="cimage-class"></a>CImage (classe)
 
@@ -197,7 +197,7 @@ Vous pouvez utiliser `CImage` à partir de MFC ou ATL.
 > <br/>
 > De même, vous devez inclure `atlimage.h` avant d’inclure `atlimpl.cpp`. Pour ce faire facilement, inclure `atlimage.h` dans votre `stdafx.h`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlimage.h
 
@@ -258,7 +258,7 @@ Une valeur de transparence alpha à utiliser sur l’image bitmap source entièr
 La fonction de simulation de transparence pour les sources et les bitmaps de destination, une valeur alpha globale à appliquer à l’image bitmap source entière, les informations de format pour l’image bitmap source. Les fonctions de blend source et destination sont actuellement limitées aux AC_SRC_OVER.
 
 *pointDest*<br/>
-Une référence à un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure qui identifie le coin supérieur gauche du rectangle de destination, en unités logiques.
+Une référence à un [POINT](/previous-versions/dd162805\(v=vs.85\)) structure qui identifie le coin supérieur gauche du rectangle de destination, en unités logiques.
 
 *nDestWidth*<br/>
 La largeur, en unités logiques, du rectangle de destination.
@@ -279,7 +279,7 @@ La largeur, en unités logiques, du rectangle source.
 La hauteur, en unités logiques, du rectangle source.
 
 *rectDest*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure, identifiant la destination.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure, identifiant la destination.
 
 *rectSrc*<br/>
 Une référence à un `RECT` structure, identifier la source.
@@ -368,7 +368,7 @@ La logique coordonnée y du coin supérieur gauche du rectangle de destination.
 L’opération de rastérisation à effectuer. Codes d’opération de rastérisation définissent exactement comment combiner les bits de la source, la destination et le modèle (tel que défini par le pinceau actuellement sélectionné) pour former la destination. Consultez [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) dans le SDK Windows pour obtenir la liste des autres codes d’opération de rastérisation et leurs descriptions.
 
 *pointDest*<br/>
-Un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure indiquant le coin supérieur gauche du rectangle de destination.
+Un [POINT](/previous-versions/dd162805\(v=vs.85\)) structure indiquant le coin supérieur gauche du rectangle de destination.
 
 *nDestWidth*<br/>
 La largeur, en unités logiques, du rectangle de destination.
@@ -383,7 +383,7 @@ La logique coordonnée x du coin supérieur gauche du rectangle source.
 La logique coordonnée y du coin supérieur gauche du rectangle source.
 
 *rectDest*<br/>
-Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure indiquant le rectangle de destination.
+Un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure indiquant le rectangle de destination.
 
 *pointSrc*<br/>
 Un `POINT` structure indiquant le coin supérieur gauche du rectangle source.
@@ -595,13 +595,13 @@ La largeur, en unités logiques, du rectangle source.
 La hauteur, en unités logiques, du rectangle source.
 
 *rectDest*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure, identifiant la destination.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure, identifiant la destination.
 
 *rectSrc*<br/>
 Une référence à un `RECT` structure, identifier la source.
 
 *pointDest*<br/>
-Une référence à un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure qui identifie le coin supérieur gauche du rectangle de destination, en unités logiques.
+Une référence à un [POINT](/previous-versions/dd162805\(v=vs.85\)) structure qui identifie le coin supérieur gauche du rectangle de destination, en unités logiques.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1259,10 +1259,10 @@ Coordonnée x du coin supérieur gauche de l’image bitmap monochrome.
 Coordonnée y du coin supérieur gauche de l’image bitmap monochrome.
 
 *rectSrc*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure spécifiant les coordonnées du rectangle source.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure spécifiant les coordonnées du rectangle source.
 
 *pointMask*<br/>
-Un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure indiquant le coin supérieur gauche de la bitmap de masque.
+Un [POINT](/previous-versions/dd162805\(v=vs.85\)) structure indiquant le coin supérieur gauche de la bitmap de masque.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1384,7 +1384,7 @@ Emplacement horizontal du pixel à définir.
 *y*<br/>
 Emplacement vertical du pixel à définir.
 
-*Couleur*<br/>
+*color*<br/>
 Le modèle de couleurs à laquelle vous le pixel.
 
 ### <a name="remarks"></a>Notes
@@ -1519,7 +1519,7 @@ La hauteur, en unités logiques, du rectangle de destination.
 L’opération de rastérisation à effectuer. Codes d’opération de rastérisation définissent exactement comment combiner les bits de la source, la destination et le modèle (tel que défini par le pinceau actuellement sélectionné) pour former la destination. Consultez [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) dans le SDK Windows pour obtenir la liste des autres codes d’opération de rastérisation et leurs descriptions.
 
 *rectDest*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure, identifiant la destination.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure, identifiant la destination.
 
 *xSrc*<br/>
 La coordonnée x, en unités logiques, du coin supérieur gauche du rectangle source.
@@ -1602,7 +1602,7 @@ La hauteur, en unités logiques, du rectangle de destination.
 La couleur de la bitmap source à traiter comme transparente. Par défaut, CLR_INVALID, indiquant que la couleur actuellement définie comme couleur transparente de l’image doit être utilisée.
 
 *rectDest*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure, identifiant la destination.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure, identifiant la destination.
 
 *xSrc*<br/>
 La coordonnée x, en unités logiques, du coin supérieur gauche du rectangle source.

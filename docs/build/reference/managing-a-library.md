@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: 69cd03e029d014b9b74a8688f155dfb1f023b55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477062"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419607"
 ---
 # <a name="managing-a-library"></a>Gestion d'une bibliothèque
 
@@ -66,7 +66,7 @@ Les options suivantes s’appliquent à la création et modification d’une bib
 **/ LIBPATH :** *dir*<br/>
 Substitue le chemin d’accès de la bibliothèque d’environnement. Pour plus d’informations, consultez la description du lien [/LIBPATH](../../build/reference/libpath-additional-libpath.md) option.
 
-**/ LISTE**<br/>
+**/LIST**<br/>
 Affiche des informations sur la bibliothèque de sortie vers la sortie standard. La sortie peut être redirigée vers un fichier. Vous pouvez utiliser /LIST pour déterminer le contenu d’une bibliothèque existante sans le modifier.
 
 **/ NAME :** *nom de fichier*<br/>

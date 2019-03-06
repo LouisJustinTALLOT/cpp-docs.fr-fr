@@ -1,18 +1,18 @@
 ---
-title: 'Comment : déboguer une version release'
+title: 'Procédure : Déboguer une version Release'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
-ms.openlocfilehash: 4ee99bb76d3af4339e065a3ed4d4809acfe23507
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61baaa827feb1abcc03a0296574e56c993ce1681
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649252"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412560"
 ---
-# <a name="how-to-debug-a-release-build"></a>Comment : déboguer une version release
+# <a name="how-to-debug-a-release-build"></a>Procédure : Déboguer une version Release
 
 Vous pouvez déboguer une version Release d’une application.
 

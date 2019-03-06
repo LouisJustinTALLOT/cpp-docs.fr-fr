@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259540"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425014"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (classe)
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Indique l’opération à effectuer. Si ce paramètre est TRUE, *lpRect* spécifie un rectangle d’affichage et reçoit le rectangle de la fenêtre correspondante. Si ce paramètre est FALSE, *lpRect* spécifie un rectangle de la fenêtre et reçoit le rectangle d’affichage correspondant.
 
 *lpRect*<br/>
-Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie le rectangle donné et reçoit le rectangle calculé.
+Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui spécifie le rectangle donné et reçoit le rectangle calculé.
 
 ### <a name="example"></a>Exemple
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle onglet. Appliquer n’importe quelle combinaison de [onglet styles de contrôle](/windows/desktop/Controls/tab-control-styles), comme décrit dans le SDK Windows. Consultez **remarques** pour obtenir la liste des styles de fenêtre que vous pouvez également appliquer au contrôle.
 
 *rect*<br/>
-Spécifie la taille et la position du contrôle onglet. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+Spécifie la taille et la position du contrôle onglet. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
 
 *pParentWnd*<br/>
 Spécifie les fenêtre du parent du contrôle onglet, généralement un `CDialog`. Il ne doit pas être NULL.
@@ -250,7 +250,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 Spécifie le style du contrôle onglet. Appliquer n’importe quelle combinaison de [onglet styles de contrôle](/windows/desktop/Controls/tab-control-styles), comme décrit dans le SDK Windows. Consultez **remarques** dans [créer](#create) pour obtenir la liste des styles de fenêtre que vous pouvez également appliquer au contrôle.
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Index de base zéro de l’élément d’onglet.
 
 *lpRect*<br/>
-Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui reçoit le rectangle englobant de l’onglet. Ces coordonnées utilisent le mode de mappage en cours de la fenêtre d’affichage.
+Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui reçoit le rectangle englobant de l’onglet. Ces coordonnées utilisent le mode de mappage en cours de la fenêtre d’affichage.
 
 ### <a name="return-value"></a>Valeur de retour
 

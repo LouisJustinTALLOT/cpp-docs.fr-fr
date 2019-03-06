@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timestamps, makefile pseudotargets
 - NMAKE program, targets
 ms.assetid: c8c479dc-0129-4186-8366-bc6251f2b494
-ms.openlocfilehash: bf0f1e2feb91611222ade366a7644e89cbe22600
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34b2b2f0d54a6e11bdfd6e818eb08d01721d80e2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541074"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414835"
 ---
 # <a name="pseudotargets"></a>Pseudocibles
 
@@ -23,4 +23,4 @@ Noms des pseudocibles obéissent les règles de syntaxe de nom de fichier pour l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Targets (Cibles MSBuild)](../build/targets.md)
+[Cibles](../build/targets.md)

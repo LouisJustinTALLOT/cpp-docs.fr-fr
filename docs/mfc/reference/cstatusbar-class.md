@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cb52f1138ba7ff01c6fbf2f7ec13d5f39e9422d8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279495"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413392"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar (classe)
 
@@ -283,7 +283,7 @@ void GetItemRect(
 Index de l’indicateur dont coordonnées du rectangle doivent être récupérés.
 
 *lpRect*<br/>
-Pointe vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui recevra les coordonnées de l’indicateur spécifié par *nIndex*.
+Pointe vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui recevra les coordonnées de l’indicateur spécifié par *nIndex*.
 
 ### <a name="remarks"></a>Notes
 

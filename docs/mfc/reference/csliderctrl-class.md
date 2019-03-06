@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0179d69726f49f2df02979264da4966b35178434
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283603"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421998"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (classe)
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](/windows/desktop/Controls/trackbar-control-styles), comme décrit dans le Kit de développement logiciel Windows, au contrôle.
 
 *rect*<br/>
-Spécifie la taille et la position du curseur. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+Spécifie la taille et la position du curseur. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
 
 *pParentWnd*<br/>
 Spécifie les fenêtre du parent du contrôle slider, généralement un `CDialog`. Il ne doit pas être NULL.
@@ -251,7 +251,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 Spécifie le style du contrôle slider. Appliquer n’importe quelle combinaison de [styles de contrôle slider](/windows/desktop/Controls/trackbar-control-styles), comme décrit dans le Kit de développement logiciel Windows, au contrôle.
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.

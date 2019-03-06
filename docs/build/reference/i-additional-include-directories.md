@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750390"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412846"
 ---
 # <a name="i-additional-include-directories"></a>/I (autres répertoires include)
 
@@ -27,11 +27,11 @@ Ajoute un répertoire à la liste des répertoires de recherche des fichiers inc
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/I**[]*directory*
+> **/I**[ ]*directory*
 
 ### <a name="arguments"></a>Arguments
 
-*Répertoire*<br/>
+*directory*<br/>
 Le répertoire à ajouter à la liste des répertoires de recherche des fichiers include.
 
 ## <a name="remarks"></a>Notes
@@ -62,7 +62,7 @@ Le compilateur recherche des répertoires dans l’ordre suivant :
 
 ## <a name="example"></a>Exemple
 
-La commande suivante recherche les fichiers include demandés par MAIN.c dans l’ordre suivant : tout d’abord, s’il est spécifié à l’aide de guillemets doubles, les fichiers locaux sont recherchés. Ensuite, recherche continue dans le répertoire \INCLUDE, puis, dans le répertoire \MY\INCLUDE et enfin, dans les répertoires affecté à la variable d’environnement INCLUDE.
+La commande suivante recherche les fichiers include demandés par MAIN.c dans l’ordre suivant : Tout d’abord, s’il est spécifié à l’aide de guillemets doubles, les fichiers locaux sont recherchés. Ensuite, recherche continue dans le répertoire \INCLUDE, puis, dans le répertoire \MY\INCLUDE et enfin, dans les répertoires affecté à la variable d’environnement INCLUDE.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

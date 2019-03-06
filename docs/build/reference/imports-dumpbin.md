@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /IMPORTS dumpbin option
 - -IMPORTS dumpbin option
 ms.assetid: 6a296216-2b1b-40f8-8736-cd4553a22456
-ms.openlocfilehash: 9367457a8e7f6be1f372244f8288a994eb777071
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94009670329887a0b8a35e7b8b36996a84c7faa6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613783"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417500"
 ---
 # <a name="imports-dumpbin"></a>/IMPORTS (DUMPBIN)
 

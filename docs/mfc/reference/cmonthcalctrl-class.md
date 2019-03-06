@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303668"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413925"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl (classe)
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Spécifie la combinaison de styles de Windows appliqués au contrôle month calendar. Consultez [Styles de contrôle Month Calendar](/windows/desktop/Controls/month-calendar-control-styles) dans le SDK Windows pour plus d’informations sur les styles.
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure. Contient la position et la taille du contrôle month calendar.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure. Contient la position et la taille du contrôle month calendar.
 
 *pt*<br/>
-Une référence à un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure qui identifie l’emplacement du contrôle month calendar.
+Une référence à un [POINT](/previous-versions/dd162805\(v=vs.85\)) structure qui identifie l’emplacement du contrôle month calendar.
 
 *pParentWnd*<br/>
 Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parente du contrôle month calendar. Il ne doit pas être NULL.
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *pRect*<br/>
-Un pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui recevra les informations de rectangle englobant. Ce paramètre doit être une adresse valide et ne peut pas être NULL.
+Un pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui recevra les informations de rectangle englobant. Ce paramètre doit être une adresse valide et ne peut pas être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*lpRect*|[in] Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui définit un rectangle qui contient le nombre souhaité de calendriers.|
+|*lpRect*|[in] Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui définit un rectangle qui contient le nombre souhaité de calendriers.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui définit un rectangle dont la taille est inférieure ou égale au rectangle défini par le *lpRect* paramètre.
+Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui définit un rectangle dont la taille est inférieure ou égale au rectangle défini par le *lpRect* paramètre.
 
 ### <a name="remarks"></a>Notes
 

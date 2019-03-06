@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: c7821fc9fca1c9a965ea83584415b9baf17ec683
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579108"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423311"
 ---
 # <a name="decorated-names"></a>Noms décorés
 
@@ -25,7 +25,7 @@ Normalement, vous n'êtes pas tenu de connaître le nom décoré pour écrire du
 
 Si vous modifiez le nom de la fonction, la classe, la convention d'appel, le type de retour ou n'importe quel paramètre, le nom décoré change également. Dans ce cas, vous devez obtenir le nouveau nom décoré et l'utiliser partout où le nom décoré est spécifié.
 
-La décoration des noms est également importante lors de la liaison à du code écrit dans d'autres langages de programmation ou à l'aide d'autres compilateurs. Des compilateurs différents utilisent des conventions différentes de décoration des noms. Quand votre fichier exécutable est lié à du code écrit dans un autre langage, il convient d'apporter un soin particulier pour mettre en correspondance les noms exportés et importés et les conventions d'appel. Le code en langage assembleur doit utiliser les noms décorés et les conventions d’appel Visual C++ pour créer un lien avec le code source écrit à l’aide de Visual C++.
+La décoration des noms est également importante lors de la liaison à du code écrit dans d'autres langages de programmation ou à l'aide d'autres compilateurs. Des compilateurs différents utilisent des conventions différentes de décoration des noms. Quand votre fichier exécutable est lié à du code écrit dans un autre langage, il convient d’apporter un soin particulier pour mettre en correspondance les noms exportés et importés et les conventions d’appel. Le code en langage assembleur doit utiliser les noms décorés et les conventions d'appel Visual C++ pour créer un lien avec le code source écrit à l'aide de Visual C++.
 
 ##  <a name="Format"></a> Format de C++ nom décoré
 
@@ -39,7 +39,7 @@ Un nom décoré pour une fonction C++ contient les informations suivantes :
 
 - Types des paramètres de la fonction.
 
-- Convention d'appel.
+- Convention d’appel.
 
 - Type de retour de la fonction.
 
@@ -52,9 +52,9 @@ Les noms de fonction et de classe sont encodés dans le nom décoré. Le reste d
 
 ##  <a name="FormatC"></a> Format d’un C nom décoré
 
-La forme de la décoration pour une fonction C dépend de la convention d’appel utilisée dans sa déclaration, comme l’indique le tableau suivant. Il s'agit également du format de décoration utilisé quand le code C++ est déclaré comme doté d'une liaison `extern "C"`. La convention d'appel par défaut est `__cdecl`. Notez que dans un environnement 64 bits, les fonctions ne sont pas décorées.
+La forme de la décoration pour une fonction C dépend de la convention d’appel utilisée dans sa déclaration, comme l’indique le tableau suivant. Il s'agit également du format de décoration utilisé quand le code C++ est déclaré comme doté d'une liaison `extern "C"`. La convention d’appel par défaut est `__cdecl`. Notez que dans un environnement 64 bits, les fonctions ne sont pas décorées.
 
-|Convention d’appel|Ornement|
+|Convention d'appel|Ornement|
 |------------------------|----------------|
 |`__cdecl`|Un trait de soulignement de début (**_**)|
 |`__stdcall`|Un trait de soulignement de début (**_**) et signe arobase de fin (**\@**) suivi du nombre d’octets dans la liste de paramètres au format décimal|

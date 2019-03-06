@@ -14,16 +14,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: a6b2abc97a44117c0fdd7c08c61de7ba900d1115
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 7b9f402d9b1c45c2fa10c1128afd271229036f88
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556307"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420776"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl, classe
 
-Fournit une implémentation de la [ISessionProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms713721(v=vs.85)) interface.
+Fournit une implémentation de la [ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +42,7 @@ Votre classe, dérivée de `ISessionPropertiesImpl`.
 *PropClass*<br/>
 Une classe de propriété définis par l’utilisateur par défaut est *T*.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -74,7 +74,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [ISessionProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723643(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
 
@@ -89,7 +89,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [ISessionProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714405(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="see-also"></a>Voir aussi
 

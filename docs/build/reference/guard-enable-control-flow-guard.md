@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 8b15318ab7ae4233d6cf02a505ffe901bbe1d689
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d79f4b20499d964d407af61fa498b4579b6794d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516071"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424078"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (Activer la protection du flux de contrôle)
 
@@ -26,7 +26,7 @@ Active la génération par le compilateur de vérifications de sécurité de la 
 
 L'option **/guard:cf** indique au compilateur d'analyser le flux de contrôle pour rechercher les cibles d'appels indirects au moment de la compilation, puis d'insérer du code pour vérifier les cibles au moment de l'exécution. Par défaut, l'option **/guard:cf** est désactivée. Elle doit être explicitement activée. Pour désactiver explicitement cette option, utilisez **/guard:cf-**.
 
-**Visual Studio 2017 et versions ultérieur**: cette option ajoute gardes pour **basculer** instructions qui génèrent des raccourcis de tables.
+**Visual Studio 2017 et versions ultérieur**: Cette option ajoute gardes pour **basculer** instructions qui génèrent des raccourcis de tables.
 
 Quand l'option de protection du flux de contrôle **/guard:cf** est activée, le compilateur et l'éditeur de liens incluent d'autres vérifications de sécurité à l'exécution pour détecter les tentatives visant à compromettre votre code. Pendant les phases de compilation et de liaison, tous les appels indirects dans votre code sont analysés pour identifier chaque emplacement auquel le code peut accéder quand il s'exécute correctement. Ces informations sont stockées dans des structures supplémentaires dans les en-têtes de vos fichiers binaires. Le compilateur injecte également une vérification avant chaque appel indirect dans votre code pour garantir que la cible fait partie des emplacements vérifiés. Si la vérification échoue à l'exécution sur un système d'exploitation utilisant la protection du flux de contrôle, le système d'exploitation ferme le programme.
 

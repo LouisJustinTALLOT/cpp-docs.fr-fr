@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fea928fc293ef916d560e51ecb27aee452b6a4c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551331"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414627"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Différences du comportement de gestion des exceptions dans /CLR
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a> Levées dissociées
 
-**/ CLR** ne prend pas en charge la nouvelle levée d’une exception en dehors d’un gestionnaire catch (appelée dissociée). Les exceptions de ce type sont traitées comme une rethrow C++ standard. Si dissociée se produite lorsqu’il existe une exception managée active, l’exception est encapsulée comme une exception C++ et puis levée de nouveau. Exceptions de ce type ne peuvent être interceptées en tant qu’exception de type [System::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx).
+**/ CLR** ne prend pas en charge la nouvelle levée d’une exception en dehors d’un gestionnaire catch (appelée dissociée). Les exceptions de ce type sont traitées comme une rethrow C++ standard. Si dissociée se produite lorsqu’il existe une exception managée active, l’exception est encapsulée comme une exception C++ et puis levée de nouveau. Exceptions de ce type ne peuvent être interceptées en tant qu’exception de type <xref:System.Runtime.InteropServices.SEHException>.
 
 L’exemple suivant montre une exception managée est levée de nouveau en tant qu’une exception C++ :
 

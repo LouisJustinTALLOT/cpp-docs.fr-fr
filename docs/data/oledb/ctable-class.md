@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 7605d78a140a0f5353a16b9e22d5d618d29ff327
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ff2a139c16b6678bedf38c64a16dce28fa53c5fe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556679"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425196"
 ---
 # <a name="ctable-class"></a>CTable, classe
 
@@ -41,7 +41,7 @@ Classe d’accesseur.
 *TRowset*<br/>
 Une classe rowset.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -95,10 +95,10 @@ HRESULT Open(const CSession& session,
 [in] Le `DBID` de la table à ouvrir.
 
 *pPropSet*<br/>
-[in] Un pointeur vers un tableau de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows. La valeur par défaut NULL ne spécifie aucuns propriétés.
+[in] Un pointeur vers un tableau de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows. La valeur par défaut NULL ne spécifie aucuns propriétés.
 
 *ulPropSets*<br/>
-[in] Le nombre de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passées dans le *pPropSet* argument.
+[in] Le nombre de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passées dans le *pPropSet* argument.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -106,7 +106,7 @@ Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Pour plus d’informations, consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="see-also"></a>Voir aussi
 

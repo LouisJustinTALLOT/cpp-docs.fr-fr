@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: ae91921ecd5f53f4551e46e1d03cf027ce3e1f3b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 638152d8c49bd20742a586bc665efcdb662b6f3a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292400"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413886"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Iaxwinambientdispatchex, Interface
 
@@ -42,7 +42,7 @@ Inclure cette interface dans les applications ATL qui sont liées statiquement A
 
 Cette interface est exposée par le contrôle ActiveX d’ATL hébergement d’objets. Dérivé [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` ajoute une méthode qui vous permet de compléter l’interface de propriété ambiante fournie par ATL avec celle de votre choix.
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) essaie de charger les informations de type sur `IAxWinAmbientDispatch` et `IAxWinAmbientDispatchEx` à partir de la bibliothèque de types qui contient le code.
+<xref:System.Windows.Forms.AxHost> tente de charger les informations de type sur `IAxWinAmbientDispatch` et `IAxWinAmbientDispatchEx` à partir de la bibliothèque de types qui contient le code.
 
 Si vous établissez une liaison à ATL90.dll, **AXHost** charge les informations de type à partir de la bibliothèque de types dans la DLL.
 

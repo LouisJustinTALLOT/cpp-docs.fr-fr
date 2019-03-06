@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304550"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417656"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (classe)
 
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Spécifie la combinaison de styles de contrôle rebar appliqué au contrôle. Consultez [Styles de contrôle Rebar](/windows/desktop/Controls/rebar-control-styles) dans le SDK Windows pour obtenir la liste des styles pris en charge.
 
 *rect*<br/>
-Une référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure, qui est la position et la taille du contrôle rebar.
+Une référence à un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](/previous-versions/dd162897\(v=vs.85\)) structure, qui est la position et la taille du contrôle rebar.
 
 *pParentWnd*<br/>
 Un pointeur vers un [CWnd](../../mfc/reference/cwnd-class.md) objet qui est la fenêtre parente du contrôle rebar. Il ne doit pas être NULL.
@@ -303,7 +303,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 Spécifie la combinaison de styles de contrôle rebar appliqué au contrôle. Pour obtenir la liste des styles pris en charge, consultez [Styles de contrôle Rebar](/windows/desktop/Controls/rebar-control-styles) dans le SDK Windows.
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.
@@ -389,7 +389,7 @@ void GetBandBorders(
 Index de base zéro de la bande pour laquelle les bordures sont récupérées.
 
 *prc*<br/>
-Un pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui recevra les bordures de bande. Si le contrôle rebar a le style RBS_BANDBORDERS, chaque membre de cette structure reçoit le nombre de pixels, dans la partie correspondante de la bande, qui constituent la bordure. Si le contrôle rebar n’a pas le style RBS_BANDBORDERS, seul le membre gauche de cette structure reçoit des informations valides. Pour obtenir une description des styles de contrôle rebar, consultez [Styles de contrôle Rebar](/windows/desktop/Controls/rebar-control-styles) dans le SDK Windows.
+Un pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui recevra les bordures de bande. Si le contrôle rebar a le style RBS_BANDBORDERS, chaque membre de cette structure reçoit le nombre de pixels, dans la partie correspondante de la bande, qui constituent la bordure. Si le contrôle rebar n’a pas le style RBS_BANDBORDERS, seul le membre gauche de cette structure reçoit des informations valides. Pour obtenir une description des styles de contrôle rebar, consultez [Styles de contrôle Rebar](/windows/desktop/Controls/rebar-control-styles) dans le SDK Windows.
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Index de base zéro d’une bande dans le contrôle rebar.
 
 *prc*<br/>
-Un pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui recevra les limites de la bande rebar.
+Un pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui recevra les limites de la bande rebar.
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610c94646b82783a49ca6de6bc443e99a3c137bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507300"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420906"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Fichier listing)
 
@@ -29,7 +29,7 @@ Crée un fichier listing contenant du code assembleur.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/FA**[**c**\][**s**\][**u**] **/Fa**_chemin d’accès_
+> **/FA**[**c**\][**s**\][**u**] **/Fa**_pathname_
 
 ## <a name="remarks"></a>Notes
 
@@ -61,16 +61,16 @@ Un *source*fichier .asm est créé pour chaque fichier de code source dans la co
 *filename*<br/>
 Un fichier listing nommé *filename*.asm est placé dans le répertoire actif. Cela est uniquement valide lors de la compilation d’un fichier de code source unique.
 
-*nomfichier.extension*<br/>
+*filename.extension*<br/>
 Un fichier listing nommé *nomfichier.extension* est placé dans le répertoire actif. Cela est uniquement valide lors de la compilation d’un fichier de code source unique.
 
-*Répertoire*__\\__<br/>
+*directory*__\\__<br/>
 Un *source_file*fichier .asm est créé et placé dans le texte spécifié *directory* pour chaque fichier de code source dans la compilation. Notez la barre oblique de fin requise. Uniquement les chemins d’accès sur le disque en cours sont autorisées.
 
-*répertoire*__\\__*nom de fichier*<br/>
+*directory*__\\__*filename*<br/>
 Un fichier listing nommé *filename*.asm est placé dans le texte spécifié *directory*. Cela est uniquement valide lors de la compilation d’un fichier de code source unique.
 
-*répertoire*__\\__*nomfichier.extension*<br/>
+*directory*__\\__*filename.extension*<br/>
 Un fichier listing nommé *nomfichier.extension* est placé dans le texte spécifié *directory*. Cela est uniquement valide lors de la compilation d’un fichier de code source unique.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio

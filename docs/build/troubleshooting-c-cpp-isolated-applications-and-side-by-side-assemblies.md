@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: 58d8453cc50c28527c1f777db1b47ea23299d38f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 74c57ee8e79da039796f28b9517e1ef41007cef0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693943"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413730"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Dépannage d'applications isolées C/C++ et d'assemblys côte à côte
 
@@ -33,7 +33,7 @@ Si votre application est déployée sur un ordinateur qui ne dispose pas de Visu
 
 1. Suivez les étapes décrites dans [fonctionnement des dépendances d’une Application Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Dependency Walker peut afficher la plupart des dépendances d'une application ou d'une DLL. Si vous constatez que certaines DLL sont manquantes, installez-les sur l'ordinateur sur lequel vous essayez d'exécuter votre application.
 
-1. Le chargeur du système d'exploitation utilise le manifeste de l'application pour charger les assemblys dont dépend l'application. Le manifeste peut être incorporé dans le fichier binaire en tant que ressource ou installé en tant que fichier distinct dans le dossier de l’application. Pour vérifier si le manifeste est incorporé dans le fichier binaire, ouvrez le fichier binaire dans Visual Studio et recherchez RT_MANIFEST dans sa liste de ressources. Si vous ne trouvez pas un manifeste incorporé, recherchez dans le dossier d’application pour un fichier semblable à < nom_fichier_binaire >. \<extension > .manifest.
+1. Le chargeur du système d'exploitation utilise le manifeste de l'application pour charger les assemblys dont dépend l'application. Le manifeste peut être incorporé dans le fichier binaire en tant que ressource ou installé en tant que fichier distinct dans le dossier de l'application. Pour vérifier si le manifeste est incorporé dans le fichier binaire, ouvrez le fichier binaire dans Visual Studio et recherchez RT_MANIFEST dans sa liste de ressources. Si vous ne trouvez pas un manifeste incorporé, recherchez dans le dossier d’application pour un fichier semblable à < nom_fichier_binaire >. \<extension > .manifest.
 
 1. Si votre application dépend d'assemblys côte à côte et qu'un manifeste n'est pas présent, vous devez vous assurer que l'éditeur de liens génère un manifeste pour votre projet. Activez l’option de l’éditeur de liens **générer manifeste** dans le **propriétés du projet** boîte de dialogue pour le projet.
 

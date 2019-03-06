@@ -43,12 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: d23eef1d48674751a725e076d1b652b304ad40a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1075c70b10ca8c59272e9a9de8a9a3fd7aa248e6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508392"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415082"
 ---
 # <a name="windows-operations-ccli"></a>Opérations Windows (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 Le <xref:Microsoft.Win32.Registry> classe est simplement un conteneur pour les instances statiques de <xref:Microsoft.Win32.RegistryKey>. Chaque instance représente un nœud de Registre racine. Les instances sont <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, et <xref:Microsoft.Win32.Registry.Users>.
 
-En plus d’être statiques, les objets au sein de la <xref:Microsoft.Win32.Registry> classe sont en lecture seule. En outre, les instances de la <xref:Microsoft.Win32.RegistryKey> sont en lecture seule ainsi des objets de classe sont créées pour accéder au contenu du Registre. Pour obtenir un exemple montrant comment substituer ce comportement, consultez [Comment : écrire les données dans le Registre Windows (C++ / c++ / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+En plus d’être statiques, les objets au sein de la <xref:Microsoft.Win32.Registry> classe sont en lecture seule. En outre, les instances de la <xref:Microsoft.Win32.RegistryKey> sont en lecture seule ainsi des objets de classe sont créées pour accéder au contenu du Registre. Pour obtenir un exemple montrant comment substituer ce comportement, consultez [Comment : Écrire des données dans le Registre Windows (C++ / c++ / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
 Il existe deux objets supplémentaires dans le <xref:Microsoft.Win32.Registry> classe : <xref:Microsoft.Win32.Registry.DynData> et <xref:Microsoft.Win32.Registry.PerformanceData>. Les deux sont des instances de la <xref:Microsoft.Win32.RegistryKey> classe. Le <xref:Microsoft.Win32.Registry.DynData> objet contient des informations de Registre dynamiques, qui sont uniquement pris en charge dans Windows 98 et Windows Me. Le <xref:Microsoft.Win32.Registry.PerformanceData> objet peut être utilisé pour accéder aux informations de compteur de performances pour les applications qui utilisent le système de surveillance des performances de Windows. Le <xref:Microsoft.Win32.Registry.PerformanceData> nœud représente des informations qui ne sont pas réellement stockées dans le Registre et par conséquent ne peut pas apparaître à l’aide de Regedit.exe.
 
@@ -503,7 +503,7 @@ int main()
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez utiliser le .NET Framework pour accéder au Registre avec le <xref:Microsoft.Win32.Registry> et [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) classes, qui sont tous deux définis dans le <xref:Microsoft.Win32> espace de noms. Le **Registre** classe est un conteneur pour les instances statiques de la <xref:Microsoft.Win32.RegistryKey> classe. Chaque instance représente un nœud de Registre racine. Les instances sont <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, et <xref:Microsoft.Win32.Registry.Users>.
+Vous pouvez utiliser le .NET Framework pour accéder au Registre avec le <xref:Microsoft.Win32.Registry> et <xref:Microsoft.Win32.RegistryKey> classes, qui sont tous deux définis dans le <xref:Microsoft.Win32> espace de noms. Le **Registre** classe est un conteneur pour les instances statiques de la <xref:Microsoft.Win32.RegistryKey> classe. Chaque instance représente un nœud de Registre racine. Les instances sont <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, et <xref:Microsoft.Win32.Registry.Users>.
 
 ## <a name="related-sections"></a>Rubriques connexes
 

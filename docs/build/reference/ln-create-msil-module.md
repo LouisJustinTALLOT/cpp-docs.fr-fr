@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -LN compiler option [C++]
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-ms.openlocfilehash: d8253dacbfa57f84a3eee05ffa0f8f9879f6b009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c1d7149865a2558ac2b9ee70dac4bbcf8f37b63
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536927"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424208"
 ---
 # <a name="ln-create-msil-module"></a>/LN (Créer le module MSIL)
 
