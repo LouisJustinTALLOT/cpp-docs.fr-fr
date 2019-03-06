@@ -7,7 +7,6 @@ f1_keywords:
 - C2125
 - C2126
 - C2127
-- C2131
 - C2136
 - C2176
 - C2187
@@ -24,12 +23,12 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 98e804b7c53eddf239e752f120854439cc3a0b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546553"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423532"
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Erreur du compilateurs C2100 through C2199
 
@@ -72,7 +71,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2128](compiler-error-c2128.md)|«*fonction*' : alloc_text/same_seg applicable uniquement aux fonctions avec liaison C|
 |[Erreur du compilateur C2129](compiler-error-c2129.md)|fonction static '*identificateur*' déclarée mais non définie|
 |[Erreur du compilateur C2130](compiler-error-c2130.md)|#line attendait une chaîne contenant le nom de fichier, trouvé '*jeton*'|
-|C2131 d’erreur du compilateur|expression ne correspond pas à une constante|
+|[Erreur du compilateur C2131](compiler-error-c2131.md)|expression ne correspond pas à une constante|
 |[Erreur du compilateur C2132](compiler-error-c2132.md)|Erreur de syntaxe : identificateur inattendu|
 |[Erreur du compilateur C2133](compiler-error-c2133.md)|«*identificateur*' : taille inconnue|
 |[Erreur du compilateur C2134](compiler-error-c2134.md)|«*fonction*' : appel n’entraîne pas une expression constante|

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - OnRowChange method
 - OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-ms.openlocfilehash: 01bcc60b0c88a3953d5e75b53ac58877f7eb15df
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 8ad3fe7a79d4847c4583f79229e4cf4aad616fa8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556385"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417344"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl, classe
 
-Implémente et enregistre [IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85)) sur le consommateur (également appelé « sink ») afin qu’il puisse gérer les notifications.
+Implémente et enregistre [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)) sur le consommateur (également appelé « sink ») afin qu’il puisse gérer les notifications.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,7 +37,7 @@ Implémente et enregistre [IRowsetNotify](https://docs.microsoft.com/previous-ve
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -55,7 +55,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 
 Consultez [réception des Notifications](../../data/oledb/receiving-notifications.md) sur l’implémentation de l’interface de point de connexion sur le consommateur.
 
-`IRowsetNotifyImpl` Fournit une implémentation factice pour `IRowsetNotify`, avec des fonctions vides pour le `IRowsetNotify` méthodes [OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)), [OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)), et [OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)). Si vous héritez de cette classe lorsque vous implémentez un `IRowsetNotify` interface, vous pouvez implémenter uniquement les méthodes que vous avez besoin. Vous devez également fournir des implémentations vides pour les autres méthodes vous-même.
+`IRowsetNotifyImpl` Fournit une implémentation factice pour `IRowsetNotify`, avec des fonctions vides pour le `IRowsetNotify` méthodes [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)), [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)), et [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)). Si vous héritez de cette classe lorsque vous implémentez un `IRowsetNotify` interface, vous pouvez implémenter uniquement les méthodes que vous avez besoin. Vous devez également fournir des implémentations vides pour les autres méthodes vous-même.
 
 ## <a name="onfieldchange"></a> IRowsetNotifyImpl::OnFieldChange
 
@@ -76,15 +76,15 @@ STDMETHOD(OnFieldChange)(
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) pour obtenir des descriptions de paramètre.
+Consultez [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) pour obtenir des descriptions de paramètre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Consultez [IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) pour des descriptions de la valeur de retour.
+Consultez [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) pour des descriptions de la valeur de retour.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode encapsule le [IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) (méthode). Consultez la description de cette méthode dans la référence du programmeur OLE DB pour plus d’informations.
+Cette méthode encapsule le [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) (méthode). Consultez la description de cette méthode dans la référence du programmeur OLE DB pour plus d’informations.
 
 ## <a name="onrowchange"></a> IRowsetNotifyImpl::OnRowChange
 
@@ -104,15 +104,15 @@ STDMETHOD(OnRowChange)(
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetNotify::OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) pour obtenir des descriptions de paramètre.
+Consultez [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) pour obtenir des descriptions de paramètre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Consultez [IRowsetNotify::OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) pour des descriptions de la valeur de retour.
+Consultez [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) pour des descriptions de la valeur de retour.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode encapsule le [IRowsetNotify::OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) (méthode). Consultez la description de cette méthode dans la référence du programmeur OLE DB pour plus d’informations.
+Cette méthode encapsule le [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) (méthode). Consultez la description de cette méthode dans la référence du programmeur OLE DB pour plus d’informations.
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyImpl::OnRowsetChange
 
@@ -130,19 +130,19 @@ STDMETHOD(OnRowsetChange)(
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) pour obtenir des descriptions de paramètre.
+Consultez [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) pour obtenir des descriptions de paramètre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Consultez [IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) pour des descriptions de la valeur de retour.
+Consultez [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) pour des descriptions de la valeur de retour.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode encapsule le [IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) (méthode). Consultez la description de cette méthode dans la référence du programmeur OLE DB pour plus d’informations.
+Cette méthode encapsule le [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) (méthode). Consultez la description de cette méthode dans la référence du programmeur OLE DB pour plus d’informations.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85))
+[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))
 [IRowsetNotifyCP, classe](../../data/oledb/irowsetnotifycp-class.md)

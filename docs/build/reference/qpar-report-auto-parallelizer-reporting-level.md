@@ -2,12 +2,12 @@
 title: /Qpar-report (Niveau de rapport du paralléliseur automatique)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 4f3f496deb9f87d4f33f5e36832bd46405a482b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ab14f890d888664b2847f3e3d4b193d7c77da1a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550031"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419905"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (Niveau de rapport du paralléliseur automatique)
 
@@ -21,10 +21,10 @@ Active la fonctionnalité de création de rapports du compilateur [PARALLÉLISEU
 
 ## <a name="remarks"></a>Notes
 
-**/ Qpar-report : 1**<br/>
+**/Qpar-report:1**<br/>
 Génère un message d'information pour les boucles parallélisées.
 
-**/ Qpar-report : 2**<br/>
+**/Qpar-report:2**<br/>
 Génère un message d'information pour les boucles parallélisées et non parallélisées, ainsi qu'un code motif.
 
 Les messages sont signalés à stdout. Si aucun message d'information n'est signalé, cela signifie que le code ne contient pas de boucle ou que le niveau de rapport n'a pas été défini pour signaler les boucles non parallélisées. Pour plus d’informations sur les codes motifs et les messages, consultez [Messages du Vectoriseur et du PARALLÉLISEUR](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).

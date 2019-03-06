@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: faf541a0705de3e0e3d1b795d1abbdc2e9707974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddf59e8df82b1ec98f4e1fabe9917027bdf0c75b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582633"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426756"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Thread et Marshaling (C++/CX)
 
@@ -61,7 +61,7 @@ Voici l'avertissement émis :
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-Lorsque vous ajoutez une référence, au niveau de portée du membre ou au niveau de portée globale, à un objet qui a un comportement de marshaling Standard, le compilateur émet un avertissement qui vous indique d'encapsuler le type dans `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Si vous utilisez `Agile<T>`, vous pouvez consommer la classe comme avec toute autre classe agile. Utilisez `Platform::Agile<T>` dans les circonstances ci-dessous.
+Lorsque vous ajoutez une référence, à la portée du membre ou de la portée globale, à un objet qui a un comportement de marshaling de « Standard », le compilateur émet un avertissement qui vous indique d’encapsuler le type dans `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Si vous utilisez `Agile<T>`, vous pouvez utiliser la classe comme vous pouvez le faire toute autre classe agile. Utilisez `Platform::Agile<T>` dans les circonstances ci-dessous.
 
 - La variable non agile est déclarée au niveau de la portée globale.
 
@@ -124,5 +124,5 @@ Le thread et marshaling des informations requises par un composant Windows Runti
 
 ## <a name="see-also"></a>Voir aussi
 
-[ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)<br/>
-[MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+[ThreadingModel](/uwp/api/Windows.Foundation.Metadata.ThreadingModel)<br/>
+[MarshallingBehavior](/uwp/api/windows.foundation.metadata.marshalingbehaviorattribute)

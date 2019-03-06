@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 21e17d9ec9c4b145af8909730e5f799de9b72ce2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ebc18d6d895928b1deec392cbb0bd91f48a96ed
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615525"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425703"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Symbole de point d'entrée)
 

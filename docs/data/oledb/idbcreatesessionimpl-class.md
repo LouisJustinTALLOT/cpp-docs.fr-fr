@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ecc06bf5e3514ea87c86de17dbafd59b9da9f8b6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 36f5a359051dbd5035a73514f84fb2c61ff13176
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556420"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412924"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl, classe
 
-Fournit une implémentation pour le [IDBCreateSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms724076(v=vs.85)) interface.
+Fournit une implémentation pour le [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,7 +39,7 @@ VOTRE CLASSE DÉRIVÉE
 *SessionClass*<br/>
 L’objet de session.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -69,7 +69,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IDBCreateSession::CreateSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms714942(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IDBCreateSession::CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="see-also"></a>Voir aussi
 

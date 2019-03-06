@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 33206dfb885239839c3a64436b6b540fc7d4e6e5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627538"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422973"
 ---
 # <a name="x64-exception-handling"></a>x64 la gestion des exceptions
 
@@ -68,7 +68,7 @@ La structure UNWIND_INFO doit être DWORD aligné en mémoire. Voici ce que sign
 
    Numéro de version des données de déroulement, 1 actuellement.
 
-- **indicateurs**
+- **Indicateurs**
 
    Trois indicateurs sont actuellement définis :
 
@@ -182,21 +182,21 @@ Le code d’opération de déroulement est une des valeurs suivantes :
 
   |||
   |-|-|
-  |RSP + 32|SS|
-  |RSP + 24|Ancien RSP|
-  |RSP + 16|EFLAGS|
-  |RSP + 8|CS|
+  |RSP+32|SS|
+  |RSP+24|Ancien RSP|
+  |RSP+16|EFLAGS|
+  |RSP+8|CS|
   |RSP|RIP|
 
   Si les informations de l’opération est égale à 1, un de ces frames ont été envoyé :
 
   |||
   |-|-|
-  |RSP + 40|SS|
-  |RSP + 32|Ancien RSP|
-  |RSP + 24|EFLAGS|
-  |RSP + 16|CS|
-  |RSP + 8|RIP|
+  |RSP+40|SS|
+  |RSP+32|Ancien RSP|
+  |RSP+24|EFLAGS|
+  |RSP+16|CS|
+  |RSP+8|RIP|
   |RSP|Code d'erreur|
 
   Ce code de déroulement s’affiche toujours dans un prologue factice, ce qui n’est jamais réellement exécuté, mais au lieu de cela apparaît avant le point d’entrée réelle d’une routine d’interruption et existe uniquement pour fournir un emplacement pour simuler le push d’un frame de la machine. `UWOP_PUSH_MACHFRAME` enregistre cette simulation, ce qui indique que l’ordinateur a effectuée sur le plan conceptuel de cette opération :
@@ -331,11 +331,11 @@ Pour pouvoir écrire des routines d’assembly approprié, il existe un ensemble
 |-|-|
 |FRAME de PROC \[:*ehandler*]|Causes MASM pour générer une fonction table d’entrée dans .pdata et .xdata d’informations de déroulement pour une fonction de structuré comportement de déroulement de la gestion des exceptions.  Si *ehandler* est présent, cette procédure est entrée dans l’enregistrement .xdata comme gestionnaire spécifique au langage.<br /><br /> Lorsque l’attribut FRAME est utilisé, il doit être suivi par un. Directive ENDPROLOG.  Si la fonction est une fonction de feuille (tel que défini dans [types de fonction](../build/stack-usage.md#function-types)) l’attribut FRAME n’est pas nécessaire, tout comme le reste de ces pseudo-opérations.|
 |. PUSHREG *inscrire*|Génère une entrée de code de déroulement UWOP_PUSH_NONVOL pour le numéro de Registre spécifié à l’aide de l’offset actuel dans le prologue.<br /><br /> Cela doit uniquement être utilisé avec les registres d’entiers non volatile.  Pour obtenir des notifications Push registres volatils, utilisez un. 8 ALLOCSTACK, à la place|
-|. SETFRAME *inscrire*, *offset*|Renseigne le frame inscrire champ et le décalage dans les informations de déroulement en utilisant le Registre spécifié et le décalage. Le décalage doit être un multiple de 16 et inférieur ou égal à 240. Cette directive génère également une entrée de code de déroulement UWOP_SET_FPREG pour le Registre spécifié à l’aide de l’offset de prologue actuel.|
+|.SETFRAME *register*, *offset*|Renseigne le frame inscrire champ et le décalage dans les informations de déroulement en utilisant le Registre spécifié et le décalage. Le décalage doit être un multiple de 16 et inférieur ou égal à 240. Cette directive génère également une entrée de code de déroulement UWOP_SET_FPREG pour le Registre spécifié à l’aide de l’offset de prologue actuel.|
 |. ALLOCSTACK *taille*|Génère un UWOP_ALLOC_SMALL ou UWOP_ALLOC_LARGE avec la taille spécifiée pour l’offset actuel dans le prologue.<br /><br /> Le *taille* opérande doit être un multiple de 8.|
 |. SAVEREG *inscrire*, *offset*|Génère un UWOP_SAVE_NONVOL ou une entrée de code de déroulement UWOP_SAVE_NONVOL_FAR pour le Registre spécifié et l’offset à l’aide de l’offset de prologue actuel. MASM choisit l’encodage plus efficace.<br /><br /> *décalage* doit être positif et un multiple de 8. *décalage* est relative à la base du frame de la procédure, qui est généralement dans RSP, ou, si vous utilisez un pointeur de frame, le pointeur de frame non ajustée.|
-|. SAVEXMM128 *inscrire*, *offset*|Génère un UWOP_SAVE_XMM128 ou une entrée de code de déroulement UWOP_SAVE_XMM128_FAR pour le registre XMM spécifié et l’offset à l’aide de l’offset de prologue actuel. MASM choisit l’encodage plus efficace.<br /><br /> *décalage* doit être positif et un multiple de 16.  *décalage* est relative à la base du frame de la procédure, qui est généralement dans RSP, ou, si vous utilisez un pointeur de frame, le pointeur de frame non ajustée.|
-|. PUSHFRAME \[ *code*]|Génère une entrée de code de déroulement UWOP_PUSH_MACHFRAME. Si le paramètre facultatif *code* est spécifié, l’écriture de code de déroulement reçoit un modificateur de 1. Sinon, le modificateur est 0.|
+|.SAVEXMM128 *register*, *offset*|Génère un UWOP_SAVE_XMM128 ou une entrée de code de déroulement UWOP_SAVE_XMM128_FAR pour le registre XMM spécifié et l’offset à l’aide de l’offset de prologue actuel. MASM choisit l’encodage plus efficace.<br /><br /> *décalage* doit être positif et un multiple de 16.  *décalage* est relative à la base du frame de la procédure, qui est généralement dans RSP, ou, si vous utilisez un pointeur de frame, le pointeur de frame non ajustée.|
+|.PUSHFRAME \[*code*]|Génère une entrée de code de déroulement UWOP_PUSH_MACHFRAME. Si le paramètre facultatif *code* est spécifié, l’écriture de code de déroulement reçoit un modificateur de 1. Sinon, le modificateur est 0.|
 |.ENDPROLOG|Signale la fin des déclarations de prologue.  Doit se produire dans les 255 premiers octets de la fonction.|
 
 Voici un exemple de prologue de fonction avec une utilisation correcte de la plupart des codes d’opération :
@@ -504,4 +504,4 @@ typedef struct _RUNTIME_FUNCTION {
 
 ## <a name="see-also"></a>Voir aussi
 
-[x64 conventions des logiciels](../build/x64-software-conventions.md)
+[Conventions des logiciels x64](../build/x64-software-conventions.md)

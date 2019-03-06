@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266290"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426392"
 ---
 # <a name="cipaddressctrl-class"></a>Cipaddressctrl, classe
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 Adresse IP style du contrôle. Appliquer une combinaison de styles de fenêtre. Vous devez inclure le style WS_CHILD, car le contrôle doit être une fenêtre enfant. Consultez [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows pour obtenir la liste des styles de windows.
 
 *rect*<br/>
-Une référence à la taille et la position du contrôle d’adresse IP. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+Une référence à la taille et la position du contrôle d’adresse IP. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre du parent du contrôle d’adresse IP. Il ne doit pas être NULL.
@@ -166,7 +166,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 Adresse IP style du contrôle. Appliquer une combinaison de styles de fenêtre. Vous devez inclure le style WS_CHILD, car le contrôle doit être une fenêtre enfant. Consultez [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) dans le SDK Windows pour obtenir la liste des styles de windows.
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.

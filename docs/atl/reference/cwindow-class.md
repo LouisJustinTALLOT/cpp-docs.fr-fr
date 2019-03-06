@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: b27d6bb01b9e94ebe38be5455ffcc870806ac33b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298345"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425066"
 ---
 # <a name="cwindow-class"></a>CWindow, classe
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Consultez [ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) dans le Kit de développement logiciel Windows.
 
-La deuxième version de cette méthode vous permet de convertir les coordonnées d’un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+La deuxième version de cette méthode vous permet de convertir les coordonnées d’un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
 
 ##  <a name="create"></a>  CWindow::Create
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Consultez [MapWindowPoints](/windows/desktop/api/winuser/nf-winuser-mapwindowpoints) dans le Kit de développement logiciel Windows.
 
-La deuxième version de cette méthode vous permet de convertir les coordonnées d’un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+La deuxième version de cette méthode vous permet de convertir les coordonnées d’un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
 
 ##  <a name="messagebox"></a>  CWindow::MessageBox
 
@@ -1923,7 +1923,7 @@ BOOL MoveWindow(
 
 Pour une fenêtre de niveau supérieur, paramètres objet, x et y sont par rapport à l’angle supérieur gauche de l’écran. Pour un objet de fenêtre enfant, ils sont par rapport à l’angle supérieur gauche de la zone cliente de la fenêtre parent.
 
-La deuxième version de cette méthode utilise un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure pour déterminer la nouvelle position, la largeur et hauteur de la fenêtre.
+La deuxième version de cette méthode utilise un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure pour déterminer la nouvelle position, la largeur et hauteur de la fenêtre.
 
 ##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Consultez [ScreenToClient](/windows/desktop/api/winuser/nf-winuser-screentoclient) dans le Kit de développement logiciel Windows.
 
-La deuxième version de cette méthode vous permet de convertir les coordonnées d’un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+La deuxième version de cette méthode vous permet de convertir les coordonnées d’un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
 
 ##  <a name="scrollwindow"></a>  CWindow::ScrollWindow
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Consultez [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) dans le Kit de développement logiciel Windows.
 
-La deuxième version de cette méthode utilise un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure pour définir la nouvelle position, la largeur et hauteur de la fenêtre.
+La deuxième version de cette méthode utilise un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure pour définir la nouvelle position, la largeur et hauteur de la fenêtre.
 
 ##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 8f60ece05443393456693aba3bc674f52822432a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 332e1d6d292e32dcf129b37c8c4a7857f0b5985f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693475"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424312"
 ---
 # <a name="file-handling-and-io-ccli"></a>Gestion de fichiers et E/S (C++/CLI)
 
@@ -136,7 +136,7 @@ int main()
 
 L’exemple de code suivant montre comment lire des données binaires à partir d’un fichier, à l’aide de deux classes à partir de la <xref:System.IO?displayProperty=fullName> espace de noms : <xref:System.IO.FileStream> et <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> représente le fichier réel. <xref:System.IO.BinaryReader> Fournit une interface pour le flux de données qui autorise l’accès binaire.
 
-L’exemple de code lit un fichier nommé data.bin et contient des entiers au format binaire. Pour plus d’informations sur ce type de fichier, consultez [Comment : écrire un fichier binaire (C++ / c++ / CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
+L’exemple de code lit un fichier nommé data.bin et contient des entiers au format binaire. Pour plus d’informations sur ce type de fichier, consultez [Comment : Écrire un fichier binaire (C++ / c++ / CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Exemple
 
@@ -177,7 +177,7 @@ int main()
 
 L’exemple de code suivant montre comment ouvrir et lire une fichier texte une ligne à la fois, à l’aide de la <xref:System.IO.StreamReader> classe qui est définie dans le <xref:System.IO?displayProperty=fullName> espace de noms. Une instance de cette classe est utilisée pour ouvrir un fichier texte, puis le <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> méthode est utilisée pour récupérer chaque ligne.
 
-Cet exemple de code lit un fichier nommé textfile.txt et qui contienne du texte. Pour plus d’informations sur ce type de fichier, consultez [Comment : écrire un fichier texte (C++ / c++ / CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
+Cet exemple de code lit un fichier nommé textfile.txt et qui contienne du texte. Pour plus d’informations sur ce type de fichier, consultez [Comment : Écrire un fichier texte (C++ / c++ / CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
 
 ### <a name="example"></a>Exemple
 
@@ -261,7 +261,7 @@ int main()
 
 L’exemple de code suivant illustre l’écriture des données binaires dans un fichier. Deux classes à partir de la <xref:System.IO> espace de noms sont utilisés : <xref:System.IO.FileStream> et <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> représente le fichier réel, tandis que <xref:System.IO.BinaryWriter> fournit une interface pour le flux de données qui autorise l’accès binaire.
 
-L’exemple de code suivant écrit un fichier contenant des entiers au format binaire. Ce fichier peut être lu par le code dans [Comment : lire un fichier binaire (C++ / c++ / CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
+L’exemple de code suivant écrit un fichier contenant des entiers au format binaire. Ce fichier peut être lu par le code dans [Comment : Lire un fichier binaire (C++ / c++ / CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Exemple
 
@@ -338,4 +338,4 @@ int main()
 
 [Fichier et flux de données E/S](/dotnet/standard/io/index)
 
-[Espace de noms System.IO](https://msdn.microsoft.com/library/system.io.aspx)
+<xref:System.IO>

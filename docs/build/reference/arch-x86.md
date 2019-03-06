@@ -2,12 +2,12 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: fb115d564ca24ff29e120e0d8c25e0dbe28024cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549706"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421805"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -21,19 +21,19 @@ Spécifie l'architecture pour la génération de code sur x86. Consultez égalem
 
 ## <a name="arguments"></a>Arguments
 
-**/ arch : IA32**<br/>
+**/arch:IA32**<br/>
 Ne spécifie aucune instruction améliorée et spécifie x87 pour les calculs à virgule flottante.
 
-**/ arch : SSE**<br/>
+**/arch:SSE**<br/>
 Permet l'utilisation d'instructions SSE.
 
-**/ arch : SSE2**<br/>
+**/arch:SSE2**<br/>
 Permet l'utilisation d'instructions SSE2. Voici l’instruction par défaut sur x86 plateformes si aucun **/arch** option est spécifiée.
 
-**/ arch : AVX**<br/>
-Active l’utilisation des instructions Intel Advanced Vector Extensions.
+**/arch:AVX**<br/>
+Active l'utilisation des instructions Intel Advanced Vector Extensions.
 
-**/ arch : avx2**<br/>
+**/arch:AVX2**<br/>
 Active l’utilisation des instructions Intel Advanced Vector Extensions 2.
 
 ## <a name="remarks"></a>Notes

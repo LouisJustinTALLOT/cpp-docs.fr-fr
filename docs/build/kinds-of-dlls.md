@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: daf042f742a9c4b7757813fc73eeb4b6d1a87413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441117"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424806"
 ---
 # <a name="kinds-of-dlls"></a>Types de DLL
 
@@ -31,7 +31,7 @@ La bibliothèque MFC elle-même est disponible, dans les deux bibliothèques de 
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [DLL non-MFC : vue d’ensemble](../build/non-mfc-dlls-overview.md)
+- [DLL non MFC : vue d’ensemble](../build/non-mfc-dlls-overview.md)
 
 - [DLL MFC normales liées de manière statique aux MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 
@@ -55,11 +55,11 @@ Si votre DLL ne doit pas être utilisée par des exécutables MFC, vous avez le 
 
 Si votre DLL liée de manière dynamique aux MFC, les DLL MFC peuvent être redistribués avec votre DLL. Cette architecture est particulièrement utile pour le partage de la bibliothèque de classes entre plusieurs fichiers exécutables afin d’économiser l’espace disque et de réduire l’utilisation de la mémoire.
 
-Avant la version 4.0, Visual C++ uniquement pris en charge deux types de DLL MFC : USRDLL et AFXDLL. DLL MFC normales liées de manière statique aux MFC ont les mêmes caractéristiques que l’ancienne USRDLL. DLL d’extension MFC ont les mêmes caractéristiques que l’ancienne AFXDLL.
+Avant la version 4.0, Visual C++ prises uniquement en charge deux types de DLL MFC : USRDLL et AFXDLL. DLL MFC normales liées de manière statique aux MFC ont les mêmes caractéristiques que l’ancienne USRDLL. DLL d’extension MFC ont les mêmes caractéristiques que l’ancienne AFXDLL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [DLL non-MFC : vue d’ensemble](../build/non-mfc-dlls-overview.md)
+- [DLL non MFC : vue d’ensemble](../build/non-mfc-dlls-overview.md)
 
 - [DLL MFC normales liées de manière statique aux MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 

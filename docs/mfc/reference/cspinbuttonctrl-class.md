@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290428"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425027"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle de bouton toupie (spin). Appliquer n’importe quelle combinaison de styles de contrôle de bouton toupie (spin) au contrôle. Ces styles sont décrites dans [Styles de contrôle Up-Down](/windows/desktop/Controls/up-down-control-styles) dans le SDK Windows.
 
 *rect*<br/>
-Spécifie la taille et la position du contrôle de bouton toupie (spin). Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure
+Spécifie la taille et la position du contrôle de bouton toupie (spin). Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre de parent du contrôle de bouton toupie (spin), généralement un `CDialog`. Il ne doit pas être NULL.
@@ -160,7 +160,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 Spécifie le style du contrôle de bouton toupie (spin). Appliquer n’importe quelle combinaison de styles de contrôle de bouton toupie (spin) au contrôle. Ces styles sont décrites dans [Styles de contrôle Up-Down](/windows/desktop/Controls/up-down-control-styles) dans le SDK Windows.
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.

@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302495"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424481"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle de barre d’outils. Barres d’outils doivent toujours avoir le style WS_CHILD. En outre, vous pouvez spécifier n’importe quelle combinaison des styles de barre d’outils et des styles de fenêtre comme décrit sous **notes**.
 
 *rect*<br/>
-Spécifie éventuellement la taille et la position du contrôle de barre d’outils. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+Spécifie éventuellement la taille et la position du contrôle de barre d’outils. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente du contrôle de barre d’outils. Il ne doit pas être NULL.
@@ -681,7 +681,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 Spécifie le style du contrôle de barre d’outils. Barres d’outils doivent toujours avoir le style WS_CHILD. En outre, vous pouvez spécifier n’importe quelle combinaison des styles de barre d’outils et des styles de fenêtre comme décrit dans la **remarques** section de [créer](#create).
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 Index de base zéro du bouton pour lequel récupérer des informations.
 
 *lpRect*<br/>
-Adresse d’un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui reçoit les coordonnées du rectangle englobant.
+Adresse d’un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui reçoit les coordonnées du rectangle englobant.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 L’identificateur du bouton.
 
 *lpRect*<br/>
-Un pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui doit recevoir les informations de rectangle englobant.
+Un pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui doit recevoir les informations de rectangle englobant.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Paramètres
 
 *ppt*<br/>
-Un pointeur vers un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure qui contient la coordonnée x du test de positionnement dans la `x` membre et la coordonnée y de l’atteinte de test dans le `y` membre. Les coordonnées sont exprimées par rapport à la zone cliente de la barre d’outils.
+Un pointeur vers un [POINT](/previous-versions/dd162805\(v=vs.85\)) structure qui contient la coordonnée x du test de positionnement dans la `x` membre et la coordonnée y de l’atteinte de test dans le `y` membre. Les coordonnées sont exprimées par rapport à la zone cliente de la barre d’outils.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Paramètres
 
 *ppt*<br/>
-Un pointeur vers un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordonne la structure qui contient le test de positionnement, par rapport à la zone cliente de la barre d’outils.
+Un pointeur vers un [POINT](/previous-versions/dd162805\(v=vs.85\)) coordonne la structure qui contient le test de positionnement, par rapport à la zone cliente de la barre d’outils.
 
 *ptbim*<br/>
 Un pointeur vers un [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) structure qui reçoit les informations de marque d’insertion.
@@ -2295,7 +2295,7 @@ Nombre de lignes demandé.
 Indique s’il faut utiliser des lignes plus ou moins de lignes si la barre d’outils ne peut pas être redimensionné pour le nombre de lignes demandé.
 
 *lpRect*<br/>
-Pointe vers le [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui recevra le nouveau rectangle englobant de la barre d’outils.
+Pointe vers le [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui recevra le nouveau rectangle englobant de la barre d’outils.
 
 ### <a name="remarks"></a>Notes
 
