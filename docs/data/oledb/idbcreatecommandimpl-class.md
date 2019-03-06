@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4b8c713bcf00cd68f9621b8c112d4d6fd27aec01
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: fda12332ef14cb95e9f11f8df0b94ccfffa0303d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556399"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425183"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl, classe
 
-Fournit une implémentation de la [IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms711625(v=vs.85)) interface.
+Fournit une implémentation de la [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,7 +39,7 @@ Dérivé de l’objet de session `IDBCreateCommandImpl`.
 *CommandClass*<br/>
 Votre classe de commande.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -69,7 +69,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IDBCreateCommand::CreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709772(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 Certains paramètres correspondent aux *de référence du programmeur OLE DB* des noms différents, qui sont décrites dans les paramètres `IDBCreateCommand::CreateCommand`:
 

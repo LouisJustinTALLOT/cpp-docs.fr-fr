@@ -3,12 +3,12 @@ title: Options du compilateur classées par ordre alphabétique
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646730"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415875"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Options du compilateur classées par ordre alphabétique
 
@@ -21,7 +21,7 @@ Le tableau suivant dresse la liste complète des options du compilateur classée
 |[/AI](ai-specify-metadata-directories.md)|Spécifie un répertoire à explorer afin de résoudre les références de fichiers passées à la directive [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/analyze](analyze-code-analysis.md)|Active l'analyse du code.|
 |[/arch](arch-minimum-cpu-architecture.md)|Spécifie l'architecture pour la génération de code.|
-|[/ await](await-enable-coroutine-support.md)|Activer les extensions de coroutines (fonctions pouvant être reprises).|
+|[/await](await-enable-coroutine-support.md)|Activer les extensions de coroutines (fonctions pouvant être reprises).|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Augmente le nombre de sections adressables dans un fichier .obj.|
 |[/C](c-preserve-comments-during-preprocessing.md)|Conserve les commentaires pendant le prétraitement.|
 |[/c](c-compile-without-linking.md)|Compile sans liaison.|
@@ -29,7 +29,7 @@ Le tableau suivant dresse la liste complète des options du compilateur classée
 |[/clr](clr-common-language-runtime-compilation.md)|Produit un fichier de sortie à exécuter sur le CLR (Common Language Runtime).|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Évaluation de constexpr de contrôle au moment de la compilation.|
 |[/D](d-preprocessor-definitions.md)|Définit des constantes et des macros.|
-|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Contrôle le format des messages de diagnostic.|
+|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Contrôle le format des messages de diagnostic.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Traite les commentaires de documentation pour les diriger vers un fichier XML.|
 |[/E](e-preprocess-to-stdout.md)|Copie la sortie du préprocesseur vers une sortie standard.|
 |[/EH](eh-exception-handling-model.md)|Spécifie le modèle de gestion des exceptions.|
@@ -79,7 +79,7 @@ Le tableau suivant dresse la liste complète des options du compilateur classée
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crée une image corrigeable en mémoire.|
 |[/I](i-additional-include-directories.md)|Recherche des fichiers Include dans un répertoire.|
 |[/J](j-default-char-type-is-unsigned.md)|Change le type `char` par défaut.|
-|[/ JMC](jmc.md)|Prend en charge le débogage uniquement mon Code C++ natif.|
+|[/JMC](jmc.md)|Prend en charge le débogage uniquement mon Code C++ natif.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Le compilateur et l'éditeur de liens créeront un binaire qui peut être exécuté dans le noyau Windows.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Crée une bibliothèque de liens dynamiques.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Crée une bibliothèque de liens dynamiques de débogage.|
@@ -103,7 +103,7 @@ Le tableau suivant dresse la liste complète des options du compilateur classée
 |[/Ox](ox-full-optimization.md)|Utilise l'optimisation maximale (/Ob2gity /Gs).|
 |[/Oy](oy-frame-pointer-omission.md)|Omet le pointeur de frame (x86 uniquement).|
 |[/P](p-preprocess-to-a-file.md)|Écrit la sortie du préprocesseur dans un fichier.|
-|[/ permissive-](permissive-standards-conformance.md)|Définir le mode de conformité à la norme.|
+|[/permissive-](permissive-standards-conformance.md)|Définir le mode de conformité à la norme.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Génère des fonctions transcendantes rapides.|
 |[/QIfist](qifist-suppress-ftol.md)|Obsolète. Supprime `_ftol` lorsque la conversion d'un type à virgule flottante vers un type intégral est requise (x86 uniquement).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Supprime les commandes `fwait` dans les blocs `try` .|

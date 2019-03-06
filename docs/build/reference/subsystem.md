@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: ec771efcd8fffd1aa1825f2c500404dc0b2a4965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638735"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415134"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -54,7 +54,7 @@ Application qui s'exécute dans le sous-système POSIX, dans Windows.
 **WINDOWS**<br/>
 Application qui s'exécute dans l'environnement graphique de Windows. Cela inclut les applications de bureau et applications Universal Windows Platform (UWP).
 
-**WINDOWS CE**<br/>
+**WINDOWSCE**<br/>
 Le sous-système WINDOWSCE indique que l'application est destinée à s'exécuter sur un périphérique doté d'une version du noyau Windows CE. Les versions du noyau incluent PocketPC, Windows Mobile, Windows Phone 7, Windows CE V1.0-6.0R3 et Windows Embedded Compact 7.
 
 Les valeurs facultatives `major` et `minor` spécifient la version minimale requise du sous-système spécifié :

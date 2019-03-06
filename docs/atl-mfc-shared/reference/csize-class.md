@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 9bbd23fe793946dc0f081f4d19b9f6e26fcfda82
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 36da88a49e7d0e648d44b0798e108a60abb935d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178367"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415147"
 ---
 # <a name="csize-class"></a>CSize, classe
 
@@ -41,10 +41,10 @@ class CSize : public tagSIZE
 |Nom|Description|
 |----------|-----------------|
 |[CSize::operator-](#operator_-)|Soustrait deux tailles.|
-|[CSize::operator ! =](#operator_neq)|Vérifie l’inégalité entre `CSize` et une taille.|
+|[CSize::operator !=](#operator_neq)|Vérifie l’inégalité entre `CSize` et une taille.|
 |[CSize::operator +](#operator_add)|Ajoute deux tailles.|
 |[CSize::operator +=](#operator_add_eq)|Ajoute une taille à `CSize`.|
-|[CSize::operator =](#operator_-_eq)|Soustrait une taille de `CSize`.|
+|[CSize::operator -=](#operator_-_eq)|Soustrait une taille de `CSize`.|
 |[CSize::operator ==](#operator_eq_eq)|Vérifie l’égalité entre `CSize` et une taille.|
 
 ## <a name="remarks"></a>Notes
@@ -119,7 +119,7 @@ Retourne zéro si les tailles sont égales, otherwize 0.
 
 [!code-cpp[NVC_ATLMFC_Utilities#98](../../atl-mfc-shared/codesnippet/cpp/csize-class_2.cpp)]
 
-##  <a name="operator_neq"></a>  CSize::operator ! =
+##  <a name="operator_neq"></a>  CSize::operator !=
 
 Vérifie l’inégalité entre deux tailles.
 
@@ -147,7 +147,7 @@ void operator+=(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#100](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>  CSize::operator =
+##  <a name="operator_-_eq"></a>  CSize::operator -=
 
 Soustrait une taille à partir de ce `CSize`.
 
@@ -179,17 +179,17 @@ Consultez les descriptions suivantes des opérateurs individuels :
 
 - **opérateur + (** *point* **)**
 
-  Cette opération offsets (déplace) un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) (ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) la valeur par ce `CSize` valeur. Le `cx` et `cy` membres de ce `CSize` valeur sont ajoutés à la `x` et `y` membres de données de la `POINT` valeur. Elle est analogue à la version de [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) qui accepte un [taille](/windows/desktop/api/windef/ns-windef-tagsize) paramètre.
+  Cette opération offsets (déplace) un [POINT](/previous-versions/dd162805\(v=vs.85\)) (ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) la valeur par ce `CSize` valeur. Le `cx` et `cy` membres de ce `CSize` valeur sont ajoutés à la `x` et `y` membres de données de la `POINT` valeur. Elle est analogue à la version de [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) qui accepte un [taille](/windows/desktop/api/windef/ns-windef-tagsize) paramètre.
 
-- **opérateur + (** *lpRect* **)**
+- **operator +(** *lpRect* **)**
 
-   Cette opération offsets (déplace) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (ou [CRect](../../atl-mfc-shared/reference/crect-class.md)) la valeur par ce `CSize` valeur. Le `cx` et `cy` membres de ce `CSize` valeur sont ajoutés à la `left`, `top`, `right`, et `bottom` membres de données de la `RECT` valeur. Elle est analogue à la version de [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) qui accepte un [taille](/windows/desktop/api/windef/ns-windef-tagsize) paramètre.
+   Cette opération offsets (déplace) un [RECT](/previous-versions/dd162897\(v=vs.85\)) (ou [CRect](../../atl-mfc-shared/reference/crect-class.md)) la valeur par ce `CSize` valeur. Le `cx` et `cy` membres de ce `CSize` valeur sont ajoutés à la `left`, `top`, `right`, et `bottom` membres de données de la `RECT` valeur. Elle est analogue à la version de [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) qui accepte un [taille](/windows/desktop/api/windef/ns-windef-tagsize) paramètre.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CSize::operator-
+##  <a name="operator_-"></a>  CSize::operator -
 
 Les trois premiers de ces opérateurs soustraire cela `CSize` valeur à la valeur du paramètre.
 
@@ -208,15 +208,15 @@ L’opérateur quatrième, l’unaire, modifie le signe de la `CSize` valeur. Co
 
   Cette opération Soustrait deux `CSize` valeurs.
 
-- **opérateur-(** *point* **)**
+- **operator -(** *point* **)**
 
-  Cette opération offsets (déplace) un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valeur par l’inverse additif de ce `CSize` valeur. Le `cx` et `cy` de ce `CSize` valeur sont soustraites de la `x` et `y` membres de données de la `POINT` valeur. Elle est analogue à la version de [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) qui accepte un [taille](/windows/desktop/api/windef/ns-windef-tagsize) paramètre.
+  Cette opération offsets (déplace) un [POINT](/previous-versions/dd162805\(v=vs.85\)) ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valeur par l’inverse additif de ce `CSize` valeur. Le `cx` et `cy` de ce `CSize` valeur sont soustraites de la `x` et `y` membres de données de la `POINT` valeur. Elle est analogue à la version de [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) qui accepte un [taille](/windows/desktop/api/windef/ns-windef-tagsize) paramètre.
 
-- **opérateur-(** *lpRect* **)**
+- **operator -(** *lpRect* **)**
 
-  Cette opération offsets (déplace) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) valeur par l’inverse additif de ce `CSize` valeur. Le `cx` et `cy` membres de ce `CSize` valeur sont soustraites de la `left`, `top`, `right`, et `bottom` membres de données de la `RECT` valeur. Elle est analogue à la version de [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) qui accepte un [taille](/windows/desktop/api/windef/ns-windef-tagsize) paramètre.
+  Cette opération offsets (déplace) un [RECT](/previous-versions/dd162897\(v=vs.85\)) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) valeur par l’inverse additif de ce `CSize` valeur. Le `cx` et `cy` membres de ce `CSize` valeur sont soustraites de la `left`, `top`, `right`, et `bottom` membres de données de la `RECT` valeur. Elle est analogue à la version de [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) qui accepte un [taille](/windows/desktop/api/windef/ns-windef-tagsize) paramètre.
 
-- **opérateur-()**
+- **operator -()**
 
   Cette opération retourne l’inverse additif de ce `CSize` valeur.
 

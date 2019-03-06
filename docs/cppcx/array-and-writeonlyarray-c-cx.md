@@ -2,12 +2,12 @@
 title: Array et WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: b957e7d34486aced4796a029ebfdfa710dc71fcc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44dc57d834272a1d78b0825ac5208d3b251aef6b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530193"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420698"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array et WriteOnlyArray (C++/CX)
 
@@ -79,13 +79,13 @@ Le système de types Windows Runtime ne prend pas en charge le concept des table
 
 Dans certains scénarios où les données sont passées à travers l'ABI dans un [Platform::Array](../cppcx/platform-array-class.md)et où vous voulez finalement traiter ces données dans un tableau de style C pour plus d'efficacité, vous pouvez utiliser [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) pour éviter l'opération de copie supplémentaire. Lorsque vous passez un type [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) comme argument à un paramètre qui accepte un `Platform::Array`, le `ArrayReference` stocke les données directement dans un tableau de style C que vous spécifiez. Gardez à l'esprit que le type `ArrayReference` ne peut effectuer aucun verrouillage sur les données sources. Ainsi, si ces données sont modifiées ou supprimées sur un autre thread avant l'appel, les résultats seront non définis.
 
-L’extrait de code suivant montre comment copier les résultats d’une opération [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) dans un `Platform::Array` (le modèle habituel), puis comment substituer `ArrayReference` pour copier les données directement dans un tableau de style C :
+L’extrait de code suivant montre comment copier les résultats d’une opération [DataReader](/uwp/api/Windows.Storage.Streams.DataReader) dans un `Platform::Array` (le modèle habituel), puis comment substituer `ArrayReference` pour copier les données directement dans un tableau de style C :
 
 [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]
 
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Évitez d'exposer un tableau comme propriété
 
-En général, vous devez éviter d'exposer un type `Platform::Array` en tant que propriété dans une classe ref, car le tableau entier est retourné même si le code client tente uniquement d'accéder à un seul élément. Quand vous devez exposer un conteneur de séquence en tant que propriété dans une classe ref publique, choisissez plutôt [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) . Dans les API privées ou internes (qui ne sont pas publiées en métadonnées), envisagez d'utiliser un conteneur C++ standard tel que le type [std::vector](../standard-library/vector-class.md).
+En général, vous devez éviter d'exposer un type `Platform::Array` en tant que propriété dans une classe ref, car le tableau entier est retourné même si le code client tente uniquement d'accéder à un seul élément. Quand vous devez exposer un conteneur de séquence en tant que propriété dans une classe ref publique, choisissez plutôt [Windows::Foundation::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) . Dans les API privées ou internes (qui ne sont pas publiées en métadonnées), envisagez d'utiliser un conteneur C++ standard tel que le type [std::vector](../standard-library/vector-class.md).
 
 ## <a name="see-also"></a>Voir aussi
 

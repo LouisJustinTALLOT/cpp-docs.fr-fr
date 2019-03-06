@@ -32,16 +32,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: dacf9de0835108ae946e7523472a0adf12e7e222
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 299cebd93a3d54ab747f5c58b22dbbf215a02e4c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556723"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426652"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl Class
 
-L’implémentation de modèles OLE DB de la [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) interface dans la spécification OLE DB.
+L’implémentation de modèles OLE DB de la [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) interface dans la spécification OLE DB.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,7 +72,7 @@ L’unité de stockage pour le handle de ligne.
 *MapClass*<br/>
 L’unité de stockage pour tous les handles de ligne détenus par le fournisseur.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -124,7 +124,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetChange::DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 
@@ -141,7 +141,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetChange::InsertRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="setdata"></a> IRowsetChangeImpl::SetData
 
@@ -157,7 +157,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetChange::SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 

@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 09d4c4f1fde563d82fa007a96723f078eb31dc1b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293938"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423233"
 ---
 # <a name="chtmleditctrlbase-class"></a>Chtmleditctrlbase, classe
 
@@ -418,9 +418,9 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur les paramètres, consultez « Format de chaîne d’un tableau de glyphe » dans [à l’aide de glyphes modification](https://msdn.microsoft.com/library/aa969614.aspx).
+Pour plus d’informations sur les paramètres, consultez « Format de chaîne d’un tableau de glyphe » dans [à l’aide de glyphes modification](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa969614\(v=vs.85\)).
 
-Cette méthode envoie le [ID de commande IDM_ADDTOGLYPHTABLE](https://msdn.microsoft.com/library/aa769891.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_ADDTOGLYPHTABLE](/previous-versions/aa769891\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold
 
@@ -436,7 +436,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_BOLD](https://msdn.microsoft.com/library/aa769861.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_BOLD](/previous-versions/aa769861\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="button"></a>  CHtmlEditCtrlBase::Button
 
@@ -457,7 +457,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_BUTTON](https://msdn.microsoft.com/library/aa769966.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_BUTTON](/previous-versions/aa769966\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox
 
@@ -478,7 +478,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_CHECKBOX](https://msdn.microsoft.com/library/aa769972.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_CHECKBOX](/previous-versions/aa769972\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection
 
@@ -494,7 +494,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_CLEARSELECTION](https://msdn.microsoft.com/library/aa770038.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_CLEARSELECTION](/previous-versions/aa770038\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy
 
@@ -510,7 +510,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_COPY](https://msdn.microsoft.com/library/aa769872.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_COPY](/previous-versions/aa769872\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut
 
@@ -526,7 +526,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_CUT](https://msdn.microsoft.com/library/aa769875.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_CUT](/previous-versions/aa769875\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete
 
@@ -542,7 +542,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_DELETE](https://msdn.microsoft.com/library/aa769876.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_DELETE](/previous-versions/aa769876\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox
 
@@ -563,7 +563,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_DROPDOWNBOX](https://msdn.microsoft.com/library/aa769984.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_DROPDOWNBOX](/previous-versions/aa769984\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable
 
@@ -579,7 +579,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_EMPTYGLYPHTABLE](https://msdn.microsoft.com/library/aa769907.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_EMPTYGLYPHTABLE](/previous-versions/aa769907\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand
 
@@ -603,7 +603,7 @@ HRESULT ExecCommand(
 ### <a name="parameters"></a>Paramètres
 
 *cmdID*<br/>
-L’ID de commande à exécuter. Pour obtenir la liste, consultez [les identificateurs de commande MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).
+L’ID de commande à exécuter. Pour obtenir la liste, consultez [les identificateurs de commande MSHTML](/previous-versions/aa741315\(v=vs.85\)).
 
 *cmdExecOpt*<br/>
 Valeurs extraites de la [admises](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) énumération, qui décrivent la façon dont l’objet doit exécuter la commande.
@@ -639,7 +639,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_FONT](https://msdn.microsoft.com/library/aa769913.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_FONT](/previous-versions/aa769913\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition
 
@@ -660,7 +660,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_ABSOLUTE_POSITION](/previous-versions/aa769889\(v=vs.85\)).
 
 ##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor
 
@@ -681,7 +681,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_BACKCOLOR](/previous-versions/aa769858\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat
 
@@ -702,7 +702,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_BLOCKFMT](https://msdn.microsoft.com/library/aa769883.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_BLOCKFMT](/previous-versions/aa769883\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames
 
@@ -723,7 +723,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [IDM_GETBLOCKFMTS ID de commande](https://msdn.microsoft.com/library/aa769884.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [IDM_GETBLOCKFMTS ID de commande](/previous-versions/aa769884\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark
 
@@ -744,7 +744,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_BOOKMARK](/previous-versions/aa769873\(v=vs.85\)).
 
 ##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument
 
@@ -852,7 +852,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 Si la sélection actuelle utilise plusieurs polices, *strFace* sera une chaîne vide.
 
-Cette méthode envoie le [ID de commande IDM_FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_FONTNAME](/previous-versions/aa769880\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize
 
@@ -873,7 +873,7 @@ Retourne la taille de police HTML (1-7). Retourne 0 si la sélection contient pl
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_FONTSIZE](/previous-versions/aa769881\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor
 
@@ -894,7 +894,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_FORECOLOR](/previous-versions/aa769882\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone
 
@@ -915,7 +915,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_GETFRAMEZONE](https://msdn.microsoft.com/library/aa769916.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_GETFRAMEZONE](/previous-versions/aa769916\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty
 
@@ -948,7 +948,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_SHOWALIGNEDSITETAGS](/previous-versions/aa769947\(v=vs.85\)).
 
 ##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags
 
@@ -969,7 +969,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_SHOWALLTAGS](/previous-versions/aa769948\(v=vs.85\)).
 
 ##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags
 
@@ -990,7 +990,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_SHOWAREATAGS](/previous-versions/aa769949\(v=vs.85\)).
 
 ##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags
 
@@ -1011,7 +1011,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_SHOWWBRTAGS](/previous-versions/aa769956\(v=vs.85\)).
 
 ##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags
 
@@ -1032,7 +1032,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_SHOWCOMMENTTAGS](/previous-versions/aa769950\(v=vs.85\)).
 
 ##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags
 
@@ -1053,7 +1053,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_SHOWMISCTAGS](/previous-versions/aa769952\(v=vs.85\)).
 
 ##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags
 
@@ -1074,7 +1074,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_SHOWSCRIPTTAGS](/previous-versions/aa769953\(v=vs.85\)).
 
 ##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags
 
@@ -1095,7 +1095,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_SHOWSTYLETAGS](/previous-versions/aa769954\(v=vs.85\)).
 
 ##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags
 
@@ -1116,7 +1116,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [ID de commande IDM_SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx).
+Pour plus d’informations, consultez [ID de commande IDM_SHOWUNKNOWNTAGS](/previous-versions/aa769955\(v=vs.85\)).
 
 ##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine
 
@@ -1137,7 +1137,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_HORIZONTALLINE](https://msdn.microsoft.com/library/aa769968.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_HORIZONTALLINE](/previous-versions/aa769968\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink
 
@@ -1158,7 +1158,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_HYPERLINK](https://msdn.microsoft.com/library/aa769874.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_HYPERLINK](/previous-versions/aa769874\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste
 
@@ -1179,7 +1179,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_IE50_PASTE](https://msdn.microsoft.com/library/aa769922.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_IE50_PASTE](/previous-versions/aa769922\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe
 
@@ -1200,7 +1200,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_IFRAME](https://msdn.microsoft.com/library/aa769969.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_IFRAME](/previous-versions/aa769969\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="image"></a>  CHtmlEditCtrlBase::Image
 
@@ -1221,7 +1221,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_IMAGE](https://msdn.microsoft.com/library/aa769970.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_IMAGE](/previous-versions/aa769970\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent
 
@@ -1237,7 +1237,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_INDENT](https://msdn.microsoft.com/library/aa769963.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_INDENT](/previous-versions/aa769963\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet
 
@@ -1258,7 +1258,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_INSFIELDSET](https://msdn.microsoft.com/library/aa769967.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_INSFIELDSET](/previous-versions/aa769967\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton
 
@@ -1279,7 +1279,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_INSINPUTBUTTON](https://msdn.microsoft.com/library/aa769971.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_INSINPUTBUTTON](/previous-versions/aa769971\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden
 
@@ -1300,7 +1300,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_INSINPUTHIDDEN](https://msdn.microsoft.com/library/aa769974.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_INSINPUTHIDDEN](/previous-versions/aa769974\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage
 
@@ -1321,7 +1321,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_INSINPUTIMAGE](https://msdn.microsoft.com/library/aa769975.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_INSINPUTIMAGE](/previous-versions/aa769975\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword
 
@@ -1342,7 +1342,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_INSINPUTPASSWORD](https://msdn.microsoft.com/library/aa769976.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_INSINPUTPASSWORD](/previous-versions/aa769976\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset
 
@@ -1363,7 +1363,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_INSINPUTRESET](https://msdn.microsoft.com/library/aa769978.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_INSINPUTRESET](/previous-versions/aa769978\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit
 
@@ -1384,7 +1384,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_INSINPUTSUBMIT](https://msdn.microsoft.com/library/aa769979.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_INSINPUTSUBMIT](/previous-versions/aa769979\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload
 
@@ -1405,7 +1405,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_INSINPUTUPLOAD](https://msdn.microsoft.com/library/aa769973.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_INSINPUTUPLOAD](/previous-versions/aa769973\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement
 
@@ -1426,7 +1426,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_1D_ELEMENT](https://msdn.microsoft.com/library/aa769885.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_1D_ELEMENT](/previous-versions/aa769885\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement
 
@@ -1447,7 +1447,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_2D_ELEMENT](https://msdn.microsoft.com/library/aa769886.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_2D_ELEMENT](/previous-versions/aa769886\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic
 
@@ -1463,7 +1463,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_ITALIC](https://msdn.microsoft.com/library/aa769988.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_ITALIC](/previous-versions/aa769988\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter
 
@@ -1479,7 +1479,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_JUSTIFYCENTER](https://msdn.microsoft.com/library/aa769989.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_JUSTIFYCENTER](/previous-versions/aa769989\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft
 
@@ -1495,7 +1495,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_JUSTIFYLEFT](https://msdn.microsoft.com/library/aa770011.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_JUSTIFYLEFT](/previous-versions/aa770011\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight
 
@@ -1511,7 +1511,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_JUSTIFYRIGHT](https://msdn.microsoft.com/library/aa770013.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_JUSTIFYRIGHT](/previous-versions/aa770013\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox
 
@@ -1532,7 +1532,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_LISTBOX](https://msdn.microsoft.com/library/aa769985.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_LISTBOX](/previous-versions/aa769985\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee
 
@@ -1553,7 +1553,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_MARQUEE](https://msdn.microsoft.com/library/aa769981.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_MARQUEE](/previous-versions/aa769981\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument
 
@@ -1586,7 +1586,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_ORDERLIST](https://msdn.microsoft.com/library/aa769982.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_ORDERLIST](/previous-versions/aa769982\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent
 
@@ -1602,7 +1602,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_OUTDENT](https://msdn.microsoft.com/library/aa770015.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_OUTDENT](/previous-versions/aa770015\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph
 
@@ -1623,7 +1623,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_PARAGRAPH](https://msdn.microsoft.com/library/aa769983.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_PARAGRAPH](/previous-versions/aa769983\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste
 
@@ -1639,7 +1639,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_PASTE](https://msdn.microsoft.com/library/aa770017.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_PASTE](/previous-versions/aa770017\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument
 
@@ -1665,7 +1665,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_PRINT](https://msdn.microsoft.com/library/aa769937.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_PRINT](/previous-versions/aa769937\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview
 
@@ -1687,7 +1687,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_PRINTPREVIEW](https://msdn.microsoft.com/library/aa769938.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_PRINTPREVIEW](/previous-versions/aa769938\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus
 
@@ -1725,7 +1725,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_RADIOBUTTON](https://msdn.microsoft.com/library/aa769977.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_RADIOBUTTON](/previous-versions/aa769977\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument
 
@@ -1741,7 +1741,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_REFRESH](https://msdn.microsoft.com/library/aa770020.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_REFRESH](/previous-versions/aa770020\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat
 
@@ -1757,7 +1757,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_REMOVEFORMAT](https://msdn.microsoft.com/library/aa770021.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_REMOVEFORMAT](/previous-versions/aa770021\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs
 
@@ -1778,7 +1778,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [IDM_SAVEAS ID de commande](https://msdn.microsoft.com/library/aa770024.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [IDM_SAVEAS ID de commande](/previous-versions/aa770024\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll
 
@@ -1794,7 +1794,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_SELECTALL](https://msdn.microsoft.com/library/aa770025.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_SELECTALL](/previous-versions/aa770025\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition
 
@@ -1815,7 +1815,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_2D_POSITION](https://msdn.microsoft.com/library/aa769887.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_2D_POSITION](/previous-versions/aa769887\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition
 
@@ -1836,7 +1836,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_ABSOLUTE_POSITION](/previous-versions/aa769889\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection
 
@@ -1857,7 +1857,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_ATOMICSELECTION](https://msdn.microsoft.com/library/aa769892.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_ATOMICSELECTION](/previous-versions/aa769892\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode
 
@@ -1878,7 +1878,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_AUTOURLDETECT_MODE](https://msdn.microsoft.com/library/aa769893.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_AUTOURLDETECT_MODE](/previous-versions/aa769893\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor
 
@@ -1892,10 +1892,10 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ### <a name="parameters"></a>Paramètres
 
 *nColor*<br/>
-La couleur. Consultez *pvaIn* dans [ID de commande IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).
+La couleur. Consultez *pvaIn* dans [ID de commande IDM_BACKCOLOR](/previous-versions/aa769858\(v=vs.85\)).
 
 *szColor*<br/>
-La couleur. Consultez *pvaIn* dans [ID de commande IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).
+La couleur. Consultez *pvaIn* dans [ID de commande IDM_BACKCOLOR](/previous-versions/aa769858\(v=vs.85\)).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1903,7 +1903,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_BACKCOLOR_](https://msdn.microsoft.com/library/aa769858.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_BACKCOLOR_](/previous-versions/aa769858\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat
 
@@ -1924,7 +1924,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [IDM_BLOCKFMT_command ID](/previous-versions/aa769883\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark
 
@@ -1945,7 +1945,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_BOOKMARK](/previous-versions/aa769873\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel
 
@@ -1966,7 +1966,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_CSSEDITING_LEVEL](https://msdn.microsoft.com/library/aa769903.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_CSSEDITING_LEVEL](/previous-versions/aa769903\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings
 
@@ -2012,7 +2012,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [IDM_COMPOSESETTINGS ID de commande](https://msdn.microsoft.com/library/aa769901.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [IDM_COMPOSESETTINGS ID de commande](/previous-versions/aa769901\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode
 
@@ -2050,7 +2050,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM_DISABLE_EDITFOCUS_UI](https://msdn.microsoft.com/library/aa769905.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM_DISABLE_EDITFOCUS_UI](/previous-versions/aa769905\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML
 
@@ -2088,7 +2088,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM FONTNAME](/previous-versions/aa769880\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize
 
@@ -2109,7 +2109,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM FONTSIZE](/previous-versions/aa769881\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor
 
@@ -2134,7 +2134,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM FORECOLOR](/previous-versions/aa769882\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode
 
@@ -2155,7 +2155,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM IE50_PASTE_MODE](https://msdn.microsoft.com/library/aa769923.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM IE50_PASTE_MODE](/previous-versions/aa769923\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize
 
@@ -2176,7 +2176,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM LIVERESIZE](https://msdn.microsoft.com/library/aa769928.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM LIVERESIZE](/previous-versions/aa769928\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect
 
@@ -2197,7 +2197,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM MULTIPLESELECTION](https://msdn.microsoft.com/library/aa769929.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM MULTIPLESELECTION](/previous-versions/aa769929\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor
 
@@ -2218,7 +2218,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM OVERRIDE_CURSOR](https://msdn.microsoft.com/library/aa769932.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM OVERRIDE_CURSOR](/previous-versions/aa769932\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode
 
@@ -2239,7 +2239,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [IDM remplacer les ID de commande](https://msdn.microsoft.com/library/aa770016.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [IDM remplacer les ID de commande](/previous-versions/aa770016\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign
 
@@ -2260,7 +2260,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM RESPECTVISIBILITY_INDESIGN](https://msdn.microsoft.com/library/aa770023.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM RESPECTVISIBILITY_INDESIGN](/previous-versions/aa770023\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags
 
@@ -2281,7 +2281,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM SHOWALIGNEDSITETAGS](/previous-versions/aa769947\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags
 
@@ -2302,7 +2302,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM SHOWALLTAGS](/previous-versions/aa769948\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags
 
@@ -2323,7 +2323,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM SHOWAREATAGS](/previous-versions/aa769949\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags
 
@@ -2344,7 +2344,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM SHOWWBRTAGS](/previous-versions/aa769956\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags
 
@@ -2365,7 +2365,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM SHOWCOMMENTTAGS](/previous-versions/aa769950\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags
 
@@ -2386,7 +2386,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM SHOWMISCTAGS](/previous-versions/aa769952\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags
 
@@ -2407,7 +2407,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM SHOWSCRIPTTAGS](/previous-versions/aa769953\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags
 
@@ -2428,7 +2428,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM SHOWSTYLETAGS](/previous-versions/aa769954\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags
 
@@ -2449,7 +2449,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM SHOWUNKNOWNTAGS](/previous-versions/aa769955\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea
 
@@ -2470,7 +2470,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM TEXTAREA](https://msdn.microsoft.com/library/aa769986.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM TEXTAREA](/previous-versions/aa769986\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox
 
@@ -2491,7 +2491,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM TEXTBOX](https://msdn.microsoft.com/library/aa769980.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM TEXTBOX](/previous-versions/aa769980\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark
 
@@ -2507,7 +2507,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM UNBOOKMARK](https://msdn.microsoft.com/library/aa770034.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM UNBOOKMARK](/previous-versions/aa770034\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline
 
@@ -2523,7 +2523,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [IDM SOULIGNER les ID de commande](https://msdn.microsoft.com/library/aa770035.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [IDM SOULIGNER les ID de commande](/previous-versions/aa770035\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink
 
@@ -2539,7 +2539,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [IDM dissocier les ID de commande](https://msdn.microsoft.com/library/aa770037.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [IDM dissocier les ID de commande](/previous-versions/aa770037\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList
 
@@ -2560,7 +2560,7 @@ Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie le [ID de commande IDM UNORDERLIST](https://msdn.microsoft.com/library/aa769987.aspx) pour le contrôle WebBrowser.
+Cette méthode envoie le [ID de commande IDM UNORDERLIST](/previous-versions/aa769987\(v=vs.85\)) pour le contrôle WebBrowser.
 
 ## <a name="see-also"></a>Voir aussi
 

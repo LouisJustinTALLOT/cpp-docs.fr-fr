@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-ms.openlocfilehash: ee42fc2d1065a755fa816a99563ccc9f0108e847
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0f79ed1b38401abbc65898193f2305bd432bb28
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634796"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419918"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Spécifier la limite d’allocation mémoire d’en-tête précompilé)
 
@@ -40,7 +40,7 @@ Le *facteur* argument est un pourcentage de la taille par défaut d’une mémoi
 
 ## <a name="remarks"></a>Notes
 
-Dans les versions antérieures de Visual C++, le compilateur utilisait plusieurs tas discrets, chacun avec une limite finie. Actuellement, le compilateur augmente dynamiquement les tas selon les besoins, jusqu’à ce que la limite de la taille totale des tas soit atteinte. Il requiert ensuite une mémoire tampon de taille fixe uniquement pour construire des en-têtes précompilés. Par conséquent, le **/Zm** option du compilateur est rarement nécessaire.
+Dans les versions antérieures de Visual C++, le compilateur utilisait plusieurs tas discrets, chacun avec une limite finie. Actuellement, le compilateur augmente dynamiquement les tas selon les besoins, jusqu'à ce que la limite de la taille totale des tas soit atteinte. Il requiert ensuite une mémoire tampon de taille fixe uniquement pour construire des en-têtes précompilés. Par conséquent, le **/Zm** option du compilateur est rarement nécessaire.
 
 Si le compilateur manque d’espace de tas et émet le [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) message d’erreur lorsque vous utilisez le **/Zm** option du compilateur, vous avez pu réserver trop de mémoire. Envisagez de supprimer le **/Zm** option. Si le compilateur émet le [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) accompagné d’un message d’erreur [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) message Spécifie le *facteur* argument à utiliser lorsque vous recompilez à l’aide de la **/Zm** option du compilateur.
 

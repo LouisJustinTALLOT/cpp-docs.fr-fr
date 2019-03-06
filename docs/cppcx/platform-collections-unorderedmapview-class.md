@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 9564904fa77ae6a7355119e83bdfa3ac65a4050c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a60d962d79684cb16d8d5a5139b9b65df8148052
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560834"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414406"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView, classe
 
@@ -35,7 +35,7 @@ Type de la clé dans la paire clé-valeur.
 Type de la valeur dans la paire clé-valeur.
 
 *C*<br/>
-Type qui fournit un objet de fonction qui peut comparer l'égalité de deux valeurs de clés. Par défaut, [std::equal_to\<K >](../standard-library/equal-to-struct.md)
+Type qui fournit un objet de fonction qui peut comparer l'égalité de deux valeurs de clés. By default, [std::equal_to\<K>](../standard-library/equal-to-struct.md)
 
 ### <a name="remarks"></a>Notes
 
@@ -63,15 +63,15 @@ UnorderedMapView est une implémentation C++ concrète de la [Windows::Foundatio
 
 `UnorderedMapView`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
-**Espace de noms :** Platform::Collections
+**Espace de noms :** Platform::Collections
 
 ## <a name="first"></a>  UnorderedMapView::First, méthode
 
-Retourne un itérateur qui spécifie le premier [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) élément dans la carte non triée.
+Retourne un itérateur qui spécifie le premier [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) élément dans la carte non triée.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -129,7 +129,7 @@ Valeur associée à `key`. Le type de la valeur de retour est typename *V*.
 
 ## <a name="size"></a>  UnorderedMapView::Size, méthode
 
-Retourne le nombre de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) éléments de l’objet UnorderedMapView.
+Retourne le nombre de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) éléments de l’objet UnorderedMapView.
 
 ### <a name="syntax"></a>Syntaxe
 

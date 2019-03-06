@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535771"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412456"
 ---
 # <a name="cl-environment-variables"></a>Variables d'environnement CL
 
@@ -42,7 +42,7 @@ Pour plus d’informations, consultez [définir des Variables d’environnement]
 
 Voici un exemple de définition de la variable d’environnement CL :
 
-> Définissez CL = / Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ
+> SET CL=/Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ
 
 Lorsque cette variable est définie, si vous entrez `CL INPUT.C` en ligne de commande, il s’agit la commande effective :
 
@@ -50,7 +50,7 @@ Lorsque cette variable est définie, si vous entrez `CL INPUT.C` en ligne de com
 
 Dans l'exemple suivant, une commande CL simple compile les fichiers sources FILE1.c et FILE2.c, puis lie les fichiers objets FILE1.obj, FILE2.obj et FILE3.obj :
 
-> ENSEMBLE CL = FILE1. C FICHIER2. ENSEMBLE DE C \_CL\_= FICHIER3. OBJ CL
+> SET CL=FILE1.C FILE2.C SET \_CL\_=FILE3.OBJ CL
 
 Cela a le même effet que la ligne de commande suivante :
 

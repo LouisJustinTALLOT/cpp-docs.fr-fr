@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276544"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426262"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -2685,10 +2685,10 @@ BOOL DrawAnimatedRects(
 Spécifie le type d’animation. Si vous spécifiez IDANI_CAPTION, la légende de fenêtre s’anime à partir de la position spécifiée par *lprcFrom* à la position spécifiée par *lprcTo*. L’effet est similaire à la réduction ou agrandissement d’une fenêtre.
 
 *lprcFrom*<br/>
-Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie l’emplacement et la taille de l’icône ou d’une fenêtre réduite.
+Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui spécifie l’emplacement et la taille de l’icône ou d’une fenêtre réduite.
 
 *lprcTo*<br/>
-Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie l’emplacement et la taille de la fenêtre restaurée
+Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui spécifie l’emplacement et la taille de la fenêtre restaurée
 
 ### <a name="return-value"></a>Valeur de retour
 

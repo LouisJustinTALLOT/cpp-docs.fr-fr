@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556632"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414020"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow, classe
 
@@ -52,7 +52,7 @@ Fournit une implémentation par défaut pour le handle de ligne, qui est utilis�
 class CSimpleRow
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -105,7 +105,7 @@ Pointeur vers un objet `CSimpleRow` .
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT, généralement S_OK, indiquant les deux lignes sont la même instance de ligne ou S_FALSE, indiquant les deux lignes sont différents. Consultez [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) dans le *de référence du programmeur OLE DB* pour les autres valeurs de retour possibles.
+Une valeur HRESULT, généralement S_OK, indiquant les deux lignes sont la même instance de ligne ou S_FALSE, indiquant les deux lignes sont différents. Consultez [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) dans le *de référence du programmeur OLE DB* pour les autres valeurs de retour possibles.
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 521fa0e0f786111e4e273685d2db6f6d011c72c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1451b452c5e2dc62e83e5b8f473248fa7c231877
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482574"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421192"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Exportation et importation à l'aide de AFX_EXT_CLASS
 

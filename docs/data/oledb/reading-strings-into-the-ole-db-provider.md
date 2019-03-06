@@ -4,16 +4,16 @@ ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-ms.openlocfilehash: 6d8558cce3fc4818d3e6fc8d64a4c682f5ce5b26
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 19fc7b16695ebeff35462aaa2c451ff6459bb7b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556164"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425222"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lecture de chaînes dans le fournisseur OLE DB
 
-Le `CCustomRowset::Execute` fonction ouvre un fichier et lit les chaînes. Le consommateur passe le nom de fichier au fournisseur en appelant [ICommandText::SetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85)). Le fournisseur reçoit le nom de fichier et le stocke dans la variable membre `m_strCommandText`. `Execute` lit le nom de fichier à partir de `m_strCommandText`. Si le nom de fichier n’est pas valide ou le fichier n’est pas disponible, `Execute` retourne une erreur. Sinon, il ouvre le fichier et appelle `fgets` pour récupérer les chaînes. Pour chaque jeu de chaînes qu’il lit, `Execute` crée une instance de l’enregistrement utilisateur (modifié `CCustomWindowsFile` de [stocker des chaînes dans le fournisseur OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) et le place dans un tableau.
+Le `CCustomRowset::Execute` fonction ouvre un fichier et lit les chaînes. Le consommateur passe le nom de fichier au fournisseur en appelant [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)). Le fournisseur reçoit le nom de fichier et le stocke dans la variable membre `m_strCommandText`. `Execute` lit le nom de fichier à partir de `m_strCommandText`. Si le nom de fichier n’est pas valide ou le fichier n’est pas disponible, `Execute` retourne une erreur. Sinon, il ouvre le fichier et appelle `fgets` pour récupérer les chaînes. Pour chaque jeu de chaînes qu’il lit, `Execute` crée une instance de l’enregistrement utilisateur (modifié `CCustomWindowsFile` de [stocker des chaînes dans le fournisseur OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) et le place dans un tableau.
 
 Si le fichier ne peut pas être ouvert, `Execute` doit retourner DB_E_NOTABLE. Si elle retourne E_FAIL à la place, le fournisseur ne fonctionnera pas avec beaucoup de consommateurs et ne sont pas transmettre OLE DB [tests de compatibilité](../../data/oledb/testing-your-provider.md).
 

@@ -1,17 +1,17 @@
 ---
-title: 'Comment : générer des composants COM sans inscription'
+title: 'Procédure : Générer des composants COM sans inscription'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-ms.openlocfilehash: 4f4ebf121b761c37969fa3f9788bda52d913f340
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 503c3e4399359d793ce660f36844d2edc6602146
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463529"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416768"
 ---
-# <a name="how-to-build-registration-free-com-components"></a>Comment : générer des composants COM sans inscription
+# <a name="how-to-build-registration-free-com-components"></a>Procédure : Générer des composants COM sans inscription
 
 Les composants COM sans inscription sont des composants COM qui ont des manifestes générés dans les DLL.
 
@@ -31,4 +31,4 @@ Les composants COM sans inscription sont des composants COM qui ont des manifest
 
 [Applications isolées](/windows/desktop/SbsCs/isolated-applications)<br/>
 [Sur les assemblys côte à côte](/windows/desktop/SbsCs/about-side-by-side-assemblies-)<br/>
-[Guide pratique pour générer des applications isolées pour consommer des composants COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[Guide pratique pour générer des applications isolées afin de consommer des composants COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)

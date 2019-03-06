@@ -9,12 +9,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 22ac88ede7cc015efd12f1a996ffdf361b43f041
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63cfa784242af1f737c116629a29be5ad77af31d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510110"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415199"
 ---
 # <a name="linker-options"></a>Options de l'éditeur de liens
 
@@ -58,14 +58,14 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|Contrôle le chargement différé des DLL.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Entraîne le chargement différé de la DLL spécifiée.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Signe partiellement un assembly.|
-|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Définit les indicateurs par défaut sur les chargements DLL dépendantes.|
+|[/DEPENDENTLOADFLAG](dependentloadflag.md)|Définit les indicateurs par défaut sur les chargements DLL dépendantes.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|Génère une DLL.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Crée un pilote en mode noyau.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Spécifie s’il convient de générer une image exécutable qui peut être redéfinie de façon aléatoire au moment du chargement en utilisant la fonctionnalité de randomisation du format d’espace d’adresse (ASLR).|
 |[/ENTRY](../../build/reference/entry-entry-point-symbol.md)|Définit l’adresse de départ.|
 |[/errorReport](../../build/reference/errorreport-report-internal-linker-errors.md)|Signale les erreurs internes de l’éditeur de liens à Microsoft.|
 |[/EXPORT](../../build/reference/export-exports-a-function.md)|Exporte une fonction.|
-|[/ /FILEALIGN](../../build/reference/filealign.md)|Alignement des sections dans le fichier de sortie multiples d’une valeur spécifiée.|
+|[/FILEALIGN](../../build/reference/filealign.md)|Alignement des sections dans le fichier de sortie multiples d’une valeur spécifiée.|
 |[/FIXED](../../build/reference/fixed-fixed-base-address.md)|Crée un programme qui peut être chargé uniquement à son adresse de base préférée.|
 |[/FORCE](../../build/reference/force-force-file-output.md)|Force un lien à se terminer même avec des symboles non résolus ou des symboles définis plusieurs fois.|
 |[/FUNCTIONPADMIN](../../build/reference/functionpadmin-create-hotpatchable-image.md)|Crée une image qui peut être corrigée en mémoire.|
@@ -95,7 +95,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|Inclut les informations spécifiées dans le fichier de mappage.|
 |[/MERGE](../../build/reference/merge-combine-sections.md)|Combine des sections.|
 |[/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)|Spécifie les options de ligne de commande MIDL.|
-|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Ajoute des visualiseurs de débogueur à partir d’un fichier Natvis au fichier PDB.|
+|[/NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Ajoute des visualiseurs de débogueur à partir d’un fichier Natvis au fichier PDB.|
 |[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)|Supprime la création d’un assembly .NET Framework.|
 |[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)|Ignore toutes les bibliothèques par défaut (ou celles spécifiées) quand des références externes sont résolues.|
 |[/NOENTRY](../../build/reference/noentry-no-entry-point.md)|Crée une DLL de ressource uniquement.|
@@ -113,7 +113,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Définit la somme de contrôle dans l’en-tête du fichier .exe.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Spécifie que l’image contiendra une table de gestionnaires d’exceptions sécurisés.|
 |[/SECTION](../../build/reference/section-specify-section-attributes.md)|Remplace les attributs d’une section.|
-|[/ SOURCELINK](../../build/reference/sourcelink.md)|Spécifie un fichier SourceLink à ajouter au fichier PDB.|
+|[/SOURCELINK](../../build/reference/sourcelink.md)|Spécifie un fichier SourceLink à ajouter au fichier PDB.|
 |[/STACK](../../build/reference/stack-stack-allocations.md)|Définit la taille de la pile, en octets.|
 |[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|Attache un programme stub MS-DOS à un programme Win32.|
 |[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|Indique au système d’exploitation comment exécuter le fichier .exe.|

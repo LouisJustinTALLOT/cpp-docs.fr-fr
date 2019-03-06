@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: c2cc67e6e837844356a071aa362dcca85eca24e4
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a655d95cf165ab2c5cba3a391b81d6f420f8322f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556970"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418514"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor (classe)
 
@@ -107,7 +107,7 @@ Semblable à [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) mais
 class CDynamicParameterAccessor : public CDynamicAccessor
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête**: atldbcli.h
 
@@ -313,7 +313,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] Le numéro de paramètre (offset à partir de 1). Le paramètre 0 est réservé pour les valeurs de retour. Le paramètre est l’index du paramètre en fonction de sa position dans le SQL ou d’un appel de procédure stockée. Consultez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour obtenir un exemple.
 
 *pStatus*<br/>
-[out] Pointeur vers la variable qui contient l’état DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs DBSTATUS, consultez [état](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *de référence du programmeur OLE DB*, ou recherchez DBSTATUS dans oledb.h.
+[out] Pointeur vers la variable qui contient l’état DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs DBSTATUS, consultez [état](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *de référence du programmeur OLE DB*, ou recherchez DBSTATUS dans oledb.h.
 
 ### <a name="remarks"></a>Notes
 
@@ -383,7 +383,7 @@ bool GetParamType(DBORDINAL nParam,
 *nParam*<br/>
 [in] Le numéro de paramètre (offset à partir de 1). Le paramètre 0 est réservé pour les valeurs de retour. Le paramètre est l’index du paramètre en fonction de sa position dans le SQL ou d’un appel de procédure stockée. Consultez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour obtenir un exemple.
 
-*PTapez*<br/>
+*pType*<br/>
 [out] Pointeur vers la variable qui contient le type de données du paramètre spécifié.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -425,7 +425,7 @@ Un paramètre basé sur un modèle qui est le type de données.
 [in] Pointeur vers la mémoire contenant les données à écrire dans la mémoire tampon.
 
 *status*<br/>
-[in] L’état de la colonne DBSTATUS. Pour plus d’informations sur les valeurs DBSTATUS, consultez [état](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *de référence du programmeur OLE DB*, ou recherchez DBSTATUS dans oledb.h.
+[in] L’état de la colonne DBSTATUS. Pour plus d’informations sur les valeurs DBSTATUS, consultez [état](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *de référence du programmeur OLE DB*, ou recherchez DBSTATUS dans oledb.h.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -473,7 +473,7 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] Le numéro de paramètre (offset à partir de 1). Le paramètre 0 est réservé pour les valeurs de retour. Le paramètre est l’index du paramètre en fonction de sa position dans le SQL ou d’un appel de procédure stockée. Consultez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour obtenir un exemple.
 
 *status*<br/>
-[in] L’état DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs DBSTATUS, consultez [état](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *de référence du programmeur OLE DB*, ou recherchez DBSTATUS dans oledb.h.
+[in] L’état DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs DBSTATUS, consultez [état](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *de référence du programmeur OLE DB*, ou recherchez DBSTATUS dans oledb.h.
 
 ### <a name="remarks"></a>Notes
 
@@ -502,7 +502,7 @@ bool SetParamString(DBORDINAL nParam,
 [in] Un pointeur vers l’ANSI (**CHAR**) ou Unicode (**WCHAR**) les données du paramètre spécifié de type string. Consultez DBSTATUS dans oledb.h.
 
 *status*<br/>
-[in] L’état DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs DBSTATUS, consultez [état](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *de référence du programmeur OLE DB*, ou recherchez DBSTATUS dans oledb.h.
+[in] L’état DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs DBSTATUS, consultez [état](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *de référence du programmeur OLE DB*, ou recherchez DBSTATUS dans oledb.h.
 
 ### <a name="remarks"></a>Notes
 

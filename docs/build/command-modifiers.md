@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NMAKE program, command modifiers
 - command modifiers
 ms.assetid: b661c432-210f-4f05-bc56-744a46e0fc0b
-ms.openlocfilehash: a9a79364880cf95adca6066b48f0d786391c8ba0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 764b381a057b1cecf85b0bc3c4c5711aa1aac4ec
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431810"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413067"
 ---
 # <a name="command-modifiers"></a>Modificateurs de commandes
 
@@ -18,8 +18,8 @@ Vous pouvez spécifier un ou plusieurs modificateurs de commandes devant une com
 
 |Modificateur|Objectif|
 |--------------|-------------|
-|\@*Commande*|Empêche l’affichage de la commande. Affichage par les commandes n’est pas supprimé. Par défaut, NMAKE répercute toutes les commandes exécutées. /S permet de supprimer l’affichage du makefile entier ; Utilisez **. En mode silencieux** pour supprimer l’affichage d’une partie du makefile.|
-|**-**\[*nombre*] *commande*|Désactive la vérification des erreurs pour *commande*. Par défaut, NMAKE s’arrête quand une commande retourne un code de sortie différent de zéro. If -*nombre* est utilisé, NMAKE s’arrête si le code de sortie dépasse *nombre*. Espaces ou des tabulations ne peut pas apparaître entre le tiret et *nombre.* Au moins un espace ou tabulation doit apparaître entre `number` et *commande*. Utilisez l’option /I pour désactiver la vérification des erreurs pour le makefile entier ; Utilisez **. Ignorer** pour désactiver la vérification des erreurs pour la partie du makefile.|
+|\@*command*|Empêche l’affichage de la commande. Affichage par les commandes n’est pas supprimé. Par défaut, NMAKE répercute toutes les commandes exécutées. /S permet de supprimer l’affichage du makefile entier ; Utilisez **. En mode silencieux** pour supprimer l’affichage d’une partie du makefile.|
+|**-**\[*number*] *command*|Désactive la vérification des erreurs pour *commande*. Par défaut, NMAKE s’arrête quand une commande retourne un code de sortie différent de zéro. If -*nombre* est utilisé, NMAKE s’arrête si le code de sortie dépasse *nombre*. Espaces ou des tabulations ne peut pas apparaître entre le tiret et *nombre.* Au moins un espace ou tabulation doit apparaître entre `number` et *commande*. Utilisez l’option /I pour désactiver la vérification des erreurs pour le makefile entier ; Utilisez **. Ignorer** pour désactiver la vérification des erreurs pour la partie du makefile.|
 |**\!** *command*|Exécute *commande* pour chaque fichier dépendant si *commande* utilise <strong>$ \* \*</strong> (tous les fichiers dépendants dans la dépendance) ou **$?** (tous les fichiers dépendants dans la dépendance avec une horodatage la plus récente que la cible).|
 
 ## <a name="see-also"></a>Voir aussi

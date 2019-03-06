@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .exp files [C++]
 - EXP files
 ms.assetid: 399f5636-0a4d-462e-b500-5f5b9ae5ad22
-ms.openlocfilehash: 4f70aad2fa91431da771f8e5be47956ae2db45a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 170adfe54b34d14f84b54c717bc9f75fe0b7ab37
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661929"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418475"
 ---
 # <a name="exp-files-as-linker-input"></a>Fichiers .exp en tant qu'entrée de l'Éditeur de liens
 

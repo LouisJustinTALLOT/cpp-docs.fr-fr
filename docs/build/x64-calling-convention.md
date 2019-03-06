@@ -3,12 +3,12 @@ title: convention d’appel de x64
 description: Détails de la convention d’appel par défaut x64 ABI.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: f2a63df878d4eac727f9c697cc326bb1f2981d95
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53636212"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415782"
 ---
 # <a name="x64-calling-convention"></a>convention d’appel de x64
 
@@ -162,11 +162,11 @@ Le x87 Registre du mot de contrôle FPU est défini sur les valeurs standards su
 
 | Inscrire\[bits] | Paramètre |
 |-|-|
-| MXFPCSRCSR\[0:6] | Exception masque tous les 1 (toutes les exceptions sont masquées) |
-| MXFPCSRCSR\[7] | Réservé - 0 |
-| MXFPCSRCSR\[8:9] | Contrôle de précision - 10 b (double précision) |
-| MXFPCSRCSR\[10:11] | Contrôle arrondi - 0 (arrondi à la plus proche) |
-| MXFPCSRCSR\[12] | Contrôle de l’infini - 0 (non utilisé) |
+| FPCSR\[0:6] | Exception masque tous les 1 (toutes les exceptions sont masquées) |
+| FPCSR\[7] | Réservé - 0 |
+| FPCSR\[8:9] | Contrôle de précision - 10 b (double précision) |
+| FPCSR\[10:11] | Contrôle arrondi - 0 (arrondi à la plus proche) |
+| FPCSR\[12] | Contrôle de l’infini - 0 (non utilisé) |
 
 Un appelant qui modifie l’un des champs dans FPCSR doit restaurer avant de retourner à son appelant. En outre, un appelant qui a modifié l’un de ces champs doit les restaurer à leurs valeurs standards avant d’appeler un appelant, sauf si le contrat de l’appelé attend les valeurs modifiées.
 
@@ -207,4 +207,4 @@ Un appel à `setjmp` conserve le pointeur de pile actuel, les registres non vola
 
 ## <a name="see-also"></a>Voir aussi
 
-[x64 conventions des logiciels](../build/x64-software-conventions.md)
+[Conventions des logiciels x64](../build/x64-software-conventions.md)

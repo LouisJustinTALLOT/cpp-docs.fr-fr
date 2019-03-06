@@ -2,12 +2,12 @@
 title: x64 prologue et épilogue
 ms.date: 12/17/2018
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-ms.openlocfilehash: b808703e9c89b8e455e9df2b5959a2f0dd10b939
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: be6a344b75fdc0cbc1876a250d0cc326bae43ccc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627226"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418592"
 ---
 # <a name="x64-prolog-and-epilog"></a>x64 prologue et épilogue
 
@@ -95,4 +95,4 @@ Ces règles permet le code de déroulement pour déterminer qu’un épilogue es
 
 ## <a name="see-also"></a>Voir aussi
 
-[x64 conventions des logiciels](../build/x64-software-conventions.md)
+[Conventions des logiciels x64](../build/x64-software-conventions.md)

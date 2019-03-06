@@ -232,6 +232,7 @@
 ## [Erreur du compilateur C2128](compiler-error-c2128.md)
 ## [Erreur du compilateur C2129](compiler-error-c2129.md)
 ## [Erreur du compilateur C2130](compiler-error-c2130.md)
+## [Erreur du compilateur C2131](compiler-error-c2131.md)
 ## [Erreur du compilateur C2132](compiler-error-c2132.md)
 ## [Erreur du compilateur C2133](compiler-error-c2133.md)
 ## [Erreur du compilateur C2134](compiler-error-c2134.md)

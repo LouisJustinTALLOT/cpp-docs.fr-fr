@@ -5,16 +5,16 @@ helpviewer_keywords:
 - manifests [C++]
 - manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-ms.openlocfilehash: 440bf785f61a438099a394319a6df6e7389a608d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19673c9b8415c663462873e87535cf086987388d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692526"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422648"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Génération de manifeste au niveau de la ligne de commande
 
-Lorsque vous générez des applications C/C++ à partir de la ligne de commande à l’aide de nmake ou des outils similaires, le manifeste est généré une fois que l’éditeur de liens a traité tous les fichiers objets et construit le fichier binaire final. L’éditeur de liens recueille des informations d’assembly stockées dans les fichiers objets et combine ces informations dans un fichier de manifeste final. Par défaut, l’éditeur de liens génère un fichier nommé *nom_fichier_binaire*. *extension*.manifest pour décrire le fichier binaire final. L’éditeur de liens n’incorpore pas un fichier manifeste dans le fichier binaire et ne peut générer un manifeste comme un fichier externe. Il existe plusieurs façons d’incorporer un manifeste dans le fichier binaire final, par exemple à l’aide de la [outil manifeste (mt.exe)](https://msdn.microsoft.com/library/aa375649) ou en compilant le manifeste en un fichier de ressources. Il est important de n’oubliez pas que des règles spécifiques doivent être suivies lors de l’incorporation d’un manifeste dans le fichier binaire final pour activer des fonctionnalités telles que la liaison incrémentielle, signature, et Modifier & Continuer. Ces d’autres options sont traitées dans [Comment : incorporer un manifeste à l’intérieur d’une Application C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) lors de la création de la ligne de commande.
+Lorsque vous générez des applications C/C++ à partir de la ligne de commande à l’aide de nmake ou des outils similaires, le manifeste est généré une fois que l’éditeur de liens a traité tous les fichiers objets et construit le fichier binaire final. L’éditeur de liens recueille des informations d’assembly stockées dans les fichiers objets et combine ces informations dans un fichier de manifeste final. Par défaut, l’éditeur de liens génère un fichier nommé *nom_fichier_binaire*. *extension*.manifest pour décrire le fichier binaire final. L’éditeur de liens n’incorpore pas un fichier manifeste dans le fichier binaire et ne peut générer un manifeste comme un fichier externe. Il existe plusieurs façons d’incorporer un manifeste dans le fichier binaire final, par exemple à l’aide de la [outil manifeste (mt.exe)](https://msdn.microsoft.com/library/aa375649) ou en compilant le manifeste en un fichier de ressources. Il est important de n’oubliez pas que des règles spécifiques doivent être suivies lors de l’incorporation d’un manifeste dans le fichier binaire final pour activer des fonctionnalités telles que la liaison incrémentielle, signature, et Modifier & Continuer. Ces d’autres options sont traitées dans [Comment : Incorporer un manifeste à l’intérieur d’une Application C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) lors de la création de la ligne de commande.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: 'Ressources localisées dans des applications MFC : DLL satellites'
+title: 'Ressources localisées dans des Applications MFC : DLL satellites'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - multiple language support [C++]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: e9f9b751da6339cbe8f352bdb7eee4b7af2c359b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d479599acceac29f0f2ee54857c663c81a919acf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658000"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420399"
 ---
-# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Ressources localisées dans des applications MFC : DLL satellites
+# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Ressources localisées dans des Applications MFC : DLL satellites
 
 Version MFC 7.0 et versions ultérieure fournit la prise en charge améliorée pour les DLL satellites, une fonctionnalité qui vous aide à créer des applications localisées pour différentes langues. Un satellite DLL est un [DLL de ressource uniquement](../build/creating-a-resource-only-dll.md) qui contient les ressources localisées pour une langue particulière d’une application. Lorsque l’application commence à s’exécuter, MFC charge automatiquement la ressource localisée plus appropriée pour l’environnement. Par exemple, vous pouvez avoir une application avec les ressources de langue anglaise avec deux DLL satellites, chacune contenant une traduction Français de vos ressources et l’autre contenant une traduction en allemand. Lorsque l’application est exécutée sur un système en langue anglaise, il utilise les ressources en anglais. Si vous exécutez sur un système Français, il utilise les ressources Français ; Si vous exécutez sur un système en allemand, il utilise les ressources allemandes.
 
@@ -54,4 +54,4 @@ Si aucune de ces DLL n’est trouvée, MFC utilise les ressources contenues dans
 ## <a name="see-also"></a>Voir aussi
 
 [DLL dans Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[TN057 : localisation des composants MFC](../mfc/tn057-localization-of-mfc-components.md)
+[TN057 : Localisation des composants MFC](../mfc/tn057-localization-of-mfc-components.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75ebc466b55cdc2221783531024eefece2e976bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176430"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413769"
 ---
 # <a name="creating-precompiled-header-files"></a>Création de fichiers d’en-tête précompilé
 
@@ -73,7 +73,7 @@ Les rubriques de référence d’option du compilateur pour **/Yu** et **/Yc** e
 
 Étant donné que les fichiers PCH contiennent des informations sur l’environnement de machine, ainsi que des informations d’adresse de mémoire sur le programme, vous devez uniquement utiliser un fichier PCH sur l’ordinateur où il a été créé.
 
-## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>Règles de cohérence pour l’utilisation d’en-têtes précompilés par fichier
+## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>Règles de cohérence pour l'utilisation d'en-têtes précompilés par fichier
 
 Le [/Yu](../../build/reference/yu-use-precompiled-header-file.md) option du compilateur vous permet de spécifier le fichier d’en-tête Précompilé à utiliser.
 
@@ -89,7 +89,7 @@ Les options du compilateur suivantes peuvent déclencher un avertissement d’in
 
 - Fichiers PCH doivent être créés à l’aide soit le générer recherche d’informations (/ FR) option ou exclure les Variables locales (/ Fr) option avant que les compilations ultérieures qui utilisent le fichier PCH peuvent utiliser ces options.
 
-### <a name="c-70-compatible-z7"></a>Compatible C 7.0 (/ Z7)
+### <a name="c-70-compatible-z7"></a>C 7.0-Compatible (/Z7)
 
 Si cette option est activée lorsque le fichier PCH est créé, les compilations ultérieures qui utilisent le fichier PCH peuvent utiliser les informations de débogage.
 
@@ -145,7 +145,7 @@ Ce tableau répertorie les options du compilateur pouvant déclencher un avertis
 > [!NOTE]
 >  La fonctionnalité en-têtes précompilés est destinée uniquement dans les fichiers sources C et C++.
 
-## <a name="using-precompiled-headers-in-a-project"></a>Utilisation d’en-têtes précompilés dans un projet
+## <a name="using-precompiled-headers-in-a-project"></a>Utilisation d'en-têtes précompilés dans un projet
 
 Les sections précédentes donnent une vue d’ensemble d’en-têtes précompilés : /Yc et/Yu, l’option/Fp et le [hdrstop](../../preprocessor/hdrstop.md) pragma. Cette section décrit une méthode d’utilisation manuelle des options d’en-tête précompilé dans un projet ; Il se termine par un exemple de makefile et le code qu’il gère.
 

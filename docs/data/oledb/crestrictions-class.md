@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 95517931f3156c4850e07c78910ccbffff424faa
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3ade541e5418799f525a08d3fc868f07d2bdfe6a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556515"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412820"
 ---
 # <a name="crestrictions-class"></a>CRestrictions, classe
 
@@ -43,7 +43,7 @@ Le nombre de colonnes de restriction pour l’ensemble de lignes de schéma.
 *pguid*<br/>
 Un pointeur vers le GUID pour le schéma.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbsch.h
 
@@ -92,7 +92,7 @@ Une des valeurs HRESULT standards.
 
 Vous pouvez spécifier un maximum de sept restrictions sur un ensemble de lignes de schéma.
 
-Consultez [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) pour plus d’informations sur les restrictions définies sur chaque ensemble de lignes de schéma.
+Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) pour plus d’informations sur les restrictions définies sur chaque ensemble de lignes de schéma.
 
 ## <a name="see-also"></a>Voir aussi
 

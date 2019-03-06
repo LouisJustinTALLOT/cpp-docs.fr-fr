@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: bb7f7ee0b4c190889daf661816a9e1c96575a052
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 776123baa0d53ac2a1777849b60d35cf0d93a172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557087"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426223"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset, classe
 
@@ -125,7 +125,7 @@ class CBulkRowset : public CRowset<TAccessor>
 *TAccessor*<br/>
 Classe d’accesseur.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -154,7 +154,7 @@ L’exemple suivant illustre l’utilisation de la `CBulkRowset` classe.
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Appels [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) pour incrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.
+Appels [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) pour incrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -245,7 +245,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Paramètres
 
-*Signet*<br/>
+*bookmark*<br/>
 [in] Un signet est l’emplacement à partir duquel vous souhaitez extraire des données.
 
 *lSkip*<br/>
@@ -253,7 +253,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>Valeur de retour
 
-Consultez [IRowset::GetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowset::GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
@@ -284,11 +284,11 @@ Une valeur HRESULT standard.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Appels [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) pour décrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.
+Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) pour décrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.
 
 ### <a name="syntax"></a>Syntaxe
 

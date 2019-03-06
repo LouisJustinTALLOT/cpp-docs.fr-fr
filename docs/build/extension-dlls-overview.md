@@ -1,5 +1,5 @@
 ---
-title: 'DLL d’extension : vue d’ensemble'
+title: "DLL d’extension : Vue d'ensemble"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AFXDLL library
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 1967370f587b0b78c4e68ebff14804b20f158bd0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498200"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425053"
 ---
-# <a name="mfc-extension-dlls-overview"></a>DLL d’extension MFC : vue d’ensemble
+# <a name="mfc-extension-dlls-overview"></a>DLL d’extension MFC : Vue d'ensemble
 
 Une extension MFC DLL est une DLL qui implémente généralement des classes réutilisables dérivées de classes Microsoft Foundation Class Library existantes. DLL d’extension MFC sont générés à l’aide de la version de la bibliothèque de liens dynamiques de la bibliothèque MFC (également connu sous la version partagée des MFC). Uniquement exécutables MFC (applications ou des DLL MFC normales) qui sont générés avec la version partagée des MFC peuvent utiliser une DLL d’extension MFC. Avec une DLL d’extension MFC, vous pouvez dériver de nouvelles classes personnalisées de MFC et offrir cette version étendue de la bibliothèque MFC aux applications qui appellent votre DLL.
 
@@ -35,7 +35,7 @@ Notez que le terme AFXDLL n’est plus utilisé dans la documentation de Visual 
 
 - [Utilisation de DLL d’extension de MFC de type base de données, OLE et sockets dans des DLL MFC normales](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [DLL non-MFC : vue d’ensemble](../build/non-mfc-dlls-overview.md)
+- [DLL non MFC : vue d’ensemble](../build/non-mfc-dlls-overview.md)
 
 - [DLL MFC normales liées de manière statique aux MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 

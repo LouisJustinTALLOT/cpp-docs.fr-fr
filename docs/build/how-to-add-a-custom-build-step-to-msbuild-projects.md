@@ -1,19 +1,19 @@
 ---
-title: 'Comment : ajouter une étape de génération personnalisée à des projets MSBuild'
+title: 'Procédure : Ajoutez une étape de génération personnalisée à des projets MSBuild'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildstep
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 7b169bfc6668fc284b45554d08d68880967a7de1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57b7636c58a245bfea3a71dfb6aa7ee853329f19
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610975"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413223"
 ---
-# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Comment : ajouter une étape de génération personnalisée à des projets MSBuild
+# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Procédure : Ajoutez une étape de génération personnalisée à des projets MSBuild
 
 Une étape de génération personnalisée est une étape définie par l’utilisateur dans une build. Une étape de génération personnalisée se comporte comme n’importe quel autre *outil de commande* étape, telles que l’étape d’outil de compilation ou de liaison standard.
 
@@ -27,7 +27,7 @@ Spécifiez le `CustomBuildBeforeTargets` élément pour exécuter l’étape de 
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Pour définir ce qui est exécuté par l’étape de génération personnalisée
 
-1. Ajouter un groupe de propriétés au fichier projet. Dans ce groupe de propriétés, spécifiez la commande, ses entrées et sorties et un message, comme indiqué dans l’exemple suivant. Cet exemple crée un fichier .cab à partir du fichier main.cpp que vous avez créé dans [procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Ajouter un groupe de propriétés au fichier projet. Dans ce groupe de propriétés, spécifiez la commande, ses entrées et sorties et un message, comme indiqué dans l’exemple suivant. Cet exemple crée un fichier .cab à partir du fichier main.cpp que vous avez créé dans [procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -52,6 +52,6 @@ Spécifiez le `CustomBuildBeforeTargets` élément pour exécuter l’étape de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[Guide pratique pour utiliser des événements de build dans des projets MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
-[Guide pratique pour ajouter des outils de génération personnalisés à des projets MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+[Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Guide pratique pour utiliser des événements de génération dans des projets MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
+[Guide pratique pour ajouter des outils de génération personnalisée à des projets MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)

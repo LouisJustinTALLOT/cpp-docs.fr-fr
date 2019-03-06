@@ -11,12 +11,12 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-ms.openlocfilehash: 266c6da52a2ff5e06dd6177a746c22e7df5adda4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ec1a763df6fcf2a1fffe4cb956076d2c7557cb5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491778"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412612"
 ---
 # <a name="using-verify-instead-of-assert"></a>Utilisation de VERIFY au lieu d'ASSERT
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE program, options
 ms.assetid: 00ba1aec-ef27-44cf-8d82-c5c095e45bae
-ms.openlocfilehash: 84130afea6cc73c480b46f065d6d85e365101b38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca7b94935f385971b8d9bff53ece3b86f2885b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455338"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417071"
 ---
 # <a name="nmake-options"></a>Options de NMAKE
 
@@ -22,8 +22,8 @@ Options de NMAKE sont décrites dans le tableau suivant. Options sont précédé
 |/C|Supprime la sortie par défaut, y compris le message de copyright de NMAKE ou les avertissements, les horodateurs et les erreurs NMAKE récupérables. Supprime les avertissements émis par l’option /K.|
 |/D|Affiche les horodatages de chacun d’eux évaluée cible et un message et dépendants lorsqu’une cible n’existe pas. Utile avec /P pour le débogage d’un makefile. Utilisez **! CMDSWITCHES** pour définir ou supprimer l’option /D pour une partie d’un makefile.|
 |/E|Les causes les variables d’environnement pour remplacer les définitions de macros makefile.|
-|/ ERRORREPORT [NONE &AMP;#124; INVITE &AMP;#124; FILE D’ATTENTE &AMP;#124; ENVOI]|Si nmake.exe échoue lors de l’exécution, vous pouvez utiliser /ERRORREPORT pour envoyer des informations à Microsoft concernant ces erreurs internes.<br /><br /> Pour plus d’informations sur /ERRORREPORT, consultez [/errorReport (signaler les erreurs du compilateur interne)](../build/reference/errorreport-report-internal-compiler-errors.md).|
-|/F *nom de fichier*|Spécifie *filename* en tant que makefile. Espaces ou des tabulations peuvent précéder *filename*. Spécifiez /F qu’une seule fois pour chaque makefile. Pour fournir un makefile à partir de l’entrée standard, spécifiez un tiret (-) pour *filename*et de fin d’entrée au clavier avec F6 ou CTRL + Z.|
+|/ERRORREPORT[NONE &#124; PROMPT &#124; QUEUE &#124; SEND ]|Si nmake.exe échoue lors de l’exécution, vous pouvez utiliser /ERRORREPORT pour envoyer des informations à Microsoft concernant ces erreurs internes.<br /><br /> Pour plus d’informations sur /ERRORREPORT, consultez [/errorReport (signaler les erreurs du compilateur interne)](../build/reference/errorreport-report-internal-compiler-errors.md).|
+|/F *filename*|Spécifie *filename* en tant que makefile. Espaces ou des tabulations peuvent précéder *filename*. Spécifiez /F qu’une seule fois pour chaque makefile. Pour fournir un makefile à partir de l’entrée standard, spécifiez un tiret (-) pour *filename*et de fin d’entrée au clavier avec F6 ou CTRL + Z.|
 |/G|Affiche les makefiles inclus avec le ! Directive INCLUDE.  Consultez [Directives de prétraitement Makefile](../build/makefile-preprocessing-directives.md) pour plus d’informations.|
 |/HELP, / ?|Affiche un bref résumé de syntaxe de ligne de commande NMAKE.|
 |/I|Ignore les codes de sortie à partir de toutes les commandes. Pour définir ou supprimer l’option /I pour une partie d’un makefile, utilisez **! CMDSWITCHES**. Pour ignorer les codes de sortie pour une partie d’un makefile, utilisez un modificateur de commande tiret (-) ou [. Ignorer](../build/dot-directives.md). Remplace /K si les deux sont spécifiés.|
@@ -36,7 +36,7 @@ Options de NMAKE sont décrites dans le tableau suivant. Options sont précédé
 |/S|Supprime l’affichage des commandes exécutées. Pour supprimer l’affichage dans une partie d’un makefile, utilisez le **\@** modificateur de commande ou [. En mode silencieux](../build/dot-directives.md). Pour définir ou supprimer l’option /S pour une partie d’un makefile, utilisez **! CMDSWITCHES**.|
 |/T|Met à jour les horodatages des cibles de ligne de commande (ou la première cible du makefile) et exécute les commandes de prétraitement mais n’exécute pas la génération.|
 |/U|Doit être utilisée conjointement avec /N. Fait un dump des fichiers NMAKE inline afin que la sortie /N peut être utilisée comme un fichier de commandes.|
-|/X *nom de fichier*|Envoie la sortie d’erreur NMAKE vers *filename* au lieu de l’erreur standard. Espaces ou des tabulations peuvent précéder *filename*. Pour envoyer la sortie d’erreur dans la sortie standard, spécifiez un tiret (-) pour *filename*. N’affecte pas la sortie des commandes vers l’erreur standard.|
+|/X *filename*|Envoie la sortie d’erreur NMAKE vers *filename* au lieu de l’erreur standard. Espaces ou des tabulations peuvent précéder *filename*. Pour envoyer la sortie d’erreur dans la sortie standard, spécifiez un tiret (-) pour *filename*. N’affecte pas la sortie des commandes vers l’erreur standard.|
 |/Y|Désactive les règles d’inférence en mode batch. Lorsque cette option est sélectionnée, toutes les règles d’inférence en mode batch sont traitées comme les règles d’inférence ordinaires.|
 
 ## <a name="see-also"></a>Voir aussi

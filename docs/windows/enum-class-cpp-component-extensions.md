@@ -3,12 +3,12 @@ title: enum, classe (C++ / c++ / CLI et c++ / CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 5bc850831e961a500ae71ce90e3ca39b3aabd159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee3d4f44c18074ca536ff028565bbbd0e37d04c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592515"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417422"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum, classe (C++ / c++ / CLI et c++ / CX)
 
@@ -55,7 +55,7 @@ La valeur de chaque énumérateur est une expression constante définie implicit
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations et d’exemples, consultez [Énumérations](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Pour plus d’informations et d’exemples, consultez [Énumérations](../cppcx/enums-c-cx.md).
 
 Notez que le compilateur émet des messages d’erreur si l’expression constante qui définit la valeur d’un énumérateur ne peut pas être représentée par *underlying-type*.  Cependant, le compilateur ne signale pas d’erreur pour une valeur non appropriée pour le type sous-jacent. Exemple :
 
@@ -65,7 +65,7 @@ Notez que le compilateur émet des messages d’erreur si l’expression constan
 
 - Si *underlying-type* a la valeur `char16`et que la valeur d’énumération est comprise entre 0xD800 et 0xDFFF, la valeur peut être représentée. Cependant, la valeur est logiquement incorrecte, car elle représente la moitié d’une paire de substitution Unicode et ne doit pas apparaître de façon isolée.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -174,7 +174,7 @@ Pour plus d’informations sur les énumérations CLR, consultez :
 
 - [Type sous-jacent d’une énumération](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 

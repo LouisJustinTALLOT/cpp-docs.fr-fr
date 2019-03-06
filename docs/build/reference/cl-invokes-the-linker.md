@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: e071209bd09fea17082379bf3f2486866b52c548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447201"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412729"
 ---
 # <a name="cl-invokes-the-linker"></a>CL appelle l'éditeur de liens
 
@@ -26,7 +26,7 @@ CL appelle automatiquement l’éditeur de liens après la compilation, sauf si 
 |/c|Compiler sans liaison|
 |/ E, /EP, /P|Prétraite sans compilation ou la liaison|
 |/Zg|Générer les prototypes de fonction|
-|/Zs|Vérifiez la syntaxe|
+|/Zs|Vérifier la syntaxe|
 
 Pour plus d’informations sur la liaison, consultez [les Options de l’éditeur de liens](../../build/reference/linker-options.md).
 

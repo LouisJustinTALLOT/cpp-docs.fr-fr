@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304520"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425092"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 
@@ -619,7 +619,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle de liste. Appliquer n’importe quelle combinaison de styles de contrôle de liste au contrôle. Consultez [styles de fenêtre d’affichage liste](/windows/desktop/Controls/list-view-window-styles) dans le SDK Windows pour obtenir la liste complète de ces styles. Ensemble spécifique d’un contrôle en utilisant des styles étendus [SetExtendedStyle](#setextendedstyle).
 
 *rect*<br/>
-Spécifie la taille et la position du contrôle de liste. Il peut s’agir un `CRect` objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+Spécifie la taille et la position du contrôle de liste. Il peut s’agir un `CRect` objet ou un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
 
 *pParentWnd*<br/>
 Spécifie la liste fenêtre du contrôle parent, généralement un `CDialog`. Il ne doit pas être NULL.
@@ -667,7 +667,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 Spécifie le style du contrôle de liste. Appliquer n’importe quelle combinaison de styles de contrôle de liste au contrôle. Pour obtenir une liste complète de ces styles, consultez [styles de fenêtre d’affichage liste](/windows/desktop/Controls/list-view-window-styles) dans le SDK Windows.
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.
@@ -701,7 +701,7 @@ CImageList* CreateDragImage(
 Index de l’élément dont la liste d’image glisser doit être créé.
 
 *lpPoint*<br/>
-Adresse d’un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordonne la structure qui reçoit l’emplacement initial de l’angle supérieur gauche de l’image, dans la vue.
+Adresse d’un [POINT](/previous-versions/dd162805\(v=vs.85\)) coordonne la structure qui reçoit l’emplacement initial de l’angle supérieur gauche de l’image, dans la vue.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Paramètre|Description|
 |---------------|-----------------|
 |*iGroupId*|[in] Spécifie un groupe.|
-|*lpRect*|[in, out] Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure. Si cette méthode réussite, la structure reçoit les coordonnées du rectangle du groupe spécifié par *iGroupId*.|
+|*lpRect*|[in, out] Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure. Si cette méthode réussite, la structure reçoit les coordonnées du rectangle du groupe spécifié par *iGroupId*.|
 |*iCoords*|[in] Spécifie les coordonnées du rectangle à récupérer. Utilisez une des valeurs suivantes :<br /><br /> -LVGGR_GROUP - (valeur par défaut) des coordonnées de l’ensemble du groupe développé.<br />-LVGGR_HEADER - coordonnées d’uniquement l’en-tête (groupe réduit).<br />-LVGGR_SUBSETLINK - coordonnées du uniquement le lien de sous-ensemble (sous-ensemble de balisage).|
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1451,7 +1451,7 @@ TRUE si cette méthode a réussi ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-L’appelant est chargé d’allouer le [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure vers laquelle pointe le *pRect* paramètre.
+L’appelant est chargé d’allouer le [RECT](/previous-versions/dd162897\(v=vs.85\)) structure vers laquelle pointe le *pRect* paramètre.
 
 Cette méthode envoie le [LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect) message, qui est décrite dans le SDK Windows.
 
@@ -1790,7 +1790,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[in] Pointeur vers un [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) structure pour l’élément parent du sous-élément.<br /><br /> L’appelant est chargé d’allouer et définissant les membres de la [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) structure. Ce paramètre ne peut pas être NULL.|
 |*iColumn*|[in] Index de base zéro d’une colonne dans le contrôle.|
 |*rectType*|[in] Partie du sous-élément d’affichage de liste pour laquelle le rectangle englobant est récupéré. Spécifiez l'une des valeurs suivantes :<br /><br /> LVIR_BOUNDS - retourne le rectangle englobant du sous-élément entière, y compris l’icône et une étiquette.<br /><br /> LVIR_ICON - retourne le rectangle englobant de l’icône ou d’une petite icône du sous-élément.<br /><br /> LVIR_LABEL - retourne le rectangle englobant du texte du sous-élément.|
-|*pRect*|[out] Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui reçoit des informations sur le rectangle englobant du sous-élément.<br /><br /> L’appelant est chargé d’allouer le [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure. Ce paramètre ne peut pas être NULL.|
+|*pRect*|[out] Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui reçoit des informations sur le rectangle englobant du sous-élément.<br /><br /> L’appelant est chargé d’allouer le [RECT](/previous-versions/dd162897\(v=vs.85\)) structure. Ce paramètre ne peut pas être NULL.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1844,7 +1844,7 @@ BOOL GetItemPosition(
 L’index de l’élément dont la position doit être récupéré.
 
 *lpPoint*<br/>
-Adresse d’un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordonne la structure qui reçoit la position du coin supérieur gauche de l’élément, dans la vue.
+Adresse d’un [POINT](/previous-versions/dd162805\(v=vs.85\)) coordonne la structure qui reçoit la position du coin supérieur gauche de l’élément, dans la vue.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1883,7 +1883,7 @@ BOOL GetItemRect(
 L’index de l’élément dont la position doit être récupéré.
 
 *lpRect*<br/>
-Adresse d’un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui reçoit le rectangle englobant.
+Adresse d’un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui reçoit le rectangle englobant.
 
 *nCode*<br/>
 Partie de l’élément d’affichage de liste pour lequel récupérer le rectangle englobant. Il peut être une des valeurs suivantes :
@@ -2220,7 +2220,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpPoint*<br/>
-Adresse d’un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure qui reçoit l’origine de la vue.
+Adresse d’un [POINT](/previous-versions/dd162805\(v=vs.85\)) structure qui reçoit l’origine de la vue.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2531,7 +2531,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Adresse d’un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+Adresse d’un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2834,7 +2834,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Paramètres
 
 *pPoint*<br/>
-Un pointeur vers un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordonne la structure qui contient le test de positionnement, par rapport à la zone cliente du contrôle de liste.
+Un pointeur vers un [POINT](/previous-versions/dd162805\(v=vs.85\)) coordonne la structure qui contient le test de positionnement, par rapport à la zone cliente du contrôle de liste.
 
 *lvim*<br/>
 Un pointeur vers un [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) structure qui spécifie le point d’insertion le plus proche pour les coordonnées définies par le paramètre de point.
@@ -3854,7 +3854,7 @@ BOOL SetItemPosition(
 Index de l’élément dont la position est à définir.
 
 *pt*<br/>
-Un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordonne la structure qui spécifie la nouvelle position, dans la vue, du coin supérieur gauche de l’élément.
+Un [POINT](/previous-versions/dd162805\(v=vs.85\)) coordonne la structure qui spécifie la nouvelle position, dans la vue, du coin supérieur gauche de l’élément.
 
 ### <a name="return-value"></a>Valeur de retour
 

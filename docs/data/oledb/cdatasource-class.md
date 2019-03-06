@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 53e9305dd308e77afbd8d53754614c1cfb559f94
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ed2c0b11dfdc6882352c87166b74b2fab327fcd3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557074"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418605"
 ---
 # <a name="cdatasource-class"></a>CDataSource, classe
 
@@ -74,7 +74,7 @@ Correspond à un objet de source de données OLE DB, qui représente une connexi
 class CDataSource
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -152,7 +152,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IDBProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.
+Consultez [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -179,7 +179,7 @@ HRESULT GetProperty(const GUID& guid,
 *guid*<br/>
 [in] Un GUID qui identifie la propriété pour laquelle retourner la propriété.
 
-*ID de propriété*<br/>
+*propid*<br/>
 [in] ID de propriété pour la propriété à retourner.
 
 *pVariant*<br/>
@@ -244,10 +244,10 @@ HRESULT Open(LPCSTR szProgID,
 [in] Le `CLSID` du fournisseur de données.
 
 *pPropSet*<br/>
-[in] Un pointeur vers un tableau de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.
+[in] Un pointeur vers un tableau de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.
 
 *nPropertySets*<br/>
-[in] Le nombre de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passées dans le *pPropSet* argument.
+[in] Le nombre de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passées dans le *pPropSet* argument.
 
 *pName*<br/>
 [in] Nom de la base de données à laquelle se connecter.
@@ -259,7 +259,7 @@ HRESULT Open(LPCSTR szProgID,
 [in] Mot de passe de l'utilisateur.
 
 *nInitMode*<br/>
-[in] Mode d'initialisation de la base de données. Consultez [propriétés d’initialisation](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))dans le *de référence du programmeur OLE DB* dans le SDK Windows pour obtenir la liste des modes d’initialisation valides. Si *nInitMode* est égal à zéro, aucune initialisation mode est inclus dans le jeu de propriétés utilisé pour ouvrir la connexion.
+[in] Mode d'initialisation de la base de données. Consultez [propriétés d’initialisation](/previous-versions/windows/desktop/ms723127(v=vs.85))dans le *de référence du programmeur OLE DB* dans le SDK Windows pour obtenir la liste des modes d’initialisation valides. Si *nInitMode* est égal à zéro, aucune initialisation mode est inclus dans le jeu de propriétés utilisé pour ouvrir la connexion.
 
 *szProgID*<br/>
 [in] Identificateur de programme.
@@ -304,7 +304,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] Nom d'un fichier, généralement un fichier de connexion de source de données au format .UDL.
 
-Pour plus d’informations sur les fichiers de liaison de données (fichiers .udl), consultez [Data Link API Overview](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85)) dans le SDK Windows.
+Pour plus d’informations sur les fichiers de liaison de données (fichiers .udl), consultez [Data Link API Overview](/previous-versions/windows/desktop/ms718102(v=vs.85)) dans le SDK Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -312,7 +312,7 @@ Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ouvre un objet source de données à l’aide des composants de service d’oledb32.dll ; cette DLL contient l’implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l’inscription de transaction automatique, etc. Pour plus d’informations, consultez « Services OLE DB » dans la référence du programmeur OLE DB à [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez « Services OLE DB » dans la référence du programmeur OLE DB à [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
 
 ## <a name="openfrominitializationstring"></a> CDataSource::OpenFromInitializationString
 
@@ -341,7 +341,7 @@ Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ouvre un objet source de données à l’aide des composants de service d’oledb32.dll ; cette DLL contient l’implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l’inscription de transaction automatique, etc.
+Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc.
 
 ## <a name="openwithpromptfilename"></a> CDataSource::OpenWithPromptFileName
 
@@ -372,7 +372,7 @@ Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ouvre un objet source de données à l’aide des composants de service d’oledb32.dll ; cette DLL contient l’implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l’inscription de transaction automatique, etc. Pour plus d’informations, consultez « Services OLE DB » dans la référence du programmeur OLE DB à [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez « Services OLE DB » dans la référence du programmeur OLE DB à [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
 
 ## <a name="openwithservicecomponents"></a> CDataSource::OpenWithServiceComponents
 
@@ -399,10 +399,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 [in] ID de programme d'un fournisseur de données.
 
 *pPropset*<br/>
-[in] Un pointeur vers un tableau de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows. Si l'objet source de données est initialisé, les propriétés doivent appartenir au groupe de propriétés Source de données. Si la même propriété est spécifiée plusieurs fois dans *pPropset*, puis de la valeur utilisée est spécifique au fournisseur. Si *ulPropSets* est égal à zéro, ce paramètre est ignoré.
+[in] Un pointeur vers un tableau de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows. Si l'objet source de données est initialisé, les propriétés doivent appartenir au groupe de propriétés Source de données. Si la même propriété est spécifiée plusieurs fois dans *pPropset*, puis de la valeur utilisée est spécifique au fournisseur. Si *ulPropSets* est égal à zéro, ce paramètre est ignoré.
 
 *ulPropSets*<br/>
-[in] Le nombre de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passées dans le *pPropSet* argument. S’il s’agit de zéro, le fournisseur ignore *pPropset*.
+[in] Le nombre de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passées dans le *pPropSet* argument. S’il s’agit de zéro, le fournisseur ignore *pPropset*.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -410,7 +410,7 @@ Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ouvre un objet source de données à l’aide des composants de service d’oledb32.dll ; cette DLL contient l’implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l’inscription de transaction automatique, etc. Pour plus d’informations, consultez « Services OLE DB » dans la référence du programmeur OLE DB à [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez « Services OLE DB » dans la référence du programmeur OLE DB à [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
 
 ## <a name="see-also"></a>Voir aussi
 

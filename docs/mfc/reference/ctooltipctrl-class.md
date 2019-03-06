@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 7750b7335b99bbfaa02c1f310c70bb868ef56573
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300958"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420841"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -210,7 +210,7 @@ Pointeur vers la fenêtre qui contient l’outil.
 ID de la ressource de chaîne qui contient le texte de l’outil.
 
 *lpRectTool*<br/>
-Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure contenant les coordonnées de l’outil du rectangle englobant. Les coordonnées sont exprimées par rapport à l’angle supérieur gauche de la zone cliente de la fenêtre identifiée par *pWnd*.
+Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure contenant les coordonnées de l’outil du rectangle englobant. Les coordonnées sont exprimées par rapport à l’angle supérieur gauche de la zone cliente de la fenêtre identifiée par *pWnd*.
 
 *nIDTool*<br/>
 ID de l’outil.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Paramètres
 
 *lprc*<br/>
-Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient un rectangle de la fenêtre outil info-bulle ou un rectangle d’affichage de texte.
+Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui contient un rectangle de la fenêtre outil info-bulle ou un rectangle d’affichage de texte.
 
 *bLarger*<br/>
 Si la valeur est TRUE, *lprc* est utilisé pour spécifier un rectangle d’affichage de texte, et qu’il reçoit le rectangle de la fenêtre correspondante. Si la valeur est FALSE, *lprc* est utilisé pour spécifier un rectangle de la fenêtre, et qu’il reçoit le rectangle d’affichage de texte correspondante.
@@ -453,7 +453,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Paramètres
 
 *lprc*<br/>
-Adresse d’un `RECT` structure qui recevra les informations de marge. Les membres de la [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure ne définissent pas un rectangle englobant. Pour les besoins de ce message, les membres de structure sont interprétés comme suit :
+Adresse d’un `RECT` structure qui recevra les informations de marge. Les membres de la [RECT](/previous-versions/dd162897\(v=vs.85\)) structure ne définissent pas un rectangle englobant. Pour les besoins de ce message, les membres de structure sont interprétés comme suit :
 
 |Membre|Représentation sous forme de|
 |------------|--------------------|
@@ -867,7 +867,7 @@ Pointeur vers la fenêtre qui contient l’outil.
 ID de l’outil.
 
 *lpRect*<br/>
-Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure en spécifiant le nouveau rectangle englobant.
+Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure en spécifiant le nouveau rectangle englobant.
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 

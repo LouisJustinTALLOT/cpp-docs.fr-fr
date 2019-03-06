@@ -37,16 +37,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: a01a090d4302983f7d53e051cf4d8a72bd739b4a
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: c410efbbd0ce51bcaca2ba43a835bf88e1cdbc54
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556736"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419171"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl, classe
 
-Fournit une implémentation de la [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) interface.
+Fournit une implémentation de la [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,7 +68,7 @@ Unité de stockage pour les informations de liaison. La valeur par défaut est l
 *BindingVector*<br/>
 Unité de stockage pour les informations de colonne. La valeur par défaut est [CAtlMap](../../atl/reference/catlmap-class.md) où l’élément clé est une valeur HACCESSOR et l’élément de la valeur est un pointeur vers un `BindType` structure.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -91,7 +91,7 @@ Unité de stockage pour les informations de colonne. La valeur par défaut est [
 
 ## <a name="remarks"></a>Notes
 
-Ce champ est obligatoire sur les ensembles de lignes et de commandes. OLE DB requiert des fournisseurs implémenter un HACCESSOR, qui est une balise à un tableau de [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) structures. HACCESSORs fournis par `IAccessorImpl` sont des adresses de la `BindType` structures. Par défaut, `BindType` est défini comme un `ATLBINDINGS` dans `IAccessorImpl`de définition de modèle. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son `DBBINDING` ainsi que d’un nombre et accesseur des indicateurs de référence de tableau.
+Ce champ est obligatoire sur les ensembles de lignes et de commandes. OLE DB requiert des fournisseurs implémenter un HACCESSOR, qui est une balise à un tableau de [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) structures. HACCESSORs fournis par `IAccessorImpl` sont des adresses de la `BindType` structures. Par défaut, `BindType` est défini comme un `ATLBINDINGS` dans `IAccessorImpl`de définition de modèle. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son `DBBINDING` ainsi que d’un nombre et accesseur des indicateurs de référence de tableau.
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 
@@ -116,7 +116,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IAccessor::AddRefAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms714978(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 
@@ -135,7 +135,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IAccessor::CreateAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms720969(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
 
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IAccessor::GetBindings](https://docs.microsoft.com/previous-versions/windows/desktop/ms721253(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 
@@ -167,7 +167,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IAccessor::ReleaseAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719717(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="see-also"></a>Voir aussi
 

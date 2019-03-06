@@ -4,12 +4,12 @@ ms.date: 09/05/2018
 helpviewer_keywords:
 - cl.exe compiler, return value
 ms.assetid: 7c2d7f33-ee0d-4199-8ef4-75fe2b007670
-ms.openlocfilehash: 39b53731d94e3b5ff5fcb666caac6a584c34d287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ad4b7947890d105d2c87bc4dbf29186fa15a86b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656077"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412781"
 ---
 # <a name="return-value-of-clexe"></a>Valeur de retour de cl.exe
 

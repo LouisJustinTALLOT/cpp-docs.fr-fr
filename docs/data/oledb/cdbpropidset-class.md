@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: fdda18243366de059b26fd566b5eecb308cbed14
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d51b1bf6862aebda34586518be6501f57f119590
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556645"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419953"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet, classe
 
@@ -50,7 +50,7 @@ Hérite de la `DBPROPIDSET` structurer et ajoute un constructeur qui initialise 
 class CDBPropIDSet : public tagDBPROPIDSET
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -68,11 +68,11 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 |||
 |-|-|
-|[opérateur =](#op_equal)|Assigne le contenu d’une propriété ID définie à un autre.|
+|[operator =](#op_equal)|Assigne le contenu d’une propriété ID définie à un autre.|
 
 ## <a name="remarks"></a>Notes
 
-Utilisation de consommateurs OLE DB `DBPROPIDSET` structures pour passer un tableau d’ID de propriété pour lequel le consommateur souhaite obtenir des informations de propriété. Les propriétés identifiées dans un seul [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) structure appartiennent à une propriété est définie.
+Utilisation de consommateurs OLE DB `DBPROPIDSET` structures pour passer un tableau d’ID de propriété pour lequel le consommateur souhaite obtenir des informations de propriété. Les propriétés identifiées dans un seul [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) structure appartiennent à une propriété est définie.
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 
@@ -86,12 +86,12 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 #### <a name="parameters"></a>Paramètres
 
-*ID de propriété*<br/>
+*propid*<br/>
 [in] Définir l’ID de propriété à ajouter à l’ID de propriété.
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
 
-Constructeur. Initialise le `rgProperties`, `cProperties`et (éventuellement) `guidPropertySet` champs de la [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) structure.
+Constructeur. Initialise le `rgProperties`, `cProperties`et (éventuellement) `guidPropertySet` champs de la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) structure.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -124,7 +124,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Paramètres
 
 *guid*<br/>
-[in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) structure.
+[in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) structure.
 
 ### <a name="remarks"></a>Notes
 

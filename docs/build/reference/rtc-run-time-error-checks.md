@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654999"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424611"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Vérifications des erreurs au moment de l'exécution)
 
@@ -95,7 +95,7 @@ Si une variable aurait pu être initialisée, elle n’est pas signalée au mome
 
 ## <a name="remarks"></a>Notes
 
-Vérifications des erreurs au moment de l’exécution sont un moyen de rechercher des problèmes dans votre code en cours d’exécution. Pour plus d’informations, consultez [Comment : utiliser les contrôles d’exécution natifs](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Vérifications des erreurs au moment de l’exécution sont un moyen de rechercher des problèmes dans votre code en cours d’exécution. Pour plus d’informations, consultez [Comment : Utiliser des contrôles d’exécution natifs](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Si vous compilez votre programme en ligne de commande à l’aide de la **/RTC** options du compilateur, n’importe quel pragma [optimiser](../../preprocessor/optimize.md) instructions dans votre code échoue en silence. Il s’agit, car les vérifications des erreurs au moment de l’exécution ne sont pas valides dans une version Release (optimisée).
 
@@ -111,7 +111,7 @@ La directive du préprocesseur __MSVC_RUNTIME_CHECKS sera définie lorsque vous 
 
 1. Cliquez sur le **génération de Code** page de propriétés.
 
-1. Modifier une ou les deux des propriétés suivantes : **base Runtime vérifie** ou **vérification des types les plus petits**.
+1. Modifiez une ou les deux des propriétés suivantes : **Des vérifications** ou **Type les plus petits cocher**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 

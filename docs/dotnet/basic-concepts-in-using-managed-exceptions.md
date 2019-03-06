@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588238"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423844"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Concepts de base dans l'utilisation des exceptions managées
 
@@ -29,7 +29,7 @@ Cette rubrique traite des exceptions dans les applications managées. Autrement 
 
 ## <a name="remarks"></a>Notes
 
-Si vous compilez avec le **/CLR** option, vous pouvez gérer les exceptions CLR, ainsi que standard [gestion des exceptions C++](../cpp/cpp-exception-handling.md) et [structurée des exceptions](../cpp/structured-exception-handling-c-cpp.md) (SEH). Une exception CLR est toute exception levée par un type managé. Le [System::Exception](https://msdn.microsoft.com/library/system.exception.aspx) classe fournit de nombreuses méthodes utiles pour le traitement des exceptions CLR et qu’il est recommandé d’utiliser une classe de base pour les classes d’exceptions définies par l’utilisateur.
+Si vous compilez avec le **/CLR** option, vous pouvez gérer les exceptions CLR, ainsi que standard <xref:System.Exception> classe fournit de nombreuses méthodes utiles pour le traitement des exceptions CLR et qu’il est recommandé d’utiliser une classe de base pour les exceptions définies par l’utilisateur classes.
 
 Interception de types d’exception dérivés d’une interface n’est pas pris en charge sous **/CLR**. En outre, le common language runtime ne vous permet pas pour intercepter les exceptions de dépassement de capacité de pile ; le processus prendra fin à une exception de dépassement de capacité de pile.
 
@@ -140,7 +140,7 @@ L’ordre des événements pour une exception levée est comme suit :
 
 ### <a name="catching-unmanaged-types"></a>Interception de Types non managés
 
-Lorsqu’un type d’objet non managé est levé, il est encapsulé avec une exception de type [InteropServices::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx). Lorsque vous recherchez approprié **catch** clause, il existe deux possibilités.
+Lorsqu’un type d’objet non managé est levé, il est encapsulé avec une exception de type <xref:System.Runtime.InteropServices.SEHException>. Lorsque vous recherchez approprié **catch** clause, il existe deux possibilités.
 
 - Si un type C++ natif est rencontré, l’exception est désencapsulée et par rapport au type rencontré. Cette comparaison permet à un type C++ natif à intercepter de façon normale.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: 3cb250c68d5ba36dc3cf502b871f62eec8f1861c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32b1c00e3ad3ed15fa56f7718789fe1a2e3ecbab
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283876"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424377"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identification des éléments du projet de contrôle DHTML
 
@@ -22,7 +22,7 @@ Un contrôle DHTML Edit est similaire à n’importe quel contrôle ATL, à l’
 
 - Il crée une ressource HTML pour le contrôle de l’interface utilisateur.
 
-- Il permet d’accéder au modèle d’objet DHTML via la variable membre `m_spBrowser`, qui est un pointeur intelligent de type [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx). Utilisez ce pointeur pour accéder à n’importe quelle partie du modèle d’objet DHTML.
+- Il permet d’accéder au modèle d’objet DHTML via la variable membre `m_spBrowser`, qui est un pointeur intelligent de type [IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\)). Utilisez ce pointeur pour accéder à n’importe quelle partie du modèle d’objet DHTML.
 
 Le graphique suivant illustre la relation entre votre DLL, le contrôle DHTML Edit, le navigateur Web et la ressource HTML.
 

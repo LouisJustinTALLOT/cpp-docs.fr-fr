@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 03209bc409453cab1769606cb972f4572d3617bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a66f78d225a5899b53a931c7eb6a0564de689ca1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548497"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423285"
 ---
 # <a name="overview-of-lib"></a>Vue d'ensemble de LIB
 
@@ -34,15 +34,15 @@ Le tableau suivant répertorie les options de lib.exe, avec un lien vers plus d�
 |Option|Description|
 |-|-|
 |**/DEF**|Créer une bibliothèque d’importation et d’un fichier d’exportation.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](../../build/reference/building-an-import-library-and-export-file.md).|
-|**/ ERRORREPORT**|   Envoyer des informations à Microsoft sur les erreurs internes avec lib.exe.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
+|**/ERRORREPORT**|   Envoyer des informations à Microsoft sur les erreurs internes avec lib.exe.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
 |**/EXPORT**|   Exporte une fonction à partir de votre programme.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](../../build/reference/building-an-import-library-and-export-file.md).|
-|**/ EXTRACTION**|   Créez un fichier objet (.obj) qui contient une copie d’un membre d’une bibliothèque existante.<br/><br/>Pour plus d’informations, consultez [extraction d’un membre de bibliothèque](../../build/reference/extracting-a-library-member.md).|
+|**/EXTRACT**|   Créez un fichier objet (.obj) qui contient une copie d’un membre d’une bibliothèque existante.<br/><br/>Pour plus d’informations, consultez [extraction d’un membre de bibliothèque](../../build/reference/extracting-a-library-member.md).|
 |**/INCLUDE**|   Ajoute un symbole à la table de symboles.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](../../build/reference/building-an-import-library-and-export-file.md).|
 |**/LIBPATH**|   Substitue le chemin d’accès de la bibliothèque d’environnement.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
-|**/ LISTE**|   Affiche des informations sur la bibliothèque de sortie vers la sortie standard.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
+|**/LIST**|   Affiche des informations sur la bibliothèque de sortie vers la sortie standard.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
 |**/LTCG**|   Provoque la bibliothèque à l’aide de la génération de code du moment de la liaison.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
 |**/MACHINE**|   Spécifie la plateforme cible pour le programme.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
-|**/ NOM**|   Lorsque vous créez une bibliothèque d’importation, spécifie le nom de la DLL pour laquelle la bibliothèque d’importation est générée.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
+|**/NAME**|   Lorsque vous créez une bibliothèque d’importation, spécifie le nom de la DLL pour laquelle la bibliothèque d’importation est générée.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
 |**/NODEFAULTLIB**|   Supprime une ou plusieurs bibliothèques par défaut de la liste des bibliothèques qu’elle parcourt lors de la résolution des références externes.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
 |**/NOLOGO**|   Supprime l’affichage de la LIB copyright message et numéro de version et empêche la répercussion des fichiers de commandes.<br/><br/>Pour plus d’informations, consultez [en cours d’exécution de LIB](../../build/reference/running-lib.md).|
 |**/OUT**|   Remplace le nom de fichier de sortie par défaut.<br/><br/>Pour plus d’informations, consultez [gestion d’une bibliothèque](../../build/reference/managing-a-library.md).|
