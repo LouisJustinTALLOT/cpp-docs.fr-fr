@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330539"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416447"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procédure pas à pas : Créer et utiliser votre propre bibliothèque de liens dynamiques (C++)
 
@@ -402,5 +402,5 @@ Lorsque vous déployez votre application, vous devez également déployer les DL
 
 [DLL dans Visual C++](../build/dlls-in-visual-cpp.md)<br/>
 [Déploiement des applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Procédure pas à pas : déploiement de votre programme (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+[Procédure pas à pas : Déploiement de votre programme (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 [Appel de fonctions de la DLL à partir d’applications Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)

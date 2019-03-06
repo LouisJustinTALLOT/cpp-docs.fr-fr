@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -CGTHREADS linker option
 - CGTHREADS linker option
 ms.assetid: 4b52cfdb-3702-470b-9580-fabeb1417488
-ms.openlocfilehash: 1c459604d90b23953bbf3f250708c393fa78277d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2e1a51dcff46601034ed18292e9c4dcf4bd7d5c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495106"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413938"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (threads du compilateur)
 
@@ -25,7 +25,7 @@ Définit le nombre de threads de cl.exe à utiliser pour l'optimisation et la g�
 
 ## <a name="arguments"></a>Arguments
 
-*Nombre*<br/>
+*number*<br/>
 Nombre maximal de threads utilisables par cl.exe, dans la plage de 1 à 8.
 
 ## <a name="remarks"></a>Notes

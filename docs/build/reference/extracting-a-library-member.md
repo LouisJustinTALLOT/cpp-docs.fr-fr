@@ -11,12 +11,12 @@ helpviewer_keywords:
 - extracting library members
 - /EXTRACT library manager option
 ms.assetid: a2c5c2a1-9b7e-489a-a9a4-1dec694e1fc5
-ms.openlocfilehash: 2975ef584b0244a16b556232b6939308d2e1bd14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d7629707d99130551401fdda39a972ab2447480
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412885"
 ---
 # <a name="extracting-a-library-member"></a>Extraction d'un membre de bibliothèque
 
