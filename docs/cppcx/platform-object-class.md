@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850089"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422780"
 ---
 # <a name="platformobject-class"></a>Platform::Object, classe
 
@@ -116,7 +116,7 @@ Un [Platform::Type](../cppcx/platform-type-class.md) objet qui décrit le type d
 
 La méthode statique [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) peut être utilisé pour obtenir un [Platform::TypeCode Enumeration](../cppcx/platform-typecode-enumeration.md) valeur qui représente le type actuel. Ceci est particulièrement utile pour les types intégrés. Le code de type pour toute classe ref en plus [Platform::String](../cppcx/platform-string-class.md) est Object (1).
 
-Le [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe est utilisée dans les API Windows comme un moyen indépendant du langage de passer des informations de type entre les composants de Windows et les applications. Le T[classe Platform::Type](../cppcx/platform-type-class.md) a des opérateurs de conversion entre `Type` et `TypeName`.
+Le [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) classe est utilisée dans les API Windows comme un moyen indépendant du langage de passer des informations de type entre les composants de Windows et les applications. Le T[classe Platform::Type](../cppcx/platform-type-class.md) a des opérateurs de conversion entre `Type` et `TypeName`.
 
 Utilisez le [typeid](../windows/typeid-cpp-component-extensions.md) opérateur pour retourner un `Platform::Type` objet pour un nom de classe, par exemple lors de la navigation entre les pages XAML :
 

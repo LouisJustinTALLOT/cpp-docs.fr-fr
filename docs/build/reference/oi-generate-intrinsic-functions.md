@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 067b8b11b716935c684a127632a8fadaf3d9a447
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dc7f5f183e7dffb65c31ebb9bc47b30776b81e3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646066"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422115"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Générer des fonctions intrinsèques)
 
@@ -47,7 +47,7 @@ Vous pouvez utiliser la [Za](../../build/reference/za-ze-disable-language-extens
 
 Vous utilisez également [intrinsèque](../../preprocessor/intrinsic.md) pour créer des fonctions intrinsèques ou [(fonction) (C/C++)](../../preprocessor/function-c-cpp.md) pour forcer explicitement un appel de fonction.
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 

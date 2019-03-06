@@ -2,12 +2,12 @@
 title: Délégués (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 8153ac6ffc48b43fc218ee786cdb3f64504d825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23c5d1ae35a56a827bc2436dbdd81b53dd1224
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635238"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415277"
 ---
 # <a name="delegates-ccx"></a>Délégués (C++/CX)
 
@@ -23,7 +23,7 @@ Les délégués sont plus fréquemment utilisés conjointement avec les événem
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-Lorsque vous déclarez des délégués qui seront exposées aux clients sur l’interface binaire d’application Windows Runtime, utilisez [Windows::Foundation :: typedeventhandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Ce délégué a des binaires stub et proxy prédéfinis qui lui permettent d'être consommé par des clients Javascript.
+Lorsque vous déclarez des délégués qui seront exposées aux clients sur l’interface binaire d’application Windows Runtime, utilisez [Windows::Foundation :: typedeventhandler\<TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). Ce délégué a des binaires stub et proxy prédéfinis qui lui permettent d'être consommé par des clients Javascript.
 
 ## <a name="consuming-delegates"></a>Utilisation des délégués
 

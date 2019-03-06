@@ -1,19 +1,19 @@
 ---
-title: 'Comment : utiliser des événements de build dans des projets MSBuild'
+title: 'Procédure : Utiliser des événements de Build dans des projets MSBuild'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 60e26b5cab77bb56f0574a91ad69a7df4d73fa1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570272"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417586"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>Comment : utiliser des événements de build dans des projets MSBuild
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>Procédure : Utiliser des événements de Build dans des projets MSBuild
 
 Un événement de build est une commande MSBuild exécute à un stade particulier dans le processus de génération. Le *pré-build* événement se produit avant le début de la génération ; le *préédition des liens* événement se produit avant le démarrage d’étape de liaison ; et le *post-build* événement se produit une fois la build termine correctement. Un événement de build se produit uniquement si l’étape de build associée se produit. Par exemple, l’événement de préédition des liens n’a pas lieu si l’étape de liaison ne s’exécute pas.
 
@@ -39,7 +39,7 @@ Le tableau suivant répertorie chaque *utilisation dans la génération* éléme
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant peut être ajouté à l’intérieur de l’élément de projet du fichier myproject.vcxproj créé dans [procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *pré-build* événement effectue une copie de main.cpp ; un *pré-lien* événement effectue une copie de main.obj ; et un *post-build* événement effectue une copie de myproject.exe. Si le projet est généré à l’aide d’une configuration release, les événements de build sont exécutées. Si le projet est généré à l’aide d’une configuration debug, les événements de build ne sont pas exécutées.
+L’exemple suivant peut être ajouté à l’intérieur de l’élément de projet du fichier myproject.vcxproj créé dans [procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *pré-build* événement effectue une copie de main.cpp ; un *pré-lien* événement effectue une copie de main.obj ; et un *post-build* événement effectue une copie de myproject.exe. Si le projet est généré à l’aide d’une configuration release, les événements de build sont exécutées. Si le projet est généré à l’aide d’une configuration debug, les événements de build ne sont pas exécutées.
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +73,4 @@ L’exemple suivant peut être ajouté à l’intérieur de l’élément de pro
 ## <a name="see-also"></a>Voir aussi
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

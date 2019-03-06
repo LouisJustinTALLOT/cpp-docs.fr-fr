@@ -1,17 +1,17 @@
 ---
-title: 'Comment : utiliser des tableaux dans C++/CLI'
+title: 'Procédure : Utiliser des tableaux dans C++ / c++ / CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: e38e15cffbf623f629f57243923ddae273801bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0a13441bc3532884dbbd32f28d57c15e352c3ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596246"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414601"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>Comment : utiliser des tableaux dans C++/CLI
+# <a name="how-to-use-arrays-in-ccli"></a>Procédure : Utiliser des tableaux dans C++ / c++ / CLI
 
 Cet article explique comment utiliser des tableaux dans C++ / c++ / CLI.
 
@@ -503,7 +503,7 @@ int main() {
 
 Contrairement aux tableaux C++ standard, les tableaux managés sont dérivés implicitement à partir d’une classe de base du tableau à partir duquel ils héritent le comportement commun. Par exemple, le `Sort` (méthode), qui peut être utilisée pour ordonner les éléments dans n’importe quel tableau.
 
-Pour les tableaux qui contiennent des types intrinsèques base, vous pouvez appeler la `Sort` (méthode). Vous pouvez remplacer les critères de tri, et cela n’est requis lorsque vous souhaitez trier des tableaux de types complexes. Dans ce cas, le type d’élément de tableau doit implémenter le [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) (méthode).
+Pour les tableaux qui contiennent des types intrinsèques base, vous pouvez appeler la `Sort` (méthode). Vous pouvez remplacer les critères de tri, et cela n’est requis lorsque vous souhaitez trier des tableaux de types complexes. Dans ce cas, le type d’élément de tableau doit implémenter le <xref:System.IComparable.CompareTo%2A> (méthode).
 
 ```cpp
 // array_sort.cpp
@@ -520,7 +520,7 @@ int main() {
 
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>Tri des tableaux à l’aide de critères personnalisés
 
-Pour trier des tableaux qui contiennent des types intrinsèques base, appelez simplement la `Array::Sort` (méthode). Toutefois, pour le tri des tableaux qui contiennent des types complexes ou à remplacer les critères de tri par défaut, remplacent le [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) (méthode).
+Pour trier des tableaux qui contiennent des types intrinsèques base, appelez simplement la `Array::Sort` (méthode). Toutefois, pour le tri des tableaux qui contiennent des types complexes ou à remplacer les critères de tri par défaut, remplacent le <xref:System.IComparable.CompareTo%2A> (méthode).
 
 Dans l’exemple suivant, une structure nommée `Element` est dérivée de <xref:System.IComparable>et écrits pour fournir un <xref:System.IComparable.CompareTo%2A> méthode qui utilise la moyenne des deux entiers comme critère de tri.
 

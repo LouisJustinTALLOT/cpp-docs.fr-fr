@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 8d50962bf66e07d6238be4a1a973c9d9ff06a556
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613770"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426522"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Modifications apportées à la fonction d'assistance du chargement différé des DLL depuis Visual C++ 6.0
 
@@ -20,9 +20,9 @@ Si vous disposez de plusieurs versions de Visual C++ sur votre ordinateur ou si 
 
 - **__delayLoadHelper** est désormais **__delayLoadHelper2**
 
-- **__pfnDliNotifyHook** est désormais **__pfnDliNotifyHook2**
+- **__pfnDliNotifyHook** is now **__pfnDliNotifyHook2**
 
-- **__pfnDliFailureHook** est désormais **__pfnDliFailureHook2**
+- **__pfnDliFailureHook** is now **__pfnDliFailureHook2**
 
 - **__FUnloadDelayLoadedDLL** est désormais **__FUnloadDelayLoadedDLL2**
 

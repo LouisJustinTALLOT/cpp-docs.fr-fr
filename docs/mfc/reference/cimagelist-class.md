@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298917"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416005"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -691,13 +691,13 @@ Pointeur vers le contexte de périphérique de destination. Vous devez supprimer
 Index de base zéro de l’image à dessiner.
 
 *pt*<br/>
-Un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure contenant les coordonnées x et y où l’image sera dessiné.
+Un [POINT](/previous-versions/dd162805\(v=vs.85\)) structure contenant les coordonnées x et y où l’image sera dessiné.
 
 *sz*<br/>
 Un [taille](/windows/desktop/api/windef/ns-windef-tagsize) structure indiquant la taille de l’image à dessiner.
 
 *ptOrigin*<br/>
-Un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure contenant les coordonnées x et y spécifiant l’angle supérieur gauche de l’opération de dessin en ce qui concerne l’image elle-même. Pixels qui sont à gauche de la coordonnée x et versions ultérieures de la coordonnée y de l’image ne sont pas dessinés.
+Un [POINT](/previous-versions/dd162805\(v=vs.85\)) structure contenant les coordonnées x et y spécifiant l’angle supérieur gauche de l’opération de dessin en ce qui concerne l’image elle-même. Pixels qui sont à gauche de la coordonnée x et versions ultérieures de la coordonnée y de l’image ne sont pas dessinés.
 
 *fStyle*<br/>
 Indicateur spécifiant le style de dessin et, éventuellement, l’image de superposition. Consultez la section Notes pour plus d’informations sur l’image de superposition. L’implémentation par défaut MFC, ILD_NORMAL, dessine l’image à l’aide de la couleur d’arrière-plan pour la liste d’images. Si vous définissez CLR_NONE comme est la couleur d’arrière-plan, l’image est dessinée de manière transparente à l’aide d’un masque.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Paramètres
 
 *lpPoint*<br/>
-Adresse d’un [POINT](https://msdn.microsoft.com/library/windows/desktop/dd162805) structure recevant actuel faites glisser la position.
+Adresse d’un [POINT](/previous-versions/dd162805\(v=vs.85\)) structure recevant actuel faites glisser la position.
 
 *lpPointHotSpot*<br/>
 Adresse d’un `POINT` structure qui reçoit le décalage de l’image glissée par rapport à la position de glissement.

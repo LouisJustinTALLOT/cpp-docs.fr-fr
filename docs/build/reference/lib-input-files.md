@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - input files, LIB
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
-ms.openlocfilehash: 885d03e74c7acff54e527c2dbad38de055913b5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb0095bd9e8699fbc9a1a144833d12d2cf4a1f83
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503313"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423090"
 ---
 # <a name="lib-input-files"></a>Fichiers d'entrée LIB
 

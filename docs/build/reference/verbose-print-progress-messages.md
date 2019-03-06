@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 41a8ee835a65a7c9a17df9bb9c155267cae29baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 290d2e5c5c5a87042ee805cdaed90cce4418a389
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575615"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423749"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (Imprimer les messages d'avancement)
 

@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271396"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418930"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle arborescence de la vue. Appliquer des styles de fenêtre, décrits dans [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)et n’importe quelle combinaison de [afficher les styles de contrôle d’arborescence](/windows/desktop/Controls/tree-view-control-window-styles) comme décrit dans le SDK Windows.
 
 *rect*<br/>
-Spécifie la taille et la position du contrôle arborescence de la vue. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+Spécifie la taille et la position du contrôle arborescence de la vue. Il peut s’agir un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure.
 
 *pParentWnd*<br/>
 Spécifie la vue fenêtre du contrôle parent, généralement un `CDialog`. Il ne doit pas être NULL.
@@ -361,7 +361,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la l
 Spécifie le style du contrôle arborescence de la vue. Appliquer des styles de fenêtre, décrits dans [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)et n’importe quelle combinaison de [afficher les styles de contrôle d’arborescence](/windows/desktop/Controls/tree-view-control-window-styles) comme décrit dans le SDK Windows.
 
 *rect*<br/>
-Une référence à un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
+Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de *pParentWnd*.
 
 *pParentWnd*<br/>
 Pointeur vers la fenêtre qui est le parent du contrôle.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|[in] Handle vers un élément de contrôle d’arborescence.|
 |*nPart*|[in] Identificateur de la partie. Doit être définie sur TVGIPR_BUTTON.|
-|*lpRect*|[out] Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure. Si cette méthode réussite, la structure reçoit les coordonnées du rectangle de la partie spécifiée par *hItem* et *nPart*.|
+|*lpRect*|[out] Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure. Si cette méthode réussite, la structure reçoit les coordonnées du rectangle de la partie spécifiée par *hItem* et *nPart*.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 Le handle d’un élément contrôle d’arborescence.
 
 *lpRect*<br/>
-Pointeur vers un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui reçoit le rectangle englobant. Les coordonnées sont exprimées par rapport à l’angle supérieur gauche du contrôle arborescence.
+Pointeur vers un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui reçoit le rectangle englobant. Les coordonnées sont exprimées par rapport à l’angle supérieur gauche du contrôle arborescence.
 
 *bTextOnly*<br/>
 Si ce paramètre est différent de zéro, le rectangle englobant inclut uniquement le texte de l’élément. Dans le cas contraire, il inclut la ligne entière qui occupe de l’élément dans le contrôle arborescence.

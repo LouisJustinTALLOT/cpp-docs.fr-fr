@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556775"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423051"
 ---
 # <a name="cutlprops-class"></a>CUtlProps, classe
 
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 *T*<br/>
 La classe qui contient le `BEGIN_PROPSET_MAP`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -73,7 +73,7 @@ La classe qui contient le `BEGIN_PROPSET_MAP`.
 
 La plupart de cette classe est un détail d’implémentation.
 
-`CUtlProps` contient deux membres pour définir les propriétés en interne : [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) et [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` Pour définir les propriétés en interne, contient deux membres : [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) et [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
 
 Pour plus d’informations sur les macros utilisées dans un mappage de jeu de propriétés, consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) et [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 L’index dans le tableau de jeu de propriétés ; zéro s’il n'existe qu’une seule propriété ensemble.
 
 *pDBProp*<br/>
-L’ID de propriété et la nouvelle valeur dans un [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) structure.
+L’ID de propriété et la nouvelle valeur dans un [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) structure.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 L’index dans le tableau de jeu de propriétés ; zéro s’il n'existe qu’une seule propriété ensemble.
 
 *pDBProp*<br/>
-L’ID de propriété et la nouvelle valeur dans un [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) structure.
+L’ID de propriété et la nouvelle valeur dans un [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) structure.
 
 ### <a name="return-value"></a>Valeur de retour
 
