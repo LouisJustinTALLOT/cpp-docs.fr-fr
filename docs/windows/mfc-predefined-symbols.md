@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: c60c75275ca565b332c33848d27c134deb90a5c6
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954950"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563202"
 ---
 # <a name="mfc-predefined-symbols"></a>Symboles MFC prédéfinis
 
@@ -236,7 +236,7 @@ Les symboles dans ce tableau s’affichent uniquement dans un projet MFC lors de
 
 Ces symboles font également partie des fichiers de prise en charge MFC, mais ils prennent en charge les actions et fonctions d’application Windows standard. Ces symboles sont utilisés avec les menus.
 
-Lorsque vous travaillez avec des menus dans le **éditeur de menus**, ces symboles s’affichent dans le **fenêtre des propriétés** associées aux commandes de menu courantes. Par exemple, si votre application comporte un **fichier** menu avec une **Exit** commande, que la commande sera associée au symbole ID_APP_EXIT dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
+Lorsque vous travaillez avec des menus dans le **éditeur de menus**, ces symboles s’affichent dans le **propriété** fenêtre associée à des commandes de menu courantes. Par exemple, si votre application comporte un **fichier** menu avec une **Exit** commande, que la commande sera associée au symbole ID_APP_EXIT dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|

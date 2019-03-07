@@ -5,18 +5,18 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 16991746c5c858310466f7eebd91a8478d2dcc5c
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 2abbfb83f6d9b09a1c5dcc2afe1c48a6d2dff79a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954846"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562872"
 ---
 # <a name="atl-predefined-symbols"></a>Symboles ATL prédéfinis
 
 Ces symboles sont définis dans les fichiers d’en-tête ATL, mais ils prennent en charge les actions et fonctions d’application Windows standard. Ces symboles sont utilisés principalement avec les boîtes de dialogue.
 
-Lorsque vous travaillez avec les boîtes de dialogue et des contrôles dans le [éditeur de boîte de dialogue](../windows/dialog-editor.md), ces symboles s’affichent dans le **propriétés** fenêtre associée aux contrôles communs. Par exemple, si votre boîte de dialogue a un **Annuler** bouton, que la commande sera associée au symbole IDCANCEL dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
+Lorsque vous travaillez avec les boîtes de dialogue et des contrôles dans le [boîte de dialogue Éditeur](../windows/dialog-editor.md), ces symboles s’affichent dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) associées aux contrôles courants. Par exemple, si votre boîte de dialogue a un **Annuler** bouton, que la commande sera associée au symbole IDCANCEL dans le **propriétés** fenêtre.
 
 |||
 |-|-|

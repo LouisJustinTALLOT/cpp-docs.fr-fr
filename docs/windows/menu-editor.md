@@ -39,47 +39,41 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: 8e97fb88a8860ab0831f62bf2413b1f8f7174c7b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 0681cc0a0d93d78633dd5488defaa0e9db55b1c6
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336681"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563132"
 ---
 # <a name="menu-editor-c"></a>Éditeur de menus (C++)
 
-Les menus permettent d’organiser les commandes de manière logique et de les trouver plus facilement. Avec le **Menu** éditeur, vous pouvez créer et modifier des menus en travaillant directement avec une barre de menus qui ressemble étroitement à celui de votre application terminée.
+Les menus permettent d’organiser les commandes de manière logique et de les trouver plus facilement. Avec le **éditeur de menus**, vous pouvez créer et modifier des menus en travaillant directement avec une barre de menus autrement étroitement ressemble à celle de votre application terminée.
 
 > [!TIP]
-> Lors de l’utilisation du **Menu** éditeur, dans de nombreux cas, vous pouvez cliquer sur le bouton droit de la souris pour afficher un menu contextuel des commandes fréquemment utilisées. Les commandes disponibles varient selon la cible du pointeur.
-
-> [!NOTE]
-> Pour les programmes MFC Microsoft Foundation Class Library () et ATL, vous pouvez utiliser **Assistants Code** pour raccorder des commandes de menu au code. Pour plus d’informations, consultez [Ajout d’un événement](../ide/adding-an-event-visual-cpp.md).
+> Lors de l’utilisation du **éditeur de menus**, dans de nombreux cas, vous pouvez avec le bouton droit pour afficher un menu contextuel des commandes fréquemment utilisées. Les commandes disponibles varient selon la cible du pointeur.
 
 ## <a name="how-to"></a>Comment
 
-> [!NOTE]
-> Le **des ressources, fenêtre** n’est pas disponible dans les éditions Express.
-
-Le **Menu** éditeur vous permet de :
+Le **éditeur de menus** vous permet de :
 
 ### <a name="to-create-a-standard-menu"></a>Pour créer un menu standard
 
-1. À partir de la **vue** menu, sélectionnez **affichage des ressources** et ensuite avec le bouton droit sur le **Menu** du titre et choisissez **ajouter une ressource**. Choisissez **Menu**.
+1. Accédez au menu **vue** > **affichage des ressources** et avec le bouton droit sur le **Menu** titre. Choisissez **ajouter une ressource**, puis **Menu**.
 
-1. Sélectionnez la zone **Nouvel élément** (le rectangle qui contient « Tapez ici ») dans la barre de menus.
+1. Sélectionnez le **un nouvel élément** boîte (le rectangle qui contient *tapez ici*) sur la barre de menus.
 
    ![Zone de nouvel élément dans l’éditeur de menus](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
-   Zone Nouvel élément
+   **Un nouvel élément** boîte
 
-1. Tapez un nom pour votre nouveau menu, par exemple, « Fichier ».
+1. Tapez un nom pour votre nouveau menu, par exemple, *fichier*.
 
-   Le texte que vous tapez s’affiche dans l’ **Éditeur de menus** et dans la zone **Légende** de la fenêtre [Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez modifier les propriétés du nouveau menu dans les deux emplacements.
+   Le texte que vous tapez s’affiche à la fois dans le **éditeur de menus** et dans le **légende** zone le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez modifier les propriétés du nouveau menu dans les deux emplacements.
 
    Une fois que vous avez donné un nom à votre nouveau menu dans la barre de menus, la zone Nouvel élément se déplace vers la droite (pour vous permettre d’ajouter un autre menu) et une autre zone Nouvel élément s’ouvre sous votre premier menu pour que vous puissiez y ajouter des commandes de menu.
 
    ![Zone nouvel élément développée](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
-   Zone Nouvel élément avec déplacement du focus quand vous avez tapé le nom du menu
+   **Un nouvel élément** décalée vers la zone avec focus après avoir tapé le nom de menu
 
    > [!NOTE]
    > Pour créer un seul élément de menu sur la barre de menus, définissez le **contextuelle** propriété **False**.
@@ -92,24 +86,22 @@ Le **Menu** éditeur vous permet de :
 
 1. Ajoutez des commandes de menu supplémentaires au sous-menu.
 
-## <a name="to-insert-a-new-menu-between-existing-menus"></a>Pour insérer un nouveau menu parmi des menus existants
+### <a name="to-insert-a-new-menu-between-existing-menus"></a>Pour insérer un nouveau menu parmi des menus existants
 
-Sélectionnez un nom de menu d’existant et appuyez sur la **insérer** de clé ou avec le bouton droit sur la barre de menus et choisissez **Insérer nouveau** dans le menu contextuel.
+Sélectionnez un nom de menu d’existant et appuyez sur la **insérer** de clé, ou avec le bouton droit sur la barre de menus et choisissez **Insérer nouveau**.
 
-Le **un nouvel élément** boîte est insérée avant l’élément sélectionné.
+   Le **un nouvel élément** boîte est insérée avant l’élément sélectionné.
 
 ### <a name="to-add-commands-to-a-menu"></a>Pour ajouter des commandes à un menu
 
-1. Créer un menu.
-
-1. Sélectionnez un nom de menu, par exemple, **fichier**.
+1. Créer un menu. Puis sélectionnez un nom de menu, par exemple, **fichier**.
 
    Chaque menu sera développé et exposera une zone Nouvel élément pour les commandes. Par exemple, vous pouvez ajouter les commandes **New**, **Open**, et **fermer** à un **fichier** menu.
 
 1. Dans la zone Nouvel élément, tapez le nom de la nouvelle commande de menu.
 
    > [!NOTE]
-   > Le texte que vous tapez s’affiche dans l’ **Éditeur de menus** et dans la zone **Légende** de la fenêtre [Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez modifier les propriétés du nouveau menu dans les deux emplacements.
+   > Le texte que vous tapez s’affiche à la fois dans le **éditeur de menus** et dans le **légende** zone le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez modifier les propriétés du nouveau menu dans les deux emplacements.
 
    > [!TIP]
    > Vous pouvez définir une touche mnémonique (touche d'accès rapide) qui permet à l'utilisateur de sélectionner la commande de menu. Tapez une esperluette (`&`) devant une lettre pour spécifier que le mnémonique. L'utilisateur peut sélectionner la commande de menu en tapant cette lettre.
@@ -127,42 +119,38 @@ Le **un nouvel élément** boîte est insérée avant l’élément sélectionn�
 
    La zone Nouvel élément est sélectionnée pour vous permettre de créer des commandes de menu supplémentaires.
 
-### <a name="to-select-multiple-menu-commands"></a>Pour sélectionner plusieurs commandes de menu
-
-Vous pouvez sélectionner plusieurs noms de menus ou commandes de menu pour exécuter des opérations en bloc telles que la suppression ou modification des propriétés.
+### <a name="to-select-multiple-menu-commands-to-run-bulk-operations-such-as-deleting-or-changing-properties"></a>Pour sélectionner plusieurs commandes de menu pour exécuter des opérations en bloc telles que la suppression ou modification des propriétés
 
 Tout en maintenant enfoncée la **Ctrl** enfoncée, sélectionnez les menus ou les commandes de sous-menu souhaitées.
 
 ### <a name="to-move-and-copy-menus-and-menu-commands"></a>Déplacer et copier des menus et commandes de menu
 
+- Utilisez la méthode glisser-déplacer :
+
+   1. Faites glisser ou copiez l'élément que vous souhaitez déplacer vers :
+
+      - Un nouvel emplacement dans le menu actuel.
+
+      - Un autre menu. Vous pouvez naviguer vers d’autres menus en faisant glisser le pointeur de la souris au-dessus d’eux.
+
+   1. Déplacez la commande de menu quand le guide d'insertion affiche la position souhaitée.
+
+- Utilisez les commandes du menu contextuel :
+
+   1. Cliquez sur un ou plusieurs menus ou commandes de menu, puis choisissez **couper** (pour déplacer) ou **copie**.
+
+   1. Si vous souhaitez déplacer les éléments vers un autre menu ressource ou le fichier de script de ressources, [ouvrir dans une autre fenêtre](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+   1. Sélectionnez la position du menu ou de la commande de menu où vous souhaitez effectuer le déplacement ou la copie.
+
+   1. Dans le menu contextuel, choisissez **Coller**. L'élément déplacé ou copié est placé avant l'élément sélectionné.
+
 > [!NOTE]
 > Vous pouvez également faire glisser, copier et coller des éléments vers d'autres menus dans d'autres fenêtres de menu.
 
-#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Pour déplacer ou copier des menus ou des commandes de menu par glisser-déplacer
-
-1. Faites glisser ou copiez l'élément que vous souhaitez déplacer vers :
-
-   - Un nouvel emplacement dans le menu actuel.
-
-   - Un autre menu. (Vous pouvez naviguer vers d'autres menus en faisant glisser le pointeur de la souris au-dessus de ces derniers.)
-
-1. Déplacez la commande de menu quand le guide d'insertion affiche la position souhaitée.
-
-#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Pour déplacer ou copier des menus ou des commandes de menu à l'aide des commandes de menu contextuel
-
-1. Cliquez avec le bouton droit sur un ou plusieurs menus ou commandes de menu.
-
-1. Dans le menu contextuel, choisissez **Couper** (pour déplacer) ou **Copier**.
-
-1. Si vous souhaitez déplacer les éléments vers un autre menu ressource ou le fichier de script de ressources, [ouvrir dans une autre fenêtre](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
-
-1. Sélectionnez la position du menu ou de la commande de menu où vous souhaitez effectuer le déplacement ou la copie.
-
-1. Dans le menu contextuel, choisissez **Coller**. L'élément déplacé ou copié est placé avant l'élément sélectionné.
-
 ### <a name="to-delete-a-menu-or-menu-command"></a>Pour supprimer un menu ou une commande de menu
 
-Avec le bouton droit de la commande ou le nom de menu et choisissez **supprimer** dans le menu contextuel.
+Avec le bouton droit de la commande ou le nom de menu et choisissez **supprimer**.
 
 > [!NOTE]
 > De même, vous pouvez utiliser le menu contextuel pour effectuer d'autres actions telles que Copier, Couper, Coller, Insérer nouveau, Insérer un séparateur, Modifier ID, Afficher comme Popup, Vérifier les mnémoniques, etc.
@@ -173,21 +161,14 @@ Les[menus contextuels](../mfc/menus-mfc.md) affichent les commandes fréquemment
 
 Une fois que vous avez créé la ressource de menu, votre code d’application doit charger cette ressource et utiliser [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) pour faire apparaître le menu. Une fois que l’utilisateur a fermé le menu contextuel en sélectionnant à l’extérieur ou qu’il a sélectionné une commande, cette fonction est retournée. Si l'utilisateur choisit une commande, ce message de commande est envoyé à la fenêtre dont le handle a été passé.
 
-### <a name="to-create-a-pop-up-menu"></a>Pour créer un menu contextuel
+> [!NOTE]
+> Pour les programmes de bibliothèque Microsoft Foundation classes (MFC) et ATL, utilisez **Assistants Code** pour raccorder des commandes de menu au code. Pour plus d’informations, consultez [Ajout d’un événement](../ide/adding-an-event-visual-cpp.md) et [mappage des Messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md).
 
-1. Créer un menu avec un titre vide (ne fournissez pas un **légende**).
+- Pour créer un menu contextuel, créer un menu avec un titre vide et ne fournissent pas un *légende*. Ensuite, ajoutez une commande de menu au nouveau menu, déplacer vers la première commande de menu sous le titre de menu vide avec la légende temporaire *tapez ici* et tapez un *légende* et toute autre information.
 
-1. [Ajoutez une commande de menu au nouveau menu](../windows/adding-commands-to-a-menu.md). Déplacer vers la première commande de menu sous le titre de menu vide (la légende temporaire indique `Type Here`). Tapez une **légende** et les autres informations appropriées.
+   Répétez ce processus pour toutes les autres commandes de menu dans le menu contextuel et veillez à enregistrer la ressource de menu.
 
-   Répétez ce processus pour les autres commandes de menu du menu contextuel.
-
-1. Enregistrez la ressource de menu.
-
-### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Pour connecter un menu contextuel à votre application
-
-1. Ajoutez un gestionnaire de messages pour WM_CONTEXTMENU (par exemple). Pour plus d’informations, consultez [mappage des Messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md).
-
-1. Ajoutez le code suivant au gestionnaire de messages :
+- Pour vous connecter à un menu contextuel à votre application, par exemple, ajoutez un gestionnaire de messages pour WM_CONTEXTMENU, puis ajoutez le code suivant au Gestionnaire de messages :
 
     ```cpp
     CMenu menu;
@@ -200,19 +181,14 @@ Une fois que vous avez créé la ressource de menu, votre code d’application d
    > [!NOTE]
    > Le [CPoint](../atl-mfc-shared/reference/cpoint-class.md) passé par le message gestionnaire est en coordonnées d’écran.
 
-> [!NOTE]
-> Connexion d’un menu contextuel à votre application nécessite des MFC.
+Normalement, lorsque vous travaillez dans le **éditeur de menus**, une ressource de menu s’affiche comme une barre de menus. Toutefois, il est possible que des ressources de menu soient ajoutées à la barre de menus de l'application pendant l'exécution du programme.
 
-### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Pour afficher une ressource de menu sous forme de menu contextuel
-
-Normalement, lorsque vous travaillez dans le **Menu** éditeur, une ressource de menu s’affiche comme une barre de menus. Toutefois, il est possible que des ressources de menu soient ajoutées à la barre de menus de l'application pendant l'exécution du programme.
-
-Le menu contextuel et choisissez **afficher comme Popup** dans le menu contextuel.
+- Pour afficher une ressource de menu sous forme de menu contextuel, le menu contextuel et choisissez **afficher comme Popup**.
 
    Cette option est uniquement une préférence d’affichage et ne peut pas modifier votre menu.
 
-> [!NOTE]
-> Pour revenir à la vue de la barre de menus, sélectionnez **afficher comme Popup** à nouveau (ce qui supprime la coche et retourne l’affichage de la barre de menus).
+> [!TIP]
+> Pour revenir à la vue de la barre de menus, sélectionnez **afficher comme Popup** à nouveau. Cette action supprime la coche et retourne l’affichage de la barre de menus.
 
 ## <a name="requirements"></a>Spécifications
 

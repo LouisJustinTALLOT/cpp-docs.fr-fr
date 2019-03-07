@@ -16,25 +16,23 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: bde951a2915bf980e09d94c16edc1a9b462c662e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336551"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563327"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Procédure : Utiliser un outil de dessin
 
-Le **Image** mot du rédacteur à main levée de dessin et effacement outils fonctionnent tous de la même façon : vous sélectionnez l’outil et, si nécessaire, [sélectionner des couleurs de premier plan et arrière-plan](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) et options de taille et la forme. Vous placez le pointeur sur l’image et cliquez sur ou faites glisser pour dessiner et effacer.
+Le **Éditeur d’images** a dessin à main levée et l’effacement des outils qui fonctionnent de la même façon. Vous sélectionnez l’outil et, si nécessaire, [sélectionner des couleurs de premier plan et arrière-plan](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) et options de taille et la forme. Vous placez le pointeur sur l’image et cliquez sur ou faites glisser pour dessiner et effacer.
 
 ## <a name="drawing-tools"></a>Outils de dessin
 
-Lorsque vous sélectionnez le **gomme** outil, **pinceau** outil, ou **aérographe** outil, le sélecteur d’options affiche les options de l’outil.
+Vous pouvez sélectionner les outils de dessin à partir du **Éditeur d’images** barre d’outils ou le **Image** menu. Lorsque vous sélectionnez le **gomme** outil, **pinceau** outil, ou **aérographe** outil, le sélecteur d’options affiche les options de l’outil.
 
 > [!TIP]
-> Au lieu d’utiliser le **gomme** outil, vous pouvez s’avérer plus commode de dessiner dans la couleur d’arrière-plan avec l’un des outils de dessin.
-
-Vous pouvez sélectionner les outils de dessin à partir du **Éditeur d’images** barre d’outils ou le **Image** menu.
+>  Info-bulles s’affichent lorsque vous placez votre curseur sur les boutons sur le [barre d’outils Éditeur d’images](../windows/toolbar-image-editor-for-icons.md). Ces conseils vous aideront à identifier les différents boutons mentionnés ici.
 
 ### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Pour sélectionner et utiliser un outil de dessin à partir de la barre d’outils Éditeur d’images
 
@@ -42,14 +40,14 @@ Vous pouvez sélectionner les outils de dessin à partir du **Éditeur d’image
 
    - Le **gomme** outil peint sur l’image avec la couleur d’arrière-plan actuelle lorsque vous appuyez sur le bouton gauche de la souris.
 
+      > [!TIP]
+      > Au lieu d’utiliser le **gomme** outil, vous pouvez s’avérer plus commode de dessiner dans la couleur d’arrière-plan avec l’un des outils de dessin.
+
    - Le **crayon** outil dessine à main levée avec une largeur constante d’un pixel.
 
-   - Le **sélecteur d’options détermine la forme et la taille de l’outil pinceau**.
+   - Le **pinceau** outil a différentes formes et tailles.
 
    - Le **aérographe** outil distribue aléatoirement des pixels de couleur autour du centre du pinceau.
-
-        > [!TIP]
-        >  Info-bulles s’affichent lorsque vous placez votre curseur sur les boutons sur le [barre d’outils Éditeur d’images](../windows/toolbar-image-editor-for-icons.md). Ces conseils vous aideront à identifier les différents boutons mentionnés ici.
 
 1. Si nécessaire, sélectionnez les couleurs et un pinceau :
 
@@ -63,19 +61,19 @@ Vous pouvez sélectionner les outils de dessin à partir du **Éditeur d’image
 
 ### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Pour sélectionner et utiliser un outil de dessin dans le menu Image
 
-1. Sélectionnez le **Image** menu et sélectionnez le **outils** commande.
+1. Accédez au menu **Image** > **outils**.
 
 1. Dans le sous-menu en cascade, choisissez l’outil que vous souhaitez utiliser.
 
 ## <a name="lines-or-closed-figures"></a>Lignes ou Figures fermées
 
-Outils de l’éditeur d’images pour dessiner des lignes et de figures fermées fonctionnent tous de la même façon : vous placez le point d’insertion à un moment donné et que vous faites glisser vers un autre. Pour les lignes, ces points sont les points de terminaison. Pour les figures fermées, ces points sont les angles opposés du rectangle englobant de la figure.
+Le **Éditeur d’images** outils pour dessiner des lignes et toutes les figures fermées fonctionnent de la même façon : vous placez le point d’insertion à un moment donné et que vous faites glisser vers un autre. Pour les lignes, ces points sont les points de terminaison. Pour les figures fermées, ces points sont les angles opposés du rectangle englobant de la figure.
 
 Les lignes sont dessinées dans une largeur déterminée par la sélection de pinceau actuelle et les figures encadrées sont dessinées dans une largeur déterminée par la sélection de la largeur actuelle. Toutes les figures, encadrées et remplies et les lignes sont dessinées dans la couleur de premier plan actuelle si vous appuyez sur le bouton gauche de la souris, ou dans la couleur d’arrière-plan actuelle si vous appuyez sur le bouton droit de la souris.
 
 ### <a name="to-draw-a-line"></a>Pour dessiner une ligne
 
-1. Sur le [barre d’outils Éditeur d’images](../windows/toolbar-image-editor-for-icons.md) (ou à partir de la **Image** menu, **outils** commande), choisissez le **ligne** outil.
+1. Utilisez le [barre d’outils Éditeur d’images](../windows/toolbar-image-editor-for-icons.md) ou accédez au menu **Image**> **outils** et choisissez le **ligne** outil.
 
 1. Si nécessaire, sélectionnez les couleurs et un pinceau :
 
@@ -89,7 +87,7 @@ Les lignes sont dessinées dans une largeur déterminée par la sélection de pi
 
 ### <a name="to-draw-a-closed-figure"></a>Pour dessiner une figure fermée
 
-1. Sur le **Éditeur d’images** barre d’outils (ou à partir de la **Image** menu, **outils** commande), sélectionnez un **Figure fermée dessin** outil.
+1. Utilisez le **Éditeur d’images** barre d’outils ou accédez au menu **Image** > **outils** et sélectionnez un **Figure fermée dessin** outil.
 
    Le **Figure fermée dessin** outils créent des figures comme indiqué par leur bouton respectif.
 
@@ -101,13 +99,13 @@ Les lignes sont dessinées dans une largeur déterminée par la sélection de pi
 
 ## <a name="custom-brushes"></a>Pinceaux personnalisés
 
-Un pinceau personnalisé est une partie rectangulaire d’une image que vous sélectionnez et utilisez comme l’un de le **Image** pinceaux prêtes à l’emploi de l’éditeur. Toutes les opérations que vous pouvez effectuer sur une sélection, vous pouvez effectuer sur un pinceau personnalisé.
+Un pinceau personnalisé est une partie rectangulaire d’une image que vous sélectionnez et utilisez comme l’un de le **Éditeur d’images**de pinceaux prêtes à l’emploi. Toutes les opérations que vous pouvez effectuer sur une sélection, vous pouvez effectuer sur un pinceau personnalisé.
 
 ### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Pour créer un pinceau personnalisé à partir d’une partie d’une image
 
-1. [Sélectionnez la partie de l’image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) que vous souhaitez utiliser pour un pinceau.
+1. Sélectionnez la partie de l’image que vous souhaitez utiliser pour un pinceau.
 
-1. Maintenez la **MAJ** clé vers le bas, choisissez dans la sélection et faites-la glisser sur l’image. Ou à partir de la **Image** menu, choisissez **utiliser la sélection comme pinceau**.
+1. Maintenez la **MAJ** clé vers le bas, choisissez dans la sélection et faites-la glisser sur l’image ou accédez au menu **Image** > **utiliser la sélection comme pinceau**.
 
    Votre sélection devient un pinceau personnalisé qui distribue les couleurs dans la sélection sur l’image. Copies de la sélection sont laissées sur le tracé de glissement. Vous faites glisser plus lentement, le nombre de copies est effectuées.
 
@@ -120,9 +118,9 @@ Vous pouvez utiliser le pinceau personnalisé comme un tampon ou un stencil pour
 
 ### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Pour dessiner des formes de pinceau personnalisé dans la couleur d’arrière-plan
 
-1. [Sélectionnez un arrière-plan transparent ou opaque](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
+1. Sélectionnez un arrière-plan opaque ou transparent.
 
-1. [Définir la couleur d’arrière-plan](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) à la couleur dans laquelle vous souhaitez dessiner.
+1. Définir la couleur d’arrière-plan de la couleur dans laquelle vous souhaitez dessiner.
 
 1. Positionner le pinceau personnalisé où vous souhaitez dessiner.
 
@@ -142,7 +140,8 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
-[Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)<br/>
-[Utilisation des couleurs](../windows/working-with-color-image-editor-for-icons.md)
+[Guide pratique pour créer une icône ou une autre image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Guide pratique pour modifier une image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Guide pratique pour utiliser les couleurs](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

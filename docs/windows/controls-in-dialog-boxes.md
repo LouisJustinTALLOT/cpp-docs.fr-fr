@@ -1,5 +1,5 @@
 ---
-title: Contrôles dans les boîtes de dialogue (C++) | Microsoft Docs
+title: Contrôles de boîte de dialogue (C++) | Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
@@ -13,28 +13,26 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336512"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563353"
 ---
-# <a name="controls-in-dialog-boxes-c"></a>Contrôles dans les boîtes de dialogue (C++)
+# <a name="dialog-box-controls-c"></a>Contrôles de boîte de dialogue (C++)
 
-Vous pouvez ajouter des contrôles à une boîte de dialogue à l’aide de la [onglet de boîte de dialogue Éditeur](../windows/dialog-editor-tab-toolbox.md) dans le [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox), ce qui vous permet de choisir le contrôle souhaité et faites-le glisser vers la boîte de dialogue. Par défaut, la fenêtre de boîte à outils est définie sur Masquer automatiquement. Il s’affiche sous forme d’onglet dans la marge gauche de votre solution lorsque l’éditeur de boîtes de dialogue est ouverte. Toutefois, vous pouvez épingler la **boîte à outils** fenêtre dans sa position en cliquant sur le **Masquer automatiquement** bouton dans le coin supérieur droit de la fenêtre. Pour plus d’informations sur la façon de contrôler le comportement de cette fenêtre, consultez [gestion des fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+Vous pouvez ajouter des contrôles à une boîte de dialogue à l’aide de la **boîte de dialogue Éditeur** onglet dans le [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox) qui vous permet de choisir le contrôle souhaité et faites-le glisser vers la boîte de dialogue. Par défaut, le **boîte à outils** fenêtre est définie sur Masquer automatiquement. Il s’affiche sous forme d’onglet dans la marge gauche de votre solution lorsque le **boîte de dialogue Éditeur** est ouvert. Toutefois, vous pouvez épingler la **boîte à outils** fenêtre embases en sélectionnant le **Masquer automatiquement** bouton dans le coin supérieur droit de la fenêtre. Pour plus d’informations sur la façon de contrôler le comportement de cette fenêtre, consultez [gestion des fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
 Le moyen le plus rapide pour ajouter des contrôles à une boîte de dialogue, repositionner des contrôles existants ou déplacer des contrôles à partir d’une boîte de dialogue à l’autre consiste à utiliser la méthode glisser-déplacer. La position du contrôle est décrite dans une ligne en pointillés jusqu'à ce qu’il sera déposé dans la boîte de dialogue. Lorsque vous ajoutez un contrôle à une boîte de dialogue avec la méthode glisser-déplacer, le contrôle est donné à une hauteur standard appropriée pour ce type de contrôle.
 
 Lorsque vous ajoutez un contrôle à une boîte de dialogue ou repositionnez, son emplacement final peut être déterminé par les guides ou les marges, ou si vous disposez de la grille de disposition sous tension.
 
-Une fois que vous avez ajouté un contrôle à la boîte de dialogue, vous pouvez modifier les propriétés telles que sa légende dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez sélectionner plusieurs contrôles et modifier leurs propriétés à la fois.
+Une fois que vous avez ajouté un contrôle à la boîte de dialogue, vous pouvez modifier les propriétés telles que sa légende dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez également sélectionner plusieurs contrôles et modifier leurs propriétés à la fois.
 
-- [Guide pratique pour Ajouter, modifier, ou supprimer des contrôles](adding-editing-or-deleting-controls.md)
+Pour plus d’informations sur la **boîte de dialogue Éditeur**, consultez Comment [ajouter, modifier ou supprimer des contrôles](adding-editing-or-deleting-controls.md), [contrôles de disposition](../windows/arrangement-of-controls-on-dialog-boxes.md), et [définir contrôler l’accès et des valeurs](../windows/defining-mnemonics-access-keys.md).
 
-- [Guide pratique pour Organiser les contrôles](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [Guide pratique pour Définir les valeurs et contrôler l’accès](../windows/defining-mnemonics-access-keys.md)
+Pour plus d’informations sur les contrôles et boîtes de dialogue, consultez [Classes de contrôle](../mfc/control-classes.md), [Classes de boîte de dialogue](../mfc/dialog-box-classes.md), et [Styles de barre de défilement](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
 
 Les contrôles standards disponibles dans le **boîte à outils** valeur par défaut, les événements sont :
 
@@ -44,17 +42,18 @@ Les contrôles standards disponibles dans le **boîte à outils** valeur par dé
 |[Contrôle de case à cocher](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[Contrôle Combo Box](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
 |[Contrôle d’édition](../mfc/reference/cedit-class.md)|EN_CHANGE|
-|Contrôle Group box|(Non applicable)|
+|Contrôle Group box|(non applicable)|
 |[Contrôle List Box](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
 |[Contrôle Radio Button](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Contrôle Static Text](../mfc/reference/cstatic-class.md)|(Non applicable)|
-|[Contrôle d’image](../mfc/reference/cpictureholder-class.md)|(Non applicable)|
+|[Contrôle Static Text](../mfc/reference/cstatic-class.md)|(non applicable)|
+|[Contrôle d’image](../mfc/reference/cpictureholder-class.md)|(non applicable)|
 |[Contrôle Rich Edit 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
 |[Contrôle de barre de défilement](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
-Pour plus d’informations sur l’utilisation de la **RichEdit 1.0** contrôler avec MFC, consultez [à l’aide du contrôle RichEdit 1.0 avec MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) et [enrichi modifier des exemples de contrôle](../mfc/rich-edit-control-examples.md).
+> [!NOTE]
+> Pour plus d’informations sur l’utilisation de la **RichEdit 1.0** contrôler avec MFC, consultez [à l’aide du contrôle RichEdit 1.0 avec MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) et [enrichi modifier des exemples de contrôle](../mfc/rich-edit-control-examples.md).
 
-Le [contrôles communs Windows](../mfc/controls-mfc.md) disponibles dans le **boîte à outils** fournissent des fonctionnalités améliorées dans votre application. Elles comprennent :
+Le [contrôles communs Windows](../mfc/controls-mfc.md) disponibles dans le **boîte à outils** pour fournir des fonctionnalités améliorées sont :
 
 |Nom du contrôle|Événement par défaut|
 |---|---|
@@ -72,18 +71,17 @@ Le [contrôles communs Windows](../mfc/controls-mfc.md) disponibles dans le **bo
 |[Contrôle Extended Combo Box](../mfc/creating-an-extended-combo-box-control.md)||
 |Contrôle personnalisé|TTN_GETDISPINFO|
 
-Pour plus d’informations, consultez [Classes de contrôle](../mfc/control-classes.md), [Classes de boîte de dialogue](../mfc/dialog-box-classes.md), et [Styles de barre de défilement](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
-
 ## <a name="custom-controls"></a>Contrôles personnalisés
 
-L’éditeur de boîtes de dialogue vous permet d’utiliser l’existant « custom » ou des contrôles dans un modèle de boîte de dialogue « utilisateur ».
+Le **boîte de dialogue Éditeur** vous permet d’utiliser l’existant personnalisé ou contrôles utilisateur dans un modèle de boîte de dialogue.
 
 > [!NOTE]
 > Contrôles personnalisés dans ce sens doivent ne pas être confondus avec les contrôles ActiveX. Contrôles ActiveX étaient parfois appelés contrôles personnalisés OLE. En outre, ne confondez pas ces contrôles avec les contrôles owner-drawn dans Windows.
 
 Cette fonctionnalité vise à vous permettent d’utiliser des contrôles autres que ceux fournis par Windows. Au moment de l’exécution, le contrôle est associé à une classe de fenêtre (pas identique à une classe C++). Une façon plus courante pour accomplir la même tâche consiste à installer n’importe quel contrôle, tel qu’un contrôle statique, dans votre boîte de dialogue. Puis au moment de l’exécution, dans le [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) fonctionner, supprimez ce contrôle et remplacez-le par votre propre contrôle personnalisé.
 
-Il s’agit d’une vieille méthode. Aujourd'hui, il est conseillé dans la plupart des cas d’écrire un contrôle ActiveX ou une sous-classe un contrôle commun de Windows.
+> [!NOTE]
+> Il s’agit d’une vieille méthode. Aujourd'hui, il est conseillé dans la plupart des cas d’écrire un contrôle ActiveX ou une sous-classe un contrôle commun de Windows.
 
 Pour ces contrôles personnalisés, vous êtes limité à :
 
@@ -91,7 +89,7 @@ Pour ces contrôles personnalisés, vous êtes limité à :
 
 - Taper une légende.
 
-- Identifiant le nom de la classe du contrôle Windows (code de votre application doit inscrire le contrôle par son nom).
+- Identifiant le nom de la classe du contrôle Windows dans la mesure où votre code d’application doit inscrire le contrôle portant ce nom.
 
 - Taper une valeur hexadécimale 32 bits qui définit le style du contrôle.
 
@@ -103,7 +101,9 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
-[Contrôles de boîtes de dialogue et types de variables](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [Éditeur de boîtes de dialogue](../windows/dialog-editor.md)<br/>
-[Contrôles](../mfc/controls-mfc.md)<br/>
+
+<!--
+[Adding Event Handlers for Dialog Box Controls](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
+[Dialog Box Controls and Variable Types](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Controls](../mfc/controls-mfc.md)<br/>-->

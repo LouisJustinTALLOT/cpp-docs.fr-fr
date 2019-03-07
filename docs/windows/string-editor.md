@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: d040c09b36c2b46036744c8a263802da48cd8e60
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210794"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563301"
 ---
 # <a name="string-editor-c"></a>Éditeur de chaînes (C++)
 
@@ -56,7 +56,7 @@ Le **éditeur de chaînes** vous permet de :
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>Pour rechercher une ressource de chaîne dans la table de chaînes
 
-1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](../windows/resource-view-window.md).
+1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Accédez au menu **modifier** > **rechercher et remplacer** et choisissez **trouver**.
 
@@ -77,9 +77,9 @@ Vous pouvez rapidement insérer ou supprimer des entrées dans la table de chaî
 
 Le **éditeur de chaînes** permet de s’assurer que vous n’utilisez pas un ID qui est déjà en cours d’utilisation. Si vous sélectionnez un ID déjà en cours d’utilisation, le **éditeur de chaînes** sera vous avertir, puis attribuez un ID unique générique, par exemple `IDS_STRING58113`.
 
-Pour ajouter une entrée de table de chaîne :
+#### <a name="to-add-a-string-table-entry"></a>Pour ajouter une entrée de table de chaînes
 
-1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](../windows/resource-view-window.md).
+1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Avec le bouton droit dans la table de chaînes et choisissez **nouvelle chaîne**.
 
@@ -92,7 +92,7 @@ Pour ajouter une entrée de table de chaîne :
    > [!NOTE]
    > Chaînes null ne sont pas autorisés dans les tables de chaînes de Windows. Si vous créez une entrée dans la table de chaînes est une chaîne null, vous recevrez un message vous demandant de **Veuillez entrer une chaîne pour cette entrée de table**.
 
-Pour supprimer une entrée de table de chaîne :
+#### <a name="to-delete-a-string-table-entry"></a>Pour supprimer une entrée de table de chaînes
 
 Sélectionnez l’entrée que vous souhaitez supprimer, puis effectuez l’une des opérations suivantes :
 
@@ -110,7 +110,7 @@ Sélectionnez l’entrée que vous souhaitez supprimer, puis effectuez l’une d
 
 1. Placez le curseur dans la cible **éditeur de chaînes** fenêtre.
 
-1. Dans le fichier .rc vers lequel vous souhaitez déplacer la chaîne, avec le bouton droit et choisissez **coller**.
+1. Dans le *.rc* fichier auquel vous souhaitez déplacer la chaîne, avec le bouton droit et choisissez **coller**.
 
 > [!NOTE]
 > Si le **ID** ou **valeur** de conflits avec une chaîne déplacée **ID** ou **valeur** dans le fichier de destination, soit ce **ID** ou **valeur** des modifications de chaîne déplacée.
@@ -122,9 +122,9 @@ Vous pouvez utiliser la modification sur place pour modifier le **ID**, **valeur
 > [!NOTE]
 >  Vous pouvez également modifier les propriétés d’une chaîne dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
 
-Pour modifier une chaîne ou son identificateur :
+#### <a name="to-change-a-string-or-its-identifier"></a>Pour modifier une chaîne ou son identificateur
 
-1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](../windows/resource-view-window.md).
+1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Sélectionnez la chaîne que vous souhaitez modifier, puis double-cliquez sur le **ID**, **valeur**, ou **légende** colonne, vous pouvez :
 
@@ -134,9 +134,9 @@ Pour modifier une chaîne ou son identificateur :
 
    - Taper des modifications dans le **légende** colonne.
 
-Pour modifier la propriété caption de plusieurs ressources de type chaîne :
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Pour modifier la propriété caption de plusieurs ressources de type chaîne
 
-1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](../windows/resource-view-window.md).
+1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Sélectionnez les chaînes que vous souhaitez modifier en maintenant enfoncée la **Ctrl** enfoncée quand vous sélectionnez chacun d’eux.
 
@@ -146,7 +146,7 @@ Pour modifier la propriété caption de plusieurs ressources de type chaîne :
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Pour ajouter des caractères spéciaux ou de mise en forme à une ressource de chaîne
 
-1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](../windows/resource-view-window.md).
+1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Sélectionnez la chaîne que vous souhaitez modifier.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 7d3581a9f6f2a2080f72634a01d3417ffecf82a4
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954911"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562755"
 ---
 # <a name="predefined-symbol-ids"></a>ID de symbole prédéfinis
 
@@ -18,7 +18,7 @@ Quand vous commencez un nouveau projet, selon le type de projet, certains ID de 
 
 Ces ID de symbole prennent de l'importance quand vous utilisez des ressources. Elles sont disponibles lorsque vous modifiez des tables d’accélérateurs et certains d'entre eux sont déjà associées touches virtuelles. Elles sont également disponibles via le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez affecter l’un des ID de symbole prédéfinis à de nouvelles ressources, ou vous pouvez affecter les touches accélérateur pour les et les fonctionnalités associées au symbole QU'ID associe automatiquement à cette combinaison de touches.
 
-Ces bibliothèques comportent des symboles prédéfinis qui s'affichent dans le cadre du projet :
+Bibliothèques ont des symboles prédéfinis qui apparaîtront en tant que partie du projet :
 
 - [Symboles ATL prédéfinis](../windows/atl-predefined-symbols.md)
 

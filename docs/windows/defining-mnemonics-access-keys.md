@@ -1,5 +1,5 @@
 ---
-title: Définition des valeurs et contrôler l’accès
+title: 'Procédure : Définir le contrôle d’accès et des valeurs (C++)'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.combo
@@ -22,61 +22,42 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 20319cd08d6d1e77faef1275e63bf3ffd354356b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 32c7b121d8c9309d2286158645ee4b6586f1df3b
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336486"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563366"
 ---
-# <a name="defining-control-access-and-values"></a>Définition des valeurs et contrôler l’accès
+# <a name="how-to-define-control-access-and-values-c"></a>Procédure : Définir le contrôle d’accès et des valeurs (C++)
 
-## <a name="change-the-tab-order-of-controls"></a>Modifier l’ordre de tabulation des contrôles
+## <a name="tab-order"></a>Ordre de tabulation
 
 L’ordre de tabulation est l’ordre dans lequel le **onglet** touche déplace le focus d’entrée d’un contrôle à l’autre dans une boîte de dialogue. Généralement, l’ordre de tabulation se déroule de gauche à droite et de haut en bas dans une boîte de dialogue. Chaque contrôle possède une **Tabstop** propriété qui détermine si un contrôle reçoit le focus d’entrée.
 
-### <a name="to-set-input-focus-for-a-control"></a>Pour définir le focus d’entrée pour un contrôle
+- Pour définir le focus d’entrée pour un contrôle, dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), sélectionnez **True** ou **False** dans le **Tabstop** propriété.
 
-Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), sélectionnez **True** ou **False** dans le **Tabstop** propriété.
-
-Même les contrôles qui n’ont pas la **Tabstop** propriété définie sur **True** doivent faire partie de l’ordre de tabulation. Ordre de tabulation est important, par exemple, lorsque vous [définir des touches d’accès rapide (mnémoniques)](../windows/defining-mnemonics-access-keys.md) pour les contrôles qui n’ont pas des légendes. Texte statique qui contient une clé d’accès pour un contrôle lié doit précéder immédiatement le contrôle concerné dans l’ordre de tabulation.
+Même les contrôles qui n’ont pas la **Tabstop** propriété définie sur **True** doivent faire partie de l’ordre de tabulation, en particulier pour les contrôles qui n’ont pas des légendes. Texte statique qui contient une clé d’accès pour un contrôle lié doit précéder immédiatement le contrôle concerné dans l’ordre de tabulation.
 
 > [!NOTE]
 > Si votre boîte de dialogue contient des contrôles qui se chevauchent, la modification de l’ordre de tabulation peut changer la façon des que contrôles sont affichés. Contrôles fournis plus loin dans l’ordre de tabulation sont toujours affichés au-dessus des contrôles superposés qui les précèdent dans l’ordre de tabulation.
 
-### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Pour afficher l’ordre de tabulation actuel pour tous les contrôles dans une boîte de dialogue
-
-Accédez à la **Format** menu et sélectionnez **l’ordre de tabulation**, ou appuyez sur **Ctrl** + **D**.
-
-### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Pour modifier l’ordre de tabulation pour tous les contrôles dans une boîte de dialogue
-
-1. Sur le **Format** menu, sélectionnez **l’ordre de tabulation**.
+- Pour afficher l’ordre de tabulation actuel pour tous les contrôles, accédez au menu **Format** > **l’ordre de tabulation**, ou appuyez sur **Ctrl** + **D**.
 
    Un nombre dans le coin supérieur gauche de chaque contrôle affiche sa place dans l’ordre de tabulation en cours.
 
-1. Définir l’ordre de tabulation en sélectionnant chaque contrôle dans l’ordre que vous souhaitez que le **onglet** clé à suivre.
+- Pour modifier l’ordre de tabulation pour tous les contrôles, accédez au menu **Format** > **l’ordre de tabulation** et définir l’ordre de tabulation en sélectionnant chaque contrôle dans l’ordre que vous souhaitez que le **onglet** clé à suivre.
 
-1. Appuyez sur **entrée** pour quitter **l’ordre de tabulation** mode.
-
-   > [!TIP]
-   > Une fois que vous entrez **l’ordre de tabulation** mode, vous pouvez appuyer sur **ÉCHAP** ou **entrée** pour désactiver la possibilité de modifier l’ordre de tabulation.
-
-### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Pour modifier l’ordre de tabulation pour deux ou plusieurs contrôles
-
-1. À partir de la **Format** menu, choisissez **l’ordre de tabulation**.
-
-1. Spécifier où commence la modification dans l’ordre. Maintenez tout d’abord le **Ctrl** de clé et sélectionnez le contrôle, puis sélectionnez celui dans lequel vous souhaitez modifier l’ordre.
+- Pour modifier l’ordre de tabulation pour deux ou plusieurs contrôles, accédez au menu **Format** > **l’ordre de tabulation**. Maintenez la **Ctrl** la clé, sélectionnez le contrôle où le changement dans l’ordre commencer, puis relâchez le **Ctrl** la clé, sélectionnez les contrôles dans l’ordre souhaité le **onglet** clé pour Suivez à partir de ce point.
 
    Par exemple, si vous souhaitez modifier l’ordre des contrôles `7` via `9`, maintenez la touche **Ctrl**, puis sélectionnez le contrôle `6` première.
 
-   > [!NOTE]
-   > Pour affecter à un contrôle spécifique numéro `1` (tout d’abord dans l’ordre de tabulation), double-cliquez sur le contrôle.
+- Pour affecter à un contrôle spécifique numéro `1`, ou tout d’abord dans l’ordre de tabulation, double-cliquez sur le contrôle.
 
-1. Mise en production la **Ctrl** de clé, puis sélectionnez les contrôles dans l’ordre que vous souhaitez que le **onglet** à partir de ce point.
+> [!TIP]
+> Une fois que vous entrez **l’ordre de tabulation** mode, appuyez sur **ÉCHAP** ou **entrée** pour quitter **l’ordre de tabulation** mode et désactiver la possibilité de modifier l’ordre de tabulation.
 
-1. Appuyez sur **entrée** pour quitter **l’ordre de tabulation** mode.
-
-## <a name="define-mnemonics-access-keys"></a>Définition des mnémoniques (touches d’accès rapide)
+## <a name="mnemonics-access-keys"></a>Mnémoniques (touches d’accès rapide)
 
 En règle générale, les utilisateurs du clavier déplacent le focus d’entrée d’un contrôle à l’autre dans une boîte de dialogue avec le **onglet** et **flèche** clés. Toutefois, vous pouvez définir une clé d’accès (un nom mnémonique ou facile à mémoriser) qui permet aux utilisateurs de choisir un contrôle en appuyant sur une clé unique.
 
@@ -99,14 +80,14 @@ En règle générale, les utilisateurs du clavier déplacent le focus d’entré
 1. Assurez-vous que le contrôle de texte statique précède immédiatement le contrôle qu’il identifie dans l’ordre de tabulation.
 
 > [!NOTE]
-> Toutes les clés d’accès au sein d’une boîte de dialogue doivent être uniques. Pour vérifier les clés d’accès en double, accédez à la **Format** menu et sélectionnez **vérifier les mnémoniques**.
+> Toutes les clés d’accès au sein d’une boîte de dialogue doivent être uniques. Pour vérifier les clés d’accès en double, accédez au menu **Format** > **vérifier les mnémoniques**.
 
 ## <a name="combo-box-values"></a>Valeurs de zone de liste déroulante
 
-Vous pouvez ajouter des valeurs à un contrôle combo box tant que vous avez le **boîte de dialogue** éditeur ouvert.
+Vous pouvez ajouter des valeurs à un contrôle combo box tant que vous avez le **boîte de dialogue Éditeur** ouvrir.
 
 > [!TIP]
-> Il est judicieux d’ajouter toutes les valeurs à la zone de liste déroulante *avant* dimensionner la zone dans le **boîte de dialogue** éditeur ou texte qui doit apparaître dans le contrôle de liste déroulante peut être tronqué.
+> Il est judicieux d’ajouter toutes les valeurs à la zone de liste déroulante *avant* dimensionner la zone dans le **boîte de dialogue Éditeur**, ou vous pouvez tronquer le texte qui doit apparaître dans le contrôle de liste déroulante.
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>Pour entrer des valeurs dans un contrôle combo box
 
@@ -131,14 +112,11 @@ Pour plus d’informations sur l’agrandissement de la partie déroulante d’u
 
 ### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Pour tester l’apparence des valeurs dans une zone de liste déroulante
 
-Après avoir entré les valeurs dans le **données** propriété, sélectionnez le **Test** bouton sur le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+1. Après avoir entré les valeurs dans le **données** propriété, sélectionnez le **Test** bouton sur le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-   Faites défiler vers le bas la liste de valeur entière. Les valeurs s’affichent exactement comme ils sont tapés dans le **données** propriété dans le **propriétés** fenêtre. Il n’existe aucune orthographe ou la vérification de la mise en majuscules.
+1. Faites défiler vers le bas la liste de valeur entière. Les valeurs s’affichent exactement comme ils sont tapés dans le **données** propriété dans le **propriétés** fenêtre. Il n’existe aucune orthographe ou la vérification de la mise en majuscules.
 
-   Appuyez sur **ÉCHAP** pour revenir à la **boîte de dialogue** éditeur.
-
-   Vous pouvez maintenant modifier votre code pour spécifier la case d’option qui doit apparaître sélectionnée. Par exemple, `m_radioBox1 = 0;` sélectionne le premier bouton de case d’option dans le groupe.
-Vous pouvez maintenant modifier votre code pour spécifier la case d’option qui doit apparaître sélectionnée. Par exemple, `m_radioBox1 = 0;` sélectionne le premier bouton de case d’option dans le groupe.
+1. Appuyez sur **ÉCHAP** pour revenir à la **boîte de dialogue** éditeur.
 
 ## <a name="radio-button-values"></a>Valeurs de la case d’option
 
@@ -157,17 +135,17 @@ Vous pouvez avoir plusieurs groupes de cases d’option sur une boîte de dialog
    Modification de la **groupe** propriété **True** ajoute le style WS_GROUP à l’entrée du bouton dans l’objet de la boîte de dialogue du script de ressources et empêche que l’utilisateur peut sélectionner plus d’une case d’option à la fois dans le groupe (si l’utilisateur sélectionne une case, les autres dans le groupe est désactivée).
 
    > [!NOTE]
-   > La propriété **Groupe** de la première case d’option du groupe doit avoir la valeur **True**. Si vous avez d’autres contrôles qui ne font pas partie du groupe de cases d’option, affectez aussi la valeur **True** à la propriété *Groupe* du premier contrôle **qui est en dehors du groupe** . Vous pouvez rapidement identifier le premier contrôle en dehors du groupe à l’aide de **Ctrl**+**D** pour afficher l’ordre de tabulation.
+   > La propriété **Groupe** de la première case d’option du groupe doit avoir la valeur **True**. Si vous avez d’autres contrôles qui ne font pas partie du groupe de cases, définissez le **groupe** propriété du premier contrôle *qui est en dehors du groupe* à **True** également. Vous pouvez rapidement identifier le premier contrôle en dehors du groupe à l’aide de **Ctrl**+**D** pour afficher l’ordre de tabulation.
 
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Pour ajouter une variable membre pour le groupe de cases d’option
 
-1. Cliquez sur le premier contrôle de bouton de case d’option dans l’ordre de tabulation (le contrôle dominant et celui dont le **groupe** propriété définie sur **True**) et choisissez **ajouter une Variable** à partir de la menu contextuel.
+1. Cliquez sur le premier contrôle de bouton de case d’option dans l’ordre de tabulation (le contrôle dominant et celui dont le **groupe** propriété définie sur **True**) et choisissez **ajouter une Variable**.
 
 1. Dans l’ [Assistant Ajout de variable membre](../ide/add-member-variable-wizard.md), cochez la case **Variable de contrôle** , puis sélectionnez la case d’option **Valeur** .
 
-1. Dans la zone **Nom de la variable** , tapez un nom pour la nouvelle variable membre.
+   - Dans la zone **Nom de la variable** , tapez un nom pour la nouvelle variable membre.
 
-1. Dans la zone de liste **Type de variable** , sélectionnez **int** ou tapez *int*.
+   - Dans la zone de liste **Type de variable** , sélectionnez **int** ou tapez *int*.
 
    Vous pouvez maintenant modifier votre code pour spécifier la case d’option qui doit apparaître sélectionnée. Par exemple, `m_radioBox1 = 0;` sélectionne le premier bouton de case d’option dans le groupe.
 
@@ -177,5 +155,6 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)<br/>
-[Contrôles](../mfc/controls-mfc.md)
+[Gérer les contrôles de boîte de dialogue](controls-in-dialog-boxes.md)<br/>
+[Guide pratique pour ajouter, modifier, ou supprimer des contrôles](adding-editing-or-deleting-controls.md)<br/>
+[Guide pratique pour Contrôles de disposition](arrangement-of-controls-on-dialog-boxes.md)<br/>
