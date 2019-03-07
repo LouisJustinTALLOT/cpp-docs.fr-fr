@@ -30,20 +30,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: ce1cf1f6d0010475192ecf7ef3ce2416fac51dfd
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676407"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563041"
 ---
 # <a name="how-to-manage-resources-c"></a>Procédure : Gérer les ressources (C++)
-
-Vous pouvez gérer des ressources pour votre projet par :
-
-- Copie et modification de ressources.
-
-- L’importation et exportation de ressources.
 
 ## <a name="copy-and-edit-resources"></a>Copie et ressources pour la modification
 
@@ -54,7 +48,7 @@ Vous pouvez facilement copier les ressources à partir d’une ressource existan
 > [!NOTE]
 > Visual C++ inclut des exemples de fichiers de ressources que vous pouvez utiliser dans votre propre application. Pour plus d’informations, consultez [CLIPART : Ressources communes](https://github.com/Microsoft/VCSamples).
 
-Vous pouvez utiliser la méthode glisser-déplacer entre les fichiers .rc qui sont ouverts en dehors du projet.
+Vous ne pouvez pas faire glisser et drop, copier, Couper ou -coller entre les fichiers de ressources dans le projet (**affichage des ressources**) et ouvrent des fichiers .rc autonome dans les fenêtres de document. Vous le faisiez dans les versions précédentes du produit. Utilisez uniquement la méthode glisser-déplacer entre les fichiers .rc qui sont ouverts en dehors du projet.
 
 ### <a name="to-copy-resources"></a>Pour copier des ressources
 
@@ -78,9 +72,6 @@ Vous pouvez utiliser la méthode glisser-déplacer entre les fichiers .rc qui so
       1. Cliquez sur le fichier de ressources dans lequel vous souhaitez coller la ressource (par exemple, *Source2.rc*) et choisissez **collez**.
 
 > [!NOTE]
-> Vous ne pouvez pas faire glisser et drop, copier, Couper ou -coller entre les fichiers de ressources dans le projet (**affichage des ressources**) et les fichiers .rc autonome (ceux qui sont ouverts dans les fenêtres de document). Vous le faisiez dans les versions précédentes du produit.
-
-> [!NOTE]
 > Pour éviter les conflits avec les noms de symboles ou les valeurs dans le fichier existant, Visual C++ peut modifier les valeur de symbole de la ressource transférée ou le nom et valeur lorsque vous la copiez dans le nouveau fichier.
 
 Durant la copie d'une ressource, vous pouvez changer sa propriété language ou sa propriété condition, ou les deux.
@@ -95,13 +86,13 @@ La langue et la condition d’une ressource sont affichées entre parenthèses a
 IDD_AboutBox (Finnish - XX33)
 ```
 
-Pour copier une ressource existante et modifier sa langue ou sa condition
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Pour copier une ressource existante et modifier sa langue ou sa condition
 
-1. Dans le fichier .rc ou dans le [affichage des ressources](../windows/resource-view-window.md) fenêtre, avec le bouton droit de la ressource que vous souhaitez copier et choisissez **insérer une copie**. Ensuite, définissez les éléments suivants :
+Dans le *.rc* fichier ou dans le [affichage des ressources](../windows/resource-view-window.md) fenêtre, avec le bouton droit de la ressource que vous souhaitez copier et choisissez **insérer une copie**. Ensuite, définissez les éléments suivants :
 
-   - Pour le **langage** zone de liste, sélectionnez la langue.
+- Pour le **langage** zone de liste, sélectionnez la langue.
 
-   - Dans le **Condition** , tapez la condition.
+- Dans le **Condition** , tapez la condition.
 
 ### <a name="to-edit-resources"></a>Pour modifier des ressources
 

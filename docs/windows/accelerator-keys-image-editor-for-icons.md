@@ -8,19 +8,19 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336536"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563119"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Touches accélérateur (Éditeur d’images C++ pour les icônes)
 
-Voici les touches accélérateur pour les commandes de l’éditeur d’Image qui sont liés aux clés par défaut. Pour modifier les touches d’accès rapide, cliquez sur **Options** sur le **outils** menu, puis choisissez **clavier** sous le **environnement** dossier. Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Voici les touches accélérateur pour les commandes de l’éditeur d’Image qui sont liés aux clés par défaut. Pour changer les touches accélérateur, accédez au menu **outils** > **Options** et choisissez **clavier** sous le **environnement** dossier. Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
-> Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans l'aide selon vos paramètres actifs ou votre édition. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans l'aide selon vos paramètres actifs ou votre édition. Pour modifier vos paramètres, accédez au menu **outils** > **importation et exportation de paramètres**. Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 |Commande|Touches|Description|
 |-------------|----------|-----------------|
@@ -68,4 +68,8 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
+[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)<br/>
+[Guide pratique pour créer une icône ou une autre image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Guide pratique pour modifier une image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Guide pratique pour utiliser un outil de dessin](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Guide pratique pour utiliser les couleurs](../windows/working-with-color-image-editor-for-icons.md)<br/>

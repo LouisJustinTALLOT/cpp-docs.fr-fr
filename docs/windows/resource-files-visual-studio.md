@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: bd73db481659573d51e4abd56da9689e2e8ade25
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676433"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563002"
 ---
 # <a name="resource-files-c"></a>Fichiers de ressources (C++)
 
@@ -121,9 +121,9 @@ Pour afficher la version et tapez les informations contenues dans une ressource 
 
 1. Développez le **fichiers de ressources** dossier, puis :
 
-   - Pour ouvrir dans l’éditeur de texte, double-cliquez sur le fichier .manifest.
+   - Pour ouvrir dans l’éditeur de texte, double-cliquez sur le *.manifest* fichier.
 
-   - Pour ouvrir dans un autre éditeur, cliquez sur le fichier .manifest, puis sélectionnez **ouvrir avec...** . Spécifiez l’éditeur à utiliser et sélectionnez **Open**.
+   - Pour ouvrir dans un autre éditeur, cliquez sur le *.manifest* fichier et sélectionnez **ouvrir avec**. Spécifiez l’éditeur pour l’utiliser, puis sélectionnez **Open**.
 
 ## <a name="requirements"></a>Spécifications
 
