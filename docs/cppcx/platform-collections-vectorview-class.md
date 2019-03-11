@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 4f4a5cbd2f1b6c06b339950307dbb333fc6392ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658183"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745289"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView, classe
 
@@ -64,11 +64,11 @@ Le `VectorView` la classe implémente le [Windows::Foundation::Collections::IVec
 
 `VectorView`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
-**Espace de noms :** Platform::Collections
+**Espace de noms :** Platform::Collections
 
 ## <a name="first"></a>  VectorView::First (méthode)
 
@@ -154,7 +154,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>Paramètres
 
-*valeur*<br/>
+*value*<br/>
 Élément à rechercher.
 
 *index*<br/>
@@ -253,7 +253,7 @@ Nombre d’éléments d’une collection d’objets utilisée pour initialiser l
 *size*<br/>
 Nombre d'éléments du VectorView.
 
-*valeur*<br/>
+*value*<br/>
 Valeur utilisée pour initialiser chaque élément du VectorView actif.
 
 *v*<br/>

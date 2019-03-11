@@ -23,12 +23,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 6ab22b9a093a1aa9c8ae0249c036ea2bf89065f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641870"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752322"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan, classe
 
@@ -68,8 +68,8 @@ class CTimeSpan
 |||
 |-|-|
 |[opérateur + -](#operator_add_-)|Ajoute et soustrait `CTimeSpan` objets.|
-|[operator += =](#operator_add_eq_-_eq)|Ajoute et soustrait un `CTimeSpan` objet vers et depuis ce `CTimeSpan`.|
-|[opérateur == < etc..](#ctimespan_comparison_operators)|Compare deux valeurs de temps relatif.|
+|[operator += -=](#operator_add_eq_-_eq)|Ajoute et soustrait un `CTimeSpan` objet vers et depuis ce `CTimeSpan`.|
+|[operator == < etc.](#ctimespan_comparison_operators)|Compare deux valeurs de temps relatif.|
 
 ## <a name="remarks"></a>Notes
 
@@ -85,7 +85,7 @@ Le `CTime` et `CTimeSpan` classes ne sont pas conçues pour la dérivation. Éta
 
 Pour plus d’informations sur l’utilisation de `CTimeSpan`, consultez les articles [Date et heure](../../atl-mfc-shared/date-and-time.md), et [gestion du temps](../../c-runtime-library/time-management.md) dans le *Run-Time Library Reference*.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atltime.h
 
@@ -104,7 +104,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*<br/>
+*span*<br/>
 Objet à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -138,7 +138,7 @@ Un `CTimeSpan` objet qui existe déjà.
 *time*<br/>
 Un **__time64_t** valeur de temps, ce qui correspond au nombre de secondes dans l’intervalle de temps.
 
-*lDays*, *nHours*, *nMins*, *every*<br/>
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Jours, heures, minutes et secondes, respectivement.
 
 ### <a name="remarks"></a>Notes
@@ -158,7 +158,7 @@ Toutes ces constructeurs créent un nouveau `CTimeSpan` objet initialisé avec l
    |*lDays*|0-25 000 (environ)|
    |*nHours*|0-23|
    |*nMins*|0-59|
-   |*Every*|0-59|
+   |*nSecs*|0-59|
 
 Notez que la version Debug de la bibliothèque Microsoft Foundation Class déclare si un ou plusieurs des composants heure est hors limites. Il vous incombe de valider les arguments avant d’appeler.
 
@@ -345,7 +345,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*<br/>
+*span*<br/>
 La valeur à ajouter à la `CTimeSpan` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -360,7 +360,7 @@ Ces deux opérateurs permettent d’ajouter et de soustraire `CTimeSpan` objets 
 
 [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator +=, =
+##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator +=, -=
 
 Ajoute et soustrait un `CTimeSpan` objet vers et depuis ce `CTimeSpan`.
 
@@ -371,7 +371,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*étendue*<br/>
+*span*<br/>
 La valeur à ajouter à la `CTimeSpan` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -416,4 +416,3 @@ La mise à jour `CArchive` objet.
 [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes partagées ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

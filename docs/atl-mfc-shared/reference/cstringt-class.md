@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525494"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750869"
 ---
 # <a name="cstringt-class"></a>CStringT, classe
 
@@ -118,15 +118,15 @@ Détermine si la classe string a besoin de prise en charge de la bibliothèque R
 
    La classe nécessite la prise en charge de CRT et recherche les chaînes de ressources dans le module spécifié par `m_hInstResource` (il s’agit d’un membre de classe de module de l’application).
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    La classe ne nécessite pas de prise en charge de CRT et recherche les chaînes de ressources dans le module spécifié par `m_hInstResource` (il s’agit d’un membre de classe de module de l’application).
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    Prise en charge de CRT et recherche les chaînes de ressources à l’aide de l’algorithme de recherche MFC standard requis par la classe.
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    La classe ne nécessite pas de prise en charge de CRT et recherche les chaînes de ressources à l’aide de l’algorithme de recherche MFC standard.
 
@@ -137,7 +137,7 @@ Détermine si la classe string a besoin de prise en charge de la bibliothèque R
 |Nom|Description|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Construit un `CStringT` objet de différentes manières.|
-|[CStringT :: ~ CStringT](#_dtorcstringt)|Détruit un objet `CStringT`.|
+|[CStringT::~CStringT](#_dtorcstringt)|Détruit un objet `CStringT`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -182,11 +182,11 @@ Détermine si la classe string a besoin de prise en charge de la bibliothèque R
 
 |||
 |-|-|
-|[opérateur =](#operator_eq)|Assigne une nouvelle valeur à un `CStringT` objet.|
+|[operator =](#operator_eq)|Assigne une nouvelle valeur à un `CStringT` objet.|
 |[CStringT::operator +](#operator_add)|Concatène deux chaînes ou un caractère et une chaîne.|
 |[CStringT::operator +=](#operator_add_eq)|Concatène une nouvelle chaîne à la fin d’une chaîne existante.|
 |[CStringT::operator ==](#operator_eq_eq)|Détermine si deux chaînes sont égales de façon logique.|
-|[CStringT::operator ! =](#operator_neq)|Détermine si deux chaînes sont logiquement pas égaux.|
+|[CStringT::operator !=](#operator_neq)|Détermine si deux chaînes sont logiquement pas égaux.|
 |[CStringT::operator &lt;](#operator_lt)|Détermine si la chaîne sur le côté gauche de l’opérateur est inférieur à la chaîne sur le côté droit.|
 |[CStringT::operator &gt;](#operator_gt)|Détermine si la chaîne sur le côté gauche de l’opérateur est supérieure à la chaîne sur le côté droit.|
 |[CStringT::operator &lt;=](#operator_lt_eq)|Détermine si la chaîne sur le côté gauche de l’opérateur est inférieur ou égal à la chaîne sur le côté droit.|
@@ -269,11 +269,11 @@ Les types de chaîne suivants sont disponibles dans les projets où ATL_CSTRING_
 
 `CStringT`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Header|Utiliser pour|
 |------------|-------------|
-|CStringT.h|Objets string MFC uniquement|
+|cstringt.h|Objets string MFC uniquement|
 |atlstr.h|Objets de chaîne non-MFC|
 
 ##  <a name="allocsysstring"></a>  CStringT::AllocSysString
@@ -525,7 +525,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Paramètres
 
-*PCH*<br/>
+*pch*<br/>
 Un pointeur vers un tableau de caractères de longueur *nLength*, pas par un caractère null.
 
 *nLength*<br/>
@@ -568,11 +568,11 @@ Un handle pour un `CStringT` objet.
 
 Étant donné que les constructeurs suivants copient les données d’entrée dans le nouveau stockage alloué, vous devez être conscient que la mémoire peuvent entraîner des exceptions. Notez que certaines de ces constructeurs agissent en tant que fonctions de conversion. Cela vous permet de remplacer, par exemple, LPTSTR où un `CStringT` objet est attendu.
 
-- `CStringT`( `LPCSTR` `lpsz` ) : Construit Unicode `CStringT` à partir d’une chaîne ANSI. Vous pouvez également utiliser ce constructeur pour charger une ressource de chaîne, comme indiqué dans l’exemple ci-dessous.
+- `CStringT`( `LPCSTR` `lpsz` ): Construit un Unicode `CStringT` à partir d’une chaîne ANSI. Vous pouvez également utiliser ce constructeur pour charger une ressource de chaîne, comme indiqué dans l’exemple ci-dessous.
 
-- `CStringT(` `LPCWSTR` `lpsz` ) : Construit un `CStringT` à partir d’une chaîne Unicode.
+- `CStringT(` `LPCWSTR` `lpsz` ): Construit un `CStringT` à partir d’une chaîne Unicode.
 
-- `CStringT`( `const unsigned char*` `psz` ) : Vous permet de construire un `CStringT` d’un pointeur vers **unsigned char**.
+- `CStringT`( `const unsigned char*` `psz` ): Vous permet de construire un `CStringT` d’un pointeur vers **unsigned char**.
 
 > [!NOTE]
 >  Définissez la macro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION pour désactiver la conversion implicite de chaîne entre des chaînes ANSI et Unicode. La macro exclut à partir des constructeurs de compilation qui prennent en charge la conversion.
@@ -588,7 +588,7 @@ L’opérateur de surcharge `CSimpleStringT<>&()` construit un `CStringT` de l�
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-##  <a name="_dtorcstringt"></a>  CStringT :: ~ CStringT
+##  <a name="_dtorcstringt"></a>  CStringT::~CStringT
 
 Détruit le `CStringT` objet.
 
@@ -1040,10 +1040,10 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Paramètres
 
-*CH1*<br/>
+*ch1*<br/>
 Un caractère ANSI ou Unicode à concaténer avec une chaîne.
 
-*Ch2*<br/>
+*ch2*<br/>
 Un caractère ANSI ou Unicode à concaténer avec une chaîne.
 
 *str1*<br/>
@@ -1141,10 +1141,10 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*CH1*<br/>
+*ch1*<br/>
 Un caractère ANSI ou Unicode pour la comparaison.
 
-*Ch2*<br/>
+*ch2*<br/>
 Un caractère ANSI ou Unicode pour la comparaison.
 
 *str1*<br/>
@@ -1167,7 +1167,7 @@ Teste si une chaîne ou le caractère situé à gauche est égale à une chaîne
 
 [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]
 
-##  <a name="operator_neq"></a>  CStringT::operator ! =
+##  <a name="operator_neq"></a>  CStringT::operator !=
 
 Détermine si deux chaînes sont logiquement pas égales.
 
@@ -1183,10 +1183,10 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*CH1*<br/>
+*ch1*<br/>
 Un caractère ANSI ou Unicode à concaténer avec une chaîne.
 
-*Ch2*<br/>
+*ch2*<br/>
 Un caractère ANSI ou Unicode à concaténer avec une chaîne.
 
 *str1*<br/>
@@ -1428,7 +1428,7 @@ Pour `CString`, le type de données de caractère est sélectionné au moment de
 |_UNICODE|Caractères larges|
 |_MBCS|Caractères multioctets|
 |Ni|Caractères codés sur un octet|
-|Both|Undefined|
+|Les deux|Undefined|
 
 ### <a name="example"></a>Exemple
 
@@ -1733,4 +1733,3 @@ Le `CStringT& TrimRight()` version ne requiert aucun paramètre. Il supprime tou
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes partagées ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT, classe](../../atl-mfc-shared/reference/csimplestringt-class.md)
-

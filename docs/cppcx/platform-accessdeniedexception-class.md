@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
-ms.openlocfilehash: 4865492e3b5d8e4acc35e58081a226c9e66ed99f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4abbac977a256ff27f99caaf77393450d3ccf858
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588147"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752413"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::AccessDeniedException, classe
 
@@ -29,13 +29,13 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
 
 Si vous rencontrez cette exception, vérifiez que vous avez demandé la fonctionnalité appropriée et que avez effectué les déclarations requises dans le manifeste de package de votre application. Pour plus d'informations, consultez [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : marshaler des chaînes COM à l’aide de l’interopérabilité C++'
+title: 'Procédure : Marshaler des chaînes COM à l’aide d’interopérabilité C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: 664c9ed973e2dff4467d13742390da8a944eb87a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559118"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751512"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>Comment : marshaler des chaînes COM à l’aide de l’interopérabilité C++
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Procédure : Marshaler des chaînes COM à l’aide d’interopérabilité C++
 
 Cette rubrique montre comment un BSTR (format de chaîne de base favorisé dans la programmation COM) peut être passé d’une fonction managée à une fonction non managée et vice versa. Pour interagir avec d’autres types de chaînes, consultez les rubriques suivantes :
 
-- [Guide pratique pour marshaler des chaînes Unicode à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+- [Guide pratique pour marshaler des chaînes Unicode à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
 - [Guide pratique pour marshaler des chaînes ANSI à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 

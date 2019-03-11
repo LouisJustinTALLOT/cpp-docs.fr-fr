@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-ms.openlocfilehash: 4431f21fe71bd7b6376f2f530b844077bc1fda6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d91974cb1c98561ba61927b84d06ad45cffc1291
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469613"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745148"
 ---
 # <a name="platformenum-class"></a>Platform::Enum, classe
 
@@ -32,13 +32,13 @@ La classe Enum hérite des méthodes Equals(), GetHashCode() et ToString() de la
 
 Utilisez le mot clé [classe enum publique](../windows/enum-class-cpp-component-extensions.md) pour créer des énumérations. N'utilisez pas le type Platform::Enum explicitement. Pour plus d'informations, consultez [Énumérations](../cppcx/enums-c-cx.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WrongThreadException
 ms.assetid: c193f97e-0392-4535-a4c4-0711e4e4a836
-ms.openlocfilehash: b59191eb739a94f305b656425ee2f3725815c7b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dde8c9afff6be083580042a958f59e057bc44350
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639996"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743954"
 ---
 # <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException, classe
 
@@ -29,13 +29,13 @@ public ref class WrongThreadException : COMException,    IException,    IPrintab
 
 Pour plus d'informations, consultez l'exception [COMException](../cppcx/platform-comexception-class.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 

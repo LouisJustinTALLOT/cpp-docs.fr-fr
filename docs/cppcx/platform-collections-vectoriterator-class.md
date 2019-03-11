@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: 8e776e0f5d479ee8633efa647ac41e6b1b5f9c0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 448ce9e9c6c937d5f95640dca8fa2d2ed20bb4b8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595596"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743222"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator, classe
 
@@ -74,11 +74,11 @@ Nom de type de la classe de modèle VectorIterator.
 
 `VectorIterator`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
-**Espace de noms :** Platform::Collections
+**Espace de noms :** Platform::Collections
 
 ## <a name="operator-arrow"></a>  VectorIterator::operator -&gt; opérateur
 
@@ -116,7 +116,7 @@ La première syntaxe décrémente le VectorIterator actif puis le retourne. La d
 
 La première syntaxe VectorIterator prédécrémente le VectorIterator actif.
 
-La deuxième syntaxe post-décrémente le VectorIterator actif. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une postdécrémentation.
+La deuxième syntaxe post-décrémente le VectorIterator actif. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une post-décrémentation.
 
 ## <a name="operator-dereference"></a>  VectorIterator::operator\* opérateur
 
@@ -208,7 +208,7 @@ La première syntaxe incrémente le VectorIterator actif puis le retourne. La de
 
 La première syntaxe VectorIterator préincrémente le VectorIterator actif.
 
-La deuxième syntaxe postincrémente le VectorIterator actif. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une post-incrémentation.
+La deuxième syntaxe postincrémente le VectorIterator actif. Le type `int` dans la deuxième syntaxe n'indique pas un opérande entier réel mais une post-incrémentation.
 
 ## <a name="operator-inequality"></a>  VectorIterator::operator ! =, opérateur
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CString objects, passing arguments
 - string arguments
 ms.assetid: a67bebff-edf1-4cf4-bbff-d1cc6a901099
-ms.openlocfilehash: bf18265e19e4b1c1db010a4d7638fa959c357bca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1729167786d71c107fe6a4369d5a0c7e7c8594f1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562394"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742194"
 ---
 # <a name="cstring-argument-passing"></a>Passage d’arguments CString
 
@@ -44,5 +44,4 @@ En général, vous pouvez retourner `CString` , car des objets à partir de fonc
 
 ## <a name="see-also"></a>Voir aussi
 
-[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-
+[Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

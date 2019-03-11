@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: c041ae941858184245879ced972c19e6e998b677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c59f28739ab94210c16bd800a48997f3f2282df
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544558"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739786"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hébergement d'un contrôle utilisateur Windows Forms en tant que vue MFC
 
@@ -34,4 +34,4 @@ Pour un exemple d’application qui illustre Windows Forms avec MFC, consultez [
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation d’un contrôle utilisateur Windows Form dans MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-[Guide pratique pour créer des contrôles composites](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
+[Guide pratique pour Créer des contrôles composites](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

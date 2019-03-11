@@ -1,5 +1,5 @@
 ---
-title: 'Comment : ajouter une DLL native au Global Assembly Cache'
+title: 'Procédure : Ajouter une DLL Native au Global Assembly Cache'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), loading native DLLs
 - native DLLs [C++]
 ms.assetid: 25e8d78a-b197-4269-b4e9-237a544ab3c8
-ms.openlocfilehash: 1b11ebfae704ca1529113a00b463df728c85fe60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4b886dfef3185c1b3084ed02abcef1ad2630c11
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641361"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746485"
 ---
-# <a name="how-to-add-native-dll-to-global-assembly-cache"></a>Comment : ajouter une DLL native au Global Assembly Cache
+# <a name="how-to-add-native-dll-to-global-assembly-cache"></a>Procédure : Ajouter une DLL Native au Global Assembly Cache
 
 Vous pouvez placer une DLL native (pas COM) dans le Global Assembly Cache.
 

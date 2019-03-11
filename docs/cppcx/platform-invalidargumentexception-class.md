@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::InvalidArgumentException
 ms.assetid: 1a8d860b-3bcb-41a9-9346-6610616a0b46
-ms.openlocfilehash: 11b1e0e2166bba2dc366520161729a8d84e865d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1cc4b87ded26807066c81e5da6935548d1a5ad26
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643610"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750466"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException, classe
 
@@ -29,13 +29,13 @@ public ref class InvalidArgumentException : COMException,    IException,    IPri
 
 Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 

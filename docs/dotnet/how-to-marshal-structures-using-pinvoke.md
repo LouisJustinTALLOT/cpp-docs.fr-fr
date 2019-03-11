@@ -1,5 +1,5 @@
 ---
-title: 'Comment : marshaler des structures à l’aide de PInvoke'
+title: 'Procédure : Marshaler des Structures à l’aide de PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: e79eb343f81cf2d66e394be7561d2c9727c4c9ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429108"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747993"
 ---
-# <a name="how-to-marshal-structures-using-pinvoke"></a>Comment : marshaler des structures à l’aide de PInvoke
+# <a name="how-to-marshal-structures-using-pinvoke"></a>Procédure : Marshaler des Structures à l’aide de PInvoke
 
 Ce document explique comment les fonctions natives qui acceptent les structures de style C peuvent être appelées à partir de fonctions managées par à l’aide de P/Invoke. Bien que nous vous recommandons d’utiliser les fonctionnalités d’interopérabilité C++ au lieu de P/Invoke, car P/Invoke offre peu une erreur de génération de rapports n’est pas de type sécurisé et peut être fastidieux à implémenter, si l’API non managée est empaqueté en tant que DLL et le code source n’est pas disponible, P/Invoke est la seule option. Sinon, consultez les documents suivants :
 

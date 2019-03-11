@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607858"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740925"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Sémantique de pile C++ pour les types de référence
 
@@ -19,7 +19,7 @@ Avant Visual C++ 2005, une instance d'un type de référence pouvait être cré
 
 Lorsque vous créez une instance d'un type de référence à l'aide de la sémantique de pile, le compilateur crée en interne l'instance sur le segment récupéré par le garbage collector (utilisation de `gcnew`).
 
-Lorsque la signature ou le type de retour d’une fonction inclut une instance d’un type de référence par valeur, la fonction est marquée dans les métadonnées comme nécessitant une gestion spéciale (avec modreq). Cette gestion spéciale est actuellement fournie par les clients Visual C++ ; les autres langues ne prennent pas en charge les fonctions "gourmandes" ou les données qui utilisent les types de référence créés avec la sémantique de pile.
+Lorsque la signature ou le type de retour d'une fonction inclut une instance d'un type de référence par valeur, la fonction est marquée dans les métadonnées comme nécessitant une gestion spéciale (avec modreq). Cette gestion spéciale est actuellement fournie par les clients Visual C++ ; les autres langues ne prennent pas en charge les fonctions "gourmandes" ou les données qui utilisent les types de référence créés avec la sémantique de pile.
 
 Il est souhaitable d'utiliser `gcnew` (allocation dynamique) au lieu de la sémantique de pile si le type n'a aucun destructeur. En outre, l'utilisation de types de référence créés avec la sémantique de pile dans les signatures de fonction ne serait pas possible si vous souhaitez que vos fonctions soient utilisées dans des langages autres que Visual C++.
 
@@ -27,7 +27,7 @@ Le compilateur ne génère pas de constructeur de copies pour un type de référ
 
 Le compilateur ne génère pas d'opérateur d'affectation par défaut pour un type de référence. Un opérateur d'affectation vous permet de créer un objet avec la sémantique de pile et de l'initialiser avec un objet existant créé avec la sémantique de pile. Un opérateur d'assignation pour un type de référence a une signature au format suivant : `void operator=( R% ){}`.
 
-Si le destructeur de votre type libère les ressources critiques et que vous utilisez la sémantique de pile pour les types de référence, vous n’avez pas besoin d’appeler explicitement le destructeur (ou appeler `delete`). Pour plus d’informations sur les destructeurs dans les types référence, consultez [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Si le destructeur de votre type libère les ressources critiques et que vous utilisez la sémantique de pile pour les types de référence, vous n’avez pas besoin d’appeler explicitement le destructeur (ou appeler `delete`). Pour plus d’informations sur les destructeurs dans les types référence, consultez [destructeurs et finaliseurs dans Comment : Définir et consommer des classes et structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Un opérateur d'assignation généré par le compilateur suit les règles C++ standard habituelles avec les ajouts suivants :
 

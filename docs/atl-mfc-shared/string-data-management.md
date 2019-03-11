@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-ms.openlocfilehash: cbc48008cd7b30f1630fc4ec2c30214e3c448c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b247e97f5aa6b5e85a6a6b6f57a64224a9e0f435
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595063"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747175"
 ---
 # <a name="string-data-management"></a>Gestion des données chaînes
 
@@ -86,4 +86,3 @@ Vous pouvez utiliser la `CString` fonctions membres [CSimpleStringT::LockBuffer]
 ## <a name="see-also"></a>Voir aussi
 
 [Rubriques MFC générales](../mfc/general-mfc-topics.md)
-

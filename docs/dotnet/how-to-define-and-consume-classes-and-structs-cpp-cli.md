@@ -1,18 +1,18 @@
 ---
-title: 'Comment : définir et consommer des classes et des structs (C++/CLI)'
+title: 'Procédure : Définir et consommer des Classes et Structs (C++ / c++ / CLI)'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 028e8622c034920e993444458c52536d2e3ec6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436152"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751828"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Comment : définir et consommer des classes et des structs (C++/CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Procédure : Définir et consommer des Classes et Structs (C++ / c++ / CLI)
 
 Cet article explique comment définir et consommer des types référence définis par l’utilisateur et les types de valeur en C / c++ / CLI.
 
@@ -455,7 +455,7 @@ Le compilateur ne peut pas incorporer un appel à un constructeur si la classe a
 
 Définir un constructeur statique comme une fonction membre privé, car elle est destinée à être appelée uniquement par le CLR.
 
-Pour plus d’informations sur les constructeurs statiques, consultez [Comment : définir un constructeur d’Interface statique (C++ / c++ / CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
+Pour plus d’informations sur les constructeurs statiques, consultez [Comment : Définir un constructeur d’Interface statique (C++ / c++ / CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
 
 ```cpp
 // compile with: /clr

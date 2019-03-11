@@ -12,16 +12,16 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: bb67c4cf2f166a8dd67d14b9f61b23241fe442fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc06e2dc58d28c34a646ccffc0be90368b3297f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607881"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747032"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Exécution en tant que membre du groupe Utilisateurs
 
-Cette rubrique explique comment la configuration de comptes d’utilisateurs Windows en tant que membres du Groupe Utilisateurs (par opposition au Groupe Administrateurs) améliore la sécurité et réduit le risque d’être infecté par un code malveillant.
+Cette rubrique explique comment la configuration de comptes d'utilisateurs Windows en tant que membres du Groupe Utilisateurs (par opposition au Groupe Administrateurs) améliore la sécurité et réduit le risque d'être infecté par un code malveillant.
 
 ## <a name="security-risks"></a>Risques de Sécurité
 
@@ -29,7 +29,7 @@ L'exécution en tant qu'administrateur rend votre système vulnérable à plusie
 
 ## <a name="non-administrator-user-groups"></a>Groupes Utilisateurs non Administrateurs
 
-Les comptes utilisateurs Windows normalement utilisés par les développeurs doivent être ajoutés aux groupes Utilisateurs ou Utilisateurs avec pouvoir. Les développeurs doivent également être ajoutés au groupe Débogage. Être membre du groupe Utilisateurs permet d'effectuer des tâches habituelles, notamment exécuter les programmes et visiter des sites Internet sans exposer son ordinateur à des risques inutiles. En tant que membre du groupe Utilisateurs avec pouvoir, il est également possible d'effectuer des tâches telles que l'installation d'application, d'imprimante, et la plupart des opérations du panneau de configuration. Si vous devez exécuter des tâches d’administration telles que mettre à niveau le système d’exploitation ou configurer les paramètres du système, vous devez vous connecter à un compte d’administrateur juste le temps d’exécuter la tâche d’administration. Vous pouvez également le Windows **runas** commande peut être utilisée pour lancer des applications spécifiques avec un accès administratif.
+Les comptes utilisateurs Windows normalement utilisés par les développeurs doivent être ajoutés aux groupes Utilisateurs ou Utilisateurs avec pouvoir. Les développeurs doivent également être ajoutés au groupe Débogage. Être membre du groupe Utilisateurs permet d’effectuer des tâches habituelles, notamment exécuter les programmes et visiter des sites Internet sans exposer son ordinateur à des risques inutiles. En tant que membre du groupe Utilisateurs avec pouvoir, il est également possible d'effectuer des tâches telles que l'installation d'application, d'imprimante, et la plupart des opérations du panneau de configuration. Si vous devez exécuter des tâches d’administration telles que mettre à niveau le système d’exploitation ou configurer les paramètres du système, vous devez vous connecter à un compte d’administrateur juste le temps d’exécuter la tâche d’administration. Vous pouvez également le Windows **runas** commande peut être utilisée pour lancer des applications spécifiques avec un accès administratif.
 
 ## <a name="exposing-customers-to-security-risks"></a>Exposition des clients aux risques de sécurité
 

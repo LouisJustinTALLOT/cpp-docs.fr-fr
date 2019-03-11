@@ -1,27 +1,27 @@
 ---
-title: 'CFixedStringT : Exemple d’un gestionnaire de chaînes personnalisé.'
+title: 'CFixedStringT: Exemple d’un gestionnaire de chaînes personnalisé.'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-ms.openlocfilehash: d35c4c998a6e5913cd972312c511b2a102480c81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6da5d4166b220ef63500d0154ab32dc72b40f4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663159"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740704"
 ---
-# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT : Exemple d’un gestionnaire de chaînes personnalisé.
+# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Exemple d’un gestionnaire de chaînes personnalisé.
 
 La bibliothèque ATL implémente un exemple de gestionnaire de chaînes personnalisé utilisé par la classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), appelé **CFixedStringMgr**. `CFixedStringT` est dérivé de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) et implémente une chaîne qui alloue ses données de caractère dans le cadre de la `CFixedStringT` de l’objet lui-même, que la chaîne est inférieure à la longueur spécifiée par le `t_nChars` paramètre de modèle de `CFixedStringT`. Avec cette approche, la chaîne est inutile le tas du tout, sauf si la longueur de la chaîne dépasse la taille de la mémoire tampon fixe. Étant donné que `CFixedStringT` n’utilise pas toujours un segment de mémoire pour allouer ses données de chaîne, il ne peut pas utiliser `CAtlStringMgr` en tant que gestionnaire de chaînes. Il utilise un gestionnaire de chaînes personnalisé (`CFixedStringMgr`), qui implémente le [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface. Cette interface est traitée en [implémentation d’un gestionnaire de chaînes personnalisé (méthode avancée)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).
 
 Le constructeur de `CFixedStringMgr` accepte trois paramètres :
 
-- *pData :* un pointeur vers le texte fixe `CStringData` structure à utiliser.
+- *pData:* Un pointeur vers le texte fixe `CStringData` structure à utiliser.
 
-- *nChars :* le nombre maximal de caractères le `CStringData` structure peut contenir.
+- *nChars :* Le nombre maximal de caractères le `CStringData` structure peut contenir.
 
-- *pMgr :* un pointeur vers le `IAtlStringMgr` interface d’un « gestionnaire de chaînes de sauvegarde ».
+- *pMgr :* Un pointeur vers le `IAtlStringMgr` interface d’un « gestionnaire de chaînes de sauvegarde ».
 
 Le constructeur stocke les valeurs de *pData* et *pMgr* dans leurs variables membres respectives (`m_pData` et `m_pMgr`). Il définit ensuite la longueur de la mémoire tampon à zéro, la longueur disponible égale à la taille maximale de la mémoire tampon fixe et le décompte de références sur -1. La valeur de nombre de référence indique la mémoire tampon est verrouillée et d’utiliser cette instance de `CFixedStringMgr` en tant que le Gestionnaire de chaînes.
 
@@ -57,11 +57,10 @@ L’implémentation de `CFixedStringMgr::GetNilString` retourne la mémoire tamp
 
 Chaque fois que la mémoire tampon fixe n’est pas en cours d’utilisation, `CFixedStringMgr` permet de s’assurer qu’elle est initialisée avec une longueur nulle. Cela vous permet de pouvoir être utilisé en tant que chaîne nulle. En prime, le `nAllocLength` membre de la mémoire tampon fixe est toujours définie sur la taille totale de la mémoire tampon fixe. Cela signifie que `CStringT` peut atteindre la chaîne sans appeler [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate), même pour la chaîne nulle.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** cstringt.h
 
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion de la mémoire avec CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

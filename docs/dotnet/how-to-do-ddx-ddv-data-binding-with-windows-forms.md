@@ -1,19 +1,19 @@
 ---
-title: 'Comment : effectuer une liaison de données DDX / DDV avec Windows Forms'
+title: 'Procédure : Faire de DDX / DDV liaison de données avec Windows Forms'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 793d6728c7726028c02b885784f122792d84dd2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456432"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740954"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Comment : établir la liaison des données DDX/DDV avec Windows Forms
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Procédure : Faire de DDX/DDV liaison de données avec Windows Forms
 
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) appels [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) pour créer un contrôle correspondant à l’ID de contrôle de ressource. Si vous utilisez `DDX_ManagedControl` pour un `CWinFormsControl` contrôle (dans le code généré par l’Assistant), vous ne devez pas appeler `CreateManagedControl` explicitement pour le même contrôle.
 
@@ -27,7 +27,7 @@ Voici un exemple de liaison de données DDX/DDV d’une chaîne MFC `m_str` avec
 
 Le contrôle est créé lorsque [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) appels `CMyDlg::DoDataExchange` pour la première fois, afin que tout code qui fait référence à `m_UserControl` doit être placée après le `DDX_ManagedControl` appeler.
 
-Vous pouvez implémenter ce code dans l’application MFC01 que vous avez créé dans [Comment : créer le contrôle utilisateur et l’héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Vous pouvez implémenter ce code dans l’application MFC01 que vous avez créé dans [Comment : Créer le contrôle utilisateur et l’héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 Placez le code suivant dans la déclaration de CMFC01Dlg :
 

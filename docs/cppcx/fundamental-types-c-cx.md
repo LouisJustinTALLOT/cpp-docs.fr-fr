@@ -2,12 +2,12 @@
 title: Types fondamentaux (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: a6c068d58f0d7c173bff34726873b7a0f4f1d74c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529127"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752361"
 ---
 # <a name="fundamental-types-ccx"></a>Types fondamentaux (C++/CX)
 
@@ -20,7 +20,7 @@ Le tableau suivant répertorie les types intégrés booléens et de caractère, 
 |Espace de noms|C++ / c++ / nom CX|Définition|Nom C++ standard|Plage de valeurs|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
 |Plateforme|Booléen|Valeur booléenne de 8 bits.|bool|**true** (différent de zéro) et **false** (zéro)|
-|default|char16|Valeur non numérique 16 bits qui représente un point de code Unicode (UTF-16).|wchar_t<br /><br /> - ou -<br /><br /> L’c’|(Spécifié par la norme Unicode)|
+|default|char16|Valeur non numérique 16 bits qui représente un point de code Unicode (UTF-16).|wchar_t<br /><br /> ou<br /><br /> L’c’|(Spécifié par la norme Unicode)|
 
 ## <a name="numeric-types"></a>Types numériques
 
@@ -28,16 +28,16 @@ Le tableau suivant répertorie les types numériques intégrés. Les types numé
 
 |C++ / c++ / nom CX|Définition|Nom C++ standard|Plage de valeurs|
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|int8|Valeur numérique signée 8 bits.|signed char|-128 à 127|
-|uint8|Valeur numérique non signée 8 bits.|unsigned char|De 0 à 255|
+|int8|Valeur numérique signée 8 bits.|signed char|-128 à 127|
+|uint8|Valeur numérique non signée 8 bits.|unsigned char|De 0 à 255|
 |int16|Entier signé 16 bits.|short|-32 768 et 32 767|
 |uint16|Entier non signé 16 bits.|unsigned short|De 0 à 65 535|
 |int32|Entier signé 32 bits.|int|2,147,483,648 et 2 147 483 647|
 |uint32|Entier 32 bits non signé.|unsigned int|De 0 à 4 294 967 295|
-|int64|Entier signé 64 bits.|long long - ou - __int64|-9,223,372,036,854, 775,808 à 9,223,372,036,854,775,807|
-|uint64|Entier 64 bits non signé.|unsigned __int64 long long - ou - non signé|De 0 à 18 446 744 073 709 551 615|
-|float32|Nombre à virgule flottante IEEE 754 32 bits.|float|3.4E +/- 38 (7 chiffres)|
-|float64|Nombre à virgule flottante IEEE 754 64 bits.|double|1.7E +/- 308 (15 chiffres)|
+|int64|Entier signé 64 bits.|long long  -or- __int64|-9,223,372,036,854, 775,808 à 9,223,372,036,854,775,807|
+|uint64|Entier 64 bits non signé.|unsigned long long  -or- unsigned __int64|De 0 à 18 446 744 073 709 551 615|
+|float32|Nombre à virgule flottante IEEE 754 32 bits.|float|3.4E +/- 38 (7 chiffres)|
+|float64|Nombre à virgule flottante IEEE 754 64 bits.|double|1.7E +/- 308 (15 chiffres)|
 
 ## <a name="windows-runtime-types"></a>Types de Runtime Windows
 

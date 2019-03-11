@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
-ms.openlocfilehash: a30f86a41917419474f93a915b92d125112ec7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2294d8fe94a32f281332c963b21a542366ae3207
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492190"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751503"
 ---
 # <a name="marshalas"></a>marshal_as
 
@@ -30,7 +30,7 @@ To_Type marshal_as<To_Type>(
 
 #### <a name="parameters"></a>Paramètres
 
-*entrée*<br/>
+*input*<br/>
 [in] La valeur que vous souhaitez à marshaler en un `To_Type` variable.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -67,7 +67,7 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **Fichier d’en-tête :** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, ou \<msclr\marshal_atl.h >
 
