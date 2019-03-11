@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::InvalidCastException
 ms.assetid: 0215131d-1251-4913-9561-824410e045b6
-ms.openlocfilehash: 9ff48fc456f03adc0e516624a16118e3ddad8718
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e502346cb373d9dec5450987c4807b445234b28
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507678"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745232"
 ---
 # <a name="platforminvalidcastexception-class"></a>Platform::InvalidCastException, classe
 
@@ -29,13 +29,13 @@ public ref class InvalidCastException : COMException,    IException,    IPrintab
 
 Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 

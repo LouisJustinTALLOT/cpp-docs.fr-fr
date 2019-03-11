@@ -2,12 +2,12 @@
 title: Modificateurs Microsoft spécifiques
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-ms.openlocfilehash: be126e90ca6f77ef43b49ccd5b83c0f307f7f307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 119e4d06d0235bbf637eefe8754668d3e90b0c52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646028"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749722"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificateurs Microsoft spécifiques
 
@@ -29,13 +29,13 @@ Un grand nombre des mots clés spécifiques à Microsoft peuvent être utilisés
 |-------------|-------------|---------------------------------|
 |[__based](based-grammar.md)|Le nom qui suit déclare un décalage de 32 bits par rapport à la base 32 bits contenue dans la déclaration.|Oui|
 |[__cdecl](cdecl.md)|Le nom qui suit utilise les conventions de nommage et d’appel du langage C.|Oui|
-|[__declspec](declspec.md)|Le nom qui suit spécifie un attribut de classe de stockage spécifique à Microsoft.|Non|
+|[__declspec](declspec.md)|Le nom qui suit spécifie un attribut de classe de stockage spécifique à Microsoft.|Aucune|
 |[__fastcall](fastcall.md)|Le nom qui suit déclare une fonction qui utilise des registres, lorsqu’ils sont disponibles, à la place de la pile, pour transmettre des arguments.|Oui|
-|[__restrict](extension-restrict.md)|Similaire à __declspec ([restreindre](restrict.md)), mais pour une utilisation sur les variables.|Non|
-|[__stdcall](stdcall.md)|Le nom qui suit spécifie une fonction qui respecte la convention d’appel standard.|Oui|
-|[__w64](w64.md)|Marque un type de données comme étant plus grand sur un compilateur 64 bits.|Non|
-|[__unaligned](unaligned.md)|Spécifie qu'un pointeur désignant un type ou d'autres données n'est pas aligné.|Non|
-|[__vectorcall](vectorcall.md)|Le nom qui suit déclare une fonction qui utilise des registres, y compris les registres SSE lorsqu’ils sont disponibles, à la place de la pile, pour transmettre des arguments.|Oui|
+|[__restrict](extension-restrict.md)|Similaire à __declspec ([restreindre](restrict.md)), mais pour une utilisation sur les variables.|Aucune|
+|[__stdcall](stdcall.md)|Le nom qui suit spécifie une fonction qui respecte la convention d'appel standard.|Oui|
+|[__w64](w64.md)|Marque un type de données comme étant plus grand sur un compilateur 64 bits.|Aucune|
+|[__unaligned](unaligned.md)|Spécifie qu'un pointeur désignant un type ou d'autres données n'est pas aligné.|Aucune|
+|[__vectorcall](vectorcall.md)|Le nom qui suit déclare une fonction qui utilise des registres, y compris les registres SSE lorsqu'ils sont disponibles, à la place de la pile, pour transmettre des arguments.|Oui|
 
 ## <a name="see-also"></a>Voir aussi
 

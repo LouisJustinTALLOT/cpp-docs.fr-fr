@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 8aa0b47c1de520693f43794df3ee10fea131c963
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c09e0c29aacbf655652446caf90ab21d92103e8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652619"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748203"
 ---
 # <a name="friend-assemblies-c"></a>Assemblys friend (C++)
 
@@ -27,7 +27,7 @@ Pour les runtimes applicables, le *assemblys friend* fonctionnalité de langage 
 
 (Cette fonctionnalité de langage n'est pas pris en charge dans le Windows Runtime.)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/ZW**
 
@@ -51,7 +51,7 @@ Pour plus d’informations sur la signature, autrement dit, comment donner un no
 
 Comme alternative à l’aide de la fonctionnalité d’assemblys friend, vous pouvez utiliser <xref:System.Security.Permissions.StrongNameIdentityPermission> pour restreindre l’accès aux types individuels.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/clr**
 
@@ -157,7 +157,7 @@ public:
 
 Notez que le composant doit spécifier sa clé publique. Nous vous suggérons d’exécuter les commandes suivantes de manière séquentielle à une invite de commande pour créer une paire de clés et obtenir la clé publique :
 
-**friend_assemblies.snk -d sn**
+**sn -d friend_assemblies.snk**
 
 **sn -k friend_assemblies.snk**
 
@@ -165,7 +165,7 @@ Notez que le composant doit spécifier sa clé publique. Nous vous suggérons d�
 
 **sn -pc friend_assemblies.snk key.publickey**
 
-**sn - tp key.publickey**
+**sn -tp key.publickey**
 
 L’exemple de code suivant accède à un type privé dans le composant de nom fort.
 

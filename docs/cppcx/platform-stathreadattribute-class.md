@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 9073dc6e802aa2ed6bfa4fde2a09dd8a0864687b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05fb2879839c504f49f56e25ffe28329aa969c69
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555657"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743575"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute (classe)
 
@@ -40,7 +40,7 @@ public ref class STAThreadAttribute sealed : Attribute
 
 L’attribut STAThreadAttribute hérite [Platform::Object Class](../cppcx/platform-object-class.md). STAThreadAttribute surcharge ou possède également les membres suivants :
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[STAThreadAttribute::Equals](#equals)|Détermine si l'objet spécifié est identique à l'objet actuel.|
 |[STAThreadAttribute::GetHashCode](#gethashcode)|Retourne le code de hachage de cette instance.|
@@ -54,7 +54,7 @@ L’attribut STAThreadAttribute hérite [Platform::Object Class](../cppcx/platfo
 
 **En-tête :** collection.h
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 ## <a name="ctor"></a> STAThreadAttribute constructor
 

@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498382"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750921"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference, classe
 
@@ -49,20 +49,20 @@ class StringReference
 
 |Nom|Description|
 |----------|-----------------|
-|[StringReference::operator =](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|
-|[Stringreference::operator](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|
+|[StringReference::operator=](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|
+|[StringReference::operator()](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **En-tête :** vccorlib.h
 
-## <a name="data"></a>  Stringreference::Data, méthode
+## <a name="data"></a>  StringReference::Data Method
 
 Retourne le contenu de ce `StringReference` sous forme de tableau de valeurs char16.
 
@@ -88,7 +88,8 @@ __abi_HSTRING GetHSTRING() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-`__abi_HSTRING` contenant les données de type chaîne.
+
+  `__abi_HSTRING` contenant les données de type chaîne.
 
 ### <a name="remarks"></a>Notes
 
@@ -150,7 +151,7 @@ Référence à un objet de type `StringReference`.
 
 Étant donné que `StringReference` est une classe C++ standard et non une classe ref, elle n’apparaît pas dans le **Explorateur d’objets**.
 
-## <a name="operator-call"></a>  Stringreference::operator opérateur
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 
 Convertit un objet `StringReference` en un objet `Platform::String^`.
 
@@ -181,7 +182,8 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 ### <a name="parameters"></a>Paramètres
 
 *__fstrArg*<br/>
-`StringReference` dont les données sont utilisées pour initialiser la nouvelle instance.
+
+  `StringReference` dont les données sont utilisées pour initialiser la nouvelle instance.
 
 *__strArg*<br/>
 Pointeur vers un tableau de valeurs char16 utilisé pour initialiser la nouvelle instance.

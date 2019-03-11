@@ -1,5 +1,5 @@
 ---
-title: 'Comment : convertir System::String en wchar_t * ou char*'
+title: 'Procédure : Convertir System::String en wchar_t * ou char *'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: 26e9f5511c0205a3c484b85381fddde802f5469a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9bf8a6af2d48c4b2624b91e2e85f78c63aee6de
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550499"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738802"
 ---
-# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Comment : convertir System::String en wchar_t * ou char*
+# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Procédure : Convertir System::String en wchar_t * ou char *
 
 Vous pouvez utiliser `PtrToStringChars` dans Vcclr.h pour convertir <xref:System.String> natif `wchar_t *` ou `char *`.  Cela retourne toujours un pointeur de chaîne Unicode large, car les chaînes CLR sont Unicode en interne. Vous pouvez ensuite convertir du pointeur étendu comme illustré dans l’exemple suivant.
 

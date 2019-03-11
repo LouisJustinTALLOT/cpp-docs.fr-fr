@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327029"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742939"
 ---
 # <a name="platformbox-class"></a>Platform::Box, classe
 
@@ -22,22 +22,22 @@ Permet à un type valeur comme `Windows::Foundation::DateTime` ou à un type sca
 ref class Box abstract;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** vccorlib.h
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 ### <a name="members"></a>Membres
 
 |Membre|Description|
 |------------|-----------------|
 |[Box](#ctor) | Crée un `Box` qui peut encapsuler une valeur du type spécifié. |
-|[opérateur boîte&lt;const T&gt;^](#box-const-t) | Permet les conversions par boxing d'une classe value `const` `T` ou d'une classe `enum` `T` en `Box<T>`. |
-|[opérateur boîte&lt;const volatile T&gt;^](#box-const-volatile-t) | Permet les conversions par boxing d'une classe value `const volatile` `T` ou d'un type `enum` `T` en `Box<T>`. |
+|[opérateur boîte&lt;const T&gt;^](#box-const-t) | Permet les conversions par boxing d'une classe value `const``T` ou d'une classe `enum``T` en `Box<T>`. |
+|[opérateur boîte&lt;const volatile T&gt;^](#box-const-volatile-t) | Permet les conversions par boxing d'une classe value `const volatile``T` ou d'un type `enum``T` en `Box<T>`. |
 |[opérateur boîte&lt;T&gt;^](#box-t) | Permet les conversions par boxing d'une classe value `T` en `Box<T>`. |
-|[opérateur boîte&lt;volatile T&gt;^](#box-volatile-t) | Permet les conversions par boxing d'une classe value `volatile` `T` ou d'un type `enum` `T` en `Box<T>`. |
-|[Box::operator T](#t) | Permet les conversions par boxing d'une classe value `T` `enum` ou d'une classe `T` en `Box<T>`. |
+|[opérateur boîte&lt;volatile T&gt;^](#box-volatile-t) | Permet les conversions par boxing d'une classe value `volatile``T` ou d'un type `enum``T` en `Box<T>`. |
+|[Box::operator T](#t) | Permet les conversions par boxing d'une classe value `T``enum` ou d'une classe `T` en `Box<T>`. |
 |[Valeur de propriété](#value) | Retourne la valeur qui est encapsulée dans l'objet `Box`. |
 
 ## <a name="ctor"></a> Box::Box, constructeur
@@ -57,7 +57,7 @@ Type de la valeur boxed, par exemple `int`, `bool`, `float64`, `DateTime`.
 
 ## <a name="box-const-t"></a> Box::operator Box&lt;const T&gt;^ opérateur
 
-Permet les conversions par boxing d'une classe value `const` `T` ou d'une classe `enum` `T` en `Box<T>`.
+Permet les conversions par boxing d'une classe value `const``T` ou d'une classe `enum``T` en `Box<T>`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -76,7 +76,7 @@ Un `Platform::Box<T>^` converti (boxed) d’instance qui représente la valeur d
 
 ## <a name="box-const-volatile-t"></a> Box::operator Box&lt;const volatile T&gt;^ opérateur
 
-Permet les conversions par boxing d'une classe value `const volatile` `T` ou d'un type `enum` `T` en `Box<T>`.
+Permet les conversions par boxing d'une classe value `const volatile``T` ou d'un type `enum``T` en `Box<T>`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -114,7 +114,7 @@ Un `Platform::Box<T>^` converti (boxed) d’instance qui représente la valeur d
 
 ## <a name="box-volatile-t"></a> Box::operator Box&lt;volatile T&gt;^ opérateur
 
-Permet les conversions par boxing d'une classe value `volatile` `T` ou d'un type `enum` `T` en `Box<T>`.
+Permet les conversions par boxing d'une classe value `volatile``T` ou d'un type `enum``T` en `Box<T>`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -133,7 +133,7 @@ Un `Platform::Box<T>^` converti (boxed) d’instance qui représente la valeur d
 
 ## <a name="t"></a>  Box::operator T, opérateur
 
-Permet les conversions par boxing d'une classe value `T` `enum` ou d'une classe `T` en `Box<T>`.
+Permet les conversions par boxing d'une classe value `T``enum` ou d'une classe `T` en `Box<T>`.
 
 ### <a name="syntax"></a>Syntaxe
 

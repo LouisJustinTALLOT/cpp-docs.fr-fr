@@ -1,5 +1,5 @@
 ---
-title: 'Comment : marshaler des tableaux à l’aide de PInvoke'
+title: 'Procédure : Marshaler des tableaux à l’aide de PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-ms.openlocfilehash: bd349fb1eca63fc336a30f4f23ae337d1191bb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60b49135928e3dadffc2a3c7a422646d2f3a768d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628512"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752309"
 ---
-# <a name="how-to-marshal-arrays-using-pinvoke"></a>Comment : marshaler des tableaux à l’aide de PInvoke
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Procédure : Marshaler des tableaux à l’aide de PInvoke
 
 Cette rubrique explique comment les fonctions natives qui acceptent des chaînes de style C peuvent être appelées en utilisant le type de chaîne CLR <xref:System.String> à l’aide de la prise en charge de .NET Framework non managé. Les programmeurs Visual C++ sont encouragés à utiliser plutôt les fonctionnalités d’interopérabilité C++ (si possible), car P/Invoke peu une erreur de génération de rapports n’est pas de type sécurisé et peut être fastidieuse à implémenter. Si l’API non managée est empaqueté en tant que DLL et le code source n’est pas disponible, P/Invoke est la seule option (sinon, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).
 

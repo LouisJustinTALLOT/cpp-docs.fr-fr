@@ -7,12 +7,12 @@ helpviewer_keywords:
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-ms.openlocfilehash: d5a2f3f9ceb62cf127d63c15131bf99646ebae4a
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b3c25a40fdb5bade02e112b13d16420b248a177f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809613"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750947"
 ---
 # <a name="stlclr-library-reference"></a>Référence de bibliothèque STL/CLR
 
@@ -63,4 +63,4 @@ En outre, cette section décrit également les composants suivants de STL/CLR :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)
+[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

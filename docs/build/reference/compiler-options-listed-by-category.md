@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676498"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746967"
 ---
 # <a name="compiler-options-listed-by-category"></a>Options du compilateur classées par catégorie
 
@@ -118,9 +118,9 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Déclare un héritage simple.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Déclare un héritage virtuel.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Génère compatible C 7.0 informations de débogage.|
-|[/Za](za-ze-disable-language-extensions.md)|Désactive les extensions de langage.|
+|[/Za](za-ze-disable-language-extensions.md)|Désactive les extensions de langage C89.|
 |[/Zc](zc-conformance.md)|Spécifie le comportement standard sous [/Ze](za-ze-disable-language-extensions.md).|
-|[/Ze](za-ze-disable-language-extensions.md)|Obsolète. Active les extensions de langage.|
+|[/Ze](za-ze-disable-language-extensions.md)|Obsolète. Active les extensions de langage C89.|
 |[/Zf](zf.md)|Améliore les temps de génération dans les builds parallèles PDB.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Inclut des informations de débogage dans une base de données du programme compatible avec Modifier & Continuer. (x86 uniquement)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Génère des informations de débogage complètes.|

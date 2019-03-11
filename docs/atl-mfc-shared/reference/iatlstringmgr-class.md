@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: de0bd720d1806c7950fa9aecc2db6e72aeb1fb4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 978d33c719b9cb8c2708dc97fa78874534dfd748
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493932"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749956"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr, classe
 
@@ -41,7 +41,7 @@ __interface IAtlStringMgr
 |[Clone](#clone)|Appelez cette méthode pour retourner un pointeur vers un nouveau gestionnaire de chaînes pour une utilisation avec une autre instance de `CSimpleStringT`.|
 |[Gratuit](#free)|Appelez cette méthode pour libérer une structure de données de chaîne.|
 |[GetNilString](#getnilstring)|Retourne un pointeur vers le `CStringData` objet utilisé par les objets de la chaîne vide.|
-|[Réallouer](#reallocate)|Appelez cette méthode pour réallouer une structure de données de chaîne.|
+|[Reallocate](#reallocate)|Appelez cette méthode pour réallouer une structure de données de chaîne.|
 
 ## <a name="remarks"></a>Notes
 
@@ -49,7 +49,7 @@ Cette interface gère la mémoire utilisée par les classes de chaîne indépend
 
 Vous pouvez également utiliser cette classe pour implémenter un gestionnaire de mémoire personnalisé pour votre classe de chaîne personnalisée. Pour plus d’informations, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsimpstr.h
 

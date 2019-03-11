@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Automation classes, current time
 - time, getting current
 ms.assetid: cc967f17-1189-4cf3-85f9-1969462d5f72
-ms.openlocfilehash: 97984376057462daaebbf949e96131e91928a1ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1183bc5fd42a59c73556d6fdecfd45c781e8cd7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596571"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739730"
 ---
 # <a name="current-time-automation-classes"></a>Heure actuelle : Classes Automation
 
@@ -29,4 +29,4 @@ La procédure suivante montre comment créer un `COleDateTime` de l’objet et l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Date et heure : prise en charge d’Automation](../atl-mfc-shared/date-and-time-automation-support.md)
+[Date et heure : Prise en charge Automation](../atl-mfc-shared/date-and-time-automation-support.md)

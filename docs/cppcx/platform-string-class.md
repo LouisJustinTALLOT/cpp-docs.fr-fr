@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607036"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746186"
 ---
 # <a name="platformstring-class"></a>Platform::String, classe
 
@@ -66,12 +66,12 @@ La classe String hérite des méthodes Equals(), Finalize(), GetHashCode(), GetT
 
 |Méthode|Description|
 |------------|-----------------|
-|[String::BEGIN](#begin)|Retourne un pointeur au début de la chaîne actuelle.|
+|[String::Begin](#begin)|Retourne un pointeur au début de la chaîne actuelle.|
 |[String::CompareOrdinal](#compareordinal)|Compare deux objets `String` en évaluant les valeurs numériques des caractères correspondants dans les deux valeurs de chaîne représentées par les objets.|
 |[String::Concat](#concat)|Concatène les valeurs de deux objets String.|
 |[String::Data](#data)|Retourne un pointeur au début de la chaîne actuelle.|
 |[String::dispose](#dispose)|Libère des ressources.|
-|[String::end](#end)|Retourne un pointeur après la fin de la chaîne actuelle.|
+|[String::End](#end)|Retourne un pointeur après la fin de la chaîne actuelle.|
 |[String::Equals](#equals)|Indique si l'objet spécifié est égal à l'objet actif.|
 |[String::GetHashCode](#gethashcode)|Retourne le code de hachage de cette instance.|
 |[String::IsEmpty](#isempty)|Indique si l'objet String actuel est vide.|
@@ -92,13 +92,13 @@ La classe String a les opérateurs suivants.
 |[String::operator ! =, opérateur](#operator-inequality)|Indique si deux objets String spécifiés ont des valeurs différentes.|
 |[String::operator < opérateur](#operator-less-than)|Indique si la valeur d'un objet String est inférieure à la valeur d'un deuxième objet String.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **En-tête** vccorlib.h (inclus par défaut)
 
@@ -409,7 +409,7 @@ Second objet `String`.
 
 **true** si la valeur de `str1` est supérieure ou égale à la valeur de `str2`; sinon, **false**.
 
-## <a name="operator-inequality"></a> String::operator ! =
+## <a name="operator-inequality"></a> String::operator!=
 
 Indique si deux spécifiée `String` objets ont des valeurs différentes.
 

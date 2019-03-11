@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
-ms.openlocfilehash: 084749bc92491593995904b6707ca94f6545981f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ed4e3f946f314819e6c562d489050182a975b7b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484277"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748500"
 ---
 # <a name="swap-function-autogcroot"></a>swap, fonction (auto_gcroot)
 
@@ -31,10 +31,10 @@ void swap(
 
 #### <a name="parameters"></a>Paramètres
 
-*à gauc_he*<br/>
+*_left*<br/>
 Élément `auto_gcroot`.
 
-*à d_roite*<br/>
+*_right*<br/>
 Un autre `auto_gcroot`.
 
 ## <a name="example"></a>Exemple
@@ -64,7 +64,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **Fichier d’en-tête** \<msclr\auto_gcroot.h >
 

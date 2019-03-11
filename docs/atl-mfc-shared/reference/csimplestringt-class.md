@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 93cb3ae0b2f358f64f0d6de26899d1b08f275b7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579281"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748227"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT, classe
 
@@ -79,7 +79,7 @@ Le type de caractère de la classe string. Il peut s'agir d'une des valeurs suiv
 |Nom|Description|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|Construit `CSimpleStringT` objets de différentes manières.|
-|[CSimpleStringT :: ~ CSimpleStringT](#dtor)|Destructeur.|
+|[CSimpleStringT::~CSimpleStringT](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -123,7 +123,7 @@ Le type de caractère de la classe string. Il peut s'agir d'une des valeurs suiv
 
 `CSimpleStringT` est la classe de base pour les différentes classes de chaîne pris en charge par Visual C++. Il fournit la prise en charge minimale pour la gestion de mémoire de l’objet string et la manipulation de la mémoire tampon de base. Pour les objets de chaîne plus avancés, consultez [Classe CStringT](../../atl-mfc-shared/reference/cstringt-class.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsimpstr.h
 
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [chaînes : nettoyage des exceptions CString](../cstring-exception-cleanup.md).
+Pour plus d’informations, consultez [chaînes : Nettoyage des exceptions CString](../cstring-exception-cleanup.md).
 
 ### <a name="example"></a>Exemple
 
@@ -1175,7 +1175,7 @@ Appelez cette méthode pour réinitialiser le nombre de référence de la chaîn
 
 Le `CSimpleStringT` destructeur appelle automatiquement `UnlockBuffer` pour vous assurer que la mémoire tampon n’est pas verrouillée lorsque le destructeur est appelé. Pour obtenir un exemple de cette méthode, consultez [LockBuffer](#lockbuffer).
 
-##  <a name="dtor"></a>  CSimpleStringT :: ~ CSimpleStringT
+##  <a name="dtor"></a>  CSimpleStringT::~CSimpleStringT
 
 Détruit un objet `CSimpleStringT`.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
-ms.openlocfilehash: 5374fb48427ea836c81fdd6731dee19c15dbc618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05677a08b7c63ddbe2196da946d62c00004d8942
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466682"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750557"
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details (espace de noms)
 
@@ -49,11 +49,11 @@ Bien que cet espace de noms est destiné à un usage interne, les navigateurs pe
 
 `Platform`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **Métadonnées :** platform.winmd
 
-**Espace de noms :** Platform::Details
+**Espace de noms :** Platform::Details
 
 ## <a name="see-also"></a>Voir aussi
 

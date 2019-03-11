@@ -1,17 +1,17 @@
 ---
-title: "Comment : définir et installer un gestionnaire d'exceptions global"
+title: 'Procédure : Définir et installer un gestionnaire d’exceptions Global'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: 9c6f355bc43fc53d2b8d27a1ee69c059d0f50692
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6b46de22ad962f6ef7653db0c38447d14ca0b54
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534535"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739257"
 ---
-# <a name="how-to-define-and-install-a-global-exception-handler"></a>Comment : définir et installer un gestionnaire d'exceptions global
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Procédure : Définir et installer un gestionnaire d’exceptions Global
 
 L’exemple de code suivant montre comment non prise en charge des exceptions peuvent être capturées. L’exemple de formulaire contienne un bouton qui, lorsque vous appuyez sur, effectue une référence null, à l’origine d’une exception levée. Cette fonctionnalité représente un échec de code typique. L’exception qui en résulte est interceptée par le Gestionnaire d’exceptions de l’application installé par la fonction principale.
 

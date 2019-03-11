@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 7bcf4c50577cf7211f90415143edac9fd0df1d5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509329"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748487"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan, classe
 
@@ -73,10 +73,10 @@ class COleDateTimeSpan
 |||
 |-|-|
 |[opérateur +, -](#operator_add_-)|Ajouter, soustraire et modifier l’authentification pour `COleDateTimeSpan` valeurs.|
-|[opérateur +=, =](#operator_add_eq_-_eq)|Ajouter ou soustraire un `COleDateTimeSpan` valeur à partir de ce `COleDateTimeSpan` valeur.|
-|[opérateur =](#operator_eq)|Copie un `COleDateTimeSpan` valeur.|
-|[opérateur ==, <, < =](#coledatetimespan_relational_operators)|Comparer deux `COleDateTimeSpan` valeurs.|
-|[double (opérateur)](#operator_double)|Convertit cette `COleDateTimeSpan` valeur un **double**.|
+|[operator +=, -=](#operator_add_eq_-_eq)|Ajouter ou soustraire un `COleDateTimeSpan` valeur à partir de ce `COleDateTimeSpan` valeur.|
+|[operator =](#operator_eq)|Copie un `COleDateTimeSpan` valeur.|
+|[operator ==, <, <=](#coledatetimespan_relational_operators)|Comparer deux `COleDateTimeSpan` valeurs.|
+|[operator double](#operator_double)|Convertit cette `COleDateTimeSpan` valeur un **double**.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
@@ -93,9 +93,9 @@ Un `COleDateTimeSpan` conserve la durée en jours.
 
 `COleDateTimeSpan` est utilisé avec sa classe compagnon [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md). `COleDateTime` encapsule le `DATE` type de données d’OLE automation. `COleDateTime` représente les valeurs de temps absolues. Tous les `COleDateTime` impliquent des calculs `COleDateTimeSpan` valeurs. La relation entre ces classes est analogue à celle entre [CTime](../../atl-mfc-shared/reference/ctime-class.md) et [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).
 
-Pour plus d’informations sur la `COleDateTime` et `COleDateTimeSpan` classes, consultez l’article [Date et heure : prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).
+Pour plus d’informations sur la `COleDateTime` et `COleDateTimeSpan` classes, consultez l’article [Date et heure : Prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLComTime.h
 
@@ -115,7 +115,8 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *dateSpan*<br/>
-`COleDateTimeSpan` à comparer.
+
+  `COleDateTimeSpan` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -147,7 +148,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 *dblSpanSrc*<br/>
 Le nombre de jours doit être copié dans le nouveau `COleDateTimeSpan` objet.
 
-*lDays*, *nHours*, *nMins*, *every*<br/>
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Indiquer les valeurs de jour et d’heure doit être copié dans le nouveau `COleDateTimeSpan` objet.
 
 ### <a name="remarks"></a>Notes
@@ -162,7 +163,7 @@ Toutes ces constructeurs créent `COleDateTimeSpan` objets initialisés à la va
 
 L’état de la nouvelle `COleDateTimeSpan` objet est défini à valide.
 
-Pour plus d’informations sur les limites de `COleDateTimeSpan` valeurs, consultez l’article [Date et heure : prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).
+Pour plus d’informations sur les limites de `COleDateTimeSpan` valeurs, consultez l’article [Date et heure : Prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).
 
 ### <a name="example"></a>Exemple
 
@@ -207,10 +208,10 @@ Appeler ces fonctions pour créer une représentation sous forme de mise en form
 
 Une brève description des formes pour cette fonction suit :
 
-**Format (** *pFormat* **)**<br/>
+**Format(** *pFormat* **)**<br/>
 Ce formulaire met en forme la valeur à l’aide de la chaîne de format qui contient les codes de mise en forme spéciales qui sont précédés d’un signe de pourcentage (%), comme dans `printf`. La chaîne mise en forme est passée en tant que paramètre à la fonction.
 
-**Format (** *nID* **)**<br/>
+**Format(** *nID* **)**<br/>
 Ce formulaire met en forme la valeur à l’aide de la chaîne de format qui contient les codes de mise en forme spéciales qui sont précédés d’un signe de pourcentage (%), comme dans `printf`. La chaîne mise en forme est une ressource. L’ID de ressource de cette chaîne est passée comme paramètre.
 
 ### <a name="example"></a>Exemple
@@ -403,7 +404,7 @@ L’état d’un `COleDateTimeSpan` objet n’est pas valide dans les cas suivan
 
 Pour plus d’informations sur les opérations qui peuvent définir l’état comme étant non valide, consultez [COleDateTimeSpan::operator +, -](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-) et [COleDateTimeSpan::operator +=, -=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq).
 
-Pour plus d’informations sur les limites de `COleDateTimeSpan` valeurs, consultez l’article [Date et heure : prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).
+Pour plus d’informations sur les limites de `COleDateTimeSpan` valeurs, consultez l’article [Date et heure : Prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).
 
 ##  <a name="gettotaldays"></a>  COleDateTimeSpan::GetTotalDays
 
@@ -603,7 +604,7 @@ Pour plus d’informations sur les opérations qui peuvent définir l’état co
 > [!CAUTION]
 >  Ce membre de données concerne les situations de programmation avancées. Vous devez utiliser les fonctions de membre inline [GetStatus](#getstatus) et [SetStatus](#setstatus). Consultez `SetStatus` pour des précautions supplémentaires concernant la définition explicite de ce membre de données.
 
-Pour plus d’informations sur les limites de `COleDateTimeSpan` valeurs, consultez l’article [Date et heure : prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).
+Pour plus d’informations sur les limites de `COleDateTimeSpan` valeurs, consultez l’article [Date et heure : Prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).
 
 ##  <a name="operator_eq"></a>  COleDateTimeSpan::operator =
 
@@ -641,7 +642,7 @@ Pour plus d’informations sur les valeurs d’état valide, null et non valides
 
 [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator +=, =
+##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator +=, -=
 
 Ajouter ou soustraire un `COleDateTimeSpan` valeur à partir de ce `COleDateTimeSpan` valeur.
 
@@ -684,7 +685,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*lDays*, *nHours*, *nMins*, *every*<br/>
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Indiquer les valeurs de plage de dates et d’intervalle de temps doit être copié dans ce `COleDateTimeSpan` objet.
 
 ### <a name="remarks"></a>Notes
@@ -758,4 +759,3 @@ Pour obtenir une brève description de ces valeurs d’état, consultez la liste
 [CTimeSpan, classe](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes partagées ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

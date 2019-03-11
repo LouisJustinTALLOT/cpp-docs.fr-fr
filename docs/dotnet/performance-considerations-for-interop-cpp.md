@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: addf3fbc5f6261800ceebf6e8bb1abe1a64f245e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478206"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741847"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Considérations sur les performances de l'interopérabilité (C++)
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-ms.openlocfilehash: 871e9fd1ec095331a895cee72e5e8472962f2b1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a09aa89cbe73469e994271179192ef7713e3a0e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621375"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745099"
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Platform::Metadata::FlagsAttribute (attribut)
 
@@ -32,13 +32,13 @@ public ref class Flags abstract : Attribute
 
 ### <a name="remarks"></a>Notes
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform::Metadata
+**Espace de noms :** Platform::Metadata
 
 **Métadonnées :** platform.winmd
 

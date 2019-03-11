@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
-ms.openlocfilehash: 11cccc082d5b9e467f5fafce6f2128aa50d33879
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66f3b5a33791d20297cde6e6223ba65189a99682
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512801"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743829"
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>Code pur et vérifiable (C++ / c++ / CLI)
 
@@ -39,4 +39,3 @@ Il existe un scénario de programmation qui passera le compilateur, mais cela en
 ## <a name="see-also"></a>Voir aussi
 
 - [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
-
