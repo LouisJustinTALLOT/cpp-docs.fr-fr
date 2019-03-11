@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 6ee03b546cf89aff3ef79fa9c89d15f39b4d9fe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539137"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743740"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator, classe
 
@@ -74,11 +74,11 @@ Typename de la classe de modèle VectorViewIterator.
 
 `VectorViewIterator`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
-**Espace de noms :** Platform::Collections
+**Espace de noms :** Platform::Collections
 
 ## <a name="operator-arrow"></a>  VectorViewIterator::operator -&gt; opérateur
 
@@ -115,7 +115,7 @@ La première syntaxe décrémente l’objet VectorViewIterator actif, puis le re
 
 La première syntaxe VectorViewIterator prédécrémente l’objet VectorViewIterator actif.
 
-La deuxième syntaxe postdécrémente l’objet VectorViewIterator actif. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une postdécrémentation.
+La deuxième syntaxe postdécrémente l’objet VectorViewIterator actif. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une post-décrémentation.
 
 ## <a name="operator-dereference"></a>  VectorViewIterator::operator\* opérateur
 
@@ -210,7 +210,7 @@ La première syntaxe incrémente l'objet VectorViewIterator actuel, puis le reto
 
 La première syntaxe VectorViewIterator préincrémente l'objet VectorViewIterator actuel.
 
-La deuxième syntaxe postincrémente l'objet VectorViewIterator actuel. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une post-incrémentation.
+La deuxième syntaxe postincrémente l'objet VectorViewIterator actuel. Le type `int` dans la deuxième syntaxe n'indique pas un opérande entier réel mais une post-incrémentation.
 
 ## <a name="operator-inequality"></a>  VectorViewIterator::operator ! =, opérateur
 

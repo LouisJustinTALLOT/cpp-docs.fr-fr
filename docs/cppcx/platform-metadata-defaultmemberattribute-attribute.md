@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata::DefaultMemberAttribute Attribute
 ms.assetid: d8abda01-c257-4371-aec4-541d4825e0af
-ms.openlocfilehash: a4b3d5e8ab5d6ce254560bc84daceac74e2c9ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 754d41a385e2717989e87c0e06a180f02429d2c2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486656"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739097"
 ---
 # <a name="platformmetadatadefaultmemberattribute-attribute"></a>Platform::Metadata::DefaultMemberAttribute (attribut)
 
@@ -34,13 +34,13 @@ public ref class DefaultMember abstract : Attribute
 
 Appliquez l'attribut DefaultMember à une méthode qui est consommée par une application JavaScript.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform::Metadata
+**Espace de noms :** Platform::Metadata
 
 **Métadonnées :** platform.winmd
 

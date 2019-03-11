@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata::Attribute Attribute
 ms.assetid: 0e69727f-429b-4f7d-85c6-eea614f14dd7
-ms.openlocfilehash: e1e36a579d1d3598369dc9485cfad1c6c2695853
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1020982ef79c77bacf920f94dd4bf43fee21424e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630358"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745197"
 ---
 # <a name="platformmetadataattribute-attribute"></a>Platform::Metadata::Attribute Attribute
 
@@ -30,13 +30,13 @@ public ref class Attribute abstract : Object
 
 [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform::Metadata
+**Espace de noms :** Platform::Metadata
 
 **Métadonnées :** platform.winmd
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330610"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744394"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 
@@ -50,13 +50,13 @@ Ces méthodes offrent une accessibilité interne, c'est-à-dire qu'elles ne sont
 
 `WriteOnlyArray`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/ZW**
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform.winmd
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 ## <a name="begin"></a>  WriteOnlyArray::begin (méthode)
 

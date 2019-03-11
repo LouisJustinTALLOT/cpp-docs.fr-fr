@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-ms.openlocfilehash: d6ebc63fdcfa8294bf81aee0ce4df0c2f83af6f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a84ae21b60d87971cb2f7b758dd369b4078607e6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430288"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740306"
 ---
 # <a name="using-cstring"></a>Utilisation de CString
 
@@ -78,8 +78,7 @@ Fournit des informations de référence sur la classe `CSimpleStringT`.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 Contient des liens vers des rubriques décrivant plusieurs façons de gérer les données chaînes.
 
-[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-
+[Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

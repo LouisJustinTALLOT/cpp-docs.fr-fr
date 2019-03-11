@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: e72101d2d9cdea90b3304ccdb82e7b81fe2975d3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c3917fea0f13e54d5f8f73599a2d28482bb6d259
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328537"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743937"
 ---
 # <a name="model"></a>.MODEL
 
@@ -23,7 +23,7 @@ Initialise le modèle de mémoire programme.
 
 ### <a name="parameters"></a>Paramètres
 
-*memoryModel*<br/>
+*memorymodel*<br/>
 Paramètre obligatoire qui détermine la taille des pointeurs de code et les données.
 
 *langtype*<br/>
@@ -44,7 +44,7 @@ Le tableau suivant répertorie les valeurs possibles pour chaque paramètre lors
 
 |Paramètre|valeurs 32 bits|valeurs 16 bits (prise en charge pour le développement de 16 bits antérieures)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memoryModel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
+|*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
 |*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
 |*stackoption*|Non utilisé|`NEARSTACK`, `FARSTACK`|
 
@@ -89,4 +89,3 @@ end
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)<br/>
-

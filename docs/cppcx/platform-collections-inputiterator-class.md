@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: d01519870d52a51a18e25f73d5caa853d90a8792
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455235"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745805"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator, classe
 
@@ -62,11 +62,11 @@ Nom de type de la classe de modèle InputIterator.
 
 `InputIterator`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
-**Espace de noms :** Platform::Collections
+**Espace de noms :** Platform::Collections
 
 ## <a name="ctor"></a>  InputIterator::InputIterator (constructeur)
 
@@ -81,7 +81,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
 
 ### <a name="parameters"></a>Paramètres
 
-*Iter*<br/>
+*iter*<br/>
 Objet itérateur.
 
 ## <a name="operator-arrow"></a>  InputIterator::operator -&gt; opérateur
@@ -98,7 +98,7 @@ pointer operator->() const;
 
 Adresse de l’élément spécifié par l’objet InputIterator actif.
 
-## <a name="operator-dereference"></a>  InputIterator::operator\* opérateur
+## <a name="operator-dereference"></a>  InputIterator::operator\* Operator
 
 Récupère une référence à l’élément spécifié par l’InputIterator actif.
 
@@ -150,9 +150,9 @@ La première syntaxe incrémente l'objet InputIterator actuel puis le retourne. 
 
 La première syntaxe InputIterator préincrémente l'objet InputIterator actuel.
 
-La deuxième syntaxe postincrémente l'objet InputIterator actuel. Le type `int` dans la deuxième syntaxe n’indique pas un opérande entier réel mais une post-incrémentation.
+La deuxième syntaxe postincrémente l'objet InputIterator actuel. Le type `int` dans la deuxième syntaxe n'indique pas un opérande entier réel mais une post-incrémentation.
 
-## <a name="operator-inequality"></a>  InputIterator::operator ! =, opérateur
+## <a name="operator-inequality"></a>  InputIterator::operator!= Operator
 
 Indique si l'InputIterator actif n'est pas égal à un InputIterator spécifié.
 

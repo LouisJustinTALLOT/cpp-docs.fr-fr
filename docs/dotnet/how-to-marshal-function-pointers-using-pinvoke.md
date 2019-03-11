@@ -1,5 +1,5 @@
 ---
-title: 'Comment : marshaler des pointeurs fonction à l’aide de PInvoke'
+title: 'Procédure : Marshaler des pointeurs fonction à l’aide de PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-ms.openlocfilehash: 2f12c86b7e32955622a4a2c598d01057e303a329
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435605"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742868"
 ---
-# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Comment : marshaler des pointeurs fonction à l’aide de PInvoke
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Procédure : Marshaler des pointeurs fonction à l’aide de PInvoke
 
 Cette rubrique explique comment les délégués managés peut être utilisé à la place des pointeurs de fonction lors de l’interaction avec l’utilisation des fonctionnalités de .NET Framework P/Invoke de fonctions non managées. Toutefois, les programmeurs Visual C++ sont encouragés à utiliser plutôt les fonctionnalités d’interopérabilité C++ (si possible), car P/Invoke peu une erreur de génération de rapports n’est pas de type sécurisé et peut être fastidieuse à implémenter. Si l’API non managée est empaqueté en tant que DLL et le code source n’est pas disponible, P/Invoke est la seule option. Sinon, consultez les rubriques suivantes :
 
 - [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [Guide pratique pour marshaler des rappels et des délégués à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+- [Guide pratique pour marshaler des rappels et des délégués à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
 
 Les API non managées qui prennent des pointeurs de fonctions comme arguments peuvent être appelées à partir du code managé avec un délégué managé à la place le pointeur de fonction native. Le compilateur automatiquement marshale le délégué à des fonctions non managées comme un pointeur de fonction et insère le code de transition managés/non managés non nécessaire.
 

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: 0c6c1bc099f8ff5d597d803c3963785902f9acd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be75ec497dff79d75c22bda3b7d24389db2c9c59
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573347"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751776"
 ---
 # <a name="lockwhen-enum"></a>lock_when, Enum
 
@@ -122,7 +122,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **Fichier d’en-tête** \<msclr\lock.h >
 

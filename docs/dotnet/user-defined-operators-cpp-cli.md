@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: 17f2f05ba6a8854a69fd2dd449a94d6b86a66d7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462d0d2819d4c65b0e37d39f24566a7152a44cf3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480013"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739982"
 ---
 # <a name="user-defined-operators-ccli"></a>Opérateurs définis par l'utilisateur (C++/CLI)
 
@@ -19,7 +19,7 @@ Dans un type référence, l’un des paramètres d’un opérateur défini par l
 
 - Un handle (`type` ^) à une instance du type englobant.
 
-- Une indirection de type référence (`type`^ & ou type ^ %) à un handle à une instance du type englobant.
+- Une indirection de type référence (`type`^ & ou type ^ %) pour un pointeur vers une instance du type englobant.
 
 Dans un type valeur, l’un des paramètres d’un opérateur défini par l’utilisateur statique doit être un d'entre eux :
 

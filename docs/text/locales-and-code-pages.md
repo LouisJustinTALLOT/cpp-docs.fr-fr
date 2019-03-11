@@ -15,16 +15,16 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: 0015e0a7a81abbd3472a8c845a9b8c0d8caf4618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610535"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750713"
 ---
 # <a name="locales-and-code-pages"></a>Paramètres régionaux et pages de codes
 
-ID de paramètres régionaux reflète les conventions locales et la langue pour une région géographique spécifique. Une langue donnée peut être parlée dans plusieurs pays/région ; par exemple, le portugais est parlé au Brésil et au Portugal. À l’inverse, un pays/région peut avoir plusieurs langues officielles. Par exemple, au Canada a deux langues : anglais et Français. Par conséquent, au Canada a deux paramètres régionaux distincts : anglais (Canada) et Français (Canada). Certaines catégories dépendent des paramètres régionaux, notamment la mise en forme des dates et le format d'affichage des valeurs monétaires.
+ID de paramètres régionaux reflète les conventions locales et la langue pour une région géographique spécifique. Une langue donnée peut être parlée dans plusieurs pays/région ; par exemple, le portugais est parlé au Brésil et au Portugal. À l’inverse, un pays/région peut avoir plusieurs langues officielles. Par exemple, au Canada a deux langues : L’anglais et Français. Par conséquent, au Canada a deux paramètres régionaux distincts : Anglais (Canada) et Français (Canada). Certaines catégories dépendent des paramètres régionaux, notamment la mise en forme des dates et le format d'affichage des valeurs monétaires.
 
 La langue détermine le texte et les données mises en forme des conventions, tandis que le pays/région détermine les conventions locales. Chaque langage possède un mappage unique, représenté par les pages de codes, qui inclut des caractères autres que ceux dans l’ordre alphabétique (par exemple, les signes de ponctuation et chiffres). Une page de codes est un jeu de caractères et est liée à la langue. Par conséquent, un [paramètres régionaux](../c-runtime-library/locale.md) est une combinaison unique de langue, pays/région et page de codes. Le paramètre de la page des paramètres régionaux et le code peut être modifié au moment de l’exécution en appelant le [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) (fonction).
 

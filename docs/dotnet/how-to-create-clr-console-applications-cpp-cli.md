@@ -5,12 +5,12 @@ helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: 9ce50266eeb17ad858891149489db85b03855aec
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d325bdc4122d85383ecaa49ca41c7709be869463
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426331"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747902"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Procédure : Créer des Applications Console CLR (C++ / c++ / CLI)
 
@@ -63,4 +63,3 @@ Quand vous utilisez le modèle Application console pour créer un projet, il ajo
 ## <a name="see-also"></a>Voir aussi
 
 [Projets CLR](../ide/files-created-for-clr-projects.md)
-

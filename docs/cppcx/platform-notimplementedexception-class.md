@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
-ms.openlocfilehash: 26e8900a10b25507f5091d9cc1f724c73ece7dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5262aaf85c73e2ff09259fe350e8b5600c68be95
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467585"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749358"
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException, classe
 
@@ -29,13 +29,13 @@ public ref class NotImplementedException : COMException,    IException,    IPrin
 
 Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 

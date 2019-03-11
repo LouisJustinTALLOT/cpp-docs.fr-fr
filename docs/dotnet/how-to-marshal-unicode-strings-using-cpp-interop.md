@@ -1,5 +1,5 @@
 ---
-title: 'Comment : marshaler des chaînes Unicode à l’aide de l’interopérabilité C++'
+title: 'Procédure : Marshaler des chaînes Unicode à l’aide d’interopérabilité C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: f08ea9d6eb879aa3b07ac0ff983637236368a11a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 920f06bd2197315b11f239827de76eba9591bad5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507781"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742664"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Comment : marshaler des chaînes Unicode à l’aide de l’interopérabilité C++
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Procédure : Marshaler des chaînes Unicode à l’aide d’interopérabilité C++
 
 Cette rubrique illustre une facette de l’interopérabilité de Visual C++. Pour plus d’informations, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

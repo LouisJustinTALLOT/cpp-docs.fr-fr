@@ -1,19 +1,19 @@
 ---
-title: 'Comment : utiliser un Type natif dans une Compilation - clr'
+title: 'Procédure : Utiliser un Type natif dans une Compilation - clr'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 0079be21b474858684e1abaaeb363820764a701d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459950"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746030"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Comment : utiliser un type natif dans une compilation /clr
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Procédure : Utiliser un Type natif dans une Compilation /clr
 
 Vous pouvez définir un type natif dans une **/CLR** compilation et toute utilisation de ce type natif à partir de l’assembly n’est valide. Toutefois, les types natifs ne sera pas disponibles pour une utilisation à partir des métadonnées référencées.
 

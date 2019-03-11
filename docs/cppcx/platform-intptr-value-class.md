@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: eda65255aa76d6a801bdc0f80c437a9dc975d8f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449138"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747110"
 ---
 # <a name="platformintptr-value-class"></a>Classe de valeur Platform::IntPtr
 
@@ -36,13 +36,13 @@ IntPtr a les membres suivants :
 |[IntPtr::op_explicit, opérateur](#op-explicit)|Convertit le paramètre spécifié en un IntPtr ou un pointeur en une valeur IntPtr.|
 |[IntPtr::ToInt32](#toint32)|Convertit l'IntPtr actif en un entier 32 bits.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 
@@ -58,7 +58,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 
 ### <a name="parameters"></a>Paramètres
 
-*valeur*<br/>
+*value*<br/>
 Handle ou pointeur 64 bits ou pointeur vers une valeur 64 bits, ou valeur 32 bits qui peut être convertie en valeur 64 bits.
 
 ## <a name="op-explicit"> </a> IntPtr::op_explicit, opérateur
@@ -73,13 +73,13 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
 
 ### <a name="parameters"></a>Paramètres
 
-*Value1*<br/>
+*value1*<br/>
 Pointeur vers un handle ou un IntPtr.
 
-*Value2*<br/>
+*value2*<br/>
 Entier 32 bits qui peut être converti en IntPtr.
 
-*valeur3*<br/>
+*value3*<br/>
 Un IntPtr.
 
 ### <a name="return-value"></a>Valeur de retour

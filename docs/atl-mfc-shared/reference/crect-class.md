@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178751"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739425"
 ---
 # <a name="crect-class"></a>CRect, classe
 
@@ -94,15 +94,15 @@ class CRect : public tagRECT
 |[CRect::operator-](#operator_-)|Soustrait les décalages donnés à partir de `CRect` ou dégonfle `CRect` et retourne le résultat `CRect`.|
 |[CRect::operator LPCRECT](#operator_lpcrect)|Convertit `CRect` en `LPCRECT`.|
 |[CRect::operator LPRECT](#operator_lprect)|Convertit `CRect` en `LPRECT`.|
-|[CRect::operator ! =](#operator_neq)|Détermine si `CRect` n’est pas égal à un rectangle.|
+|[CRect::operator !=](#operator_neq)|Détermine si `CRect` n’est pas égal à un rectangle.|
 |[CRect::operator &amp;](#operator_amp)|Crée l’intersection de `CRect` et un rectangle et retourne le résultat `CRect`.|
 |[CRect::operator &amp;=](#operator_amp_eq)|Jeux `CRect` égal à l’intersection de `CRect` et un rectangle.|
-|[CRect::operator&#124;](#operator_or)|Crée l’union de `CRect` et un rectangle et retourne le résultat `CRect`.|
+|[CRect::operator &#124;](#operator_or)|Crée l’union de `CRect` et un rectangle et retourne le résultat `CRect`.|
 |[CRect::operator &#124;=](#operator_or_eq)|Jeux `CRect` égal à l’union de `CRect` et un rectangle.|
 |[CRect::operator +](#operator_add)|Ajoute les décalages donnés à `CRect` ou augmente `CRect` et retourne le résultat `CRect`.|
 |[CRect::operator +=](#operator_add_eq)|Ajoute des offsets spécifiés au `CRect` ou augmente `CRect`.|
 |[CRect::operator =](#operator_eq)|Copie les dimensions d’un rectangle à `CRect`.|
-|[CRect::operator =](#operator_-_eq)|Soustrait des offsets spécifiés à partir de `CRect` ou dégonfle `CRect`.|
+|[CRect::operator -=](#operator_-_eq)|Soustrait des offsets spécifiés à partir de `CRect` ou dégonfle `CRect`.|
 |[CRect::operator ==](#operator_eq_eq)|Détermine si `CRect` est égal à un rectangle.|
 
 ## <a name="remarks"></a>Notes
@@ -855,7 +855,7 @@ BOOL operator==(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Fait référence à un rectangle source. Peut être un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -895,7 +895,7 @@ BOOL operator!=(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Fait référence à un rectangle source. Peut être un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -963,7 +963,7 @@ La troisième surcharge augmente `CRect` par le nombre de spécifié d’unités
    ASSERT(rect1 == rect2);
 ```
 
-##  <a name="operator_-_eq"></a>  CRect::operator =
+##  <a name="operator_-_eq"></a>  CRect::operator -=
 
 Déplacement les deux premières surcharges `CRect` par offsets spécifiés.
 
@@ -1011,7 +1011,7 @@ void operator&=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Contient un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou `CRect`.
 
 ### <a name="remarks"></a>Notes
@@ -1035,7 +1035,7 @@ void operator|=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rect*<br/>
 Contient un `CRect` ou [RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 ### <a name="remarks"></a>Notes
@@ -1099,7 +1099,7 @@ La troisième surcharge retourne un nouvel `CRect` qui est égal à `CRect` augm
    ASSERT(rectResult == rect2);
 ```
 
-##  <a name="operator_-"></a>  CRect::operator-
+##  <a name="operator_-"></a>  CRect::operator -
 
 Tout d’abord deux surcharges retournent un `CRect` objet est égal à `CRect` déplacé par offsets spécifiés.
 
@@ -1178,7 +1178,7 @@ L’intersection est le plus grand rectangle qui est contenu dans les deux recta
    ASSERT(rectResult == rect3);
 ```
 
-##  <a name="operator_or"></a>  CRect::operator&#124;
+##  <a name="operator_or"></a>  CRect::operator &#124;
 
 Retourne un `CRect` qui est l’union de `CRect` et *rect2*.
 
@@ -1504,4 +1504,3 @@ La largeur peut être négative.
 [CPoint, classe](cpoint-class.md)<br/>
 [CSize, classe](csize-class.md)<br/>
 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)
-

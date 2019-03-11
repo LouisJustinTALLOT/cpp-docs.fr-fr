@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9b4bdcb8a6e691d8f9f0f0f0c2e7d852b4885ea6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486279"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746823"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Vue d’ensemble du marshaling dans C++
 
@@ -23,7 +23,7 @@ En mode mixte, vous devez parfois marshaler des données entre les types managé
 
 |Header|Description|
 |---------------|-----------------|
-|Marshal.h|`marshal_context` classe et des fonctions de marshaling sans contexte|
+|marshal.h|`marshal_context` classe et des fonctions de marshaling sans contexte|
 |marshal_atl.h| Fonctions pour le marshaling des types d’ATL|
 |marshal_cppstd.h|Fonctions pour le marshaling des types C++ standard|
 |marshal_windows.h|Fonctions pour le marshaling des types de Windows|
@@ -38,28 +38,28 @@ Vous pouvez utiliser la bibliothèque de marshaling avec ou sans un [marshal_con
 
 |À partir de type|En type|Marshaler (méthode)|Fichier Include|
 |---------------|-------------|--------------------|------------------|
-|System::String ^|const char \*|marshal_context|Marshal.h|
-|const char \*|System::String ^|marshal_as|Marshal.h|
-|Char \*|System::String ^|marshal_as|Marshal.h|
-|System::String ^|wchar_t const\*|marshal_context|Marshal.h|
-|wchar_t const \*|System::String ^|marshal_as|Marshal.h|
-|wchar_t \*|System::String ^|marshal_as|Marshal.h|
+|System::String^|const char \*|marshal_context|marshal.h|
+|const char \*|System::String^|marshal_as|marshal.h|
+|Char \*|System::String^|marshal_as|marshal.h|
+|System::String^|wchar_t const\*|marshal_context|marshal.h|
+|wchar_t const \*|System::String^|marshal_as|marshal.h|
+|wchar_t \*|System::String^|marshal_as|marshal.h|
 |System::IntPtr|HANDLE|marshal_as|marshal_windows.h|
 |HANDLE|System::IntPtr|marshal_as|marshal_windows.h|
-|System::String ^|BSTR|marshal_context|marshal_windows.h|
-|BSTR|System::String ^|marshal_as|Marshal.h|
-|System::String ^|bstr_t|marshal_as|marshal_windows.h|
-|bstr_t|System::String ^|marshal_as|marshal_windows.h|
-|System::String ^|std::String|marshal_as|marshal_cppstd.h|
-|std::String|System::String ^|marshal_as|marshal_cppstd.h|
-|System::String ^|std::wstring|marshal_as|marshal_cppstd.h|
-|std::wstring|System::String ^|marshal_as|marshal_cppstd.h|
-|System::String ^|CStringT\<char >|marshal_as|marshal_atl.h|
-|CStringT\<char >|System::String ^|marshal_as|marshal_atl.h|
-|System::String ^|CStringT < wchar_t >|marshal_as|marshal_atl.h|
-|CStringT < wchar_t >|System::String ^|marshal_as|marshal_atl.h|
-|System::String ^|CComBSTR|marshal_as|marshal_atl.h|
-|CComBSTR|System::String ^|marshal_as|marshal_atl.h|
+|System::String^|BSTR|marshal_context|marshal_windows.h|
+|BSTR|System::String^|marshal_as|marshal.h|
+|System::String^|bstr_t|marshal_as|marshal_windows.h|
+|bstr_t|System::String^|marshal_as|marshal_windows.h|
+|System::String^|std::string|marshal_as|marshal_cppstd.h|
+|std::string|System::String^|marshal_as|marshal_cppstd.h|
+|System::String^|std::wstring|marshal_as|marshal_cppstd.h|
+|std::wstring|System::String^|marshal_as|marshal_cppstd.h|
+|System::String^|CStringT\<char>|marshal_as|marshal_atl.h|
+|CStringT\<char>|System::String^|marshal_as|marshal_atl.h|
+|System::String^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
+|CStringT<wchar_t>|System::String^|marshal_as|marshal_atl.h|
+|System::String^|CComBSTR|marshal_as|marshal_atl.h|
+|CComBSTR|System::String^|marshal_as|marshal_atl.h|
 
 Marshaling de requiert un contexte uniquement lorsque marshaler les types de données managées au mode natif et que vous convertissez en type natif n’a pas d’un destructeur pour automatique de nettoyage. Le contexte de marshaling détruit le type de données native allouées dans son destructeur. Par conséquent, les conversions qui requièrent un contexte sera valides uniquement jusqu'à ce que le contexte est supprimé. Pour enregistrer toutes les valeurs marshalés, vous devez copier les valeurs dans vos propres variables.
 
@@ -70,7 +70,7 @@ Cet exemple montre comment inclure le répertoire msclr dans une déclaration d�
 
 `#include "msclr\marshal_cppstd.h"`
 
-La bibliothèque de marshaling est extensible afin que vous pouvez ajouter vos propres types de marshaling. Pour plus d’informations sur l’extension de la bibliothèque de marshaling, consultez [Comment : étendre la bibliothèque de Marshaling](../dotnet/how-to-extend-the-marshaling-library.md).
+La bibliothèque de marshaling est extensible afin que vous pouvez ajouter vos propres types de marshaling. Pour plus d’informations sur l’extension de la bibliothèque de marshaling, consultez [Comment : Étendre la bibliothèque de Marshaling](../dotnet/how-to-extend-the-marshaling-library.md).
 
 Dans les versions antérieures, vous pouvez marshaler des données à l’aide de [non managé](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Pour plus d’informations sur `PInvoke`, consultez [appelant des fonctions natives à partir de Code managé](../dotnet/calling-native-functions-from-managed-code.md).
 

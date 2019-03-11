@@ -1,5 +1,5 @@
 ---
-title: Exigences pour les éléments de conteneur STL/CLR
+title: Spécifications pour les éléments de conteneur STL/CLR
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - containers, STL/CLR
 - containers, C++ Standard Library
 ms.assetid: 59ab240c-15bf-4701-a9f9-e7c56e5ab53f
-ms.openlocfilehash: 0744d38a08dbd972b786e1cc74c112322ecf181f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113624b15a0c2c6062feb7113c4771fda6d6cf39
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428572"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739403"
 ---
-# <a name="requirements-for-stlclr-container-elements"></a>Exigences pour les éléments de conteneur STL/CLR
+# <a name="requirements-for-stlclr-container-elements"></a>Spécifications pour les éléments de conteneur STL/CLR
 
 Tous les types de référence sont insérées dans des conteneurs STL/CLR doivent avoir au minimum, les éléments suivants :
 
@@ -31,4 +31,4 @@ Comme les types référence, les types valeur et les descripteurs pour faire ré
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

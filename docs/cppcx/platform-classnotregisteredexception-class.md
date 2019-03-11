@@ -1,5 +1,5 @@
 ---
-title: Platform::ClassNotRegisteredException, classe
+title: Classe Platform::ClassNotRegisteredException
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ClassNotRegisteredException
 ms.assetid: 8f8871d8-51b9-46e8-902e-ae023c9f1de9
-ms.openlocfilehash: a295331dd91768f1732a40a07837ba93a6e9fdfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9276561b4291ac25c1d623bc308b7fae40b9ab81
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464647"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745029"
 ---
-# <a name="platformclassnotregisteredexception-class"></a>Platform::ClassNotRegisteredException, classe
+# <a name="platformclassnotregisteredexception-class"></a>Classe Platform::ClassNotRegisteredException
 
 Levée lorsqu'une classe COM n'a pas été inscrite.
 
@@ -29,13 +29,13 @@ public ref class ClassNotRegisteredException : COMException,    IException,    I
 
 Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 

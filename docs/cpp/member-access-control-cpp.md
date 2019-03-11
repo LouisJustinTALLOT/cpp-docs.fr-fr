@@ -6,12 +6,12 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 367ee5183498453b9ce647c8e91ad1194f90fbd2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176223"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740272"
 ---
 # <a name="member-access-control-c"></a>Contrôle d'accès aux membres (C++)
 
@@ -232,7 +232,7 @@ Dans l'exemple précédent, l'appel de la fonction virtuelle `GetState` à l'aid
 
 ## <a name="access-control-with-multiple-inheritance"></a>Contrôle d'accès avec héritage multiple
 
-Dans les treillis à héritage multiple impliquant des classes de base virtuelles, un nom donné est accessible via plusieurs chemins. Comme un contrôle d’accès différent peut être appliqué le long de ces différents chemins, le compilateur choisit le chemin qui fournit le plus souvent l’accès. Voir l'illustration suivante.
+Dans les treillis à héritage multiple impliquant des classes de base virtuelles, un nom donné est accessible via plusieurs chemins. Comme un contrôle d'accès différent peut être appliqué le long de ces différents chemins, le compilateur choisit le chemin qui fournit le plus souvent l'accès. Voir l'illustration suivante.
 
 ![Accès avec les chemins d’accès d’un graphique d’héritage](../cpp/media/vc38v91.gif "accès le long des chemins d’accès d’un graphique d’héritage") <br/>
 Chemins d’accès d’un graphique d’héritage

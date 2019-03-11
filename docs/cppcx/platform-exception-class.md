@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 8579b3506d727f5c4faeb56a9c1f3ea88b7a4b6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464959"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743421"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 
@@ -37,7 +37,7 @@ La classe `Exception` comporte également les types de membres ci-dessous.
 
 |Membre|Description|
 |------------|-----------------|
-|[Exception::exception](#ctor)|Initialise une nouvelle instance de la classe `Exception`.|
+|[Exception::Exception](#ctor)|Initialise une nouvelle instance de la classe `Exception`.|
 
 ### <a name="methods"></a>Méthodes
 
@@ -53,16 +53,16 @@ La classe Exception comporte aussi les propriétés ci-dessous.
 
 |Membre|Description|
 |------------|-----------------|
-|[Exception::HRESULT](#hresult)|HRESULT qui correspond à l'exception.|
+|[Exception::HResult](#hresult)|HRESULT qui correspond à l'exception.|
 |[Exception::Message](#message)|Message qui décrit l'exception. Cette valeur est en lecture seule et ne peut pas être modifiée après la construction d' `Exception` .|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 
@@ -79,7 +79,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>Paramètres
 
-*ressources humaines*<br/>
+*hr*<br/>
 Valeur HRESULT que vous obtenez généralement à partir d'un appel à une méthode COM. Si la valeur est 0, ce qui est égal à S_OK, cette méthode lève [Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) , car les méthodes COM qui réussissent ne doivent pas lever d’exceptions.
 
 *message*<br/>
@@ -108,7 +108,7 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>Paramètres
 
-*HRESULT*<br/>
+*hresult*<br/>
 Erreur HRESULT qui est représentée par l'exception.
 
 *message*<br/>

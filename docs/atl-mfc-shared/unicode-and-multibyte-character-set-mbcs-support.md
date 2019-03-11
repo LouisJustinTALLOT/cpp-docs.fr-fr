@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e8759ffbe61b80c74d8b5aba5bc50886d6b23d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596649"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743901"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Prise en charge des jeux de caractères Unicode et MBCS (Multibyte Character Set)
 
@@ -35,11 +35,11 @@ Ces bibliothèque, débogueur et fichiers DLL sont utilisés pour prendre en cha
 
 |||||
 |-|-|-|-|
-|UAFXCW.LIB|UAFXCW. PDB|UAFXCWD. LIB|UAFXCWD. PDB|
+|UAFXCW.LIB|UAFXCW.PDB|UAFXCWD.LIB|UAFXCWD.PDB|
 |MFC*version*U.LIB|MFC*version*U.PDB|MFC*version*U.DLL|MFC*version*UD. LIB|
-|MFC*version*UD. PDB|MFC*version*UD. DLL|MFCS*version*U.LIB|MFCS*version*U.PDB|
-|MFCS*version*UD. LIB|MFCS*version*UD. PDB|MFCM*version*U.LIB|MFCM*version*U.PDB|
-|MFCM*version*U.DLL|MFCM*version*UD. LIB|MFCM*version*UD. PDB|MFCM*version*UD. DLL|
+|MFC*version*UD.PDB|MFC*version*UD. DLL|MFCS*version*U.LIB|MFCS*version*U.PDB|
+|MFCS*version*UD. LIB|MFCS*version*UD.PDB|MFCM*version*U.LIB|MFCM*version*U.PDB|
+|MFCM*version*U.DLL|MFCM*version*UD.LIB|MFCM*version*UD.PDB|MFCM*version*UD.DLL|
 
 (*version* représente le numéro de version du fichier ; par exemple, « 140 » signifie que la version 14.0.)
 
@@ -95,5 +95,5 @@ De même, `CString` méthodes sont implémentées à l’aide des mappages de ty
 
 ## <a name="see-also"></a>Voir aussi
 
-[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Manipulation de chaînes](../c-runtime-library/string-manipulation-crt.md)

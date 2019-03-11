@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
-ms.openlocfilehash: c2a1db60700f600360942d2e748badf6e932ce72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c97ce0171fcf8f28254ce3f91b91f4d1711ad813
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548159"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748409"
 ---
 # <a name="platformboolean-value-class"></a>Classe de valeur Platform::Boolean
 
@@ -28,13 +28,13 @@ public value struct Boolean
 
 Boolean contient les méthodes Equals(), GetHashCode(), et ToString() dérivées de la [Platform::Object Class](../cppcx/platform-object-class.md), et la méthode GetTypeCode() dérivée de la [Platform::Type Class](../cppcx/platform-type-class.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 

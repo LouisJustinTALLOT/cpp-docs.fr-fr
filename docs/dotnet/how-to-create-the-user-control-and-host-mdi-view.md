@@ -1,28 +1,28 @@
 ---
-title: "Comment : créer le contrôle utilisateur et héberger l'affichage MDI"
+title: 'Procédure : Créer le contrôle utilisateur et héberger l’affichage MDI'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: c2705ef1938684d8521316436fccaae367629584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509120"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738761"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Comment : créer le contrôle utilisateur et héberger l'affichage MDI
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Procédure : Créer le contrôle utilisateur et héberger l’affichage MDI
 
 Les étapes suivantes montrent comment créer un contrôle utilisateur de .NET Framework, créer le contrôle utilisateur dans une bibliothèque de classes de contrôle (plus précisément, un projet de bibliothèque de contrôles Windows), puis compiler le projet dans un assembly. Le contrôle peut ensuite être consommé à partir d’une application MFC qui utilise des classes dérivées de [classe CView](../mfc/reference/cview-class.md) et [CWinFormsView, classe](../mfc/reference/cwinformsview-class.md).
 
-Pour plus d’informations sur la création d’un contrôle utilisateur Windows Forms et de créer une bibliothèque de classes de contrôle, consultez [Comment : Author User Controls](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
+Pour plus d’informations sur la création d’un contrôle utilisateur Windows Forms et de créer une bibliothèque de classes de contrôle, consultez [Comment : Créer des contrôles utilisateur](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
 
 > [!NOTE]
 >  Dans certains cas, des contrôles Windows Forms, tel qu’un contrôle de grille tiers, ne peuvent pas se comportent de façon fiable quand ils sont hébergés dans une application MFC. Une solution de contournement recommandée consiste à placer un contrôle d’utilisateur Windows Forms dans l’application MFC et de placer le contrôle de grille par des tiers à l’intérieur du contrôle utilisateur.
 
-Cette procédure suppose que vous avez créé un projet de bibliothèque de contrôles Windows Forms nommé WindowsFormsControlLibrary1, selon la procédure décrite dans [Comment : créer le contrôle utilisateur et l’héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Cette procédure suppose que vous avez créé un projet de bibliothèque de contrôles Windows Forms nommé WindowsFormsControlLibrary1, selon la procédure décrite dans [Comment : Créer le contrôle utilisateur et l’héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Pour créer l’application MFC hôte
 

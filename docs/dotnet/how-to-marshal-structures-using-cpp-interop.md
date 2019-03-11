@@ -1,5 +1,5 @@
 ---
-title: 'Comment : marshaler des structures à l’aide de l’interopérabilité C++'
+title: 'Procédure : Marshaler des Structures à l’aide de C++ Interop'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-ms.openlocfilehash: c44b23bf0f73191b86b4970c57313d9bc38c8b7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93aeabc3fe984bee8a9281281320d61dccd182bf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521327"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739384"
 ---
-# <a name="how-to-marshal-structures-using-c-interop"></a>Comment : marshaler des structures à l’aide de l’interopérabilité C++
+# <a name="how-to-marshal-structures-using-c-interop"></a>Procédure : Marshaler des Structures à l’aide de C++ Interop
 
 Cette rubrique illustre une facette de l’interopérabilité de Visual C++. Pour plus d’informations, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
@@ -24,7 +24,7 @@ Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.m
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre le passage d’une structure d’une fonction managée à une fonction non managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient les types de données intrinsèques simples uniquement (consultez [Types blittables et Non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez [Comment : marshaler Embedded pointeurs à l’aide de C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+L’exemple suivant illustre le passage d’une structure d’une fonction managée à une fonction non managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient les types de données intrinsèques simples uniquement (consultez [Types blittables et Non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez [Comment : Marshaler des pointeurs à l’aide de C++ Interop incorporés](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```
 // PassStruct1.cpp
@@ -82,7 +82,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre le passage d’une structure à partir d’une fonction non managée à une fonction managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient les types de données intrinsèques simples uniquement (consultez [Types blittables et Non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez [Comment : marshaler Embedded pointeurs à l’aide de C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+L’exemple suivant illustre le passage d’une structure à partir d’une fonction non managée à une fonction managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient les types de données intrinsèques simples uniquement (consultez [Types blittables et Non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez [Comment : Marshaler des pointeurs à l’aide de C++ Interop incorporés](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```
 // PassStruct2.cpp

@@ -1,5 +1,5 @@
 ---
-title: Platform::Array (classe)
+title: Classe Platform::Array
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 6be34e801f7314efe76a4bea61caf13693eee31d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 597f8e32e2da95370169cdbfe2ccd209296322cc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661095"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751659"
 ---
-# <a name="platformarray-class"></a>Platform::Array (classe)
+# <a name="platformarray-class"></a>Classe Platform::Array
 
 Représente un tableau unidimensionnel et modifiable qui peut être reçu et passé via l'interface binaire d'application (ABI).
 
@@ -47,7 +47,7 @@ Consultez [Platform::writeonlyarray, classe](../cppcx/platform-writeonlyarray-cl
 
 |||
 |-|-|
-|[Array::value](#value)|Récupère un handle vers le tableau actuel.|
+|[Array::Value](#value)|Récupère un handle vers le tableau actuel.|
 
 ### <a name="remarks"></a>Notes
 
@@ -61,7 +61,7 @@ Le système de type Windows Runtime ne prend pas en charge le concept des tablea
 
 Cette classe est définie dans l'en-tête vccorlib.h, qui est inclus automatiquement par le compilateur. Il est visible dans IntelliSense mais pas dans Explorateur d’objets, car il n’est pas un type public défini dans platform.winmd.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/ZW**
 

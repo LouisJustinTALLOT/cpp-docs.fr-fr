@@ -1,5 +1,5 @@
 ---
-title: 'Temps écoulé : Les Classes à usage général'
+title: 'Temps écoulé : Classes à usage général'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - adding dates
@@ -11,18 +11,17 @@ helpviewer_keywords:
 - intervals, date and time
 - calculations, date and time
 ms.assetid: e5c5d3d2-ce1d-409e-875c-98848434e716
-ms.openlocfilehash: ebaf77b34411cd55cb3a028bcce9109613b63ed9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5990f6f5db0270c8d24ff35b5c9bbea5b24e6ed7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676735"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742036"
 ---
-# <a name="elapsed-time-general-purpose-classes"></a>Temps écoulé : Les Classes à usage général
+# <a name="elapsed-time-general-purpose-classes"></a>Temps écoulé : Classes à usage général
 
 La procédure suivante montre comment calculer la différence entre deux `CTime` objets et obtenez un `CTimeSpan` résultat. Utilisez le `CTime` et `CTimeSpan` objets pour calculer le temps écoulé, comme suit :
 
    [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]
 
 Une fois que vous avez calculé `elapsedTime`, vous pouvez utiliser les fonctions membres de `CTimeSpan` pour extraire les composants de la valeur de temps écoulé.
-

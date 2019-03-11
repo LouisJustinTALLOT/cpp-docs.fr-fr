@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499867"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747123"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
 
@@ -102,11 +102,11 @@ Si vous essayez d’utiliser un **vecteur** type dans une valeur de retour publi
 
 `Vector`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
-**Espace de noms :** Platform::Collections
+**Espace de noms :** Platform::Collections
 
 ## <a name="append"></a>  Vector::Append, méthode
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Paramètres
 
-*valeur*<br/>
+*value*<br/>
 Élément à rechercher.
 
 *index*<br/>
@@ -257,7 +257,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
-*Élément*<br/>
+*item*<br/>
 Un élément à insérer dans le vecteur après l’élément spécifié par *index*. Le type de *élément* est défini par le *T* typename.
 
 ## <a name="removeat"></a>  Vector::RemoveAt, méthode
@@ -315,7 +315,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*<br/>
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
-*Élément*<br/>
+*item*<br/>
 Valeur à assigner à l’élément spécifié. Le type de *élément* est défini par le *T* typename.
 
 ## <a name="size"></a>  Vector::Size, méthode
@@ -375,7 +375,7 @@ Nombre d’éléments d’une collection d’objets utilisée pour initialiser l
 *size*<br/>
 Nombre d'éléments dans l'objet Vector.
 
-*valeur*<br/>
+*value*<br/>
 Valeur utilisée pour initialiser chaque élément de l'objet Vector actuel.
 
 *v*<br/>
