@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178067"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740393"
 ---
 # <a name="cpoint-class"></a>CPoint, classe
 
@@ -47,10 +47,10 @@ class CPoint : public tagPOINT
 |Nom|Description|
 |----------|-----------------|
 |[CPoint::operator-](#operator_-)|Retourne la différence entre un `CPoint` et une taille ou la négation d’un point ou la différence de taille entre deux points, ou le décalage par une taille négative.|
-|[CPoint::operator ! =](#operator_neq)|Vérifie l’inégalité entre deux points.|
+|[CPoint::operator !=](#operator_neq)|Vérifie l’inégalité entre deux points.|
 |[CPoint::operator +](#operator_add)|Retourne la somme d’un `CPoint` et une taille ou un point, ou un `CRect` compensée par une taille.|
 |[CPoint::operator +=](#operator_add_eq)|Décalages `CPoint` en ajoutant une taille ou un point.|
-|[CPoint::operator =](#operator_-_eq)|Décalages `CPoint` en soustrayant une taille ou un point.|
+|[CPoint::operator -=](#operator_-_eq)|Décalages `CPoint` en soustrayant une taille ou un point.|
 |[CPoint::operator ==](#operator_eq_eq)|Vérifie l’égalité entre deux points.|
 
 ## <a name="remarks"></a>Notes
@@ -147,10 +147,10 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*décalage x*<br/>
+*xOffset*<br/>
 Spécifie la valeur de décalage la `x` membre de la `CPoint`.
 
-*décalage y*<br/>
+*yOffset*<br/>
 Spécifie la valeur de décalage la `y` membre de la `CPoint`.
 
 *point*<br/>
@@ -234,7 +234,7 @@ Par exemple, l’ajout `CPoint(5, -7)` à une variable qui contient `CPoint(30, 
 
 [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>  CPoint::operator =
+##  <a name="operator_-_eq"></a>  CPoint::operator -=
 
 La première surcharge soustrait une taille à partir de la `CPoint`.
 
@@ -298,7 +298,7 @@ Ajout d’un rectangle à un point retourne le rectangle après décalé par le 
 
 [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CPoint::operator-
+##  <a name="operator_-"></a>  CPoint::operator -
 
 Utilisez une des deux premières surcharges à soustraire un `CPoint` ou `CSize` à partir de l’objet `CPoint`.
 
@@ -347,4 +347,3 @@ Utilisez l’opérateur unaire à inverser un point. Par exemple, à l’aide de
 [POINT, Structure](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect, classe](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize, classe](../../atl-mfc-shared/reference/csize-class.md)
-

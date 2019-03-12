@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 4974571764c22b26e84e93c68d679afc8a1cea73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573366"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746199"
 ---
 # <a name="exec-wexec-functions"></a>_exec, _wexec, fonctions
 
@@ -80,7 +80,7 @@ La lettre à la fin du nom de fonction détermine la variance.
 |`p`|La variable d'environnement `PATH` est utilisée pour rechercher le fichier à exécuter.|
 |`v`|`argv`, un tableau de pointeurs vers des arguments de ligne de commande, est passé à `_exec`. Utilisée généralement quand le nombre de paramètres du nouveau processus est variable.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Chaque fonction `_exec` charge et exécute un nouveau processus. Toutes les fonctions `_exec` utilisent la même fonction de système d’exploitation ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). Les fonctions `_exec` gèrent automatiquement des arguments de chaîne de caractères multioctets de façon appropriée, en identifiant des séquences de caractères multioctets selon la page de codes multioctets actuellement utilisée. Les fonctions `_wexec` sont des versions à caractères larges des fonctions `_exec`. Les fonctions `_wexec` se comportent de la même façon que leurs équivalents de famille `_exec`, sauf qu'elles ne gèrent pas les chaînes de caractères multioctets.
 
@@ -229,7 +229,7 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** process.h
 

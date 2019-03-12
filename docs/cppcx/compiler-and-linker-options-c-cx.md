@@ -2,12 +2,12 @@
 title: Options du compilateur et de l'éditeur de liens (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-ms.openlocfilehash: 2165d802e6ff4bd530acac7c1ba6185c732a6499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577283"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750908"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Options du compilateur et de l'éditeur de liens (C++/CX)
 
@@ -31,7 +31,7 @@ La variable d’environnement %LIBPATH% spécifie le chemin par défaut pour rec
 |Option|Description|
 |------------|-----------------|
 |/APPCONTAINER[:NO]|Marque le fichier exécutable comme exécutable dans l’appcontainer (uniquement).|
-|/ WINMD [ : {AUCUNE&AMP;#124;UNIQUEMENT}]|Émet un fichier .winmd et un fichier binaire associé. Cette option doit être passée à l’éditeur de liens pour qu’un .winmd soit émis.<br /><br /> **NO**: ne produit pas de fichier .winmd, mais produit un fichier binaire.<br /><br /> **ONLY**: produit un fichier .winmd, mais ne produit pas de fichier binaire.|
+|/WINMD[:{NO&#124;ONLY}]|Émet un fichier .winmd et un fichier binaire associé. Cette option doit être passée à l’éditeur de liens pour qu’un .winmd soit émis.<br /><br /> **NO**: ne produit pas de fichier .winmd, mais produit un fichier binaire.<br /><br /> **ONLY**: produit un fichier .winmd, mais ne produit pas de fichier binaire.|
 |/WINMDFILE:*nom_fichier*|Nom du fichier .winmd à émettre, au lieu du nom du fichier .winmd par défaut. Si plusieurs noms de fichier sont spécifiés sur la ligne de commande, le dernier nom est utilisé.|
 |/WINMDDELAYSIGN[:NO]|Signe partiellement le fichier .winmd et place la clé publique dans le fichier binaire.<br /><br /> **NO**: (par défaut) ne signe pas le fichier .winmd.<br /><br /> /WINMDDELAYSIGN n’a aucun effet à moins de spécifier également /WINMDKEYFILE ou /WINMDKEYCONTAINER.|
 |/WINMDKEYCONTAINER:*nom*|Spécifie un conteneur de clé pour signer un assembly. Le paramètre *nom* correspond au conteneur de clé qui est utilisé pour signer le fichier de métadonnées.|

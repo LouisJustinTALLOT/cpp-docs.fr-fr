@@ -1,19 +1,19 @@
 ---
-title: 'Comment : ajouter le routage des commandes au contrôle Windows Forms'
+title: 'Procédure : Ajoutez la commande routage pour les Windows Forms de contrôle'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-ms.openlocfilehash: b3f93574e007fdb1b7d4009d85c573223091adf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447110"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750296"
 ---
-# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Comment : ajouter le routage des commandes au contrôle Windows Forms
+# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Procédure : Ajoutez la commande routage pour les Windows Forms de contrôle
 
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) achemine les commandes et les messages de l’interface utilisateur de commande de mise à jour vers le contrôle utilisateur pour lui permettre de gérer les commandes MFC (par exemple, les éléments de menu de frame et boutons de barre d’outils).
 
@@ -21,11 +21,11 @@ Le contrôle utilisateur utilise [ICommandTarget::Initialize](../mfc/reference/i
 
 `CWinFormsView` gère plusieurs des notifications d’affichage MFC communes en les envoyant au contrôle utilisateur managé. Ces notifications incluent le [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) et [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) méthodes.
 
-Cette rubrique suppose que vous avez déjà effectué [Comment : créer le contrôle utilisateur et l’héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) et [Comment : créer le contrôle utilisateur et l’hôte de l’affichage MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+Cette rubrique suppose que vous avez déjà effectué [Comment : Créer le contrôle utilisateur et l’héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) et [Comment : Créer le contrôle utilisateur et héberger l’affichage MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Pour créer l’application MFC hôte
 
-1. Ouvrez la bibliothèque de contrôles Windows Forms vous avez créé dans [Comment : créer le contrôle utilisateur et l’héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+1. Ouvrez la bibliothèque de contrôles Windows Forms vous avez créé dans [Comment : Créer le contrôle utilisateur et l’héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 1. Ajoutez une référence à mfcmifc80.dll en cliquant sur le nœud du projet dans **l’Explorateur de solutions**, en sélectionnant **ajouter**, **référence**, puis accédez à Microsoft Visual Studio 10.0\VC\atlmfc\lib.
 
@@ -41,7 +41,7 @@ Cette rubrique suppose que vous avez déjà effectué [Comment : créer le cont
     partial class UserControl1
     ```
 
-   Par ceci :
+   en ceci :
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
@@ -70,7 +70,7 @@ Cette rubrique suppose que vous avez déjà effectué [Comment : créer le cont
     }
     ```
 
-1. Ouvrez l’application MFC que vous avez créé dans [Comment : créer le contrôle utilisateur et l’hôte de l’affichage MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+1. Ouvrez l’application MFC que vous avez créé dans [Comment : Créer le contrôle utilisateur et héberger l’affichage MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 1. Ajoutez une option de menu qui appelle `singleMenuHandler`.
 

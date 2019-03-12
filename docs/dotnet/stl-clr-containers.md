@@ -6,18 +6,18 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 1787e18cb36c77429cd4957bab167c77d5e25d8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496081"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744351"
 ---
 # <a name="stlclr-containers"></a>STL/CLR, conteneurs
 
 La bibliothèque STL/CLR se compose de conteneurs qui sont similaires à ceux trouvés dans la bibliothèque Standard C++, mais elle s’exécute dans un environnement managé du .NET Framework. Il n’est pas mis à jour avec la bibliothèque Standard C++ réelle et est conservé pour la prise en charge héritée.
 
-Ce document fournit une vue d’ensemble des conteneurs dans STL/CLR, tels que les exigences pour les éléments conteneurs, les types d’éléments que vous pouvez insérer dans des conteneurs, et les problèmes de propriété avec les éléments des conteneurs. Le cas échéant, les différences entre la bibliothèque Standard C++ native et STL/CLR sont indiquées.
+Ce document fournit une vue d'ensemble des conteneurs dans STL/CLR, tels que les conditions requises pour les éléments conteneurs, les types d'éléments que vous pouvez insérer dans des conteneurs, et les problèmes de propriété avec les éléments des conteneurs. Le cas échéant, les différences entre la bibliothèque Standard C++ native et STL/CLR sont indiquées.
 
 ## <a name="requirements-for-container-elements"></a>Exigences pour les éléments de conteneurs
 
@@ -312,4 +312,4 @@ Lorsque vous appelez une méthode clear ou erase d'un conteneur de handles d'obj
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)

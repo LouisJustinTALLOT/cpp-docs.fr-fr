@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CIsqrt intrinsic
 - _CIsqrt intrinsic
 ms.assetid: 663548ea-398c-48ee-8397-a787c6ebb937
-ms.openlocfilehash: 4e76136935aba4e7fa3968e84d3ca2702a12f26e
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 5042be822df7789d30d2b4ea2d5be6cf8a081ef9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703231"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749384"
 ---
 # <a name="cisqrt"></a>_CIsqrt
 
@@ -37,7 +37,7 @@ Calcule la racine carrée de la valeur supérieure de la pile.
 void __cdecl _CIsqrt();
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Cette version de la fonction `sqrt` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.
 

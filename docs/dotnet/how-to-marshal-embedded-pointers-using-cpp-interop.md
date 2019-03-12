@@ -1,5 +1,5 @@
 ---
-title: 'Comment : marshaler des pointeurs incorporés à l’aide de l’interopérabilité C++'
+title: 'Procédure : Marshaler des pointeurs incorporés à l’aide d’interopérabilité C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: d48297118fde98889acc0fd5f4abd29ee177cd8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493730"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738476"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Comment : marshaler des pointeurs incorporés à l’aide de l’interopérabilité C++
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Procédure : Marshaler des pointeurs incorporés à l’aide d’interopérabilité C++
 
 Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.md) directives #pragma pour implémenter des fonctions managées et dans le même fichier, mais ces fonctions interagissent de la même manière, si elles sont définies dans des fichiers distincts. Fichiers contenant uniquement des fonctions non managées ne doivent pas être compilé avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 

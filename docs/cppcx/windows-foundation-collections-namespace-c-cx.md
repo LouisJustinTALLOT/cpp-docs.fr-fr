@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-ms.openlocfilehash: 1fe48f457f2c44720ad7ecec349a68e63a05268b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a8118886f4556343f2e4a494fdbea6d240d1c77
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498304"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738744"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections (espace de noms) (C++/CX)
 
@@ -37,9 +37,8 @@ namespace Windows {
 |[end, fonction](../cppcx/end-function.md)|Retourne un itérateur qui pointe au-delà de la fin d’une collection.|
 |[to_vector, fonction](../cppcx/to-vector-function.md)|Retourne une collection sous la forme d’un std::vector.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
-**Espace de noms :** Windows::Foundation::Collections
-
+**Espace de noms :** Windows::Foundation::Collections

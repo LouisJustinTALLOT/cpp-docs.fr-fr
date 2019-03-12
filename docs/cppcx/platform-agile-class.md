@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471199"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749271"
 ---
 # <a name="platformagile-class"></a>Platform::Agile, classe
 
@@ -72,13 +72,13 @@ La classe `Agile<T>` est une classe C++ native standard qui nécessite `agile.h`
 
 `Agile`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **En-tête :** agile.h
 
@@ -137,7 +137,7 @@ Handle vers l’objet représenté par l’objet Agile actif.
 
 Le type de la valeur de retour est en réalité un type interne non divulgué. Un moyen pratique pour contenir la valeur de retour est pour l’assigner à une variable est déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myAgileTvariable->Get();`.
 
-## <a name="getaddressof"></a>  Agile::getaddressof, méthode
+## <a name="getaddressof"></a>  Agile::GetAddressOf Method
 
 Réinitialise l’objet Agile actif, puis retourne l’adresse d’un handle vers un objet de type `T`.
 
@@ -234,7 +234,7 @@ Le type spécifié par le nom de type du modèle.
 *object*<br/>
 L'objet ou le handle vers un objet qui est copié ou déplacé vers l'objet Agile actuel.
 
-*LP*<br/>
+*lp*<br/>
 Le pointeur d'interface IUnknown d'un objet.
 
 ### <a name="return-value"></a>Valeur de retour

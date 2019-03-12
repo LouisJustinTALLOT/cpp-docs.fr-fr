@@ -2,12 +2,12 @@
 title: Créer un projet Linux C++ dans Visual Studio
 ms.date: 09/12/2018
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 394fc5727035dd5a65b67ebf26a925fd3484582e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd5ab1d2bc1077f366082bf8767f8f690173ac8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623026"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745158"
 ---
 # <a name="create-a-new-linux-project"></a>Créer un projet Linux
 
@@ -28,4 +28,3 @@ Pour créer un projet Linux dans Visual Studio, effectuez les étapes suivantes�
    | **Application console (Linux)** | Projet ciblé pour n’importe quel ordinateur Linux avec un exemple de code écrit afin de sortir un texte vers la console
    | **Projet vide (Linux)**       | Projet ciblé pour n’importe quel ordinateur Linux sans exemple de code écrit
    | **Projet Makefile (Linux)**    | Projet ciblé pour n’importe quel ordinateur Linux qui sera généré à l’aide d’un système de génération Makefile standard
-

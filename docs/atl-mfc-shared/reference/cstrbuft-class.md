@@ -1,5 +1,5 @@
 ---
-title: CStrBufT, classe
+title: CStrBufT Class
 ms.date: 10/18/2018
 f1_keywords:
 - CStrBufT
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: e33bea159d2915b86fc77381f69dc2a745af68f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81c3b429089eab3ba95c178e3fc7cf2bf55783a2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492819"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747448"
 ---
-# <a name="cstrbuft-class"></a>CStrBufT, classe
+# <a name="cstrbuft-class"></a>CStrBufT Class
 
 Cette classe fournit le nettoyage automatique des ressources des `GetBuffer` et `ReleaseBuffer` appelle sur un existant `CStringT` objet.
 
@@ -84,7 +84,7 @@ Cette classe est utilisée comme une classe wrapper pour remplacer les appels à
 
 Conçu principalement comme une classe d’assistance, `CStrBufT` offre un moyen pratique pour un développeur travailler avec la mémoire tampon de caractères d’un objet string sans vous soucier de procédure ou quand appeler `ReleaseBuffer`. Ceci est possible car l’objet de wrapper est hors de portée naturellement dans le cas d’une exception ou de plusieurs chemins de code existant ; à l’origine de son destructeur libérer la ressource de chaîne.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsimpstr.h
 
@@ -228,4 +228,3 @@ typedef CSimpleStringT<TCharType> StringType;
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes partagées ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

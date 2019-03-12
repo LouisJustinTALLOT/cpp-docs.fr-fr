@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: 17724fe5335ba54d7e32ed7851b6a35b132b1086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ce07ca3fece558c23f4fcd9a12949f184b7532
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639840"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741053"
 ---
 # <a name="lclocalenamefunc"></a>___lc_locale_name_func
 
@@ -38,13 +38,13 @@ wchar_t** ___lc_locale_name_func(void);
 
 Pointeur vers une chaîne qui contient le nom de paramètres régionaux actuel du thread.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `___lc_locale_name_func` est une fonction CRT interne qui est utilisée par d'autres fonctions CRT pour obtenir le nom de paramètres régionaux actuel du stockage local des threads pour les données CRT. Ces informations sont également disponibles à l'aide des fonctions [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) ou [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 
 Les fonctions CRT internes sont spécifiques à l'implémentation et sont susceptibles d'être modifiées à chaque nouvelle version. Nous vous déconseillons de les utiliser dans votre code.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

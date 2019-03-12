@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: 08751e5fcdf246dd5ad285fc0cda5114d99cce15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 015647cd381ba4dc0c099b322e3c5870246c9fc2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646665"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751329"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 
@@ -42,7 +42,7 @@ Terme à définir, qui est défini dans `description`.
 *description*<br/>
 Élément contenu dans une puce ou une liste numérotée ou définition d’un `term`.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Chaque élément de la liste est spécifié avec un bloc \<item>. Au moment de créer une liste de définitions, vous devez spécifier à la fois `term` et `description`. Cependant, pour une table, une liste à puces ou une liste numérotée, il vous suffit de fournir une entrée pour `description`.
 

@@ -1,19 +1,19 @@
 ---
-title: 'Comment : inclure une classe native dans un wrapper pour une utilisation par C#'
+title: 'Procédure : Encapsuler une classe Native pour une utilisation parC#'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: dc61c9749492f2f0dbe0c6b60abc2a9030cab4d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588095"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751633"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Comment : inclure une classe native dans un wrapper pour une utilisation par C#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Procédure : Encapsuler une classe Native pour une utilisation parC#
 
 Cet exemple montre comment encapsuler une classe C++ native, donc il peut être utilisé dans du code créé en c# ou autre langage .NET.
 

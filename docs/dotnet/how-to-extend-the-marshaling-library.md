@@ -1,18 +1,18 @@
 ---
-title: 'Comment : étendre la bibliothèque de marshaling'
+title: 'Procédure : Étendre la bibliothèque de Marshaling'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 697a246012544e6be1189b6cc40d6185e5ec26d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569846"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750361"
 ---
-# <a name="how-to-extend-the-marshaling-library"></a>Comment : étendre la bibliothèque de marshaling
+# <a name="how-to-extend-the-marshaling-library"></a>Procédure : Étendre la bibliothèque de Marshaling
 
 Cette rubrique explique comment étendre la bibliothèque de marshaling pour fournir plus de conversions entre types de données. Les utilisateurs peuvent étendre la bibliothèque de marshaling pour toute conversion de données non pris en charge par la bibliothèque.
 

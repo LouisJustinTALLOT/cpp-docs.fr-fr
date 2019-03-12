@@ -1,19 +1,19 @@
 ---
-title: 'Comment : détecter la Compilation - clr'
+title: 'Procédure : Détecter la Compilation - clr'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, detecting /clr
 - /clr compiler option [C++], detecting use of
 ms.assetid: a9310045-4810-4637-a64a-0b31a08791c1
-ms.openlocfilehash: 600c74bfda6673295269902021afcecd95b90077
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b02be1bcd0afc9fd857e689ceafdcab5eaf05d1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590825"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746511"
 ---
-# <a name="how-to-detect-clr-compilation"></a>Comment : détecter une compilation /clr
+# <a name="how-to-detect-clr-compilation"></a>Procédure : Détecter une Compilation /clr
 
 Utilisez le `_MANAGED` ou `_M_CEE` macro pour voir si un module est compilé avec **/CLR**. Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 

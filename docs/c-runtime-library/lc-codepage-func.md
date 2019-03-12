@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: 3a6bcb9688116fc72b4c33b13fff73db3dff6c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aebd978839cc59c94c01e9c24432b69add72c4dc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573259"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751333"
 ---
 # <a name="lccodepagefunc"></a>___lc_codepage_func
 
@@ -39,7 +39,7 @@ UINT ___lc_codepage_func(void);
 
 Page de code active du thread.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `___lc_codepage_func` est une fonction CRT interne utilisée par d'autres fonctions CRT pour obtenir la page de code active à partir du stockage local des threads pour les données CRT. Ces informations sont également disponibles à l'aide de la fonction [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
@@ -47,7 +47,7 @@ Une *page de code* est le mappage de codes sur un ou deux octets en caractères 
 
 Les fonctions CRT internes sont spécifiques à l’implémentation et soumises à modification à chaque nouvelle mise en production. Nous vous déconseillons de les utiliser dans votre code.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

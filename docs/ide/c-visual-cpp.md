@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <c> C++ XML tag
 - c C++ XML tag
 ms.assetid: 3b23fc0f-e10d-4dd0-b197-48a46cbddd9f
-ms.openlocfilehash: 1efb411537e07ae9a5c2e4a70b5fa3ac319d79c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5eb88be4cb5be8c4e970c285bad712093fdbb51
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431094"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742602"
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
 
@@ -29,7 +29,7 @@ La balise \<c> indique que le texte d’une description doit être marqué comme
 *texte*<br/>
 Texte que vous souhaitez indiquer comme étant du code.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
 

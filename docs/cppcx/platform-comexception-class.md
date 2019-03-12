@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 6ba387b8d3be0e3f91a844bb7633bedfdb7ee9d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607803"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745210"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (classe)
 
@@ -48,7 +48,7 @@ La classe COMException a les propriétés ci-dessous.
 
 |Membre|Description|
 |------------|-----------------|
-|[Exception::HRESULT](#hresult)|HRESULT qui correspond à l'exception.|
+|[Exception::HResult](#hresult)|HRESULT qui correspond à l'exception.|
 |[Exception::Message](#message)|Message décrivant l'exception.|
 
 ## <a name="derived-exceptions"></a>Exceptions dérivées
@@ -71,13 +71,13 @@ Les exceptions prédéfinies suivantes sont dérivées de COMException. Elles di
 |OutOfBoundsException|E_BOUNDS|Levée lorsqu'une opération tente d'accéder aux données en dehors de la plage valide.|
 |OutOfMemoryException|E_OUTOFMEMORY|Levée en cas de mémoire insuffisante pour terminer l'opération.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 
@@ -93,7 +93,7 @@ COMException( int hresult )
 
 ### <a name="parameters"></a>Paramètres
 
-*HRESULT*<br/>
+*hresult*<br/>
 Erreur HRESULT qui est représentée par l'exception.
 
 ## <a name="hresult"></a> COMException::HResult (propriété)

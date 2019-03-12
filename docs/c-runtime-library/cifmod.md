@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CIfmod intrinsic
 - _CIfmod intrinsic
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
-ms.openlocfilehash: e0e6b2f846de77d27b1826e1f24cd364c0d76a64
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: b3f667c24a4b02a23d045a5061b41ac4acc4095b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703075"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746836"
 ---
 # <a name="cifmod"></a>_CIfmod
 
@@ -37,7 +37,7 @@ Calcule le reste à virgule flottante des deux valeurs supérieures de la pile.
 void __cdecl _CIfmod();
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Cette version de la fonction `fmod` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.
 

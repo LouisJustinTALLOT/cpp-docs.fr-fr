@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: a977aa81a598e1698dfbc1c5679b85378b7ba6fc
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389927"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747694"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilisation d'assemblys vérifiables avec SQL Server (C++/CLI)
 
@@ -19,9 +19,9 @@ Lorsqu’un client exécute une procédure stockée étendue, SQL Server recherc
 
 SQL Server fournit des extensions à Transact-SQL (T-SQL) pour vous permettre d’installer des assemblys vérifiables dans SQL Server. Le jeu d’autorisations SQL Server spécifie le contexte de sécurité, avec les niveaux de sécurité suivants :
 
-- Mode non restreint : exécuter du code à vos risques et périls ; code ne devra pas être de type sécurisé.
+- Mode non restreint : Exécuter du code à vos risques et périls ; code ne devra pas être de type sécurisé.
 
-- Mode sans échec : exécuter sécurisé vérifié le code de type sécurisé ; compilé avec/clr : safe.
+- Mode sans échec : Exécuter sécurisé vérifié le code de type sécurisé ; compilé avec/clr : safe.
 
 > [!IMPORTANT]
 > Déconseillé de Visual Studio 2015 et Visual Studio 2017 ne prend pas en charge la **/CLR : pure** et **/CLR : safe** la création de projets vérifiables. Si vous avez besoin du code vérifiable, nous vous recommandons de que vous traduisez votre code en c#.

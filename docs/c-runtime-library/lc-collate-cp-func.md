@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: 37254177ab57212dd57e476716d1dc07d59d7239
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fac8b7ba2e9568dd53509e5cccbb96a6b2f1df8d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521240"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738882"
 ---
 # <a name="lccollatecpfunc"></a>___lc_collate_cp_func
 
@@ -38,13 +38,13 @@ UINT ___lc_codepage_func(void);
 
 Page de code de classement active du thread.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `___lc_collate_cp_func` est une fonction CRT interne utilisée par d'autres fonctions CRT pour obtenir la page de code de classement active à partir du stockage local des threads pour les données CRT. Ces informations sont également disponibles à l'aide de la fonction [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
 Les fonctions CRT internes sont spécifiques à l'implémentation et sont susceptibles d'être modifiées à chaque nouvelle version. Nous vous déconseillons de les utiliser dans votre code.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

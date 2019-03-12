@@ -1,5 +1,5 @@
 ---
-title: 'Comment : marshaler des chaînes à l’aide de PInvoke'
+title: 'Procédure : Marshaler des chaînes à l’aide de PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598118"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739243"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Comment : marshaler des chaînes à l’aide de PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Procédure : Marshaler des chaînes à l’aide de PInvoke
 
 Cette rubrique explique comment les fonctions natives qui acceptent des chaînes de style C peuvent être appelées à l’aide de la chaîne CLR System::String à l’aide de la prise en charge de .NET Framework non managé de type. Les programmeurs Visual C++ sont encouragés à utiliser plutôt les fonctionnalités d’interopérabilité C++ (si possible), car P/Invoke peu une erreur de génération de rapports n’est pas de type sécurisé et peut être fastidieuse à implémenter. Si l’API non managée est empaqueté en tant que DLL et le code source n’est pas disponible, P/Invoke est la seule option, mais sinon consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: 3c4e4de7dc7161c033f07cfb02ef90ad5db559c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 173c1bbae3009ffb4ee10b7b32ec7751f47c56c8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492155"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749228"
 ---
 # <a name="setoutputformat"></a>_set_output_format
 
@@ -53,7 +53,7 @@ unsigned int _set_output_format(
 
 Le format de sortie précédent.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `_set_output_format` est utilisé pour configurer la sortie de fonctions d’E-S mises en forme, comme [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Actuellement, la seule convention de mise en forme qui peut être changée par cette fonction est le nombre de chiffres affichés dans les exposants dans la sortie des nombres à virgule flottante.
 
@@ -61,7 +61,7 @@ Par défaut, la sortie des nombres à virgule flottante par des fonctions comme 
 
 Pour activer des exposants à deux chiffres, appelez cette fonction avec le paramètre `_TWO_DIGIT_EXPONENT`, comme illustré dans l’exemple. Pour désactiver les exposants à deux chiffres, appelez cette fonction avec un argument ayant la valeur 0.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

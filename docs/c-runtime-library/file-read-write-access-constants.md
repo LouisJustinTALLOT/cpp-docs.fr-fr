@@ -10,12 +10,12 @@ helpviewer_keywords:
 - constants [C++], file attributes
 - file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
-ms.openlocfilehash: 7bf16271c0d58e3d87e4c24795ec0bd1ee1ccb89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dfbc925c5252724cbb1caad58470849915242a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666172"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746069"
 ---
 # <a name="file-readwrite-access-constants"></a>Constantes d'accès fichier en lecture/écriture
 
@@ -25,7 +25,7 @@ ms.locfileid: "50666172"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Ces constantes spécifient le type d’accès (« a », « r » ou « w ») demandé pour le fichier. Le [mode de traduction](../c-runtime-library/file-translation-constants.md) (« b » ou « t ») et le [mode commit-to-disk](../c-runtime-library/commit-to-disk-constants.md) (« c » ou « n ») peut tous deux être spécifiés avec le type d’accès.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-ms.openlocfilehash: 70669f67b78ee4ea4f8073b78d2b9589e56a6356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4d063538339f55fa326163a400b9a7bf2c8bdfe
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552618"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751907"
 ---
 # <a name="mbcs-programming-tips"></a>Conseils de programmation MBCS
 

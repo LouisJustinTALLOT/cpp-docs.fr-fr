@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
-ms.openlocfilehash: 70e69952e350f96179298e2d64ec6ddf7b9167bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6c077ac010c0b5d94ba21ba823441ea6ac932b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625418"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739376"
 ---
 # <a name="dllonexit"></a>__dllonexit
 
@@ -53,7 +53,7 @@ Pointeur vers une variable qui pointe vers la fin d’une liste de fonctions à 
 
 Si l’opération réussit, pointeur vers la fonction de l’utilisateur. Dans le cas contraire, pointeur **NULL**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 La fonction `__dllonexit` est analogue à la fonction [_onexit](../c-runtime-library/reference/onexit-onexit-m.md) sauf que les variables globales utilisées par cette fonction ne sont pas visibles pour cette routine. Au lieu de variables globales, cette fonction utilise les paramètres `pbegin` et `pend`.
 
@@ -61,7 +61,7 @@ Les fonctions `_onexit` et `atexit` dans une DLL liée à MSVCRT.LIB doivent con
 
 Le type `_PVFV` est défini en tant que `typedef void (__cdecl *_PVFV)(void)`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|Fichier obligatoire|
 |-------------|-------------------|

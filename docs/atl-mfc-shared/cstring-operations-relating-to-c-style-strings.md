@@ -15,12 +15,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-ms.openlocfilehash: f68f021d16de7ad701ce20c3be59ed6958aa6893
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eee23296d9aac40849dacf58c3b3d9bdf583d1df
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528399"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743281"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Opérations CString relatives aux chaînes de style C
 
@@ -101,5 +101,5 @@ Pour les résultats de la plupart des fonctions, vous pouvez simplement retourne
 
 ## <a name="see-also"></a>Voir aussi
 
-[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Passage d’arguments CString](../atl-mfc-shared/cstring-argument-passing.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: a4e15e2a0481f10b58517135c5dc283549f358af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb410d420e91f9b64742d74d9f9262a4db42f562
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638300"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751620"
 ---
 # <a name="swap-function-autohandle"></a>swap, fonction (auto_handle)
 
@@ -31,10 +31,10 @@ void swap(
 
 #### <a name="parameters"></a>Paramètres
 
-*à gauc_he*<br/>
+*_left*<br/>
 Élément `auto_handle`.
 
-*à d_roite*<br/>
+*_right*<br/>
 Un autre `auto_handle`.
 
 ## <a name="example"></a>Exemple
@@ -64,9 +64,9 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**Fichier d’en-tête** \<msclr\auto_handle.h >
+**Header file** \<msclr\auto_handle.h>
 
 **Namespace** msclr
 

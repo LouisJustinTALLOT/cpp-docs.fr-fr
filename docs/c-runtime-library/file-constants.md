@@ -25,12 +25,12 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: 2dc473db50b1835d4e1495ce255c0a826563b70a
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: f0bf85dc8f27fca1720cde7f5a8b2029a791849c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220437"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739978"
 ---
 # <a name="file-constants"></a>Constantes de fichier
 
@@ -40,7 +40,7 @@ ms.locfileid: "54220437"
 #include <fcntl.h>
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 L’expression d’entier formée à partir d’une ou plusieurs de ces constantes détermine le type des opérations de lecture ou écriture autorisées. Elle est formée en combinant une ou plusieurs constantes avec une constante de mode de traduction.
 

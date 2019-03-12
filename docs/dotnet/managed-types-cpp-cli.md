@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595958"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746915"
 ---
 # <a name="managed-types-ccli"></a>Types managés (C++/CLI)
 
@@ -125,7 +125,7 @@ S.i = 11
 
 Toutefois, si vous ajoutez un autre membre `struct S` dans nested_value_types.cpp, (par exemple, `double d;`) et recompiler le composant sans recompiler le client, le résultat est une exception non gérée (de type <xref:System.IO.FileLoadException?displayProperty=fullName>).
 
-## <a name="test_equality"></a> Comment : tester l’égalité
+## <a name="test_equality"></a> Guide pratique pour Test d’égalité
 
 Dans l’exemple suivant, un test d’égalité qui utilise les Extensions managées pour C++ est basé sur quoi les descripteurs de référence.
 
@@ -150,7 +150,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> Comment : diagnostiquer et résoudre les problèmes de compatibilité d’Assembly
+## <a name="diagnose_fix"></a> Guide pratique pour Diagnostiquer et résoudre les problèmes de compatibilité d’Assembly
 
 Cette rubrique explique ce qui peut se produire lorsque la version d’un assembly référencé au moment de la compilation ne correspond pas à la version de l’assembly référencé lors de l’exécution et comment éviter le problème.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - _iob global variable
 - iob global variable
 ms.assetid: 008ed376-8078-4bbd-bc6c-0677c63d0ff1
-ms.openlocfilehash: b9a9fbb51cf0de83faa6ee3d434d545083dd17fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e0b859e87f272871c99cbd208a2e3090a860c87
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581569"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750765"
 ---
 # <a name="iob"></a>_iob
 
@@ -30,7 +30,7 @@ Tableau de structures de contrôle stdio.
 FILE _iob[_IOB_ENTRIES];
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `IOB_ENTRIES` est défini en tant que 20 dans stdio.h.
 

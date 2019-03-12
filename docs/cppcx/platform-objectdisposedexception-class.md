@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ObjectDisposedException
 ms.assetid: 68506fe4-d09c-4407-999f-1e3edb261d41
-ms.openlocfilehash: 41afe11efa23a3418ec9629a3c6f5a45015e2aa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 566f8a05a6b81adb78113dd4ba0fb1c47fc65a2f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612951"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749839"
 ---
 # <a name="platformobjectdisposedexception-class"></a>Platform::ObjectDisposedException, classe
 
@@ -29,13 +29,13 @@ public ref class ObjectDisposedException : COMException,    IException,    IPrin
 
 Pour plus d'informations, consultez l'exception [COMException](../cppcx/platform-comexception-class.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 

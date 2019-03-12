@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SIG_IGN constant
 - SIG_DFL constant
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
-ms.openlocfilehash: 71c2eb796680e90cd16b1798fd478506ce7aa2c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ff79626d576a05744336d36f99caf95d9b9902d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444653"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743872"
 ---
 # <a name="signal-action-constants"></a>signal, constantes action
 
@@ -26,7 +26,7 @@ L’action effectuée lors de la réception du signal d’interruption varie sel
 #include <signal.h>
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 L’argument `func` doit être une adresse de fonction ou une des constantes manifestes répertoriées ci-dessous et définies dans SIGNAL.H.
 

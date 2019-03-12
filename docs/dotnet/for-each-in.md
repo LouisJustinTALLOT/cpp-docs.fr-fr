@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532747"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746306"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -26,7 +26,7 @@ Itère dans un tableau ou une collection. Ce mot clé non standard est disponibl
 ### <a name="syntax"></a>Syntaxe
 
 > **pour chaque (** *type* *identificateur* **dans** *expression* **) {}**<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;*Instructions*<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;*statements*<br/>
 > **}**
 
 ### <a name="parameters"></a>Paramètres
@@ -35,19 +35,19 @@ Itère dans un tableau ou une collection. Ce mot clé non standard est disponibl
 Type d'élément `identifier`.
 
 *identifier*<br/>
-La variable d’itération qui représente l’élément de collection.  Lorsque `identifier` est un [opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md), vous pouvez modifier l’élément.
+La variable d'itération qui représente l'élément de collection.  Lorsque `identifier` est un [opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md), vous pouvez modifier l’élément.
 
-*Expression*<br/>
-Expression ou collection de tableaux. L’élément de collection doit pouvoir être converti par le compilateur en type d’élément `identifier`.
+*expression*<br/>
+Expression ou collection de tableaux. L'élément de collection doit pouvoir être converti par le compilateur en type d'élément `identifier`.
 
-*Instructions*<br/>
+*statements*<br/>
 Une ou plusieurs instructions à exécuter.
 
 ### <a name="remarks"></a>Notes
 
-L’instruction `for each` permet d’itérer au sein d’une collection. Vous pouvez modifier les éléments d’une collection, mais vous ne pouvez ni ajouter ni supprimer des éléments.
+L’instruction `for each` permet d’itérer au sein d’une collection. Vous pouvez modifier les éléments d'une collection, mais vous ne pouvez ni ajouter ni supprimer des éléments.
 
-Le *instructions* sont exécutées pour chaque élément du tableau ou de la collection. Une fois l’itération terminée pour tous les éléments de la collection, le contrôle est transféré à l’instruction placée après le bloc `for each`.
+Le *instructions* sont exécutées pour chaque élément du tableau ou de la collection. Une fois l'itération terminée pour tous les éléments de la collection, le contrôle est transféré à l'instruction placée après le bloc `for each`.
 
 `for each` et `in` sont [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).
 
@@ -55,15 +55,15 @@ Pour plus d'informations :
 
 - [Itération au sein d’une collection de bibliothèque standard C++ en utilisant for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [Guide pratique pour itérer au sein des tableaux avec for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [Guide pratique pour Itérer des tableaux avec for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [Guide pratique pour itérer au sein d’une collection générique en utilisant for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [Guide pratique pour Itérer une Collection générique en utilisant for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [Guide pratique pour itérer au sein d’une collection définie par l’utilisateur en utilisant for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [Guide pratique pour Itérer une Collection définie par l’utilisateur avec for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/ZW**
 
@@ -111,12 +111,12 @@ Testing
 
 La syntaxe CLR est identique à la **tous les Runtimes** syntaxe, sauf comme suit.
 
-*Expression*<br/>
+*expression*<br/>
 Collection ou expression de tableau managé. L’élément de collection doit être converti par le compilateur peut convertir à partir <xref:System.Object> à la *identificateur* type.
 
 *expression* correspond à un type qui implémente <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, ou un type qui définit un `GetEnumerator` méthode qui retourne un type qui implémente <xref:System.Collections.IEnumerator> ou déclare toutes les méthodes qui sont définies dans `IEnumerator`.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/clr**
 

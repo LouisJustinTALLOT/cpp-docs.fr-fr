@@ -1,5 +1,5 @@
 ---
-title: 'Comment : marshaler des chaînes ANSI à l’aide de l’interopérabilité C++'
+title: 'Procédure : Marshaler des chaînes ANSI à l’aide d’interopérabilité C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - C++ Interop, strings
 - data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-ms.openlocfilehash: 272e64a5dd8faf103daf3ab7fa17449bf3dbb7ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73d8ed403ab0bbad7703f66f0d8d4ac23bb7766
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570496"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748032"
 ---
-# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Comment : marshaler des chaînes ANSI à l’aide de l’interopérabilité C++
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Procédure : Marshaler des chaînes ANSI à l’aide d’interopérabilité C++
 
 Cette rubrique montre comment les chaînes ANSI peuvent être passées à l’aide de C++ Interop, mais le .NET Framework <xref:System.String> représente des chaînes au format Unicode, par conséquent, la conversion en ANSI est une étape supplémentaire. Pour interagir avec d’autres types de chaîne, consultez les rubriques suivantes :
 
-- [Guide pratique pour marshaler des chaînes Unicode à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+- [Guide pratique pour marshaler des chaînes Unicode à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
 - [Guide pratique pour marshaler des chaînes COM à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 

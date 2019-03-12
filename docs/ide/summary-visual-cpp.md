@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 08d03d19355b89fa3c59ce5bede514d3ffa9b55b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32d939dc51e3e476e503f96995355fc78fb21ed0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509097"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744850"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 
@@ -30,7 +30,7 @@ La balise \<summary> doit être utilisée pour décrire un type ou un membre de 
 *description*<br/>
 Résumé de l’objet.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Le texte de la balise \<summary> est la seule source d’informations sur le type dans IntelliSense et il est également affiché dans [l’Explorateur d’objets](/visualstudio/ide/viewing-the-structure-of-code) et dans le rapport web de commentaire de code.
 

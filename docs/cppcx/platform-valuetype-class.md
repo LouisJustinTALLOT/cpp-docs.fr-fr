@@ -1,5 +1,5 @@
 ---
-title: Platform::ValueType (classe)
+title: Classe Platform::ValueType
 ms.date: 02/03/2017
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: 57fb089f0d9dc53ba8a65cef41e3341168ffea45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889cf3a53468491517d37978ca09472756ad9b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596402"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747149"
 ---
-# <a name="platformvaluetype-class"></a>Platform::ValueType (classe)
+# <a name="platformvaluetype-class"></a>Classe Platform::ValueType
 
 Classe de base pour les instances de types de valeur.
 
@@ -34,13 +34,13 @@ public ref class ValueType : Object
 
 La classe ValueType est utilisée pour construire des types valeur. ValueType est dérivée d’Object, qui a des membres de base. Toutefois, le compilateur détache ces membres de base des types valeur qui sont dérivés de la classe ValueType. Le compilateur réattache ces membres de base lorsqu’un type valeur est boxed.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd
 
