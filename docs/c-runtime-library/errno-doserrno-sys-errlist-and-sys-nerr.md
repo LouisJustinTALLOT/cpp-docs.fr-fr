@@ -21,12 +21,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 50b44c659aac66dbaddad711cceef635f277d2c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487723"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750778"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist et _sys_nerr
 
@@ -41,7 +41,7 @@ Macros globales qui contiennent des codes d'erreur définis pendant l'exécution
 #define _sys_nerr (*__sys_nerr())
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Les éléments `errno` et `_doserrno` sont définis à 0 par l'exécution lors du démarrage du programme. L'élément `errno` est déclenché en cas d'erreur lors d'un appel au niveau système. Comme `errno` contient la valeur du dernier appel qui le définit, cette valeur peut être modifiée par les appels suivants. Les appels de la bibliothèque Runtime qui déclenchent `errno` en cas d'erreur ne suppriment pas `errno` en cas de réussite. Supprimez toujours `errno` en appelant `_set_errno(0)` juste avant un appel qui peut le déclencher, puis vérifiez-le immédiatement après celui-ci.
 
@@ -102,7 +102,7 @@ Toutes les valeurs `errno` du tableau suivant sont des constantes prédéfinies 
 |`EILSEQ`|Séquence d'octets non conforme|42|
 |`STRUNCATE`|La chaîne a été tronquée|80|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Macro globale|En-tête requis|En-tête facultatif|
 |------------------|---------------------|---------------------|

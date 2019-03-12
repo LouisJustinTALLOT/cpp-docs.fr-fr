@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fmode function
 - _fmode function
 ms.assetid: ac6df9eb-e5cc-4c54-aff3-373c21983118
-ms.openlocfilehash: c462b8f848a34993e01232039d608b627c05961f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41d665eab50203fc3bb176f8bb1bbc30737e844
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430535"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741922"
 ---
 # <a name="fmode"></a>_fmode
 
@@ -26,7 +26,7 @@ La variable `_fmode` définit le mode de traduction de fichiers par défaut pour
 extern int _fmode;
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Le paramètre par défaut de `_fmode` est `_O_TEXT` pour la traduction en mode texte. `_O_BINARY` est le paramètre pour le mode binaire.
 

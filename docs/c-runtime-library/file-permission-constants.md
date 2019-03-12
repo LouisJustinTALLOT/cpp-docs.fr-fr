@@ -12,12 +12,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: c0c5e02458fa6b5436b029392a40bd2f54f22c0c
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 0e042cddce6edf079aa54f114130f9750412e327
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220281"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742705"
 ---
 # <a name="file-permission-constants"></a>Constantes d'autorisations de fichier
 
@@ -27,7 +27,7 @@ ms.locfileid: "54220281"
 #include <sys/stat.h>
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Une de ces constantes est obligatoire quand `_O_CREAT` (`_open`, `_sopen`) est spécifié.
 

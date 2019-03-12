@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _PLOSS constant
 - math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
-ms.openlocfilehash: b159d5dbe434f4ce63b7b93f60aca89b51437812
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 3267a5053cb2cd18cfcb07473bbcc4d6f8295f5d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220021"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751854"
 ---
 # <a name="math-error-constants"></a>Constantes d'erreur mathématique
 
@@ -38,7 +38,7 @@ ms.locfileid: "54220021"
 #include <math.h>
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Les routines mathématiques de la bibliothèque Runtime peuvent générer des constantes d’erreur mathématique.
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 142702699523633bf810d0077ce7ba6355557d21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bc00902b449905ee75e77f147150cbb68bf3f22
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496299"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751802"
 ---
 # <a name="help-files-winhelp"></a>Fichiers d'aide (WinHelp)
 

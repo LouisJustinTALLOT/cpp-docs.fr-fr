@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: fa608af9406dc03047ff9f113ac648e215b0d117
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 5d51e8e542ffb14a77001d045903dccb1a091d53
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703283"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751328"
 ---
 # <a name="ciexp"></a>_CIexp
 
@@ -37,7 +37,7 @@ Calcule la valeur exponentielle de la valeur supérieure de la pile.
 void __cdecl _CIexp();
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Cette version de la fonction `exp` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.
 

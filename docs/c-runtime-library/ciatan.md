@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CIatan intrinsic
 - _CIatan intrinsic
 ms.assetid: 3baa0429-fe46-4bab-8b00-868e2186dc8c
-ms.openlocfilehash: 4ab94997f249b541c0e5fb16156f88033c43d09d
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 81448d976a38d45de821fc66ea87dcf431ebd228
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703010"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749977"
 ---
 # <a name="ciatan"></a>_CIatan
 
@@ -37,7 +37,7 @@ Calcule l’arc tangente de la valeur supérieure de la pile.
 void __cdecl _CIatan();
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Cette version de la fonction `atan` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _setjmp3 function
 - setjmp3 function
 ms.assetid: 6129c2f3-8bac-4fdb-a827-44e1eebba500
-ms.openlocfilehash: 4509738f8e0128e2f9277e744a5965f557f65439
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c89acf1de88b831d70a0f438cdf14148a48632
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564006"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741803"
 ---
 # <a name="setjmp3"></a>_setjmp3
 
@@ -55,11 +55,11 @@ int _setjmp3(
 
 Retourne toujours 0.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 N'utilisez pas cette fonction dans un programme C++. Il s'agit d'une fonction intrinsèque qui ne prend pas en charge C++. Pour plus d'informations sur l'utilisation de `setjmp`, consultez [Utilisation de setjmp/longjmp](../cpp/using-setjmp-longjmp.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ## <a name="see-also"></a>Voir aussi
 

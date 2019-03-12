@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _HEAPBADPTR constants
 - heap constants
 ms.assetid: 3f751bb9-2dc4-486f-b5f5-9061c96d3754
-ms.openlocfilehash: b8783a5826376a65cb71444e2d64c61b6938eab8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 44c7a280ebffd0073f1dfb3a0a3cbdbd2efee0fb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220216"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745371"
 ---
 # <a name="heap-constants"></a>Constantes de tas
 
@@ -38,7 +38,7 @@ ms.locfileid: "54220216"
 #include <malloc.h>
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Ces constantes donnent la valeur de retour indiquant l’état du tas.
 

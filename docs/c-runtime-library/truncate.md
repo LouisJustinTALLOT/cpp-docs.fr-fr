@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: 69dc495083bc7fffd925e42163473c64452cb402
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5a341f1828bad9f5562c10036779245ac88c79e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544259"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743200"
 ---
 # <a name="truncate"></a>_TRUNCATE
 
@@ -25,7 +25,7 @@ Spécifie le comportement de troncation de chaîne.
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `_TRUNCATE` active le comportement de troncation quand il est passé en tant que paramètre `count` à ces fonctions :
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 5982aa367aa043dbe7a5c41128c3646f520d3b4a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56f6f1d06d834ccab68daf859fac065cf215582c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666906"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748921"
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 
@@ -33,7 +33,7 @@ La variable `_environ` est un pointeur vers un tableau de pointeurs qui désigne
 extern char **_environ;
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Dans un programme qui utilise la fonction `main`, `_environ` est initialisé au démarrage du programme en fonction des paramètres tirés de l'environnement de système d'exploitation. L'environnement se compose d'une ou plusieurs entrées de la forme
 

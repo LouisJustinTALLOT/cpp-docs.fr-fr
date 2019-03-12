@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693712"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748045"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn, fonctions
 
@@ -72,7 +72,7 @@ Les lettres à la fin du nom de la fonction déterminent la variation.
 | `p`  | La variable d'environnement `PATH` est utilisée pour rechercher le fichier à exécuter.  |
 | `v`  | `argv`, un tableau de pointeurs vers les arguments de ligne de commande, est passé à la fonction `_spawn`. Ce suffixe est généralement utilisé lorsque plusieurs paramètres d'un nouveau processus sont variables.  |
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Les fonctions `_spawn` créent et exécutent chacune un nouveau processus. Elles gèrent automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d'utilisation. Les fonctions `_wspawn` sont des versions à caractères larges des fonctions `_spawn` ; elles ne gèrent pas les chaînes de caractères multioctets. Sinon, les fonctions `_wspawn` se comportent de la même manière que leurs fonctions équivalentes `_spawn`.
 

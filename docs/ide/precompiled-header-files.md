@@ -10,12 +10,12 @@ helpviewer_keywords:
 - precompiled header files, file descriptions
 - stdafx.cpp
 ms.assetid: 8228d87a-5609-41f3-9697-b16094c000e5
-ms.openlocfilehash: fed583464aa172887b80a8551adf86e02a76d210
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9df203aac7d43c4c16850dd617639a85234917b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643207"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740881"
 ---
 # <a name="precompiled-header-files"></a>Fichiers d'en-tête précompilés
 

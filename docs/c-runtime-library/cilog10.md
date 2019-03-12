@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: 0814043f56122e5e5363940ead338f8617279b09
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 771ed103c8ab0fe29061086923189cc90eb047d9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702945"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746326"
 ---
 # <a name="cilog10"></a>_CIlog10
 
@@ -37,7 +37,7 @@ Effectue une opération `log10` sur la valeur supérieure de la pile.
 void __cdecl _CIlog10();
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Cette version de la fonction `log10` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.
 

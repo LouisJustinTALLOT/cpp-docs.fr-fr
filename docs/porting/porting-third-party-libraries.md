@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: 1abd7f05614317237c911ceb69c243211a373e34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51c1634aade159e095b5957a15783e40ec0284d0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658300"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750960"
 ---
 # <a name="porting-third-party-libraries"></a>Portage de bibliothèques tierces
 
