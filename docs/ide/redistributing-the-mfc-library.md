@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: 891a11e02b60bf5337b02956e9562b2f4b45a6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e7352306627722ff2921c2a46cb49b6318f10b6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659938"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746954"
 ---
 # <a name="redistributing-the-mfc-library"></a>Redistribution de la bibliothèque MFC
 
@@ -25,7 +25,7 @@ Si votre application est générée à l’aide d’une version antérieure de l
 
 Si vous liez statiquement votre application à MFC (autrement dit, si vous spécifiez **Utiliser MFC dans une bibliothèque statique** sous l’onglet **Général** dans la boîte de dialogue **Pages de propriétés**), vous n’avez pas à redistribuer de DLL MFC. Toutefois, même si la liaison statique peut fonctionner pour le test et le déploiement interne d’applications, nous vous conseillons de ne pas l’utiliser pour redistribuer MFC. Pour plus d’informations sur les stratégies conseillées pour le déploiement des bibliothèques Visual C++, consultez [Choix d’une méthode de déploiement](../ide/choosing-a-deployment-method.md).
 
-Si votre application utilise les classes MFC qui implémentent le contrôle WebBrowser (par exemple, la [classe CHtmlView](../mfc/reference/chtmlview-class.md) ou la [classe CHtmlEditView](../mfc/reference/chtmleditview-class.md)), nous vous recommandons d’installer aussi la version la plus récente de Microsoft Internet Explorer pour que l’ordinateur cible ait les derniers fichiers de contrôle commun. (Internet Explorer 4.0 minium est nécessaire.) Pour plus d’informations sur l’installation des composants d’Internet Explorer, consultez « Article 185375 : Comment créer un fichier EXE d’installation unique d’Internet Explorer » sur le site web du support Microsoft.
+Si votre application utilise les classes MFC qui implémentent le contrôle WebBrowser (par exemple, la [classe CHtmlView](../mfc/reference/chtmlview-class.md) ou la [classe CHtmlEditView](../mfc/reference/chtmleditview-class.md)), nous vous recommandons d’installer aussi la version la plus récente de Microsoft Internet Explorer pour que l’ordinateur cible ait les derniers fichiers de contrôle commun. (Internet Explorer 4.0 minium est nécessaire.) Pour plus d’informations sur l’installation des composants Internet Explorer, consultez l’article 185375 sur la manière de créer un fichier EXE d’installation d’Internet Explorer sur le site web du support Microsoft.
 
 Si votre application utilise les classes de base de données MFC (par exemple, la [classe CRecordset](../mfc/reference/crecordset-class.md) et la [classe CRecordView](../mfc/reference/crecordview-class.md)), vous devez redistribuer ODBC et tous les pilotes ODBC utilisés par votre application.
 
@@ -41,7 +41,7 @@ Si vous décidez de localiser votre application en installant une DLL de localis
 
 Les fichiers .msm redistribuables contiennent les DLL utilisées pour la localisation. À chaque langue prise en charge correspond une DLL. Le processus d’installation installe ces DLL dans le dossier %windir%\system32\ sur l’ordinateur cible.
 
-Pour plus d’informations sur la localisation des applications MFC, consultez [TN057 : localisation des composants MFC](../mfc/tn057-localization-of-mfc-components.md).
+Pour plus d’informations sur la localisation des applications MFC, consultez [TN057 : localisation des composants MFC](../mfc/tn057-localization-of-mfc-components.md).
 
 Vous pouvez redistribuer les DLL de localisation MFC en déployant la DLL MFC dans le dossier local de votre application. Pour plus d’informations sur la redistribution des bibliothèques MFC, consultez [Redistribution des fichiers Visual C++](../ide/redistributing-visual-cpp-files.md).
 

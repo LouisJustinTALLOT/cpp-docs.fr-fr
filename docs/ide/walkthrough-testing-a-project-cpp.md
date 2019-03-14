@@ -1,19 +1,19 @@
 ---
-title: "Procédure pas à pas : test d'un projet (C++)"
+title: 'Procédure pas à pas : test d’un projet (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - project testing [C++]
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437308"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744605"
 ---
-# <a name="walkthrough-testing-a-project-c"></a>Procédure pas à pas : test d'un projet (C++)
+# <a name="walkthrough-testing-a-project-c"></a>Procédure pas à pas : test d’un projet (C++)
 
 Quand vous exécutez un programme en mode débogage, vous pouvez utiliser des points d’arrêt pour interrompre le programme afin d’examiner l’état des variables et des objets.
 
@@ -51,14 +51,14 @@ Dans cette procédure pas à pas, vous observez la valeur d’une variable que l
 
 1. Ouvrez le menu contextuel de l’instruction `return 0;`, puis choisissez **Exécuter jusqu’au curseur**. La flèche jaune à gauche du code pointe vers l’instruction suivante à exécuter.
 
-1. Le nombre `Cardgame::totalParticipants` doit diminuer quand un `Cardgame` se termine. À ce stade, `Cardgame::totalParticipants` doit être égal à 0, car toutes les instances de `Cardgame` ont été supprimées, mais la fenêtre **Espion 1** indique que `Cardgame::totalparticipants` est égal à **18**. La différence indique qu’il y a un bogue dans le code, que vous pouvez détecter et corriger en effectuant la procédure pas à pas suivante, [Procédure pas à pas : Débogage d’un projet (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
+1. Le nombre `Cardgame::totalParticipants` doit diminuer quand un `Cardgame` se termine. À ce stade, `Cardgame::totalParticipants` doit être égal à 0, car toutes les instances de `Cardgame` ont été supprimées, mais la fenêtre **Espion 1** indique que `Cardgame::totalparticipants` est égal à **18**. La différence indique qu’il y a un bogue dans le code, que vous pouvez détecter et corriger en effectuant la procédure pas à pas suivante, [Procédure pas à pas : débogage d’un projet (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
 
 1. Pour arrêter le programme, dans la barre de menus, choisissez **Déboguer** > **Arrêter le débogage** ou appuyez sur le raccourci **Maj**+**F5**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-**Précédent :** [Procédure pas à pas : génération d’un projet (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-**Suivant :** [Procédure pas à pas : débogage d’un projet (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Précédent :** [Procédure pas à pas : Génération d’un projet (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Suivant :** [Procédure pas à pas : Débogage d'un projet (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Voir aussi
 

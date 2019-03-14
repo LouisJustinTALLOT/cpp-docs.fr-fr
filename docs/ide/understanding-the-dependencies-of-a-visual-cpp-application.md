@@ -11,16 +11,16 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-ms.openlocfilehash: 8ed340bed62d3b2cfcf32e0b98f032c9146b6bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed510e0d289349b1d7a0129a1c586b0bf1715b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629266"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751477"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Fonctionnement des dépendances d'une application Visual C++
 
-Pour déterminer les bibliothèques Visual C++ dont dépend une application, vous pouvez voir les propriétés du projet. (Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet, puis choisissez **Propriétés** pour ouvrir la boîte de dialogue **Pages de propriétés**.) Vous pouvez également utiliser le Dependency Walker (depends.exe), qui donne une image plus complète des dépendances.
+Pour déterminer les bibliothèques Visual C++ dont dépend une application, vous pouvez voir les propriétés du projet. (Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet, puis choisissez **Propriétés** pour ouvrir la boîte de dialogue **Pages de propriétés**.) Vous pouvez également utiliser Dependency Walker (depends.exe), qui donne une image plus complète des dépendances.
 
 Dans la boîte de dialogue **Pages de propriétés**, vous pouvez examiner différentes pages sous **Propriétés de configuration** pour comprendre les dépendances. Par exemple, si votre projet utilise les bibliothèques MFC et que vous choisissez **Utilisation des MFC**, **Utiliser les MFC dans une DLL partagée** dans la page **Propriétés de configuration**, **Général**, votre application au moment de l’exécution dépend d’une DLL MFC comme mfc\<version>.dll. Si votre application n’utilise pas MFC, elle peut encore dépendre de la bibliothèque CRT si vous choisissez pour la **Bibliothèque Runtime** la valeur **DLL de débogage multithread (/MDd)** ou **DLL multithread (/MD)** dans la page **Propriétés de configuration**, **C/C++**, **Génération de code**.
 

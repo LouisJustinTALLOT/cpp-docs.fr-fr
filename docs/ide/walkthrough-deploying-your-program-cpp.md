@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: c202d4eae5e9115f847caefce18a8974a4388a04
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657511"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740459"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Procédure pas à pas : Déploiement de votre programme (C++)
 
@@ -44,7 +44,7 @@ La procédure pas à pas indique comment utiliser Windows Installer pour déploy
 
 ### <a name="to-create-a-setup-project-and-install-your-program"></a>Pour créer un projet d'installation et installer votre programme
 
-1. Modifiez la configuration de solution active en Mise en production. Dans la barre de menus, choisissez **Build** > **Gestionnaire de configurations**. Dans la boîte de dialogue **Gestionnaire de configurations**, dans la liste déroulante **Configuration de la solution active**, sélectionnez **Release**. Cliquez sur le bouton **Fermer** pour enregistrer la configuration.
+1. Modifiez la configuration de solution active en Version finale. Dans la barre de menus, choisissez **Build** > **Gestionnaire de configurations**. Dans la boîte de dialogue **Gestionnaire de configurations**, dans la liste déroulante **Configuration de la solution active**, sélectionnez **Release**. Cliquez sur le bouton **Fermer** pour enregistrer la configuration.
 
 1. Dans la barre de menus, choisissez **Fichier** > **Nouveau** > **Projet** pour ouvrir la boîte de dialogue **Nouveau projet**.
 

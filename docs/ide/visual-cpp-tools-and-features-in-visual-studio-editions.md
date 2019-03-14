@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463750"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751893"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio
 
-Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles dans Visual Studio. La présence d'une croix (« X ») dans une cellule indique que la fonctionnalité est disponible ; une cellule vide indique que la fonctionnalité n'est pas disponible. Les remarques entre parenthèses indiquent qu'une fonctionnalité est disponible, mais limitée.
+Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles dans Visual Studio. La présence d’une croix (« X ») dans une cellule indique que la fonctionnalité est disponible ; une cellule vide indique que la fonctionnalité n’est pas disponible. Les remarques entre parenthèses indiquent qu'une fonctionnalité est disponible, mais limitée.
 
 ## <a name="platforms"></a>Plateformes
 
@@ -58,7 +58,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Applications Direct3D|X||X|X|
 |DLL (Windows universel)|X||X|X|
 |Bibliothèque statique (Windows universel)|X||X|X|
-|Composant Windows Runtime|X||X|X|
+|Composant Windows Runtime|X||X|X|
 |Application de tests unitaires (Windows universel)|X||X|X|
 |Projet ATL|||X|X|
 |Bibliothèque de classes (CLR)||X|X|X|
@@ -106,7 +106,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Débogage managé||X|X|X|
 |Utilisation du GPU|X||X|X|
 |Utilisation de la mémoire|X||X|X|
-|Débogage distant|X|X|X|X|
+|Remote Debugging|X|X|X|X|
 |Débogage SQL|||X|X|
 |Analyse statique du code|Limité|Limité|X|X|
 
@@ -119,7 +119,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Concepteur/éditeur HTML|X|X|X|X|
 |Éditeur XML|X|X|X|X|
 |Éditeur de code source|X|X|X|X|
-|Fonctionnalités de productivité : refactorisation, IntelliSense, mise en forme de code C++|X|X|X|X|
+|Fonctionnalités de productivité : Refactorisation, IntelliSense, mise en forme du code C++|X|X|X|X|
 |Concepteur Windows Forms||X|X|X|
 |Concepteur de données|||X|X|
 |Éditeur de ressources natives (fichiers .rc)|||X|X|
@@ -169,7 +169,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Test manuel||||X|
 |Tests exploratoires||||X|
 |Gestion de cas de test||||X|
-|Carte de code et graphiques de dépendance|||en lecture seule|X|
+|Carte de code et graphiques de dépendance|||Lecture seule|X|
 |Débogage des cartes de code||||X|
 
 ## <a name="see-also"></a>Voir aussi

@@ -27,18 +27,18 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: b39e8563797ca0b57b54d2c85f851c8c45b29905
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471446"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747928"
 ---
 # <a name="using-generic-text-mappings"></a>Utilisation des mappages de texte générique
 
 **Section spécifique à Microsoft**
 
-Pour simplifier le développement de code pour les marchés internationaux, la bibliothèque Runtime Microsoft fournit des mappages de « texte générique » spécifiques à Microsoft pour de nombreux types de données, routines et autres objets. Ces mappages sont définis dans TCHAR.H. Vous pouvez utiliser ces mappages de nom pour écrire du code générique qui peut être compilé pour n’importe lequel des trois types de jeux de caractères : ASCII (SBCS), MBCS ou Unicode, en fonction d’une constante manifeste que vous définissez à l’aide d’une instruction `#define`. Les mappages de texte générique sont des extensions Microsoft non compatibles ANSI.
+Pour simplifier le développement de code pour les marchés internationaux, la bibliothèque Runtime Microsoft fournit des mappages de « texte générique » spécifiques à Microsoft pour de nombreux types de données, routines et autres objets. Ces mappages sont définis dans TCHAR.H. Vous pouvez utiliser ces mappages de noms pour écrire du code générique compilable pour l’un des trois types de jeux de caractères : ASCII (SBCS), MBCS ou Unicode, en fonction d’une constante de manifeste que vous définissez à l’aide d’une instruction `#define`. Les mappages de texte générique sont des extensions Microsoft non compatibles ANSI.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Directives de préprocesseur pour les mappages de texte générique
 

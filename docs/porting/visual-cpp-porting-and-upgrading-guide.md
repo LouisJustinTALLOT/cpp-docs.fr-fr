@@ -2,12 +2,12 @@
 title: Guide du portage et de la mise à niveau de Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556866"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752426"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guide du portage et de la mise à niveau de Visual C++
 
@@ -81,7 +81,7 @@ Ou bien, vous avez peut-être maintenant de nouvelles exigences à respecter, ou
 |[Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md)|Liste de toutes les modifications apportées aux bibliothèques Visual C++ et outils de génération entre Visual Studio 2003 et 2015 qui pourraient vous contraindre à modifier votre code.|
 |[Nouveautés de Visual C++ entre 2003 et 2015](visual-cpp-what-s-new-2003-through-2015.md)|Toutes les informations relatives aux « nouveautés » pour Visual C++ de Visual Studio 2003 à Visual Studio 2015.|
 |[Portage de bibliothèques tierces](porting-third-party-libraries.md)|Mode d’utilisation de l’outil en ligne de commande **vcpkg** pour transférer d’anciennes bibliothèques open source vers des versions compilées avec des ensembles d’outils Visual C++ plus récents.|
-|[Portage et mise à niveau : exemples et études de cas](porting-and-upgrading-examples-and-case-studies.md)|Dans cette section, nous avons déplacé et mis à niveau plusieurs exemples et applications, puis présenté nos expériences et résultats. Cela vous donnera une idée de ce qu'impliquent les processus de déplacement et de mise à niveau. Nous donnons des conseils et astuces à suivre pendant toute la mise à niveau, et indiquons des solutions pour corriger certaines erreurs courantes.|
+|[Portage et mise à niveau : Exemples et études de cas](porting-and-upgrading-examples-and-case-studies.md)|Dans cette section, nous avons déplacé et mis à niveau plusieurs exemples et applications, puis présenté nos expériences et résultats. Cela vous donnera une idée de ce qu'impliquent les processus de déplacement et de mise à niveau. Nous donnons des conseils et astuces à suivre pendant toute la mise à niveau, et indiquons des solutions pour corriger certaines erreurs courantes.|
 |[Portage vers la plateforme universelle Windows](porting-to-the-universal-windows-platform-cpp.md)|Contient des informations sur le déplacement de code vers Windows 10|
 |[Introduction à Visual C++ pour les utilisateurs UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fournit des informations aux utilisateurs UNIX qui débutent avec Visual C++ et souhaitent être plus productifs.|
 |[Portage d’UNIX vers Win32](porting-from-unix-to-win32.md)|Présente les différentes options pour migrer des applications UNIX vers Windows.|
