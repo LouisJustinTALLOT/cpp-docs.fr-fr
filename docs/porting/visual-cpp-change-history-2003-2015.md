@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dcae15ade3bd155e16149cc56981f79abb245e16
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525520"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740373"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 
@@ -86,7 +86,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
 - **FLT_ROUNDS**
 
-   Dans Visual Studio 2013, la macro FLT_ROUNDS se développe en une expression constante, ce qui était incorrect car le mode d’arrondi est configurable à l’exécution, par exemple, en appelant fesetround. La macro FLT_ROUNDS est à présent dynamique et reflète fidèlement le mode d'arrondi actuel.
+   Dans Visual Studio 2013, la macro FLT_ROUNDS s'étendait à une expression constante, ce qui était incorrect car le mode d'arrondi est configurable à l'exécution, par exemple, en appelant fesetround. La macro FLT_ROUNDS est à présent dynamique et reflète fidèlement le mode d'arrondi actuel.
 
 #### <a name="new-and-newh"></a>\<new> et \<new.h>
 
@@ -207,7 +207,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
 - **Mise en forme des exposants**
 
-   Les spécificateurs de format %e et %E formatent un nombre à virgule flottante sous la forme d'une mantisse décimale et d'un exposant. Les spécificateurs de format %g et %G formatent également les nombres sous cette forme, dans certains cas. Dans les versions précédentes, le CRT générait toujours des chaînes avec des exposants à trois chiffres. Par exemple, `printf("%e\n", 1.0)` affichait 1,000000e+000. Cela était incorrect : le langage C requiert que si l'exposant peut être représenté à l'aide d'un ou de deux chiffres, seulement deux chiffres doivent être affichés.
+   Les spécificateurs de format %e et %E formatent un nombre à virgule flottante sous la forme d'une mantisse décimale et d'un exposant. Les spécificateurs de format %g et %G formatent également les nombres sous cette forme, dans certains cas. Dans les versions précédentes, le CRT générait toujours des chaînes avec des exposants à trois chiffres. Par exemple, `printf("%e\n", 1.0)` affichait 1,000000e+000. Cela était incorrect : le langage C requiert que si l’exposant peut être représenté uniquement avec un ou deux chiffres, seulement deux chiffres doivent être affichés.
 
    Dans Visual Studio 2005, un commutateur de conformité globale a été ajouté : [_set_output_format](../c-runtime-library/set-output-format.md). Un programme peut appeler cette fonction avec l'argument _TWO_DIGIT_EXPONENT pour permettre un affichage d'exposant conforme. Le comportement par défaut a été remplacé par le mode d'affichage d'exposant conforme aux normes.
 
@@ -318,7 +318,7 @@ Pour activer les nouvelles optimisations et vérifications de débogage, l'impl�
 
 - **allocateurs et const**
 
-   Nous avons à présent besoin de comparaisons d’égalité/inégalité d’allocateurs pour accepter des arguments const des deux côtés.  Si vos allocateurs définissent ces opérateurs comme suit :
+   Nous avons à présent besoin de comparaisons d'égalité/inégalité d'allocateurs pour accepter des arguments const des deux côtés.  Si vos allocateurs définissent ces opérateurs comme suit :
 
     ```cpp
     bool operator==(const MyAlloc& other)
@@ -1190,7 +1190,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **Les exceptions MFC ne peuvent pas être interceptées par valeur, car elles ne peuvent pas être copiées**
 
-   Le code suivant dans une application MFC génère désormais l’erreur C2316 : 'D' : ne peut pas être intercepté en tant que destructeur et/ou le constructeur de copie est inaccessible ou supprimé
+   Le code suivant dans une application MFC génère maintenant l’erreur C2316 : 'D': ne peut pas être intercepté en tant que destructeur et/ou le constructeur de copie est inaccessible ou supprimé
 
     ```cpp
     struct B {
@@ -1336,7 +1336,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **Corriger l’initialisation de copie non valide dans l’initialisation de données membres non static (NSDMI)**
 
-   Le code suivant génère désormais l’erreur C2664 : 'S1::S1(S1 &&)' : impossible de convertir l’argument 1 de 'bool' en 'const S1 &' :
+   Le code suivant génère désormais l’erreur C2664 : 'S1::S1(S1 &&)' : impossible de convertir l’argument 1 de 'bool' en 'const S1 &' :
 
     ```cpp
     struct S1 {
@@ -2884,7 +2884,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     };
     ```
 
-   Pour rechercher les emplacements dans votre code qu'une version antérieure aurait essayé d'optimiser, utilisez un compilateur de cette version avec l'option de compilateur `/W3` et activez l'avertissement 4370. Exemple :
+   Pour rechercher les emplacements dans votre code qu'une version antérieure aurait essayé d'optimiser, utilisez un compilateur de cette version avec l'option de compilateur `/W3` et activez l'avertissement 4370. Par exemple :
 
     ```cpp
     #pragma warning(default:4370)
@@ -2899,7 +2899,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     };
     ```
 
-   Avant Visual Studio 2013, ce code génère le message suivant : « avertissement C4370 : 'S2' : la disposition de classe a été modifiée à partir d’une version précédente du compilateur en raison d’une meilleure compression ».
+   Dans les versions antérieures à Visual Studio 2013, ce code génère le message : « avertissement C4370 : 'S2' : la disposition de classe a changé par rapport à une version précédente du compilateur en raison d'une meilleure compression ».
 
    Le compilateur x86 a le même problème de disposition non optimale dans toutes les versions du compilateur. Par exemple, si le code ci-dessous est compilé pour x86 :
 
@@ -2963,7 +2963,7 @@ Le compilateur C++ dans Visual Studio 2013 détecte des incompatibilités dans _
 
 ### <a name="mfc-and-atl"></a>MFC et ATL
 
-- **Visual Studio 2013 uniquement** : la bibliothèque MFC MBCS n’est pas incluse dans Visual Studio, car Unicode est très répandu et l’utilisation de MBCS est très réduite. Cette modification maintient également MFC plus étroitement aligné avec le Kit de développement logiciel (SDK) Windows, car la plupart des nouveaux contrôles et messages sont seulement Unicode. Toutefois, si vous devez continuer à utiliser la bibliothèque MFC MBCS, vous pouvez la télécharger depuis le Centre de téléchargement MSDN à la page [Bibliothèque MFC multioctets pour Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Le package redistribuable Visual C++ inclut toujours cette bibliothèque.  (Remarque : La DLL MBCS est fournie avec les composants d’installation de C++ dans Visual Studio 2015 et les versions ultérieures).
+- **Visual Studio 2013 uniquement** : la bibliothèque MFC MBCS n’est pas incluse dans Visual Studio, car Unicode est très répandu et l’utilisation de MBCS est considérablement réduite. Cette modification maintient également MFC plus étroitement aligné avec le Kit de développement logiciel (SDK) Windows, car la plupart des nouveaux contrôles et messages sont seulement Unicode. Toutefois, si vous devez continuer à utiliser la bibliothèque MFC MBCS, vous pouvez la télécharger depuis le Centre de téléchargement MSDN à la page [Bibliothèque MFC multioctets pour Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Le package redistribuable Visual C++ inclut toujours cette bibliothèque.  (Remarque : La DLL MBCS est fournie avec les composants d’installation de C++ dans Visual Studio 2015 et les versions ultérieures).
 
 - L’accessibilité pour le ruban MFC est modifiée.  Au lieu d’une architecture d’un niveau, il y a maintenant une architecture hiérarchique. Vous pouvez continuer à utiliser l'ancien comportement en appelant `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
@@ -3043,7 +3043,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 - En raison d’un changement cassant entre les normes C++98/03 et C++11, l’utilisation d’arguments template explicites pour appeler `make_pair()` (comme dans `make_pair<int, int>(x, y)`) ne permet généralement pas la compilation en Visual C++ dans Visual Studio 2012. La solution consiste à toujours appeler `make_pair() ` sans arguments template explicites, comme dans `make_pair(x, y)`. L’indication d’arguments template explicites va à l’encontre de l’objectif de la fonction. Si vous avez besoin d’un contrôle précis sur le type résultant, utilisez `pair` au lieu de `make_pair`, comme dans `pair<short, short>(int1, int2)`.
 
-- Autre changement cassant entre les normes C++98/03 et C++11 : quand A est implicitement convertible en B et B est implicitement convertible en C, mais quand A n’est pas implicitement convertible en C, C++98/03 et Visual C++ 2010 autorisaient la conversion (implicite ou explicite) de `pair<A, X>` en `pair<C, X>`. (L’autre type, X, ne présente pas d’intérêt ici, et ce n’est pas spécifique au premier type de la paire.) Comme C++11 et le compilateur C++ dans Visual Studio 2012 détectent que A n’est pas implicitement convertible en C, ils suppriment la conversion de paire de la résolution de surcharge. Il s’agit d’une modification positive pour de nombreux scénarios. Par exemple, la surcharge de `func(const pair<int, int>&)` et `func(const pair<string, string>&)`, et l’appel de `func()` avec `pair<const char *, const char *>`, permettent maintenant la compilation. Toutefois, cette modification altère le code qui reposait sur des conversions de paires agressives. Ce code peut généralement être corrigé en effectuant une partie de la conversion explicitement, par exemple, en passant `make_pair(static_cast<B>(a), x)` à une fonction qui attend `pair<C, X>`.
+- Autre changement cassant entre les normes C++98/03 et C++11 : quand A est implicitement convertible en B et B est implicitement convertible en C, mais quand A n’est pas implicitement convertible en C, C++98/03 et Visual C++ 2010 autorisaient la conversion (implicite ou explicite) de `pair<A, X>` en `pair<C, X>`. (L’autre type, X, ne présente pas d’intérêt ici, et ce n’est pas spécifique au premier type de la paire.) Comme C++11 et le compilateur C++ dans Visual Studio 2012 détectent que A n’est pas implicitement convertible en C, ils suppriment la conversion de paire de la résolution de surcharge. Il s’agit d’une modification positive pour de nombreux scénarios. Par exemple, la surcharge de `func(const pair<int, int>&)` et `func(const pair<string, string>&)`, et l’appel de `func()` avec `pair<const char *, const char *>`, permettent maintenant la compilation. Toutefois, cette modification altère le code qui reposait sur des conversions de paires agressives. Ce code peut généralement être corrigé en effectuant une partie de la conversion explicitement, par exemple, en passant `make_pair(static_cast<B>(a), x)` à une fonction qui attend `pair<C, X>`.
 
 - Visual C++ 2010 simulait des modèles variadiques, par exemple `make_shared<T>(arg1, arg2, argN)`, jusqu’à une limite de 10 arguments, en marquant les surcharges et les spécialisations avec le mécanisme de préprocesseur. Dans Visual Studio 2012, cette limite est réduite à 5 arguments pour améliorer les temps de compilation et la consommation de mémoire du compilateur pour la majorité des utilisateurs. Toutefois, vous pouvez définir la limite précédente en affectant explicitement 10 à _VARIADIC_MAX, au niveau du projet.
 
@@ -3091,7 +3091,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 - Ajout d’un paramètre au constructeur `CFolderPickerDialog`. (Comme il s’agit d’un paramètre par défaut, il n’altère pas la source.)
 
-- Changement de la taille de la structure `CFileStatus` : le membre `m_attribute` a été remplacé par DWORD (pour correspondre à la valeur qui est retournée de `GetFileAttributes`).
+- Changement de la taille de la structure `CFileStatus` : le membre `m_attribute` a été changé de BYTE en DWORD (pour correspondre à la valeur qui est retournée de `GetFileAttributes`).
 
 - `CRichEditCtrl` et `CRichEditView` utilisent MSFTEDIT_CLASS (contrôle RichEdit 4.1) au lieu de RICHEDIT_CLASS (contrôle RichEdit 3.0) dans les builds Unicode.
 
@@ -3405,21 +3405,21 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 ### <a name="mfc"></a>MFC
 
-- Classe `CTime` : la classe `CTime` accepte désormais les dates à partir du 1/1/1900 (notre ère) au lieu du 1/1/1970 (notre ère).
+- Classe `CTime` : la classe `CTime` accepte désormais les dates à partir du 1/1/1900 (notre ère) au lieu du 1/1/1970 (notre ère).
 
 - Ordre de tabulation des contrôles dans les boîtes de dialogue MFC : l’ordre de tabulation correct de plusieurs contrôles dans une boîte de dialogue MFC est perturbé si un contrôle ActiveX MFC est inséré dans l’ordre de tabulation. Cette modification résout ce problème.
 
    Par exemple, créez une application de boîte de dialogue MFC qui comporte un contrôle ActiveX et plusieurs contrôles d’édition. Placez le contrôle ActiveX au milieu de l’ordre de tabulation des contrôles d’édition. Démarrez l’application, cliquez sur un contrôle d’édition dont l’ordre de tabulation se situe après le contrôle ActiveX et appuyez sur TAB. Avant cette modification, le focus était placé sur le contrôle d’édition suivant le contrôle ActiveX et non sur le contrôle d’édition suivant dans l’ordre de tabulation.
 
-- Classe `CFileDialog` : les modèles personnalisés pour la classe `CFileDialog` ne peuvent pas être automatiquement déplacés vers Windows Vista. Ils sont toujours utilisables, mais ne présentent pas l’aspect ni les fonctionnalités supplémentaires des boîtes de dialogue de style Windows Vista.
+- Classe `CFileDialog` : les modèles personnalisés pour la classe `CFileDialog` ne peuvent pas être automatiquement portés vers Windows Vista. Ils sont toujours utilisables, mais ne présentent pas l’aspect ni les fonctionnalités supplémentaires des boîtes de dialogue de style Windows Vista.
 
-- Classe `CWnd` et classe `CFrameWnd` : la méthode `CWnd::GetMenuBarInfo` a été supprimée.
+- Classe `CWnd` et classe `CFrameWnd` : la méthode `CWnd::GetMenuBarInfo` a été supprimée.
 
    La méthode `CFrameWnd::GetMenuBarInfo` est maintenant une méthode non virtuelle. Pour plus d’informations, consultez **GetMenuBarInfo, fonction** dans le SDK Windows.
 
-- Prise en charge d’ISAPI par MFC : MFC ne prend plus en charge la génération d’applications avec l’interface ISAPI (Internet Server Application Programming Interface). Si vous souhaitez générer une application ISAPI, appelez directement les extensions ISAPI.
+- Prise en charge d’ISAPI par MFC : MFC ne prend plus en charge la génération d’applications avec l’interface ISAPI (Internet Server Application Programming Interface). Si vous souhaitez générer une application ISAPI, appelez directement les extensions ISAPI.
 
-- API ANSI dépréciées : les versions ANSI de plusieurs méthodes MFC sont dépréciées. Utilisez les versions Unicode de ces méthodes dans vos futures applications. Pour plus d’informations, consultez **Configuration requise pour les contrôles communs Windows Vista**.
+- API ANSI dépréciées : les versions ANSI de plusieurs méthodes MFC sont dépréciées. Utilisez les versions Unicode de ces méthodes dans vos futures applications. Pour plus d’informations, consultez **Configuration requise pour les contrôles communs Windows Vista**.
 
 ## <a name="visual-c-2005-breaking-changes"></a>Modifications avec rupture dans Visual C++ 2005
 

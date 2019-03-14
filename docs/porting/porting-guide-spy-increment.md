@@ -2,12 +2,12 @@
 title: 'Guide du portage : Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177002"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751372"
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 
@@ -292,7 +292,7 @@ Après la modification, nous obtenons le code suivant :
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Étant donné qu’il y a environ 10 occurrences de cette fonction dans les différentes classes dérivées de CWnd, le plus rapide est d’utiliser les commandes **Atteindre la définition** (raccourci clavier : **F12**) et **Atteindre la déclaration** (raccourci clavier : **Ctrl**+**CtrlF12**) quand le curseur est placé sur la fonction dans l’éditeur. Cela permet de localiser ces occurrences et d’y accéder à partir de la fenêtre Outil **Rechercher un symbole**. La commande **Atteindre la définition** est généralement la plus pratique des deux. La commande **Atteindre la déclaration** permet de trouver les déclarations autres que la déclaration de la classe de définition, par exemple les déclarations de classe Friend ou les références anticipées.
+Dans la mesure où il y a environ dix occurrences de cette fonction dans différentes classes dérivées de CWnd, il est conseillé d’utiliser la commande **Atteindre la définition** (touche **F12**) et la commande **Atteindre la déclaration** (touches **Ctrl**+**F12**) quand le curseur se trouve sur la fonction dans l’éditeur pour localiser ces occurrences et y accéder à partir de la fenêtre Outil **Rechercher un symbole**. La commande **Atteindre la définition** est généralement la plus pratique des deux. La commande **Atteindre la déclaration** permet de trouver les déclarations autres que la déclaration de la classe de définition, par exemple les déclarations de classe Friend ou les références anticipées.
 
 ##  <a name="mfc_changes"></a> Étape 9. Modifications MFC
 
@@ -542,7 +542,7 @@ Nous avons ajouté \_T autour du littéral de chaîne pour supprimer l’erreur.
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-Avec la macro \_T, un littéral de chaîne se compile en chaîne **char** ou **wchar_t**, selon le paramètre MBCS ou UNICODE choisi. Pour remplacer toutes les chaînes par \_T dans Visual Studio, ouvrez d’abord la zone **Remplacement rapide** (raccourci clavier : **Ctrl**+**F**) ou **Remplacer dans les fichiers** (raccourci clavier : **Ctrl**+**Maj**+**H**), puis cochez la case **Utiliser des expressions régulières**. Entrez le texte recherché `((\".*?\")|('.+?'))` et le texte de remplacement `_T($1)`. Si la macro \_T existe déjà autour de certaines chaînes, cette procédure en ajoute une nouvelle. Pour les cas où la macro \_T n’est pas nécessaire (par exemple, avec `#include`), utilisez **Suivant** plutôt que **Remplacer tout**.
+Avec la macro \_T, un littéral de chaîne se compile en chaîne **char** ou **wchar_t**, selon le paramètre MBCS ou UNICODE choisi. Pour remplacer toutes les chaînes par \_T dans Visual Studio, ouvrez d’abord la zone **Remplacement rapide** (touches **Ctrl**+**F**) ou la zone **Remplacer dans les fichiers** (touches **Ctrl**+**Maj**+**H**), puis cochez la case **Utiliser des expressions régulières** . Entrez le texte recherché `((\".*?\")|('.+?'))` et le texte de remplacement `_T($1)`. Si la macro \_T existe déjà autour de certaines chaînes, cette procédure en ajoute une nouvelle. Pour les cas où la macro \_T n’est pas nécessaire (par exemple, avec `#include`), utilisez **Suivant** plutôt que **Remplacer tout**.
 
 Cette fonction spécifique, [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), est définie dans les en-têtes Windows, mais la documentation la concernant recommande de ne pas l’utiliser, en raison d’un risque de dépassement de mémoire. Aucune taille n'étant spécifiée pour la mémoire tampon `szTmp`, la fonction n'est pas en mesure de vérifier si la mémoire tampon sera suffisante pour contenir toutes les données qui y seront écrites. Consultez la section suivante sur le portage vers les fonctions CRT sécurisées, où nous verrons comment résoudre d'autres problèmes similaires. Nous l’avons finalement remplacée par [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
@@ -673,5 +673,5 @@ Il nous a fallu environ 20 heures de codage pendant une semaine pour porter la 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Portage et mise à niveau : exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Étude de cas précédente : COMSpy](../porting/porting-guide-com-spy.md)
+[Portage et mise à niveau : Exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Étude de cas précédente : COM Spy](../porting/porting-guide-com-spy.md)

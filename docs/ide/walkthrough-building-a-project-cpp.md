@@ -1,19 +1,19 @@
 ---
-title: 'Procédure pas à pas : génération d’un projet (C++)'
+title: 'Procédure pas à pas : Générer un projet (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1d5dbd8f83f501c3b68bad771089eab8acc6f8aa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524155"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742500"
 ---
-# <a name="walkthrough-building-a-project-c"></a>Procédure pas à pas : génération d’un projet (C++)
+# <a name="walkthrough-building-a-project-c"></a>Procédure pas à pas : Générer un projet (C++)
 
 Dans cette procédure pas à pas, vous introduisez délibérément une erreur de syntaxe Visual C++ dans votre code pour apprendre à reconnaître une erreur de compilation et à la résoudre. Lorsque vous compilez le projet, un message d'erreur indique en quoi consiste le problème et l'endroit où il s'est produit.
 
@@ -54,8 +54,8 @@ Dans cette procédure pas à pas, vous introduisez délibérément une erreur de
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-**Étape précédente :** [Procédure pas à pas : utilisation de projets et de solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**Étape suivante :** [Procédure pas à pas : test d’un projet (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Précédent :** [Procédure pas à pas : utilisation de projets et de solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**Suivant :** [Procédure pas à pas : Test d’un projet (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Voir aussi
 

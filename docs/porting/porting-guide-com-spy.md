@@ -1,15 +1,15 @@
 ---
-title: 'Guide du portage : COMSpy'
+title: 'Guide du portage : COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 67dbcc815404c26535763239eddb176fcecf03f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441783"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751685"
 ---
-# <a name="porting-guide-com-spy"></a>Guide du portage : COMSpy
+# <a name="porting-guide-com-spy"></a>Guide du portage : COM Spy
 
 Cette rubrique est la deuxième d'une série d'articles qui décrit le processus de mise à niveau d'anciens projets Visual C++ vers la dernière version de Visual Studio. L'exemple de code utilisé dans cette rubrique a été compilé avec Visual Studio 2005.
 
@@ -166,6 +166,6 @@ Cela a fonctionné sans problème. Avec COMSpy, opérationnel et configuré pour
 
 ## <a name="see-also"></a>Voir aussi
 
-[Portage et mise à niveau : exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portage et mise à niveau : Exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Exemple suivant : Spy++](../porting/porting-guide-spy-increment.md)<br/>
-[Exemple précédent : Scribble MFC](../porting/porting-guide-mfc-scribble.md)
+[Exemple précédent : MFC Scribble](../porting/porting-guide-mfc-scribble.md)

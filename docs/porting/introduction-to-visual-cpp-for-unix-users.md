@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: e930702862149de4dae65aab2f880f35850e0687
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597546"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747006"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduction à Visual C++ pour les utilisateurs UNIX
 
@@ -19,7 +19,7 @@ Cette rubrique fournit des informations aux utilisateurs UNIX qui débutent avec
 
 Vous pouvez utiliser le compilateur C++ à partir de la ligne de commande, comme vous le feriez dans un environnement de ligne de commande UNIX. Vous pouvez compiler à partir de l’invite de commandes à l’aide du compilateur en ligne de commande C et C++ (CL.EXE), de l’éditeur de liens (LINK.EXE) et d’autres outils comme NMAKE.EXE, la version Microsoft de l’utilitaire UNIX.
 
-Sous UNIX, les commandes sont installées dans un dossier commun, tel que /usr/bin. Dans Visual Studio, les outils en ligne de commande sont installés dans votre répertoire d’installation de Visual Studio, dans le sous-répertoire VC\bin et ses sous-répertoires. Contrairement à UNIX, ces outils ne sont pas disponibles dans une fenêtre d’invite de commandes standard. Pour accéder aux outils en ligne de commande, utilisez un raccourci vers l’invite de commandes développeur, ou exécutez un fichier de commandes développeur tel que vcvarsall.bat. Cela définit le chemin et les autres variables d’environnement nécessaires pour compiler les programmes C++ à partir de la ligne de commande. Pour plus d’informations, consultez [Générer du code C/C++ sur la ligne de commande](../build/building-on-the-command-line.md) et [Procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+Sous UNIX, les commandes sont installées dans un dossier commun, tel que /usr/bin. Dans Visual Studio, les outils en ligne de commande sont installés dans votre répertoire d’installation de Visual Studio, dans le sous-répertoire VC\bin et ses sous-répertoires. Contrairement à UNIX, ces outils ne sont pas disponibles dans une fenêtre d’invite de commandes standard. Pour accéder aux outils en ligne de commande, utilisez un raccourci vers l’invite de commandes développeur, ou exécutez un fichier de commandes développeur tel que vcvarsall.bat. Cela définit le chemin et les autres variables d’environnement nécessaires pour compiler les programmes C++ à partir de la ligne de commande. Pour plus d’informations, consultez [Générer du code C/C++ sur la ligne de commande](../build/building-on-the-command-line.md) et [Procédure pas à pas : Compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
 
 Pour ouvrir un raccourci d’invite de commandes développeur, entrez *invite de commandes développeur* dans le contrôle de recherche sur l’ordinateur, puis choisissez le résultat **Invite de commandes développeur** correspondant à votre version de Visual Studio. Pour choisir une invite de commandes développeur préconfigurée pour une architecture hôte et cible spécifique, ouvrez le menu **Démarrer** (icône Windows dans le coin du Bureau), puis faites défiler le menu jusqu’au dossier correspondant à votre version de Visual Studio (par exemple, **Visual Studio 2017**). Ouvrez le dossier et choisissez le raccourci d’invite de commandes pour votre architecture hôte et cible par défaut.
 
@@ -37,7 +37,7 @@ Les applications composées de plusieurs bibliothèques et fichiers exécutables
 
 ## <a name="importing-your-existing-code"></a>Importation de votre code existant
 
-Vous pouvez utiliser le compilateur C++ pour générer du code existant configuré pour être compilé avec ou sans makefile, et le placer dans un projet Visual Studio. Pour plus d’informations, consultez [Guide pratique pour créer un projet C++ à partir d’un code existant](../ide/how-to-create-a-cpp-project-from-existing-code.md).
+Vous pouvez utiliser le compilateur C++ pour générer du code existant configuré pour être compilé avec ou sans makefile, et le placer dans un projet Visual Studio. Pour plus d'informations, voir [Procédure : Créer un projet C++ à partir de code existant](../ide/how-to-create-a-cpp-project-from-existing-code.md).
 
 ## <a name="creating-a-new-project"></a>Création d'un projet
 
@@ -51,7 +51,7 @@ Quand vous créez un projet, vous devez lui attribuer un nom. Par défaut, le no
 
 Le compilateur Microsoft Visual C++ implémente plusieurs extensions du langage de programmation C++ standard pour prendre en charge la programmation sur les systèmes d’exploitation Windows. Ces extensions servent à spécifier des attributs de classe de stockage, des conventions d'appel de fonction et des fonctions d'adressage, entre autres choses. Pour obtenir une liste complète de toutes les extensions C++ prises en charge, consultez [Modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-Vous pouvez désactiver toutes les extensions spécifiques Microsoft pour C++ à l’aide de l’option `/Za` du compilateur. Cette option est recommandée si vous souhaitez écrire du code devant s'exécuter sur plusieurs plateformes. Pour plus d’informations sur l’option de compilateur `/Za`, consultez [/Za, /Ze (désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md). Pour plus d’informations sur la conformité du compilateur C++, consultez [Conformité du langage Visual C++](../visual-cpp-language-conformance.md) et [Comportement non standard](../cpp/nonstandard-behavior.md).
+Vous pouvez désactiver toutes les extensions spécifiques Microsoft pour C++ à l'aide de l'option `/Za` du compilateur. Cette option est recommandée si vous souhaitez écrire du code devant s'exécuter sur plusieurs plateformes. Pour plus d’informations sur l’option de compilateur `/Za`, consultez [/Za, /Ze (désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md). Pour plus d’informations sur la conformité du compilateur C++, consultez [Conformité du langage Visual C++](../visual-cpp-language-conformance.md) et [Comportement non standard](../cpp/nonstandard-behavior.md).
 
 ## <a name="precompiled-headers"></a>En-têtes précompilés
 
