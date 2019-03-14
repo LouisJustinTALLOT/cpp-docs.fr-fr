@@ -17,12 +17,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: f5f0629b97c3f3731e3916af36c9c8e40176462a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aebdf2e5aaf6d59e5ee39af05540604206ec6c23
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621648"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740549"
 ---
 # <a name="filename-search-functions"></a>Fonctions de recherche de nom de fichier
 
@@ -34,7 +34,7 @@ Ces fonctions recherchent des noms de fichiers spécifiés et arrêtent ces rech
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 La fonction `_findfirst` fournit des informations sur la première instance d’un nom de fichier correspondant au fichier spécifié dans l’argument `filespec` . Vous pouvez utiliser dans `filespec` n’importe quelle combinaison de caractères génériques prise en charge par le système d’exploitation hôte.
 
@@ -64,22 +64,22 @@ Dans les systèmes de fichiers qui ne prennent pas en charge les heures de créa
 Vous ne pouvez pas spécifier d’attributs cibles (comme `_A_RDONLY`) pour limiter l’opération de recherche. Ces attributs sont retournés dans le champ `attrib` de la structure `_finddata_t` et peuvent prendre les valeurs suivantes (définies dans IO.h). Les utilisateurs ne doivent pas compter sur le fait que ce sont les seules valeurs possibles pour le champ `attrib` .
 
 `_A_ARCH`<br/>
-Archive. Défini chaque fois que le fichier est modifié et supprimé par la commande **BACKUP** . Valeur : 0x20.
+Archive. Défini chaque fois que le fichier est modifié et supprimé par la commande **BACKUP** . Valeur : 0x20.
 
 `_A_HIDDEN`<br/>
-Fichier caché. Ne s’affiche généralement pas avec la commande DIR, sauf si vous utilisez l’option **/AH** . Retourne des informations sur les fichiers normaux et les fichiers qui ont cet attribut. Valeur : 0x02.
+Fichier caché. Ne s’affiche généralement pas avec la commande DIR, sauf si vous utilisez l’option **/AH** . Retourne des informations sur les fichiers normaux et les fichiers qui ont cet attribut. Valeur : 0x02.
 
 `_A_NORMAL`<br/>
-Normal. Aucun autre attribut n’est défini pour le fichier et il est possible d’y effectuer des opérations de lecture ou d’écriture sans restriction. Valeur : 0x00.
+Normal. Aucun autre attribut n’est défini pour le fichier et il est possible d’y effectuer des opérations de lecture ou d’écriture sans restriction. Valeur : 0x00.
 
 `_A_RDONLY`<br/>
-Lecture seule. Impossible d’ouvrir le fichier pour des opérations d’écriture ni de créer un fichier portant le même nom. Valeur : 0x01.
+Lecture seule. Impossible d’ouvrir le fichier pour des opérations d’écriture ni de créer un fichier portant le même nom. Valeur : 0x01.
 
 `_A_SUBDIR`<br/>
-Sous-répertoire. Valeur : 0x10.
+Sous-répertoire. Valeur : 0x10.
 
 `_A_SYSTEM`<br/>
-Fichier système. Ne s’affiche généralement pas avec la commande **DIR** , sauf si vous utilisez l’option **/A** ou **/A:S** . Valeur : 0x04.
+Fichier système. Ne s’affiche généralement pas avec la commande **DIR** , sauf si vous utilisez l’option **/A** ou **/A:S** . Valeur : 0x04.
 
 `_findnext` recherche le nom suivant, le cas échéant, correspondant à l’argument `filespec` spécifié dans un appel antérieur à `_findfirst`. L’argument `fileinfo` doit pointer vers une structure initialisée par l’appel précédent à `_findfirst`. Si une correspondance est trouvée, le contenu de la structure `fileinfo` est modifié comme décrit précédemment. Dans le cas contraire, il reste inchangé. `_findclose` ferme le handle de recherche spécifié et libère toutes les ressources associées à la fois pour `_findfirst` et `_findnext`. Le handle retourné par `_findfirst` ou `_findnext` doit tout d’abord être transmis à `_findclose`, avant de pouvoir effectuer une opération de modification, telle que la suppression, sur les répertoires qui constituent les chemins transmis.
 

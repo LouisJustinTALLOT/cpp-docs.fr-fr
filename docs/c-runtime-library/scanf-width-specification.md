@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: e4608d46664dad3e04d37a82368cc6e7173106f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445160"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743263"
 ---
 # <a name="scanf-width-specification"></a>Spécification de largeur scanf
 
@@ -79,7 +79,7 @@ Si vous utilisez une fonction non sécurisée dans la famille `scanf`, omettez l
 
 ## <a name="reading-undelimited-strings"></a>Lecture de chaînes non délimitées
 
-Pour la lecture des chaînes non délimitées par des espaces blancs, un jeu de caractères entre crochets (**[ ]**) peut remplacer le caractère de type **s** (string). Le jeu de caractères entre crochets est appelé chaîne de contrôle. Le champ d'entrée correspondant est lu jusqu'au premier caractère non visible dans la chaîne de contrôle. Si le premier caractère du jeu est un accent circonflexe (**^**), l’effet est inversé : le champ d’entrée est lu jusqu’au premier caractère visible dans le reste du jeu de caractères.
+Pour la lecture des chaînes non délimitées par des espaces blancs, un jeu de caractères entre crochets (**[ ]**) peut remplacer le caractère de type **s** (string). Le jeu de caractères entre crochets est appelé chaîne de contrôle. Le champ d'entrée correspondant est lu jusqu'au premier caractère non visible dans la chaîne de contrôle. Si le premier caractère dans le jeu est un accent circonflexe (**^**), l’effet est inversé : Le champ d’entrée est lu jusqu’au premier caractère qui apparaît dans le reste du jeu de caractères.
 
 Notez que **%[a-z]** et **%[z-a]** sont interprétés comme étant équivalents à **%[abcde...z]**. Il s'agit d'une extension de fonction `scanf` commune. Toutefois, notez que la norme ANSI ne l'impose pas.
 

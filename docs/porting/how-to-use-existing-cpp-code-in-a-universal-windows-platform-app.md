@@ -1,15 +1,15 @@
 ---
-title: 'Comment : utiliser le code C++ existant dans une application pour la plateforme Windows universelle'
+title: Guide pratique pour utiliser le code C++ existant dans une application de plateforme Windows universelle
 ms.date: 08/21/2018
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 55fb1f3fa89f192c83effb755966158394d2fbcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a4633b74591e16f22def44ff5875557f2909043
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528711"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745508"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Comment : utiliser le code C++ existant dans une application pour la plateforme Windows universelle
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Guide pratique pour utiliser le code C++ existant dans une application de plateforme Windows universelle
 
 Le moyen le plus simple d’exécuter votre programme de bureau dans l’environnement UWP consiste peut-être à utiliser les technologies de pont de bureau. Elles incluent Desktop App Converter, qui va empaqueter votre application existante comme application UWP sans nécessiter de modifications de code. Pour plus d’informations, consultez [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
@@ -153,7 +153,7 @@ La procédure suivante s’applique quand vous avez une DLL native qui expose de
 
 5. Assurez-vous que le nom de votre fichier d'en-tête précompilé est correct. Dans la section **En-têtes précompilés**, remplacez le **fichier d’en-tête précompilé** pch.h par stdafx.h. Si vous ne le faites pas, l'erreur suivante apparaît.
 
-   > Erreur C2857 : L'instruction '#include' spécifiée avec l'option de ligne de commande /Ycpch.h n'a pu être trouvée dans le fichier source
+   > Erreur C2857 : L'instruction '#include' spécifiée avec l'option de ligne de commande /Yc%s n'a pu être trouvée dans le fichier source
 
    Le problème est que les projets d’application Windows universelle utilisent une convention d’affectation des noms différente pour le fichier d’en-tête précompilé.
 

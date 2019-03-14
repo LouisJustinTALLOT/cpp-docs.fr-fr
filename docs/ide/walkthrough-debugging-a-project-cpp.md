@@ -1,19 +1,19 @@
 ---
-title: "Procédure pas à pas : débogage d'un projet (C++)"
+title: 'Procédure pas à pas : Déboguer un projet (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581946"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741348"
 ---
-# <a name="walkthrough-debugging-a-project-c"></a>Procédure pas à pas : débogage d'un projet (C++)
+# <a name="walkthrough-debugging-a-project-c"></a>Procédure pas à pas : Déboguer un projet (C++)
 
 Dans cette procédure pas à pas, vous modifiez le programme pour résoudre le problème que vous avez détecté au moment du test du projet.
 
@@ -53,8 +53,8 @@ Dans cette procédure pas à pas, vous modifiez le programme pour résoudre le p
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-**Précédent :** [Procédure pas à pas : test d’un projet (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Suivant :** [Procédure pas à pas : déploiement de votre programme (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**Précédent :** [Procédure pas à pas : Test d’un projet (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Suivant :** [Procédure pas à pas : Déploiement de votre programme (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 
 ## <a name="see-also"></a>Voir aussi
 

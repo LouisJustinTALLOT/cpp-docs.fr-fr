@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: a4bb059b13f2001c6691e8d051106aa5e11eccbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f7450537f7609cbc66f8adf0bc868631e15f3a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429139"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740818"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets
 
@@ -52,7 +52,7 @@ Ensuite, vous devez mettre à jour vos projets et solution Visual Studio 2008 v
 
 Une fois la mise à niveau terminée, si le rapport de journal contient des erreurs ou des avertissements pour l’un de vos projets, examinez-les attentivement. La conversion de **VCBuild** vers **MSBuild** peut entraîner des problèmes. Veillez à comprendre et à implémenter toutes les actions répertoriées dans le rapport. Pour plus d’informations sur le rapport de journal de mise à niveau et sur les problèmes qui peuvent se produire durant la conversion de **VCBuild** vers **MSBuild**, consultez ce billet de blog consacré au [multiciblage natif C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/).
 
-Une fois que la mise à niveau du projet est terminée et que vous avez résolu les problèmes éventuellement signalés dans le fichier journal, votre solution cible réellement le dernier ensemble d’outils. En guise d’étape finale, modifiez les propriétés de chaque projet dans la solution pour utiliser l’ensemble d’outils de Visual Studio 2008. Une fois la solution chargée dans la version actuelle de Visual Studio, pour chaque projet dans la solution, ouvrez la boîte de dialogue **Pages de propriétés** liée au projet : cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **Propriétés**. Dans la boîte de dialogue **Pages de propriétés**, définissez la valeur de la liste déroulante **Configuration** sur **Toutes les configurations**. Dans **Propriétés de configuration**, sélectionnez **Général**, puis définissez **Ensemble d’outils de plateforme** sur **Visual Studio 2008 (v90)**.
+Une fois que la mise à niveau du projet est terminée et que vous avez résolu les problèmes éventuellement signalés dans le fichier journal, votre solution cible réellement le dernier ensemble d’outils. En guise d’étape finale, modifiez les propriétés de chaque projet dans la solution pour utiliser l’ensemble d’outils de Visual Studio 2008. Une fois la solution chargée dans la version actuelle de Visual Studio, pour chaque projet dans la solution, ouvrez la boîte de dialogue **Pages de propriétés** du projet : cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **Propriétés**. Dans la boîte de dialogue **Pages de propriétés**, définissez la valeur de la liste déroulante **Configuration** sur **Toutes les configurations**. Dans **Propriétés de configuration**, sélectionnez **Général**, puis définissez **Ensemble d’outils de plateforme** sur **Visual Studio 2008 (v90)**.
 
 Après cette modification, le compilateur et les bibliothèques Visual Studio 2008 sont utilisés pour générer les fichiers binaires du projet quand vous générez la solution dans la version actuelle de Visual Studio.
 
