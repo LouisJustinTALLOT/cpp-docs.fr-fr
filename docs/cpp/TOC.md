@@ -16,7 +16,7 @@
 ### [Algorithmes (C++ moderne)](algorithms-modern-cpp.md)
 ### [Mise en forme des chaînes et E/S (C++ moderne)](string-and-i-o-formatting-modern-cpp.md)
 ### [Gestion des erreurs et des exceptions (C++ moderne)](errors-and-exception-handling-modern-cpp.md)
-#### [Guide pratique de conception pour la sécurité des exceptions](how-to-design-for-exception-safety.md)
+#### [Guide pratique pour concevoir la sécurité des exceptions](how-to-design-for-exception-safety.md)
 #### [Guide pratique pour établir une interface entre le code exceptionnel et le code non exceptionnel](how-to-interface-between-exceptional-and-non-exceptional-code.md)
 ### [Portabilité aux limites ABI (C++ moderne)](portability-at-abi-boundaries-modern-cpp.md)
 ## [Conventions lexicales](lexical-conventions.md)
@@ -267,7 +267,7 @@
 #### [Écriture d’un gestionnaire de terminaisons](writing-a-termination-handler.md)
 ##### [Instruction try-finally](try-finally-statement.md)
 ##### [Nettoyage des ressources](cleaning-up-resources.md)
-##### [Synchronisation de la gestion des exceptions : Résumé](timing-of-exception-handling-a-summary.md)
+##### [Synchronisation de la gestion des exceptions : résumé](timing-of-exception-handling-a-summary.md)
 ##### [Restrictions sur les gestionnaires de terminaison](restrictions-on-termination-handlers.md)
 ### [Transport des exceptions entre les threads](transporting-exceptions-between-threads.md)
 ## [Messages d’assertion et messages fournis par l’utilisateur](assertion-and-user-supplied-messages-cpp.md)
@@ -416,4 +416,3 @@
 ## [Extensions Microsoft](microsoft-extensions.md)
 ## [Comportement non standard](nonstandard-behavior.md)
 ### [Limites du compilateur](compiler-limits.md)
-
