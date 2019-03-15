@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /MACHINE linker option
 - MACHINE linker option
 ms.assetid: 8d41bf4b-7e53-4ab9-9085-d852b08d31c2
-ms.openlocfilehash: 713cff8a787b6eb97ad5d9bea32b6fd77fa64f17
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e64aa7b2ca9e50ebdc0760f64a9b25e851b45310
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426574"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818126"
 ---
 # <a name="machine-specify-target-platform"></a>/MACHINE (Spécifier la plate-forme cible)
 
@@ -32,7 +32,7 @@ En règle générale, vous n’êtes pas obligé de spécifier l’option /MACHI
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -46,5 +46,5 @@ En règle générale, vous n’êtes pas obligé de spécifier l’option /MACHI
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

@@ -1,16 +1,16 @@
 ---
-title: 'Procédure : utilisation du Kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows'
+title: 'Procédure : Utiliser Windows 10 SDK dans une Application de bureau Windows'
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669116"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809923"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procédure : utilisation du Kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procédure : Utiliser Windows 10 SDK dans une Application de bureau Windows
 
 Lorsque vous créez un projet de bureau Windows classique dans Visual Studio 2017, il est configuré par défaut pour générer avec la version du SDK Windows 10 qui a été installé lors de la charge de travail C++ Desktop a été installé ou mis à jour. Cette version du SDK Windows est compatible avec Windows 7 et versions ultérieures. Consultez [utilisation des en-têtes Windows](/windows/desktop/WinProg/using-the-windows-headers) pour plus d’informations sur le ciblage des versions spécifiques de Windows.
 
@@ -38,7 +38,7 @@ Si vous souhaitez cibler une version antérieure du Kit de développement, vous 
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. Ouvrez les propriétés du projet et, dans la section **Propriétés de configuration, Général** , notez les valeurs de **Version de la plateforme cible Windows**. Changer la valeur ici revient à suivre cette procédure. Consultez [General Property Page (Project)](../ide/general-property-page-project.md).
+4. Ouvrez les propriétés du projet et, dans la section **Propriétés de configuration, Général** , notez les valeurs de **Version de la plateforme cible Windows**. Changer la valeur ici revient à suivre cette procédure. Consultez [General Property Page (Project)](../build/reference/general-property-page-project.md).
 
    ![Cibler la Version de la plateforme](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
@@ -48,7 +48,7 @@ Si vous souhaitez cibler une version antérieure du Kit de développement, vous 
 
    Choisissez le **Macros >>** bouton et faites défiler la liste des macros pour les macros du Kit de développement logiciel Windows pour voir toutes les nouvelles valeurs.
 
-   ![Macros de kit de développement logiciel Windows](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")
+   ![Windows SDK Macros](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")
 
 5. Répétez l'opération pour les autres projets selon vos besoins et régénérez la solution.
 

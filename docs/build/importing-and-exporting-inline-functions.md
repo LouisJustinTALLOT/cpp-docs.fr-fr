@@ -1,5 +1,5 @@
 ---
-title: Importation et exportation de fonctions inline
+title: L’importation et exportation de fonctions inline
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exporting functions [C++], inline functions
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: fb117ce6c6088b9fdca57f7d4fd7d0193e1813c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed523d84228124d4a8d99e443c0c744f362f1c56
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425547"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822039"
 ---
-# <a name="importing-and-exporting-inline-functions"></a>Importation et exportation de fonctions inline
+# <a name="importing-and-exporting-inline-functions"></a>L’importation et exportation de fonctions inline
 
 Les fonctions importées peuvent être définies comme étant inline. L’effet est à peu près identique à la définition d’une fonction inline standard ; les appels à la fonction sont développés en code inline, comme une macro. Il s’agit essentiellement utile comme un moyen de prendre en charge C++ classes dans une DLL qui peuvent être inline à certaines de leurs membres fonctions pour plus d’efficacité.
 
@@ -30,20 +30,20 @@ Une fonctionnalité d’une fonction importée inline est que vous pouvez prendr
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Exporter à partir d’une DLL](../build/exporting-from-a-dll.md)
+- [Exporter à partir d’une DLL](exporting-from-a-dll.md)
 
-- [Exporter à partir d’une DLL à l’aide. Fichiers DEF](../build/exporting-from-a-dll-using-def-files.md)
+- [Exporter à partir d’une DLL à l’aide. Fichiers DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exporter et importer à l’aide de AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exporter et importer à l’aide de AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exporter des fonctions C++ à utiliser dans des exécutables en langage C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exporter des fonctions C++ à utiliser dans des exécutables en langage C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Déterminer la méthode d’exportation à utiliser](../build/determining-which-exporting-method-to-use.md)
+- [Déterminer la méthode d’exportation à utiliser](determining-which-exporting-method-to-use.md)
 
-- [Importer dans une application à l’aide de __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une application à l’aide de __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Importation et exportation](../build/importing-and-exporting.md)
+[Importation et exportation](importing-and-exporting.md)

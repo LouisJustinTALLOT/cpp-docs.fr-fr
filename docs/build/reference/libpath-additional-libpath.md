@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -LIBPATH linker option
 - library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
-ms.openlocfilehash: 0495081fb108b2b0a60de1b7782dc92717367ec6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab586c788825a854e7d3cb3760da6e4e5558de3a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413119"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819881"
 ---
 # <a name="libpath-additional-libpath"></a>/LIBPATH (Autre chemin de bibliothèque)
 
@@ -36,7 +36,7 @@ Utilisez l’option /LIBPATH pour substituer le chemin de bibliothèque d’envi
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -50,5 +50,5 @@ Utilisez l’option /LIBPATH pour substituer le chemin de bibliothèque d’envi
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

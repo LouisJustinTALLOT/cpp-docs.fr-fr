@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421368"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813953"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Procédure : Configurer des projets Visual C++ pour cibler les 64 bits, x64 plateformes
 
@@ -21,7 +21,7 @@ Vous pouvez utiliser les configurations de projet dans l’IDE Visual Studio pou
 
 1. Ouvrez le projet C++ à configurer.
 
-1. Ouvrez les pages de propriétés de ce projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).
+1. Ouvrez les pages de propriétés de ce projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](working-with-project-properties.md).
 
    > [!NOTE]
    > Pour les projets .NET, assurez-vous que le **propriétés de Configuration** nœud ou l’un de ses nœuds enfants, est sélectionné dans le  **\<nom_projet > Pages de propriétés** boîte de dialogue ; sinon, le  **Configuration Manager** bouton reste indisponible.
@@ -43,21 +43,20 @@ Vous pouvez utiliser les configurations de projet dans l’IDE Visual Studio pou
 
 - Quand la boîte de dialogue **Nouvelle plateforme de solution** est ouverte pendant que vous configurez un projet pour cibler une plateforme 64 bits, dans la liste déroulante **Copier les paramètres à partir de** , sélectionnez **Win32**. Ces paramètres de projet sont mis à jour automatiquement au niveau du projet :
 
-  - L’option [/MACHINE](../build/reference/machine-specify-target-platform.md) de l’Éditeur de liens prend la valeur **/MACHINE:X64**.
+  - L’option [/MACHINE](reference/machine-specify-target-platform.md) de l’Éditeur de liens prend la valeur **/MACHINE:X64**.
 
-  - L’**Inscription de la sortie** est désactivée. Pour plus d'informations, consultez [Linker Property Pages](../ide/linker-property-pages.md).
+  - L’**Inscription de la sortie** est désactivée. Pour plus d'informations, consultez [Linker Property Pages](reference/linker-property-pages.md).
 
-  - L’**Environnement cible** prend la valeur **/env x64**. Pour plus d’informations, consultez [Pages de propriétés MIDL : Général](../ide/midl-property-pages-general.md).
+  - L’**Environnement cible** prend la valeur **/env x64**. Pour plus d’informations, consultez [Pages de propriétés MIDL : Général](reference/midl-property-pages-general.md).
 
-  - L’option**Validation des paramètres** est effacée et réinitialisée à la valeur par défaut. Pour plus d’informations, consultez [Pages de propriétés MIDL : Advanced](../ide/midl-property-pages-advanced.md).
+  - L’option**Validation des paramètres** est effacée et réinitialisée à la valeur par défaut. Pour plus d’informations, consultez [Pages de propriétés MIDL : Advanced](reference/midl-property-pages-advanced.md).
 
-  - Si vous avez affecté la valeur **/ZI** à l’option **Format des informations de débogage** dans la configuration de projet Win32, elle prend la valeur **/Zi** dans la configuration de projet 64 bits. Pour plus d’informations, consultez l’article [/Z7, /Zi, /ZI (Format des informations de débogage)](../build/reference/z7-zi-zi-debug-information-format.md).
+  - Si vous avez affecté la valeur **/ZI** à l’option **Format des informations de débogage** dans la configuration de projet Win32, elle prend la valeur **/Zi** dans la configuration de projet 64 bits. Pour plus d’informations, consultez l’article [/Z7, /Zi, /ZI (Format des informations de débogage)](reference/z7-zi-zi-debug-information-format.md).
 
   > [!NOTE]
   > Aucune de ces propriétés de projet n’est modifiée si elle est substituée au niveau du fichier.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Applications 64 bits de .NET framework](/dotnet/framework/64-bit-apps)<br/>
-[Configurer Visual C++ pour des cibles x64 64 bits](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Configurer des projets C++ pour x64 64 64 bits, cibles](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Déboguer des applications 64 bits](/visualstudio/debugger/debug-64-bit-applications)

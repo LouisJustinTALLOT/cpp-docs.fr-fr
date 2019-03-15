@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: 0e6cf408e56dd6e5bc262c39dda460253a32dfc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0d850d54611579288b81a334af4abdfab6e411c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662460"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820336"
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (c ++ 17 suralignés allocation)
 
@@ -97,7 +97,7 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
 
@@ -105,4 +105,4 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Zc (Conformité)](../../build/reference/zc-conformance.md)
+[/Zc (Conformité)](zc-conformance.md)

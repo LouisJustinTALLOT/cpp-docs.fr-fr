@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: fe31763c5da21a724f0c9242e6eb8429a2379ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421491"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816943"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Créer une application sensible à Terminal Server)
 
@@ -34,15 +34,15 @@ Si une application est compatible Terminal Server, il doit s’appuyer sur les f
 
 Si vous utilisez /TSAWARE et que votre application utilise toujours les fichiers INI, les fichiers sont partagés par tous les utilisateurs du système. Si tel est acceptable, vous pouvez toujours lier votre application avec l’option /TSAWARE ; Sinon, vous devez utiliser : no.
 
-L’option /TSAWARE est activée par défaut pour Windows et les applications de console. Consultez [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) et [/VERSION](../../build/reference/version-version-information.md) pour plus d’informations.
+L’option /TSAWARE est activée par défaut pour Windows et les applications de console. Consultez [/SUBSYSTEM](subsystem-specify-subsystem.md) et [/VERSION](version-version-information.md) pour plus d’informations.
 
 /TSAWARE n’est pas valide pour les pilotes, VxDs ou DLL.
 
-Si une application a été liée avec l’option/TSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) affiche des informations à cet effet.
+Si une application a été liée avec l’option/TSAWARE, DUMPBIN [/HEADERS](headers.md) affiche des informations à cet effet.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -56,7 +56,7 @@ Si une application a été liée avec l’option/TSAWARE, DUMPBIN [/HEADERS](../
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)<br/>
 [Stocker des informations spécifiques à l’utilisateur](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [Applications héritées dans un environnement de Services Terminal Server](https://msdn.microsoft.com/library/aa382957.aspx)

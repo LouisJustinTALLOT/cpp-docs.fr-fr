@@ -13,12 +13,12 @@ helpviewer_keywords:
 - representation method compiler options [C++]
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-ms.openlocfilehash: 9bb355635181c3db53e1171aaf18cd665e6504ae
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eac41de04ec883e7b5acf26596647f912b0b1d20
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426353"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808480"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Méthode de représentation)
 
@@ -41,7 +41,7 @@ Vous pouvez également utiliser [pointers_to_members](../../preprocessor/pointer
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -55,5 +55,5 @@ Vous pouvez également utiliser [pointers_to_members](../../preprocessor/pointer
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

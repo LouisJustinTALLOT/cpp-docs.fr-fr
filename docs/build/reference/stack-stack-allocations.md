@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-ms.openlocfilehash: 34d764f88b1dccb60c7d9a006be119e3800ac2d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412768"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813797"
 ---
 # <a name="stack-stack-allocations"></a>/STACK, allocations de la pile
 
@@ -35,11 +35,11 @@ Le `reserve` valeur spécifie l’allocation de pile total dans la mémoire virt
 
 Spécifiez le `reserve` et `commit` valeurs dans la notation décimale ou en langage C.
 
-Une autre consiste à définir la taille de la pile avec le [STACKSIZE](../../build/reference/stacksize.md) instruction dans un fichier de définition de module (.def). **STACKSIZE** remplace les Allocations de la pile (/Stack) option si les deux sont spécifiés. Vous pouvez modifier la taille de la pile une fois que le fichier .exe est généré à l’aide de la [EDITBIN](../../build/reference/editbin-reference.md) outil.
+Une autre consiste à définir la taille de la pile avec le [STACKSIZE](stacksize.md) instruction dans un fichier de définition de module (.def). **STACKSIZE** remplace les Allocations de la pile (/Stack) option si les deux sont spécifiés. Vous pouvez modifier la taille de la pile une fois que le fichier .exe est généré à l’aide de la [EDITBIN](editbin-reference.md) outil.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **l’éditeur de liens** dossier.
 
@@ -57,5 +57,5 @@ Une autre consiste à définir la taille de la pile avec le [STACKSIZE](../../bu
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

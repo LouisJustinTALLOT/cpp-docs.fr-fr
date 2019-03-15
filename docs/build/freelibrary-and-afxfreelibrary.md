@@ -13,12 +13,12 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 51d14b86a92f3acb76dc54d1bade2d2cd0baa055
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 709e4fdbc24d6fbbac44944e686a6fecf8c9b8db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419944"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808142"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary et AfxFreeLibrary
 
@@ -28,18 +28,18 @@ Dans une application MFC, utilisez [AfxFreeLibrary](../mfc/reference/application
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Comment lier de manière implicite à une DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Lier un exécutable à une DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Déterminer la méthode de liaison à utiliser](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Lier un exécutable à une DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [LoadLibrary et AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+- [LoadLibrary et AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
-- [GetProcAddress](../build/getprocaddress.md)
+- [GetProcAddress](getprocaddress.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[DLL dans Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[DLL dans Visual C++](dlls-in-visual-cpp.md)<br/>
 [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

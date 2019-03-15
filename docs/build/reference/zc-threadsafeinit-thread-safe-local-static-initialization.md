@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: a0fc4b34-2cf0-45a7-a642-b8afc4ca19f2
-ms.openlocfilehash: a0a5edda3d0d178a03fa98cf689b257cd5ab3f53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92a1bfa5ec3bab2814397d51e35e617b7666c706
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605827"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808337"
 ---
 # <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/ Zc : threadsafeinit (initialisation statique locale thread-safe)
 
@@ -40,7 +40,7 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. À partir de la **Configurations** menu déroulant, choisissez **toutes les Configurations**.
 
@@ -50,6 +50,6 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (Conformité)](../../build/reference/zc-conformance.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (Conformité)](zc-conformance.md)<br/>

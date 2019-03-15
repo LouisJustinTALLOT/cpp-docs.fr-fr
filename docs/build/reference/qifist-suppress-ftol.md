@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 0b0dba0fec21b3c0ab03555ae90497f212ab6315
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422206"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816592"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Supprimer _ftol)
 
@@ -42,16 +42,16 @@ Outre la conversion d’un type à virgule flottante en type intégral, la `_fto
 
 Vous pouvez utiliser la [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) fonction C Run-Time pour modifier le comportement d’arrondi du FPU. Mode du FPU d’arrondi par défaut est « Arrondi vers le plus proche ». À l’aide de **/QIfist** peut améliorer les performances de votre application, mais pas sans risque. Vous devez tester rigoureusement les parties de votre code qui sont sensibles aux modes d’arrondi avant de vous fier au code généré avec **/QIfist** dans les environnements de production.
 
-[/ arch (x86)](../../build/reference/arch-x86.md) et **/QIfist** ne peut pas être utilisé sur le même compiland.
+[/ arch (x86)](arch-x86.md) et **/QIfist** ne peut pas être utilisé sur le même compiland.
 
 > [!NOTE]
 >  **/QIfist** est pas en vigueur par défaut, car les bits d’arrondi affectent à virgule flottante flottante également point arrondi (ce qui se produit après chaque calcul), donc lorsque vous définissez les indicateurs pour l’arrondi de style C (à zéro), votre à virgule flottante calculs peuvent être différents. **/QIfist** ne doit pas être utilisé si votre code dépend du comportement attendu de tronquer la partie fractionnaire du nombre à virgule flottante. Si vous ne savez pas, n’utilisez pas **/QIfist**.
 
-Le **/QIfist** option est déconseillée à compter de Visual Studio 2005. Le compilateur a apporté des améliorations significatives dans float à vitesse de conversion de type int. Pour obtenir la liste des options du compilateur déconseillées, consultez **Options déconseillées et supprimées du compilateur** dans [Options du compilateur classées par catégorie](../../build/reference/compiler-options-listed-by-category.md).
+Le **/QIfist** option est déconseillée à compter de Visual Studio 2005. Le compilateur a apporté des améliorations significatives dans float à vitesse de conversion de type int. Pour obtenir la liste des options du compilateur déconseillées, consultez **Options déconseillées et supprimées du compilateur** dans [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -65,6 +65,6 @@ Le **/QIfist** option est déconseillée à compter de Visual Studio 2005. Le co
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Q, options (Opérations de bas niveau)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[/Q, options (Opérations de bas niveau)](q-options-low-level-operations.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

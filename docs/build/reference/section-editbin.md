@@ -9,12 +9,12 @@ helpviewer_keywords:
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 5ec58e2501176413991e6ad270940406f50b870d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8bcc925b34118630c872a0147b93291626b7c19b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413145"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822429"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -62,4 +62,4 @@ Spécifiez le `attributes` et *alignement* caractères sous forme de chaîne san
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options EDITBIN](../../build/reference/editbin-options.md)
+[Options EDITBIN](editbin-options.md)

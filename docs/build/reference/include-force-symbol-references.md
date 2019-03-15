@@ -12,12 +12,12 @@ helpviewer_keywords:
 - symbols, add to symbol table
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-ms.openlocfilehash: 389bd16829c2466b02cb879c8bc8d43c9efa6fb4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421218"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810976"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Forcer les références des symboles)
 
@@ -38,11 +38,11 @@ Pour spécifier plusieurs symboles, tapez une virgule (,), un point-virgule ( ;
 
 L’éditeur de liens résout `symbol` en ajoutant l’objet qui contient la définition du symbole au programme. Cette fonctionnalité est utile pour inclure un objet de bibliothèque qui ne serait sinon pas lié au programme.
 
-Spécification d’un symbole avec cette option substitue à la suppression de ce symbole par [/OPT : REF](../../build/reference/opt-optimizations.md).
+Spécification d’un symbole avec cette option substitue à la suppression de ce symbole par [/OPT : REF](opt-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -56,5 +56,5 @@ Spécification d’un symbole avec cette option substitue à la suppression de c
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

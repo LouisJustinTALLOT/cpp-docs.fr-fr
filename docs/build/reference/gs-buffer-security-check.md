@@ -14,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 6681ff09b846011af1b500f88a535c208d0bc1c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417581"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820232"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (vérification de la sécurité des mémoires tampons)
 
@@ -96,7 +96,7 @@ Le compilateur ne fait pas de copies de paramètres vulnérables dans les situat
 
 - Fonctions qui ne contiennent pas d’une mémoire tampon GS.
 
-- Optimisations ([/O options](../../build/reference/o-options-optimize-code.md)) ne sont pas activés.
+- Optimisations ([/O options](o-options-optimize-code.md)) ne sont pas activés.
 
 - Fonctions qui ont une liste d’arguments variable (...).
 
@@ -116,7 +116,7 @@ Même si vous utilisez **/GS**, essayez toujours d’écrire du code sécurisé 
 
 1. Dans **l’Explorateur de solutions**, cliquez sur le projet, puis cliquez sur **propriétés**.
 
-   Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+   Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Dans le **Pages de propriétés** boîte de dialogue, cliquez sur le **C/C++** dossier.
 
@@ -157,5 +157,5 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

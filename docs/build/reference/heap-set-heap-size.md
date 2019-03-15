@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: 500e1eca9385697829edca46e5e703a5238684a7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422369"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813291"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Définir la taille des tas)
 
@@ -34,11 +34,11 @@ Le paramètre facultatif `commit` argument spécifie la quantité de mémoire ph
 
 Spécifiez le *réserver* et `commit` valeurs dans la notation décimale ou en langage C.
 
-Cette fonctionnalité est également disponible via un fichier de définition de module avec [HEAPSIZE](../../build/reference/heapsize.md).
+Cette fonctionnalité est également disponible via un fichier de définition de module avec [HEAPSIZE](heapsize.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -52,5 +52,5 @@ Cette fonctionnalité est également disponible via un fichier de définition de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)
