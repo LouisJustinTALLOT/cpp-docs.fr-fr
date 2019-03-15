@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-ms.openlocfilehash: 29b8fc3caf2d769fcc60772be7fdf1c25f13d100
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 99f262d420cd503c6ca385ed29bcaa2647c5f556
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285384"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810053"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Ajout d’une nouvelle Interface dans un projet ATL
 
@@ -43,8 +43,7 @@ Vous pouvez ajouter une nouvelle interface à votre contrôle dans un des deux f
 ## <a name="see-also"></a>Voir aussi
 
 [Assistant Projet ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Types de projets Visual C++](../../ide/visual-cpp-project-types.md)<br/>
-[Création de projets de bureau à l’aide des Assistants Application](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Types de projets Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)

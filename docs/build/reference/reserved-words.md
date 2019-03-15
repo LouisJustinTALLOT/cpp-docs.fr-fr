@@ -17,28 +17,28 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 360baf479f9100483fe694ca8860dfc1d7ebfe11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d51f599dfb81dfa860e1bdba86c4372e80379fb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502464"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822442"
 ---
 # <a name="reserved-words"></a>Mots réservés
 
-Les mots suivants sont réservés par l’éditeur de liens. Ces noms peuvent être utilisés en tant qu’arguments dans [les instructions de définition de module](../../build/reference/module-definition-dot-def-files.md) uniquement si le nom est placé entre guillemets doubles ( » »).
+Les mots suivants sont réservés par l’éditeur de liens. Ces noms peuvent être utilisés en tant qu’arguments dans [les instructions de définition de module](module-definition-dot-def-files.md) uniquement si le nom est placé entre guillemets doubles ( » »).
 
 ||||
 |-|-|-|
 |**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**PRÉCHARGEMENT**|
-|**BASE DE**|**IOPL**|**PRIVÉ**|
+|**BASE DE**|**IOPL**|**PRIVATE**|
 |**CODE**|**BIBLIOTHÈQUE**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
 |**CONFORME**|**LOADONCALL**<sup>1</sup>|**PURE**<sup>1</sup>|
-|**DONNÉES**|**LONGNAMES**<sup>2</sup>|**EN LECTURE SEULE**|
-|**DESCRIPTION**|**MOBILE**<sup>1</sup>|**LECTURE/ÉCRITURE**|
+|**DATA**|**LONGNAMES**<sup>2</sup>|**EN LECTURE SEULE**|
+|**DESCRIPTION**|**MOBILE**<sup>1</sup>|**READWRITE**|
 |**DEV386**|**MOVEABLE**<sup>1</sup>|**EN MODE RÉEL ;**<sup>1</sup>|
 |**POUVANT ÊTRE ÉLIMINÉE**|**PLUSIEURS**|**RÉSIDENT**|
-|**DYNAMIQUE**|**NOM**|**RESIDENTNAME**<sup>1</sup>|
+|**DYNAMIC**|**NOM**|**RESIDENTNAME**<sup>1</sup>|
 |**EXÉCUTER UNIQUEMENT**|**NEWFILES**<sup>2</sup>|**SECTIONS**|
 |**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTS**|
 |**EXÉCUTIONLECTURE**|**NOIOPL**<sup>1</sup>|**PARTAGÉ**|
@@ -47,9 +47,9 @@ Les mots suivants sont réservés par l’éditeur de liens. Ces noms peuvent ê
 |**FIXE**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
 |**FONCTIONS**<sup>2</sup>|**NONE**|**VERSION**|
 |**HEAPSIZE**|**NON PARTAGÉ**|**WINDOWAPI**|
-|**IMPORTATIONS**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
-|**IMPURES**<sup>1</sup>|**OBJETS**|**WINDOWS**|
-|**INCLURE**<sup>2</sup>|**ANCIEN**<sup>1</sup>||
+|**IMPORTS**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
+|**IMPURES**<sup>1</sup>|**OBJECTS**|**WINDOWS**|
+|**INCLUDE**<sup>2</sup>|**OLD**<sup>1</sup>||
 
 <sup>1</sup> l’éditeur de liens émet un avertissement (« ignoré ») lorsqu’il rencontre ce terme. Toutefois, le mot est toujours réservé.
 
@@ -57,5 +57,5 @@ Les mots suivants sont réservés par l’éditeur de liens. Ces noms peuvent ê
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)
-- [Options de l’éditeur de liens](../../build/reference/linker-options.md)
+- [Référence de l’éditeur de liens MSVC](linking.md)
+- [Options de l’éditeur de liens MSVC](linker-options.md)

@@ -6,12 +6,12 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: ac8439e1709b6bbce6f32580bafee50c9ff30e3f
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 6c5adac9bb31287693b7d53c1fa8ff10263f4367
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977743"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815851"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installer la prise en charge C++ dans Visual Studio
 
@@ -45,15 +45,15 @@ En règle générale, nous vous recommandons vivement d’utiliser Visual Studio
 
 1. Recherchez le fichier de programme d’installation téléchargé et l’exécuter. Il peut s’afficher dans votre navigateur, ou il peut s’avérer dans votre dossier Téléchargements. Le programme d’installation a besoin de privilèges d’administrateur pour s’exécuter. Vous pouvez voir un **contrôle de compte d’utilisateur** boîte de dialogue vous demandant d’accorder l’autorisation pour vous permettre du programme d’installation apporter des modifications à votre système ; choisissez **Oui**. Si vous rencontrez des problèmes, recherchez le fichier téléchargé dans l’Explorateur de fichiers, avec le bouton droit sur l’icône de programme d’installation et choisissez **exécuter en tant qu’administrateur** dans le menu contextuel.
 
-   ![Téléchargez et installez Visual Studio Installer](../build/media/vscpp-concierge-run-installer.gif "télécharger et installer Visual Studio Installer")
+   ![Téléchargez et installez Visual Studio Installer](media/vscpp-concierge-run-installer.gif "télécharger et installer Visual Studio Installer")
 
 1. Le programme d’installation vous présente une liste de charges de travail, qui sont des groupes d’options connexes pour des types de développement spécifiques. Prise en charge de C++ fait désormais partie des charges de travail facultatifs qui ne sont pas installés par défaut.
 
-   ![Développement Desktop en charge de travail C++](../build/media/desktop-development-with-cpp.png "développement Desktop en C++")
+   ![Développement Desktop en charge de travail C++](media/desktop-development-with-cpp.png "développement Desktop en C++")
 
    Pour C++, sélectionnez le **développement Desktop en C++** charge de travail, puis choisissez **installer**.
 
-   ![Installez le développement bureautique avec la charge de travail C++](../build/media/vscpp-concierge-choose-workload.gif "installez le développement bureautique avec la charge de travail C++")
+   ![Installez le développement bureautique avec la charge de travail C++](media/vscpp-concierge-choose-workload.gif "installez le développement bureautique avec la charge de travail C++")
 
 1. Lorsque l’installation est terminée, choisissez le **lancer** bouton pour démarrer Visual Studio.
 
@@ -61,13 +61,13 @@ En règle générale, nous vous recommandons vivement d’utiliser Visual Studio
 
    Il faudra encore Visual Studio plusieurs minutes pour se préparer à utilisent la première fois que vous l’exécutez. Voici ce que cela donne dans un rapide séquentiel :
 
-   ![Visual Studio 2017 connectez-vous](../build/media/vscpp-quickstart-first-run.gif "connecter Visual Studio 2017")
+   ![Visual Studio 2017 connectez-vous](media/vscpp-quickstart-first-run.gif "connecter Visual Studio 2017")
 
    Visual Studio démarre beaucoup plus rapidement lorsque vous l’exécutez à nouveau.
 
 1. Lorsque Visual Studio s’ouvre, vérifiez si l’icône d’indicateur dans la barre de titre est mis en surbrillance :
 
-   ![Indicateur de notification Visual Studio 2017](../build/media/vscpp-first-start-page-flag.png "indicateur de notification de Visual Studio 2017")
+   ![Indicateur de notification Visual Studio 2017](media/vscpp-first-start-page-flag.png "indicateur de notification de Visual Studio 2017")
 
    Si elle est mise en surbrillance, sélectionnez-la pour ouvrir le **Notifications** fenêtre. Si les mises à jour sont disponibles pour Visual Studio, nous vous recommandons de que les installer maintenant. Une fois que l’installation est terminée, redémarrez Visual Studio.
 

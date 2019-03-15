@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: f5e57a19f337653cdab6f66404b9458e1e7fed0d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7f40841b82db9f46019ce2a96a61a1a0f622b6d5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412833"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813433"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (Passer des options à l'Éditeur de liens)
 
@@ -35,11 +35,11 @@ L’éditeur de liens les options à passer à l’éditeur de liens.
 
 ## <a name="remarks"></a>Notes
 
-Le **/link** option et ses options de l’éditeur de liens doivent apparaître après les noms de fichiers et les options CL. Un espace est requis entre **/link,** et `linkeroptions`. Pour plus d’informations, consultez [définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md).
+Le **/link** option et ses options de l’éditeur de liens doivent apparaître après les noms de fichiers et les options CL. Un espace est requis entre **/link,** et `linkeroptions`. Pour plus d’informations, consultez [référence de l’éditeur de liens MSVC](linking.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -53,5 +53,5 @@ Le **/link** option et ses options de l’éditeur de liens doivent apparaître 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

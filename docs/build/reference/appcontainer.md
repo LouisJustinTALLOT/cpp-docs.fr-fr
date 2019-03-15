@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -APPCONTAINER editbin option
 - /APPCONTAINER editbin option
 ms.assetid: 0ca4f1ec-c8de-4a37-b3e2-deda7af0bb88
-ms.openlocfilehash: ad451f5900841abe3f0fe10ae99fa0183e14e5c5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eb922a29b00fee63effae302505f25c98b04523e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412588"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820804"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
 
@@ -30,5 +30,5 @@ Un fichier exécutable dont l’option **/APPCONTAINER** est définie ne peut ê
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options EDITBIN](../../build/reference/editbin-options.md)<br/>
+[Options EDITBIN](editbin-options.md)<br/>
 [Qu’est-ce qu’une application Windows universelle ?](/windows/uwp/get-started/universal-application-platform-guide)

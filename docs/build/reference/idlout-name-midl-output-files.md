@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: 91c1a3642f157390e5a0d5c7e2f36d7adf3ca118
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3816bb85cb3c711075e3fefeec2d706c2f8cc2ff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417630"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821467"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Nommer les fichiers de sortie MIDL)
 
@@ -38,7 +38,7 @@ Spécifie le nom du fichier .idl créé par le compilateur MIDL. Aucune extensio
 
 L’option /IDLOUT spécifie le nom et l’extension du fichier .idl.
 
-Le compilateur MIDL est appelé par l’éditeur de liens Visual C++ lors de la liaison de projets qui ont le [module](../../windows/module-cpp.md) attribut.
+Le compilateur MIDL est appelé par l’éditeur de liens MSVC lors de la liaison de projets qui ont le [module](../../windows/module-cpp.md) attribut.
 
 L’option /IDLOUT spécifie également les noms de fichiers des autres fichiers de sortie associés au compilateur MIDL :
 
@@ -50,13 +50,13 @@ L’option /IDLOUT spécifie également les noms de fichiers des autres fichiers
 
 - *nom de fichier*.h
 
-*nom de fichier* est le paramètre que vous passez à /IDLOUT. Si [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md) est spécifié, le fichier .tlb obtiendra son nom de /TLBOUT *filename*.
+*nom de fichier* est le paramètre que vous passez à /IDLOUT. Si [/TLBOUT](tlbout-name-dot-tlb-file.md) est spécifié, le fichier .tlb obtiendra son nom de /TLBOUT *filename*.
 
 Si vous spécifiiez /TLBOUT, l’éditeur de liens crée vc70.tlb, vc70.idl, vc70_p.c, vc70_i.c et vc70.h.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -70,8 +70,8 @@ Si vous spécifiiez /TLBOUT, l’éditeur de liens crée vc70.tlb, vc70.idl, vc7
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (Ne pas traiter les attributs dans MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (Spécifier des options de ligne de commande MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)<br/>
+[/IGNOREIDL (Ne pas traiter les attributs dans MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (Spécifier des options de ligne de commande MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Générer un programmes par attributs](../../windows/building-an-attributed-program.md)

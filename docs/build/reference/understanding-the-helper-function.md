@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: 955ae0ed8feac22da19eb13218e2332849477e29
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ad193d0101507f43145c6af9f8e6200ab6fcdb5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421379"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817989"
 ---
 # <a name="understanding-the-helper-function"></a>Présentation de la fonction d'assistance
 
@@ -53,16 +53,16 @@ Le code d’assistance par défaut peut être trouvé dans Delayhlp.cpp et Delay
 
 Les rubriques suivantes décrivent la fonction d’assistance :
 
-- [Modifications apportées à la fonction d’assistance du chargement différé des DLL depuis Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+- [Modifications apportées à la fonction d’assistance du chargement différé des DLL depuis Visual C++ 6.0](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
 
-- [Conventions d’appel, paramètres et type de retour](../../build/reference/calling-conventions-parameters-and-return-type.md)
+- [Conventions d’appel, paramètres et type de retour](calling-conventions-parameters-and-return-type.md)
 
-- [Définitions des structures et constantes](../../build/reference/structure-and-constant-definitions.md)
+- [Définitions des structures et constantes](structure-and-constant-definitions.md)
 
-- [Calcul des valeurs nécessaires](../../build/reference/calculating-necessary-values.md)
+- [Calcul des valeurs nécessaires](calculating-necessary-values.md)
 
-- [Déchargement d’une DLL à chargement différé](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [Déchargement d’une DLL à chargement différé](explicitly-unloading-a-delay-loaded-dll.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](linker-support-for-delay-loaded-dlls.md)

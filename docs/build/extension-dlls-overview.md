@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425053"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816475"
 ---
 # <a name="mfc-extension-dlls-overview"></a>DLL d’extension MFC : Vue d'ensemble
 
@@ -27,22 +27,22 @@ Notez que le terme AFXDLL n’est plus utilisé dans la documentation de Visual 
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Initialiser une DLL d’extension MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [Initialiser une DLL d’extension MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [DLL d’extension de MFC](../build/extension-dlls.md)
+- [DLL d’extension de MFC](extension-dlls.md)
 
-- [Utilisation de DLL d’extension de MFC de type base de données, OLE et sockets dans des DLL MFC normales](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Utilisation de DLL d’extension de MFC de type base de données, OLE et sockets dans des DLL MFC normales](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [DLL non MFC : vue d’ensemble](../build/non-mfc-dlls-overview.md)
+- [DLL non MFC : vue d’ensemble](non-mfc-dlls-overview.md)
 
-- [DLL MFC normales liées de manière statique aux MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [DLL MFC normales liées de manière statique aux MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [DLL MFC normales liées de manière dynamique aux MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [DLL MFC normales liées de manière dynamique aux MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [Création d’une DLL MFC](../mfc/reference/mfc-dll-wizard.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Genres de DLL](../build/kinds-of-dlls.md)
+[Genres de DLL](kinds-of-dlls.md)

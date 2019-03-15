@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421435"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816319"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Format des informations de débogage)
 
@@ -50,15 +50,15 @@ Par défaut, si aucune option de format d’informations de débogage est spéci
 
 Le **/Z7** option produit des fichiers objets qui contiennent également des informations de débogage symboliques complètes pour une utilisation avec le débogueur. Ces fichiers de l’objet et le fichier exécutable généré peuvent être beaucoup plus important que les fichiers qui ne possèdent aucune information de débogage. Les informations de débogage symboliques comprennent les noms et types des variables, ainsi que les fonctions et les numéros de ligne. Aucun fichier PDB est produit.
 
-Pour les serveurs de distribution des versions debug des bibliothèques tierces, il est l’avantage de ne pas avoir un fichier PDB. Toutefois, les fichiers objets pour tous les en-têtes précompilés sont nécessaires pendant la phase de liaison de bibliothèque et pour le débogage. Si type uniquement des informations (et aucun code) dans le fichier d’objet .pch, vous devez également utiliser le [/Yl (injecter une référence PCH pour une bibliothèque de débogage)](../../build/reference/yl-inject-pch-reference-for-debug-library.md) option, qui est activée par défaut, lorsque vous générez la bibliothèque.
+Pour les serveurs de distribution des versions debug des bibliothèques tierces, il est l’avantage de ne pas avoir un fichier PDB. Toutefois, les fichiers objets pour tous les en-têtes précompilés sont nécessaires pendant la phase de liaison de bibliothèque et pour le débogage. Si type uniquement des informations (et aucun code) dans le fichier d’objet .pch, vous devez également utiliser le [/Yl (injecter une référence PCH pour une bibliothèque de débogage)](yl-inject-pch-reference-for-debug-library.md) option, qui est activée par défaut, lorsque vous générez la bibliothèque.
 
-Le [/Gm (activer la régénération minimale)](../../build/reference/gm-enable-minimal-rebuild.md) option n’est pas disponible lorsque **/Z7** est spécifié.
+Le [/Gm (activer la régénération minimale)](gm-enable-minimal-rebuild.md) option n’est pas disponible lorsque **/Z7** est spécifié.
 
 ### <a name="zi"></a>/ZI
 
 Le **/Zi** option génère un fichier PDB distinct qui contient toutes les informations de débogage symboliques à utiliser avec le débogueur. Les informations de débogage ne sont pas incluses dans les fichiers objets ou exécutable, ce qui les rend beaucoup plus petite.
 
-Utilisation de **/Zi** n’affecte pas les optimisations. Toutefois, **/Zi** implique **/debug**; consultez [/DEBUG (Generate Debug Info)](../../build/reference/debug-generate-debug-info.md) pour plus d’informations.
+Utilisation de **/Zi** n’affecte pas les optimisations. Toutefois, **/Zi** implique **/debug**; consultez [/DEBUG (Generate Debug Info)](debug-generate-debug-info.md) pour plus d’informations.
 
 Lorsque vous spécifiez à la fois **/Zi** et **/CLR**, le <xref:System.Diagnostics.DebuggableAttribute> attribut n’est pas placé dans les métadonnées d’assembly. Si vous le souhaitez, vous devez le spécifier dans le code source. Cet attribut peut affecter les performances d'exécution de l'application. Pour plus d’informations sur la façon dont **attribut Debuggable** attribut affecte les performances et la manière dont vous pouvez modifier l’impact sur les performances, consultez [simplification une Image de débogage](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
 
@@ -70,16 +70,16 @@ Si vous créez une bibliothèque à partir d’objets qui ont été compilés à
 
 Le **/Zi** option est similaire à **/Zi**, mais il génère un fichier PDB dans un format qui prend en charge la [Modifier & Continuer](/visualstudio/debugger/edit-and-continue-visual-cpp) fonctionnalité. Pour utiliser les fonctionnalités de débogage Modifier & Continuer, vous devez utiliser cette option. La fonctionnalité Modifier & Continuer est utile pour la productivité des développeurs, mais peut entraîner des problèmes dans le code du compilateur, les performances et la taille de la mise en conformité. Étant donné que la plupart des optimisations sont incompatibles avec Modifier & Continuer, à l’aide **/Zi** désactive toutes `#pragma optimize` instructions dans votre code. Le **/Zi** option est également incompatible avec utilisation de la [ &#95; &#95;ligne&#95; &#95; la macro prédéfinie](../../preprocessor/predefined-macros.md); le code compilé avec **/Zi** ne pouvez pas utiliser **&#95; &#95;Ligne&#95; &#95;** comme argument de modèle sans type, bien que **&#95; &#95;ligne&#95; &#95;** peut être utilisé dans les expansions de macros.
 
-Le **/Zi** option force à la fois le [/Gy (activer la liaison au niveau des fonctions)](../../build/reference/gy-enable-function-level-linking.md) et [/FC (complet chemin d’accès du fichier de Code Source dans les Diagnostics)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) options à utiliser dans votre compilation.
+Le **/Zi** option force à la fois le [/Gy (activer la liaison au niveau des fonctions)](gy-enable-function-level-linking.md) et [/FC (complet chemin d’accès du fichier de Code Source dans les Diagnostics)](fc-full-path-of-source-code-file-in-diagnostics.md) options à utiliser dans votre compilation.
 
-**/ Zi** n’est pas compatible avec [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+**/ Zi** n’est pas compatible avec [/clr (Compilation pour le Common Language Runtime)](clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
 > Le **/Zi** option est uniquement disponible dans les compilateurs qui ciblent des processeurs x86 et x64 ; cette option du compilateur n’est pas disponible dans les compilateurs ciblant les processeurs ARM.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Ouvrez le **propriétés de Configuration** > **C/C++** > **général** page de propriétés.
 
@@ -91,5 +91,6 @@ Le **/Zi** option force à la fois le [/Gy (activer la liaison au niveau des fon
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+

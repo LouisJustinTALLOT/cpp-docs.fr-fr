@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750403"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821386"
 ---
 # <a name="include-directive-cc"></a>#include, directive (C/C++)
 
@@ -49,7 +49,7 @@ Inclure les fichiers peuvent être « imbriqués ». Autrement dit, un **#incl
 
 Lorsque des fichiers Include sont imbriqués et que la compilation s'effectue à partir de la ligne de commande, la recherche dans les répertoires commence dans les répertoires du fichier parent, puis se poursuit dans les répertoires de tous les fichiers grands-parents. Autrement dit, la recherche commence par rapport au répertoire contenant la source actuellement traitée. Si le fichier est introuvable, la recherche se déplace vers les répertoires spécifiés par la [/I (autres répertoires include)](../build/reference/i-additional-include-directories.md) option du compilateur. Finalement, la recherche s'effectue dans les répertoires spécifiés par la variable d'environnement INCLUDE.
 
-À partir de l’environnement de développement Visual Studio, la variable d’environnement INCLUDE est ignorée. Pour plus d’informations sur la façon de définir les répertoires dans lesquels sont recherchés les fichiers include, cela s’applique également à la variable d’environnement LIB, consultez [VC ++ Directories Property Page](../ide/vcpp-directories-property-page.md).
+À partir de l’environnement de développement Visual Studio, la variable d’environnement INCLUDE est ignorée. Pour plus d’informations sur la façon de définir les répertoires dans lesquels sont recherchés les fichiers include, cela s’applique également à la variable d’environnement LIB, consultez [VC ++ Directories Property Page](../build/reference/vcpp-directories-property-page.md).
 
 Cet exemple illustre l'inclusion d'un fichier à l'aide de crochets pointus :
 

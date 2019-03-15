@@ -11,16 +11,16 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 1451b452c5e2dc62e83e5b8f473248fa7c231877
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421192"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821220"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Exportation et importation à l'aide de AFX_EXT_CLASS
 
-[DLL d’extension MFC](../build/extension-dlls-overview.md) utiliser la macro **AFX_EXT_CLASS** pour exporter des classes ; les exécutables liés à la DLL d’extension MFC utilisent la macro pour importer des classes. Avec le **AFX_EXT_CLASS** (macro), les fichiers d’en-tête qui sont utilisés pour générer la DLL peut être utilisé avec les exécutables liés à la DLL d’extension MFC.
+[DLL d’extension MFC](extension-dlls-overview.md) utiliser la macro **AFX_EXT_CLASS** pour exporter des classes ; les exécutables liés à la DLL d’extension MFC utilisent la macro pour importer des classes. Avec le **AFX_EXT_CLASS** (macro), les fichiers d’en-tête qui sont utilisés pour générer la DLL peut être utilisé avec les exécutables liés à la DLL d’extension MFC.
 
 Dans le fichier d’en-tête pour votre DLL, ajoutez le **AFX_EXT_CLASS** mot clé à la déclaration de votre classe, comme suit :
 
@@ -104,28 +104,28 @@ class CExampleView : public CView
 
 ### <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Exporter à partir d’une DLL à l’aide de fichiers .def](../build/exporting-from-a-dll-using-def-files.md)
+- [Exporter à partir d’une DLL à l’aide de fichiers .def](exporting-from-a-dll-using-def-files.md)
 
-- [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exporter des fonctions C++ à utiliser dans des exécutables en langage C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exporter des fonctions C++ à utiliser dans des exécutables en langage C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exporter des fonctions C à utiliser dans des exécutables en langage C ou C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exporter des fonctions C à utiliser dans des exécutables en langage C ou C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Déterminer la méthode d’exportation à utiliser](../build/determining-which-exporting-method-to-use.md)
+- [Déterminer la méthode d’exportation à utiliser](determining-which-exporting-method-to-use.md)
 
-- [Importer dans une application à l’aide de __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une application à l’aide de __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Initialiser une DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [Noms décorés](../build/reference/decorated-names.md)
+- [Noms décorés](reference/decorated-names.md)
 
-- [L’importation et exportation de fonctions inline](../build/importing-and-exporting-inline-functions.md)
+- [L’importation et exportation de fonctions inline](importing-and-exporting-inline-functions.md)
 
-- [Importations mutuelles](../build/mutual-imports.md)
+- [Importations mutuelles](mutual-imports.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exportation à partir d’une DLL](../build/exporting-from-a-dll.md)
+[Exportation à partir d’une DLL](exporting-from-a-dll.md)

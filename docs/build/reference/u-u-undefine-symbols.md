@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413041"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822483"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Annuler la définition de symboles)
 
@@ -46,18 +46,18 @@ Par défaut, le compilateur définit des symboles suivants spécifiques à Micro
 
 |Symbole|Fonction|
 |------------|--------------|
-|_CHAR_UNSIGNED|Type de caractère par défaut n’est pas signé. Définie lorsque le [/J](../../build/reference/j-default-char-type-is-unsigned.md) option est spécifiée.|
-|_CPPRTTI|Défini pour le code compilé avec le [/GR](../../build/reference/gr-enable-run-time-type-information.md) option.|
-|_CPPUNWIND|Défini pour le code compilé avec le [/EHsc](../../build/reference/eh-exception-handling-model.md) option.|
-|_DLL|Définie lorsque le [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) option est spécifiée.|
+|_CHAR_UNSIGNED|Type de caractère par défaut n’est pas signé. Définie lorsque le [/J](j-default-char-type-is-unsigned.md) option est spécifiée.|
+|_CPPRTTI|Défini pour le code compilé avec le [/GR](gr-enable-run-time-type-information.md) option.|
+|_CPPUNWIND|Défini pour le code compilé avec le [/EHsc](eh-exception-handling-model.md) option.|
+|_DLL|Définie lorsque le [/MD](md-mt-ld-use-run-time-library.md) option est spécifiée.|
 |_M_IX86|Par défaut, défini à 600 pour x86 cibles.|
 |_MSC_VER|Pour plus d'informations, consultez [Predefined Macros](../../preprocessor/predefined-macros.md).|
 |_WIN32|Défini pour les applications WIN32. Toujours défini.|
-|_MT|Définie lorsque le [/MD ou /MT](../../build/reference/md-mt-ld-use-run-time-library.md) option est spécifiée.|
+|_MT|Définie lorsque le [/MD ou /MT](md-mt-ld-use-run-time-library.md) option est spécifiée.|
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -71,9 +71,9 @@ Par défaut, le compilateur définit des symboles suivants spécifiques à Micro
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[/J (Type de caractère par défaut non signé)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
-[/GR (Activer les informations de type au moment de l’exécution)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
-[/EH (Modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md)<br/>
-[/MD, /MT, /LD (Utiliser la bibliothèque Runtime)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[/J (Type de caractère par défaut non signé)](j-default-char-type-is-unsigned.md)<br/>
+[/GR (Activer les informations de type au moment de l’exécution)](gr-enable-run-time-type-information.md)<br/>
+[/EH (Modèle de gestion des exceptions)](eh-exception-handling-model.md)<br/>
+[/MD, /MT, /LD (Utiliser la bibliothèque Runtime)](md-mt-ld-use-run-time-library.md)

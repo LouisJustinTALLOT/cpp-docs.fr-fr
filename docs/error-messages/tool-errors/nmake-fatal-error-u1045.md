@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - U1045
 ms.assetid: dc70d162-14b9-4107-9237-7514044d72e3
-ms.openlocfilehash: bb1dfac36eda263e656ca85fb1f5b74babfd2e2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0937e83303fefdf1f2aaaa5eea6f43c27159fd57
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607962"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808233"
 ---
 # <a name="nmake-fatal-error-u1045"></a>Erreur irrécupérable NMAKE U1045
 
@@ -19,4 +19,4 @@ ms.locfileid: "50607962"
 
 Un programme ou une commande appelé par NMAKE a échoué pour la raison indiquée. Quand NMAKE appelle un autre programme (par exemple, le compilateur ou l'éditeur de liens), l'appel peut échouer ou une erreur peut être retournée par le programme appelé. Ce message est utilisé pour signaler l'erreur.
 
-Pour résoudre ce problème, commencez par déterminer la cause de l'erreur. Vous pouvez utiliser les commandes indiquées par le NMAKE [/N](../../build/nmake-options.md) option pour vérifier les paramètres d’environnement et répéter les actions effectuées par NMAKE sur la ligne de commande.
+Pour résoudre ce problème, commencez par déterminer la cause de l'erreur. Vous pouvez utiliser les commandes indiquées par le NMAKE [/N](../../build/reference/nmake-options.md) option pour vérifier les paramètres d’environnement et répéter les actions effectuées par NMAKE sur la ligne de commande.

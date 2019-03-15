@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424611"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815890"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Vérifications des erreurs au moment de l'exécution)
 
@@ -75,7 +75,7 @@ Permet aux vérifications frame de pile erreur d’exécution, comme suit :
 
 - Initialisation de variables locales à une valeur différente de zéro. Cela permet d’identifier les bogues qui n’apparaissent pas lors de l’exécution en mode débogage. Il est très probable que les variables de pile sera toujours égal à zéro dans une version debug par rapport à une version Release en raison des optimisations du compilateur des variables de pile dans une version Release. Une fois qu’un programme a utilisé une zone de sa pile, il n’est jamais réinitialisé à 0 par le compilateur. Par conséquent, les variables de pile suivantes non initialisées qui se produisent pour utiliser la même zone de pile peuvent retourner des valeurs créés à partir de l’utilisation de cette mémoire de la pile.
 
-- Détection des dépassements et de sous-utilisation des variables locales, tels que des tableaux. **/ RTC** `s` ne détecte pas les dépassements de lors de l’accès mémoire qui résulte de remplissage du compilateur dans une structure. Remplissage peut se produire à l’aide de [aligner](../../cpp/align-cpp.md), [/Zp (alignement des membres de Struct)](../../build/reference/zp-struct-member-alignment.md), ou [pack](../../preprocessor/pack.md), ou si vous ordonnez les éléments de la structure de manière à exiger au compilateur d’ajouter une marge intérieure.
+- Détection des dépassements et de sous-utilisation des variables locales, tels que des tableaux. **/ RTC** `s` ne détecte pas les dépassements de lors de l’accès mémoire qui résulte de remplissage du compilateur dans une structure. Remplissage peut se produire à l’aide de [aligner](../../cpp/align-cpp.md), [/Zp (alignement des membres de Struct)](zp-struct-member-alignment.md), ou [pack](../../preprocessor/pack.md), ou si vous ordonnez les éléments de la structure de manière à exiger au compilateur d’ajouter une marge intérieure.
 
 - Vérification de pointeur de pile, qui détecte l’altération de pointeur de pile. Corruption de pointeur de pile peut être dû à une discordance de convention d’appel. Par exemple, à l’aide d’un pointeur de fonction, vous appelez une fonction dans une DLL qui est exportée en tant que [__stdcall](../../cpp/stdcall.md) , mais vous déclarez le pointeur désignant la fonction en tant que [__cdecl](../../cpp/cdecl.md).
 
@@ -95,17 +95,17 @@ Si une variable aurait pu être initialisée, elle n’est pas signalée au mome
 
 ## <a name="remarks"></a>Notes
 
-Vérifications des erreurs au moment de l’exécution sont un moyen de rechercher des problèmes dans votre code en cours d’exécution. Pour plus d’informations, consultez [Comment : Utiliser des contrôles d’exécution natifs](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Vérifications des erreurs au moment de l’exécution sont un moyen de rechercher des problèmes dans votre code en cours d’exécution. Pour plus d’informations, consultez [Comment : utiliser les vérifications natives à l’exécution](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Si vous compilez votre programme en ligne de commande à l’aide de la **/RTC** options du compilateur, n’importe quel pragma [optimiser](../../preprocessor/optimize.md) instructions dans votre code échoue en silence. Il s’agit, car les vérifications des erreurs au moment de l’exécution ne sont pas valides dans une version Release (optimisée).
 
-Vous devez utiliser **/RTC** pour les builds de développement ; **/RTC** ne doit pas être utilisé pour une version commerciale. **/ RTC** ne peut pas être utilisé avec les optimisations du compilateur ([/O Options (Optimize Code)](../../build/reference/o-options-optimize-code.md)). Une image de programme générée avec **/RTC** sera légèrement plus grande et plus lente qu’une image générée avec **/Od** (jusqu'à 5 pour cent plus lent qu’un **/Od** build).
+Vous devez utiliser **/RTC** pour les builds de développement ; **/RTC** ne doit pas être utilisé pour une version commerciale. **/ RTC** ne peut pas être utilisé avec les optimisations du compilateur ([/O Options (Optimize Code)](o-options-optimize-code.md)). Une image de programme générée avec **/RTC** sera légèrement plus grande et plus lente qu’une image générée avec **/Od** (jusqu'à 5 pour cent plus lent qu’un **/Od** build).
 
-La directive du préprocesseur __MSVC_RUNTIME_CHECKS sera définie lorsque vous utilisez un **/RTC** option ou [/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).
+La directive du préprocesseur __MSVC_RUNTIME_CHECKS sera définie lorsque vous utilisez un **/RTC** option ou [/GZ](gz-enable-stack-frame-run-time-error-checking.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -119,6 +119,6 @@ La directive du préprocesseur __MSVC_RUNTIME_CHECKS sera définie lorsque vous 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [Guide pratique pour utiliser les vérifications natives à l’exécution](/visualstudio/debugger/how-to-use-native-run-time-checks)

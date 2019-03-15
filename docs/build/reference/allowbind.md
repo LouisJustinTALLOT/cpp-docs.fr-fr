@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ALLOWBIND editbin option
 - -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-ms.openlocfilehash: 8f59cc83c06bbaaccba911c44835247253cb264b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4cb7e5a3627d865e2f2193dee096c72cced75f5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416889"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819816"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 
@@ -30,8 +30,8 @@ Le **/ALLOWBIND** option définit un bit dans l’en-tête d’une DLL qui indiq
 
 Utilisez **/ALLOWBIND : no** pour empêcher la liaison de la DLL Bind.exe.
 
-Pour plus d’informations, consultez le [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) option de l’éditeur de liens.
+Pour plus d’informations, consultez le [/ALLOWBIND](allowbind-prevent-dll-binding.md) option de l’éditeur de liens.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options EDITBIN](../../build/reference/editbin-options.md)
+[Options EDITBIN](editbin-options.md)

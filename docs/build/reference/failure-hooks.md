@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-ms.openlocfilehash: 2cd691ed4514ac4073f90691ed731670fbd22477
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fc22ae77d729868adbf8c37d40e450e35a8e866
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417942"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811990"
 ---
 # <a name="failure-hooks"></a>Raccordements de défaillance
 
-Le raccordement de défaillance est activé dans la même manière que le [hook de notification](../../build/reference/notification-hooks.md). La routine de raccordement doit retourner une valeur appropriée afin que le traitement peut continuer (HINSTANCE ou FARPROC) ou 0 pour indiquer qu’une exception doit être levée.
+Le raccordement de défaillance est activé dans la même manière que le [hook de notification](notification-hooks.md). La routine de raccordement doit retourner une valeur appropriée afin que le traitement peut continuer (HINSTANCE ou FARPROC) ou 0 pour indiquer qu’une exception doit être levée.
 
 La variable pointeur qui fait référence à la fonction définie par l’utilisateur est :
 
@@ -39,4 +39,4 @@ Si la notification est **dliFailGetProc**, la fonction de raccordement peut reto
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion et notification des erreurs](../../build/reference/error-handling-and-notification.md)
+[Gestion et notification des erreurs](error-handling-and-notification.md)

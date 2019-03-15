@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 69e1868990358aeb4d790366b3a0bfa8d8999823
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414745"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809728"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Génération de manifeste dans Visual Studio
 
@@ -27,11 +27,8 @@ Le système de génération dans Visual Studio permet le manifeste incorporé da
 
 1. Si le manifeste incorporé dans le fichier binaire est le même que le manifeste généré par l’outil manifeste, la génération continue pour les étapes de build.
 
-Le manifeste est incorporé dans le fichier binaire final en tant que texte ressource et elle peut être affichée en ouvrant le fichier binaire final en tant que fichier dans Visual Studio. Pour vous assurer que le manifeste de pointe aux bonnes bibliothèques, suivez les étapes décrites dans [fonctionnement des dépendances d’une Application Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) ou suivre les suggestions décrites dans le [dépannage](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) section.
+Le manifeste est incorporé dans le fichier binaire final en tant que texte ressource et elle peut être affichée en ouvrant le fichier binaire final en tant que fichier dans Visual Studio. Pour vous assurer que le manifeste de pointe aux bonnes bibliothèques, suivez les étapes décrites dans [fonctionnement des dépendances d’une Application Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) ou suivre les suggestions décrites dans le [dépannage](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) section.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour incorporer un manifeste à une application C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
-[À propos des assemblys privés](/windows/desktop/SbsCs/about-private-assemblies-)<br/>
-[Outil manifeste](/windows/desktop/SbsCs/mt-exe)<br/>
-[Présentation de la génération de manifeste pour les programmes C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Présentation de la génération de manifeste pour les programmes C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

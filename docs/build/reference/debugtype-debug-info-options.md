@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: c4a24d79295c1f7dbbe645c4a6e52f58b4a08807
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 00e3cb61f8ec9aa707bb72aa9ff05a64f98d4e47
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423494"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820050"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (options d'informations de débogage)
 
@@ -40,11 +40,11 @@ Arguments à **/DEBUGTYPE** peuvent être combinées dans n’importe quel ordre
 
 Utilisez le **/DEBUGTYPE** option pour spécifier l’inclusion de réadressage des données ou .pdata et .xdata en-tête informations sur la table dans le flux de débogage. Par conséquent, l'éditeur de liens inclut des informations concernant le code en mode utilisateur qui est visible dans un débogueur du noyau lors de la séparation de code en mode noyau. Pour rendre les symboles de débogage disponibles quand **correction** est spécifié, incluez le **CV** argument.
 
-Pour déboguer le code en mode utilisateur, qui est généralement utilisé pour les applications, le **/DEBUGTYPE** option n’est pas nécessaire. Par défaut, les commutateurs de compilation qui spécifient le débogage de sortie ([/Z7, / Zi, / Zi](../../build/reference/z7-zi-zi-debug-information-format.md)) émettent toutes les informations requises par Visual Studio du débogueur. Utilisez **/DEBUGTYPE:PDATA** ou **/DEBUGTYPE : CV, PDATA, correction** pour déboguer le code qui combine les composants en mode utilisateur et en mode noyau, par exemple une application de configuration pour un pilote de périphérique. Pour plus d’informations sur les débogueurs en mode noyau, consultez [débogage outils pour Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)
+Pour déboguer le code en mode utilisateur, qui est généralement utilisé pour les applications, le **/DEBUGTYPE** option n’est pas nécessaire. Par défaut, les commutateurs de compilation qui spécifient le débogage de sortie ([/Z7, / Zi, / Zi](z7-zi-zi-debug-information-format.md)) émettent toutes les informations requises par Visual Studio du débogueur. Utilisez **/DEBUGTYPE:PDATA** ou **/DEBUGTYPE : CV, PDATA, correction** pour déboguer le code qui combine les composants en mode utilisateur et en mode noyau, par exemple une application de configuration pour un pilote de périphérique. Pour plus d’informations sur les débogueurs en mode noyau, consultez [débogage outils pour Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)
 
 ## <a name="see-also"></a>Voir aussi
 
-[/DEBUG (Générer les informations de débogage)](../../build/reference/debug-generate-debug-info.md)<br/>
-[/DRIVER (Pilote Windows NT en mode noyau)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
-[/PROFILE (Profileur des outils d’analyse des performances)](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[/DEBUG (Générer les informations de débogage)](debug-generate-debug-info.md)<br/>
+[/DRIVER (Pilote Windows NT en mode noyau)](driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (Profileur des outils d’analyse des performances)](profile-performance-tools-profiler.md)<br/>
 [Outils de débogage pour Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)

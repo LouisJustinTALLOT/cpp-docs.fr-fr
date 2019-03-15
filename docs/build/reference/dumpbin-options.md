@@ -6,68 +6,68 @@ f1_keywords:
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 2a836af74260c213289f3300500bf7e4de521d5a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 655087236e3e4644c6215da2adccd9755c767b77
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420087"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816021"
 ---
 # <a name="dumpbin-options"></a>Options DUMPBIN
 
-Une option est constituée d’un spécificateur d’option, qui est un tiret (-) ou une barre oblique (/), suivie du nom de l’option. Noms d’options ne peuvent pas être abrégés. Certaines options acceptent les arguments spécifiés après le signe deux-points ( :)). Aucun espace ni les onglets ne sont autorisés au sein de la spécification d’une option. Utiliser un ou plusieurs espaces ou des tabulations pour séparer les spécifications des options sur la ligne de commande. Noms des options et leurs arguments de nom de fichier ou le mot clé ne respectent pas la casse. La plupart des options s’appliquent à tous les fichiers binaires. quelques s’appliquent uniquement à certains types de fichiers. Par défaut, DUMPBIN envoie les informations dans la sortie standard. Utilisez le [/OUT](../../build/reference/out-dumpbin.md) option pour envoyer la sortie vers un fichier.
+Une option est constituée d’un spécificateur d’option, qui est un tiret (-) ou une barre oblique (/), suivie du nom de l’option. Noms d’options ne peuvent pas être abrégés. Certaines options acceptent les arguments spécifiés après le signe deux-points ( :)). Aucun espace ni les onglets ne sont autorisés au sein de la spécification d’une option. Utiliser un ou plusieurs espaces ou des tabulations pour séparer les spécifications des options sur la ligne de commande. Noms des options et leurs arguments de nom de fichier ou le mot clé ne respectent pas la casse. La plupart des options s’appliquent à tous les fichiers binaires. quelques s’appliquent uniquement à certains types de fichiers. Par défaut, DUMPBIN envoie les informations dans la sortie standard. Utilisez le [/OUT](out-dumpbin.md) option pour envoyer la sortie vers un fichier.
 
 DUMPBIN a les options suivantes :
 
-- [/ALL](../../build/reference/all.md)
+- [/ALL](all.md)
 
-- [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md)
+- [/ARCHIVEMEMBERS](archivemembers.md)
 
-- [/CLRHEADER](../../build/reference/clrheader.md)
+- [/CLRHEADER](clrheader.md)
 
-- [/DEPENDENTS](../../build/reference/dependents.md)
+- [/DEPENDENTS](dependents.md)
 
-- [/DIRECTIVES](../../build/reference/directives.md)
+- [/DIRECTIVES](directives.md)
 
-- [/DISASM](../../build/reference/disasm.md)
+- [/DISASM](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](../../build/reference/errorreport-dumpbin-exe.md)
+- [/ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
 
-- [/EXPORTS](../../build/reference/dash-exports.md)
+- [/EXPORTS](dash-exports.md)
 
-- [/FPO](../../build/reference/fpo.md)
+- [/FPO](fpo.md)
 
-- [/HEADERS](../../build/reference/headers.md)
+- [/HEADERS](headers.md)
 
-- [/IMPORTS](../../build/reference/imports-dumpbin.md)
+- [/IMPORTS](imports-dumpbin.md)
 
-- [/LINENUMBERS](../../build/reference/linenumbers.md)
+- [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](../../build/reference/linkermember.md)
+- [/LINKERMEMBER](linkermember.md)
 
-- [/LOADCONFIG](../../build/reference/loadconfig.md)
+- [/LOADCONFIG](loadconfig.md)
 
-- [/OUT](../../build/reference/out-dumpbin.md)
+- [/OUT](out-dumpbin.md)
 
-- [/PDATA](../../build/reference/pdata.md)
+- [/PDATA](pdata.md)
 
-- [/PDBPATH](../../build/reference/pdbpath.md)
+- [/PDBPATH](pdbpath.md)
 
-- [/RANGE](../../build/reference/range.md)
+- [/RANGE](range.md)
 
-- [/RAWDATA](../../build/reference/rawdata.md)
+- [/RAWDATA](rawdata.md)
 
-- [/RELOCATIONS](../../build/reference/relocations.md)
+- [/RELOCATIONS](relocations.md)
 
-- [/SECTION](../../build/reference/section-dumpbin.md)
+- [/SECTION](section-dumpbin.md)
 
-- [/SUMMARY](../../build/reference/summary.md)
+- [/SUMMARY](summary.md)
 
-- [/SYMBOLS](../../build/reference/symbols.md)
+- [/SYMBOLS](symbols.md)
 
-- [/TLS](../../build/reference/tls.md)
+- [/TLS](tls.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Outils de génération C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[Informations de référence sur DUMPBIN](../../build/reference/dumpbin-reference.md)
+[Outils de génération MSVC supplémentaires](c-cpp-build-tools.md)<br/>
+[Informations de référence sur DUMPBIN](dumpbin-reference.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329298"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808257"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modèle de gestion des exceptions)
 
@@ -25,7 +25,7 @@ Spécifie le type de gestion des exceptions utilisé par le compilateur, quand o
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Eh**{**s**|**un**} [**c**] [**r**] [**-**]
+> **/EH**{**s**|**a**}[**c**][**r**][**-**]
 
 ## <a name="arguments"></a>Arguments
 
@@ -43,7 +43,7 @@ Indique au compilateur de générer en permanence des vérifications d’arrêt 
 
 ## <a name="remarks"></a>Notes
 
-L'option de compilateur **/EHa** permet de prendre en charge la gestion des exceptions structurées asynchrones (SEH) avec la clause C++ native `catch(...)` . Pour implémenter la gestion des exceptions structurées sans spécifier **/EHa**, vous pouvez utiliser la **__try**, **__except**, et **__finally** syntaxe. Bien que Windows et Visual C++ prennent en charge la gestion des exceptions structurées, nous vous recommandons fortement d'utiliser la gestion des exceptions C++ normalisée par l'ISO (**/EHs** ou **/EHsc**), car elle rend le code plus portable et plus flexible. Néanmoins, dans le code existant ou pour certains genres de programmes, par exemple, dans le code compilé pour prendre en charge le common language runtime ([/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)), vous devrez toujours utiliser SEH. Pour plus d'informations, consultez [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
+L'option de compilateur **/EHa** permet de prendre en charge la gestion des exceptions structurées asynchrones (SEH) avec la clause C++ native `catch(...)` . Pour implémenter la gestion des exceptions structurées sans spécifier **/EHa**, vous pouvez utiliser la **__try**, **__except**, et **__finally** syntaxe. Bien que Windows et Visual C++ prennent en charge la gestion des exceptions structurées, nous vous recommandons fortement d'utiliser la gestion des exceptions C++ normalisée par l'ISO (**/EHs** ou **/EHsc**), car elle rend le code plus portable et plus flexible. Néanmoins, dans le code existant ou pour certains genres de programmes, par exemple, dans le code compilé pour prendre en charge le common language runtime ([/clr (Compilation pour le Common Language Runtime)](clr-common-language-runtime-compilation.md)), vous devrez toujours utiliser SEH. Pour plus d'informations, consultez [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
 
 Il peut s’avérer dangereux de spécifier **/EHa** et de tenter de gérer toutes les exceptions à l’aide de `catch(...)` . Dans la plupart des cas, les exceptions asynchrones sont irrécupérables et doivent être considérées comme telles. Si vous les interceptez sans les gérer, cela risque de provoquer une altération du processus et de générer des bogues difficiles à trouver et à résoudre.
 
@@ -94,11 +94,11 @@ Cette option peut être désactivée à l'aide du symbole **-**. Par exemple, **
 
 Le **/EHr** option du compilateur force les vérifications d’arrêt au moment de l’exécution dans toutes les fonctions qui ont un **noexcept** attribut. Par défaut, les vérifications à l’exécution peuvent être optimisées, si le compilateur back end détermine qu’une fonction appelle uniquement des fonctions *qui ne lèvent pas d’exceptions* . Les fonctions qui ne lèvent pas d’exceptions sont des fonctions qui ont un attribut spécifiant qu’aucune exception ne peut être levée. Cela inclut les fonctions **noexcept**, `throw()`, `__declspec(nothrow)`et quand **/EHc** est spécifié, **extern « C »** fonctions. Les fonctions qui ne lèvent pas d’exceptions incluent également les fonctions que le compilateur a identifiées par inspection comme des fonctions ne levant pas d’exceptions. Vous pouvez définir explicitement la valeur par défaut à l’aide de **/EHr-**.
 
-Toutefois, l’attribut relatif à l’absence de levée d’exceptions ne garantit pas qu’une fonction ne peut pas lever d’exceptions. Contrairement au comportement d’un **noexcept** (fonction), le compilateur Visual C++ considère une exception levée par une fonction déclarée à l’aide de `throw()`, `__declspec(nothrow)`, ou **extern « C »** comme non défini comportement. Les fonctions qui utilisent ces trois attributs de déclaration n’appliquent pas les vérifications d’arrêt au moment de l’exécution pour les exceptions. Vous pouvez utiliser la **/EHr** option pour vous aider à identifier ce comportement indéfini, en forçant le compilateur à générer des vérifications à l’exécution pour les exceptions non gérées qui échappent un **noexcept** (fonction).
+Toutefois, l’attribut relatif à l’absence de levée d’exceptions ne garantit pas qu’une fonction ne peut pas lever d’exceptions. Contrairement au comportement d’un **noexcept** (fonction), le compilateur MSVC considère qu’une exception levée par une fonction déclarée à l’aide de `throw()`, `__declspec(nothrow)`, ou **extern « C »** comme un comportement non défini. Les fonctions qui utilisent ces trois attributs de déclaration n’appliquent pas les vérifications d’arrêt au moment de l’exécution pour les exceptions. Vous pouvez utiliser la **/EHr** option pour vous aider à identifier ce comportement indéfini, en forçant le compilateur à générer des vérifications à l’exécution pour les exceptions non gérées qui échappent un **noexcept** (fonction).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez **propriétés de Configuration** > **C/C++** > **de génération de Code**.
 
@@ -112,8 +112,8 @@ Toutefois, l’attribut relatif à l’absence de levée d’exceptions ne garan
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [Erreurs et exceptions](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Spécifications d’exception (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [Gestion structurée des exceptions (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)
