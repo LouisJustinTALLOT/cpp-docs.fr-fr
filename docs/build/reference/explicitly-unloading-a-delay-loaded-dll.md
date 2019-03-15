@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-ms.openlocfilehash: f661694dd791ed8db3cd9f5b72a021c7470d17f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9909a3e179aa6c0af3a622c7bf1b545326f90bbd
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420451"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818438"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Déchargement explicite d'une DLL à chargement différé
 
-Le [/retarder](../../build/reference/delay-delay-load-import-settings.md): option de l’éditeur de liens unload vous permet de décharger une DLL à chargement différé. Par défaut, lorsque votre code décharge la DLL (à l’aide / Delay : Unload et **__FUnloadDelayLoadedDLL2**), les importations à chargement différé restent dans la table d’adresses d’importation (IAT). Toutefois, si vous utilisez/DELAY : Unload sur la ligne de commande de l’éditeur de liens, la fonction d’assistance prendra en charge le déchargement explicite de la DLL, la réinitialisation de la table IAT dans sa forme d’origine ; les pointeurs désormais non valides seront remplacées. L’IAT est un champ dans le [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) qui contient l’adresse d’une copie de la table IAT d’origine (si elle existe).
+Le [/retarder](delay-delay-load-import-settings.md): option de l’éditeur de liens unload vous permet de décharger une DLL à chargement différé. Par défaut, lorsque votre code décharge la DLL (à l’aide / Delay : Unload et **__FUnloadDelayLoadedDLL2**), les importations à chargement différé restent dans la table d’adresses d’importation (IAT). Toutefois, si vous utilisez/DELAY : Unload sur la ligne de commande de l’éditeur de liens, la fonction d’assistance prendra en charge le déchargement explicite de la DLL, la réinitialisation de la table IAT dans sa forme d’origine ; les pointeurs désormais non valides seront remplacées. L’IAT est un champ dans le [ImgDelayDescr](calling-conventions-parameters-and-return-type.md) qui contient l’adresse d’une copie de la table IAT d’origine (si elle existe).
 
 ## <a name="example"></a>Exemple
 
@@ -53,10 +53,10 @@ Remarques importantes sur le déchargement d’une DLL à chargement différé 
 
 - Vous trouverez l’implémentation de la **__FUnloadDelayLoadedDLL2** fonction dans le fichier \VC7\INCLUDE\DELAYHLP. CPP.
 
-- Le paramètre name de la **__FUnloadDelayLoadedDLL2** fonction doit correspondre exactement (y compris les cas) ce que la bibliothèque d’importation contient (cette chaîne se trouve également dans la table d’importation dans l’image). Vous pouvez afficher le contenu de la bibliothèque d’importation avec [DUMPBIN /DEPENDENTS](../../build/reference/dependents.md). Si une correspondance de chaîne de non-respect de la casse est souhaitée, vous pouvez mettre à jour **__FUnloadDelayLoadedDLL2** à utiliser une des fonctions de chaîne CRT ou un appel d’API de Windows.
+- Le paramètre name de la **__FUnloadDelayLoadedDLL2** fonction doit correspondre exactement (y compris les cas) ce que la bibliothèque d’importation contient (cette chaîne se trouve également dans la table d’importation dans l’image). Vous pouvez afficher le contenu de la bibliothèque d’importation avec [DUMPBIN /DEPENDENTS](dependents.md). Si une correspondance de chaîne de non-respect de la casse est souhaitée, vous pouvez mettre à jour **__FUnloadDelayLoadedDLL2** à utiliser une des fonctions de chaîne CRT ou un appel d’API de Windows.
 
-Consultez [déchargement d’une DLL à chargement différé](../../build/reference/unloading-a-delay-loaded-dll.md) pour plus d’informations.
+Consultez [déchargement d’une DLL à chargement différé](unloading-a-delay-loaded-dll.md) pour plus d’informations.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](linker-support-for-delay-loaded-dlls.md)

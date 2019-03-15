@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639343"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816098"
 ---
 # <a name="clr-restrictions"></a>Restrictions de /clr
 
@@ -17,7 +17,7 @@ Notez les restrictions suivantes sur l’utilisation de **/CLR**:
 
 - Dans un gestionnaire d’exceptions structurées, il existe des restrictions sur l’utilisation de `_alloca` lors de la compilation avec **/CLR**. Pour plus d’informations, consultez [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- L’utilisation de vérifications des erreurs au moment de l’exécution n’est pas valide avec **/CLR**. Pour plus d’informations, consultez [Comment : utiliser les contrôles natifs à l'exécution](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- L’utilisation de vérifications des erreurs au moment de l’exécution n’est pas valide avec **/CLR**. Pour plus d'informations, voir [Procédure : utiliser les vérifications natives à l’exécution](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Lorsque **/CLR** est utilisé pour compiler un programme qui utilise uniquement la syntaxe C++ standard, les instructions suivantes s’appliquent à l’utilisation de l’assembly inline :
 
@@ -37,36 +37,36 @@ Notez les restrictions suivantes sur l’utilisation de **/CLR**:
 
 - Les options du compilateur suivantes ne sont pas pris en charge avec **/CLR**:
 
-  - **/ EHsc** et **/EHs** (**/CLR** implique **/EHa** (consultez [/EH (modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md))
+  - **/ EHsc** et **/EHs** (**/CLR** implique **/EHa** (consultez [/EH (modèle de gestion des exceptions)](eh-exception-handling-model.md))
 
-  - **/ fp : strict** et **/fp : sauf** (consultez [/fp (spécifier le comportement de virgule flottante)](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/ fp : strict** et **/fp : sauf** (consultez [/fp (spécifier le comportement de virgule flottante)](fp-specify-floating-point-behavior.md))
 
-  - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)
+  - [/Gm](gm-enable-minimal-rebuild.md)
 
-  - [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)
+  - [/MT](md-mt-ld-use-run-time-library.md)
 
-  - [/RTC](../../build/reference/rtc-run-time-error-checks.md)
+  - [/RTC](rtc-run-time-error-checks.md)
 
-  - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- La combinaison de la `_STATIC_CPPLIB` définition du préprocesseur (`/D_STATIC_CPPLIB`) et le **/CLR** option du compilateur n’est pas pris en charge. Cela est le cas, car la définition de plantage de l’application effectuer une liaison avec la statique multithread bibliothèque C++ Standard, qui n’est pas pris en charge. Pour plus d’informations, consultez le [/MD, / MT, /LD (utiliser la bibliothèque Runtime)](../../build/reference/md-mt-ld-use-run-time-library.md) rubrique.
+- La combinaison de la `_STATIC_CPPLIB` définition du préprocesseur (`/D_STATIC_CPPLIB`) et le **/CLR** option du compilateur n’est pas pris en charge. Cela est le cas, car la définition de plantage de l’application effectuer une liaison avec la statique multithread bibliothèque C++ Standard, qui n’est pas pris en charge. Pour plus d’informations, consultez le [/MD, / MT, /LD (utiliser la bibliothèque Runtime)](md-mt-ld-use-run-time-library.md) rubrique.
 
-- Lorsque vous utilisez **/Zi** avec **/CLR**, impacte les performances. Pour plus d’informations, consultez [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+- Lorsque vous utilisez **/Zi** avec **/CLR**, impacte les performances. Pour plus d’informations, consultez [/Zi](z7-zi-zi-debug-information-format.md).
 
-- La routine de sortie en passant un caractère large à un Framework .NET sans spécifier également [/Zc : wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) ou sans casting du caractère en `__wchar_t` entraîne la sortie d’apparaître comme un `unsigned short int`. Exemple :
+- La routine de sortie en passant un caractère large à un Framework .NET sans spécifier également [/Zc : wchar_t](zc-wchar-t-wchar-t-is-native-type.md) ou sans casting du caractère en `__wchar_t` entraîne la sortie d’apparaître comme un `unsigned short int`. Exemple :
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/GS](../../build/reference/gs-buffer-security-check.md) est ignoré lors de la compilation avec **/CLR**, sauf si une fonction est sous `#pragma` [non managé](../../preprocessor/managed-unmanaged.md) ou si la fonction doit être compilée en natif, auquel cas le compilateur génère avertissement C4793, qui est désactivée par défaut.
+- [/GS](gs-buffer-security-check.md) est ignoré lors de la compilation avec **/CLR**, sauf si une fonction est sous `#pragma` [non managé](../../preprocessor/managed-unmanaged.md) ou si la fonction doit être compilée en natif, auquel cas le compilateur génère avertissement C4793, qui est désactivée par défaut.
 
-- Consultez [/Entry](../../build/reference/entry-entry-point-symbol.md) pour les exigences de signature de fonction d’une application managée.
+- Consultez [/Entry](entry-entry-point-symbol.md) pour les exigences de signature de fonction d’une application managée.
 
-- Les applications compilées avec **/OpenMP** et **/CLR** peut uniquement être exécuté dans un processus appdomain unique.  Consultez [/openmp (activer OpenMP 2.0 prise en charge)](../../build/reference/openmp-enable-openmp-2-0-support.md) pour plus d’informations.
+- Les applications compilées avec **/OpenMP** et **/CLR** peut uniquement être exécuté dans un processus appdomain unique.  Consultez [/openmp (activer OpenMP 2.0 prise en charge)](openmp-enable-openmp-2-0-support.md) pour plus d’informations.
 
 - Fonctions qui acceptent un nombre variable d’arguments (varargs) seront générées en tant que fonctions natives. Les types de données managés dans la position d’argument variable seront marshalés vers des types natifs. Notez que <xref:System.String?displayProperty=fullName> types sont des chaînes à caractères larges en fait, mais ils sont marshalés vers des chaînes de caractères d’un octet. Par conséquent, si un spécificateur printf est %S (wchar_t *), il sera marshaler une chaîne de %s à la place.
 
@@ -88,4 +88,4 @@ Notez les restrictions suivantes sur l’utilisation de **/CLR**:
 
 ## <a name="see-also"></a>Voir aussi
 
-- [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/clr (Compilation pour le Common Language Runtime)](clr-common-language-runtime-compilation.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412729"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821480"
 ---
 # <a name="cl-invokes-the-linker"></a>CL appelle l'éditeur de liens
 
@@ -28,7 +28,7 @@ CL appelle automatiquement l’éditeur de liens après la compilation, sauf si 
 |/Zg|Générer les prototypes de fonction|
 |/Zs|Vérifier la syntaxe|
 
-Pour plus d’informations sur la liaison, consultez [les Options de l’éditeur de liens](../../build/reference/linker-options.md).
+Pour plus d’informations sur la liaison, consultez [Options de l’éditeur de liens MSVC](linker-options.md).
 
 ## <a name="example"></a>Exemple
 
@@ -46,7 +46,7 @@ Pour générer ce programme, compilez avec la ligne de commande suivante :
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
 ```
 
-Tout d’abord, CL compile les fichiers sources C et crée les fichiers objets MAIN.obj, MOD1.obj et MOD2.obj. Le compilateur place le nom de la bibliothèque standard dans chaque fichier .obj. Pour plus d’informations, consultez [utilisez Run-Time Library](../../build/reference/md-mt-ld-use-run-time-library.md).
+Tout d’abord, CL compile les fichiers sources C et crée les fichiers objets MAIN.obj, MOD1.obj et MOD2.obj. Le compilateur place le nom de la bibliothèque standard dans chaque fichier .obj. Pour plus d’informations, consultez [utilisez Run-Time Library](md-mt-ld-use-run-time-library.md).
 
 CL passe les noms des fichiers .obj, ainsi que le nom MYGRAPH.lib, à l’éditeur de liens. L’éditeur de liens résout les références externes comme suit :
 
@@ -58,5 +58,5 @@ CL passe les noms des fichiers .obj, ainsi que le nom MYGRAPH.lib, à l’édite
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Définition des options du compilateur](compiler-command-line-syntax.md)

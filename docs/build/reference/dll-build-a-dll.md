@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-ms.openlocfilehash: edad85b2890679e4247c7d34b4e19534e871f4dd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5f7907d659ee3bedc590b88320df03edce005b06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420061"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820505"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (Générer une DLL)
 
@@ -29,9 +29,9 @@ L’option /DLL génère une DLL comme fichier de sortie principal. Une DLL cont
 
 1. [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) dans le code source
 
-1. Un [exportations](../../build/reference/exports.md) instruction dans un fichier .def
+1. Un [exportations](exports.md) instruction dans un fichier .def
 
-1. Un [/EXPORT](../../build/reference/export-exports-a-function.md) spécification dans une commande LINK
+1. Un [/EXPORT](export-exports-a-function.md) spécification dans une commande LINK
 
 Un programme peut utiliser plusieurs méthodes.
 
@@ -43,7 +43,7 @@ Notez que si vous créez votre bibliothèque d’importation dans une étape pr�
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **propriétés de Configuration** dossier.
 
@@ -57,5 +57,5 @@ Notez que si vous créez votre bibliothèque d’importation dans une étape pr�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434981"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815877"
 ---
 # <a name="attribute-programming-faq"></a>Programmation par attributs (FAQ)
 
@@ -43,16 +43,16 @@ Un HRESULT est un type de données simple qui est souvent utilisé comme valeur 
 |Name|Description|Value|
 |----------|-----------------|-----------|
 |S_OK|Opération réussie|0x00000000|
-|E_UNEXPECTED|Échec inattendu|0x8000ffff|
-|E_NOTIMPL|Non implémenté|0 x 80004001|
+|E_UNEXPECTED|Échec inattendu|0x8000FFFF|
+|E_NOTIMPL|Non implémenté|0x80004001|
 |E_OUTOFMEMORY|Échec d’allocation de mémoire nécessaire|0x8007000E|
-|E_INVALIDARG|Un ou plusieurs arguments ne sont pas valides|0 x 80070057|
-|E_NOINTERFACE|Interface non pris en charge|0 x 80004002|
-|E_POINTER|Pointeur non valide|0 x 80004003|
+|E_INVALIDARG|Un ou plusieurs arguments ne sont pas valides|0x80070057|
+|E_NOINTERFACE|Interface non pris en charge|0x80004002|
+|E_POINTER|Pointeur non valide|0x80004003|
 |E_HANDLE|Handle non valide|0x80070006|
-|E_ABORT|Opération abandonnée|0 x 80004004|
-|E_FAIL|Erreur non spécifiée|0 x 80004005|
-|E_ACCESSDENIED|Accès général refusé|0 x 80070005|
+|E_ABORT|Opération abandonnée|0x80004004|
+|E_FAIL|Erreur non spécifiée|0x80004005|
+|E_ACCESSDENIED|Accès général refusé|0x80070005|
 
 ##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Lorsque je dois spécifier le nom du paramètre pour un attribut ?
 
@@ -122,7 +122,7 @@ Avoir un projet ATL sans attributs, ce qui a un fichier .idl, et vous pouvez com
 
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Comment puis-je utiliser un fichier .idl dans un projet avec attributs ?
 
-Vous pouvez avoir un fichier .idl que vous souhaitez utiliser dans votre projet ATL avec attributs. Dans ce cas, vous utiliseriez le [importidl](importidl.md) , compilez le fichier .idl dans un fichier .h (consultez le [Pages de propriétés MIDL](../../ide/midl-property-pages.md) dans le projet **Pages de propriétés** boîte de dialogue), et puis inclure le fichier .h dans votre projet.
+Vous pouvez avoir un fichier .idl que vous souhaitez utiliser dans votre projet ATL avec attributs. Dans ce cas, vous utiliseriez le [importidl](importidl.md) , compilez le fichier .idl dans un fichier .h (consultez le [Pages de propriétés MIDL](../../build/reference/midl-property-pages.md) dans le projet **Pages de propriétés** boîte de dialogue), et puis inclure le fichier .h dans votre projet.
 
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Puis-je modifier le code injecté par un attribut ?
 

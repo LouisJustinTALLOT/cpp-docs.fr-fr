@@ -1,37 +1,37 @@
 ---
 title: Créer un projet d’application console C++
-description: Créer une application de console Hello World dans Visual C++
+description: Créer une application console Hello World dans Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 5722dcc06f5141818910e44a6160d12bcd4eaecd
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977756"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817723"
 ---
 # <a name="create-a-c-console-app-project"></a>Créer un projet d’application console C++
 
-Le habituel point de départ pour un programmeur C++ est un « Hello, world ! » application qui s’exécute sur la ligne de commande. C’est ce que vous allez créer dans Visual Studio dans cette étape.
+Habituellement, le programmeur C++ commence par créer une application « Hello, world ! » qu’il exécute sur la ligne de commande. C’est ce que vous allez créer dans Visual Studio dans cette étape.
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Visual Studio avec le développement bureautique dotées de la charge de travail C++ installé et en cours d’exécution sur votre ordinateur. S’il n’est pas encore installé, consultez [prise en charge de l’installation de C++ dans Visual Studio 2017](../build/vscpp-step-0-installation.md).
+- Vous devez installer puis exécuter Visual Studio ainsi que la charge de travail Développement Desktop en C++ sur votre ordinateur. Pour les installer, consultez [Installer la prise en charge C++ dans Visual Studio 2017](vscpp-step-0-installation.md).
 
-## <a name="create-your-app-project"></a>Créer votre projet d’application
+## <a name="create-your-app-project"></a>Créer un projet d’application
 
-Visual Studio organise le code des applications dans des *projets*, et vos projets dans des *solutions*. Un projet contient toutes les options, les configurations et les règles utilisées pour créer vos applications et gère la relation entre tous les fichiers du projet et des fichiers externes. Pour créer votre application, tout d’abord, vous allez créer un nouveau projet et solution.
+Visual Studio organise le code des applications dans des *projets*, et vos projets dans des *solutions*. Un projet contient l’ensemble des options, configurations et règles qui sont utilisées pour créer vos applications. De plus, il gère les relations qui existent entre tous les fichiers du projet et les fichiers externes. Pour créer votre application, commencez par créer un projet et une solution.
 
 1. Dans Visual Studio, ouvrez le **fichier** menu et choisissez **Nouveau > projet** pour ouvrir le **nouveau projet** boîte de dialogue.
 
-   ![Ouvrez la boîte de dialogue Nouveau projet](../build/media/vscpp-file-new-project.gif "ouvrir la boîte de dialogue Nouveau projet")
+   ![Ouvrez la boîte de dialogue Nouveau projet](media/vscpp-file-new-project.gif "ouvrir la boîte de dialogue Nouveau projet")
 
 1. Dans le **nouveau projet** boîte de dialogue, sélectionnez **installé**, **Visual C++** si elle n’est pas déjà sélectionné, puis choisissez le **projet vide** modèle. Dans le **nom** , entrez *HelloWorld*. Choisissez **OK** pour créer le projet.
 
-   ![Nommer et créer le projet](../build/media/vscpp-concierge-project-name-callouts.png "nom et créer le projet")
+   ![Nommer et créer le projet](media/vscpp-concierge-project-name-callouts.png "nom et créer le projet")
 
 Visual Studio crée un nouveau projet vide, prêt à spécialisés pour le type d’application que vous souhaitez créer et ajouter vos fichiers de code source. Vous allez faire maintenant.
 
@@ -45,7 +45,7 @@ Visual Studio peut créer toutes sortes d’applications et composants pour Wind
 
 1. Dans le **Pages de propriétés** boîte de dialogue, sous **propriétés de Configuration**, sélectionnez **l’éditeur de liens**, **système**, puis choisissez suivant pour la zone d’édition le **sous-système** propriété. Dans le menu déroulant qui s’affiche, sélectionnez **Console (/ SUBSYSTEM : CONSOLE)**. Choisissez **OK** pour enregistrer vos modifications.
 
-   ![Ouvrez la boîte de dialogue Pages de propriétés](../build/media/vscpp-properties-linker-subsystem.gif "ouvrir la boîte de dialogue Pages de propriétés")
+   ![Ouvrez la boîte de dialogue Pages de propriétés](media/vscpp-properties-linker-subsystem.gif "ouvrir la boîte de dialogue Pages de propriétés")
 
 Visual Studio sait maintenant pour générer votre projet doit être exécuté dans une fenêtre de console. Ensuite, vous allez ajouter un fichier de code source et entrez le code de votre application.
 
@@ -57,7 +57,7 @@ Visual Studio sait maintenant pour générer votre projet doit être exécuté d
 
 1. Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **Visual C++** sous **installé** s’il n’est pas déjà sélectionné. Dans le volet central, sélectionnez **fichier C++ (.cpp)**. Modifier le **nom** à *HelloWorld.cpp*. Choisissez **ajouter** pour fermer la boîte de dialogue et créer le fichier.
 
-   ![Ajoutez un fichier source pour HelloWorld.cpp](../build/media/vscpp-add-new-item.gif "ajouter un fichier source pour HelloWorld.cpp")
+   ![Ajoutez un fichier source pour HelloWorld.cpp](media/vscpp-add-new-item.gif "ajouter un fichier source pour HelloWorld.cpp")
 
 Visual studio crée un fichier de code source vide et s’ouvre dans une fenêtre d’éditeur, prête à entrer votre code source.
 
@@ -79,7 +79,7 @@ Visual studio crée un fichier de code source vide et s’ouvre dans une fenêtr
 
    Dans la fenêtre d’éditeur, le code doit ressembler à ceci :
 
-   ![Hello dans l’éditeur de code World](../build/media/vscpp-hello-world-editor.png "dans l’éditeur de code Hello World")
+   ![Hello dans l’éditeur de code World](media/vscpp-hello-world-editor.png "dans l’éditeur de code Hello World")
 
 Lorsque le code ressemble à ceci dans l’éditeur, vous êtes prêt à passer à l’étape suivante et générer votre application.
 

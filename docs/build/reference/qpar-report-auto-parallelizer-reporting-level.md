@@ -2,12 +2,12 @@
 title: /Qpar-report (Niveau de rapport du paralléliseur automatique)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 4ab14f890d888664b2847f3e3d4b193d7c77da1a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 25732900fa201258331dcb8eee96af9ba97a6def
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419905"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818386"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (Niveau de rapport du paralléliseur automatique)
 
@@ -43,7 +43,7 @@ Les messages sont signalés à stdout. Si aucun message d'information n'est sign
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Q, options (Opérations de bas niveau)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
+[/Q, options (Opérations de bas niveau)](q-options-low-level-operations.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [Programmation parallèle en Code natif](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

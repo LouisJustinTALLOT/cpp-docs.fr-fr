@@ -2,16 +2,16 @@
 title: /arch (x64)
 ms.date: 11/04/2016
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
-ms.openlocfilehash: ac34a18efbf31787889cc4fe31ebd3d8473df0eb
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c515307ee3a49ef746eea939e90d7aecbd661b95
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421855"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809312"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 
-Spécifie l'architecture pour la génération de code sur x64. Consultez également [/arch (x86)](../../build/reference/arch-x86.md) et [/arch (ARM)](../../build/reference/arch-arm.md).
+Spécifie l'architecture pour la génération de code sur x64. Consultez également [/arch (x86)](arch-x86.md) et [/arch (ARM)](arch-arm.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,13 +29,13 @@ Active l’utilisation des instructions Intel Advanced Vector Extensions 2.
 
 ## <a name="remarks"></a>Notes
 
-**/ arch** uniquement affecte la génération pour les fonctions natives de code. Lorsque vous utilisez [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) à compiler, **/arch** n’a aucun effet sur la génération de code pour les fonctions managées.
+**/ arch** uniquement affecte la génération pour les fonctions natives de code. Lorsque vous utilisez [/CLR](clr-common-language-runtime-compilation.md) à compiler, **/arch** n’a aucun effet sur la génération de code pour les fonctions managées.
 
 Le `__AVX__` symbole de préprocesseur est défini lors de la **/arch : AVX** option du compilateur est spécifiée. Le `__AVX2__` symbole de préprocesseur est défini lors de la **/arch : avx2** option du compilateur est spécifiée. Pour plus d'informations, consultez [Predefined Macros](../../preprocessor/predefined-macros.md). Le **/arch : avx2** option a été introduite dans Visual Studio 2013 Update 2, version 12.0.34567.1.
 
 ### <a name="to-set-the-archavx-or-archavx2-compiler-option-in-visual-studio"></a>Pour définir l'option de compilateur /arch:AVX ou /arch:AVX2 dans Visual Studio
 
-1. Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration**, **C/C++** dossier.
 
@@ -49,6 +49,6 @@ Le `__AVX__` symbole de préprocesseur est défini lors de la **/arch : AVX** o
 
 ## <a name="see-also"></a>Voir aussi
 
-[/arch (Architecture d’UC minimale)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[/arch (Architecture d’UC minimale)](arch-minimum-cpu-architecture.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

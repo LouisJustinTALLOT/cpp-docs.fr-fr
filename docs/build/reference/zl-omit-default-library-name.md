@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: 8a5aede89e2b37655b67144a9882f1de9b7a4bf8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cb8083d874abe17add1d27096ebce143d03a04cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414796"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809585"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (Omettre le nom de la bibliothèque par défaut)
 
@@ -30,13 +30,13 @@ Omet le nom de bibliothèque runtime C par défaut à partir du fichier .obj. Pa
 
 ## <a name="remarks"></a>Notes
 
-Pour plus d’informations sur la bibliothèque par défaut, consultez [utilisez Run-Time Library](../../build/reference/md-mt-ld-use-run-time-library.md).
+Pour plus d’informations sur la bibliothèque par défaut, consultez [utilisez Run-Time Library](md-mt-ld-use-run-time-library.md).
 
 Vous pouvez utiliser **/Zl** pour compiler les fichiers .obj vous envisagez de placer dans une bibliothèque. Bien qu’en omettant le nom de la bibliothèque enregistre uniquement une petite quantité d’espace pour un seul fichier .obj, l’espace total économisé est significatif dans une bibliothèque qui contient de nombreux modules objet.
 
 Cette option est une option avancée. Cette option supprime certains prise en charge de bibliothèque Runtime C qui peut être requis par votre application, ce qui entraîne des erreurs du moment de la liaison si votre application dépend de cette prise en charge. Si vous utilisez cette option, vous devez fournir les composants requis par d’autres moyens.
 
-Utilisez [/NODEFAULTLIB (ignorer les bibliothèques)](../../build/reference/nodefaultlib-ignore-libraries.md). pour diriger l’éditeur de liens pour ignorer les références de bibliothèque dans tous les fichiers .obj.
+Utilisez [/NODEFAULTLIB (ignorer les bibliothèques)](nodefaultlib-ignore-libraries.md). pour diriger l’éditeur de liens pour ignorer les références de bibliothèque dans tous les fichiers .obj.
 
 Pour plus d’informations, consultez [Fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 
@@ -56,7 +56,7 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -70,5 +70,5 @@ void Test() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

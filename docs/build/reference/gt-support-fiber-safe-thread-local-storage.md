@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-ms.openlocfilehash: 14d2f66401b7b7ed324b79b12b6de26c7ee450b2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420256"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822514"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Prendre en charge le stockage local des threads avec fibres sécurisées)
 
@@ -33,11 +33,11 @@ Prend en charge de la sécurité des fibres pour les données allouées à l’a
 
 Données déclarées avec `__declspec(thread)` est référencé via une baie de stockage local des threads (TLS). Le tableau TLS est un tableau d’adresses que le système gère pour chaque thread. Chaque adresse de ce tableau indique l’emplacement de données de stockage local des threads.
 
-Une fibre est un objet léger qui se compose d’une pile et un contexte de Registre et peut être planifié sur différents threads. Une fibre peut être exécutée sur n’importe quel thread. Comme une fibre peut être transférée et redémarrée ultérieurement sur un thread différent, l’adresse du tableau TLS ne doit pas être mis en cache ou optimisée en tant qu’une sous-expression commune dans un appel de fonction (voir la [/Og (optimisations globales)](../../build/reference/og-global-optimizations.md) option pour (détails). **/GT** empêche ces optimisations.
+Une fibre est un objet léger qui se compose d’une pile et un contexte de Registre et peut être planifié sur différents threads. Une fibre peut être exécutée sur n’importe quel thread. Comme une fibre peut être transférée et redémarrée ultérieurement sur un thread différent, l’adresse du tableau TLS ne doit pas être mis en cache ou optimisée en tant qu’une sous-expression commune dans un appel de fonction (voir la [/Og (optimisations globales)](og-global-optimizations.md) option pour (détails). **/GT** empêche ces optimisations.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -51,5 +51,5 @@ Une fibre est un objet léger qui se compose d’une pile et un contexte de Regi
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

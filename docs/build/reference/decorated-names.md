@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423311"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815421"
 ---
 # <a name="decorated-names"></a>Noms décorés
 
@@ -67,7 +67,7 @@ Vous pouvez obtenir la forme décorée du nom d'un symbole après avoir compilé
 
 #### <a name="to-use-a-listing-to-view-decorated-names"></a>Pour utiliser un listing pour afficher les noms décorés
 
-1. Générez une liste en compilant le fichier source qui contient les données, objet, ou définition de fonction ou le prototype avec le [Type de fichier Listing](../../build/reference/fa-fa-listing-file.md) option du compilateur définie sur Assembly avec Code Source (**/FA**).
+1. Générez une liste en compilant le fichier source qui contient les données, objet, ou définition de fonction ou le prototype avec le [Type de fichier Listing](fa-fa-listing-file.md) option du compilateur définie sur Assembly avec Code Source (**/FA**).
 
    Par exemple, entrez `cl /c /FAs example.cpp` à une invite de commandes développeur pour générer un fichier listing, example.asm.
 
@@ -94,5 +94,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>Voir aussi
 
-[Outils de génération C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Outils de génération MSVC supplémentaires](c-cpp-build-tools.md)<br/>
 [Utilisation d’extern pour spécifier la liaison](../../cpp/using-extern-to-specify-linkage.md)

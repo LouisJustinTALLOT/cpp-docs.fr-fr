@@ -7,12 +7,12 @@ helpviewer_keywords:
 - blank projects
 - files [C++], adding to projects
 ms.assetid: 070098e8-0396-49fe-a697-3daa2f1be6de
-ms.openlocfilehash: d5347a0693619e5db44b1087fc249c68b9227fb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8facd371ad2dddbb8ce239af5ca536b21a606807
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568650"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818204"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Ajout de fichiers à des applications Win32 vides
 
@@ -29,7 +29,7 @@ ms.locfileid: "50568650"
 Pour ajouter des fichiers qui sont source, en-tête ni les fichiers de ressources à votre projet, cliquez sur le **Solution** nœud **l’Explorateur de solutions** et ajoutez les fichiers au projet de la même manière. Un **divers** dossier sera créé pour contenir les autres fichiers dans votre projet.
 
 > [!NOTE]
-> Avant de générer votre projet, vous devrez spécifier les options de génération de ces fichiers pour qu’ils soient correctement inclus dans l’application finale. Pour plus d’informations, consultez [Spécification des paramètres de projet avec des pages de propriétés](../ide/property-pages-visual-cpp.md) et [Génération d’un programme C/C++](../build/building-c-cpp-programs.md).
+> Avant de générer votre projet, vous devrez spécifier les options de génération de ces fichiers pour qu’ils soient correctement inclus dans l’application finale. Pour plus d’informations, consultez [Spécification des paramètres de projet avec des pages de propriétés](../build/reference/property-pages-visual-cpp.md) et [Génération d’un programme C/C++](../build/building-c-cpp-programs.md).
 
 ## <a name="see-also"></a>Voir aussi
 

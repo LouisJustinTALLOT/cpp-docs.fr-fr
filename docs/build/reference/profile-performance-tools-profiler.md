@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: a0fda47497ffc247dd9678ece7aac76291aed1ff
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419151"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810001"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profileur des outils d'analyse des performances)
 
@@ -28,13 +28,13 @@ Génère un fichier de sortie utilisable avec le profileur Outils d’analyse de
 
 /Profile implique les options de l’éditeur de liens suivantes :
 
-- [/OPT:REF](../../build/reference/opt-optimizations.md)
+- [/OPT:REF](opt-optimizations.md)
 
 - /OPT:NOICF
 
-- [/INCREMENTAL:NO](../../build/reference/incremental-link-incrementally.md)
+- [/INCREMENTAL:NO](incremental-link-incrementally.md)
 
-- [/ FIXE : NO](../../build/reference/fixed-fixed-base-address.md)
+- [/ FIXE : NO](fixed-fixed-base-address.md)
 
 / PROFIL entraîne l’éditeur de liens générer une section de réadressage dans l’image de programme.  Une section de réadressage permet au profileur transformer l’image de programme pour obtenir des données de profil.
 
@@ -42,7 +42,7 @@ Génère un fichier de sortie utilisable avec le profileur Outils d’analyse de
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Développez le nœud **Propriétés de configuration**.
 
@@ -58,5 +58,5 @@ Génère un fichier de sortie utilisable avec le profileur Outils d’analyse de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

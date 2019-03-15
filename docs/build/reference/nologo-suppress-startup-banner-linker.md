@@ -13,12 +13,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-ms.openlocfilehash: 1b966c1f7af556a85aadcafaa8ed43da5b3f75df
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422154"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812497"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Suppression de la bannière de démarrage) (Éditeur de liens)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57422154"
 
 L’option /NOLOGO empêche l’affichage de l’auteur message et numéro de version.
 
-Cette option supprime également la répercussion des fichiers de commandes. Pour plus d’informations, consultez [fichiers de commandes LINK](../../build/reference/link-command-files.md).
+Cette option supprime également la répercussion des fichiers de commandes. Pour plus d’informations, consultez [fichiers de commandes LINK](linking.md).
 
 Par défaut, ces informations sont transmises par l’éditeur de liens dans la fenêtre Sortie. Sur la ligne de commande, il est envoyé vers la sortie standard et peut être redirigée vers un fichier.
 
@@ -44,5 +44,5 @@ Par défaut, ces informations sont transmises par l’éditeur de liens dans la 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

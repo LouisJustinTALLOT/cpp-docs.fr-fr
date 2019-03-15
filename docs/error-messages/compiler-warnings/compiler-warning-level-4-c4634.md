@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4634
 ms.assetid: 3e3496ce-2ac7-43d0-a48a-f514c950e81d
-ms.openlocfilehash: a26356dd32f1513eadf4ef2b82175cf71aed13a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d0e2af13128a201d96aa905d85621e14441a673
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536667"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818256"
 ---
 # <a name="compiler-warning-level-4-c4634"></a>Avertissement du compilateur (niveau 4) C4634
 
@@ -19,7 +19,7 @@ Commentaire de document XML : application impossible : raison
 
 Les balises de documentation XML ne peuvent pas être appliquées à toutes les constructions C++.  Par exemple, vous ne pouvez pas ajouter un commentaire de documentation à un espace de noms ou à un modèle.
 
-Pour plus d’informations, consultez [XML Documentation](../../ide/xml-documentation-visual-cpp.md).
+Pour plus d’informations, consultez [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md).
 
 ## <a name="example"></a>Exemple
 

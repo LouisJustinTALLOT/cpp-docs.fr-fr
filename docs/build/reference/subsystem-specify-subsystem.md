@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417006"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821259"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Spécifier le sous-système)
 
@@ -42,7 +42,7 @@ Application en mode caractères Win32. Le système d'exploitation fournit une co
 Les sous-systèmes Extensible Firmware Interface. Consultez la spécification EFI pour plus d’informations. Pour obtenir des exemples, consultez le site Web d’Intel. La version minimale de version et la valeur par défaut est 1.0.
 
 **NATIF**<br/>
-Pilotes en mode noyau pour Windows NT. Cette option est généralement réservée pour les composants du système Windows. Si [/Driver : WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) est spécifié, NATIVE est la valeur par défaut.
+Pilotes en mode noyau pour Windows NT. Cette option est généralement réservée pour les composants du système Windows. Si [/Driver : WDM](driver-windows-nt-kernel-mode-driver.md) est spécifié, NATIVE est la valeur par défaut.
 
 **POSIX**<br/>
 Application qui s’exécute avec le sous-système POSIX sous Windows NT.
@@ -73,7 +73,7 @@ Le minimum facultatif et par défaut *majeure* et *mineure* numéros de version 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le dossier de l’éditeur de liens.
 
@@ -87,5 +87,5 @@ Le minimum facultatif et par défaut *majeure* et *mineure* numéros de version 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

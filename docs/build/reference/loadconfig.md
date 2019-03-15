@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -LOADCONFIG dumpbin option
 - /LOADCONFIG dumpbin option
 ms.assetid: 24667afe-9bee-4f6e-ae72-f534c0050428
-ms.openlocfilehash: c34132f1f9cb5de9f28e83c401fe53145068975d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 689fd64e3d13cd609f709a3e4d3e9035ca711274
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426332"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813849"
 ---
 # <a name="loadconfig"></a>/LOADCONFIG
 
@@ -25,8 +25,8 @@ ms.locfileid: "57426332"
 
 Cette option vide la structure IMAGE_LOAD_CONFIG_DIRECTORY, une structure facultative qui est utilisée par le chargeur Windows NT et définie dans WINNT. H.
 
-Uniquement les [/HEADERS](../../build/reference/headers.md) (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](../../build/reference/gl-whole-program-optimization.md) option du compilateur.
+Uniquement les [/HEADERS](headers.md) (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](gl-whole-program-optimization.md) option du compilateur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](../../build/reference/dumpbin-options.md)
+[DUMPBIN, options](dumpbin-options.md)

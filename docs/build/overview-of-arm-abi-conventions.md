@@ -2,12 +2,12 @@
 title: Vue d'ensemble des conventions ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: d25cba2800348ca1ae45c5bb59163816a4eefa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436021"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810456"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Vue d’ensemble des Conventions ABI de ARM32
 
@@ -23,7 +23,7 @@ Une prise en charge de la division d'entier (UDIV/SDIV) est vivement recommandé
 
 ## <a name="endianness"></a>Endianness
 
-Windows on ARM s'exécute en mode Little-Endian. Le compilateur Visual C++ comme le runtime Windows attendent toujours des données Little-Endian. Bien que l'instruction SETEND de l'architecture de jeu d'instructions (ISA) ARM autorise même le code en mode utilisateur à modifier l'endianness actif, cette opération est déconseillée car dangereuse pour une application. Si une exception est générée en mode Big-Endian, le comportement est imprévisible et peut provoquer une erreur d'application en mode utilisateur ou une vérification d'erreur en mode noyau.
+Windows on ARM s'exécute en mode Little-Endian. Le compilateur MSVC et le runtime Windows attendent little endian données à tout moment. Bien que l'instruction SETEND de l'architecture de jeu d'instructions (ISA) ARM autorise même le code en mode utilisateur à modifier l'endianness actif, cette opération est déconseillée car dangereuse pour une application. Si une exception est générée en mode Big-Endian, le comportement est imprévisible et peut provoquer une erreur d'application en mode utilisateur ou une vérification d'erreur en mode noyau.
 
 ## <a name="alignment"></a>Alignement
 
@@ -135,9 +135,9 @@ La plupart des matériels ARM ne prennent pas en charge les exceptions de virgul
 
 ## <a name="parameter-passing"></a>Passage de paramètres
 
-Pour les fonctions non variadiques, l’interface ABI de Windows on ARM suit les règles d’ARM en matière de passage de paramètres (extensions VFP et SIMD avancées comprises). Ces règles suivent la [procédure appeler Standard pour l’Architecture ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf), consolidée avec les extensions VFP. Par défaut, les quatre premiers arguments entiers et jusqu’à huit arguments à virgule flottante ou vectoriels sont passés aux registres, et des arguments supplémentaires sont passés à la pile. Les arguments sont assignés aux registres ou à la pile à l’aide de cette procédure :
+Pour les fonctions non variadiques, l’interface ABI de Windows on ARM suit les règles d’ARM en matière de passage de paramètres (extensions VFP et SIMD avancées comprises). Ces règles suivent la [procédure appeler Standard pour l’Architecture ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf), consolidée avec les extensions VFP. Par défaut, les quatre premiers arguments entiers et jusqu'à huit arguments à virgule flottante ou vectoriels sont passés aux registres, et des arguments supplémentaires sont passés à la pile. Les arguments sont assignés aux registres ou à la pile à l’aide de cette procédure :
 
-### <a name="stage-a-initialization"></a>Étape a : initialisation
+### <a name="stage-a-initialization"></a>Étape a : Initialisation
 
 L’initialisation est exécutée une seule fois exactement, avant le début du traitement des arguments :
 
@@ -149,7 +149,7 @@ L’initialisation est exécutée une seule fois exactement, avant le début du 
 
 1. Si une fonction qui retourne un résultat en mémoire est appelé, l'adresse du résultat est placée dans r0 et le numéro NCRN est défini sur r1.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Étape b : remplissage préalable et extension des arguments
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Étape b : Remplissage préalable et extension des arguments
 
 Pour chaque argument de la liste, la première règle correspondante de la liste suivante est appliquée :
 
@@ -157,9 +157,9 @@ Pour chaque argument de la liste, la première règle correspondante de la liste
 
 1. Si l'argument est un demi-mot d'un octet ou de 16 bits, il est étendu en mot complet de 32 bits avec des zéros ou des signes et est traité comme un argument de 4 octets.
 
-1. Si l’argument est un type composite, sa taille est arrondie au multiple de 4 supérieur le plus proche.
+1. Si l'argument est un type composite, sa taille est arrondie au multiple de 4 supérieur le plus proche.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Phase C: assignation d’arguments aux registres et la pile
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Étape c : Assignation d’arguments aux registres et la pile
 
 Pour chaque argument de la liste, les règles suivantes sont appliquées tour à tour jusqu’à ce que l’argument ait été alloué :
 
@@ -191,7 +191,7 @@ Les fonctions qui allouent 4 Ko ou plus dans la pile doivent s'assurer que chaq
 
 ### <a name="red-zone"></a>Zone rouge
 
-La zone de 8 octets située juste en dessous du pointeur de pile actif est réservée à l’analyse et à la mise à jour corrective dynamique. Cela permet l'insertion de code généré avec soins, lequel stocke 2 registres au niveau de [sp, #-8] et les utilise provisoirement à des fins arbitraires. Le noyau Windows garantit que ces 8 octets ne seront pas remplacés si une exception ou une interruption se produit à la fois en mode utilisateur et en mode noyau.
+La zone de 8 octets située juste en dessous du pointeur de pile actif est réservée à l'analyse et à la mise à jour corrective dynamique. Cela permet l'insertion de code généré avec soins, lequel stocke 2 registres au niveau de [sp, #-8] et les utilise provisoirement à des fins arbitraires. Le noyau Windows garantit que ces 8 octets ne seront pas remplacés si une exception ou une interruption se produit à la fois en mode utilisateur et en mode noyau.
 
 ### <a name="kernel-stack"></a>Pile de noyau
 
@@ -205,13 +205,13 @@ Les énumérations sont des types d'entier de 32 bits sauf si au moins une vale
 
 ## <a name="stack-walking"></a>Parcours de pile
 
-Code de Windows est compilé avec les pointeurs de frame activés ([/Oy (Omission du pointeur Frame)](../build/reference/oy-frame-pointer-omission.md)) pour activer l’exploration de pile rapide. En général, le registre r11 pointe vers le lien suivant dans la chaîne, qui correspond à une paire {r11, lr} qui spécifie le pointeur vers le frame précédent de la pile et l'adresse de retour. Nous recommandons aussi l'activation des pointeurs de frame dans votre code pour un profilage et un traçage améliorés.
+Code de Windows est compilé avec les pointeurs de frame activés ([/Oy (Omission du pointeur Frame)](reference/oy-frame-pointer-omission.md)) pour activer l’exploration de pile rapide. En général, le registre r11 pointe vers le lien suivant dans la chaîne, qui correspond à une paire {r11, lr} qui spécifie le pointeur vers le frame précédent de la pile et l'adresse de retour. Nous recommandons aussi l'activation des pointeurs de frame dans votre code pour un profilage et un traçage améliorés.
 
 ## <a name="exception-unwinding"></a>Déroulement d’exception
 
 Le déroulement de la pile pendant le traitement des exceptions est assuré par l'utilisation de codes de déroulement. Les codes de déroulement correspondent à une séquence d'octets stockés dans la section .xdata de l'image exécutable. Ils décrivent l'opération du code de prologue et d'épilogue de la fonction de manière abstraite, ce qui permet d'annuler les effets du prologue d'une fonction en préparation du déroulement dans le frame de pile de l'appelant.
 
-L'interface EABI ARM spécifie un modèle de déroulement d'exception qui utilise des codes de déroulement. Cependant, cette spécification ne suffit pas pour un déroulement dans Windows, qui doit gérer des cas où le processeur se situe au milieu du prologue ou de l'épilogue d'une fonction. Pour plus d’informations sur Windows sur les données d’exception ARM et de déroulement, consultez [ARM exceptions](../build/arm-exception-handling.md).
+L'interface EABI ARM spécifie un modèle de déroulement d'exception qui utilise des codes de déroulement. Cependant, cette spécification ne suffit pas pour un déroulement dans Windows, qui doit gérer des cas où le processeur se situe au milieu du prologue ou de l'épilogue d'une fonction. Pour plus d’informations sur Windows sur les données d’exception ARM et de déroulement, consultez [ARM exceptions](arm-exception-handling.md).
 
 Nous vous recommandons de décrire le code généré dynamiquement à l'aide des tables de fonctions dynamiques spécifiées dans les appels à `RtlAddFunctionTable` et les fonctions associées pour permettre au code généré de participer à la gestion des exceptions.
 
@@ -223,5 +223,5 @@ Le compteur est un vrai compteur de cycles, pas une horloge ; ainsi, la fréque
 
 ## <a name="see-also"></a>Voir aussi
 
-[Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[Gestion des exceptions ARM](../build/arm-exception-handling.md)
+[Problèmes courants de migration ARM Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
+[Gestion des exceptions ARM](arm-exception-handling.md)

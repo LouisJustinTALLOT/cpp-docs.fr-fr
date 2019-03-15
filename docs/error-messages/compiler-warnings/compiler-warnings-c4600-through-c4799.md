@@ -57,14 +57,13 @@ f1_keywords:
 - C4767
 - C4770
 - C4792
-- C4794
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4acc36fcf7508bdcfcc1bd936110df4c32c47ae2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553152"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810079"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Avertissements du compilateur C4600 à C4799
 
@@ -76,7 +75,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 
 |Warning|Message|
 |-------------|-------------|
-|[Avertissement du compilateur (niveau 1) C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#pragma 'nom_macro' : chaîne valide non vide attendue|
+|[Avertissement du compilateur (niveau 1) C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#pragma 'macro name': expected a valid non-empty string|
 |Avertissement du compilateur (niveau 1) C4602|#pragma pop_macro : 'nom de macro' pas de #pragma push_macro défini au préalable pour cet identificateur|
 |Avertissement du compilateur (niveau 1) C4603|«*identificateur*' : macro n’est pas définie ou la définition est différente après utilisation d’un en-tête précompilé|
 |Avertissement du compilateur (niveau 1) C4604|«*type*» : passage d’argument par valeur sur une frontière native / managée nécessite un constructeur de copie valide. Sinon, le comportement d’exécution n’est pas défini|
@@ -147,12 +146,12 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 4) C4681|'class' : coclasse ne spécifie pas une interface par défaut qui est une source d’événement|
 |Avertissement du compilateur (niveau 4) C4682|'paramètre' : aucun attribut de paramètre directionnel spécifié, [in] pris par défaut|
 |[Avertissement du compilateur (niveau 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|'fonction' : source de l’événement a un 'out'-paramètre ; Soyez prudent lorsque vous raccordez plusieurs gestionnaires d’événements|
-|[Avertissement du compilateur (niveau 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute' : avertissement !! attribut peut entraîner une génération de code non valide : utilisez avec précaution|
+|[Avertissement du compilateur (niveau 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': AVERTISSEMENT !! attribut peut entraîner une génération de code non valide : utilisez avec précaution|
 |Avertissement du compilateur (niveau 1) C4685|'> >' attendu, '>>' trouvé lors de l'analyse des paramètres du modèle|
 |[Avertissement du compilateur (niveau 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|’type défini par l’utilisateur’ : changement de comportement possible, changement de la convention d’appel de retour UDT|
 |[Avertissement (erreur) du compilateur C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'classe' : une classe abstraite sealed ne peut pas implémenter une interface 'interface'|
 |[Avertissement du compilateur (niveau 1) C4688](../../error-messages/compiler-warnings/compiler-warning-level-1-c4688.md)|'constraint' : la liste des contraintes contient un type privé d’assembly 'type'|
-|Avertissement du compilateur (niveau 1) C4689|'%c' : non pris en charge des caractères dans #pragma detect_mismatch ; #pragma ignoré|
+|Avertissement du compilateur (niveau 1) C4689|'%c': unsupported character in #pragma detect_mismatch; #pragma ignored|
 |[Avertissement du compilateur (niveau 4) C4690](../../error-messages/compiler-warnings/compiler-warning-level-4-c4690.md)|\[ emitidl (pop)] : plus de POP que de push|
 |[Avertissement du compilateur (niveau 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type' : type référencé était attendu dans l’assembly non référencé 'fichier', type défini dans l’unité de traduction actuelle utilisée à la place|
 |[Avertissement du compilateur (niveau 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'fonction' : la signature de membre non privée contient un type natif privé d'assembly 'type_natif'|
@@ -194,7 +193,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' a une taille différente dans 'fichier1' et 'fichier2' : nombre et le nombre d’octets|
 |[Avertissement du compilateur (niveau 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' a un type différent dans 'fichier1' et 'fichier2' : 'type1' et 'type2'|
 |[Avertissement du compilateur C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|accès volatile de «*expression*' volatile :\<iso&#124;ms > configuration ; envisagez d’utiliser des fonctions intrinsèques __iso_volatile_load/store|
-|[Avertissement du compilateur (niveau 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Appelant managé 'entrypoint' : Impossible d’exécuter du code managé le verrouillage du chargeur, y compris le point d’entrée DLL et les appels accessibles à partir du point d’entrée DLL|
+|[Avertissement du compilateur (niveau 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Appel géré 'point d’entrée' : Impossible d’exécuter du code managé le verrouillage du chargeur, y compris le point d’entrée DLL et les appels accessibles à partir du point d’entrée DLL|
 |Avertissement du compilateur (niveau 4) C4749|prise en charge conditionnelle : offsetof appliqué au type de connexion non standard-disposition '*type*'|
 |Avertissement du compilateur (niveau 1) C4750|'identifier' : fonction with _alloca() inline dans une boucle|
 |Avertissement du compilateur (niveau 4) C4751|/ arch : AVX ne s’applique pas à Intel (r) Extensions Streaming SIMD situés au sein d’inline ASM|

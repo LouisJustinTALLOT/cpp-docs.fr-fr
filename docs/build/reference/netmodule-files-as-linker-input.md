@@ -7,38 +7,38 @@ helpviewer_keywords:
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: 050736e5536a1e38b73524f31491b3a01dc99193
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443575"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818100"
 ---
 # <a name="netmodule-files-as-linker-input"></a>Fichiers .netmodule en tant qu'entrée de l'Éditeur de liens
 
 Link.exe accepte désormais les fichiers .obj MSIL et .netmodule en tant qu’entrée. Le fichier de sortie produit par l’éditeur de liens est un assembly ou un fichier .netmodule sans dépendance d’exécution sur n’importe quel fichier .obj ou .netmodule entrés à l’éditeur de liens.
 
-fichiers .netmodule sont créés par le compilateur Visual C++ avec [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) ou par l’éditeur de liens avec [/NOASSEMBLY (créer un Module MSIL)](../../build/reference/noassembly-create-a-msil-module.md). fichiers .obj sont toujours créés dans une compilation Visual C++. Pour d’autres compilateurs Visual Studio, utilisez le **/target : module** option du compilateur.
+fichiers .netmodule sont créés par le compilateur MSVC avec [/LN (Create MSIL Module)](ln-create-msil-module.md) ou par l’éditeur de liens avec [/NOASSEMBLY (créer un Module MSIL)](noassembly-create-a-msil-module.md). fichiers .obj sont toujours créés dans une compilation Visual C++. Pour d’autres compilateurs Visual Studio, utilisez le **/target : module** option du compilateur.
 
 Vous devez passer à l’éditeur de liens le fichier .obj de la compilation de Visual C++ qui a créé le fichier .netmodule. Passant dans un fichier .netmodule n’est plus pris en charge, car le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 
-Pour plus d’informations sur l’appel de l’éditeur de liens à partir de la ligne de commande, consultez [syntaxe de ligne de commande de l’éditeur de liens](../../build/reference/linker-command-line-syntax.md), [code de génération C/C++ sur la ligne de commande](../../build/building-on-the-command-line.md), et [définir le chemin d’accès et les Variables d’environnement pour Builds de ligne de commande](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Pour plus d’informations sur l’appel de l’éditeur de liens à partir de la ligne de commande, consultez [syntaxe de ligne de commande de l’éditeur de liens](linking.md), [utiliser l’ensemble d’outils MSVC à partir de la ligne de commande](../building-on-the-command-line.md), et [définir le chemin d’accès et les Variables d’environnement pour les Builds de ligne de commande](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Passage d’un fichier .netmodule ou .dll pour l’éditeur de liens qui a été compilé par le compilateur Visual C++ avec **/CLR** peut entraîner une erreur de l’éditeur de liens. Pour plus d’informations, consultez [choix du Format des fichiers d’entrée .netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).
+Passage d’un fichier .netmodule ou .dll pour l’éditeur de liens qui a été compilé par le compilateur MSVC avec **/CLR** peut entraîner une erreur de l’éditeur de liens. Pour plus d’informations, consultez [choix du Format des fichiers d’entrée .netmodule](choosing-the-format-of-netmodule-input-files.md).
 
 L’éditeur de liens accepte les fichiers .obj natifs, ainsi que les fichiers .obj MSIL compilés avec **/CLR**. Lors du passage de fichiers .obj mixtes dans la même version, la vérifiabilité du fichier de sortie résultant, par défaut, sera égale à niveau le plus bas de vérifiabilité des modules d’entrée.
 
 Si vous disposez actuellement d’une application qui se compose de deux ou plusieurs assemblys et que l’application doit être contenu dans un assembly, vous devez recompiler les assemblys et puis lier les fichiers .obj ou .netmodule pour produire un assembly unique.
 
-Vous devez spécifier un point d’entrée à l’aide [/ENTRY (symbole de Point d’entrée)](../../build/reference/entry-entry-point-symbol.md) lors de la création d’une image exécutable.
+Vous devez spécifier un point d’entrée à l’aide [/ENTRY (symbole de Point d’entrée)](entry-entry-point-symbol.md) lors de la création d’une image exécutable.
 
-Lors de la liaison avec un fichier .obj ou .netmodule MSIL, utilisez [/LTCG (Link-time Code Generation)](../../build/reference/ltcg-link-time-code-generation.md), sinon lorsque l’éditeur de liens rencontre le MSIL .obj ou .netmodule, il redémarrera le lien avec /LTCG.
+Lors de la liaison avec un fichier .obj ou .netmodule MSIL, utilisez [/LTCG (Link-time Code Generation)](ltcg-link-time-code-generation.md), sinon lorsque l’éditeur de liens rencontre le MSIL .obj ou .netmodule, il redémarrera le lien avec /LTCG.
 
 Fichiers .obj ou .netmodule MSIL peuvent également être passés à cl.exe.
 
-Fichiers .obj ou .netmodule MSIL d’entrée ne peut pas comporter de ressources. Une ressource est incorporée dans un fichier de sortie (module ou assembly) avec [/ASSEMBLYRESOURCE (incorporer une ressource managée)](../../build/reference/assemblyresource-embed-a-managed-resource.md) option de l’éditeur de liens ou avec le **/resource** option du compilateur dans d’autres compilateurs Visual Studio.
+Fichiers .obj ou .netmodule MSIL d’entrée ne peut pas comporter de ressources. Une ressource est incorporée dans un fichier de sortie (module ou assembly) avec [/ASSEMBLYRESOURCE (incorporer une ressource managée)](assemblyresource-embed-a-managed-resource.md) option de l’éditeur de liens ou avec le **/resource** option du compilateur dans d’autres compilateurs Visual Studio.
 
-Lorsque vous effectuez la liaison MSIL, et si vous ne spécifiez pas [/LTCG (Link-time Code Generation)](../../build/reference/ltcg-link-time-code-generation.md), vous verrez un message informatif indiquant que la liaison redémarre. Ce message peut être ignoré, mais to améliorer les performances de l’éditeur de liens avec la liaison MSIL, spécifiez explicitement **/LTCG**.
+Lorsque vous effectuez la liaison MSIL, et si vous ne spécifiez pas [/LTCG (Link-time Code Generation)](ltcg-link-time-code-generation.md), vous verrez un message informatif indiquant que la liaison redémarre. Ce message peut être ignoré, mais to améliorer les performances de l’éditeur de liens avec la liaison MSIL, spécifiez explicitement **/LTCG**.
 
 ## <a name="example"></a>Exemple
 
@@ -98,5 +98,5 @@ caught non System exception in C++ source code file
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Fichiers d’entrée LINK](../../build/reference/link-input-files.md)
-- [Options de l’éditeur de liens](../../build/reference/linker-options.md)
+- [Fichiers d’entrée LINK](link-input-files.md)
+- [Options de l’éditeur de liens MSVC](linker-options.md)

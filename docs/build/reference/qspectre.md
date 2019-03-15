@@ -5,12 +5,12 @@ f1_keywords:
 - /Qspectre
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: af04a905fdb3b509a90249c6d55a28ccdaa39318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507313"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812458"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -28,7 +28,7 @@ Le **/qspectre** option est désactivée par défaut.
 
 Dans sa version initiale, le **/qspectre** option travaillée uniquement sur le code optimisé. Dans Visual Studio 2017 version 15.7 et ultérieure, le **/qspectre** option est prise en charge à tous les niveaux d’optimisation.
 
-Bibliothèques Visual C++ de Microsoft sont également disponibles dans les versions avec atténuation de Spectre. Les bibliothèques d’atténuation de Spectre pour Visual Studio 2017 peuvent être téléchargés dans le programme d’installation Visual Studio. Ils sont trouvent dans le **composants individuels** onglet sous **compilateurs, outils de génération et runtimes**, et le nom contient « Libs pour Spectre ». DLL et bibliothèques runtime statique avec atténuation est activée sont disponibles pour un sous-ensemble des runtimes Visual C++ : code de démarrage VC ++, vcruntime140, msvcp140, concrt140 et vcamp140. Les DLL sont pris en charge pour le déploiement local de l’application uniquement ; le contenu de Redistributable Visual C++ 2017 Runtime bibliothèques n’ont pas été modifié. Vous pouvez également installer les bibliothèques d’atténuation de Spectre pour MFC et ATL, trouvé dans le **composants individuels** onglet sous **SDK, bibliothèques et infrastructures**.
+Bibliothèques Visual C++ de Microsoft sont également disponibles dans les versions avec atténuation de Spectre. Les bibliothèques d’atténuation de Spectre pour Visual Studio 2017 peuvent être téléchargés dans le programme d’installation Visual Studio. Ils sont trouvent dans le **composants individuels** onglet sous **compilateurs, outils de génération et runtimes**, et le nom contient « Libs pour Spectre ». DLL et bibliothèques runtime statique avec atténuation est activée sont disponibles pour un sous-ensemble des runtimes Visual C++ : Code de démarrage VC ++, vcruntime140, msvcp140, concrt140 et vcamp140. Les DLL sont pris en charge pour le déploiement local de l’application uniquement ; le contenu de Redistributable Visual C++ 2017 Runtime bibliothèques n’ont pas été modifié. Vous pouvez également installer les bibliothèques d’atténuation de Spectre pour MFC et ATL, trouvé dans le **composants individuels** onglet sous **SDK, bibliothèques et infrastructures**.
 
 ### <a name="applicability"></a>Mise en application
 
@@ -36,7 +36,7 @@ Si votre code fonctionne sur les données qui transitent par une limite d’appr
 
 ### <a name="availability"></a>Disponibilité
 
-Le **/qspectre** option est disponible dans Visual Studio 2017 version 15.5.5 et dans toutes les mises à jour pour les compilateurs Microsoft Visual C++ (MSVC) effectuées sur ou après le 23 janvier 2018. Utilisez Visual Studio Installer pour mettre à jour le compilateur et pour installer les bibliothèques d’atténuation de Spectre en tant que composants individuels. Le **/qspectre** option est également disponible dans Visual Studio 2015 Update 3 via un correctif. Pour plus d’informations, consultez [Ko 4338871](https://support.microsoft.com/help/4338871).
+Le **/qspectre** option est disponible dans Visual Studio 2017 version 15.5.5 et dans toutes les mises à jour pour les compilateurs Microsoft MSVC (MSVC) effectuées sur ou après le 23 janvier 2018. Utilisez Visual Studio Installer pour mettre à jour le compilateur et pour installer les bibliothèques d’atténuation de Spectre en tant que composants individuels. Le **/qspectre** option est également disponible dans Visual Studio 2015 Update 3 via un correctif. Pour plus d’informations, consultez [Ko 4338871](https://support.microsoft.com/help/4338871).
 
 Toutes les versions de Visual Studio 2017 version 15.5 et toutes les versions préliminaires de Visual Studio 2017 version 15.6 incluent une option non documentée, **/d2guardspecload**, qui équivaut au comportement initial de   **/qspectre**. Vous pouvez utiliser **/d2guardspecload** à appliquer les atténuations mêmes à votre code dans ces versions du compilateur. Mettez à jour votre build pour utiliser **/qspectre** dans les compilateurs qui prennent en charge l’option ; la **/qspectre** option peut également en charge les atténuations de nouveau dans les versions ultérieures du compilateur.
 
@@ -58,7 +58,7 @@ Le **/qspectre** option du compilateur génère du code qui lie implicitement de
 - Visual C++ ATL pour \[(x86/x64) | ARM | ARM64] avec atténuations Spectre
 - Visual C++ MFC pour \[x86/x64 | ARM | ARM64] avec atténuations Spectre
 
-Si vous générez votre code à l’aide de **/qspectre** et ces bibliothèques ne sont pas installés, les rapports de système de génération **avertissement MSB8038 : atténuation de Spectre est activée, mais les bibliothèques atténuée de Spectre sont introuvables**. Si votre code MFC ou ATL ne parvient pas à générer et de l’éditeur de liens signale une erreur comme **erreur irrécupérable LNK1104 : Impossible d’ouvrir le fichier 'oldnames.lib'**, ces bibliothèques manquantes peuvent être la cause.
+Si vous générez votre code à l’aide de **/qspectre** et ces bibliothèques ne sont pas installés, les rapports de système de génération **avertissement MSB8038 : Atténuation de spectre est activée, mais les bibliothèques atténuée de Spectre sont introuvables**. Si votre code MFC ou ATL ne parvient pas à générer et de l’éditeur de liens signale une erreur comme **erreur irrécupérable LNK1104 : Impossible d’ouvrir le fichier 'oldnames.lib'**, ces bibliothèques manquantes peuvent être la cause.
 
 ### <a name="additional-information"></a>Informations supplémentaires
 
@@ -66,7 +66,7 @@ Pour plus d’informations, consultez le fonctionnaire [ADV180002 avis de sécur
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
 
@@ -78,6 +78,6 @@ Pour plus d’informations, consultez le fonctionnaire [ADV180002 avis de sécur
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Q, options (Opérations de bas niveau)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[/Q, options (Opérations de bas niveau)](q-options-low-level-operations.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

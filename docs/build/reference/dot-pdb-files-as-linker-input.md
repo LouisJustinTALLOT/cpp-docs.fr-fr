@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .pdb files, as linker input
 - PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
-ms.openlocfilehash: a29f01e5e5b30be4f7a983652d476a4512d2bec0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 365f2955f5bc9e8082221a070af454c820c665f1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426420"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822508"
 ---
 # <a name="pdb-files-as-linker-input"></a>Fichiers .pdb en tant qu'entrée dans l'éditeur de liens
 
@@ -20,5 +20,5 @@ LIEN utilise également un fichier PDB pour contenir les informations de déboga
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers d’entrée LINK](../../build/reference/link-input-files.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Fichiers d’entrée LINK](link-input-files.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

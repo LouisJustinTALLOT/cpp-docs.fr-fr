@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: e435b48359a708408ff8659e53c9e7c4f7e80261
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7ee51c858c9f90440cf0c2b21799ef7473cf6da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619113"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813862"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Spécifier le type de fichier source)
 
@@ -29,9 +29,9 @@ Le **TP** option spécifie que son argument de nom de fichier est un fichier sou
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/TC** _filename_
+> **/Tc** _filename_
 >  **/Tp** _filename_
-> **TP** 
+>  **/TC**
 >  **/TP**
 
 ## <a name="arguments"></a>Arguments
@@ -43,11 +43,11 @@ Un fichier source C ou C++.
 
 Par défaut, **CL** suppose que les fichiers portant l’extension .c sont des fichiers sources C et les fichiers avec le .cpp ou .cxx sont des fichiers sources C++.
 
-Lorsque soit la **TC** ou **Tc** option est spécifiée, une spécification de la [/Zc : wchar_t (wchar_t est un Type natif)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) option est ignorée.
+Lorsque soit la **TC** ou **Tc** option est spécifiée, une spécification de la [/Zc : wchar_t (wchar_t est un Type natif)](zc-wchar-t-wchar-t-is-native-type.md) option est ignorée.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **avancé** page de propriétés.
 
@@ -65,9 +65,9 @@ Cette ligne de commande CL Spécifie que MAIN.c, TEST.prg et COLLATE.prg sont to
 
 Cette ligne de commande CL Spécifie que TEST1.c, TEST2.cxx, TEST3.huh et TEST4.o sont compilés en tant que fichiers C++, et que TEST5.z est compilé en tant qu’un fichier C.
 
-> CL TEST1. C TEST2. CXX TEST3. NON TEST4. O TP TEST5. Z /TP
+> CL TEST1.C TEST2.CXX TEST3.HUH TEST4.O /Tc TEST5.Z /TP
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

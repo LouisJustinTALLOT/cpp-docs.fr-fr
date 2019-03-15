@@ -2,16 +2,16 @@
 title: Configuration des programmes pour Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 73fc66c358f2bfa390177557da2f114f225cec1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582739"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814291"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configuration des programmes pour Windows XP
 
-Étant donné que Visual Studio prend en charge plusieurs ensembles d’outils de plateforme, vous pouvez cibler les systèmes d’exploitation et les bibliothèques runtime qui ne sont pas pris en charge par l’ensemble d’outils par défaut. Par exemple, en passant l’ensemble d’outils de plateforme, vous pouvez utiliser C ++ 11, C ++ 14 et les améliorations de langage C ++ 17 pris en charge par le compilateur Visual C++ dans Visual Studio pour créer des applications qui ciblent Windows XP et Windows Server 2003. Vous pouvez également utiliser des ensembles d’outils de plateforme plus anciens pour maintenir le code hérité compatible binaire et quand même tirer parti des dernières fonctionnalités de l’IDE Visual Studio.
+Étant donné que Visual Studio prend en charge plusieurs ensembles d’outils de plateforme, vous pouvez cibler les systèmes d’exploitation et les bibliothèques runtime qui ne sont pas pris en charge par l’ensemble d’outils par défaut. Par exemple, en passant l’ensemble d’outils de plateforme, vous pouvez utiliser C ++ 11, C ++ 14 et les améliorations de langage C ++ 17 pris en charge par le compilateur MSVC dans Visual Studio pour créer des applications qui ciblent Windows XP et Windows Server 2003. Vous pouvez également utiliser des ensembles d’outils de plateforme plus anciens pour maintenir le code hérité compatible binaire et quand même tirer parti des dernières fonctionnalités de l’IDE Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Installer l’ensemble d’outils de plateforme Windows XP
 

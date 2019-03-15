@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: 03bbe3d9da0530d4fe3c540d46d1a597fbe9dd2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea977020286d720ed3a6b1b13bf8ff8f5c85e5b2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549303"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822559"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (déduire le type de variable)
 
@@ -32,7 +32,7 @@ Le compilateur émet un message de diagnostic approprié si votre utilisation de
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Pour définir cette option de compilateur dans Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
 
@@ -40,5 +40,5 @@ Le compilateur émet un message de diagnostic approprié si votre utilisation de
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Zc (Conformité)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Conformité)](zc-conformance.md)<br/>
 [auto, mot clé](../../cpp/auto-keyword.md)

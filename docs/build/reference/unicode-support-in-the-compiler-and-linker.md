@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494976"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807503"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Prise en charge Unicode dans le compilateur et l'éditeur de liens
 
@@ -45,8 +45,8 @@ Fichiers réponse et fichiers DEF peuvent être soit UTF-16 avec une marque BOM 
 
 ## <a name="asm-and-cod-dumps"></a>dumps .asm et .cod
 
-dumps .asm et .cod est au format ANSI par défaut pour la compatibilité avec MASM. Utilisez [/FAu](../../build/reference/fa-fa-listing-file.md) en sortie UTF-8. Notez que si vous spécifiez **/FAS**, la source par recoupement sera directement affichée et peut sembler altérée, par exemple, si vous n’avez pas spécifié et que le code source est UTF-8 **/FAsu**.
+dumps .asm et .cod est au format ANSI par défaut pour la compatibilité avec MASM. Utilisez [/FAu](fa-fa-listing-file.md) en sortie UTF-8. Notez que si vous spécifiez **/FAS**, la source par recoupement sera directement affichée et peut sembler altérée, par exemple, si vous n’avez pas spécifié et que le code source est UTF-8 **/FAsu**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Générer du code C/C++ sur la ligne de commande](../../build/building-on-the-command-line.md)
+[Utiliser l’ensemble d’outils MSVC à partir de la ligne de commande](../building-on-the-command-line.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - XML documentation, comments in source files
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-ms.openlocfilehash: 94d10718ac47c984f8254d2c7b7f32fc6189fee3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 90f63a972245114424b64d4131420dcb4e1e925a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415394"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809793"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Traiter les commentaires de documentation) (C/C++)
 
@@ -33,15 +33,15 @@ Le nom du fichier .xdc que le compilateur va créer. Valide uniquement lorsqu’
 
 ## <a name="remarks"></a>Notes
 
-Les fichiers .xdc sont traités dans un fichier .xml avec xdcmake.exe. Pour plus d’informations, consultez [XDCMake référence](../../ide/xdcmake-reference.md).
+Les fichiers .xdc sont traités dans un fichier .xml avec xdcmake.exe. Pour plus d’informations, consultez [XDCMake référence](xdcmake-reference.md).
 
-Vous pouvez ajouter des commentaires de documentation à vos fichiers de code source. Pour plus d’informations, consultez [Balises recommandées pour commentaires de documentation](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).
+Vous pouvez ajouter des commentaires de documentation à vos fichiers de code source. Pour plus d’informations, consultez [Balises recommandées pour commentaires de documentation](recommended-tags-for-documentation-comments-visual-cpp.md).
 
 Pour utiliser le fichier .xml généré avec IntelliSense, vérifiez le nom de fichier du fichier .xml est de même que l’assembly que vous souhaitez prendre en charge et placez le fichier .xml dans le même répertoire que l’assembly. Lorsque l’assembly est référencé dans le projet Visual Studio, le fichier .xml est également trouvé. Pour plus d’informations, consultez [IntelliSense à l’aide de](/visualstudio/ide/using-intellisense) et [insertion de commentaires de Code XML](/visualstudio/ide/supplying-xml-code-comments).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **fichiers de sortie** page de propriétés.
 
@@ -53,5 +53,5 @@ Pour utiliser le fichier .xml généré avec IntelliSense, vérifiez le nom de f
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-ms.openlocfilehash: f0a0d692cd7eaf59aa0c53ecf4436b4c507439a3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 710be7e1dfc4de89bc1eed3e23e4803c561da10c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425482"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817352"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (Prétraiter dans stdout)
 
@@ -28,15 +28,15 @@ Prétraite les fichiers sources C et C++ et copie les fichiers prétraités sur 
 
 ## <a name="remarks"></a>Notes
 
-Dans ce processus, toutes les directives du préprocesseur sont exécutées, les expansions macro sont effectuées et commentaires sont supprimés. Pour conserver les commentaires dans la sortie prétraitée, utilisez le [/C (conserver les commentaires pendant le prétraitement)](../../build/reference/c-preserve-comments-during-preprocessing.md) option du compilateur également.
+Dans ce processus, toutes les directives du préprocesseur sont exécutées, les expansions macro sont effectuées et commentaires sont supprimés. Pour conserver les commentaires dans la sortie prétraitée, utilisez le [/C (conserver les commentaires pendant le prétraitement)](c-preserve-comments-during-preprocessing.md) option du compilateur également.
 
 **/E** ajoute `#line` directives dans la sortie au début et à la fin de chaque fichier inclus et autour des lignes supprimées par les directives de préprocesseur pour une compilation conditionnelle. Ces directives renumérotent les lignes du fichier prétraité. Par conséquent, erreurs générées pendant les phases ultérieures du traitement désignent les numéros de ligne du fichier source d’origine plutôt que les lignes dans le fichier prétraité.
 
-Le **/E** option supprime la compilation. Vous devez renvoyer le fichier prétraité pour la compilation. **/E** supprime également les fichiers de sortie à partir de la **/FA**, **/Fa**, et **/Fm** options. Pour plus d’informations, consultez [/FA, /Fa (fichier Listing)](../../build/reference/fa-fa-listing-file.md) et [/Fm (nom de fichier de mappage)](../../build/reference/fm-name-mapfile.md).
+Le **/E** option supprime la compilation. Vous devez renvoyer le fichier prétraité pour la compilation. **/E** supprime également les fichiers de sortie à partir de la **/FA**, **/Fa**, et **/Fm** options. Pour plus d’informations, consultez [/FA, /Fa (fichier Listing)](fa-fa-listing-file.md) et [/Fm (nom de fichier de mappage)](fm-name-mapfile.md).
 
-Pour supprimer `#line` directives, utilisez le [/EP (Prétraiter dans stdout sans directive #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) plutôt l’option.
+Pour supprimer `#line` directives, utilisez le [/EP (Prétraiter dans stdout sans directive #line)](ep-preprocess-to-stdout-without-hash-line-directives.md) plutôt l’option.
 
-Pour envoyer la sortie prétraitée dans un fichier plutôt qu’à `stdout`, utilisez le [/P (Prétraiter dans un fichier)](../../build/reference/p-preprocess-to-a-file.md) plutôt l’option.
+Pour envoyer la sortie prétraitée dans un fichier plutôt qu’à `stdout`, utilisez le [/P (Prétraiter dans un fichier)](p-preprocess-to-a-file.md) plutôt l’option.
 
 Pour supprimer `#line` directives et envoyer la sortie prétraitée dans un fichier, utilisez **/P** et **/EP** ensemble.
 
@@ -62,7 +62,7 @@ cl -E test.cpp > test2.cpp
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -84,5 +84,5 @@ CL /E /C ADD.C
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-ms.openlocfilehash: 1a035be2080d9fe407799122f804668e0fc3ce76
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c47a45208ac5b5c7e0000516ed114c008feda7ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413158"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807511"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Nom du fichier #using imposé)
 
@@ -36,11 +36,11 @@ Le commutateur /FU prend simplement un nom de fichier. Pour spécifier plusieurs
 
 Si vous utilisez C++ / c++ / CLI et référencez les métadonnées pour utiliser le [assemblys Friend](../../dotnet/friend-assemblies-cpp.md) fonctionnalité, vous ne pouvez pas utiliser **/FU**. Vous devez référencer les métadonnées dans le code à l’aide de `#using`— avec la `[as friend]` attribut. Assemblys friend ne sont pas pris en charge dans les extensions du composant C++ de Visual C++ / c++ / CX.
 
-Pour plus d’informations sur la création d’un assembly ou un module pour le common language runtime (CLR), consultez [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). Pour plus d’informations sur la création en C / c++ / CX, consultez [génération d’applications et bibliothèques](../../cppcx/building-apps-and-libraries-c-cx.md).
+Pour plus d’informations sur la création d’un assembly ou un module pour le common language runtime (CLR), consultez [/clr (Compilation pour le Common Language Runtime)](clr-common-language-runtime-compilation.md). Pour plus d’informations sur la création en C / c++ / CX, consultez [génération d’applications et bibliothèques](../../cppcx/building-apps-and-libraries-c-cx.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **avancé** page de propriétés.
 
@@ -52,6 +52,6 @@ Pour plus d’informations sur la création d’un assembly ou un module pour le
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du fichier de sortie (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du fichier de sortie (/F)](output-file-f-options.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

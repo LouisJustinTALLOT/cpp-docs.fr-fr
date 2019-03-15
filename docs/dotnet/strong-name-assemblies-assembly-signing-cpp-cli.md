@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-ms.openlocfilehash: 762c95c3ecc60995e8d0e6f9e4f7bc95d179c26f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747499"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813927"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Assemblys de nom fort (signature d'assembly) (C++/CLI)
 
@@ -34,7 +34,7 @@ Les raisons pour ne pas utiliser les attributs incluent le fait que le nom de cl
 
 Si vous générez en ligne de commande, utilisez les options de l’éditeur de liens pour signer votre assembly, puis exécutez un outil de post-traitement (comme mt.exe), vous devez signer à nouveau l’assembly avec sn.exe. Vous pouvez également générer et différer la signature de l’assembly et après l’exécution des outils de post-traitement, complétez la signature.
 
-Si vous utilisez les attributs de signature lors de la génération dans l’environnement de développement, vous pouvez vous connecter l’assembly en appelant explicitement sn.exe ([Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool)) dans un événement post-build. Pour plus d’informations, consultez [Spécification d’événements de build](../ide/specifying-build-events.md). Durées de génération peuvent être inférieure si vous utilisez des attributs et un événement post-build, par rapport à l’aide des options d’un éditeur de liens.
+Si vous utilisez les attributs de signature lors de la génération dans l’environnement de développement, vous pouvez vous connecter l’assembly en appelant explicitement sn.exe ([Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool)) dans un événement post-build. Pour plus d’informations, consultez [Spécification d’événements de build](../build/specifying-build-events.md). Durées de génération peuvent être inférieure si vous utilisez des attributs et un événement post-build, par rapport à l’aide des options d’un éditeur de liens.
 
 Les options de l’éditeur de liens suivantes prennent en charge la signature d’assembly :
 
