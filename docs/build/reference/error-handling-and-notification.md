@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-ms.openlocfilehash: 7aae4d68b272a6c12233f283d4b263648062b7c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 29fe46e15712609ec0c4f268749aaefed103117e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418943"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812939"
 ---
 # <a name="error-handling-and-notification"></a>Gestion et notification des erreurs
 
 Pour plus d’informations sur la gestion des erreurs et de notification, consultez [présentation de la fonction d’assistance](understanding-the-helper-function.md).
 
-Pour plus d’informations sur les fonctions de raccordement, consultez [définitions des structures et constantes](../../build/reference/structure-and-constant-definitions.md).
+Pour plus d’informations sur les fonctions de raccordement, consultez [définitions des structures et constantes](structure-and-constant-definitions.md).
 
 Si votre programme utilise la DLL à chargement différé, il doit gérer efficacement les erreurs dans la mesure où les défaillances qui se produisent pendant l’exécution du programme provoquent des exceptions non gérées. Gestion des défaillances se compose de deux parties :
 
@@ -27,12 +27,12 @@ Si tout ce qui est nécessaire pour la gestion de l’erreur est d’annuler la 
 
 Les rubriques suivantes traitent de notification et la gestion des erreurs :
 
-- [Raccordements de notification](../../build/reference/notification-hooks.md)
+- [Raccordements de notification](notification-hooks.md)
 
-- [Raccordements de défaillance](../../build/reference/failure-hooks.md)
+- [Raccordements de défaillance](failure-hooks.md)
 
-- [Exceptions](../../build/reference/exceptions-c-cpp.md)
+- [Exceptions](exceptions-c-cpp.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](linker-support-for-delay-loaded-dlls.md)

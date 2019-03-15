@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: bed47c2c69b154c6bab996299eaeb4173c8298f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416548"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816995"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Exportation à partir d'une DLL à l'aide de fichiers DEF
 
@@ -21,7 +21,7 @@ Un fichier DEF minimal doit contenir les instructions de définition de module s
 
 - La première instruction dans le fichier doit être l’instruction LIBRARY. Cette instruction identifie le fichier DEF comme appartenant à une DLL. L’instruction LIBRARY est suivie du nom de la DLL. L’éditeur de liens place ce nom dans la bibliothèque d’importation de la DLL.
 
-- L’instruction EXPORTS répertorie les noms et, éventuellement, des valeurs ordinales des fonctions exportées par la DLL. Vous affectez à la fonction une valeur ordinale en suivant le nom de la fonction avec un arobase (@) et un nombre. Lorsque vous spécifiez des valeurs ordinales, ils doivent être dans la plage 1 à N, où N est le nombre de fonctions exportées par la DLL. Si vous souhaitez exporter des fonctions par ordinal, consultez [exportation de fonctions à partir d’une DLL par Ordinal plutôt que par nom](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) , ainsi que de cette rubrique.
+- L’instruction EXPORTS répertorie les noms et, éventuellement, des valeurs ordinales des fonctions exportées par la DLL. Vous affectez à la fonction une valeur ordinale en suivant le nom de la fonction avec un arobase (@) et un nombre. Lorsque vous spécifiez des valeurs ordinales, ils doivent être dans la plage 1 à N, où N est le nombre de fonctions exportées par la DLL. Si vous souhaitez exporter des fonctions par ordinal, consultez [exportation de fonctions à partir d’une DLL par Ordinal plutôt que par nom](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) , ainsi que de cette rubrique.
 
 Par exemple, une DLL qui contient le code pour implémenter un arbre de recherche binaire peut se présenter comme suit :
 
@@ -56,32 +56,32 @@ Notez que MFC elle-même utilise des fichiers DEF pour exporter des fonctions et
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exporter et importer à l’aide de AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exporter et importer à l’aide de AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exporter des fonctions C++ à utiliser dans des exécutables en langage C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exporter des fonctions C++ à utiliser dans des exécutables en langage C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exporter des fonctions C à utiliser dans des exécutables en langage C ou C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exporter des fonctions C à utiliser dans des exécutables en langage C ou C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Déterminer la méthode d’exportation à utiliser](../build/determining-which-exporting-method-to-use.md)
+- [Déterminer la méthode d’exportation à utiliser](determining-which-exporting-method-to-use.md)
 
-- [Importer dans une application à l’aide de __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une application à l’aide de __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Initialiser une DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [fichiers .def](../build/reference/module-definition-dot-def-files.md)
+- [fichiers .def](reference/module-definition-dot-def-files.md)
 
-- [Règles pour les instructions de définition de module](../build/reference/rules-for-module-definition-statements.md)
+- [Règles pour les instructions de définition de module](reference/rules-for-module-definition-statements.md)
 
-- [Noms décorés](../build/reference/decorated-names.md)
+- [Noms décorés](reference/decorated-names.md)
 
-- [L’importation et exportation de fonctions inline](../build/importing-and-exporting-inline-functions.md)
+- [L’importation et exportation de fonctions inline](importing-and-exporting-inline-functions.md)
 
-- [Importations mutuelles](../build/mutual-imports.md)
+- [Importations mutuelles](mutual-imports.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exportation à partir d’une DLL](../build/exporting-from-a-dll.md)
+[Exportation à partir d’une DLL](exporting-from-a-dll.md)

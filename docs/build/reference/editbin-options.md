@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: 409c40986068475299c95f1be0dff5f15d022520
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e7338c6a45d74aa8efac1b72683cca7661c62e0a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424325"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820102"
 ---
 # <a name="editbin-options"></a>Options EDITBIN
 
@@ -23,28 +23,28 @@ EDITBIN a les options suivantes :
 
 |Option|Objectif|
 |------------|-------------|
-|[/ALLOWBIND](../../build/reference/allowbind.md)|Spécifie si une DLL peut être liée.|
-|[/ALLOWISOLATION](../../build/reference/allowisolation.md)|Spécifie le comportement de recherche de manifeste de fichier exécutable ou de DLL.|
-|[/APPCONTAINER](../../build/reference/appcontainer.md)|Spécifie si l’application doit s’exécuter au sein d’un AppContainer — par exemple, une application UWP.|
-|[/BIND](../../build/reference/bind.md)|Définit les adresses pour les points d’entrée dans les objets spécifiés pour le temps de chargement de vitesse.|
-|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Spécifie si la DLL ou une image exécutable pouvant être aléatoirement redéfinie au moment du chargement à l’aide de randomisation du format d’espace d’adresse (ASLR).|
-|[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Signale les erreurs internes à Microsoft.|
-|[/HEAP](../../build/reference/heap.md)|Définit la taille du tas de l’image exécutable en octets.|
-|[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Spécifie si la DLL ou une image exécutable prend en charge de forte entropie (64 bits) espace randomisation d’adresse (ASLR).|
-|[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Spécifie s’il faut vérifier la signature numérique au moment du chargement.|
-|[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Spécifie si l’objet prend en charge les adresses supérieures à deux gigaoctets.|
-|[/NOLOGO](../../build/reference/nologo-editbin.md)|Supprime la bannière de démarrage EDITBIN.|
-|[/NXCOMPAT](../../build/reference/nxcompat.md)|Spécifie si l’image exécutable est compatible avec la prévention de l’exécution des données Windows.|
-|[/REBASE](../../build/reference/rebase.md)|Définit les adresses de base pour les objets spécifiés.|
-|[/RELEASE](../../build/reference/release.md)|Définit la somme de contrôle dans l’en-tête.|
-|[/SECTION](../../build/reference/section-editbin.md)|Remplace les attributs d’une section.|
-|[/STACK](../../build/reference/stack.md)|Définit la taille de pile de l’image exécutable en octets.|
-|[/SUBSYSTEM](../../build/reference/subsystem.md)|Spécifie l’environnement d’exécution.|
-|[/SWAPRUN](../../build/reference/swaprun.md)|Spécifie que l’image exécutable doit être copié dans le fichier d’échange et puis exécutez à partir de là.|
-|[/TSAWARE](../../build/reference/tsaware.md)|Spécifie que l’application est conçue pour s’exécuter dans un environnement multi-utilisateur.|
-|[/VERSION](../../build/reference/version.md)|Définit le numéro de version dans l’en-tête.|
+|[/ALLOWBIND](allowbind.md)|Spécifie si une DLL peut être liée.|
+|[/ALLOWISOLATION](allowisolation.md)|Spécifie le comportement de recherche de manifeste de fichier exécutable ou de DLL.|
+|[/APPCONTAINER](appcontainer.md)|Spécifie si l’application doit s’exécuter au sein d’un AppContainer — par exemple, une application UWP.|
+|[/BIND](bind.md)|Définit les adresses pour les points d’entrée dans les objets spécifiés pour le temps de chargement de vitesse.|
+|[/DYNAMICBASE](dynamicbase.md)|Spécifie si la DLL ou une image exécutable pouvant être aléatoirement redéfinie au moment du chargement à l’aide de randomisation du format d’espace d’adresse (ASLR).|
+|[/ERRORREPORT](errorreport-editbin-exe.md)|Signale les erreurs internes à Microsoft.|
+|[/HEAP](heap.md)|Définit la taille du tas de l’image exécutable en octets.|
+|[/HIGHENTROPYVA](highentropyva.md)|Spécifie si la DLL ou une image exécutable prend en charge de forte entropie (64 bits) espace randomisation d’adresse (ASLR).|
+|[/INTEGRITYCHECK](integritycheck.md)|Spécifie s’il faut vérifier la signature numérique au moment du chargement.|
+|[/LARGEADDRESSAWARE](largeaddressaware.md)|Spécifie si l’objet prend en charge les adresses supérieures à deux gigaoctets.|
+|[/NOLOGO](nologo-editbin.md)|Supprime la bannière de démarrage EDITBIN.|
+|[/NXCOMPAT](nxcompat.md)|Spécifie si l’image exécutable est compatible avec la prévention de l’exécution des données Windows.|
+|[/REBASE](rebase.md)|Définit les adresses de base pour les objets spécifiés.|
+|[/RELEASE](release.md)|Définit la somme de contrôle dans l’en-tête.|
+|[/SECTION](section-editbin.md)|Remplace les attributs d’une section.|
+|[/STACK](stack.md)|Définit la taille de pile de l’image exécutable en octets.|
+|[/SUBSYSTEM](subsystem.md)|Spécifie l’environnement d’exécution.|
+|[/SWAPRUN](swaprun.md)|Spécifie que l’image exécutable doit être copié dans le fichier d’échange et puis exécutez à partir de là.|
+|[/TSAWARE](tsaware.md)|Spécifie que l’application est conçue pour s’exécuter dans un environnement multi-utilisateur.|
+|[/VERSION](version.md)|Définit le numéro de version dans l’en-tête.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Outils de génération C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[Informations de référence sur EDITBIN](../../build/reference/editbin-reference.md)
+[Outils de génération MSVC supplémentaires](c-cpp-build-tools.md)<br/>
+[Informations de référence sur EDITBIN](editbin-reference.md)

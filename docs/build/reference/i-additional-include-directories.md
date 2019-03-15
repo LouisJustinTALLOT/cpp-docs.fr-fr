@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412846"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807635"
 ---
 # <a name="i-additional-include-directories"></a>/I (autres répertoires include)
 
@@ -38,7 +38,7 @@ Le répertoire à ajouter à la liste des répertoires de recherche des fichiers
 
 Pour ajouter plusieurs répertoires, utilisez cette option plusieurs fois. Répertoires sont recherchés uniquement jusqu'à ce que le fichier include spécifié est trouvé.
 
-Vous pouvez utiliser cette option avec le ([/X (ignorer Standard chemins d’accès Include)](../../build/reference/x-ignore-standard-include-paths.md)) option.
+Vous pouvez utiliser cette option avec le ([/X (ignorer Standard chemins d’accès Include)](x-ignore-standard-include-paths.md)) option.
 
 Le compilateur recherche des répertoires dans l’ordre suivant :
 
@@ -50,7 +50,7 @@ Le compilateur recherche des répertoires dans l’ordre suivant :
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **général** page de propriétés.
 
@@ -70,5 +70,5 @@ CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

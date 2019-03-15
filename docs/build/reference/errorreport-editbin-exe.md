@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ERRORREPORT editbin option
 - /ERRORREPORT editbin option
 ms.assetid: eca66ac3-b754-4bd7-9dd4-e04fc79a71b6
-ms.openlocfilehash: bb1cb07d7b162c9bf2824bebbc2ec0c8cba2dd86
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a23d64b8491b2521746eb3bfab2372ed563f2c58
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417240"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817541"
 ---
 # <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
 
@@ -25,8 +25,8 @@ ms.locfileid: "57417240"
 
 Si editbin.exe échoue lors de l’exécution, vous pouvez utiliser **/ERRORREPORT** pour envoyer des informations à Microsoft concernant ces erreurs internes.
 
-Pour plus d’informations sur **/ERRORREPORT**, consultez [/errorReport (signaler les erreurs du compilateur interne)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Pour plus d’informations sur **/ERRORREPORT**, consultez [/errorReport (signaler les erreurs du compilateur interne)](errorreport-report-internal-compiler-errors.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options EDITBIN](../../build/reference/editbin-options.md)
+[Options EDITBIN](editbin-options.md)

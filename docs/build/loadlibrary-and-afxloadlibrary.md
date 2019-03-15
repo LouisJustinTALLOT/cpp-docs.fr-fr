@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: 7c0b63d80a8b4b03b55d6e50af6c08a8de0937de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96b8c0ce1116dbb08260573f25f941ca54169127
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596544"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822416"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary et AfxLoadLibrary
 
@@ -30,22 +30,22 @@ Pour les applications MFC qui chargent des DLL d’extension MFC, nous vous reco
 Si Windows ne peut pas charger la DLL, le processus peut tenter de récupérer à partir de l’erreur. Par exemple, le processus peut notifier l’utilisateur de l’erreur et demandez à l’utilisateur de spécifier un autre chemin d’accès à la DLL.
 
 > [!IMPORTANT]
-> Veillez à spécifier le chemin d’accès complet de toute DLL. Le répertoire actif est tout d’abord recherché lors du chargement de fichiers. Si vous ne sont pas éligibles le chemin d’accès du fichier, un fichier qui n’est pas celle prévue peut être chargé. Une autre façon d’éviter ce problème consiste à l’aide de la [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) option de l’éditeur de liens.
+> Veillez à spécifier le chemin d’accès complet de toute DLL. Le répertoire actif est tout d’abord recherché lors du chargement de fichiers. Si vous ne sont pas éligibles le chemin d’accès du fichier, un fichier qui n’est pas celle prévue peut être chargé. Une autre façon d’éviter ce problème consiste à l’aide de la [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) option de l’éditeur de liens.
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Comment lier de manière implicite à une DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Lier un exécutable à une DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Déterminer la méthode de liaison à utiliser](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Lier un exécutable à une DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
 - [Dynamic-Link Library Search Order](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
-- [FreeLibrary et AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)
+- [FreeLibrary et AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
 
-- [GetProcAddress](../build/getprocaddress.md)
+- [GetProcAddress](getprocaddress.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-- [DLL dans Visual C++](../build/dlls-in-visual-cpp.md)
+- [DLL dans Visual C++](dlls-in-visual-cpp.md)

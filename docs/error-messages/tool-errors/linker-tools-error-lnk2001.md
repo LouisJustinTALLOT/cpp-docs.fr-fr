@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: dba197be71fc77af6d95c2ec62053928ac1627cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631658"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808103"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Erreur des outils Éditeur de liens LNK2001
 
@@ -47,9 +47,9 @@ Cette erreur peut être provoquée par essaie d’utiliser une variable déclar�
 
 Cette erreur peut se produire lorsque vous générez une version d’un projet ATL, de produire un message que le code de démarrage du CRT est requis. Pour résoudre ce problème, effectuez l’une des opérations suivantes,
 
-- Supprimer `_ATL_MIN_CRT` dans la liste du préprocesseur définit pour autoriser le code de démarrage du CRT à inclure. Consultez [General Property Page (Project)](../../ide/general-property-page-project.md) pour plus d’informations.
+- Supprimer `_ATL_MIN_CRT` dans la liste du préprocesseur définit pour autoriser le code de démarrage du CRT à inclure. Consultez [General Property Page (Project)](../../build/reference/general-property-page-project.md) pour plus d’informations.
 
-- Si possible, supprimez les appels aux fonctions CRT qui nécessitent le code de démarrage du CRT. Au lieu de cela, utilisez leurs équivalents Win32. Par exemple, utilisez `lstrcmp` au lieu de `strcmp`. Fonctions connues qui requièrent le code de démarrage du CRT sont certaines des fonctions à virgule flottante et chaîne.
+- Si possible, supprimez les appels aux fonctions CRT qui nécessitent le code de démarrage du CRT. Au lieu de cela, utilisez leurs équivalents Win32. Par exemple, utilisez `lstrcmp` à la place `strcmp`. Fonctions connues qui requièrent le code de démarrage du CRT sont certaines des fonctions à virgule flottante et chaîne.
 
 ### <a name="compilation-and-link-issues"></a>Problèmes de compilation et liaison
 

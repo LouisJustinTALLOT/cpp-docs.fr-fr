@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: ec5ac314f73c49b47f4132583d7651681b6b0545
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 54f8d4d0edaa310384d19a9c9a188f96ec895eac
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413054"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811652"
 ---
 # <a name="source-charset-set-source-character-set"></a>/ source-CharSet (définir jeu de caractères Source)
 
@@ -44,7 +44,7 @@ Si vous souhaitez définir le jeu de caractères source et le jeu de caractères
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Développez le **propriétés de Configuration**, **C/C++**, **ligne de commande** dossier.
 
@@ -54,8 +54,8 @@ Si vous souhaitez définir le jeu de caractères source et le jeu de caractères
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[/ EXECUTION-CharSet (définir l’exécution du jeu de caractères)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/utf-8 (Définir les jeux de caractères sources et exécutables sur UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
-[/validate-charset (Valider les caractères compatibles)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[/ EXECUTION-CharSet (définir l’exécution du jeu de caractères)](execution-charset-set-execution-character-set.md)<br/>
+[/utf-8 (Définir les jeux de caractères sources et exécutables sur UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset (Valider les caractères compatibles)](validate-charset-validate-for-compatible-characters.md)

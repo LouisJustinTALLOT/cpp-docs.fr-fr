@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 09780d5823190eb4cb3b4ad13bb60e33808e4987
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977730"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813544"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Générer et exécuter un projet d’application console C++
 
@@ -19,27 +19,27 @@ Lorsque vous avez créé un projet d’application console C++ et entré votre c
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Visual Studio avec le développement bureautique dotées de la charge de travail C++ installé et en cours d’exécution sur votre ordinateur. S’il n’est pas encore installé, suivez les étapes de [prise en charge de l’installation de C++ dans Visual Studio](../build/vscpp-step-0-installation.md).
+- Vous devez installer puis exécuter Visual Studio ainsi que la charge de travail Développement Desktop en C++ sur votre ordinateur. S’il n’est pas encore installé, suivez les étapes de [prise en charge de l’installation de C++ dans Visual Studio](vscpp-step-0-installation.md).
 
-- Créer un « Hello, World ! » projet et entrez son code source. Si vous n’avez pas fait, suivez les étapes de [créer un projet d’application console C++](../build/vscpp-step-1-create.md).
+- Créer un « Hello, World ! » projet et entrez son code source. Si vous n’avez pas fait, suivez les étapes de [créer un projet d’application console C++](vscpp-step-1-create.md).
 
 Si Visual Studio ressemble à ceci, vous êtes prêt à générer et exécuter votre application :
 
-   ![Prêt à générer le nouveau projet](../build/media/vscpp-ready-to-build.png "prêt à générer le nouveau projet")
+   ![Prêt à générer le nouveau projet](media/vscpp-ready-to-build.png "prêt à générer le nouveau projet")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>Générer et exécuter votre code dans Visual Studio
 
-1. Pour générer votre projet, choisissez **générer la Solution** à partir de la **Build** menu. Le **sortie** fenêtre affiche les résultats du processus de génération.
+1. Pour générer le projet, choisissez **Générer la solution** dans le menu **Générer**. La fenêtre **Sortie** affiche les résultats de la génération.
 
-   ![Générez le projet](../build/media/vscpp-build-solution.gif "générer le projet")
+   ![Générer le projet](media/vscpp-build-solution.gif "Générer le projet")
 
-1. Pour exécuter le code, sur la barre de menus, choisissez **déboguer**, **démarrer sans débogage**.
+1. Pour exécuter le projet, dans la barre de menus, choisissez **Déboguer**, **Démarrer sans débogage**.
 
-   ![Démarrer le projet](../build/media/vscpp-start-without-debugging.gif "démarrer le projet")
+   ![Démarrer le projet](media/vscpp-start-without-debugging.gif "Démarrer le projet")
 
-   Une fenêtre de console s’ouvre, puis exécute votre application. Lorsque vous démarrez une application console dans Visual Studio, elle s’exécute votre code, puis imprime « appuyez sur n’importe quelle touche pour continuer. . ." Pour vous donner une chance pour afficher la sortie.
+   Une fenêtre de console s’ouvre, puis exécute votre application. Lorsque vous démarrez une application console dans Visual Studio, celui-ci exécute votre code, puis affiche le message « Appuyez sur une touche pour continuer . » afin de vous permettre de voir la sortie.
 
-Félicitations ! Vous avez créé votre premier « Hello, world ! » application de console dans Visual Studio ! Appuyez sur une touche pour fermer la fenêtre de console et revenir à Visual Studio.
+Félicitations ! Vous venez de créer votre première application console « Hello, world ! » dans Visual Studio. Appuyez sur une touche pour fermer la fenêtre de console et revenir à Visual Studio.
 
 [J’ai rencontré un problème.](#build-and-run-your-code-in-visual-studio-issues)
 
@@ -55,7 +55,7 @@ En règle générale, vous exécutez des applications de console à l’invite d
 
 1. Dans la fenêtre d’invite de commandes, avec le bouton droit pour coller le chemin d’accès à votre application dans l’invite de commandes. Appuyez sur ENTRÉE pour exécuter votre application.
 
-   ![Exécutez l’application à l’invite de commande](../build/media/vscpp-run-in-cmd.gif "à l’invite de commande, exécutez l’application")
+   ![Exécutez l’application à l’invite de commande](media/vscpp-run-in-cmd.gif "à l’invite de commande, exécutez l’application")
 
 Félicitations, vous venez de créer et exécuter une application console dans Visual Studio.
 

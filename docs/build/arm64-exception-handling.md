@@ -1,16 +1,16 @@
 ---
 title: La gestion des exceptions ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176677"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816150"
 ---
 # <a name="arm64-exception-handling"></a>La gestion des exceptions ARM64
 
-Windows sur ARM64 utilise la même gestion structurée des exceptions mécanisme pour asynchrones exceptions générées par le matériel et des exceptions synchrones générées par les logiciels. Les gestionnaires d'exceptions propres aux langages s'appuient sur la gestion des exceptions structurées Windows en utilisant des fonctions d'assistance de langage. Ce document décrit la gestion des exceptions dans Windows sur ARM64 et les programmes d’assistance de langage utilisés par le code généré par l’assembleur Microsoft ARM et le compilateur Visual C++.
+Windows sur ARM64 utilise la même gestion structurée des exceptions mécanisme pour asynchrones exceptions générées par le matériel et des exceptions synchrones générées par les logiciels. Les gestionnaires d'exceptions propres aux langages s'appuient sur la gestion des exceptions structurées Windows en utilisant des fonctions d'assistance de langage. Ce document décrit la gestion des exceptions dans Windows sur ARM64 et les programmes d’assistance de langage utilisés par le code généré par l’assembleur Microsoft ARM et le compilateur MSVC.
 
 ## <a name="goals-and-motivation"></a>Objectifs et motivation
 
@@ -44,7 +44,7 @@ Il s’agit de la description des exceptions hypothèses :
 
 1. Il n’y a aucun code conditionnel dans épilogues.
 
-1. Dédié de Registre de pointeur de frame : si la procédure stockée est enregistrée dans un autre registre (r29) dans le prologue, qui s’inscrivent auprès reste intact tout au long de la fonction, afin que le sp d’origine peut être libéré à tout moment.
+1. Registre de pointeur de frame dédié : Si la procédure stockée est enregistrée dans un autre registre (r29) dans le prologue, ce qui s’inscrivent reste inchangée tout au long de la fonction, afin que le sp d’origine peut être libéré à tout moment.
 
 1. À moins que le sp soit enregistré dans un autre registre, toutes les manipulations dont le pointeur de pile se produit strictement dans le prologue et épilogue.
 
@@ -52,11 +52,11 @@ Il s’agit de la description des exceptions hypothèses :
 
 ## <a name="arm64-stack-frame-layout"></a>Disposition du frame de pile ARM64
 
-![disposition du frame de pile](../build/media/arm64-exception-handling-stack-frame.png "disposition du frame de pile")
+![disposition du frame de pile](media/arm64-exception-handling-stack-frame.png "disposition du frame de pile")
 
 Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée à n’importe quelle position dans la zone de variable locale en fonction des considérations d’optimisation. L’objectif est de maximiser le nombre de variables locales qui peut être atteint par une instruction unique basée sur le pointeur de frame (r29) ou le pointeur de pile (sp). Toutefois pour `alloca` fonctions, il doit être chaîné et r29 doit pointer vers le bas de pile. Pour permettre une meilleure couverture register-paire-adressage-mode, non volatile inscrire aave zones sont positionnés en haut de la pile de réseau Local. Voici des exemples qui illustrent certains des séquences de prologue plus efficaces. Par souci de clarté une meilleure localité de cache, l’ordre de stockage de registres enregistrés des appelés dans tous les prologues canoniques est dans l’ordre « croissante des ». `#framesz` ci-dessous représente la taille de pile entière (à l’exclusion de la zone d’alloca). `#localsz` et `#outsz` indiquent la taille de la zone locale (y compris l’enregistrement concernant la \<r29, lr > paire) et sortant de taille de paramètre, respectivement.
 
-1. Chaînées, #localsz \<= 512
+1. Chained, #localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -70,7 +70,7 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
         sub    sp, #outsz               // (optional for #outsz != 0)
     ```
 
-1. Chaînées, #localsz > 512
+1. Chained, #localsz > 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -131,7 +131,7 @@ Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée
 
    Toutes les variables locales sont accessibles selon le fournisseur de services. \<R29 > pointe vers le frame précédent.
 
-1. Chaînées, #framesz \<= 512, #outsz = 0
+1. Chained, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -187,7 +187,7 @@ Les enregistrements .pdata sont un tableau ordonné d’éléments de longueur f
 
 Chaque enregistrement .pdata pour ARM64 est la longueur de 8 octets. Le format général des chaque enregistrement endroits l’adresse RVA 32 bits de la fonction Démarrer dans le premier mot, suivi d’une seconde comportant qui contient un pointeur vers un bloc .xdata de longueur variable, ou un mot compressé qui décrit une séquence de déroulement canonique.
 
-![disposition des enregistrements .pdata](../build/media/arm64-exception-handling-pdata-record.png "disposition des enregistrements .pdata")
+![disposition des enregistrements .pdata](media/arm64-exception-handling-pdata-record.png "disposition des enregistrements .pdata")
 
 Les champs sont les suivantes :
 
@@ -203,7 +203,7 @@ Les champs sont les suivantes :
 
 Quand le format de déroulement compressé ne suffit pas à décrire le déroulement d'une fonction, un enregistrement .xdata de longueur variable doit être créé. L'adresse de cet enregistrement est stockée dans le deuxième mot de l'enregistrement .pdata. Le format de l’enregistrement .xdata est un ensemble de longueur variable compressé de mots :
 
-![disposition d’enregistrement .xdata](../build/media/arm64-exception-handling-xdata-record.png "disposition des enregistrements .xdata")
+![disposition d’enregistrement .xdata](media/arm64-exception-handling-xdata-record.png "disposition des enregistrements .xdata")
 
 Ces données sont divisées en quatre sections :
 
@@ -313,10 +313,10 @@ Les codes de déroulement sont encodées selon le tableau ci-dessous. Tous les c
 |`arithmetic(ror)`|    11100111' 100zxxxx : lr ror avec cookie reg(z) (0 = x28, 1 = sp) ; ROR lr, lr, reg(z) |
 | |            11100111 : xxxz--- :---réservé |
 | |              11101xxx : réservé pour les cas de pile personnalisée ci-dessous générés uniquement pour les routines asm |
-| |              11101001 : pile personnalisé pour MSFT_OP_TRAP_FRAME |
-| |              11101010 : pile personnalisé pour MSFT_OP_MACHINE_FRAME |
-| |              11101011 : pile personnalisé pour MSFT_OP_CONTEXT |
-| |              1111xxxx : réservé |
+| |              11101001: Pile personnalisée pour MSFT_OP_TRAP_FRAME |
+| |              11101010: Pile personnalisée pour MSFT_OP_MACHINE_FRAME |
+| |              11101011: Pile personnalisée pour MSFT_OP_CONTEXT |
+| |              1111xxxx: reserved |
 
 Dans les instructions avec des valeurs élevées couvrant plusieurs octets, les bits les plus significatifs sont enregistrés en premier. Les codes de déroulement ci-dessus soient conçus pour en recherchant simplement le premier octet du code, il est possible de connaître la taille totale en octets du code de déroulement. Étant donné que chaque code de déroulement est mappée exactement à une instruction de prologue/épilogue, pour calculer la taille du prologue ou de l’épilogue, doit être effectuée qu’à remonter à partir du début de la séquence à la fin, à l’aide d’une table de recherche ou un dispositif similaire pour déterminer la durée pendant laquelle le cor est de l’opcode répond.
 
@@ -334,7 +334,7 @@ Pour les fonctions emballées dont suivi les prologues et épilogues la forme ca
 
 Le format d’un enregistrement .pdata avec compressé de déroulement données ressemble à ceci :
 
-![données de déroulement enregistrement .pdata avec compressé](../build/media/arm64-exception-handling-packed-unwind-data.png "enregistrement .pdata avec compressée des données de déroulement")
+![données de déroulement enregistrement .pdata avec compressé](media/arm64-exception-handling-packed-unwind-data.png "enregistrement .pdata avec compressée des données de déroulement")
 
 Les champs sont les suivantes :
 
@@ -359,28 +359,28 @@ Les prologues canoniques qui appartiennent aux catégories 1, 2 (sans zone de pa
 
 Étape 0 : Effectuer le calcul préalable de la taille de chaque zone.
 
-Étape 1 : Enregistrer des registres enregistrés des appelés de Int.
+Étape 1 : Enregistrer des registres enregistrés des appelés de Int.
 
-Étape 2 : Cette étape est spécifique de type 4 dans les premières sections. LR est enregistré à la fin de la zone de type Int.
+Étape 2 : Cette étape est spécifique de type 4 dans les premières sections. LR est enregistré à la fin de la zone de type Int.
 
-Étape 3 : Enregistrer des registres enregistrés des appelés FP.
+Étape 3 : Enregistrer des registres enregistrés des appelés FP.
 
-Étape 4 : Enregistrer des arguments d’entrée dans la zone paramètre domestique.
+Étape 4 : Enregistrer des arguments d’entrée dans la zone paramètre domestique.
 
-Étape 5 : Allouer de la pile restante, y compris le réseau local, \<r29, lr > paire et zone de paramètres sortants. 5 a correspond au type canonique 1. 5 b et c de 5 sont pour le type canonique 2. 5D 5e concernent à la fois type 3 et tapez 4.
+Étape 5 : Allouer de la pile restante, y compris le réseau local, \<r29, lr > paire et zone de paramètres sortants. 5 a correspond au type canonique 1. 5 b et c de 5 sont pour le type canonique 2. 5D 5e concernent à la fois type 3 et tapez 4.
 
 Étape #|Valeurs d’indicateur|nombre d’instructions|Opcode|Code de déroulement
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
 1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**== 01 *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
+2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
+3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 & & #locsz<br/> < = 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** == 11 &AMP; &AMP;<br/>512 < #locsz < = 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5C|**CR** == 11 & & #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** == 11 &&<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Si **CR** == 01 et **RegI** est un nombre impair, étape 2 et dernière save_rep à l’étape 1 sont fusionnées dans un save_regp.
 
@@ -531,7 +531,7 @@ Si un fragment ne contient aucun prologue et aucun épilogue, elle nécessite to
 
 ## <a name="examples"></a>Exemples
 
-### <a name="example-1-frame-chained-compact-form"></a>Exemple 1 : Frame-chaînées, compact-formulaire
+### <a name="example-1-frame-chained-compact-form"></a>Exemple 1 : Forme compact frame en série
 
 ```asm
 |Foo|     PROC
@@ -549,7 +549,7 @@ Si un fragment ne contient aucun prologue et aucun épilogue, elle nécessite to
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Exemple 2 : Frame-chaînées, forme complète avec miroir prologue et épilogue
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Exemple 2 : Frame en série, forme complète avec miroir prologue et épilogue
 
 ```asm
 |Bar|     PROC
@@ -583,7 +583,7 @@ Si un fragment ne contient aucun prologue et aucun épilogue, elle nécessite to
 
 Notez que l’EpilogStart Index [0] pointe vers la même séquence de code de déroulement de prologue.
 
-### <a name="example-3-variadic-unchained-function"></a>Exemple 3 : Variadic chaîné (fonction)
+### <a name="example-3-variadic-unchained-function"></a>Exemple 3 : Variadiques chaîné (fonction)
 
 ```asm
 |Delegate| PROC
@@ -627,4 +627,4 @@ Remarque : EpilogStart Index [4] pointe vers le milieu de code de déroulement 
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble des conventions ABI de ARM64](arm64-windows-abi-conventions.md)<br/>
-[Gestion des exceptions ARM](../build/arm-exception-handling.md)
+[Gestion des exceptions ARM](arm-exception-handling.md)

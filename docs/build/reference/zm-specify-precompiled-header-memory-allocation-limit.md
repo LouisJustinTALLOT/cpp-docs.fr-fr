@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-ms.openlocfilehash: 3c1362479b2068ee8fb527a4ecaac6e203e83cb0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 09df8e1ee9a97289e29e1191e8c1585580435b79
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751984"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807895"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Spécifier la limite d’allocation mémoire d’en-tête précompilé)
 
@@ -60,7 +60,7 @@ Le tableau suivant montre comment la *facteur* argument a une incidence sur la l
 
 ### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir l'option de compilateur /Zm dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Dans le volet de navigation, sélectionnez **propriétés de Configuration** > **C/C++** > **ligne de commande**.
 
@@ -72,5 +72,5 @@ Le tableau suivant montre comment la *facteur* argument a une incidence sur la l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

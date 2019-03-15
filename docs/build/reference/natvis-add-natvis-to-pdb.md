@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -NATVIS linker option
 - Add Natvis file to PDB
 ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
-ms.openlocfilehash: 983cbe4c4bd4164d81b83a23fe19569318d5193c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e758a49b41a17d805b752947cd1944087c8ff852
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424975"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809234"
 ---
 # <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS (ajouter Natvis à PDB)
 
@@ -30,11 +30,11 @@ Un fichier Natvis à ajouter au fichier PDB. Il incorpore les visualisations du 
 
 L’option /NATVIS incorpore les visualisations du débogueur définies dans le fichier Natvis *nom de fichier* dans le fichier PDB généré par LINK. Cela permet au débogueur afficher les visualisations indépendamment le fichier .natvis. Vous pouvez utiliser plusieurs options /NATVIS à incorporer plusieurs fichiers Natvis dans le fichier PDB généré.
 
-LIEN ignore /NATVIS quand un fichier PDB n’est pas créé à l’aide un [/DEBUG](../../build/reference/debug-generate-debug-info.md) option. Pour plus d’informations sur la création et l’utilisation de fichiers .natvis, consultez [créer des vues personnalisées d’objets natifs dans le débogueur Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
+LIEN ignore /NATVIS quand un fichier PDB n’est pas créé à l’aide un [/DEBUG](debug-generate-debug-info.md) option. Pour plus d’informations sur la création et l’utilisation de fichiers .natvis, consultez [créer des vues personnalisées d’objets natifs dans le débogueur Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **ligne de commande** page de propriétés dans le **l’éditeur de liens** dossier.
 
@@ -46,6 +46,5 @@ LIEN ignore /NATVIS quand un fichier PDB n’est pas créé à l’aide un [/DEB
 
 ## <a name="see-also"></a>Voir aussi
 
-[Créer des vues personnalisées d’objets natifs dans le débogueur Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects)<br/>
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

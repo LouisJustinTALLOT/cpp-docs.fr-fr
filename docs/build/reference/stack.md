@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stack, setting size
 - /STACK editbin option
 ms.assetid: a39bcff0-c945-4355-80cc-8e4f24a5f142
-ms.openlocfilehash: 1d583a7259e1aecef0a638743fb0b6271ff09330
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f30877800d4597054601f7459df88c78193fd3c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417747"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820648"
 ---
 # <a name="stack"></a>/STACK
 
@@ -32,4 +32,4 @@ Le paramètre facultatif `commit` argument est soumis à l’interprétation par
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options EDITBIN](../../build/reference/editbin-options.md)
+[Options EDITBIN](editbin-options.md)

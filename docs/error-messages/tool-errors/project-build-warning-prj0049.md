@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-ms.openlocfilehash: a451b7fe7b2f7cd89f8898232badf0d3b7e9f138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fba3de0be764aa56b56ed22c6a9fde9366295456
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447214"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816228"
 ---
 # <a name="project-build-warning-prj0049"></a>Avertissement de génération de projet PRJ0049
 
@@ -21,7 +21,7 @@ Les applications créées à l’aide de Visual Studio 2008 peuvent spécifier q
 
 1. Choisissez l'une des valeurs suivantes :
 
-   - Modifier le framework ciblé dans le projet **Pages de propriétés** afin qu’il soit postérieure ou égale à la version de framework minimale de tous les assemblys référencés et projets de boîte de dialogue. Pour plus d’informations, consultez [l’ajout de références](../../ide/adding-references-in-visual-cpp-projects.md).
+   - Modifier le framework ciblé dans le projet **Pages de propriétés** afin qu’il soit postérieure ou égale à la version de framework minimale de tous les assemblys référencés et projets de boîte de dialogue. Pour plus d’informations, consultez [l’ajout de références](../../build/adding-references-in-visual-cpp-projects.md).
 
    - Supprimez la référence à l’assembly ou le projet qui a une version de framework minimale qui est ultérieure au framework ciblé. Ces éléments sont marqués avec une icône d’avertissement dans le projet **Pages de propriétés**.
 

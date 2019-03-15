@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424793"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815825"
 ---
 # <a name="importing-and-exporting"></a>Importation et exportation
 
@@ -27,7 +27,7 @@ Vous pouvez importer des symboles publics dans une application ou exporter des f
 
 Un fichier de définition de module (.def) est un fichier texte contenant une ou plusieurs instructions du module décrivant divers attributs d’une DLL. Si vous n’utilisez pas **__declspec (dllimport)** ou **__declspec (dllexport)** pour exporter des fonctions d’une DLL, la DLL exige un fichier .def.
 
-Vous pouvez utiliser des fichiers .def pour [importer dans une application](../build/importing-using-def-files.md) ou [exporter à partir d’une DLL](../build/exporting-from-a-dll-using-def-files.md).
+Vous pouvez utiliser des fichiers .def pour [importer dans une application](importing-using-def-files.md) ou [exporter à partir d’une DLL](exporting-from-a-dll-using-def-files.md).
 
 ## <a name="using-declspec"></a>À l’aide de __declspec
 
@@ -41,10 +41,10 @@ Le format de fichier exécutable Portable Win32 est conçu pour réduire le nomb
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Importer dans une Application](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une Application](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Exporter à partir d’une DLL](../build/exporting-from-a-dll.md)
+- [Exporter à partir d’une DLL](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[DLL dans Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL dans Visual C++](dlls-in-visual-cpp.md)

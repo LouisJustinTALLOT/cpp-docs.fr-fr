@@ -30,7 +30,6 @@ f1_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -99,7 +98,6 @@ helpviewer_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -140,12 +138,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 14195271fa0e5e399b801fd36803db4731e690f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491297"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816618"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Avertissements du compilateur C4400 à C4599
 
@@ -173,7 +171,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|«*fonction*' : signature de fonction contient le type '*type*' ; Objets C++ n’est unsafe pour passer entre le code pure et mixte ou natif.|
 |Avertissement C4413 du compilateur|'classname::member' : membre de référence est initialisé en temporaire qui ne persiste pas après l’arrêt du constructeur|
 |[Avertissement du compilateur (niveau 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|«*fonction*' : saut de type short vers la fonction converti en near|
-|Avertissement du compilateur (niveau 1) C4415|en double __declspec (code_seg ('*nom*'))|
+|Avertissement du compilateur (niveau 1) C4415|duplicate __declspec(code_seg('*name*'))|
 |Avertissement du compilateur (niveau 1) C4416|__declspec(code_seg(...)) contient une chaîne vide : ignoré|
 |Avertissement du compilateur (niveau 1) C4417|une instanciation explicite du modèle ne peut pas avoir __declspec(code_seg(...)) : ignoré|
 |Avertissement du compilateur (niveau 1) C4418|__declspec(code_seg(...)) ignoré sur un enum|
@@ -187,9 +185,9 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1) C4427|«*opérateur*' : dépassement en division constante, un comportement non défini|
 |[Avertissement du compilateur (niveau 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|possible incomplet ou incorrectement formé universel-nom de caractère|
 |[Avertissement (erreur) du compilateur C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut|
-|[Avertissement du compilateur (niveau 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|spécificateur de type manquant - int est pris en compte par défaut. Remarque : C ne prend plus en charge int par défaut|
+|[Avertissement du compilateur (niveau 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|spécificateur de type manquant - int est pris en compte par défaut. Remarque : C prend n’est plus en charge int par défaut|
 |[Avertissement du compilateur (niveau 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|un constructeur static doit avoir un accès privé ; modification d’un accès privé|
-|[Avertissement du compilateur (niveau 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|«*derived_class*' : la disposition des objets sous/vd2 sera modifiée en raison de la base virtuelle '*base_class*»|
+|[Avertissement du compilateur (niveau 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|«*derived_class*» : Disposition des objets sous/vd2 sera modifiée en raison de la base virtuelle '*base_class*'|
 |[Avertissement du compilateur (niveau 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamique\_converti à partir de la base virtuelle '*base_class*'en'*derived_class*» dans le constructeur ou un destructeur peut échouer avec un objet partiellement construit|
 |[Avertissement du compilateur (niveau 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamique\_converti à partir de la base virtuelle '*base_class*'en'*derived_class*' risque d’échouer dans certains contextes|
 |Avertissement C4438 du compilateur|«*fonction*' : ne peut pas être appelée en toute sécurité / await : clrcompat mode. Si '*fonction*' appels dans le CLR, cela peut entraîner une altération de la tête de CLR|
@@ -205,9 +203,9 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement C4448 du compilateur|«*type*1' n’a pas d’interface par défaut spécifiée dans les métadonnées. Sélection : '*type2*», ce qui peut échouer lors de l’exécution.|
 |Avertissement C4449 du compilateur|«*type*» un type unsealed doit être marqué comme '[WebHostHidden]'|
 |Avertissement C4450 du compilateur|«*type1*'doit être marqué comme '[WebHostHidden]', car il dérive de'*type2*»|
-|Avertissement du compilateur (niveau 4) C4451|'classname1::member' : utilisation de la classe ref 'classname2::member' à l’intérieur de ce contexte peut entraîner un marshaling non valide d’objet entre plusieurs contextes|
+|Avertissement du compilateur (niveau 4) C4451|'classname1::member': Utilisation de la classe ref 'classname2::member' à l’intérieur de ce contexte peut entraîner un marshaling non valide d’objet entre plusieurs contextes|
 |Avertissement du compilateur (niveau 1) C4452|«*identificateur*' : type public ne peut pas être dans une portée globale. Il doit être dans un espace de noms qui est un enfant du nom du fichier de sortie .winmd.|
-|Avertissement du compilateur (niveau 1) C4453|«*type*' : un type de '[WebHostHidden]' ne doit pas être utilisé sur la surface publiée d’un type public qui n’est pas '[WebHostHidden]'|
+|Avertissement du compilateur (niveau 1) C4453|«*type*» : Un type de '[WebHostHidden]' ne doit pas être utilisé sur la surface publiée d’un type public qui n’est pas '[WebHostHidden]'|
 |Avertissement du compilateur (niveau 1) C4454|«*fonction*» est surchargé par plus que le nombre de paramètres d’entrée sans avoir [defaultoverload pour] spécifié. Sélection «*déclaration*» en tant que la surcharge par défaut|
 |Avertissement du compilateur (niveau 1) C4455|' opérateur *opérateur*' : les identificateurs de suffixe littéral qui ne commencent pas par un trait de soulignement sont réservés.|
 |[Avertissement du compilateur (niveau 4) C4456](compiler-warning-level-4-c4456.md)|déclaration de '*identificateur*' masque la déclaration locale précédente|
@@ -242,7 +240,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1) C4491|«*nom*' : a un format de version IDL non conforme|
 |Avertissement du compilateur (niveau 1, erreur) C4492|'*function1*' : méthode de classe ref de base correspond à «*function2*», mais n’est ne pas marqué 'override'|
 |Avertissement du compilateur (niveau 3, erreur) C4493|expression de suppression n’a aucun effet car le destructeur de '*type*' n’a pas d’accessibilité 'publique'|
-|Avertissement du compilateur (niveau 1) C4494|«*fonction*' : ignoré __declspec (allocateur) car le type de retour de la fonction n’est pas un pointeur ou une référence|
+|Avertissement du compilateur (niveau 1) C4494|«*fonction*» : En ignorant __declspec (allocateur) car le type de retour de la fonction n’est pas un pointeur ou une référence|
 |Avertissement C4495 du compilateur|extension non standard '__super' utilisée : Remplacez par le nom de classe de base explicite|
 |Avertissement C4496 du compilateur|extension non standard 'for each' utilisée : Remplacez par une instruction ranged-for|
 |Avertissement C4497 du compilateur|extension non standard 'sealed' utilisée : Remplacez-la par 'final'|
@@ -318,8 +316,8 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 4) C4582|«*type*' : constructeur n’est pas appelé de manière implicite|
 |Avertissement du compilateur (niveau 4) C4583|«*type*' : destructeur n’est pas appelé de manière implicite|
 |[Avertissement du compilateur (niveau 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|«*class1*' : classe de base*classe2*'est déjà une classe de base de'*class3*»|
-|Avertissement du compilateur (niveau 1, erreur) C4585|«*classe*' : classe unsealed de WinRT A 'public ref class' doit être sealed ou dériver d’un existant|
-|Avertissement du compilateur (niveau 1, erreur) C4586|«*type*' : un type public ne peut pas être déclaré dans un espace de noms de niveau supérieur appelé 'Windows'|
+|Avertissement du compilateur (niveau 1, erreur) C4585|«*classe*» : WinRT 'public ref class' doit être sealed ou dériver d’une classe unsealed existante|
+|Avertissement du compilateur (niveau 1, erreur) C4586|«*type*» : Un type public ne peut pas être déclaré dans un espace de noms de niveau supérieur appelé 'Windows'|
 |Avertissement du compilateur (niveau 1) C4587|«*anonymous_structure*' : changement de comportement : constructeur est appelé n’est plus implicitement|
 |Avertissement du compilateur (niveau 1) C4588|«*anonymous_structure*' : changement de comportement : destructeur est appelé n’est plus implicitement|
 |Avertissement du compilateur (niveau 1) C4591|limite de profondeur des appels 'constexpr' de *nombre* dépassée (/ constexpr : Depth\<nombre >)|

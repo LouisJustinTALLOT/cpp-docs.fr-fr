@@ -29,24 +29,24 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415407"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812055"
 ---
 # <a name="bscmake-options"></a>Options BSCMAKE
 
 Cette section décrit les options disponibles pour contrôler BSCMAKE. Plusieurs options contrôlent le contenu du fichier d’informations de consultation en excluant ou incluant certaines informations. Les options d’exclusion peuvent autoriser BSCMAKE accélère l’exécution et peuvent aboutir dans un fichier .bsc plus petit. Noms d’options respectent la casse (à l’exception de **/Help** et **/NOLOGO**).
 
-Uniquement **/NOLOGO** et **/o** sont disponibles dans l’environnement de développement Visual Studio.  Consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md) pour plus d’informations sur accéder aux pages de propriétés d’un projet.
+Uniquement **/NOLOGO** et **/o** sont disponibles dans l’environnement de développement Visual Studio.  Consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md) pour plus d’informations sur accéder aux pages de propriétés d’un projet.
 
 **/EI (** *filename*... **)**<br/>
 Exclut le contenu des fichiers include spécifié à partir du fichier d’informations de navigation. Pour spécifier plusieurs fichiers, séparez les noms par un espace et placez la liste entre parenthèses. Parenthèses ne sont pas nécessaires si vous spécifiez une seule *filename*. Utilisez **/Ei** avec la **/es** possibilité d’exclure des fichiers non exclus par **/es**.
 
 **/El**<br/>
-Exclut les symboles locaux. La valeur par défaut consiste à inclure les symboles locaux. Pour plus d’informations sur les symboles locaux, consultez [création d’un fichier .sbr](../../build/reference/creating-an-dot-sbr-file.md).
+Exclut les symboles locaux. La valeur par défaut consiste à inclure les symboles locaux. Pour plus d’informations sur les symboles locaux, consultez [création d’un fichier .sbr](creating-an-dot-sbr-file.md).
 
 **/Em**<br/>
 Exclut les symboles dans le corps de macros. Utilisez **/Em** à inclure uniquement les noms des macros dans le fichier d’informations de consultation. La valeur par défaut consiste à inclure les noms des macros et le résultat de l’expansion macro.
@@ -60,7 +60,7 @@ Exclut le fichier d’informations de chaque fichier include spécifié avec un 
 **/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 Vous permet d’envoyer des informations à Microsoft concernant des erreurs internes dans bscmake.exe.
 
-Pour plus d’informations sur **/errorreport**, consultez [/errorReport (signaler les erreurs du compilateur interne)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Pour plus d’informations sur **/errorreport**, consultez [/errorReport (signaler les erreurs du compilateur interne)](errorreport-report-internal-compiler-errors.md).
 
 **/HELP**<br/>
 Affiche un résumé de la syntaxe de ligne de commande BSCMAKE.
@@ -69,7 +69,7 @@ Affiche un résumé de la syntaxe de ligne de commande BSCMAKE.
 Inclut les symboles non référencés. Par défaut, BSCMAKE n’enregistre pas tous les symboles qui sont définies, mais non référencés. Si un fichier .sbr a été compressé, cette option n’a aucun effet sur ce fichier, car le compilateur a déjà supprimé les symboles non référencés.
 
 **/n**<br/>
-Force une génération non incrémentielle. Utilisez **/n** pour forcer une génération complète du fichier d’informations de navigation ou non un fichier .bsc existe et pour empêcher la troncature des fichiers .sbr. Consultez [génération d’un fichier .bsc par BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).
+Force une génération non incrémentielle. Utilisez **/n** pour forcer une génération complète du fichier d’informations de navigation ou non un fichier .bsc existe et pour empêcher la troncature des fichiers .sbr. Consultez [génération d’un fichier .bsc par BSCMAKE](how-bscmake-builds-a-dot-bsc-file.md).
 
 **/NOLOGO**<br/>
 Supprime le message de copyright de BSCMAKE.
@@ -94,4 +94,4 @@ BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence BSCMAKE](../../build/reference/bscmake-reference.md)
+[Référence BSCMAKE](bscmake-reference.md)

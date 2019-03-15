@@ -1,6 +1,6 @@
 ---
-title: DLL en Visual C++
-ms.date: 11/04/2016
+title: Créer des DLL C/C++ dans Visual Studio
+ms.date: 12/10/2018
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: be653be42b1905f1edbcf8d50f7aef2b343c2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd30c84ba202c3f772ad4451368efde10285e6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667192"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815812"
 ---
-# <a name="dlls-in-visual-c"></a>DLL en Visual C++
+# <a name="create-cc-dlls-in-visual-studio"></a>Créer des DLL C/C++ dans Visual Studio
 
 Dans Windows, une bibliothèque de liens dynamiques (DLL) est un type de fichier exécutable qui agit comme une bibliothèque partagée de fonctions et de ressources. La liaison dynamique est une fonctionnalité du système d’exploitation qui permet à un fichier exécutable appeler des fonctions ou utiliser des ressources stockées dans un fichier distinct. Ces fonctions et ressources peuvent être compilées et déployées séparément des exécutables qui les utilisent. Une DLL n’est pas un exécutable autonome ; Il s’exécute dans le contexte d’une application qui l’appelle. Le système d’exploitation peut charger la DLL dans l’espace de mémoire d’une application lors du chargement de l’application (*liaison implicite*), ou à la demande lors de l’exécution (*liaison explicite*). Les DLL facilitent également le partage des fonctions et des ressources entre les fichiers exécutables. Plusieurs applications peuvent accéder simultanément au contenu d'une copie de la DLL en mémoire.
 
@@ -61,61 +61,61 @@ Un inconvénient potentiel à l’utilisation des DLL est que l’application n�
 
 Les rubriques suivantes fournissent des informations détaillées sur la programmation des DLL dans Visual C++.
 
-[Procédure pas à pas : création et utilisation d’une bibliothèque de liens dynamiques (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[Procédure pas à pas : création et utilisation d’une bibliothèque de liens dynamiques (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 Montre comment créer et utiliser une DLL à l'aide de Visual Studio.
 
-[Genres de DLL](../build/kinds-of-dlls.md)<br/>
+[Genres de DLL](kinds-of-dlls.md)<br/>
 Fournit des informations sur les différentes sortes de DLL qui peuvent être générées.
 
-[Forum aux Questions de DLL](../build/dll-frequently-asked-questions.md)<br/>
+[Forum aux Questions de DLL](dll-frequently-asked-questions.md)<br/>
 Fournit des réponses à des questions fréquentes concernant les DLL.
 
-[Lier un exécutable à une DLL](../build/linking-an-executable-to-a-dll.md)<br/>
+[Lier un exécutable à une DLL](linking-an-executable-to-a-dll.md)<br/>
 Décrit la liaison explicite et implicite à une DLL.
 
-[Initialiser une DLL](../build/run-time-library-behavior.md#initializing-a-dll)<br/>
+[Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)<br/>
 Explique le code d’initialisation de DLL qui doit s’exécuter lorsque le chargement de la DLL.
 
-[DLL et comportement de la bibliothèque runtime Visual C++](../build/run-time-library-behavior.md)<br/>
+[DLL et comportement de la bibliothèque runtime Visual C++](run-time-library-behavior.md)<br/>
 Décrit comment la bibliothèque Runtime exécute la séquence de démarrage de la DLL.
 
-[LoadLibrary et AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)<br/>
+[LoadLibrary et AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
 Explique comment utiliser **LoadLibrary** et `AfxLoadLibrary` pour une liaison explicite à une DLL lors de l’exécution.
 
-[GetProcAddress](../build/getprocaddress.md)<br/>
+[GetProcAddress](getprocaddress.md)<br/>
 Explique comment utiliser **GetProcAddress** pour obtenir l’adresse d’une fonction exportée dans la DLL.
 
-[FreeLibrary et AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)<br/>
+[FreeLibrary et AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
 Explique comment utiliser **FreeLibrary** et `AfxFreeLibrary` lorsque le module DLL n’est plus nécessaire.
 
 [Dynamic-Link Library Search Order](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
 Décrit le chemin d’accès que le système d’exploitation Windows utilise pour rechercher une DLL sur le système.
 
-[États du module d’une DLL MFC normale liée de manière dynamique à MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
+[États du module d’une DLL MFC normale liée de manière dynamique à MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
 Décrit les États du module d’une expression régulière que MFC DLL liée de manière dynamique aux MFC.
 
-[DLL d’extension de MFC](../build/extension-dlls-overview.md)<br/>
+[DLL d’extension de MFC](extension-dlls-overview.md)<br/>
 Décrit les DLL qui implémentent généralement des classes réutilisables dérivées de classes de bibliothèque MFC existantes.
 
-[Création d’une DLL de ressource uniquement](../build/creating-a-resource-only-dll.md)<br/>
+[Création d’une DLL de ressource uniquement](creating-a-resource-only-dll.md)<br/>
 Traite des DLL de ressource uniquement, qui ne contiennent que des ressources, telles que des icônes, des images bitmap, des chaînes et des boîtes de dialogue.
 
-[Ressources localisées dans les applications MFC : DLL satellites](../build/localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
+[Ressources localisées dans les applications MFC : DLL satellites](localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
 Fournit une prise en charge améliorée pour les DLL satellites, une fonctionnalité qui vous aide à créer des applications localisées pour différentes langues.
 
-[Importation et exportation](../build/importing-and-exporting.md)<br/>
+[Importation et exportation](importing-and-exporting.md)<br/>
 Décrit l'importation de symboles publics dans une application ou l'exportation de fonctions à partir d'une DLL.
 
-[Technologie active et DLL](../build/active-technology-and-dlls.md)<br/>
+[Technologie active et DLL](active-technology-and-dlls.md)<br/>
 Autorise l'implémentation des serveurs d'objets dans une DLL.
 
-[Automation dans une DLL](../build/automation-in-a-dll.md)<br/>
+[Automation dans une DLL](automation-in-a-dll.md)<br/>
 Décrit ce que fournit l'option Automation de l'Assistant DLL MFC.
 
 [Conventions d’affectation de noms pour les DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
 Décrit comment les DLL et les bibliothèques incluses dans les MFC obéissent aux règles d'une convention d'attribution de noms structurée.
 
-[Appel des fonctions DLL à partir d’Applications Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)<br/>
+[Appel des fonctions DLL à partir d’Applications Visual Basic](calling-dll-functions-from-visual-basic-applications.md)<br/>
 Explique comment appeler des fonctions DLL à partir d'applications Visual Basic.
 
 ## <a name="related-sections"></a>Rubriques connexes

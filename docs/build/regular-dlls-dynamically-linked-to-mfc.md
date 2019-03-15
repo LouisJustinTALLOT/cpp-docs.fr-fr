@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413171"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821298"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>DLL MFC normales liées de manière dynamique aux MFC
 
@@ -83,18 +83,18 @@ Pour obtenir un exemple montrant comment écrire, créer et utiliser une DLL MFC
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Initialiser des DLL MFC normales](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [Initialiser des DLL MFC normales](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [États du module d’une DLL MFC normale liée de manière dynamique aux MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [États du module d’une DLL MFC normale liée de manière dynamique aux MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
 - [Gestion des données d’état des modules MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [Utilisation de DLL d’extension de MFC de type base de données, OLE et sockets dans des DLL MFC normales](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Utilisation de DLL d’extension de MFC de type base de données, OLE et sockets dans des DLL MFC normales](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [À l’aide de MFC dans le cadre d’une DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Genres de DLL](../build/kinds-of-dlls.md)
+[Genres de DLL](kinds-of-dlls.md)

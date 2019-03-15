@@ -4,7 +4,7 @@
 # [Créer un projet Linux](create-a-new-linux-project.md)
 # [Se connecter à votre ordinateur Linux distant](connect-to-your-remote-linux-computer.md)
 # [Déployer, exécuter et déboguer un projet Linux](deploy-run-and-debug-your-linux-project.md)
-# [Tutoriel : Créer des projets multiplateforme C++ dans Visual Studio](../ide/get-started-linux-cmake.md)
+# [Tutoriel : Créer des projets multiplateforme C++ dans Visual Studio](../build/get-started-linux-cmake.md)
 # [Informations de référence sur les pages de propriétés dans un projet Linux](prop-pages-linux.md)
 ## [Général, propriétés (Linux)](prop-pages/general-linux.md)
 ## [Débogage, propriétés (Linux)](prop-pages/debugging-linux.md)

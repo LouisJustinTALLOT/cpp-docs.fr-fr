@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175767"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820739"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributs de C++ pour COM et .NET
 
@@ -49,7 +49,7 @@ Vous pouvez ensuite configurer le `CMyReceiver` méthodes `handler1` et `handler
 
 ## <a name="basic-mechanics-of-attributes"></a>Mécanismes de base des attributs
 
-Il existe trois façons d’insérer des attributs dans votre projet. Tout d’abord, vous pouvez les insérer manuellement dans votre code source. Ensuite, vous pouvez insérer à l’aide de la grille des propriétés d’un objet dans votre projet. Enfin, vous pouvez insérer à l’aide de différents Assistants. Pour plus d’informations sur l’utilisation de la **propriétés** fenêtre et les différents Assistants, consultez [création et gestion de projets Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md).
+Il existe trois façons d’insérer des attributs dans votre projet. Tout d’abord, vous pouvez les insérer manuellement dans votre code source. Ensuite, vous pouvez insérer à l’aide de la grille des propriétés d’un objet dans votre projet. Enfin, vous pouvez insérer à l’aide de différents Assistants. Pour plus d’informations sur l’utilisation de la **propriétés** fenêtre et les différents Assistants, consultez [création et gestion de projets Visual C++](../../build/creating-and-managing-visual-cpp-projects.md).
 
 Comme précédemment, lorsque le projet est généré, le compilateur analyse chaque fichier source C++, produit un fichier objet. Toutefois, lorsque le compilateur rencontre un attribut, il est analysé et sa syntaxe est vérifiée. Le compilateur appelle ensuite dynamiquement un fournisseur d’attributs pour insérer du code ou apporter d’autres modifications à la compilation. L’implémentation du fournisseur diffère selon le type d’attribut. Par exemple, les attributs liés à ATL sont implémentés par Atlprov.dll.
 

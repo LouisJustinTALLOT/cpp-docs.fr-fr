@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978281"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816605"
 ---
 # <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (fichier inclure un lien de Source dans le fichier PDB)
 
@@ -32,7 +32,7 @@ Lien de source est un système indépendant du contrôle de code source et de la
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Pour définir l’option de l’éditeur de liens /SOURCELINK dans Visual Studio
 
-1. Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
 
@@ -44,5 +44,5 @@ Lien de source est un système indépendant du contrôle de code source et de la
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

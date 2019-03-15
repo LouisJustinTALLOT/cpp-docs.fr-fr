@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-ms.openlocfilehash: 4ac2b86c19845a092c743c484ad48d0cd0b6fb35
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 43be8f6d0f080f0d85568ce5b089751fc68f0e8e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416031"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815461"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (Activer la gestion des exceptions)
 
@@ -30,7 +30,7 @@ Obsolète. Permet aux exceptions synchrone à l’aide de l’hypothèse que les
 
 ## <a name="remarks"></a>Notes
 
-**/GX** est déconseillée. Utiliser les équivalents [/EHsc](../../build/reference/eh-exception-handling-model.md) plutôt l’option. Pour obtenir la liste des options du compilateur déconseillées, consultez le **Options déconseillées et supprimées du compilateur** section [Options du compilateur classées par catégorie](../../build/reference/compiler-options-listed-by-category.md).
+**/GX** est déconseillée. Utiliser les équivalents [/EHsc](eh-exception-handling-model.md) plutôt l’option. Pour obtenir la liste des options du compilateur déconseillées, consultez le **Options déconseillées et supprimées du compilateur** section [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md).
 
 Par défaut, **/EHsc**, l’équivalent de **/GX**, est en vigueur quand vous compilez à l’aide de l’environnement de développement Visual Studio. Lorsque vous utilisez les outils de ligne de commande, aucune gestion des exceptions ne sont spécifié. C’est l’équivalent de **/GX-**.
 
@@ -38,7 +38,7 @@ Pour plus d’informations, consultez [gestion des exceptions C++](../../cpp/cpp
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Dans le volet de navigation, choisissez **propriétés de Configuration**, **C/C++**, **ligne de commande**.
 
@@ -50,6 +50,6 @@ Pour plus d’informations, consultez [gestion des exceptions C++](../../cpp/cpp
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[/EH (Modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[/EH (Modèle de gestion des exceptions)](eh-exception-handling-model.md)

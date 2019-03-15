@@ -14,16 +14,16 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298059"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808350"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Classes de fenêtre frame créées par l'Assistant Application
 
-Lorsque vous utilisez le [Assistant Application](../ide/creating-desktop-projects-by-using-application-wizards.md) pour créer une application squelette, outre l’application, document et affichage de classes, l’Assistant Application crée une classe dérivée de fenêtre frame de fenêtre frame principale de votre application. La classe est appelée `CMainFrame` par défaut et les fichiers qui le contiennent sont nommés MAINFRM. H et MAINFRM. CPP.
+Lorsque vous permettent de créer un nouveau MFC project à partir de la **nouveau projet** boîte de dialogue, en plus des applications, documents et classes d’affichage, l’Assistant Application crée une classe dérivée de fenêtre frame de fenêtre frame principale de votre application. La classe est appelée `CMainFrame` par défaut et les fichiers qui le contiennent sont nommés MAINFRM. H et MAINFRM. CPP.
 
 Si votre application SDI, votre `CMainFrame` classe est dérivée de la classe [CFrameWnd](../mfc/reference/cframewnd-class.md).
 
@@ -36,4 +36,5 @@ Ces classes de fenêtre frame fonctionnent comme créé, mais pour améliorer le
 ## <a name="see-also"></a>Voir aussi
 
 [Classes de fenêtre frame](../mfc/frame-window-classes.md)<br/>
-[Fichiers d’en-tête et fichiers sources de contrôle ou de programme MFC](../ide/mfc-program-or-control-source-and-header-files.md)
+[Fichiers d’en-tête et fichiers sources de contrôle ou de programme MFC](../build/reference/mfc-program-or-control-source-and-header-files.md)
+

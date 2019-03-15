@@ -29,12 +29,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: b4025413fcf6389249fc011da020c0cd7c6f4519
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447435"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813888"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Extensions Microsoft pour C et C++
 
@@ -101,7 +101,7 @@ Le compilateur C++ et le compilateur C prennent tous les deux en charge les ty
 
 ## <a name="variable-length-argument-lists"></a>Listes d’arguments de longueur variable
 
-Le compilateur C et le compilateur C++ prennent les tous deux en charge un déclarateur de fonction qui spécifie un nombre variable d’arguments, suivi d’une définition de fonction qui fournit un type à la place :
+Le compilateur C et le compilateur C++ prennent les tous deux en charge un déclarateur de fonction qui spécifie un nombre variable d'arguments, suivi d'une définition de fonction qui fournit un type à la place :
 
 ```cpp
 void myfunc( int x, ... );
@@ -268,15 +268,15 @@ Sous **/Ze**, vous devez inclure iso646.h si vous souhaitez utiliser les formula
 
 - & (bitand)
 
-- &#124;(bitor)
+- &#124; (bitor)
 
 - ~ (compl)
 
 - ! (not)
 
-- ! = (not_eq)
+- != (not_eq)
 
-- &#124;&#124;(ou)
+- &#124;&#124; (or)
 
 - &#124;= (or_eq)
 
@@ -300,6 +300,6 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-- [/Za, /Ze (Désactiver les extensions de langage)](../../build/reference/za-ze-disable-language-extensions.md)
-- [Options du compilateur](../../build/reference/compiler-options.md)
-- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+- [/Za, /Ze (Désactiver les extensions de langage)](za-ze-disable-language-extensions.md)
+- [Options du compilateur MSVC](compiler-options.md)
+- [Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

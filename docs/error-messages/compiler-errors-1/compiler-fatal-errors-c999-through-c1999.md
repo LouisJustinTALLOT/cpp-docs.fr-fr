@@ -160,14 +160,13 @@ helpviewer_keywords:
 - C1852
 - C1901
 - C1903
-- C1904
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1159a635f0c7a61e591b4d96c4e55bd2baf44782
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677329"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814447"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erreurs irrécupérables du compilateur C999 à C1999
 
@@ -224,7 +223,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur irrécupérable C1063|limite du compilateur : dépassement de capacité de la pile du compilateur|
 |[Erreur irrécupérable C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|limite du compilateur : dépassement de jetons dans la mémoire tampon interne|
 |[Erreur irrécupérable C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|limite du compilateur : balises insuffisantes|
-|[Erreur irrécupérable C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limite du compilateur : un enregistrement de type a dépassé la taille maximale de 64 Ko|
+|[Erreur irrécupérable C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limite du compilateur : Limite de 64 Ko sur la taille d’un enregistrement de type a été dépassé.|
 |Erreur irrécupérable C1068|impossible d'ouvrir le fichier '*file*'|
 |Erreur irrécupérable C1069|impossible de lire la ligne de commande du compilateur|
 |Erreur irrécupérable C1070|non concordance #if/#endif dans le fichier '*file*'|
@@ -234,7 +233,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur irrécupérable C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|l'élément *token* gauche n'est pas apparié en fin du fichier|
 |[Erreur irrécupérable C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|limite du compilateur : la limite du tas interne a été atteinte ; utilisez /Zm pour spécifier une limite plus élevée|
 |Erreur irrécupérable C1077|limite du compilateur : impossible d'avoir plus de *number* options de ligne de commande|
-|[Erreur irrécupérable C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite du compilateur : la taille limite du fichier PCH est dépassée|
+|[Erreur irrécupérable C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite du compilateur : Limite de taille de fichier PCH est dépassée|
 |[Erreur irrécupérable C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|limite du compilateur : l'option de ligne de commande dépasse la limite autorisée de *number* caractères|
 |[Erreur irrécupérable C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*' : nom de fichier trop long|
 |Erreur irrécupérable C1082|Impossible de fermer le fichier *type* : '*file*' : *message*|
@@ -265,7 +264,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Erreur irrécupérable C1111|paramètres modèle/générique trop nombreux|
 |Erreur irrécupérable C1112|limite du compilateur : `'number`' arguments de macro en trop, ' *number* ' arguments autorisés au maximum|
 |[Erreur irrécupérable C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|Échec de #using sur '*file*'|
-|Erreur irrécupérable C1114|'*file*' : WinRT ne prend pas en charge #using pour un assembly managé|
+|Erreur irrécupérable C1114|«*fichier*» : WinRT ne prend pas en charge #using un assembly managé|
 |[Erreur irrécupérable C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|échec de l'appel à GetProcAddress pour '*function*'|
 |[Erreur irrécupérable C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|échec de l'appel à CryptoAPI|
 |[Erreur irrécupérable C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|l'allocation automatique dépasse *size*|
@@ -321,6 +320,6 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur irrécupérable C1900](../../error-messages/compiler-errors-1/fatal-error-c1900.md)|incompatibilité de IL entre '*tool*' version '*number*' et '*tool*' version '*number*'|
 |Erreur irrécupérable C1901|Erreur interne de gestion de la mémoire|
 |[Erreur irrécupérable C1902](../../error-messages/compiler-errors-1/fatal-error-c1902.md)|incompatibilité de gestionnaire de bases de données du programme ; vérifiez votre installation|
-|Erreur irrécupérable C1903|impossible de récupérer à partir des erreurs précédentes ; arrêt de la compilation|
+|Erreur irrécupérable C1903|impossible de récupérer à partir des erreurs précédentes ; arrêt de la compilation|
 |Erreur irrécupérable C1904|interaction de fournisseurs incorrecte : '*file*'|
 |[Erreur irrécupérable C1905](../../error-messages/compiler-errors-1/fatal-error-c1905.md)|Front end et back end non compatibles (doivent cibler le même processeur).|

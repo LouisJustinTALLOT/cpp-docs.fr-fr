@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -MERGE linker option
 - MERGE linker option
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
-ms.openlocfilehash: d9e029bf38beab83e7823a65376a70278c82d34c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f0e770425f8068b15522f405ffdcf7cf52999fe0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414718"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820131"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (Combiner des sections)
 
@@ -35,7 +35,7 @@ Cette option est utile pour créer des VxD et en remplaçant les noms de section
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -49,5 +49,5 @@ Cette option est utile pour créer des VxD et en remplaçant les noms de section
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

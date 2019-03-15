@@ -2,12 +2,12 @@
 title: Problèmes courants de migration ARM Visual C++
 ms.date: 11/04/2016
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618511"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816254"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Problèmes courants de migration ARM Visual C++
 
@@ -92,7 +92,7 @@ Et s’il existe une dépendance entre `operator->(memory_handle)` et `operator*
 
 ### <a name="volatile-keyword-default-behavior"></a>comportement par défaut de mot clé volatile
 
-Le compilateur MSVC prend en charge deux différentes interprétations du `volatile` qualificateur de stockage que vous pouvez spécifier à l’aide des commutateurs du compilateur. Le [/volatile:ms](../build/reference/volatile-volatile-keyword-interpretation.md) commutateur sélectionne l’étendue des sémantiques volatiles qui garantissent le classement fort, comme cela a été le cas classique pour x86 et x64 en raison du modèle de mémoire fort sur ces architectures de Microsoft. Le [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) commutateur sélectionne strict C++ standard des sémantiques volatiles qui ne garantissent pas le classement fort.
+Le compilateur MSVC prend en charge deux différentes interprétations du `volatile` qualificateur de stockage que vous pouvez spécifier à l’aide des commutateurs du compilateur. Le [/volatile:ms](reference/volatile-volatile-keyword-interpretation.md) commutateur sélectionne l’étendue des sémantiques volatiles qui garantissent le classement fort, comme cela a été le cas classique pour x86 et x64 en raison du modèle de mémoire fort sur ces architectures de Microsoft. Le [/volatile:iso](reference/volatile-volatile-keyword-interpretation.md) commutateur sélectionne strict C++ standard des sémantiques volatiles qui ne garantissent pas le classement fort.
 
 Sur l’architecture ARM, la valeur par défaut est **/volatile:iso** les processeurs ARM ont une faiblement triés de modèle de mémoire, et parce que le logiciel ARM ne présente pas un héritage de s’appuyer sur la sémantique d’étendues de **/volatile:ms**  et n’a généralement pour interagir avec les logiciels qui effectuent. Toutefois, il est toujours parfois pratique ou même obligatoire pour compiler un programme ARM à utiliser la sémantique d’étendue. Par exemple, il peut être trop coûteux porter un programme à utiliser la sémantique de la norme ISO C++ ou pilote logiciel devra peut-être respecter la sémantique traditionnelle pour fonctionner correctement. Dans ce cas, vous pouvez utiliser la **/volatile:ms** commutateur ; Toutefois, pour recréer des sémantiques volatiles traditionnels sur les objectifs d’ARM, le compilateur doit insérer des barrières de mémoire autour de chaque lecture ou d’écriture d’un `volatile` variable à appliquer classement fort, qui peut avoir un impact négatif sur les performances.
 
@@ -100,4 +100,4 @@ Sur les architectures x86 et x64, la valeur par défaut est **/volatile:ms** , c
 
 ## <a name="see-also"></a>Voir aussi
 
-[Configurer Visual C++ pour les processeurs ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[Configurer Visual C++ pour les processeurs ARM](configuring-programs-for-arm-processors-visual-cpp.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 2363d9ab13e120ab72a30628a7c37c411e8de3a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 14cbdadd8c66d6fdf282f644102a6d4a783893b5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414523"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809286"
 ---
 # <a name="non-mfc-dlls-overview"></a>DLL non-MFC : Vue d'ensemble
 
@@ -20,22 +20,22 @@ Pour plus d’informations sur les DLL non - MFC, consultez [Dynamic-Link Librar
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Procédure pas à pas : Création et utilisation d’une bibliothèque de liens dynamiques](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
+- [Procédure pas à pas : Création et utilisation d’une bibliothèque de liens dynamiques](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
 
-- [Exporter à partir d’une DLL](../build/exporting-from-a-dll.md)
+- [Exporter à partir d’une DLL](exporting-from-a-dll.md)
 
-- [Lier un exécutable à une DLL](../build/linking-an-executable-to-a-dll.md)
+- [Lier un exécutable à une DLL](linking-an-executable-to-a-dll.md)
 
-- [Initialiser une DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [DLL MFC normales liées de manière statique aux MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [DLL MFC normales liées de manière statique aux MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [DLL MFC normales liées de manière dynamique aux MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [DLL MFC normales liées de manière dynamique aux MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [DLL d’extension de MFC : vue d’ensemble](../build/extension-dlls-overview.md)
+- [DLL d’extension de MFC : vue d’ensemble](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Genres de DLL](../build/kinds-of-dlls.md)
+[Genres de DLL](kinds-of-dlls.md)

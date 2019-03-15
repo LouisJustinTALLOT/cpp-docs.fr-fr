@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 9c86d99b365994870b991967b6cab6e6ee5c5088
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f80b99943b103dcf90c05d59df3169e0e05d79f4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422986"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811665"
 ---
 # <a name="exceptions-cc"></a>Exceptions (C/C++)
 
@@ -41,8 +41,8 @@ Les codes d’exception levées sont les VcppException standard (ERROR_SEVERITY_
 
 En outre, si les bits incorrects sont définis dans le champ grAttrs, l’exception ERROR_INVALID_PARAMETER est levée. Cette exception est, par tous les cas, irrécupérable.
 
-Consultez [définitions des structures et constantes](../../build/reference/structure-and-constant-definitions.md) pour plus d’informations.
+Consultez [définitions des structures et constantes](structure-and-constant-definitions.md) pour plus d’informations.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion et notification des erreurs](../../build/reference/error-handling-and-notification.md)
+[Gestion et notification des erreurs](error-handling-and-notification.md)
