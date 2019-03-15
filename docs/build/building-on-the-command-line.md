@@ -1,7 +1,8 @@
 ---
-title: Générer du Code C/C++ sur la ligne de commande
+title: Utiliser l’ensemble d’outils MSVC à partir de la ligne de commande - Visual Studio
+description: Utilisez le Microsoft C++ du compilateur chaîne d’outils (MSVC) à partir de la ligne de commande en dehors de l’IDE Visual Studio.
 ms.custom: conceptual
-ms.date: 06/21/2018
+ms.date: 12/10/2018
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -9,28 +10,30 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: bc5080ff14cf8629c98077bf1e3e39e4b824b48b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452037"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812120"
 ---
-# <a name="build-cc-code-on-the-command-line"></a>Générer du code C/C++ sur la ligne de commande
+# <a name="use-the-msvc-toolset-from-the-command-line"></a>Utiliser l’ensemble d’outils MSVC à partir de la ligne de commande
 
-Vous pouvez créer des applications C et C++ sur la ligne de commande à l’aide des outils qui sont inclus dans Visual Studio.
+Vous pouvez créer des applications C et C++ sur la ligne de commande à l’aide des outils qui sont inclus dans Visual Studio. Vous pouvez également télécharger l’ensemble d’outils du compilateur sous forme de package autonome à partir de [Build Tools pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
 
-## <a name="how-to-get-the-command-line-tools"></a>Comment obtenir les outils de ligne de commande
+## <a name="how-to-use-the-command-line-tools"></a>Comment utiliser les outils de ligne de commande
 
 Lorsque vous choisissez une des charges de travail C++ dans Visual Studio Installer, il installe Visual Studio *ensemble d’outils de plateforme*. Un ensemble d’outils de plateforme dispose d’outils de tous les C et C++ pour une version spécifique de Visual Studio, y compris les compilateurs C/C++, éditeurs de liens, assembleurs et autres outils de génération, ainsi que les bibliothèques correspondantes. Vous pouvez utiliser tous ces outils en ligne de commande, et elles sont également utilisées en interne par l’IDE Visual Studio. Il existe des compilateurs hébergés x86 et hébergés en x64 64 distincts et outils pour générer le code pour x86, x 64, ARM et ARM64 cibles. Chaque ensemble d’outils pour une architecture de build hôte et cible particulière est stockée dans son propre répertoire.
 
-Pour fonctionner correctement, les outils requièrent plusieurs variables d’environnement spécifiques à définir. Ils sont utilisés pour les ajouter au chemin d’accès et comment inclure le fichier, les fichier de bibliothèque et les emplacements du Kit de développement logiciel. Pour faciliter la définir ces variables d’environnement, le programme d’installation crée personnalisé *fichiers de commandes*, ou un groupe de fichiers, lors de l’installation. Vous pouvez exécuter un de ces fichiers de commande dans une fenêtre d’invite de commandes pour définir un hôte spécifique et architecture de build cible version du SDK Windows, plateforme cible et ensemble d’outils de plateforme. Pour plus de commodité, le programme d’installation crée également des raccourcis dans votre menu Démarrer (ou page de démarrage sur Windows 8.x) qui démarre l’invite de commandes de développeur windows à l’aide de ces fichiers de commandes, par conséquent, toutes les variables d’environnement nécessaires sont définie et prête à l’utilisation.
+Les ensembles d’outils du compilateur qui sont installés dépendent de votre processeur de l’ordinateur et les options sélectionnées lors de l’installation. Au minimum, les 32 bits hébergé x86 outils générer du code de x86 natif 32 bits et Cross-outils qui génèrent le code de x64 natif 64 bits sont installés. Si vous avez Windows de 64 bits, les outils hébergés en x64 64 64 bits qui générer du code natif 64 bits et croisée des outils qui génèrent du code natif 32 bits sont également installés. Si vous choisissez d’installer les outils de plateforme Windows universelle C++ facultatifs, puis les outils natifs 32 bits et 64 bits qui s’appuient les code ARM sont également installés. Autres charges de travail peuvent installer des outils supplémentaires.
 
-Les variables d’environnement requises sont spécifiques à votre installation et de l’architecture de build que vous choisissez et pouvez être modifiés par les mises à jour de produit ou de mise à niveau. Par conséquent, nous recommandons fortement d’utiliser un des raccourcis d’invite de commandes installée ou des fichiers de commandes au lieu de définir les variables d’environnement dans Windows vous-même. Pour plus d’informations, consultez [définir le chemin d’accès et les Variables d’environnement pour les générations de ligne de commande](../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+## <a name="environment-variables-and-developer-command-prompts"></a>Variables d’environnement et des invites de commandes développeur
 
-Les ensembles d’outils de ligne de commande, les fichiers de commandes et les raccourcis d’invite de commandes qui sont installés dépendent de votre processeur de l’ordinateur et les options sélectionnées lors de l’installation. Au minimum, les 32 bits hébergé x86 outils générer du code de x86 natif 32 bits et Cross-outils qui génèrent le code de x64 natif 64 bits sont installés. Si vous avez Windows de 64 bits, les outils hébergés en x64 64 64 bits qui générer du code natif 64 bits et croisée des outils qui génèrent du code natif 32 bits sont également installés. Si vous choisissez d’installer les outils de plateforme Windows universelle C++ facultatifs, puis les outils natifs 32 bits et 64 bits qui s’appuient les code ARM sont également installés. Autres charges de travail peuvent installer des outils supplémentaires.
+Pour fonctionner correctement, les outils requièrent plusieurs variables d’environnement spécifiques à définir. Ils sont utilisés pour les ajouter au chemin d’accès et comment inclure le fichier, les fichier de bibliothèque et les emplacements du Kit de développement logiciel. Pour faciliter la définir ces variables d’environnement, le programme d’installation crée personnalisé *fichiers de commandes*, ou un groupe de fichiers, lors de l’installation. Vous pouvez exécuter un de ces fichiers de commande dans une fenêtre d’invite de commandes pour définir un hôte spécifique et architecture de build cible version du SDK Windows, plateforme cible et ensemble d’outils de plateforme. Pour plus de commodité, le programme d’installation crée également des raccourcis dans votre menu Démarrer qui démarrent l’invite de commandes de développeur windows à l’aide de ces fichiers de commandes, par conséquent, toutes les variables d’environnement nécessaires sont défini et prêt à être utilisé.
 
-## <a name="developer-command-prompt-shortcuts"></a>Raccourcis d’invite de commandes développeur
+Les variables d’environnement requises sont spécifiques à votre installation et de l’architecture de build que vous choisissez et pouvez être modifiés par les mises à jour de produit ou de mise à niveau. Par conséquent, nous recommandons fortement d’utiliser un des raccourcis d’invite de commandes installée ou des fichiers de commandes au lieu de définir les variables d’environnement dans Windows vous-même. Pour plus d’informations, consultez [définir le chemin d’accès et les Variables d’environnement pour les générations de ligne de commande](setting-the-path-and-environment-variables-for-command-line-builds.md).
+
+## <a name="developer_command_prompt_shortcuts"></a> Raccourcis d’invite de commandes développeur
 
 Les raccourcis d’invite de commande sont installés dans un dossier de Visual Studio spécifique à la version dans votre menu Démarrer. Voici une liste de raccourcis de l’invite de commandes base et les architectures de build qu'ils prennent en charge :
 
@@ -44,8 +47,7 @@ Les véritable Start menu contextuel noms des dossiers et varient selon la versi
 
 Si vous avez installé le [Build Tools pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (qui inclut également l’ensemble d’outils du compilateur de Visual Studio 2015 Update 3), uniquement les spécifique de l’architecture native entre différents outils ou invite de commandes développeur options sont installées. et pas le général **invite de commandes développeur** raccourci.
 
-<a name="developer_command_prompt"></a>
-### <a name="to-open-a-developer-command-prompt-window"></a>Pour ouvrir une fenêtre d’invite de commandes développeur
+## <a name="developer_command_prompt"></a> Pour ouvrir une fenêtre d’invite de commandes développeur
 
 1. Sur le bureau, ouvrez le Windows **Démarrer** menu, puis faites défiler pour rechercher et ouvrir le dossier correspondant à votre version de Visual Studio, par exemple, **Visual Studio 2017**. Dans certaines versions antérieures de Visual Studio, les raccourcis sont dans un sous-dossier appelé **Visual Studio Tools**.
 
@@ -53,7 +55,7 @@ Si vous avez installé le [Build Tools pour Visual Studio 2017](https://go.micro
 
 Un moyen encore plus rapide pour ouvrir une fenêtre d’invite de commandes développeur consiste à entrer *invite de commandes développeur* dans la zone de recherche de bureau, puis choisissez le résultat souhaité.
 
-## <a name="developer-command-files-and-locations"></a>Emplacements et des fichiers de commandes développeur
+## <a name="developer_command_file_locations"></a> Emplacements de fichiers de commandes développeur
 
 Si vous préférez définir l’environnement d’architecture de génération dans une fenêtre d’invite de commande existante, vous pouvez utiliser un des fichiers de commande (fichiers de commandes) créé par le programme d’installation pour définir l’environnement requis. Nous vous recommandons de seulement faire cela dans une nouvelle fenêtre d’invite de commandes, et nous déconseillons vous basculez vers les environnements plus loin dans la même fenêtre de commande. L’emplacement de ces fichiers dépend de la version de Visual Studio que vous avez installée et sur l’emplacement et d’affectation de noms des choix effectués lors de l’installation. Pour Visual Studio 2017, l’installation par défaut sur un ordinateur 64 bits se trouve dans \Program fichiers (x86) \Microsoft Visual Studio\2017\\*édition*, où *édition* peut-être la Communauté, Professionnel, entreprise, BuildTools ou un autre nom que vous avez fournies. Pour Visual Studio 2015, l’installation par défaut se trouve dans \Program Files (x86) \Microsoft Visual Studio 14.0.
 
@@ -132,20 +134,20 @@ Vous devez ajuster le chemin d’accès pour refléter votre répertoire d’ins
 
 Pour générer un projet C/C++ sur la ligne de commande, Visual Studio fournit ces outils de ligne de commande :
 
-[CL](../build/reference/compiling-a-c-cpp-program.md)<br/>
+[CL](reference/compiling-a-c-cpp-program.md)<br/>
 Utilisez le compilateur (cl.exe) pour compiler et lier les fichiers de code source dans les applications, les bibliothèques et les DLL.
 
-[Lien](../build/reference/linking.md)<br/>
+[Lien](reference/linking.md)<br/>
 Utilisez l'éditeur de liens (link.exe) pour lier les bibliothèques et les fichiers objets compilés dans les applications et les DLL.
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-Utiliser MSBuild (msbuild.exe) pour générer des projets Visual C++ et des solutions Visual Studio. Cela équivaut à exécuter la **Build** projet ou **générer la Solution** commande dans l’IDE Visual Studio.
+[MSBuild](msbuild-visual-cpp.md)<br/>
+Utilisez MSBuild (msbuild.exe) et un fichier projet (.vcxproj) pour configurer une build et appeler indirectement de l’ensemble d’outils. Cela équivaut à exécuter la **Build** projet ou **générer la Solution** commande dans l’IDE Visual Studio. Exécution de MSBuild à partir de la ligne de commande est un scénario avancé et généralement pas recommandé.
 
 [DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-Utilisez DEVENV (devenv.exe) combiné à un commutateur de ligne de commande, par exemple, **/Build** ou **/Clean**— pour effectuer certaines commandes de génération sans afficher l’IDE Visual Studio.
+Utilisez DEVENV (devenv.exe) combiné à un commutateur de ligne de commande, par exemple, **/Build** ou **/Clean**— pour effectuer certaines commandes de génération sans afficher l’IDE Visual Studio. En général il est préférable à l’aide de MSBuild directement, car vous pouvez laisser Visual Studio gère les complexités de MSBuild.
 
-[NMAKE](../build/nmake-reference.md)<br/>
-Utilisez NMAKE (nmake.exe) pour automatiser les tâches qui génèrent des projets Visual C++ à l’aide d’un fichier makefile traditionnel.
+[NMAKE](reference/nmake-reference.md)<br/>
+Utilisez NMAKE (nmake.exe) sur Windows pour générer des projets C++ basés sur un fichier makefile traditionnel.
 
 Lorsque vous générez sur la ligne de commande, la commande F1 n’est pas disponible pour une aide instantanée. Au lieu de cela, vous pouvez utiliser un moteur de recherche pour obtenir des informations sur les avertissements, les erreurs et les messages, ou vous pouvez utiliser les fichiers d’aide hors connexion. Pour utiliser la recherche dans [docs.microsoft.com](https://docs.microsoft.com/cpp/), entrez votre chaîne de recherche dans la zone de recherche en haut de la page.
 
@@ -153,41 +155,41 @@ Lorsque vous générez sur la ligne de commande, la commande F1 n’est pas disp
 
 Les articles répertoriés dans cette section de la documentation montrent comment générer des applications sur la ligne de commande. Ils expliquent aussi comment personnaliser l'environnement de build en ligne de commande pour utiliser les ensembles d'outils 64 bits et cibler les plateformes x86, x64 et ARM. Enfin, ils illustrent l'utilisation des outils de génération en ligne de commande MSBuild et NMAKE.
 
-[Procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+[Procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 Fournit un exemple illustrant la création et la compilation un programme C++ simple sur la ligne de commande.
 
-[Procédure pas à pas : Compilation d’un programme C sur la ligne de commande](../build/walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+[Procédure pas à pas : compiler un programme C sur la ligne de commande](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
 Décrit comment compiler un programme écrit dans le langage de programmation C.
 
-[Procédure pas à pas : compilation d’un programme C++-CLI sur la ligne de commande](../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
+[Procédure pas à pas : compilation d’un programme C++/CLI natif sur la ligne de commande](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
 Décrit comment créer et compiler un programme C++/CLI qui utilise le .NET Framework.
 
-[Procédure pas à pas : compilation d’un programme C++-CX sur la ligne de commande](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
+[Procédure pas à pas : compilation d’un programme C++/CX natif sur la ligne de commande](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
 Décrit comment créer et compiler un programme C++/CX qui utilise le Windows Runtime.
 
-[Définir le chemin et les variables d’environnement pour les générations sur la ligne de commande](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
+[Définir le chemin et les variables d’environnement pour les générations sur la ligne de commande](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
 Décrit comment ouvrir une fenêtre d’invite de commandes qui a les variables d’environnement requises défini pour les builds de ligne de commande qui ciblent x86, x64 et ARM des plateformes à l’aide d’un ensemble d’outils 32 bits ou 64 bits.
 
-[NMAKE, référence](../build/nmake-reference.md)<br/>
+[NMAKE, référence](reference/nmake-reference.md)<br/>
 Fournit des liens vers des articles qui décrivent l'utilitaire Microsoft Program Maintenance Utility (NMAKE.EXE).
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-Fournit des liens vers des articles qui expliquent comment utiliser MSBuild.EXE.
+[MSBuild sur la ligne de commande - C++](msbuild-visual-cpp.md)<br/>
+Fournit des liens vers des articles qui expliquent comment utiliser msbuild.exe à partir de la ligne de commande.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[/MD, /MT, /LD (Utiliser la bibliothèque Runtime)](../build/reference/md-mt-ld-use-run-time-library.md)<br/>
+[/MD, /MT, /LD (Utiliser la bibliothèque Runtime)](reference/md-mt-ld-use-run-time-library.md)<br/>
 Décrit comment utiliser ces options de compilateur pour utiliser une bibliothèque runtime Debug ou Release.
 
-[Options du compilateur C/C++](../build/reference/compiler-options.md)<br/>
+[Options du compilateur C/C++](reference/compiler-options.md)<br/>
 Fournit des liens vers des articles qui présentent les options de compilateur C et C++, ainsi que CL.exe.
 
-[Options de l’éditeur de liens](../build/reference/linker-options.md)<br/>
+[Options de l’éditeur de liens MSVC](reference/linker-options.md)<br/>
 Fournit des liens vers des articles qui présentent les options de l'éditeur de liens et LINK.exe.
 
-[Outils de génération C/C++](../build/reference/c-cpp-build-tools.md)<br/>
+[Outils de génération MSVC supplémentaires](reference/c-cpp-build-tools.md)<br/>
 Fournit des liens vers les C/C++ outils de génération qui sont inclus dans Visual Studio.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Génération de programmes C/C++](../build/building-c-cpp-programs.md)
+[Projets et des systèmes de génération](projects-and-build-systems-cpp.md)

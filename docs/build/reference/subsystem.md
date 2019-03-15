@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415134"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820492"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -65,10 +65,10 @@ Les valeurs facultatives `major` et `minor` spécifient la version minimale requ
 
 - Les valeurs de `major` et `minor` doivent être comprises entre 0 et 65 535.
 
-Le choix du sous-système affecte l'adresse de départ par défaut du programme. Pour plus d’informations, consultez [/ENTRY (symbole de Point d’entrée)](../../build/reference/entry-entry-point-symbol.md), l’éditeur de liens/ENTRY :*fonction* option.
+Le choix du sous-système affecte l'adresse de départ par défaut du programme. Pour plus d’informations, consultez [/ENTRY (symbole de Point d’entrée)](entry-entry-point-symbol.md), l’éditeur de liens/ENTRY :*fonction* option.
 
-Pour plus d’informations, y compris les valeurs minimales et par défaut pour les numéros de version majeure et mineure pour chaque sous-système, consultez le [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) option de l’éditeur de liens.
+Pour plus d’informations, y compris les valeurs minimales et par défaut pour les numéros de version majeure et mineure pour chaque sous-système, consultez le [/SUBSYSTEM](subsystem-specify-subsystem.md) option de l’éditeur de liens.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options EDITBIN](../../build/reference/editbin-options.md)
+[Options EDITBIN](editbin-options.md)

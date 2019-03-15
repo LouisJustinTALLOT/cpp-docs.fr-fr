@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-ms.openlocfilehash: aca009b108eab8a9e7e9401aa14db4ab225d475a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8830b26b8fdfc3db2aa5fe31a52e6226fd554946
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417851"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807479"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Créer une image corrigeable en mémoire)
 
@@ -31,13 +31,13 @@ Prépare une image corrigeable en mémoire.
 
 Lorsque **/hotpatch** est utilisé dans une compilation, le compilateur garantit que la première instruction de chaque fonction est d’au moins deux octets, ce qui est requis pour la création d’images corrigeables.
 
-Pour terminer la préparation de création d’une image corrigeable en mémoire, une fois que vous utilisez **/hotpatch** pour compiler, vous devez utiliser [/FUNCTIONPADMIN (créer une Image corrigeable en mémoire)](../../build/reference/functionpadmin-create-hotpatchable-image.md) à lier. Lorsque vous compilez et liez une image à l’aide d’un appel de cl.exe, **/hotpatch** implique **/functionpadmin**.
+Pour terminer la préparation de création d’une image corrigeable en mémoire, une fois que vous utilisez **/hotpatch** pour compiler, vous devez utiliser [/FUNCTIONPADMIN (créer une Image corrigeable en mémoire)](functionpadmin-create-hotpatchable-image.md) à lier. Lorsque vous compilez et liez une image à l’aide d’un appel de cl.exe, **/hotpatch** implique **/functionpadmin**.
 
 Étant donné que les instructions sont toujours deux octets ou plus sur l’architecture ARM et parce que x64 compilation est toujours traitée comme si **/hotpatch** a été spécifié, vous n’êtes pas obligé de spécifier **/hotpatch** lorsque vous compilez pour ces cibles ; Toutefois, vous devez toujours lier à l’aide de **/functionpadmin** pour créer des images corrigeables en mémoire pour eux. Le **/hotpatch** du compilateur option seule affecte x86 compilation.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **C/C++** dossier.
 
@@ -51,5 +51,5 @@ Pour terminer la préparation de création d’une image corrigeable en mémoire
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

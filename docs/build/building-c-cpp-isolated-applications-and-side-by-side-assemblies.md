@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: 5d487e8a124d2edd7ce5a658d4965f1567756d5a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e3c39595008d92b390b03a56bdcf5fc8990b2103
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694151"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807554"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Génération d'applications isolées C/C++ et d'assemblys côte à côte
 
@@ -26,19 +26,19 @@ Cette section explique comment générer une application C/C++ en tant qu'applic
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Concepts d’applications isolées et d’assemblys côte à côte](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)
+[Concepts d’applications isolées et d’assemblys côte à côte](concepts-of-isolated-applications-and-side-by-side-assemblies.md)
 
-[Génération d’applications isolées C/C++](../build/building-c-cpp-isolated-applications.md)
+[Génération d’applications isolées C/C++](building-c-cpp-isolated-applications.md)
 
-[Génération d’assemblys côte à côte C/C++](../build/building-c-cpp-side-by-side-assemblies.md)
+[Génération d’assemblys côte à côte C/C++](building-c-cpp-side-by-side-assemblies.md)
 
-[Guide pratique pour générer des composants COM sans inscription](../build/how-to-build-registration-free-com-components.md)
+[Guide pratique pour générer des composants COM sans inscription](how-to-build-registration-free-com-components.md)
 
-[Guide pratique pour générer des applications isolées pour consommer des composants COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[Guide pratique pour générer des applications isolées afin de consommer des composants COM](how-to-build-isolated-applications-to-consume-com-components.md)
 
-[Présentation de la génération de manifeste pour les programmes C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Présentation de la génération de manifeste pour les programmes C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
 
-[Dépannage d’applications isolées et d’assemblys côte à côte C/C++](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Dépannage d’applications isolées et d’assemblys côte à côte C/C++](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
 ## <a name="related-sections"></a>Rubriques connexes
 

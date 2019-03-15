@@ -97,13 +97,12 @@ f1_keywords:
 - C5043
 - C5044
 - C5045
-- C5046
-ms.openlocfilehash: 672aa1b0e298be3b6754b1706e721ad6798230ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a0eee4e0a7774c1c92a44ad1e8eaa480ce84d3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642856"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816345"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Avertissements du compilateur C4800 via C5999
 
@@ -122,7 +121,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1) C4806|«*opération*' : opération risquée : aucune valeur de type '*type1*'promue en type'*type2*» peut être égal à la constante donnée|
 |Avertissement du compilateur (niveau 1) C4807|«*opération*' : mélange risqué de type '*type1*'et signé le champ de bits de type'*type2*»|
 |Avertissement du compilateur (niveau 1) C4808|cas '*valeur*' n'est pas une valeur valide pour la condition switch de type 'bool'|
-|Avertissement du compilateur (niveau 1) C4809|l’instruction switch a une étiquette 'default' redondante ; toutes les étiquettes 'case' possibles sont fournies|
+|Avertissement du compilateur (niveau 1) C4809|switch statement has redundant 'default' label; all possible 'case' labels are given|
 |Avertissement du compilateur (niveau 1) C4810|valeur de pragma pack(show) == n|
 |Avertissement du compilateur (niveau 1) C4811|valeur de pragma conform(forScope, show) == value|
 |Avertissement du compilateur (niveau 1) C4812|style de déclaration obsolète : utilisez '*nouvelle_syntaxe*' à la place|
@@ -136,7 +135,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 3) C4823](compiler-warning-level-3-c4823.md)|«*fonction*' : utilise des pointeurs épingle mais déroulement sémantique n’est pas activée. Utilisez /EHa|
 |Avertissement du compilateur (niveau 2) C4826|Conversion de '*type1*'en'*type2*' type signe étendu. Cela peut provoquer un comportement inattendu de runtime.|
 |Avertissement du compilateur (niveau 3) C4827|Une méthode 'ToString' publique avec 0 paramètre doit être marqué comme étant virtuel et remplacer|
-|[Avertissement du compilateur (niveau 1) C4829](compiler-warning-level-1-c4829.md)|Paramètres potentiellement incorrects de la fonction main. Considérez ' int main (Platform::Array\<Platform::String ^ > ^ argv)'|
+|[Avertissement du compilateur (niveau 1) C4829](compiler-warning-level-1-c4829.md)|Paramètres potentiellement incorrects de la fonction main. Consider 'int main(Platform::Array\<Platform::String^>^ argv)'|
 |[Avertissement du compilateur (niveau 1) C4835](compiler-warning-level-1-c4835.md)|«*variable*' : l’initialiseur des données exportées ne sera pas exécuté jusqu'à ce que le code managé pour la première fois dans l’assembly hôte|
 |Avertissement du compilateur (niveau 4) C4837|trigraphe détecté : ' ?? *caractère*« remplacé par »*caractère*'|
 |[Avertissement du compilateur (niveau 1) C4838](compiler-warning-level-1-c4838.md)|conversion de '*type_1*'en'*type_2*' requiert une conversion restrictive|
@@ -144,7 +143,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 4) C4840](compiler-warning-level-4-c4840.md)|utilisation non portable de la classe*type*» en tant qu’argument à une fonction variadique|
 |Avertissement du compilateur (niveau 4) C4841|extension non standard utilisée : désignateur de membre composé utilisé dans offsetof|
 |Avertissement du compilateur (niveau 4) C4842|le résultat d '' offsetof' appliqué à un type à l’aide de l’héritage multiple n’est pas garanti pour être cohérente entre les versions du compilateur|
-|Avertissement C4843 du compilateur|«*type1*' : un gestionnaire d’exceptions de référence à un type tableau ou fonction est inaccessible, utilisez '*type2*' à la place|
+|Avertissement C4843 du compilateur|«*type1*» : Un gestionnaire d’exceptions de référence à un type tableau ou fonction est inaccessible, utilisez '*type2*' à la place|
 |Avertissement C4844 du compilateur|' exporter le module *nom_module*; » est désormais la syntaxe préférée pour déclarer une interface de module|
 |[Avertissement du compilateur (niveau 4) C4866](c4866.md)| compilateur ne peut pas appliquer l’ordre d’évaluation de gauche à droite pour l’appel à *nom_opérateur*|
 |[Avertissement (erreur) du compilateur C4867](compiler-warning-c4867.md)|'*fonction*' : appel manquant de liste d’arguments de fonction ; utilisez '*appeler*' pour créer un pointeur vers membre|
@@ -172,12 +171,12 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 1) C4930](compiler-warning-level-1-c4930.md)|«*prototype*' : fonction prototypée non appelée (était une définition de variable souhaitée ?)|
 |[Avertissement du compilateur (niveau 4) C4931](compiler-warning-level-4-c4931.md)|bibliothèque de types présumée construite pour des pointeurs 'nombre' bits|
 |Avertissement du compilateur (niveau 4) C4932|__identifier (*identificateur*) et \__identificateur (*identificateur*) ne se distinguent pas|
-|Avertissement du compilateur (niveau 1) C4934|'__delegate (Multicast)' est déconseillé, utilisez '\__delegate' à la place|
+|Avertissement du compilateur (niveau 1) C4934|'__delegate(multicast)' is deprecated, use '\__delegate' instead|
 |Avertissement du compilateur (niveau 1) C4935|spécificateur d’accès l’assembly modifié à partir de '*accès*»|
 |Avertissement du compilateur (niveau 1, erreur) C4936|ce __declspec est pris en charge uniquement lorsqu'il est compilé avec /clr ou /clr:pure|
 |Avertissement du compilateur (niveau 4) C4937|«*text1*'et'*text2*« sont impossibles à distinguer en tant qu’arguments pour »*directive*»|
-|Avertissement du compilateur (niveau 4) C4938|«*var*' : variable de réduction de la virgule flottante peut entraîner des résultats incohérents sous/fp : strict ou #pragma fenv_access|
-|Avertissement C4939 du compilateur|#pragma vtordisp est déconseillé et sera supprimé dans une mise en production ultérieure de Visual C++|
+|Avertissement du compilateur (niveau 4) C4938|«*var*» : Variable de réduction de la virgule flottante peut entraîner des résultats incohérents sous/fp : strict ou #pragma fenv_access|
+|Avertissement C4939 du compilateur|#pragma vtordisp est déconseillé et sera supprimé dans une version ultérieure de Visual C++|
 |Avertissement du compilateur (niveau 1) C4944|«*symbole*' : ne peut pas importer le symbole de '*assembly1*' : en tant que*symbole*' existe déjà dans la portée actuelle|
 |[Avertissement du compilateur (niveau 1) C4945](compiler-warning-level-1-c4945.md)|«*symbole*' : ne peut pas importer le symbole de '*assembly1*' : en tant que*symbole*'a déjà été importé à partir d’un autre assembly'*assembly2* '|
 |[Avertissement du compilateur (niveau 1) C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast utilisé entre des classes connexes : '*class1*'et'*classe2*'|
@@ -196,7 +195,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1, erreur) C4959|Impossible de définir le type non managé '*type*» dans/CLR : safe, car l’accès à ses membres génère du code non vérifiable|
 |Avertissement du compilateur (niveau 4) C4960|«*fonction*' est trop grand pour être profilé|
 |Avertissement du compilateur (niveau 1) C4961|Aucune donnée de profil n’a été fusionnée dans 'fichier .pgd', les optimisations guidées par profil sont désactivées|
-|Avertissement du compilateur (niveau 4) C4962|«*fonction*' : les optimisations guidées par profil désactivées, car elles génèrent des incohérences au niveau des données de profil|
+|Avertissement du compilateur (niveau 4) C4962|«*fonction*» : Optimisations guidées par profil désactivées, car elles génèrent des incohérences au niveau des données de profil|
 |Avertissement du compilateur (niveau 1) C4963|«*description*' : aucune donnée de profil trouvée ; les différentes options de compilateur ont été utilisées dans la génération instrumentée|
 |[Avertissement du compilateur (niveau 1) C4964](compiler-warning-level-1-c4964.md)|Aucune option d’optimisation a été spécifiée ; informations de profil ne seront pas collectées.|
 |[Avertissement du compilateur (niveau 1) C4965](compiler-warning-level-1-c4965.md)|boxing implicite de l’entier 0 ; utilisez nullptr ou cast explicite|
@@ -226,7 +225,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 4) C5025|«*type*' : déplacement opérateur d’assignation a été implicitement défini comme étant supprimé|
 |Avertissement du compilateur (niveaux 1 et 4) C5026|«*type*' : constructeur de déplacement a été implicitement défini comme étant supprimé|
 |Avertissement du compilateur (niveaux 1 et 4) C5027|«*type*' : déplacement opérateur d’assignation a été implicitement défini comme étant supprimé|
-|Avertissement du compilateur (niveau 1) C5028|«*nom*' : alignement spécifié dans la déclaration antérieure (*nombre*) non spécifiée dans la définition|
+|Avertissement du compilateur (niveau 1) C5028|«*nom*» : L’alignement spécifié dans la déclaration antérieure (*nombre*) non spécifiée dans la définition|
 |Avertissement du compilateur (niveau 4) C5029|extension non standard utilisée : les attributs d’alignement en C++ s’appliquent aux variables, les membres de données et les types de balises uniquement|
 |Avertissement du compilateur (niveau 3) C5030|attribut '*attribut*' n’est pas reconnu|
 |Avertissement du compilateur (niveau 4) C5031|#pragma warning (pop) : incompatibilité probable, état d’avertissement envoyé dans un autre fichier|
@@ -244,4 +243,4 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 2) avertissements C5043|«*spécification*' : spécification d’exception ne correspond pas à la déclaration précédente|
 |Avertissement du compilateur (niveau 4) C5044|Un argument pour l’option de ligne de commande *option* pointe vers un chemin d’accès '*chemin d’accès*' qui n’existe pas|
 |[Avertissement C5045 du compilateur](c5045.md)|Compilateur va insérer l’atténuation de Spectre pour la charge de mémoire si le commutateur/qspectre spécifié|
-|[Avertissement du compilateur (niveau 2) C5046](c5046.md)|«*fonction*' : symbole impliquant le type avec une liaison interne non définie|
+|[Avertissement du compilateur (niveau 2) C5046](c5046.md)|«*fonction*» : Symbole impliquant le type avec une liaison interne non définie|

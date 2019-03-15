@@ -10,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 48592fd6162ee354d82e73228e8b144ef0f354ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420582"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810235"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportation à partir d'une DLL à l'aide de __declspec(dllexport)
 
@@ -49,7 +49,7 @@ Lorsque vous créez votre DLL, vous créez généralement un fichier d’en-têt
 #define DllExport   __declspec( dllexport )
 ```
 
-**__declspec (dllexport)** stocke les noms dans la table d’exportation de la DLL de fonction. Si vous souhaitez optimiser la taille du tableau, consultez [exportation de fonctions à partir d’une DLL par Ordinal plutôt que par nom](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+**__declspec (dllexport)** stocke les noms dans la table d’exportation de la DLL de fonction. Si vous souhaitez optimiser la taille du tableau, consultez [exportation de fonctions à partir d’une DLL par Ordinal plutôt que par nom](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
 > [!NOTE]
 >  Lors du portage du code source de la DLL de Win16 en Win32, remplacez chaque instance de **__export** avec **__declspec (dllexport)**.
@@ -58,28 +58,28 @@ En tant que référence, parcourez le fichier d’en-tête Winbase.h Win32. Il c
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Exporter à partir d’une DLL à l’aide de fichiers .def](../build/exporting-from-a-dll-using-def-files.md)
+- [Exporter à partir d’une DLL à l’aide de fichiers .def](exporting-from-a-dll-using-def-files.md)
 
-- [Exporter et importer à l’aide de AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exporter et importer à l’aide de AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exporter des fonctions C++ à utiliser dans des exécutables en langage C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exporter des fonctions C++ à utiliser dans des exécutables en langage C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exporter des fonctions C à utiliser dans des exécutables en langage C ou C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exporter des fonctions C à utiliser dans des exécutables en langage C ou C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Déterminer la méthode d’exportation à utiliser](../build/determining-which-exporting-method-to-use.md)
+- [Déterminer la méthode d’exportation à utiliser](determining-which-exporting-method-to-use.md)
 
-- [Importer dans une application à l’aide de __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une application à l’aide de __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Initialiser une DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
 - [Le mot clé __declspec](../cpp/declspec.md)
 
-- [L’importation et exportation de fonctions inline](../build/importing-and-exporting-inline-functions.md)
+- [L’importation et exportation de fonctions inline](importing-and-exporting-inline-functions.md)
 
-- [Importations mutuelles](../build/mutual-imports.md)
+- [Importations mutuelles](mutual-imports.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exportation à partir d’une DLL](../build/exporting-from-a-dll.md)
+[Exportation à partir d’une DLL](exporting-from-a-dll.md)

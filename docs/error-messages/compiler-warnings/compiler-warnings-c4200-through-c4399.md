@@ -31,14 +31,13 @@ f1_keywords:
 - C4380
 - C4387
 - C4388
-- C4396
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455992"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810508"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Avertissements du compilateur C4200 à C4399
 
@@ -92,7 +91,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 2) C4250](../../error-messages/compiler-warnings/compiler-warning-level-2-c4250.md)|«*classname*' : hérite de '*base_classname*::*membre*' via la dominance|
 |[Avertissement du compilateur (niveau 1) C4251](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)|«*identificateur*' : '*object_type1*' '*identificateur1*« doit avoir une interface dll pour être utilisé par les clients de »*object_type*' '*identfier2*'|
 |[Avertissement du compilateur (niveau 4) C4254](../../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)|«*opérateur*' : conversion de '*type1*:*field_bits*'en'*type2*:*field_bits*», perte de données|
-|[Avertissement du compilateur (niveau 4) C4255](../../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)|«*fonction*' : aucun prototype de fonction fourni : conversion de '()' en '(void)'|
+|[Avertissement du compilateur (niveau 4) C4255](../../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)|'*function*': no function prototype given: converting '()' to '(void)'|
 |[Avertissement du compilateur (niveau 4) C4256](../../error-messages/compiler-warnings/compiler-warning-level-4-c4256.md)|«*fonction*' : constructeur de classe avec bases virtuelles a '...' ; appels ne seront ne peut-être pas compatibles avec les versions antérieures de Visual C++|
 |[Avertissement du compilateur (niveau 1) C4258](../../error-messages/compiler-warnings/compiler-warning-level-1-c4258.md)|«*variable*' : définition de la boucle for ignorée ; la définition de la portée englobante est utilisée|
 |[Avertissement du compilateur (niveau 4) C4263](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)|«*fonction*' : fonction membre ne remplace pas n’importe quelle fonction membre virtuelle de classe de base|
@@ -104,7 +103,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|«*identificateur*' : les données automatiques 'const' initialisées avec le constructeur de valeur par défaut généré par le compilateur produisent des résultats incertains|
 |[Avertissement du compilateur (niveau 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|«*fonction*' : est marqué comme __declspec (dllimport) ; doit spécifier convention d’appel native lors de l’importation d’une fonction.|
 |[Avertissement du compilateur (niveau 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|«*fonction*' : liaison dll incohérente|
-|Avertissement du compilateur (niveau 1) C4274|#ident ignoré ; consultez la documentation pour #pragma comment (exestr, 'string')|
+|Avertissement du compilateur (niveau 1) C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[Avertissement du compilateur (niveau 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|interface non dll '*classkey*' '*identificateur1*'utilisée comme base pour une interface dll'*classkey*' '*identificateur2*'|
 |[Avertissement du compilateur (niveau 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|«*fonction*' : aucun prototype fourni ; on suppose aucun paramètre|
 |Avertissement du compilateur (niveau 1) C4277|élément importé '*classname*::*membre*' existe en tant que membre de données et de fonction membre ; donnée membre ignorée|
@@ -153,7 +152,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|type de retour de '*fonction*'doit être'*type1*« au lieu de »*type2*'|
 |Avertissement C4327 du compilateur|«*attribution*' : alignement d’indirection de LHS ('*alignment1*») est supérieur à celui de RHS («*alignment2*»)|
 |Avertissement de l’erreur C4328 du compilateur|«*fonction*' : alignement d’indirection du paramètre formel *numéro_paramètre* (*parameter_alignment*) est supérieure à l’alignement de l’argument réel (*argument_alignment*)|
-|[Avertissement du compilateur (niveau 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) est ignoré sur enum|
+|[Avertissement du compilateur (niveau 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) is ignored on enum|
 |Avertissement du compilateur (niveau 1) C4330|attribut '*attribut*« pour la section »*section*' ignoré|
 |[Avertissement du compilateur (niveau 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|«*shift_operator*' : décalage vers la droite trop important, perte de données|
 |[Avertissement du compilateur (niveau 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|«*shift_operator*' : résultat du décalage 32 bits converti implicitement en 64 bits (était décalage 64 bits destiné ?)|
@@ -175,7 +174,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|«*membre*' : données membres static ne peuvent pas être initialisées via une classe dérivée|
 |[Avertissement du compilateur (niveau 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|argument de tableau param trouvé dans la liste d’arguments formels pour le délégué '*déléguer*'ignoré lors de la génération'*fonction*'|
 |[Avertissement du compilateur (niveau 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|«*opérateur*' : type de retour des délégués combinés n’est pas 'void' ; la valeur retournée n’est pas définie|
-|[Avertissement du compilateur (niveau 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|«*type*' : spécificateur d’alignement est inférieur à l’alignement réel («*alignement*») et sera ignoré.|
+|[Avertissement du compilateur (niveau 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|«*type*» : Spécificateur d’alignement est inférieur à l’alignement réel («*alignement*») et sera ignoré.|
 |Avertissement du compilateur (niveau 2) C4362|«*type*' : alignement supérieur à 8 octets n’est pas pris en charge par le CLR|
 |[Avertissement du compilateur (niveau 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using pour l’assembly '*assembly*'déjà rencontré à'*emplacement*' ('*line_number*») sans en tant que\_attribut de friend ; comme\_friend pas appliqué|
 |[Avertissement du compilateur (niveau 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|«*expression*' : conversion de '*type1*'en'*type2*', incompatibilité signed/unsigned|
@@ -192,7 +191,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|les types natifs sont privés par défaut ; -d1PrivateNativeTypes est déconseillé.|
 |[Avertissement du compilateur (niveau 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Les pointeurs de fonction pour l’exécution des initialiseurs ; envisagez de System::ModuleHandle::ResolveMethodHandle|
 |[Avertissement du compilateur (niveau 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|Version '*numéro_version*» du common language runtime ne prend pas en charge ce compilateur. À l’aide de cette version peut provoquer des résultats inattendus|
-|Avertissement du compilateur (niveau 1, erreur) C4380|«*classe*' : un constructeur par défaut ne peut pas être déconseillé.|
+|Avertissement du compilateur (niveau 1, erreur) C4380|«*classe*» : Un constructeur par défaut ne peut pas être déconseillé.|
 |[Avertissement du compilateur (niveau 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|«*function1*' : méthode d’interface ne sera pas implémentée par une méthode non publique '*function2*»|
 |[Avertissement du compilateur (niveau 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|lever '*type*' : un type avec le constructeur de copie ou le destructeur __clrcall ne peut être intercepté que dans/CLR : pure module|
 |[Avertissement du compilateur (niveau 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|«*opérateur_déréférencement_instance*' : la signification du déréférencement d’un handle peut changer lorsqu’un défini par l’utilisateur '*opérateur_déréférencement_instance*' opérateur existe ; écrivez l’opérateur comme statique fonction comme étant l’opérande explicite|

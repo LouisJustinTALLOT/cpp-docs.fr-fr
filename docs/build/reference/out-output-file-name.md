@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /OUT C++ linker option
 - linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
-ms.openlocfilehash: 395a2475ec572476f80b17cc5ffab7c2724e6b02
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: be5fe929bdcf52be19955a5bc2d7aa093e194f45
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418046"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812419"
 ---
 # <a name="out-output-file-name"></a>/OUT (Nom du fichier de sortie)
 
@@ -35,11 +35,11 @@ L’option /OUT substitue le nom par défaut et l’emplacement du programme qui
 
 Par défaut, l’éditeur de liens constitue le nom de fichier en utilisant le nom de base du premier fichier .obj spécifié et l’extension appropriée (.exe ou .dll).
 
-Cette option le nom de base par défaut pour une bibliothèque de fichier de mappage ou d’importation. Pour plus d’informations, consultez [générer fichier de mappage](../../build/reference/map-generate-mapfile.md) (/Map) et [/IMPLIB](../../build/reference/implib-name-import-library.md).
+Cette option le nom de base par défaut pour une bibliothèque de fichier de mappage ou d’importation. Pour plus d’informations, consultez [générer fichier de mappage](map-generate-mapfile.md) (/Map) et [/IMPLIB](implib-name-import-library.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -53,5 +53,5 @@ Cette option le nom de base par défaut pour une bibliothèque de fichier de map
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

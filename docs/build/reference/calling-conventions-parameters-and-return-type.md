@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264801"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812965"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Conventions d'appel, paramètres et type de retour
 
@@ -29,7 +29,7 @@ FARPROC WINAPI __delayLoadHelper2(
 *pidd*<br/>
 Un `const` pointeur vers un `ImgDelayDescr` qui contient les décalages de diverses données liées aux importations, un horodatage pour les informations de liaison et un ensemble d’attributs qui fournissent des informations supplémentaires sur le contenu du descripteur. Actuellement, il n'est qu’un seul attribut, `dlattrRva`, ce qui indique que les adresses dans le descripteur sont des adresses virtuelles relatives. Pour plus d’informations, consultez les déclarations dans *delayimp.h*.
 
-Pour la définition de la `PCImgDelayDescr` structure, consultez [définitions des structures et constantes](../../build/reference/structure-and-constant-definitions.md).
+Pour la définition de la `PCImgDelayDescr` structure, consultez [définitions des structures et constantes](structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
 Pointeur vers l’emplacement dans le délai charge adresse table d’importation (IAT) qui est mis à jour avec l’adresse de la fonction importée. La routine d’assistance doit stocker la même valeur qu’il renvoie dans cet emplacement.
@@ -137,4 +137,4 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation de la fonction d’assistance](../../build/reference/understanding-the-helper-function.md)
+[Présentation de la fonction d’assistance](understanding-the-helper-function.md)

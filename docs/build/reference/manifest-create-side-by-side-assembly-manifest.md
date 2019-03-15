@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-ms.openlocfilehash: 685d98d166a94f2c17feae7bfafbd64b77786e8d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9a3ca3980a9cdff4e67885b2ad47ffa2385b0774
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418774"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807817"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Créer un manifeste d'assembly côte à côte)
 
@@ -29,7 +29,7 @@ La valeur par défaut est /MANIFEST.
 
 Le /MANIFEST : incorporer option spécifie que l’éditeur de liens doit incorporer le fichier manifeste dans l’image en tant que ressource de type RT_MANIFEST. Le paramètre facultatif `ID` paramètre est l’ID de ressource à utiliser pour le manifeste. Utilisez la valeur 1 pour un fichier exécutable. Utilisez la valeur 2 pour une DLL pour lui permettre de spécifier les dépendances privés. Si le `ID` paramètre n’est pas spécifié, la valeur par défaut est 2 si l’option /DLL est définie ; sinon, la valeur par défaut est 1.
 
-À compter de Visual Studio 2008, les fichiers manifeste pour les fichiers exécutables contiennent une section qui spécifie les informations de contrôle de compte utilisateur (UAC). Si vous spécifiez /MANIFEST mais que vous ne spécifiez ni [/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) ni [/DLL](../../build/reference/dll-build-a-dll.md), un fragment du contrôle par défaut qui a la valeur de niveau de contrôle de compte utilisateur *asInvoker* est inséré dans le manifeste. Pour plus d’informations sur les niveaux UAC, consultez [/MANIFESTUAC (informations UAC incorpore dans le manifeste)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).
+À compter de Visual Studio 2008, les fichiers manifeste pour les fichiers exécutables contiennent une section qui spécifie les informations de contrôle de compte utilisateur (UAC). Si vous spécifiez /MANIFEST mais que vous ne spécifiez ni [/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md) ni [/DLL](dll-build-a-dll.md), un fragment du contrôle par défaut qui a la valeur de niveau de contrôle de compte utilisateur *asInvoker* est inséré dans le manifeste. Pour plus d’informations sur les niveaux UAC, consultez [/MANIFESTUAC (informations UAC incorpore dans le manifeste)](manifestuac-embeds-uac-information-in-manifest.md).
 
 Pour modifier le comportement par défaut pour le compte d’utilisateur, effectuez l’une d'entre elles :
 
@@ -37,13 +37,13 @@ Pour modifier le comportement par défaut pour le compte d’utilisateur, effect
 
 - Ou spécifiez l’option : no si vous ne souhaitez pas générer un fragment du contrôle dans le manifeste.
 
-Si vous ne spécifiez pas /MANIFEST, mais spécifiez [/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md) des commentaires, un fichier manifest est créé. Un fichier manifest n’est pas créé si vous spécifiez/manifest : no.
+Si vous ne spécifiez pas /MANIFEST, mais spécifiez [/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md) des commentaires, un fichier manifest est créé. Un fichier manifest n’est pas créé si vous spécifiez/manifest : no.
 
 Si vous spécifiez /MANIFEST, le nom du fichier manifeste est la même que le nom de votre fichier de sortie, mais avec l’extension .manifest ajoutée au nom de fichier. Par exemple, si votre nom de fichier de sortie est MyFile.exe, le nom du fichier manifeste est MyFile.exe.manifest.  Si vous spécifiez MANIFESTFILE :*nom*, le nom du manifeste est ce que vous spécifiez dans *nom*.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Développez le nœud **Propriétés de configuration**.
 
@@ -59,5 +59,5 @@ Si vous spécifiez /MANIFEST, le nom du fichier manifeste est la même que le no
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

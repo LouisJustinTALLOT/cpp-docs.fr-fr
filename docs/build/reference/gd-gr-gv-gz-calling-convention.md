@@ -1,5 +1,5 @@
 ---
-title: /Gd, /Gr, /Gv, /Gz (Convention d’appel)
+title: /Gd, /Gr, /Gv, /Gz (Convention d'appel)
 ms.date: 09/05/2018
 f1_keywords:
 - /gr
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 8eba665e34fc3b949283557461e33348106fd532
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451510"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817463"
 ---
-# <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convention d’appel)
+# <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convention d'appel)
 
 Ces options déterminent l’ordre dans lesquels fonction arguments sont transmis dans la pile, si la fonction appelante ou la fonction appelée supprime les arguments de la pile à la fin de l’appel et la convention de décoration de nom que le compilateur utilise pour identifier fonctions individuelles.
 
@@ -51,14 +51,14 @@ Ces options déterminent l’ordre dans lesquels fonction arguments sont transmi
 
 Les fonctions qui acceptent un nombre variable d’arguments doivent être marquées `__cdecl`.
 
-**/Gd**, **/GR**, **GV** et **/Gz** ne sont pas compatibles avec [/CLR : safe](../../build/reference/clr-common-language-runtime-compilation.md) ou   **/CLR : pure**. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+**/Gd**, **/GR**, **GV** et **/Gz** ne sont pas compatibles avec [/CLR : safe](clr-common-language-runtime-compilation.md) ou   **/CLR : pure**. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 
 > [!NOTE]
 > Par défaut pour x86 processeurs, fonctions membres C++ utilisent [__thiscall](../../cpp/thiscall.md).
 
 Pour tous les processeurs, une fonction membre qui est marquée explicitement comme `__cdecl`, `__fastcall`, `__vectorcall`, ou `__stdcall` utilise la convention d’appel spécifiée si elle n’est pas ignorée dans cette architecture. Une fonction membre qui accepte un nombre variable d’arguments toujours utilise le `__cdecl` convention d’appel.
 
-Ces options du compilateur n’ont aucun effet sur la décoration de noms des méthodes et fonctions C++. Sauf si déclarée comme `extern "C"`, fonctions et méthodes C++ utilisent un mécanisme de décoration de noms différent. Pour plus d’informations, consultez [noms décorés](../../build/reference/decorated-names.md).
+Ces options du compilateur n’ont aucun effet sur la décoration de noms des méthodes et fonctions C++. Sauf si déclarée comme `extern "C"`, fonctions et méthodes C++ utilisent un mécanisme de décoration de noms différent. Pour plus d’informations, consultez [noms décorés](decorated-names.md).
 
 Pour plus d’informations sur les conventions d’appel, consultez [Conventions d’appel](../../cpp/calling-conventions.md).
 
@@ -66,7 +66,7 @@ Pour plus d’informations sur les conventions d’appel, consultez [Conventions
 
 Sur x86 processeurs, tous les arguments de fonction sont passés sur la pile de droite à gauche. Sur ARM et x64 architectures, certains arguments sont passés par le Registre et les autres sont passés sur la pile de droite à gauche. La routine d’appel enlève les arguments de la pile.
 
-Pour C, la `__cdecl` naming convention utilise le nom de fonction précédé par un trait de soulignement ( `_` ) ; aucune conversion de casse n’est effectuée. Sauf si déclarée comme `extern "C"`, les fonctions C++ utilisent un mécanisme de décoration de nom différent. Pour plus d’informations, consultez [noms décorés](../../build/reference/decorated-names.md).
+Pour C, la `__cdecl` naming convention utilise le nom de fonction précédé par un trait de soulignement ( `_` ) ; aucune conversion de casse n’est effectuée. Sauf si déclarée comme `extern "C"`, les fonctions C++ utilisent un mécanisme de décoration de nom différent. Pour plus d’informations, consultez [noms décorés](decorated-names.md).
 
 ## <a name="fastcall-specifics"></a>particularités de __fastcall
 
@@ -99,7 +99,7 @@ Pour C, la `__vectorcall` convention d’affectation de noms utilise le nom de f
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **C/C++** > **avancé** page de propriétés.
 
@@ -111,5 +111,5 @@ Pour C, la `__vectorcall` convention d’affectation de noms utilise le nom de f
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur](../../build/reference/compiler-options.md)
-- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+- [Options du compilateur MSVC](compiler-options.md)
+- [Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

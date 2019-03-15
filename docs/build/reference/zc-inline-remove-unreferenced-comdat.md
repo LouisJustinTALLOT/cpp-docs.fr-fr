@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 6855773c6ec807a7488fa5604ddee7fd43983135
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441234"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820518"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (supprimer des éléments COMDAT non référencés)
 
@@ -27,7 +27,7 @@ Supprime les données ou fonctions non référencées qui sont des COMDAT ou qui
 
 ## <a name="remarks"></a>Notes
 
-Lorsque **/Zc : inline** est spécifié, le compilateur n’émet pas d’informations de symboles pour les fonctions COMDAT non référencées ou des données, ou pour les fonctions ou des données qui possèdent uniquement une liaison interne. Cette optimisation simplifie une partie du travail effectué par l’éditeur de liens dans les versions release ou quand l’option de l’éditeur de liens [/OPT : REF](../../build/reference/opt-optimizations.md) est spécifié. Quand le compilateur effectue cette optimisation, il peut réduire considérablement la taille du fichier .obj et accélérer le fonctionnement de l'éditeur de liens. Cette option du compilateur n’est pas activée quand les optimisations sont désactivées ([/Od](../../build/reference/od-disable-debug.md)) ou lorsque [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md) est spécifié.
+Lorsque **/Zc : inline** est spécifié, le compilateur n’émet pas d’informations de symboles pour les fonctions COMDAT non référencées ou des données, ou pour les fonctions ou des données qui possèdent uniquement une liaison interne. Cette optimisation simplifie une partie du travail effectué par l’éditeur de liens dans les versions release ou quand l’option de l’éditeur de liens [/OPT : REF](opt-optimizations.md) est spécifié. Quand le compilateur effectue cette optimisation, il peut réduire considérablement la taille du fichier .obj et accélérer le fonctionnement de l'éditeur de liens. Cette option du compilateur n’est pas activée quand les optimisations sont désactivées ([/Od](od-disable-debug.md)) ou lorsque [/GL (Whole Program Optimization)](gl-whole-program-optimization.md) est spécifié.
 
 Par défaut, cette option est désactivée (**/Zc:inline-**). Le [/ permissive-](permissive-standards-conformance.md) option n’active pas **/Zc : inline**.
 
@@ -121,9 +121,9 @@ void main() {
 
 Pour plus d’informations sur les problèmes de conformité dans Visual C++, consultez [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **langage** page de propriétés.
 
@@ -131,4 +131,4 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Zc (Conformité)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Conformité)](zc-conformance.md)<br/>

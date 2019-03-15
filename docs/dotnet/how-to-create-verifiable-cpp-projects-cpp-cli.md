@@ -1,17 +1,17 @@
 ---
-title: 'Comment : créer des projets C++ vérifiables (C++/CLI)'
+title: 'Procédure : Créer des projets C++ vérifiables (C++ / c++ / CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630436"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817373"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Comment : créer des projets C++ vérifiables (C++ / c++ / CLI)
 
@@ -28,7 +28,7 @@ Par défaut, les projets .NET utilisent l’indicateur de compilateur/CLR et con
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>Pour modifier les paramètres du compilateur et éditeur de liens
 
-1. Afficher la Page de propriétés du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).
+1. Afficher la Page de propriétés du projet. Pour plus d’informations, consultez [définir du compilateur et les propriétés de build](../build/working-with-project-properties.md).
 
 1. Sur le **général** page sous le **propriétés de Configuration** nœud, définissez la **prise en charge du Common Language Runtime** propriété **Safe MSIL Common Language Prise en charge runtime (/ CLR : safe)**.
 
@@ -56,7 +56,7 @@ Par défaut, les projets .NET utilisent l’indicateur de compilateur/CLR et con
 
 1. Remplacez _tmain() Main() dans le fichier du projet .cpp principal.
 
-1. Afficher la Page de propriétés du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../ide/working-with-project-properties.md).
+1. Afficher la Page de propriétés du projet. Pour plus d’informations, consultez [définir du compilateur et les propriétés de build](../build/working-with-project-properties.md).
 
 1. Sur le **avancé** page sous le **l’éditeur de liens** nœud, entrez `Main` en tant que le **Point d’entrée** valeur de propriété.
 

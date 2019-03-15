@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], swap tuning
 - paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
-ms.openlocfilehash: 5429876d9bfae7d8b317d52d69f0b21c720b002a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b1927ffd2efc923157fe1956fe905c939bc62719
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418072"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807882"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (Mettre les fonctions dans l'ordre)
 
@@ -36,11 +36,11 @@ Un fichier texte qui spécifie l’ordre de liaison des fonctions COMDAT.
 
 Le **/Order** option du compilateur vous permet d’optimiser le comportement de pagination de votre programme en regroupant une fonction avec les fonctions qu’elle appelle. Vous pouvez également regrouper les fonctions fréquemment appelées. Ces techniques, connu sous le nom *réglage de l’échange* ou *l’optimisation de la pagination*, augmente la probabilité qu’une fonction appelée est en mémoire lorsqu’il est nécessaire et ne doit pas être averti par radiomessagerie à partir du disque.
 
-Quand vous compilez votre code source dans un fichier objet, vous pouvez indiquer au compilateur de placer chaque fonction dans sa propre section appelée un *COMDAT*, à l’aide de la [/Gy (activer la liaison au niveau des fonctions)](../../build/reference/gy-enable-function-level-linking.md) compilateur option. Le **/Order** option de l’éditeur de liens indique à l’éditeur de liens de placer les COMDAT dans l’image exécutable dans l’ordre que vous spécifiez.
+Quand vous compilez votre code source dans un fichier objet, vous pouvez indiquer au compilateur de placer chaque fonction dans sa propre section appelée un *COMDAT*, à l’aide de la [/Gy (activer la liaison au niveau des fonctions)](gy-enable-function-level-linking.md) compilateur option. Le **/Order** option de l’éditeur de liens indique à l’éditeur de liens de placer les COMDAT dans l’image exécutable dans l’ordre que vous spécifiez.
 
-Pour spécifier l’ordre COMDAT, créez un *fichier réponse*, un fichier texte qui répertorie chaque COMDAT par nom, une par ligne, dans l’ordre que vous sélectionnez soient placés par l’éditeur de liens. Passez le nom de ce fichier en tant que le *filename* paramètre de la **/Order** option. Pour les fonctions C++, le nom d’un COMDAT est la forme décorée du nom de fonction. Utiliser le nom non décoré de fonctions C, `main`, et pour les fonctions C++ déclarées en tant que `extern "C"`. Noms de fonctions et les noms décorés respectent la casse. Pour plus d’informations sur les noms décorés, consultez [noms décorés](../../build/reference/decorated-names.md).
+Pour spécifier l’ordre COMDAT, créez un *fichier réponse*, un fichier texte qui répertorie chaque COMDAT par nom, une par ligne, dans l’ordre que vous sélectionnez soient placés par l’éditeur de liens. Passez le nom de ce fichier en tant que le *filename* paramètre de la **/Order** option. Pour les fonctions C++, le nom d’un COMDAT est la forme décorée du nom de fonction. Utiliser le nom non décoré de fonctions C, `main`, et pour les fonctions C++ déclarées en tant que `extern "C"`. Noms de fonctions et les noms décorés respectent la casse. Pour plus d’informations sur les noms décorés, consultez [noms décorés](decorated-names.md).
 
-Pour rechercher les noms décorés de votre COMDAT, utilisez le [DUMPBIN](../../build/reference/dumpbin-reference.md) l’outil [/symboles](../../build/reference/symbols.md) option sur le fichier objet. L’éditeur de liens ajoute automatiquement un trait de soulignement (**\_**) de la fonction dans la réponse, les noms de fichiers, sauf si le nom commence par un point d’interrogation (**?**) ou signe arobase ( **\@**). Par exemple, si un fichier source, example.cpp, contient des fonctions `int cpp_func(int)`, `extern "C" int c_func(int)` et `int main(void)`, la commande `DUMPBIN /SYMBOLS example.obj` répertorie ces noms décorés :
+Pour rechercher les noms décorés de votre COMDAT, utilisez le [DUMPBIN](dumpbin-reference.md) l’outil [/symboles](symbols.md) option sur le fichier objet. L’éditeur de liens ajoute automatiquement un trait de soulignement (**\_**) de la fonction dans la réponse, les noms de fichiers, sauf si le nom commence par un point d’interrogation (**?**) ou signe arobase ( **\@**). Par exemple, si un fichier source, example.cpp, contient des fonctions `int cpp_func(int)`, `extern "C" int c_func(int)` et `int main(void)`, la commande `DUMPBIN /SYMBOLS example.obj` répertorie ces noms décorés :
 
 ```Output
 ...
@@ -54,14 +54,14 @@ Dans ce cas, spécifiez les noms en tant que `?cpp_func@@YAHH@Z`, `c_func`, et `
 
 Si plusieurs objets **/Order** option s’affiche dans les options de l’éditeur de liens, la dernière spécifiée est appliquée.
 
-Le **/Order** option désactive la liaison incrémentielle. Vous pouvez voir l’avertissement de l’éditeur de liens [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) lorsque vous spécifiez cette option si la liaison incrémentielle est activée, ou si vous avez spécifié le [/ZI (PDB incrémentielle)](../../build/reference/z7-zi-zi-debug-information-format.md) option du compilateur. Pour exclure cet avertissement, vous pouvez utiliser la [/INCREMENTAL : no](../../build/reference/incremental-link-incrementally.md) option de l’éditeur de liens pour désactiver les liens incrémentiels et utiliser le [/ZI (générer des PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) option du compilateur pour générer un fichier PDB sans liaison incrémentielle.
+Le **/Order** option désactive la liaison incrémentielle. Vous pouvez voir l’avertissement de l’éditeur de liens [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) lorsque vous spécifiez cette option si la liaison incrémentielle est activée, ou si vous avez spécifié le [/ZI (PDB incrémentielle)](z7-zi-zi-debug-information-format.md) option du compilateur. Pour exclure cet avertissement, vous pouvez utiliser la [/INCREMENTAL : no](incremental-link-incrementally.md) option de l’éditeur de liens pour désactiver les liens incrémentiels et utiliser le [/ZI (générer des PDB)](z7-zi-zi-debug-information-format.md) option du compilateur pour générer un fichier PDB sans liaison incrémentielle.
 
 > [!NOTE]
 > LIEN ne peut pas classer les fonctions statiques, car les noms de fonctions statiques ne sont pas des noms de symboles publics. Lorsque **/Order** est spécifié, l’avertissement de l’éditeur de liens [LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md) est généré pour chaque symbole dans le fichier de réponse de commande qui est statique ou est introuvable.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **optimisation** page de propriétés.
 
@@ -73,5 +73,5 @@ Le **/Order** option désactive la liaison incrémentielle. Vous pouvez voir l�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

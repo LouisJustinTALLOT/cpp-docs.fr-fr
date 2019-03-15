@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b800bdcc36c82dabe13418244782e82737ad9171
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f98667d3a771994d1b4e54b429f42cb566c102c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502022"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810249"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Forcer la conformité à la portée de la boucle for)
 
-Permet d'implémenter un comportement C++ standard pour les boucles [for](../../cpp/for-statement-cpp.md) avec les extensions Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+Permet d'implémenter un comportement C++ standard pour les boucles [for](../../cpp/for-statement-cpp.md) avec les extensions Microsoft ([/Ze](za-ze-disable-language-extensions.md)).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ Permet d'implémenter un comportement C++ standard pour les boucles [for](../../
 
 ## <a name="remarks"></a>Notes
 
-Le comportement standard consiste à laisser l’initialiseur d’une boucle **for** sortir de la portée après la boucle **for** . Sous **/Zc:forScope-** et [/Ze](../../build/reference/za-ze-disable-language-extensions.md), l’initialiseur de la boucle **for** reste dans la portée jusqu’à la fin de la portée locale.
+Le comportement standard consiste à laisser l’initialiseur d’une boucle **for** sortir de la portée après la boucle **for** . Sous **/Zc:forScope-** et [/Ze](za-ze-disable-language-extensions.md), l’initialiseur de la boucle **for** reste dans la portée jusqu’à la fin de la portée locale.
 
 Le **/Zc : forScope** option est activée par défaut. **/ Zc : forScope** n’est pas affecté lorsque le [/ permissive-](permissive-standards-conformance.md) option est spécifiée.
 
@@ -55,13 +55,13 @@ Si vous utilisez **/Zc:forScope-**, l’avertissement C4288 (désactivé par dé
 
 Vous pouvez modifier le comportement au moment de l’exécution de **/Zc:forScope** en utilisant le pragma [conform](../../preprocessor/conform.md) .
 
-Si vous utilisez **/Zc:forScope-** dans un projet contenant déjà un fichier .pch, un avertissement est généré, **/Zc:forScope-** est ignoré et la compilation continue en utilisant les fichiers .pch existants. Si vous souhaitez générer un nouveau fichier .pch, utilisez [/Yc (créer un fichier d’en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md).
+Si vous utilisez **/Zc:forScope-** dans un projet contenant déjà un fichier .pch, un avertissement est généré, **/Zc:forScope-** est ignoré et la compilation continue en utilisant les fichiers .pch existants. Si vous souhaitez générer un nouveau fichier .pch, utilisez [/Yc (créer un fichier d’en-tête précompilé)](yc-create-precompiled-header-file.md).
 
 Pour plus d’informations sur les problèmes de conformité dans Visual C++, consultez [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **langage** page de propriétés.
 
@@ -73,5 +73,5 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Zc (Conformité)](../../build/reference/zc-conformance.md)<br/>
-[/Za, /Ze (Désactiver les extensions de langage)](../../build/reference/za-ze-disable-language-extensions.md)<br/>
+[/Zc (Conformité)](zc-conformance.md)<br/>
+[/Za, /Ze (Désactiver les extensions de langage)](za-ze-disable-language-extensions.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Configurer Visual C++ pour x64 64 64 bits, cibles
+title: Configurer des projets C++ pour x64 64 64 bits, cibles
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - programming [C++], 64-bit
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: c0c3620f4e5fea864fda1fd3d6b046fa3f485085
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c56cd34ecbc6615b0acebde6c40c658ca0c436a4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417539"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818113"
 ---
-# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Configurer Visual C++ pour x64 64 64 bits, cibles
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurer des projets C++ pour x64 64 64 bits, cibles
 
 Cette section contient des rubriques sur le ciblage x64 64 64 bits des outils de génération matériel avec Visual C++.
 
 ## <a name="in-this-section"></a>Dans cette section
 
-- [Guide pratique pour configurer des projets Visual C++ pour cibler des plateformes x64 64 bits](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [Guide pratique pour configurer des projets Visual C++ pour cibler des plateformes x64 64 bits](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Guide pratique pour activer un ensemble d’outils Visual C++ 64 bits sur la ligne de commande](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Guide pratique pour activer un ensemble d’outils Visual C++ 64 bits sur la ligne de commande](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
-- [Problèmes courants de migration vers Visual C++ 64 bits](../build/common-visual-cpp-64-bit-migration-issues.md)
+- [Problèmes courants de migration vers Visual C++ 64 bits](common-visual-cpp-64-bit-migration-issues.md)
 
-- [Conventions des logiciels x64](../build/x64-software-conventions.md)
+- [Conventions des logiciels x64](x64-software-conventions.md)
 
 ## <a name="related-sections"></a>Rubriques connexes
 
@@ -35,9 +35,9 @@ Cette section contient des rubriques sur le ciblage x64 64 64 bits des outils de
 
 [align](../cpp/align-cpp.md)
 
-[/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
+[/clr (Compilation pour le Common Language Runtime)](reference/clr-common-language-runtime-compilation.md)
 
-[/favor (Optimisation pour les particularités d’architecture)](../build/reference/favor-optimize-for-architecture-specifics.md)
+[/favor (Optimisation pour les particularités d’architecture)](reference/favor-optimize-for-architecture-specifics.md)
 
 [Guide de programmation pour Windows de 64 bits](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)
 
@@ -47,4 +47,4 @@ Cette section contient des rubriques sur le ciblage x64 64 64 bits des outils de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Génération de programmes C/C++](building-c-cpp-programs.md)
+[Projets et des systèmes de génération](projects-and-build-systems-cpp.md)

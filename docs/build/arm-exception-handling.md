@@ -2,16 +2,16 @@
 title: Gestion des exceptions ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694346"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814538"
 ---
 # <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
-Windows on ARM utilise le même mécanisme de gestion des exceptions structurées pour les exceptions asynchrones générées par le matériel et les exceptions synchrones générées par les logiciels. Les gestionnaires d'exceptions propres aux langages s'appuient sur la gestion des exceptions structurées Windows en utilisant des fonctions d'assistance de langage. Ce document décrit la gestion des exceptions dans Windows sur ARM et les programmes d’assistance de langage utilisés par le code généré par l’assembleur Microsoft ARM et le compilateur Visual C++.
+Windows on ARM utilise le même mécanisme de gestion des exceptions structurées pour les exceptions asynchrones générées par le matériel et les exceptions synchrones générées par les logiciels. Les gestionnaires d'exceptions propres aux langages s'appuient sur la gestion des exceptions structurées Windows en utilisant des fonctions d'assistance de langage. Ce document décrit la gestion des exceptions dans Windows sur ARM et les programmes d’assistance de langage utilisés par le code généré par l’assembleur Microsoft ARM et le compilateur MSVC.
 
 ## <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
@@ -104,8 +104,8 @@ Les prologues des fonctions canoniques peuvent avoir jusqu'à 5 instructions (�
 
 |Instruction|Un opcode est considéré être présent si :|Taille|Opcode|Codes de déroulement|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*== 1|16|`push {r0-r3}`|04|
-|2|*C*== 1 ou *L*== 1 ou *R*== 0 ou PF == 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
+|1|*H*==1|16|`push {r0-r3}`|04|
+|2|*C*==1 or *L*==1 or *R*==0 or PF==1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*== 1 et (*L*== 0 et *R*== 1 et PF == 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*== 1 et (*L*== 1 ou *R*== 0 ou PF == 1)|32|`add r11,sp,#xx`|FC|
 |4|*R*== 1 et *Reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
@@ -121,22 +121,22 @@ Les instructions 2 et 4 sont définies selon qu'un push est nécessaire ou pas. 
 
 |C|L|R|PF|Registres d'entiers faisant l'objet d'un push|Registres VFP faisant l'objet d'un push|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-r*N*|none|
-|0|0|0|1|r*S*- r*N*|none|
-|0|0|1|0|none|d-D8*E*|
-|0|0|1|1|r*S*-r3|d-D8*E*|
-|0|1|0|0|R4-r*N*, LR|none|
-|0|1|0|1|r*S*- r*N*, LR|none|
-|0|1|1|0|LR|d-D8*E*|
-|0|1|1|1|r*S*-r3, LR|d-D8*E*|
-|1|0|0|0|R4-r*N*, r11|none|
-|1|0|0|1|r*S*- r*N*, r11|none|
-|1|0|1|0|r11|d-D8*E*|
-|1|0|1|1|r*S*-r3, r11|d-D8*E*|
-|1|1|0|0|R4-r*N*, r11, LR|none|
-|1|1|0|1|r*S*- r*N*, r11, LR|none|
-|1|1|1|0|r11, LR|d-D8*E*|
-|1|1|1|1|r*S*-r3, r11, LR|d-D8*E*|
+|0|0|0|0|r4-r*N*|none|
+|0|0|0|1|r*S*-r*N*|none|
+|0|0|1|0|none|d8-d*E*|
+|0|0|1|1|r*S*-r3|d8-d*E*|
+|0|1|0|0|r4-r*N*, LR|none|
+|0|1|0|1|r*S*-r*N*, LR|none|
+|0|1|1|0|LR|d8-d*E*|
+|0|1|1|1|r*S*-r3, LR|d8-d*E*|
+|1|0|0|0|r4-r*N*, r11|none|
+|1|0|0|1|r*S*-r*N*, r11|none|
+|1|0|1|0|r11|d8-d*E*|
+|1|0|1|1|r*S*-r3, r11|d8-d*E*|
+|1|1|0|0|r4-r*N*, r11, LR|none|
+|1|1|0|1|r*S*-r*N*, r11, LR|none|
+|1|1|1|0|r11, LR|d8-d*E*|
+|1|1|1|1|r*S*-r3, r11, LR|d8-d*E*|
 
 Les épilogues des fonctions canoniques suivent une forme analogue, mais en sens inverse et avec quelques options supplémentaires. L'épilogue peut compter jusqu'à 5 instructions et sa forme est strictement dictée par celle du prologue.
 
@@ -147,8 +147,8 @@ Les épilogues des fonctions canoniques suivent une forme analogue, mais en sens
 |8|*C*== 1 ou (*L*== 1 et *H*== 0) ou *R*== 0 ou *EF*== 1|16/32|`pop   {registers}`|
 |9a|*H*== 1 et *L*== 0|16|`add   sp,sp,#0x10`|
 |9b|*H*== 1 et *L*== 1|32|`ldr   pc,[sp],#0x14`|
-|10a|*RET*== 1|16|`bx    reg`|
-|10b|*RET*== 2|32|`b     address`|
+|10a|*Ret*==1|16|`bx    reg`|
+|10b|*Ret*==2|32|`b     address`|
 
 L’instruction 6 est l’ajustement de pile explicite si un ajustement non plié est spécifié. Étant donné que *PF* est indépendante de *EF*, il est possible d’avoir une instruction 5 présente sans l’instruction 6, ou vice versa.
 
@@ -190,7 +190,7 @@ Quand le format de déroulement compressé ne suffit pas à décrire le déroule
 
 1. Si le *X* champ dans l’en-tête est 1, les octets de code de déroulement sont suivis par les informations de gestionnaire d’exception. Il s’agit d’un *RVA de gestionnaire d’Exception* qui contient l’adresse du Gestionnaire d’exceptions, immédiatement suivi de la quantité de (de longueur variable) de données requises par le Gestionnaire d’exceptions.
 
-L’enregistrement .xdata est conçu pour permettre la récupération des 8 premiers octets et le calcul de la taille complète de l’enregistrement, à l’exclusion de la longueur des données d’exception de taille variable qui suivent. Cet extrait de code permet de calculer la taille de l'enregistrement :
+L'enregistrement .xdata est conçu pour permettre la récupération des 8 premiers octets et le calcul de la taille complète de l'enregistrement, à l'exclusion de la longueur des données d'exception de taille variable qui suivent. Cet extrait de code permet de calculer la taille de l'enregistrement :
 
 ```cpp
 ULONG ComputeXdataSize(PULONG *Xdata)
@@ -410,7 +410,7 @@ Si, une fois que les épilogues à une instruction ont été ignorés, il ne res
 
 Dans ces exemples, la base d'image se trouve au niveau de 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Exemple 1 : fonction terminale, pas de variables locales
+### <a name="example-1-leaf-function-no-locals"></a>Exemple 1 : Fonction terminale, pas de variables locales
 
 ```asm
 Prologue:
@@ -444,7 +444,7 @@ Epilogue:
 
    - *Ajuster la pile* = 0, ce qui indique aucun ajustement de pile
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Exemple 2 : fonction imbriquée avec allocation locale
+### <a name="example-2-nested-function-with-local-allocation"></a>Exemple 2 : Fonction imbriquée avec Allocation locale
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Pile ajuster* = 3 (= 0x0C/4)
 
-### <a name="example-3-nested-variadic-function"></a>Exemple 3 : fonction variadique imbriquée
+### <a name="example-3-nested-variadic-function"></a>Exemple 3 : Fonction Variadique imbriquée
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *Ajuster la pile* = 0, ce qui indique aucun ajustement de pile
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Exemple 4 : fonction avec plusieurs épilogues
+### <a name="example-4-function-with-multiple-epilogues"></a>Exemple 4 : Fonction avec plusieurs épilogues
 
 ```asm
 Prologue:
@@ -576,7 +576,7 @@ Epilogues:
 
    - Code de déroulement 2 = 0xFF : fin
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Exemple 5 : fonction avec pile dynamique et épilogue interne
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Exemple 5 : Fonction avec pile dynamique et épilogue interne
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Les mots de code* = 0 x 01, indiquant un mot de 32 bits de codes de déroulement
 
-- Mot 1 : portée d'épilogue au niveau du décalage 0xC6 (= 0x18C/2), index du code de déroulement de départ à 0x00, avec une condition de 0x0E (toujours)
+- Mot 1 : Portée d’épilogue au décalage 0xC6 (= 0x18C/2), les index de code de déroulement de départ à 0 x 00 et avec une condition de 0x0E (toujours)
 
 - Codes de déroulement, commençant au Mot 2 : (partagé entre le prologue et l'épilogue)
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - Code de déroulement 3 = 0xFD : fin, compte comme une instruction de 16 bits pour l'épilogue
 
-### <a name="example-6-function-with-exception-handler"></a>Exemple 6 : fonction avec un gestionnaire d'exceptions
+### <a name="example-6-function-with-exception-handler"></a>Exemple 6 : Avec le Gestionnaire d’exceptions (fonction)
 
 ```asm
 Prologue:
@@ -739,5 +739,5 @@ Function:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble des conventions ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
-[Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)
+[Vue d’ensemble des conventions ABI ARM](overview-of-arm-abi-conventions.md)<br/>
+[Problèmes courants de migration ARM Visual C++](common-visual-cpp-arm-migration-issues.md)

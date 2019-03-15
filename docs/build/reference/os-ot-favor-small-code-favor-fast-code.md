@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: c2abf23c15e6550a6d115f2e2b41a9c59de5fa3a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d4e8d062685a543c428f0c86a22c17c8faf017ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424637"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814249"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Favoriser la taille du code, Favoriser la vitesse du code)
 
@@ -39,12 +39,12 @@ Réduit ou l’agrandit la taille des fichiers exe et DLL.
 
 **/OS** (favoriser la taille du Code) réduit la taille des fichiers exe et DLL en demandant au compilateur de favoriser la taille par rapport à la vitesse. Le compilateur peut réduire de nombreuses constructions C et C++ en séquences similaires de code machine. Parfois, ces différences offrent des compromis taille / vitesse. Le **/Os** et **/Ot** options vous permettent de spécifier une préférence pour un par rapport à l’autre :
 
-**/OT** (favoriser la vitesse du Code) augmente la vitesse des fichiers .exe et .dll en demandant au compilateur de favoriser la vitesse par rapport à taille. (C’est la valeur par défaut). Le compilateur peut réduire de nombreuses constructions C et C++ en séquences similaires de code machine. Parfois, ces différences offrent des compromis taille / vitesse. L’option /Ot est déduite d’augmenter la vitesse ([/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) option. Le **/O2** option combine plusieurs options pour produire un code très rapide.
+**/OT** (favoriser la vitesse du Code) augmente la vitesse des fichiers .exe et .dll en demandant au compilateur de favoriser la vitesse par rapport à taille. (C’est la valeur par défaut). Le compilateur peut réduire de nombreuses constructions C et C++ en séquences similaires de code machine. Parfois, ces différences offrent des compromis taille / vitesse. L’option /Ot est déduite d’augmenter la vitesse ([/O2](o1-o2-minimize-size-maximize-speed.md)) option. Le **/O2** option combine plusieurs options pour produire un code très rapide.
 
-Si vous utilisez **/Os** ou **/Ot**, vous devez également spécifier [/Og](../../build/reference/og-global-optimizations.md) pour optimiser le code.
+Si vous utilisez **/Os** ou **/Ot**, vous devez également spécifier [/Og](og-global-optimizations.md) pour optimiser le code.
 
 > [!NOTE]
->  Les informations collectées à partir des séries de tests de profilage remplacent les optimisations qui seraient en vigueur si vous spécifiez **/Ob**, **/Os**, ou **/Ot**. Pour plus d’informations, [optimisations guidées par profil](../../build/reference/profile-guided-optimizations.md).
+>  Les informations collectées à partir des séries de tests de profilage remplacent les optimisations qui seraient en vigueur si vous spécifiez **/Ob**, **/Os**, ou **/Ot**. Pour plus d’informations, [optimisations guidées par profil](../profile-guided-optimizations.md).
 
 **x86 spécifique**
 
@@ -86,7 +86,7 @@ sub    eax, ecx
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -100,6 +100,6 @@ sub    eax, ecx
 
 ## <a name="see-also"></a>Voir aussi
 
-[/O, options (Optimiser le code)](../../build/reference/o-options-optimize-code.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[/O, options (Optimiser le code)](o-options-optimize-code.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
