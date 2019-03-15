@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /PDBALTPATH dumpbin option
 - PDB files, path
 ms.assetid: 72e200aa-e2c3-4ad8-b687-25528da1aaaf
-ms.openlocfilehash: 22bc53858aca3b037655829bd7449049971ca79f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 660e39a97b9fed0c5a9228fe011e7c0fa2566e68
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419183"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820713"
 ---
 # <a name="pdbaltpath-use-alternate-pdb-path"></a>/PDBALTPATH (Utiliser un autre chemin d’accès PDB)
 
@@ -36,5 +36,5 @@ La valeur de *pdb_file_name* peut être une chaîne arbitraire, une variable d�
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](../../build/reference/dumpbin-options.md)<br/>
-[/PDBPATH](../../build/reference/pdbpath.md)
+[DUMPBIN, options](dumpbin-options.md)<br/>
+[/PDBPATH](pdbpath.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850296"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57808389"
 ---
 # <a name="application-information-and-management"></a>Informations sur l'application et gestion
 
@@ -711,7 +711,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Avant Windows Vista, applications qui ont accédé le Registre utilisé généralement la **HKEY_CLASSES_ROOT** nœud. Toutefois, avec Windows Vista ou versions ultérieures, vous devez exécuter une application en mode élevé pour écrire dans HKCR.
 
-Cette méthode permet à votre application lire et écrire dans le Registre sans exécuter en mode élevé en redirigeant l’accès au Registre dans HKCR dans HKCU. Pour plus d'informations, consultez [Linker Property Pages](../../ide/linker-property-pages.md).
+Cette méthode permet à votre application lire et écrire dans le Registre sans exécuter en mode élevé en redirigeant l’accès au Registre dans HKCR dans HKCU. Pour plus d'informations, consultez [Linker Property Pages](../../build/reference/linker-property-pages.md).
 
 Si vous activez la redirection du Registre, le framework redirige l’accès à partir de HKCR à **HKEY_CURRENT_USER\Software\Classes**. Uniquement les infrastructures MFC et ATL sont affectés par la redirection.
 

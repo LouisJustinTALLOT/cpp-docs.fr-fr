@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 057fabe9612f84af07649d7a4f7bbf6d83e01f6c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426210"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819504"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (analyse de code)
 
@@ -32,7 +32,7 @@ Active l'analyse du code et les options de contrôle.
 
 /Analyze active sur l’analyse dans le mode par défaut. Sortie de l’analyse passe à la **sortie** fenêtre similaire à d’autres messages d’erreur. Utilisez **/ analyze-** pour désactiver explicitement l’analyse.
 
-/ analyze : WX-spécification **/ analyze : WX -** signifie que les avertissements d’analyse du code n’est pas traités comme des erreurs lorsque vous compilez à l’aide de **/WX**. Pour plus d’informations, consultez [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Niveau d’avertissement)](../../build/reference/compiler-option-warning-level.md).
+/ analyze : WX-spécification **/ analyze : WX -** signifie que les avertissements d’analyse du code n’est pas traités comme des erreurs lorsque vous compilez à l’aide de **/WX**. Pour plus d’informations, consultez [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Niveau d’avertissement)](compiler-option-warning-level.md).
 
 / analyze : log `filename` les résultats détaillés de l’analyseur sont écrits au format XML dans le fichier spécifié par `filename`.
 
@@ -79,7 +79,7 @@ Pour plus d’informations, consultez [analyse du Code pour C/C++ Overview](/vis
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Développez le nœud **Propriétés de configuration**.
 
@@ -95,5 +95,5 @@ Pour plus d’informations, consultez [analyse du Code pour C/C++ Overview](/vis
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur](../../build/reference/compiler-options.md)
-- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+- [Options du compilateur MSVC](compiler-options.md)
+- [Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

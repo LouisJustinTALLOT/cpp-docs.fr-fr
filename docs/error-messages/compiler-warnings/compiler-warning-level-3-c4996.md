@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: cbb93bdba5853ed47bc3326d47bbb3c65ad7ce41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472174"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816423"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilateur avertissement (niveau 3) C4996
 
@@ -45,7 +45,7 @@ Vous pouvez désactiver l’avertissement dans le monde entier dans les versions
 
 Pour désactiver l’avertissement pour un projet entier dans l’IDE Visual Studio :
 
-- Ouvrez le **Pages de propriétés** boîte de dialogue pour votre projet. Pour plus d’informations sur l’utilisation de la boîte de dialogue Pages de propriétés, consultez [Pages de propriétés](../../ide/property-pages-visual-cpp.md).
+- Ouvrez le **Pages de propriétés** boîte de dialogue pour votre projet. Pour plus d’informations sur l’utilisation de la boîte de dialogue Pages de propriétés, consultez [Pages de propriétés](../../build/reference/property-pages-visual-cpp.md).
 - Sélectionnez le **propriétés de Configuration**, **C/C++**, **avancé** page.
 - Modifier le **désactivation des avertissements spécifiques** propriété à ajouter `4996`. Choisissez **OK** pour appliquer vos modifications.
 
@@ -53,7 +53,7 @@ Vous pouvez également utiliser des macros de préprocesseur pour désactiver ce
 
 Pour définir une macro de préprocesseur dans Visual Studio :
 
-- Ouvrez le **Pages de propriétés** boîte de dialogue pour votre projet. Pour plus d’informations sur l’utilisation de la boîte de dialogue Pages de propriétés, consultez [Pages de propriétés](../../ide/property-pages-visual-cpp.md).
+- Ouvrez le **Pages de propriétés** boîte de dialogue pour votre projet. Pour plus d’informations sur l’utilisation de la boîte de dialogue Pages de propriétés, consultez [Pages de propriétés](../../build/reference/property-pages-visual-cpp.md).
 - Développez **propriétés de Configuration > C/C++ > préprocesseur**.
 - Dans le **définitions de préprocesseur** propriété, ajoutez le nom de macro. Choisissez **OK** pour enregistrer, puis régénérez votre projet.
 
@@ -81,7 +81,7 @@ Microsoft a déprécié de certaines fonctions CRT et la bibliothèque C++ Stand
 
 Pour résoudre ce problème, nous vous recommandons d’utiliser la fonction ou variable *version_sécurisée* à la place. Si vous avez vérifié qu’il n’est pas possible pour un remplacement de la mémoire tampon ou overread se produisent dans votre code et vous ne pouvez pas modifier le code pour des raisons de portabilité, vous pouvez désactiver l’avertissement.
 
-Pour désactiver les avertissements déconseillant ces fonctions dans le CRT, définissez  **\_CRT\_SECURE\_non\_avertissements**. Pour désactiver les avertissements concernant les variables globales déconseillées, définissez  **\_CRT\_SECURE\_non\_avertissements\_GLOBALS**. Pour plus d’informations sur ces variables globales et les fonctions déconseillées, consultez [des fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md) et [bibliothèques sécurisées : bibliothèque Standard C++](../../standard-library/safe-libraries-cpp-standard-library.md).
+Pour désactiver les avertissements déconseillant ces fonctions dans le CRT, définissez  **\_CRT\_SECURE\_non\_avertissements**. Pour désactiver les avertissements concernant les variables globales déconseillées, définissez  **\_CRT\_SECURE\_non\_avertissements\_GLOBALS**. Pour plus d’informations sur ces variables globales et les fonctions déconseillées, consultez [des fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md) et [bibliothèques sécurisées : Bibliothèque Standard C++](../../standard-library/safe-libraries-cpp-standard-library.md).
 
 ### <a name="unsafe-standard-library-functions"></a>Fonctions de bibliothèque Standard unsafe
 
@@ -279,7 +279,7 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>Exemple : Défini par l’utilisateur une fonction déconseillée
+## <a name="example-user-defined-deprecated-function"></a>Exemple : Défini par l’utilisateur la fonction déconseillée
 
 Vous pouvez utiliser l’attribut déconseillé dans votre propre code pour avertir les appelants lorsque vous n’en avez plus recommandez l’utilisation de certaines fonctions. Dans cet exemple, l’erreur C4996 est généré pour la ligne sur lequel la fonction déconseillée est déclarée et de la ligne sur laquelle la fonction est utilisée.
 

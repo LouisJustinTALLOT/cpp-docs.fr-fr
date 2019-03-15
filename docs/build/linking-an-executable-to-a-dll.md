@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 998ec23d2d0f16069783529aebafc8b91bb15834
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418804"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818360"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Lier un exécutable à une DLL
 
@@ -30,7 +30,7 @@ Un exécutable peut utiliser une méthode de liaison à lier à la même DLL. En
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="determine-which-linking-method-to-use"></a>Déterminer la méthode de liaison à utiliser
+## <a name="link-an-executable-to-a-dll"></a>Lier un exécutable à une DLL
 
 S’il faut utiliser la liaison implicite ou explicite de liaison est une décision concernant l’architecture que vous devez effectuer pour votre application. Il existe des avantages et inconvénients de chaque méthode.
 
@@ -70,13 +70,13 @@ Voici deux dangers de la liaison explicite à connaître :
 
 <a name="linking-implicitly"></a>
 
-## <a name="how-to-link-implicitly-to-a-dll"></a>Comment lier de manière implicite à une DLL
+## <a name="link-an-executable-to-a-dll"></a>Lier un exécutable à une DLL
 
 Pour utiliser une DLL par la liaison implicite, les fichiers exécutables client doivent obtenir ces fichiers auprès du fournisseur de la DLL :
 
 - Un ou plusieurs fichiers d’en-tête (fichiers .h) qui contiennent les déclarations des données exportées, fonctions ou des classes C++ dans la DLL. Les classes, les fonctions et les données exportées par la DLL doivent tous être marquées `__declspec(dllimport)` dans le fichier d’en-tête. Pour plus d’informations, consultez [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-- Une bibliothèque d’importation à lier dans votre fichier exécutable. L’éditeur de liens crée la bibliothèque d’importation lors de la DLL est générée. Pour plus d’informations, consultez [. Les fichiers LIB](../build/reference/dot-lib-files-as-linker-input.md).
+- Une bibliothèque d’importation à lier dans votre fichier exécutable. L’éditeur de liens crée la bibliothèque d’importation lors de la DLL est générée. Pour plus d’informations, consultez [. Les fichiers LIB](reference/dot-lib-files-as-linker-input.md).
 
 - Le fichier DLL.
 
@@ -139,10 +139,10 @@ Contrairement à dans cet exemple, dans la plupart des cas vous devez appeler `L
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [Utilisation de bibliothèques d’importation et de fichiers d’exportation](../build/reference/working-with-import-libraries-and-export-files.md)
+- [Utilisation de bibliothèques d’importation et de fichiers d’exportation](reference/working-with-import-libraries-and-export-files.md)
 
 - [Dynamic-Link Library Search Order](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 ## <a name="see-also"></a>Voir aussi
 
-[DLL dans Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL dans Visual C++](dlls-in-visual-cpp.md)
