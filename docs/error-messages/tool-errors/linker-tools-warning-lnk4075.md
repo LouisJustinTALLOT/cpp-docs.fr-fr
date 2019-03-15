@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bba0fa85a3f2590c84cbb6f78fac7e49386d35a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548250"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809897"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Avertissement des outils Éditeur de liens LNK4075
 
@@ -21,7 +21,7 @@ La deuxième option remplace la première.
 
 Options de l’éditeur de liens qui s’excluent mutuellement sont spécifiées.  Examinez vos options de l’éditeur de liens.  Où les options de l’éditeur de liens sont spécifiées dépend de la façon dont vous générez votre projet.
 
-- Si vous générez dans l’environnement de développement, recherchez dans les pages de propriétés de l’éditeur de liens pour votre projet et voir où les deux options de l’éditeur de liens sont spécifiées.  Consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md) pour plus d’informations.
+- Si vous générez dans l’environnement de développement, recherchez dans les pages de propriétés de l’éditeur de liens pour votre projet et voir où les deux options de l’éditeur de liens sont spécifiées.  Consultez [définir du compilateur et les propriétés de build](../../build/working-with-project-properties.md) pour plus d’informations.
 
 - Si vous générez à la ligne de commande, consultez les options de l’éditeur de liens spécifiées.
 

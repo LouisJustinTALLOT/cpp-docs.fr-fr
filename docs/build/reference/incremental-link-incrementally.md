@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 60cec41173afc9955bddf9df0bd6796b5df6285c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414081"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816137"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (Lier par incrément)
 
@@ -54,7 +54,7 @@ La plupart des programmes peuvent être liés de façon incrémentielle. Toutefo
 
 - /ORDER est sélectionné
 
-/INCREMENTAL est implicite lorsque [/DEBUG](../../build/reference/debug-generate-debug-info.md) est spécifié.
+/INCREMENTAL est implicite lorsque [/DEBUG](debug-generate-debug-info.md) est spécifié.
 
 De plus, LINK effectue un lien complet si l'une des situations suivantes se produit :
 
@@ -72,7 +72,7 @@ De plus, LINK effectue un lien complet si l'une des situations suivantes se prod
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **l’éditeur de liens** dossier.
 
@@ -86,5 +86,5 @@ De plus, LINK effectue un lien complet si l'une des situations suivantes se prod
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

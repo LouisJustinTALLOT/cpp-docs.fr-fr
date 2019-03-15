@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
-ms.openlocfilehash: 160e90f0b068da6fe8330ac97dfd8bda52f05a38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc381058c6a2ef84542be1d3cdd00c410aa51c2f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536602"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809299"
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/ Zc : sizeddealloc (activer les fonctions de Global désallocation dimensionnée)
 
@@ -40,7 +40,7 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. À partir de la **Configurations** menu déroulant, choisissez **toutes les Configurations**.
 
@@ -50,6 +50,6 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (Conformité)](../../build/reference/zc-conformance.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (Conformité)](zc-conformance.md)<br/>
