@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414753"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816449"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Créer un fichier binaire pour le mode noyau)
 
@@ -46,7 +46,7 @@ Le tableau suivant répertorie les changements de comportement du compilateur lo
 |RTTI|Désactivé. Toutes les instances de la `dynamic_cast` et `typeid` mots clés émettent une erreur du compilateur, sauf si `dynamic_cast` est utilisée de manière statique.|
 |`new` et `delete`|Vous devez définir explicitement la `new()` ou `delete()` opérateur ; le compilateur ni le runtime fournit une définition default.|
 
-Custom conventions d’appel, le [/GS](../../build/reference/gs-buffer-security-check.md) option de build et toutes les optimisations sont autorisés lorsque vous utilisez le **/kernel** option. La fonctionnalité inline est en grande partie non affectée par **/kernel**, avec la même sémantique honorée par le compilateur. Si vous souhaitez vous assurer que le `__forceinline` qualificateur de l’incorporation (inlining) est prise en compte, vous devez vous assurer que l’avertissement [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) est activée afin que vous sachiez quand un particulier `__forceinline` fonction n’est pas inline.
+Custom conventions d’appel, le [/GS](gs-buffer-security-check.md) option de build et toutes les optimisations sont autorisés lorsque vous utilisez le **/kernel** option. La fonctionnalité inline est en grande partie non affectée par **/kernel**, avec la même sémantique honorée par le compilateur. Si vous souhaitez vous assurer que le `__forceinline` qualificateur de l’incorporation (inlining) est prise en compte, vous devez vous assurer que l’avertissement [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) est activée afin que vous sachiez quand un particulier `__forceinline` fonction n’est pas inline.
 
 Lorsque le compilateur est passé le **/kernel** commutateur, il prédéfinit une macro de préprocesseur qui est nommée `_KERNEL_MODE` et a la valeur **1**. Vous pouvez utiliser cela pour effectuer une compilation conditionnelle code selon que l’environnement d’exécution est en mode utilisateur ou en mode noyau. Par exemple, le code suivant spécifie que la classe doit être dans un segment de mémoire non paginable lorsqu’il est compilé pour l’exécution en mode noyau.
 
@@ -88,7 +88,7 @@ Le **/kernel** option et la **/driver** option fonctionnent indépendamment et a
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Pour définir l’option de compilateur /kernel dans Visual Studio
 
-1. Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **C/C++** dossier.
 
@@ -98,5 +98,5 @@ Le **/kernel** option et la **/driver** option fonctionnent indépendamment et a
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

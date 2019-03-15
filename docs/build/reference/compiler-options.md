@@ -1,58 +1,56 @@
 ---
-title: Options du compilateur
+title: Options du compilateur MSVC
 ms.date: 01/29/2018
 helpviewer_keywords:
 - cl.exe compiler
-- x86 Visual C++ compiler
-- ARM Visual C++ compiler
+- x86 MSVC compiler
+- ARM MSVC compiler
 - compiler options, C++
-- x64 Visual C++ compiler
+- x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: 8b887b2b9da6f38cdc1cf7287a69bbad8e88b989
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 831aade72cd728ec42aee5ef1f320deb7bdf173d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583883"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816514"
 ---
 # <a name="compiler-options"></a>Options du compilateur
 
 CL.exe est un outil qui contrôle le Microsoft Visual C++ (MSVC) C et de compilateurs C++ et de l’éditeur de liens. CL.exe peut être exécuté uniquement sur les systèmes d’exploitation qui prennent en charge de Microsoft Visual Studio pour Windows.
 
 > [!NOTE]
-> Vous pouvez démarrer cet outil uniquement à partir d’une invite de commandes développeur Visual Studio. Vous ne pouvez pas le démarrer à partir d'une invite de commandes système ni de l'Explorateur de fichiers. Pour plus d’informations, consultez [code de génération C/C++ sur la ligne de commande](../building-on-the-command-line.md).
+> Vous pouvez démarrer cet outil uniquement à partir d’une invite de commandes développeur Visual Studio. Vous ne pouvez pas le démarrer à partir d'une invite de commandes système ni de l'Explorateur de fichiers. Pour plus d’informations, consultez [utiliser l’ensemble d’outils MSVC à partir de la ligne de commande](../building-on-the-command-line.md).
 
 Les compilateurs génèrent des fichiers objet (.obj) de fichier Format COFF (Common Object). L’éditeur de liens produit des fichiers exécutables (.exe) ou des bibliothèques de liens dynamiques (DLL).
 
 Notez que toutes les options du compilateur respectent la casse. Vous pouvez utiliser soit une barre oblique (`/`) ou un tiret (`-`) pour spécifier une option du compilateur.
 
-Pour compiler sans liaison, utilisez la [/c](../../build/reference/c-compile-without-linking.md) option.
+Pour compiler sans liaison, utilisez la [/c](c-compile-without-linking.md) option.
 
 ## <a name="find-a-compiler-option"></a>Recherchez une option du compilateur
 
 Pour rechercher une option spécifique, consultez une des listes suivantes :
 
-- [Options du compilateur classées par ordre alphabétique](../../build/reference/compiler-options-listed-alphabetically.md)
+- [Options du compilateur classées par ordre alphabétique](compiler-options-listed-alphabetically.md)
 
-- [Options du compilateur classées par catégorie](../../build/reference/compiler-options-listed-by-category.md)
+- [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md)
 
 ## <a name="specify-compiler-options"></a>Spécifiez les options du compilateur
 
 La rubrique pour chaque option du compilateur explique comment elle peut être définie dans l’environnement de développement. Pour plus d’informations sur la spécification des options en dehors de l’environnement de développement, consultez :
 
-- [Syntaxe de la ligne de commande du compilateur](../../build/reference/compiler-command-line-syntax.md)
+- [Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
 
-- [Fichiers de commandes CL](../../build/reference/cl-command-files.md)
+- [Fichiers de commandes CL](cl-command-files.md)
 
-- [Variables d’environnement CL](../../build/reference/cl-environment-variables.md)
+- [Variables d’environnement CL](cl-environment-variables.md)
 
 ## <a name="related-build-tools"></a>Outils de génération connexes
 
-[Options de l’éditeur de liens](../../build/reference/linker-options.md) affectent également la façon dont votre programme est généré.
+[Options de l’éditeur de liens MSVC](linker-options.md) affectent également la façon dont votre programme est généré.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de la génération C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[Compilation rapide](../../build/reference/fast-compilation.md)<br/>
-[CL appelle l’éditeur de liens](../../build/reference/cl-invokes-the-linker.md)
+[Référence de la génération C/C++](c-cpp-building-reference.md)<br/>
+[CL appelle l’éditeur de liens](cl-invokes-the-linker.md)

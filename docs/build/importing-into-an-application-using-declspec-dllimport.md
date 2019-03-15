@@ -1,5 +1,5 @@
 ---
-title: Importation dans une application à l'aide de __declspec(dllimport)
+title: Importer dans une application à l’aide de __declspec (dllimport)
 ms.date: 11/04/2016
 f1_keywords:
 - __declspec
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: ef01c2905dea215a1a52333ae5611ec58c5f5af4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 30e0f6517f2d749962c5cf49dddb1662c9ccf129
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419216"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810222"
 ---
-# <a name="importing-into-an-application-using-declspecdllimport"></a>Importation dans une application à l'aide de __declspec(dllimport)
+# <a name="import-into-an-application-using-declspecdllimport"></a>Importer dans une application à l’aide de __declspec (dllimport)
 
 Un programme qui utilise des symboles publics définis par une DLL est dite de les importer. Lorsque vous créez des fichiers d’en-tête pour les applications qui utilisent vos DLL pour la génération, utiliser **__declspec (dllimport)** sur les déclarations des symboles publics. Le mot clé **__declspec (dllimport)** fonctionne si vous exportez des fichiers .def ou avec le **__declspec (dllexport)** mot clé.
 
@@ -45,14 +45,14 @@ class CLASS_DECLSPEC CExampleA : public CObject
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Initialiser une DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [L’importation et exportation de fonctions inline](../build/importing-and-exporting-inline-functions.md)
+- [L’importation et exportation de fonctions inline](importing-and-exporting-inline-functions.md)
 
-- [Importations mutuelles](../build/mutual-imports.md)
+- [Importations mutuelles](mutual-imports.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Importation dans une application](../build/importing-into-an-application.md)
+[Importation dans une application](importing-into-an-application.md)

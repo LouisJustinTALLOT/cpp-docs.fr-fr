@@ -16,12 +16,12 @@ helpviewer_keywords:
 - O1 compiler option [C++]
 - /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
-ms.openlocfilehash: 8074d4308974673c18dffb45ae580d43f3a377b3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d33fe6bceae09267fd3f79ffe3dc26864e87c764
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415541"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820583"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Réduire la taille, augmenter la vitesse)
 
@@ -37,17 +37,17 @@ Le **/O1** et **/O2** options du compilateur constituent un moyen rapide pour d�
 
 |Option|Équivalent à|
 |------------|-------------------|
-|**/ O1** (réduire la taille)|[/Og](../../build/reference/og-global-optimizations.md) [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md)  [ /Gy](../../build/reference/gy-enable-function-level-linking.md)|
-|**/ O2** (augmenter la vitesse)|[/Og](../../build/reference/og-global-optimizations.md) [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md)  [ /Gy](../../build/reference/gy-enable-function-level-linking.md)|
+|**/ O1** (réduire la taille)|[/Og](og-global-optimizations.md) [/Os](os-ot-favor-small-code-favor-fast-code.md) [/Oy](oy-frame-pointer-omission.md) [/Ob2](ob-inline-function-expansion.md) [/GF](gf-eliminate-duplicate-strings.md)  [ /Gy](gy-enable-function-level-linking.md)|
+|**/ O2** (augmenter la vitesse)|[/Og](og-global-optimizations.md) [/Oi](oi-generate-intrinsic-functions.md) [/Ot](os-ot-favor-small-code-favor-fast-code.md) [/Oy](oy-frame-pointer-omission.md) [/Ob2](ob-inline-function-expansion.md) [/GF](gf-eliminate-duplicate-strings.md)  [ /Gy](gy-enable-function-level-linking.md)|
 
 **/ O1** et **/O2** s’excluent mutuellement.
 
 > [!NOTE]
-> **x86 spécifique** ces options impliquent l’utilisation de l’Omission du pointeur Frame ([/Oy](../../build/reference/oy-frame-pointer-omission.md)) option.
+> **x86 spécifique** ces options impliquent l’utilisation de l’Omission du pointeur Frame ([/Oy](oy-frame-pointer-omission.md)) option.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sous **propriétés de Configuration**, ouvrez **C/C++** , puis choisissez le **optimisation** page de propriétés.
 
@@ -59,7 +59,7 @@ Le **/O1** et **/O2** options du compilateur constituent un moyen rapide pour d�
 
 ## <a name="see-also"></a>Voir aussi
 
-[/O, options (Optimiser le code)](../../build/reference/o-options-optimize-code.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[/EH (Modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md)
+[/O, options (Optimiser le code)](o-options-optimize-code.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[/EH (Modèle de gestion des exceptions)](eh-exception-handling-model.md)

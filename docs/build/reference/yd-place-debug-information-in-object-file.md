@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: 55bb8197cd15243f65c90d7fbd2724f91fce23b4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414874"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820154"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Placer les informations de débogage dans un fichier objet)
 
-Épreuve complète les informations de débogage dans tous les fichiers de l’objet créé à partir d’un fichier d’en-tête précompilé (.pch) lorsqu’il est utilisé avec le [/Yc](../../build/reference/yc-create-precompiled-header-file.md) et [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) options. Obsolète.
+Épreuve complète les informations de débogage dans tous les fichiers de l’objet créé à partir d’un fichier d’en-tête précompilé (.pch) lorsqu’il est utilisé avec le [/Yc](yc-create-precompiled-header-file.md) et [/Z7](z7-zi-zi-debug-information-format.md) options. Obsolète.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,9 +28,9 @@ ms.locfileid: "57414874"
 
 ## <a name="remarks"></a>Notes
 
-**/Yd** est déconseillé ; Visual C++ prend désormais en charge plusieurs objets qui écrivent dans un fichier .pdb unique, utilisez **/Zi** à la place. Pour obtenir la liste des options du compilateur déconseillées, consultez **Options déconseillées et supprimées du compilateur** dans [Options du compilateur classées par catégorie](../../build/reference/compiler-options-listed-by-category.md).
+**/Yd** est déconseillé ; Visual C++ prend désormais en charge plusieurs objets qui écrivent dans un fichier .pdb unique, utilisez **/Zi** à la place. Pour obtenir la liste des options du compilateur déconseillées, consultez **Options déconseillées et supprimées du compilateur** dans [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md).
 
-À moins que vous deviez distribuer une bibliothèque contenant des informations de débogage, utilisez le [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) option plutôt que **/Z7** et **/Yd**.
+À moins que vous deviez distribuer une bibliothèque contenant des informations de débogage, utilisez le [/Zi](z7-zi-zi-debug-information-format.md) option plutôt que **/Z7** et **/Yd**.
 
 Stockage des informations de débogage complètes dans chaque fichier .obj est nécessaire uniquement pour la distribution des bibliothèques qui contiennent des informations de débogage. Il ralentit la compilation et nécessite un espace disque considérable. Lorsque **/Yc** et **/Z7** sont utilisés sans **/Yd**, le compilateur stocke les informations de débogage communes dans le premier fichier .obj créé à partir du fichier .pch. Le compilateur n’insère pas ces informations dans des fichiers .obj créés par la suite à partir du fichier .pch ; Il insère les renvois aux informations. Quel que soit le nombre de fichiers .obj utilisent le fichier .pch, un seul fichier .obj contient les informations de débogage courants.
 
@@ -38,13 +38,13 @@ Bien que ce comportement se traduit par défaut dans les délais de génération
 
 Pour plus d’informations sur les en-têtes précompilés, consultez :
 
-- [/Y (En-têtes précompilés)](../../build/reference/y-precompiled-headers.md)
+- [/Y (En-têtes précompilés)](y-precompiled-headers.md)
 
-- [Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)
+- [Fichiers d’en-tête précompilés](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -83,5 +83,5 @@ Si votre en-tête précompilé n’a pas été compilé avec **/Z7**, vous pouve
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

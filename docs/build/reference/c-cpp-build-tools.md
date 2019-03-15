@@ -1,5 +1,5 @@
 ---
-title: Outils de génération C/C++
+title: Outils de génération MSVC supplémentaires
 ms.date: 11/04/2016
 f1_keywords:
 - c.build
@@ -7,32 +7,35 @@ helpviewer_keywords:
 - builds [C++], C/C++ tools
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-ms.openlocfilehash: 8240ee91d0318b969ba36cedac9dbc3f645d2ed8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e41a6dcb8de4a8608d065cce5bce2595cd96a84f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416760"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808064"
 ---
-# <a name="cc-build-tools"></a>Outils de génération C/C++
+# <a name="additional-msvc-build-tools"></a>Outils de génération MSVC supplémentaires
 
-Visual C++ fournit les outils de ligne de commande suivants pour l’affichage ou la manipulation de sortie de génération :
+Visual C++ fournit les utilitaires de ligne de commande suivants pour l’affichage ou la manipulation de sortie de génération :
 
-- [BSCMAKE. EXE](../../build/reference/bscmake-reference.md) génère un fichier d’informations de consultation (.bsc) qui contient des informations sur les symboles (classes, fonctions, données, macros et types) dans votre programme. Vous permet d’afficher ces informations dans les fenêtres de navigation au sein de l’environnement de développement. (Un fichier .bsc peut également être généré dans l’environnement de développement.)
 
-- [LIB. EXE](../../build/reference/lib-reference.md) est utilisé pour créer et gérer une bibliothèque de fichiers d’objets fichier Format COFF (Common Object). Il peut également être utilisé pour créer des fichiers d’exportation et de bibliothèques d’importation pour référencer des définitions exportées.
+- [LIB. EXE](lib-reference.md) est utilisé pour créer et gérer une bibliothèque de fichiers d’objets fichier Format COFF (Common Object). Il peut également être utilisé pour créer des fichiers d’exportation et de bibliothèques d’importation pour référencer des définitions exportées.
 
-- [EDITBIN. EXE](../../build/reference/editbin-reference.md) est utilisé pour modifier les fichiers binaires COFF.
+- [EDITBIN. EXE](editbin-reference.md) est utilisé pour modifier les fichiers binaires COFF.
 
-- [DUMPBIN. EXE](../../build/reference/dumpbin-reference.md) affiche des informations (par exemple, une table de symboles) sur les fichiers binaires COFF.
+- [DUMPBIN. EXE](dumpbin-reference.md) affiche des informations (par exemple, une table de symboles) sur les fichiers binaires COFF.
 
-- [NMAKE](../../build/nmake-reference.md) lit et exécute des makefiles.
+- [NMAKE](nmake-reference.md) lit et exécute des makefiles.
 
-- [ERRLOOK](../../build/reference/value-edit-control.md), l’utilitaire de recherche d’erreurs, récupère un message d’erreur système ou d’un message d’erreur de module selon la valeur entrée.
+- [ERRLOOK](value-edit-control.md), l’utilitaire de recherche d’erreurs, récupère un message d’erreur système ou d’un message d’erreur de module selon la valeur entrée.
+
+- [XDCMake](xdcmake-reference.md). Un traitement des fichiers de code source qui contiennent des commentaires de documentation de toolfor marqué avec des balises XML.
+
+- [BSCMAKE. EXE](bscmake-reference.md) (fourni pour la compatibilité descendante) génère un fichier d’informations de consultation (.bsc) qui contient des informations sur les symboles (classes, fonctions, données, macros et types) dans votre programme. Vous permet d’afficher ces informations dans les fenêtres de navigation au sein de l’environnement de développement. (Un fichier .bsc peut également être généré dans l’environnement de développement.)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de la génération C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
-[Noms décorés](../../build/reference/decorated-names.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de la génération C/C++](c-cpp-building-reference.md)<br/>
+[Noms décorés](decorated-names.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

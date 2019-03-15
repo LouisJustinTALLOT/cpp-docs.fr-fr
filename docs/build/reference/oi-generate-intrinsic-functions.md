@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 1dc7f5f183e7dffb65c31ebb9bc47b30776b81e3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422115"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811886"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Générer des fonctions intrinsèques)
 
@@ -41,7 +41,7 @@ Consultez [intrinsèque](../../preprocessor/intrinsic.md) pour plus d’informat
 
 Les fonctions à virgule flottante intrinsèques ne pas effectuer des vérifications spéciales sur les valeurs d’entrée et donc travailler dans des plages restreints d’entrée et ont différentes exceptions et les restrictions que les routines de bibliothèque portant le même nom. À l’aide de formes intrinsèques véritables implique une perte de la gestion des exceptions IEEE et une perte de `_matherr` et `errno` fonctionnalités ; cette dernière implique la perte de compatibilité ANSI. Toutefois, les formes intrinsèques peuvent accélérer considérablement les programmes de beaucoup de virgule flottante, et pour de nombreux programmes, les problèmes de conformité sont peu d’intérêt pratique.
 
-Vous pouvez utiliser la [Za](../../build/reference/za-ze-disable-language-extensions.md) option du compilateur pour remplacer la génération d’options à virgule flottante intrinsèques vraies. Dans ce cas, les fonctions sont générées en tant que routines de bibliothèque qui passent directement des arguments au processeur de calcul en virgule flottante au lieu de leur appliquer une transmission de type push sur la pile du programme.
+Vous pouvez utiliser la [Za](za-ze-disable-language-extensions.md) option du compilateur pour remplacer la génération d’options à virgule flottante intrinsèques vraies. Dans ce cas, les fonctions sont générées en tant que routines de bibliothèque qui passent directement des arguments au processeur de calcul en virgule flottante au lieu de leur appliquer une transmission de type push sur la pile du programme.
 
 **FIN x86 spécifique**
 
@@ -49,7 +49,7 @@ Vous utilisez également [intrinsèque](../../preprocessor/intrinsic.md) pour cr
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -63,7 +63,7 @@ Vous utilisez également [intrinsèque](../../preprocessor/intrinsic.md) pour cr
 
 ## <a name="see-also"></a>Voir aussi
 
-[/O, options (Optimiser le code)](../../build/reference/o-options-optimize-code.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
+[/O, options (Optimiser le code)](o-options-optimize-code.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [compilateur, fonctions intrinsèques](../../intrinsics/compiler-intrinsics.md)

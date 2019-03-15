@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: 0be2c9e0681018bb61f433f77df8fdd77ba741a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e37890fcd757a52ddeff0ccd79289bbc0c35e042
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420490"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816579"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Contraintes relatives aux DLL à chargement différé
 
@@ -21,7 +21,7 @@ Des contraintes s'appliquent au chargement différé d'importations.
 
 - Le chargement différé de Kernel32.dll n'est pas pris en charge. Cette DLL est nécessaire pour que les routines de l'assistant de chargement différé effectuent le chargement différé.
 
-- [Liaison](../../build/reference/binding-imports.md) d’entrée de points qui sont transférés n’est pas pris en charge.
+- [Liaison](binding-imports.md) d’entrée de points qui sont transférés n’est pas pris en charge.
 
 - Le chargement différé d'une DLL peut ne pas entraîner le même comportement du processus si des initialisations par processus surviennent au point d'entrée de la DLL chargée en différé. Autres cas incluent statique TLS (stockage local des threads), déclaré à l’aide de [__declspec (thread)](../../cpp/thread.md), ce qui n’est pas géré lorsque la DLL est chargée via `LoadLibrary`. Le stockage local des threads (TLS) de type dynamique, via `TlsAlloc`, `TlsFree`, `TlsGetValue` et `TlsSetValue`, peut encore être utilisé dans les bibliothèques DLL statiques ou chargées en différé.
 
@@ -33,7 +33,7 @@ Des contraintes s'appliquent au chargement différé d'importations.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
+[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](linker-support-for-delay-loaded-dlls.md)<br/>
 [LoadLibrary (fonction)](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
 [GetModuleHandle (fonction)](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
 [GetProcAddress (fonction)](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>

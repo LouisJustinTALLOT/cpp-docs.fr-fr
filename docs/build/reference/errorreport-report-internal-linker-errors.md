@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 97d36e9db342e5873fc76a156b879e03af880dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447238"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818022"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Signaler les erreurs internes de l'Éditeur de liens)
 
-> **/ errorreport :**[ **aucun** | **invite** | **file d’attente** | **envoyer** ]
+> **/errorreport:**[ **none** | **prompt** | **queue** | **send** ]
 
 ## <a name="arguments"></a>Arguments
 
@@ -42,7 +42,7 @@ L’option **/errorreport : send** envoie automatiquement les informations d’
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Ouvrez le **propriétés de Configuration** > **l’éditeur de liens** > **avancé** page de propriétés.
 
@@ -54,6 +54,6 @@ L’option **/errorreport : send** envoie automatiquement les informations d’
 
 ## <a name="see-also"></a>Voir aussi
 
-[/errorReport (Signaler les erreurs internes du compilateur)](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[/errorReport (Signaler les erreurs internes du compilateur)](errorreport-report-internal-compiler-errors.md)<br/>
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 47d23ac6f9234e095a1733a8d4078840318cce4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3495de3ec72bcac78cdee2f5f3265864e7a2932
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512396"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807752"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Utiliser la randomisation du format d'espace d'adresse)
 
@@ -21,7 +21,7 @@ Spécifie s’il faut générer une image exécutable pouvant être aléatoireme
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ DYNAMICBASE**[**: NO**]
+> **/DYNAMICBASE**[**:NO**]
 
 ## <a name="remarks"></a>Notes
 
@@ -31,7 +31,7 @@ Par défaut, **/DYNAMICBASE** est activé. Pour désactiver cette option, utilis
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Pour définir cette option d'éditeur de liens dans Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **avancé** page de propriétés.
 
@@ -43,7 +43,7 @@ Par défaut, **/DYNAMICBASE** est activé. Pour désactiver cette option, utilis
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)
-- [Options de l’éditeur de liens](../../build/reference/linker-options.md)
+- [Référence de l’éditeur de liens MSVC](linking.md)
+- [Options de l’éditeur de liens MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
 - [Défenses de sécurité d’éditeurs de logiciels Windows](https://msdn.microsoft.com/library/bb430720.aspx)

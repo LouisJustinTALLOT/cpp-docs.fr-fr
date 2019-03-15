@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: ae4c6a9f6c41d94aa1e36ba4a79226b49df08b49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628005"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822195"
 ---
 # <a name="fatal-error-c1083"></a>Erreur irrécupérable C1083
 
@@ -39,7 +39,7 @@ Le compilateur ne parvient pas à trouver le fichier à l'aide des règles de re
 
 `#include "myincludefile.h"`
 
-Cela indique au compilateur de rechercher le fichier dans le même répertoire que celui qui contient le fichier source tout d’abord, puis rechercher dans d’autres emplacements spécifiés par l’environnement de génération. Si les guillemets contiennent un chemin d’accès absolu, le compilateur recherche uniquement le fichier à cet emplacement. Si les guillemets contiennent un chemin d’accès relatif, le compilateur recherche le fichier dans le répertoire relatif au répertoire source.
+Cela indique au compilateur de rechercher le fichier dans le même répertoire que celui qui contient le fichier source tout d’abord, puis rechercher dans d’autres emplacements spécifiés par l’environnement de génération. Si les guillemets contiennent un chemin d’accès absolu, le compilateur recherche uniquement le fichier à cet emplacement. Si les guillemets contiennent un chemin d'accès relatif, le compilateur recherche le fichier dans le répertoire relatif au répertoire source.
 
 Si le nom est mis entre crochets,
 
@@ -69,13 +69,13 @@ Si vous voyez cette erreur lorsque vous essayez de configurer une bibliothèque 
 
 Même si les fichiers d’en-tête sont répertoriées dans **l’Explorateur de solutions** en tant que partie d’un projet, les fichiers sont trouvés uniquement par le compilateur lorsqu’ils sont désignés par un `#include` ou `#import` directive dans une source de fichier et sont situés dans un chemin de recherche Include. Différents genres de builds peuvent utiliser différents chemins d’accès de recherche. Le **/X** option du compilateur peut être utilisée pour exclure des répertoires à partir du chemin de recherche include. Cela permet à des builds distinctes d'utiliser des fichiers Include distincts qui portent le même nom, mais qui sont conservés dans des dossiers différents. Il s'agit d'une alternative à la compilation conditionnelle à l'aide de commandes de préprocesseur. Pour plus d’informations sur la **/X** option du compilateur, consultez [/X (ignorer Standard chemins d’accès Include)](../../build/reference/x-ignore-standard-include-paths.md).
 
-Pour résoudre ce problème, corrigez le chemin d’accès utilisé par le compilateur pour rechercher le fichier inclus ou importé. Une nouvelle valeur par défaut de projet utilise les chemins de recherche include. Vous devrez peut-être modifier le chemin de recherche include pour ajouter un répertoire pour votre projet. Si vous compilez sur la ligne de commande, ajoutez le chemin d’accès à la **INCLUDE** variable d’environnement ou le **/I** option du compilateur pour spécifier le chemin d’accès au fichier.
+Pour résoudre ce problème, corrigez le chemin d'accès utilisé par le compilateur pour rechercher le fichier inclus ou importé. Une nouvelle valeur par défaut de projet utilise les chemins de recherche include. Vous devrez peut-être modifier le chemin de recherche include pour ajouter un répertoire pour votre projet. Si vous compilez sur la ligne de commande, ajoutez le chemin d’accès à la **INCLUDE** variable d’environnement ou le **/I** option du compilateur pour spécifier le chemin d’accès au fichier.
 
-Pour définir le chemin du répertoire include dans Visual Studio, ouvrez le projet **Pages de propriétés** boîte de dialogue. Sélectionnez **répertoires VC ++** sous **propriétés de Configuration** dans le volet gauche, puis modifiez le **répertoires Include** propriété. Pour plus d’informations sur les répertoires par utilisateur et par projet recherché par le compilateur dans Visual Studio, consultez [VC ++ Directories Property Page](../../ide/vcpp-directories-property-page.md). Pour plus d’informations sur la **/I** option du compilateur, consultez [/I (autres répertoires Include)](../../build/reference/i-additional-include-directories.md).
+Pour définir le chemin du répertoire include dans Visual Studio, ouvrez le projet **Pages de propriétés** boîte de dialogue. Sélectionnez **répertoires VC ++** sous **propriétés de Configuration** dans le volet gauche, puis modifiez le **répertoires Include** propriété. Pour plus d’informations sur les répertoires par utilisateur et par projet recherché par le compilateur dans Visual Studio, consultez [VC ++ Directories Property Page](../../build/reference/vcpp-directories-property-page.md). Pour plus d’informations sur la **/I** option du compilateur, consultez [/I (autres répertoires Include)](../../build/reference/i-additional-include-directories.md).
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>La ligne de commande INCLUDE ou d’un environnement de LIB n’est pas définie.
 
-Lorsque le compilateur est appelé sur la ligne de commande, les variables d’environnement sont souvent utilisées pour spécifier des chemins de recherche. Si le chemin de recherche décrit par le **INCLUDE** ou **LIB** variable d’environnement n’est pas définie correctement, une erreur C1083 peut être générée. Nous vous recommandons vivement de l’utilisation d’un raccourci d’invite de commandes développeur pour définir l’environnement de base pour la ligne de commande de builds. Pour plus d’informations, consultez [Build C/C++ sur la ligne de commande](../../build/building-on-the-command-line.md). Pour plus d’informations sur l’utilisation des variables d’environnement, consultez [Comment : utiliser les Variables d’environnement dans une Build](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
+Lorsque le compilateur est appelé sur la ligne de commande, les variables d'environnement sont souvent utilisées pour spécifier des chemins de recherche. Si le chemin de recherche décrit par le **INCLUDE** ou **LIB** variable d’environnement n’est pas définie correctement, une erreur C1083 peut être générée. Nous vous recommandons vivement de l’utilisation d’un raccourci d’invite de commandes développeur pour définir l’environnement de base pour la ligne de commande de builds. Pour plus d’informations, consultez [Build C/C++ sur la ligne de commande](../../build/building-on-the-command-line.md). Pour plus d’informations sur l’utilisation des variables d’environnement, consultez [Comment : Utiliser des Variables d’environnement dans une génération](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>Le fichier peut être verrouillé ou en cours d’utilisation
 
@@ -87,7 +87,7 @@ Une erreur C1083 peut également indiquer que la version incorrecte d'un fichie
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Les en-têtes précompilés ne sont pas encore précompilés
 
-Lorsqu’un projet est configuré pour utiliser des en-têtes précompilés, les fichiers .pch appropriés doivent être créés de manière à ce que les fichiers qui utilisent le contenu d’en-tête puissent être compilés. Par exemple, le fichier stdafx.cpp est automatiquement créé dans le répertoire du projet pour les nouveaux projets. Compilez d’abord ce fichier pour créer les fichiers d’en-tête précompilés. Dans la conception de processus de génération classique, cela s’effectue automatiquement. Pour plus d’informations, consultez [création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md).
+Lorsqu'un projet est configuré pour utiliser des en-têtes précompilés, les fichiers .pch appropriés doivent être créés de manière à ce que les fichiers qui utilisent le contenu d'en-tête puissent être compilés. Par exemple, le fichier stdafx.cpp est automatiquement créé dans le répertoire du projet pour les nouveaux projets. Compilez d’abord ce fichier pour créer les fichiers d’en-tête précompilés. Dans la conception de processus de génération classique, cela s’effectue automatiquement. Pour plus d’informations, consultez [création de fichiers d’en-tête précompilé](../../build/creating-precompiled-header-files.md).
 
 ## <a name="additional-causes"></a>Causes supplémentaires
 
@@ -116,7 +116,7 @@ L’exemple suivant génère une erreur C1083 lorsque le fichier d’en-tête `"
 #include "stdio.h"  // OK
 ```
 
-Pour plus d’informations sur la création de projets C/C++ dans l’IDE ou sur la ligne de commande et des informations sur la définition des variables d’environnement, consultez [génération de programmes C/C++](../../build/building-c-cpp-programs.md).
+Pour plus d’informations sur la création de projets C/C++ dans l’IDE ou sur la ligne de commande et d’informations sur la définition des variables d’environnement, consultez [projets et des systèmes de génération](../../build/projects-and-build-systems-cpp.md).
 
 ## <a name="see-also"></a>Voir aussi
 

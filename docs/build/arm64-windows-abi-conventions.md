@@ -1,12 +1,12 @@
 ---
 title: Vue d’ensemble des conventions ABI de ARM64
 ms.date: 07/11/2018
-ms.openlocfilehash: c5c928dcb77729f5b79433d3be1b552664a0d211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599782"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816540"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI de ARM64
 
@@ -58,7 +58,7 @@ L’architecture AArch64 prend en charge 32 registres d’entiers, résumées ci
 |Registre|Volatil ?|Rôle|
 |-|-|-|
 x0|Volatil|Paramètre/zéro inscrire 1, inscrire de résultat
-X1-x7|Volatil|Register/zéro paramètre 2 à 8
+x1-x7|Volatil|Register/zéro paramètre 2 à 8
 x8-x15|Volatil|Registres de travail
 x16-x17|Volatil|Registres de travail intra--appel de procédure
 x18|Non volatil|Registre de plateforme : en mode noyau, pointe KPCR pour le processeur actuel ; en mode utilisateur, pointe vers TEB
@@ -80,10 +80,10 @@ L’architecture AArch64 prend également en charge 32 registres de virgule flot
 
 Registre|Volatil ?|Rôle
 |-|-|-|
-V0|Volatil|Paramètre/zéro inscrire 1, inscrire de résultat
-V1-v7|Volatil|Paramètre/zéro inscrit 2 à 8
+v0|Volatil|Paramètre/zéro inscrire 1, inscrire de résultat
+v1-v7|Volatil|Paramètre/zéro inscrit 2 à 8
 v8-v15|Non volatil|Scratch registres (Notez que seuls 64 bits de poids faibles sont non volatile)
-V16-v31|Volatil|Registres de travail
+v16-v31|Volatil|Registres de travail
 
 Chaque registre est accessible en tant qu’une valeur 128 bits complète (via v0-v31 ou q0-q31), comme une valeur de 64 bits (via d0-d31), comme une valeur 32 bits (via s0-s31), comme une valeur de 16 bits (via h0-h31), ou comme une valeur de 8 bits (via b0-b31). Est inférieure à 128 bits accède à accéder uniquement les bits de poids faible du Registre de 128 bits et laisser les bits restants inchangés, sauf indication contraire. (Notez que cela diffère considérablement AArch32, où les registres plus petits ont été compressés sur les registres de plus grande).
 
@@ -95,7 +95,7 @@ Bits|Signification|Volatil ?|Rôle
 25|DN|Non Volatile|Contrôle du mode NaN par défaut
 24|FZ|Non volatil|Contrôle du mode de remplacement par zéro (Flush-to-zero)
 23-22|RMode|Non volatil|Contrôle du mode d'arrondi
-15,12-8|IDE/IXE/etc.|Non Volatile|Bits d'activation de l'interception d'exceptions, doit toujours être égal à 0
+15,12-8|IDE/IXE/etc|Non Volatile|Bits d'activation de l'interception d'exceptions, doit toujours être égal à 0
 
 ## <a name="system-registers"></a>Registres du système
 
@@ -171,7 +171,7 @@ Pour chaque argument dans la liste les règles suivantes sont appliquées à son
 
 1. L’argument est copié dans la mémoire à l’adresse NSAA ajustée. L’adresse NSAA est incrémentée de la taille de l’argument. L’argument a maintenant été alloué.
 
-### <a name="addendum-variadic-functions"></a>Addenda : Les fonctions Variadiques
+### <a name="addendum-variadic-functions"></a>Addenda : Fonctions Variadiques
 
 Fonctions qui acceptent un nombre variable d’arguments sont gérées différemment de ceux ci-dessus, comme suit :
 
@@ -203,7 +203,7 @@ La pile de mode noyau par défaut dans Windows est six pages (24 Ko). Apportez u
 
 ## <a name="stack-walking"></a>Parcours de pile
 
-Code au sein de Windows est compilé avec des pointeurs de frame activés ([/Oy-](../build/reference/oy-frame-pointer-omission.md)) pour activer l’exploration de pile rapide. De cela est que x29 (fp) est en général pointe vers le lien suivant dans la chaîne, qui est {fp, lr} paire indiquant le pointeur vers le frame précédent sur la pile et l’adresse de retour. Code tiers est encouragé à activer des pointeurs de frame ainsi afin de permettre le profilage améliorées et le suivi.
+Code au sein de Windows est compilé avec des pointeurs de frame activés ([/Oy-](reference/oy-frame-pointer-omission.md)) pour activer l’exploration de pile rapide. De cela est que x29 (fp) est en général pointe vers le lien suivant dans la chaîne, qui est {fp, lr} paire indiquant le pointeur vers le frame précédent sur la pile et l’adresse de retour. Code tiers est encouragé à activer des pointeurs de frame ainsi afin de permettre le profilage améliorées et le suivi.
 
 ## <a name="exception-unwinding"></a>Déroulement d’exception
 
@@ -221,5 +221,5 @@ Notez que le compteur de cycles est un vrai compteur de cycles, pas une horloge 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Problèmes courants de migration ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[La gestion des exceptions ARM64](../build/arm64-exception-handling.md)
+[Problèmes courants de migration ARM Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
+[La gestion des exceptions ARM64](arm64-exception-handling.md)

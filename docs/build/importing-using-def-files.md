@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424774"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815331"
 ---
 # <a name="importing-using-def-files"></a>Importation à l'aide de fichiers DEF
 
@@ -59,8 +59,8 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 À l’aide de la constante est plus risqué, car si vous oubliez d’utiliser le niveau supplémentaire d’indirection, vous pourriez éventuellement accéder un pointeur de la table adresses d’importation à la variable, pas la variable elle-même. Ce type de problème peut se manifester souvent une violation d’accès, car la table d’importation adresse est actuellement en lecture seule par le compilateur et l’éditeur de liens.
 
-L’éditeur de liens Visual C++ actuel émet un avertissement s’il voit constante dans le fichier .def pour prendre en compte pour ce cas. La seule véritable raison d’utiliser constante est que si vous ne pouvez pas recompiler un fichier objet quelconque dans lequel le fichier d’en-tête ne pas répertorier **__declspec (dllimport)** sur le prototype.
+L’éditeur de liens MSVC actuel émet un avertissement s’il voit constante dans le fichier .def pour prendre en compte pour ce cas. La seule véritable raison d’utiliser constante est que si vous ne pouvez pas recompiler un fichier objet quelconque dans lequel le fichier d’en-tête ne pas répertorier **__declspec (dllimport)** sur le prototype.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Importation dans une application](../build/importing-into-an-application.md)
+[Importation dans une application](importing-into-an-application.md)

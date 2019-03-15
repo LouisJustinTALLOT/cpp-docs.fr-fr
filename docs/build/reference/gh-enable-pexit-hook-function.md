@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-ms.openlocfilehash: 21649838ba81f3affdda3f3833de23e4d9e33746
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 077096cc296f2aa2128127493a84a91da9a067c5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422527"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822169"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Activer la fonction de raccordement _pexit)
 
@@ -36,11 +36,11 @@ Sauf si vous envisagez d’appeler explicitement `_pexit`, vous n’avez pas bes
 void __declspec(naked) __cdecl _pexit( void );
 ```
 
-`_pexit` est similaire à `_penter`; consultez [/Gh (activer _penter la fonction de raccordement)](../../build/reference/gh-enable-penter-hook-function.md) pour obtenir un exemple montrant comment écrire un `_pexit` (fonction).
+`_pexit` est similaire à `_penter`; consultez [/Gh (activer _penter la fonction de raccordement)](gh-enable-penter-hook-function.md) pour obtenir un exemple montrant comment écrire un `_pexit` (fonction).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -54,5 +54,5 @@ void __declspec(naked) __cdecl _pexit( void );
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

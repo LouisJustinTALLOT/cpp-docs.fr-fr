@@ -2,16 +2,16 @@
 title: Choix du format des fichiers d'entrée .netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: ed492e47c09c05fc8ce2af3e19822cc5dde47b63
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420048"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807323"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Choix du format des fichiers d'entrée .netmodule
 
-Un fichier .obj MSIL (compilé avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)) peut également être utilisé comme un fichier .netmodule.  les fichiers .obj contiennent des métadonnées et des symboles natifs.  fichiers .netmodule contiennent uniquement des métadonnées.
+Un fichier .obj MSIL (compilé avec [/CLR](clr-common-language-runtime-compilation.md)) peut également être utilisé comme un fichier .netmodule.  les fichiers .obj contiennent des métadonnées et des symboles natifs.  fichiers .netmodule contiennent uniquement des métadonnées.
 
 Vous pouvez passer d’un fichier .obj MSIL à tout autre compilateur Visual Studio via l’option de compilateur /addmodule (mais n’oubliez pas que le fichier .obj devient partie intégrante de l’assembly résultant et doit être livré avec l’assembly).  Par exemple, Visual c# et Visual Basic ont l’option de compilateur /addmodule.
 
@@ -22,11 +22,11 @@ fichiers .obj, ainsi que leurs fichiers .h associés, qui vous font référence 
 
 Autres compilateurs Visual Studio peuvent uniquement consommer des types managés à partir d’un module.
 
-Utilisez les éléments suivants pour déterminer s’il faut utiliser un fichier .netmodule ou un fichier .obj comme entrée de module dans l’éditeur de liens Visual C++ :
+Pour déterminer s’il faut utiliser un fichier .netmodule ou un fichier .obj comme entrée de module dans l’éditeur de liens MSVC, utilisez les éléments suivants :
 
 - Si vous générez avec un compilateur de Visual Studio que Visual C++, produisez un fichier .netmodule et utilisez-le comme entrée dans l’éditeur de liens.
 
-- Si vous utilisez le compilateur Visual C++ pour produire des modules et si l’ou les modules doivent être utilisé pour générer autre chose qu’une bibliothèque, utilisez les fichiers .obj produits par le compilateur comme entrée de module dans l’éditeur de liens ; n’utilisez pas le fichier .netmodule en tant qu’entrée.
+- Si vous utilisez le compilateur MSVC pour produire des modules et si l’ou les modules doivent être utilisé pour générer autre chose qu’une bibliothèque, utilisez les fichiers .obj produits par le compilateur comme entrée de module dans l’éditeur de liens ; n’utilisez pas le fichier .netmodule en tant qu’entrée.
 
 - Si vos modules sont utilisés pour générer une bibliothèque native (et non managée), utilisez les fichiers .obj en tant qu’entrée de module dans l’éditeur de liens et générer un fichier de bibliothèque .lib.
 
@@ -36,4 +36,4 @@ Utilisez les éléments suivants pour déterminer s’il faut utiliser un fichie
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers .netmodule en tant qu’entrée de l’Éditeur de liens](../../build/reference/netmodule-files-as-linker-input.md)
+[Fichiers .netmodule en tant qu’entrée de l’Éditeur de liens](netmodule-files-as-linker-input.md)

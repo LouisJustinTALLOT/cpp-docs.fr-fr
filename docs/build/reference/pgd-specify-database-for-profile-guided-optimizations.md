@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PGD linker option
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-ms.openlocfilehash: 68d112c0a40289ba62e3fe5c37ae23f8f55f9209
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1d7c9fcb94a9351ce94b66e04b4bfc523248f4e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601290"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812198"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (Spécifier la base de données pour les optimisations guidées par profil)
 
@@ -29,15 +29,15 @@ Spécifie le nom du fichier .pgd qui permet de conserver des informations sur le
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous utilisez déconseillées [/LTCG : PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md) , utilisez l’option **/PGD** pour spécifier un nom de non défini par défaut ou un emplacement pour le fichier .pgd. Si vous ne spécifiez pas **/PGD**, le nom de base du fichier .pgd est le même que le nom fichier de sortie (.exe ou .dll) base et est créé dans le même répertoire que celui à partir duquel le lien a été appelé.
+Lorsque vous utilisez déconseillées [/LTCG : PGINSTRUMENT](ltcg-link-time-code-generation.md) , utilisez l’option **/PGD** pour spécifier un nom de non défini par défaut ou un emplacement pour le fichier .pgd. Si vous ne spécifiez pas **/PGD**, le nom de base du fichier .pgd est le même que le nom fichier de sortie (.exe ou .dll) base et est créé dans le même répertoire que celui à partir duquel le lien a été appelé.
 
 Lorsque vous utilisez déconseillées **/LTCG : PGOPTIMIZE** option, utilisez le **/PGD** option pour spécifier le nom du fichier .pgd à utiliser pour créer l’image optimisée. Le *filename* l’argument doit correspondre à la *filename* spécifié à **/LTCG : PGINSTRUMENT**.
 
-Pour plus d’informations, consultez [optimisation guidée par profil](../../build/reference/profile-guided-optimizations.md).
+Pour plus d’informations, consultez [optimisations guidées par profil](../profile-guided-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **optimisation** page de propriétés.
 
@@ -49,5 +49,5 @@ Pour plus d’informations, consultez [optimisation guidée par profil](../../bu
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)<br/>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612366"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822624"
 ---
 # <a name="import-directive-c"></a>#import, directive (C++)
 
@@ -72,7 +72,7 @@ Un ou plusieurs [attributs #import](#_predir_the_23import_directive_import_attri
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-ou -
+\- ou -
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -121,16 +121,16 @@ Les optimisations du compilateur suivantes sont fournis avec le **#import** dire
 
 - Lorsque **#import** est traité, le compilateur vérifie d’abord si l’en-tête existe et qu’il est à jour. Si oui, il est inutile de le recréer.
 
-Le **#import** directive également participe à la régénération minimale et peut être placée dans un fichier d’en-tête précompilé. Consultez [création de fichiers d’en-tête précompilé](../build/reference/creating-precompiled-header-files.md) pour plus d’informations.
+Le **#import** directive également participe à la régénération minimale et peut être placée dans un fichier d’en-tête précompilé. Consultez [création de fichiers d’en-tête précompilé](../build/creating-precompiled-header-files.md) pour plus d’informations.
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> Fichier d’en-tête de bibliothèque de Type principal
 Le fichier d'en-tête principal de bibliothèque de types se compose de sept sections :
 
-- Zones fixes de titre : se composent des commentaires, de l'instruction `#include` pour COMDEF.H (qui définit des macros standard utilisées dans l'en-tête) et d'autres informations de configuration diverses.
+- Zones fixes de titre : Se compose de commentaires, `#include` instruction pour COMDEF. H (qui définit des macros standard utilisées dans l’en-tête) et d’autres informations de configuration diverses.
 
-- Références anticipées et typedefs : se composent de déclarations de structure comme `struct IMyInterface` et de définitions de types (typedefs).
+- Références anticipées et typedefs : Se compose des déclarations de structure comme `struct IMyInterface` et typedefs.
 
-- Déclarations de pointeur intelligent : la classe de modèle `_com_ptr_t` est une implémentation de pointeur intelligent qui encapsule des pointeurs d’interface et élimine la nécessité d’appeler `AddRef`, `Release`, `QueryInterface` fonctions. En outre, elle masque l'appel de `CoCreateInstance` en créant un nouvel objet COM. Cette section utilise l’instruction macro `_COM_SMARTPTR_TYPEDEF` pour établir les typedefs des interfaces COM pour être des spécialisations de modèle de la [_com_ptr_t](../cpp/com-ptr-t-class.md) classe de modèle. Par exemple, pour l’interface `IMyInterface`, le. Les fichiers TLH contiendra :
+- Déclarations de pointeur intelligent : La classe de modèle `_com_ptr_t` est une implémentation de pointeur intelligent qui encapsule des pointeurs d’interface et élimine la nécessité d’appeler `AddRef`, `Release`, `QueryInterface` fonctions. En outre, elle masque l'appel de `CoCreateInstance` en créant un nouvel objet COM. Cette section utilise l’instruction macro `_COM_SMARTPTR_TYPEDEF` pour établir les typedefs des interfaces COM pour être des spécialisations de modèle de la [_com_ptr_t](../cpp/com-ptr-t-class.md) classe de modèle. Par exemple, pour l’interface `IMyInterface`, le. Les fichiers TLH contiendra :
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -144,13 +144,13 @@ Le fichier d'en-tête principal de bibliothèque de types se compose de sept sec
 
    Le type `IMyInterfacePtr` peut alors être utilisé à la place du pointeur d'interface brut `IMyInterface*`. Par conséquent, il n’est pas nécessaire d’appeler les différentes `IUnknown` fonctions membres
 
-- Déclarations de TypeInfo : se compose essentiellement de définitions de classe et d’autres éléments exposant les différents éléments de typeinfo retournés par `ITypeLib:GetTypeInfo`. Dans cette section, chaque typeinfo de la bibliothèque de types est répercuté dans l'en-tête en fonction des informations de `TYPEKIND`.
+- Déclarations de TypeInfo : Se compose principalement de définitions de classe et d’autres éléments exposant les différents éléments de typeinfo retournés par `ITypeLib:GetTypeInfo`. Dans cette section, chaque typeinfo de la bibliothèque de types est répercuté dans l'en-tête en fonction des informations de `TYPEKIND`.
 
-- Ancienne définition de GUID facultative : contient les initialisations des constantes GUID nommées. Il s’agit des noms au format `CLSID_CoClass` et `IID_Interface`, semblables à ceux générés par le compilateur MIDL.
+- Définition de GUID facultative ancienne : Contient les initialisations des constantes GUID nommées. Il s’agit des noms au format `CLSID_CoClass` et `IID_Interface`, semblables à ceux générés par le compilateur MIDL.
 
 - Instruction `#include` pour l'en-tête de bibliothèque de types secondaires.
 
-- Zones fixes de pied de page : incluent actuellement `#pragma pack(pop)`.
+- Réutilisable de pied de page : Inclut actuellement `#pragma pack(pop)`.
 
 Toutes les sections, à l’exception de la section de code réutilisable de titre réutilisable et un pied de page, sont placées dans un espace de noms portant le nom spécifié par le `library` instruction dans le fichier IDL d’origine. Vous pouvez utiliser les noms de l'en-tête de la bibliothèque de types en spécifiant une qualification explicite avec le nom de l'espace de noms ou en incluant l'instruction suivante :
 
@@ -162,7 +162,7 @@ immédiatement après le **#import** instruction dans le code source.
 
 L’espace de noms peut être supprimée à l’aide de la [no_namespace](#_predir_no_namespace) attribut de la **#import** directive. Toutefois, la suppression de l'espace de noms peut entraîner des collisions de noms. L’espace de noms peut également être renommé par la [rename_namespace](#_predir_rename_namespace) attribut.
 
-Le compilateur fournit le chemin d’accès complet aux dépendances de bibliothèque de types requises par la bibliothèque de types qu’il traite actuellement. Le chemin d'accès est écrit, sous forme de commentaires, dans l'en-tête de bibliothèque de types (.TLH) que le compilateur génère pour chaque bibliothèque de types traitée.
+Le compilateur fournit le chemin d’accès complet aux dépendances de bibliothèque de types requises par la bibliothèque de types qu’il traite actuellement. Le chemin d’accès est écrit, sous forme de commentaires, dans l’en-tête de bibliothèque de types (.TLH) que le compilateur génère pour chaque bibliothèque de types traitée.
 
 Si une bibliothèque de types inclut des références aux types définis dans d'autres bibliothèques de types, le fichier .TLH inclura des commentaires du type suivant :
 

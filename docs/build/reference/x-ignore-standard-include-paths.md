@@ -13,12 +13,12 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 615a53a7ad29527187072c3131f551a76bd18969
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dba7e49880307002a3dee983264e93666adfef17
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421365"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818399"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Ignorer les chemins d'accès Include standard)
 
@@ -32,11 +32,11 @@ Empêche le compilateur de rechercher des fichiers include dans les répertoires
 
 ## <a name="remarks"></a>Notes
 
-Vous pouvez utiliser cette option avec la [/I (autres répertoires Include)](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) option.
+Vous pouvez utiliser cette option avec la [/I (autres répertoires Include)](i-additional-include-directories.md) (**/I**`directory`) option.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -58,5 +58,5 @@ CL /X /I \ALT\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 18bbdb980c63b3c04b432602afb2402c5e2c42e7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424676"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812081"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Définitions de préprocesseur)
 
@@ -62,7 +62,7 @@ CL /DTEST=%% TEST.C
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Dans le volet gauche, sélectionnez **propriétés de Configuration**, **C/C++**, **préprocesseur**.
 
@@ -97,8 +97,8 @@ TEST defined 1
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[/U, /u (Annuler la définition de symboles)](../../build/reference/u-u-undefine-symbols.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[/U, /u (Annuler la définition de symboles)](u-u-undefine-symbols.md)<br/>
 [#undef, directive (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br/>
 [#define, directive (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

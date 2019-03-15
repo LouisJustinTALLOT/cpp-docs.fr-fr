@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 30fac6579d05eed276b60918b2417cd96044359a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251275fd866ce7c9d697787c35c6207ef77862db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292625"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818594"
 ---
 # <a name="creating-an-mfc-application"></a>Création d'une application MFC
 
@@ -36,7 +36,7 @@ L'Assistant Application MFC génère les classes et fichiers appropriés pour n'
 
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Pour créer une application MFC à l'aide de l'Assistant Application MFC
 
-1. Suivez les instructions de la rubrique d’aide [Création d’un projet à l’aide d’un Assistant Application Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Suivez les instructions de la rubrique d’aide [créer un projet d’application console C++](../../get-started/tutorial-console-cpp.md).
 
 1. Dans le **nouveau projet** boîte de dialogue, sélectionnez **Application MFC** dans le volet Modèles pour ouvrir l’Assistant.
 
@@ -47,9 +47,10 @@ L'Assistant Application MFC génère les classes et fichiers appropriés pour n'
 
 1. Cliquez sur **Terminer** pour fermer l’Assistant et ouvrir votre nouveau projet dans l’environnement de développement.
 
-Une fois votre projet créé, vous pouvez afficher les fichiers créés dans **l’Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour les projets Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+Une fois votre projet créé, vous pouvez afficher les fichiers créés dans **l’Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour les projets Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Pages de propriétés](../../ide/property-pages-visual-cpp.md)
+[Pages de propriétés](../../build/reference/property-pages-visual-cpp.md)
+

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412898"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809780"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Procédure : Incorporer un manifeste à l’intérieur d’une Application C/C++
 
-Il est recommandé qu’une application C/C++ (ou une bibliothèque) son manifeste incorporé dans le fichier binaire final, car cela garantit le comportement d’exécution correct dans la plupart des scénarios. Par défaut, Visual Studio essaie d’incorporer le manifeste lorsqu’il génère un projet à partir de fichiers sources ; consultez [génération de manifeste dans Visual Studio](../build/manifest-generation-in-visual-studio.md) pour plus d’informations. Toutefois si une application est générée à l’aide de nmake, certaines modifications dans le fichier makefile existant sont nécessaires. Cette section montre comment modifier des makefiles existants pour incorporer automatiquement le manifeste dans le fichier binaire final.
+Il est recommandé qu’une application C/C++ (ou une bibliothèque) son manifeste incorporé dans le fichier binaire final, car cela garantit le comportement d’exécution correct dans la plupart des scénarios. Par défaut, Visual Studio essaie d’incorporer le manifeste lorsqu’il génère un projet à partir de fichiers sources ; consultez [génération de manifeste dans Visual Studio](manifest-generation-in-visual-studio.md) pour plus d’informations. Toutefois si une application est générée à l’aide de nmake, certaines modifications dans le fichier makefile existant sont nécessaires. Cette section montre comment modifier des makefiles existants pour incorporer automatiquement le manifeste dans le fichier binaire final.
 
 ## <a name="two-approaches"></a>Deux approches
 
@@ -255,4 +255,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation de la génération de manifeste pour les programmes C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Présentation de la génération de manifeste pour les programmes C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

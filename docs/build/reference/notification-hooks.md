@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 1e4dc6331e2a957c0268e686fff7dbb3f7eb0b24
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 884d8e8479b7cad28d99e19adfac4d05dbeec5f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426548"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818308"
 ---
 # <a name="notification-hooks"></a>Raccordements de notification
 
@@ -77,8 +77,8 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;
 ```
 
-Les notifications passent dans un **DelayLoadInfo** structure à la fonction de raccordement, ainsi que la valeur de notification. Ces données sont identiques à celle utilisée par la routine d’assistance de chargement différé. La valeur de la notification sera une des valeurs définies dans [définitions des structures et constantes](../../build/reference/structure-and-constant-definitions.md).
+Les notifications passent dans un **DelayLoadInfo** structure à la fonction de raccordement, ainsi que la valeur de notification. Ces données sont identiques à celle utilisée par la routine d’assistance de chargement différé. La valeur de la notification sera une des valeurs définies dans [définitions des structures et constantes](structure-and-constant-definitions.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion et notification des erreurs](../../build/reference/error-handling-and-notification.md)
+[Gestion et notification des erreurs](error-handling-and-notification.md)

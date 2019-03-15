@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417586"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814114"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Procédure : Utiliser des événements de Build dans des projets MSBuild
 
@@ -39,7 +39,7 @@ Le tableau suivant répertorie chaque *utilisation dans la génération* éléme
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant peut être ajouté à l’intérieur de l’élément de projet du fichier myproject.vcxproj créé dans [procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *pré-build* événement effectue une copie de main.cpp ; un *pré-lien* événement effectue une copie de main.obj ; et un *post-build* événement effectue une copie de myproject.exe. Si le projet est généré à l’aide d’une configuration release, les événements de build sont exécutées. Si le projet est généré à l’aide d’une configuration debug, les événements de build ne sont pas exécutées.
+L’exemple suivant peut être ajouté à l’intérieur de l’élément de projet du fichier myproject.vcxproj créé dans [procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *pré-build* événement effectue une copie de main.cpp ; un *pré-lien* événement effectue une copie de main.obj ; et un *post-build* événement effectue une copie de myproject.exe. Si le projet est généré à l’aide d’une configuration release, les événements de build sont exécutées. Si le projet est généré à l’aide d’une configuration debug, les événements de build ne sont pas exécutées.
 
 ```
 <ItemDefinitionGroup>
@@ -72,5 +72,5 @@ L’exemple suivant peut être ajouté à l’intérieur de l’élément de pro
 
 ## <a name="see-also"></a>Voir aussi
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[MSBuild sur la ligne de commande - C++](msbuild-visual-cpp.md)<br/>
+[Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

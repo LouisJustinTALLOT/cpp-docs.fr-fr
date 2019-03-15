@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mapfiles, specifying file name
 - /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-ms.openlocfilehash: 769fdc6a3980be34d92fc722099fde11ab677dc8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9a45fd5ea44b8908e77f847275bde42b86385cdb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417890"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817944"
 ---
 # <a name="map-generate-mapfile"></a>/MAP (Générer fichier de mappage)
 
@@ -51,11 +51,11 @@ Un fichier de mappage est un fichier texte qui contient les informations suivant
 
 - Le point d’entrée (en tant que *section*:*décalage*)
 
-Le [/Map.](../../build/reference/mapinfo-include-information-in-mapfile.md) option spécifie des informations supplémentaires à inclure dans le fichier de mappage.
+Le [/Map.](mapinfo-include-information-in-mapfile.md) option spécifie des informations supplémentaires à inclure dans le fichier de mappage.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -69,5 +69,5 @@ Le [/Map.](../../build/reference/mapinfo-include-information-in-mapfile.md) opti
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Zc:implicitNoexcept
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-ms.openlocfilehash: 0ca03cc2a3afa0d5665f217ccb0d41eb1e41d3be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec2b8c8fb4c7730a78c4403606d6fa61c0ddc374
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480927"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810014"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (spécificateurs d'exceptions implicites)
 
@@ -129,7 +129,7 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
 
@@ -137,7 +137,7 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Zc (Conformité)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Conformité)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [Spécifications d’exception (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [terminate](../../standard-library/exception-functions.md#terminate)<br/>

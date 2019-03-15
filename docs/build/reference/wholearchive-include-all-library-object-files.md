@@ -2,12 +2,12 @@
 title: / WHOLEARCHIVE (inclure tous les fichiers d’objet de bibliothèque)
 ms.date: 11/04/2016
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: cc260f139a9312bbac7fed34471481401db770d4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: db99816b18110b424647603196040997044e7fbd
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412911"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808649"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (inclure tous les fichiers d’objet de bibliothèque)
 
@@ -27,7 +27,7 @@ L’option /WHOLEARCHIVE a été introduite dans Visual Studio 2015 Update 2.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Pour définir cette option d'éditeur de liens dans Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **ligne de commande** page de propriétés **propriétés de Configuration**, **l’éditeur de liens**.
 
@@ -35,5 +35,5 @@ L’option /WHOLEARCHIVE a été introduite dans Visual Studio 2015 Update 2.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

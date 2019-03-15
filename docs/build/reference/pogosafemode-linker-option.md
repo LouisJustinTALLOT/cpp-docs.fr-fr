@@ -3,12 +3,12 @@ title: / POGOSAFEMODE (exécuter PGO en mode sans échec du thread)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544428"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821285"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (exécuter PGO en mode sans échec du thread)
 
@@ -26,11 +26,11 @@ Le **/POGOSAFEMODE** option définit la génération instrumentée pour utiliser
 
 Par défaut, le profilage PGO fonctionne en mode rapide. **/ POGOSAFEMODE** est nécessaire uniquement si vous souhaitez utiliser le mode sans échec.
 
-Pour exécuter le profilage PGO en mode sans échec, vous devez utiliser soit **/genprofile : exacte** (recommandé), ou utiliser la variable d’environnement [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) ou le commutateur de l’éditeur de liens **/POGOSAFEMODE**, selon le système. Si vous effectuez le profilage sur un x64 ordinateur, vous devez utiliser le commutateur de l’éditeur de liens. Si vous effectuez le profilage sur un x86 ordinateur, vous pouvez utiliser le commutateur de l’éditeur de liens ou définir la variable d’environnement à n’importe quelle valeur avant de commencer le processus d’instrumentation PGO.
+Pour exécuter le profilage PGO en mode sans échec, vous devez utiliser soit **/genprofile : exacte** (recommandé), ou utiliser la variable d’environnement [PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md) ou le commutateur de l’éditeur de liens **/POGOSAFEMODE**, selon le système. Si vous effectuez le profilage sur un x64 ordinateur, vous devez utiliser le commutateur de l’éditeur de liens. Si vous effectuez le profilage sur un x86 ordinateur, vous pouvez utiliser le commutateur de l’éditeur de liens ou définir la variable d’environnement à n’importe quelle valeur avant de commencer le processus d’instrumentation PGO.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **optimisation** page de propriétés.
 
@@ -48,5 +48,5 @@ Pour exécuter le profilage PGO en mode sans échec, vous devez utiliser soit **
 
 [/GENPROFILE et /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Optimisations guidées par profil](../../build/reference/profile-guided-optimizations.md)<br/>
-[Variables d’environnement pour les optimisations guidées par profil](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Optimisations guidées par profil](../profile-guided-optimizations.md)<br/>
+[Variables d’environnement pour les optimisations guidées par profil](../environment-variables-for-profile-guided-optimizations.md)<br/>

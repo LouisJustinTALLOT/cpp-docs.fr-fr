@@ -16,12 +16,12 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-ms.openlocfilehash: bf87023e3417a922232af60d89a21c17ad6864cc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ca7ef5d1935ddea0441f49e387e35184c6fd1fc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424728"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810196"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Générer les informations de débogage)
 
@@ -35,7 +35,7 @@ Le **/DEBUG** option permet de créer des informations de débogage pour le fich
 
 L’éditeur de liens place les informations de débogage dans un fichier du programme (PDB) de la base de données. Il met à jour le fichier PDB lors des générations suivantes du programme.
 
-Un exécutable créé pour le débogage (fichier .exe ou DLL) contient le nom et le chemin d’accès du fichier PDB correspondant. Le débogueur lit le nom incorporé et utilise le fichier PDB lorsque vous déboguez le programme. L’éditeur de liens utilise le nom de base du programme et l’extension .pdb pour nommer la base de données du programme et incorpore le chemin d’accès où il a été créé. Pour substituer cette valeur par défaut, définissez [/PDB](../../build/reference/pdb-use-program-database.md) et spécifiez un autre nom de fichier.
+Un exécutable créé pour le débogage (fichier .exe ou DLL) contient le nom et le chemin d’accès du fichier PDB correspondant. Le débogueur lit le nom incorporé et utilise le fichier PDB lorsque vous déboguez le programme. L’éditeur de liens utilise le nom de base du programme et l’extension .pdb pour nommer la base de données du programme et incorpore le chemin d’accès où il a été créé. Pour substituer cette valeur par défaut, définissez [/PDB](pdb-use-program-database.md) et spécifiez un autre nom de fichier.
 
 Le **/Debug : Fastlink** option est disponible dans Visual Studio 2017 et versions ultérieures. Cette option laisse les informations de symboles privés dans les produits individuels de compilation utilisés pour générer le fichier exécutable. Il génère un fichier PDB limité qui indexe dans les informations de débogage dans les fichiers objets et les bibliothèques utilisées pour générer l’exécutable au lieu de faire une copie complète. Cette option peut lier de deux à quatre fois plus vite à la génération de PDB complet et est recommandée lorsque vous déboguez localement et que vous disposez des disponibilité des produits de build. Ce fichier PDB limité ne peut pas être utilisé pour le débogage lorsque les produits de génération requis ne sont pas disponibles, telles que lorsque le fichier exécutable est déployé sur un autre ordinateur. Dans une invite de commandes développeur, vous pouvez utiliser l’outil mspdbcmf.exe pour générer un fichier PDB complet à partir de ce fichier PDB limité. Dans Visual Studio, utilisez les éléments de menu projet ou de Build pour générer un fichier PDB complet pour créer un fichier PDB complet pour le projet ou la solution.
 
@@ -45,17 +45,17 @@ Le **/DEBUG : aucun** option ne génère pas un fichier PDB.
 
 Lorsque vous spécifiez **/DEBUG** avec aucune des options supplémentaires, l’éditeur de liens par défaut est **/Debug : Full** pour la ligne de commande et les builds de makefile pour les versions release dans l’IDE Visual Studio et pour debug et release versions de Visual Studio 2015 et versions antérieures. À compter de Visual Studio 2017, le système de génération dans l’IDE par défaut est **/Debug : Fastlink** lorsque vous spécifiez le **/DEBUG** option pour les versions debug. Autres valeurs par défaut sont inchangés pour assurer la compatibilité descendante.
 
-Le compilateur [Compatible C7](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) option indique au compilateur de laisser les informations de débogage dans les fichiers .obj. Vous pouvez également utiliser le [base de données de programme](../../build/reference/z7-zi-zi-debug-information-format.md) option du compilateur (/ Zi) pour stocker les informations de débogage dans un fichier PDB pour le fichier .obj. L’éditeur de liens recherche PDB de l’objet dans le chemin d’accès absolu écrit dans le fichier .obj, et puis dans le répertoire qui contient le fichier .obj. Vous ne pouvez pas spécifier le nom du fichier PDB ou l’emplacement de l’éditeur de liens d’un objet.
+Le compilateur [Compatible C7](z7-zi-zi-debug-information-format.md) (/ Z7) option indique au compilateur de laisser les informations de débogage dans les fichiers .obj. Vous pouvez également utiliser le [base de données de programme](z7-zi-zi-debug-information-format.md) option du compilateur (/ Zi) pour stocker les informations de débogage dans un fichier PDB pour le fichier .obj. L’éditeur de liens recherche PDB de l’objet dans le chemin d’accès absolu écrit dans le fichier .obj, et puis dans le répertoire qui contient le fichier .obj. Vous ne pouvez pas spécifier le nom du fichier PDB ou l’emplacement de l’éditeur de liens d’un objet.
 
-[/ INCRÉMENTIELLE](../../build/reference/incremental-link-incrementally.md) est implicite lorsque /DEBUG est spécifié.
+[/ INCRÉMENTIELLE](incremental-link-incrementally.md) est implicite lorsque /DEBUG est spécifié.
 
-/Debug modifie les valeurs par défaut pour le [/OPT](../../build/reference/opt-optimizations.md) dans l’option REF par NOREF et ICF NOICF, donc si vous souhaitez que les valeurs par défaut d’origine, vous devez spécifier explicitement/OPT : REF ou/OPT : ICF.
+/Debug modifie les valeurs par défaut pour le [/OPT](opt-optimizations.md) dans l’option REF par NOREF et ICF NOICF, donc si vous souhaitez que les valeurs par défaut d’origine, vous devez spécifier explicitement/OPT : REF ou/OPT : ICF.
 
 Il n’est pas possible de créer un .exe ou .dll qui contient les informations de débogage. Déboguer des informations sont toujours placées dans un fichier .obj ou .pdb.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -71,5 +71,5 @@ Il n’est pas possible de créer un .exe ou .dll qui contient les informations 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

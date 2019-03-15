@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-ms.openlocfilehash: 3c11572880a0b58a1ba82f2e794c9dbfbd521c44
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7a46cecdbf96ad891ce218df4769a60590e562a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425209"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810040"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Représentation à but général)
 
-Utilisé lorsque [/vmb, /vmg (méthode de représentation)](../../build/reference/vmb-vmg-representation-method.md) est sélectionné comme le [méthode de représentation](../../build/reference/vmb-vmg-representation-method.md). Ces options indiquent le modèle d’héritage de la définition de classe a pas encore été rencontrée.
+Utilisé lorsque [/vmb, /vmg (méthode de représentation)](vmb-vmg-representation-method.md) est sélectionné comme le [méthode de représentation](vmb-vmg-representation-method.md). Ces options indiquent le modèle d’héritage de la définition de classe a pas encore été rencontrée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,7 +52,7 @@ Lorsque vous spécifiez une de ces options de modèle d’héritage, ce modèle 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -66,6 +66,6 @@ Lorsque vous spécifiez une de ces options de modèle d’héritage, ce modèle 
 
 ## <a name="see-also"></a>Voir aussi
 
-[/vmb, /vmg (Méthode de représentation)](../../build/reference/vmb-vmg-representation-method.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[/vmb, /vmg (Méthode de représentation)](vmb-vmg-representation-method.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

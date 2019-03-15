@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894092"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818165"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (spécifier le comportement de virgule flottante)
 
@@ -51,7 +51,7 @@ Sous **/fp : strict**, le compilateur génère du code qui permet au programme 
 
 #### <a name="fast"></a>Rapide
 
-Le **Fast** option permet au compilateur de réorganiser, combiner et simplifier les opérations à virgule flottante pour optimiser le code en virgule flottante pour la vitesse et l’espace. Le compilateur peut omettre l’arrondi lors des instructions d’assignation, des conversions de type ou d’appels de fonction. Il peut réorganiser les opérations ou effectuer des transformations algébriques, par exemple, à l’aide de lois associatives et DISTRIBUTIVES, même si ces transformations entraînent un comportement arrondi logiciel différent. En raison de cette optimisation améliorée, le résultat de certains calculs en virgule flottante peut-être différer de celles générées par d’autres **/FP** options. Les valeurs spéciales (NaN, + infini, - infinity, -0.0) ne peuvent pas être propagées ou se comportent strictement selon la norme IEEE-754. Contractions à virgule flottante peuvent être générées sous **Fast**. Le compilateur est toujours lié à l’architecture sous-jacente sous **Fast**, et des optimisations supplémentaires peuvent être disponibles à l’aide de la [/arch](../../build/reference/arch-minimum-cpu-architecture.md) option.
+Le **Fast** option permet au compilateur de réorganiser, combiner et simplifier les opérations à virgule flottante pour optimiser le code en virgule flottante pour la vitesse et l’espace. Le compilateur peut omettre l’arrondi lors des instructions d’assignation, des conversions de type ou d’appels de fonction. Il peut réorganiser les opérations ou effectuer des transformations algébriques, par exemple, à l’aide de lois associatives et DISTRIBUTIVES, même si ces transformations entraînent un comportement arrondi logiciel différent. En raison de cette optimisation améliorée, le résultat de certains calculs en virgule flottante peut-être différer de celles générées par d’autres **/FP** options. Les valeurs spéciales (NaN, + infini, - infinity, -0.0) ne peuvent pas être propagées ou se comportent strictement selon la norme IEEE-754. Contractions à virgule flottante peuvent être générées sous **Fast**. Le compilateur est toujours lié à l’architecture sous-jacente sous **Fast**, et des optimisations supplémentaires peuvent être disponibles à l’aide de la [/arch](arch-minimum-cpu-architecture.md) option.
 
 Sous **Fast**, le compilateur génère du code destiné à s’exécuter dans l’environnement à virgule flottante par défaut et suppose que l’environnement à virgule flottante n’est pas ouvert ou modifié lors de l’exécution. Autrement dit, il suppose que le code ne démasquer les exceptions de virgule flottante, lire ou écrire des registres de l’état à virgule flottante ni modifier les modes d’arrondi.
 
@@ -67,7 +67,7 @@ Notez que **/fp : sauf** n’active pas les exceptions de virgule flottante par
 
 Plusieurs **/FP** options peuvent être spécifiées dans la même ligne de commande du compilateur. Seul l’un des **/fp : strict**, **Fast**, et **/fp : precise** options peuvent être active à la fois. Si plusieurs de ces options est spécifié sur la ligne de commande, l’option de version ultérieure est prioritaire et le compilateur génère un avertissement. Le **/fp : strict** et **/fp : sauf** options ne sont pas compatibles avec **/CLR**.
 
-Le [/Za](../../build/reference/za-ze-disable-language-extensions.md) option (compatibilité ANSI) n’est pas compatible avec **/FP**.
+Le [/Za](za-ze-disable-language-extensions.md) option (compatibilité ANSI) n’est pas compatible avec **/FP**.
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>À l’aide des Pragmas pour contrôler le comportement à virgule flottante
 
@@ -75,9 +75,9 @@ Le compilateur fournit trois directives pragma pour substituer le comportement d
 
 ||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**/fp:fast**|Hors tension|Hors tension|Hors tension|actif|
-|**/fp:precise**|actif|Hors tension|Hors tension|actif|
-|**/fp:strict**|actif|actif|actif|Hors tension|
+|**/fp:fast**|Hors tension|Hors tension|Hors tension|sur|
+|**/fp:precise**|sur|Hors tension|Hors tension|sur|
+|**/fp:strict**|sur|sur|sur|Hors tension|
 
 ### <a name="the-default-floating-point-environment"></a>L’environnement à virgule flottante par défaut
 
@@ -256,7 +256,7 @@ Sous **/O2** **Fast** le code généré est simplifié, car toutes les conversio
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **génération de Code** page de propriétés.
 
@@ -268,6 +268,6 @@ Sous **/O2** **Fast** le code généré est simplifié, car toutes les conversio
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur](compiler-options.md)<br/>
-[Définition des options du compilateur](setting-compiler-options.md)<br/>
-[Microsoft Visual C++ d’optimisation à virgule flottante](floating-point-optimization.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Optimisation de point flottante MSVC](floating-point-optimization.md)<br/>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /NOENTRY linker option [C++]
 - DLLs [C++], creating
 ms.assetid: 0214dd41-35ad-43ab-b892-e636e038621a
-ms.openlocfilehash: 28a9e09c4a78623c2cda2f8802ba4e1c1435d093
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c750fd94e21eec39a25acf216a452faaa277bf7c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423740"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811450"
 ---
 # <a name="noentry-no-entry-point"></a>/NOENTRY (Aucun point d'entrée)
 
@@ -27,13 +27,13 @@ ms.locfileid: "57423740"
 
 ## <a name="remarks"></a>Notes
 
-L'option /NOENTRY est nécessaire pour créer une DLL de ressources uniquement ne contenant aucun code exécutable. Pour plus d’informations, consultez [création d’une DLL Resource-Only](../../build/creating-a-resource-only-dll.md).
+L'option /NOENTRY est nécessaire pour créer une DLL de ressources uniquement ne contenant aucun code exécutable. Pour plus d’informations, consultez [création d’une DLL Resource-Only](../creating-a-resource-only-dll.md).
 
 Utilisez cette option pour empêcher LINK de lier une référence à `_main` dans la DLL.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **l’éditeur de liens** dossier.
 
@@ -47,6 +47,6 @@ Utilisez cette option pour empêcher LINK de lier une référence à `_main` dan
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d’une DLL de ressource uniquement](../../build/creating-a-resource-only-dll.md)<br/>
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Création d’une DLL de ressource uniquement](../creating-a-resource-only-dll.md)<br/>
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

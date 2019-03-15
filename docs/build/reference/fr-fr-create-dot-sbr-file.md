@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 41b415889465441b0c53f12ec7f4aa412a636562
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418082"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811873"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Créer un fichier .sbr)
 
@@ -41,14 +41,14 @@ Pendant le processus de build, Microsoft Browse Information File Maintenance Uti
 
 Si vous ne spécifiez pas `filename`, le fichier .sbr a le même nom de base que le fichier source.
 
-**/Fr** est déconseillé. Utilisez **/FR** à la place. Pour plus d’informations, consultez la section « Options du compilateur déconseillées et supprimées » dans [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+**/Fr** est déconseillé. Utilisez **/FR** à la place. Pour plus d’informations, consultez la section « Options du compilateur déconseillées et supprimées » dans [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
 > [!NOTE]
 >  Ne modifiez pas l’extension .sbr. Avec BSCMAKE, les fichiers intermédiaires doivent avoir cette extension.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Dans le volet de navigation, accédez à la page de propriétés **C/C++**, **Informations de consultation** .
 
@@ -60,7 +60,7 @@ Si vous ne spécifiez pas `filename`, le fichier .sbr a le même nom de base que
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du fichier de sortie (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)<br/>
-[Spécification du nom de chemin](../../build/reference/specifying-the-pathname.md)
+[Options du fichier de sortie (/F)](output-file-f-options.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Spécification du nom de chemin](specifying-the-pathname.md)
