@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -WX linker option
 - WX linker option
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
-ms.openlocfilehash: fa7b651d2a884e25a9b0e6f1ba824d082c3c01bc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b4b29ed364d39c5f105dded703b8530c08db35e6
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412641"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57822091"
 ---
 # <a name="wx-treat-linker-warnings-as-errors"></a>/WX (Traiter les avertissements de l'Éditeur de liens comme des erreurs)
 
@@ -25,13 +25,13 @@ ms.locfileid: "57412641"
 
 /WX est spécifiée, aucun fichier de sortie est généré si l’éditeur de liens génère un avertissement.
 
-Cela revient à **/WX** pour le compilateur (voir [wln, / W0, W1, W2, / w3, / W4, W1, W2, / w3, / W4, Wall, WD, / we, Wo, / WV, /WX (niveau d’avertissement)](../../build/reference/compiler-option-warning-level.md) pour plus d’informations). Toutefois, la spécification **/WX** pour la compilation n’implique pas que **/WX** sera également appliquée pour la phase de liaison ; vous devez explicitement spécifier **/WX** pour chaque outil.
+Cela revient à **/WX** pour le compilateur (voir [wln, / W0, W1, W2, / w3, / W4, W1, W2, / w3, / W4, Wall, WD, / we, Wo, / WV, /WX (niveau d’avertissement)](compiler-option-warning-level.md) pour plus d’informations). Toutefois, la spécification **/WX** pour la compilation n’implique pas que **/WX** sera également appliquée pour la phase de liaison ; vous devez explicitement spécifier **/WX** pour chaque outil.
 
 Par défaut, **/WX** n’est pas en vigueur. Pour traiter les avertissements de l’éditeur de liens comme des erreurs, spécifiez **/WX**. **/WX:no** est identique à ne pas spécifier **/WX**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le **l’éditeur de liens** dossier.
 
@@ -45,5 +45,5 @@ Par défaut, **/WX** n’est pas en vigueur. Pour traiter les avertissements de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)

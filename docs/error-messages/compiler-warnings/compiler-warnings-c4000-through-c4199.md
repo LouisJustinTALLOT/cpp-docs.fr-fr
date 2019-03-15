@@ -3,98 +3,29 @@ title: Avertissements du compilateur C4000 à C4199
 ms.date: 11/17/2017
 f1_keywords:
 - C4000
-- C4002
-- C4006
-- C4008
-- C4019
-- C4023
-- C4025
-- C4026
-- C4027
-- C4030
-- C4033
 - C4035
-- C4036
-- C4038
-- C4041
-- C4045
-- C4051
-- C4052
-- C4053
-- C4057
 - C4060
 - C4063
 - C4064
 - C4065
 - C4066
-- C4068
 - C4069
-- C4075
-- C4076
-- C4077
-- C4080
-- C4081
-- C4085
-- C4086
-- C4087
-- C4097
-- C4102
-- C4109
-- C4112
-- C4115
-- C4117
-- C4119
-- C4120
-- C4122
 - C4123
-- C4125
-- C4130
-- C4131
-- C4132
 - C4137
-- C4138
-- C4141
-- C4143
-- C4145
-- C4152
-- C4153
-- C4155
-- C4158
-- C4160
-- C4161
-- C4163
-- C4164
-- C4165
-- C4166
-- C4167
-- C4168
-- C4174
-- C4175
-- C4176
-- C4177
-- C4178
-- C4179
-- C4180
 - C4181
-- C4182
-- C4185
-- C4186
-- C4187
 - C4188
-- C4189
-- C4191
 - C4193
 - C4194
 - C4195
 - C4196
 - C4199
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-ms.openlocfilehash: 6f9c69f0e6835513facf101be8f61c6e1c6430ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f764cfca3ea3ae39a1598aa39029925b9edcc80c
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617696"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57988191"
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>Avertissements du compilateur C4000 à C4199
 
@@ -239,10 +170,10 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 4) C4179|' / / *': analysé comme '/' et ' /\*' : toute confusion avec standard ' / /' commentaires|
 |Avertissement du compilateur (niveau 1) C4180|qualificateur appliqué au type fonction n'a pas de sens ; ignoré|
 |Avertissement C4181 du compilateur|qualificateur appliqué au type référence ; ignoré|
-|Avertissement du compilateur (niveau 1) C4182|#include niveau d’imbrication est 'nest_count' approfondie ; risque de récurrence infinie|
+|Avertissement du compilateur (niveau 1) C4182|#include nesting level is 'nest_count' deep; possible infinite recursion|
 |[Avertissement du compilateur (niveau 1) C4183](../../error-messages/compiler-warnings/compiler-warning-level-1-c4183.md)|'identificateur' : type de retour manquant supposé pour être une fonction membre retournant 'int'|
 |Avertissement du compilateur (niveau 1) C4185|attribut #import inconnu 'attribute' ignoré|
-|Avertissement du compilateur (niveau 1) C4186|attribut #import 'attribut' nécessite 'argument_count' arguments ; ignoré|
+|Avertissement du compilateur (niveau 1) C4186|#import attribute 'attribute' requires 'argument_count' arguments; ignored|
 |Avertissement du compilateur (niveau 1) C4187|#import Les attributs 'attribut1' et 'attribut2' sont incompatibles ; tous deux seront ignorés|
 |Avertissement du compilateur (niveau 1) C4188|expression constante non intégrale|
 |Avertissement du compilateur (niveau 4) C4189|'identificateur' : variable locale initialisée mais non référencée|
@@ -250,7 +181,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 3) C4191|' opérateur/opération' : conversion risquée de 'type_of_expression' en 'type_required' \nCalling cette fonction via le pointeur résultant peut entraîner l’échec du programme|
 |[Avertissement du compilateur (niveau 3) C4192](../../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)|exclusion automatique de 'identificateur' lors de l’importation de bibliothèque de types 'library'|
 |Avertissement du compilateur (niveau 3) C4193|#pragma warning (pop) : aucune correspondance « #pragma warning (push)'|
-|Avertissement du compilateur (niveau 1) C4194|#pragma start_map_region ne peut pas être imbriqués ; ignoré|
+|Avertissement du compilateur (niveau 1) C4194|#pragma start_map_region cannot be nested; ignored|
 |Avertissement du compilateur (niveau 1) C4195|#pragma stop_map_region utilisé sans #pragma start_map_region ; ignoré|
 |Avertissement du compilateur (niveau 1) C4196|'%$L' ou '%$L ;' attendu '%$L' trouvé|
 |[Avertissement du compilateur (niveau 3) C4197](../../error-messages/compiler-warnings/compiler-warning-level-3-c4197.md)|'type' : volatile de niveau supérieur dans le cast est ignoré.|

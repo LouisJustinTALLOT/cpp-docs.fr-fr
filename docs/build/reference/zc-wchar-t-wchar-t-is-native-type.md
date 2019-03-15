@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-ms.openlocfilehash: 13d25a73a0c70789e8b860607e9f222e69ae6d36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537928"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57815175"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t est un type natif)
 
@@ -47,7 +47,7 @@ Le `wchar_t` type intégré n’est pas pris en charge lorsque vous compilez du 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **langage** page.
 
@@ -59,4 +59,4 @@ Le `wchar_t` type intégré n’est pas pris en charge lorsque vous compilez du 
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Zc (Conformité)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Conformité)](zc-conformance.md)<br/>

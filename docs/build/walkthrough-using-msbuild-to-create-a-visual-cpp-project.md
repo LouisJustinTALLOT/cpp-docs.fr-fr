@@ -1,19 +1,19 @@
 ---
-title: 'Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++'
+title: 'Procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++'
 ms.date: 09/24/2018
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: c5ccacb5e68c4f950d4ffa731fbc83decc4f10fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7b038ede8c03f7016c5e9f81a9db785c49da448
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677212"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57813914"
 ---
-# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++
+# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++
 
 Cette procédure pas à pas montre comment utiliser MSBuild pour générer un projet Visual C++ à l’invite de commande. Vous allez apprendre à créer des fichiers sources C++ et un fichier de projet basé sur XML pour une application de console Visual C++. Après avoir généré le projet, vous allez apprendre à personnaliser le processus de génération.
 
@@ -265,8 +265,8 @@ Pour régénérer votre projet avec l’ensemble d’outils Visual C++ 11.0 Wind
 
 MSBuild fournit différentes façons de personnaliser votre processus de génération. Les rubriques suivantes montrent comment ajouter des étapes de génération personnalisée, des outils et des événements à votre projet MSBuild :
 
-- [Guide pratique pour ajouter une étape de génération personnalisée à des projets MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)
+- [Guide pratique pour ajouter une étape de génération personnalisée à des projets MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)
 
-- [Guide pratique pour ajouter des outils de génération personnalisés à des projets MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+- [Guide pratique pour ajouter des outils de génération personnalisée à des projets MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
 
-- [Guide pratique pour utiliser des événements de build dans des projets MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)
+- [Guide pratique pour utiliser des événements de génération dans des projets MSBuild](how-to-use-build-events-in-msbuild-projects.md)

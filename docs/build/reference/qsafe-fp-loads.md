@@ -1,12 +1,12 @@
 ---
 title: /Qsafe_fp_loads
 ms.date: 01/24/2018
-ms.openlocfilehash: e1ef4237fe3af39e76777609a06f90bd585ca422
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57aece79dfab617121371e0489aa80f18e143372
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504423"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819688"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -22,13 +22,13 @@ Nécessite des instructions de déplacement entier pour les valeurs à virgule f
 
 **/ Qsafe_fp_loads** force le compilateur à utiliser des instructions de déplacement entier au lieu d’obtenir des instructions à virgule flottante de déplacement pour déplacer des données entre la mémoire et MMX inscrit. Cette option désactive également les optimisations du chargement s’inscrire pour les valeurs à virgule flottante qui peut être chargé dans plusieurs chemins d’accès de contrôle lorsque la valeur peut provoquer une exception lors du chargement, par exemple, une valeur NaN.
 
-Cette option est remplacée par [/fp : sauf](../../build/reference/fp-specify-floating-point-behavior.md). **/ Qsafe_fp_loads** spécifie un sous-ensemble du comportement du compilateur qui est spécifié par **/fp : sauf**.
+Cette option est remplacée par [/fp : sauf](fp-specify-floating-point-behavior.md). **/ Qsafe_fp_loads** spécifie un sous-ensemble du comportement du compilateur qui est spécifié par **/fp : sauf**.
 
-**/ Qsafe_fp_loads** est incompatible avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) et [Fast](../../build/reference/fp-specify-floating-point-behavior.md). Pour plus d’informations sur les options de compilateur point flottant, consultez [/fp (spécifier le comportement de virgule flottante)](../../build/reference/fp-specify-floating-point-behavior.md).
+**/ Qsafe_fp_loads** est incompatible avec [/CLR](clr-common-language-runtime-compilation.md) et [Fast](fp-specify-floating-point-behavior.md). Pour plus d’informations sur les options de compilateur point flottant, consultez [/fp (spécifier le comportement de virgule flottante)](fp-specify-floating-point-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
 
@@ -40,6 +40,6 @@ Cette option est remplacée par [/fp : sauf](../../build/reference/fp-specify-f
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Q, options (Opérations de bas niveau)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Options du compilateur](../../build/reference/compiler-options.md)<br/>
-[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+[/Q, options (Opérations de bas niveau)](q-options-low-level-operations.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)<br/>
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

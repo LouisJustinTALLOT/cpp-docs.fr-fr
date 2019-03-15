@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 17acde51d3fa9a7fabf14de748fd60b126b8b8f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418839"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57821935"
 ---
 # <a name="dll-frequently-asked-questions"></a>Forum Aux Questions à propos des DLL
 
@@ -59,9 +59,9 @@ Notez que, comme le `CWinApp::Run` mécanisme ne s’applique pas à une DLL, l�
 
 Si votre DLL est une DLL MFC normale liée de manière statique aux MFC, modifiez-le à intervalles réguliers des DLL MFC qui est liée de manière dynamique aux MFC réduit la taille du fichier.
 
-Si la DLL possède un grand nombre de fonctions exportées, utilisez un fichier .def pour exporter les fonctions (au lieu d’utiliser **__declspec (dllexport)**) et utiliser le fichier .def [NONAME (attribut)](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) sur chaque fonction exportée. L’attribut NONAME provoque uniquement la valeur ordinale et pas le nom de fonction à stocker dans la table d’exportation de la DLL, ce qui réduit la taille du fichier.
+Si la DLL possède un grand nombre de fonctions exportées, utilisez un fichier .def pour exporter les fonctions (au lieu d’utiliser **__declspec (dllexport)**) et utiliser le fichier .def [NONAME (attribut)](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) sur chaque fonction exportée. L’attribut NONAME provoque uniquement la valeur ordinale et pas le nom de fonction à stocker dans la table d’exportation de la DLL, ce qui réduit la taille du fichier.
 
-DLL liées implicitement à une application sont chargés lorsque l’application charge. Pour améliorer les performances lors du chargement, essayez de diviser la DLL dans différentes DLL. Placez toutes les fonctions dont l’application appelante doit immédiatement après le chargement dans une DLL et disposer de l’application appelante implicitement liée à cette DLL. Placez les autres fonctions de l’application appelante n’a pas besoin de tout de suite dans une autre DLL et lier l’application explicitement à cette DLL. Pour plus d’informations, consultez [déterminer la méthode de liaison à utiliser](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use).
+DLL liées implicitement à une application sont chargés lorsque l’application charge. Pour améliorer les performances lors du chargement, essayez de diviser la DLL dans différentes DLL. Placez toutes les fonctions dont l’application appelante doit immédiatement après le chargement dans une DLL et disposer de l’application appelante implicitement liée à cette DLL. Placez les autres fonctions de l’application appelante n’a pas besoin de tout de suite dans une autre DLL et lier l’application explicitement à cette DLL. Pour plus d’informations, consultez [lier un exécutable à une DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use).
 
 ## <a name="memory_leak"></a> Il&#39;s une fuite de mémoire dans ma DLL MFC normale, mais mon code semble correct. Comment puis-je trouver la fuite de mémoire ?
 
@@ -69,4 +69,4 @@ Une des causes possibles de la fuite de mémoire est que MFC crée des objets te
 
 ## <a name="see-also"></a>Voir aussi
 
-[DLL dans Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL dans Visual C++](dlls-in-visual-cpp.md)

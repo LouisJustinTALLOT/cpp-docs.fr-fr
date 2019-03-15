@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-ms.openlocfilehash: 6b6582049dfaac47f1989a5bdf79bfac418ae4e5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416473"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818841"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Éviter la liaison DLL)
 
@@ -29,11 +29,11 @@ ms.locfileid: "57416473"
 
 /ALLOWBIND:NO définit un bit dans l'en-tête d'une DLL, qui indique à Bind.exe que l'image n'est pas autorisée à être liée. Vous ne voulez peut-être pas qu’une DLL soit liée si elle a été signée numériquement (la liaison invalide la signature).
 
-Vous pouvez modifier une DLL existante pour la fonctionnalité /ALLOWBIND à le [/ALLOWBIND](../../build/reference/allowbind.md) option de l’utilitaire EDITBIN.
+Vous pouvez modifier une DLL existante pour la fonctionnalité /ALLOWBIND à le [/ALLOWBIND](allowbind.md) option de l’utilitaire EDITBIN.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Développez **propriétés de Configuration**, **l’éditeur de liens**, puis sélectionnez **ligne de commande**.
 
@@ -45,7 +45,7 @@ Vous pouvez modifier une DLL existante pour la fonctionnalité /ALLOWBIND à le 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)<br/>
 [BindImage (fonction)](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
 [BindImageEx (fonction)](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

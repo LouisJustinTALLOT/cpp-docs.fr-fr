@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9586244c9e2293ba6b484efb158fc3a2529c0ea
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432356"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57814486"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensions de composant pour .NET et UWP
 
@@ -39,22 +39,22 @@ Le tableau suivant répertorie les mots clés de l'extension du langage C++.
 
 |Mot clé|Contextuel|Objectif|Référence|
 |-------------|-----------------------|-------------|---------------|
-|**classe ref**<br /><br /> **struct ref**|Non|Déclare une classe.|[Classes et structs](../windows/classes-and-structs-cpp-component-extensions.md)|
-|**classe value**<br /><br /> **struct Value**|Non|Déclare une classe de valeur.|[Classes et structs](../windows/classes-and-structs-cpp-component-extensions.md)|
-|**classe d’interface**<br /><br /> **struct d’interface**|Non|Déclare une interface.|[classe d’interface](../windows/interface-class-cpp-component-extensions.md)|
-|**enum, classe**<br /><br /> **enum struct**|Non|Déclare une énumération.|[enum, classe](../windows/enum-class-cpp-component-extensions.md)|
+|**classe ref**<br /><br /> **struct ref**|Aucune|Déclare une classe.|[Classes et structs](../windows/classes-and-structs-cpp-component-extensions.md)|
+|**classe value**<br /><br /> **struct Value**|Aucune|Déclare une classe de valeur.|[Classes et structs](../windows/classes-and-structs-cpp-component-extensions.md)|
+|**classe d’interface**<br /><br /> **struct d’interface**|Aucune|Déclare une interface.|[classe d’interface](../windows/interface-class-cpp-component-extensions.md)|
+|**enum, classe**<br /><br /> **enum struct**|Aucune|Déclare une énumération.|[enum, classe](../windows/enum-class-cpp-component-extensions.md)|
 |**propriété**|Oui|Déclare une propriété.|[propriété](../windows/property-cpp-component-extensions.md)|
 |**delegate**|Oui|Déclare un délégué.|[délégué (C++/CLI et C++/CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Oui|Déclare un événement.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Spécificateurs de substitution
 
-Vous pouvez utiliser les mots clés suivants pour qualifier le comportement de substitution pour la dérivation. Bien que le **nouveau** mot clé n’est pas une extension de C++, il est répertorié ici car il peut être utilisé dans un contexte supplémentaire. Certains spécificateurs sont également valides pour la programmation native. Pour plus d’informations, consultez [Comment : déclarer des spécificateurs de substitution dans les Compilations natives (C++ / c++ / CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Vous pouvez utiliser les mots clés suivants pour qualifier le comportement de substitution pour la dérivation. Bien que le **nouveau** mot clé n’est pas une extension de C++, il est répertorié ici car il peut être utilisé dans un contexte supplémentaire. Certains spécificateurs sont également valides pour la programmation native. Pour plus d'informations, voir [Procédure : Déclarer des spécificateurs de substitution dans les Compilations natives (C++ / c++ / CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Mot clé|Contextuel|Objectif|Référence|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|Oui|Indique que les fonctions ou classes sont abstraites.|[abstract](../windows/abstract-cpp-component-extensions.md)|
-|**new**|Non|Indique qu'une fonction n'est pas une substitution d'une version de la classe de base.|[New (nouvel emplacement dans vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|
+|**new**|Aucune|Indique qu'une fonction n'est pas une substitution d'une version de la classe de base.|[New (nouvel emplacement dans vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|
 |**override**|Oui|Indique qu'une méthode doit être une substitution d'une version de la classe de base.|[override](../windows/override-cpp-component-extensions.md)|
 |**sealed**|Oui|Empêche les classes d'être utilisées comme classes de base.|[sealed](../windows/sealed-cpp-component-extensions.md)|
 
@@ -64,7 +64,7 @@ Les mots clés suivants ont été ajoutés pour prendre en charge des types gén
 
 |Mot clé|Contextuel|Objectif|
 |-------------|-----------------------|-------------|
-|**Générique**|Non|Déclare un type générique.|
+|**generic**|Aucune|Déclare un type générique.|
 |**where**|Oui|Spécifie les contraintes appliquées à un paramètre de type générique.|
 
 ## <a name="miscellaneous-keywords"></a>Mots clés divers
@@ -74,12 +74,12 @@ Les mots clés suivants ont été ajoutés aux extensions C++.
 |Mot clé|Contextuel|Objectif|Référence|
 |-------------|-----------------------|-------------|---------------|
 |**finally**|Oui|Indique le comportement de gestion des exceptions par défaut.|[Gestion des exceptions](../windows/exception-handling-cpp-component-extensions.md)|
-|**for each, in**|Non|Énumère les éléments d’une collection.|[for each, in](../dotnet/for-each-in.md)|
-|**gcnew**|Non|Alloue des types sur le tas récupéré par le garbage collector. Utilisez à la place de **nouveau** et **supprimer**.|[gcnew nouvelle, ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|
+|**for each, in**|Aucune|Énumère les éléments d’une collection.|[for each, in](../dotnet/for-each-in.md)|
+|**gcnew**|Aucune|Alloue des types sur le tas récupéré par le garbage collector. Utilisez à la place de **nouveau** et **supprimer**.|[gcnew nouvelle, ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**ref nouveau**|Oui|Alloue un type Windows Runtime. Utilisez à la place de **nouveau** et **supprimer**.|[gcnew nouvelle, ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Oui|Indique qu’un membre peut uniquement être initialisé lors de la déclaration ou dans un constructeur statique.|[initonly (C++-CLI)](../dotnet/initonly-cpp-cli.md)|
 |**literal**|Oui|Crée une variable littérale.|[literal](../windows/literal-cpp-component-extensions.md)|
-|**nullptr**|Non|Indique qu'un handle ou pointeur ne pointe pas vers un objet.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
+|**nullptr**|Aucune|Indique qu'un handle ou pointeur ne pointe pas vers un objet.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>Constructions de modèle
 
@@ -111,7 +111,7 @@ Cette section répertorie les constructions de programmation supplémentaires, a
 |[__identifier (C++-CLI)](../windows/identifier-cpp-cli.md)|(Windows Runtime et CLR) Permet d’utiliser des mots clés comme identificateurs.|
 |[Listes d’arguments de variable (...) (C++-CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime et CLR) Permet à une fonction à prendre un nombre variable d’arguments.|
 |[Équivalents .NET Framework des types natifs C++ (C++-CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Répertorie les types CLR qui sont utilisés à la place des types intégraux C++.|
-|[AppDomain](../cpp/appdomain.md) **__declspec** modificateur|**__declspec** modificateur qui impose que les variables statiques et globales existent par appdomain.|
+|[appdomain](../cpp/appdomain.md) **__declspec** modifier|**__declspec** modificateur qui impose que les variables statiques et globales existent par appdomain.|
 |[Les Casts de Style C avec /clr (C++ / c++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|Décrit comment les casts de style C sont interprétées.|
 |[__clrcall](../cpp/clrcall.md) convention d’appel|Indique la convention d’appel conforme au CLR.|
 |`__cplusplus_cli`|[Macros prédéfinies](../preprocessor/predefined-macros.md)|
@@ -122,13 +122,13 @@ Cette section répertorie les constructions de programmation supplémentaires, a
 |[Conversion boxing](../windows/boxing-cpp-component-extensions.md)|Montre les conditions dans lesquelles les types de valeur sont boxed.|
 |[Prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)|Explique comment détecter les caractéristiques des types au moment de la compilation.|
 |[Managed, unmanaged](../preprocessor/managed-unmanaged.md) pragmas|Montre comment les fonctions managées et non managées peuvent coexister dans le même module.|
-|[processus](../cpp/process.md) **__declspec** modificateur|**__declspec** modificateur qui impose que les variables statiques et globales existent par processus.|
+|[process](../cpp/process.md) **__declspec** modifier|**__declspec** modificateur qui impose que les variables statiques et globales existent par processus.|
 |[Réflexion (C++-CLI)](../dotnet/reflection-cpp-cli.md)|Montre la version CLR des informations de type au moment de l'exécution.|
 |[String](../windows/string-cpp-component-extensions.md)|Décrit la conversion du compilateur des littéraux de chaîne en <xref:System.String>.|
 |[Transfert de type (C++-CLI)](../windows/type-forwarding-cpp-cli.md)|Permet le déplacement d'un type dans un assembly d'expédition vers un autre assembly afin que le code client n'ait pas besoin d'être recompilé.|
 |[Attributs définis par l’utilisateur](../windows/user-defined-attributes-cpp-component-extensions.md)|Montre les attributs définis par l'utilisateur.|
 |[Directive #using](../preprocessor/hash-using-directive-cpp.md)|Importe des assemblys externes.|
-|[Documentation XML](../ide/xml-documentation-visual-cpp.md)|Explique la documentation du code XML à l’aide de [/doc (traiter les commentaires de Documentation) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
+|[Documentation XML](../build/reference/xml-documentation-visual-cpp.md)|Explique la documentation du code XML à l’aide de [/doc (traiter les commentaires de Documentation) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
 ## <a name="see-also"></a>Voir aussi
 

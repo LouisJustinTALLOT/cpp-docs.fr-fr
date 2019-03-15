@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 77f6f05029ec4480afb2180eab0bb57838d643a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462944"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57822533"
 ---
 # <a name="disasm"></a>/DISASM
 
@@ -36,8 +36,8 @@ Le **/DISASM** option affiche le code machine des sections de code dans le fichi
 
 **/ DISASM** doit uniquement être utilisée sur des images natives, non gérés,. L’outil équivalent pour le code managé est [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
 
-Uniquement les [/HEADERS](../../build/reference/headers.md) (option DUMPBIN) est disponible pour les fichiers générés par le [/GL (optimisation de l’ensemble du programme)](../../build/reference/gl-whole-program-optimization.md) option du compilateur.
+Uniquement les [/HEADERS](headers.md) (option DUMPBIN) est disponible pour les fichiers générés par le [/GL (optimisation de l’ensemble du programme)](gl-whole-program-optimization.md) option du compilateur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](../../build/reference/dumpbin-options.md)
+[DUMPBIN, options](dumpbin-options.md)
