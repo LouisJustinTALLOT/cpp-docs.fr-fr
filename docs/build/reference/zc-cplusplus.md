@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
-ms.openlocfilehash: 8e73d93ae0618a04bdcc8476fadb6cc2aab595b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623988"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810092"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/ Zc : __cplusplus (macro __cplusplus mis à jour de l’activer)
 
@@ -19,7 +19,7 @@ Le **/Zc : __cplusplus** permet d’option du compilateur le  **\_ \_cplusplus*
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ Zc : __cplusplus**[**-**]
+> **/Zc:__cplusplus**[**-**]
 
 ## <a name="remarks"></a>Notes
 
@@ -27,13 +27,13 @@ Le  **\_ \_cplusplus** macro de préprocesseur est couramment utilisé pour pren
 
 Lorsque le **/Zc : __cplusplus** option est activée, la valeur signalée par le  **\_ \_cplusplus** dépend de la macro la [/STD](std-specify-language-standard-version.md) commutateur de version paramètre. Ce tableau montre les valeurs possibles de la macro :
 
-|/ Zc : __cplusplus commutateur|commutateur de /std:c++|valeur de __cplusplus|
+|/Zc:__cplusplus switch|/std:c++ switch|__cplusplus value|
 |-|-|-|
-Zc:__cplusplus|/ std : c ++ 14 (valeur par défaut)|L 201402
-Zc:__cplusplus|/ std : c ++ 17|L 201703
-Zc:__cplusplus|/ std : c ++ plus récente|L 201704
-Zc:__cplusplus-(désactivé)|Valeur quelconque|L 199711
-Sauf indication contraire|Valeur quelconque|L 199711
+Zc:__cplusplus|/ std : c ++ 14 (valeur par défaut)|201402L
+Zc:__cplusplus|/std:c++17|201703L
+Zc:__cplusplus|/std:c++latest|201704L
+Zc:__cplusplus- (disabled)|Valeur quelconque|199711L
+Sauf indication contraire|Valeur quelconque|199711L
 
 Le compilateur ne prend pas en charge les commutateurs de normes pour C ++ 98, C ++ 03 ou C ++ 11.
 
@@ -41,7 +41,7 @@ Pour la détection de plus grande ampleur des modifications apportées à l’en
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Pour définir cette option de compilateur dans Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
 

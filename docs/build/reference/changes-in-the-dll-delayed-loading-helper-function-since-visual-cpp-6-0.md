@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426522"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807999"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Modifications apportées à la fonction d'assistance du chargement différé des DLL depuis Visual C++ 6.0
 
@@ -33,7 +33,7 @@ Si vous disposez de plusieurs versions de Visual C++ sur votre ordinateur ou si 
 
 Si vous avez plusieurs versions de Visual C++ sur votre ordinateur, assurez-vous que l’éditeur de liens correspond à delayimp.lib. S’il existe une incompatibilité, vous obtiendrez une erreur de l’éditeur de liens reporting soit `___delayLoadHelper2@8` ou `___delayLoadHelper@8` comme un symbole externe non résolu. La première implique un nouvel éditeur de liens avec une ancienne bibliothèque delayimp.lib, et cette dernière implique un éditeur de liens ancien avec une nouvelle bibliothèque delayimp.lib.
 
-Si vous obtenez une erreur de l’éditeur de liens non résolue, exécutez [dumpbin /linkermember](../../build/reference/linkermember.md): 1 sur la bibliothèque delayimp.lib susceptible de contenir la fonction d’assistance pour voir quelle fonction d’assistance est définie à la place. La fonction d’assistance peut également être définie dans un fichier objet ; Exécutez [dumpbin /symbols](../../build/reference/symbols.md) et recherchez `delayLoadHelper(2)`.
+Si vous obtenez une erreur de l’éditeur de liens non résolue, exécutez [dumpbin /linkermember](linkermember.md): 1 sur la bibliothèque delayimp.lib susceptible de contenir la fonction d’assistance pour voir quelle fonction d’assistance est définie à la place. La fonction d’assistance peut également être définie dans un fichier objet ; Exécutez [dumpbin /symbols](symbols.md) et recherchez `delayLoadHelper(2)`.
 
 Si vous savez que l’éditeur de liens Visual C++ 6.0, puis :
 
@@ -51,7 +51,7 @@ Si vous défini votre propre fonction d’assistance et que vous utilisez la ver
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Charger toutes les importations pour une DLL à chargement différé
 
-L’éditeur de liens peut charger toutes les importations à partir d’une DLL que vous avez spécifié pour le chargement différé. Consultez [le chargement de toutes les importations pour une DLL à chargement différé](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) pour plus d’informations.
+L’éditeur de liens peut charger toutes les importations à partir d’une DLL que vous avez spécifié pour le chargement différé. Consultez [le chargement de toutes les importations pour une DLL à chargement différé](loading-all-imports-for-a-delay-loaded-dll.md) pour plus d’informations.
 
 ## <a name="see-also"></a>Voir aussi
 
