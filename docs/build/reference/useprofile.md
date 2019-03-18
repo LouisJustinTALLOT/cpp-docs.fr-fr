@@ -3,12 +3,12 @@ title: /USEPROFILE (données d’utilisation PGO avec /LTCG)
 ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
-ms.openlocfilehash: 4b780bed3b92b874f2bf18fb0235e8e2baf95ae9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550629"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816527"
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (exécuter PGO en mode sans échec du thread)
 
@@ -32,13 +32,13 @@ Le **/USEPROFILE** option de l’éditeur de liens est utilisée conjointement a
 
 Le paramètre facultatif **agressif** argument désactive relatifs à la taille des heuristiques pour tenter d’optimiser pour la vitesse. Cela peut entraîner des optimisations qui considérablement augmenter la taille de votre fichier exécutable et ne peuvent pas augmenter la vitesse qui en résulte. Vous devez profiler et comparer les résultats de l’utilisation et de ne pas à l’aide de **agressif**. Cet argument doit être spécifié explicitement ; Il n’est pas activé par défaut.
 
-Le **PGD** argument spécifie un nom facultatif pour le fichier de .pgd des données de formation à utiliser, les mêmes que dans [/GENPROFILE ou /fastgenprofile.](genprofile-fastgenprofile-generate-profiling-instrumented-build.md). Il est l’équivalent de déconseillées **/PGD** basculer. Par défaut, ou si aucun *filename* est spécifié, un fichier .pgd qui porte le même nom de base que le fichier exécutable est utilisé.
+Le **PGD** argument spécifie un nom facultatif pour le fichier de .pgd des données de formation à utiliser, les mêmes que dans [/GENPROFILE ou /fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md). Il est l’équivalent de déconseillées **/PGD** basculer. Par défaut, ou si aucun *filename* est spécifié, un fichier .pgd qui porte le même nom de base que le fichier exécutable est utilisé.
 
 Le **/USEPROFILE** option de l’éditeur de liens est une nouveauté de Visual Studio 2015.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **optimisation** page de propriétés.
 
@@ -56,5 +56,5 @@ Le **/USEPROFILE** option de l’éditeur de liens est une nouveauté de Visual 
 
 [/GENPROFILE et /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Optimisations guidées par profil](../../build/reference/profile-guided-optimizations.md)<br/>
-[Variables d’environnement pour les optimisations guidées par profil](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Optimisations guidées par profil](../profile-guided-optimizations.md)<br/>
+[Variables d’environnement pour les optimisations guidées par profil](../environment-variables-for-profile-guided-optimizations.md)<br/>
