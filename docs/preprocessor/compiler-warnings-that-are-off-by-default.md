@@ -5,15 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651371"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142551"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avertissements du compilateur désactivés par défaut
-Le compilateur inclut des avertissements qui sont désactivés par défaut, car la plupart des développeurs ne souhaitent pas les voir. Dans certains cas, ils représentent un choix stylistique, sont des idiomes courants dans le code plus ancien ou tirer parti d’une extension Microsoft du langage. Dans d’autres cas, ils indiquent une zone où les programmeurs souvent des hypothèses incorrectes, ce qui peut entraîner un comportement inattendu ou non défini. Il se peut que certaines de ces avertissements peuvent être très bruyant dans les en-têtes de bibliothèque. Bibliothèques runtime C et les bibliothèques standards C++ sont destinés à n’émettre aucun avertissement uniquement au niveau d’avertissement [/W4](../build/reference/compiler-option-warning-level.md).
+
+Le compilateur prend en charge les avertissements qui sont désactivés par défaut, car la plupart des développeurs ne les trouverez utiles. Dans certains cas, elles signalent un choix stylistique ou sur des idiomes courants dans le code plus ancien. Autres avertissements sont sur l’utilisation d’une extension Microsoft du langage. Dans d’autres cas, ils indiquent une zone où les programmeurs souvent des hypothèses incorrectes, ce qui peut entraîner un comportement inattendu ou non défini. Si activé, certaines de ces avertissements peuvent apparaître plusieurs fois dans les en-têtes de bibliothèque. Bibliothèques runtime C et les bibliothèques standards C++ sont destinés à n’émettre aucun avertissement uniquement au niveau d’avertissement [/W4](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Activer les avertissements qui sont désactivés par défaut
 
@@ -23,7 +24,7 @@ Vous pouvez activer des avertissements qui sont normalement désactivées par d�
 
    L’avertissement spécifié (*numéro_avertissement*) est activé au niveau de sa valeur par défaut. La documentation de l'avertissement contient le niveau par défaut de l'avertissement.
 
-- **#pragma warning (** *warning_level* **:** *numéro_avertissement* **)**
+- **#pragma warning(** *warning_level* **:** *warning_number* **)**
 
    L’avertissement spécifié (*numéro_avertissement*) est activé au niveau spécifié (*warning_level*).
 
@@ -33,7 +34,7 @@ Vous pouvez activer des avertissements qui sont normalement désactivées par d�
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   Cela permet d’avertissement *nnnn* au niveau *L*.
+   Cette option permet d’avertissement *nnnn* au niveau *L*.
 
 ## <a name="warnings-that-are-off-by-default"></a>Avertissements qui sont désactivés par défaut
 
@@ -43,10 +44,11 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (niveau 4)|énumérateur '*identificateur*'dans un switch de l’enum'*énumération*' n’est pas géré explicitement par une étiquette case|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (niveau 4)|énumérateur '*identificateur*'dans un switch de l’enum'*énumération*' n’est pas géré|
-|C4191 (niveau 3)|«*opérateur*' : conversion risquée de '*type_of_expression*'en'*type_required*»|
+| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) (niveau 1) | 'HRESULT' est converti en 'bool' ; Êtes-vous sûr que c’est ce que vous voulez ? |
+| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) (niveau 3)|«*opérateur*' : conversion risquée de '*type_of_expression*'en'*type_required*»|
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (niveau 4)|'*identificateur*' : conversion de '*type1*'en'*type2*', perte possible de données|
 |[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) (niveau 4)|'*opérateur*' : conversion de '*type1*'en'*type2*', perte possible de données|
-|[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) (niveau 4)|«*fonction*' : aucun prototype de fonction fourni : conversion de '()' en '(void)'|
+|[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) (niveau 4)|'*function*': no function prototype given: converting '()' to '(void)'|
 |[C4263](../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md) (niveau 4)|«*fonction*' : fonction membre ne remplace pas n’importe quelle fonction membre virtuelle de classe de base|
 |[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md) (niveau 1)|«*fonction_virtuelle*' : aucune substitution disponible pour la fonction membre virtuelle à partir de la base de '*classe*' ; la fonction est masquée|
 |[C4265](../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md) (niveau 3)|«*classe*' : classe possède des fonctions virtuelles, mais le destructeur n’est pas virtuel|
@@ -64,7 +66,7 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |C4388 (niveau 4)|incompatibilité signed/unsigned|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (niveau 2)|«*fonction*' : signature de fonction contient le type '*type*' ; Objets C++ n’est unsafe pour passer entre le code pure et mixte ou natif|
 |C4426 (niveau 1)|indicateurs d’optimisation modifiés après l’en-tête, peut être dû à #pragma optimize() <sup>14.1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (niveau 4)|«*class1*' : la disposition des objets sous/vd2 sera modifiée en raison de la base virtuelle '*classe2*»|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (niveau 4)|«*class1*» : Disposition des objets sous/vd2 sera modifiée en raison de la base virtuelle '*classe2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (niveau 4)|le dynamic_cast de la base virtuelle '*class1*'en'*classe2*' risque d’échouer dans certains contextes|
 |C4444 (niveau 3)|'__unaligned' de niveau supérieur n'est pas implémenté dans ce contexte|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (niveau 4)|chemin include relatif contient '..'|
@@ -97,8 +99,9 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (niveau 4)|'classe dérivée' : l'opérateur d'assignation n'a pas pu être généré parce qu'un opérateur d'assignation de la classe de base est inaccessible|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (niveau 1)|digrammes non pris en charge avec -Ze. Séquence de caractères '*digramme*'non interprétée comme jeton de remplacement pour'*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (niveau 3)|«*instance*' : la construction d’un objet static local n’est pas thread-safe|
+| C4643 (niveau 4) | Transférer la déclaration '*identificateur*' dans l’espace de noms std n’est pas autorisé par la norme C++. <sup>15.8</sup> |
 |C4647 (niveau 3)|changement de comportement : __is_pod (*type*) a une valeur différente dans les versions précédentes|
-|C4654 (niveau 4)|Le code placé avant d’inclure d’en-tête précompilé ligne sera ignorée. Ajoutez le code à l’en-tête précompilé. <sup>14,1</sup>|
+|C4654 (niveau 4)|Le code placé avant d’inclure d’en-tête précompilé ligne sera ignorée. Ajoutez le code à l’en-tête précompilé. <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (niveau 4)|«*symbole*'n’est pas défini comme préprocesseur ou macro, remplacement par '0' pour'*directives*»|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (niveau 4)|«*symbole*' : aucun attribut de paramètre directionnel spécifié, [in] pris par défaut|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (niveau 3)|«*type défini par l’utilisateur*' : changement de comportement possible, changement retour UDT convention d’appel|
@@ -112,7 +115,9 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |C4774 (niveau 4)|«*chaîne*' : chaîne attendue dans l’argument de format *nombre* n’est pas une chaîne littérale|
 |C4777 (niveau 4)|'*fonction*' : chaîne de format '*chaîne*'requiert un argument de type'*type1*', mais l’argument variadique *nombre* a le type '*type2*'|
 |C4786 (niveau 3)|«*symbole*' : nom d’objet tronqué à '*nombre*' caractères dans les informations de débogage|
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (niveau 4) | Conversion implicite de '*type*» en valeur booléenne. Perte d’informations possible <sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (niveau 4)|«*octets*'octets de remplissage ajoutés après construction'*member_name*»|
+| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (niveau 1) | «*membre*' : fonction membre de classe locale n’a pas un corps |
 |C4826 (niveau 2)|Conversion de '*type1*'en'*type2*' type signe étendu. Cela peut provoquer un comportement inattendu de runtime.|
 |C4837 (niveau 4)|trigraphe détecté : ' ?? *caractère*« remplacé par »*caractère*'|
 |C4841 (niveau 4)|extension non standard utilisée : désignateur de membre composé utilisé dans offsetof|
@@ -150,6 +155,10 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 <sup>15.3</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.3.<br/>
 <sup>15.5</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.5.<br/>
 <sup>15.7</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.7.<br/>
+<sup>15.8</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15.8.<br/>
+::: moniker range=">= vs-2019"
+<sup>16.0</sup> cet avertissement est disponible à partir de Visual Studio 2019 RTM.<br/>
+::: moniker-end
 <sup>Perm</sup> cet avertissement est désactivé, sauf si le [/ permissive-](../build/reference/permissive-standards-conformance.md) option du compilateur est définie.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avertissements désactivé par défaut dans les versions antérieures
@@ -167,7 +176,7 @@ Cet avertissement était désactivé par défaut dans les versions du compilateu
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (niveau 4)|spécificateur de type manquant - int est pris en compte par défaut. Remarque : C ne prend plus en charge int par défaut|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (niveau 4)|spécificateur de type manquant - int est pris en compte par défaut. Remarque : C prend n’est plus en charge int par défaut|
 
 ## <a name="see-also"></a>Voir aussi
 
