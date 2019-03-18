@@ -1,13 +1,13 @@
 ---
-title: Optimisation à virgule flottante de Microsoft Visual C++
+title: Optimisation de point flottante MSVC
 ms.date: 03/09/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78c5c310f2f348b5cfa5a92feb65e265d28560d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504297"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814369"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Optimisation à virgule flottante de Microsoft Visual C++
 
@@ -15,7 +15,7 @@ Obtenez un descripteur sur l’optimisation du code en virgule flottante à l’
 
 ## <a name="optimization-of-floating-point-code-in-c"></a>Optimisation du code à virgule flottante en C++
 
-Un compilateur C++ d’optimisation traduit non seulement le code source en code machine, mais organise également les instructions machine de façon à améliorer l’efficacité et/ou à réduire la taille. Malheureusement, de nombreuses optimisations courantes ne sont pas nécessairement sécurisées lorsqu’il est appliqué à des calculs en virgule flottante. Un bon exemple de ce qui peut être consulté avec l’algorithme de somme suivante, extraite de David Goldberg, « Ce que chaque ordinateur scientifique doit savoir sur Floating-Point Arithmetic », *Computing Surveys*, mars 1991, pg. 203 :
+Un compilateur C++ d’optimisation traduit non seulement le code source en code machine, mais organise également les instructions machine de façon à améliorer l’efficacité et/ou à réduire la taille. Malheureusement, de nombreuses optimisations courantes ne sont pas nécessairement sécurisées lorsqu’il est appliqué à des calculs en virgule flottante. Un bon exemple de ce qui peut être consulté avec l’algorithme de somme suivante, extraite de David Goldberg, « Ce que chaque ordinateur scientifique doit savoir sur Floating-Point Arithmetic », *Computing Surveys*, mars 1991, pg. 203:
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -36,11 +36,11 @@ Cette fonction ajoute n **float** valeurs du vecteur de tableau `A`. Dans le cor
 
 Un compilateur C++ naïf peut supposer qu’arithmétique à virgule flottante suit les mêmes règles algébriques que l’arithmétique des nombres réels. Un tel compilateur peut ensuite à tort la conclusion que
 
-> C = T - sum - Y == > (somme + Y) - sum - Y == > 0 ;
+> C = T - sum - Y ==> (sum+Y)-sum-Y ==> 0;
 
 Autrement dit, que la valeur perçue de C est toujours un zéro constant. Si cette valeur constante est propagée aux expressions suivantes, le corps de boucle est réduit à une simple somme. Pour être précis,
 
-> Y = [i] - C == > Y = un [i]<br/>T = somme + Y == > T = somme + un [i]<br/>SUM = T == > somme = somme + un [i]
+> Y = A[i] - C ==> Y = A[i]<br/>T = sum + Y ==> T = sum + A[i]<br/>sum = T ==> sum = sum + A[i]
 
 Par conséquent, pour le compilateur naïf, une transformation logique de la `KahanSum` fonction serait :
 
@@ -641,7 +641,7 @@ Lorsque le mode fp : fast est activé, le compilateur assouplit les règles mod
 
 Le mode en virgule flottante fp : fast est activé à l’aide de la [Fast](fp-specify-floating-point-behavior.md) commutateur de compilateur de ligne de commande comme suit :
 
-> CL Fast source.cpp
+> cl /fp:fast source.cpp
 
 Cet exemple indique au compilateur d’utiliser la sémantique fp : Fast lors de la génération de code pour le fichier source.cpp. Le modèle fp : fast peut également être appelé fonction par fonction à l’aide du `float_control` du pragma de compilateur.
 
@@ -951,12 +951,12 @@ Les commutateurs de ligne de commande sont en fait des raccourcis permettant de 
 
 ||||||
 |-|-|-|-|-|
-||float_control(precise)|float_control|fp_contract|fenv_access|
-|/ fp : strict|actif|actif|Hors tension|actif|
-|/ fp : strict/fp : à l’exception :|actif|Hors tension|Hors tension|actif|
-|/ fp : precise|actif|Hors tension|actif|Hors tension|
-|/ fp : precise/fp : à l’exception|actif|actif|actif|Hors tension|
-|Fast|Hors tension|Hors tension|actif|Hors tension|
+||float_control(precise)|float_control(except)|fp_contract|fenv_access|
+|/fp:strict|sur|sur|Hors tension|sur|
+|/fp:strict /fp:except-|sur|Hors tension|Hors tension|sur|
+|/fp:precise|sur|Hors tension|sur|Hors tension|
+|/fp:precise /fp:except|sur|sur|sur|Hors tension|
+|/fp:fast|Hors tension|Hors tension|sur|Hors tension|
 
 Par exemple, le code ci-dessous Active explicitement la sémantique fp : fast.
 
@@ -1088,4 +1088,4 @@ catch(float_exception)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Optimisation du code](optimizing-your-code.md)<br/>
+[Optimisation du code](../optimizing-your-code.md)<br/>
