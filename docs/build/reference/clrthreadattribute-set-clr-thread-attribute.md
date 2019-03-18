@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-ms.openlocfilehash: f1a637f74cf1da608149779821a25340d35f8739
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417149"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57806777"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Définir l'attribut de thread CLR)
 
@@ -41,7 +41,7 @@ Définition de l’attribut de thread est valide uniquement lors de la création
 
 Si vous utilisez le point d’entrée par défaut (main ou wmain, par exemple) spécifiez le modèle de thread en utilisant /CLRTHREADATTRIBUTE ou en plaçant l’attribut de thread (STAThreadAttribute ou MTAThreadAttribute) sur la fonction d’entrée par défaut.
 
-Si vous utilisez un point d’entrée de celle par défaut, spécifiez le modèle de thread en utilisant /CLRTHREADATTRIBUTE ou en plaçant le threading attribut sur la fonction d’entrée non-par défaut, puis spécifiez le point d’entrée de celle par défaut avec [/Entry](../../build/reference/entry-entry-point-symbol.md) .
+Si vous utilisez un point d’entrée de celle par défaut, spécifiez le modèle de thread en utilisant /CLRTHREADATTRIBUTE ou en plaçant le threading attribut sur la fonction d’entrée non-par défaut, puis spécifiez le point d’entrée de celle par défaut avec [/Entry](entry-entry-point-symbol.md) .
 
 Si le modèle de thread spécifié dans le code source ne correspond pas avec le modèle de thread spécifié avec /CLRTHREADATTRIBUTE., l’éditeur de liens ignore /CLRTHREADATTRIBUTE et appliquer le modèle de thread spécifié dans le code source.
 
@@ -49,7 +49,7 @@ Il sera nécessaire pour pouvoir utiliser le thread unique, par exemple, si votr
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
 1. Développez le nœud **Propriétés de configuration**.
 
@@ -65,5 +65,5 @@ Il sera nécessaire pour pouvoir utiliser le thread unique, par exemple, si votr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)
+[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Options de l’éditeur de liens MSVC](linker-options.md)
