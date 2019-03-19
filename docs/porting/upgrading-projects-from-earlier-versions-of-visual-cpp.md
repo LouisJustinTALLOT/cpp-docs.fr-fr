@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: dcbec57c75b4dc6fb72a3b35040e12cab0e7111e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8848dca10a75bec6f5ff6251a3af5be8e9a7b6e6
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740875"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57816371"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Mise à niveau de projets à partir de versions antérieures de Visual C++
 
@@ -33,9 +33,18 @@ Les sources de données sont contenues dans un projet de base de données distin
 
 Pour plus d’informations sur la façon de mettre à jour les versions de Windows ciblées, consultez [Modification de WINVER et _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md).
 
+## <a name="in-this-section"></a>Dans cette section
+
+[Mettre à niveau votre code vers la bibliothèque Universal CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
+[Modification de WINVER et _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
+[Résoudre vos dépendances aux éléments internes de bibliothèque](fix-your-dependencies-on-library-internals.md)<br/>
+[Problèmes de migration de virgule flottante](floating-point-migration-issues.md)<br/>
+[Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](use-native-multi-targeting.md)<br/>
+[Fonctionnalités Visual C++ dépréciées dans la préversion de Visual Studio 2019](features-deprecated-in-visual-studio.md)<br/>
+[Modifications du système de génération](build-system-changes.md)<br/>
+
 ## <a name="see-also"></a>Voir aussi
 
-[Modifications du système de génération](../build/build-system-changes.md)<br/>
 [Nouveautés de Visual C++ dans Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Historique des modifications de Visual C++ entre 2003 et 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Comportement non standard](../cpp/nonstandard-behavior.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0a1ceddca3234ead7d10cc839d41a6d644ec1866
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741348"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57812029"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Procédure pas à pas : Déboguer un projet (C++)
 
@@ -59,4 +59,4 @@ Dans cette procédure pas à pas, vous modifiez le programme pour résoudre le p
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Génération de programmes C/C++](../build/building-c-cpp-programs.md)<br/>
+[Projets et systèmes de build](../build/projects-and-build-systems-cpp.md)<br/>

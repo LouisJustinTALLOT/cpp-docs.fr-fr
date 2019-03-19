@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 50b1005c7734b62941cbda087161d5ec41a0d026
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740246"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808038"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Guide pratique pour signaler un problème avec la documentation ou l’ensemble d’outils Visual C++
 
@@ -43,7 +43,7 @@ Nous avons besoin d’informations complètes sur la version et l’architecture
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Pour indiquer la version complète du compilateur que vous utilisez
 
-1. Ouvrez l’**invite de commandes développeur** qui correspond à l’architecture de configuration et à la version de Visual Studio utilisées pour générer votre projet. Par exemple, si vous générez vos projets en utilisant Visual Studio 2017 sur x64 pour des cibles x64, choisissez **Invite de commandes des outils natifs x64 pour VS 2017**. Pour plus d’informations, consultez [Raccourcis de l’invite de commandes développeur](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
+1. Ouvrez l’**invite de commandes développeur** qui correspond à l’architecture de configuration et à la version de Visual Studio utilisées pour générer votre projet. Par exemple, si vous générez vos projets en utilisant Visual Studio 2017 sur x64 pour des cibles x64, choisissez **Invite de commandes des outils natifs x64 pour VS 2017**. Pour plus d’informations, consultez [Raccourcis de l’invite de commandes développeur](build/building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
 1. Dans la fenêtre de console de l’invite de commandes développeur, entrez la commande **cl /Bv**.
 
