@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0cffdc2be00b4af9badbbbc80bcfef48b3f76e19
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747006"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57818373"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduction à Visual C++ pour les utilisateurs UNIX
 
@@ -37,7 +37,7 @@ Les applications composées de plusieurs bibliothèques et fichiers exécutables
 
 ## <a name="importing-your-existing-code"></a>Importation de votre code existant
 
-Vous pouvez utiliser le compilateur C++ pour générer du code existant configuré pour être compilé avec ou sans makefile, et le placer dans un projet Visual Studio. Pour plus d'informations, voir [Procédure : Créer un projet C++ à partir de code existant](../ide/how-to-create-a-cpp-project-from-existing-code.md).
+Vous pouvez utiliser le compilateur C++ pour générer du code existant configuré pour être compilé avec ou sans makefile, et le placer dans un projet Visual Studio. Pour plus d'informations, voir [Procédure : Créer un projet C++ à partir de code existant](../build/how-to-create-a-cpp-project-from-existing-code.md).
 
 ## <a name="creating-a-new-project"></a>Création d'un projet
 
@@ -57,7 +57,7 @@ Vous pouvez désactiver toutes les extensions spécifiques Microsoft pour C++ à
 
 Les compilateurs Microsoft C et C++ offrent des options pour la précompilation du code en C ou C++, y compris du code incorporé. Grâce à cela, vous pouvez compiler un corps de code stable, stocker l'état compilé du code dans un fichier et, lors des compilations suivantes, combiner le code précompilé avec du code qui est toujours en cours de développement. Les compilations ultérieures sont plus rapides, car le code stable n'a pas besoin d'être recompilé.
 
-Par défaut, le code précompilé est spécifié dans les fichiers stdafx.h et stdafx.cpp. L’Assistant **Nouveau projet** créera automatiquement ces fichiers, sauf si vous désélectionnez l’option **En-tête précompilé**. Pour plus d’informations, consultez [Création de fichiers d’en-têtes précompilés](../build/reference/creating-precompiled-header-files.md).
+Par défaut, le code précompilé est spécifié dans les fichiers stdafx.h et stdafx.cpp. L’Assistant **Nouveau projet** créera automatiquement ces fichiers, sauf si vous désélectionnez l’option **En-tête précompilé**. Pour plus d’informations, consultez [Création de fichiers d’en-têtes précompilés](../build/creating-precompiled-header-files.md).
 
 ## <a name="related-sections"></a>Rubriques connexes
 
@@ -65,4 +65,4 @@ Pour plus d’informations, consultez [Portage d’UNIX vers Win32](../porting/p
 
 ## <a name="see-also"></a>Voir aussi
 
-[Génération de programmes C/C++](../build/building-c-cpp-programs.md)
+[Projets et systèmes de build](../build/projects-and-build-systems-cpp.md)

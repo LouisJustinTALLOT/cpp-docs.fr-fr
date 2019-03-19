@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: aa1af9cd355265214827527b986b8602a25e93f3
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744605"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808272"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Procédure pas à pas : test d’un projet (C++)
 
@@ -63,4 +63,4 @@ Dans cette procédure pas à pas, vous observez la valeur d’une variable que l
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Génération de programmes C/C++](../build/building-c-cpp-programs.md)<br/>
+[Projets et systèmes de build](../build/projects-and-build-systems-cpp.md)<br/>

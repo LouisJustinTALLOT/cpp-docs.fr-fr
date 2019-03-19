@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 1d5dbd8f83f501c3b68bad771089eab8acc6f8aa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8aadb6983cc096ff75785c6bab7ace6bd5f0c632
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742500"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57809004"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Procédure pas à pas : Générer un projet (C++)
 
@@ -60,4 +60,4 @@ Dans cette procédure pas à pas, vous introduisez délibérément une erreur de
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Génération de programmes C/C++](../build/building-c-cpp-programs.md)<br/>
+[Projets et systèmes de build](../build/projects-and-build-systems-cpp.md)<br/>
