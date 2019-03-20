@@ -2,12 +2,12 @@
 title: Configurer un projet Linux C++ dans Visual Studio
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 84b9242ad5af79ed48d716fb5a35db56428e9a98
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745187"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808363"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
 
@@ -89,8 +89,8 @@ Pour gérer votre cache d’en-têtes, accédez à **Outils > Options, Multiplat
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des propriétés de projet](../ide/working-with-project-properties.md)<br/>
-[Général C++, propriétés (Linux C++)](prop-pages/general-linux.md)<br/>
-[Répertoires VC++ (Linux C++)](prop-pages/directories-linux.md)<br/>
-[Copier les sources, propriétés de projet (Linux C++)](prop-pages/copy-sources-project.md)<br/>
-[Événement de build, propriétés (Linux C++)](prop-pages/build-events-linux.md)
+[Définir des propriétés de build et de compilateur](../build/working-with-project-properties.md)<br/>
+[Général C++, propriétés (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[Répertoires VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[Copier les sources, propriétés de projet (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
+[Événement de build, propriétés (Linux C++)](../linux/prop-pages/build-events-linux.md)

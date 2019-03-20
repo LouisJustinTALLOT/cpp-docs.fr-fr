@@ -1,18 +1,18 @@
 ---
 title: Objets de fonction dans la bibliothèque C++ Standard
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 7af56f52b59b03dfed9e1233473239274a0dcbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437116"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172957"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objets de fonction dans la bibliothèque C++ Standard
 
@@ -22,7 +22,7 @@ Les objets de fonctions offrent deux avantages par rapport à un appel de foncti
 
 ## <a name="creating-a-function-object"></a>Création d’un objet de fonction
 
-Pour créer un objet de fonction, créez un type et implémentez operator(), par exemple :
+Pour créer un objet de fonction, créez un type et implémentez operator(), par exemple :
 
 ```cpp
 class Functor
@@ -33,9 +33,17 @@ public:
         return a < b;
     }
 };
+
+int main()
+{
+    Functor f;
+    int a = 5;
+    int b = 7;
+    int ans = f(a, b);
+}
 ```
 
-La dernière ligne de la fonction `main` montre comment vous appelez l’objet de fonction. Ceci ressemble à un appel à une fonction, mais cela appelle réellement operator() du type Functor. Cette similarité entre appeler un objet de fonction et la fonction, est comment le terme objet de fonction agit.
+La dernière ligne de la fonction `main` montre comment vous appelez l’objet de fonction. Cet appel ressemble à un appel à une fonction, mais que son appelant réellement operator() du type Functor. Cette similarité entre appeler un objet de fonction et la fonction, est comment le terme objet de fonction agit.
 
 ## <a name="function-objects-and-containers"></a>Objets de fonction et conteneurs
 
@@ -48,7 +56,7 @@ template <class Key,
 class set
 ```
 
-Le deuxième argument du modèle est l’objet de fonction `less`. Retourne cet objet de fonction **true** si le premier paramètre passé à il est inférieur au second paramètre transmis. Comme certains conteneurs trient leurs éléments, le conteneur a besoin d’un moyen de comparer deux éléments : ceci est réalisé à l’aide de l’objet de fonction. Vous pouvez définir vos propres critères de tri pour les conteneurs en créant un objet de fonction et en le spécifiant dans la liste des modèles pour le conteneur.
+Le deuxième argument du modèle est l’objet de fonction `less`. Retourne cet objet de fonction **true** si le premier paramètre est inférieur au second paramètre. Étant donné que certains conteneurs trient leurs éléments, le conteneur a besoin d’un moyen de comparer deux éléments. La comparaison est effectuée à l’aide de l’objet de fonction. Vous pouvez définir vos propres critères de tri pour les conteneurs en créant un objet de fonction et en le spécifiant dans la liste des modèles pour le conteneur.
 
 ## <a name="function-objects-and-algorithms"></a>Objets de fonction et algorithmes
 
