@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b75a1903b3e0767f8aa009134a2b37a7d1a8e0d0
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809787"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57810469"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Nouveautés de Visual C++ dans Visual Studio 2017
 
@@ -315,7 +315,7 @@ C++ prend maintenant en charge la fonctionnalité **Atteindre la définition** a
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>Projets non MSBuild avec Ouvrir le dossier
 
-Visual Studio 2017 introduit la fonctionnalité **Ouvrir le dossier**, qui vous permet d’effectuer des opérations de codage, de génération et de débogage dans un dossier contenant le code source, sans avoir à créer des solutions ni des projets. Il est ainsi beaucoup plus simple de bien démarrer avec Visual Studio, même si votre projet n’est pas un projet MSBuild. Avec **Ouvrir le dossier**, vous pouvez accéder aux puissantes fonctionnalités de compréhension du code, de modification, de génération et de débogage que Visual Studio fournit déjà pour les projets MSBuild. Pour plus d’informations, consultez [Open Folder projects in Visual C++](ide/non-msbuild-projects.md).
+Visual Studio 2017 introduit la fonctionnalité **Ouvrir le dossier**, qui vous permet d’effectuer des opérations de codage, de génération et de débogage dans un dossier contenant le code source, sans avoir à créer des solutions ni des projets. Il est ainsi beaucoup plus simple de bien démarrer avec Visual Studio, même si votre projet n’est pas un projet MSBuild. Avec **Ouvrir le dossier**, vous pouvez accéder aux puissantes fonctionnalités de compréhension du code, de modification, de génération et de débogage que Visual Studio fournit déjà pour les projets MSBuild. Pour plus d’informations, consultez [Projets Dossier ouvert pour C++](build/open-folder-projects-cpp.md).
 
 - Améliorations de l’expérience de la fonctionnalité Ouvrir le dossier. Vous pouvez personnaliser l’expérience via ces fichiers .json :
   - CppProperties.json pour personnaliser l’expérience IntelliSense et l’expérience de navigation.
@@ -330,7 +330,7 @@ Visual Studio 2017 introduit la fonctionnalité **Ouvrir le dossier**, qui vous 
 
 ## <a name="cmake-support-via-open-folder"></a>Prise en charge de CMake via Ouvrir le dossier
 
-Visual Studio 2017 introduit la prise en charge de l’utilisation de projets CMake sans les convertir en fichiers projet MSBuild (.vcxproj). Pour plus d’informations, consultez [CMake projects in Visual C++](ide/cmake-tools-for-visual-cpp.md). L’ouverture de projets CMake avec **Ouvrir le dossier** configure automatiquement l’environnement pour la modification, la génération et le débogage en C++.
+Visual Studio 2017 introduit la prise en charge de l’utilisation de projets CMake sans les convertir en fichiers projet MSBuild (.vcxproj). Pour plus d’informations, consultez [CMake projects in Visual C++](build/cmake-projects-in-visual-studio.md). L’ouverture de projets CMake avec **Ouvrir le dossier** configure automatiquement l’environnement pour la modification, la génération et le débogage en C++.
 
 - IntelliSense pour C++ fonctionne sans qu’il soit nécessaire de créer un fichier CppProperties.json dans le dossier racine. En outre, nous avons ajouté une nouvelle liste déroulante pour permettre aux utilisateurs de basculer facilement entre les configurations fournies par les fichiers CMake et CppProperties.json.
 
@@ -342,7 +342,7 @@ Visual Studio 2017 introduit la prise en charge de l’utilisation de projets C
 
 **Visual Studio 2017 version 15.5** : Ajout de la prise en charge de l’importation des caches CMake existants.
 
-**Visual Studio 2017 version 15.7** : Ajout de la prise en charge de CMake 3.11, analyse du code dans les projets CMake, vue des cibles dans l’Explorateur de solutions, options de génération du cache et compilation de fichier unique. Pour plus d’informations, consultez [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) et [Projets CMake en Visual C++](ide/cmake-tools-for-visual-cpp.md).
+**Visual Studio 2017 version 15.7** : Ajout de la prise en charge de CMake 3.11, analyse du code dans les projets CMake, vue des cibles dans l’Explorateur de solutions, options de génération du cache et compilation de fichier unique. Pour plus d’informations, consultez [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) et [Projets CMake en Visual C++](build/cmake-projects-in-visual-studio.md).
 
 ## <a name="windows-desktop-development-with-c"></a>Développement Windows Desktop avec C++
 
