@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 984a20d701b159820a94483fe9d3743f015b71f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741963"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278396"
 ---
 # <a name="double-thunking-c"></a>Double conversion de code (thunking) (C++)
 
@@ -27,7 +27,7 @@ Une solution consiste à indiquer au compilateur de ne pas générer un point d�
 
 De même, si vous exportez ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) une fonction managée, un point d’entrée natif est généré et toute fonction qui importe et appelle cette fonction appellera via le point d’entrée natif. Pour éviter un double médiateur dans cette situation, n’utilisez pas de sémantique d’exportation/importation native ; Il suffit de référencer les métadonnées via `#using` (consultez [#using, Directive](../preprocessor/hash-using-directive-cpp.md)).
 
-Le compilateur a été mis à jour afin de réduire inutiles double médiateur. Par exemple, toute fonction possédant un type managé dans la signature (y compris le type de retour) sera marquée implicitement comme `__clrcall`. Pour plus d’informations sur l’élimination du double conversion de code, consultez [ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).
+Le compilateur a été mis à jour afin de réduire inutiles double médiateur. Par exemple, toute fonction possédant un type managé dans la signature (y compris le type de retour) sera marquée implicitement comme `__clrcall`.
 
 ## <a name="example"></a>Exemple
 

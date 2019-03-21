@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293444"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278530"
 ---
 # <a name="cdrawingmanager-class"></a>Cdrawingmanager, classe
 
@@ -617,7 +617,7 @@ La représentation RVB de la couleur TSL fournie.
 
 ### <a name="remarks"></a>Notes
 
-Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](/windows/desktop/uxguide/vis-color).
 
 Cette méthode et la `CDrawingManager::HLStoRGB_TWO` méthode effectuer la même opération, mais requièrent des valeurs différentes pour le *H* paramètre. Dans cette méthode, *H* est un pourcentage du cercle. Dans le `CDrawingManager::HLStoRGB_TWO` (méthode), *H* est une valeur de degré comprise entre 0 et 360, ce qui les deux représentent rouge. Par exemple, avec `HLStoRGB_ONE`, une valeur de 0,25 pour *H* équivaut à une valeur de 90 avec `HLStoRGB_TWO`.
 
@@ -649,7 +649,7 @@ La représentation RVB de la couleur TSL fournie.
 
 ### <a name="remarks"></a>Notes
 
-Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](/windows/desktop/uxguide/vis-color).
 
 Cette méthode et la [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) méthode effectuer la même opération, mais requièrent des valeurs différentes pour le *H* paramètre. Dans cette méthode, *H* est une valeur de degré comprise entre 0 et 360, ce qui les deux représentent rouge. Dans le [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) (méthode), *H* est un pourcentage du cercle. Par exemple, avec `HLStoRGB_ONE`, une valeur de 0,25 pour *H* équivaut à une valeur de 90 avec `HLStoRGB_TWO`.
 
@@ -679,7 +679,7 @@ La représentation RVB de la couleur TSL fournie.
 
 ### <a name="remarks"></a>Notes
 
-Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](/windows/desktop/uxguide/vis-color).
 
 ##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
 
@@ -864,7 +864,7 @@ static void __stdcall RGBtoHSL(
 
 ### <a name="remarks"></a>Notes
 
-Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](/windows/desktop/uxguide/vis-color).
 
 La valeur retournée pour *H* est représenté sous forme de fraction comprise entre 0 et 1, où 0 et 1 représentent rouge. Les valeurs renvoyées pour *S* et *L* sont des nombres compris entre 0 et 1.
 
@@ -896,7 +896,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="remarks"></a>Notes
 
-Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Une couleur peut être représentée comme TSL (teinte, saturation et valeur), TSL (teinte, saturation et luminosité) ou RVB (rouge, vert et bleu). Pour plus d’informations sur les différentes représentations sous forme de couleur, consultez [couleur](/windows/desktop/uxguide/vis-color).
 
 La valeur retournée pour *H* est un nombre compris entre 0 et 360, où 0 et 360 indiquent rouge. Valeurs de retour pour *S* et *V* sont des nombres compris entre 0 et 1.
 
