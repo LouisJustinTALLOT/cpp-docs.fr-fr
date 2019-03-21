@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e047ecc5266a898f2c6dc24be3c204f8ddf94386
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809221"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278368"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Nom du fichier Include imposé)
 
@@ -41,7 +41,7 @@ Cette option a le même effet que si vous définissiez le fichier avec des guill
 
 1. Cliquez sur le **avancé** page de propriétés.
 
-1. Modifier le **Force inclut** propriété.
+1. Modifier le **du fichier Include imposé** propriété.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
@@ -51,5 +51,5 @@ Cette option a le même effet que si vous définissiez le fichier avec des guill
 
 [Options du fichier de sortie (/F)](output-file-f-options.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [Spécification du nom de chemin](specifying-the-pathname.md)

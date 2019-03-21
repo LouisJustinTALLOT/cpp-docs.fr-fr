@@ -4,12 +4,12 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 67bf20248933b28e9c7c0d87c598c0449d6bed0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b055a1e3ca1d43cc0a1633401c1a08a3d54c1a31
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825655"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278448"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projets CMake dans Visual Studio
 
@@ -80,7 +80,7 @@ Le contenu du cache n’est pas importé en totalité.  Des propriétés comme l
 
 Pour générer un projet CMake, vous avez ces possibilités :
 
-1. Sélectionnez la cible dans la liste déroulante **Déboguer** et appuyez sur **F5**, ou cliquez sur le bouton **Exécuter** (triangle vert). Le projet est d’abord généré automatiquement, comme une solution Visual Studio.
+1. Dans la barre d’outils généraux, recherchez le **Configurations** déroulante ; il affiche généralement « Linux-Debug » ou « x64-Debug » par défaut. Sélectionnez la configuration souhaitée et appuyez sur **F5**, ou cliquez sur le **exécuter** (triangle vert) la barre d’outils. Le projet est d’abord généré automatiquement, comme une solution Visual Studio.
 
 1. Cliquez avec le bouton droit sur CMakeLists.txt et sélectionnez **Générer** dans le menu contextuel. Si vous avez plusieurs cibles dans votre structure de dossiers, vous pouvez choisir de générer toutes les cibles ou une seule cible spécifique.
 

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289297"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278532"
 ---
 # <a name="task-class-concurrency-runtime"></a>task (Concurrency Runtime), classe
 
@@ -112,7 +112,7 @@ Résultat de la tâche.
 Si la tâche est annulée, un appel à `get` lèvera une [task_canceled](task-canceled-class.md) exception. Si la tâche rencontre une exception différente ou si une exception est propagée à cette tâche à partir d'une tâche précédente, un appel à `get` lève cette exception.
 
 > [!IMPORTANT]
->  Dans une application Universal Windows Platform (UWP), n’appelez pas [Concurrency::Task :: wait](#wait) ou `get` ( `wait` appels `get`) dans le code qui s’exécute sur le STA. Sinon, le runtime lève [concurrency::invalid_operation](invalid-operation-class.md) , car ces méthodes bloque le thread actuel et peut entraîner l’application à cesser de répondre. Toutefois, vous pouvez appeler la `get` méthode pour recevoir le résultat de la tâche antécédente dans une continuation basée sur des tâches, car le résultat est immédiatement disponible.
+>  Dans une application Universal Windows Platform (UWP), n’appelez pas [Concurrency::Task :: wait](#wait) ou `get` ( `wait` appels `get`) dans le code qui s’exécute sur le thread d’interface utilisateur. Sinon, le runtime lève [concurrency::invalid_operation](invalid-operation-class.md) , car ces méthodes bloque le thread actuel et peut entraîner l’application à cesser de répondre. Toutefois, vous pouvez appeler la `get` méthode pour recevoir le résultat de la tâche antécédente dans une continuation basée sur des tâches, car le résultat est immédiatement disponible.
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -344,7 +344,7 @@ Valeur `task_status` qui peut être `completed` ou `canceled`. Si la tâche renc
 ### <a name="remarks"></a>Notes
 
 > [!IMPORTANT]
->  Dans une application Universal Windows Platform (UWP), n’appelez pas `wait` dans le code qui s’exécute sur le STA. Sinon, le runtime lève [concurrency::invalid_operation](invalid-operation-class.md) , car cette méthode bloque le thread actuel et peut provoquer le blocage de l'application. Toutefois, vous pouvez appeler la méthode [concurrency::task::get](#get) pour recevoir le résultat de la tâche précédente dans une continuation basée sur des tâches.
+>  Dans une application Universal Windows Platform (UWP), n’appelez pas `wait` dans le code qui s’exécute sur le thread d’interface utilisateur. Sinon, le runtime lève [concurrency::invalid_operation](invalid-operation-class.md) , car cette méthode bloque le thread actuel et peut provoquer le blocage de l'application. Toutefois, vous pouvez appeler la méthode [concurrency::task::get](#get) pour recevoir le résultat de la tâche précédente dans une continuation basée sur des tâches.
 
 ## <a name="see-also"></a>Voir aussi
 

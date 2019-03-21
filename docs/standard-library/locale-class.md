@@ -1,6 +1,6 @@
 ---
 title: locale, classe
-ms.date: 11/04/2016
+ms.date: 03/19/2019
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 888aeff3e8661338d1a017c06325108a4240ace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677914"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278513"
 ---
 # <a name="locale-class"></a>locale, classe
 
@@ -179,7 +179,7 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 |[facet](#facet_class)|Classe qui sert de classe de base pour toutes les facettes de paramètres régionaux.|
 |[ID](#id_class)|La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<locale>
 
@@ -403,8 +403,14 @@ The previous locale was: C
 
 La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.
 
-class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };
-
+```cpp
+class id 
+{
+   protected:    id();
+   private:      id(const id&)
+   void operator=(const id&)  // not defined    
+};
+```
 ### <a name="remarks"></a>Notes
 
 La classe membre décrit l’objet membre statique exigé par chaque facette de paramètres régionaux unique. Notez que vous ne pouvez pas copier ou assigner un objet de classe `id`.
@@ -437,7 +443,7 @@ Paramètres régionaux qui doivent être copiés lors de la construction des nou
 *Autre*<br/>
 Paramètres régionaux à partir desquels sélectionner une catégorie.
 
-*CAT*<br/>
+*Cat*<br/>
 Catégorie à substituer dans les paramètres régionaux construits.
 
 *Fac*<br/>
