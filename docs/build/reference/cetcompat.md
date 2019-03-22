@@ -1,21 +1,21 @@
 ---
-title: / CETCOMPAT (compatible avec la technologie de mise en œuvre de flux de contrôle)
+title: / CETCOMPAT (compatible avec la pile cachée d’Europe centrale)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809845"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356013"
 ---
-# <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (compatible avec la technologie de mise en œuvre de flux de contrôle)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT (compatible avec la pile cachée d’Europe centrale)
 
-Spécifie s’il faut marquer une image exécutable comme étant compatible avec la technologie de mise en œuvre flux de contrôle (CET).
+Spécifie s’il faut marquer une image exécutable comme étant compatible avec la pile cachée de technologie de mise en œuvre (CET) flux de contrôle.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,13 +24,13 @@ Spécifie s’il faut marquer une image exécutable comme étant compatible avec
 ## <a name="arguments"></a>Arguments
 
 **NO**<br/>
-Spécifie que le fichier exécutable ne doit pas être marqué compatible avec Europe centrale.
+Spécifie que le fichier exécutable ne doit pas être marqué compatible avec la pile cachée d’Europe centrale.
 
 ## <a name="remarks"></a>Notes
 
-Technologie de mise en œuvre de flux de contrôle (CET) est une fonctionnalité de processeur d’ordinateur qui fournit des fonctionnalités pour vous défendre contre certains types d’attaques de programmes malveillants. Pour plus d’informations, consultez [la présentation de la technologie de mise en œuvre du flux de contrôle Intel](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
+Pile cachée de technologie de mise en œuvre (CET) flux de contrôle est une fonctionnalité de processeur d’ordinateur qui fournit des fonctionnalités pour se défendre de programmation orientée retournée (ROP) en fonction des attaques de programmes malveillants. Pour plus d’informations, consultez [la présentation de la technologie de mise en œuvre du flux de contrôle Intel](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
 
-Le **/CETCOMPAT** option de l’éditeur de liens indique à l’éditeur de liens pour marquer le fichier binaire comme Europe centrale-compatible. **/CETCOMPAT:no** marque le binaire comme non compatible avec Europe centrale. Si les deux options sont spécifiées sur la ligne de commande, la dernière spécifiée est utilisée. Ce commutateur est actuellement uniquement applicable aux architectures x86 et x64.
+Le **/CETCOMPAT** option de l’éditeur de liens indique à l’éditeur de liens pour marquer le fichier binaire comme pile de clichés instantanés Europe centrale-compatible. **/CETCOMPAT:no** marque le binaire comme non compatible avec la pile cachée d’Europe centrale. Si les deux options sont spécifiées sur la ligne de commande, la dernière spécifiée est utilisée. Ce commutateur est actuellement uniquement applicable aux architectures x86 et x64.
 
 Le **/CETCOMPAT** option est disponible à compter de l’ensemble d’outils Visual Studio 2019 Preview 3.
 

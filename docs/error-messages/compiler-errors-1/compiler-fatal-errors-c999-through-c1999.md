@@ -52,12 +52,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 6809ef1640c324e247bd20c83d4622fe27987ae6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328244"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356216"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erreurs irrécupérables du compilateur C999 à C1999
 
@@ -70,7 +70,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Error|Message|
 |-----------|-------------|
 |[Erreur irrécupérable C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|MESSAGE INCONNU Choisissez la commande Support technique du menu ? (Aide) de Visual C++ ou ouvrez le fichier d'aide du Support technique pour plus d'informations|
-|[Erreur irrécupérable C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Une erreur interne s’est produite dans le compilateur.<br /><br /> (fichier du compilateur '*file*', ligne *number*)<br /><br /> Pour résoudre ce problème, essayez de simplifier ou de modifier le programme à proximité des emplacements répertoriés ci-dessus. Choisissez la commande Support technique du menu ? (Aide) de Visual C++ ou ouvrez le fichier d'aide du Support technique pour plus d'informations|
+|[Erreur irrécupérable C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Une erreur interne s’est produite dans le compilateur.<br /> (fichier du compilateur '*file*', ligne *number*)<br /> Pour résoudre ce problème, essayez de simplifier ou de modifier le programme à proximité des emplacements répertoriés ci-dessus. Choisissez la commande Support technique du menu ? (Aide) de Visual C++ ou ouvrez le fichier d'aide du Support technique pour plus d'informations|
 |[Erreur irrécupérable C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|espace du tas insuffisant pour le compilateur lors de la deuxième passe|
 |[Erreur irrécupérable C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|le nombre d'erreurs est supérieur à *number*; arrêt de la compilation|
 |[Erreur irrécupérable C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|fin de fichier inattendue rencontrée|
@@ -78,7 +78,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur irrécupérable C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|indicateur '*string*' non reconnu dans '*option*'|
 |[Erreur irrécupérable C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|aucun fichier d'entrée spécifié|
 |[Erreur irrécupérable C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limite du compilateur : macros imbriquées trop profondément|
-|[Erreur irrécupérable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Avez-vous oublié d’ajouter ' #include <*fichier*>' à votre source ?|
+|[Erreur irrécupérable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Avez-vous oublié d’ajouter ' #include \< *fichier*>' à votre source ?|
 |[Erreur irrécupérable C1012](fatal-error-c1012.md)|parenthèses non équilibrées : '*character*" manquant(e)|
 |[Erreur irrécupérable C1013](fatal-error-c1013.md)|limite du compilateur : parenthèses ouvertes trop nombreuses|
 |[Erreur irrécupérable C1014](fatal-error-c1014.md)|fichiers Include trop nombreux : profondeur = *number*|

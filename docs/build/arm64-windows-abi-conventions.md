@@ -1,12 +1,12 @@
 ---
 title: Vue d’ensemble des conventions ABI de ARM64
-ms.date: 07/11/2018
-ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.date: 03/22/2019
+ms.openlocfilehash: 5dddc26285606b771a3939be19dff5b9ad53f3c7
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816540"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356190"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI de ARM64
 
@@ -191,7 +191,7 @@ Pour en-valeur de retour qui ne peut pas être transmis via les registres, l’a
 
 Après l’ABI iaasb par ARM, la pile doit rester 16 octets alignés en permanence. AArch64 contient une fonctionnalité de matériel qui génère l’alignement de pile alignées erreurs chaque fois qu’un magasin ou une charge de service pack relatif est effectuée et la procédure stockée n’est pas 16 octets. Windows s’exécute avec cette fonctionnalité est activée en permanence.
 
-Fonctions qui alloue 4 Ko ou plus intéressant de pile doivent garantir que chaque page précédant la dernière page est touché par ordre, ne garantissant ainsi aucun code peut « sauter » les pages de garde Windows utilise pour développer la pile. En général, cela le `__chkstk` helper, qui a une convention d’appel personnalisée qui transmet l’allocation de pile totale divisée par 16 dans x8.
+Fonctions qui alloue 4 Ko ou plus intéressant de pile doivent garantir que chaque page précédant la dernière page est touché par ordre, ne garantissant ainsi aucun code peut « sauter » les pages de garde Windows utilise pour développer la pile. En général, cela le `__chkstk` helper, qui a une convention d’appel personnalisée qui transmet l’allocation de pile totale divisée par 16 dans x15.
 
 ## <a name="red-zone"></a>Zone rouge
 
