@@ -37,12 +37,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 9d660f507f50c00c8ccd6f19505f09285ede9e60
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893598"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356229"
 ---
 # <a name="hstring-class"></a>HString, classe
 
@@ -62,14 +62,14 @@ Le Runtime Windows fournit l’accès aux chaînes via [HSTRING](/windows/deskto
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-Nom                                | Description
+Name                                | Description
 ----------------------------------- | -----------------------------------------------------
 [HString::HString](#hstring)        | Initialise une nouvelle instance de la classe `HString`.
 [HString :: ~ HString](#tilde-hstring) | Détruit l’instance actuelle de la `HString` classe.
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-Nom                                     | Description
+Name                                     | Description
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
 [HString::Attach](#attach)               | Associe les `HString` objet actuelle `HString` objet.
 [HString::CopyTo](#copyto)               | Copie en cours `HString` objet dans un objet HSTRING.
@@ -83,7 +83,7 @@ Nom                                     | Description
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-Nom                                         | Description
+Name                                         | Description
 -------------------------------------------- | ----------------------------------------------------------------------------
 [HString::operator=](#operator-assign)       | Déplace la valeur d’un autre `HString` objet actuel `HString` objet.
 [HString::operator==](#operator-equality)    | Indique si les deux paramètres sont égaux.
@@ -94,7 +94,7 @@ Nom                                         | Description
 
 `HString`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** corewrappers.h
 
@@ -187,7 +187,7 @@ Après cette opération, la valeur de chaîne du handle HSTRING sous-jacent est 
 Initialise une nouvelle instance de la classe `HString`.
 
 ```cpp
-HString(HSTRING hstr = nullptr) throw();
+HString() throw();
 HString(HString&& other) throw();
 ```
 
