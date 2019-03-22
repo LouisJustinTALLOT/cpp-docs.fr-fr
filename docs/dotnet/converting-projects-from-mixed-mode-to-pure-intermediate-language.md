@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559673"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328582"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Conversion de projets du mode mixte en langage intermédiaire pur
 
@@ -80,7 +80,7 @@ Si vous utilisez une version antérieure de l’ensemble d’outils du compilate
    |[Boolean](/dotnet/api/system.boolean)|Représente une valeur booléenne.|
    |[Byte](/dotnet/api/system.byte)|Représente un entier non signé 8 bits.|
    |[Char](/dotnet/api/system.char)|Représente un caractère Unicode.|
-   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Représente un instant, généralement exprimé sous la forme d'une date et d'une heure.|
+   |[DateTime](/dotnet/api/system.datetime)|Représente un instant, généralement exprimé sous la forme d'une date et d'une heure.|
    |[Decimal](/dotnet/api/system.decimal)|Représente un nombre décimal.|
    |[Double](/dotnet/api/system.double)|Représente un nombre à virgule flottante double précision.|
    |[Guid](/dotnet/api/system.guid)|Représente un GUID (identificateur global unique).|
@@ -88,8 +88,8 @@ Si vous utilisez une version antérieure de l’ensemble d’outils du compilate
    |[Int32](/dotnet/api/system.int32)|Représente un entier signé 32 bits.|
    |[Int64](/dotnet/api/system.int64)|Représente un entier signé 64 bits.|
    |[IntPtr](/dotnet/api/system.intptr)|Type spécifique à la plateforme, utilisé pour représenter un pointeur ou un handle.|
-   |[SByte](/dotnet/api/system.byte.aspx)|Représente un entier 8 bits signé.|
-   |[Single](/dotnet/api/system.single.aspx)|Représente un nombre à virgule flottante simple précision.|
+   |[SByte](/dotnet/api/system.byte)|Représente un entier 8 bits signé.|
+   |[Single](/dotnet/api/system.single)|Représente un nombre à virgule flottante simple précision.|
    |[TimeSpan](/dotnet/api/system.timespan)|Représente un intervalle de temps.|
    |[UInt16](/dotnet/api/system.uint16)|Représente un entier non signé 16 bits.|
    |[UInt32](/dotnet/api/system.uint32)|Représente un entier non signé 32 bits.|

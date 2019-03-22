@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295017"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328530"
 ---
 # <a name="cdbexception-class"></a>CDBException, classe
 
@@ -33,7 +33,7 @@ class CDBException : public CException
 
 ### <a name="public-data-members"></a>Membres de données publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDBException::m_nRetCode](#m_nretcode)|Contient un code de retour Open Database Connectivity (ODBC), de type et RETCODE contient.|
 |[CDBException::m_strError](#m_strerror)|Contient une chaîne qui décrit l’erreur en termes d’alphanumériques.|
@@ -60,7 +60,7 @@ Pour plus d’informations sur la gestion des exceptions en général, ou sur `C
 
 `CDBException`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -132,7 +132,7 @@ Contient une chaîne décrivant l’erreur qui a provoqué l’exception.
 
 La chaîne est du formulaire « état : % s, natif : % ld, origine : % s », où les codes de format, dans l’ordre, sont remplacés par les valeurs qui décrivent :
 
-- La valeur SQLSTATE, une chaîne se terminant par null qui contient un code d’erreur à cinq caractères retournés dans le *szSqlState* paramètre de la fonction ODBC `SQLError`. Les valeurs SQLSTATE sont répertoriés dans l’annexe A, [Codes d’erreur ODBC](/previous-versions/windows/desktop/ms714687), dans le *de référence du programmeur ODBC*. Exemple : "S0022".
+- La valeur SQLSTATE, une chaîne se terminant par null qui contient un code d’erreur à cinq caractères retournés dans le *szSqlState* paramètre de la fonction ODBC `SQLError`. Les valeurs SQLSTATE sont répertoriés dans l’annexe A, [Codes d’erreur ODBC](/previous-versions/windows/desktop/ms714687(v=vs.85)), dans le *de référence du programmeur ODBC*. Exemple : "S0022".
 
 - Le code d’erreur natif spécifique à la source de données retournées dans le *pfNativeError* paramètre de la `SQLError` (fonction). Exemple : 207.
 
@@ -140,13 +140,13 @@ La chaîne est du formulaire « état : % s, natif : % ld, origine : % s »
 
 Le framework interprète la chaîne d’erreur et met ses composants dans `m_strStateNativeOrigin`; si `m_strStateNativeOrigin` contient des informations pour plusieurs erreurs, les erreurs sont séparées par des sauts de ligne. Le framework met le texte d’erreur d’alphanumériques dans `m_strError`.
 
-Pour plus d’informations sur les codes utilisées pour créer cette chaîne, consultez la [SQLError](/previous-versions/windows/desktop/ms716312) fonctionner dans le *de référence du programmeur ODBC*.
+Pour plus d’informations sur les codes utilisées pour créer cette chaîne, consultez la [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85)) fonctionner dans le *de référence du programmeur ODBC*.
 
 ### <a name="example"></a>Exemple
 
-  À partir d’ODBC : « Origine, natif : 207, état : S0022 : nom de colonne non valide [Microsoft] [pilote ODBC SQL Server] [SQL Server] 'ColName' »
+  À partir d’ODBC : « Origine, natif : 207, état : S0022 :\[Microsoft]\[le pilote ODBC SQL Server]\[SQL Server] le nom de colonne non valide 'ColName' »
 
-Dans `m_strStateNativeOrigin`: « Origine, natif : 207, état : S0022 : [Microsoft] [pilote ODBC SQL Server] [SQL Server] »
+Dans `m_strStateNativeOrigin`: « Origine, natif : 207, état : S0022 :\[Microsoft]\[pilote ODBC SQL Server]\[SQL Server] »
 
 Dans `m_strError`: « Nom de colonne non valide 'ColName' »
 

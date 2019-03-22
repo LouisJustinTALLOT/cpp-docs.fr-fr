@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: f27e325a8d766fbaf95037db669e0829671cb104
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 217bde10ea1b7f6457d141c3006c8c8fb2efaadf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562911"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328504"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Procédure : Ajouter, modifier, ou supprimer des contrôles (C++)
 
@@ -153,7 +153,7 @@ Après avoir ajouté un contrôle commun ou un contrôle RichEdit une boîte de 
 
 1. Créez un projet Win32, en modifiant les paramètres d’application pour créer une application Windows (pas une application console).
 
-1. Dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), double-cliquez sur le *.rc* fichier.
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), double-cliquez sur le *.rc* fichier.
 
 1. Sous l’option de la boîte de dialogue, double-cliquez sur le **sur** boîte.
 
@@ -224,14 +224,14 @@ Contrôles ActiveX fournis par des fabricants indépendants peuvent sont équip�
 > [!NOTE]
 > Cette procédure s’applique à l’utilisation de la page de propriétés pour modifier des contrôles ActiveX. Vous pouvez également parcourir et modifier les propriétés ActiveX dans le nouveau **propriétés** fenêtre.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
 [Gérer les contrôles de boîte de dialogue](controls-in-dialog-boxes.md)<br/>
-[Guide pratique pour Contrôles de disposition](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Guide pratique pour disposer les contrôles](arrangement-of-controls-on-dialog-boxes.md)<br/>
 [Guide pratique pour définir les valeurs et l’accès au contrôle](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links

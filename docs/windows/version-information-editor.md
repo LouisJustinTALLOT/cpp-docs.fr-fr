@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: 8382371acfd423f8c6864e816b0357e3ef11718e
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 7cfb2b5426a65298c01c61541020a0f30b673f9c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210976"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328816"
 ---
 # <a name="version-information-editor-c"></a>Éditeur d’informations (C++)
 
@@ -60,7 +60,7 @@ Vous pouvez trier la séquence d’informations du bloc de chaîne en sélection
 
 ### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Pour ajouter des informations de version pour une autre langue (nouveau bloc d’informations de version)
 
-1. Ouvrez une ressource d’informations de version en double-cliquant dessus dans [Affichage des ressources](../windows/resource-view-window.md).
+1. Ouvrez une ressource d’informations de version en double-cliquant dessus dans [Affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Avec le bouton droit dans la table d’informations de version et choisissez **nouveau bloc d’informations de Version**.
 
@@ -70,7 +70,7 @@ Vous pouvez trier la séquence d’informations du bloc de chaîne en sélection
 
 ### <a name="to-delete-a-version-information-block"></a>Pour supprimer un bloc d’informations de version
 
-1. Ouvrez la ressource d’informations de version en double-cliquant sur son icône dans l’ [Affichage des ressources](../windows/resource-view-window.md).
+1. Ouvrez la ressource d’informations de version en double-cliquant sur son icône dans l’ [Affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Cliquez sur l’en-tête de bloc que vous souhaitez supprimer, puis sélectionnez **supprimer le bloc d’informations de Version**.
 
@@ -80,7 +80,7 @@ Vous pouvez trier la séquence d’informations du bloc de chaîne en sélection
 
 Si vous souhaitez accéder aux informations de version à partir de votre programme, utilisez les fonctions [GetFileVersionInfo](/windows/desktop/api/winver/nf-winver-getfileversioninfoa) et [VerQueryValue](/windows/desktop/api/winver/nf-winver-verqueryvaluea) .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

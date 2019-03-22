@@ -3,12 +3,12 @@ title: Personnaliser des paramètres de génération CMake dans Visual Studio
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: aa840dd41ee6843afae80343e42ba62741bbcd80
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: dd34fbefcbc89c7c4aa93105ae5bad31ae4d5f01
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825328"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328296"
 ---
 # <a name="customize-cmake-build-settings"></a>Personnaliser des paramètres de génération CMake
 
@@ -53,19 +53,19 @@ Vous pouvez également modifier directement `CMakeSettings.json` pour créer des
 
 - **generator** : correspond au commutateur **-G** CMake et spécifie le générateur à utiliser. Cette propriété peut également être utilisée en tant que macro, `${generator}`, quand vous rédigez d’autres valeurs de propriétés. Visual Studio prend actuellement en charge les générateurs CMake suivants :
 
-    - « Ninja »
-    - « Visual Studio 14 2015 »
-    - « Visual Studio 14 2015 ARM »
-    - « Visual Studio 14 2015 Win64 »
-    - « Visual Studio 15 2017 »
-    - « Visual Studio 15 2017 ARM »
-    - « Visual Studio 15 2017 Win64 »
+  - « Ninja »
+  - « Visual Studio 14 2015 »
+  - « Visual Studio 14 2015 ARM »
+  - « Visual Studio 14 2015 Win64 »
+  - « Visual Studio 15 2017 »
+  - « Visual Studio 15 2017 ARM »
+  - « Visual Studio 15 2017 Win64 »
 
-    Comme Ninja est conçu pour des vitesses de génération rapides plutôt que pour la flexibilité et la fonctionnalité, il est défini par défaut. Toutefois, certains projets CMake peuvent ne pas pouvoir être générés correctement avec Ninja. Si cela se produit, vous pouvez demander à CMake de générer un projet Visual Studio à la place.
+  Comme Ninja est conçu pour des vitesses de génération rapides plutôt que pour la flexibilité et la fonctionnalité, il est défini par défaut. Toutefois, certains projets CMake peuvent ne pas pouvoir être générés correctement avec Ninja. Si cela se produit, vous pouvez demander à CMake de générer un projet Visual Studio à la place.
 
-    Pour spécifier un générateur Visual Studio, ouvrez `CMakeSettings.json` à partir du menu principal en choisissant **CMake | Modifier les paramètres CMake**. Supprimez « Ninja » et tapez « V ». Cela active IntelliSense, qui vous permet de choisir le générateur souhaité.
+  Pour spécifier un générateur Visual Studio, ouvrez `CMakeSettings.json` à partir du menu principal en choisissant **CMake | Modifier les paramètres CMake**. Supprimez « Ninja » et tapez « V ». Cela active IntelliSense, qui vous permet de choisir le générateur souhaité.
 
-    Quand la configuration active spécifie un générateur Visual Studio, MSBuild.exe est appelé par défaut avec des arguments `-m -v:minimal`. Pour personnaliser la génération, dans le fichier `CMakeSettings.json`, vous pouvez spécifier des [arguments de ligne de commande MSBuild](../build/msbuild-visual-cpp-overview.md) supplémentaires à passer au système de génération via la propriété `buildCommandArgs` :
+  Quand la configuration active spécifie un générateur Visual Studio, MSBuild.exe est appelé par défaut avec des arguments `-m -v:minimal`. Pour personnaliser la génération, dans le fichier `CMakeSettings.json`, vous pouvez spécifier des [arguments de ligne de commande MSBuild](../build/reference/msbuild-visual-cpp-overview.md) supplémentaires à passer au système de génération via la propriété `buildCommandArgs` :
     
     ```json
     "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -132,7 +132,7 @@ usage: ninja [options] [targets...]
 |   -n       | test (n’exécute pas de commandes mais agit comme elles avaient réussi)|
 |   -v       | affiche toutes les lignes de commande pendant la génération|
 |   -d MODE  | active le débogage (utilisez -d list pour obtenir la liste des modes)|
-|   -t TOOL  | exécute un sous-outil (utilisez -t list pour obtenir la liste des sous-outils). met fin aux options de niveau supérieur. Les autres indicateurs sont transmis à l’outil|
+|   -t TOOL  | exécute un sous-outil (utilisez -t list pour obtenir la liste des sous-outils). met fin à des options de niveau supérieur ; autres indicateurs sont passées à l’outil|
 |   -w FLAG  | ajuste les avertissements (utiliser -w list pour obtenir la liste des avertissements)|
 
 ## <a name="inherited-environments"></a>Environnements hérités

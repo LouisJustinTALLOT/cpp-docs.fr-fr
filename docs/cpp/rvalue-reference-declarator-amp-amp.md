@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: caec1ae10db273b6ed604af29b20a1908b1313cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614641"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328907"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Déclarateur de référence rvalue : &amp;&amp;
 
@@ -55,7 +55,7 @@ Avant Visual C++ 2010, chaque appel à **opérateur +** alloue et retourne un no
 
 La sémantique de déplacement est également utile lorsque le compilateur ne peut pas utiliser l'optimisation de la valeur de retour (RVO) ou l'optimisation de la valeur de retour nommée (NRVO). Dans ces cas-là, le compilateur appelle le constructeur de déplacement si le type le définit. Pour plus d’informations sur l’optimisation de valeur de retour nommée, consultez [l’optimisation de la valeur de retour nommée dans Visual C++ 2005](https://msdn.microsoft.com/library/ms364057.aspx).
 
-Pour mieux comprendre la sémantique de déplacement, prenez comme exemple l'insertion d'un élément dans un objet `vector`. Si la capacité de l'objet `vector` est dépassée, l'objet `vector` doit réallouer de la mémoire pour ses éléments puis copier chaque élément vers un autre emplacement de mémoire pour libérer de l'espace pour l'élément inséré. Lorsqu’une opération d’insertion copie un élément, elle crée un nouvel élément, appelle le constructeur de copie pour copier les données de l’élément précédent dans le nouvel élément, puis détruit l’élément précédent. La sémantique de déplacement vous permet de déplacer directement des objets sans qu'il soit nécessaire d'exécuter des opérations d'allocation de mémoire et de copie coûteuses.
+Pour mieux comprendre la sémantique de déplacement, prenez comme exemple l'insertion d'un élément dans un objet `vector`. Si la capacité de l'objet `vector` est dépassée, l'objet `vector` doit réallouer de la mémoire pour ses éléments puis copier chaque élément vers un autre emplacement de mémoire pour libérer de l'espace pour l'élément inséré. Lorsqu'une opération d'insertion copie un élément, elle crée un nouvel élément, appelle le constructeur de copie pour copier les données de l'élément précédent dans le nouvel élément, puis supprime l'élément précédent. La sémantique de déplacement vous permet de déplacer directement des objets sans qu'il soit nécessaire d'exécuter des opérations d'allocation de mémoire et de copie coûteuses.
 
 Pour tirer parti de la sémantique de déplacement dans l'exemple `vector`, vous pouvez écrire un constructeur de déplacement pour déplacer des données d'un objet vers un autre.
 
@@ -193,7 +193,7 @@ Dans cet exemple, le premier appel à `f` passe une variable locale (une lvalue)
 
 Lorsque vous écrivez une fonction qui accepte une référence rvalue comme paramètre, ce paramètre est traité comme une lvalue dans le corps de la fonction. Le compilateur traite une référence rvalue nommée comme une lvalue car un objet nommé peut être référencé par plusieurs parties d'un programme ; il serait dangereux d'autoriser plusieurs parties d'un programme à modifier ou à supprimer des ressources de cet objet. Par exemple, si plusieurs parties d'un programme tentent de transférer des ressources à partir du même objet, seule la première partie transfère correctement la ressource.
 
-L'exemple suivant illustre la fonction `g`, qui est surchargée pour accepter une référence lvalue et une référence rvalue. La fonction `f` accepte une référence rvalue comme paramètre (une référence rvalue nommée) et retourne une référence rvalue (une référence rvalue sans nom). Dans l’appel à `g` à partir de `f`, la résolution de surcharge sélectionne la version de `g` qui accepte une référence lvalue, car le corps de `f` traite son paramètre comme une lvalue. Dans l'appel à `g` à partir de `main`, la résolution de surcharge sélectionne la version de `g` qui accepte une référence rvalue car `f` retourne une référence rvalue.
+L'exemple suivant illustre la fonction `g`, qui est surchargée pour accepter une référence lvalue et une référence rvalue. La fonction `f` accepte une référence rvalue comme paramètre (une référence rvalue nommée) et retourne une référence rvalue (une référence rvalue sans nom). Dans l'appel à `g` à partir de `f`, la résolution de surcharge sélectionne la version de `g` qui accepte une référence lvalue, car le corps de `f` traite son paramètre comme une lvalue. Dans l’appel à `g` à partir de `main`, la résolution de surcharge sélectionne la version de `g` qui accepte une référence rvalue car `f` retourne une référence rvalue.
 
 ```cpp
 // named-reference.cpp
@@ -220,7 +220,7 @@ void g(MemoryBlock&&)
 MemoryBlock&& f(MemoryBlock&& block)
 {
    g(block);
-   return block;
+   return move(block);
 }
 
 int main()
@@ -283,7 +283,7 @@ In g(MemoryBlock&&).
 
 Il est courant d’écrire un modèle de fonction qui passe (ou *transfère*) ses paramètres à une autre fonction. Il est important de comprendre comment la déduction de type de modèle fonctionne pour les modèles de fonction qui acceptent des références rvalue.
 
-Si l'argument de fonction est une rvalue, le compilateur déduit l'argument comme étant une référence rvalue. Par exemple, si vous passez une référence rvalue à un objet de type `X` à une fonction de modèle qui accepte le type `T&&` comme paramètre, la déduction d’argument template déduit `T` comme étant `X`. Par conséquent, le paramètre est de type `X&&`. Si l’argument de fonction est une lvalue ou **const** lvalue, le compilateur déduit son type doit être une référence lvalue ou **const** référence lvalue de ce type.
+Si l'argument de fonction est une rvalue, le compilateur déduit l'argument comme étant une référence rvalue. Par exemple, si vous passez une référence rvalue à un objet de type `X` à une fonction de modèle qui accepte le type `T&&` comme paramètre, la déduction d'argument template déduit `T` comme étant `X`. Par conséquent, le paramètre est de type `X&&`. Si l’argument de fonction est une lvalue ou **const** lvalue, le compilateur déduit son type doit être une référence lvalue ou **const** référence lvalue de ce type.
 
 L'exemple suivant déclare un modèle de structure, puis le spécialise pour différents types de références. La fonction `print_type_and_value` accepte une référence rvalue comme paramètre et la transfère à la version spécialisée appropriée de la méthode `S::print`. La fonction `main` illustre les différentes façons d'appeler la méthode `S::print`.
 
@@ -375,7 +375,7 @@ print<T&&>: third
 print<const T&&>: fourth
 ```
 
-Pour résoudre chaque appel à la fonction `print_type_and_value`, le compilateur effectue d’abord une déduction de l’argument template. Il applique ensuite des règles de réduction de référence lorsqu'il remplace les types de paramètres par les arguments template déduits. Par exemple, le passage de la variable locale `s1` à la fonction `print_type_and_value` provoque la production par le compilateur de la signature de fonction suivante :
+Pour résoudre chaque appel à la fonction `print_type_and_value`, le compilateur effectue d’abord une déduction de l’argument template. Il applique ensuite des règles de réduction de référence lorsqu’il remplace les types de paramètres par les arguments template déduits. Par exemple, le passage de la variable locale `s1` à la fonction `print_type_and_value` provoque la production par le compilateur de la signature de fonction suivante :
 
 ```cpp
 print_type_and_value<string&>(string& && t)
@@ -389,7 +389,7 @@ print_type_and_value<string&>(string& t)
 
 Cette version de la fonction `print_type_and_value` transfère ensuite son paramètre à la version spécialisée appropriée de la méthode `S::print`.
 
-Le tableau suivant résume les règles de réduction de référence pour la déduction du type d’argument template :
+Le tableau suivant résume les règles de réduction de référence pour la déduction du type d'argument template :
 
 |||
 |-|-|
@@ -403,7 +403,7 @@ La déduction d’argument template est un élément important de l’implément
 
 ## <a name="summary"></a>Récapitulatif
 
-Les références rvalue différencient les lvalues des rvalues. Elles peuvent vous aider à améliorer les performances de vos applications en évitant de faire appel à des allocations de la mémoire et des opérations de copie inutiles. Elles vous permettent également d'écrire une version d'une fonction qui accepte des arguments arbitraires et les transfère à une autre fonction comme si celle-ci avait été appelée directement.
+Les références rvalue différencient les lvalues des rvalues. Elles peuvent vous aider à améliorer les performances de vos applications en évitant de faire appel à des allocations de la mémoire et des opérations de copie inutiles. Elles vous permettent également d’écrire une version d’une fonction qui accepte des arguments arbitraires et les transfère à une autre fonction comme si celle-ci avait été appelée directement.
 
 ## <a name="see-also"></a>Voir aussi
 

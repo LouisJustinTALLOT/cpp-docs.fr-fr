@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562794"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328842"
 ---
 # <a name="how-to-manage-symbols"></a>Procédure : Gérer les symboles
 
@@ -85,7 +85,7 @@ Les noms de symboles comportent des préfixes descriptifs qui indiquent le genre
 
 ### <a name="to-change-a-symbol-name-id"></a>Pour modifier un nom de symbole (ID)
 
-1. Dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), sélectionnez la ressource.
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), sélectionnez la ressource.
 
 1. Dans le **propriétés** fenêtre, tapez un nouveau nom de symbole ou sélectionnez dans la liste des symboles existants dans le **ID** boîte.
 
@@ -129,7 +129,7 @@ Certaines limitations des valeurs de symboles sont :
 
 ### <a name="to-change-a-symbol-value"></a>Pour modifier une valeur de symbole
 
-1. Dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), sélectionnez la ressource.
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), sélectionnez la ressource.
 
 1. Dans le **propriétés** fenêtre, tapez le nom du symbole suivi par un signe égal et d’un entier dans la **ID** zone, par exemple :
 
@@ -185,7 +185,7 @@ L'environnement interprète correctement ces symboles calculés tant que les con
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Pour inclure des symboles partagés (en lecture seule) dans votre fichier de ressources
 
-1. Dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), cliquez sur votre *.rc* fichier et sélectionnez [Include des ressources](../windows/resource-includes-dialog-box.md).
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez sur votre *.rc* fichier et sélectionnez [Include des ressources](../windows/resource-includes-dialog-box.md).
 
 1. Dans le **directives de symboles en lecture seule** zone, utilisez la `#include` directive de compilateur pour spécifier le fichier dans lequel les symboles en lecture seule peuvent être conservées.
 
@@ -204,11 +204,11 @@ L'environnement interprète correctement ces symboles calculés tant que les con
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Pour changer le nom du fichier d'en-tête de symbole de ressource
 
-1. Dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), cliquez sur votre *.rc* de fichier et choisissez [Include des ressources](../windows/resource-includes-dialog-box.md).
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez sur votre *.rc* de fichier et choisissez [Include des ressources](../windows/resource-includes-dialog-box.md).
 
 1. Dans le **fichier d’en-tête de symbole** , tapez le nouveau nom pour le fichier include.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

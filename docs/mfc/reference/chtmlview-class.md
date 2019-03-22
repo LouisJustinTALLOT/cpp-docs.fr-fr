@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 251a1f9f6773363955ac374aa8714bc616137a31
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 07f942e6582eb9fabe6001c4823ec9e2b1a83bf6
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425001"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328972"
 ---
 # <a name="chtmlview-class"></a>CHtmlView, classe
 
@@ -215,7 +215,7 @@ class CHtmlView : public CFormView
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CHtmlView::Create](#create)|Crée le contrôle WebBrowser.|
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Méthode substituable permettant de créer une instance de site de contrôle pour héberger un contrôle sur le formulaire.|
@@ -359,7 +359,7 @@ En basant la classe de vue de l’application sur `CHtmlView` , la vue est fourn
 
 `CHtmlView`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxhtml.h
 
@@ -1376,7 +1376,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Paramètres
 
 *pInfo*<br/>
-Adresse d’un [DOCHOSTUIINFO](/previous-versions/aa770044\(v=vs.85\)) structure qui reçoit les fonctionnalités d’interface utilisateur de l’hôte.
+Adresse d’un [DOCHOSTUIINFO](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa770044\(v=vs.85\)) structure qui reçoit les fonctionnalités d’interface utilisateur de l’hôte.
 
 ### <a name="return-value"></a>Valeur de retour
 

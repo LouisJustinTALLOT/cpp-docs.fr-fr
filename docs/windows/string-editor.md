@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6c855986d98f265f876f2acdd085eea46e057c93
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563301"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328894"
 ---
 # <a name="string-editor-c"></a>Éditeur de chaînes (C++)
 
@@ -56,7 +56,7 @@ Le **éditeur de chaînes** vous permet de :
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>Pour rechercher une ressource de chaîne dans la table de chaînes
 
-1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Accédez au menu **modifier** > **rechercher et remplacer** et choisissez **trouver**.
 
@@ -79,7 +79,7 @@ Le **éditeur de chaînes** permet de s’assurer que vous n’utilisez pas un I
 
 #### <a name="to-add-a-string-table-entry"></a>Pour ajouter une entrée de table de chaînes
 
-1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Avec le bouton droit dans la table de chaînes et choisissez **nouvelle chaîne**.
 
@@ -124,7 +124,7 @@ Vous pouvez utiliser la modification sur place pour modifier le **ID**, **valeur
 
 #### <a name="to-change-a-string-or-its-identifier"></a>Pour modifier une chaîne ou son identificateur
 
-1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Sélectionnez la chaîne que vous souhaitez modifier, puis double-cliquez sur le **ID**, **valeur**, ou **légende** colonne, vous pouvez :
 
@@ -136,7 +136,7 @@ Vous pouvez utiliser la modification sur place pour modifier le **ID**, **valeur
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Pour modifier la propriété caption de plusieurs ressources de type chaîne
 
-1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Sélectionnez les chaînes que vous souhaitez modifier en maintenant enfoncée la **Ctrl** enfoncée quand vous sélectionnez chacun d’eux.
 
@@ -146,7 +146,7 @@ Vous pouvez utiliser la modification sur place pour modifier le **ID**, **valeur
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Pour ajouter des caractères spéciaux ou de mise en forme à une ressource de chaîne
 
-1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Sélectionnez la chaîne que vous souhaitez modifier.
 
@@ -164,7 +164,7 @@ Vous pouvez utiliser la modification sur place pour modifier le **ID**, **valeur
    > [!NOTE]
    > Le **éditeur de chaînes** ne prend pas en charge l’ensemble complet d’échappement des caractères d’ASCII. Vous ne pouvez utiliser que ceux répertoriés ci-dessus.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

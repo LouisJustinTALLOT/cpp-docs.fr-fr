@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563054"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328491"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Procédure : Créez une icône ou une autre Image
 
@@ -167,7 +167,7 @@ Utilisez le **ouvrir &lt;appareil&gt; Image** boîte de dialogue pour ouvrir des
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>Pour créer une nouvelle icône ou curseur
 
-1. Dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), avec le bouton droit votre *.rc* de fichier, puis choisissez **insérer la ressource**. Si vous disposez déjà d’une ressource image votre *.rc* fichier, par exemple un curseur, vous pouvez cliquer sur le **curseur** dossier et sélectionnez **insérer Cursor**.
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), avec le bouton droit votre *.rc* de fichier, puis choisissez **insérer la ressource**. Si vous disposez déjà d’une ressource image votre *.rc* fichier, par exemple un curseur, vous pouvez cliquer sur le **curseur** dossier et sélectionnez **insérer Cursor**.
 
 1. Dans le [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), sélectionnez **icône** ou **curseur** et choisissez **New**. Pour les icônes, cette action crée une ressource icône 16 couleurs, 32 x 32. Pour les curseurs, 32 x 32, Monochrome image (2-color) est créé.
 
@@ -228,7 +228,7 @@ Les couleurs de l’écran et inverse que vous appliquez aux icônes et curseurs
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>Pour créer une icône de 256 couleurs ou d’un curseur
 
-1. Dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), avec le bouton droit votre *.rc* de fichier, puis choisissez **insérer la ressource**. Si vous disposez déjà d’une ressource image votre *.rc* fichier, par exemple un curseur, vous pouvez cliquer sur le **curseur** dossier et sélectionnez **insérer Cursor**.
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), avec le bouton droit votre *.rc* de fichier, puis choisissez **insérer la ressource**. Si vous disposez déjà d’une ressource image votre *.rc* fichier, par exemple un curseur, vous pouvez cliquer sur le **curseur** dossier et sélectionnez **insérer Cursor**.
 
 1. Dans le [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), sélectionnez **icône** ou **curseur** et choisissez **New**.
 
@@ -295,7 +295,7 @@ Vous pouvez ouvrir des images GIF ou JPEG dans la **Éditeur d’images** et enr
 
 ### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Pour ajouter une nouvelle ressource image à un projet C++ non managé
 
-1. Dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), avec le bouton droit votre *.rc* de fichier, puis choisissez **insérer la ressource**. Si vous disposez déjà d’une ressource image votre *.rc* fichier, par exemple un curseur, vous pouvez simplement avec le bouton droit le **curseur** dossier et sélectionnez **insérer Cursor**.
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), avec le bouton droit votre *.rc* de fichier, puis choisissez **insérer la ressource**. Si vous disposez déjà d’une ressource image votre *.rc* fichier, par exemple un curseur, vous pouvez simplement avec le bouton droit le **curseur** dossier et sélectionnez **insérer Cursor**.
 
 1. Dans le [boîte de dialogue Ajouter une ressource](../windows/add-resource-dialog-box.md), sélectionnez le type de ressource image que vous souhaitez créer (**Bitmap**, par exemple) puis choisissez **New**.
 
@@ -313,7 +313,7 @@ Vous pouvez ouvrir des images GIF ou JPEG dans la **Éditeur d’images** et enr
 
    La ressource est ajoutée à votre projet dans **l’Explorateur de solutions** et la ressource s’ouvre dans le [Éditeur d’images](../windows/image-editor-for-icons.md). Vous pouvez maintenant utiliser tous les outils disponibles dans le **Éditeur d’images** pour modifier votre image. Pour plus d’informations sur l’ajout d’images à un projet managé, consultez [chargement d’une image au moment du Design](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Aucun.
 

@@ -48,12 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 545bbeec545b37324ff9c15512b27073f5ffc1c7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 840a7e63bb9b98cfb46ea36e30b3439168688c87
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627293"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328310"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Fonctions intrinsèques _InterlockedCompareExchangePointer
 
@@ -184,7 +184,7 @@ __int64 _InterlockedCompareExchange64_rel(
 *Exchange*<br/>
 [in] Valeur d’échange. Le signe est ignoré.
 
-*Comparateur*<br/>
+*Comparand*<br/>
 [in] Valeur à comparer à la destination. Le signe est ignoré.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -193,7 +193,7 @@ La valeur de retour est la valeur initiale du pointeur `Destination`.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Intrinsèque|Architecture|En-tête|
+|Intrinsèque|Architecture|Header|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
@@ -204,7 +204,7 @@ La valeur de retour est la valeur initiale du pointeur `Destination`.
 
 `_InterlockedCompareExchange` effectue une comparaison atomique de la valeur `Destination` à la valeur `Comparand`. Si la valeur `Destination` est égale à la valeur `Comparand`, la valeur `Exchange` est stockée dans l'adresse spécifiée par `Destination`. Dans le cas contraire, aucune opération n'est effectuée.
 
-`_InterlockedCompareExchange` Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange) (fonction).
+`_InterlockedCompareExchange` Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) (fonction).
 
 Il existe plusieurs variantes de `_InterlockedCompareExchange` qui varient selon les types de données qu’elles impliquent et l’utilisation d’une sémantique acquire ou release spécifique au processeur.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: 2bb15597be5ac4e1bb5f37fb2f12b74631e5a354
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a171e6a7eea5e10b47bf680545bc14618893b155
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592703"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328985"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -26,12 +26,12 @@ Crée une connexion à une source de données.
 ### <a name="parameters"></a>Paramètres
 
 *db_source*<br/>
-Chaîne de connexion utilisée pour se connecter à la source de données. Pour le format de la chaîne de connexion, consultez [chaînes de connexion et des liaisons de données](/previous-versions/windows/desktop/ms718376) dans le Kit de développement logiciel Microsoft Data Access Components (MDAC).
+Chaîne de connexion utilisée pour se connecter à la source de données. Pour le format de la chaîne de connexion, consultez [chaînes de connexion et des liaisons de données](/previous-versions/windows/desktop/ms718376(v=vs.85)) dans le Kit de développement logiciel Microsoft Data Access Components (MDAC).
 
 *name*<br/>
 (Facultatif) Lorsque vous utilisez **db_source** sur une classe, *nom* est une instance d’un objet de source de données qui a le **db_source** attribut appliqué à ce dernier (voir exemple 1). Lorsque vous utilisez **db_source** inline dans une implémentation de méthode, *nom* est une variable (local à la méthode) qui peut être utilisée pour accéder aux données source (voir l’exemple 2). Vous la transmettre *nom* à la *source_name* paramètre de `db_command` pour associer la source de données avec une commande.
 
-*HRESULT*<br/>
+*hresult*<br/>
 (Facultatif) Identifie la variable qui recevra la valeur HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.
 
 ## <a name="remarks"></a>Notes

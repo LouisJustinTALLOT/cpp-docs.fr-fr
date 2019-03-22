@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273444"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328998"
 ---
 # <a name="cdatabase-class"></a>CDatabase, classe
 
@@ -71,13 +71,13 @@ class CDatabase : public CObject
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDatabase::CDatabase](#cdatabase)|Construit un objet `CDatabase`. Vous devez initialiser l’objet en appelant `OpenEx` ou `Open`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDatabase::BeginTrans](#begintrans)|Démarre une transaction « », une série d’appels réversibles pour le `AddNew`, `Edit`, `Delete`, et `Update` fonctions membres de classe `CRecordset` — sur la source de données connectée. La source de données doit prendre en charge des transactions pour `BeginTrans` en vigueur.|
 |[CDatabase::BindParameters](#bindparameters)|Vous permet de lier les paramètres avant d’appeler `CDatabase::ExecuteSQL`.|
@@ -102,7 +102,7 @@ class CDatabase : public CObject
 
 ### <a name="public-data-members"></a>Membres de données publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDatabase::m_hdbc](#m_hdbc)|Open Database Connectivity (ODBC) handle de connexion pour une source de données. Type *pas*.|
 
@@ -123,7 +123,7 @@ Pour plus d’informations sur `CDatabase`, consultez les articles [Source de do
 
 `CDatabase`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Notes
 
-Notez que les classes ODBC MFC ne plus utilisent le traitement asynchrone ; Pour effectuer une opération asynchrone, vous devez appeler directement la fonction API ODBC [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564). Pour plus d’informations, consultez [exécution asynchrone](/previous-versions/windows/desktop/ms713563) dans le SDK Windows.
+Notez que les classes ODBC MFC ne plus utilisent le traitement asynchrone ; Pour effectuer une opération asynchrone, vous devez appeler directement la fonction API ODBC [SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function). Pour plus d’informations, consultez [exécution asynchrone](/sql/odbc/reference/develop-app/asynchronous-execution).
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

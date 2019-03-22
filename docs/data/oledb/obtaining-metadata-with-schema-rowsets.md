@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: 64502c19b55d42ab0ed7f6c2b8b1cf503e7795c8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e61507a187f7625e7e90e2a0e3a1ce404573e29
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422669"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328868"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Récupération de métadonnées à l'aide de jeux de lignes du schéma
 
@@ -52,7 +52,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 Le [CRestrictions](../../data/oledb/crestrictions-class.md) classe fournit la prise en charge de la restriction. Après avoir créé une instance de l’ensemble de lignes du schéma, appelez [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Cette méthode retourne un jeu de résultats basé sur les restrictions que vous spécifiez.
 
-Pour spécifier des restrictions, consultez [annexe b : Ensembles de lignes de schéma](/previous-versions/windows/desktop/ms712921(v=vs.85)) et rechercher l’ensemble de lignes que vous utilisez. Par exemple, `CColumns` correspond à la [ensemble de lignes COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); cette rubrique répertorie les colonnes de restriction de l’ensemble de lignes COLUMNS : TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Vous devez suivre cet ordre quand vous spécifiez vos restrictions.
+Pour spécifier des restrictions, consultez [annexe b : Ensembles de lignes de schéma](/previous-versions/windows/desktop/ms712921(v=vs.85)) et rechercher l’ensemble de lignes que vous utilisez. Par exemple, `CColumns` correspond à la [ensemble de lignes COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85)); cette rubrique répertorie les colonnes de restriction de l’ensemble de lignes COLUMNS : TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Vous devez suivre cet ordre quand vous spécifiez vos restrictions.
 
 Par conséquent, par exemple, si vous souhaitez limiter par nom de table, TABLE_NAME est la troisième colonne de restriction, puis appelez `Open`, spécifiant le nom de table souhaité comme troisième paramètre de restriction, comme indiqué dans l’exemple suivant.
 
