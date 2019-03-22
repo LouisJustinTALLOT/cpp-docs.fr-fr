@@ -2,12 +2,12 @@
 title: Référence du langage Visual C++ (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ce0272499b653b9077a891e39e9b29797e7e051d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422960"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328413"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Référence du langage Visual C++ (C++/CX)
 
@@ -24,7 +24,7 @@ C++ / c++ / CX est un ensemble d’extensions du langage C++ qui permettent la c
 
 - Composants C++ Windows Runtime qui peuvent être consommées par les applications Windows basées sur JavaScript. Pour plus d'informations, consultez [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-- Des jeux et des applications à intensité graphique Windows DirectX. Pour plus d’informations, consultez [créer un jeu UWP simple avec DirectX](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game).
+- Des jeux et des applications à intensité graphique Windows DirectX. Pour plus d’informations, consultez [créer un jeu UWP simple avec DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game).
 
 ## <a name="related-articles"></a>Articles connexes
 
@@ -32,7 +32,7 @@ C++ / c++ / CX est un ensemble d’extensions du langage C++ qui permettent la c
 |-|-|
 |[Référence rapide](../cppcx/quick-reference-c-cx.md)|Table des mots clés et des opérateurs pour C / c++ / CX.|
 |[Système de type](../cppcx/type-system-c-cx.md)|Décrit la base C + c++ / CX types et des constructions de programmation et comment utiliser C++ / c++ / CX pour consommer et créer des types Windows Runtime.|
-|[Génération d’applications et bibliothèques](../cppcx/building-apps-and-libraries-c-cx.md)|Explique comment utiliser l'IDE pour générer des applications et les lier aux bibliothèques et DLL statiques.|
+|[Génération d’applications et bibliothèques](../cppcx/building-apps-and-libraries-c-cx.md)|Explique comment utiliser l’IDE pour créer des applications et le lier à des bibliothèques statiques et les DLL.|
 |[Interopérabilité avec d’autres langages](../cppcx/interoperating-with-other-languages-c-cx.md)|Explique comment les composants qui sont écrits à l’aide de C++ / c++ / CX peut être utilisé avec des composants qui sont écrits en JavaScript, tous les managés langage ou la bibliothèque de modèles C++ Windows Runtime.|
 |[Thread et Marshaling](../cppcx/threading-and-marshaling-c-cx.md)|Explique comment spécifier le comportement de threads et de marshaling des composants que vous créez.|
 |[Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)|Documentation de référence sur l’espace de noms par défaut, l’espace de noms de plateforme, Platform::Collections et les espaces de noms associés.|

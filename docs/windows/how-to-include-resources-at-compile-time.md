@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562833"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328387"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Procédure : Inclure des ressources au moment de la compilation (C++)
 
@@ -48,7 +48,7 @@ Si vous avez des sections dans vos fichiers .rc existants qui répondent à ces 
 
 Vous pouvez ajouter des ressources à partir d’autres fichiers à votre projet au moment de la compilation en les répertoriant dans la **directives de compilation** zone le **Include des ressources** boîte de dialogue. Utilisez le **Include des ressources** boîte de dialogue pour modifier de l’environnement projet normal de stockage de toutes les ressources dans le fichier .rc de projet et toutes les [symboles](../windows/symbols-resource-identifiers.md) dans `Resource.h`.
 
-Pour commencer, ouvrez le **Include des ressources** boîte de dialogue en cliquant sur un fichier .rc dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), sélectionnez **Include des ressources** et notez les propriétés suivantes :
+Pour commencer, ouvrez le **Include des ressources** boîte de dialogue en cliquant sur un fichier .rc dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), sélectionnez **Include des ressources** et notez les propriétés suivantes :
 
 | Propriété | Description |
 |---|---|
@@ -65,7 +65,7 @@ Une fois que les modifications sont apportées à votre fichier de ressources à
 
 1. Placez les ressources dans un fichier de script de ressources portant un nom de fichier unique. N’utilisez pas *projectname.rc*, car il s’agit du nom du fichier utilisé pour le fichier de script de ressources principal.
 
-1. Avec le bouton droit le *.rc* fichier [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources) et sélectionnez **Include des ressources**.
+1. Avec le bouton droit le *.rc* fichier [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources) et sélectionnez **Include des ressources**.
 
 1. Dans le **directives de compilation** zone, ajoutez le [#include](../preprocessor/hash-include-directive-c-cpp.md) directive de compilateur pour inclure le fichier de ressources dans le fichier de ressources principal dans l’environnement de développement.
 
@@ -91,7 +91,7 @@ Les ressources dans les fichiers inclus de cette façon sont effectuées uniquem
 > [!NOTE]
 > Vous ne pouvez pas rechercher de symboles dans les ressources de type chaîne, accélérateur ou binaire.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

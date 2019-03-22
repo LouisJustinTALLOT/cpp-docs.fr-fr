@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 41ea20bcddc53142773d474af41021e9c71af1aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289856"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328946"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant (classe)
 
@@ -55,19 +55,19 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDBVariant::CDBVariant](#cdbvariant)|Construit un objet `CDBVariant`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDBVariant::Clear](#clear)|Efface le `CDBVariant` objet.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDBVariant::m_dwType](#m_dwtype)|Contient le type de données de la valeur actuellement stockée. Tapez `DWORD`.|
 
@@ -99,7 +99,7 @@ Classe [CRecordset](../../mfc/reference/crecordset-class.md) utilise `CDBVariant
 
 `CDBVariant`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -216,7 +216,7 @@ Stocke un pointeur vers un objet de type TIMESTAMP_STRUCT.
 
 Le `m_pdate` membre de données appartient à une union. Avant d’accéder à `m_pdate`, vérifiez tout d’abord la valeur de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` a la valeur DBVT_DATE, puis `m_pdate` contient un pointeur valide ; sinon, l’accès à `m_pdate` produira des résultats imprévisibles.
 
-Pour plus d’informations sur le type de données TIMESTAMP_STRUCT, consultez la rubrique [les Types de données C](/previous-versions/windows/desktop/ms714556) dans l’annexe D de la *de référence du programmeur ODBC* dans le SDK Windows.
+Pour plus d’informations sur le type de données TIMESTAMP_STRUCT, consultez la rubrique [les Types de données C](/sql/odbc/reference/appendixes/c-data-types) dans l’annexe D de la *de référence du programmeur ODBC* dans le SDK Windows.
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

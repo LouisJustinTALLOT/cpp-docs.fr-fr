@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: ecf69b1e910dab9824131f26d8db1eb5615d6e18
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627174"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328517"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange, fonctions intrinsèques
 
@@ -156,7 +156,7 @@ Retourne la valeur initiale pointée par `Target`.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Intrinsèque|Architecture|En-tête|
+|Intrinsèque|Architecture|Header|
 |---------------|------------------|------------|
 |`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|
@@ -164,7 +164,7 @@ Retourne la valeur initiale pointée par `Target`.
 
 ## <a name="remarks"></a>Notes
 
-`_InterlockedExchange` Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange) (fonction).
+`_InterlockedExchange` Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange) (fonction).
 
 Il existe plusieurs variantes de `_InterlockedExchange` qui varient selon les types de données qu’elles impliquent et l’utilisation d’une sémantique acquire ou release spécifique au processeur.
 

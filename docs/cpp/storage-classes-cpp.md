@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 31f9ba4e16fa1216db4fb66c7b7faeca333f2c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520310"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329024"
 ---
 # <a name="storage-classes-c"></a>Classes de stockage (C++)
 
@@ -24,7 +24,7 @@ Un *classe de stockage* dans le contexte de C++, déclarations de variable est u
 
 1. Le [mutable](../cpp/mutable-data-members-cpp.md) mot clé peut être considéré comme un spécificateur de classe de stockage. Toutefois, il est uniquement disponible dans la liste des membres d'une définition de classe.
 
-1. **Visual C++ 2010 et versions ultérieures :** le **automatique** mot clé n’est plus un spécificateur de classe de stockage C++ et le **inscrire** mot clé est déconseillé. **Visual Studio 2017 version 15.7 et ultérieure :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : le **inscrire** mot clé est supprimé du langage C++.
+1. **Visual C++ 2010 et versions ultérieures :** Le **automatique** mot clé n’est plus un spécificateur de classe de stockage C++ et le **inscrire** mot clé est déconseillé. **Visual Studio 2017 version 15.7 et ultérieure :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Le **inscrire** mot clé est supprimé du langage C++.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -167,7 +167,7 @@ Objets et les variables déclarées en tant que **extern** déclarer un objet qu
 
 Déclaration de **const** variables avec le **extern** classe de stockage force la variable à avoir une liaison externe. Une initialisation d’un **extern const** variable n’est autorisée dans l’unité de traduction de définition. Les initialisations dans des unités de traduction autres que l'unité de traduction de définition produisent des résultats indéterminés. Pour plus d’informations, consultez [utilisation d’extern pour spécifier la liaison](../cpp/using-extern-to-specify-linkage.md)
 
-Le [/Zc : externconstexpr](../build/reference/zc-externconstexpr.md) option du compilateur indique au compilateur d’appliquer [une liaison externe]() aux variables déclarées à l’aide de `extern constexpr`. Dans les versions antérieures de Visual Studio et, par défaut ou si **/Zc:externConstexpr-** est spécifié, Visual Studio applique une liaison interne à **constexpr** même si de variables le **extern** mot clé est utilisé. Le **/Zc : externconstexpr** option est disponible à partir de Visual Studio 2017 mise à jour 15.6. et est désactivée par défaut. La /permissive-option n’active pas/Zc : externconstexpr.
+Le [/Zc : externconstexpr](../build/reference/zc-externconstexpr.md) option du compilateur indique au compilateur d’appliquer [une liaison externe](../c-language/external-linkage.md) aux variables déclarées à l’aide de `extern constexpr`. Dans les versions antérieures de Visual Studio et, par défaut ou si **/Zc:externConstexpr-** est spécifié, Visual Studio applique une liaison interne à **constexpr** même si de variables le **extern** mot clé est utilisé. Le **/Zc : externconstexpr** option est disponible à partir de Visual Studio 2017 mise à jour 15.6. et est désactivée par défaut. La /permissive-option n’active pas/Zc : externconstexpr.
 
 Le code suivant montre deux **extern** déclarations, `DefinedElsewhere` (qui fait référence à un nom défini dans une autre unité de traduction) et `DefinedHere` (qui fait référence à un nom défini dans une portée englobante) :
 
@@ -215,13 +215,13 @@ Choses à noter concernant le `thread_local` spécificateur :
 
 - Vous pouvez spécifier `thread_local` uniquement sur les éléments de données ayant une durée de stockage statique. Cela inclut les objets de données globaux (à la fois **statique** et **extern**), les objets statiques locaux et les données membres statiques des classes. Toute variable locale déclarée `thread_local` est implicitement statique si aucune autre classe de stockage n’est fourni ; en d’autres termes, à la portée de bloc `thread_local` équivaut à `thread_local static`.
 
-- Vous devez spécifier `thread_local` à la fois pour la déclaration et la définition d’un objet local de thread, que la déclaration et la définition se produisent dans le même fichier ou dans des fichiers séparés.
+- Vous devez spécifier `thread_local` à la fois pour la déclaration et la définition d'un objet local de thread, que la déclaration et la définition se produisent dans le même fichier ou dans des fichiers séparés.
 
 Sur Windows, `thread_local` est fonctionnellement équivalent à [__declspec (thread)](../cpp/thread.md) , à ceci près que **__declspec (thread)** peut être appliqué à une définition de type et n’est valide dans le code C. Si possible, utilisez `thread_local`, car il fait partie de la norme C++ et est par conséquent plus portable.
 
-##  <a name="register"></a>  s’inscrire
+##  <a name="register"></a>  register
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : le **inscrire** mot clé n’est plus une classe de stockage pris en charge. Le mot clé est toujours réservé dans la norme pour une utilisation ultérieure.
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Le **inscrire** mot clé n’est plus une classe de stockage pris en charge. Le mot clé est toujours réservé dans la norme pour une utilisation ultérieure.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -304,7 +304,7 @@ Cet exemple montre comment et quand les objets `I1`, `I2`, et `I3` sont initiali
 
 Il existe plusieurs points à noter concernant le programme :
 
-- D’abord, `I1` et `I2` sont automatiquement détruits lorsque l’ordre d’exécution quitte le bloc dans lequel ils sont définis.
+- D'abord, `I1` et `I2` sont automatiquement détruits lorsque l'ordre d'exécution quitte le bloc dans lequel ils sont définis.
 
 - Ensuite, en C++, il n'est pas nécessaire de déclarer des objets ou des variables au début d'un bloc. En outre, ces objets sont initialisés uniquement lorsque l'ordre d'exécution atteint leurs définitions. (`I2` et `I3` sont des exemples de telles définitions.) La sortie montre exactement quand ils sont initialisés.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-ms.openlocfilehash: 6b77efffca127c79c665cb8dedb916b0874de038
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2ec83fc320d65f5f51c14f9523544972cd69c66c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290727"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328686"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel, classe
 
@@ -35,7 +35,7 @@ class CComMultiThreadModel
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|Référence de classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).|
 |[CComMultiThreadModel::CriticalSection](#criticalsection)|Référence de classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).|
@@ -43,7 +43,7 @@ class CComMultiThreadModel
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CComMultiThreadModel::Decrement](#decrement)|(Statique) Décrémente la valeur de la variable spécifiée de manière thread-safe.|
 |[CComMultiThreadModel::Increment](#increment)|(Statique) Incrémente la valeur de la variable spécifiée de manière thread-safe.|
@@ -61,7 +61,7 @@ S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 `CComMultiThreadModel` lui-même définit trois **typedef** noms. `AutoCriticalSection` et `CriticalSection` référencer des classes qui fournissent des méthodes pour obtenir et de libérer de la propriété d’une section critique. `ThreadModelNoCS` références de classe [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 
@@ -157,7 +157,7 @@ Consultez [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
 
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement
 
-Cette fonction statique appelle la fonction Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), qui décrémente la valeur de la variable vers laquelle pointe *p*.
+Cette fonction statique appelle la fonction Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement), qui décrémente la valeur de la variable vers laquelle pointe *p*.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -178,7 +178,7 @@ Si le résultat de la décrémentation est 0, puis `Decrement` retourne 0. Si le
 
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment
 
-Cette fonction statique appelle la fonction Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), ce qui incrémente la valeur de la variable vers laquelle pointée *p*.
+Cette fonction statique appelle la fonction Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement), ce qui incrémente la valeur de la variable vers laquelle pointée *p*.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

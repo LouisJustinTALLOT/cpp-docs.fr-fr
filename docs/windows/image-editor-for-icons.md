@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 73fd4a8996bcfbaaf6fdd4018e524b66913d11cd
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563080"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328426"
 ---
 # <a name="image-editor-for-icons-c"></a>Éditeur d’images pour les icônes (C++)
 
@@ -60,7 +60,7 @@ Ressources graphiques sont les images que vous définissez pour votre applicatio
 
 Vous pouvez également utiliser le **Éditeur d’images** et [éditeur binaire](binary-editor.md) pour travailler avec des fichiers de ressources dans les projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
 
-Outre la création de nouvelles ressources graphiques, vous pouvez [importer des images existantes](/windows/how-to-copy-resources#import-and-export-resources) pour la modification, puis ajoutez-les à votre projet. Vous pouvez également ouvrir et modifier des images qui ne font pas partie d’un projet pour [modification d’image autonome](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
+Outre la création de nouvelles ressources graphiques, vous pouvez [importer des images existantes](../windows/how-to-copy-resources.md#import-and-export-resources) pour la modification, puis ajoutez-les à votre projet. Vous pouvez également ouvrir et modifier des images qui ne font pas partie d’un projet pour [modification d’image autonome](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
 
 Pour plus d’informations sur la **Éditeur d’images**, consultez Comment [créer une icône ou une autre Image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [modifier une Image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [utiliser un outil de dessin](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Utiliser des couleurs](../windows/working-with-color-image-editor-for-icons.md), et [touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md).
 
@@ -151,7 +151,7 @@ Pour accéder à cette boîte de dialogue, sélectionnez le **police** situé da
 
 Voici un exemple montrant comment ajouter du texte à une icône dans une application Windows et de manipuler la police du texte.
 
-1. Créez une Application de formulaires Windows de C++. Pour plus d’informations, consultez [création d’un projet d’Application Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). Un *app.ico* fichier est ajouté à votre projet par défaut.
+1. Créez une Application de formulaires Windows de C++. Pour plus d’informations, consultez [Guide pratique pour Créer des Applications Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Un *app.ico* fichier est ajouté à votre projet par défaut.
 
 1. Dans **l’Explorateur de solutions**, double-cliquez sur le fichier *app.ico*. Le **Éditeur d’images** s’ouvre.
 
@@ -213,7 +213,7 @@ Pour toutes les **Éditeur d’images** volets avec un facteur d’agrandissemen
 
 1. Sélectionnez le **grille de pixels** case à cocher pour afficher la grille, ou désactivez la case pour masquer la grille.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Aucun.
 

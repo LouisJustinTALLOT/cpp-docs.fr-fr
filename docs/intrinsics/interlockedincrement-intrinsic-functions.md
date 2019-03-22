@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 3054a9eab21f6f7ec149f7f1c23c3c40fca3b9e1
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 91e9c6dac1b6f13997bb7e4f2727a743a9177083
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626930"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328608"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement, fonctions intrinsèques
 
 **Section spécifique à Microsoft**
 
-Fournir la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement) (fonction).
+Fournir la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement) (fonction).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -107,7 +107,7 @@ __int64 _InterlockedIncrement64_nf(
 
 La valeur de retour est la valeur incrémentée résultante.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|Header|
 |---------------|------------------|------------|
@@ -120,7 +120,7 @@ Il existe plusieurs variantes de `_InterlockedIncrement` qui varient selon les t
 
 La fonction `_InterlockedIncrement` opère sur des valeurs entières de 32 bits, `_InterlockedIncrement16` sur des valeurs entières de 16 bits et `_InterlockedIncrement64` sur des valeurs entières de 64 bits.
 
-Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d'une section critique. La fonction intrinsèque avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agit pas comme une barrière mémoire.
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. La fonction intrinsèque avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agit pas comme une barrière mémoire.
 
 La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86. Pour plus d’informations, consultez [aligner](../cpp/align-cpp.md).
 

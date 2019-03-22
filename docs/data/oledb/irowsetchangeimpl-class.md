@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 299cebd93a3d54ab747f5c58b22dbbf215a02e4c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 452bd28e3ea061ecc30ef802290242e4cb830792
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426652"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328595"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl Class
 
@@ -72,7 +72,7 @@ L’unité de stockage pour le handle de ligne.
 *MapClass*<br/>
 L’unité de stockage pour tous les handles de ligne détenus par le fournisseur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -90,7 +90,7 @@ L’unité de stockage pour tous les handles de ligne détenus par le fournisseu
 
 |||
 |-|-|
-|[FlushData](#flushdata)|Substitué par le fournisseur pour valider des données dans son magasin.|
+|[FlushData](#flushdata)|Remplacée par fournisseur pour valider des données dans son magasin.|
 
 ## <a name="remarks"></a>Notes
 
@@ -124,7 +124,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) dans le *de référence du programmeur OLE DB*.
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 
@@ -161,7 +161,7 @@ Consultez [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232(v
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 
-Substitué par le fournisseur pour valider des données dans son magasin.
+Remplacée par fournisseur pour valider des données dans son magasin.
 
 ### <a name="syntax"></a>Syntaxe
 

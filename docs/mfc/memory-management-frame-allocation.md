@@ -18,12 +18,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: bcd691f8e99b558fcadfc1cf51990b673c5b760c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1acf2ce89e18dd64c166103b59b5eb7007214efd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262205"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328452"
 ---
 # <a name="memory-management-frame-allocation"></a>Gestion de la mémoire : Allocation de frame
 
@@ -37,7 +37,7 @@ Pour les variables de fonction locale, cette transition de portée se produit lo
 
 Lorsqu'un objet est défini comme variable de frame, le constructeur est appelé automatiquement au point où la définition est produite. Lorsque l'objet sort de l'étendue, le destructeur est automatiquement appelé avant que la mémoire de l'objet soit diffusée. Ces constructions et destructions automatiques peuvent être très pratiques, mais vous devez connaître les appels automatiques, notamment le destructeur.
 
-Le principal avantage d'allouer des objets dans le frame est qu'ils sont automatiquement supprimés. Lorsque vous allouez vos objets dans le frame, vous n'avez pas à vous soucier des objets oubliés provoquant des fuites de mémoire. (Pour plus d’informations sur les fuites de mémoire, consultez l’article [détection des fuites de mémoire dans les MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476).) L'inconvénient lié à l'allocation de frame est que les variables du frame ne peuvent pas être utilisées hors de portée. Un autre facteur en choisissant l'allocation de frame par rapport à l'allocation des segments est que pour les structures et les objets, il est souvent préférable d'utiliser le segment au lieu de la pile de stockage, l'espace de pile est généralement limité.
+Le principal avantage d'allouer des objets dans le frame est qu'ils sont automatiquement supprimés. Lorsque vous allouez vos objets dans le frame, vous n'avez pas à vous soucier des objets oubliés provoquant des fuites de mémoire. (Pour plus d’informations sur les fuites de mémoire, consultez l’article [détection des fuites de mémoire dans les MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100)).) L'inconvénient lié à l'allocation de frame est que les variables du frame ne peuvent pas être utilisées hors de portée. Un autre facteur en choisissant l'allocation de frame par rapport à l'allocation des segments est que pour les structures et les objets, il est souvent préférable d'utiliser le segment au lieu de la pile de stockage, l'espace de pile est généralement limité.
 
 ## <a name="see-also"></a>Voir aussi
 

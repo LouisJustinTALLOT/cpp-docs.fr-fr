@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0adcefe2af9d17a1c42f64f25636e220f53706fc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562859"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328751"
 ---
 # <a name="binary-editor-c"></a>Éditeur binaire (C++)
 
@@ -53,7 +53,7 @@ Le **éditeur binaire** vous permet de :
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Pour ouvrir une ressource de bureau Windows pour l’édition binaire
 
-1. Dans [Affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), sélectionnez le fichier de ressources que vous souhaitez modifier.
+1. Dans [Affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), sélectionnez le fichier de ressources que vous souhaitez modifier.
 
 1. Cliquez sur la ressource et sélectionnez **Open Data binaire**.
 
@@ -121,7 +121,7 @@ Une autre façon de créer une ressource personnalisée consiste à importer un 
 > [!NOTE]
 > Création de nouvelles ressources personnalisée ou de données nécessite Win32.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Aucun.
 

@@ -3,12 +3,12 @@ title: 'Procédure : Utiliser winmdidl.exe et midlrt.exe pour créer des fichie
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54335991"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328712"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Procédure : Utiliser winmdidl.exe et midlrt.exe pour créer des fichiers .h à partir de métadonnées windows
 
@@ -18,7 +18,7 @@ Vous utilisez ces outils dans deux scénarios principaux :
 
 - Création de fichiers d'en-tête et IDL personnalisés pour qu'une application C++ écrite à l'aide de la bibliothèque de modèles Windows Runtime (WRL) puisse utiliser un composant Windows Runtime personnalisé
 
-- Génération de fichiers de proxy et stub pour les types d'événements définis par l'utilisateur dans un composant Windows Runtime Pour plus d’informations, consultez [événements personnalisés et accesseurs d’événement dans les composants Windows Runtime](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
+- Génération de fichiers de proxy et stub pour les types d'événements définis par l'utilisateur dans un composant Windows Runtime Pour plus d’informations, consultez [événements personnalisés et accesseurs d’événement dans les composants Windows Runtime](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
 Ces outils ne sont nécessaires que pour analyser les fichiers .winmd personnalisés. Les fichiers .idl et .h pour les composants de système d'exploitation Windows sont automatiquement générés. Par défaut dans Windows 8.1, ils se trouvent dans \Program fichiers (x86) \Windows Kits\8.1\Include\winrt\\.
 
@@ -67,7 +67,7 @@ L'exemple suivant illustre l'affichage de la console à partir de winmdidl qui i
 
 **Generating c:\users\giraffe\documents\\\Test_for_winmdidl.idl**
 
-Ensuite, midlrt est exécuté sur le fichier IDL généré. Notez que le **metadata_dir** argument est spécifié après le nom du fichier .idl. Le chemin d’accès de \WinMetadata\ est obligatoire ; il s’agit de l’emplacement de windows.winmd.
+Ensuite, midlrt est exécuté sur le fichier IDL généré. Notez que le **metadata_dir** argument est spécifié après le nom du fichier .idl. Le chemin d'accès de \WinMetadata\ est obligatoire ; il s'agit de l'emplacement de windows.winmd.
 
 `C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
@@ -75,4 +75,4 @@ Ensuite, midlrt est exécuté sur le fichier IDL généré. Notez que le **metad
 
 Le fichier de sortie d'une opération winmdidl a le même nom que le fichier d'entrée, mais porte l'extension de nom de fichier .idl.
 
-Si vous développez un composant Windows Runtime qui est accessible à partir de la bibliothèque WRL, vous pouvez spécifier que winmdidl.exe et midlrt.exe s'exécutent en guise d'étapes post-builds pour que les fichiers .idl et .h soient générés sur chaque build. Pour obtenir un exemple, consultez [déclenchement d’événements dans les composants Windows Runtime](/uwp/winrt-components/raising-events-in-windows-runtime-components).
+Si vous développez un composant Windows Runtime qui est accessible à partir de la bibliothèque WRL, vous pouvez spécifier que winmdidl.exe et midlrt.exe s'exécutent en guise d'étapes post-builds pour que les fichiers .idl et .h soient générés sur chaque build. Pour obtenir un exemple, consultez [déclenchement d’événements dans les composants Windows Runtime](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).

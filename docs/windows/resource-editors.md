@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 461322076e2de4e2cd89c6d39592989aecc75361
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563015"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328803"
 ---
 # <a name="resource-editors-c"></a>Éditeurs de ressources (C++)
 
@@ -63,13 +63,13 @@ Les ressources peuvent également être modifié en dehors du projet sans ouvrir
 > [!NOTE]
 > Propriétés d’une ressource peuvent être modifiées à l’aide de la **propriétés** fenêtre.
 
-- Pour modifier les propriétés d’une ressource, dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), avec le bouton droit de la ressource que vous souhaitez modifier, puis choisissez **propriétés**.  Ensuite, dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), modifier les propriétés de votre ressource.
+- Pour modifier les propriétés d’une ressource, dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), avec le bouton droit de la ressource que vous souhaitez modifier, puis choisissez **propriétés**.  Ensuite, dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), modifier les propriétés de votre ressource.
 
 - Pour annuler une modification apportée aux propriétés d’une ressource, vérifiez que votre ressource a le focus dans **affichage des ressources** et choisissez **Annuler** à partir de la **modifier** menu.
 
 ### <a name="win32-resources"></a>Ressources Win32
 
-Vous pouvez accéder à des ressources Win32 dans le [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources) volet.
+Vous pouvez accéder à des ressources Win32 dans le [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources) volet.
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Pour afficher une ressource Win32 dans un éditeur de ressources
 
@@ -113,7 +113,7 @@ Un aperçu visuel ne fournissent pas les ressources suivantes : Accélérateur,
 
 ### <a name="to-preview-resources"></a>Pour afficher un aperçu des ressources
 
-1. Dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources) ou une fenêtre de document, sélectionnez votre ressource, par exemple, **IDD_ABOUTBOX**.
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources) ou une fenêtre de document, sélectionnez votre ressource, par exemple, **IDD_ABOUTBOX**.
 
 1. Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), sélectionnez le **Pages de propriétés** bouton.
 
@@ -122,7 +122,7 @@ Un aperçu visuel ne fournissent pas les ressources suivantes : Accélérateur,
 
    Le **propriété** page de la ressource s’ouvre affichant un aperçu de cette ressource. Vous pouvez utiliser la **des** et **vers le bas** dans contrôlent des touches de direction pour parcourir l’arborescence **affichage des ressources** ou la fenêtre de document. Le **propriété** page reste ouverte et affiche toutes les ressources qui a le focus et peuvent être visualisés.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Aucun.
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 91092b29d7265904e69b093310daa72b673d8745
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c2e2f67a6547b05fca198a54b13776a1d3fafecf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563379"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328920"
 ---
 # <a name="how-to-create-symbols-c"></a>Procédure : Créer des symboles (C++)
 
@@ -65,7 +65,7 @@ La boîte de dialogue contient les propriétés suivantes :
 
 ## <a name="to-view-resource-symbols"></a>Pour afficher les symboles des ressources
 
-Dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources), avec le bouton droit votre *.rc* fichier et sélectionnez **symboles des ressources** pour afficher une table de symboles des ressources dans le **symboles des ressources**boîte de dialogue.
+Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), avec le bouton droit votre *.rc* fichier et sélectionnez **symboles des ressources** pour afficher une table de symboles des ressources dans le **symboles des ressources**boîte de dialogue.
 
 > [!NOTE]
 > Pour afficher les symboles prédéfinis, cochez la **afficher les symboles en lecture seule** case à cocher.
@@ -82,7 +82,7 @@ Lorsque que vous parcourez les symboles dans le **symboles des ressources**, vou
 
    La ressource s'affiche dans la fenêtre d'éditeur appropriée.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

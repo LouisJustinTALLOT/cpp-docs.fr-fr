@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: cb79bfe7cf0a30e0ff4ed2a4a6860bc3042983ee
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416538"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329011"
 ---
 # <a name="crowset-class"></a>CRowset, classe
 
@@ -261,7 +261,7 @@ class CRowset
 *TAccessor*<br/>
 Classe d’accesseur. La valeur par défaut est `CAccessorBase`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -275,7 +275,7 @@ Classe d’accesseur. La valeur par défaut est `CAccessorBase`.
 |[Fermer](#close)|Libère les lignes et en cours `IRowset` interface.|
 |[Compare](#compare)|Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Crée un `CRowset` de l’objet et l’associe (éventuellement) une `IRowset` interface fournie en tant que paramètre.|
-|[Supprimer](#delete)|Supprime des lignes de l’ensemble de lignes à l’aide [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)).|
+|[Supprimer](#delete)|Supprime des lignes de l’ensemble de lignes à l’aide [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Recherche la ligne correspondante suivante après le signet spécifié.|
 |[GetApproximatePosition](#getapproximateposition)|Retourne la position approximative d’une ligne correspondant à un signet.|
 |[GetData](#getdata)|Récupère les données à partir de la copie de l’ensemble de lignes de la ligne.|
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> CRowset::Delete
 
-Appels [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) pour supprimer la ligne actuelle de l’ensemble de lignes.
+Appels [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) pour supprimer la ligne actuelle de l’ensemble de lignes.
 
 ### <a name="syntax"></a>Syntaxe
 

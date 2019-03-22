@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: f57c09d549a4ceb92db21c06499b4f6e71fc6a52
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562937"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328400"
 ---
 # <a name="accelerator-editor-c"></a>Éditeur d’accélérateurs (C++)
 
@@ -116,7 +116,7 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Pour modifier une table d'accélérateurs
 
-1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Sélectionnez une entrée dans la table et sélectionnez cette option pour activer la modification sur place.
 
@@ -132,7 +132,7 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Pour rechercher une entrée dans une table d'accélérateurs ouverte
 
-1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Sélectionnez un en-tête de colonne pour trier le contenu de la colonne par ordre alphabétique. Par exemple, sélectionnez **ID** pour afficher tous les ID dans votre table d’accélérateurs par ordre alphabétique.
 
@@ -140,7 +140,7 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Pour ajouter une entrée à une table d'accélérateurs
 
-1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Avec le bouton droit dans la table d’accélérateurs et choisissez **nouvel accélérateur**, ou sélectionnez l’entrée de la ligne vide en bas de la table.
 
@@ -155,7 +155,7 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Pour supprimer une entrée dans une table d'accélérateurs
 
-1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Sélectionnez l’entrée que vous souhaitez supprimer, ou maintenez la **Ctrl** ou **MAJ** enfoncée tout en sélectionnant pour choisir plusieurs entrées.
 
@@ -177,7 +177,7 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Pour modifier les propriétés de plusieurs touches accélérateur
 
-1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Ouvrez la table d’accélérateurs en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Sélectionnez les touches accélérateur que vous souhaitez modifier en maintenant enfoncée la **Ctrl** enfoncée quand vous sélectionnez chacun d’eux.
 
@@ -186,7 +186,7 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 > [!NOTE]
 > Chaque valeur de modificateur apparaît sous la forme d’une propriété booléenne dans la **propriétés** fenêtre. Si vous modifiez un [modificateur](../windows/accelerator-modifier-property.md) valeur dans le **propriétés** fenêtre, la table d’accélérateurs traite le nouveau modificateur comme un ajout aux modificateurs déjà présents. Pour cette raison, si vous définissez des valeurs de la modifier, vous devez définir toutes les pour vous assurer que chaque accélérateur partage les mêmes **modificateur** paramètres.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 
