@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289960"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416999"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Construit un `CEdit` objet de contrôle.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Détermine si une opération de contrôle d’édition peut être annulée.|
 |[CEdit::CharFromPos](#charfrompos)|Récupère les index de ligne et de caractère pour le caractère le plus proche à une position spécifiée.|
@@ -227,7 +227,7 @@ Pour plus d’informations sur `CEdit`, consultez [contrôles](../../mfc/control
 
 `CEdit`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -570,11 +570,11 @@ UINT GetLimitText() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La limite texte actuel, en octets, pour ce `CEdit` objet.
+La limite texte actuel, en TCHARs, pour ce `CEdit` objet.
 
 ### <a name="remarks"></a>Notes
 
-La limite de texte est la quantité maximale de texte, en octets, que le contrôle d’édition peut accepter.
+La limite de texte est la quantité maximale de texte, dans TCHARs, capable d’accepter le contrôle d’édition.
 
 > [!NOTE]
 >  Cette fonction membre est disponible avec Windows 95 et Windows NT 4.0.
@@ -606,14 +606,14 @@ int GetLine(
 Spécifie le numéro de ligne à récupérer à partir de plusieurs lignes de contrôle edit. Numéros de ligne sont de base zéro ; la valeur 0 spécifie la première ligne. Ce paramètre est ignoré par un contrôle d’édition sur une ligne.
 
 *lpszBuffer*<br/>
-Pointe vers la mémoire tampon qui reçoit une copie de la ligne. Le premier mot de la mémoire tampon doit spécifier le nombre maximal de caractères qui peuvent être copiées vers la mémoire tampon.
+Pointe vers la mémoire tampon qui reçoit une copie de la ligne. Le premier mot de la mémoire tampon doit spécifier le nombre maximal de TCHARs qui peuvent être copiées vers la mémoire tampon.
 
 *nMaxLength*<br/>
-Spécifie le nombre maximal d’octets qui peuvent être copiées vers la mémoire tampon. `GetLine` place cette valeur dans le premier mot de *lpszbuffer a été* avant d’effectuer l’appel à Windows.
+Spécifie le nombre maximal de caractères TCHAR qui peuvent être copiées vers la mémoire tampon. `GetLine` place cette valeur dans le premier mot de *lpszbuffer a été* avant d’effectuer l’appel à Windows.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre d’octets réellement copiés. La valeur de retour est 0 si le numéro de ligne spécifié par *nIndex* est supérieur au nombre de lignes dans le contrôle d’édition.
+Nombre de caractères réellement copiés. La valeur de retour est 0 si le numéro de ligne spécifié par *nIndex* est supérieur au nombre de lignes dans le contrôle d’édition.
 
 ### <a name="remarks"></a>Notes
 
@@ -800,7 +800,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>Paramètres
 
 *nChars*<br/>
-Spécifie la longueur (en octets) du texte que l’utilisateur peut entrer. Si ce paramètre est 0, la longueur du texte a la valeur octets UINT_MAX. Il s'agit du comportement par défaut.
+Spécifie la longueur (en TCHARs) du texte que l’utilisateur peut entrer. Si ce paramètre est 0, la longueur du texte a la valeur octets UINT_MAX. Il s'agit du comportement par défaut.
 
 ### <a name="remarks"></a>Notes
 

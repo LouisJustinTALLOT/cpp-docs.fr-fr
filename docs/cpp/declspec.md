@@ -1,18 +1,18 @@
 ---
 title: __declspec
-ms.date: 10/09/2018
+ms.date: 03/21/2019
 f1_keywords:
 - __declspec_cpp
 - __declspec
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 3ee83203cc992ba8c5d05b7bb6974d3576baf59c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645092"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416947"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -27,14 +27,15 @@ La syntaxe à attributs étendus pour la spécification de classe de stockage d�
 
 *extended-decl-modifier-seq* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *extended-decl-modifier-seq*
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier* *extended-decl-modifier-seq*
 
 *extended-decl-modifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Aligner (** *#* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**align(** *#* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**allocator**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Déconseillé**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**deprecated**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
@@ -44,8 +45,8 @@ La syntaxe à attributs étendus pour la spécification de classe de stockage d�
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Processus**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**propriété (** { **obtenir =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**process**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**restrict**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
@@ -55,7 +56,7 @@ La syntaxe à attributs étendus pour la spécification de classe de stockage d�
 
 Un espace blanc sépare la séquence de modificateur de déclaration. Des exemples sont donnés dans des sections ultérieures.
 
-Grammaire des attributs étendus prend en charge ces attributs de classe de stockage spécifique de Microsoft : [aligner](../cpp/align-cpp.md), [allouer](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [déconseillée](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [processus](../cpp/process.md), [restreindre](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), et [thread](../cpp/thread.md). Il prend également en charge ces attributs d’objet COM : [propriété](../cpp/property-cpp.md) et [uuid](../cpp/uuid-cpp.md).
+Grammaire des attributs étendus prend en charge ces attributs de classe de stockage spécifique de Microsoft : [aligner](../cpp/align-cpp.md), [allouer](../cpp/allocate.md), [allocateur](../cpp/allocator.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [déconseillée](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md), [processus](../cpp/process.md), [restreindre](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), et [thread](../cpp/thread.md). Il prend également en charge ces attributs d’objet COM : [propriété](../cpp/property-cpp.md) et [uuid](../cpp/uuid-cpp.md).
 
 Le **code_seg**, **dllexport**, **dllimport**, **naked**, **noalias**, **nothrow** , **propriété**, **restreindre**, **selectany**, **thread**, et **uuid**les attributs de classe de stockage sont des propriétés uniquement de la déclaration de l’objet ou la fonction à laquelle ils s’appliquent. Le **thread** attribut affecte des données et uniquement les objets. Le **naked** et **spectre** attributs affectent uniquement les fonctions. Le **dllimport** et **dllexport** attributs affectent les fonctions, les données et les objets. Le **propriété**, **selectany**, et **uuid** attributs affectent les objets COM.
 
