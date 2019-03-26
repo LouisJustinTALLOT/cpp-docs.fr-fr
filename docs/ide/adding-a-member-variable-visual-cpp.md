@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694411"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328959"
 ---
 # <a name="add-a-member-variable"></a>Ajouter une variable membre
 
-Vous pouvez ajouter une variable membre à une classe à l’aide d’Affichage de classes. Les variables membres peuvent être utilisées pour [l’échange et la validation de données](../mfc/dialog-data-exchange-and-validation.md), ou elles peuvent être génériques. L’Assistant Ajout de variable membre est conçu pour prélever les informations importantes et les utiliser pour insérer des éléments dans vos fichiers sources aux emplacements appropriés. Vous pouvez ajouter une variable membre à partir de l’[Éditeur de boîtes de dialogue](../windows/dialog-editor.md) dans [Affichage des ressources](../windows/resource-view-window.md), ou à partir d’[Affichage de classes](/visualstudio/ide/viewing-the-structure-of-code).
+Vous pouvez ajouter une variable membre à une classe à l’aide d’Affichage de classes. Les variables membres peuvent être utilisées pour [l’échange et la validation de données](../mfc/dialog-data-exchange-and-validation.md), ou elles peuvent être génériques. L’Assistant Ajout de variable membre est conçu pour prélever les informations importantes et les utiliser pour insérer des éléments dans vos fichiers sources aux emplacements appropriés. Vous pouvez ajouter une variable membre à partir de l’[Éditeur de boîtes de dialogue](../windows/dialog-editor.md) dans [Affichage des ressources](../windows/how-to-create-a-resource-script-file.md#create-resources), ou à partir d’[Affichage de classes](/visualstudio/ide/viewing-the-structure-of-code).
 
 > [!NOTE]
 > Quand vous concevez et implémentez une boîte de dialogue, il peut être plus efficace d’utiliser l’Éditeur de boîtes de dialogue pour ajouter les contrôles de boîte de dialogue, puis d’implémenter les variables membres des contrôles.
@@ -147,7 +147,7 @@ Vous pouvez utiliser l’[Assistant Ajout de variable membre](#add-member-variab
 
 Le tableau suivant décrit tous les types de contrôles de boîtes de dialogue pris en charge dans MFC et dans l’[Éditeur de boîtes de dialogue](../windows/dialog-editor.md). Il montre également leurs types et valeurs disponibles.
 
-|Contrôle|Type du contrôle|Type de variable de contrôle|Type de variable de valeur|Valeurs min/max (type valeur uniquement)|
+|Contrôle|Type de contrôle|Type de variable de contrôle|Type de variable de valeur|Valeurs min/max (type valeur uniquement)|
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
 |Contrôle Animation|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Aucun ; contrôle uniquement|N/A|
 |Bouton|BUTTON|[CButton](../mfc/reference/cbutton-class.md)|Aucun ; contrôle uniquement|N/A|
@@ -163,7 +163,7 @@ Le tableau suivant décrit tous les types de contrôles de boîtes de dialogue p
 |Contrôle RichEdit 2|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|Nombre maximal de caractères|
 |Contrôle RichEdit|RICHEDIT|`CRichEditCtrl`|`CString`|Nombre maximal de caractères|
 |Barre de défilement (verticale ou horizontale)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|Valeur min/Valeur max|
-|Contrôle Slider|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valeur min/Valeur max|
+|Slider (contrôle)|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valeur min/Valeur max|
 |Contrôle Spin|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Aucun ; contrôle uniquement|N/A|
 |Contrôle Tab|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Aucun ; contrôle uniquement|N/A|
 |Contrôle Tree|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Aucun ; contrôle uniquement|N/A|

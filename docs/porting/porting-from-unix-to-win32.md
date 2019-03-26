@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 325cdb86f61f658776c69057022c005c389492d3
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 3146c94879532a5c58208369bb6d131a3a027c33
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57813901"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278474"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portage d'UNIX vers Win32
 
@@ -38,12 +38,6 @@ La liste suivante indique les ressources Microsoft et tierces disponibles pour l
 Le manuel [UNIX Custom Application Migration Guide](https://technet.microsoft.com/library/bb656290.aspx) fournit une aide technique sur la migration du code de l'environnement UNIX vers l'environnement Win32.
 
 Le manuel [Unix Migration Project Guide](https://technet.microsoft.com/library/bb656287.aspx) vient compléter le manuel « UNIX Custom Application Migration Guide » en proposant une aide détaillée sur la migration de projets majeurs d'UNIX vers Win32. Ce guide fournit des conseils relatifs aux problèmes susceptibles de se produire aux différentes étapes de la migration d'un projet.
-
-### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows Services for UNIX (SFU)
-
-Microsoft Windows Services for UNIX (SFU) fournit une gamme complète de services multiplateforme pour intégrer Windows dans les environnements UNIX existants. Ces services permettent le partage de fichiers, l’administration et l’accès à distance, la synchronisation de mot de passe et la gestion d’annuaires communs. Ils fournissent aussi un ensemble d’utilitaires communs et un shell.
-
-[Windows Services for UNIX](http://www.microsoft.com/downloads/details.aspx?FamilyID=896c9688-601b-44f1-81a4-02878ff11778&displaylang=en)
 
 ### <a name="interopsystemscom"></a>InteropSystems.com
 
