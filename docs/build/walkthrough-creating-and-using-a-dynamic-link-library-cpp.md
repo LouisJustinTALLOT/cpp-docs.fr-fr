@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813966"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476927"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procédure pas à pas : Créer et utiliser votre propre bibliothèque de liens dynamiques (C++)
 
@@ -296,9 +296,11 @@ Ensuite, pour appeler les fonctions MathLibrary dans votre code source, votre pr
 
 1. Double-cliquez dans le volet supérieur de la **autres répertoires Include** boîte de dialogue pour activer un contrôle d’édition.
 
-1. Dans le contrôle d’édition, spécifiez le chemin d’accès à l’emplacement de la **MathLibrary.h** fichier d’en-tête. Dans ce cas, vous pouvez utiliser un chemin d’accès relatif :
+1. Dans le contrôle d’édition, spécifiez le chemin d’accès à l’emplacement de la **MathLibrary.h** fichier d’en-tête. Dans ce cas, vous pouvez utiliser un chemin d’accès relatif à partir du dossier qui contient vos fichiers .cpp dans le projet client dans le dossier qui contient le fichier .h dans le projet DLL. Si votre projet de client est dans une solution distincte dans le même dossier que la solution DLL, le chemin d’accès relatif doit ressembler à ceci :
 
    `..\..\MathLibrary\MathLibrary`
+
+   Si vos projets DLL et le client se trouvent dans la même solution, ou les solutions sont dans des dossiers différents, vous devez ajuster le chemin d’accès relatif en conséquence.
 
    ![Ajouter l’emplacement de l’en-tête à la propriété d’autres répertoires Include](media/mathclient-additional-include-directories.png "ajouter l’emplacement de l’en-tête à la propriété d’autres répertoires Include")
 

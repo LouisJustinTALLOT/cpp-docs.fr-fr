@@ -1,15 +1,15 @@
 ---
 title: Syntaxe d’expression lambda
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 030960cf8a301575396231cec1a37ff7bed2667f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577467"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476862"
 ---
 # <a name="lambda-expression-syntax"></a>Syntaxe d’expression lambda
 
@@ -23,7 +23,7 @@ Une expression lambda combine les avantages des pointeurs et des objets de fonct
 
 Les exemples suivants comparent l'utilisation d'une expression lambda et d'un objet de fonction. Le premier exemple utilise une expression lambda pour afficher sur la console si chaque élément d'un objet `vector` est pair ou impair. Le deuxième exemple utilise un objet de fonction pour accomplir la même tâche.
 
-## <a name="example-1-using-a-lambda"></a>Exemple 1 : Utilisation d'une expression lambda
+## <a name="example-1-using-a-lambda"></a>Exemple 1 : À l’aide d’une expression Lambda
 
 Cet exemple passe une expression lambda pour le **for_each** (fonction). L'expression lambda imprime un résultat qui indique si chaque élément dans un objet `vector` est pair ou impair.
 
@@ -39,7 +39,7 @@ using namespace std;
 
 int main()
 {
-   // Create a vector object that contains 10 elements.
+   // Create a vector object that contains 9 elements.
    vector<int> v;
    for (int i = 1; i < 10; ++i) {
       v.push_back(i);
@@ -64,8 +64,6 @@ int main()
 }
 ```
 
-### <a name="output"></a>Sortie
-
 ```Output
 1 is odd
 2 is even
@@ -83,7 +81,7 @@ There are 4 even numbers in the vector.
 
 Dans l’exemple, le troisième argument de la **for_each** (fonction) est une expression lambda. La partie `[&evenCount]` spécifie la clause de capture de l'expression, `(int n)` spécifie la liste des paramètres, et la partie restante spécifie le corps de l'expression.
 
-## <a name="example-2-using-a-function-object"></a>Exemple 2 : Utilisation d'un objet de fonction
+## <a name="example-2-using-a-function-object"></a>Exemple 2 : À l’aide d’un objet de fonction
 
 Il arrive qu'une expression lambda soit trop complexe pour être utilisée autrement que dans l'exemple précédent. L’exemple suivant utilise un objet de fonction au lieu d’une expression lambda, conjointement avec le **for_each** fonction, pour produire les mêmes résultats que l’exemple 1. Les deux exemples indiquent le nombre de chiffres pairs dans un objet `vector`. Pour conserver l'état de l'opération, la classe `FunctorClass` enregistre la variable `m_evenCount` par référence comme variable membre. Pour effectuer l’opération, `FunctorClass` implémente l’opérateur d’appel de fonction, **operator()**. Le compilateur Visual C++ génère un code qui est comparable en taille et en performances au code de l'expression lambda de l'exemple 1. Pour un problème simple comme celui de cet article, la plus simple des expressions lambda convient probablement mieux qu'un objet de fonction. Toutefois, si vous pensez que les fonctionnalités peuvent nécessiter une expansion significative à l'avenir, il serait plus judicieux d'utiliser un objet de fonction afin que la maintenance du code soit facilitée.
 
@@ -129,7 +127,7 @@ private:
 
 int main()
 {
-    // Create a vector object that contains 10 elements.
+    // Create a vector object that contains 9 elements.
     vector<int> v;
     for (int i = 1; i < 10; ++i) {
         v.push_back(i);
@@ -145,8 +143,6 @@ int main()
         << " even numbers in the vector." << endl;
 }
 ```
-
-## <a name="output"></a>Sortie
 
 ```Output
 1 is odd

@@ -1,17 +1,17 @@
 ---
 title: Avertissement du compilateur (niveau 1) C4789
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 f1_keywords:
 - C4789
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: f489915f07eefd0909cbcd806a590f93f674c258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677394"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476850"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Avertissement du compilateur (niveau 1) C4789
 
@@ -19,9 +19,11 @@ ms.locfileid: "50677394"
 
 ## <a name="remarks"></a>Notes
 
-Signale tout dépassement de mémoire tampon lors de l'utilisation de fonctions CRT (Runtime C) spécifiques, quand des paramètres sont passés et des affectations effectuées, de façon à ce que les tailles des données soient connues au moment de la compilation. Cet avertissement s'applique aux situations susceptibles d'échapper à la détection standard des non-correspondances de tailles de données.
+**Erreur C4789** signale les dépassements de mémoire tampon lorsque des fonctions C Runtime (CRT) spécifiques sont utilisées. Il peut également signaler les incompatibilités de taille lorsque les paramètres sont transmis ou affectations effectuées. L’avertissement est possible si les tailles des données sont connues au moment de la compilation. Cet avertissement s'applique aux situations susceptibles d'échapper à la détection standard des non-correspondances de tailles de données.
 
-L'avertissement s'affiche quand les données, dont la longueur est connue au moment de la compilation, sont copiées et placées dans un bloc de données dont la taille est identifiée au moment de la compilation comme étant trop petite pour les données. La copie doit être effectuée à l'aide de la forme intrinsèque de l'une des fonctions CRT suivantes :
+**Erreur C4789** vous avertit quand données sont copiées dans un bloc de données qui est connu comme étant trop petite à la compilation.
+
+L’avertissement se produit si la copie utilise la forme intrinsèque d’une de ces fonctions CRT :
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
@@ -29,18 +31,18 @@ L'avertissement s'affiche quand les données, dont la longueur est connue au mom
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-L'avertissement apparaît également quand le type de données d'un paramètre est incompatible avec un cast et qu'une tentative d'assignation de copie d'une référence lvalue est effectuée ultérieurement.
+L’avertissement s’affiche également lorsque vous effectuez un cast d’un paramètre à un type de données plus grand et effectuez une assignation de copie à partir d’une référence lvalue.
 
-Visual C++ peut générer cet avertissement pour un chemin d'accès de code qui ne s'exécute jamais. Vous pouvez désactiver temporairement l'avertissement à l'aide de `#pragma`, comme illustré dans l'exemple suivant :
+Visual C++ peut générer cet avertissement pour un chemin d’accès du code qui s’exécute jamais. Vous pouvez désactiver temporairement l'avertissement à l'aide de `#pragma`, comme illustré dans l'exemple suivant :
 
 ```cpp
-#pragma(push)
-#pragma warning ( disable : 4789 )
+#pragma warning( push )
+#pragma warning( disable : 4789 )
 // unused code that generates compiler warning C4789`
-#pragma(pop)
+#pragma warning( pop )
 ```
 
-Cela empêche Visual C++ de générer l'avertissement pour ce bloc de code spécifique. `#pragma(push)` conserve l'état existant avant que `#pragma warning(disable: 4789)` le modifie. `#pragma(pop)` restaure l'état de type push et supprime les effets de `#pragma warning(disable:4789)`. Pour plus d’informations sur la directive de préprocesseur C++ `#pragma`, consultez [avertissement](../../preprocessor/warning.md) et [Directives Pragma et mot clé _pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Cet idiome empêche Visual C++ de générer l’avertissement pour ce bloc de code spécifique. `#pragma warning(push)` conserve l'état existant avant que `#pragma warning(disable: 4789)` le modifie. `#pragma warning(pop)` restaure l'état de type push et supprime les effets de `#pragma warning(disable:4789)`. Pour plus d’informations sur la directive de préprocesseur C++ `#pragma`, consultez [avertissement](../../preprocessor/warning.md) et [Directives Pragma et mot clé _pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Exemple
 

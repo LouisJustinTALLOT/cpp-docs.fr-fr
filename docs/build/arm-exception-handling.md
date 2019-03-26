@@ -2,12 +2,12 @@
 title: Gestion des exceptions ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814538"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476940"
 ---
 # <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
@@ -102,7 +102,7 @@ Pour les besoins de l’explication ci-dessous, deux pseudo-indicateurs sont dé
 
 Les prologues des fonctions canoniques peuvent avoir jusqu'à 5 instructions (à noter que les instructions 3a et 3b s'excluent mutuellement) :
 
-|Instruction|Un opcode est considéré être présent si :|Taille|Opcode|Codes de déroulement|
+|Instruction|Un opcode est considéré être présent si :|Size|Opcode|Codes de déroulement|
 |-----------------|-----------------------------------|----------|------------|------------------|
 |1|*H*==1|16|`push {r0-r3}`|04|
 |2|*C*==1 or *L*==1 or *R*==0 or PF==1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
@@ -140,7 +140,7 @@ Les instructions 2 et 4 sont définies selon qu'un push est nécessaire ou pas. 
 
 Les épilogues des fonctions canoniques suivent une forme analogue, mais en sens inverse et avec quelques options supplémentaires. L'épilogue peut compter jusqu'à 5 instructions et sa forme est strictement dictée par celle du prologue.
 
-|Instruction|Un opcode est considéré être présent si :|Taille|Opcode|
+|Instruction|Un opcode est considéré être présent si :|Size|Opcode|
 |-----------------|-----------------------------------|----------|------------|
 |6|*Pile ajuster*! = 0 et *EF*== 0|16/32|`add   sp,sp,#xx`|
 |7|*R*== 1 et *Reg*! = 7|32|`vpop  {d8-dE}`|
@@ -164,7 +164,7 @@ Quand le format de déroulement compressé ne suffit pas à décrire le déroule
 
 1. Un en-tête de 1 ou 2 mots qui décrit la taille globale de la structure .xdata et fournit des données de fonction clés. Le deuxième mot n’est présent que si le *épilogue nombre* et *Code mots* champs sont toutes deux définies sur 0. Les champs sont décrits en détail dans ce tableau :
 
-   |Mot|Bits|Objectif|
+   |Word|Bits|Objectif|
    |----------|----------|-------------|
    |0|0-17|*Longueur de la fonction* est un champ de 18 bits qui indique la longueur totale de la fonction en octets divisée par 2. Si une fonction dépasse 512 Ko, plusieurs enregistrements .pdata et .xdata doivent être utilisés pour décrire la fonction. Pour plus de détails, consultez la section Grandes fonctions dans ce document.|
    |0|18-19|*Vers* est un champ de 2 bits qui décrit la version de l’enregistrement xdata restant. Seule la version 0 est actuellement définie ; les valeurs 1 à 3 sont réservées.|
@@ -220,7 +220,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Même si le prologue et chaque épilogue ont un index dans les codes de déroulement, la table est partagée entre eux. Il n'est pas rare qu'ils puissent tous partager les mêmes codes de déroulement. Nous recommandons aux rédacteurs de compilateur de prévoir une optimisation pour ce cas de figure, car la taille maximale d'index est de 255, ce qui limite le nombre total de codes de déroulement possibles pour une fonction déterminée.
+Bien que le prologue et chaque épilogue ont un index dans les codes de déroulement, la table est partagée entre eux. Il n'est pas rare qu'ils puissent tous partager les mêmes codes de déroulement. Nous recommandons aux rédacteurs de compilateur de prévoir une optimisation pour ce cas de figure, car la taille maximale d'index est de 255, ce qui limite le nombre total de codes de déroulement possibles pour une fonction déterminée.
 
 ### <a name="unwind-codes"></a>Codes de déroulement
 
@@ -239,20 +239,20 @@ Le tableau suivant présente le mappage entre les codes de déroulement et les o
 |Octet 1|Octet 2|Octet 3|Octet 4|Taille d'opcode|Explication|
 |------------|------------|------------|------------|------------|-----------------|
 |00-7F||||16|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x7F) \* 4|
-|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> où le registre LR fait l'objet d'un pop si Code & 0x2000 et r0-r12 font l'objet d'un pop si le bit correspondant est défini dans Code & 0x1FFF|
+|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> où LR est dépilée si Code & 0 x 2000 et r0-r12 sont dépilés si le bit correspondant est défini dans Code & 0x1FFF|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> où X correspond à Code & 0x0F|
-|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> où X correspond à (Code & 0x03) + 4 et LR fait l'objet d'un pop si Code & 0x04|
-|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> où X correspond à (Code & 0x03) + 8 et LR fait l'objet d'un pop si Code & 0x04|
-|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> où X correspond à (Code & 0x07) + 8|
+|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> où X correspond à (Code & 0 x 03) + 4 et LR est un POP si Code & 0 x 04|
+|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> où X correspond à (Code & 0 x 03) + 8 et LR est un POP si Code & 0 x 04|
+|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> où X correspond à (Code & 0 x 07) + 8|
 |E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> où X correspond à (Code & 0x03FF) \* 4|
-|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> où le registre LR fait l'objet d'un pop si Code & 0x0100 et r0-r7 font l'objet d'un pop si le bit correspondant est défini dans Code & 0x00FF|
+|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> où LR est dépilée si Code & 0 x 0100 et r0-r7 sont dépilés si le bit correspondant est défini dans Code & 0x00FF|
 |EE|00-0F|||16|Spécifique à Microsoft|
 |EE|10-FF|||16|Disponible|
 |EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> où X correspond à (Code & 0x000F) \* 4|
 |EF|10-FF|||32|Disponible|
 |F0-F4||||-|Disponible|
-|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> où S correspond à (Code & 0x00F0) >> 4 et E à Code & 0x000F|
-|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> où S correspond à ((Code & 0x00F0) >> 4) + 16 et E à (Code & 0x000F) + 16|
+|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> où S correspond à (Code & 0x00F0) >> 4 et E correspond à Code & 0x000F|
+|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> où S est ((Code & 0x00F0) >> 4) + 16 et E correspond à (Code & 0x000F) + 16|
 |F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFF) \* 4|
 |F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFFFF) \* 4|
 |F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> où X correspond à (Code & 0x00FFFF) \* 4|
@@ -265,7 +265,7 @@ Le tableau suivant présente le mappage entre les codes de déroulement et les o
 
 Cela montre la plage de valeurs hexadécimales pour chaque octet dans un code de déroulement *Code*, ainsi que la taille d’opcode *Opsize* et l’interprétation de l’instruction d’origine correspondant. Les cellules vides indiquent des codes de déroulement plus courts. Dans les instructions qui contiennent des valeurs élevées couvrant plusieurs octets, les bits les plus significatifs sont stockés en premier. Le *Opsize* champ indique la taille d’opcode implicite associée à chaque opération Thumb-2. Les entrées en double apparentes figurant dans le tableau avec des encodages différents servent à faire la distinction entre les différentes tailles d’opcode.
 
-Les codes de déroulement sont conçus de telle sorte que le premier octet du code indique à la fois la taille totale en octets du code et la taille de l'opcode correspondant dans le flux d'instructions. Pour calculer la taille du prologue ou de l'épilogue, parcourez les codes de déroulement du début jusqu'à la fin de la séquence, puis utilisez une table de correspondance ou une méthode similaire pour déterminer la longueur de l'opcode correspondant.
+Les codes de déroulement sont conçus de telle sorte que le premier octet du code indique à la fois la taille totale en octets du code et la taille de l'opcode correspondant dans le flux d'instructions. Pour calculer la taille du prologue ou de l’épilogue, parcourez les codes de déroulement du début jusqu’à la fin de la séquence, puis utilisez une table de correspondance ou une méthode similaire pour déterminer la longueur de l’opcode correspondant.
 
 Les codes de déroulement 0xFD et 0xFE sont équivalents au code de fin normal 0xFF, mais prennent en compte un opcode nop supplémentaire dans le cas de l'épilogue, de 16 ou 32 bits. Pour les prologues, les codes 0xFD, 0xFE et 0xFF sont tout à fait équivalents. Cela prend en compte les fins d'épilogue courantes `bx lr` ou `b <tailcall-target>`, qui n'ont pas d'instruction de prologue équivalente. Cela augmente les probabilités de partage des séquences de déroulement entre le prologue et les épilogues.
 
@@ -290,7 +290,7 @@ Penchons-nous à titre d'exemple sur cette séquence de prologue et d'épilogue�
 0148:   bx    lr
 ```
 
-En regard de chaque opcode figure le code déroulement approprié qui décrit l'opération. La séquence de codes de déroulement du prologue est une image miroir des codes de déroulement de l'épilogue, l'instruction finale en moins. S'agissant d'un cas fréquent, cela explique que les codes de déroulement du prologue sont toujours censés être stockés dans l'ordre inverse de l'ordre d'exécution du prologue. Cela nous donne un ensemble commun de codes de déroulement :
+En regard de chaque opcode figure le code déroulement approprié qui décrit l’opération. La séquence de codes de déroulement du prologue est une image miroir des codes de déroulement de l'épilogue, l'instruction finale en moins. S'agissant d'un cas fréquent, cela explique que les codes de déroulement du prologue sont toujours censés être stockés dans l'ordre inverse de l'ordre d'exécution du prologue. Cela nous donne un ensemble commun de codes de déroulement :
 
 ```asm
 0xc7, 0xdd, 0x04, 0xfd
@@ -304,7 +304,7 @@ La logique qui prévaut dans le cas du prologue est identique mais inversée. Si
 
 Les codes de déroulement de prologue et d'épilogue ne correspondent pas toujours exactement. Dans ce cas, il se peut que le tableau des codes de déroulement doive contenir plusieurs séquences de codes. Pour déterminer à quel décalage commencer le traitement des codes, suivez cette logique :
 
-1. Si le déroulement démarre dans le corps de la fonction, commencez à exécuter les codes de déroulement à l'index 0 et continuez jusqu'à ce qu'un opcode de fin soit atteint.
+1. Si le déroulement démarre dans le corps de la fonction, commencez à exécuter les codes de déroulement à l’index 0 et continuez jusqu’à ce qu’un opcode de fin soit atteint.
 
 2. Si le déroulement démarre dans un épilogue, utilisez l'index de démarrage propre à l'épilogue fourni par la portée de l'épilogue. Calculez le nombre d'octets qui séparent le compteur de programme (PC) du début de l'épilogue. Parcourez les codes de déroulement jusqu'à ce que toutes les instructions déjà exécutées soient prises en compte. Exécutez la séquence de déroulement à partir de ce point.
 
@@ -366,7 +366,7 @@ La fonction emballée par rétraction prise pour exemple doit être divisée en 
 
 La région B intermédiaire obtient son propre enregistrement .pdata ou .xdata qui décrit un fragment qui n'a ni prologue ni épilogue. Cependant, des codes de déroulement doivent toujours être présents pour cette région, car elle est considérée comme un corps de fonction. Les codes doivent décrire un prologue composite qui représente à la fois les registres initiaux enregistrés dans le prologue de la région A et les registres supplémentaires enregistrés avant d'entrer dans la région B, comme s'ils étaient générés par une même séquence d'opérations.
 
-Les enregistrements de registres de la région B ne peuvent pas être considérés comme un « prologue interne », car le prologue composite décrit pour la région B doit décrire à la fois le prologue de la région A et les registres supplémentaires enregistrés. S'il était indiqué que le fragment B contenait un prologue, la taille de ce prologue serait aussi induite par les codes de déroulement. Or, il n'existe aucun moyen de décrire le prologue composite qui autorise un mappage un-à-un avec les opcodes qui enregistrent uniquement les registres supplémentaires.
+Les enregistrements de registres de la région B ne peuvent pas être considérés comme un « prologue interne », car le prologue composite décrit pour la région B doit décrire à la fois le prologue de la région A et les registres supplémentaires enregistrés. S’il était indiqué que le fragment B contenait un prologue, la taille de ce prologue serait aussi induite par les codes de déroulement. Or, il n’existe aucun moyen de décrire le prologue composite qui autorise un mappage un-à-un avec les opcodes qui enregistrent uniquement les registres supplémentaires.
 
 Les enregistrements de registres supplémentaires doivent être considérés comme faisant partie de la région A, car tant qu'ils n'ont pas été menés à bien, le prologue composite ne décrit pas avec précision l'état de la pile.
 
@@ -396,7 +396,7 @@ L'optimisation la plus importante consiste à faire attention à ne pas confondr
 
 La même règle s'applique à la longueur des fonctions. Si des données (par exemple, un pool de littéraux) suivent l'épilogue d'une fonction, elles ne doivent pas être prises en compte dans la longueur de la fonction. En réduisant la fonction au seul code intégré à la fonction, il y a bien plus de chances que l'épilogue se trouve à la toute fin et compact. Un enregistrement pdata peut être utilisé.
 
-Dans un prologue, dès lors que le pointeur de pile est enregistré dans un autre registre, il n'y a généralement pas besoin d'enregistrer d'autres opcodes. Pour dérouler la fonction, la première chose à faire est de récupérer le pointeur de pile auprès du registre enregistré, ce qui évite que les opérations ultérieures aient un impact sur le déroulement.
+Dans un prologue, dès lors que le pointeur de pile est enregistré dans un autre registre, il n’y a généralement pas besoin d’enregistrer d’autres opcodes. Pour dérouler la fonction, la première chose à faire est de récupérer le pointeur de pile auprès du registre enregistré, ce qui évite que les opérations ultérieures aient un impact sur le déroulement.
 
 Les épilogues à une instruction n'ont pas du tout besoin d'être encodées, ni en tant que portées ni en tant que codes de déroulement. Si un déroulement se produit avant que l'instruction soit exécutée, on peut supposer qu'elle provient du corps de la fonction et que la simple exécution des codes de déroulement de prologue suffit. Si le déroulement se produit après l'exécution de l'instruction unique, elle se produit de fait dans une autre région.
 
@@ -570,7 +570,7 @@ Epilogues:
 
 - Codes de déroulement, commençant au Mot 5 : (partagé entre le prologue et l'épilogue)
 
-   - Code de déroulement 0 = 0x06 : sp += (6 << 2)
+   - Déroulement code 0 = 0 x 06 : sp += (6 << 2)
 
    - Code de déroulement 1 = 0xDE : pop {r4-r10, lr}
 
@@ -634,7 +634,7 @@ Epilogue:
 
    - Code de déroulement 1 = 0xDC : pop {r4-r8, lr}
 
-   - Code de déroulement 2 = 0x04 : sp += (4 << 2)
+   - Déroulement code 2 = 0 x 04 : sp += (4 << 2)
 
    - Code de déroulement 3 = 0xFD : fin, compte comme une instruction de 16 bits pour l'épilogue
 
@@ -688,7 +688,7 @@ Epilogue:
 
    - Code de déroulement 0 = 0xC7 : sp = r7
 
-   - Code de déroulement 1 = 0x05 : sp += (5 << 2)
+   - 1 = 0 x 05 de code de déroulement : sp += (5 << 2).
 
    - Code de déroulement 2 = 0xED/0x90 : pop {r4, r7, lr}
 

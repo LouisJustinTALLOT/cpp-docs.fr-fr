@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _mbstok_l
 - _mbstok
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bb791c7049379f62b99804fa8f1cf3a57fe0b749
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416960"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476914"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -81,11 +81,11 @@ wchar_t *wcstok_l(
    _locale_t locale
 );
 unsigned char *_mbstok(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit
 );
 unsigned char *_mbstok_l(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit,
    _locale_t locale
 );
@@ -104,7 +104,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers le prochain jeton trouvé dans *strToken*. Elles retournent **NULL** lorsque plus aucun jeton ne se trouvent. Chaque appel modifie *strToken* en remplaçant un caractère null pour le premier délimiteur qui se produit après le jeton retourné.
+Retourne un pointeur vers le prochain jeton trouvé dans *strToken*. Les fonctions retournent **NULL** lorsque plus aucun jeton ne se trouvent. Chaque appel modifie *strToken* en remplaçant un caractère null pour le premier délimiteur qui se produit après le jeton retourné.
 
 ## <a name="remarks"></a>Notes
 
@@ -115,7 +115,9 @@ Le **strtok** fonction recherche le prochain jeton dans *strToken*. Le jeu de ca
 
 Sur le premier appel à **strtok**, la fonction ignore les délimiteurs de début et retourne un pointeur désignant le premier jeton dans *strToken*, le jeton par un caractère null de fin d’exécution. Plus de jetons peuvent être tirés de la suite de *strToken* par une série d’appels à **strtok**. Chaque appel à **strtok** modifie *strToken* en insérant un caractère null après la **jeton** retourné par cet appel. Pour lire le prochain jeton à partir de *strToken*, appelez **strtok** avec un **NULL** valeur pour le *strToken* argument. Le **NULL** *strToken* argument causes **strtok** pour rechercher le prochain jeton dans le texte modifié *strToken*. Le *strDelimit* argument peut prendre n’importe quelle valeur à partir d’un seul appel à l’autre afin que l’ensemble de délimiteurs peut varier.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur de la **LC_CTYPE** paramètre de catégorie de paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md).
+
+Les versions de ces fonctions sans le **_l** suffixe utiliser les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Les versions avec le **_l** suffixe sont identiques, sauf qu’ils utilisent les paramètres régionaux à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Chaque fonction utilise une variable statique locale de thread pour analyser la chaîne en jetons. Par conséquent, plusieurs threads peuvent appeler simultanément ces fonctions sans effets indésirables. Cependant, dans un thread unique, il est très probable que l’entrelacement d’appels dans l’une de ses fonctions se traduise par une altération des données et des résultats imprécis. Quand il s’agit d’analyser différentes chaînes, terminez l’analyse d’une chaîne avant de débuter celle de la suivante. De même, tenez compte du risque potentiel que représente l’appel de l’une de ces fonctions dans une boucle pendant qu’une autre fonction est appelée. S l’une de ces fonctions met fin à l’autre fonction, une séquence entrelacée d’appels est générée, ce qui a pour conséquence d’altérer les données.

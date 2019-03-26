@@ -3,12 +3,12 @@ title: Système de type C++ (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220671"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476901"
 ---
 # <a name="c-type-system-modern-c"></a>Système de type C++ (Modern C++)
 
@@ -70,7 +70,7 @@ Le tableau suivant répertorie les types fondamentaux les plus souvent utilisés
 |bool|1 octet|Représente des valeurs qui peuvent être true ou false.|
 |char|1 octet|À utiliser pour les caractères ASCII dans les chaînes de style C plus anciennes ou les objets std::string qui ne devront jamais être convertis en UNICODE.|
 |wchar_t|2 octets|Représente les valeurs à caractères « larges » qui peuvent être encodées au format UNICODE (UTF-16 sur Windows, mais peut varier sur les autres systèmes d'exploitation). Type de caractère utilisé dans les chaînes de type `std::wstring`.|
-|non signé&nbsp;char|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|
+|unsigned&nbsp;char|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|
 |unsigned int|4 octets|Option par défaut pour les bits indicateurs.|
 |long long|8 octets|Représente des valeurs entières très grandes.|
 
@@ -102,9 +102,7 @@ Lorsque vous définissez un **classe**, **struct**, **union**, ou **enum**, cett
 
 - Le compilateur n'a pas connaissance de manière intégrée d'un type défini par l'utilisateur. Il détecte le type lorsqu’il rencontre tout d’abord la définition pendant le processus de compilation.
 
-- Vous spécifiez les opérations qui peuvent être exécutées sur votre type et comment il peut être converti en d'autres types, en définissant (via la surcharge) les opérateurs appropriés, comme membres de classe ou comme fonctions non membres. Pour plus d’informations, consultez [surcharge de fonction](function-overloading.md).
-
-- Ils ne doivent pas être typés statiquement (règle selon laquelle un type d'objet ne change jamais). Grâce aux mécanismes de *héritage* et *polymorphisme*, une variable déclarée comme un type défini par l’utilisateur de classe (appelée comme une instance d’objet d’une classe) peut avoir un type différent au moment de l’exécution qu’à moment de la compilation. Pour plus d’informations, consultez [Héritage](../cpp/inheritance-cpp.md).
+- Vous spécifiez les opérations qui peuvent être exécutées sur votre type et comment il peut être converti en d'autres types, en définissant (via la surcharge) les opérateurs appropriés, comme membres de classe ou comme fonctions non membres. Pour plus d’informations, consultez [surcharge de fonction](function-overloading.md)
 
 ## <a name="pointer-types"></a>Types de pointeur
 
