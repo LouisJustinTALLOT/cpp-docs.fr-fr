@@ -1,6 +1,6 @@
 ---
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 0020d4944ffb379584a044023bc34169b4a5c983
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: e2c237927aa133d33085be40b88789c1024d6b34
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416973"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476888"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -137,13 +137,15 @@ Si *str* est **NULL** mais *contexte* est un pointeur vers un pointeur de contex
 
 Le **strtok_s** famille de fonctions recherche le prochain jeton dans *str*. Le jeu de caractères dans *délimiteurs* spécifie les délimiteurs possibles du jeton doit être recherché dans *str* lors de l’appel actuel. **wcstok_s** et **_mbstok_s** sont des versions à caractères larges et à caractères multioctets de **strtok_s**. Les arguments et les valeurs de retour de **wcstok_s** et **_wcstok_s_l** sont des caractères larges chaînes ; ceux de **_mbstok_s** et **_mbstok_s_l**sont des chaînes de caractères multioctets. Ces fonctions se comportent sinon de façon identique.
 
-Cette fonction valide ses paramètres. Si une condition d’erreur se présente, comme dans la table des conditions d’erreur, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourner **NULL**.
+Cette fonction valide ses paramètres. Lorsqu’une condition d’erreur se produit, comme indiqué dans le tableau de Conditions d’erreur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourner **NULL**.
 
-Sur le premier appel à **strtok_s** la fonction ignore les délimiteurs de début et retourne un pointeur désignant le premier jeton dans *str*, le jeton par un caractère null de fin d’exécution. Plus de jetons peuvent être tirés de la suite de *str* par une série d’appels à **strtok_s**. Chaque appel à **strtok_s** modifie *str* en insérant un caractère null après le jeton retourné par cet appel. Le *contexte* pointeur effectue le suivi de chaîne est en cours de lecture et où la chaîne où le prochain jeton doit être lu. Pour lire le prochain jeton à partir de *str*, appelez **strtok_s** avec un **NULL** valeur pour le *str* argument, puis passez le même  *contexte* paramètre. Le **NULL** *str* argument causes **strtok_s** pour rechercher le prochain jeton dans le texte modifié *str*. Le *délimiteurs* argument peut prendre n’importe quelle valeur à partir d’un seul appel à l’autre afin que l’ensemble de délimiteurs peut varier.
+Sur le premier appel à **strtok_s**, la fonction ignore les délimiteurs de début et retourne un pointeur désignant le premier jeton dans *str*, le jeton par un caractère null de fin d’exécution. Plus de jetons peuvent être tirés de la suite de *str* par une série d’appels à **strtok_s**. Chaque appel à **strtok_s** modifie *str* en insérant un caractère null après le jeton retourné par cet appel. Le *contexte* pointeur effectue le suivi de chaîne est en cours de lecture et où la chaîne où le prochain jeton doit être lu. Pour lire le prochain jeton à partir de *str*, appelez **strtok_s** avec un **NULL** valeur pour le *str* argument, puis passez le même  *contexte* paramètre. Le **NULL** *str* argument causes **strtok_s** pour rechercher le prochain jeton dans le texte modifié *str*. Le *délimiteurs* argument peut prendre n’importe quelle valeur à partir d’un seul appel à l’autre afin que l’ensemble de délimiteurs peut varier.
 
 Dans la mesure où le *contexte* paramètre remplace les mémoires tampons statiques utilisées dans **strtok** et **_strtok_l**, il est possible d’analyser deux chaînes simultanément dans le même thread.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le **_l** suffixe utiliser des paramètres régionaux du thread actuel pour ce comportement dépendant des paramètres régionaux. Les versions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent à la place la *paramètres régionaux* paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur de la **LC_CTYPE** paramètre de catégorie de paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md).
+
+Les versions de ces fonctions sans le **_l** suffixe utiliser des paramètres régionaux du thread actuel pour ce comportement dépendant des paramètres régionaux. Les versions avec le **_l** suffixe sont identiques, à ceci près qu’ils utilisent à la place les paramètres régionaux spécifiés par le *paramètres régionaux* paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Configuration requise
 
