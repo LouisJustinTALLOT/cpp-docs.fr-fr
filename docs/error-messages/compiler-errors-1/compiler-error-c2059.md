@@ -1,17 +1,17 @@
 ---
 title: Erreur du compilateur C2059
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 f1_keywords:
 - C2059
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: dec5f7a9eb91603b129cfb589352b6ee2579e553
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2fb2aa86a1fd8f8e0710d787682fdd44abd941ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521789"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508830"
 ---
 # <a name="compiler-error-c2059"></a>Erreur du compilateur C2059
 
@@ -33,7 +33,18 @@ Pour déterminer la cause de l’erreur, examinez la ligne qui est répertoriée
 
 Si le message d’erreur se produit sur un symbole qui suit immédiatement un `typedef` variable, assurez-vous que la variable est définie dans le code source.
 
-Vous pouvez obtenir l’erreur C2059 si un symbole a la valeur nothing, comme peut se produire lorsque **/D** `symbol` **=** sert à compiler.
+L’erreur C2059 est déclenché lorsqu’un nom de symbole de préprocesseur est utilisé à nouveau en tant qu’identificateur. Dans l’exemple suivant, le compilateur voit `DIGITS.ONE` en tant que le numéro 1, qui n’est pas valide en tant qu’un nom d’élément enum :
+
+```cpp
+#define ONE 1
+
+enum class DIGITS {
+    ZERO,
+    ONE // error C2059
+};
+```
+
+Vous pouvez obtenir l’erreur C2059 si un symbole a la valeur nothing, comme peut se produire lorsque **/D**_symbole_ **=** sert à compiler.
 
 ```
 // C2059a.cpp

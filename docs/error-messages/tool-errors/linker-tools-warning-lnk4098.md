@@ -1,42 +1,40 @@
 ---
 title: Avertissement des outils Éditeur de liens LNK4098
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 f1_keywords:
 - LNK4098
 helpviewer_keywords:
 - LNK4098
 ms.assetid: 1f1b1408-1316-4e34-80f5-6a02f2db0ac1
-ms.openlocfilehash: 088124fcce7cafad3fab3280ae0b3ae0d893283e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66cf1a1bc75405ffc9bae8158bfc8682776a8228
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468716"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508726"
 ---
 # <a name="linker-tools-warning-lnk4098"></a>Avertissement des outils Éditeur de liens LNK4098
 
-conflit entre la 'library' utiliser et les autres bibliothèques ; utilisez/NODEFAULTLIB : library
+> DEFAULTLIB '*bibliothèque*' est en conflit avec les autres bibliothèques ; utilisez/NODEFAULTLIB :*bibliothèque*
 
-Vous tentez de créer un lien avec des bibliothèques incompatibles.
+Que vous tentez de créer un lien avec des bibliothèques incompatibles.
 
 > [!NOTE]
->  Les bibliothèques Runtime contiennent maintenant des directives pour empêcher le mélange de types différents. Vous recevrez cet avertissement si vous tentez d’utiliser différents types et les versions sans débogage de la bibliothèque d’exécution dans le même programme. Par exemple, si vous avez compilé un fichier pour un type d’exécution bibliothèque et un autre pour un autre type (par exemple, monothread et multithread) et a tenté de les lier, vous obtiendrez cet avertissement. Vous devez compiler tous les fichiers source pour utiliser la même bibliothèque d’exécution. Consultez le [utilisez Run-Time Library](../../build/reference/md-mt-ld-use-run-time-library.md) (**/MD**, **/MT**, **/LD**) les options du compilateur pour plus d’informations.
+> Les bibliothèques Runtime contiennent maintenant des directives pour empêcher le mélange de types différents. Vous recevrez cet avertissement si vous tentez d’utiliser différents types et les versions sans débogage de la bibliothèque d’exécution dans le même programme. Par exemple, si vous avez compilé un fichier à utiliser un seul type de bibliothèque Runtime et un autre fichier à un autre type (par exemple, debug par rapport à la vente au détail) et tentez de les lier, vous obtiendrez cet avertissement. Vous devez compiler tous les fichiers source pour utiliser la même bibliothèque d’exécution. Pour plus d’informations, consultez le [/MD, / MT, /LD (utiliser la bibliothèque Runtime)](../../build/reference/md-mt-ld-use-run-time-library.md) options du compilateur.
 
-Vous pouvez utiliser l’éditeur de liens [: lib](../../build/reference/verbose-print-progress-messages.md) commutateur pour déterminer les bibliothèques dans l’éditeur de liens recherche. Si vous recevez LNK4098 et souhaitez créer un fichier exécutable qui utilise, par exemple, le thread unique, sans débogage bibliothèques Runtime, utilisez le **: lib** option afin de déterminer les bibliothèques que la recherche de l’éditeur de liens. L’éditeur de liens doit imprimer LIBC.lib et non LIBCMT.lib, MSVCRT.lib, LIBCD.lib, LIBCMTD.lib ou MSVCRTD.lib dans les bibliothèques recherchées. Vous pouvez indiquer à l’éditeur de liens d’ignorer les bibliothèques d’exécution incorrects par le [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) pour chaque bibliothèque que vous souhaitez ignorer.
+Vous pouvez utiliser l’éditeur de liens [: lib](../../build/reference/verbose-print-progress-messages.md) commutateur pour connaître les bibliothèques que l’éditeur de liens recherche. Par exemple, lorsque votre fichier exécutable utilise les bibliothèques Runtime multithreads, sans débogage, la liste signalée doit inclure LIBCMT.lib et pas LIBCMTD.lib, MSVCRT.lib ou MSVCRTD.lib. Vous pouvez indiquer à l’éditeur de liens d’ignorer les bibliothèques d’exécution incorrects par le [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) pour chaque bibliothèque que vous souhaitez ignorer.
 
-Le tableau ci-dessous présente les bibliothèques doivent être ignorées en fonction de la bibliothèque d’exécution que vous souhaitez utiliser.
+Le tableau ci-dessous présente les bibliothèques doivent être ignorées en fonction de la bibliothèque d’exécution que vous souhaitez utiliser. Sur la ligne de commande, utilisez une **/NODEFAULTLIB** option pour chacune des bibliothèques à ignorer. Dans l’IDE de Visual Studio, séparez les bibliothèques à ignorer par des points-virgules dans la **ignorer les bibliothèques par défaut spécifique** propriété.
 
-|Pour utiliser cette bibliothèque d’exécution|Ignorer ces bibliothèques|
+| Pour utiliser cette bibliothèque d’exécution | Ignorer ces bibliothèques |
 |-----------------------------------|----------------------------|
-|Thread unique (libc.lib)|LIBCMT.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|
-|Multithread (libcmt.lib)|libc.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|
-|Multithread utilisant des DLL (msvcrt.lib)|libc.lib, libcmt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|
-|Débogage monothread (libcd.lib)|libc.lib, libcmt.lib, msvcrt.lib, libcmtd.lib, msvcrtd.lib|
-|Débogage multithread (libcmtd.lib)|libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, msvcrtd.lib|
-|Débogage multithread utilisant des DLL (msvcrtd.lib)|libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib|
+| Multithreaded (libcmt.lib) | msvcrt.lib; libcmtd.lib; msvcrtd.lib |
+| Multithread utilisant des DLL (msvcrt.lib) | libcmt.lib; libcmtd.lib; msvcrtd.lib |
+| Débogage multithread (libcmtd.lib) | libcmt.lib; msvcrt.lib; msvcrtd.lib |
+| Débogage multithread utilisant des DLL (msvcrtd.lib) | libcmt.lib; msvcrt.lib; libcmtd.lib |
 
-Par exemple, si vous avez reçu cet avertissement et que vous souhaitez créer un fichier exécutable qui utilise la version non debug, monothread, des bibliothèques Runtime, vous pouvez utiliser les options suivantes avec l’éditeur de liens :
+Par exemple, si vous avez reçu cet avertissement et que vous souhaitez créer un fichier exécutable qui utilise la version DLL non-debug, des bibliothèques Runtime, vous pouvez utiliser les options suivantes avec l’éditeur de liens :
 
-```
-/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
+```cmd
+/NODEFAULTLIB:libcmt.lib NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
 ```
