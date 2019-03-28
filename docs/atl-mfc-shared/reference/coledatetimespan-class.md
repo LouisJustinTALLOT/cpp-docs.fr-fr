@@ -1,6 +1,6 @@
 ---
 title: COleDateTimeSpan, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748487"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565647"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan, classe
 
@@ -95,7 +95,7 @@ Un `COleDateTimeSpan` conserve la durée en jours.
 
 Pour plus d’informations sur la `COleDateTime` et `COleDateTimeSpan` classes, consultez l’article [Date et heure : Prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** ATLComTime.h
 
@@ -115,8 +115,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *dateSpan*<br/>
-
-  `COleDateTimeSpan` à comparer.
+`COleDateTimeSpan` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -746,7 +745,7 @@ Pour obtenir une brève description de ces valeurs d’état, consultez la liste
 - `COleDateTimeSpan::null` Indique que ce `COleDateTimeSpan` objet a la valeur null, c'est-à-dire qu’aucune valeur n’a été fournie pour cet objet. (C’est « null » dans le sens de la base de données de « ne having aucune valeur, », par opposition à la valeur NULL en C++.)
 
    > [!CAUTION]
-   > Cette fonction concerne les situations de programmation avancées. Cette fonction ne modifie pas les données dans cet objet. Il sera plus souvent utilisée pour définir l’état sur **null** ou **non valide**. Notez que l’opérateur d’assignation ( [opérateur =](#eq)) et [SetDateTimeSpan](#setdatetimespan) ne définissez pas l’état de l’objet basé sur la valeur (s) source.
+   > Cette fonction concerne les situations de programmation avancées. Cette fonction ne modifie pas les données dans cet objet. Il sera plus souvent utilisée pour définir l’état sur **null** ou **non valide**. Notez que l’opérateur d’assignation ([opérateur =](#operator_eq)) et [SetDateTimeSpan](#setdatetimespan) ne définissez pas l’état de l’objet basé sur la valeur (s) source.
 
 ### <a name="example"></a>Exemple
 

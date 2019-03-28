@@ -1,6 +1,6 @@
 ---
 title: '&lt;shared_mutex&gt;'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751815"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565384"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,13 +60,13 @@ L’en-tête &lt;shared_mutex > définit les classes `shared_mutex` et `shared_t
 
 |Classes|Description|
 |-------------|-----------------|
-|[shared_mutex, classe](../standard-library/shared-mutex.md#class_shared_mutex)|Type de mutex partagé qui peut être verrouillé en mode exclusif par un seul agent ou être partagé en mode non exclusif par plusieurs agents.|
-|[shared_timed_mutex, classe](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Type de mutex temporisé partagé qui peut être verrouillé en mode exclusif par un seul agent ou être partagé en mode non exclusif par plusieurs agents.|
-|[shared_lock, classe](../standard-library/shared-mutex.md#class_shared_lock)|Classe de modèle qui inclut un mutex partagé dans un wrapper pour prendre en charge les opérations de verrouillage temporisées et le partage non exclusif par plusieurs agents.|
+|[shared_mutex, classe](#class_shared_mutex)|Type de mutex partagé qui peut être verrouillé en mode exclusif par un seul agent ou être partagé en mode non exclusif par plusieurs agents.|
+|[shared_timed_mutex, classe](#class_shared_timed_mutex)|Type de mutex temporisé partagé qui peut être verrouillé en mode exclusif par un seul agent ou être partagé en mode non exclusif par plusieurs agents.|
+|[shared_lock, classe](#class_shared_lock)|Classe de modèle qui inclut un mutex partagé dans un wrapper pour prendre en charge les opérations de verrouillage temporisées et le partage non exclusif par plusieurs agents.|
 
 |Fonctions|Description|
 |---------------|-----------------|
-|[swap](../standard-library/shared-mutex.md#function_swap)|Échange le contenu des objets mutex partagé qui sont référencés par les paramètres de la fonction.|
+|[swap](#function_swap)|Échange le contenu des objets mutex partagé qui sont référencés par les paramètres de la fonction.|
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -167,7 +167,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a> shared_lock, classe
+###  <a name="class_shared_lock"></a> shared_lock, classe
 
 La classe de modèle `shared_lock` contrôle la propriété partagée d’un objet mutex partagé dans une portée. Le paramètre de modèle doit être un type mutex partagé.
 
@@ -226,7 +226,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 Échange le contenu de deux objets `shared_lock`. Fonctionne comme `x.swap(y)`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** &lt;shared_mutex>
 

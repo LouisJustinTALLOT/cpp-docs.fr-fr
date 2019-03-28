@@ -1,6 +1,6 @@
 ---
 title: CAnimationVariable, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationVariable
 - AFXANIMATIONCONTROLLER/CAnimationVariable
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 42fd3ddc504e85ba3f69588bee54c6540b628129
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269030"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565757"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable, classe
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |Nom|Description|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Construit un objet de variable de l’animation.|
-|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|Destructeur. Appelé lorsqu’un objet CAnimationVariable est détruit.|
+|[CAnimationVariable::~CAnimationVariable](#_dtorcanimationvariable)|Destructeur. Appelé lorsqu’un objet CAnimationVariable est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -101,7 +101,7 @@ class CAnimationVariable;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Spécifie la valeur par défaut, qui est propagée à IUIAnimationVariable.|
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Contient une liste de transitions qui animent cette variable de l’animation.|
@@ -116,7 +116,7 @@ La classe CAnimationVariable encapsule l’objet COM IUIAnimationVariable. Elle 
 
 `CAnimationVariable`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxanimationcontroller.h
 

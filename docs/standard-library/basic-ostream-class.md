@@ -1,6 +1,6 @@
 ---
 title: basic_ostream, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543635"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565725"
 ---
 # <a name="basicostream-class"></a>basic_ostream, classe
 
@@ -48,7 +48,7 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ## <a name="remarks"></a>Notes
 
-La plupart des fonctions membres qui surchargent [operator<<](#op_lt_lt) sont des fonctions de sortie mises en forme. Elles suivent le modèle :
+La plupart des fonctions membres qui surchargent [operator<<](#basic_ostream_operator_lt_lt) sont des fonctions de sortie mises en forme. Elles suivent le modèle :
 
 ```cpp
 iostate state = goodbit;
@@ -122,7 +122,7 @@ Pour en savoir plus sur les flux de sortie, consultez l’exemple relatif à [ba
 |[put](#put)|Place un caractère dans un flux.|
 |[seekp](#seekp)|Réinitialise la position dans le flux de sortie.|
 |[sentry](#sentry)|La classe imbriquée décrit un objet dont la déclaration structure les fonctions de sortie mise en forme et les fonctions de sortie non mise en forme.|
-|[swap](#op_eq)|Échange les valeurs de cet objet `basic_ostream` avec celles de l'objet `basic_ostream` fourni.|
+|[swap](#swap)|Échange les valeurs de cet objet `basic_ostream` avec celles de l'objet `basic_ostream` fourni.|
 |[tellp](#tellp)|Indique la position dans le flux de sortie.|
 |[write](#write)|Place des caractères dans un flux.|
 
@@ -130,7 +130,7 @@ Pour en savoir plus sur les flux de sortie, consultez l’exemple relatif à [ba
 
 |Opérateur|Description|
 |-|-|
-|[operator=](#basic_ostream_operator_eq)|Affecte la valeur du paramètre d'objet `basic_ostream` fourni à cet objet.|
+|[operator=](#op_eq)|Affecte la valeur du paramètre d'objet `basic_ostream` fourni à cet objet.|
 |[operator<<](#basic_ostream_operator_lt_lt)|Écrit dans le flux.|
 
 ## <a name="requirements"></a>Configuration requise
@@ -237,13 +237,13 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Paramètres
 
-*NFP*<br/>
+*Pfn*<br/>
 Pointeur de fonction.
 
 *strbuf*<br/>
 Pointeur vers un objet `stream_buf` .
 
-*Val*<br/>
+*val*<br/>
 Élément à écrire dans le flux.
 
 ### <a name="return-value"></a>Valeur de retour

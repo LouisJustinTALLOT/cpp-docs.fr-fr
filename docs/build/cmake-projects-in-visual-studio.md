@@ -1,15 +1,15 @@
 ---
 title: Projets CMake dans Visual Studio
-ms.date: 03/05/2019
+ms.date: 03/27/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 479179d94a0534f5f0c790fea18e281053b686e2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356139"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565293"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projets CMake dans Visual Studio
 
@@ -58,7 +58,7 @@ Si vous avez besoin passer des arguments à un fichier exécutable au moment du 
 
 ## <a name="import-an-existing-cache"></a>Importer un cache existant
 
-Lorsque vous importez un fichier CMakeCache.txt existant, Visual Studio extrait des variables personnalisées automatiquement et crée un préremplie [ **CMakeSettings.json** ](#cmake_settings) fichier basé sur ces derniers. Le cache d’origine n’est modifié en aucune façon et peut encore être utilisé à partir de la ligne de commande ou avec n’importe quel outil ou IDE qui a été utilisé pour sa génération. La nouvelle **CMakeSettings.json** fichier est placé à côté de la racine du projet CMakeLists.txt. Visual Studio génère un nouveau cache en fonction du fichier de paramètres. Vous pouvez remplacer la génération automatique du cache dans la boîte de dialogue **Outils | Options | CMake | Général**.
+Quand vous importez un fichier CMakeCache.txt existant, Visual Studio extrait automatiquement des variables personnalisées à partir desquelles il crée un fichier **CMakeSettings.json** prérempli. Le cache d’origine n’est modifié en aucune façon et peut encore être utilisé à partir de la ligne de commande ou avec n’importe quel outil ou IDE qui a été utilisé pour sa génération. La nouvelle **CMakeSettings.json** fichier est placé à côté de la racine du projet CMakeLists.txt. Visual Studio génère un nouveau cache en fonction du fichier de paramètres. Vous pouvez remplacer la génération automatique du cache dans la boîte de dialogue **Outils | Options | CMake | Général**.
 
 Le contenu du cache n’est pas importé en totalité.  Des propriétés comme le générateur et l’emplacement des compilateurs sont remplacées par les valeurs par défaut qui fonctionnent avec l’IDE.
 
@@ -132,7 +132,7 @@ Pour limiter les builds et déboguer des sessions pour un sous-ensemble des proj
 
 Si vous avez besoin de plus d’informations sur l’état du cache CMake pour diagnostiquer un problème, ouvrez le menu principal de **CMake** ou le menu contextuel de **CMakeLists.txt** dans **l’Explorateur de solutions** pour exécuter l’une des commandes suivantes :
 
-- **Afficher le cache** ouvre le fichier CMakeCache.txt à partir du dossier racine de build dans l’éditeur. (Toutes les modifications que vous apportez ici à CMakeCache.txt sont effacées si vous nettoyez le cache. Pour apporter des modifications qui persistent une fois le cache nettoyé, consultez [Paramètres CMake et configurations personnalisées](#cmake_settings) plus haut dans cet article.)
+- **Afficher le cache** ouvre le fichier CMakeCache.txt à partir du dossier racine de build dans l’éditeur. (Toutes les modifications que vous apportez ici à CMakeCache.txt sont effacées si vous nettoyez le cache. Pour apporter des modifications conservées une fois que le cache est nettoyé, voir [paramètres CMake personnaliser](customize-cmake-settings.md).)
 
 - **Ouvrir le dossier de cache** ouvre une fenêtre de l’Explorateur dans le dossier racine de build.
 

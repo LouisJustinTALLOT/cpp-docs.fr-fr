@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6e87d77eec526cbfcfe5c1e6e78b0287226f0613
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739425"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565695"
 ---
 # <a name="crect-class"></a>CRect, classe
 
@@ -128,7 +128,7 @@ Quand à l’aide de surchargé `CRect` opérateurs, le premier opérande doit �
 
 `CRect`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atltypes.h
 
@@ -950,7 +950,7 @@ Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure o
 
 Le paramètre *x* et *y* (ou `cx` et `cy`) valeurs sont ajoutées à `CRect`.
 
-La troisième surcharge augmente `CRect` par le nombre de spécifié d’unités dans chaque membre du paramètre.
+La troisième surcharge augmente `CRect` par le nombre d’unités spécifiées dans chaque membre du paramètre.
 
 ### <a name="example"></a>Exemple
 
@@ -988,7 +988,7 @@ Pointe vers un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure o
 
 Le paramètre *x* et *y* (ou `cx` et `cy`) valeurs sont soustraits `CRect`.
 
-La troisième surcharge dégonfle `CRect` par le nombre de spécifié d’unités dans chaque membre du paramètre. Notez que cette surcharge fonctionne comme [DeflateRect](#deflaterect).
+La troisième surcharge dégonfle `CRect` par le nombre d’unités spécifiées dans chaque membre du paramètre. Notez que cette surcharge fonctionne comme [DeflateRect](#deflaterect).
 
 ### <a name="example"></a>Exemple
 
@@ -1085,7 +1085,7 @@ Le `CRect` résultant de déplacement ou de gonfler `CRect` par le nombre d’un
 
 Le paramètre *x* et *y* (ou `cx` et `cy`) paramètres sont ajoutés à `CRect`de position.
 
-La troisième surcharge retourne un nouvel `CRect` qui est égal à `CRect` augmenté le nombre de spécifié d’unités dans chaque membre du paramètre.
+La troisième surcharge retourne un nouvel `CRect` qui est égal à `CRect` augmenté le nombre d’unités spécifié dans chaque membre du paramètre.
 
 ### <a name="example"></a>Exemple
 
@@ -1128,7 +1128,7 @@ Le `CRect` résultant de déplacement ou de DÉGONFLAGE `CRect` par le nombre d�
 
 Le paramètre *x* et *y* (ou `cx` et `cy`) paramètres sont soustraits `CRect`de position.
 
-La troisième surcharge retourne un nouvel `CRect` qui est égal à `CRect` réduite par le nombre de spécifié d’unités dans chaque membre du paramètre. Notez que cette surcharge fonctionne comme [DeflateRect](#deflaterect), et non [SubtractRect](#subtractrect).
+La troisième surcharge retourne un nouvel `CRect` qui est égal à `CRect` réduite par le nombre d’unités spécifiées dans chaque membre du paramètre. Notez que cette surcharge fonctionne comme [DeflateRect](#deflaterect), et non [SubtractRect](#subtractrect).
 
 ### <a name="example"></a>Exemple
 

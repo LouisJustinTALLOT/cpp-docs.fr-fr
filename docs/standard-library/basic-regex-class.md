@@ -1,17 +1,17 @@
 ---
 title: basic_regex, classe
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - regex/std::basic_regex
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633401"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565449"
 ---
 # <a name="basicregex-class"></a>basic_regex, classe
 
@@ -58,13 +58,13 @@ Ces fonctions membres acceptent également un argument `flags` qui spécifie dif
 |-|-|
 |publique statique icase de flag_type const|regex_constants::icase|
 |publique statique nosubs de flag_type const|regex_constants::nosubs|
-|optimiser publique flag_type const statique|regex_constants::Optimize|
-|collate publique flag_type const statique|regex_constants::COLLATE|
+|optimiser publique flag_type const statique|regex_constants::optimize|
+|collate publique flag_type const statique|regex_constants::collate|
 |public static const flag_type ECMAScript|regex_constants::ECMAScript|
-|flag_type const statique publique base|regex_constants::Basic|
-|public flag_type const statiques étendues|regex_constants::Extended|
+|flag_type const statique publique base|regex_constants::basic|
+|public flag_type const statiques étendues|regex_constants::extended|
 |public static awk de flag_type const|regex_constants::awk|
-|public static grep de flag_type const|regex_constants::GREP|
+|public static grep de flag_type const|regex_constants::grep|
 |public static egrep de flag_type const|regex_constants::egrep|
 |caractéristiques RXtraits privés||
 
@@ -88,7 +88,7 @@ Ces fonctions membres acceptent également un argument `flags` qui spécifie dif
 |-|-|
 |[assign](#assign)|Assigne une valeur à l’objet d’expression régulière.|
 |[flags](#flags)|Retourne des indicateurs d’option de syntaxe.|
-|[get_loc](#get_loc)|Retourne l’objet des paramètres régionaux stockés.|
+|[getloc](#getloc)|Retourne l’objet des paramètres régionaux stockés.|
 |[imbue](#imbue)|Modifie l’objet des paramètres régionaux stocké.|
 |[mark_count](#mark_count)|Retourne le nombre de sous-expressions en correspondance.|
 |[swap](#swap)|Échange deux objets d’expression régulière.|
@@ -248,7 +248,7 @@ Pointeur vers le début de la séquence à copier.
 *flags*<br/>
 Indicateurs d'option de syntaxe à ajouter lors de la copie.
 
-*Len/TD >*<br/>
+*len/TD>*<br/>
 Longueur de la séquence à copier.
 
 *str*<br/>
@@ -322,7 +322,7 @@ Pointeur vers le début de la séquence à copier.
 *flags*<br/>
 Indicateurs d'option de syntaxe à ajouter lors de la copie.
 
-*Len/TD >*<br/>
+*len/TD>*<br/>
 Longueur de la séquence à copier.
 
 *str*<br/>
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Loc*<br/>
+*loc*<br/>
 Objet de paramètres régionaux à stocker.
 
 ### <a name="remarks"></a>Notes

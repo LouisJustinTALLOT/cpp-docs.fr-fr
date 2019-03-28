@@ -1,6 +1,6 @@
 ---
 title: ICommandSource, Interface
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296018"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565608"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource, Interface
 
@@ -59,7 +59,7 @@ Voir [Guide pratique pour Ajouter le routage des commandes au contrôle Windows 
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 
@@ -179,7 +179,7 @@ ID de la commande.
 
 Cette méthode supprime le Gestionnaire de commandes mappé à cmdID à partir de l’objet de source de commande.
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 Supprime un groupe de gestionnaires de commandes à partir d’un objet de source de commande.
 ```
@@ -196,7 +196,7 @@ Index de début de la plage d’ID de commande.
 Index de fin de la plage d’ID de commande.
 ### <a name="remarks"></a>Notes
 
-Cette méthode supprime un groupe de gestionnaires de messages, mappé la spécifiée d’ID de commande par cmdIDMin et cmdIDMax, à partir de l’objet de source de commande.
+Cette méthode supprime un groupe de gestionnaires de messages, mappé à l’ID de commande spécifiés par cmdIDMin et cmdIDMax, à partir de l’objet de source de commande.
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ Index de début de la plage d’ID de commande.
 Index de fin de la plage d’ID de commande.
 ### <a name="remarks"></a>Notes
 
-Cette méthode supprime un groupe de gestionnaires de messages de commande interface utilisateur, mappé la spécifiée d’ID de commande par cmdIDMin et cmdIDMax, à partir de l’objet de source de commande.
+Cette méthode supprime un groupe de gestionnaires de messages de commande interface utilisateur, mappé à l’ID de commande spécifiés par cmdIDMin et cmdIDMax, à partir de l’objet de source de commande.
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

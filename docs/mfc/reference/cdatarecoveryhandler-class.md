@@ -1,6 +1,6 @@
 ---
 title: Cdatarecoveryhandler, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDataRecoveryHandler
 - AFXDATARECOVERY/CDataRecoveryHandler
@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5c5836a11dbf9e05db5b56e0bc5c062dd1617b2f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273034"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565855"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Cdatarecoveryhandler, classe
 
@@ -148,7 +148,7 @@ Avant de pouvoir utiliser un `CDataRecoveryHandler` de l’objet, vous devez app
 
 Étant donné que le `CDataRecoveryHandler` classe est étroitement liée au Gestionnaire de redémarrage, `CDataRecoveryHandler` varie selon le paramètre global `m_dwRestartManagerSupportFlags`. Ce paramètre détermine les autorisations du Gestionnaire de redémarrage et comment elle interagit avec votre application. Pour intégrer le Gestionnaire de redémarrage dans une application existante, vous devez attribuer `m_dwRestartManagerSupportFlags` la valeur appropriée dans le constructeur de votre application principale. Pour plus d’informations sur la façon d’utiliser le Gestionnaire de redémarrage, consultez [Comment : ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdatarecovery.h
 
@@ -168,7 +168,7 @@ TRUE si le `CDataRecoveryHandler` enregistré tous les documents ; FALSE si n�
 
 Cette méthode retourne TRUE si aucun document qui doit être enregistré. Elle retourne également TRUE sans enregistrer tous les documents si la récupération de la `CWinApp` ou `CDocManager` pour l’application génère une erreur.
 
-Pour utiliser cette méthode, vous devez définir AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART ou AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL dans `m_dwRestartManagerSupportFlags`. Consultez [m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags) pour plus d’informations.
+Pour utiliser cette méthode, vous devez définir AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART ou AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL dans `m_dwRestartManagerSupportFlags`. Pour plus d'informations, voir [Procédure : ajouter la prise en charge du Gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md).
 
 ##  <a name="autosavedocumentinfo"></a>  CDataRecoveryHandler::AutosaveDocumentInfo
 

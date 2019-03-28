@@ -1,6 +1,6 @@
 ---
 title: IResourceManager, structure
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - IResourceManager
 - CONCRTRM/concurrency::IResourceManager
@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 1f8f5992d9ce55100d193196a3c0f94b468ef892
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7afb37fb35040975d6e9471a1d12465e5163fafc
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275265"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565202"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager, structure
 
@@ -58,7 +58,7 @@ Utilisez le [CreateResourceManager](concurrency-namespace-functions.md) fonction
 
 `IResourceManager`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrtrm.h
 
@@ -120,7 +120,7 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 
 Le premier nœud dans l’ordre d’énumération comme défini par le Gestionnaire de ressources.
 
-##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion, énumération
+##  <a name="osversion"></a>  IResourceManager::OSVersion, énumération
 
 Type énuméré qui représente la version du système d'exploitation.
 

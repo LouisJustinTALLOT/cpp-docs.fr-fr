@@ -1,6 +1,6 @@
 ---
 title: CWinFormsDialog, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CWinFormsDialog
 - AFXWINFORMS/CWinFormsDialog
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: 4d0731e40a622f0d360cabc03b68b0fe74c1ebc9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1542f852a8fe3f05d81ae59efb8a522caae671fd
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277116"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565345"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog, classe
 
@@ -56,10 +56,10 @@ Le contrôle utilisateur .NET Framework, à afficher dans l’application MFC.
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name||
+|Nom||
 |----------|-|
 |[CWinFormsDialog::operator -&gt;](#operator_-_gt)|Remplace [CWinFormsDialog::GetControl](#getcontrol) dans les expressions.|
-|[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Convertit un type en tant que référence à un contrôle utilisateur Windows Forms.|
+|[CWinFormsDialog::operator TManagedControl ^](#operator-tmanagedcontrol-hat)|Convertit un type en tant que référence à un contrôle utilisateur Windows Forms.|
 
 ## <a name="remarks"></a>Notes
 
@@ -67,7 +67,7 @@ Le contrôle utilisateur .NET Framework, à afficher dans l’application MFC.
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) et [qui héberge un contrôle d’utilisateur Windows Form en tant que boîte de dialogue MFC](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwinforms.h
 
@@ -140,7 +140,7 @@ Cet opérateur fournit une syntaxe pratique qui remplace `GetControl` dans les e
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl^
+##  <a name="operator-tmanagedcontrol-hat"></a>  CWinFormsDialog::operator TManagedControl^
 
 Convertit un type en tant que référence à un contrôle utilisateur Windows Forms.
 

@@ -1,6 +1,6 @@
 ---
 title: CD2DGradientBrush, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DGradientBrush
 - AFXRENDERTARGET/CD2DGradientBrush
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: f49a3a1a1aaebed47b05bf003926379c6f0b8102
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2e04d714e3479224cfc4e207b70483786be33db8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290974"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565462"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush, classe
 
@@ -42,7 +42,7 @@ class CD2DGradientBrush : public CD2DBrush;
 |Nom|Description|
 |----------|-----------------|
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Construit un objet CD2DGradientBrush.|
-|[CD2DGradientBrush::~CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Destructeur. Appelé lorsqu’un objet de pinceau de dégradé D2D est détruit.|
+|[CD2DGradientBrush::~CD2DGradientBrush](#_dtorcd2dgradientbrush)|Destructeur. Appelé lorsqu’un objet de pinceau de dégradé D2D est détruit.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
@@ -52,7 +52,7 @@ class CD2DGradientBrush : public CD2DBrush;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Tableau des structures D2D1_GRADIENT_STOP.|
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|L’espace dans chacune des couleurs interpolation entre le dégradé est effectuée.|
@@ -69,7 +69,7 @@ class CD2DGradientBrush : public CD2DBrush;
 
 `CD2DGradientBrush`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

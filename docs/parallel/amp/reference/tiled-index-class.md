@@ -1,6 +1,6 @@
 ---
 title: tiled_index, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257902"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565215"
 ---
 # <a name="tiledindex-class"></a>tiled_index, classe
 
@@ -79,7 +79,7 @@ La longueur de la dimension la moins significative.
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[Barrier (constante)](#tiled_index__barrier)|Stocke un [tile_barrier](tile-barrier-class.md) objet qui représente une barrière de la mosaïque de threads actuelle.|
 |||
@@ -104,13 +104,13 @@ La longueur de la dimension la moins significative.
 
 `tiled_index`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp.h
 
 **Espace de noms :** Concurrence
 
-## <a name="tiled_index__ctor"></a>  tiled_index, constructeur
+## <a name="ctor"></a>  tiled_index, constructeur
 
 Initialise une nouvelle instance de la classe `tiled_index`.
 
@@ -152,7 +152,7 @@ Le `tile_index` objet doit être copié vers construit `tiled_index`.
 
 |||
 |-|-|
-|Name|Description|
+|Nom|Description|
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Initialise une nouvelle instance de la `tile_index` classe à partir de l’index de la mosaïque en coordonnées globales et la position relative dans la mosaïque en coordonnées locales. Le `_Global` et `_Tile_origin` paramètres sont calculées.|
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Initialise une nouvelle instance de la `tile_index` classe en copiant le texte spécifié `tiled_index` objet.|
 

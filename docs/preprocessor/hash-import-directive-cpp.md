@@ -1,6 +1,6 @@
 ---
 title: '#Importer la Directive (C++)'
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822624"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564952"
 ---
 # <a name="import-directive-c"></a>#import, directive (C++)
 
@@ -160,7 +160,7 @@ using namespace MyLib;
 
 immédiatement après le **#import** instruction dans le code source.
 
-L’espace de noms peut être supprimée à l’aide de la [no_namespace](#_predir_no_namespace) attribut de la **#import** directive. Toutefois, la suppression de l'espace de noms peut entraîner des collisions de noms. L’espace de noms peut également être renommé par la [rename_namespace](#_predir_rename_namespace) attribut.
+L’espace de noms peut être supprimée à l’aide de la [no_namespace](no-namespace.md)) attribut de la **#import** directive. Toutefois, la suppression de l'espace de noms peut entraîner des collisions de noms. L’espace de noms peut également être renommé par la [rename_namespace](rename-namespace.md) attribut.
 
 Le compilateur fournit le chemin d’accès complet aux dépendances de bibliothèque de types requises par la bibliothèque de types qu’il traite actuellement. Le chemin d’accès est écrit, sous forme de commentaires, dans l’en-tête de bibliothèque de types (.TLH) que le compilateur génère pour chaque bibliothèque de types traitée.
 

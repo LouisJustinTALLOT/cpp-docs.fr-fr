@@ -1,6 +1,6 @@
 ---
 title: CFixedStringT, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CFixedStringT
 - CSTRINGT/ATL::CFixedStringT
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-ms.openlocfilehash: a84afc50fb17c5e2ee21d136cd4697dec8fb97de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6c7649b7131e3b1620112acf89867d0731d7265d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739748"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564864"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT, classe
 
@@ -47,17 +47,17 @@ Le nombre de caractères stockés dans la mémoire tampon.
 
 |Nom|Description|
 |----------|-----------------|
-|[CFixedStringT::operator =](#eq)|Assigne une nouvelle valeur à un `CFixedStringT` objet.|
+|[CFixedStringT::operator =](#operator_eq)|Assigne une nouvelle valeur à un `CFixedStringT` objet.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe est un exemple d’une classe de chaîne personnalisée basée sur `CStringT`. Bien que tout à fait similaire, les deux classes diffèrent dans la mise en œuvre. Les principales différences entre `CFixedStringT` et `CStringT` sont :
+Cette classe est un exemple d’une classe de chaîne personnalisée basée sur `CStringT`. Bien que similaires, les deux classes diffèrent dans la mise en œuvre. Les principales différences entre `CFixedStringT` et `CStringT` sont :
 
 - La mémoire tampon caractère initial est alloué dans le cadre de l’objet et a une taille *t_nChars*. Cela permet la `CFixedString` objet pour occuper un segment de mémoire contiguë à des fins de performances. Toutefois, si le contenu d’un `CFixedStringT` objet excède *t_nChars*, la mémoire tampon est allouée dynamiquement.
 
 - La mémoire tampon de caractères pour un `CFixedStringT` objet est toujours la même longueur ( *t_nChars*). Il n’existe aucune limitation de taille de mémoire tampon pour `CStringT` objets.
 
-- Le Gestionnaire de mémoire pour `CFixedStringT` personnalisé tel que le partage d’un [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) objet entre deux ou plusieurs `CFixedStringT` objectsis ne pas autorisé. `CStringT` objets n’ont pas cette limitation.
+- Le Gestionnaire de mémoire pour `CFixedStringT` personnalisé tel que le partage d’un [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) objet entre deux ou plusieurs `CFixedStringT` objets n’est pas autorisée. `CStringT` objets n’ont pas cette limitation.
 
 Pour plus d’informations sur la personnalisation de `CFixedStringT` et gestion de la mémoire pour les objets string en général, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
@@ -71,7 +71,7 @@ Pour plus d’informations sur la personnalisation de `CFixedStringT` et gestion
 
 `CFixedStringT`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** cstringt.h
 
@@ -82,19 +82,19 @@ Construit un objet `CFixedStringT`.
 ```
 CFixedStringT() throw();
 explicit CFixedStringT(IAtlStringMgr* pStringMgr) throw();
-CFixedStringT(const CFixedStringT<StringType, t_nChars>& str);
-CFixedStringT(const StringType& str);
-CFixedStringT(const StringType::XCHAR* psz);
-explicit CFixedStringT(const StringType::YCHAR* psz);
-explicit CFixedStringT(const unsigned char* psz);
+CFixedStringT(const CFixedStringT<StringType, t_nChars>& strSrc);
+CFixedStringT(const StringType& strSrc);
+CFixedStringT(const StringType::XCHAR* pszSrc);
+explicit CFixedStringT(const StringType::YCHAR* pszSrc);
+explicit CFixedStringT(const unsigned char* pszSrc);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*psz*<br/>
+*pszSrc*<br/>
 Une chaîne se terminant par null doit être copié dans ce `CFixedStringT` objet.
 
-*str*<br/>
+*strSrc*<br/>
 Un existant `CFixedStringT` objet doit être copié dans ce `CFixedStringT` objet.
 
 *pStringMgr*<br/>
@@ -102,27 +102,27 @@ Un pointeur vers le Gestionnaire de mémoire de le `CFixedStringT` objet. Pour p
 
 ### <a name="remarks"></a>Notes
 
-Étant donné que les constructeurs suivants copient les données d’entrée dans le nouveau stockage alloué, vous devez être conscient que la mémoire peuvent entraîner des exceptions. Notez que certaines de ces constructeurs agissent en tant que fonctions de conversion.
+Étant donné que les constructeurs suivants copient les données d’entrée dans le nouveau stockage alloué, vous devez être conscient que la mémoire peuvent entraîner des exceptions. Certaines de ces constructeurs agissent en tant que fonctions de conversion.
 
-##  <a name="operator__eq"></a>  CFixedStringT::operator =
+##  <a name="operator_eq"></a>  CFixedStringT::operator =
 
 Réinitialise un existant `CFixedStringT` objet avec de nouvelles données.
 
 ```
 CFixedStringT<StringType, t_nChars>& operator=(
-    const CFixedStringT<StringType, t_nChars>& str);
-CFixedStringT<StringType, t_nChars>& operator=(const char* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const wchar_t* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const unsigned char* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
+    const CFixedStringT<StringType, t_nChars>& strSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const char* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const wchar_t* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const unsigned char* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const StringType& strSrc);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*pszSrc*<br/>
 Une chaîne se terminant par null doit être copié dans ce `CFixedStringT` objet.
 
-*psz*<br/>
+*strSrc*<br/>
 Un existant `CFixedStringT` doit être copié dans ce `CFixedStringT` objet.
 
 ### <a name="remarks"></a>Notes

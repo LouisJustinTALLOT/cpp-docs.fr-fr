@@ -1,6 +1,6 @@
 ---
 title: CD2DTextFormat, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DTextFormat
 - AFXRENDERTARGET/CD2DTextFormat
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-ms.openlocfilehash: 9d796ac39ba29e6d286926f4975f8f6d2054e7ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa2f3b663cb5258c64ec0405abacf2e4eedeb987
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297890"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565319"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat, classe
 
@@ -48,7 +48,7 @@ class CD2DTextFormat : public CD2DResource;
 |Nom|Description|
 |----------|-----------------|
 |[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Construit un objet CD2DTextFormat.|
-|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|Destructeur. Appelé lorsqu’un objet de format de texte D2D est détruit.|
+|[CD2DTextFormat::~CD2DTextFormat](#_dtorcd2dtextformat)|Destructeur. Appelé lorsqu’un objet de format de texte D2D est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -70,7 +70,7 @@ class CD2DTextFormat : public CD2DResource;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|Pointeur vers un IDWriteTextFormat.|
 
@@ -82,7 +82,7 @@ class CD2DTextFormat : public CD2DResource;
 
 [CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

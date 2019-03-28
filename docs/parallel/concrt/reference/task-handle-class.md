@@ -1,6 +1,6 @@
 ---
 title: task_handle, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8528bc212603484be9325ed967e9475e4faa1348
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298085"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565098"
 ---
 # <a name="taskhandle-class"></a>task_handle, classe
 
@@ -39,7 +39,7 @@ Le type de l’objet de fonction qui sera appelé pour exécuter le travail repr
 
 |Nom|Description|
 |----------|-----------------|
-|[task_handle](#ctor)|Construit un nouvel `task_handle` objet. Le travail de la tâche est effectué en appelant la fonction spécifiée en tant que paramètre au constructeur.|
+|[task_handle](#task_handle)|Construit un nouvel `task_handle` objet. Le travail de la tâche est effectué en appelant la fonction spécifiée en tant que paramètre au constructeur.|
 |[~ task_handle, destructeur](#dtor)|Détruit le `task_handle` objet.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
@@ -62,7 +62,7 @@ Le runtime crée une copie de la fonction de travail que vous passez à un `task
 
 `task_handle`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** ppl.h
 
@@ -76,7 +76,7 @@ L’opérateur d’appel de fonction que le runtime appelle pour effectuer le tr
 void operator()() const;
 ```
 
-##  <a name="task_handle__ctor"></a> task_handle
+## <a name="taskhandle"></a>task_handle
 
 Construit un nouvel `task_handle` objet. Le travail de la tâche est effectué en appelant la fonction spécifiée en tant que paramètre au constructeur.
 
