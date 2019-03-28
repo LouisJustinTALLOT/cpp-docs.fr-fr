@@ -2,12 +2,12 @@
 title: Portage vers la plateforme Windows universelle (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518539"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278461"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portage vers la plateforme Windows universelle (C++)
 
@@ -21,9 +21,9 @@ Cette rubrique contient les procédures suivantes relatives au portage de code v
 
 - [Portage d'un composant d'exécution Windows 8.1 vers UWP](#BK_81Component)
 
-Si vous avez une DLL Win32 de bureau classique et que vous souhaitez l’appeler à partir d’une application UWP, c’est également possible. Ces procédures vous permettent de créer une couche d’interface utilisateur UWP pour une application C++ de bureau Windows classique existante ou votre code C++ standard multiplateforme. Consultez [Guide pratique pour utiliser le code C++ existant dans une application de plateforme universelle Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
+Si vous avez une DLL Win32 de bureau classique et que vous souhaitez l’appeler à partir d’une application UWP, c’est également possible. Ces procédures vous permettent de créer une couche d’interface utilisateur UWP pour une application C++ de bureau Windows classique existante ou votre code C++ standard multiplateforme. Voir [Guide pratique pour utiliser le code C++ existant dans une application de plateforme Windows universelle](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
-## <a name="BK_81StoreApp"></a> Portage d’une application du Windows Store Windows 8.1 vers UWP
+## <a name="BK_81StoreApp"></a> Portage d’une application du Windows Store Windows 8.1 vers UWP
 
 Si vous avez une application du Windows Store Windows 8.1, vous pouvez appliquer cette procédure pour qu'elle fonctionne sur la plateforme UWP et sur tout appareil qui exécute Windows 10.  Il est préférable de créer d’abord le projet avec Visual Studio 2017 comme projet Windows 8.1, pour éliminer les problèmes résultant des modifications apportées au compilateur et aux bibliothèques. Une fois cette opération terminée, il existe deux façons de convertir un projet UWP Windows 10. Le moyen le plus simple (comme expliqué dans la procédure suivante) consiste à créer un projet Windows universel et à y copier votre code existant. Si vous utilisiez un projet universel pour la version de bureau de Windows 8.1 et pour Windows Phone 8.1, votre projet commencera avec deux dispositions différentes en XAML, mais finira avec une disposition dynamique unique qui s'adapte à la taille d'affichage.
 
@@ -74,7 +74,7 @@ Si vous avez une DLL ou un composant Windows Runtime qui fonctionne déjà avec 
 
 ### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Pour porter un composant d'exécution Windows 8.1 vers UWP
 
-1. Dans la boîte de dialogue **Nouveau projet** dans Visual Studio 2017, localisez le nœud **Windows universel**. Si vous ne voyez pas ce nœud, installez d’abord les [Outils pour Windows 10](http://go.microsoft.com/fwlink/p/?LinkID=617903) . Choisissez le modèle **Composant Windows Runtime** , donnez un nom à votre composant, puis choisissez le bouton **OK** . Le nom du composant sera utilisé comme nom de l’espace de noms. C’est pourquoi il est conseillé d’utiliser le même nom que celui de l’espace de noms de vos anciens projets. Pour ce faire, vous devez créer le projet dans un dossier autre que celui de l'ancien. Si vous choisissez un nom différent, vous pouvez mettre à jour le nom de l'espace de noms dans les fichiers de code générés.
+1. Dans la boîte de dialogue **Nouveau projet** dans Visual Studio 2017, localisez le nœud **Windows universel**. Si vous ne voyez pas ce nœud, installez d’abord le [SDK Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Choisissez le modèle **Composant Windows Runtime** , donnez un nom à votre composant, puis choisissez le bouton **OK** . Le nom du composant sera utilisé comme nom de l’espace de noms. C’est pourquoi il est conseillé d’utiliser le même nom que celui de l’espace de noms de vos anciens projets. Pour ce faire, vous devez créer le projet dans un dossier autre que celui de l'ancien. Si vous choisissez un nom différent, vous pouvez mettre à jour le nom de l'espace de noms dans les fichiers de code générés.
 
 1. Fermez le projet.
 
