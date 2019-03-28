@@ -1,19 +1,19 @@
 ---
 title: Définir le compilateur C++ et générer des propriétés dans Visual Studio
 description: Utilisez l’IDE Visual Studio pour modifier les options du compilateur et éditeur de liens C++ et autres paramètres de build.
-ms.date: 12/10/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 55adb6dc91919bda9c2827a89e5de536667085c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826055"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564909"
 ---
 # <a name="set-compiler-and-build-properties"></a>Définir un compilateur et les propriétés de build
 
@@ -65,7 +65,7 @@ L’illustration suivante montre les pages de propriétés d’un projet Visual 
 
 ![Pages de propriétés de projet](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-Vous pouvez utiliser l’éditeur de propriétés pour voir les valeurs de toutes les macros disponibles. Les macros sont décrites dans la section [Macros des pages de propriétés](#bkmkPropertiesVersusMacros) plus loin dans cet article.
+Vous pouvez utiliser l’éditeur de propriétés pour voir les valeurs de toutes les macros disponibles.
 
 ### <a name="predefined-macros"></a>Macros prédéfinies
 
@@ -79,7 +79,7 @@ Possède la syntaxe `%(name)`. Pour un fichier, une macro d'élément s'applique
 
 Vous pouvez créer des *macros définies par l’utilisateur* à utiliser comme variables dans les générations de projet. Par exemple, vous pouvez créer une macro définie par l'utilisateur qui fournit une valeur pour une étape de génération personnalisée ou un outil de génération personnalisée. Une macro définie par l'utilisateur est une paire nom/valeur. Dans un fichier projet, utilisez la notation **$(**<em>nom</em>**)** pour accéder à la valeur.
 
-Une macro définie par l’utilisateur est stockée dans une feuille de propriétés. Si votre projet ne contient pas déjà une feuille de propriétés, vous pouvez en créer un en suivant les étapes sous [les paramètres de projet de Visual Studio C++ partage ou resuse](#bkmkPropertySheets).
+Une macro définie par l’utilisateur est stockée dans une feuille de propriétés. Si votre projet ne contient pas déjà une feuille de propriétés, vous pouvez en créer un en suivant les étapes sous [partage ou réutilisation des paramètres du projet Visual Studio](create-reusable-property-configurations.md).
 
 #### <a name="to-create-a-user-defined-macro"></a>Pour créer une macro définie par l’utilisateur
 
@@ -128,13 +128,13 @@ Dans le volet droit, modifiez les paramètres de projet **Environnement** ou **F
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Partage ou resuse paramètres du projet Visual Studio](create-reusable-property-configurations.md)<br/>
+[Partager ou réutiliser les paramètres de projet Visual Studio](create-reusable-property-configurations.md)<br/>
 Comment créer un fichier .props avec les paramètres de génération personnalisée qui peuvent être partagés ou resused.
 
-[Héritage de propriété de projet](project-property-inheritance.md)<br/>
+[Héritage de propriétés de projet](project-property-inheritance.md)<br/>
 Décrit l’ordre d’évaluation pour les variables d’environnement dans le processus de génération, .targets, fichiers .vcxproj et .props.
 
-[Modifier les propriétés et cibles sans modifier le fichier de projet](modify-project-properties-without-changing-project-file.md)<br/>
+[Modifier les propriétés et les cibles sans changer le fichier projet](modify-project-properties-without-changing-project-file.md)<br/>
 Comment créer des paramètres de build temporaires sans avoir à modifier un fichier projet. 
 
 ## <a name="see-also"></a>Voir aussi

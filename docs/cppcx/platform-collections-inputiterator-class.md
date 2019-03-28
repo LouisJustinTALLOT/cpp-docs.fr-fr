@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::InputIterator, classe
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745805"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565137"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator, classe
 
@@ -53,7 +53,7 @@ Nom de type de la classe de modèle InputIterator.
 |Nom|Description|
 |----------|-----------------|
 |[InputIterator::operator!=, opérateur](#operator-inequality)|Indique si l'InputIterator actif n'est pas égal à un InputIterator spécifié.|
-|[InputIterator::operator*, opérateur](#operator-decrement)|Récupère une référence à l’élément spécifié par l’InputIterator actif.|
+|[InputIterator::operator*, opérateur](#operator-dereference)|Récupère une référence à l’élément spécifié par l’InputIterator actif.|
 |[InputIterator::operator++, opérateur](#operator-increment)|Incrémente l'objet InputIterator actuel.|
 |[InputIterator::operator==, opérateur](#operator-equality)|Indique si l'InputIterator actif est égal à un InputIterator spécifié.|
 |[InputIterator::operator->, opérateur](#operator-arrow)|Récupère l’adresse de l’élément référencé par l’InputIterator actif.|
@@ -62,7 +62,7 @@ Nom de type de la classe de modèle InputIterator.
 
 `InputIterator`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** collection.h
 
@@ -76,12 +76,12 @@ Initialise une nouvelle instance de la classe InputIterator.
 
 ```
 InputIterator();
-explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
+explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*iter*<br/>
+*iterator*<br/>
 Objet itérateur.
 
 ## <a name="operator-arrow"></a>  InputIterator::operator -&gt; opérateur

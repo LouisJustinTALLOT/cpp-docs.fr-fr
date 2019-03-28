@@ -1,6 +1,6 @@
 ---
 title: tile_barrier, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tile_barrier
 - AMP/tile_barrier
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0e742a0cc1a0809fc08b3862cadb7e3deb36fa8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301166"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564981"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier, classe
 
@@ -50,13 +50,13 @@ class tile_barrier;
 
 `tile_barrier`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp.h
 
 **Espace de noms :** Concurrence
 
-## <a name="tile_barrier__ctor"></a>  tile_barrier, constructeur
+## <a name="ctor"></a>  tile_barrier, constructeur
 
 Initialise une nouvelle instance de la classe en copiant une existante.
 
@@ -72,7 +72,7 @@ tile_barrier(
 *_Other*<br/>
 Le `tile_barrier` objet à copier.
 
-## <a name="wait"></a>  wait
+## <a name="wait"></a>attente
 
 Indique à tous les threads dans le groupe de threads (mosaïque) pour arrêter l’exécution jusqu'à ce que tous les threads dans la mosaïque aient terminé l’attente.
 
@@ -82,7 +82,7 @@ Indique à tous les threads dans le groupe de threads (mosaïque) pour arrêter 
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence
+## <a name="waitwithallmemoryfence"></a>wait_with_all_memory_fence
 
 Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les threads dans une mosaïque aient atteint cet appel. Cela garantit que tous les accès mémoire sont visibles à d’autres threads dans la mosaïque de threads et ont été exécutés dans l’ordre du programme.
 
@@ -92,7 +92,7 @@ Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tou
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence
+## <a name="waitwithglobalmemoryfence"></a>wait_with_global_memory_fence
 
 Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les threads dans une mosaïque aient atteint cet appel. Cela garantit que tous les accès mémoire globaux sont visibles à d’autres threads dans la mosaïque de threads et ont été exécutés dans l’ordre du programme.
 
@@ -102,7 +102,7 @@ Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tou
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence
+## <a name="waitwithtilestaticmemoryfence"></a>wait_with_tile_static_memory_fence
 
 Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les threads dans une mosaïque aient atteint cet appel. Cela garantit que `tile_static` mémoire les accès sont visibles à d’autres threads dans la mosaïque de threads et ont été exécutés dans l’ordre du programme.
 

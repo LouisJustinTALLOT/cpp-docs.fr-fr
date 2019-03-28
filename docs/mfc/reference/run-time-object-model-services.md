@@ -1,17 +1,17 @@
 ---
 title: Services du modèle objet au moment de l'exécution
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - vc.mfc.macros
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 45ad85e5b85674be957320ef6fdb7f5a81db6503
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 59f5be1d8bb38295b50732583fea47924160cecf
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304676"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565890"
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
 
@@ -75,7 +75,7 @@ Pointeur vers une chaîne se terminant par null qui contient le nom de fonction,
 
 Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 afxcomctl32.h, afxcomctl32.inl
 
@@ -98,7 +98,7 @@ Pointeur vers une chaîne se terminant par null qui contient le nom de fonction,
 
 Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress). Cette macro est la version Unicode de AFX_COMCTL32_IF_EXISTS.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 afxcomctl32.h, afxcomctl32.inl
 
@@ -129,7 +129,7 @@ Pour plus d’informations sur la macro DECLARE_DYNAMIC, consultez [rubriques de
 
 Consultez l’exemple de [IMPLEMENT_DYNAMIC](#implement_dynamic).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -163,7 +163,7 @@ Pour plus d’informations sur la macro DECLARE_DYNCREATE, consultez [rubriques 
 
 Consultez l’exemple de [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -186,7 +186,7 @@ Le nom de la classe de contrôle.
 
 `GetUserTypeNameID` et `GetMiscStatus` sont des fonctions virtuelles pures, déclarées dans `COleControl`. Étant donné que ces fonctions sont pures virtuel, elles doivent être remplacées dans votre classe de contrôle. En plus de DECLARE_OLECTLTYPE, vous devez ajouter l’implement_olectltype (macro) à votre déclaration de classe du contrôle.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxctl.h
 
@@ -211,7 +211,7 @@ Utilisez le `DECLARE_PROPPAGEIDS` macro à la fin de votre déclaration de class
 
 Pour plus d’informations sur les pages de propriétés, consultez l’article [contrôles ActiveX : Pages de propriétés](../mfc-activex-controls-property-pages.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxctl.h
 
@@ -248,7 +248,7 @@ Pour plus d’informations sur la macro DECLARE_SERIAL, consultez [rubriques de 
 
 [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -280,7 +280,7 @@ Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc
 
 [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -316,7 +316,7 @@ Notez que cette définition de macro va appeler le constructeur par défaut pour
 
 [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -359,11 +359,11 @@ Le nom externe est l’identificateur exposée à d’autres applications. Les a
 
 L’ID de classe OLE est un identificateur unique de 128 bits pour l’objet. Il se compose d’un **long**, deux **WORD**s et huit **octets**s, telle que représentée par *l*, *w1*, *w2*, et *b1* via *b8* dans la description de la syntaxe. Les Assistants d’Assistant Application et de code créent les ID de classe OLE unique pour vous en fonction des besoins.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdisp.h
 
-## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
+## <a name="implementolectltype"></a>IMPLEMENT_OLECTLTYPE
 
 Implémente le `GetUserTypeNameID` et `GetMiscStatus` fonctions membres de votre classe de contrôle.
 
@@ -393,7 +393,7 @@ Le `GetUserTypeNameID` fonction membre retourne la chaîne de ressource qui iden
 > [!NOTE]
 >  Par défaut utilisé par le ActiveX ControlWizard sont les suivantes : OLEMISC_ACTIVATEWHENVISIBLE OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE et OLEMISC_RECOMPOSEONRESIZE.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxctl.h
 
@@ -430,7 +430,7 @@ Pour plus d’informations, consultez le [rubriques de la classe CObject](../../
 
 [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -457,7 +457,7 @@ Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc
 
 [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -482,7 +482,7 @@ Ajoutez le declare_olecreate (macro) dans le module .h pour la classe et ensuite
 
 Si DECLARE_OLECREATE est inclus dans la déclaration de classe, IMPLEMENT_OLECREATE doit être inclus dans l’implémentation de classe. Une déclaration de classe à l’aide de DECLARE_OLECREATE doit également utiliser DECLARE_DYNCREATE ou DECLARE_SERIAL.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxdisp.h
 
@@ -513,7 +513,7 @@ Le nom externe est l’identificateur exposée à d’autres applications. Les a
 
 L’ID de classe OLE est un identificateur unique de 128 bits pour l’objet. Il se compose d’un **long**, deux **WORD**s et huit **octets**s, telle que représentée par *l*, *w1*, *w2*, et *b1* via *b8* dans la description de la syntaxe. Les Assistants d’Assistant Application et de code créent les ID de classe OLE unique pour vous en fonction des besoins.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxdisp.h
 

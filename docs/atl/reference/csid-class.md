@@ -1,6 +1,6 @@
 ---
 title: CSid, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CSid
 - ATLSECURITY/ATL::CSid
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4c8d05fd193254f2431bbec7692ff25420c1bf05
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301894"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565868"
 ---
 # <a name="csid-class"></a>CSid, classe
 
@@ -86,8 +86,8 @@ class CSid
 |-|-|
 |[operator ==](#operator_eq_eq)|Teste si deux objets de descripteur de sécurité pour l’égalité|
 |[operator !=](#operator_neq)|Teste si deux objets de descripteur de sécurité pour vérifier leur inégalité|
-|[Opérateur \<](#operator_lt_)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
-|[opérateur >](#operator_gt_)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
+|[Opérateur \<](#operator_lt)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
+|[opérateur >](#operator_gt)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
 |[Opérateur \<=](#operator_lt__eq)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
 |[operator >=](#operator_gt__eq)|Compare la valeur relative de deux objets de descripteurs de sécurité.|
 
@@ -99,7 +99,7 @@ Les applications ne doivent pas modifier le `SID` structure directement, mais pl
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsecurity.h
 
@@ -119,7 +119,7 @@ Retourne le LPCTSTR pointant vers le nom du compte.
 
 Cette méthode tente de trouver un nom pour le texte spécifié `SID` (identificateur de sécurité). Pour plus d’informations, consultez [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Si aucun nom de compte pour le `SID` peut être trouvé, `AccountName` retourne une chaîne vide. Cela peut se produire si un délai d’expiration réseau empêche cette méthode de recherche du nom. Elle se produit également pour les identificateurs de sécurité sans nom de compte correspondant, par exemple une ouverture de session `SID` qui identifie une ouverture de session.
+Si aucun nom de compte pour le `SID` peut être trouvé, `AccountName` retourne une chaîne vide. Cela peut se produire si un délai d’expiration réseau empêche cette méthode de recherche du nom. Elle se produit également pour les identificateurs de sécurité sans nom de compte correspondant, comme un `SID` qui identifie une session de connexion.
 
 ##  <a name="csid"></a>  CSid::CSid
 
@@ -210,7 +210,7 @@ Retourne le `LPCTSTR` pointant vers le domaine.
 
 Cette méthode tente de trouver un nom pour le texte spécifié `SID` (identificateur de sécurité). Pour plus d’informations, consultez [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Si aucun nom de compte pour le `SID` peut être trouvé, `Domain` retourne le domaine comme une chaîne vide. Cela peut se produire si un délai d’expiration réseau empêche cette méthode de recherche du nom. Elle se produit également pour les identificateurs de sécurité sans nom de compte correspondant, par exemple une ouverture de session `SID` qui identifie une ouverture de session.
+Si aucun nom de compte pour le `SID` peut être trouvé, `Domain` retourne le domaine comme une chaîne vide. Cela peut se produire si un délai d’expiration réseau empêche cette méthode de recherche du nom. Elle se produit également pour les identificateurs de sécurité sans nom de compte correspondant, comme un `SID` qui identifie une session de connexion.
 
 ##  <a name="equalprefix"></a>  CSid::EqualPrefix
 

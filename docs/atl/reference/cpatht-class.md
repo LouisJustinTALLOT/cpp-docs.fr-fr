@@ -1,6 +1,6 @@
 ---
 title: Cpatht, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CPathT
 - ATLPATH/ATL::CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273021"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565786"
 ---
 # <a name="cpatht-class"></a>Cpatht, classe
 
 Cette classe représente un chemin d’accès.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -139,7 +139,7 @@ La classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [C
 |----------|-----------------|
 |[StringType const CPathT::operator &](#operator_const_stringtype_amp)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|
-|[CPathT::operator StringType &](#operator_stringtype)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|
+|[CPathT::operator StringType &](#operator_stringtype_amp)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|
 |[CPathT::operator +=](#operator_add_eq)|Cet opérateur ajoute une chaîne pour le chemin d’accès.|
 
 ### <a name="public-data-members"></a>Membres de données publics
@@ -158,7 +158,7 @@ La classe de chaîne ATL/MFC à utiliser pour le chemin d’accès (consultez [C
 
 `typedef CPathT< CStringW > CPathW;`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlpath.h
 
@@ -653,7 +653,7 @@ Retourne le chemin d’accès de mise à jour.
 Cet opérateur permet à l’objet à être traitée comme une chaîne.
 
 ```
-operatorconst StringType&() const throw();
+operator const StringType&() const throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
@@ -665,19 +665,19 @@ Retourne une chaîne représentant le chemin d’accès actuel géré par cet ob
 Cet opérateur permet à l’objet à être traitée comme une chaîne.
 
 ```
-operatorPCXSTR() const throw();
+operator PCXSTR() const throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
 Retourne une chaîne représentant le chemin d’accès actuel géré par cet objet.
 
-##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;
+##  <a name="operator_stringtype_amp"></a>  CPathT::operator StringType &amp;
 
 Cet opérateur permet à l’objet à être traitée comme une chaîne.
 
 ```
-operatorStringType&() throw();
+operator StringType&() throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour

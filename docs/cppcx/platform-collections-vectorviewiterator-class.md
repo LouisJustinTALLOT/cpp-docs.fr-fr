@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::VectorViewIterator, classe
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743740"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565660"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator, classe
 
@@ -61,7 +61,7 @@ Typename de la classe de modèle VectorViewIterator.
 |[VectorViewIterator::operator\[\]](#operator-at)|Extrait une référence à l'élément qui est un offset spécifié de l'objet VectorViewIterator actuel.|
 |[VectorViewIterator::operator+, opérateur](#operator-plus)|Retourne un VectorIterator qui référence l'élément au décalage spécifié à partir du VectorViewIterator spécifié.|
 |[VectorViewIterator::operator++, opérateur](#operator-increment)|Incrémente l'objet VectorViewIterator actuel.|
-|[VectorViewIterator::operator+=, opérateur](#operator-plus-assign)|Incrémente le VectorViewIterator actuel par le décalage spécifié.|
+|[VectorViewIterator::operator+=, opérateur](#operator-plus-equals)|Incrémente le VectorViewIterator actuel par le décalage spécifié.|
 |[VectorViewIterator::operator<, opérateur](#operator-less-than)|Indique si le VectorViewIterator actif est inférieur à un VectorViewIterator spécifié.|
 |[VectorViewIterator::operator\<=, opérateur](#operator-less-than-or-equals)|Indique si le VectorViewIterator actif est inférieur ou égal à un VectorViewIterator spécifié.|
 |[VectorViewIterator::operator-=, opérateur](#operator-minus-assign)|Décrémente le VectorViewIterator actif du décalage spécifié.|
@@ -74,7 +74,7 @@ Typename de la classe de modèle VectorViewIterator.
 
 `VectorViewIterator`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** collection.h
 

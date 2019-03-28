@@ -1,6 +1,6 @@
 ---
 title: CStringT, classe
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750869"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565816"
 ---
 # <a name="cstringt-class"></a>CStringT, classe
 
@@ -182,7 +182,7 @@ Détermine si la classe string a besoin de prise en charge de la bibliothèque R
 
 |||
 |-|-|
-|[operator =](#operator_eq)|Assigne une nouvelle valeur à un `CStringT` objet.|
+|[CStringT::operator =](#operator_eq)|Assigne une nouvelle valeur à un `CStringT` objet.|
 |[CStringT::operator +](#operator_add)|Concatène deux chaînes ou un caractère et une chaîne.|
 |[CStringT::operator +=](#operator_add_eq)|Concatène une nouvelle chaîne à la fin d’une chaîne existante.|
 |[CStringT::operator ==](#operator_eq_eq)|Détermine si deux chaînes sont égales de façon logique.|
@@ -251,7 +251,7 @@ Les types de chaîne suivants sont disponibles dans les projets où ATL_CSTRING_
 
 Étant donné que `CStringT` utilise un argument de modèle pour définir le type de caractère (soit [wchar_t](../../c-runtime-library/standard-types.md) ou [char](../../c-runtime-library/standard-types.md)) pris en charge, les types de paramètre de méthode peuvent être compliqués dans certains cas. Pour simplifier ce problème, un ensemble de types prédéfinis est défini et utilisé tout au long de la `CStringT` classe. Le tableau suivant répertorie les différents types :
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`XCHAR`|Un caractère unique (soit **wchar_t** ou **char**) avec le même type de caractère en tant que le `CStringT` objet.|
 |`YCHAR`|Un caractère unique (soit **wchar_t** ou **char**) avec le type de caractère opposé que le `CStringT` objet.|
@@ -269,7 +269,7 @@ Les types de chaîne suivants sont disponibles dans les projets où ATL_CSTRING_
 
 `CStringT`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Header|Utiliser pour|
 |------------|-------------|
@@ -1023,6 +1023,56 @@ Cette fonction n’est pas disponible si _UNICODE est défini.
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple de [CStringT::AnsiToOem](#ansitooem).
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+Assigne une nouvelle valeur à la chaîne.
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*strSrc*<br/>
+Un `CStringT` à affecter à cette chaîne.
+
+*str*<br/>
+Référence à un objet `CThisSimpleString`.
+
+*bMFCDLL*<br/>
+Valeur booléenne qui spécifie si le projet est une DLL MFC ou non.
+
+*BaseType*<br/>
+Le type de base de chaîne.
+
+*var*<br/>
+Un objet variant à affecter à cette chaîne.
+
+*ch*<br/>
+Un caractère ANSI ou Unicode à assigner à la chaîne.
+
+*pszSrc*<br/>
+Pointeur vers la chaîne d’origine assignée.
+
+### <a name="remarks"></a>Notes
+
+L’opérateur d’assignation accepte une autre `CStringT` objet, un pointeur de caractère ou un caractère unique. Vous devez être conscient que les exceptions peuvent se produire chaque fois que vous utilisez cet opérateur, car le nouveau stockage peut être alloué de mémoire.
+
+Pour plus d’informations sur `CThisSimpleString`, consultez la section Notes de [CStringT::CStringT](#cstringt).
+
+> [!NOTE]
+> Bien qu’il soit possible de créer `CStringT` instances qui contiennent des caractères null incorporés, nous vous déconseillons il. Appel des méthodes et des opérateurs sur `CStringT` objets qui contiennent des caractères null incorporés peuvent produire des résultats inattendus.
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 

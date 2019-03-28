@@ -1,6 +1,6 @@
 ---
 title: valarray, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f38d431248c524a65b4a7a7126ba73b767a64173
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525305"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565738"
 ---
 # <a name="valarray-class"></a>valarray, classe
 
@@ -88,7 +88,7 @@ En particulier, aucune différence même minime ne peut exister entre la constru
 |-|-|
 |[operator!](#op_not)|Un opérateur unaire qui obtient les valeurs `NOT` logiques de chaque élément d'un `valarray`.|
 |[operator%=](#op_mod_eq)|Obtient le reste de la division (élément par élément) des éléments d'un tableau par un `valarray` spécifié ou par une valeur du type d'élément.|
-|[operator&=](#op_amp_eq)|Obtient le résultat d'une opération `AND` au niveau du bit des éléments d'un tableau avec les éléments correspondants d'un `valarray` spécifié ou avec une valeur du type d'élément.|
+|[operator&=](#op_and_eq)|Obtient le résultat d'une opération `AND` au niveau du bit des éléments d'un tableau avec les éléments correspondants d'un `valarray` spécifié ou avec une valeur du type d'élément.|
 |[operator>>=](#op_gt_gt_eq)|Décale vers la droite les bits pour chaque élément d'un opérande `valarray` d'un nombre spécifié de positions ou d'une quantité élément par élément spécifiée par un second `valarray`.|
 |[operator<<=](#op_lt_lt_eq)|Décale vers la gauche les bits pour chaque élément d'un opérande  `valarray` d'un nombre spécifié de positions ou d'une quantité élément par élément spécifiée par un second `valarray`.|
 |[operator*=](#op_star_eq)|Multiplie les éléments d'un `valarray` spécifié ou une valeur du type d'élément, élément par élément, avec un `valarray` opérande.|
@@ -508,7 +508,7 @@ valarray: ( 0 -3 4 -7 1 -3 ).
 */
 ```
 
-## <a name="and_eq"></a>  valarray::operator&amp;=
+## <a name="op_and_eq"></a>  valarray::operator&amp;=
 
 Obtient le résultat de l’opération de bits **AND** des éléments d’un tableau avec les éléments correspondants dans un valarray spécifié ou avec une valeur du type d’élément.
 
@@ -906,7 +906,7 @@ valarray: ( 2 0 4 2 6 4 8 6 ).
 */
 ```
 
-## <a name="valarray__operator-"></a>  valarray::operator-
+## <a name="operator-"></a>  valarray::operator-
 
 Un opérateur unaire qui applique un moins à chaque élément dans un valarray.
 
@@ -958,7 +958,7 @@ valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 */
 ```
 
-## <a name="valarray__operator-_eq"></a>  valarray::operator-=
+## <a name="operator-_eq"></a>  valarray::operator-=
 
 Soustrait les éléments d’un valarray spécifié ou une valeur du type d’élément, élément par élément, à un valarray d’opérandes.
 
@@ -1115,7 +1115,7 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 *right*<br/>
 Le valarray qui doit être copié dans le valarray d’opérandes.
 
-*Val*<br/>
+*val*<br/>
 La valeur à affecter aux éléments du valarray d’opérandes.
 
 *_Slicearray*<br/>
@@ -1276,7 +1276,7 @@ Un valarray dont les éléments sont l’élément par élément, exclusif logiq
 
 ### <a name="remarks"></a>Notes
 
-Ou exclusif logique, connu sous le nom **XOR**, a la sémantique suivante : étant donnés les éléments *e*1 et *e*2, *e*1 **XOR** *e*2 a la valeur **true** si exactement un des éléments a la valeur true ; **false** si les deux éléments ont la valeur false ou si les deux éléments ont la valeur true.
+Exclusif pour la logique ou, connue sous le nom **XOR**, a la sémantique suivante : Éléments donnés *e*1 et *e*2, *e*1 **XOR** *e*2 est **true** si exactement un des éléments a la valeur true ; **false** si les deux éléments ont la valeur false ou si les deux éléments sont trues.
 
 ### <a name="example"></a>Exemple
 
@@ -1528,7 +1528,7 @@ void resize(
 *_Newsize*<br/>
 Nombre d'éléments dans le valarray redimensionné.
 
-*Val*<br/>
+*val*<br/>
 Valeur à affecter aux éléments du valarray redimensionné.
 
 ### <a name="remarks"></a>Notes
@@ -1852,7 +1852,7 @@ Le nombre d’éléments qui doivent figurer dans le valarray.
 *Val*<br/>
 La valeur à utiliser pour initialiser les éléments dans le valarray.
 
-*PTR*<br/>
+*Ptr*<br/>
 Le pointeur désignant les valeurs à utiliser pour initialiser les éléments dans le valarray.
 
 *Droite*<br/>

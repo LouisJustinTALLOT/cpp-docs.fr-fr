@@ -1,17 +1,17 @@
 ---
 title: Conteneurs et objets parallèles
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333284"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565946"
 ---
 # <a name="parallel-containers-and-objects"></a>Conteneurs et objets parallèles
 
@@ -27,13 +27,13 @@ Cette rubrique décrit les objets en détail et des conteneurs parallèles suiva
 
 Conteneurs simultanés :
 
-- [concurrent_vector, classe](#ctor)
+- [concurrent_vector, classe](#vector)
 
-   - [Différences entre concurrent_vector et Vector](#ctor)
+   - [Différences entre concurrent_vector et Vector](#vector-differences)
 
-   - [Opérations d’accès concurrentiel sécurisé](#ctor)
+   - [Opérations d’accès concurrentiel sécurisé](#vector-safety)
 
-   - [Sécurité des exceptions](#ctor)
+   - [Sécurité des exceptions](#vector-exceptions)
 
 - [concurrent_queue, classe](#queue)
 
@@ -189,7 +189,7 @@ L’exemple suivant montre la structure de base pour l’utilisation de `concurr
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-Pour obtenir un exemple qui utilise `concurrent_unordered_map` pour effectuer un mappage et réduire les opérations en parallèle, consultez [Comment : effectuer un mappage et réduire les opérations en parallèle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Pour obtenir un exemple qui utilise `concurrent_unordered_map` pour effectuer un mappage et réduire les opérations en parallèle, consultez [Comment : Exécuter de mappage et réduire les opérations en parallèle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 ###  <a name="map-differences"></a> Unordered_map et les différences entre concurrent_unordered_map
 

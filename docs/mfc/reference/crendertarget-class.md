@@ -1,6 +1,6 @@
 ---
 title: CRenderTarget, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259878"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565756"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget, classe
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Nom|Description|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Construit un objet CRenderTarget.|
-|[CRenderTarget :: ~ CRenderTarget](#crendertarget__~crendertarget)|Destructeur. Appelé lorsqu’un objet de cible de rendu est détruit.|
+|[CRenderTarget :: ~ CRenderTarget](#_dtorcrendertarget)|Destructeur. Appelé lorsqu’un objet de cible de rendu est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -208,7 +208,7 @@ class CRenderTarget : public CObject;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CRenderTarget::m_lstResources](#m_lstresources)|Une liste de pointeurs vers les objets CD2DResource.|
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Pointeur vers un objet ID2D1RenderTarget.|
@@ -220,7 +220,7 @@ class CRenderTarget : public CObject;
 
 [CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 
@@ -502,7 +502,7 @@ Dessiner le contour d’un rectangle qui contient les dimensions spécifiées et
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Paramètres
 
-*rect*<br/>
+*rectangle*<br/>
 Les dimensions du rectangle à dessiner, en pixels indépendants du périphérique
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ Dessine le texte spécifié en utilisant les informations de format fournies par
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 Pointeur vers un tableau de caractères Unicode à dessiner.
 
-*rect*<br/>
+*rectangle*<br/>
 La taille et la position de la zone dans laquelle le texte est dessiné.
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ Peint l’intérieur du rectangle spécifié.
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*rect*<br/>
+*rectangle*<br/>
 La dimension du rectangle à peindre, en pixels indépendants du périphérique.
 
 *pBrush*<br/>
@@ -999,7 +999,7 @@ void PushAxisAlignedClip(
 La taille et la position de la zone de découpage, en pixels indépendants du périphérique.
 
 *mode*<br/>
-Le mode de l’anticrénelage est utilisé pour dessiner les bords de détourage qui ont des limites de sous-pixel et pour fusionner le clip avec le contenu de la scène. La fusion est exécutée une fois lorsque la méthode PopAxisAlignedClip est appelée et ne s’applique pas à chaque primitive au sein de la couche.
+Le mode de l’anticrénelage est utilisé pour dessiner les bords des rectangles de découpage qui ont des limites de sous-pixel et pour fusionner le clip avec le contenu de la scène. La fusion est exécutée une fois lorsque la méthode PopAxisAlignedClip est appelée et ne s’applique pas à chaque primitive au sein de la couche.
 
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer
 

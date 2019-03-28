@@ -1,6 +1,6 @@
 ---
 title: Cjumplist, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CJumpList
 - AFXADV/CJumpList
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: b72ea6f3715be1e4a11d457dbdeaba7a622ef8b6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9296912c97b1efb5f7cbd1ed9f769d0222d5f85c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259072"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565306"
 ---
 # <a name="cjumplist-class"></a>Cjumplist, classe
 
-Un `CJumpList` est une liste de raccourcis qui s’affichent lorsque vous avec le bouton droit sur une icône dans la barre des tâches.
+Un `CJumpList` est une liste de raccourcis qui s’affichent lorsque vous cliquez sur une icône dans la barre des tâches.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,9 +60,9 @@ class CJumpList;
 |Nom|Description|
 |----------|-----------------|
 |[CJumpList::CJumpList](#cjumplist)|Construit un objet `CJumpList`.|
-|[CJumpList::~CJumpList](#cjumplist__~cjumplist)|Détruit un objet `CJumpList`.|
+|[CJumpList::~CJumpList](#_dtorcjumplist)|Détruit un objet `CJumpList`.|
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CJumpList::AbortList](#abortlist)|Abandonne une transaction de création de liste sans validation.|
 |[CJumpList::AddDestination](#adddestination)|Surchargé. Ajoute la destination à la liste.|
@@ -83,7 +83,7 @@ class CJumpList;
 
 [CJumpList](../../mfc/reference/cjumplist-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxadv.h
 
@@ -188,7 +188,7 @@ BOOL AddTask(IShellLink* pShellLink);
 Spécifie le chemin d’accès de la tâche cible.
 
 *strCommandLineArgs*<br/>
-Spécifie les arguments de ligne de commande de l’exécutable spécifié par strTargetExecutablePath.
+Spécifie les arguments de ligne de commande de l’exécutable spécifié par *strTargetExecutablePath*.
 
 *strTitle*<br/>
 Nom de la tâche qui s’affichera dans la liste de Destination.

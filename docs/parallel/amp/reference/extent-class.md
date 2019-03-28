@@ -1,6 +1,6 @@
 ---
 title: extent, classe (C++ AMP)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - extent
 - AMP/extent
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46af59708ef3f0d91883c52502bce4d09676ca77
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270187"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565829"
 ---
 # <a name="extent-class-c-amp"></a>extent, classe (C++ AMP)
 
@@ -35,7 +35,7 @@ class extent;
 *_Rank*<br/>
 Le rang de le `extent` objet.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp.h
 
@@ -75,9 +75,9 @@ Le rang de le `extent` objet.
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[rang (constante)](#rank)|Obtient le rang de le `extent` objet.|
+|[rang (constante)](#rank_constant)|Obtient le rang de le `extent` objet.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 

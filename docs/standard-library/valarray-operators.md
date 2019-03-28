@@ -1,6 +1,6 @@
 ---
 title: '&lt;valarray&gt;, opérateurs'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::operator!=
 - valarray/std::operator%
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: daaddf6de79411aea58b79feb0fbfd0f8ff56f5c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6de4b4ad75f9240fb86ff5e363f4a7d9062925d9
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332606"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565920"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt;, opérateurs
 
@@ -268,7 +268,7 @@ Un valarray dont les éléments sont la combinaison au niveau des éléments de 
 
 Une opération de bits peut uniquement être utilisée pour manipuler des bits dans **char** et **int** types de données et de variantes et non pas sur **float**, **double**, **longdouble**, **void**, **bool** ou autres, types de données plus complexes.
 
-L’opérateur de bits `AND` a la même table de vérité que l’opérateur `AND` logique, mais il s’applique au type de données au niveau des bits individuels. L’opérateur [operator&&](../standard-library/valarray-operators.md#amp) s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme true : le résultat est un valarray de valeurs booléennes. L’opérateur de bits **ANDoperator&**, en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.
+L’opérateur de bits `AND` a la même table de vérité que l’opérateur `AND` logique, mais il s’applique au type de données au niveau des bits individuels. L’opérateur [operator&&](#op_amp_amp) s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme true : le résultat est un valarray de valeurs booléennes. L’opérateur de bits `AND` [opérateur &](#op_amp), en revanche, peut fournir un valarray de valeurs autres que 0 ou 1, selon le résultat de l’opération au niveau du bit.
 
 ### <a name="example"></a>Exemple
 
@@ -356,7 +356,7 @@ Un valarray dont les éléments sont de type bool et sont la combinaison au nive
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur logique `ANDoperator&&` s’applique au niveau de l’élément compte toutes les valeurs différentes de zéro comme true, le résultat est un valarray de valeurs booléennes. La version au niveau du bit de `AND`, [opérateur &,](../standard-library/valarray-operators.md#op_amp), en revanche, peut fournir un valarray de valeurs autres que 0 ou 1, selon le résultat de l’opération au niveau du bit.
+L’opérateur logique `ANDoperator&&` s’applique au niveau de l’élément compte toutes les valeurs différentes de zéro comme true, le résultat est un valarray de valeurs booléennes. La version au niveau du bit de `AND`, [opérateur &,](#op_amp), en revanche, peut fournir un valarray de valeurs autres que 0 ou 1, selon le résultat de l’opération au niveau du bit.
 
 ### <a name="example"></a>Exemple
 
@@ -1430,7 +1430,7 @@ Un valarray dont les éléments sont la combinaison au niveau des éléments de 
 
 Une opération de bits peut uniquement être utilisée pour manipuler des bits dans **char** et **int** types de données et de variantes et non pas sur **float**, **double**, **long double**, **void**, **bool** ou autres, types de données plus complexes.
 
-L’opération de bits `OR` ( **XOR**) exclusive a la sémantique suivante : étant donné les bits *b*1 et *b*2, *b*1 **XOR** *b*2 a la valeur **true** si exactement un des bits a la valeur true ; **false** si les deux bits ont la valeur false ou si les deux bits ont la valeur true.
+L’exclusif au niveau du bit `OR` ( **XOR**) utilise la sémantique suivante : Étant donné les bits *b*1 et *b*2, *b*1 **XOR** *b*2 est **true** si exactement un des bits a la valeur true ; **false** si les deux bits ont la valeur false ou si les deux bits sont remplies.
 
 ### <a name="example"></a>Exemple
 

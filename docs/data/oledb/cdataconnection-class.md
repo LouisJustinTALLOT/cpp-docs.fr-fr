@@ -1,6 +1,6 @@
 ---
 title: CDataConnection, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326535"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565504"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection, classe
 
@@ -119,7 +119,7 @@ Avec `CDataConnection`, il vous suffit de créer un objet de connexion, de passe
 > [!NOTE]
 >  Si vous créez une application de base de données qui doit gérer plusieurs sessions, vous devrez utiliser [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).
 
-## <a name="#cdataconnection"></a> CDataConnection::CDataConnection
+## <a name="cdataconnection"></a> CDataConnection::CDataConnection
 
 Instancie et initialise un `CDataConnection` objet.
 
@@ -132,7 +132,7 @@ CDataConnection(const CDataConnection &ds);
 
 #### <a name="parameters"></a>Paramètres
 
-*service d’annuaire*<br/>
+*ds*<br/>
 [in] Une référence à une connexion de données existante.
 
 ### <a name="remarks"></a>Notes
@@ -141,7 +141,7 @@ Le premier remplacement crée un nouveau `CDataConnection` objet avec les param�
 
 Le deuxième remplacement crée un nouveau `CDataConnection` objet avec les paramètres équivalents à l’objet de connexion de données que vous spécifiez.
 
-## <a name="#copy"></a> CDataConnection::Copy
+## <a name="copy"></a> CDataConnection::Copy
 
 Crée une copie d’une connexion de données existante.
 
@@ -153,10 +153,10 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 
 #### <a name="parameters"></a>Paramètres
 
-*service d’annuaire*<br/>
+*ds*<br/>
 [in] Une référence à une connexion de données existante à copier.
 
-## <a name="#open"></a> CDataConnection::Open
+## <a name="open"></a> CDataConnection::Open
 
 Ouvre une connexion à une source de données à l’aide d’une chaîne d’initialisation.
 
@@ -175,7 +175,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 Une valeur HRESULT standard.
 
-## <a name="#opennewsession"></a> CDataConnection::OpenNewSession
+## <a name="opennewsession"></a> CDataConnection::OpenNewSession
 
 Ouvre une nouvelle session à l’aide de la source de données de l’objet de connexion en cours.
 

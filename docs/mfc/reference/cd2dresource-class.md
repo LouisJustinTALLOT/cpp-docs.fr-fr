@@ -1,6 +1,6 @@
 ---
 title: CD2DResource, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DResource
 - AFXRENDERTARGET/CD2DResource
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284864"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564773"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource, classe
 
@@ -46,7 +46,7 @@ class CD2DResource : public CObject;
 |Nom|Description|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|Construit un objet CD2DResource.|
-|[CD2DResource :: ~ CD2DResource](#cd2dresource__~cd2dresource)|Destructeur. Appelé lorsqu’un objet de ressource D2D est détruit.|
+|[CD2DResource :: ~ CD2DResource](#_dtorcd2dresource)|Destructeur. Appelé lorsqu’un objet de ressource D2D est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -65,7 +65,7 @@ class CD2DResource : public CObject;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Ressource sera détruite par le propriétaire (CRenderTarget)|
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|Pointeur vers le parent CRenderTarget)|
@@ -76,7 +76,7 @@ class CD2DResource : public CObject;
 
 `CD2DResource`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

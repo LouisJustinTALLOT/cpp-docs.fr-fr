@@ -1,6 +1,6 @@
 ---
 title: Opérateurs d'assignation
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,25 +31,25 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328472"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565478"
 ---
 # <a name="assignment-operators"></a>Opérateurs d'assignation
 
 ## <a name="syntax"></a>Syntaxe
 
-*expression* *opérateur d’assignation* *expression*
+*expression* *assignment-operator* *expression*
 
 *opérateur d’assignation* : un des<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
 
 ## <a name="remarks"></a>Notes
 
-Les opérateurs d’assignation stockent une valeur dans l’objet indiqué par l’opérande de gauche. Il existe deux types d’opérations d’assignation :
+Les opérateurs d'assignation stockent une valeur dans l'objet indiqué par l'opérande de gauche. Il existe deux types d’opérations d’assignation :
 
 1. *assignation simple*, dans laquelle la valeur du second opérande est stockée dans l’objet spécifié par le premier opérande.
 
@@ -57,7 +57,7 @@ Les opérateurs d’assignation stockent une valeur dans l’objet indiqué par 
 
 Tous les opérateurs d'assignation décrits dans le tableau suivant, à l'exception de l'opérateur =, sont des opérateurs d'assignation composée.
 
-### <a name="assignment-operators"></a>Opérateurs d'assignation
+### <a name="assignment-operators-table"></a>Table d’affectation d’opérateurs
 
 |Opérateur|Signification|
 |--------------|-------------|
@@ -68,12 +68,12 @@ Tous les opérateurs d'assignation décrits dans le tableau suivant, à l'except
 |**+=**|Ajoute la valeur du deuxième opérande à la valeur du premier opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
 |**-=**|Soustrait la valeur du deuxième opérande de la valeur du premier opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
 |**<\<=**|Déplace la valeur du premier opérande à gauche du nombre de bits spécifiés par la valeur du deuxième opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
-|**>>=**|Déplace la valeur du premier opérande à droite du nombre de bits spécifiés par la valeur du deuxième opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
-|**&=**|Obtient l’opérateur de bits AND du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
-|**^=**|Obtient l’opérateur de bits OR exclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
+|**>>=**|Déplace la valeur du premier opérande à droite du nombre de bits spécifiés par la valeur du deuxième opérande ; enregistre le résultat dans l'objet spécifié par le premier opérande.|
+|**&=**|Obtient l'opérateur de bits AND du premier et du deuxième opérandes ; enregistre le résultat dans l'objet spécifié par le premier opérande.|
+|**^=**|Obtient l'opérateur de bits OR exclusif du premier et du deuxième opérandes ; enregistre le résultat dans l'objet spécifié par le premier opérande.|
 |**\|=**|Obtient l’opérateur de bits OR inclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
 
-**Mots clés des opérateurs**
+### <a name="operator-keywords"></a>Mots clés des opérateurs
 
 Trois des opérateurs d'assignation composée ont des équivalents textuels. Il s'agit des éléments suivants :
 
@@ -180,7 +180,7 @@ peut avoir l'un des effets suivants :
 
 ## <a name="compound-assignment"></a>Assignation composée
 
-Les opérateurs d’assignation composée, indiqués dans le tableau de [opérateurs d’assignation](#assignment-operators), sont spécifiées sous la forme *e1* *op*= *e2*, où *e1* est une l-value modifiable pas de **const** type et *e2* est une des opérations suivantes :
+Les opérateurs d’assignation composée, illustrés à la [table d’affectation d’opérateurs](#assignment-operators-table), sont spécifiées sous la forme *e1* *op*= *e2*, où *e1* est une l-value modifiable pas de **const** type et *e2* est une des opérations suivantes :
 
 - Un type arithmétique
 
@@ -188,11 +188,11 @@ Les opérateurs d’assignation composée, indiqués dans le tableau de [opérat
 
 Le *e1* *op*= *e2* se comporte comme *e1* **=** *e1* *op* *e2*, mais *e1* est évaluée une seule fois.
 
-L'assignation composée en type énuméré génère un message d'erreur. Si l'opérande de gauche est d'un type pointeur, l'opérande de droite doit être d'un type pointeur ou il doit être une expression constante qui correspond à 0. Si l’opérande de gauche est d’un type intégral, l’opérande de droite ne doit pas être d’un type pointeur.
+L'assignation composée en type énuméré génère un message d'erreur. Si l’opérande de gauche est d’un type pointeur, l’opérande de droite doit être d’un type pointeur ou il doit être une expression constante qui correspond à 0. Si l’opérande de gauche est d’un type intégral, l’opérande de droite ne doit pas être d’un type pointeur.
 
 ## <a name="result-of-assignment-operators"></a>Résultat des opérateurs d'assignation
 
-Les opérateurs d'assignation retournent la valeur de l'objet spécifié par l'opérande gauche après l'assignation. Le type résultant est le type de l'opérande gauche. Le résultat d'une expression d'assignation est toujours une l-value. Ces opérateurs ont une associativité de droite à gauche. L'opérande gauche doit être une l-value modifiable.
+Les opérateurs d'assignation retournent la valeur de l'objet spécifié par l'opérande gauche après l'assignation. Le type résultant est le type de l’opérande gauche. Le résultat d'une expression d'assignation est toujours une l-value. Ces opérateurs ont une associativité de droite à gauche. L’opérande gauche doit être une l-value modifiable.
 
 En C ANSI, le résultat d'une expression d'assignation n'est pas une l-value. Par conséquent, l'expression `(a += b) += c`, conforme dans C++, ne l'est pas dans C.
 

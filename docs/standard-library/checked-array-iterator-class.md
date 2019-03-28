@@ -1,6 +1,6 @@
 ---
 title: checked_array_iterator, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 2d7788a33321f794af6b395de3188bc51f662ad0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476598"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565712"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator, classe
 
@@ -495,7 +495,7 @@ Consultez [checked_array_iterator::operator&lt;](#op_lt) pour obtenir un exemple
 
 Pour plus d'informations, consultez [Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="lt_eq"></a>  checked_array_iterator::operator&lt;=
+## <a name="op_lt_eq"></a>  checked_array_iterator::operator&lt;=
 
 Vérifie si le `checked_array_iterator` à gauche de l'opérateur est inférieur ou égal au `checked_array_iterator` du côté droit.
 
@@ -514,7 +514,7 @@ Consultez [checked_array_iterator::operator&gt;=](#op_gt_eq) pour obtenir un exe
 
 Pour plus d'informations, consultez [Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="gt_eq"></a>  checked_array_iterator::operator&gt;=
+## <a name="op_gt_eq"></a>  checked_array_iterator::operator&gt;=
 
 Vérifie si le `checked_array_iterator` à gauche de l'opérateur est supérieur ou égal au `checked_array_iterator` du côté droit.
 
@@ -697,7 +697,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--
+## <a name="operator--"></a>  checked_array_iterator::operator--
 
 Décrémente le `checked_array_iterator` à l'élément précédent.
 
@@ -841,7 +841,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=
+## <a name="operator-_eq"></a>  checked_array_iterator::operator-=
 
 Décrémente un décalage spécifié d'un `checked_array_iterator`.
 
@@ -890,7 +890,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-
+## <a name="operator-"></a>  checked_array_iterator::operator-
 
 Décrémente un décalage depuis un itérateur et retourne le nouveau `checked_array_iterator` qui traite l'élément inséré à la nouvelle position décalée.
 
@@ -910,8 +910,6 @@ Décalage à décrémenter du `checked_array_iterator`.
 `checked_array_iterator` se rapportant à l’élément de décalage.
 
 ### <a name="remarks"></a>Notes
-
-Consultez [checked_array_iterator::operator-](#operator-) pour obtenir un exemple de code.
 
 Pour plus d'informations, consultez [Checked Iterators](../standard-library/checked-iterators.md).
 

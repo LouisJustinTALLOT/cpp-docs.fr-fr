@@ -1,6 +1,6 @@
 ---
 title: CBaseTransition, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258370"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565907"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition, classe
 
@@ -73,8 +73,8 @@ class CBaseTransition : public CObject;
 
 |Nom|Description|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|Construit un objet de base de la transition.|
-|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|Destructeur. Appelé lorsqu’un objet de transition est détruit.|
+|[CBaseTransition::CBaseTransition](#cbasetransition)|Construit un objet de base de transition.|
+|[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|Destructeur. Appelé lorsqu’un objet de transition est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -95,7 +95,7 @@ class CBaseTransition : public CObject;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CBaseTransition::m_bAdded](#m_badded)|Spécifie si une transition a été ajoutée à une table de montage séquentiel.|
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Stocke un pointeur vers l’image clé qui spécifie la fin de la transition.|
@@ -114,7 +114,7 @@ Cette classe encapsule l’interface IUIAnimationTransition et sert de classe de
 
 `CBaseTransition`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxanimationcontroller.h
 
@@ -170,7 +170,7 @@ S’applique à la transition à la variable connexe dans le storyboard. Si l’
 
 ##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
 
-Construit un objet de base de la transition.
+Construit un objet de base de transition.
 
 ```
 CBaseTransition();

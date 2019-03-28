@@ -1,6 +1,6 @@
 ---
 title: CAnimationController, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationController
 - AFXANIMATIONCONTROLLER/CAnimationController
@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 114b6bffdc63ecadc951965f8f199b229f0f7672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a3a533b876b9ca245c0553c4c24a815ef3cabca1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270278"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565959"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController, classe
 
@@ -127,7 +127,7 @@ class CAnimationController : public CObject;
 |Nom|Description|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Construit un contrôleur de l’animation.|
-|[CAnimationController :: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|Destructeur. Appelée lorsque l’objet de contrôleur de l’animation est détruit.|
+|[CAnimationController :: ~ CAnimationController](#_dtorcanimationcontroller)|Destructeur. Appelée lorsque l’objet de contrôleur de l’animation est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -181,7 +181,7 @@ class CAnimationController : public CObject;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Une image clé qui représente le début de la table de montage séquentiel.|
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Spécifie si un contrôleur de l’animation est valide ou non. Ce membre est défini sur FALSE si le système d’exploitation actuel ne prend pas en charge les API d’Animation de Windows.|
@@ -202,7 +202,7 @@ La classe CAnimationController est la classe clé qui gère les animations. Vous
 
 `CAnimationController`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxanimationcontroller.h
 

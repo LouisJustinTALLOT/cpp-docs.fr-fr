@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9b2888c82ad9522925ffbd53923d3988863f56ca
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259449"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565358"
 ---
 # <a name="cwordarray-class"></a>CWordArray, classe
 
@@ -120,7 +120,7 @@ Pour plus d’informations sur l’utilisation de `CWordArray`, consultez l’ar
 
 `CWordArray`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcoll.h
 
@@ -292,7 +292,7 @@ Index de fin de la plage d’ID de commande.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode supprime un groupe de gestionnaires de messages, mappé la spécifiée d’ID de commande par *cmdIDMin* et *cmdIDMax*, à partir de l’objet de source de commande.
+Cette méthode supprime un groupe de gestionnaires de messages, mappé à l’ID de commande spécifiés par *cmdIDMin* et *cmdIDMax*, à partir de l’objet de source de commande.
 
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler
 
@@ -314,7 +314,7 @@ Index de fin de la plage d’ID de commande.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode supprime un groupe de gestionnaires de messages de commande interface utilisateur, mappé la spécifiée d’ID de commande par *cmdIDMin* et *cmdIDMax*, à partir de l’objet de source de commande.
+Cette méthode supprime un groupe de gestionnaires de messages de commande interface utilisateur, mappé à l’ID de commande spécifiés par *cmdIDMin* et *cmdIDMax*, à partir de l’objet de source de commande.
 
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler
 

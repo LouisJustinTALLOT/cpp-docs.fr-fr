@@ -1,6 +1,6 @@
 ---
 title: reverse_iterator, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: c865caa6d47d68462740fb4e9b2f6b712d9b6df9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae4a3da8f15f838900cb5a4324fbaeda01d918a2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640217"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565634"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator, classe
 
@@ -48,7 +48,7 @@ Le `reverse_iterator` qui nécessite un itérateur bidirectionnel ne doit appele
 
 La plage d’un itérateur est [*première*, *dernière*), où le crochet gauche indique l’inclusion des *premier* et la parenthèse de droite indique le inclusion des éléments à exclu *dernière* lui-même. Les mêmes éléments sont inclus dans la séquence inversée [ **rev** - *première*, **rev** - *dernière*) pour qu’en cas *dernière* est l’élément celui-past-the-end dans une séquence, puis le premier élément **rev** - *premier* dans les points de séquence inversée à \*(*dernière* - 1). L'identité qui associe tous les itérateurs inverses à leurs itérateurs sous-jacents est :
 
-&\*( **reverse_iterator** ( *je* )) == &\*( *je* - 1).
+&\*( **reverse_iterator** ( *i* ) ) == &\*( *i* - 1 ).
 
 En pratique, cela signifie que dans la séquence inversée le reverse_iterator se rapportera à l'élément situé une position au-delà (à droite) de l'élément auquel l'itérateur se rapportait dans la séquence d'origine. Ainsi, si un itérateur se rapportait à l'élément 6 dans la séquence (2, 4, 6, 8), le `reverse_iterator` se rapporte à l'élément 4 dans la séquence inversée (8, 6, 4, 2).
 
@@ -84,7 +84,7 @@ En pratique, cela signifie que dans la séquence inversée le reverse_iterator s
 |[operator-](#operator-)|Soustrait un décalage à un `reverse_iterator` et retourne un `reverse_iterator` se rapportant à l'élément situé à la position décalée.|
 |[operator--](#operator--)|Décrémente le `reverse_iterator` à l'élément précédent.|
 |[operator-=](#operator-_eq)|Soustrait un décalage spécifié d'un `reverse_iterator`.|
-|[operator->](#operator-_gt)|Retourne un pointeur vers l'élément traité par le `reverse_iterator`.|
+|[operator->](#op-arrow)|Retourne un pointeur vers l'élément traité par le `reverse_iterator`.|
 |[operator&#91;&#93;](#op_at)|Retourne une référence à un élément décalé d'un nombre donné de positions par rapport à l'élément auquel un `reverse_iterator` se rapportait.|
 
 ## <a name="requirements"></a>Configuration requise
@@ -109,7 +109,7 @@ Itérateur sous-jacent à `reverse_iterator`.
 
 L’identité qui associe tous les itérateurs inverses à leurs itérateurs sous-jacents est :
 
-&\*( `reverse_iterator` ( *je* )) == &\*( *je* - 1).
+&\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).
 
 En pratique, cela signifie que dans la séquence inversée, `reverse_iterator` se rapporte à l’élément situé une position à droite de l’élément auquel l’itérateur se rapportait dans la séquence d’origine. Ainsi, si un itérateur se rapportait à l'élément 6 dans la séquence (2, 4, 6, 8), le `reverse_iterator` se rapporte à l'élément 4 dans la séquence inversée (8, 6, 4, 2).
 
@@ -477,7 +477,7 @@ After the +2 offset, the iterator rVPOS1 now points
 to the third element in the reversed sequence: 6.
 ```
 
-## <a name="reverse_iterator__operator-"></a>  reverse_iterator::operator-
+## <a name="operator-"></a>  reverse_iterator::operator-
 
 Soustrait un décalage à un `reverse_iterator` et retourne un `reverse_iterator` se rapportant à l'élément situé à la position décalée.
 
@@ -554,7 +554,7 @@ After the -2 offset, the iterator rVPOS2 points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="reverse_iterator__operator--"></a>  reverse_iterator::operator--
+## <a name="operator--"></a>  reverse_iterator::operator--
 
 Décrémente le reverse_iterator à l’élément précédent.
 
@@ -627,7 +627,7 @@ After the decrement, the iterator rVPOS1 points
 to the next-to-last element in the reversed sequence: 3.
 ```
 
-## <a name="reverse_iterator__operator-_eq"></a>  reverse_iterator::operator-=
+## <a name="operator-_eq"></a>  reverse_iterator::operator-=
 
 Soustrait un décalage spécifié d'un `reverse_iterator`.
 
@@ -702,7 +702,7 @@ After the -2 offset, the iterator rVPOS1 now points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="op_arrow"></a>  reverse_iterator::operator-&gt;
+## <a name="op-arrow"></a>  reverse_iterator::operator-&gt;
 
 Retourne un pointeur vers l'élément traité par le `reverse_iterator`.
 
@@ -972,7 +972,7 @@ Itérateur devant être adapté à un `reverse_iterator`.
 
 L'identité qui associe tous les itérateurs inverses à leurs itérateurs sous-jacents est :
 
-&\*( `reverse_iterator` ( *je* )) == &\*( *je* - 1).
+&\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).
 
 En pratique, cela signifie que dans la séquence inversée le reverse_iterator se rapportera à l'élément situé une position au-delà (à droite) de l'élément auquel l'itérateur se rapportait dans la séquence d'origine. Ainsi, si un itérateur se rapportait à l'élément 6 dans la séquence (2, 4, 6, 8), le `reverse_iterator` se rapporte à l'élément 4 dans la séquence inversée (8, 6, 4, 2).
 

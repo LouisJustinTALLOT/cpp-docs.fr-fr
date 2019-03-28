@@ -1,6 +1,6 @@
 ---
 title: CMultiPageDHtmlDialog, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMultiPageDHtmlDialog
 - AFXDHTML/CMultiPageDHtmlDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 66ab996a810c7409d689d600758828130d4237f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 404b1b8bb1c96c2b244a6cfaee7f2f2c77800f31
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283746"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565998"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog, classe
 
@@ -32,7 +32,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 |Nom|Description|
 |----------|-----------------|
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Construit un objet de boîte de dialogue multipage (Assistant-style) DHTML.|
-|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Détruit un objet de boîte de dialogue multipage DHTML.|
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Détruit un objet de boîte de dialogue multipage DHTML.|
 
 ## <a name="remarks"></a>Notes
 
@@ -72,7 +72,7 @@ Les parties pertinentes de l’implémentation de classe (dans CMyMultipageDlg.c
 
 `CMultiPageDHtmlDialog`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdhtml.h
 

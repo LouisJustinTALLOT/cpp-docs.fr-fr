@@ -1,6 +1,6 @@
 ---
 title: Macros de débogage et rapport d’erreurs
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287321"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565034"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de débogage et rapport d’erreurs
 
@@ -29,7 +29,7 @@ Ces macros fournissent des fonctionnalités de trace et de débogage utiles.
 |[ATLASSERT](#atlassert)|Effectue les mêmes fonctionnalités que le [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) macro trouvé dans la bibliothèque Runtime C.|
 |[ATLENSURE](#atlensure)|Effectue une validation de paramètres. Appeler `AtlThrow` si nécessaire|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|Envoie un message à l’unité de sauvegarde que la fonction spécifiée n’est pas implémentée.|
-|[ATLTRACE](#alttrace)|Signale les avertissements pour un périphérique de sortie, tels que la fenêtre du débogueur, selon les indicateurs indiqués et les niveaux. Inclus pour la compatibilité descendante.|
+|[ATLTRACE](#atltrace)|Signale les avertissements pour un périphérique de sortie, tels que la fenêtre du débogueur, selon les indicateurs indiqués et les niveaux. Inclus pour la compatibilité descendante.|
 |[ATLTRACE2](#atltrace2)|Signale les avertissements pour un périphérique de sortie, tels que la fenêtre du débogueur, selon les indicateurs indiqués et les niveaux.|
 
 ##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
@@ -94,7 +94,7 @@ Expression (pointeurs inclus) qui prend une valeur différente de zéro ou 0.
 
 Dans les versions debug, évalue ATLASSERT ; *booleanExpression* et génère un rapport de débogage lorsque le résultat est false.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldef.h
 
@@ -131,7 +131,7 @@ La différence entre ATLENSURE et ATLASSERT ; est que ATLENSURE lève une excep
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -156,7 +156,7 @@ Dans les versions release, renvoie simplement E_NOTIMPL.
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atltrace.h
 
