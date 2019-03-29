@@ -1,6 +1,6 @@
 ---
 title: duration, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2016
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568886"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565569"
 ---
 # <a name="duration-class"></a>duration, classe
 
@@ -50,7 +50,7 @@ L’argument de modèle `Rep` décrit le type utilisé pour contenir le nombre d
 
 |Nom|Description|
 |----------|-----------------|
-|[durée](#duration)|Construit un objet `duration`.|
+|[duration](#duration)|Construit un objet `duration`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -59,7 +59,7 @@ L’argument de modèle `Rep` décrit le type utilisé pour contenir le nombre d
 |[count](#count)|Retourne le nombre de battements d’horloge dans l’intervalle de temps.|
 |[max](#max)|Static. Retourne la valeur maximale autorisée du paramètre de modèle `Ref`.|
 |[min](#min)|Static. Retourne la valeur minimale autorisée du paramètre de modèle `Ref`.|
-|[zéro](#zero)|Static. Retourne `Rep`(0).|
+|[zero](#zero)|Static. Retourne `Rep`(0).|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -118,7 +118,7 @@ Spécialisation de modèle `std::ratio` pour représenter la période de batteme
 *R*<br/>
 Nombre de battements de la période par défaut.
 
-*Durée*<br/>
+*Dur*<br/>
 Le nombre de graduations de la période spécifiée par *Period2*.
 
 ### <a name="remarks"></a>Notes
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 Retourne `duration(duration_values<rep>::min())`.
 
-## <a name="duration__operator-"></a>  duration::operator-
+## <a name="operator-"></a>  duration::operator-
 
 Retourne une copie de l’objet `duration` avec un nombre de battements négatifs.
 
@@ -167,7 +167,7 @@ Retourne une copie de l’objet `duration` avec un nombre de battements négatif
 constexpr duration operator-() const;
 ```
 
-## <a name="duration__operator--"></a>  duration::operator--
+## <a name="operator--"></a>  duration::operator--
 
 Décrémente le nombre de battements stocké.
 
@@ -270,14 +270,14 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Durée*<br/>
+*Dur*<br/>
 Objet `duration`.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Objet `duration` une fois l’addition effectuée.
 
-## <a name="duration__operator-_eq"></a>  duration::operator-=
+## <a name="operator-_eq"></a>  duration::operator-=
 
 Soustrait le nombre de battements d’un objet `duration` spécifié du nombre de battements stocké.
 
@@ -287,7 +287,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Durée*<br/>
+*Dur*<br/>
 Objet `duration`.
 
 ### <a name="return-value"></a>Valeur de retour
