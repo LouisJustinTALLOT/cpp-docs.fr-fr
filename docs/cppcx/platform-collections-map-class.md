@@ -1,6 +1,6 @@
 ---
 title: Platform::Collections::Map, classe
-ms.date: 01/18/2018
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745177"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565280"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map, classe
 
@@ -55,7 +55,7 @@ Les types autorisés sont les suivants :
 
 - Entiers
 
-- Classe interface ^
+- classe interface ^
 
 - Classe ref publique ^
 
@@ -92,14 +92,14 @@ Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md
 
 |||
 |-|-|
-|Name|Description|
-|[Map::MapChanged](#mapchanged-event.md) `event`|Se produit lorsque l'objet Map est modifié.|
+|Nom|Description|
+|[Map::MapChanged](#mapchanged) event|Se produit lorsque l'objet Map est modifié.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `Map`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** collection.h
 
@@ -238,7 +238,7 @@ Nom de type de l'objet Map actuel.
 Type qui fournit un objet de fonction qui peut comparer deux valeurs d'élément comme des clés de tri pour déterminer leur ordre relatif dans le Map.
 
 *m*<br/>
-Une référence ou [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un `map Class` qui est utilisé pour initialiser le Map actuel.
+Une référence ou [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) à un `map Class` qui est utilisé pour initialiser le Map actuel.
 
 *first*<br/>
 Itérateur d'entrée du premier élément d'une plage d'éléments utilisée pour initialiser le Map actuel.
