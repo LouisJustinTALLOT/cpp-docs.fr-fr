@@ -1,12 +1,12 @@
 ---
 title: Vue d’ensemble des conventions ABI de ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 2695ba69c642b2100ec041d1f85debb4ad7041c8
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
+ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508856"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639444"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI de ARM64
 
@@ -187,27 +187,21 @@ Valeurs intégrales sont retournées dans x0.
 
 Les valeurs à virgule flottante sont retournées dans s0/d0/v0 comme il convient.
 
-Les types retournés par valeur sont gérées différemment selon qu’ils aient certaines propriétés.
+Les types retournés par valeur sont gérées différemment selon qu’ils aient certaines propriétés. Types de toutes ces propriétés,
 
-Types bénéficient d’un style de retour « C » si elles sont agrégées par le C ++ 14 définition de la norme. C'est
+- ils sont *agrégation* par le standard définition C ++ 14, autrement dit, ils ont aucun constructeur fourni par l’utilisateur, aucun membre des données non statiques privés ou protégés, sans classes de base et sans fonctions virtuelles, et
+- ils ont un opérateur d’assignation de copie trivial, et
+- ils ont un destructeur trivial,
 
-- ils disposent d’aucun constructeur fourni par l’utilisateur, aucun membre des données non statiques privés ou protégés, sans classes de base et sans fonctions virtuelles,
-- ils ont un constructeur de copie trivial, et
-- ils ont un destructeur trivial.
+Utilisez le style de retour suivant :
 
-Tous les autres types bénéficient d’un style de retour « C++ ».
+- Types inférieure ou égale à 8 octets sont retournés dans x0.
+- Types inférieure ou égale à 16 octets sont retournés dans x0 et x1, avec x0 contenant les 8 octets de poids faible.
+- Pour plus de 16 octets pour les types, l’appelant se réserve un bloc de mémoire de taille suffisante et l’alignement doit contenir le résultat. L’adresse du bloc de mémoire doit être passée comme un argument supplémentaire à la fonction dans x8. L’appelé peut modifier le bloc de mémoire de résultat à tout moment pendant l’exécution de la sous-routine. L’appelé n’est pas nécessaire pour conserver la valeur stockée dans x8.
 
-### <a name="c-return-style"></a>Type de retour de C
+Tous les autres types utilisent cette convention :
 
-Types inférieure ou égale à 8 octets sont retournés dans x0.
-
-Types inférieure ou égale à 16 octets sont retournés dans x0 et x1, avec x0 contenant les 8 octets de poids faible.
-
-Pour plus de 16 octets pour les types, l’appelant se réserve un bloc de mémoire de taille suffisante et l’alignement doit contenir le résultat. L’adresse du bloc de mémoire doit être passée comme un argument supplémentaire à la fonction dans x8. L’appelé peut modifier le bloc de mémoire de résultat à tout moment pendant l’exécution de la sous-routine. L’appelé n’est pas nécessaire pour conserver la valeur stockée dans x8.
-
-### <a name="c-return-style"></a>Style de retour de C++
-
-L’appelant doit réserver un bloc de mémoire de taille suffisante et l’alignement doit contenir le résultat. L’adresse du bloc de mémoire doit être passé en tant qu’argument supplémentaire à la fonction dans x0 ou x1 si $ces données sont transmises dans x0. L’appelé peut modifier le bloc de mémoire de résultat à tout moment pendant l’exécution de la sous-routine. L’appelé retourne l’adresse du bloc de mémoire dans x0.
+- L’appelant doit réserver un bloc de mémoire de taille suffisante et l’alignement doit contenir le résultat. L’adresse du bloc de mémoire doit être passé en tant qu’argument supplémentaire à la fonction dans x0 ou x1 si $ces données sont transmises dans x0. L’appelé peut modifier le bloc de mémoire de résultat à tout moment pendant l’exécution de la sous-routine. L’appelé retourne l’adresse du bloc de mémoire dans x0.
 
 ## <a name="stack"></a>Stack
 
