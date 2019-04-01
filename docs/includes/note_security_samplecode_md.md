@@ -1,2 +1,0 @@
-> [!IMPORTANT]
-> Cet exemple de code est destiné à illustrer un concept ; il présente uniquement le code qui se rapporte spécifiquement à ce concept. Il est possible qu'il ne réponde pas aux exigences de sécurité d'un environnement spécifique, et ne doit pas être utilisé exactement comme indiqué. Nous vous recommandons d'ajouter du code de sécurité et de gestion des erreurs afin de renforcer la sécurité et la fiabilité de vos projets. Microsoft fournit cet exemple de code « EN L'ÉTAT » sans aucune garantie.
