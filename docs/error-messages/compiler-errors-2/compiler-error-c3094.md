@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3094
 ms.assetid: 10da9b7c-e72d-4013-9925-c83e1bb142db
-ms.openlocfilehash: 1b2cd29738763e5b31cc6727126114fca509a47f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2147320aeb662c46421f953eeb99c5cab0f5cd5e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512575"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767702"
 ---
 # <a name="compiler-error-c3094"></a>Erreur du compilateur C3094
 
-'attribut' : utilisation anonyme non autorisée
+'attribut' : utilisation anonyme non autorisée
 
-La portée d’un attribut a été définie de manière incorrecte.  Pour plus d'informations, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+La portée d’un attribut a été définie de manière incorrecte.  Pour plus d'informations, consultez [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
