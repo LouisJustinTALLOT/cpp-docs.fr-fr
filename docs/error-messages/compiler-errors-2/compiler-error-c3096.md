@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3096
 ms.assetid: 56353c9a-800c-474f-b428-3e5d2a7afc9a
-ms.openlocfilehash: 636777e0914dd8c8a1182c7d4e5472828e4ed108
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67de54eab963ec395a6fe08e22d06ae72aa06d94
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543921"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774096"
 ---
 # <a name="compiler-error-c3096"></a>Erreur du compilateur C3096
 
@@ -19,4 +19,4 @@ ms.locfileid: "50543921"
 
 Un attribut a été appliqué de façon incorrecte.
 
-Pour plus d'informations, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Pour plus d'informations, consultez [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).

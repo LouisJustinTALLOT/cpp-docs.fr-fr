@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3095
 ms.assetid: cde725be-0936-40f6-9e57-e1d7d0710f83
-ms.openlocfilehash: b8b6a7bfd5b44e0ddd1e8dfba1a054d9645a4693
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0cf35e7964925623be39c0177d77fc5a6231ad2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438751"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774111"
 ---
 # <a name="compiler-error-c3095"></a>Erreur du compilateur C3095
 
-'attribute' : impossible de répéter l’attribut
+'attribute' : impossible de répéter l’attribut
 
 Certains attributs sont déclarés de sorte que plusieurs occurrences d’eux mêmes ne peuvent pas être appliquées à une cible.
 
-Pour plus d'informations, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Pour plus d'informations, consultez [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 
