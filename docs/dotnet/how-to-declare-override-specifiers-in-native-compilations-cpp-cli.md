@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 2c9238eab1627b0494c4073c88032c488fdfb828
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752383"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777179"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Procédure : Déclarer des spécificateurs de substitution dans les Compilations natives (C++ / c++ / CLI)
 
-[sealed](../windows/sealed-cpp-component-extensions.md), [abstraite](../windows/abstract-cpp-component-extensions.md), et [remplacer](../windows/override-cpp-component-extensions.md) sont disponibles dans les compilations qui n’utilisent pas **/ZW** ou [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+[sealed](../extensions/sealed-cpp-component-extensions.md), [abstraite](../extensions/abstract-cpp-component-extensions.md), et [remplacer](../extensions/override-cpp-component-extensions.md) sont disponibles dans les compilations qui n’utilisent pas **/ZW** ou [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
 >  La norme ISO C ++ 11 Standard langue a la [remplacer](../cpp/override-specifier.md) identificateur et le [finale](../cpp/final-specifier.md) identificateur et les deux sont pris en charge dans Visual Studio, cliquez `final` au lieu de `sealed` dans le code est destiné à être compilé en tant que natif uniquement.
@@ -88,4 +88,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Spécificateurs de substitution](../windows/override-specifiers-cpp-component-extensions.md)
+[Spécificateurs de substitution](../extensions/override-specifiers-cpp-component-extensions.md)

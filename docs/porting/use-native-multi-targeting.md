@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 57f7450537f7609cbc66f8adf0bc868631e15f3a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 4afc34eb68281ea8f90ded0a647d714f70ba9d96
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740818"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770939"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets
 
@@ -67,4 +67,4 @@ Quand ces produits sont installés, la liste déroulante de propriétés **Ensem
 ## <a name="see-also"></a>Voir aussi
 
 [Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Améliorations de la conformité de C++ dans Visual Studio 2017](../cpp-conformance-improvements-2017.md)
+[Améliorations de la conformité de C++ dans Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)

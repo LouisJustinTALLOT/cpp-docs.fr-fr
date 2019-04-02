@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259202"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773123"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback, classe
 
@@ -101,7 +101,7 @@ Spécifie les indicateurs de liaison qui sont retournés par [GetBindInfo](#getb
 
 La classe `CBindStatusCallback` implémente l'interface `IBindStatusCallback`. `IBindStatusCallback` doit être implémentée par votre application afin qu’il peut recevoir des notifications à partir d’un transfert de données asynchrone. Utilise le moniker asynchrone fourni par le système `IBindStatusCallback` méthodes pour envoyer et recevoir des informations sur les données asynchrones de transfert vers et à partir de votre objet.
 
-En règle générale, le `CBindStatusCallback` objet est associé à une opération de liaison spécifique. Par exemple, dans le [ASYNC](../../visual-cpp-samples.md) exemple, lorsque vous définissez la propriété URL, il crée un `CBindStatusCallback` objet dans l’appel à `Download`:
+En règle générale, le `CBindStatusCallback` objet est associé à une opération de liaison spécifique. Par exemple, dans le [ASYNC](../../overview/visual-cpp-samples.md) exemple, lorsque vous définissez la propriété URL, il crée un `CBindStatusCallback` objet dans l’appel à `Download`:
 
 [!code-cpp[NVC_ATL_Windowing#86](../../atl/codesnippet/cpp/cbindstatuscallback-class_1.h)]
 
@@ -117,7 +117,7 @@ Le moniker asynchrone utilise la fonction de rappel `OnData` pour appeler votre 
 
 `CBindStatusCallback`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlctl.h
 
@@ -528,7 +528,7 @@ void Function_Name(
     DWORD dwSize);
 ```
 
-Dans l’exemple suivant (provenant du [ASYNC](../../visual-cpp-samples.md) exemple), la fonction `OnData` écrit les données reçues dans une zone de texte.
+Dans l’exemple suivant (provenant du [ASYNC](../../overview/visual-cpp-samples.md) exemple), la fonction `OnData` écrit les données reçues dans une zone de texte.
 
 ### <a name="example"></a>Exemple
 

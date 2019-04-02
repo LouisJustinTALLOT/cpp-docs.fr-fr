@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: f6e5031cb77729ede053b275c90fa93bf251fcb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486773"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769522"
 ---
 # <a name="unhook"></a>__unhook
 
@@ -48,7 +48,7 @@ long  __unhook(
 - Événements managés : *SourceClass* est la classe source d’événements et *EventMethod* est l’événement.
 
 *interface*<br/>
-Le nom d’interface décroché à partir *récepteur*, uniquement pour les récepteurs d’événements COM dans lequel le *layout_dependent* paramètre de la [event_receiver](../windows/event-receiver.md) attribut est **true**.
+Le nom d’interface décroché à partir *récepteur*, uniquement pour les récepteurs d’événements COM dans lequel le *layout_dependent* paramètre de la [event_receiver](../windows/attributes/event-receiver.md) attribut est **true**.
 
 *source*<br/>
 Pointeur vers une instance de la source d'événement. En fonction du code `type` spécifié dans `event_receiver`, *source* peut prendre l’une des opérations suivantes :
@@ -89,7 +89,7 @@ Au moment de la compilation, le compilateur vérifie que l'événement existe et
 
 Une alternative à l’utilisation de **__unhook** consiste à utiliser l’opérateur-=.
 
-Pour plus d’informations sur le codage des événements managés dans la nouvelle syntaxe, consultez [événement](../windows/event-cpp-component-extensions.md).
+Pour plus d’informations sur le codage des événements managés dans la nouvelle syntaxe, consultez [événement](../extensions/event-cpp-component-extensions.md).
 
 > [!NOTE]
 >  Une classe ou structure modélisée ne peut pas contenir d'événements.
@@ -101,8 +101,8 @@ Consultez [gestion des événements en C++ natif](../cpp/event-handling-in-nativ
 ## <a name="see-also"></a>Voir aussi
 
 [Mots clés](../cpp/keywords-cpp.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__event](../cpp/event.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__raise](../cpp/raise.md)

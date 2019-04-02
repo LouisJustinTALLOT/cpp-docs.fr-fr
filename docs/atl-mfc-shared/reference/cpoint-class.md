@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740393"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768027"
 ---
 # <a name="cpoint-class"></a>CPoint, classe
 
@@ -71,7 +71,7 @@ Un `CPoint` objet peut être utilisé partout où une `POINT` structure est util
 
 `CPoint`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atltypes.h
 
@@ -342,7 +342,7 @@ Utilisez l’opérateur unaire à inverser un point. Par exemple, à l’aide de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
+[Exemple MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [POINT, Structure](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect, classe](../../atl-mfc-shared/reference/crect-class.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 5abd2ef73ff8af9ebc2f1827cb5403025d5383ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330994"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774813"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -31,25 +31,25 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 #### <a name="parameters"></a>Paramètres
 
-*spécifications de modèle*<br/>
+*template-spec*<br/>
 Spécifications de modèle facultatives. Pour plus d’informations, consultez [modèles](templates-cpp.md).
 
 *class*<br/>
 Le **classe** mot clé.
 
-*MS-decl-spec*<br/>
+*ms-decl-spec*<br/>
 Spécification de classe de stockage facultative. Pour plus d’informations, reportez-vous à la [__declspec](../cpp/declspec.md) mot clé.
 
-*Balise*<br/>
+*tag*<br/>
 Le nom de type donné à la classe. L’étiquette devient un mot réservé dans l’étendue de la classe. La balise est facultative. Si omis, une classe anonyme est définie. Pour plus d’informations, consultez [des Types de classe anonymes](../cpp/anonymous-class-types.md).
 
-*liste de base*<br/>
+*base-list*<br/>
 Liste facultative des classes ou structures de que cette classe dérive ses membres à partir. Consultez [des Classes de Base](../cpp/base-classes.md) pour plus d’informations. Chaque nom de classe ou une structure de base peut être précédée d’un spécificateur d’accès ([public](../cpp/public-cpp.md), [privé](../cpp/private-cpp.md), [protégé](../cpp/protected-cpp.md)) et le [virtuels](../cpp/virtual-cpp.md) mot clé. Consultez le tableau de l’accès aux membres de [contrôle de l’accès aux membres de classe](member-access-control-cpp.md) pour plus d’informations.
 
-*liste des membres*<br/>
+*member-list*<br/>
 Liste des membres de classe. Reportez-vous à [vue d’ensemble des membres de classe](../cpp/class-member-overview.md) pour plus d’informations.
 
-*déclarateurs*<br/>
+*declarators*<br/>
 Liste des déclarateurs spécifiant les noms d’une ou plusieurs instances du type classe. Déclarateurs peuvent inclure des listes d’initialiseurs si tous les membres de données de la classe sont **public**. Cela est plus courant dans les structures, dont les données membres sont **public** par défaut, que dans les classes. Consultez [vue d’ensemble des déclarateurs](../cpp/overview-of-declarators.md) pour plus d’informations.
 
 ## <a name="remarks"></a>Notes
@@ -66,7 +66,7 @@ Pour plus d’informations sur les classes en général, consultez une des rubri
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Pour plus d’informations sur les classes et structures managées, consultez [Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+Pour plus d’informations sur les classes managées et les structures en C / c++ / CLI et c++ / CX, consultez [Classes et Structs](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>Exemple
 

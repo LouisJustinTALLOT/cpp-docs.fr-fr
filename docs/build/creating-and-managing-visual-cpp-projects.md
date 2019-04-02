@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: b5fb9ac87547578f101676d4cf424c7065155842
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825543"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775320"
 ---
 # <a name="visual-studio-projects---c"></a>Projets Visual Studio - C++
 
@@ -26,7 +26,7 @@ Un *projet Visual Studio* est un projet basé sur le système de génération MS
 
 Vous pouvez créer des projets C++ en choisissant **fichier &#124; New &#124; projet**, puis en cliquant sur Visual C++ dans le volet gauche. Dans le volet central, vous consultez une liste des modèles de projet : 
 
-   ![Modèles de projet](../media/vs2017-new-project.png "Boîte de dialogue Nouveau projet de Visual Studio 2017")
+   ![Modèles de projet](../overview/media/vs2017-new-project.png "Boîte de dialogue Nouveau projet de Visual Studio 2017")
 
 Pour plus d’informations sur tous les modèles de projet par défaut qui sont inclus dans Visual Studio, consultez [des modèles de projet C++ dans Visual Studio](reference/visual-cpp-project-types.md). Vous pouvez créer vos propres modèles de projet. Pour plus d'informations, voir [Procédure : Créer des modèles de projet](/visualstudio/ide/how-to-create-project-templates).
 
@@ -42,7 +42,7 @@ Ajouter des fichiers de code source, des icônes ou d’autres éléments à vot
 
 ## <a name="add-third-party-libraries"></a>Ajouter des bibliothèques tierces
 
-Pour ajouter des bibliothèques tierces, utilisez le [vcpkg](../vcpkg.md) Gestionnaire de package. Exécutez l’étape d’intégration Visual Studio pour configurer les chemins d’accès à cette bibliothèque lorsque vous faites référence à partir de n’importe quel projet de Visual Studio. 
+Pour ajouter des bibliothèques tierces, utilisez le [vcpkg](vcpkg.md) Gestionnaire de package. Exécutez l’étape d’intégration Visual Studio pour configurer les chemins d’accès à cette bibliothèque lorsque vous faites référence à partir de n’importe quel projet de Visual Studio. 
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Définir les options du compilateur et autres propriétés de build
 
@@ -54,22 +54,22 @@ Pour compiler et exécuter le nouveau projet, appuyez sur **F5** ou cliquez sur 
 
 Un nouveau projet se compile sans erreur. Lorsque vous ajoutez votre propre code, vous pouvez parfois introduire une erreur ou déclencher un avertissement. Une erreur empêche la génération de fin ; un avertissement ne fait pas. Toutes les erreurs et avertissements seront affiche dans la fenêtre Sortie et dans la liste d’erreurs lorsque vous générez le projet. 
 
-   ![Sortie fenêtre et liste d’erreurs](../media/vs2017-output-error-list.png)
+   ![Sortie fenêtre et liste d’erreurs](../overview/media/vs2017-output-error-list.png)
 
 Dans la liste d’erreurs, vous pouvez appuyer sur **F1** sur une erreur en surbrillance pour accéder à sa rubrique de documentation.
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Définir le compilateur C++ et générer des propriétés dans Visual Studio](working-with-project-properties.md)<br/>
+[Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md)<br/>
 Comment utiliser les Pages de propriétés et les feuilles de propriétés pour spécifier les paramètres de votre projet.
 
-[Bibliothèques de référence et des composants au moment de la génération](adding-references-in-visual-cpp-projects.md)<br/>
+[Composants et bibliothèques de référence au moment de la création](adding-references-in-visual-cpp-projects.md)<br/>
 Guide pratique pour inclure les composants COM et .NET et les bibliothèques, les DLL, dans un projet.
  
-[Organiser les fichiers de sortie de projet](how-to-organize-project-output-files-for-builds.md)<br/>
+[Organiser des fichiers de sortie de projet](how-to-organize-project-output-files-for-builds.md)<br/>
 Comment personnaliser l’emplacement des fichiers exécutables créé dans le processus de génération.
 
-[Étapes de génération personnalisée et des événements de Build](understanding-custom-build-steps-and-build-events.md)<br/>
+[Étapes de build personnalisée et événements de build](understanding-custom-build-steps-and-build-events.md)<br/>
 Comment ajouter n’importe quelle commande pour le processus de génération à points spécifiés.
 
 [Créer un projet à partir d’un code existant](how-to-create-a-cpp-project-from-existing-code.md)<br/>
@@ -77,4 +77,4 @@ Comment créer un nouveau projet Visual Studio à partir d’une collection libr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Projets et des systèmes de génération](projects-and-build-systems-cpp.md)<br>
+[Projets et systèmes de build](projects-and-build-systems-cpp.md)<br>

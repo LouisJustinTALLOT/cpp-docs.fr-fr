@@ -7,12 +7,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: d111d601d966ec5f863d62d9788654101a2ab56d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c46cb77dd2efe41a41c7108115d6d22808782f01
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825527"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773526"
 ---
 # <a name="xml-documentation-visual-c"></a>Documentation XML (Visual C++)
 
@@ -44,4 +44,4 @@ Si vous devez placer des caractères spéciaux XML dans le texte d’un commenta
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour les plateformes Runtime](../../extensions/component-extensions-for-runtime-platforms.md)

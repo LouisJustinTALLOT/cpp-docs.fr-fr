@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: 51c1634aade159e095b5957a15783e40ec0284d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e1aefc82eb23a8479035dd3372fa9ec24ab8feb1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750960"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774202"
 ---
 # <a name="porting-third-party-libraries"></a>Portage de bibliothèques tierces
 
@@ -18,7 +18,7 @@ Quand vous mettez à niveau un projet vers la version actuelle de Visual C++, v
 
 ## <a name="introducing-vcpkg"></a>Présentation de vcpkg
 
-Dans le passé, la recherche et la mise à niveau de bibliothèques tierces représentaient parfois une tâche loin d’être futile. Pour faciliter l’acquisition et la régénération de bibliothèques open source tierces C++, l’équipe Visual C++ a créé un outil en ligne de commande appelé l’**outil d’empaquetage VC++** ou **vcpkg**. Vcpkg comporte un catalogue de nombreuses bibliothèques open source C++ populaires dans lequel vous pouvez effectuer des recherches. Vous pouvez installer n’importe quelle bibliothèque dans le catalogue directement à partir de la ligne de commande vcpkg. Quand vous installez une bibliothèque, Vcpkg crée une arborescence de répertoires sur votre ordinateur et ajoute les fichiers .h, .lib et binaires à ce dossier. Vous pouvez utiliser ce dossier dans votre ligne de commande de compilation, ou l’intégrer à Visual Studio 2015 ou version ultérieure à l’aide de la commande vcpkg integrate install. Après avoir intégré un emplacement de bibliothèque, Visual Studio peut le trouver et l’ajouter à n’importe quel projet que vous créez. Pour employer une bibliothèque, utilisez simplement `#include`. Visual Studio ajoute automatiquement le chemin du fichier .lib aux paramètres du projet, puis copie la dll dans votre dossier solution. Pour plus d’informations, consultez [vcpkg : Gestionnaire de package pour C++](../vcpkg.md).
+Dans le passé, la recherche et la mise à niveau de bibliothèques tierces représentaient parfois une tâche loin d’être futile. Pour faciliter l’acquisition et la régénération de bibliothèques open source tierces C++, l’équipe Visual C++ a créé un outil en ligne de commande appelé l’**outil d’empaquetage VC++** ou **vcpkg**. Vcpkg comporte un catalogue de nombreuses bibliothèques open source C++ populaires dans lequel vous pouvez effectuer des recherches. Vous pouvez installer n’importe quelle bibliothèque dans le catalogue directement à partir de la ligne de commande vcpkg. Quand vous installez une bibliothèque, Vcpkg crée une arborescence de répertoires sur votre ordinateur et ajoute les fichiers .h, .lib et binaires à ce dossier. Vous pouvez utiliser ce dossier dans votre ligne de commande de compilation, ou l’intégrer à Visual Studio 2015 ou version ultérieure à l’aide de la commande vcpkg integrate install. Après avoir intégré un emplacement de bibliothèque, Visual Studio peut le trouver et l’ajouter à n’importe quel projet que vous créez. Pour employer une bibliothèque, utilisez simplement `#include`. Visual Studio ajoute automatiquement le chemin du fichier .lib aux paramètres du projet, puis copie la dll dans votre dossier solution. Pour plus d’informations, consultez [vcpkg : Gestionnaire de package pour C++](../build/vcpkg.md).
 
 ## <a name="reporting-issues"></a>Problèmes liés aux rapports
 

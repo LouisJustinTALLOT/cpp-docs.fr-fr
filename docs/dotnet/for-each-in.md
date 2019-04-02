@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746306"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770689"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -35,7 +35,7 @@ Itère dans un tableau ou une collection. Ce mot clé non standard est disponibl
 Type d'élément `identifier`.
 
 *identifier*<br/>
-La variable d'itération qui représente l'élément de collection.  Lorsque `identifier` est un [opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md), vous pouvez modifier l’élément.
+La variable d'itération qui représente l'élément de collection.  Lorsque `identifier` est un [opérateur de référence de suivi](../extensions/tracking-reference-operator-cpp-component-extensions.md), vous pouvez modifier l’élément.
 
 *expression*<br/>
 Expression ou collection de tableaux. L'élément de collection doit pouvoir être converti par le compilateur en type d'élément `identifier`.
@@ -49,7 +49,7 @@ L’instruction `for each` permet d’itérer au sein d’une collection. Vous p
 
 Le *instructions* sont exécutées pour chaque élément du tableau ou de la collection. Une fois l'itération terminée pour tous les éléments de la collection, le contrôle est transféré à l'instruction placée après le bloc `for each`.
 
-`for each` et `in` sont [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).
+`for each` et `in` sont [mots clés contextuels](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
 Pour plus d'informations :
 
@@ -63,7 +63,7 @@ Pour plus d'informations :
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : **/ZW**
 
@@ -116,7 +116,7 @@ Collection ou expression de tableau managé. L’élément de collection doit ê
 
 *expression* correspond à un type qui implémente <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, ou un type qui définit un `GetEnumerator` méthode qui retourne un type qui implémente <xref:System.Collections.IEnumerator> ou déclare toutes les méthodes qui sont définies dans `IEnumerator`.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : **/clr**
 
@@ -159,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md)

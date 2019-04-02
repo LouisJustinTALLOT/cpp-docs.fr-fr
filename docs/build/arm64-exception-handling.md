@@ -1,12 +1,12 @@
 ---
 title: La gestion des exceptions ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 78d3d7d206adcb123c9537e91c2d5976b8be5baa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816150"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770068"
 ---
 # <a name="arm64-exception-handling"></a>La gestion des exceptions ARM64
 
@@ -54,7 +54,7 @@ Il s’agit de la description des exceptions hypothèses :
 
 ![disposition du frame de pile](media/arm64-exception-handling-stack-frame.png "disposition du frame de pile")
 
-Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée à n’importe quelle position dans la zone de variable locale en fonction des considérations d’optimisation. L’objectif est de maximiser le nombre de variables locales qui peut être atteint par une instruction unique basée sur le pointeur de frame (r29) ou le pointeur de pile (sp). Toutefois pour `alloca` fonctions, il doit être chaîné et r29 doit pointer vers le bas de pile. Pour permettre une meilleure couverture register-paire-adressage-mode, non volatile inscrire aave zones sont positionnés en haut de la pile de réseau Local. Voici des exemples qui illustrent certains des séquences de prologue plus efficaces. Par souci de clarté une meilleure localité de cache, l’ordre de stockage de registres enregistrés des appelés dans tous les prologues canoniques est dans l’ordre « croissante des ». `#framesz` ci-dessous représente la taille de pile entière (à l’exclusion de la zone d’alloca). `#localsz` et `#outsz` indiquent la taille de la zone locale (y compris l’enregistrement concernant la \<r29, lr > paire) et sortant de taille de paramètre, respectivement.
+Pour les fonctions de frame chaînée, la paire fp et lr peut être enregistrée à n’importe quelle position dans la zone de variable locale en fonction des considérations d’optimisation. L’objectif est de maximiser le nombre de variables locales qui peut être atteint par une instruction unique basée sur le pointeur de frame (r29) ou le pointeur de pile (sp). Toutefois pour `alloca` fonctions, il doit être chaîné et r29 doit pointer vers le bas de pile. Pour permettre une meilleure couverture register-paire-adressage-mode, un Registre non volatil zones de sauvegarde sont positionnés en haut de la pile de réseau Local. Voici des exemples qui illustrent certains des séquences de prologue plus efficaces. Par souci de clarté une meilleure localité de cache, l’ordre de stockage de registres enregistrés des appelés dans tous les prologues canoniques est dans l’ordre « croissante des ». `#framesz` ci-dessous représente la taille de pile entière (à l’exclusion de la zone d’alloca). `#localsz` et `#outsz` indiquent la taille de la zone locale (y compris l’enregistrement concernant la \<r29, lr > paire) et sortant de taille de paramètre, respectivement.
 
 1. Chained, #localsz \<= 512
 
@@ -267,7 +267,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Il convient de noter que bien que le prologue et chaque épilogue a son propre index dans les codes de déroulement, la table est partagée entre eux, et il est tout à fait possible (et pas complètement rare) qu’ils puissent tous partager les mêmes codes (voir l’exemple 2 dans l’annexe A ci-dessous). Writers de compilateur doivent optimiser dans ce cas, en particulier, car le plus grand index peut être spécifié est de 255, ce qui limite le nombre total de codes de déroulement pour une fonction particulière.
+Il convient de noter que bien que le prologue et chaque épilogue a son propre index dans les codes de déroulement, la table est partagée entre eux, et il est tout à fait possible (et pas complètement rare) qu’ils puissent tous partager les mêmes codes (voir l’exemple 2 dans le bel de section d’exemples Comment puis-je). Writers de compilateur doivent optimiser dans ce cas, en particulier, car le plus grand index peut être spécifié est de 255, ce qui limite le nombre total de codes de déroulement pour une fonction particulière.
 
 ### <a name="unwind-codes"></a>Codes de déroulement
 
@@ -340,7 +340,7 @@ Les champs sont les suivantes :
 
 - **Fonction RVA Démarrer** est l’adresse RVA 32 bits du début de la fonction.
 - **Indicateur** est un champ de 2 bits comme décrit ci-dessus, avec les significations suivantes :
-  - 00 = compressé déroulement des données non utilisées ; bits restants pointent vers un enregistrement .xdata, ci-dessous
+  - 00 = compressé déroulement des données non utilisées ; bits restants pointent vers un enregistrement .xdata
   - 01 = compressée utilisées comme décrit ci-dessous, avec un seul prologue et épilogue au début et à la fin de l’étendue des données de déroulement
   - 10 = compressée utilisées comme décrit ci-dessous pour le code sans prologue et épilogue ; des données de déroulement Cela est utile pour décrire les segments de la fonction séparés.
   - 11 = réservés ;
@@ -353,7 +353,7 @@ Les champs sont les suivantes :
   - 11 = fonction chaînée, une instruction de paire de magasin/charge est utilisée dans le prologue/épilogue \<r29, lr >
 - **H** est un indicateur de 1 bit qui indique si la fonction héberge le paramètre entier inscrit (r0-r7) en les stockant dès le début de la fonction. (0 = n’héberge pas les registres, 1 = héberge les registres).
 - **RegI** est un champ de 4 bits indiquant le nombre d’INT les registres non volatils (r19 r28) enregistré dans l’emplacement de pile canonique.
-- **RegF** est un champ de 3 bits indiquant le nombre de FP les registres non volatils (d8-d15) enregistré dans l’emplacement de pile canonique. (0 ne = aucune FP register est enregistré, m > 0 : m + 1 registres de virgule flottante sont enregistrés). Pour la fonction enregistrer qu’un seul registre FP, conditionné de déroulement données ne peut pas être appliquées.
+- **RegF** est un champ de 3 bits indiquant le nombre de FP les registres non volatils (d8-d15) enregistré dans l’emplacement de pile canonique. (RegF = 0 : aucun registre FP n’est enregistré ; RegF > 0 : RegF + 1 registres de virgule flottante sont enregistrées). Conditionnés de déroulement données ne peut pas être utilisées pour la fonction qui n'enregistrer qu’un seul registre FP.
 
 Les prologues canoniques qui appartiennent aux catégories 1, 2 (sans zone de paramètres sortants), 3 et 4 dans la section ci-dessus peuvent être représentés par le format de déroulement compressé.  Les épilogues pour les fonctions canoniques suivent une forme très similaire, sauf **H** n’a aucun effet, la `set_fp` instruction est omise, ainsi que l’ordre des étapes, ainsi que des instructions dans chaque étape dans l’épilogue. L’algorithme pour xdata compressé suit ces étapes détaillées dans le tableau suivant :
 
@@ -386,7 +386,7 @@ Les prologues canoniques qui appartiennent aux catégories 1, 2 (sans zone de pa
 
 \*\* Si **RegI** == **CR** == 0, et **RegF** ! = 0, le premier protocole stp pour la virgule flottante ne la décrémentation préfixée.
 
-\*\*\* Aucune instruction correspondant à `mov r29, sp` est présent dans l’épilogue. Si une fonction requiert la restauration de procédure stockée à partir de r29 ensuite nous ne pouvons pas utiliser emballés données de déroulement.
+\*\*\* Aucune instruction correspondant à `mov r29, sp` est présent dans l’épilogue. Conditionnés de déroulement données ne peut pas être utilisées si une fonction requiert la restauration de procédure stockée à partir de r29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Épilogues et le déroulement des prologues partielles
 

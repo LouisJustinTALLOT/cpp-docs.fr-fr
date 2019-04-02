@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: 7f8966c215ed53279f1391ce00adfc783f34f2d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1a8618bd5146f2906f18cfbaa33894d34598776a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276159"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770744"
 ---
 # <a name="ccomheap-class"></a>Ccomheap, classe
 
@@ -56,7 +56,7 @@ Consultez l’exemple de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 `CComHeap`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** ATLComMem.h
 
@@ -149,7 +149,7 @@ Implémenté à l’aide [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-c
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Exemple DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [CWin32Heap, classe](../../atl/reference/cwin32heap-class.md)<br/>
 [CLocalHeap, classe](../../atl/reference/clocalheap-class.md)<br/>

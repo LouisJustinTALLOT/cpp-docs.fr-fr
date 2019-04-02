@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: 3891741cb6998ec8621795801ce409aa40ab6d1d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87e526a10c9bcd6a52f4544c50344c5145cfa732
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270382"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769548"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT, classe
 
@@ -98,7 +98,7 @@ Pour plus d’informations sur les modules dans ATL, consultez [Module ATL, Clas
 
 `CAtlExeModuleT`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 
@@ -353,7 +353,7 @@ Cette méthode peut être substituée. Si vous la substituez [CAtlExeModuleT::Pr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple ATLDuck](../../visual-cpp-samples.md)<br/>
+[Exemple ATLDuck](../../overview/visual-cpp-samples.md)<br/>
 [CAtlModuleT, classe](../../atl/reference/catlmodulet-class.md)<br/>
 [CAtlDllModuleT, classe](../../atl/reference/catldllmodulet-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

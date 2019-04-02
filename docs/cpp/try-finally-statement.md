@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175919"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778336"
 ---
 # <a name="try-finally-statement"></a>try-finally, instruction
 
@@ -33,11 +33,11 @@ ms.locfileid: "52175919"
 
 La syntaxe suivante décrit la **try-finally** instruction :
 
-> **\_\_Essayez**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;code protégé<br/>
 > }<br/>
-> **\_\_Enfin**<br/>
+> **\_\_finally**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;code d’arrêt<br/>
 > }<br/>
@@ -45,11 +45,11 @@ La syntaxe suivante décrit la **try-finally** instruction :
 ## <a name="grammar"></a>Grammaire
 
 *try-finally-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\_\_Essayez** *compound-statement*  **\_ \_enfin** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**\_\_try** *compound-statement* **\_\_finally** *compound-statement*
 
 Le **try-finally** instruction est une extension de Microsoft pour les langages C et C++ qui permet aux applications cibles garantir l’exécution de code de nettoyage lorsque l’exécution d’un bloc de code est interrompue. Le nettoyage se compose de tâches telles que la désallocation de mémoire, la fermeture de fichiers et la libération des handles de fichiers. Le **try-finally** instruction est particulièrement utile pour les routines qui ont plusieurs endroits où un contrôle est effectué pour une erreur qui peut entraîner prématuré de retour de la routine.
 
-Pour plus d’informations et un exemple de code, consultez [essayez-EXCEPT, instruction](../cpp/try-except-statement.md). Pour plus d’informations sur structurée des exceptions en général, consultez [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Pour plus d’informations sur la gestion des exceptions dans les applications managées, consultez [gestion des exceptions sous /clr](../windows/exception-handling-cpp-component-extensions.md).
+Pour plus d’informations et un exemple de code, consultez [essayez-EXCEPT, instruction](../cpp/try-except-statement.md). Pour plus d’informations sur structurée des exceptions en général, consultez [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Pour plus d’informations sur la gestion des exceptions dans les applications managées avec C / c++ / CLI, consultez [gestion des exceptions sous /clr](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
 > La gestion structurée des exceptions fonctionne avec Win32 pour les fichiers sources C et C++. Toutefois, elle n'est pas conçue spécifiquement pour C++. Vous pouvez vous assurer que votre code est plus portable en utilisant la gestion des exceptions C++. En outre, la gestion des exceptions C++ est plus souple, car elle permet de traiter des exceptions de tout type. Pour les programmes C++, il est recommandé d’utiliser le mécanisme de gestion des exceptions C++ ([try, catch et throw](../cpp/try-throw-and-catch-statements-cpp.md) instructions).
@@ -66,7 +66,7 @@ Le contrôle atteint une **__try** instruction par exécution séquentielle simp
 
 Si une exception se produit dans le **__try** bloc, le système d’exploitation doit rechercher un gestionnaire pour l’exception ou le programme échoue. Si un gestionnaire est trouvé, tous les **__finally** blocs sont exécutés et l’exécution reprend dans le gestionnaire.
 
-Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à la fonction D, comme indiqué dans l'illustration suivante. Chaque fonction a un gestionnaire de terminaisons. Si une exception est levée dans la fonction D et gérée dans A, les gestionnaires de terminaisons sont appelés dans l'ordre suivant à mesure que le système déroule la pile : D, C, B.
+Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à la fonction D, comme indiqué dans l'illustration suivante. Chaque fonction a un gestionnaire de terminaisons. Si une exception est levée dans la fonction D et gérée dans A, les gestionnaires de terminaisons sont appelés dans l’ordre, comme le système déroule la pile : D, C, B.
 
 ![Commande d’arrêt&#45;l’exécution du gestionnaire](../cpp/media/vc38cx1.gif "commande d’arrêt&#45;l’exécution du Gestionnaire") <br/>
 Fin de l'ordre d'exécution du gestionnaire

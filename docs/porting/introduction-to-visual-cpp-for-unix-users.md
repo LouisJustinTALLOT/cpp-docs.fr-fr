@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 0cffdc2be00b4af9badbbbc80bcfef48b3f76e19
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 2b0736bca9cc0b67f9ea8ac83dc18fadaeefdb3c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57818373"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780819"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduction à Visual C++ pour les utilisateurs UNIX
 
@@ -51,7 +51,7 @@ Quand vous créez un projet, vous devez lui attribuer un nom. Par défaut, le no
 
 Le compilateur Microsoft Visual C++ implémente plusieurs extensions du langage de programmation C++ standard pour prendre en charge la programmation sur les systèmes d’exploitation Windows. Ces extensions servent à spécifier des attributs de classe de stockage, des conventions d'appel de fonction et des fonctions d'adressage, entre autres choses. Pour obtenir une liste complète de toutes les extensions C++ prises en charge, consultez [Modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-Vous pouvez désactiver toutes les extensions spécifiques Microsoft pour C++ à l'aide de l'option `/Za` du compilateur. Cette option est recommandée si vous souhaitez écrire du code devant s'exécuter sur plusieurs plateformes. Pour plus d’informations sur l’option de compilateur `/Za`, consultez [/Za, /Ze (désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md). Pour plus d’informations sur la conformité du compilateur C++, consultez [Conformité du langage Visual C++](../visual-cpp-language-conformance.md) et [Comportement non standard](../cpp/nonstandard-behavior.md).
+Vous pouvez désactiver toutes les extensions spécifiques Microsoft pour C++ à l'aide de l'option `/Za` du compilateur. Cette option est recommandée si vous souhaitez écrire du code devant s'exécuter sur plusieurs plateformes. Pour plus d’informations sur l’option de compilateur `/Za`, consultez [/Za, /Ze (désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md). Pour plus d’informations sur la conformité du compilateur C++, consultez [Conformité du langage Visual C++](../overview/visual-cpp-language-conformance.md) et [Comportement non standard](../cpp/nonstandard-behavior.md).
 
 ## <a name="precompiled-headers"></a>En-têtes précompilés
 

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling [C++], Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-ms.openlocfilehash: 210eea760e80814041b4e97f50c4164ef98d75e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93bfcc93c680618ea3a51eabd145548a4f47563a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457549"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772330"
 ---
 # <a name="event-handling-in-native-c"></a>Gestion des événements en mode natif C++
 
-Dans Gestion des événements C++ native, vous configurez un récepteur d’événements source et les événements à l’aide de la [event_source](../windows/event-source.md) et [event_receiver](../windows/event-receiver.md) des attributs, respectivement, en spécifiant `type` = `native`. Ces attributs permettent aux classes auxquelles ils sont appliqués de déclencher et de gérer des événements dans un contexte natif non COM.
+Dans Gestion des événements C++ native, vous configurez un récepteur d’événements source et les événements à l’aide de la [event_source](../windows/attributes/event-source.md) et [event_receiver](../windows/attributes/event-receiver.md) des attributs, respectivement, en spécifiant `type` = `native`. Ces attributs permettent aux classes auxquelles ils sont appliqués de déclencher et de gérer des événements dans un contexte natif non COM.
 
 ## <a name="declaring-events"></a>Déclaration d'événements
 
@@ -21,7 +21,7 @@ Dans une classe de source d’événement, utilisez le [__event](../cpp/event.md
 
 ## <a name="defining-event-handlers"></a>Définition de gestionnaires d'événements
 
-Dans une classe de récepteur d’événements, vous définissez des gestionnaires d’événements, qui sont des méthodes avec signatures (types de retour, conventions d’appel et arguments) qui correspondent à l’événement qu’ils doivent gérer.
+Dans une classe de récepteur d'événements, vous définissez des gestionnaires d'événements, qui sont des méthodes avec signatures (types de retour, conventions d'appel et arguments) qui correspondent à l'événement qu'ils doivent gérer.
 
 ## <a name="hooking-event-handlers-to-events"></a>Raccordement de gestionnaires d'événements à des événements
 

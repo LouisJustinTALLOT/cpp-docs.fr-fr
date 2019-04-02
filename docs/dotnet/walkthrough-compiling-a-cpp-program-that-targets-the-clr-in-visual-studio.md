@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: a65ccdb4d2f031a70ba03719b58fb439407cdfc8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d0a006c6928bf42c3e6f4adfbc3d1fdde7ff7c87
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825627"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773045"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Procédure pas à pas : Compiler un C + c++ / CLI programme qui cible le CLR dans Visual Studio
 
@@ -57,7 +57,7 @@ Ces rubriques partent du principe que vous avez des notions de base du langage C
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Pour plus d’informations sur la nouvelle syntaxe Visual C++, consultez [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md).
+   Pour plus d’informations sur la nouvelle syntaxe Visual C++, consultez [Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. Dans le menu **Générer** , cliquez sur **Générer la solution**.
 
@@ -77,4 +77,4 @@ Ces rubriques partent du principe que vous avez des notions de base du langage C
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Projets et des systèmes de génération](../build/projects-and-build-systems-cpp.md)<br/>
+[Projets et systèmes de build](../build/projects-and-build-systems-cpp.md)<br/>

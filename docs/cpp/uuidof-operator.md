@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: 6e593d023c486aa504f0b5eee8578fa8c307bcc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432706"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769197"
 ---
 # <a name="uuidof-operator"></a>__uuidof, opérateur
 
@@ -39,7 +39,7 @@ Utilisez ce mot clé pour extraire le GUID attaché à :
 
 - Un objet par le [uuid](../cpp/uuid-cpp.md) attributs étendus.
 
-- Un bloc de bibliothèque est créé avec le [module](../windows/module-cpp.md) attribut.
+- Un bloc de bibliothèque est créé avec le [module](../windows/attributes/module-cpp.md) attribut.
 
 > [!NOTE]
 > Dans une version debug, **__uuidof** toujours Initialise un objet dynamiquement (lors de l’exécution). Dans une version Release, **__uuidof** peut initialiser statiquement (au moment de la compilation) un objet.

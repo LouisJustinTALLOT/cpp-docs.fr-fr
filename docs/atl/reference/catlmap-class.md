@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293782"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774553"
 ---
 # <a name="catlmap-class"></a>CAtlMap, classe
 
@@ -91,7 +91,7 @@ Le code utilisé pour copier ou déplacer des éléments de valeur.
 
 ### <a name="cpair-data-members"></a>Membres de données de CPair
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CPair::m_key](#m_key)|Le stockage de l’élément clé de membre de données.|
 |[CPair::m_value](#m_value)|Le membre de données stocker l’élément de valeur.|
@@ -151,7 +151,7 @@ Lorsqu’un petit nombre d’éléments doit être stockées, envisagez d’util
 
 Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcoll.h
 
@@ -782,6 +782,6 @@ Le type d’élément de valeur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple de texte défilant](../../visual-cpp-samples.md)<br/>
+[Exemple de texte défilant](../../overview/visual-cpp-samples.md)<br/>
 [Exemple UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518565"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776334"
 ---
 # <a name="auto-c"></a>automatique (C++)
 
@@ -34,13 +34,13 @@ Le **automatique** mot clé indique au compilateur d’utiliser l’expression d
 
 Nous vous recommandons d’utiliser le **automatique** mot clé pour la plupart des situations —, sauf si vous voulez vraiment une conversion, car elle offre ces avantages :
 
-- **Robustesse :** si le type de l’expression est modifié, cela inclut les cas de modification d’un type de retour de fonction, elle fonctionne tout simplement.
+- **Robustesse :** Si le type de l’expression est modifié, cela inclut les cas de modification d’un type de retour de fonction, elle fonctionne tout simplement.
 
-- **Performances :** vous êtes certain qu’il n’y aura aucune conversion.
+- **Performances :** Vous êtes certain qu’il n’y aura aucune conversion.
 
-- **Facilité d’utilisation :** ne pas avoir à vous soucier des fautes de frappe et les difficultés de l’orthographe de nom de type.
+- **Facilité d’utilisation :** Vous n’avez pas à vous soucier des fautes de frappe et les difficultés de l’orthographe de nom de type.
 
-- **L’efficacité :** votre codage peut être plus efficace.
+- **Efficacité :** Votre codage peut être plus efficace.
 
 Cas de conversion dans lesquels vous souhaiterez pas utiliser **automatique**:
 
@@ -52,7 +52,7 @@ Pour utiliser le **automatique** mot clé, utilisez plutôt qu’un type pour d�
 
 L’expression d’initialisation peut être une assignation (syntaxe avec signe égal), une initialisation directe (syntaxe de style fonction), un [opérateur new](new-operator-cpp.md) expression ou l’expression d’initialisation peut être le  *for-range-declaration* paramètre dans un [Range-based pour instruction (C++)](../cpp/range-based-for-statement-cpp.md) instruction. Pour plus d’informations, consultez [initialiseurs](../cpp/initializers.md) et les exemples de code plus loin dans ce document.
 
-Le **automatique** mot clé est un espace réservé pour un type, mais il n’est pas lui-même un type. Par conséquent, le **automatique** mot clé ne peut pas être utilisé dans des casts ni des opérateurs tels que [sizeof](../cpp/sizeof-operator.md) et [typeid](../windows/typeid-cpp-component-extensions.md).
+Le **automatique** mot clé est un espace réservé pour un type, mais il n’est pas lui-même un type. Par conséquent, le **automatique** mot clé ne peut pas être utilisé dans des casts ni des opérateurs tels que [sizeof](../cpp/sizeof-operator.md) et (pour C / c++ / CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Utilité
 
@@ -123,7 +123,7 @@ int main()
 
 Le tableau suivant répertorie les restrictions sur l’utilisation de la **automatique** mot clé et le message d’erreur de diagnostic correspondant émis par le compilateur.
 
-|Numéro de l'erreur|Description|
+|Numéro d'erreur|Description|
 |------------------|-----------------|
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|Le **automatique** mot clé ne peut pas être combiné avec n’importe quel autre spécificateur de type.|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Un symbole qui est déclaré avec le **automatique** mot clé doit avoir un initialiseur.|
@@ -133,7 +133,7 @@ Le tableau suivant répertorie les restrictions sur l’utilisation de la **auto
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Un symbole ne peut pas être utilisé avant d'être initialisé. Dans la pratique, cela signifie qu'une variable ne peut pas être utilisée pour s'initialiser.|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Vous ne pouvez pas effectuer un cast en un type qui est déclaré avec le **automatique** mot clé.|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Tous les symboles dans une liste de déclarateurs qui est déclaré avec le **automatique** mot clé doit correspondre au même type. Pour plus d’informations, consultez [déclarations et définitions](declarations-and-definitions-cpp.md).|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Le [sizeof](../cpp/sizeof-operator.md) et [typeid](../windows/typeid-cpp-component-extensions.md) opérateurs ne peuvent pas être appliqués à un symbole qui est déclaré avec le **automatique** mot clé.|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Le [sizeof](../cpp/sizeof-operator.md) et [typeid](../extensions/typeid-cpp-component-extensions.md) opérateurs ne peuvent pas être appliqués à un symbole qui est déclaré avec le **automatique** mot clé.|
 
 ## <a name="examples"></a>Exemples
 
@@ -225,7 +225,7 @@ int main()
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (Déduire le type de variable)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof, opérateur](../cpp/sizeof-operator.md)<br/>
-[typeid](../windows/typeid-cpp-component-extensions.md)<br/>
+[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [operator new](new-operator-cpp.md)<br/>
 [Déclarations et définitions](declarations-and-definitions-cpp.md)<br/>
 [Exemples d’expressions lambda](../cpp/examples-of-lambda-expressions.md)<br/>

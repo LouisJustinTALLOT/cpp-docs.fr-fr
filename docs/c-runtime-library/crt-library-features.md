@@ -18,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 08d85cd6993a2f3558ddb501dacac671c0d5d797
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540268"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767689"
 ---
 # <a name="crt-library-features"></a>Fonctionnalités de la bibliothèque CRT
 
@@ -33,14 +33,14 @@ Cette rubrique décrit les différents fichiers .lib qui composent les biblioth�
 
 La bibliothèque runtime C (CRT) est la partie de la bibliothèque C++ standard qui incorpore la bibliothèque ISO C99 standard. Les bibliothèques Visual C++ qui implémentent le CRT prennent en charge le développement du code natif ainsi que le code natif et managé mixte. Toutes les versions du CRT prennent en charge le développement multithread. La plupart des bibliothèques prennent en charge la liaison statique, pour lier la bibliothèque directement à votre code, ou la liaison dynamique pour permettre à votre code d’utiliser les fichiers DLL communs.
 
-À compter de Visual Studio 2015, le CRT est refactorisé dans de nouveaux binaires. La bibliothèque Universal CRT (UCRT) contient les fonctions et variables globales exportées par la bibliothèque CRT C99 standard. UCRT est désormais un composant Windows fourni avec Windows 10. La bibliothèque statique, la bibliothèque d’importation de DLL et les fichiers d’en-tête UCRT se trouvent désormais dans le SDK Windows 10. Quand vous installez Visual C++, le programme d’installation de Visual Studio installe le sous-ensemble du SDK Windows 10 nécessaire à l’utilisation de l’UCRT. Vous pouvez utiliser l’UCRT sur n’importe quelle version de Windows prise en charge par Visual Studio 2015 et ultérieur. Vous pouvez la redistribuer à l’aide de vcredist pour les versions prises en charge de Windows distinctes de Windows 10. Pour plus d'informations, consultez [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).
+À compter de Visual Studio 2015, le CRT est refactorisé dans de nouveaux binaires. La bibliothèque Universal CRT (UCRT) contient les fonctions et variables globales exportées par la bibliothèque CRT C99 standard. UCRT est désormais un composant Windows fourni avec Windows 10. La bibliothèque statique, la bibliothèque d’importation de DLL et les fichiers d’en-tête UCRT se trouvent désormais dans le SDK Windows 10. Quand vous installez Visual C++, le programme d’installation de Visual Studio installe le sous-ensemble du SDK Windows 10 nécessaire à l’utilisation de l’UCRT. Vous pouvez utiliser l’UCRT sur n’importe quelle version de Windows prise en charge par Visual Studio 2015 et ultérieur. Vous pouvez la redistribuer à l’aide de vcredist pour les versions prises en charge de Windows distinctes de Windows 10. Pour plus d'informations, consultez [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md).
 
 Le tableau suivant répertorie les bibliothèques qui implémentent l’UCRT.
 
 |Bibliothèque|DLL associée|Caractéristiques|Option|Directives de préprocesseur|
 |-------------|--------------------|---------------------|------------|-----------------------------|
 |libucrt.lib|Aucun.|Lie de manière statique l’UCRT à votre code.|**/MT**|_MT|
-|libucrtd.lib|Aucune|Version Debug de l’UCRT pour la liaison statique. Non redistribuable.|**/MTd**|_DEBUG, _MT|
+|libucrtd.lib|Aucun.|Version Debug de l’UCRT pour la liaison statique. Non redistribuable.|**/MTd**|_DEBUG, _MT|
 |ucrt.lib|ucrtbase.dll|Bibliothèque d’importation de DLL pour l’UCRT.|**/MD**|_MT, _DLL|
 |ucrtd.lib|ucrtbased.dll|Bibliothèque d’importation de DLL pour la version Debug de l’UCRT. Non redistribuable.|**/MDd**|_DEBUG, _MT, _DLL|
 
@@ -96,7 +96,7 @@ Cette version du CRT n’est pas entièrement conforme à la norme C99. En parti
 |libcpmtd.lib|Multithread, liaison statique|**/MTd**|_DEBUG, _MT|
 |msvcprtd.lib|Multithread, liaison dynamique, (bibliothèque d’importation pour MSVCP*version*D.DLL)|**/MDd**|_DEBUG, _MT, _DLL|
 
-Quand vous générez une version de mise en production de votre projet, une des bibliothèques runtime C de base (libcmt.lib, msvcmrt.lib, msvcrt.lib) est liée par défaut, selon l’option de compilateur choisie (multithread, DLL, /clr). Si vous incluez un des [fichiers d’en-tête de bibliothèque standard C++](../standard-library/cpp-standard-library-header-files.md) dans votre code, une bibliothèque standard C++ est liée automatiquement par Visual C++ au moment de la compilation. Exemple :
+Quand vous générez une version de mise en production de votre projet, une des bibliothèques runtime C de base (libcmt.lib, msvcmrt.lib, msvcrt.lib) est liée par défaut, selon l’option de compilateur choisie (multithread, DLL, /clr). Si vous incluez un des [fichiers d’en-tête de bibliothèque standard C++](../standard-library/cpp-standard-library-header-files.md) dans votre code, une bibliothèque standard C++ est liée automatiquement par Visual C++ au moment de la compilation. Par exemple :
 
 ```cpp
 #include <ios>

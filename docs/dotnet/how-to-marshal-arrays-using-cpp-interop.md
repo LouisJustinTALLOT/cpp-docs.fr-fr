@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739999"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776893"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Procédure : Marshaler des tableaux à l’aide de C++ Interop
 
@@ -24,7 +24,7 @@ Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.m
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment passer un tableau managé à une fonction non managée. Utilise la fonction managée [pin_ptr (C++ / c++ / CLI)](../windows/pin-ptr-cpp-cli.md) pour supprimer le garbage collection pour le tableau avant d’appeler la fonction non managée. En fournissant la fonction non managée avec un pointeur épinglé dans le tas GC, la surcharge d’effectuer une copie du tableau peut être évitée. Pour montrer que la fonction non managée est l’accès à la mémoire de tas GC, elle modifie le contenu du tableau et les modifications sont répercutées lorsque la fonction managée reprend le contrôle.
+L’exemple suivant montre comment passer un tableau managé à une fonction non managée. Utilise la fonction managée [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md) pour supprimer le garbage collection pour le tableau avant d’appeler la fonction non managée. En fournissant la fonction non managée avec un pointeur épinglé dans le tas GC, la surcharge d’effectuer une copie du tableau peut être évitée. Pour montrer que la fonction non managée est l’accès à la mémoire de tas GC, elle modifie le contenu du tableau et les modifications sont répercutées lorsque la fonction managée reprend le contrôle.
 
 ```
 // PassArray1.cpp

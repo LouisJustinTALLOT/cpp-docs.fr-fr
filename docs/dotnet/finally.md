@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: cb2bbdb36a102c7ef8974a9ac210473f2306f5d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746771"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771511"
 ---
 # <a name="finally"></a>finally
 
@@ -19,7 +19,7 @@ En plus de `try` et `catch` clauses, prend en charge des exceptions CLR un `fina
 
 L’objectif de la `finally` bloc consiste à nettoyer les ressources qui restent après l’exception s’est produite. Notez que le `finally` bloc est toujours exécuté, même si aucune exception n’a été levée. Le `catch` bloc est exécuté uniquement si une exception managée est levée dans associé `try` bloc.
 
-`finally` est un mot clé contextuel ; consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations.
+`finally` est un mot clé contextuel ; consultez [mots clés contextuels](../extensions/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations.
 
 ## <a name="example"></a>Exemple
 
@@ -58,4 +58,4 @@ in finally
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion des exceptions](../windows/exception-handling-cpp-component-extensions.md)
+[Gestion des exceptions](../extensions/exception-handling-cpp-component-extensions.md)
