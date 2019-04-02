@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cad88af9e81a60857fbbd6c90cf81cdcafbd7a12
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694060"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781469"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
@@ -474,7 +474,7 @@ Si un constructeur lève une exception, l'ordre de destruction est l'inverse de 
 
 1. Le code dans le corps de la fonction constructeur est déroulé.
 
-1. Les objets de classe de base et membres sont détruits dans l'ordre inverse de déclaration.
+1. Les objets de classe de base et membres sont détruits dans l’ordre inverse de déclaration.
 
 1. Si le constructeur ne délègue pas, tous les membres et objets de classe de base entièrement construits sont détruits. Toutefois, l'objet lui-même n'étant pas complètement construit, le destructeur n'est pas exécuté.
 
@@ -636,9 +636,9 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-**Visual Studio 2017 version 15.7 et ultérieure**: le **à l’aide de** instruction dans **/std : c ++ 17** mode place dans la portée de tous les constructeurs de la classe de base, sauf ceux qui ont une signature identique aux constructeurs dans la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre. Voir aussi [améliorations dans Visual Studio 2017 version 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
+**Visual Studio 2017 15.7 et versions ultérieures :** Le **à l’aide de** instruction dans **/std : c ++ 17** mode place dans la portée de tous les constructeurs de la classe de base, sauf ceux qui ont une signature identique aux constructeurs dans la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre. Voir aussi [améliorations dans Visual Studio 2017 version 15.7](../overview/cpp-conformance-improvements-2017.md#improvements_157).
 
-Un modèle de classe peut hériter de tous les constructeurs d’un argument de type si ce type spécifie une classe de base :
+Un modèle de classe peut hériter de tous les constructeurs d'un argument de type si ce type spécifie une classe de base :
 
 ```cpp
 template< typename T >

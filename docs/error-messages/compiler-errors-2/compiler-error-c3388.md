@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3388
 ms.assetid: 34336545-ed13-4d81-ab5f-f869799fe4c2
-ms.openlocfilehash: 1f6e51542cc852543d648f9f94a964ae0cab3b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b56aae115b1a1721f3f8a8688e36b25edc7f33f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512678"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780026"
 ---
 # <a name="compiler-error-c3388"></a>Erreur du compilateur C3388
 
 'type' : non autorisé en tant que contrainte, 'ref class' pris par défaut pour poursuivre l’analyse
 
-Une contrainte a été spécifiée sur un type générique, mais la contrainte n’a pas été spécifiée correctement. Consultez [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) pour plus d’informations.
+Une contrainte a été spécifiée sur un type générique, mais la contrainte n’a pas été spécifiée correctement. Consultez [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) pour plus d’informations.
 
 ## <a name="example"></a>Exemple
 

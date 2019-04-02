@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 82036017188acc3f882e9751096af8ab268fd9db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525169"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780351"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Avertissement du compilateur (niveau 4) C4754
 
 Les règles de conversion pour les opérations arithmétiques dans une comparaison signifient qu’une branche ne peut pas être exécutée.
 
-L'avertissement C4754 est généré, car le résultat de la comparaison est toujours identique. Cela indique qu'une des branches de la condition n'est jamais exécutée, très probablement parce que l'expression d'entier associée est incorrecte. Cette erreur de code se produit souvent dans les contrôles incorrects de dépassement sur les entiers sur les architectures 64 bits.
+L'avertissement C4754 est généré, car le résultat de la comparaison est toujours identique. Cela indique qu’une des branches de la condition n’est jamais exécutée, très probablement parce que l’expression d’entier associée est incorrecte. Cette erreur de code se produit souvent dans les contrôles incorrects de dépassement sur les entiers sur les architectures 64 bits.
 
-Les règles de conversion d'entier sont complexes, et il existe de nombreuses pièges subtils. Comme alternative à résoudre chaque avertissement C4754, vous pouvez mettre à jour le code pour utiliser le [Bibliothèque SafeInt](../../windows/safeint-library.md).
+Les règles de conversion d'entier sont complexes, et il existe de nombreuses pièges subtils. Comme alternative à résoudre chaque avertissement C4754, vous pouvez mettre à jour le code pour utiliser le [Bibliothèque SafeInt](../../safeint/safeint-library.md).
 
 ## <a name="example"></a>Exemple
 
@@ -49,7 +49,7 @@ L'addition `a + b` peut provoquer un dépassement de capacité arithmétique ava
 Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754a.cpp (7) mean that one branch cannot be executed. Cast '(a + ...)' to 'ULONG64' (or similar type of 8 bytes).
 ```
 
-Pour éliminer l’avertissement, il est possible de modifier l’instruction d’assignation pour effectuer un cast des opérandes vers des valeurs de 8 octets :
+Pour éliminer l'avertissement, il est possible de modifier l'instruction d'assignation pour effectuer un cast des opérandes vers des valeurs de 8 octets :
 
 ```cpp
 // Casting one operand is sufficient to force all the operands in

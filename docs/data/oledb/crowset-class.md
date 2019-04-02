@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329011"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779454"
 ---
 # <a name="crowset-class"></a>CRowset, classe
 
@@ -534,7 +534,7 @@ Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Pour obtenir un exemple montrant comment utiliser cette fonction, consultez le [exemple MultiRead](../../visual-cpp-samples.md).
+Pour obtenir un exemple montrant comment utiliser cette fonction, consultez le [exemple MultiRead](../../overview/visual-cpp-samples.md).
 
 ## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
@@ -937,8 +937,8 @@ Une valeur HRESULT standard.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple DBVIEWER](../../visual-cpp-samples.md)<br/>
-[Exemple multiRead](../../visual-cpp-samples.md)<br/>
-[Attributs multiRead](../../visual-cpp-samples.md)<br/>
+[Exemple DBVIEWER](../../overview/visual-cpp-samples.md)<br/>
+[Exemple multiRead](../../overview/visual-cpp-samples.md)<br/>
+[Attributs multiRead](../../overview/visual-cpp-samples.md)<br/>
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

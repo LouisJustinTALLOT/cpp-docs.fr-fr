@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738476"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780234"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Procédure : Marshaler des pointeurs incorporés à l’aide d’interopérabilité C++
 
@@ -23,7 +23,7 @@ Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.m
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment une fonction non managée qui prend une structure contenant des pointeurs peut être appelée à partir d’une fonction managée. La fonction managée crée une instance de la structure et initialise le pointeur incorporé avec le nouveau mot clé (au lieu du [gcnew nouvelle, ref](../windows/ref-new-gcnew-cpp-component-extensions.md) mot clé). Étant donné que ceci alloue la mémoire sur le tas natif, il n’est pas nécessaire pour épingler le tableau pour supprimer le garbage collection. Toutefois, la mémoire doit être explicitement supprimée pour éviter toute fuite de mémoire.
+L’exemple suivant montre comment une fonction non managée qui prend une structure contenant des pointeurs peut être appelée à partir d’une fonction managée. La fonction managée crée une instance de la structure et initialise le pointeur incorporé avec le nouveau mot clé (au lieu du [gcnew nouvelle, ref](../extensions/ref-new-gcnew-cpp-component-extensions.md) mot clé). Étant donné que ceci alloue la mémoire sur le tas natif, il n’est pas nécessaire pour épingler le tableau pour supprimer le garbage collection. Toutefois, la mémoire doit être explicitement supprimée pour éviter toute fuite de mémoire.
 
 ```
 // marshal_embedded_pointer.cpp

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-ms.openlocfilehash: 2b1d023488e8d547217dafffd224ab9fc05bd876
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 977ef29095e652ab40028a2e8ba7feffabf56418
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267899"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781066"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Test des propriétés et des événements avec le conteneur de test
 
@@ -23,7 +23,7 @@ L’application conteneur de Test, fournie avec Visual C++, est un conteneur de 
 
 ### <a name="to-access-the-activex-control-test-container"></a>Pour accéder au conteneur de Test du contrôle ActiveX
 
-1. Générer le [exemple TSTCON : Contrôle ActiveX Test Container](../visual-cpp-samples.md).
+1. Générer le [exemple TSTCON : Contrôle ActiveX Test Container](../overview/visual-cpp-samples.md).
 
 ### <a name="to-test-your-activex-control"></a>Pour tester votre contrôle ActiveX
 

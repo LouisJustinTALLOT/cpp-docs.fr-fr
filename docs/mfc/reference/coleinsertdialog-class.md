@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-ms.openlocfilehash: 750243ddf6494ecc4a6a28c0cb47b05ca7089c33
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 27bf98ea4fe6951624873c1463d50f37558c9234
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260684"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781482"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog, classe
 
@@ -94,7 +94,7 @@ Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, cons
 
 `COleInsertDialog`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxodlgs.h
 
@@ -304,7 +304,7 @@ Pour plus d’informations, consultez le [OLEUIINSERTOBJECT](/windows/desktop/ap
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Exemple MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog, classe](../../mfc/reference/coledialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog, classe](../../mfc/reference/coledialog-class.md)

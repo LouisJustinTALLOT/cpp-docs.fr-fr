@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816030"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781313"
 ---
 # <a name="how-to-migrate-to-clr"></a>Procédure : Migrer vers/CLR
 
@@ -152,7 +152,7 @@ Dans certains cas, le CLR puisse s’arrêter avant la fin de votre code managé
 
 ## <a name="using-new-visual-c-features"></a>À l’aide des nouvelles fonctionnalités de Visual C++
 
-Une fois votre application compilée, liens et s’exécute, commencer à utiliser des fonctionnalités .NET dans n’importe quel module compilé avec **/CLR**. Pour plus d’informations, consultez [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md).
+Une fois votre application compilée, liens et s’exécute, commencer à utiliser des fonctionnalités .NET dans n’importe quel module compilé avec **/CLR**. Pour plus d’informations, consultez [Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md).
 
 Si vous avez utilisé des Extensions managées pour C++, vous pouvez convertir votre code pour utiliser la nouvelle syntaxe. Pour plus d’informations sur la conversion d’Extensions managées pour C++, consultez [C++ / c++ / CLI Migration Primer](../dotnet/cpp-cli-migration-primer.md).
 
@@ -162,7 +162,7 @@ Pour plus d’informations sur la programmation dans Visual C++ .NET, consultez�
 
 - [Interopérabilité native et .NET](../dotnet/native-and-dotnet-interoperability.md)
 
-- [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+- [Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md)
 
 ## <a name="see-also"></a>Voir aussi
 

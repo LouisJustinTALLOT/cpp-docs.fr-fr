@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-ms.openlocfilehash: 6d0b2fc22d1d0779db17e970118694270a206439
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272670"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781300"
 ---
 # <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox, classe
 
@@ -56,7 +56,7 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Indique à l’infrastructure de police à utiliser pour dessiner les étiquettes d’élément dans la zone de liste déroulante police actuelle.|
 
@@ -76,7 +76,7 @@ Pour utiliser un `CMFCFontComboBox` de l’objet dans une boîte de dialogue, aj
 
 [CMFCFontComboBox](../../mfc/reference/cmfcfontcombobox-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxfontcombobox.h
 
@@ -151,7 +151,7 @@ Utilisez cette méthode pour sélectionner et faites défiler jusqu'à l’élé
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `SelectFont` méthode dans la `CMFCFontComboBox` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `SelectFont` méthode dans la `CMFCFontComboBox` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]
@@ -188,7 +188,7 @@ Cette méthode initialise la zone de liste déroulante de police en énumérant 
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `Setup` méthode dans la `CMFCFontComboBox` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `Setup` méthode dans la `CMFCFontComboBox` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]

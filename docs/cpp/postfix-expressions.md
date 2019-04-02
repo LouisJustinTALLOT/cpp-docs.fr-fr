@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332437"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779259"
 ---
 # <a name="postfix-expressions"></a>Expressions suffixées
 
@@ -23,7 +23,7 @@ Les expressions suffixées se composent d'expressions primaires ou d'expressions
 |-------------------|-----------------------|
 |[Opérateur d’indice](../cpp/subscript-operator.md)|**[ ]**|
 |[Opérateur d’appel de fonction](../cpp/function-call-operator-parens.md)|**( )**|
-|[Opérateur de conversion de type explicite](../cpp/explicit-type-conversion-operator-parens.md)|*nom de type* **)**|
+|[Opérateur de conversion de type explicite](../cpp/explicit-type-conversion-operator-parens.md)|*type-name* **( )**|
 |[Opérateur d’accès au membre](../cpp/member-access-operators-dot-and.md)|**.** Ou **->**|
 |[Opérateur d’Incrément suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[Opérateur de décrémentation suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
@@ -59,11 +59,11 @@ Le **typeid** opérateur est considéré comme une expression suffixée.  Consul
 
 ## <a name="formal-and-actual-arguments"></a>Arguments formels et arguments réels
 
-Les programmes appelants passent des informations aux fonctions appelées dans des « arguments réels ». Les fonctions appelées accèdent aux informations à l'aide des « arguments formels » correspondants.
+Les programmes appelants passent des informations aux fonctions appelées dans des « arguments réels ». Les fonctions appelées accèdent aux informations à l’aide des « arguments formels » correspondants.
 
 Lorsqu’une fonction est appelée, les tâches suivantes sont effectuées :
 
-- Tous les arguments réels (ceux fournis par l’appelant) sont évalués. Il n'y a pas d'ordre implicite dans lequel ces arguments sont évalués, mais ils sont tous évalués et les effets secondaires sont résolus avant l'entrée dans la fonction.
+- Tous les arguments réels (ceux fournis par l'appelant) sont évalués. Il n’y a pas d’ordre implicite dans lequel ces arguments sont évalués, mais ils sont tous évalués et les effets secondaires sont résolus avant l’entrée dans la fonction.
 
 - Chaque argument formel est initialisé avec son argument réel correspondant dans la liste d'expressions. (Un argument formel est un argument déclaré dans l'en-tête de fonction et utilisé dans le corps d'une fonction.) Les conversions sont effectuées suite à une initialisation — les conversions standard et celles définies par l’utilisateur sont exécutées en convertissant un argument réel en type correct. L'initialisation exécutée est illustrée conceptuellement par le code suivant :
 
@@ -113,9 +113,9 @@ void func( long param1, double param2 )
 
 Lorsque `func` est appelée à partir de main, le paramètre formel `param1` est initialisé avec la valeur de `i` (`i` est converti en type **long** pour correspondre au type correct à l’aide d’une norme conversion) et le paramètre formel `param2` est initialisé avec la valeur de `j` (`j` est converti en type **double** à l’aide d’une conversion standard).
 
-## <a name="treatment-of-argument-types"></a>Traitement des types d’arguments
+## <a name="treatment-of-argument-types"></a>Traitement des types d'arguments
 
-Les arguments formels déclarés en tant que types const ne peuvent pas être modifiés dans le corps d’une fonction. Fonctions peuvent modifier tout argument qui n’est pas de type **const**. Toutefois, la modification est locale à la fonction et n’affecte pas la valeur d’argument réel, sauf si l’argument réel faisait référence à un objet pas de type **const**.
+Les arguments formels déclarés en tant que types const ne peuvent pas être modifiés dans le corps d'une fonction. Fonctions peuvent modifier tout argument qui n’est pas de type **const**. Toutefois, la modification est locale à la fonction et n’affecte pas la valeur d’argument réel, sauf si l’argument réel faisait référence à un objet pas de type **const**.
 
 Les fonctions suivantes illustrent certains de ces concepts :
 
@@ -137,7 +137,7 @@ double& func2( double& d, const char *c ) {
 
 ## <a name="ellipses-and-default-arguments"></a>Ellipses et arguments par défaut
 
-Les fonctions peuvent être déclarées pour accepter moins d'arguments que le nombre spécifié dans la définition de fonction, en utilisant l'une des deux méthodes suivantes : points de suspension (`...`) ou arguments par défaut.
+Les fonctions peuvent être déclarées pour accepter moins d’arguments que le nombre spécifié dans la définition de fonction, en utilisant l’une des deux méthodes suivantes : points de suspension (`...`) ou arguments par défaut.
 
 Les points de suspension indiquent que des arguments peuvent être requis mais que leur nombre et leurs types ne sont pas spécifiés dans la déclaration. C'est habituellement une mauvaise pratique de programmation C++ car elle occulte l'un des avantages du C++ : la sécurité de type. Différentes conversions sont appliquées aux fonctions déclarées avec des points de suspension par rapport aux fonctions pour lesquelles les types d’argument formels et réels sont connus :
 
@@ -149,7 +149,7 @@ Les points de suspension indiquent que des arguments peuvent être requis mais q
 
 Les points de suspension, s’ils sont utilisés, doivent être déclarés en dernier dans la liste d’arguments. Pour plus d’informations sur la transmission d’un nombre variable d’arguments, consultez la discussion de [va_arg, va_start et va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) dans le *Run-Time Library Reference*.
 
-Pour plus d’informations sur les arguments par défaut dans la programmation CLR, consultez [listes d’arguments variables (...) (C + C++ / CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Pour plus d’informations sur les arguments par défaut dans la programmation CLR, consultez [listes d’arguments variables (...) (C + C++ / CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 Les arguments par défaut vous permettent de spécifier la valeur qu’un argument doit prendre si aucune n’est fournie dans l’appel de fonction. Le fragment de code suivant montre le fonctionnement des arguments par défaut. Pour plus d’informations sur les restrictions sur la spécification des arguments par défaut, consultez [Arguments par défaut](../cpp/default-arguments.md).
 

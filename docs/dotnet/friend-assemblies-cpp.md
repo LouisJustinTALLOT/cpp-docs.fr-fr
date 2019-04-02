@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 0c09e0c29aacbf655652446caf90ab21d92103e8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748203"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781040"
 ---
 # <a name="friend-assemblies-c"></a>Assemblys friend (C++)
 
@@ -27,7 +27,7 @@ Pour les runtimes applicables, le *assemblys friend* fonctionnalité de langage 
 
 (Cette fonctionnalité de langage n'est pas pris en charge dans le Windows Runtime.)
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : **/ZW**
 
@@ -51,7 +51,7 @@ Pour plus d’informations sur la signature, autrement dit, comment donner un no
 
 Comme alternative à l’aide de la fonctionnalité d’assemblys friend, vous pouvez utiliser <xref:System.Security.Permissions.StrongNameIdentityPermission> pour restreindre l’accès aux types individuels.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : **/clr**
 
@@ -186,4 +186,4 @@ Class1::Test_Public
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md)

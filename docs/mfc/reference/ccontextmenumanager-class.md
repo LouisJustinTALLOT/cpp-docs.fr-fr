@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304329"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779792"
 ---
 # <a name="ccontextmenumanager-class"></a>Ccontextmenumanager, classe
 
@@ -81,7 +81,7 @@ Le `CContextMenuManager` peut également enregistrer et charger son état dans l
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment ajouter un menu à un `CContextMenuManager` objet et comment ne pas fermer le menu contextuel actif lorsque le `CContextMenuManager` objet affiche un menu contextuel. Cet extrait de code fait partie de la [exemple des Pages personnalisées](../../visual-cpp-samples.md).
+L’exemple suivant montre comment ajouter un menu à un `CContextMenuManager` objet et comment ne pas fermer le menu contextuel actif lorsque le `CContextMenuManager` objet affiche un menu contextuel. Cet extrait de code fait partie de la [exemple des Pages personnalisées](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 
@@ -91,7 +91,7 @@ L’exemple suivant montre comment ajouter un menu à un `CContextMenuManager` o
 
 `CContextMenuManager`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcontextmenumanager.h
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: dfbf5275391e2820c94d2827c9b2c3eb252365c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1185f48df4a941eb2a5d81bfa67d07cdf4387d0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571923"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780884"
 ---
 # <a name="typeid-operator"></a>typeid, opérateur
 
@@ -26,7 +26,7 @@ Le **typeid** opérateur autorise le type d’un objet à être déterminée au 
 
 Le résultat de **typeid** est un `const type_info&`. La valeur est une référence à un `type_info` objet qui représente soit le *id de type* ou le type de la *expression*, selon la forme de **typeid** est utilisé. Consultez [classe type_info](../cpp/type-info-class.md) pour plus d’informations.
 
-Le **typeid** opérateur ne fonctionne pas avec les types managés (déclarateurs abstraits ou instances), consultez [typeid](../windows/typeid-cpp-component-extensions.md) pour plus d’informations sur l’obtention du <xref:System.Type> d’un type spécifié.
+Le **typeid** opérateur ne fonctionne pas avec les types managés (déclarateurs abstraits ou instances), consultez [typeid](../extensions/typeid-cpp-component-extensions.md) pour plus d’informations sur l’obtention du <xref:System.Type> d’un type spécifié.
 
 Le **typeid** opérateur est un contrôle d’exécution lorsqu’il est appliqué à une l-value d’un type de classe polymorphe, où le type réel de l’objet ne peut pas être déterminé par les informations statiques fournies. Dans les cas suivants par exemple :
 

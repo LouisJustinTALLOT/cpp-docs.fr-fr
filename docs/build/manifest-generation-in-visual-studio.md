@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809728"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781677"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Génération de manifeste dans Visual Studio
 
@@ -27,7 +27,7 @@ Le système de génération dans Visual Studio permet le manifeste incorporé da
 
 1. Si le manifeste incorporé dans le fichier binaire est le même que le manifeste généré par l’outil manifeste, la génération continue pour les étapes de build.
 
-Le manifeste est incorporé dans le fichier binaire final en tant que texte ressource et elle peut être affichée en ouvrant le fichier binaire final en tant que fichier dans Visual Studio. Pour vous assurer que le manifeste de pointe aux bonnes bibliothèques, suivez les étapes décrites dans [fonctionnement des dépendances d’une Application Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) ou suivre les suggestions décrites dans le [dépannage](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) section.
+Le manifeste est incorporé dans le fichier binaire final en tant que texte ressource et elle peut être affichée en ouvrant le fichier binaire final en tant que fichier dans Visual Studio. Pour vous assurer que le manifeste de pointe aux bonnes bibliothèques, suivez les étapes décrites dans [fonctionnement des dépendances d’une Application Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md) ou suivre les suggestions décrites dans le [dépannage](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) section.
 
 ## <a name="see-also"></a>Voir aussi
 

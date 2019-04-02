@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283655"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778297"
 ---
 # <a name="cregkey-class"></a>CRegKey, classe
 
@@ -129,7 +129,7 @@ Lorsque vous fermez une clé, ses données de Registre sont écrit (vidées) sur
 > [!IMPORTANT]
 >  Les méthodes qui permettent à l’appelant de spécifier un emplacement de Registre ont la possibilité de lire les données qui ne peut pas être approuvées. Utilisent des méthodes qui permettent de [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) à prendre en compte cette fonction ne gère pas explicitement les chaînes qui ont la valeur NULL s’est arrêté. Les deux conditions de doivent être vérifiées par le code appelant.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 
@@ -1058,5 +1058,5 @@ La troisième méthode appelle [RegSetValueEx](/windows/desktop/api/winreg/nf-wi
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple DCOM](../../visual-cpp-samples.md)<br/>
+[Exemple DCOM](../../overview/visual-cpp-samples.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

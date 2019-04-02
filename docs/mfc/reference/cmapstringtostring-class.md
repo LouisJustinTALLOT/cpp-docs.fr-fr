@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: d18cad73f9cf42ffd04ecbcde840d50f6167743a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266222"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780364"
 ---
 # <a name="cmapstringtostring-class"></a>Cmapstringtostring, classe
 
@@ -71,7 +71,7 @@ par exemple, se traduit par
 
 ### <a name="public-structures"></a>Structures publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMapStringToString::CPair](#cpair)|Une structure imbriquée contenant une valeur de clé et la valeur de l’objet de chaîne associée.|
 
@@ -124,7 +124,7 @@ Pour plus d’informations sur `CMapStringToString`, consultez l’article [Coll
 
 `CMapStringToString`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcoll.h
 
@@ -226,6 +226,6 @@ Appelez cette méthode pour rechercher un élément de carte avec une clé qui c
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Exemple MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

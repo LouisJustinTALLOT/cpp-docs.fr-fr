@@ -20,12 +20,12 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464584"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778232"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Utilisation de l'interopérabilité C++ (PInvoke implicite)
 
@@ -59,7 +59,7 @@ Même si COM est utilisé directement ou via un CRCW, les types d’arguments au
 
 ## <a name="blittable-types"></a>Types blittables
 
-Pour les API non managées qui utilisent des types intrinsèques simples (consultez [Types blittables et Non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun codage spécial n’est nécessaire, car ces types de données ont la même représentation en mémoire, mais les types de données plus complexes nécessitent marshaling de données explicites. Pour obtenir un exemple, consultez [Comment : appeler des DLL natives à partir de l’utilisation de Code géré, PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
+Pour les API non managées qui utilisent des types intrinsèques simples (consultez [Types blittables et Non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun codage spécial n’est nécessaire, car ces types de données ont la même représentation en mémoire, mais les types de données plus complexes nécessitent marshaling de données explicites. Pour voir un exemple, consultez [Comment : Appeler des DLL natives à partir du Code managé à l’aide de PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
 
 ## <a name="example"></a>Exemple
 
@@ -95,7 +95,7 @@ Done
 
 - [Guide pratique pour marshaler des chaînes ANSI à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-- [Guide pratique pour marshaler des chaînes Unicode à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+- [Guide pratique pour marshaler des chaînes Unicode à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
 - [Guide pratique pour marshaler des chaînes COM à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
@@ -103,7 +103,7 @@ Done
 
 - [Guide pratique pour marshaler des tableaux à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)
 
-- [Guide pratique pour marshaler des rappels et des délégués à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+- [Guide pratique pour marshaler des rappels et des délégués à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
 
 - [Guide pratique pour marshaler des pointeurs incorporés à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)
 
@@ -111,7 +111,7 @@ Done
 
 - [Guide pratique pour convertir la chaîne char * en tableau System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
-- [Comment : convertir System::String en wchar_t * ou char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
+- [Guide pratique pour Convertir System::String en wchar_t * ou char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
 - [Guide pratique pour convertir System::String en chaîne standard](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
@@ -131,19 +131,19 @@ Done
 
 - [Guide pratique pour stocker la référence d’un objet dans une mémoire non managée](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
-- [Comment : détecter une Compilation /clr](../dotnet/how-to-detect-clr-compilation.md)
+- [Guide pratique pour Détecter une Compilation /clr](../dotnet/how-to-detect-clr-compilation.md)
 
 - [Guide pratique pour procéder à une conversion entre System::Guid et _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
 - [Guide pratique pour spécifier un paramètre Out](../dotnet/how-to-specify-an-out-parameter.md)
 
-- [Comment : utiliser un Type natif dans une Compilation /clr](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
+- [Guide pratique pour Utiliser un Type natif dans une Compilation /clr](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
 - [Guide pratique pour déclarer des handles dans les types natifs](../dotnet/how-to-declare-handles-in-native-types.md)
 
 - [Guide pratique pour inclure une classe native dans un wrapper pour une utilisation par C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-Pour plus d’informations sur l’utilisation de délégués dans un scénario d’interopérabilité, consultez [delegate (Extensions du composant C++)](../windows/delegate-cpp-component-extensions.md).
+Pour plus d’informations sur l’utilisation de délégués dans un scénario d’interopérabilité, consultez [delegate (Extensions du composant C++)](../extensions/delegate-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Voir aussi
 

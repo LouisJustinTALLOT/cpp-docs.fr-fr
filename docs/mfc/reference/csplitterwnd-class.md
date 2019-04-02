@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302102"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781443"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd, classe
 
@@ -175,9 +175,9 @@ Pour plus d’informations sur les fenêtres fractionnées, consultez [Technical
 
 Pour plus d’informations sur la création de fenêtres fractionnées dynamiques, consultez :
 
-- Exemple MFC [Scribble](../../visual-cpp-samples.md)
+- Exemple MFC [Scribble](../../overview/visual-cpp-samples.md)
 
-- Exemple MFC [VIEWEX](../../visual-cpp-samples.md).
+- Exemple MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -189,7 +189,7 @@ Pour plus d’informations sur la création de fenêtres fractionnées dynamique
 
 `CSplitterWnd`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxext.h
 
@@ -1036,7 +1036,7 @@ Pointeur vers un contexte de périphérique.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC VIEWEX](../../visual-cpp-samples.md)<br/>
+[Exemple MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CView, classe](../../mfc/reference/cview-class.md)<br/>

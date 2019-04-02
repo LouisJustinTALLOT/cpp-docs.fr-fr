@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
-ms.openlocfilehash: d14b921afa3888f1a9497f19bfeaa013b147b086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f7af4e19fab5f5a0539e9fc3bf9dbeffb5c6fbf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430548"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781378"
 ---
 # <a name="compiler-error-c3154"></a>Erreur du compilateur C3154
 
@@ -19,7 +19,7 @@ Attendu ',' avant les points de suspension. Non-virgule séparées par des point
 
 Une fonction d’argument variable n’a pas été correctement déclarée.
 
-Pour plus d’informations, consultez [listes d’arguments variables (...) (C + C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Pour plus d’informations, consultez [listes d’arguments variables (...) (C + C++ / CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 

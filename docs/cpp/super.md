@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: 778ed2d80aa926c7282073a99898a6aa355a3379
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602616"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779649"
 ---
 # <a name="super"></a>__super
 
@@ -33,7 +33,7 @@ Toutes les méthodes de classe de base accessibles sont considérées pendant la
 
 **__super** ne peut pas être utilisé avec un à l’aide de déclaration. Consultez [à l’aide de la déclaration](../cpp/using-declaration.md) pour plus d’informations.
 
-Avec l’introduction de [attributs](../windows/cpp-attributes-reference.md) qui injectent du code, votre code peut contenir un ou plusieurs classes de base dont vous ne savez pas, mais que les noms contiennent des méthodes que vous souhaitez appeler.
+Avec l’introduction de [attributs](../windows/attributes/attributes-alphabetical-reference.md) qui injectent du code, votre code peut contenir un ou plusieurs classes de base dont vous ne savez pas, mais que les noms contiennent des méthodes que vous souhaitez appeler.
 
 ## <a name="example"></a>Exemple
 

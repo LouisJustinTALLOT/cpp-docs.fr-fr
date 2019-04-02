@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293419"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781755"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx, classe
 
@@ -201,7 +201,7 @@ Pour tirer parti des fonctionnalités d’ancrage étendues dans les application
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant dérive une classe de `CMDIChildWndEx`. Cet extrait de code provient de la [exemple VisualStudioDemo : Application de Visual Studio MFC](../../visual-cpp-samples.md).
+L’exemple suivant dérive une classe de `CMDIChildWndEx`. Cet extrait de code provient de la [exemple VisualStudioDemo : Application de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -219,7 +219,7 @@ L’exemple suivant dérive une classe de `CMDIChildWndEx`. Cet extrait de code 
 
 [CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxMDIChildWndEx.h
 
@@ -431,7 +431,7 @@ Lorsque l’infrastructure est état de restauration plus tard, le nom du docume
 
 ### <a name="example"></a>Exemple
 
-L'exemple suivant illustre l'utilisation de la méthode `GetDocumentName`. Cet extrait de code provient de la [exemple VisualStudioDemo : Application de Visual Studio MFC](../../visual-cpp-samples.md).
+L'exemple suivant illustre l'utilisation de la méthode `GetDocumentName`. Cet extrait de code provient de la [exemple VisualStudioDemo : Application de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -602,7 +602,7 @@ Cette fonction est utilisée pour empêcher l’enregistrement de documents en l
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant illustre la substitution de la `IsReadOnly` (méthode). Cet extrait de code provient de la [exemple VisualStudioDemo : Application de Visual Studio MFC](../../visual-cpp-samples.md).
+L’exemple suivant illustre la substitution de la `IsReadOnly` (méthode). Cet extrait de code provient de la [exemple VisualStudioDemo : Application de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 

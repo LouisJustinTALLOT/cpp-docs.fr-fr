@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739279"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781625"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Procédure : Utiliser des propriétés en C / c++ / CLI
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Propriétés abstract et sealed
 
-Bien que le [abstraite](../windows/abstract-cpp-component-extensions.md) et [sealed](../windows/sealed-cpp-component-extensions.md) mots clés sont spécifiés comme étant valides dans l’ECMA C++ / c++ / spécification CLI, pour le compilateur Visual C++, vous ne pouvez pas spécifier les propriétés trivial, ni sur la propriété déclaration d’une propriété non triviale.
+Bien que le [abstraite](../extensions/abstract-cpp-component-extensions.md) et [sealed](../extensions/sealed-cpp-component-extensions.md) mots clés sont spécifiés comme étant valides dans l’ECMA C++ / c++ / spécification CLI, pour le compilateur Visual C++, vous ne pouvez pas spécifier les propriétés trivial, ni sur la propriété déclaration d’une propriété non triviale.
 
 Pour déclarer une propriété scellée ou abstraite, vous devez définir une propriété non triviale, puis spécifiez le `abstract` ou `sealed` mot clé dans la méthode get et définir les fonctions d’accesseur.
 
@@ -409,4 +409,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[propriété](../windows/property-cpp-component-extensions.md)
+[propriété](../extensions/property-cpp-component-extensions.md)
