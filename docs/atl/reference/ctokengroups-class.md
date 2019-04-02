@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 842ceab1630fc7bc08b5c27dc769a25d029886f3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 934d746dafafb39c2ffc3477c59c95914d270196
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274516"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772824"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups, classe
 
@@ -73,7 +73,7 @@ Le `CTokenGroups` classe est un wrapper pour le [TOKEN_GROUPS](/windows/desktop/
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsecurity.h
 
@@ -273,7 +273,7 @@ Convertit une valeur en un pointeur vers le [TOKEN_GROUPS](/windows/desktop/api/
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple de sécurité](../../visual-cpp-samples.md)<br/>
+[Exemple de sécurité](../../overview/visual-cpp-samples.md)<br/>
 [CSid, classe](../../atl/reference/csid-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-ms.openlocfilehash: dbb84814c6865b5b666a8b3a1162e81a211de1eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3159a53b5a500aa61b85cf2bc5a97d321ed6ebb5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280704"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772369"
 ---
 # <a name="com-map-macros"></a>Macros de mappage COM
 
@@ -23,7 +23,7 @@ Ces macros définissent des tables d’interface COM.
 |[BEGIN_COM_MAP](#begin_com_map)|Marque le début des entrées de mappage d’interface COM.|
 |[END_COM_MAP](#end_com_map)|Marque la fin des entrées de mappage d’interface COM.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 
@@ -46,7 +46,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="example"></a>Exemple
 
-À partir de la bibliothèque ATL [BEEPER](../../visual-cpp-samples.md) exemple :
+À partir de la bibliothèque ATL [BEEPER](../../overview/visual-cpp-samples.md) exemple :
 
 [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
 

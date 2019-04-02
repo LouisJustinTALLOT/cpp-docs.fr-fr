@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296343"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776958"
 ---
 # <a name="atl-copy-policy-classes"></a>Classes de stratégies de copie ATL
 
@@ -62,7 +62,7 @@ ATL fournit deux classes de stratégie de copie dans l’écran de la `_Copy` et
 
 ## <a name="custom-implementations"></a>Implémentations personnalisées
 
-En règle générale, vous devez définir vos propres classes de stratégie de copie pour la copie hétérogène (autrement dit, la conversion entre types de données). Pour obtenir des exemples de classes de stratégie de copie personnalisé, examinez les fichiers VCUE_Copy.h et VCUE_CopyString.h dans le [ATLCollections](../visual-cpp-samples.md) exemple. Ces fichiers contiennent deux classes de stratégie de copie de modèle, `GenericCopy` et `MapCopy`, ainsi que plusieurs spécialisations de `GenericCopy` pour différents types de données.
+En règle générale, vous devez définir vos propres classes de stratégie de copie pour la copie hétérogène (autrement dit, la conversion entre types de données). Pour obtenir des exemples de classes de stratégie de copie personnalisé, examinez les fichiers VCUE_Copy.h et VCUE_CopyString.h dans le [ATLCollections](../overview/visual-cpp-samples.md) exemple. Ces fichiers contiennent deux classes de stratégie de copie de modèle, `GenericCopy` et `MapCopy`, ainsi que plusieurs spécialisations de `GenericCopy` pour différents types de données.
 
 ### <a name="genericcopy"></a>GenericCopy
 
@@ -81,4 +81,4 @@ VCUE_Copy.h contient également les spécialisations suivantes de cette classe 
 ## <a name="see-also"></a>Voir aussi
 
 [Implémentation d’une collection basée sur la bibliothèque standard C++](../atl/implementing-an-stl-based-collection.md)<br/>
-[ATLCollections, exemple](../visual-cpp-samples.md)
+[ATLCollections, exemple](../overview/visual-cpp-samples.md)

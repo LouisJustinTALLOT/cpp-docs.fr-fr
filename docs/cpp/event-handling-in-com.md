@@ -16,16 +16,16 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: a66c429626938f1bf10d715c1fecac341a3ba000
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da255da9fb9ff7a652fa1af796568a8e50759dc4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446044"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777695"
 ---
 # <a name="event-handling-in-com"></a>Gestion des événements dans COM
 
-Dans Gestion des événements de COM, vous configurez un récepteur d’événements source et les événements à l’aide de la [event_source](../windows/event-source.md) et [event_receiver](../windows/event-receiver.md) des attributs, respectivement, en spécifiant `type` = `com`. Ces attributs injectent le code approprié pour les interfaces personnalisées, de dispatch et doubles afin d'autoriser les classes auxquelles ils sont appliqués à déclencher et gérer des événements via des points de connexion COM.
+Dans Gestion des événements de COM, vous configurez un récepteur d’événements source et les événements à l’aide de la [event_source](../windows/attributes/event-source.md) et [event_receiver](../windows/attributes/event-receiver.md) des attributs, respectivement, en spécifiant `type` = `com`. Ces attributs injectent le code approprié pour les interfaces personnalisées, de dispatch et doubles afin d'autoriser les classes auxquelles ils sont appliqués à déclencher et gérer des événements via des points de connexion COM.
 
 ## <a name="declaring-events"></a>Déclaration d'événements
 
@@ -33,7 +33,7 @@ Dans une classe de source d’événement, utilisez le [__event](../cpp/event.md
 
 ## <a name="defining-event-handlers"></a>Définition de gestionnaires d'événements
 
-Dans une classe de récepteur d’événements, vous définissez des gestionnaires d’événements, qui sont des méthodes avec signatures (types de retour, conventions d’appel et arguments) qui correspondent à l’événement qu’ils doivent gérer. Pour les événements COM, les conventions d’appel n’ont pas faire correspondre ; consultez [événements COM dépendant des dispositions](#vcconeventhandlingincomanchorlayoutdependentcomevents) ci-dessous pour plus d’informations.
+Dans une classe de récepteur d'événements, vous définissez des gestionnaires d'événements, qui sont des méthodes avec signatures (types de retour, conventions d'appel et arguments) qui correspondent à l'événement qu'ils doivent gérer. Pour les événements COM, les conventions d’appel n’ont pas faire correspondre ; consultez [événements COM dépendant des dispositions](#vcconeventhandlingincomanchorlayoutdependentcomevents) ci-dessous pour plus d’informations.
 
 ## <a name="hooking-event-handlers-to-events"></a>Raccordement de gestionnaires d'événements à des événements
 
@@ -159,7 +159,7 @@ MyHandler2 was called with value 123.
 
 ##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> Événements COM dépendant des dispositions
 
-La dépendance aux dispositions représente un problème uniquement dans le cadre de la programmation COM. Dans la gestion des événements natifs et managés, les signatures (type de retour, convention d’appel et arguments) des gestionnaires doivent correspondre aux événements, mais il n’est pas nécessaire que les noms des gestionnaires correspondent aux événements.
+La dépendance aux dispositions représente un problème uniquement dans le cadre de la programmation COM. Dans la gestion des événements natifs et managés, les signatures (type de retour, convention d'appel et arguments) des gestionnaires doivent correspondre aux événements, mais il n'est pas nécessaire que les noms des gestionnaires correspondent aux événements.
 
 Toutefois, dans la gestion des événements COM, lorsque vous définissez la *layout_dependent* paramètre de `event_receiver` à **true**, le nom et la correspondance de signature est appliquée. Cela signifie que les noms et les signatures des gestionnaires dans le récepteur d'événements doivent correspondre exactement aux noms et aux signatures des événements auxquels ils sont raccordés.
 

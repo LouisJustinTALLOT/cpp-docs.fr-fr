@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 83800f823ffd14fd61a9735b09b12d2f07f6d0a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477985"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768066"
 ---
 # <a name="new-operator-c"></a>new, opérateur (C++)
 
 Alloue de la mémoire pour un objet ou un tableau d’objets de *type-name* du magasin gratuit et retourne un pointeur différent de zéro, correctement typé vers l’objet.
 
 > [!NOTE]
->  Microsoft C++ Component Extensions fournit la prise en charge pour le **nouveau** mot clé pour ajouter des entrées d’emplacement vtable. Pour plus d’informations, consultez [new (nouvel emplacement dans vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  Microsoft C++ Component Extensions fournit la prise en charge pour le **nouveau** mot clé pour ajouter des entrées d’emplacement vtable. Pour plus d’informations, consultez [new (nouvel emplacement dans vtable)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +29,7 @@ Alloue de la mémoire pour un objet ou un tableau d’objets de *type-name* du m
 
 En cas d’échec, **nouveau** retourne zéro ou lève une exception ; consultez [le nouveau et supprimer des opérateurs](../cpp/new-and-delete-operators.md) pour plus d’informations. Vous pouvez modifier ce comportement par défaut en écrivant une routine de gestion des exceptions personnalisée et en appelant le [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) fonction de bibliothèque du run-time avec votre nom de fonction comme argument.
 
-Pour plus d’informations sur la création d’un objet sur le tas managé, consultez [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).
+Pour plus d’informations sur la création d’un objet sur le tas managé, consultez [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
 Lorsque **nouveau** est utilisé pour allouer de la mémoire pour un objet de classe C++, constructeur de l’objet est appelé une fois que la mémoire est allouée.
 
@@ -61,11 +61,11 @@ Si vous utilisez l’opérateur **nouveau** sans arguments supplémentaires et c
 
 La liste suivante décrit les éléments de grammaire de **nouveau**:
 
-*sélection élective*<br/>
+*placement*<br/>
 Offre un moyen de passer des arguments supplémentaires si vous surchargez **nouveau**.
 
 *type-name*<br/>
-Spécifie le type à allouer ; il peut s'agir d'un type intégré ou d'un type défini par l'utilisateur. Si la spécification de type est compliquée, elle peut être placée entre parenthèses pour forcer l’ordre de liaison.
+Spécifie le type à allouer ; il peut s'agir d'un type intégré ou d'un type défini par l'utilisateur. Si la spécification de type est compliquée, elle peut être placée entre parenthèses pour forcer l'ordre de liaison.
 
 *initializer*<br/>
 Fournit une valeur pour l'objet initialisé. Les initialiseurs ne peuvent pas être spécifiés pour des tableaux. Le **nouveau** opérateur crée des tableaux d’objets uniquement si la classe a un constructeur par défaut.

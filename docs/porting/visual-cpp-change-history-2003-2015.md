@@ -4,18 +4,18 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 20920a5f1a1cdf2a4e10263a7b1de3010f24f9c0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9be4db9e0f7c50054dc6e6ca498b1c9d49715a8d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329037"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775411"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 
 Cet article décrit toutes les modifications avec rupture dans Visual Studio 2015 en remontant jusqu’à Visual Studio 2003 et, dans cet article, les termes « nouveau comportement » ou « maintenant » font référence à Visual Studio 2015 et versions ultérieures. Les termes « ancien comportement » et « avant » font référence à Visual Studio 2013 et aux versions antérieures.
 
-Pour plus d’informations sur Visual Studio 2017, consultez [Nouveautés de Visual C++ dans Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) et [Améliorations de la conformité de Visual C++ dans Visual Studio 2017](../cpp-conformance-improvements-2017.md).
+Pour plus d’informations sur Visual Studio 2017, consultez [Nouveautés de Visual C++ dans Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) et [Améliorations de la conformité de Visual C++ dans Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
 
 > [!NOTE]
 > Aucune modification importante n’a été apportée au niveau des binaires entre Visual Studio 2015 et Visual Studio 2017.
@@ -3524,4 +3524,4 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 ## <a name="see-also"></a>Voir aussi
 
-[Nouveautés de Visual C++ dans Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
+[Nouveautés de Visual C++ dans Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

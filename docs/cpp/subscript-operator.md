@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 5921b89c7637f1a4d1171c8835bb1b5300b718fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572911"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767923"
 ---
 # <a name="subscript-operator-"></a>Opérateur d’indice]
 
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Une expression suffixée (qui peut également être une expression primaire) suivie de l’opérateur d’indice, **[]**, spécifie l’indexation de tableau.
 
-Pour plus d’informations sur les tableaux managés, consultez [tableaux](../windows/arrays-cpp-component-extensions.md).
+Pour plus d’informations sur les tableaux managés en C / c++ / CLI, consultez [tableaux](../extensions/arrays-cpp-component-extensions.md).
 
 En règle générale, la valeur représentée par *postfix-expression* est une valeur de pointeur, par exemple un identificateur de tableau, et *expression* est une valeur intégrale (y compris les types énumérés). Toutefois, sur le plan de la syntaxe, il est requis que l'une des expressions soit de type pointeur et l'autre de type intégral. La valeur intégrale peut donc se trouver dans le *postfix-expression* position et la valeur de pointeur peut être entre crochets, dans le *expression* ou la position d’indice. Prenons le fragment de code suivant :
 

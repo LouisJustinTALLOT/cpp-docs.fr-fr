@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272098"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774975"
 ---
 # <a name="atl-collection-classes"></a>Classes de collection ATL
 
@@ -84,10 +84,10 @@ Chacune des classes de collection disponibles offre des caractéristiques de per
 
 |Forme|Ordered|Indexés|Insérer un<br /><br /> d'élément|Rechercher<br /><br /> élément spécifié|Dupliquer<br /><br /> éléments|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
-|Liste|Oui|Aucune|Fast (temps constant)|O (n) lente|Oui|
+|Liste|Oui|Non|Fast (temps constant)|O (n) lente|Oui|
 |Tableau|Oui|Par int (temps constant)|Lente o (n), sauf si insertion à la fin, dans quel cas temps constant|O (n) lente|Oui|
-|Carte|Aucune|Par clé (temps constant)|Fast (temps constant)|Fast (temps constant)|Non (clés) Oui (valeurs)|
-|Table rouge-noire|Oui (par clé)|Par clé O (log n)|Rapide O (log n)|Rapide O (log n)|Aucune|
+|Carte|Non|Par clé (temps constant)|Fast (temps constant)|Fast (temps constant)|Non (clés) Oui (valeurs)|
+|Table rouge-noire|Oui (par clé)|Par clé O (log n)|Rapide O (log n)|Rapide O (log n)|Non|
 |Rouge-noire Multimap|Oui (par clé)|Par clé O(log n) (plusieurs valeurs par clé)|Rapide O (log n)|Rapide O (log n)|Oui (plusieurs valeurs par clé)|
 
 ## <a name="using-ctraits-objects"></a>Utilisation des objets CTraits
@@ -116,13 +116,13 @@ Le diagramme suivant illustre la hiérarchie de classes pour les classes CTraits
 
 Les exemples suivants illustrent les classes de collection :
 
-- [MMXSwarm, exemple](../visual-cpp-samples.md)
+- [MMXSwarm, exemple](../overview/visual-cpp-samples.md)
 
-- [Exemple DynamicConsumer](../visual-cpp-samples.md)
+- [Exemple DynamicConsumer](../overview/visual-cpp-samples.md)
 
 - [Exemple UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
-- [Exemple de texte défilant](../visual-cpp-samples.md)
+- [Exemple de texte défilant](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Voir aussi
 

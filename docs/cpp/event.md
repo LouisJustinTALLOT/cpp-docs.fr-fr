@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: bd5f53e5d2b80b22c3a38f413c4fa79b27fa7026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606477"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778258"
 ---
 # <a name="event"></a>__event
 
@@ -62,7 +62,7 @@ Consultez [gestion des événements en C++ natif](../cpp/event-handling-in-nativ
 
 Les événements COM sont des interfaces. Les paramètres d’une méthode dans une interface de source d’événement doivent être *dans* paramètres (mais cela n’est pas rigoureusement appliqué), car un *out* paramètre n’est pas utile lors du multicasting. Un avertissement de niveau 1 est émis si vous utilisez un *out* paramètre.
 
-Le type de retour est généralement HRESULT ou **void**, mais peut être n’importe quel type intégral, y compris **enum**. Lorsqu’un événement utilise un type de retour intégral et qu’un gestionnaire d’événements retourne une valeur différente de zéro, il s’agit d’une condition d’erreur. L’événement déclenché annule alors les appels aux autres délégués. Notez que le compilateur marque automatiquement une interface de source d’événement comme un [source](../windows/source-cpp.md) dans le fichier IDL généré.
+Le type de retour est généralement HRESULT ou **void**, mais peut être n’importe quel type intégral, y compris **enum**. Lorsqu'un événement utilise un type de retour intégral et qu'un gestionnaire d'événements retourne une valeur différente de zéro, il s'agit d'une condition d'erreur. L'événement déclenché annule alors les appels aux autres délégués. Notez que le compilateur marque automatiquement une interface de source d’événement comme un [source](../windows/attributes/source-cpp.md) dans le fichier IDL généré.
 
 Le [__interface](../cpp/interface.md) mot clé est toujours requis après **__event** pour une source d’événements COM.
 
@@ -75,9 +75,9 @@ Consultez [gestion des événements COM](../cpp/event-handling-in-com.md) pour l
 
 ## <a name="managed-events"></a>Événements managés
 
-Pour plus d’informations sur le codage des événements dans la nouvelle syntaxe, consultez [événement](../windows/event-cpp-component-extensions.md).
+Pour plus d’informations sur le codage des événements dans la nouvelle syntaxe, consultez [événement](../extensions/event-cpp-component-extensions.md).
 
-Les événements managés sont des méthodes ou des données membres. Lorsqu’il est utilisé avec un événement, le type de retour d’un délégué doit être conforme à la [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Le type de retour du gestionnaire d’événements doit correspondre à celui du délégué. Pour plus d’informations sur les délégués, consultez [délégués et événements](../dotnet/delegates-and-events.md). Si un événement managé est un membre de données, son type doit être un pointeur vers un délégué.
+Les événements managés sont des méthodes ou des données membres. Lorsqu’il est utilisé avec un événement, le type de retour d’un délégué doit être conforme à la [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Le type de retour du gestionnaire d'événements doit correspondre à celui du délégué. Pour plus d’informations sur les délégués, consultez [délégués et événements](../dotnet/delegates-and-events.md). Si un événement managé est un membre de données, son type doit être un pointeur vers un délégué.
 
 Dans .NET Framework, vous pouvez traiter un membre de données comme s'il s'agissait d'une méthode (autrement dit, la méthode `Invoke` de son délégué correspondant). Vous devez prédéfinir le type délégué pour déclarer un membre de données d'événement managé. En revanche, une méthode d'événement managé définit implicitement le délégué managé correspondant, s'il n'est pas déjà défini. Par exemple, vous pouvez déclarer une valeur d'événement telle que `OnClick` comme événement de la manière suivante :
 
@@ -87,9 +87,9 @@ __event ClickEventHandler* OnClick;  // data member as event
 __event void OnClick(String* s);  // method as event
 ```
 
-Lors de la déclaration implicite d'un événement managé, vous pouvez spécifier des accesseurs add et remove qui seront appelés lorsque les gestionnaires d'événements sont ajoutés ou supprimés. Vous pouvez également définir la méthode qui appelle (déclenche) l'événement en dehors de la classe.
+Lors de la déclaration implicite d’un événement managé, vous pouvez spécifier des accesseurs add et remove qui seront appelés lorsque les gestionnaires d’événements sont ajoutés ou supprimés. Vous pouvez également définir la méthode qui appelle (déclenche) l'événement en dehors de la classe.
 
-## <a name="example-native-events"></a>Exemple : événements natifs
+## <a name="example-native-events"></a>Exemple : Événements natifs
 
 ```cpp
 // EventHandling_Native_Event.cpp
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>Exemple : événements COM
+## <a name="example-com-events"></a>Exemple : Événements COM
 
 ```cpp
 // EventHandling_COM_Event.cpp
@@ -131,8 +131,8 @@ public:
 
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [Gestion des événements](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)

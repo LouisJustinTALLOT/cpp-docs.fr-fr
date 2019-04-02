@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-ms.openlocfilehash: 2da1d4ec24d29d5db0c12bdc856f8d031aa4ff54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b74eef1799dd5f9fae8f2a6aceeb79a115ce837
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534691"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777868"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Référence de Microsoft Macro Assembler
 
@@ -43,7 +43,7 @@ Informations sur la création des fichiers de sortie pour x64.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Visual C++](../../visual-cpp-in-visual-studio.md)<br/>
+[Visual C++](../../overview/visual-cpp-in-visual-studio.md)<br/>
 Fournit des liens vers différentes zones de la documentation de Visual Studio et Visual C++.
 
 ## <a name="see-also"></a>Voir aussi

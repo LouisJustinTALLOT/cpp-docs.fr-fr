@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332411"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772563"
 ---
 # <a name="enumerations-c"></a>Énumérations (C++)
 
 Une énumération est un type défini par l'utilisateur qui se compose d'un jeu de constantes intégrales nommées, appelées énumérateurs.
 
 > [!NOTE]
->  Cet article couvre le langage C++ de la norme ISO **enum** type et l’étendue (ou fortement typé) **classe enum** type qui a été introduit dans C ++ 11. Pour plus d’informations sur la **classe enum publique** ou **privé enum, classe** types en C / c++ / CLI et c++ / CX, consultez [enum, classe](../windows/enum-class-cpp-component-extensions.md).
+>  Cet article couvre le langage C++ de la norme ISO **enum** type et l’étendue (ou fortement typé) **classe enum** type qui a été introduit dans C ++ 11. Pour plus d’informations sur la **classe enum publique** ou **privé enum, classe** types en C / c++ / CLI et c++ / CX, consultez [enum, classe](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,7 +52,7 @@ Nom de type donné à l'énumération.
 *type*<br/>
 Type sous-jacent des énumérateurs ; tous les énumérateurs ont le même type sous-jacent. Peut être tout type intégral.
 
-*liste d’énumération*<br/>
+*enum-list*<br/>
 Liste délimitée par des virgules des énumérateurs dans l'énumération. Chaque nom d'énumérateur ou de variable dans la portée doit être unique. Toutefois, les valeurs peuvent être dupliquées. Dans un enum non délimité, la portée est la portée environnante ; dans un enum délimité, la portée est la *liste d’énumération* lui-même.  Dans un enum délimité, la liste peut être vide qui définit ce qui entraîne un nouveau type intégral.
 
 *class*<br/>
@@ -145,7 +145,7 @@ Notez que la ligne `hand = account_num;` provoque toujours l'erreur avec les enu
 
 ## <a name="no_enumerators"></a> Enums avec aucun énumérateurs
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : en définissant un enum (standard ou étendu) avec un type sous-jacent explicit et aucune énumérateurs, vous pouvez en effet introduire un nouveau type intégral qui n’a aucune conversion implicite en un autre type. À l’aide de ce type au lieu de son type sous-jacent intégré, vous pouvez éliminer le potentiel des erreurs subtiles provoquées par les conversions implicites par inadvertance.
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : En définissant un enum (standard ou étendu) avec un type sous-jacent explicit et aucune énumérateurs, vous pouvez en effet introduire un nouveau type intégral qui n’a aucune conversion implicite en un autre type. À l’aide de ce type au lieu de son type sous-jacent intégré, vous pouvez éliminer le potentiel des erreurs subtiles provoquées par les conversions implicites par inadvertance.
 
 ```cpp
 enum class byte : unsigned char { };

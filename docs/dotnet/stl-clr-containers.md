@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744351"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774540"
 ---
 # <a name="stlclr-containers"></a>STL/CLR, conteneurs
 
@@ -37,7 +37,7 @@ Vous ne pouvez pas insérer les valeurs de type encapsulé dans les conteneurs S
 
 ### <a name="handles-to-reference-types"></a>Handle vers des types référence
 
-Vous pouvez insérer un handle à un type référence dans un conteneur STL/CLR. Un descripteur en C++ qui cible le CLR est analogue à un pointeur en mode natif C++. Pour plus d’informations, consultez [gérer sur l’opérateur Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).
+Vous pouvez insérer un handle à un type référence dans un conteneur STL/CLR. Un descripteur en C++ qui cible le CLR est analogue à un pointeur en mode natif C++. Pour plus d’informations, consultez [gérer sur l’opérateur Object (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Exemple
 
@@ -229,7 +229,7 @@ int main()
 
 Vous pouvez également insérer un type de valeur non encapsulé dans un conteneur STL/CLR. Un type valeur unboxed est un type valeur qui n’a pas été *boxed* dans un type référence.
 
-Un élément de type valeur peut être l'un des types de valeurs standard, comme `int`, ou il peut s'agir d'un type défini par l'utilisateur, tel que `value class`. Pour plus d’informations, consultez [Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+Un élément de type valeur peut être l'un des types de valeurs standard, comme `int`, ou il peut s'agir d'un type défini par l'utilisateur, tel que `value class`. Pour plus d’informations, consultez [Classes et Structs](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>Exemple
 

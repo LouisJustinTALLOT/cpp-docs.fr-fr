@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 0252c4b64690f6a2fb0fd97b97841fe45fcce244
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751451"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774735"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Procédure : Définir et consommer des énumérateurs dans C++ / c++ / CLI
 
@@ -92,7 +92,7 @@ Opérateurs &#124; ^ & ~ ++--sont définies uniquement pour les énumérations a
 Le compilateur n’effectue aucune vérification statique ou dynamique du résultat d’une opération d’énumération ; une opération peut entraîner une valeur pas dans la plage des énumérateurs valide de l’énumération.
 
 > [!NOTE]
->  C ++ 11 présente les types de classe enum en code non managé qui sont considérablement différents que les classes d’énumération managée en C / c++ / CLI. En particulier, le type de classe enum C ++ 11 ne prend pas en charge les opérateurs de mêmes que le type de classe enum géré en C / c++ / CLI et c++ / CLI source code doit fournir un spécificateur d’accessibilité dans l’énumération managée de déclarations de classe afin de les distinguer (C++ non managé 11) déclarations de classe enum. Pour plus d’informations sur les classes enum en C / c++ / CLI, C++ / c++ / CX et C ++ 11, consultez [classe enum](../windows/enum-class-cpp-component-extensions.md).
+>  C ++ 11 présente les types de classe enum en code non managé qui sont considérablement différents que les classes d’énumération managée en C / c++ / CLI. En particulier, le type de classe enum C ++ 11 ne prend pas en charge les opérateurs de mêmes que le type de classe enum géré en C / c++ / CLI et c++ / CLI source code doit fournir un spécificateur d’accessibilité dans l’énumération managée de déclarations de classe afin de les distinguer (C++ non managé 11) déclarations de classe enum. Pour plus d’informations sur les classes enum en C / c++ / CLI, C++ / c++ / CX et C ++ 11, consultez [classe enum](../extensions/enum-class-cpp-component-extensions.md).
 
 ```
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>Voir aussi
 
-[enum, classe](../windows/enum-class-cpp-component-extensions.md)
+[enum, classe](../extensions/enum-class-cpp-component-extensions.md)

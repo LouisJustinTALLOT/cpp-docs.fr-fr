@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: c954955ad52197316da0952dc6dd415a91782444
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739435"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775944"
 ---
 # <a name="cimage-class"></a>CImage (classe)
 
@@ -197,7 +197,7 @@ Vous pouvez utiliser `CImage` à partir de MFC ou ATL.
 > <br/>
 > De même, vous devez inclure `atlimage.h` avant d’inclure `atlimpl.cpp`. Pour ce faire facilement, inclure `atlimage.h` dans votre `stdafx.h`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlimage.h
 
@@ -1658,8 +1658,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
 ## <a name="see-also"></a>Voir aussi
 
-[MMXSwarm, exemple](../../visual-cpp-samples.md)<br/>
-[Exemple SimpleImage](../../visual-cpp-samples.md)<br/>
+[MMXSwarm, exemple](../../overview/visual-cpp-samples.md)<br/>
+[Exemple SimpleImage](../../overview/visual-cpp-samples.md)<br/>
 [Bitmaps indépendantes du périphérique](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)<br/>

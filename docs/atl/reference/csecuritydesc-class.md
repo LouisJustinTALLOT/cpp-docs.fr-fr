@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 3673b7ae8630a344e640df70a23698247b0ff8ec
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aadaa64a936aee867766dfc0f7a6e190c9691ca6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262634"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778024"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc, classe
 
@@ -109,7 +109,7 @@ Les applications ne doivent pas modifier le `SECURITY_DESCRIPTOR` structure dire
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsecurity.h
 
@@ -703,7 +703,7 @@ Cette méthode appelle [convertstringsecuritydescriptortosecuritydescriptor a](/
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple de sécurité](../../visual-cpp-samples.md)<br/>
+[Exemple de sécurité](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)

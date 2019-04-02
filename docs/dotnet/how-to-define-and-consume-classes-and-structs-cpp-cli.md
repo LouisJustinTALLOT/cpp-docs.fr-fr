@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751828"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774917"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Procédure : Définir et consommer des Classes et Structs (C++ / c++ / CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 Un *implicitement abstraites classe* ne peut pas être instanciée. Une classe est abstraite implicitement si le type de base de la classe est une interface et la classe n’implémente pas toutes les fonctions membres de l’interface.
 
-Si vous ne parvenez pas à construire des objets à partir d’une classe qui est dérivée d’une interface, la raison peut être que la classe est abstraite implicitement. Pour plus d’informations sur les classes abstraites, consultez [abstraite](../windows/abstract-cpp-component-extensions.md).
+Si vous ne parvenez pas à construire des objets à partir d’une classe qui est dérivée d’une interface, la raison peut être que la classe est abstraite implicitement. Pour plus d’informations sur les classes abstraites, consultez [abstraite](../extensions/abstract-cpp-component-extensions.md).
 
 L’exemple de code suivant montre que le `MyClass` classe ne peut pas être instanciée, car fonction `MyClass::func2` n’est pas implémentée. Pour activer l’exemple compiler, supprimez les commentaires de `MyClass::func2`.
 
@@ -229,7 +229,7 @@ Ce tableau récapitule l’effet des spécificateurs d’accès différents :
 |public|Membre est accessible à l’intérieur et en dehors de l’assembly.  Consultez [public](../cpp/public-cpp.md) pour plus d’informations.|
 |private|Membre n’est pas accessible, ni à l’intérieur, ni en dehors de l’assembly.  Consultez [privé](../cpp/private-cpp.md) pour plus d’informations.|
 |protected|Membre est accessible à l’intérieur et en dehors de l’assembly, mais uniquement pour les types dérivés.  Consultez [protégé](../cpp/protected-cpp.md) pour plus d’informations.|
-|internal|Membre est public à l’intérieur de l’assembly mais privé en dehors de l’assembly.  `internal` est un mot clé contextuel.  Pour plus d’informations, consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).|
+|internal|Membre est public à l’intérieur de l’assembly mais privé en dehors de l’assembly.  `internal` est un mot clé contextuel.  Pour plus d’informations, consultez [mots clés contextuels](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
 |public public protégé - ou - protégé|Membre est public à l’intérieur de l’assembly mais protégés en dehors de l’assembly.|
 |privé privé protégé - ou - protégé|Membre est protégé à l’intérieur de l’assembly mais privé en dehors de l’assembly.|
 
@@ -499,9 +499,9 @@ Ce une sémantique différente de la `this` pointeur peut provoquer un comportem
 
 Pour plus d'informations, consultez
 
-- [Handle de l’opérateur Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [Handle de l’opérateur Object (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++-CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++-CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -797,7 +797,7 @@ Code qui a écrit en Visual C++ et compilé à l’aide de **/CLR** exécute le 
 
 - L’objet est un membre d’un objet dont le destructeur est en cours d’exécution.
 
-- Vous appelez le [supprimer](../cpp/delete-operator-cpp.md) opérateur sur un handle ([gérer sur l’opérateur Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).
+- Vous appelez le [supprimer](../cpp/delete-operator-cpp.md) opérateur sur un handle ([gérer sur l’opérateur Object (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)).
 
 - Vous appelez explicitement le destructeur.
 
@@ -844,7 +844,7 @@ Après l’exécution du finaliseur d’un objet, les finaliseurs dans les class
 
 Si un finaliseur supprime un pointeur natif dans un type managé, vous devez vous assurer que les références à ou via le pointeur natif ne sont pas collectés prématurément ; appeler le destructeur sur le type managé au lieu d’utiliser <xref:System.GC.KeepAlive%2A>.
 
-Au moment de la compilation, vous pouvez détecter si un type a un finaliseur ou un destructeur. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+Au moment de la compilation, vous pouvez détecter si un type a un finaliseur ou un destructeur. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 L’exemple suivant montre deux types, un qui a des ressources non managées et un qui a géré les ressources sont libérées de façon déterministe.
 
@@ -914,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classes et structs](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[Classes et structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Classes et structs](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[Classes et structs](../extensions/classes-and-structs-cpp-component-extensions.md)

@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: ed2c0b11dfdc6882352c87166b74b2fab327fcd3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cb92c19dd839fc09ed803e170a2762e4ac7cd494
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418605"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770796"
 ---
 # <a name="cdatasource-class"></a>CDataSource, classe
 
@@ -74,7 +74,7 @@ Correspond à un objet de source de données OLE DB, qui représente une connexi
 class CDataSource
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -98,7 +98,7 @@ class CDataSource
 
 Une ou plusieurs sessions de base de données peuvent être créées pour une seule connexion. Ces sessions sont représentées par `CSession`. Vous devez appeler [CDataSource::Open](../../data/oledb/cdatasource-open.md) pour ouvrir la connexion avant de créer une session avec `CSession::Open`.
 
-Pour obtenir un exemple montrant comment utiliser `CDataSource`, consultez le [CatDB](../../visual-cpp-samples.md) exemple.
+Pour obtenir un exemple montrant comment utiliser `CDataSource`, consultez le [CatDB](../../overview/visual-cpp-samples.md) exemple.
 
 ## <a name="close"></a> CDataSource::Close
 

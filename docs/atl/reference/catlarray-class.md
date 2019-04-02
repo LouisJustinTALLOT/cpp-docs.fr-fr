@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301847"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775697"
 ---
 # <a name="catlarray-class"></a>CAtlArray, classe
 
@@ -99,7 +99,7 @@ Pour les tableaux avec un petit nombre d’éléments, la classe ATL [CSimpleArr
 
 Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcoll.h
 
@@ -549,9 +549,9 @@ Remplace la valeur de l’élément vers lequel pointé l’index. Si *iElement*
 
 ## <a name="see-also"></a>Voir aussi
 
-[MMXSwarm, exemple](../../visual-cpp-samples.md)<br/>
-[Exemple DynamicConsumer](../../visual-cpp-samples.md)<br/>
-[Exemple UpdatePV](../../visual-cpp-samples.md)<br/>
-[Exemple de texte défilant](../../visual-cpp-samples.md)<br/>
+[MMXSwarm, exemple](../../overview/visual-cpp-samples.md)<br/>
+[Exemple DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>
+[Exemple UpdatePV](../../overview/visual-cpp-samples.md)<br/>
+[Exemple de texte défilant](../../overview/visual-cpp-samples.md)<br/>
 [CArray, classe](../../mfc/reference/carray-class.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

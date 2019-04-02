@@ -1,16 +1,16 @@
 ---
 title: Utilisation de l'IDE de Visual Studio pour le développement de bureau C++
-ms.date: 06/08/2018
+ms.date: 03/14/2019
 helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 45dcf185f57f7deedb3734d31ce17a6201c81959
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7417c46097b1f0c6282e3684a7556880c21be42a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612275"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773565"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Utilisation de l'IDE de Visual Studio pour le développement de bureau C++
 
@@ -26,7 +26,7 @@ Si vous n’avez pas encore installé Visual Studio, le moment est venu.
 
 **Installation de Visual Studio 2017**
 
-Pour obtenir Visual Studio 2017, vous pouvez le télécharger depuis [Téléchargements de Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Veillez à inclure les outils de développement Visual C++ quand vous installez Visual Studio, car ceux-ci ne sont pas installés par défaut. Pour plus d’informations sur l’installation de Visual Studio, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio).
+Pour obtenir Visual Studio 2017, vous pouvez le télécharger depuis [Téléchargements de Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Veillez à inclure les outils de développement Visual C++ quand vous installez Visual Studio, car ceux-ci ne sont pas installés par défaut. Pour plus d’informations sur l’installation de Visual Studio, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio).
 
 **Installation de Visual Studio 2015**
 
@@ -40,19 +40,19 @@ Une fois que vous avez terminé votre installation de Visual Studio, vous êtes 
 
 Pour commencer à utiliser l’IDE Visual Studio pour générer des applications C++, passez en revue chacune des rubriques ci-dessous dans l’ordre. Chacune d’elles s’appuie sur le travail effectué dans les rubriques précédentes :
 
-- [Procédure pas à pas : utilisation de projets et de solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)
+- [Procédure pas à pas : utilisation de projets et de solutions (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
 
-- [Procédure pas à pas : génération d’un projet (C++)](../ide/walkthrough-building-a-project-cpp.md)
+- [Procédure pas à pas : Génération d’un projet (C++)](walkthrough-building-a-project-cpp.md)
 
-- [Procédure pas à pas : test d’un projet (C++)](../ide/walkthrough-testing-a-project-cpp.md)
+- [Procédure pas à pas : Test d’un projet (C++)](walkthrough-testing-a-project-cpp.md)
 
-- [Procédure pas à pas : débogage d’un projet (C++)](../ide/walkthrough-debugging-a-project-cpp.md)
+- [Procédure pas à pas : Débogage d'un projet (C++)](walkthrough-debugging-a-project-cpp.md)
 
-- [Procédure pas à pas : déploiement de votre programme (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
+- [Procédure pas à pas : Déploiement de votre programme (C++)](walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Une fois que vous avez terminé ces procédures pas à pas, vous êtes prêt à générer vos propres projets. Pour obtenir plus d’informations et de ressources pour le développement Visual C++, consultez [Visual C++ dans Visual Studio](../visual-cpp-in-visual-studio.md).
+Une fois que vous avez terminé ces procédures pas à pas, vous êtes prêt à générer vos propres projets. Pour obtenir plus d’informations et de ressources pour le développement Visual C++, consultez [Visual C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md).
 
 ## <a name="see-also"></a>Voir aussi
 

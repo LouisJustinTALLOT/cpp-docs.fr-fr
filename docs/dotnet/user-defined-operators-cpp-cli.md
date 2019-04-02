@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: 462d0d2819d4c65b0e37d39f24566a7152a44cf3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: cf80eb4c440c1308e8ea06a563c18569e4e4ddf2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739982"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774566"
 ---
 # <a name="user-defined-operators-ccli"></a>Opérateurs définis par l'utilisateur (C++/CLI)
 
@@ -165,4 +165,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classes et structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Classes et structs](../extensions/classes-and-structs-cpp-component-extensions.md)
