@@ -59,7 +59,7 @@ Utilisez Visual Studio 2017 pour créer et déboguer des applications exécuté
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/visual-cpp-in-visual-studio">Visual C++</a></h3>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
                         <p><a href="/cpp/overview-of-cpp-development">IDE et outils pour le développement Visual C++</a></p>
                     </div>
                 </div>
