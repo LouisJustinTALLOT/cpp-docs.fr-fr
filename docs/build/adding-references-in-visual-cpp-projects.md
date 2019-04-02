@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 8daba00432d7f14c8517da3ed4dc506cfd80865a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825656"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780468"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilisation des bibliothèques et composants
 
@@ -20,7 +20,7 @@ Souvent, un projet C++ doit appeler des fonctions ou accéder aux données dans 
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Utilisation des bibliothèques téléchargés via vcpkg
 
-Pour utiliser une bibliothèque que vous avez téléchargé à l’aide de la **vcpkg** Gestionnaire de package, vous pouvez ignorer les instructions ci-dessous. Consultez [vcpkg : Gestionnaire de package C++ pour Windows, Linux et MacOS](../vcpkg.md#integrate-with-visual-studio-windows) pour plus d’informations.
+Pour utiliser une bibliothèque que vous avez téléchargé à l’aide de la **vcpkg** Gestionnaire de package, vous pouvez ignorer les instructions ci-dessous. Consultez [vcpkg : Gestionnaire de package C++ pour Windows, Linux et MacOS](vcpkg.md#integrate-with-visual-studio-windows) pour plus d’informations.
 
 ## <a name="consuming-static-libraries"></a>Utilisation des bibliothèques statiques
 
@@ -167,4 +167,4 @@ Les propriétés suivantes font partie des références d’assembly COM et .NET
 ## <a name="see-also"></a>Voir aussi
 
 [Référence de page de propriété de projet C++](reference/property-pages-visual-cpp.md)<br>
-[Définir le compilateur C++ et générer des propriétés dans Visual Studio](working-with-project-properties.md)
+[Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md)

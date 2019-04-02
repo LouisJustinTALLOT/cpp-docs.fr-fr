@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269849"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781235"
 ---
 # <a name="ceditview-class"></a>CEditView, classe
 
@@ -142,7 +142,7 @@ Pour plus d’informations sur `CEditView`, consultez [dérivées les Classes d�
 
 `CEditView`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxext.h
 
@@ -492,7 +492,7 @@ Appelez `UnlockBuffer` une fois que vous avez fini d’utiliser le pointeur reto
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[Exemple MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView, classe](../../mfc/reference/cctrlview-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CEdit, classe](../../mfc/reference/cedit-class.md)<br/>

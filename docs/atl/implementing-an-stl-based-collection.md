@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: 90583f34c9e9fb500bb48fdbd3c1a17d343d865f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292920"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779246"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implémentation d’une Collection de basée sur la bibliothèque Standard C++
 
 ATL fournit le `ICollectionOnSTLImpl` interface pour vous permettre d’implémenter rapidement des interfaces de collection basées sur la bibliothèque Standard C++ sur vos objets. Pour comprendre le fonctionne de cette classe, vous travaillerez avec un exemple simple (ci-dessous) qui utilise cette classe pour implémenter une collection en lecture seule destinée aux clients Automation.
 
-L’exemple de code présente le [exemple ATLCollections](../visual-cpp-samples.md).
+L’exemple de code présente le [exemple ATLCollections](../overview/visual-cpp-samples.md).
 
 Pour effectuer cette procédure, vous allez :
 
@@ -75,7 +75,7 @@ Les typedefs que vous avez créé jusqu'à présent fournir toutes les informati
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-Dans cet exemple, vous pouvez utiliser personnalisé `GenericCopy` classe définie dans VCUE_Copy.h et VCUE_CopyString.h à partir de la [ATLCollections](../visual-cpp-samples.md) exemple. Vous pouvez utiliser cette classe dans un autre code, mais vous devrez peut-être définir d’autres spécialisations de `GenericCopy` pour prendre en charge les types de données utilisés dans vos propres regroupements. Pour plus d’informations, consultez [Classes de stratégies de copie ATL](../atl/atl-copy-policy-classes.md).
+Dans cet exemple, vous pouvez utiliser personnalisé `GenericCopy` classe définie dans VCUE_Copy.h et VCUE_CopyString.h à partir de la [ATLCollections](../overview/visual-cpp-samples.md) exemple. Vous pouvez utiliser cette classe dans un autre code, mais vous devrez peut-être définir d’autres spécialisations de `GenericCopy` pour prendre en charge les types de données utilisés dans vos propres regroupements. Pour plus d’informations, consultez [Classes de stratégies de copie ATL](../atl/atl-copy-policy-classes.md).
 
 ##  <a name="vcconenumeration_and_collection"></a> Création de Typedefs pour l’énumération et la Collection
 
@@ -102,5 +102,5 @@ Vous pouvez maintenant tester le code avec le client de votre choix.
 ## <a name="see-also"></a>Voir aussi
 
 [Collections et énumérateurs](../atl/atl-collections-and-enumerators.md)<br/>
-[ATLCollections, exemple](../visual-cpp-samples.md)<br/>
+[ATLCollections, exemple](../overview/visual-cpp-samples.md)<br/>
 [Classes de stratégies de copie ATL](../atl/atl-copy-policy-classes.md)

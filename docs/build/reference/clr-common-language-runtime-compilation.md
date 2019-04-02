@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822459"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779350"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilation pour le Common Language Runtime)
 
@@ -67,13 +67,13 @@ Un ou plusieurs des commutateurs suivants, séparés par des virgules.
 
 Le code managé est du code qui peut être inspecté et géré par le CLR. Le code managé peut accéder aux objets managés. Pour plus d'informations, consultez [/clr Restrictions](clr-restrictions.md).
 
-Pour plus d’informations sur la façon de développer des applications qui définissent et utilisent des types managés, consultez [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md).
+Pour plus d’informations sur la façon de développer des applications qui définissent et utilisent des types managés, consultez [Component Extensions for Runtime Platforms](../../extensions/component-extensions-for-runtime-platforms.md).
 
 Une application compilée en utilisant **/clr** peut contenir ou non des données managées.
 
 Pour activer le débogage sur une application managée, consultez [/ASSEMBLYDEBUG (Ajouter DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
-Seuls les types CLR seront instanciés sur le tas récupéré par le garbage collector. Pour plus d’informations, consultez [les Classes et Structs](../../windows/classes-and-structs-cpp-component-extensions.md). Pour compiler une fonction en code natif, utilisez le pragma `unmanaged` . Pour plus d’informations, consultez [managed, unmanaged](../../preprocessor/managed-unmanaged.md).
+Seuls les types CLR seront instanciés sur le tas récupéré par le garbage collector. Pour plus d’informations, consultez [les Classes et Structs](../../extensions/classes-and-structs-cpp-component-extensions.md). Pour compiler une fonction en code natif, utilisez le pragma `unmanaged` . Pour plus d’informations, consultez [managed, unmanaged](../../preprocessor/managed-unmanaged.md).
 
 Par défaut, l’option **/clr** n’est pas activée. Quand l’option **/clr** est activée, **/MD** l’est également. Pour plus d’informations, consultez l’article [/MD, /MT, /LD (Utiliser la bibliothèque Runtime)](md-mt-ld-use-run-time-library.md). **/MD** garantit que les versions multithreads dynamiquement liées des routines d’exécution sont sélectionnées à partir des fichiers d’en-tête standard (.h). Le multithreading est requis pour la programmation managée, car le garbage collector CLR exécute les finaliseurs dans un thread auxiliaire.
 
@@ -106,4 +106,4 @@ Utilisez ildasm.exe pour afficher les métadonnées.
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

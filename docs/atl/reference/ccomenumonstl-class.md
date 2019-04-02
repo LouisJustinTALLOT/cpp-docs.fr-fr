@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: 56d0de1131791def3ea536c6e5a7f5ce0bef9617
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f9bf9c227984b2fdbf460f970357f395934b238c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290506"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779857"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL, classe
 
@@ -83,7 +83,7 @@ Consultez [Collections et énumérateurs ATL](../../atl/atl-collections-and-enum
 
 `CComEnumOnSTL`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 
@@ -102,7 +102,7 @@ Ce code crée un **typedef** pour `CComEnumOnSTL` qui expose un vecteur de `CCom
 ## <a name="see-also"></a>Voir aussi
 
 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[Exemple ATLCollections : Montre comment ICollectionOnSTLImpl, CComEnumOnSTL et des Classes de stratégie de copie personnalisées](../../visual-cpp-samples.md)<br/>
+[Exemple ATLCollections : Montre comment ICollectionOnSTLImpl, CComEnumOnSTL et des Classes de stratégie de copie personnalisées](../../overview/visual-cpp-samples.md)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
 [CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>

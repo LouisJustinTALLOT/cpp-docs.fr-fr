@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294991"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781729"
 ---
 # <a name="tn029-splitter-windows"></a>TN029 : Fenêtres fractionnées
 
@@ -46,7 +46,7 @@ Le nombre maximal de volets que vous pouvez spécifier pour les fenêtres fracti
 
 ## <a name="splitter-examples"></a>Exemples de fractionnement
 
-La plupart des exemples de programmes MFC utilisent des fenêtres fractionnées directement ou indirectement. L’exemple général MFC [VIEWEX](../visual-cpp-samples.md) illustre plusieurs utilisations de fenêtres fractionnées statiques, notamment comment placer un séparateur dans un séparateur.
+La plupart des exemples de programmes MFC utilisent des fenêtres fractionnées directement ou indirectement. L’exemple général MFC [VIEWEX](../overview/visual-cpp-samples.md) illustre plusieurs utilisations de fenêtres fractionnées statiques, notamment comment placer un séparateur dans un séparateur.
 
 Vous pouvez également utiliser ClassWizard pour créer un nouveau plusieurs document interface (multidocument MDI) enfant classe de fenêtre frame qui contient une fenêtre fractionnée. Pour plus d’informations sur les fenêtres fractionnées, consultez [plusieurs Types de documents, vues et Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
 

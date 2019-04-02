@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: 4b99578ed40b4ff70f3606840198b7062083ca83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4534b11f3aedf638f69337fb6a7af778e086bb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667039"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778986"
 ---
 # <a name="compiler-error-c3671"></a>Erreur du compilateur C3671
 
 'function_1' : fonction ne substitue pas 'function_2'
 
-Lorsque vous utilisez la syntaxe de substitution explicite, le compilateur génère une erreur si une fonction n’est pas remplacée.  Consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md) pour plus d’informations.
+Lorsque vous utilisez la syntaxe de substitution explicite, le compilateur génère une erreur si une fonction n’est pas remplacée.  Consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md) pour plus d’informations.
 
 ## <a name="example"></a>Exemple
 

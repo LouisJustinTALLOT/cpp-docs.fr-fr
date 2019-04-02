@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298631"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780390"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery, classe
 
@@ -155,7 +155,7 @@ Un bouton de la galerie se comporte comme un bouton de menu standard, à ceci pr
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonGallery` classe permettant de configurer un `CMFCRibbonGallery` objet. L’exemple montre comment spécifier le nombre d’éléments par ligne dans la galerie, activer le redimensionnement du Panneau de menu, la barre latérale à gauche du menu contextuel et afficher la galerie du ruban sous la forme d’une palette directement sur la barre du ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRibbonGallery` classe permettant de configurer un `CMFCRibbonGallery` objet. L’exemple montre comment spécifier le nombre d’éléments par ligne dans la galerie, activer le redimensionnement du Panneau de menu, la barre latérale à gauche du menu contextuel et afficher la galerie du ruban sous la forme d’une palette directement sur la barre du ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 
@@ -165,7 +165,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRi
 
 [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxRibbonPaletteGallery.h
 

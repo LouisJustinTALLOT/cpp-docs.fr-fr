@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301335"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780221"
 ---
 # <a name="cmfccolormenubutton-class"></a>Cmfccolormenubutton, classe
 
@@ -105,7 +105,7 @@ La boîte de dialogue de sélecteur de couleurs est créée pendant le traitemen
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment créer et configurer un bouton de menu de couleur à l’aide de différentes méthodes de la `CMFCColorMenuButton` classe. Dans l’exemple, un `CPalette` objet est tout d’abord créé, puis utilisé pour construire un objet de la `CMFCColorMenuButton` classe. Le `CMFCColorMenuButton` objet est ensuite configuré en activant son automatique et autres boutons et en définissant sa couleur et le nombre de colonnes. Ce code fait partie de la [exemple Word Pad](../../visual-cpp-samples.md).
+L’exemple suivant montre comment créer et configurer un bouton de menu de couleur à l’aide de différentes méthodes de la `CMFCColorMenuButton` classe. Dans l’exemple, un `CPalette` objet est tout d’abord créé, puis utilisé pour construire un objet de la `CMFCColorMenuButton` classe. Le `CMFCColorMenuButton` objet est ensuite configuré en activant son automatique et autres boutons et en définissant sa couleur et le nombre de colonnes. Ce code fait partie de la [exemple Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]
@@ -120,7 +120,7 @@ L’exemple suivant montre comment créer et configurer un bouton de menu de cou
 
 [CMFCColorMenuButton](../../mfc/reference/cmfccolormenubutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcolormenubutton.h
 

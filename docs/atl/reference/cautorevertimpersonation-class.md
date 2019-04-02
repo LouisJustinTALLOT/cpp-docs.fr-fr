@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 78488fba080e397b06eb67ebe8039fb3e8d5e035
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299099"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779376"
 ---
 # <a name="cautorevertimpersonation-class"></a>Cautorevertimpersonation, classe
 
@@ -53,7 +53,7 @@ Il est parfois nécessaire d’emprunter l’identité des jetons d’accès. Ce
 
 Pour une présentation du modèle de contrôle d’accès dans Windows, consultez [contrôle d’accès](/windows/desktop/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsecurity.h
 
@@ -137,6 +137,6 @@ Si cette méthode est appelée dans le cadre qui incluent le rétablissement d�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Exemple ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
 [Jetons d’accès](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

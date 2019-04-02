@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414289"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779272"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (classe)
 
@@ -269,7 +269,7 @@ Pour plus d’informations sur l’utilisation de `CRichEditCtrl`, consultez :
 
 - [Utilisation de CRichEditCtrl](../../mfc/using-cricheditctrl.md)
 
-Pour obtenir un exemple d’utilisation d’un contrôle RichEdit dans une application MFC, consultez le [WORDPAD](../../visual-cpp-samples.md) exemple d’application.
+Pour obtenir un exemple d’utilisation d’un contrôle RichEdit dans une application MFC, consultez le [WORDPAD](../../overview/visual-cpp-samples.md) exemple d’application.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -281,7 +281,7 @@ Pour obtenir un exemple d’utilisation d’un contrôle RichEdit dans une appli
 
 `CRichEditCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 
@@ -2198,7 +2198,7 @@ Pour plus d’informations, consultez [EM_UNDO](/windows/desktop/Controls/em-und
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Exemple MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CEdit, classe](../../mfc/reference/cedit-class.md)<br/>

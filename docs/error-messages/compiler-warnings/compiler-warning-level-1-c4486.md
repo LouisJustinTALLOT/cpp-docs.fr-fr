@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-ms.openlocfilehash: b6e1fc7001908202efc2fb0ef3653153c007eac0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 402d5eefde6c2dfd5693e53c27edb00d1ac2e56c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456028"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780208"
 ---
 # <a name="compiler-warning-level-1-c4486"></a>Avertissement du compilateur (niveau 1) C4486
 
 'fonction' : une méthode virtuelle privée d’une classe ref ou d’une classe value doit être marquée comme 'sealed'
 
-Dans la mesure où une fonction membre virtuelle privée d’une classe managée ou un struct ne peut pas être accessible ou de substitution, il doit être marqué [sealed](../../windows/sealed-cpp-component-extensions.md).
+Dans la mesure où une fonction membre virtuelle privée d’une classe managée ou un struct ne peut pas être accessible ou de substitution, il doit être marqué [sealed](../../extensions/sealed-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 

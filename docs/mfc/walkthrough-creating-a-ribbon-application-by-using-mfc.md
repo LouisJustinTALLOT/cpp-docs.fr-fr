@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: a74e8863c32199d1c0309f70bceae867993ce721
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271331"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781222"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procédure pas à pas : Création d’une Application de ruban à l’aide de MFC
 
@@ -87,9 +87,9 @@ Cette procédure pas à pas suppose que vous avez défini Visual Studio à utili
 
 [Guide pratique pour Personnaliser le bouton d’Application](../mfc/how-to-customize-the-application-button.md)
 
-Pour obtenir des exemples de bout en bout, consultez [exemples (MFC Feature Pack)](../visual-cpp-samples.md).
+Pour obtenir des exemples de bout en bout, consultez [exemples (MFC Feature Pack)](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Procédures pas à pas](../mfc/walkthroughs-mfc.md)<br/>
-[Exemples (MFC Feature Pack)](../visual-cpp-samples.md)
+[Exemples (MFC Feature Pack)](../overview/visual-cpp-samples.md)

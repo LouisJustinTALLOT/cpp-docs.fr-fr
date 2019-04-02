@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOfficeXP class [MFC]
 ms.assetid: 46b6f854-37c2-4836-8f56-5cb6ff63c9af
-ms.openlocfilehash: 6bfde7e241e16584254c956125208efc5c2a405a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c975a2b7ae7de12c154954e44470e7af9feeaa1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292235"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781417"
 ---
 # <a name="cmfcvisualmanagerofficexp-class"></a>CMFCVisualManagerOfficeXP, classe
 
@@ -33,7 +33,7 @@ Vous utilisez la `CMFCVisualManagerOfficeXP` classe pour modifier l’apparence 
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser `CMFCVisualManagerOfficeXP`. Cet extrait de code fait partie de la [exemple de démonstration alerte Desktop](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser `CMFCVisualManagerOfficeXP`. Cet extrait de code fait partie de la [exemple de démonstration alerte Desktop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#8](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]
 
@@ -47,7 +47,7 @@ L’exemple suivant montre comment utiliser `CMFCVisualManagerOfficeXP`. Cet ext
 
 [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxvisualmanagerofficexp.h
 

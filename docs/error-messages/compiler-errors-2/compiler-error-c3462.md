@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3462
 ms.assetid: 56b75f35-9fad-42d9-a969-eeca5d709bec
-ms.openlocfilehash: 6c56e59be8bc4173c6568b47628f675ba4f4d782
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 020556be73f0bad8bea6836c9ec0dd0b92dd7f39
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651774"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781365"
 ---
 # <a name="compiler-error-c3462"></a>Erreur du compilateur C3462
 
@@ -19,7 +19,7 @@ ms.locfileid: "50651774"
 
 L’attribut TypeForwardedTo doit être appliqué à un type dans les métadonnées référencées.
 
-Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 
