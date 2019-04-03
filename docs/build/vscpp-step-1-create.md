@@ -2,16 +2,16 @@
 title: Créer un projet d’application console C++
 description: Créer une application console Hello World dans Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817723"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898776"
 ---
 # <a name="create-a-c-console-app-project"></a>Créer un projet d’application console C++
 
@@ -19,11 +19,31 @@ Habituellement, le programmeur C++ commence par créer une application « Hell
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Vous devez installer puis exécuter Visual Studio ainsi que la charge de travail Développement Desktop en C++ sur votre ordinateur. Pour les installer, consultez [Installer la prise en charge C++ dans Visual Studio 2017](vscpp-step-0-installation.md).
+- Vous devez installer puis exécuter Visual Studio ainsi que la charge de travail Développement Desktop en C++ sur votre ordinateur. S’il n’est pas encore installé, consultez [prise en charge de l’installation de C++ dans Visual Studio](vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Créer un projet d’application
 
 Visual Studio organise le code des applications dans des *projets*, et vos projets dans des *solutions*. Un projet contient l’ensemble des options, configurations et règles qui sont utilisées pour créer vos applications. De plus, il gère les relations qui existent entre tous les fichiers du projet et les fichiers externes. Pour créer votre application, commencez par créer un projet et une solution.
+
+::: moniker range=">=vs-2019"
+
+1. Dans Visual Studio, ouvrez le **fichier** menu et choisissez **New** > **projet** pour ouvrir le **créer un nouveau projet** boîte de dialogue. Sélectionnez le **application Console** modèle, puis choisissez **suivant**.
+
+   ![Créer un nouveau projet](media/vs2019-choose-console-app.png "ouvrir la créer une boîte de dialogue Nouveau projet")
+
+1. Dans le **configurer votre nouveau projet** boîte de dialogue, entrez *HelloWorld* dans le **nom_projet** zone d’édition. Choisissez **créer** pour créer le projet.
+
+   ![Nommer et créer le projet](media/vs2019-configure-new-project-hello-world.png "nom et créer le projet")
+
+   Visual Studio crée un nouveau projet, vous pouvez ajouter et modifier votre code source. Par défaut, le modèle d’application de Console remplit dans votre code source avec une application « Hello World » :
+
+   ![Projet de World Hello dans l’IDE](media/vs2019-hello-world-code.png "projet Hello World dans l’IDE")
+
+   Lorsque le code ressemble à ceci dans l’éditeur, vous êtes prêt à passer à l’étape suivante et générer votre application.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 1. Dans Visual Studio, ouvrez le **fichier** menu et choisissez **Nouveau > projet** pour ouvrir le **nouveau projet** boîte de dialogue.
 
@@ -85,10 +105,14 @@ Lorsque le code ressemble à ceci dans l’éditeur, vous êtes prêt à passer 
 
 [J’ai rencontré un problème.](#add-a-source-code-file-issues)
 
+::: moniker-end
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="nextstepaction"]
 > [Générer et exécuter un projet C++](vscpp-step-2-build.md)
+
+::: moniker range="<=vs-2017"
 
 ## <a name="troubleshooting-guide"></a>Guide de dépannage
 
@@ -125,5 +149,7 @@ Si vous avez fermé accidentellement la fenêtre Éditeur de source code fichier
 Si les soulignements ondulés rouges s’affichent sous quoi que ce soit dans l’éditeur de code source, vérifiez que votre code correspond à l’exemple de l’orthographe, des signes de ponctuation et des cas. Cas est significatif dans le code C++.
 
 [Revenir en arrière](#add-code-to-the-source-file).
+
+::: moniker-end
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />
