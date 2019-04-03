@@ -1,6 +1,6 @@
 ---
 title: memchr, wmemchr
-ms.date: 11/04/2016
+ms.date: 03/31/2019
 apiname:
 - wmemchr
 - memchr
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: cbd8b80ed42a6532fb7161fab7217a772a2cb777
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
+ms.sourcegitcommit: 489c0b998f2360317701f7a4a97b2b8ad96052d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57209897"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58866914"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -87,11 +87,11 @@ En cas de réussite, retourne un pointeur vers le premier emplacement de *c* dan
 
 ## <a name="remarks"></a>Notes
 
-`memchr` et `wmemchr` rechercher la première occurrence de *c* dans la première *nombre* octets de *tampon*. Il s’arrête lorsqu’il trouve *c* ou qu’elles ont vérifié la première *nombre* octets.
+`memchr` et `wmemchr` rechercher la première occurrence de *c* dans la première *nombre* caractères de *tampon*. Il s’arrête lorsqu’il trouve *c* ou qu’elles ont vérifié la première *nombre* caractères.
 
-En C, ces fonctions prennent une **const** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non -**const** retourne un pointeur vers non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le **const** et non-**const** versions de ces fonctions sont disponibles. Si vous avez besoin non -**const** comportement pour les deux surcharges C++ dans C++, définissez le symbole _CONST_RETURN.
+En C, ces fonctions prennent une **const** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non -**const** retourne un pointeur vers non -**const** . La macro \_CRT\_CONST\_CORRECT\_surcharges est défini si les deux le **const** et non-**const** versions de ces fonctions sont disponibles. Si vous avez besoin non -**const** comportement pour les deux surcharges C++ dans C++, définissez le symbole \_CONST\_retourner.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
