@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bcf2372f039ccec4b46bf51fb4da9f4175289f14
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58807574"
+---
 Les compilateurs Visual Studio et les outils de génération peuvent signaler de nombreux genres d’erreurs et avertissements. Une fois qu’une erreur ou un avertissement est trouvé, les outils de génération peuvent émettre des hypothèses sur l’intention du code et tenter de se poursuivre, afin que davantage de problèmes peut être signalées en même temps. Si les outils suivent une hypothèse incorrecte, les erreurs ou avertissements ultérieurs peuvent ne pas s'appliquer à votre projet. Lors de la résolution de problèmes dans votre projet, démarrez toujours par la première erreur ou le premier avertissement signalé et effectuez régulièrement une régénération. Le d’eux peut rendre les nombreuses autres erreurs disparaître.
 
 Pour obtenir une aide sur un message particulier de diagnostic dans Visual Studio, sélectionnez-le dans la **sortie** fenêtre, puis appuyez sur la **F1** touche pour ouvrir la page de documentation pour cette erreur, s’il en existe. Vous pouvez également utiliser l’outil de recherche ci-dessus pour rechercher des articles sur les erreurs spécifiques ou des avertissements, ou parcourez la liste des erreurs et avertissements par type dans le volet de navigation et d’outil.
@@ -7,4 +15,4 @@ Pour obtenir une aide sur un message particulier de diagnostic dans Visual Studi
 
 Vous pouvez trouver une assistance supplémentaire pour les erreurs et avertissements dans les forums publics de Microsoft. Vous pouvez rechercher l’erreur ou le numéro d’avertissement sur la [Communauté de développeurs](https://developercommunity.visualstudio.com/spaces/8/index.html) site. Vous pouvez également rechercher des erreurs et avertissements et poser des questions sur [Stack Overflow](http://stackoverflow.com/) pour trouver des solutions.
 
-Pour obtenir des liens pour obtenir une aide supplémentaire et des ressources de la Communauté, consultez [aide de Visual C++ et de la Communauté](../../visual-cpp-help-and-community.md).
+Pour obtenir des liens pour obtenir une aide supplémentaire et des ressources de la Communauté, consultez [aide de Visual C++ et de la Communauté](../../overview/visual-cpp-help-and-community.md).
