@@ -9,24 +9,24 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 051ef3aa8c691a2191d25183ef96f17b557a47c1
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820206"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769262"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Procédure pas à pas : Déploiement de votre programme (C++)
 
-Maintenant que vous avez créé votre application en suivant les procédures pas à pas décrites précédemment, qui sont listées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), la dernière étape consiste à créer un programme d’installation pour permettre à d’autres utilisateurs d’installer le programme sur leurs ordinateurs. Pour le programme d’installation, vous allez ajouter un nouveau projet à votre solution existante. La sortie de ce nouveau projet est un fichier setup.exe qui installe votre application sur un autre ordinateur.
+Maintenant que vous avez créé votre application en suivant les procédures pas à pas décrites précédemment, la dernière étape consiste à créer un programme d'installation pour permettre à d'autres utilisateurs d'installer le programme sur leurs ordinateurs. Pour le programme d’installation, vous allez ajouter un nouveau projet à votre solution existante. La sortie de ce nouveau projet est un fichier setup.exe qui installe votre application sur un autre ordinateur.
 
-La procédure pas à pas indique comment utiliser Windows Installer pour déployer votre application. Vous pouvez également utiliser ClickOnce pour déployer une application. Pour plus d’informations, consultez [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md). Pour plus d’informations sur le déploiement en général, consultez [Déploiement d’applications, de services et de composants](/visualstudio/deployment/deploying-applications-services-and-components).
+La procédure pas à pas indique comment utiliser Windows Installer pour déployer votre application. Vous pouvez également utiliser ClickOnce pour déployer une application. Pour plus d’informations, consultez [ClickOnce Deployment for Visual C++ Applications](../windows/clickonce-deployment-for-visual-cpp-applications.md). Pour plus d’informations sur le déploiement en général, consultez [Déploiement d’applications, de services et de composants](/visualstudio/deployment/deploying-applications-services-and-components).
 
 ## <a name="prerequisites"></a>Prérequis
 
 - La procédure pas à pas part du principe que vous comprenez les notions de base du langage C++.
 
-- Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l’IDE Visual Studio pour le développement d’applications de bureau C++](using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 - La procédure pas à pas ne peut pas être effectuée dans les éditions Express de Visual Studio.
 
@@ -72,10 +72,10 @@ La procédure pas à pas indique comment utiliser Windows Installer pour déploy
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-**Précédent :** [Procédure pas à pas : Débogage d'un projet (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Précédent :** [Procédure pas à pas : Débogage d'un projet (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Projets et systèmes de build](../build/projects-and-build-systems-cpp.md)<br/>
-[Déploiement des applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[Déploiement des applications de bureau](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>

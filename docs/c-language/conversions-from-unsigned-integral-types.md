@@ -1,6 +1,6 @@
 ---
 title: Conversions depuis les types intégraux non signés
-ms.date: 01/29/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: d7653c545601d10b159f10a8a3c8f60f9128f944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579685"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565020"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversions depuis les types intégraux non signés
 
-Un entier non signé est converti en entier non signé ou signé plus court en tronquant les bits de poids fort, ou en entier non signé ou signé plus long par extension zéro (consultez le tableau [Conversions de types intégraux non signés](#_clang_table_4..3)).
+Un entier non signé est converti en entier non signé ou signé plus court en tronquant les bits de poids fort, ou en entier non signé ou signé plus long par extension zéro. Pour plus d’informations, consultez le tableau [Conversions depuis les types intégraux non signés](#conversions-from-unsigned-integral-types-table).
 
 Lorsque la valeur ayant le type intégral est rétrogradée en entier signé plus petit, ou qu'un entier non signé est converti en son entier signé correspondant, la valeur est inchangée si elle peut être représentée dans le nouveau type. Toutefois, la valeur change si le bit de signe est défini, comme dans l'exemple suivant.
 
@@ -35,7 +35,7 @@ Les valeurs non signées sont converties de manière à conserver leur valeur et
 
 Le tableau suivant répertorie les conversions de types intégraux non signés.
 
-## <a name="conversions-from-unsigned-integral-types"></a>Conversions depuis les types intégraux non signés
+## <a name="conversions-from-unsigned-integral-types-table"></a>Tableau des conversions de types intégraux non signés
 
 |From|À|Méthode|
 |----------|--------|------------|
