@@ -2,16 +2,16 @@
 title: Créer un projet d’application console C++
 description: Créer une application console Hello World dans Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 49fc20f3040f50ddc1b8014cc4dcf8df20f7af87
-ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
+ms.openlocfilehash: 1b2fe7b95ec27a559de73673412cb2d28507b656
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "57700647"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476875"
 ---
 # <a name="create-a-c-console-app-project"></a>Créer un projet d’application console C++
 
@@ -23,7 +23,7 @@ Habituellement, le programmeur C++ commence par créer une application « Hell
 
 ## <a name="create-your-app-project"></a>Créer un projet d’application
 
-Visual Studio organise le code des applications dans des *projets*, et vos projets dans des *solutions*. Un projet contient l’ensemble des options, configurations et règles qui sont utilisées pour créer vos applications. De plus, il gère les relations qui existent entre tous les fichiers du projet et les fichiers externes. Pour créer votre application, commencez par créer un projet et une solution.
+Visual Studio organise le code des applications dans des *projets*, et vos projets dans des *solutions*. Un projet contient l’ensemble des options, des configurations et des règles utilisées pour créer une application. Il gère également le lien entre tous les fichiers d’un projet et les éventuels fichiers externes. Pour créer votre application, commencez par créer un projet et une solution.
 
 1. Dans la barre des menus de Visual Studio, choisissez **Fichier** > **Nouveau** > **Projet**. La fenêtre **Nouveau projet** s’ouvre.
 
@@ -33,7 +33,7 @@ Visual Studio organise le code des applications dans des *projets*, et vos proje
 
    ![Boîte de dialogue Nouveau projet](./media/calculator-new-project-dialog.png "Boîte de dialogue Nouveau projet")
 
-   Cette opération crée une application console Windows C++ vide. Les applications console utilisent une fenêtre de console Windows pour afficher la sortie et accepter les entrées utilisateur. Dans Visual Studio, une fenêtre d’éditeur s’ouvre et affiche le code généré, qui doit ressembler à ceci :
+   Une application console Windows C++ vide est créée. Les applications console utilisent une fenêtre de console Windows pour afficher la sortie et accepter les entrées utilisateur. Dans Visual Studio, une fenêtre d’éditeur s’ouvre et affiche le code généré :
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -58,8 +58,6 @@ Visual Studio organise le code des applications dans des *projets*, et vos proje
     //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
-
-[J’ai rencontré un problème.](#create-your-app-project-issues)
 
 ## <a name="verify-that-your-new-app-builds-and-runs"></a>Vérifier que la génération et l’exécution de la nouvelle application se déroulent normalement
 
@@ -124,13 +122,11 @@ Maintenant, nous allons transformer le code de ce modèle en application de calc
 
 1. Pour enregistrer le fichier, tapez **Ctrl + S**, ou choisissez l’icône **Enregistrer** en haut de l’IDE, représentée par une disquette dans la barre d’outils, sous la barre de menus.
 
-1. Pour exécuter l’application, appuyez sur **Ctrl + F5** ou accédez au menu **Déboguer**, puis choisissez **Démarrer sans débogage**. Si le message **Ce projet est obsolète** s’affiche, vous pouvez sélectionner **Ne plus afficher cette boîte de dialogue**, puis choisir **Oui** pour générer votre application. Vous devez voir une fenêtre de console s’afficher avec le texte spécifié dans le code.
+1. Pour exécuter l’application, appuyez sur **Ctrl + F5** ou accédez au menu **Déboguer**, puis choisissez **Démarrer sans débogage**. Si une fenêtre contextuelle **Ce projet est obsolète** s’affiche, vous pouvez sélectionner **Ne plus afficher cette boîte de dialogue**, puis choisir **Oui** pour générer votre application. Vous devriez voir apparaître une fenêtre de console affichant le texte spécifié dans le code.
 
    ![Générer et démarrer votre application](./media/calculator-first-launch.gif "Générer et démarrer votre application")
 
 1. Lorsque vous avez terminé, fermez la fenêtre de console.
-
-[J’ai rencontré un problème.](#edit-the-code-issues)
 
 ## <a name="add-code-to-do-some-math"></a>Ajouter du code pour effectuer des calculs
 
@@ -138,7 +134,7 @@ Il est temps d’ajouter une logique mathématique.
 
 ### <a name="to-add-a-calculator-class"></a>Pour ajouter une classe Calculator
 
-1. Dans le menu **Projet**, choisissez **Ajouter une classe**. Dans la zone d’édition **Nom de la classe**, entrez *Calculator*. Cliquez sur **OK**. Deux nouveaux fichiers sont alors ajoutés à votre projet. Pour enregistrer simultanément tous vos fichiers modifiés, appuyez sur **Ctrl + Maj + S**. Il s’agit du raccourci clavier pour **Fichier** > **Enregistrer tout**. La barre d’outils comprend également un bouton **Enregistrer tout**, représenté par deux disquettes, qui se trouve à côté du bouton **Enregistrer**. En général, il est recommandé de cliquer régulièrement sur **Enregistrer tout** pour ne rater aucun fichier lorsque vous enregistrez.
+1. Dans le menu **Projet**, choisissez **Ajouter une classe**. Dans la zone d’édition **Nom de la classe**, entrez *Calculator*. Cliquez sur **OK**. Deux nouveaux fichiers sont ajoutés à votre projet. Pour enregistrer simultanément tous vos fichiers modifiés, appuyez sur **Ctrl + Maj + S**. Il s’agit du raccourci clavier pour **Fichier** > **Enregistrer tout**. La barre d’outils comprend également un bouton **Enregistrer tout**, représenté par deux disquettes, qui se trouve à côté du bouton **Enregistrer**. En général, il est recommandé de cliquer régulièrement sur **Enregistrer tout** pour ne rater aucun fichier lorsque vous enregistrez.
 
    ![Créer la classe Calculator](./media/calculator-create-class.gif "Créer la classe Calculator")
 
@@ -268,13 +264,13 @@ Il est maintenant temps de retester le programme pour vous assurer que tout fonc
 
 ### <a name="to-run-the-app-in-the-debugger"></a>Pour exécuter l’application dans le débogueur
 
-1. Définissez un point d’arrêt sur la ligne `result = c.Calculate(x, oper, y);`, juste après que l’utilisateur a été invité à taper une entrée. Pour ce faire, cliquez sur la barre grise verticale située sur le bord gauche de la fenêtre de l’éditeur, à côté de la ligne, pour qu’un point rouge s’affiche.
+1. Définissez un point d’arrêt sur la ligne `result = c.Calculate(x, oper, y);`, juste après que l’utilisateur a été invité à taper une entrée. Pour définir le point d’arrêt, cliquez en regard de la ligne sur la barre grise verticale située sur le bord gauche de la fenêtre de l’éditeur. Un point rouge apparaît.
 
    ![Définir un point d’arrêt](./media/calculator-set-breakpoint.gif "Définir un point d’arrêt")
 
-   Désormais, lorsque nous déboguerons le programme, son exécution s’arrêtera toujours au niveau de cette ligne. Cependant, nous savons déjà que le programme fonctionne pour les cas simples, et nous ne souhaitons pas suspendre l’exécution à chaque fois. Nous allons donc rendre le point d’arrêt conditionnel.
+   Désormais, lorsque nous déboguerons le programme, son exécution s’arrêtera toujours au niveau de cette ligne. Nous savons déjà que le programme fonctionne pour les cas simples. Et comme nous ne souhaitons pas suspendre l’exécution à chaque fois, nous allons donc rendre le point d’arrêt conditionnel.
 
-1. Cliquez avec le bouton droit sur le point rouge qui représente le point d’arrêt, puis choisissez **Conditions**. Dans la zone d’édition de la condition, entrez `(y == 0) && (oper == '/')`. Lorsque vous avez terminé, choisissez le bouton **Fermer**. La condition est enregistrée automatiquement.
+1. Cliquez avec le bouton droit sur le point rouge qui représente le point d’arrêt, puis choisissez **Conditions**. Dans la zone d’édition de la condition, entrez `(y == 0) && (oper == '/')`. Choisissez le bouton **Fermer** lorsque vous avez terminé. La condition est automatiquement enregistrée.
 
    ![Définir un point d’arrêt conditionnel](./media/calculator-conditional-breakpoint.gif "Définir un point d’arrêt conditionnel")
 
@@ -290,29 +286,29 @@ Lorsque vous déboguez votre code, vous pouvez remarquer que de nouvelles fenêt
 
    ![Fenêtre Automatique](./media/calculator-autos.png "Fenêtre Automatique")
 
-Pour afficher toutes les variables de cette fonction, basculez vers la fenêtre **Variables locales**. Vous pouvez réellement modifier les valeurs de ces variables à la volée pendant le débogage, pour voir l’impact de modifications sur le programme. Ici, nous n’y toucherons pas.
+Pour afficher toutes les variables de cette fonction, basculez vers la fenêtre **Variables locales**. Vous pouvez réellement modifier les valeurs de ces variables pendant le débogage, pour voir l’impact de modifications sur le programme. Ici, nous n’y toucherons pas.
 
    ![Fenêtre Variables locales](./media/calculator-locals.png "Fenêtre Variables locales")
 
-Vous pouvez également pointer sur les variables directement dans le code pour afficher leur valeur au moment où leur exécution est suspendue. Avant de procéder, cliquez sur la fenêtre d’éditeur pour la mettre en mode focus.
+Vous pouvez également pointer sur les variables directement dans le code pour afficher leur valeur au moment où leur exécution est suspendue. Cliquez sur la fenêtre d’éditeur pour la mettre en mode focus.
 
    ![Passer la souris sur les variables pour voir leur valeur](./media/calculator-hover-tooltip.gif "Passer la souris sur les variables pour voir leur valeur")
 
 ### <a name="to-continue-debugging"></a>Pour continuer le débogage
 
-1. La ligne jaune sur la gauche montre le point d’exécution actuel. Elle se trouve actuellement sur une ligne qui appelle `Calculate`. Par conséquent, appuyez sur **F11** pour **effectuer un pas à pas détaillé** de la fonction. Vous allez vous retrouver dans le corps de la fonction `Calculate`. Soyez prudent avec l’utilisation du **pas à pas détaillé**. Une utilisation trop fréquente peut vous faire perdre beaucoup de temps, car le pas à pas exécute l’intégralité du code de la ligne sur laquelle vous vous trouvez, y compris les fonctions de la bibliothèque standard.
+1. La ligne jaune sur la gauche montre le point d’exécution actuel. La ligne actuelle appelle `Calculate`. Par conséquent, appuyez sur **F11** pour **effectuer un pas à pas détaillé** de la fonction. Vous allez vous retrouver dans le corps de la fonction `Calculate`. Soyez prudent avec l’utilisation du **pas à pas détaillé** car une utilisation trop fréquente peut vous faire perdre beaucoup de temps. Le pas à pas exécute l’intégralité du code de la ligne sur laquelle vous vous trouvez, y compris les fonctions de la bibliothèque standard.
 
-1. Maintenant que le point d’exécution se trouve au début de la fonction `Calculate`, appuyez sur **F10** pour passer à la ligne suivante dans l’exécution du programme. Cette opération est également appelée **Pas à pas principal**. Vous pouvez utiliser le **pas à pas principal** pour passer d’une ligne à l’autre, sans entrer dans les détails de ce qui se produit dans chaque partie de la ligne. En général, il est préférable d’utiliser le **pas à pas principal** plutôt que le **pas à pas détaillé**, sauf si vous souhaitez analyser davantage le code qui est appelé à partir d’un autre emplacement (comme vous l’avez fait pour atteindre le corps de `Calculate`).
+1. Maintenant que le point d’exécution se trouve au début de la fonction `Calculate`, appuyez sur **F10** pour passer à la ligne suivante dans l’exécution du programme. **F10** correspond également à **Pas à pas principal**. Vous pouvez utiliser le **pas à pas principal** pour passer d’une ligne à l’autre, sans entrer dans les détails de ce qui se produit dans chaque partie de la ligne. En général, il est préférable d’utiliser le **pas à pas principal** plutôt que le **pas à pas détaillé**, sauf si vous souhaitez analyser davantage le code qui est appelé à partir d’un autre emplacement (comme vous l’avez fait pour atteindre le corps de `Calculate`).
 
 1. Continuez à utiliser **F10** pour effectuer un **pas à pas principal** sur chaque ligne, jusqu’à ce que vous retourniez à la fonction `main()` de l’autre fichier et que vous vous arrêtiez à la ligne `cout`.
 
    ![Pas à pas sortant sur Calculate et vérification du résultat](./media/calculator-undefined-zero.gif "Pas à pas sortant sur Calculate et vérification du résultat")
 
-1. Il semble que le programme agisse comme attendu : il accepte le premier nombre et le divise par le deuxième. Sur la ligne `cout`, pointez sur la variable `result` ou regardez `result` dans la fenêtre **Automatique**. Vous verrez que sa valeur est « inf ». Cette valeur n’est pas correcte, nous allons donc corriger cela. La ligne `cout` ne fait que générer la valeur qui est stockée dans `result`. Ainsi, lorsque vous avancez d’une ligne à l’aide de **F10**, la fenêtre de console affiche ceci :
+1. Il semble que le programme agisse comme attendu : il accepte le premier nombre et le divise par le deuxième. Sur la ligne `cout`, pointez sur la variable `result` ou regardez `result` dans la fenêtre **Automatique**. Vous verrez que sa valeur est « inf ». Cette valeur est incorrecte et nous allons donc la corriger. La ligne `cout` ne fait que générer la valeur qui est stockée dans `result`. Ainsi, lorsque vous avancez d’une ligne à l’aide de **F10**, la fenêtre de console affiche :
 
    ![Résultat de la division par zéro](./media/calculator-divide-by-zero-fail.png "Résultat de la division par zéro")
 
-   Cela se produit parce que la division par zéro n’est pas définie, donc le programme n’a pas de réponse numérique à l’opération demandée.
+   Ce résultat se produit parce que la division par zéro n’est pas définie, donc le programme n’a pas de réponse numérique à l’opération demandée.
 
 ### <a name="to-fix-the-divide-by-zero-error"></a>Pour corriger l’erreur de division par zéro
 
@@ -332,9 +328,9 @@ Nous allons traiter le problème de la division par zéro d’une façon plus ap
 
     int main()
     {
-        double x = 0.0
-        double y = 0.0
-        double result = 0.0
+        double x = 0.0;
+        double y = 0.0;
+        double result = 0.0;
         char oper = '+';
 
         cout << "Calculator Console Application" << endl << endl;
@@ -360,7 +356,7 @@ Nous allons traiter le problème de la division par zéro d’une façon plus ap
     }
     ```
 
-1. À présent, appuyez une fois sur **F5**. De cette façon, l’exécution du programme continue jusqu’à ce qu’il doive s’interrompre pour demander une entrée utilisateur. Entrez à nouveau `10 / 0`. Maintenant, un message plus utile s’affiche. L’utilisateur est invité à taper une entrée supplémentaire, et le programme continue de s’exécuter normalement.
+1. À présent, appuyez une fois sur **F5**. L’exécution du programme continue jusqu’à ce qu’il doive s’interrompre pour demander une entrée utilisateur. Entrez à nouveau `10 / 0`. Maintenant, un message plus utile s’affiche. L’utilisateur est invité à taper une entrée supplémentaire, et le programme continue de s’exécuter normalement.
 
    ![Résultat final après modifications](./media/calculator-final-verification.gif "Résultat final après modifications")
 
