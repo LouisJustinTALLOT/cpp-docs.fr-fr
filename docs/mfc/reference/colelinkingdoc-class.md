@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300403"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773552"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc, classe
 
@@ -57,7 +57,7 @@ class COleLinkingDoc : public COleDocument
 
 ## <a name="remarks"></a>Notes
 
-Une application de conteneur qui prend en charge la liaison à des éléments incorporés est appelée « conteneur de liaison ». Le [OCLIENT](../../visual-cpp-samples.md) exemple d’application est un exemple d’un conteneur de lien.
+Une application de conteneur qui prend en charge la liaison à des éléments incorporés est appelée « conteneur de liaison ». Le [OCLIENT](../../overview/visual-cpp-samples.md) exemple d’application est un exemple d’un conteneur de lien.
 
 Lorsque la source de l’un élément lié est un élément incorporé dans un autre document, que contenant le document doit être chargé pour l’élément incorporé à modifier. Pour cette raison, un conteneur de lien doit pouvoir être lancé par une autre application de conteneur lorsque l’utilisateur souhaite modifier la source d’un élément lié. Votre application doit également utiliser le [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) classe afin qu’elle peut créer des documents lorsqu’elle est lancée par programmation.
 
@@ -75,7 +75,7 @@ Connecter votre `COleTemplateServer` objet à vos modèles de document en appela
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-Pour obtenir un exemple `CWinApp`-dérivée de définition de classe et `InitInstance` de fonction, consultez OCLIENT. H et OCLIENT. CPP dans l’exemple MFC [OCLIENT](../../visual-cpp-samples.md).
+Pour obtenir un exemple `CWinApp`-dérivée de définition de classe et `InitInstance` de fonction, consultez OCLIENT. H et OCLIENT. CPP dans l’exemple MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 Pour plus d’informations sur l’utilisation de `COleLinkingDoc`, consultez les articles [conteneurs : Implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md) et [conteneurs : Fonctionnalités avancées](../../mfc/containers-advanced-features.md).
 
@@ -91,7 +91,7 @@ Pour plus d’informations sur l’utilisation de `COleLinkingDoc`, consultez le
 
 `COleLinkingDoc`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxole.h
 
@@ -193,7 +193,7 @@ Vous devez appeler cette fonction lors de la fermeture d’un fichier nommé, ma
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Exemple MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument, classe](../../mfc/reference/coledocument-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CDocTemplate, classe](../../mfc/reference/cdoctemplate-class.md)
+[CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)

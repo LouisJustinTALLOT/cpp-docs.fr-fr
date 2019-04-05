@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425092"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780611"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 
@@ -512,7 +512,7 @@ Par défaut, un contrôle list view détruit les listes d’images qui lui est a
 
 `CListCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 
@@ -3043,7 +3043,7 @@ BOOL RedrawItems(
 *nFirst*<br/>
 Index du premier élément à être redessinée.
 
-*nLast*<br/>
+*Ndernier*<br/>
 Index du dernier élément à être redessinée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3225,7 +3225,7 @@ BOOL SetCheck(
 *nItem*<br/>
 Index de base zéro d’un élément de contrôle de liste.
 
-*fCheck*<br/>
+*Consultez*<br/>
 Spécifie si l’image d’état de l’élément doit être visible ou non. Par défaut, *consultez* a la valeur TRUE et l’image d’état est visible. Si *consultez* est FALSE, il n’est pas visible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*color*<br/>
+*couleur*<br/>
 Un [COLORREF](/windows/desktop/gdi/colorref) structure qui spécifie la couleur pour définir le point d’insertion.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*color*<br/>
+*couleur*<br/>
 La nouvelle [COLORREF](/windows/desktop/gdi/colorref) structure contenant la couleur de contour.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -4422,7 +4422,7 @@ Cette fonction permet également d’organiser le contrôle list view s’il a l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC ROWLIST](../../visual-cpp-samples.md)<br/>
+[Exemple MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](cwnd-class.md)<br/>
 [Graphique hiérarchique](../hierarchy-chart.md)<br/>
-[CImageList, classe](cimagelist-class.md)
+[CImageList (classe)](cimagelist-class.md)

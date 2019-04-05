@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: e78cf26b32d424bc9cc9441787192cda6f7aeb54
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280375"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776464"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Cmfcribbonundobutton, classe
 
@@ -56,7 +56,7 @@ Le `CMFCRibbonUndoButton` classe utilise une pile pour représenter la liste dé
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un objet de la `CMFCRibbonUndoButton` classe et ajoutez une nouvelle action à la liste des actions. Cet extrait de code fait partie de la [exemples de Gadgets de ruban](../../visual-cpp-samples.md).
+L’exemple suivant montre comment construire un objet de la `CMFCRibbonUndoButton` classe et ajoutez une nouvelle action à la liste des actions. Cet extrait de code fait partie de la [exemples de Gadgets de ruban](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]
 
@@ -72,7 +72,7 @@ L’exemple suivant montre comment construire un objet de la `CMFCRibbonUndoButt
 
 [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxribbonundobutton.h
 
@@ -161,5 +161,5 @@ Renvoie toujours TRUE.
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonGallery, classe](../../mfc/reference/cmfcribbongallery-class.md)<br/>
-[CMFCRibbonButton, classe](../../mfc/reference/cmfcribbonbutton-class.md)
+[Cmfcribbongallery, classe](../../mfc/reference/cmfcribbongallery-class.md)<br/>
+[Cmfcribbonbutton, classe](../../mfc/reference/cmfcribbonbutton-class.md)

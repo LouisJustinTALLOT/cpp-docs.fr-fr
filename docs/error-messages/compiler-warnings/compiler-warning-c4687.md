@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
-ms.openlocfilehash: 50551faf817f83d8a4af848a75af67ebe7004fe7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635475"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778661"
 ---
 # <a name="compiler-warning-c4687"></a>Avertissement du compilateur C4687
 
@@ -19,7 +19,7 @@ ms.locfileid: "50635475"
 
 Un type abstrait sealed n’est généralement utile de contenir des fonctions de membre statique.
 
-Pour plus d’informations, consultez [abstraite](../../windows/abstract-cpp-component-extensions.md)et [sealed](../../windows/sealed-cpp-component-extensions.md).
+Pour plus d’informations, consultez [abstraite](../../extensions/abstract-cpp-component-extensions.md)et [sealed](../../extensions/sealed-cpp-component-extensions.md).
 
 Par défaut, C4687 est émis en tant qu’erreur. Vous pouvez supprimer l’erreur C4687 avec le [avertissement](../../preprocessor/warning.md) pragma. Si vous êtes certain que vous souhaitez implémenter une interface dans un type abstrait sealed, vous pouvez supprimer C4687.
 

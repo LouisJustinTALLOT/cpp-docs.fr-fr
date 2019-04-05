@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5e4de39b0352f33ad59950754df7c0815d6038c3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417903"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776191"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget (classe)
 
@@ -113,7 +113,7 @@ Tables dispatch, similaires aux mappages de message, sont utilisées pour expose
 
 `CCmdTarget`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -524,14 +524,14 @@ void RestoreWaitCursor();
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC ACDUAL](../../visual-cpp-samples.md)<br/>
-[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[Exemple MFC ACDUAL](../../overview/visual-cpp-samples.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CCmdUI, classe](../../mfc/reference/ccmdui-class.md)<br/>
-[CDocument, classe](../../mfc/reference/cdocument-class.md)<br/>
-[CDocTemplate, classe](../../mfc/reference/cdoctemplate-class.md)<br/>
-[CWinApp, classe](../../mfc/reference/cwinapp-class.md)<br/>
+[CDocument (classe)](../../mfc/reference/cdocument-class.md)<br/>
+[CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)<br/>
+[CWinApp (classe)](../../mfc/reference/cwinapp-class.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
-[CView, classe](../../mfc/reference/cview-class.md)<br/>
-[CFrameWnd, classe](../../mfc/reference/cframewnd-class.md)<br/>
+[CView (classe)](../../mfc/reference/cview-class.md)<br/>
+[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)<br/>
 [COleDispatchDriver, classe](../../mfc/reference/coledispatchdriver-class.md)

@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264987"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781872"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar, classe
 
@@ -124,7 +124,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|La couleur d’arrière-plan de la barre de légende.|
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|La couleur de la bordure de la barre de légende.|
@@ -148,7 +148,7 @@ Pour activer le mode de barre de message, appelez [CMFCCaptionBar::Create](#crea
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCCaptionBar` . L’exemple montre comment créer le contrôle de barre de légende, définissez une bordure 3D de la barre de légende, définit la distance, en pixels, entre le bord de la légende de barre éléments et le bord du contrôle de barre de légende, définissez le bouton de la barre de légende , définir l’info-bulle pour le bouton, définir l’étiquette de texte pour la barre de légende, définissez l’image bitmap de la barre de légende et définir l’info-bulle pour l’image dans la barre de légende. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCCaptionBar` . L’exemple montre comment créer le contrôle de barre de légende, définissez une bordure 3D de la barre de légende, définit la distance, en pixels, entre le bord de la légende de barre éléments et le bord du contrôle de barre de légende, définissez le bouton de la barre de légende , définir l’info-bulle pour le bouton, définir l’étiquette de texte pour la barre de légende, définissez l’image bitmap de la barre de légende et définir l’info-bulle pour l’image dans la barre de légende. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -167,7 +167,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcaptionbar.h
 
@@ -233,7 +233,7 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] True pour activer le bouton, FALSE pour désactiver le bouton.
 
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Paramètres
 
-*elem*<br/>
+*Elem*<br/>
 [in] Un élément de barre de légende pour lequel récupérer l’alignement.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -412,7 +412,7 @@ virtual void OnDrawButton(
 *strButton*<br/>
 [in] Étiquette de texte du bouton.
 
-*bEnabled*<br/>
+*case d’option bActivé*<br/>
 [in] TRUE si le bouton est activé ; FALSE sinon.
 
 ### <a name="remarks"></a>Notes

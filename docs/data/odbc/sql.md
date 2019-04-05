@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576813"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037855"
 ---
 # <a name="sql"></a>SQL
 
@@ -51,8 +51,8 @@ Les classes de base de données utilisent une partie de SQL connu en tant que le
 |**WHERE**|Pour appliquer un filtre qui restreint la sélection.|
 |**ORDER BY**|Pour appliquer un ordre de tri pour le jeu d’enregistrements.|
 |**INSERT**|Pour ajouter de nouveaux enregistrements à un jeu d’enregistrements.|
-|**SUPPRIMER**|Pour supprimer des enregistrements à partir d’un jeu d’enregistrements.|
-|**MISE À JOUR**|Pour modifier les champs d’un enregistrement.|
+|**SUPPR**|Pour supprimer des enregistrements à partir d’un jeu d’enregistrements.|
+|**UPDATE**|Pour modifier les champs d’un enregistrement.|
 
 En outre, les classes de base de données reconnaissent ODBC **appeler** les instructions, vous pouvez utiliser pour appeler une requête prédéfinie (ou procédure stockée) sur certaines sources de données. Le pilote de base de données ODBC interprète les instructions et les remplace par la commande appropriée pour chaque SGBD.
 
@@ -61,7 +61,7 @@ En outre, les classes de base de données reconnaissent ODBC **appeler** les ins
 
 Si les classes ne peut pas reconnaître une instruction fournie par l’utilisateur dans `CRecordset::Open`, il est interprété comme un nom de table.
 
-Pour obtenir une explication de la façon dont le framework construit des instructions SQL, consultez [Recordset : sélection d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) et [SQL : personnalisation du Recordset SQL instruction (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Pour obtenir une explication de la façon dont le framework construit des instructions SQL, consultez [jeu d’enregistrements : La sélection de jeux d’enregistrements d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) et [SQL : Personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 Bases de données SQL utilisent des types de données similaires à ceux utilisés dans C et C++. Pour une description de ces similitudes, consultez [SQL : SQL et les Types de données C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
@@ -77,11 +77,11 @@ Lorsque le jeu d’enregistrements appelle ODBC pour envoyer une instruction SQL
 
 Les rubriques suivantes fournissent plus d’informations sur l’utilisent de SQL par les classes de base de données :
 
-- [SQL : Personnalisation instruction SQL de votre jeu d’enregistrements (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL : Personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL : types de données SQL et C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL : SQL et les Types de données C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL : appels SQL directs (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL : Appels SQL directs (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
 ## <a name="see-also"></a>Voir aussi
 

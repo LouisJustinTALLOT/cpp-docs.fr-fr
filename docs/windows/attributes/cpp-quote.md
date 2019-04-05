@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 5a281f9f88412df4d3ee18bff1302b19433e07f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466948"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024677"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -25,7 +25,7 @@ ms.locfileid: "50466948"
 
 ### <a name="parameters"></a>Paramètres
 
-*statement*<br/>
+*instruction*<br/>
 Une instruction C.
 
 ## <a name="remarks"></a>Notes

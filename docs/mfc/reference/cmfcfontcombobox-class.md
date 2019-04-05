@@ -17,10 +17,10 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
 ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781300"
 ---
 # <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox, classe
@@ -197,5 +197,5 @@ L’exemple suivant montre comment utiliser le `Setup` méthode dans la `CMFCFon
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBarFontComboBox, classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md)<br/>
-[CMFCFontInfo, classe](../../mfc/reference/cmfcfontinfo-class.md)
+[Cmfctoolbarfontcombobox, classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md)<br/>
+[Cmfcfontinfo, classe](../../mfc/reference/cmfcfontinfo-class.md)

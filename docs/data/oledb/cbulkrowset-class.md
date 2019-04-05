@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: 776123baa0d53ac2a1777849b60d35cf0d93a172
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426223"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023228"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset, classe
 
@@ -125,7 +125,7 @@ class CBulkRowset : public CRowset<TAccessor>
 *TAccessor*<br/>
 Classe d’accesseur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -245,7 +245,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Paramètres
 
-*bookmark*<br/>
+*signet*<br/>
 [in] Un signet est l’emplacement à partir duquel vous souhaitez extraire des données.
 
 *lSkip*<br/>
@@ -321,5 +321,5 @@ Si vous appelez cette fonction, il doit être avant l’ouverture de l’ensembl
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

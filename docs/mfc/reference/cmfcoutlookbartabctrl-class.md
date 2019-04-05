@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269936"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776802"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -109,7 +109,7 @@ Pour créer une barre Outlook avec prise en charge d’ancrage, utilisez un `CMF
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment initialiser un `CMFCOutlookBarTabCtrl` et que vous utilisez différentes méthodes de la `CMFCOutlookBarTabCtrl` classe. L’exemple montre comment activer la modification sur place de l’étiquette de texte sur les boutons de page d’onglet de la barre Outlook, activer l’animation, activer les poignées de défilement qui permettent à l’utilisateur à parcourir les boutons dans le volet de barre Outlook, définissez la taille de bordure de la suite d’onglet Outlook ROL et définissez l’alignement des étiquettes de texte sur les boutons d’onglet de la barre Outlook. Cet extrait de code fait partie de la [exemple de démonstration d’Outlook](../../visual-cpp-samples.md).
+L’exemple suivant montre comment initialiser un `CMFCOutlookBarTabCtrl` et que vous utilisez différentes méthodes de la `CMFCOutlookBarTabCtrl` classe. L’exemple montre comment activer la modification sur place de l’étiquette de texte sur les boutons de page d’onglet de la barre Outlook, activer l’animation, activer les poignées de défilement qui permettent à l’utilisateur à parcourir les boutons dans le volet de barre Outlook, définissez la taille de bordure de la suite d’onglet Outlook ROL et définissez l’alignement des étiquettes de texte sur les boutons d’onglet de la barre Outlook. Cet extrait de code fait partie de la [exemple de démonstration d’Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -126,7 +126,7 @@ L’exemple suivant montre comment initialiser un `CMFCOutlookBarTabCtrl` et que
 
 [CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxoutlookbartabctrl.h
 
@@ -170,7 +170,7 @@ Si vous définissez *bDetachable* sur TRUE, `AddControl` crée en interne un `CD
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `AddControl` méthode dans la `CMFCOutlookBarTabCtrl` classe. Cet extrait de code fait partie de la [exemple de démonstration d’Outlook](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `AddControl` méthode dans la `CMFCOutlookBarTabCtrl` classe. Cet extrait de code fait partie de la [exemple de démonstration d’Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 
@@ -246,7 +246,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] Spécifie si l’animation doit être activée ou désactivée.
 
 ### <a name="remarks"></a>Notes
@@ -265,7 +265,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 Si la valeur est TRUE, activer la modification sur place de l’étiquette de texte. Si la valeur est FALSE, désactiver la modification sur place.
 
 ### <a name="remarks"></a>Notes
@@ -285,7 +285,7 @@ void EnableScrollButtons(
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] Détermine si les boutons de défilement sont affichées.
 
 *bIsUp*<br/>
@@ -508,6 +508,6 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCBaseTabCtrl, classe](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
 [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
-[CMFCOutlookBarPane, classe](../../mfc/reference/cmfcoutlookbarpane-class.md)
+[Cmfcoutlookbarpane, classe](../../mfc/reference/cmfcoutlookbarpane-class.md)

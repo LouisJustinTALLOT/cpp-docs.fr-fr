@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: 4507c2a640296c2d2619b1da7a0ebae2bc6ef401
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291277"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776620"
 ---
 # <a name="clistview-class"></a>CListView (classe)
 
@@ -67,7 +67,7 @@ Pour plus d’informations sur cette architecture, consultez la vue d’ensemble
 
 `CListView`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcview.h
 
@@ -110,7 +110,7 @@ Index de base zéro de l’image à supprimer.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC ROWLIST](../../visual-cpp-samples.md)<br/>
+[Exemple MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView, classe](../../mfc/reference/cctrlview-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CCtrlView, classe](../../mfc/reference/cctrlview-class.md)

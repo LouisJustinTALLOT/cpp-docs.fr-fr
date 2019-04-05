@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomSession class in CustomSess.H
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-ms.openlocfilehash: 75d0c8d871ca736be5e2c33829296b2760092e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cb462aba671e79450e9ee7b8447410252f8edc9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568010"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023462"
 ---
 # <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
@@ -39,8 +39,8 @@ Hérite de l’objet de session `IGetDataSource`, `IOpenRowset`, `ISessionProper
 
 L’Assistant génère également trois classes de session : `CCustomSessionColSchema`, `CCustomSessionPTSchema`, et `CCustomSessionTRSchema`. Ces sessions sont utilisées pour les ensembles de lignes de schéma. Ensembles de lignes de schéma permettent au fournisseur retourner des métadonnées au consommateur sans que celui-ci ait à exécuter une requête ou l’extraction des données. L’extraction de métadonnées peut être beaucoup plus rapide que la recherche les fonctionnalités d’un fournisseur.
 
-La spécification OLE DB requiert que fournisseurs qui implémentent le `IDBSchemaRowset` types d’interface prise en charge trois schéma ensemble de lignes : DBSCHEMA_COLUMNS, DBSCHEMA_PROVIDER_TYPES et DBSCHEMA_TABLES. L’Assistant génère des implémentations pour chaque ensemble de lignes de schéma. Chaque classe générée par l’Assistant contient un `Execute` (méthode). Dans ce `Execute` (méthode), vous pouvez retourner des données pour le fournisseur sur les tables, les colonnes et les types de données que vous prenez en charge. Ces données sont connues au moment de la compilation.
+La spécification OLE DB requiert que fournisseurs qui implémentent le `IDBSchemaRowset` types d’ensemble de lignes du schéma interface prise en charge trois : DBSCHEMA_COLUMNS, DBSCHEMA_PROVIDER_TYPES et DBSCHEMA_TABLES. L’Assistant génère des implémentations pour chaque ensemble de lignes de schéma. Chaque classe générée par l’Assistant contient un `Execute` (méthode). Dans ce `Execute` (méthode), vous pouvez retourner des données pour le fournisseur sur les tables, les colonnes et les types de données que vous prenez en charge. Ces données sont connues au moment de la compilation.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers générés par l’Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[Fichiers générés par l'Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)<br/>

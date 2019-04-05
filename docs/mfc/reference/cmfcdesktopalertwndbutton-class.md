@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: 2a9ade332c87f293719872e426fb459b011d2d35
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 639342e0a09a6e970478fce1b5aac629f03c2015
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270256"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776945"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Cmfcdesktopalertwndbutton, classe
 
@@ -49,7 +49,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 |||
 |-|-|
-|Name|Description|
+|Nom|Description|
 |`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Valeur booléenne qui spécifie si le bouton est affiché dans la zone de légende de la boîte de dialogue d’alerte.|
 |`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Valeur booléenne qui spécifie si le bouton ferme la boîte de dialogue d’alerte.|
 
@@ -61,7 +61,7 @@ Ajouter `CMFCDesktopAlertWndButton` des objets sur un `CMFCDesktopAlertDialog` q
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `SetImage` méthode dans la `CMFCDesktopAlertWndButton` classe. Cet extrait de code fait partie de la [exemple de démonstration alerte Desktop](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `SetImage` méthode dans la `CMFCDesktopAlertWndButton` classe. Cet extrait de code fait partie de la [exemple de démonstration alerte Desktop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]
@@ -80,7 +80,7 @@ L’exemple suivant montre comment utiliser le `SetImage` méthode dans la `CMFC
 
 [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdesktopalertwnd.h
 
@@ -112,4 +112,4 @@ Différent de zéro si le bouton ferme la boîte de dialogue d’alerte ; Sinon
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCDesktopAlertDialog, classe](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+[Cmfcdesktopalertdialog, classe](../../mfc/reference/cmfcdesktopalertdialog-class.md)

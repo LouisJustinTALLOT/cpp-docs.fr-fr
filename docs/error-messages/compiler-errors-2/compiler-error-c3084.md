@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3084
 ms.assetid: 0362cb70-e24e-476f-a24d-8f5bb97c3afd
-ms.openlocfilehash: 7659c17d999a8720ffb0ccdcdb631b27949167b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01e229fe0ae5bf9e04c577bb653ff1ed7fdb33bf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572677"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773897"
 ---
 # <a name="compiler-error-c3084"></a>Erreur du compilateur C3084
 
@@ -19,7 +19,7 @@ ms.locfileid: "50572677"
 
 Un finaliseur ou un destructeur n’a pas été correctement déclaré.
 
-Par exemple, un destructeur ne doit pas être marqué comme sealed.  Le destructeur sera inaccessible aux types dérivés.  Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md) et [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C++ / c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Par exemple, un destructeur ne doit pas être marqué comme sealed.  Le destructeur sera inaccessible aux types dérivés.  Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md) et [destructeurs et finaliseurs dans Comment : Définir et consommer des classes et structs (C++ / c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Exemple
 

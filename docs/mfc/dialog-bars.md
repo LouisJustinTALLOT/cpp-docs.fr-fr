@@ -9,10 +9,10 @@ helpviewer_keywords:
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
 ms.openlocfilehash: e4e843327daba6f0aa468cb07394165bc70fa7f0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779506"
 ---
 # <a name="dialog-bars"></a>Barres de boîte de dialogue
@@ -32,5 +32,5 @@ S’il est normal pour dériver vos propres classes de boîte de dialogue à par
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
+[Éléments de l'interface utilisateur](../mfc/user-interface-elements-mfc.md)<br/>
 [Exemple](../overview/visual-cpp-samples.md)

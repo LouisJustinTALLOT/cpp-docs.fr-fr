@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266365"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773994"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestionnaires pour les plages de table des messages
 
@@ -95,7 +95,7 @@ Pour plus d’informations sur les paramètres requis pour la mise à jour des f
 
 ##  <a name="_core_example_for_a_range_of_command_ids"></a> Exemple pour une plage d’ID de commandes
 
-Quand pouvez-vous utiliser des plages, par exemple, dans le traitement des commandes telles que la commande de Zoom dans l’exemple MFC [HIERSVR](../visual-cpp-samples.md). Cette commande effectue un zoom de la vue mise à l’échelle d’il entre 25 et 300 % de sa taille normale. Classe de vue HIERSVR utilise une plage pour gérer les commandes de Zoom avec une entrée de table des messages qui ressemble à ceci :
+Quand pouvez-vous utiliser des plages, par exemple, dans le traitement des commandes telles que la commande de Zoom dans l’exemple MFC [HIERSVR](../overview/visual-cpp-samples.md). Cette commande effectue un zoom de la vue mise à l’échelle d’il entre 25 et 300 % de sa taille normale. Classe de vue HIERSVR utilise une plage pour gérer les commandes de Zoom avec une entrée de table des messages qui ressemble à ceci :
 
 [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
 

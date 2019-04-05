@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 3fa829c5333a87d908d36438fe8ffcd253f9fb5a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279989"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779753"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl, classe
 
@@ -80,13 +80,13 @@ Cette classe étend la `CTreeCtrl` classe en activant votre programme inclure le
 
 `CMFCShellTreeCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxshelltreeCtrl.h
 
 ## <a name="example"></a>Exemple
 
-L'exemple suivant montre comment créer un objet de la classe `CMFCShellTreeCtrl`. Cet extrait de code fait partie de la [exemple Explorer](../../visual-cpp-samples.md).
+L'exemple suivant montre comment créer un objet de la classe `CMFCShellTreeCtrl`. Cet extrait de code fait partie de la [exemple Explorer](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#4](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#5](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_2.cpp)]
@@ -101,7 +101,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] Valeur booléenne qui spécifie s’il faut activer le menu contextuel.
 
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags
@@ -294,5 +294,5 @@ Utilisez la méthode [CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist) pour r
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CTreeCtrl, classe](../../mfc/reference/ctreectrl-class.md)<br/>
+[CTreeCtrl Class](../../mfc/reference/ctreectrl-class.md)<br/>
 [CMFCShellListCtrl, classe](../../mfc/reference/cmfcshelllistctrl-class.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 9add6f003f0f6cd4ab85980e1e35370770da43aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282056"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778492"
 ---
 # <a name="dialog-boxes"></a>Boîtes de dialogue
 
@@ -33,7 +33,7 @@ La plupart des boîtes de dialogue sont modales, ce qui oblige l’utilisateur f
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 
-- [Exemple : Affichage d’une boîte de dialogue via une commande de Menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [Exemple : Affichage d’une boîte de dialogue via une commande de Menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [Composants de boîte de dialogue dans le framework](../mfc/dialog-box-components-in-the-framework.md)
 
@@ -61,10 +61,10 @@ La plupart des boîtes de dialogue sont modales, ce qui oblige l’utilisateur f
 
 - [Boîtes de dialogue dans OLE](../mfc/dialog-boxes-in-ole.md)
 
-- Créer une application dont l’interface utilisateur est une boîte de dialogue : consultez le [CMNCTRL1](../visual-cpp-samples.md) ou [CMNCTRL2](../visual-cpp-samples.md) des exemples de programmes. L’Assistant Application fournit également cette option.
+- Créer une application dont l’interface utilisateur est une boîte de dialogue : consultez le [CMNCTRL1](../overview/visual-cpp-samples.md) ou [CMNCTRL2](../overview/visual-cpp-samples.md) des exemples de programmes. L’Assistant Application fournit également cette option.
 
 - [Exemples](../mfc/dialog-sample-list.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)
+[Éléments de l'interface utilisateur](../mfc/user-interface-elements-mfc.md)

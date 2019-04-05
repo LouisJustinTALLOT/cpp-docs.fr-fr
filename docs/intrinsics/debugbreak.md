@@ -8,12 +8,12 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: 72fe358f379656a05d840246c4d525bbabc9e9e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b52c34014402a235e03c45f82dcd1e5c542e4919
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591099"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023098"
 ---
 # <a name="debugbreak"></a>__debugbreak
 
@@ -38,7 +38,7 @@ void __debugbreak();
 Le `__debugbreak` compilateur intrinsèque, comme dans [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), est une manière Win32 portable pour provoquer un point d’arrêt.
 
 > [!NOTE]
->  Lors de la compilation avec **/CLR**, une fonction contenant `__debugbreak` seront compilés en MSIL. `asm int 3` entraîne la compilation d'une fonction en code natif. Pour plus d’informations, consultez [__asm](../assembler/inline/asm.md).
+>  Lors de la compilation avec **/CLR**, une fonction contenant `__debugbreak` seront compilés en MSIL. `asm int 3` entraîne une fonction être compilé en code natif. Pour plus d’informations, consultez [__asm](../assembler/inline/asm.md).
 
 Exemple :
 
@@ -66,5 +66,5 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)

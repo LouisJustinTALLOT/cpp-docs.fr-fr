@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 626666a8f03a8312bd26fceca745f82ad1ab89b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285917"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778167"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar, classe
 
@@ -71,7 +71,7 @@ Un `CMFCRibbonProgressBar` peut fonctionner dans deux modes : normal et infinie
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonProgressBar` . L’exemple montre comment définir la barre de progression pour fonctionner en mode infini (où l’heure d’achèvement d’une opération est inconnu), définissez les valeurs minimales et maximales pour la barre de progression et définissez la position actuelle de la barre de progression. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonProgressBar` . L’exemple montre comment définir la barre de progression pour fonctionner en mode infini (où l’heure d’achèvement d’une opération est inconnu), définissez les valeurs minimales et maximales pour la barre de progression et définissez la position actuelle de la barre de progression. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -83,7 +83,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxRibbonProgressBar.h
 
@@ -253,7 +253,7 @@ void SetRange(
 *nMin*<br/>
 [in] Spécifie la valeur minimale de la plage.
 
-*nMax*<br/>
+*nombre maximal*<br/>
 [in] Spécifie la valeur maximale de la plage.
 
 ### <a name="remarks"></a>Notes
@@ -264,5 +264,5 @@ Utilisez cette méthode pour définir la plage de la barre de progression en dé
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonBaseElement, classe](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[CMFCRibbonBar, classe](../../mfc/reference/cmfcribbonbar-class.md)
+[Cmfcribbonbaseelement, classe](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
+[Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

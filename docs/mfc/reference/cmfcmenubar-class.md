@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87844e843057bb295c904b5f1b3d7dd03fa4d797
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267366"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775892"
 ---
 # <a name="cmfcmenubar-class"></a>Cmfcmenubar, classe
 
@@ -191,7 +191,7 @@ Pour utiliser un `CMFCMenuBar` d’objet, l’incorporer dans l’objet de frame
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCMenuBar` . L’exemple montre comment définir le style du volet, activer le bouton Personnaliser, une zone de l’aide, activer les ombres des menus contextuels et mettre à jour de la barre de menus. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCMenuBar` . L’exemple montre comment définir le style du volet, activer le bouton Personnaliser, une zone de l’aide, activer les ombres des menus contextuels et mettre à jour de la barre de menus. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -214,7 +214,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 `CMFCMenuBar`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmenubar.h
 
@@ -395,7 +395,7 @@ Pour obtenir la liste des styles supplémentaires, consultez [contrôle de barre
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `CreateEx` méthode de la `CMFCMenuBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `CreateEx` méthode de la `CMFCMenuBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]
@@ -464,7 +464,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] Un paramètre booléen qui indique si les ombres doivent être activées pour les menus contextuels.
 
 ### <a name="remarks"></a>Notes
@@ -1086,4 +1086,4 @@ Si un menu ne s’affiche pas toutes les commandes de menu, elle masque les comm
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBar, classe](../../mfc/reference/cmfctoolbar-class.md)
+[Cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3887
 ms.assetid: a7e82426-ef99-437b-9562-2822004e18fe
-ms.openlocfilehash: e41ea1dbe1f2bd47f9b557d502ec95bcecb1e2a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85434cb8daba0db82843c09e2d1bb09d98960272
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428261"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777439"
 ---
 # <a name="compiler-error-c3887"></a>Erreur du compilateur C3887
 
 'var' : l’initialiseur d’une donnée membre littérale doit être une expression constante
 
-Un [littéral](../../windows/literal-cpp-component-extensions.md) données membre peut uniquement être initialisée avec une expression constante.
+Un [littéral](../../extensions/literal-cpp-component-extensions.md) données membre peut uniquement être initialisée avec une expression constante.
 
 L’exemple suivant génère l’erreur C3887 :
 

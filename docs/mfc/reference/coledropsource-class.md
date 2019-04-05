@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a2773333ea1dd89f73e7bdf3c5dc2f36945e0810
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304975"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778505"
 ---
 # <a name="coledropsource-class"></a>COleDropSource, classe
 
@@ -65,7 +65,7 @@ Pour plus d’informations, consultez [IDropSource](/windows/desktop/api/oleidl/
 
 `COleDropSource`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxole.h
 
@@ -163,7 +163,7 @@ L’implémentation par défaut initialise la liste déroulante ou annule l’op
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Exemple MFC OCLIENT](../../visual-cpp-samples.md)<br/>
-[CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)<br/>
+[Exemple MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

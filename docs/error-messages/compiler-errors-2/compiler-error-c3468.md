@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3468
 ms.assetid: cfd320db-2f6e-4e0d-ba02-e79ece87e1e0
-ms.openlocfilehash: 185bd35bb732f592c75912fe69d4491252fe9d0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3870fa21e2b4a932937edd49091980406a5ff0d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476113"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777230"
 ---
 # <a name="compiler-error-c3468"></a>Erreur du compilateur C3468
 
@@ -21,7 +21,7 @@ ms.locfileid: "50476113"
 
 Seuls les types contenus dans un assembly peuvent être transférés.
 
-Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 

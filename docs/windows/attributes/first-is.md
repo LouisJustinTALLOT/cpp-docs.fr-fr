@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: fcabad8d6c512a84e44f050cd5b34d985d687636
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512808"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033081"
 ---
 # <a name="firstis"></a>first_is
 
@@ -25,7 +25,7 @@ Spécifie l’index du premier élément de tableau doit être transmis.
 
 ### <a name="parameters"></a>Paramètres
 
-*Expression*<br/>
+*expression*<br/>
 Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.
 
 ## <a name="remarks"></a>Notes
@@ -56,16 +56,16 @@ requestedit] HRESULT get_I([out, retval]long *i);
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
 |**S'applique à**|Champ **struct** ou **union**, paramètre de l’interface, interface (méthode)|
-|**Renouvelable**|Aucune|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**Renouvelable**|Non|
+|**Attributs requis**|Aucun.|
+|**Attributs non valides**|Aucun.|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

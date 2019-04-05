@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
-ms.openlocfilehash: c154a0fe1989c92bb5e07c0710d3846883d1a113
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e29e536bf89aef887dc043327e4b4596703d0538
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546312"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775190"
 ---
 # <a name="compiler-error-c3675"></a>Erreur du compilateur C3675
 
@@ -19,7 +19,7 @@ ms.locfileid: "50546312"
 
 Lorsque vous déclarez une propriété simple, le compilateur génère get et méthodes d’accesseur set et ces noms sont présents dans la portée de votre programme.  Le nom généré par le compilateur est constitué en ajoutant le préfixe get_ et set_ au nom de propriété.  Par conséquent, vous ne pouvez pas déclarer des fonctions avec le même nom que les accesseurs générés par le compilateur.
 
-Pour plus d'informations, voir [property](../../windows/property-cpp-component-extensions.md) .
+Pour plus d'informations, voir [property](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Exemple
 

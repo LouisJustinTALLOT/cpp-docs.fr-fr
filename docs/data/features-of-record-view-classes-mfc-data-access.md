@@ -5,12 +5,12 @@ helpviewer_keywords:
 - record views, classes
 - record view classes
 ms.assetid: e7b2820f-09c4-483f-83c0-317e8be42bdf
-ms.openlocfilehash: 2feda8f8f446e02a5056287c656707ea038f5387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f8de956065571109c988bd2940d21822bba7cfd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461150"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029873"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>Fonctionnalités des classes d'affichage des enregistrements (Accès aux données MFC)
 
@@ -22,9 +22,9 @@ Vous pouvez effectuer la programmation d’accès aux données de formulaire ave
 
 - Mises à jour devient l’enregistrement en cours lorsque l’utilisateur se déplace vers un autre enregistrement.
 
-Pour plus d’informations sur la navigation, consultez [vues d’enregistrements : prise en charge la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).
+Pour plus d’informations sur la navigation, consultez [vues d’enregistrements : Prise en charge de la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Vues d'enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: a4324fad7668907600cbaebeb5c9de4ad0e7c1e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302716"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776425"
 ---
 # <a name="cmfclinkctrl-class"></a>Cmfclinkctrl, classe
 
@@ -53,7 +53,7 @@ Lorsque vous cliquez sur un bouton qui est dérivé de la `CMFCLinkCtrl` (classe
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment définir la taille d’un `CMFCLinkCtrl` objet et comment définir une url et une info-bulle dans un `CMFCLinkCtrl` objet. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment définir la taille d’un `CMFCLinkCtrl` objet et comment définir une url et une info-bulle dans un `CMFCLinkCtrl` objet. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]
@@ -72,7 +72,7 @@ L’exemple suivant montre comment définir la taille d’un `CMFCLinkCtrl` obje
 
 [CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxlinkctrl.h
 
@@ -159,4 +159,4 @@ Un [CSize](../../atl-mfc-shared/reference/csize-class.md) objet qui contient la 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CLinkCtrl, classe](../../mfc/reference/clinkctrl-class.md)<br/>
-[CMFCButton, classe](../../mfc/reference/cmfcbutton-class.md)
+[Cmfcbutton, classe](../../mfc/reference/cmfcbutton-class.md)

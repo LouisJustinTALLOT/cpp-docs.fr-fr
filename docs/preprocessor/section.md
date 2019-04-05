@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-ms.openlocfilehash: cd8eee564fa17b21d5421a3471fd676af921f444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462138"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023241"
 ---
 # <a name="section"></a>section
 
@@ -38,12 +38,12 @@ Une fois qu'une section est définie, elle reste valide pour le reste de la comp
 |Attribut|Description|
 |-|-|
 |**read**|Permet les opérations de lecture sur les données.|
-|**write**|Permet les opérations d'écriture sur les données.|
-|**execute**|Permet d'exécuter le code.|
-|**Partagé**|Partage la section entre tous les processus qui chargent l'image.|
+|**écriture**|Permet les opérations d'écriture sur les données.|
+|**exécuter**|Permet d'exécuter le code.|
+|**partagés**|Partage la section entre tous les processus qui chargent l'image.|
 |**nopage**|Marque la section comme non paginable ; utile pour les pilotes de périphériques Win32.|
 |**nocache**|Marque la section comme ne pouvant pas être mise en cache ; utile pour les pilotes de périphériques Win32.|
-|**Ignorer**|Marque la section comme ne pouvant pas être supprimée ; utile pour les pilotes de périphériques Win32.|
+|**discard**|Marque la section comme ne pouvant pas être supprimée ; utile pour les pilotes de périphériques Win32.|
 |**remove**|Marque la section comme non résidante en ; pilotes de périphériques virtuels (V*x*D) uniquement.|
 
 Si vous ne spécifiez aucun attribut, la section aura des attributs en lecture et en écriture.

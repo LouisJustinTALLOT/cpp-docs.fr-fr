@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_registry attribute
 ms.assetid: d30de4e2-551c-428c-98fd-951330d578d3
-ms.openlocfilehash: bd101f5ca1776518ff4c5092da99134110bbb0b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a0fd9a761f765aa9562ab18c095f683b80c7987
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503023"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023423"
 ---
 # <a name="noregistry"></a>no_registry
 
@@ -40,5 +40,5 @@ Lorsque `auto_search` est spécifié, supplémentaires `#import`s sera généré
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import, directive](../preprocessor/hash-import-directive-cpp.md)

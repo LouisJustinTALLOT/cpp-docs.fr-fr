@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259254"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774151"
 ---
 # <a name="cscrollview-class"></a>CScrollView, classe
 
@@ -82,7 +82,7 @@ Pour faire défiler automatiquement en réponse aux messages à partir du clavie
 
 Vous pouvez gérer la roulette de défilement vous-même en substituant le message mappé [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) et [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) fonctions membres. Comme pour les `CScrollView`, ces fonctions membres prennent en charge le comportement recommandé pour [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), le message de rotation de roulette.
 
-Pour tirer parti du défilement automatique, dérivez votre classe de vue de `CScrollView` au lieu d’à partir de `CView`. Lorsque la vue est tout d’abord créée, si vous souhaitez calculer la taille de la vue à défilement selon la taille du document, appel le `SetScrollSizes` fonction membre à partir de votre substitution de soit [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) ou [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Vous devez écrire votre propre code pour interroger la taille du document. Pour obtenir un exemple, consultez le [exemple Scribble](../../visual-cpp-samples.md).)
+Pour tirer parti du défilement automatique, dérivez votre classe de vue de `CScrollView` au lieu d’à partir de `CView`. Lorsque la vue est tout d’abord créée, si vous souhaitez calculer la taille de la vue à défilement selon la taille du document, appel le `SetScrollSizes` fonction membre à partir de votre substitution de soit [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) ou [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Vous devez écrire votre propre code pour interroger la taille du document. Pour obtenir un exemple, consultez le [exemple Scribble](../../overview/visual-cpp-samples.md).)
 
 L’appel à la `SetScrollSizes` fonction membre définit le mode de mappage de la vue, le nombre total de dimensions de la vue de défilement et les quantités pour faire défiler horizontalement et verticalement. Toutes les tailles sont exprimées en unités logiques. La taille logique de la vue est généralement calculée à partir des données stockées dans le document, mais dans certains cas vous pouvez spécifier une taille fixe. Pour obtenir des exemples des deux approches, consultez [CScrollView::SetScrollSizes](#setscrollsizes).
 
@@ -116,7 +116,7 @@ Pour plus d’informations sur l’utilisation de `CScrollView`, consultez [Arch
 
 `CScrollView`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -376,8 +376,8 @@ Vous devez définir le mode de mappage à un des modes de mappage de Windows à 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
-[CView, classe](../../mfc/reference/cview-class.md)<br/>
+[Exemple MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
+[CView (classe)](../../mfc/reference/cview-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CView, classe](../../mfc/reference/cview-class.md)<br/>
+[CView (classe)](../../mfc/reference/cview-class.md)<br/>
 [CSplitterWnd, classe](../../mfc/reference/csplitterwnd-class.md)

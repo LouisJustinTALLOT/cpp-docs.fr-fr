@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3611
 ms.assetid: 42f3e320-41de-420a-bd05-8924cab765aa
-ms.openlocfilehash: 08e9b969c9eb03dd0259813487bfeb04bfaa5ca9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d4c5cb02b1b8c5472502380fe7c74ff4a91954a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590241"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781924"
 ---
 # <a name="compiler-error-c3611"></a>Erreur du compilateur C3611
 
 'fonction' : une fonction sealed ne peut pas avoir de spécificateur pure
 
-Une fonction sealed a été correctement déclarée.  Pour plus d’informations, consultez [sealed](../../windows/sealed-cpp-component-extensions.md).
+Une fonction sealed a été correctement déclarée.  Pour plus d’informations, consultez [sealed](../../extensions/sealed-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 

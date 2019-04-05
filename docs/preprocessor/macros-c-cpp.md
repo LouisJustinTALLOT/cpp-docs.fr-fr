@@ -6,12 +6,12 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656298"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032178"
 ---
 # <a name="macros-cc"></a>Macros (C/C++)
 Prétraitement développe des macros dans toutes les lignes qui ne sont pas des directives de préprocesseur (lignes qui n’ont pas un **#** comme premier caractère autre qu’un espace blanc) et dans les parties de certaines directives qui ne sont pas ignorées en tant que partie d’un compilation conditionnelle. Les directives de « compilation conditionnelle » vous permettent de supprimer la compilation des parties d'un fichier source en testant une expression constante ou un identificateur pour déterminer quels blocs de texte sont transmis au compilateur et quels blocs de texte sont supprimés du fichier source pendant le prétraitement.
@@ -30,10 +30,10 @@ Pour plus d'informations, consultez
 
 - [Macros et C++](../preprocessor/macros-and-cpp.md)
 
-- [Macros variadiques](../preprocessor/variadic-macros.md)
+- [Macros Variadic](../preprocessor/variadic-macros.md)
 
 - [Macros prédéfinies](../preprocessor/predefined-macros.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Référence du préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

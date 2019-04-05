@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
-ms.openlocfilehash: 953318e09c4c0d00748f2b6189615dbd66677a96
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 4b88ad0da31321a696c1238f1c9838d3b3a1c927
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784430"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030113"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers, espace de noms
 
@@ -36,15 +36,15 @@ namespace Microsoft::WRL::Wrappers;
 
 |Nom|Description|
 |----------|-----------------|
-|[CriticalSection, classe](criticalsection-class.md)|Représente un objet de section critique.|
-|[Event, classe (WRL)](event-class-wrl.md)|Représente un événement.|
-|[HandleT, classe](handlet-class.md)|Représente un handle à un objet.|
+|[CriticalSection (classe)](criticalsection-class.md)|Représente un objet de section critique.|
+|[Classe d’événements (WRL)](event-class-wrl.md)|Représente un événement.|
+|[HandleT (classe)](handlet-class.md)|Représente un handle à un objet.|
 |[HString, classe](hstring-class.md)|Prend en charge des handles HSTRING.|
 |[HStringReference, classe](hstringreference-class.md)|Représente un HSTRING créé à partir d’une chaîne existante.|
 |[Mutex, classe](mutex-class.md)|Représente un objet de synchronisation qui contrôle exclusivement une ressource partagée.|
 |[RoInitializeWrapper, classe](roinitializewrapper-class.md)|Initialise le Runtime de Windows.|
-|[Semaphore, classe](semaphore-class.md)|Représente un objet de synchronisation qui contrôle une ressource partagée prenant en charge un nombre limité d’utilisateurs.|
-|[SRWLock, classe](srwlock-class.md)|Représente un verrou SRW.|
+|[Semaphore (classe)](semaphore-class.md)|Représente un objet de synchronisation qui contrôle une ressource partagée prenant en charge un nombre limité d’utilisateurs.|
+|[SRWLock (classe)](srwlock-class.md)|Représente un verrou SRW.|
 
 ## <a name="requirements"></a>Configuration requise
 

@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : défilement (ODBC)'
+title: 'Recordset : Défilement (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets [C++], end of
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: e41b526b86922bafd1d923fa5848a5ef8ed4825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579595"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040054"
 ---
-# <a name="recordset-scrolling-odbc"></a>Recordset : défilement (ODBC)
+# <a name="recordset-scrolling-odbc"></a>Recordset : Défilement (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -32,7 +32,7 @@ Cette rubrique explique :
 
 ##  <a name="_core_scrolling_from_one_record_to_another"></a> Défilement d’un enregistrement à un autre
 
-Classe `CRecordset` fournit le `Move` fonctions membre pour faire défiler un jeu d’enregistrements. Ces fonctions déplacent l’enregistrement actif en ensembles de lignes. Si vous avez implémenté l’extraction de lignes en bloc, un `Move` opération repositionne le jeu d’enregistrements en fonction de la taille de l’ensemble de lignes. Si vous n’avez pas implémenté l’extraction, un appel à de lignes en bloc un `Move` fonction repositionne le jeu d’enregistrements en un seul enregistrement chaque fois. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Classe `CRecordset` fournit le `Move` fonctions membre pour faire défiler un jeu d’enregistrements. Ces fonctions déplacent l’enregistrement actif en ensembles de lignes. Si vous avez implémenté l’extraction de lignes en bloc, un `Move` opération repositionne le jeu d’enregistrements en fonction de la taille de l’ensemble de lignes. Si vous n’avez pas implémenté l’extraction, un appel à de lignes en bloc un `Move` fonction repositionne le jeu d’enregistrements en un seul enregistrement chaque fois. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Lorsque vous déplacez dans un jeu d’enregistrements, enregistrements supprimés ne peuvent pas être ignorés. Pour plus d’informations, consultez le [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) fonction membre.
@@ -89,11 +89,11 @@ rsCustSet.MoveFirst( );
 
 `IsEOF` Retourne une valeur différente de zéro si le jeu d’enregistrements est positionné au-delà du dernier enregistrement. `IsBOF` Retourne une valeur différente de zéro si le jeu d’enregistrements est positionné avant le premier enregistrement (avant tous les enregistrements). Dans les deux cas, il n’existe aucun enregistrement actif à utiliser. Si vous appelez `MovePrev` lorsque `IsBOF` est déjà TRUE ou appeler `MoveNext` lorsque `IsEOF` est déjà TRUE, le framework lève une `CDBException`. Vous pouvez également utiliser `IsBOF` et `IsEOF` à vérifier pour un jeu d’enregistrements vide.
 
-Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez [jeu d’enregistrements : Signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="_core_when_scrolling_is_supported"></a> Lorsque le défilement est pris en charge
 
-Conçue à l’origine, SQL fourni uniquement en avant le défilement, mais ODBC étend les capacités de défilement. Le niveau de prise en charge pour le défilement disponible varie selon les pilotes ODBC de votre application fonctionne avec le niveau de conformité de votre pilote ODBC API et si la bibliothèque de curseurs ODBC est chargée en mémoire. Pour plus d’informations, consultez [ODBC](../../data/odbc/odbc-basics.md) et [ODBC : bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Conçue à l’origine, SQL fourni uniquement en avant le défilement, mais ODBC étend les capacités de défilement. Le niveau de prise en charge pour le défilement disponible varie selon les pilotes ODBC de votre application fonctionne avec le niveau de conformité de votre pilote ODBC API et si la bibliothèque de curseurs ODBC est chargée en mémoire. Pour plus d’informations, consultez [ODBC](../../data/odbc/odbc-basics.md) et [ODBC : La bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!TIP]
 >  Vous pouvez contrôler si la bibliothèque de curseurs est utilisée. Consultez le *bUseCursorLib* et *dwOptions* paramètres [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open).
@@ -106,4 +106,4 @@ Conçue à l’origine, SQL fourni uniquement en avant le défilement, mais ODBC
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)<br/>
 [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)<br/>
-[Recordset : filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Recordset : Filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

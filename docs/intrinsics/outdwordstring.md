@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __outdwordstring intrinsic
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-ms.openlocfilehash: 5579258c813850cdb8f29758bb4bd5d87270467f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 51cb4a97d271d6d41d39d1025e3a5d34b273cdc4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330279"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035252"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 
@@ -36,7 +36,7 @@ void __outdwordstring(
 *Port*<br/>
 [in] Le port pour envoyer les données.
 
-*mémoire tampon*<br/>
+*Mémoire tampon*<br/>
 [in] Un pointeur vers les données seront envoyés le port spécifié.
 
 *Nombre*<br/>
@@ -58,4 +58,4 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)

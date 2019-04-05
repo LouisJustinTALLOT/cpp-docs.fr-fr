@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266131"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779844"
 ---
 # <a name="carray-class"></a>CArray (classe)
 
@@ -130,7 +130,7 @@ Pour plus d’informations sur l’utilisation `CArray`, consultez l’article [
 
 `CArray`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtempl.h
 
@@ -630,8 +630,8 @@ Le *nGrowBy* paramètre affecte l’allocation de mémoire interne pendant que l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
-[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[Exemple MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CObArray, classe](../../mfc/reference/cobarray-class.md)<br/>
+[CObArray (classe)](../../mfc/reference/cobarray-class.md)<br/>
 [Programmes d’assistance pour les classes de collection](../../mfc/reference/collection-class-helpers.md)

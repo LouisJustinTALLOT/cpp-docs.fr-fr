@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-ms.openlocfilehash: 1cfc762cc7151eb2d55f8bd681bec935aea2acd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625964"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778245"
 ---
 # <a name="compiler-error-c3821"></a>Erreur du compilateur C3821
 
@@ -19,7 +19,7 @@ ms.locfileid: "50625964"
 
 Fonctions avec un assembly inline ou [setjmp](../../c-runtime-library/reference/setjmp.md) ne peut pas contenir des types valeur ou des classes managées. Pour corriger cette erreur, supprimez l’assembly inline et `setjmp` ou supprimez les objets gérés.
 
-C3821 peut également se produire si vous essayez d’utiliser le stockage automatique dans une fonction vararg.  Pour plus d’informations, consultez [listes d’arguments variables (...) (C + C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) et [sémantique de pile C++ pour les Types référence](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+C3821 peut également se produire si vous essayez d’utiliser le stockage automatique dans une fonction vararg.  Pour plus d’informations, consultez [listes d’arguments variables (...) (C + C++ / CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) et [sémantique de pile C++ pour les Types référence](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Exemple
 

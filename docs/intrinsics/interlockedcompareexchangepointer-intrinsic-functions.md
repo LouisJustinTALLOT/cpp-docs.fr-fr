@@ -24,12 +24,12 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: b58af33e13609dcb9a51f7d2b3075427f538a2d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445030"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024814"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer, fonctions intrinsèques
 
@@ -102,7 +102,7 @@ La valeur de retour est la valeur initiale de la destination.
 
 ## <a name="remarks"></a>Notes
 
-`_InterlockedCompareExchangePointer` effectue une comparaison atomique de l'adresse `Destination` à l'adresse `Comparand`. Si l'adresse `Destination` est égale à l'adresse `Comparand`, l'adresse `Exchange` est stockée dans l'adresse spécifiée par `Destination`. Dans le cas contraire, aucune opération n'est effectuée.
+`_InterlockedCompareExchangePointer` effectue une comparaison atomique de la `Destination` adresse avec le `Comparand` adresse. Si l'adresse `Destination` est égale à l'adresse `Comparand`, l'adresse `Exchange` est stockée dans l'adresse spécifiée par `Destination`. Dans le cas contraire, aucune opération n'est effectuée.
 
 `_InterlockedCompareExchangePointer` Fournit la prise en charge intrinsèque du compilateur pour le Kit de développement logiciel Windows Win32 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) (fonction).
 
@@ -120,5 +120,5 @@ Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)

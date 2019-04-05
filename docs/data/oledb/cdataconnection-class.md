@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565504"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021629"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection, classe
 
@@ -105,8 +105,8 @@ class CDataConnection
 |[operator bool](#op_bool_ole)|Détermine si la session active est ouverte ou non.|
 |[opérateur CDataSource &](#op_cdata_amp)|Retourne une référence à la relation contenant-contenu `CDataSource` objet.|
 |[opérateur CDataSource *](#op_cdata_star)|Retourne un pointeur vers la relation contenant-contenu `CDataSource` objet.|
-|[opérateur CSession &](#op_csession_amp)|Retourne une référence à la relation contenant-contenu `CSession` objet.|
-|[opérateur CSession *](#op_csession_star)|Retourne un pointeur vers la relation contenant-contenu `CSession` objet.|
+|[opérateur CSession&](#op_csession_amp)|Retourne une référence à la relation contenant-contenu `CSession` objet.|
+|[opérateur CSession*](#op_csession_star)|Retourne un pointeur vers la relation contenant-contenu `CSession` objet.|
 
 ## <a name="remarks"></a>Notes
 
@@ -306,5 +306,5 @@ Consultez [opérateur CSession &](../../data/oledb/cdataconnection-operator-cses
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

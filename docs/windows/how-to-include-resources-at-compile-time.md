@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: ca24a10f905e61feb2b090ba3966c752db3d4444
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328387"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041500"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Procédure : Inclure des ressources au moment de la compilation (C++)
 
@@ -52,7 +52,7 @@ Pour commencer, ouvrez le **Include des ressources** boîte de dialogue en cliqu
 
 | Propriété | Description |
 |---|---|
-| **Fichier d’en-tête de symbole** | Vous permet de modifier le nom du fichier d’en-tête où sont stockées les définitions de symbole de vos fichiers de ressources.<br/><br/>Pour plus d’informations, consultez [modification des noms de symbole de fichiers d’en-tête](../windows/changing-the-names-of-symbol-header-files.md). |
+| **Fichier d'en-tête de symbole** | Vous permet de modifier le nom du fichier d’en-tête où sont stockées les définitions de symbole de vos fichiers de ressources.<br/><br/>Pour plus d’informations, consultez [modification des noms de symbole de fichiers d’en-tête](../windows/changing-the-names-of-symbol-header-files.md). |
 | **Directives de symboles en lecture seule** | Vous permet d’inclure des fichiers d’en-tête qui contiennent les symboles qui ne doit pas être modifiées.<br/><br/>Par exemple, les fichiers de symboles devant être partagé avec d’autres projets. Cela peut également inclure des fichiers MFC .h. Pour plus d’informations, consultez [symboles notamment partagés (lecture seule) ou calculés](../windows/including-shared-read-only-or-calculated-symbols.md). |
 | **Directives de compilation** | Vous permet d’inclure des fichiers de ressources qui sont créés et modifiés séparément à partir des ressources dans votre fichier de ressources principal, contiennent des directives de compilation (par exemple, ces directives qui incluent des ressources de manière conditionnelle) ou contiennent des ressources dans un format personnalisé.<br/><br/>Vous pouvez également utiliser le **zone directives de compilation** pour inclure des fichiers de ressources MFC standards. |
 
@@ -98,5 +98,5 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
-[Guide pratique pour Créer des ressources](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Guide pratique pour Gestion des ressources](../windows/how-to-copy-resources.md)<br/>
+[Procédure : Créer des ressources](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Procédure : Gérer les ressources](../windows/how-to-copy-resources.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3665
 ms.assetid: 893bb47e-8de1-43aa-af7d-fa47ad149ee9
-ms.openlocfilehash: 30aaf67ac9f912059bb5726681e61feabc1e557d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40de7a7b1ede5e6dbbc20d2128b782c0ad6f798b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644117"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781027"
 ---
 # <a name="compiler-error-c3665"></a>Erreur du compilateur C3665
 
@@ -19,7 +19,7 @@ ms.locfileid: "50644117"
 
 Un mot clé a été utilisé qui n’est pas autorisée sur un destructeur ou un finaliseur.
 
-Par exemple, un nouvel emplacement ne peut pas être demandé sur un destructeur ou un finaliseur.  Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md) et [destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Par exemple, un nouvel emplacement ne peut pas être demandé sur un destructeur ou un finaliseur.  Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md) et [destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 L’exemple suivant génère l’erreur C3665 :
 

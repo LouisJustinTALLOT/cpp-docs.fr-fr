@@ -8,16 +8,16 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 075f00ad8a4071af57014638707503847b58756d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557181"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034376"
 ---
 # <a name="vtordisp"></a>vtordisp
 
-**Spécifique à C++**
+**Section spécifique à C++**
 
 Contrôle l'ajout du membre de déplacement de construction/destruction vtordisp masqué.
 
@@ -41,7 +41,7 @@ Supprime l'enregistrement supérieur de la pile interne du compilateur et rétab
 *n*<br/>
 Spécifie la nouvelle valeur du paramètre vtordisp. Les valeurs possibles sont 0, 1 ou 2, correspondant à la `/vd0`, `/vd1`, et `/vd2` options du compilateur. Pour plus d’informations, consultez [/vd (désactiver les déplacements de Construction)](../build/reference/vd-disable-construction-displacements.md).
 
-*on*<br/>
+*sur*<br/>
 Équivalent à `#pragma vtordisp(1)`.
 
 *Hors tension*<br/>
@@ -57,7 +57,7 @@ Spécification de 1 ou *sur*, permet à la valeur par défaut, le texte masqué 
 
 En spécifiant 2 permet le texte masqué **vtordisp** membres pour toutes les bases virtuelles avec des fonctions virtuelles.  `vtordisp(2)` peut être nécessaire de garantir des performances correctes de **dynamic_cast** sur un objet partiellement construit. Pour plus d’informations, consultez [Avertissement du compilateur (niveau 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
 
-`#pragma vtordisp()`, sans argument, rétablit la valeur initiale du paramètre vtordisp.
+`#pragma vtordisp()`, aucun argument, rétablit la paramètre vtordisp à sa valeur initiale.
 
 ```cpp
 #pragma vtordisp(push, 2)
@@ -65,7 +65,7 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**FIN spécifique à C++**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 

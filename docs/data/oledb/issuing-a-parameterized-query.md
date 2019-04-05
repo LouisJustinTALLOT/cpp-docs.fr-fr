@@ -4,12 +4,12 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 9bf6a9ab1b4849b562637c11fffb578aec11ac34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ac029d954fc6cefaae6349e01af7728ca0886fd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533040"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025696"
 ---
 # <a name="issuing-a-parameterized-query"></a>Émission d'une requête paramétrée
 

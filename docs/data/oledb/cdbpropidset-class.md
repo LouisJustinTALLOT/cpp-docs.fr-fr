@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: d51b1bf6862aebda34586518be6501f57f119590
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e878af3acf4c4d3a6ca785454c4bb072f17cf09
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419953"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022409"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet, classe
 
@@ -50,7 +50,7 @@ Hérite de la `DBPROPIDSET` structurer et ajoute un constructeur qui initialise 
 class CDBPropIDSet : public tagDBPROPIDSET
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -68,7 +68,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 |||
 |-|-|
-|[operator =](#op_equal)|Assigne le contenu d’une propriété ID définie à un autre.|
+|[opérateur =](#op_equal)|Assigne le contenu d’une propriété ID définie à un autre.|
 
 ## <a name="remarks"></a>Notes
 
@@ -86,7 +86,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 #### <a name="parameters"></a>Paramètres
 
-*propid*<br/>
+*ID de propriété*<br/>
 [in] Définir l’ID de propriété à ajouter à l’ID de propriété.
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
@@ -142,5 +142,5 @@ CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

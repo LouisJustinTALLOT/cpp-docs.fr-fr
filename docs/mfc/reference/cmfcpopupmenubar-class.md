@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-ms.openlocfilehash: 14f1636917244efe4decc0108579f81fbad2f457
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: acb1e2be7d40e5e0c569fffcc92c57c750be8f91
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300776"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776776"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar, classe
 
@@ -91,7 +91,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Spécifie si la barre latérale grise s’affichera lorsque l’application a une apparence de Windows XP.|
 
@@ -101,7 +101,7 @@ Le `CMFCPopupMenuBar` est créé en même temps comme un [cmfcpopupmenu, classe]
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment initialiser un `CMFCPopupMenuBar` de l’objet à partir d’un `CMFCPopupMenu` objet. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).
+L’exemple suivant montre comment initialiser un `CMFCPopupMenuBar` de l’objet à partir d’un `CMFCPopupMenu` objet. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]
 
@@ -123,7 +123,7 @@ L’exemple suivant montre comment initialiser un `CMFCPopupMenuBar` de l’obje
 
 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpopupmenubar.h
 
@@ -446,5 +446,5 @@ void StartPopupMenuTimer(
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCColorBar, classe](../../mfc/reference/cmfccolorbar-class.md)<br/>
-[CMFCPopupMenu, classe](../../mfc/reference/cmfcpopupmenu-class.md)
+[Cmfccolorbar, classe](../../mfc/reference/cmfccolorbar-class.md)<br/>
+[Cmfcpopupmenu, classe](../../mfc/reference/cmfcpopupmenu-class.md)

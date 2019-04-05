@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
 ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780364"
 ---
 # <a name="cmapstringtostring-class"></a>Cmapstringtostring, classe
@@ -110,7 +110,7 @@ par exemple, se traduit par
 
 ## <a name="remarks"></a>Notes
 
-`CMapStringToString` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Chaque élément est sérialisé à son tour, si un mappage est stocké dans une archive, soit avec l’insertion surchargée ( **<<**) opérateur ou avec le `Serialize` fonction membre.
+`CMapStringToString` incorpore le `IMPLEMENT_SERIAL` macro pour prendre en charge la sérialisation et le vidage de ses éléments. Chaque élément est sérialisé à son tour, si un mappage est stocké dans une archive, soit avec l’insertion surchargée ( **<<**) opérateur ou avec le `Serialize` fonction membre.
 
 Si vous avez besoin d’un dump de l’individu `CString` -  `CString` éléments, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.
 
@@ -209,7 +209,7 @@ CPair* PLookup(LPCTSTR key);
 
 ### <a name="parameters"></a>Paramètres
 
-*key*<br/>
+*clé*<br/>
 Pointeur vers la clé de l’élément à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -227,5 +227,5 @@ Appelez cette méthode pour rechercher un élément de carte avec une clé qui c
 ## <a name="see-also"></a>Voir aussi
 
 [Exemple MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
-[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

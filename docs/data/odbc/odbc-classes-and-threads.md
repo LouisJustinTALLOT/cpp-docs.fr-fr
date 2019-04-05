@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ODBC, multithreaded applications
 - threading [MFC], ODBC support
 ms.assetid: 16543926-7331-41a6-ba50-72288f2a61b7
-ms.openlocfilehash: 1d470e79ba5a6a73a30743a21da0462a6b89e7da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d11cdab632e916f548011462f9738bc267fc730
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608167"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023528"
 ---
 # <a name="odbc-classes-and-threads"></a>Threads et classes ODBC
 
@@ -29,4 +29,4 @@ Pour plus d’informations sur la création d’applications multithread, consul
 ## <a name="see-also"></a>Voir aussi
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
-[Accès aux données de programmation (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Programmation de l'accès aux données (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

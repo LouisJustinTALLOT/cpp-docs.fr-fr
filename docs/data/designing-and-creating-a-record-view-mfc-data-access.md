@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: b97ac5e61530742280dd8ee2183ec54229fb4441
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613445"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035541"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Conception et création d'une vue de l'enregistrement (Accès aux données MFC)
 
@@ -34,14 +34,14 @@ Vous pouvez créer votre classe de vue d’enregistrement avec le [Assistant App
 
 Les rubriques suivantes décrivent d'autres aspects de l'utilisation des vues d'enregistrements :
 
-- [Vues d’enregistrements : Prise en charge la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+- [Vues des enregistrements : Prise en charge de la navigation dans une vue de l'enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
-- [Vues d’enregistrements : À l’aide d’une vue d’enregistrement](../data/using-a-record-view-mfc-data-access.md)
+- [Vues des enregistrements : Utilisation d'une vue de l'enregistrement](../data/using-a-record-view-mfc-data-access.md)
 
-- [Vues d’enregistrements : Remplissage d’une zone de liste à partir d’un Second Recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [Vues des enregistrements : Remplissage d'une zone de liste à partir d'un second recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Vues d'enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Recordset (ODBC)](../data/odbc/recordset-odbc.md)<br/>
 [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

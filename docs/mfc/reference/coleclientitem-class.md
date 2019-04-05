@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295355"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773981"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem, classe
 
@@ -302,7 +302,7 @@ Pour plus d’informations sur l’utilisation de l’interface du conteneur, co
 
 `COleClientItem`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxole.h
 
@@ -2187,8 +2187,8 @@ Pour plus d’informations, consultez [IOleLink::Update](/windows/desktop/api/ol
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MFCBIND](../../visual-cpp-samples.md)<br/>
-[Exemple MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Exemple MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CDocItem, classe](../../mfc/reference/cdocitem-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleServerItem, classe](../../mfc/reference/coleserveritem-class.md)

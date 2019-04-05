@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297383"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780949"
 ---
 # <a name="clist-class"></a>CList (classe)
 
@@ -134,7 +134,7 @@ Pour plus d’informations sur l’utilisation de `CList`, consultez l’article
 
 `CList`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtempl.h
 
@@ -697,8 +697,8 @@ Vous devez vous assurer que votre valeur POSITION représente une position valid
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
-[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[Exemple MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CMap, classe](../../mfc/reference/cmap-class.md)<br/>
-[CArray, classe](../../mfc/reference/carray-class.md)
+[CMap (classe)](../../mfc/reference/cmap-class.md)<br/>
+[CArray (classe)](../../mfc/reference/carray-class.md)

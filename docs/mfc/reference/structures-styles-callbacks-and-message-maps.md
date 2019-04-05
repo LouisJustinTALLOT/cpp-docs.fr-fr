@@ -9,12 +9,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: ffa57be45ca3b5626d78f495ed5ab5f658b62fb9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301920"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780195"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Structures, styles, rappels et tables de messages
 
@@ -36,8 +36,8 @@ Décrit les macros de mappage de message et `CWnd` les entrées de table des mes
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Présentation des bibliothèques de classes .NET](../../mfc/class-library-overview.md)<br/>
+[Vue d'ensemble de la bibliothèque de classes](../../mfc/class-library-overview.md)<br/>
 Répertorie les classes de la bibliothèque MFC en fonction de la catégorie.
 
-[Exemples MFC](../../visual-cpp-samples.md)<br/>
+[Exemples MFC](../../overview/visual-cpp-samples.md)<br/>
 Fournit des liens vers des exemples qui illustrent l’utilisation de la bibliothèque MFC.

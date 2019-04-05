@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: bc3d9f089dc6289331c79c6a1e18eccbc9ff4993
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37de6fd74f1e9210dcd9b9a356719436814c0c7f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296973"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776828"
 ---
 # <a name="coledatasource-class"></a>COleDataSource, classe
 
@@ -96,7 +96,7 @@ Pour plus d’informations sur les sources de données et de transfert de donné
 
 `COleDataSource`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxole.h
 
@@ -488,8 +488,8 @@ void SetClipboard();
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Exemple MFC OCLIENT](../../visual-cpp-samples.md)<br/>
-[CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)<br/>
+[Exemple MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleDataObject, classe](../../mfc/reference/coledataobject-class.md)

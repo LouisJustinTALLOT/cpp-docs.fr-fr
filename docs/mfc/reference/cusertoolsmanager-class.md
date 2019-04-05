@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-ms.openlocfilehash: 7fa2f0bc5717c7481b4ed415e89fbb0cc8df0ffc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 857e86184e1b7ea399787520e9c4701547185133
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289362"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777088"
 ---
 # <a name="cusertoolsmanager-class"></a>Cusertoolsmanager, classe
 
@@ -108,7 +108,7 @@ Pour obtenir un exemple d’outils de l’utilisateur, consultez l’exemple de 
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment récupérer une référence à un `CUserToolsManager` objet et comment créer de nouveaux outils de l’utilisateur. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).
+L’exemple suivant montre comment récupérer une référence à un `CUserToolsManager` objet et comment créer de nouveaux outils de l’utilisateur. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#38](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]
 
@@ -118,7 +118,7 @@ L’exemple suivant montre comment récupérer une référence à un `CUserTools
 
 `CUserToolsManager`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxusertoolsmanager.h
 
@@ -491,4 +491,4 @@ void SetFilter(const CString& strFilter);
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx, classe](../../mfc/reference/cwinappex-class.md)<br/>
-[CUserTool, classe](../../mfc/reference/cusertool-class.md)
+[Cusertool, classe](../../mfc/reference/cusertool-class.md)

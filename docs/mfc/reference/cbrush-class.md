@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: 38f9c6953999e07f1a72ed6a9c0661184f075ea0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303073"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778869"
 ---
 # <a name="cbrush-class"></a>CBrush (classe)
 
@@ -84,7 +84,7 @@ Pour plus d’informations sur `CBrush`, consultez [objets graphiques](../../mfc
 
 `CBrush`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -435,8 +435,8 @@ Pour plus d’informations sur l’utilisation des objets graphiques, consultez 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[Exemple MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject, classe](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CBitmap, classe](../../mfc/reference/cbitmap-class.md)<br/>
-[CDC, classe](../../mfc/reference/cdc-class.md)
+[CBitmap (classe)](../../mfc/reference/cbitmap-class.md)<br/>
+[CDC (classe)](../../mfc/reference/cdc-class.md)

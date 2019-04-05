@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: d9ebea5c955dcf89308654feec9866d4fdc924cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501359"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774605"
 ---
 # <a name="compiler-error-c2664"></a>Erreur du compilateur C2664
 
@@ -25,13 +25,13 @@ Si un paramètre qui n'est pas du type attendu par la fonction est passé à cet
 
 Pour résoudre l'erreur C2664,
 
-- Vérifiez à nouveau le prototype de la fonction concernée et corrigez l’argument noté dans le message d’erreur.
+- Vérifiez à nouveau le prototype de la fonction concernée et corrigez l'argument noté dans le message d'erreur.
 
 - Prévoyez une conversion explicite si nécessaire.
 
 L'erreur C2664 peut également être générée si une classe masque un membre dans l'une de ses classes de base.
 
-Pour plus d’informations, consultez [Comment : convertir System::String en wchar_t * ou char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
+Pour plus d'informations, voir [Procédure : Convertir System::String en wchar_t * ou char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
 ## <a name="example"></a>Exemple
 
@@ -189,7 +189,7 @@ int main( ) {
 
 ## <a name="example"></a>Exemple
 
-Une variable enum n'est pas convertie en son type sous-jacent, de sorte qu'un appel de fonction soit rempli. Pour plus d’informations, consultez [classe enum](../../windows/enum-class-cpp-component-extensions.md). L'exemple suivant génère l'erreur C2664 et montre comment la corriger.
+Une variable enum n'est pas convertie en son type sous-jacent, de sorte qu'un appel de fonction soit rempli. Pour plus d’informations, consultez [classe enum](../../extensions/enum-class-cpp-component-extensions.md). L'exemple suivant génère l'erreur C2664 et montre comment la corriger.
 
 ```
 // C2664f.cpp

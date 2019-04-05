@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: ec80e8cf177becdc25bdf49d6dfa9ad9c7794b88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612821"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025268"
 ---
 # <a name="comment-cc"></a>commentaire (C/C++)
 
@@ -39,7 +39,7 @@ Place le nom et le numéro de version du compilateur dans le fichier objet. Cet 
 
 Emplacements *commentstring* dans le fichier objet. Au moment d'effectuer le lien, cette chaîne est placée dans le fichier exécutable. La chaîne n'est pas chargée en mémoire lorsque le fichier exécutable est chargé. Toutefois, elle peut être détectée à l'aide d'un programme qui recherche les chaînes imprimables dans les fichiers. Ce type d'enregistrement de commentaires peut être utilisé par exemple pour incorporer un numéro de version ou des informations similaires dans un fichier exécutable.
 
-Le mot clé `exestr` est déconseillé et sera supprimé dans une version ultérieure. L'Éditeur de liens ne traite pas l'enregistrement de commentaires.
+`exestr` est déconseillée et sera supprimée dans une version ultérieure. l’éditeur de liens ne traite pas l’enregistrement de commentaires.
 
 ### <a name="lib"></a>lib
 

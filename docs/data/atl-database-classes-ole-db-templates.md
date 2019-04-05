@@ -6,12 +6,12 @@ helpviewer_keywords:
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-ms.openlocfilehash: 4304c350ce6a9303a7542809fa85fb0cd2560031
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2ecde060f10a7c2a056869525f58d0bb4da67963
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522069"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023436"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Classes de bases de données ATL (modèles OLE DB)
 
@@ -34,7 +34,7 @@ Pour plus d’informations, consultez [programmation OLE DB](../data/oledb/ole-d
 ## <a name="see-also"></a>Voir aussi
 
 [Création d’un consommateur OLE DB](../data/oledb/creating-an-ole-db-consumer.md)<br/>
-[Création d’un fournisseur OLE DB](../data/oledb/creating-an-ole-db-provider.md)<br/>
+[Création d'un fournisseur OLE DB](../data/oledb/creating-an-ole-db-provider.md)<br/>
 [Référence des modèles du consommateur OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Référence des modèles du fournisseur OLE DB](../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Exemples de modèles OLE DB](https://github.com/Microsoft/VCSamples)

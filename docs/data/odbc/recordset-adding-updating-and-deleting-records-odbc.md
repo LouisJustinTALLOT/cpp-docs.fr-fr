@@ -1,5 +1,5 @@
 ---
-title: "Recordset : ajout, modification et suppression d'enregistrements (ODBC)"
+title: 'Recordset : Ajout, la mise à jour et suppression d’enregistrements (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-ms.openlocfilehash: a13bffdc79f01c49c290b8b5d4388f06ce777105
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512370"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024606"
 ---
-# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset : ajout, modification et suppression d'enregistrements (ODBC)
+# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset : Ajout, la mise à jour et suppression d’enregistrements (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
 > [!NOTE]
->  Vous pouvez maintenant ajouter des enregistrements en bloc plus efficacement. Pour plus d’informations, consultez [Recordset : ajout global d’enregistrements (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
+>  Vous pouvez maintenant ajouter des enregistrements en bloc plus efficacement. Pour plus d’informations, consultez [jeu d’enregistrements : Ajout d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
 
 > [!NOTE]
->  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Les instantanés et les feuilles de réponse dynamiques permettent d’ajouter, modifier (update) et supprimer des enregistrements. Cette rubrique explique :
 
@@ -45,7 +45,7 @@ Les instantanés et les feuilles de réponse dynamiques permettent d’ajouter, 
 
 - [Comment supprimer un enregistrement](#_core_deleting_a_record_from_a_recordset).
 
-Pour plus d’informations sur la façon dont les mises à jour sont effectuées et sur la façon dont vos mises à jour apparaissent à d’autres utilisateurs, consultez [Recordset : mise à jour des enregistrements par les Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). Normalement, lorsque vous ajoutez, modifiez ou supprimez un enregistrement, le jeu d’enregistrements change immédiatement la source de données. À la place de commandes mises à jour associées dans des transactions. Si une transaction est en cours d’exécution, la mise à jour ne devient-elle pas finale jusqu'à ce que vous validez la transaction. Cela vous permet de reprendre ou d’annuler les modifications. Pour plus d’informations sur les transactions, consultez [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
+Pour plus d’informations sur la façon dont les mises à jour sont effectuées et sur la façon dont vos mises à jour apparaissent à d’autres utilisateurs, consultez [jeu d’enregistrements : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). Normalement, lorsque vous ajoutez, modifiez ou supprimez un enregistrement, le jeu d’enregistrements change immédiatement la source de données. À la place de commandes mises à jour associées dans des transactions. Si une transaction est en cours d’exécution, la mise à jour ne devient-elle pas finale jusqu'à ce que vous validez la transaction. Cela vous permet de reprendre ou d’annuler les modifications. Pour plus d’informations sur les transactions, consultez [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
 Le tableau suivant récapitule les options disponibles pour les jeux d’enregistrements avec les caractéristiques de mise à jour différents.
 
@@ -102,9 +102,9 @@ Vous pouvez ajouter de nouveaux enregistrements à un jeu d’enregistrements si
 
 1. Appeler l’objet recordset `Update` fonction membre.
 
-   `Update` termine l’ajout en écrivant le nouvel enregistrement dans la source de données. Pour plus d’informations sur se produit si vous n’appelez pas `Update`, consultez [Recordset : mise à jour des enregistrements par les Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+   `Update` termine l’ajout en écrivant le nouvel enregistrement dans la source de données. Pour plus d’informations sur se produit si vous n’appelez pas `Update`, consultez [jeu d’enregistrements : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
-Pour plus d’informations sur le fonctionnement de l’ajout d’enregistrements et lorsque les enregistrements ajoutés sont visibles dans le jeu d’enregistrements, consultez [Recordset : fonctionnement d’AddNew, Edit et Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
+Pour plus d’informations sur le fonctionnement de l’ajout d’enregistrements et lorsque les enregistrements ajoutés sont visibles dans le jeu d’enregistrements, consultez [jeu d’enregistrements : Comment AddNew, modifier et supprimer des travaux (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
 
 L’exemple suivant montre comment ajouter un nouvel enregistrement :
 
@@ -147,7 +147,7 @@ Vous pouvez modifier les enregistrements existants si votre jeu d’enregistreme
 
 1. Appeler l’objet recordset `Update` fonction membre.
 
-   `Update` termine la modification en écrivant l’enregistrement modifié dans la source de données. Pour plus d’informations sur se produit si vous n’appelez pas `Update`, consultez [Recordset : mise à jour des enregistrements par les Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+   `Update` termine la modification en écrivant l’enregistrement modifié dans la source de données. Pour plus d’informations sur se produit si vous n’appelez pas `Update`, consultez [jeu d’enregistrements : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 Une fois que vous modifiez un enregistrement, celui-ci demeure l’enregistrement actif.
 
@@ -197,9 +197,9 @@ rsStudent.Delete( );
 rsStudent.MoveNext( );
 ```
 
-Pour plus d’informations sur les effets de la `AddNew`, `Edit`, et `Delete` fonctions membres, consultez [Recordset : mise à jour des enregistrements par les Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+Pour plus d’informations sur les effets de la `AddNew`, `Edit`, et `Delete` fonctions membres, consultez [jeu d’enregistrements : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset : Verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849474"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041499"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -36,7 +36,7 @@ Le `__fastfail` intrinsèque fournit un mécanisme pour un *rapide échouent* de
 
 En interne, `__fastfail` est implémentée à l'aide de plusieurs mécanismes spécifiques à l'architecture :
 
-|Architecture|Instruction|Emplacement de l'argument de code|
+|Architecture|Instruction|Emplacement de l’argument de code|
 |------------------|-----------------|-------------------------------|
 |x86|int 0x29|ecx|
 |X64|int 0x29|rcx|
@@ -47,13 +47,13 @@ Une demande de basculement rapide est autonome et son exécution ne nécessite g
 
 L'argument `code` (l'une des constantes symboliques `FAST_FAIL_<description>` de winnt.h ou wdm.h) décrit le type de condition d'échec. Il est intégré aux rapports d'échec d'une manière spécifique à l'environnement.
 
-Les demandes de basculement rapide en mode utilisateur apparaissent comme une exception non continuelle de deuxième chance avec le code d'exception 0xC0000409 et avec au moins un paramètre d'exception. Le premier paramètre de l'exception est la valeur `code`. Ce code d'exception indique à l'infrastructure de débogage et de Rapport d'erreurs Windows que le processus est endommagé et que des actions in-process minimales doivent être effectuées en réponse à l'échec. Les demandes de basculement rapide en mode noyau sont implémentées à l'aide d'un code de vérification d'erreur dédié, `KERNEL_SECURITY_CHECK_FAILURE` (0x139). Dans les deux cas, aucun gestionnaire d'exceptions n'est appelé car le programme est censé être dans un état endommagé. Si un débogueur est présent, il a la possibilité d'examiner l'état du programme avant son arrêt.
+Les demandes de basculement rapide en mode utilisateur apparaissent comme une exception non continuelle de deuxième chance avec le code d'exception 0xC0000409 et avec au moins un paramètre d'exception. Le premier paramètre de l'exception est la valeur `code`. Ce code d'exception indique à l'infrastructure de débogage et de Rapport d'erreurs Windows que le processus est endommagé et que des actions in-process minimales doivent être effectuées en réponse à l'échec. Les demandes de basculement rapide en mode noyau sont implémentées à l'aide d'un code de vérification d'erreur dédié, `KERNEL_SECURITY_CHECK_FAILURE` (0x139). Dans les deux cas, aucun gestionnaire d'exceptions n'est appelé car le programme est censé être dans un état endommagé. Si un débogueur est présent, il a la possibilité d’examiner l’état du programme avant son arrêt.
 
 La prise en charge du mécanisme de basculement rapide natif est apparue dans Windows 8. Les systèmes d'exploitation Windows qui ne prennent pas en charge l'instruction de basculement rapide en mode natif traitent généralement une demande de basculement rapide comme une violation d'accès ou comme une vérification d'erreur `UNEXPECTED_KERNEL_MODE_TRAP`. Dans ces cas-là, le programme est tout de même arrêté, mais pas nécessairement au rapidement.
 
-`__fastfail` est uniquement disponible en tant qu'intrinsèque.
+`__fastfail` est uniquement disponible comme intrinsèque.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
@@ -65,4 +65,4 @@ La prise en charge du mécanisme de basculement rapide natif est apparue dans Wi
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)

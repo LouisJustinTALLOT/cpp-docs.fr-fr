@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: 37197ee20b31564c589099b10e0f8d3f0d1f7e86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263869"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781859"
 ---
 # <a name="colepropertiesdialog-class"></a>Colepropertiesdialog, classe
 
@@ -90,7 +90,7 @@ Pour plus d’informations sur les boîtes de dialogue OLE, consultez l’articl
 
 `COlePropertiesDialog`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxodlgs.h
 
@@ -261,8 +261,8 @@ L'implémentation par défaut n'exécute aucune opération. Vous devez substitue
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC CERC](../../visual-cpp-samples.md)<br/>
+[Exemple MFC CERC](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog, classe](../../mfc/reference/coledialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog, classe](../../mfc/reference/coledialog-class.md)<br/>
-[CPropertyPage, classe](../../mfc/reference/cpropertypage-class.md)
+[CPropertyPage (classe)](../../mfc/reference/cpropertypage-class.md)

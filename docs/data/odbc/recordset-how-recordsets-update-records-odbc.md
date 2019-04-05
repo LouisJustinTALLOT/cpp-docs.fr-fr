@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : modification des enregistrements par les recordsets (ODBC)'
+title: 'Recordset : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510004"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034480"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset : modification des enregistrements par les recordsets (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -25,7 +25,7 @@ En dehors de leur capacité à sélectionner des enregistrements à partir d’u
 >  Le code SQL sur lequel votre `CRecordset` objet repose peut affecter la mise à jour votre jeu d’enregistrements. Par exemple, si votre SQL contient une jointure ou un **GROUP BY** clause, MFC définit la mise à jour sur FALSE.
 
 > [!NOTE]
->  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Cette rubrique explique :
 
@@ -35,13 +35,13 @@ Cette rubrique explique :
 
 [Recordset : Comment AddNew, Edit et Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) décrit les actions de ces fonctions à partir du point de vue de l’objet recordset.
 
-[Recordset : Informations complémentaires sur les mises à jour (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) conclut la mise à jour des recordsets en expliquant comment les transactions affectent les mises à jour, comment la fermeture d’un recordset influe sur les mises à jour en cours d’exécution, et comment vos mises à jour interagissent avec les mises à jour des autres utilisateurs.
+[Recordset : Informations complémentaires sur les mises à jour (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) conclut la mise à jour des recordsets en expliquant comment les transactions affectent les mises à jour, comment la fermeture d’un recordset influe sur les mises à jour en cours d’exécution, et comment vos mises à jour interagissent avec les mises à jour d’autres utilisateurs.
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> Votre rôle dans la mise à jour du jeu d’enregistrements
 
 Le tableau suivant illustre votre rôle dans l’aide de jeux d’enregistrements à ajouter, modifier ou supprimer des enregistrements, ainsi que ce que l’infrastructure effectue pour vous.
 
-### <a name="recordset-updating-you-and-the-framework"></a>La mise à jour du jeu d’enregistrements : L’infrastructure et vous
+### <a name="recordset-updating-you-and-the-framework"></a>La mise à jour du jeu d’enregistrements : Vous et l’infrastructure
 
 |Vous|L'infrastructure|
 |---------|-------------------|
@@ -73,4 +73,4 @@ Lorsque vous appelez [AddNew](../../mfc/reference/crecordset-class.md#addnew) ou
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : fonctionnement d’AddNew, Edit et Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Recordset : Comment AddNew, modifier et supprimer des travaux (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

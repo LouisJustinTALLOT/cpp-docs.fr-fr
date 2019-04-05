@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265520"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773825"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Assistants et les Éditeurs de ressources
 
@@ -46,10 +46,10 @@ La fenêtre Propriétés crée des fonctions membres de gestionnaire de messages
 
 Utiliser le Visual C++ [éditeurs de ressources](../windows/resource-editors.md) pour créer et modifier des menus, boîtes de dialogue, des contrôles personnalisés, touches accélérateur, bitmaps, icônes, curseurs, chaînes et des ressources de version. À compter de Visual C++ version 4.0, un éditeur de la barre d’outils facilite barres d’outils de création.
 
-Pour vous aider à encore plus, la bibliothèque Microsoft Foundation Class fournit un fichier appelé COMMON. RES, qui contient des ressources « clipart » que vous pouvez copier à partir de COMMON. RES et les coller dans votre propre fichier de ressources. COURANTS. RES comporte des boutons de barre d’outils, common curseurs, les icônes et bien plus encore. Vous pouvez utiliser, modifier et redistribuer ces ressources dans votre application. Pour plus d’informations sur COMMON. RES, consultez le [Clipart, exemple](../visual-cpp-samples.md).
+Pour vous aider à encore plus, la bibliothèque Microsoft Foundation Class fournit un fichier appelé COMMON. RES, qui contient des ressources « clipart » que vous pouvez copier à partir de COMMON. RES et les coller dans votre propre fichier de ressources. COURANTS. RES comporte des boutons de barre d’outils, common curseurs, les icônes et bien plus encore. Vous pouvez utiliser, modifier et redistribuer ces ressources dans votre application. Pour plus d’informations sur COMMON. RES, consultez le [Clipart, exemple](../overview/visual-cpp-samples.md).
 
 L’Assistant Application MFC, les Assistants Visual C++, éditeurs de ressources et l’infrastructure MFC faire beaucoup de travail pour vous et faciliter la gestion de votre code beaucoup plus facile. L’essentiel de votre code spécifique à l’application se trouve dans vos classes de document et la vue.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des classes pour l’écriture d’applications pour Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[Utilisation des classes pour l'écriture d'applications pour Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

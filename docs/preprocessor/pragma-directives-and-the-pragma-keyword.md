@@ -13,16 +13,16 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 9e79ba7378e28fdea863af010decb7064df415cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6c2ff579c6fafa78cbfd0a2879a71fca2bfaa01
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660094"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027439"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Directives pragma et mot clé _Pragma
 
-Les directives pragma spécifient des fonctionnalités de compilateur spécifiques à l’ordinateur ou au système d’exploitation. Le **_pragma** mot clé, qui est spécifique au compilateur de Microsoft, vous permet de coder des directives pragma dans des définitions de macro.
+Les directives pragma spécifient des fonctionnalités de compilateur spécifiques à l'ordinateur ou au système d'exploitation. Le **_pragma** mot clé, qui est spécifique au compilateur de Microsoft, vous permet de coder des directives pragma dans des définitions de macro.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,19 +47,19 @@ Les compilateurs Microsoft C et C++ reconnaissent les pragmas suivants :
 |-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
 |[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[commentaire](../preprocessor/comment-c-cpp.md)|
-|[component](../preprocessor/component.md)|[se conformer](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
+|[component](../preprocessor/component.md)|[conform](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
 |[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
 |[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
-|[intrinsic](../preprocessor/intrinsic.md)|[boucle](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
-|[Gérés](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||
+|[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
+|[managed](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||
 |[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||
 |[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|
 |[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|
 |[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|
-|[strict_gs_check](../preprocessor/strict-gs-check.md)|[non managé](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
-|[warning](../preprocessor/warning.md)|||
+|[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
+|[avertissement](../preprocessor/warning.md)|||
 
 <sup>1</sup> pris en charge uniquement par le compilateur C++.
 
@@ -80,7 +80,7 @@ cl /Zp8 ...
 
 ## <a name="the-pragma-keyword"></a>Mot clé __pragma()
 
-**Spécifique à Microsoft**
+**Section spécifique à Microsoft**
 
 Le compilateur prend également en charge la **_pragma** mot clé, qui a les mêmes fonctionnalités que le **#pragma** directive, mais peut être utilisé inline dans une définition de macro. Le **#pragma** directive ne peut pas être utilisée dans une définition de macro, car le compilateur interprète le signe dièse ('#') dans la directive pour être le [opérateur d’enchaînement (#)](../preprocessor/stringizing-operator-hash.md).
 
@@ -104,10 +104,10 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Fin spécifique à Microsoft**
+**Fin de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Référence du préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Pragmas C](../c-language/c-pragmas.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)
