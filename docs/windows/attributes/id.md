@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: b7bcbd9229529ec00a3b778cafd5678d47af950c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630031"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034694"
 ---
 # <a name="id"></a>ID
 
@@ -25,7 +25,7 @@ Spécifie un *dispid* paramètre pour une fonction membre (une propriété ou un
 
 ### <a name="parameters"></a>Paramètres
 
-*DISPID*<br/>
+*dispid*<br/>
 L’ID de dispatch pour la méthode d’interface.
 
 ## <a name="remarks"></a>Notes
@@ -55,5 +55,5 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs de méthode](method-attributes.md)<br/>
 [Attributs de membre de données](data-member-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[in](in-cpp.md)<br/>
+[dans](in-cpp.md)<br/>
 [out](out-cpp.md)

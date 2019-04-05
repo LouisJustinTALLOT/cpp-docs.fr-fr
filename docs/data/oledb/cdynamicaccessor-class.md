@@ -127,12 +127,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: a9e862e9df785a0986d9d75759de85c0c1448912
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423454"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040966"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor, classe
 
@@ -144,7 +144,7 @@ Vous permet d’accéder à une source de données lorsque vous n’avez aucune 
 class CDynamicAccessor : public CAccessorBase
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête**: atldbcli.h
 
@@ -696,7 +696,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in] Pointeur vers une chaîne de caractères contenant le nom de colonne.
 
-*data*<br/>
+*Données*<br/>
 [in] Pointeur vers la mémoire contenant les données.
 
 *nColumn*<br/>
@@ -710,8 +710,8 @@ Pour tous les autres types de données, il est plus simple d’utiliser les vers
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor, classe](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicParameterAccessor (classe)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor, classe](../../data/oledb/cmanualaccessor-class.md)

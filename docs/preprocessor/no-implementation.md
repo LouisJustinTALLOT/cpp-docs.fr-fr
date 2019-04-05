@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: d4e55d06bef823d28c5deb3467654bc530a3853e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26527ca69c66c73f5d41084dc42df5faa34481d3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456782"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030539"
 ---
 # <a name="noimplementation"></a>no_implementation
-**Spécifique à C++**
+**Section spécifique à C++**
 
 Supprime la génération de l'en-tête .tli, qui contient les implémentations des fonctions membres de wrapper.
 
@@ -30,9 +30,9 @@ Si cet attribut est spécifié, l'en-tête .tlh, avec les déclarations pour exp
 
 Cet attribut est utilisé conjointement avec [implementation_only](../preprocessor/implementation-only.md).
 
-**FIN spécifique à C++**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import, directive](../preprocessor/hash-import-directive-cpp.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: a63504ce327bc2f1996c74dba9c51dc345e15abd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: beca804fae8d6e82b4664102b39d76a23e66ca59
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647159"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041401"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -57,7 +57,7 @@ class CMyClass {};
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**|
+|**S'applique à**|**class**, **struct**|
 |**Renouvelable**|Oui|
 |**Attributs requis**|Une des opérations suivantes : `coclass`, `progid`, ou `vi_progid`|
 |**Attributs non valides**|Aucun.|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sidt instruction
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
-ms.openlocfilehash: 2188b2cdbf5c5f8836197f8cf2ee33928b7e9425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88dbb4713577fcf224e1c5646bf4c38b2a1dfafe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624456"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036758"
 ---
 # <a name="sidt"></a>__sidt
 
@@ -42,11 +42,11 @@ void __sidt(void * Destination);
 
 ## <a name="remarks"></a>Notes
 
-La fonction `__sidt` est équivalente à l’instruction machine `SIDT` . Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : référence de jeu d’instructions, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+La fonction `__sidt` est équivalente à l’instruction machine `SIDT` . Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : Instruction Set Reference, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
 **FIN de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [__lidt](../intrinsics/lidt.md)

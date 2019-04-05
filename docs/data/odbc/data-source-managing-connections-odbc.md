@@ -1,5 +1,5 @@
 ---
-title: 'Source de données : gestion des connexions (ODBC)'
+title: 'Source de données : Gestion des connexions (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], multiuser environments
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 0f10dd1053819cb201385098b0125042ad556a47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568504"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041161"
 ---
-# <a name="data-source-managing-connections-odbc"></a>Source de données : gestion des connexions (ODBC)
+# <a name="data-source-managing-connections-odbc"></a>Source de données : Gestion des connexions (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -72,7 +72,7 @@ Vous pouvez utiliser un fichier Excel comme source de données, et vous devez co
 
 ##  <a name="_core_working_in_a_multiuser_environment"></a> Utilisation dans un environnement multi-utilisateur
 
-Si plusieurs utilisateurs sont connectés à une source de données, ils peuvent modifier les données lorsque vous les manipulez dans vos jeux d’enregistrements. De même, vos modifications peuvent affecter les recordsets des autres utilisateurs. Pour plus d’informations, consultez [Recordset : mise à jour des enregistrements par les Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) et [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
+Si plusieurs utilisateurs sont connectés à une source de données, ils peuvent modifier les données lorsque vous les manipulez dans vos jeux d’enregistrements. De même, vos modifications peuvent affecter les recordsets des autres utilisateurs. Pour plus d’informations, consultez [jeu d’enregistrements : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) et [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
 ##  <a name="_core_generalizing_the_connection_string"></a> La généralisation de la chaîne de connexion
 
@@ -139,5 +139,5 @@ Vous pouvez réutiliser un `CDatabase` objet après la déconnexion à partir de
 ## <a name="see-also"></a>Voir aussi
 
 [Source de données (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[Source de données : détermination du schéma de la source de données (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
+[Source de données : Détermination du schéma de la Source de données (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
 [CRecordset, classe](../../mfc/reference/crecordset-class.md)

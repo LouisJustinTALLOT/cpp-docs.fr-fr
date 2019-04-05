@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - no_namespace attribute
 ms.assetid: 5d81b741-a558-451b-b493-1f3b18967337
-ms.openlocfilehash: b17bf5fb5f44d5453de29febe001f9e8737102b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6bd60de02bf0166d5cf0b0cd1bc1de56ceda5bf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540437"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028715"
 ---
 # <a name="nonamespace"></a>no_namespace
-**Spécifique à C++**
+**Section spécifique à C++**
 
 Indique que le nom de l'espace de noms n'est pas généré par le compilateur.
 
@@ -30,9 +30,9 @@ Le contenu de la bibliothèque de types dans le fichier d'en-tête `#import` est
 
 Si vous souhaitez utiliser un nom d’espace de noms différent, puis utiliser le [rename_namespace](../preprocessor/rename-namespace.md) d’attribut à la place.
 
-**FIN spécifique à C++**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import, directive](../preprocessor/hash-import-directive-cpp.md)

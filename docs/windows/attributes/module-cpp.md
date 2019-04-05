@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893520"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040578"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -48,7 +48,7 @@ ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est génér�
 *lcid*<br/>
 Paramètre de localisation. Pour plus d’informations, consultez [lcid](/windows/desktop/Midl/lcid) .
 
-*control*<br/>
+*contrôle*<br/>
 (Facultatif) Spécifie que toutes les coclasses dans la bibliothèque sont des contrôles.
 
 *helpstring*<br/>
@@ -72,7 +72,7 @@ Spécifie la bibliothèque de types.
 *restricted*<br/>
 (Facultatif) Membres de la bibliothèque ne peut pas être appelées arbitrairement. Pour plus d’informations, consultez l’attribut MIDL [restricted](/windows/desktop/Midl/restricted) .
 
-*custom*<br/>
+*personnalisé*<br/>
 (Facultatif) Un ou plusieurs attributs ; Ceci est similaire à la [personnalisé](custom-cpp.md) attribut. Le premier paramètre de *personnalisé* est le GUID de l’attribut. Exemple :
 
 ```
@@ -146,14 +146,14 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
 |**S'applique à**|N'importe où|
-|**Renouvelable**|Aucune|
+|**Renouvelable**|Non|
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
 
@@ -166,7 +166,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs autonomes](stand-alone-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[library](/windows/desktop/Midl/library)<br/>
+[bibliothèque](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : informations complémentaires sur les mises à jour (ODBC)'
+title: 'Recordset : Plus d’informations sur les mises à jour (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: b34f6f51c6ff3a0995f4cf6044ddd7949644f42c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665294"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040766"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>Recordset : informations complémentaires sur les mises à jour (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>Recordset : Plus d’informations sur les mises à jour (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -30,7 +30,7 @@ Cette rubrique explique :
 - [Plus d’informations sur les fonctions membres Update et Delete](#_core_more_about_update_and_delete).
 
 > [!NOTE]
->  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous avez implémenté l’extraction de lignes en bloc, certaines informations ne s’applique pas. Par exemple, vous ne pouvez pas appeler le `AddNew`, `Edit`, `Delete`, et `Update` fonctions membres ; Toutefois, vous pouvez effectuer des transactions. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous avez implémenté l’extraction de lignes en bloc, certaines informations ne s’applique pas. Par exemple, vous ne pouvez pas appeler le `AddNew`, `Edit`, `Delete`, et `Update` fonctions membres ; Toutefois, vous pouvez effectuer des transactions. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> Répercussions des autres opérations sur les mises à jour
 
@@ -53,7 +53,7 @@ Si vous fermez un jeu d’enregistrements, ou qui lui sont associés `CDatabase`
 
 ###  <a name="_core_how_scrolling_affects_updates"></a> Influence du défilement mises à jour
 
-Lorsque vous [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) dans un jeu d’enregistrements, la mémoire tampon d’édition est rempli avec chaque nouvel enregistrement courant (l’enregistrement précédent n’est pas stocké d’abord). Défilement ignore les enregistrements supprimés précédemment. Si vous faites défiler après un `AddNew` ou `Edit` appel sans appeler `Update`, `CommitTrans`, ou `Rollback` tout d’abord, toutes les modifications sont perdues (aucun avertissement pour vous) lorsqu’un nouvel enregistrement est placé dans la mémoire tampon d’édition. La mémoire tampon d’édition est rempli avec l’enregistrement défilent jusqu’au, l’enregistrement stocké est libéré, et aucune modification n’intervient sur la source de données. Cela s’applique aux deux `AddNew` et `Edit`.
+Lorsque vous [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) dans un jeu d’enregistrements, la mémoire tampon d’édition est rempli avec chaque nouvel enregistrement courant (l’enregistrement précédent n’est pas stocké d’abord). Défilement ignore les enregistrements supprimés précédemment. Si vous faites défiler après un `AddNew` ou `Edit` appel sans appeler `Update`, `CommitTrans`, ou `Rollback` tout d’abord, toutes les modifications sont perdues (aucun avertissement pour vous) lorsqu’un nouvel enregistrement est placé dans la mémoire tampon d’édition. La mémoire tampon d’édition est rempli avec l’enregistrement défilent jusqu’au, l’enregistrement stocké est libéré, et aucune modification n’intervient sur la source de données. Cela s’applique aux deux `AddNew` et `Edit`.
 
 ##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Vos mises à jour et les mises à jour d’autres utilisateurs
 
@@ -94,7 +94,7 @@ Sur un `Update` ou `Delete` opération, un seul enregistrement et doit être mis
 
 - AFX_SQL_ERROR_NO_ROWS_AFFECTED
 
-- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED APPARAÎT
+- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED
 
 Lorsque ces exceptions sont levées, vous restez dans le `AddNew` ou `Edit` état vous étiez lorsque vous avez appelé `Update` ou `Delete`. Voici les scénarios les plus courants dans lesquels vous devriez voir ces exceptions. Vous êtes probablement voir :
 
@@ -105,7 +105,7 @@ Lorsque ces exceptions sont levées, vous restez dans le `AddNew` ou `Edit` éta
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Recordset : La sélection de jeux d’enregistrements d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[Exceptions : exceptions de base de données](../../mfc/exceptions-database-exceptions.md)
+[Exceptions : Exceptions de base de données](../../mfc/exceptions-database-exceptions.md)

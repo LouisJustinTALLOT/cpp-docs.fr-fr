@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - no_auto_exclude attribute
 ms.assetid: 3241ef9c-758a-4e86-bdc5-37da6072430f
-ms.openlocfilehash: 04e3b261e24bbe9870a6d3fc428cd68e8c1a8132
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bde7535bd181057750ab9dd4c3999321b4990c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537629"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038940"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
-**Spécifique à C++**
+**Section spécifique à C++**
 
 Désactive l'exclusion automatique.
 
@@ -26,11 +26,11 @@ no_auto_exclude
 
 ## <a name="remarks"></a>Notes
 
-Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. `#import` tente d'éviter les erreurs de définitions multiples en excluant automatiquement ces éléments. Dans ce cas, [Avertissement du compilateur (niveau 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) sera émis pour chaque élément à exclure. Vous pouvez désactiver cette exclusion automatique à l'aide de cet attribut.
+Les bibliothèques de types peuvent inclure des définitions d'éléments définis dans les en-têtes système ou dans d'autres bibliothèques de types. `#import` tente d’éviter les erreurs de définitions multiples en excluant automatiquement ces éléments. Dans ce cas, [Avertissement du compilateur (niveau 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) sera émis pour chaque élément à exclure. Vous pouvez désactiver cette exclusion automatique à l'aide de cet attribut.
 
-**FIN spécifique à C++**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import, directive](../preprocessor/hash-import-directive-cpp.md)

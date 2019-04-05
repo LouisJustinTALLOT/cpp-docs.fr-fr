@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512671"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037644"
 ---
 # <a name="snapshot"></a>Instantané
 
@@ -37,7 +37,7 @@ Prise en charge de l’instantané est basée sur la bibliothèque de curseurs O
 Les instantanés sont disponibles uniquement si la bibliothèque de curseurs ODBC a été chargée lorsque le `CDatabase` objet a été construit, ou le pilote ODBC que vous utilisez prend en charge les curseurs statiques.
 
 > [!NOTE]
->  Pour certains pilotes ODBC, instantanés (curseurs statiques) n’est peut-être pas modifiables. Vérifiez la documentation de votre pilote pour les types de curseurs pris en charge et les types d’accès concurrentiel que pris en charge. Pour garantir les instantanés, assurez-vous de charger la bibliothèque de curseurs en mémoire lorsque vous créez un `CDatabase` objet. Pour plus d’informations, consultez [ODBC : bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+>  Pour certains pilotes ODBC, instantanés (curseurs statiques) n’est peut-être pas modifiables. Vérifiez la documentation de votre pilote pour les types de curseurs pris en charge et les types d’accès concurrentiel que pris en charge. Pour garantir les instantanés, assurez-vous de charger la bibliothèque de curseurs en mémoire lorsque vous créez un `CDatabase` objet. Pour plus d’informations, consultez [ODBC : La bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
 >  Si vous souhaitez utiliser les instantanés et les feuilles de réponse dynamiques, vous devez les baser sur deux différents `CDatabase` objets (deux connexions différentes).

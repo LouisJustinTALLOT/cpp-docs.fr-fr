@@ -18,12 +18,12 @@ helpviewer_keywords:
 - _interlockedbittestandreset64 intrinsic
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
-ms.openlocfilehash: 5b32dc9eb41285afb653817629148b9f666201e8
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 54ea8b1ccac15eab600c91302969b606c188dc59
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627200"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040648"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset, fonctions intrinsèques
 
@@ -84,7 +84,7 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 
 Valeur d'origine du bit à la position spécifiée par `b`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|Header|
 |---------------|------------------|------------|
@@ -108,5 +108,5 @@ Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

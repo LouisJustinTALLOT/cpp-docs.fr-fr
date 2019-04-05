@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: 31b71f7c195a7e2ee649b40197551e4ff5efda2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584510"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037929"
 ---
 # <a name="tlbid"></a>tlbid
 
-**Spécifique à C++**
+**Section spécifique à C++**
 
 Permet de charger des bibliothèques autres que la bibliothèque de types principale.
 
@@ -27,7 +27,7 @@ tlbid(number)
 
 ### <a name="parameters"></a>Paramètres
 
-*Nombre*<br/>
+*nombre*<br/>
 Numéro de la bibliothèque de types dans `filename`.
 
 ## <a name="remarks"></a>Notes
@@ -46,9 +46,9 @@ Exemple :
 LoadTypeLib("MyResource.dll\\2");
 ```
 
-**FIN spécifique à C++**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import, directive](../preprocessor/hash-import-directive-cpp.md)

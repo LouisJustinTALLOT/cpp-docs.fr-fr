@@ -1,5 +1,5 @@
 ---
-title: "Recordset : verrouillage d'enregistrements (ODBC)"
+title: 'Recordset : Verrouillage d’enregistrements (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - locks [C++], recordsets
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: 08d7ca1db474a5735ccaabaa7d7d87b359730bb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438695"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037287"
 ---
-# <a name="recordset-locking-records-odbc"></a>Recordset : verrouillage d'enregistrements (ODBC)
+# <a name="recordset-locking-records-odbc"></a>Recordset : Verrouillage d’enregistrements (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -30,7 +30,7 @@ Cette rubrique explique :
 Lorsque vous utilisez un jeu d’enregistrements à mettre à jour un enregistrement sur la source de données, votre application peut verrouiller l’enregistrement, aucun autre utilisateur peut mettre à jour l’enregistrement en même temps. L’état d’un enregistrement mis à jour par deux utilisateurs en même temps n’est pas défini, sauf si le système peut garantir que deux utilisateurs ne peuvent pas mettre à jour un enregistrement simultanément.
 
 > [!NOTE]
->  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous avez implémenté l’extraction de lignes en bloc, certaines informations ne s’applique pas. Par exemple, vous ne pouvez pas appeler le `Edit` et `Update` fonctions membres. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous avez implémenté l’extraction de lignes en bloc, certaines informations ne s’applique pas. Par exemple, vous ne pouvez pas appeler le `Edit` et `Update` fonctions membres. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_record.2d.locking_modes"></a> Modes de verrouillage des enregistrements
 
@@ -66,5 +66,5 @@ Le nouveau mode de verrouillage reste en vigueur jusqu'à ce que vous la modifie
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
-[Recordset : ajout, modification et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Recordset : Création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
+[Recordset : Ajout, la mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: d6cc9a0ce784ab79f5e4225675a082fc55bd53e7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146890"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037008"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
@@ -40,14 +40,14 @@ unsigned __int64 __popcnt64(
 
 #### <a name="parameters"></a>Paramètres
 
-*value*<br/>
+*par défaut*<br/>
 [in] Le 16, 32 ou entier non signé 64 bits pour lequel nous voulons le volume de peuplement.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Le nombre de bits un dans le `value` paramètre.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
@@ -105,4 +105,4 @@ Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reprodu
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
