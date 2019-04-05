@@ -1,5 +1,5 @@
 ---
-title: "Recordset : filtrage d'enregistrements (ODBC)"
+title: 'Recordset : Filtrage d’enregistrements (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [MFC], filtering
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514749"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041213"
 ---
-# <a name="recordset-filtering-records-odbc"></a>Recordset : filtrage d'enregistrements (ODBC)
+# <a name="recordset-filtering-records-odbc"></a>Recordset : Filtrage d’enregistrements (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -44,7 +44,7 @@ Vous devez établir le filtre d’un objet recordset après avoir construit l’
     > [!NOTE]
     >  La chaîne littérale « MATH101 » est indiquée par des apostrophes ci-dessus. Dans la spécification SQL ODBC, les guillemets simples sont utilisés pour désigner un littéral de chaîne de caractères. Vérifiez la documentation du pilote ODBC pour les exigences d’indentation de SGBD dans cette situation. Cette syntaxe est également traité plus loin dans la fin de cette rubrique.
 
-1. Définissez les autres options que vous avez besoin, telles que l’ordre de tri, le mode de verrouillage ou des paramètres. Spécification d’un paramètre est particulièrement utile. Pour plus d’informations sur le paramétrage de votre filtre, consultez [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Définissez les autres options que vous avez besoin, telles que l’ordre de tri, le mode de verrouillage ou des paramètres. Spécification d’un paramètre est particulièrement utile. Pour plus d’informations sur le paramétrage de votre filtre, consultez [jeu d’enregistrements : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Appelez `Open` pour le nouvel objet (ou `Requery` pour un objet précédemment ouvert).
 
@@ -82,15 +82,15 @@ Notez l’utilisation de guillemets simples ; Si vous définissez directement l
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-L’utilisation des guillemets ci-dessus est conforme à la spécification ODBC, mais certains SGBD requièrent d’autres types de guillemets. Pour plus d’informations, consultez [SQL : personnalisation du Recordset SQL instruction (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+L’utilisation des guillemets ci-dessus est conforme à la spécification ODBC, mais certains SGBD requièrent d’autres types de guillemets. Pour plus d’informations, consultez [SQL : Personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Si vous choisissez de remplacer la chaîne SQL par défaut du jeu d’enregistrements en passant votre propre chaîne SQL à `Open`, vous ne devez pas définir un filtre si votre chaîne personnalisée contient une **où** clause. Pour plus d’informations sur la substitution de la valeur par défaut SQL, consultez [SQL : personnalisation du Recordset SQL instruction (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Si vous choisissez de remplacer la chaîne SQL par défaut du jeu d’enregistrements en passant votre propre chaîne SQL à `Open`, vous ne devez pas définir un filtre si votre chaîne personnalisée contient une **où** clause. Pour plus d’informations sur la substitution de la valeur par défaut SQL, consultez [SQL : Personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Recordset : sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Recordset : modification des enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Recordset : verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset : Tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[Recordset : La sélection de jeux d’enregistrements d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Recordset : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Recordset : Verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

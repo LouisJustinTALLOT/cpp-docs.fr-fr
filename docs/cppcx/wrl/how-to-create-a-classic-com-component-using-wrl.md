@@ -3,12 +3,12 @@ title: 'Procédure : Créer un composant COM classique à l’aide de WRL'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-ms.openlocfilehash: e19ff4a331a98e64c39dc2e163459b2696bbdee5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bb38f36cdd481e61d049f82159fdc24c3726f646
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784622"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031840"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Procédure : Créer un composant COM classique à l’aide de WRL
 

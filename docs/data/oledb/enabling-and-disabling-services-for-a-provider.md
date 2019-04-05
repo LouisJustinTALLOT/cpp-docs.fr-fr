@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 3deac1bb-f660-407a-92ef-95e139e280c0
-ms.openlocfilehash: 23579b9561356e95d315c0fbe47132208753afa8
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: d91f08accf1a8be69f63d6bbcaa4c620d68c1077
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265124"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033029"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Activation et désactivation de services pour un fournisseur
 
@@ -18,8 +18,8 @@ Des services OLE DB peuvent être activées ou désactivées par défaut pour to
 
 |Services activés par défaut|Valeur de mot clé|
 |------------------------------|-------------------|
-|Tous les services (par défaut)|0xFFFFFFFF|
-|Tous sauf le regroupement et l’inscription automatique|0xFFFFFFFE|
+|Tous les services (par défaut)|0xffffffff|
+|Tous sauf le regroupement et l’inscription automatique|0xfffffffe|
 |Tout sauf le curseur Client|0xfffffffb|
 |Tous sauf le regroupement, l’inscription automatique et le curseur Client|0xfffffff0|
 |Aucun service|0x00000000|

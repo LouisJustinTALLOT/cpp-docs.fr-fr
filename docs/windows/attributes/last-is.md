@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: ce19d8d727a359054289200b2cdcb6a6427dc706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545715"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033279"
 ---
 # <a name="lastis"></a>last_is
 
@@ -25,7 +25,7 @@ Spécifie l’index du dernier élément de tableau doit être transmis.
 
 ### <a name="parameters"></a>Paramètres
 
-*Expression*<br/>
+*expression*<br/>
 Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.
 
 ## <a name="remarks"></a>Notes

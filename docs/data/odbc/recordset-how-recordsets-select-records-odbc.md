@@ -1,5 +1,5 @@
 ---
-title: "Recordset : sélection d'enregistrements par les recordsets (ODBC)"
+title: 'Recordset : La sélection de jeux d’enregistrements d’enregistrements (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, selecting records
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329466"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041323"
 ---
-# <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset : sélection d'enregistrements par les recordsets (ODBC)
+# <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset : La sélection de jeux d’enregistrements d’enregistrements (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -40,11 +40,11 @@ Le tableau suivant répertorie les options de sélection des enregistrements.
 |--------------|-------------|
 |Déclarer la classe de jeu d’enregistrements avec le **ajouter une classe** Assistant|Spécifier la table à sélectionner à partir de.<br /><br /> Spécifiez les colonnes à inclure.<br /><br /> Consultez [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).|
 |Effectuez votre implémentation de classe de jeu d’enregistrements|Substituer des fonctions membres telles que `OnSetOptions` (Avancé) pour définir des options spécifiques à l’application ou pour modifier les valeurs par défaut. Spécifier les membres de données de paramètre si vous souhaitez un jeu d’enregistrements paramétrable.|
-|Construisez un objet recordset (avant d’appeler `Open`)|Spécifiez une condition de recherche (éventuellement composée) pour une utilisation dans un **où** clause qui filtre les enregistrements. Consultez [Recordset : filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Spécifier un ordre de tri pour une utilisation dans un **ORDER BY** clause qui trie les enregistrements. Consultez [Recordset : tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Définir les valeurs des paramètres ajoutés à la classe. Consultez [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
+|Construisez un objet recordset (avant d’appeler `Open`)|Spécifiez une condition de recherche (éventuellement composée) pour une utilisation dans un **où** clause qui filtre les enregistrements. Consultez [jeu d’enregistrements : Filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Spécifier un ordre de tri pour une utilisation dans un **ORDER BY** clause qui trie les enregistrements. Consultez [jeu d’enregistrements : Tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Définir les valeurs des paramètres ajoutés à la classe. Consultez [jeu d’enregistrements : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
 
-| Exécuter la requête du recordset en appelant `Open`| Spécifiez une chaîne SQL personnalisée pour remplacer la chaîne SQL par défaut configurée par l’Assistant. Consultez [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) dans le *référence de bibliothèque de classe* et [SQL : personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md). |
+| Exécuter la requête du recordset en appelant `Open`| Spécifiez une chaîne SQL personnalisée pour remplacer la chaîne SQL par défaut configurée par l’Assistant. Consultez [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) dans le *référence de bibliothèque de classe* et [SQL : Personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md). |
 
-| Appelez `Requery` pour actualiser le jeu d’enregistrements avec les valeurs les plus récentes sur la source de données | Spécifiez les nouveaux paramètres, filtrer ou trier. Consultez [Recordset : actualisant un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |
+| Appelez `Requery` pour actualiser le jeu d’enregistrements avec les valeurs les plus récentes sur la source de données | Spécifiez les nouveaux paramètres, filtrer ou trier. Consultez [jeu d’enregistrements : Actualisation d’un jeu d’enregistrements (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |
 
 ##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Comment un Recordset construit son instruction SQL
 
@@ -78,19 +78,19 @@ En plus de fournir un filtre, un ordre de tri ou des paramètres, vous pouvez ef
 
 - Passer une chaîne SQL personnalisée dans *lpszSQL* lorsque vous appelez [Open](../../mfc/reference/crecordset-class.md#open) pour le jeu d’enregistrements. Tout ce que vous passez dans *lpsqSQL* est prioritaire sur ce que le [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) fonction membre retourne.
 
-   Pour plus d’informations, consultez [SQL : personnalisation du Recordset SQL instruction (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md), qui décrit les types d’instructions SQL (ou d’instructions partielles), vous pouvez passer à `Open` et le rôle de l’infrastructure avec eux.
+   Pour plus d’informations, consultez [SQL : Personnaliser les instruction SQL (ODBC du Recordset)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md), qui décrit les types d’instructions SQL (ou d’instructions partielles), vous pouvez passer à `Open` et le rôle de l’infrastructure avec eux.
 
     > [!NOTE]
     >  Si la chaîne personnalisée que vous transmettez ne commence pas par « SELECT » ou « {CALL », MFC suppose qu’il contient un nom de table. Cela s’applique également à l’élément suivant à puces.
 
 - Modifier la chaîne que l’Assistant écrit dans le jeu d’enregistrements `GetDefaultSQL` fonction membre. Modifier le code de fonction pour modifier ce qu’elle retourne. Par défaut, l’Assistant écrit un `GetDefaultSQL` fonction qui retourne un nom de table unique.
 
-   Vous pouvez avoir `GetDefaultSQL` retourner les éléments que vous pouvez passer dans le *lpszSQL* paramètre `Open`. Si vous ne passez pas une chaîne SQL personnalisée dans *lpszSQL*, l’infrastructure utilise la chaîne qui `GetDefaultSQL` retourne. Au minimum, `GetDefaultSQL` doit retourner un nom de table unique. Mais vous pouvez lui demander de renvoyer plusieurs noms de tables, d’un intégral **sélectionnez** instruction, une application ODBC **appeler** instruction et ainsi de suite. Pour obtenir la liste de ce que vous pouvez passer à *lpszSQL* — ou avez `GetDefaultSQL` retourner — consultez [SQL : personnalisation du Recordset SQL instruction (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+   Vous pouvez avoir `GetDefaultSQL` retourner les éléments que vous pouvez passer dans le *lpszSQL* paramètre `Open`. Si vous ne passez pas une chaîne SQL personnalisée dans *lpszSQL*, l’infrastructure utilise la chaîne qui `GetDefaultSQL` retourne. Au minimum, `GetDefaultSQL` doit retourner un nom de table unique. Mais vous pouvez lui demander de renvoyer plusieurs noms de tables, d’un intégral **sélectionnez** instruction, une application ODBC **appeler** instruction et ainsi de suite. Pour obtenir la liste de ce que vous pouvez passer à *lpszSQL* — ou avez `GetDefaultSQL` retourner — consultez [SQL : Personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-   Si vous effectuez une jointure de deux ou plusieurs tables, réécrivez `GetDefaultSQL` pour personnaliser la liste de tables utilisée dans le SQL **FROM** clause. Pour plus d’informations, consultez [Recordset : création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+   Si vous effectuez une jointure de deux ou plusieurs tables, réécrivez `GetDefaultSQL` pour personnaliser la liste de tables utilisée dans le SQL **FROM** clause. Pour plus d’informations, consultez [jeu d’enregistrements : Création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
 
-- Lier manuellement les membres de données de champ supplémentaire, par exemple basés sur les informations sur le schéma de votre source de données en cours d’exécution. Vous ajoutez des membres de données de champ à la classe de jeu d’enregistrements, [RFX](../../data/odbc/record-field-exchange-using-rfx.md) ou d’appels de fonction de RFX en bloc pour qu’ils puissent le [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) ou [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) fonction membre, et initialisations des membres de données dans le constructeur de classe. Pour plus d’informations, consultez [Recordset : liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+- Lier manuellement les membres de données de champ supplémentaire, par exemple basés sur les informations sur le schéma de votre source de données en cours d’exécution. Vous ajoutez des membres de données de champ à la classe de jeu d’enregistrements, [RFX](../../data/odbc/record-field-exchange-using-rfx.md) ou d’appels de fonction de RFX en bloc pour qu’ils puissent le [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) ou [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) fonction membre, et initialisations des membres de données dans le constructeur de classe. Pour plus d’informations, consultez [jeu d’enregistrements : Liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 - Substituer des fonctions membres de jeu d’enregistrements, telles que `OnSetOptions`, pour définir les options spécifiques à l’application ou pour remplacer les valeurs par défaut.
 
@@ -99,7 +99,7 @@ Si vous souhaitez baser le jeu d’enregistrements sur une instruction SQL compl
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : modification des enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Recordset : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [Éléments fondamentaux relatifs à ODBC](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[Recordset : verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset : Verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

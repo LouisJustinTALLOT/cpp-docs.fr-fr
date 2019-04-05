@@ -37,12 +37,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: c410efbbd0ce51bcaca2ba43a835bf88e1cdbc54
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a4f98cdfea9ea1e82ec0a3de09e292604a6c199f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419171"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032113"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl, classe
 
@@ -68,7 +68,7 @@ Unité de stockage pour les informations de liaison. La valeur par défaut est l
 *BindingVector*<br/>
 Unité de stockage pour les informations de colonne. La valeur par défaut est [CAtlMap](../../atl/reference/catlmap-class.md) où l’élément clé est une valeur HACCESSOR et l’élément de la valeur est un pointeur vers un `BindType` structure.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -171,5 +171,5 @@ Consultez [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms7197
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

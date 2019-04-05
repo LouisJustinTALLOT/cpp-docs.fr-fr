@@ -8,19 +8,19 @@ helpviewer_keywords:
 - data [MFC]
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
-ms.openlocfilehash: f612f4be726707681ffbddff88ccc6b8a672e427
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522406"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032217"
 ---
 # <a name="record-field-exchange-rfx"></a>Record Field Exchange (RFX)
 
 Les classes de base de données ODBC MFC automatisent le déplacement de données entre la source de données et un [recordset](../../data/odbc/recordset-odbc.md) objet. Lorsque vous dérivez une classe de [CRecordset](../../mfc/reference/crecordset-class.md) et n’utilisez pas l’extraction de lignes en bloc, les données sont transférées par le mécanisme record field exchange (RFX).
 
 > [!NOTE]
->  Si vous avez implémenté l’extraction de lignes en bloc dans une dérivée `CRecordset` (classe), le framework utilise le mécanisme RFX en bloc (RFX) pour transférer des données. Pour plus d’informations, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Si vous avez implémenté l’extraction de lignes en bloc dans une dérivée `CRecordset` (classe), le framework utilise le mécanisme RFX en bloc (RFX) pour transférer des données. Pour plus d’informations, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 RFX est similaire à l’échange de données de boîtes de dialogue (DDX). Déplacement de données entre une source de données et les membres de données de champ d’un recordset nécessite plusieurs appels à l’ensemble d’enregistrements [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) et une interaction considérable entre l’infrastructure et [ODBC](../../data/odbc/odbc-basics.md). Le mécanisme RFX est de type sécurisé et vous épargne le travail de l’appel de fonctions ODBC comme `::SQLBindCol`. Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -28,21 +28,21 @@ RFX est essentiellement transparente pour vous. Si vous déclarez vos classes de
 
 Vous devez ajouter manuellement une petite quantité de code RFX dans trois cas, lorsque vous souhaitez :
 
-- Utilisez des requêtes paramétrables. Pour plus d’informations, consultez [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+- Utilisez des requêtes paramétrables. Pour plus d’informations, consultez [jeu d’enregistrements : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-- Effectuer des jointures (à l’aide d’un jeu d’enregistrements pour les colonnes à partir de deux ou plusieurs tables). Pour plus d’informations, consultez [Recordset : création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+- Effectuer des jointures (à l’aide d’un jeu d’enregistrements pour les colonnes à partir de deux ou plusieurs tables). Pour plus d’informations, consultez [jeu d’enregistrements : Création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
-- Lier dynamiquement les colonnes de données. Cela est moins fréquentes que le paramétrage. Pour plus d’informations, consultez [Recordset : liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+- Lier dynamiquement les colonnes de données. Cela est moins fréquentes que le paramétrage. Pour plus d’informations, consultez [jeu d’enregistrements : Liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-Si vous avez besoin d’une plus grande maîtrise de RFX, consultez [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Si vous avez besoin d’une plus grande maîtrise de RFX, consultez [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 Les rubriques suivantes expliquent les détails d’utilisation des objets de jeu d’enregistrements :
 
-- [Record Field Exchange : utilisation de RFX](../../data/odbc/record-field-exchange-using-rfx.md)
+- [Record Field Exchange : Utilisation de RFX](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [Record Field Exchange : utilisation des fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [Record Field Exchange : Utilisation des fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-- [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
+- [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
 ## <a name="see-also"></a>Voir aussi
 

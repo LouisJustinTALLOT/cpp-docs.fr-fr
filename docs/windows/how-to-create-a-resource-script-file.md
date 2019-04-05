@@ -36,12 +36,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: a18c24685ff0d5f65970a094730d1587abffb601
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c22df99240c0fa076124e33224a4f6f4ab9a957e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563028"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028520"
 ---
 # <a name="how-to-create-resources-c"></a>Procédure : Créer des ressources (C++)
 
@@ -183,12 +183,12 @@ Après la personnalisation d’un modèle de ressource, enregistrez vos modifica
 
 Le fichier de script ressource ouvert, dans le menu, accédez à **fichier** > **enregistrer \< *filename*> en tant que**. Spécifiez un emplacement et choisissez **OK**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
-[Guide pratique pour Gestion des ressources](../windows/how-to-copy-resources.md)<br/>
-[Guide pratique pour inclure des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Procédure : Gérer les ressources](../windows/how-to-copy-resources.md)<br/>
+[Procédure : Inclure des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)<br/>

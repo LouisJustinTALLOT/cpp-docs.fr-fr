@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 6e88edf114e180a118d0467d5425d16e50d7c216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593490"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039498"
 ---
 # <a name="idl-attributes"></a>Attributs IDL
 
@@ -36,9 +36,9 @@ Notez que [idl_quote](idl-quote.md) vous permet d’utiliser des constructions M
 |[async_uuid](async-uuid.md)|Spécifie l’UUID qui indique au compilateur MIDL pour définir des versions synchrones et asynchrones d’une interface COM.|
 |[bindable](bindable.md)|Indique que la propriété prend en charge la liaison de données.|
 |[call_as](call-as.md)|Permet à une fonction non accessibles à distance à mapper à une fonction à distance.|
-|[case](case-cpp.md)|Utilisé avec le [switch_type](switch-type.md) attribut dans une union.|
+|[casse](case-cpp.md)|Utilisé avec le [switch_type](switch-type.md) attribut dans une union.|
 |[coclasse](coclass.md)|Définition dans un fichier .idl que coclasse de classe de lieux.|
-|[control](control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|
+|[contrôle](control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|
 |[cpp_quote](cpp-quote.md)|Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier d’en-tête généré.|
 |[defaultbind](defaultbind.md)|Indique la propriété unique, pouvant être liée qui correspond le mieux à l’objet.|
 |[defaultcollelem](defaultcollelem.md)|Utilisé pour l’optimisation du code Visual Basic.|
@@ -62,15 +62,15 @@ Notez que [idl_quote](idl-quote.md) vous permet d’utiliser des constructions M
 |[iid_is](iid-is.md)|Spécifie l’IID de l’interface COM vers laquelle pointé un pointeur d’interface.|
 |[immediatebind](immediatebind.md)|Indique que la base de données est immédiatement avertie de toutes les modifications apportées à une propriété d’un objet lié aux données.|
 |[importlib](importlib.md)|Rend disponibles les types qui ont déjà été compilés dans une autre bibliothèque de types pour la bibliothèque de types en cours de création.|
-|[import](import.md)|Spécifie un autre fichier .idl, .odl ou en-tête contenant les définitions que vous souhaitez référencer à partir de votre fichier .idl principal.|
+|[d'importation](import.md)|Spécifie un autre fichier .idl, .odl ou en-tête contenant les définitions que vous souhaitez référencer à partir de votre fichier .idl principal.|
 |[include](include-cpp.md)|Spécifie un ou plusieurs fichiers d’en-tête à inclure dans le fichier .idl généré.|
 |[includelib](includelib-cpp.md)|Génère un fichier .idl ou .h à inclure dans le fichier .idl généré.|
-|[in](in-cpp.md)|Indique qu’un paramètre est à passer à la procédure appelée à partir de la procédure appelante.|
+|[dans](in-cpp.md)|Indique qu’un paramètre est à passer à la procédure appelée à partir de la procédure appelante.|
 |[last_is](last-is.md)|Spécifie l’index du dernier élément de tableau doit être transmis.|
 |[lcid](lcid.md)|Vous permet de passer un identificateur de paramètres régionaux à une fonction.|
 |[length_is](length-is.md)|Spécifie le nombre d’éléments de tableau doit être transmis.|
 |[licensed](licensed.md)|Indique que la coclasse auquel il s’applique est concédé sous licence et doit être instanciée à l’aide de `IClassFactory2`.|
-|[local](local-cpp.md)|Vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête lorsqu’il est utilisé dans l’en-tête de l’interface. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.|
+|[locaux](local-cpp.md)|Vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête lorsqu’il est utilisé dans l’en-tête de l’interface. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.|
 |[max_is](max-is.md)|Désigne la valeur maximale pour un index de tableau valide.|
 |[module](module-cpp.md)|Définit le bloc de bibliothèque dans le fichier .idl.|
 |[ms_union](ms-union.md)|Contrôle l’alignement de représentation sous forme de données de réseau d’unions nonencapsulated.|
@@ -81,7 +81,7 @@ Notez que [idl_quote](idl-quote.md) vous permet d’utiliser des constructions M
 |[object](object-cpp.md)|Identifie une interface personnalisée ; synonyme d’attribut personnalisé.|
 |[odl](odl.md)|Identifie une interface en tant qu’objet Description Language (ODL) interface.|
 |[oleautomation](oleautomation.md)|Indique qu’une interface est compatible avec Automation.|
-|[optional](optional-cpp.md)|Spécifie un paramètre facultatif pour une fonction membre.|
+|[facultatifs](optional-cpp.md)|Spécifie un paramètre facultatif pour une fonction membre.|
 |[out](out-cpp.md)|Identifie des paramètres pointeurs qui sont retournés de la procédure appelée à la procédure appelante (du serveur au client).|
 |[pointer_default](pointer-default.md)|Spécifie l’attribut de pointeur par défaut pour tous les pointeurs à l’exception des pointeurs de niveau supérieur qui apparaissent dans les listes de paramètres.|
 |[pragma](pragma.md)|Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier .idl généré.|
@@ -94,7 +94,7 @@ Notez que [idl_quote](idl-quote.md) vous permet d’utiliser des constructions M
 |[range](range-cpp.md)|Spécifie une plage de valeurs autorisées pour les arguments ou les champs dont les valeurs sont définies au moment de l’exécution.|
 |[readonly](readonly-cpp.md)|Interdit l’assignation à une variable.|
 |[ref](ref-cpp.md)|Identifie un pointeur de référence.|
-|[requestedit](requestedit.md)|Indique que la propriété prend en charge la `OnRequestEdit` notification.|
+|[requestedit](requestedit.md)|Indique que la propriété prend en charge la notification `OnRequestEdit`.|
 |[restricted](restricted.md)|Spécifie qu’une bibliothèque ou un membre d’un module, une interface ou une dispinterface ne peut pas être appelée arbitrairement.|
 |[retval](retval.md)|Désigne le paramètre qui reçoit la valeur de retour du membre.|
 |[size_is](size-is.md)|Spécifie la taille de mémoire allouée pour les pointeurs de taille, taille des pointeurs vers des pointeurs de taille et seul ou les tableaux multidimensionnels.|

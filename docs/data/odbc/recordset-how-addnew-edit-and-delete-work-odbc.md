@@ -1,5 +1,5 @@
 ---
-title: "Recordset : fonctionnement d'AddNew, Edit et Delete (ODBC)"
+title: 'Recordset : Comment AddNew, modifier et supprimer des travaux (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 84d4c2f1128f7b73189f69b056eee96619c31ef5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331969"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033203"
 ---
-# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset : fonctionnement d'AddNew, Edit et Delete (ODBC)
+# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset : Comment AddNew, modifier et supprimer des travaux (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -39,9 +39,9 @@ Cette rubrique explique comment la `AddNew`, `Edit`, et `Delete` fonctions membr
 - [Fonctionnement de la suppression d’enregistrements](#_core_deleting_a_record)
 
 > [!NOTE]
->  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-En complément, vous pouvez souhaiter lire [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), qui décrit le rôle correspondant de RFX dans les opérations de mise à jour.
+En complément, vous pouvez souhaiter lire [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), qui décrit le rôle correspondant de RFX dans les opérations de mise à jour.
 
 ##  <a name="_core_adding_a_record"></a> Ajout d’un enregistrement
 
@@ -118,7 +118,7 @@ Lorsque vous appelez `Update` pour l’enregistrement modifié :
 
    1. Si des modifications sont apportées, `Update` construit une instance SQL **mise à jour** instruction. Les colonnes répertoriées dans le **mise à jour** instruction sont basées sur les données membres de champ qui ont été modifiés.
 
-   1. `Update` valide les modifications — exécute la **mise à jour** instruction — et l’enregistrement est modifié sur la source de données, mais non validé si une transaction est en cours d’exécution (consultez [Transaction : exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) pour plus d’informations sur les effets de la transaction sur la mise à jour). ODBC conserve une copie de l’enregistrement, ce qui modifie également.
+   1. `Update` valide les modifications — exécute la **mise à jour** instruction — et l’enregistrement est modifié sur la source de données, mais non validé si une transaction est en cours d’exécution (consultez [Transaction : Exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) pour plus d’informations sur les effets de la transaction sur la mise à jour). ODBC conserve une copie de l’enregistrement, ce qui modifie également.
 
    1. Contrairement au processus pour `AddNew`, le `Edit` processus ne restaure pas l’enregistrement stocké. L’enregistrement modifié reste en place comme enregistrement actif.
 
@@ -160,5 +160,5 @@ Pour plus d’informations sur les instructions SQL utilisées dans les opérati
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : informations complémentaires sur les mises à jour (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[Recordset : Plus d’informations sur les mises à jour (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
 [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)

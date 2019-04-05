@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: c1d8c8d894ed9a54c0dd3af775d6fbfda0385906
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1d87ea057b22984a0e0f8f5518899e36f7d0221
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597611"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038419"
 ---
 # <a name="hidden"></a>hidden
 
@@ -47,6 +47,6 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs d’interface](interface-attributes.md)<br/>
+[Attributs d'interface](interface-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)

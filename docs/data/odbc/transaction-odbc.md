@@ -10,12 +10,12 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: 0deb21a43ff17ca94efe29bdec37db7611331a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615811"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023668"
 ---
 # <a name="transaction-odbc"></a>Transaction (ODBC)
 
@@ -29,7 +29,7 @@ Une transaction est un moyen pour le groupe ou le lot, une série de mises à jo
 Appels à la `AddNew` et `Edit` fonctions membres d’un `CRecordset` affectent la source de données immédiatement lorsque vous appelez l’objet `Update`. `Delete` appels également immédiatement en vigueur. En revanche, vous pouvez utiliser une transaction composée de plusieurs appels à `AddNew`, `Edit`, `Update`, et `Delete`, qui sont effectué, mais pas validé jusqu'à ce que vous appeliez `CommitTrans` explicitement. En établissant une transaction, vous pouvez exécuter une série de tels appels tout en conservant la possibilité de les annuler. Si une ressource critique n’est pas disponible ou une autre condition empêche toute la transaction à partir de l’exécution, vous pouvez restaurer la transaction au lieu de la valider. Dans ce cas, aucune des modifications appartenant à la transaction affectent la source de données.
 
 > [!NOTE]
->  Actuellement, la classe `CRecordset` ne prend pas en charge les mises à jour de la source de données si vous avez implémenté l’extraction de lignes en bloc. Cela signifie que vous ne pouvez pas effectuer des appels vers `AddNew`, `Edit`, `Delete`, ou `Update`. Toutefois, vous pouvez écrire vous propres fonctions pour effectuer des mises à jour, puis appeler ces fonctions au sein d’une transaction donnée. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Actuellement, la classe `CRecordset` ne prend pas en charge les mises à jour de la source de données si vous avez implémenté l’extraction de lignes en bloc. Cela signifie que vous ne pouvez pas effectuer des appels vers `AddNew`, `Edit`, `Delete`, ou `Update`. Toutefois, vous pouvez écrire vous propres fonctions pour effectuer des mises à jour, puis appeler ces fonctions au sein d’une transaction donnée. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Affecte le jeu d’enregistrements, les transactions n’affectent que vous exécutez directement tant que vous utilisez ODBC **pas** associé à votre `CDatabase` objet ou une application ODBC **HSTMT** selon qui **pas**.
@@ -43,9 +43,9 @@ Dans les classes de base de données, vous effectuez des transactions via `CData
 
 Les rubriques suivantes fournissent plus d’informations sur la façon dont les transactions sont effectuées :
 
-- [Transaction : exécution d’une transaction dans un recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [Transaction : Exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
-- [Transaction : répercussions des transactions sur les mises à jour (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
+- [Transaction : Répercussions des Transactions sur les mises à jour (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
 ## <a name="see-also"></a>Voir aussi
 

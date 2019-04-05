@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 95b0e16e5f5d085e526f45e8e98898474fc5a17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449437"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033227"
 ---
 # <a name="sizeis"></a>size_is
 
@@ -25,7 +25,7 @@ Spécifiez la taille de mémoire allouée pour les pointeurs de taille, en taill
 
 ### <a name="parameters"></a>Paramètres
 
-*Expression*<br/>
+*expression*<br/>
 La taille de mémoire allouée pour les pointeurs de taille.
 
 ## <a name="remarks"></a>Notes

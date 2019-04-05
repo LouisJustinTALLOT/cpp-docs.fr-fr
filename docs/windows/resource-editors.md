@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328803"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038655"
 ---
 # <a name="resource-editors-c"></a>Éditeurs de ressources (C++)
 
@@ -40,9 +40,9 @@ L’éditeur approprié s’ouvre automatiquement quand vous créez ou que vous 
 |Utilisez|Pour modifier|
 |----------------|----------------|
 |[Éditeur d’accélérateurs](../windows/accelerator-editor.md)|Tables d’accélérateurs dans les projets Visual C++.|
-|[Binary Editor](binary-editor.md)|Informations de données binaires et ressources personnalisées dans des projets Visual C++, Visual Basic ou Visual C#.|
+|[éditeur binaire](binary-editor.md)|Informations de données binaires et ressources personnalisées dans des projets Visual C++, Visual Basic ou Visual C#.|
 |[Éditeur de boîtes de dialogue](../windows/dialog-editor.md)|Boîtes de dialogue dans des projets Visual C++.|
-|[Image Editor](../windows/image-editor-for-icons.md)|Bitmaps, icônes, curseurs et autres fichiers image dans des projets Visual C++, Visual Basic ou Visual C#.|
+|[Éditeur d’images](../windows/image-editor-for-icons.md)|Bitmaps, icônes, curseurs et autres fichiers image dans des projets Visual C++, Visual Basic ou Visual C#.|
 |[Éditeur de menus](../windows/menu-editor.md)|Ressources de menu dans des projets Visual C++.|
 |[Éditeur Ribbon](../mfc/ribbon-designer-mfc.md)|Ressources de ruban dans les projets MFC.|
 |[Éditeur de chaînes](../windows/string-editor.md)|Tableaux de chaînes dans des projets Visual C++.|
@@ -130,4 +130,4 @@ Aucun.
 
 [Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)<br/>
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
-[Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 8e3d5b3ff01dd37eec9f00dac2f2ce28013fc258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dc5cb06b3eb7f01667e4e1ec09dd60f9befae77
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659674"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026602"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl, classe
 
@@ -84,5 +84,5 @@ En outre, `IRowsetCreatorImpl::SetSite` permet OLE DB `DBPROPCANSCROLLBACKWARDS 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
-ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
+ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58142551"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039395"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avertissements du compilateur désactivés par défaut
 
@@ -30,7 +30,7 @@ Vous pouvez activer des avertissements qui sont normalement désactivées par d�
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)
 
-   `/Wall` active tous les avertissements qui sont désactivés par défaut. Si vous utilisez cette option, vous pouvez désactiver les avertissements individuels à l’aide de la [WD](../build/reference/compiler-option-warning-level.md) option.
+   `/Wall` Active tous les avertissements qui sont désactivés par défaut. Si vous utilisez cette option, vous pouvez désactiver les avertissements individuels à l’aide de la [WD](../build/reference/compiler-option-warning-level.md) option.
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
@@ -180,4 +180,4 @@ Cet avertissement était désactivé par défaut dans les versions du compilateu
 
 ## <a name="see-also"></a>Voir aussi
 
-[warning](../preprocessor/warning.md)
+[avertissement](../preprocessor/warning.md)

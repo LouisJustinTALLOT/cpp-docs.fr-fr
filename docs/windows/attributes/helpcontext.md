@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 921e5370303cb62830ec281bcefd7c03331efaeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552748"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038158"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -26,7 +26,7 @@ Spécifie un ID de contexte qui vous permet de l’utilisateur afficher des info
 ### <a name="parameters"></a>Paramètres
 
 *ID*<br/>
-ID de contexte de la rubrique d’aide. Consultez [aide HTML : aide contextuelle pour vos programmes](../../mfc/html-help-context-sensitive-help-for-your-programs.md) pour plus d’informations sur l’ID de contexte.
+ID de contexte de la rubrique d’aide. Consultez [aide HTML : Aide contextuelle pour vos programmes](../../mfc/html-help-context-sensitive-help-for-your-programs.md) pour plus d’informations sur l’ID de contexte.
 
 ## <a name="remarks"></a>Notes
 
@@ -42,7 +42,7 @@ Consultez l’exemple de [defaultvalue](defaultvalue.md) pour obtenir un exemple
 
 |||
 |-|-|
-|**S'applique à**|**interface**, **typedef**, **classe**, méthode, propriété|
+|**S'applique à**|**interface**, **typedef**, **class**, method, property|
 |**Renouvelable**|Non|
 |**Attributs requis**|Aucun.|
 |**Attributs non valides**|Aucun.|
@@ -52,7 +52,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs d’interface](interface-attributes.md)<br/>
+[Attributs d'interface](interface-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>

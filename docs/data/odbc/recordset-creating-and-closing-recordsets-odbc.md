@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : création et fermeture de recordsets (ODBC)'
+title: 'Recordset : Création et fermeture de Recordsets (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, creating
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: d98f7e59e52b86a1b9b1c3ffac5c3e7160e6c36d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581504"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041265"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset : création et fermeture de recordsets (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset : Création et fermeture de Recordsets (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -71,10 +71,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Après avoir appelé `Open`, utilisez les membres de données et des fonctions de membre de l’objet pour travailler avec les enregistrements. Dans certains cas, vous souhaiterez actualiser ou actualiser le jeu d’enregistrements pour inclure les modifications qui se sont produites sur la source de données. Pour plus d’informations, consultez [Recordset : actualisant un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Après avoir appelé `Open`, utilisez les membres de données et des fonctions de membre de l’objet pour travailler avec les enregistrements. Dans certains cas, vous souhaiterez actualiser ou actualiser le jeu d’enregistrements pour inclure les modifications qui se sont produites sur la source de données. Pour plus d’informations, consultez [jeu d’enregistrements : Actualisation d’un jeu d’enregistrements (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  La chaîne de connexion que vous utilisez pendant le développement n’est peut-être pas la même chaîne de connexion nécessitant les utilisateurs finaux. Pour trouver des idées sur la généralisation de votre application à cet égard, consultez [Source de données : gestion des connexions (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  La chaîne de connexion que vous utilisez pendant le développement n’est peut-être pas la même chaîne de connexion nécessitant les utilisateurs finaux. Pour trouver des idées sur la généralisation de votre application à cet égard, consultez [Source de données : Gestion des connexions (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
 ##  <a name="_core_setting_recordset_options"></a> Définition des Options de jeu d’enregistrements
 
@@ -110,5 +110,5 @@ Lorsque vous avez terminé avec votre jeu d’enregistrements, vous devez suppri
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[Recordset : ajout, modification et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Recordset : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[Recordset : Ajout, la mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

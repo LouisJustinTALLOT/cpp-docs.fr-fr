@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 246dee3c7d0c1a5a4f495fddf709833acc2c885e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562989"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033285"
 ---
 # <a name="how-to-edit-an-image"></a>Procédure : Modifier une Image
 
@@ -209,20 +209,20 @@ Vous pouvez définir ou modifier les propriétés d’une image à l’aide de l
    |--------------|-----------------|
    |**Couleurs**|Spécifie le jeu de couleurs de l’image. Sélectionnez **Monochrome**, **16**, ou **256**, ou **couleurs vraies**.<br/><br/>Si vous avez déjà dessiné l’image avec une palette de couleurs-16, en sélectionnant **Monochrome** provoque des substitutions de noir et blanc pour les couleurs dans l’image. Contraste n’est pas toujours conservé : par exemple, les zones adjacentes rouge et verte sont converties en noir.|
    |**Nom de fichier**|Spécifie le nom du fichier image.<br/><br/>Par défaut, Visual Studio assigne un nom de fichier de base créé en supprimant les quatre premiers caractères (« IDB_ ») à partir de l’identificateur de ressource par défaut (IDB_BITMAP1) et en ajoutant l’extension appropriée. Le nom de fichier pour l’image dans cet exemple serait *BITMAP1.bmp*. Vous pouvez le renommer *MABITMAP1.bmp*.|
-   |**Height**|Définit la hauteur de l’image (en pixels). La valeur par défaut est 48.<br/><br/>L’image est rognée ou espace vide est ajouté en dessous de l’image existante.|
-   |**ID**|Définit l’identificateur de ressource.<br/><br/>Pour une image, Microsoft Visual Studio, par défaut, attribue l’identificateur disponible suivant dans une série : IDB_BITMAP1, IDB_BITMAP2 et ainsi de suite. Des noms similaires sont utilisés pour les icônes et curseurs.|
+   |**Hauteur **|Définit la hauteur de l’image (en pixels). La valeur par défaut est 48.<br/><br/>L’image est rognée ou espace vide est ajouté en dessous de l’image existante.|
+   |**Id**|Définit l’identificateur de ressource.<br/><br/>Pour une image, Microsoft Visual Studio, par défaut, attribue l’identificateur disponible suivant dans une série : IDB_BITMAP1, IDB_BITMAP2 et ainsi de suite. Des noms similaires sont utilisés pour les icônes et curseurs.|
    |**Palette**|Modifications des propriétés de couleur.<br/><br/>Double-clic pour sélectionner une couleur et afficher la [boîte de dialogue Sélecteur de couleurs personnalisées](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Définir la couleur en tapant des valeurs RVB ou TSL dans les zones de texte appropriées.|
    |**SaveCompressed**|Indique si l’image est dans un format compressé. Cette propriété est en lecture seule.<br/><br/>Visual Studio ne vous permet d’enregistrer des images dans un format compressé, donc pour toutes les images créées dans Visual Studio, cette propriété sera **False**. Si vous ouvrez une image compressée (créée dans un autre programme) dans Visual Studio, cette propriété sera **True**. Si vous enregistrez une image compressée à l’aide de Visual Studio, elle sera décompressée et cette propriété est rétablis au **False**.|
-   |**Width**|Définit la largeur de l’image (en pixels). La valeur par défaut pour les bitmaps est 48.<br/><br/>L’image est rognée ou espace vide est ajouté à droite de l’image existante.|
+   |**Largeur**|Définit la largeur de l’image (en pixels). La valeur par défaut pour les bitmaps est 48.<br/><br/>L’image est rognée ou espace vide est ajouté à droite de l’image existante.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)<br/>
-[Guide pratique pour créer une icône ou une autre image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Guide pratique pour utiliser un outil de dessin](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Guide pratique pour utiliser les couleurs](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Éditeur d'images pour les icônes](../windows/image-editor-for-icons.md)<br/>
+[Procédure : Créez une icône ou une autre Image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Procédure : Utiliser un outil de dessin](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Procédure : Utiliser des couleurs](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

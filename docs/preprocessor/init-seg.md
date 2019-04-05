@@ -9,16 +9,16 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: f11ec6d3cee7af2ce785555af9b73d8c0eb58638
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532623"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026628"
 ---
 # <a name="initseg"></a>init_seg
 
-**Spécifique à C++**
+**Section spécifique à C++**
 
 Spécifie un mot clé ou une section de code qui affecte l'ordre dans lequel le code de démarrage est exécuté.
 
@@ -36,13 +36,13 @@ La signification des termes du contrat *segment* et *section* sont interchangeab
 
 Les options pour le **init_seg** pragma sont :
 
-*compiler*<br/>
+*compilateur*<br/>
 Réservé pour l'initialisation de la bibliothèque Runtime C Microsoft. Les objets de ce groupe sont construits en premier.
 
 *lib*<br/>
 Disponible pour les initialisations des fournisseurs de bibliothèques de classes tierces. Objets de ce groupe sont construits après ceux marqués *compilateur* mais avant les autres.
 
-*Utilisateur*<br/>
+*utilisateur*<br/>
 Disponible pour tout utilisateur. Les objets de ce groupe sont construits en dernier.
 
 *nom de la section* autorise la spécification explicite de la section de l’initialisation. Objets dans spécifié par l’utilisateur *nom de la section* ne sont pas implicitement construits ; Toutefois, leurs adresses sont placées dans la section nommée par *nom de la section*.

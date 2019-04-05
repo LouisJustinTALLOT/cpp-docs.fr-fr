@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: 813f13e20e74890cfcb52ae25234aa348e1d522d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b28052fbe0a1ab0e1a6f037ce61f43abea5cf771
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496293"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028478"
 ---
 # <a name="rdtscp"></a>__rdtscp
 
@@ -84,4 +84,4 @@ Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reprodu
 ## <a name="see-also"></a>Voir aussi
 
 [__rdtsc](../intrinsics/rdtsc.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)

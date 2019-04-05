@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 202d5b23a5e2e8e673e3c220b9618cfe6cd4f0d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525604"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034087"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 
-**Spécifique à C++**
+**Section spécifique à C++**
 
 Indique que la bibliothèque de types est écrite dans le fichier .tlh et que le code généré par attributs est conservé.
 
@@ -30,9 +30,9 @@ embedded_idl[("param")]
 *param*<br/>
 Peut avoir l'une des deux valeurs suivantes :
 
-- **emitidl**: informations de Type importées à partir du typelib seront présentes dans le fichier IDL généré pour le projet avec attributs.  Il s'agit de la valeur par défaut qui sera appliquée si vous ne spécifiez pas de paramètre pour `embedded_idl`.
+- **emitidl**: Les informations de type importées à partir de la typelib sera présentes dans le fichier IDL généré pour le projet avec attributs.  Il s'agit de la valeur par défaut qui sera appliquée si vous ne spécifiez pas de paramètre pour `embedded_idl`.
 
-- **no_emitidl**: informations de Type importées à partir du typelib ne seront pas présentes dans le fichier IDL généré pour le projet avec attributs.
+- **no_emitidl**: Informations de type importées à partir du typelib ne seront pas présentes dans le fichier IDL généré pour le projet avec attributs.
 
 ## <a name="example"></a>Exemple
 
@@ -46,9 +46,9 @@ Peut avoir l'une des deux valeurs suivantes :
 
 ## <a name="remarks"></a>Notes
 
-**FIN spécifique à C++**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import, directive](../preprocessor/hash-import-directive-cpp.md)

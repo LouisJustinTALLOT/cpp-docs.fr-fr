@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bf1ae81184d53dd271f63c26e8f9a52a6410b232
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627445"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038445"
 ---
 # <a name="pack"></a>pack
 Spécifie l'alignement de compression pour des membres de structure, d'union et de classe.
@@ -35,7 +35,7 @@ Spécifie l'alignement de compression pour des membres de structure, d'union et 
 **pop**<br/>
 (Facultatif) Supprime l’enregistrement du haut de la pile interne du compilateur. Si *n* n’est pas spécifié avec **pop**, alors la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de compression. Si *n* est spécifié, par exemple, `#pragma pack(pop, 16)`, *n* devient la nouvelle valeur d’alignement de compression. Si vous effectuez un pop avec *identificateur*, par exemple, `#pragma pack(pop, r1)`, puis tous les enregistrements de la pile sont dépilés jusqu'à ce que l’enregistrement a *identificateur* est trouvé. Cet enregistrement est dépilé et la valeur de compression associée à l'enregistrement obtenu en haut de la pile est la nouvelle valeur d'alignement de compression. Si vous effectuez un pop avec un *identificateur* qui est introuvable dans tous les enregistrements de la pile, puis le **pop** est ignoré.
 
-*identifier*<br/>
+*'identificateur'*<br/>
 (Facultatif) Lorsqu’il est utilisé avec *push*, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.
 
 *n*<br/>

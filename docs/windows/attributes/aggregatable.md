@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 74a561b9b70c5aee36781d102835c73dec2c3ac2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582455"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029289"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -25,7 +25,7 @@ Indique que la classe prend en charge l’agrégation.
 
 ### <a name="parameters"></a>Paramètres
 
-*valeur*<br/>
+*par défaut*<br/>
 (Facultatif) Un paramètre pour indiquer quand l’objet COM peut être agrégée :
 
 - `never` L’objet COM ne peut pas être agrégée.
@@ -72,7 +72,7 @@ class CMyClass {};
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**|
+|**S'applique à**|**class**, **struct**|
 |**Renouvelable**|Non|
 |**Attributs requis**|Un ou plusieurs des opérations suivantes : `coclass`, `progid`, ou `vi_progid`.|
 |**Attributs non valides**|Aucun.|
@@ -84,4 +84,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Aggregation](/windows/desktop/com/aggregation)
+[Agrégation](/windows/desktop/com/aggregation)

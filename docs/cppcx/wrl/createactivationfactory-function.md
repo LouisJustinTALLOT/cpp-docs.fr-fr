@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-ms.openlocfilehash: 07bc0dceb8066faf9c1beab64d48245d8735aa64
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: ca3469128cf3d412138d5d39a1587cbc20150699
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784659"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040604"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory (fonction)
 
@@ -30,7 +30,7 @@ template<typename Factory>
 
 ### <a name="parameters"></a>Paramètres
 
-*flags*<br/>
+*indicateurs*<br/>
 Une combinaison d’une ou plusieurs [RuntimeClassType](runtimeclasstype-enumeration.md) valeurs d’énumération.
 
 *entry*<br/>

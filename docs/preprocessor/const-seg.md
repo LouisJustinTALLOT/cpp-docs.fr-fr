@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648342"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029620"
 ---
 # <a name="constseg"></a>const_seg
 Spécifie le segment où [const](../cpp/const-cpp.md) variables sont stockées dans le fichier .obj.
@@ -32,15 +32,15 @@ Spécifie le segment où [const](../cpp/const-cpp.md) variables sont stockées d
 **pop**<br/>
 (Facultatif) Supprime un enregistrement à partir du haut de la pile interne du compilateur.
 
-*identifier*<br/>
+*'identificateur'*<br/>
 (Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.
 
 À l’aide de *identificateur* permet à plusieurs enregistrements à dépiler avec une seule **pop** commande.
 
-«*segment-name*»<br/>
+"*segment-name*"<br/>
 (Facultatif) Le nom d’un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom de segment actif.
 
-«*segment-classe*»<br/>
+"*segment-class*"<br/>
 (Facultatif) Inclus pour la compatibilité avec C++ antérieures à la version 2.0. Elle est ignorée.
 
 ## <a name="remarks"></a>Notes
@@ -51,7 +51,7 @@ Les fichiers OBJ peuvent être affichés avec le [dumpbin](../build/reference/du
 
 La définition d'un objet qui requiert une initialisation dynamique dans un `const_seg` entraîne un comportement non défini.
 
-`#pragma const_seg` sans paramètre réinitialise le segment sur .rdata.
+`#pragma const_seg` sans paramètres réinitialise le segment sur .rdata.
 
 ## <a name="example"></a>Exemple
 

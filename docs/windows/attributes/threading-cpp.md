@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: 0feb258941993ff9776bb9f94f61a556d7d4caec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdebf06a62ebbd1d8648b9777fe200bc7a373261
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449840"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038276"
 ---
 # <a name="threading-c"></a>thread (C++)
 
@@ -25,7 +25,7 @@ Spécifie le modèle de thread pour un objet COM.
 
 ### <a name="parameters"></a>Paramètres
 
-*model*<br/>
+*modèle*<br/>
 (Facultatif) L’un des modèles de threads suivants :
 
 - `apartment` (modèle de thread cloisonné)
@@ -58,7 +58,7 @@ Consultez le [concédé sous licence](licensed.md) exemple pour un exemple d’u
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**|
+|**S'applique à**|**class**, **struct**|
 |**Renouvelable**|Non|
 |**Attributs requis**|**coclasse**|
 |**Attributs non valides**|Aucun.|

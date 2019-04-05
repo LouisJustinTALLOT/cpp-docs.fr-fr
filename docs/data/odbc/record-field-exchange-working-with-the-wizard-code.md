@@ -1,5 +1,5 @@
 ---
-title: "Record Field Exchange : utilisation du code écrit par l'Assistant"
+title: 'Record Field Exchange : Utilisation de l’Assistant de Code'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DoFieldExchange method, overriding
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492116"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041290"
 ---
-# <a name="record-field-exchange-working-with-the-wizard-code"></a>Record Field Exchange : utilisation du code écrit par l'Assistant
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>Record Field Exchange : Utilisation de l’Assistant de Code
 
 Cette rubrique explique le code que l’Assistant Application MFC et **ajouter une classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) écrire prendre en charge RFX et comment vous pouvez modifier ce code.
 
 > [!NOTE]
->  Cette rubrique s’applique aux classes dérivées de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, RFX en bloc (RFX en bloc) est implémentée. RFX en bloc est similaire à RFX. Pour comprendre les différences, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette rubrique s’applique aux classes dérivées de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, RFX en bloc (RFX en bloc) est implémentée. RFX en bloc est similaire à RFX. Pour comprendre les différences, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Lorsque vous créez une classe de jeu d’enregistrements avec l’Assistant Application MFC ou **ajouter une classe**, l’Assistant écrit les éléments associés à RFX suivants pour vous, en fonction de la source de données de table et de choix de la colonne que vous effectuez dans l’Assistant :
 
@@ -99,7 +99,7 @@ Notez les fonctionnalités clées suivantes de la fonction :
 
 - Un appel à `CFieldExchange::SetFieldType`, jusqu'à la `pFX` pointeur. Cet appel indique que tous les appels de fonction RFX à la fin de `DoFieldExchange` ou l’appel suivant à `SetFieldType` sont des colonnes de sortie. Pour plus d’informations, consultez [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Plusieurs appels à la `RFX_Text` fonction globale — un par membre de données de champ (qui sont tous `CString` variables dans l’exemple). Ces appels spécifient la relation entre un nom de colonne sur la source de données et un membre de données de champ. Les fonctions RFX effectuent le transfert de données réelles. La bibliothèque de classes fournit des fonctions RFX pour tous les types de données courants. Pour plus d’informations sur les fonctions RFX, consultez [Record Field Exchange : utilisation des fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Plusieurs appels à la `RFX_Text` fonction globale — un par membre de données de champ (qui sont tous `CString` variables dans l’exemple). Ces appels spécifient la relation entre un nom de colonne sur la source de données et un membre de données de champ. Les fonctions RFX effectuent le transfert de données réelles. La bibliothèque de classes fournit des fonctions RFX pour tous les types de données courants. Pour plus d’informations sur les fonctions RFX, consultez [Record Field Exchange : Utilisation des fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  L’ordre des colonnes dans votre jeu de résultats doit correspondre à l’ordre des appels de fonction RFX dans `DoFieldExchange`.

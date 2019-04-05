@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 01916a9306faa4159f54225b745fd56c35b5ae16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641781"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041135"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 
@@ -20,7 +20,7 @@ ms.locfileid: "50641781"
 
 Le `_ReturnAddress` intrinsèque fournit l’adresse de l’instruction dans la fonction appelante qui sera exécutée après le contrôle retourne à l’appelant.
 
-Générer le programme et pas à pas dans le débogueur suivants. À mesure que vous parcourez le programme, notez l’adresse qui est retourné à partir de `_ReturnAddress`. Puis, immédiatement après le retour de la fonction où `_ReturnAddress` a été utilisé, ouvrez le [Comment : utiliser la fenêtre code machine](/visualstudio/debugger/how-to-use-the-disassembly-window) et notez que l’adresse de l’instruction suivante à exécuter correspond à l’adresse retournée par `_ReturnAddress`.
+Générer le programme et pas à pas dans le débogueur suivants. À mesure que vous parcourez le programme, notez l’adresse qui est retourné à partir de `_ReturnAddress`. Puis, immédiatement après le retour de la fonction où `_ReturnAddress` a été utilisé, ouvrez le [Comment : La fenêtre code machine](/visualstudio/debugger/how-to-use-the-disassembly-window) et notez que l’adresse de l’instruction suivante à exécuter correspond à l’adresse retournée par `_ReturnAddress`.
 
 Les optimisations telles que mai incorporation (inlining) affecte l’adresse de retour. Par exemple, si le programme d’exemple ci-dessous est compilé avec [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` seront incorporées dans la fonction appelante, `main`. Par conséquent, les appels à `_ReturnAddress` de `inline_func` et `main` chacun génère la même valeur.
 
@@ -66,5 +66,5 @@ int main(void)
 ## <a name="see-also"></a>Voir aussi
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)

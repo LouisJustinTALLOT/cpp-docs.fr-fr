@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 7db2d3d71deecda06e39772541658dfada72ae3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415264"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039726"
 ---
 # <a name="ccommand-class"></a>CCommand, classe
 
@@ -83,7 +83,7 @@ Le type de classe de l’ensemble de lignes (tel que `CArrayRowset` ou `CNoRowse
 *TMultiple*<br/>
 Pour utiliser une commande OLE DB qui peut retourner plusieurs résultats, spécifiez [CMultipleResults](../../data/oledb/cmultipleresults-class.md). Sinon, utilisez [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Pour plus d’informations, consultez [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85)).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -101,7 +101,7 @@ Pour utiliser une commande OLE DB qui peut retourner plusieurs résultats, spéc
 
 |||
 |-|-|
-|[Create](#create)|Crée une nouvelle commande pour la session spécifiée, puis définit le texte de commande.|
+|[Créer](#create)|Crée une nouvelle commande pour la session spécifiée, puis définit le texte de commande.|
 |[CreateCommand](#createcommand)|Crée une nouvelle commande.|
 |[GetParameterInfo](#getparameterinfo)|Obtient une liste de paramètres de la commande, leurs noms et leurs types.|
 |[Préparer](#prepare)|Valide et optimise la commande actuelle.|
@@ -416,5 +416,5 @@ Cette méthode encapsule la méthode OLE DB [ICommandPrepare::Unprepare](/previo
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

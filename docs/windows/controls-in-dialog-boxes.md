@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563353"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023696"
 ---
 # <a name="dialog-box-controls-c"></a>Contrôles de boîte de dialogue (C++)
 
@@ -38,16 +38,16 @@ Les contrôles standards disponibles dans le **boîte à outils** valeur par dé
 
 |Nom du contrôle|Événement par défaut|
 |---|---|
-|[Contrôle de bouton](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Contrôle de case à cocher](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Contrôle Button](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[Contrôle Check Box ](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[Contrôle Combo Box](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Contrôle d’édition](../mfc/reference/cedit-class.md)|EN_CHANGE|
+|[Contrôle Edit](../mfc/reference/cedit-class.md)|EN_CHANGE|
 |Contrôle Group box|(non applicable)|
 |[Contrôle List Box](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
 |[Contrôle Radio Button](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[Contrôle Static Text](../mfc/reference/cstatic-class.md)|(non applicable)|
-|[Contrôle d’image](../mfc/reference/cpictureholder-class.md)|(non applicable)|
-|[Contrôle Rich Edit 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
+|[Contrôle Picture](../mfc/reference/cpictureholder-class.md)|(non applicable)|
+|[Contrôle Rich Edit 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
 |[Contrôle de barre de défilement](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
@@ -57,17 +57,17 @@ Le [contrôles communs Windows](../mfc/controls-mfc.md) disponibles dans le **bo
 
 |Nom du contrôle|Événement par défaut|
 |---|---|
-|[Contrôle Slider](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[Slider (contrôle)](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
 |[Contrôle Spin](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Contrôle de progression](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
+|[Contrôle Progress](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[Contrôle Hot Key](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Contrôle de liste](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Contrôle d’arborescence](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Contrôle onglet](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
+|[Contrôle List](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
+|[Contrôle Tree](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
+|[Contrôle Tab](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
 |[Contrôle Animation](../mfc/using-an-animation-control.md)|ACN_START|
 |[Contrôle Date Time Picker](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
 |[Contrôle Month Calendar](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[Contrôle de l’adresse IP](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
+|[Contrôle IP Address](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
 |[Contrôle Extended Combo Box](../mfc/creating-an-extended-combo-box-control.md)||
 |Contrôle personnalisé|TTN_GETDISPINFO|
 
@@ -95,7 +95,7 @@ Pour ces contrôles personnalisés, vous êtes limité à :
 
 - Définir le style étendu.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

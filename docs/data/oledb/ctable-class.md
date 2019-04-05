@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: ff2a139c16b6678bedf38c64a16dce28fa53c5fe
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425196"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038765"
 ---
 # <a name="ctable-class"></a>CTable, classe
 
@@ -41,7 +41,7 @@ Classe d’accesseur.
 *TRowset*<br/>
 Une classe rowset.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -110,5 +110,5 @@ Pour plus d’informations, consultez [IOpenRowset::OpenRowset](/previous-versio
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

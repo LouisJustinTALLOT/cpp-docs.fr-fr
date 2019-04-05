@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: 70e618944ddac3468c0e49443cde116c8496df7c
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626766"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033318"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd, fonctions intrinsèques
 
@@ -172,7 +172,7 @@ __int64 _InterlockedAnd64_rel(
 
 #### <a name="parameters"></a>Paramètres
 
-*value*<br/>
+*par défaut*<br/>
 [in, out] Pointeur vers le premier opérande, à remplacer par le résultat.
 
 *Masque*<br/>
@@ -182,9 +182,9 @@ __int64 _InterlockedAnd64_rel(
 
 Valeur d’origine du premier opérande.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-|Intrinsèque|Architecture|En-tête|
+|Intrinsèque|Architecture|Header|
 |---------------|------------------|------------|
 |`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|
@@ -229,5 +229,5 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

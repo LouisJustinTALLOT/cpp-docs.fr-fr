@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 63e27e992778776e186345da07937d1a88844e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a7829252cebb726363c67c990a94d08b0d6467a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611014"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032308"
 ---
 # <a name="floatcontrol"></a>float_control
 
@@ -21,11 +21,11 @@ Spécifie le comportement de virgule flottante d'une fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma float_control** [ **(** [ *valeur* **,** *paramètre* [ **, push** ]] | [ **push** | **pop** ] **)** ]
+> **#pragma float_control** [ **(** [ *value* **,** *setting* [ **, push** ] ] | [ **push** | **pop** ] **)** ]
 
 ## <a name="options"></a>Options
 
-*valeur*, *paramètre* [, **push**]<br/>
+*value*, *setting* [, **push**]<br/>
 Spécifie le comportement de virgule flottante. *valeur* peut être **précise**, **strict**, ou **sauf**. Pour plus d’informations, consultez l’article [/fp (Spécifier le comportement de virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md). Le *paramètre* peut être **sur** ou **hors**.
 
 Si *valeur* est **strict**, les paramètres des options **strict** et **sauf** sont spécifiées par *paramètre* . **à l’exception** peut uniquement être définie sur **sur** lorsque **précise** ou **strict** est également défini sur **sur**.

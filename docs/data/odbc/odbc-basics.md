@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 81b1f6d06d909b5b046703b97c4574270efbdd46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591722"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033240"
 ---
 # <a name="odbc-basics"></a>Éléments fondamentaux relatifs à ODBC
 
@@ -25,7 +25,7 @@ Cette rubrique fournit les notions de base de connectivité ODBC (Open Database)
 
 - [Les composants ODBC que vous devez redistribuer avec vos Applications](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-Vous devez également lire la rubrique connexe [ODBC : bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Vous devez également lire la rubrique connexe [ODBC : La bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
 > Sources de données ODBC sont accessibles via les classes ODBC MFC, comme décrit dans cette rubrique, ou via les classes de données Access objet DAO (MFC).

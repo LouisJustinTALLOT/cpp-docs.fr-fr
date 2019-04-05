@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563002"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029393"
 ---
 # <a name="resource-files-c"></a>Fichiers de ressources (C++)
 
@@ -125,12 +125,12 @@ Pour afficher la version et tapez les informations contenues dans une ressource 
 
    - Pour ouvrir dans un autre éditeur, cliquez sur le *.manifest* fichier et sélectionnez **ouvrir avec**. Spécifiez l’éditeur pour l’utiliser, puis sélectionnez **Open**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)<br/>
-[Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
-[Éditeurs de ressources](../windows/resource-editors.md)<br/>
+[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[éditeurs de ressources](../windows/resource-editors.md)<br/>

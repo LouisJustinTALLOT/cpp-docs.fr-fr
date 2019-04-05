@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: c50b14d1905d7d827215ba9583026f8489c3a1e0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825528"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035807"
 ---
 # <a name="ltcodegt"></a>&lt;code&gt;
 
@@ -27,7 +27,7 @@ La balise \<code> vous permet d’indiquer une ou plusieurs lignes comme étant 
 
 #### <a name="parameters"></a>Paramètres
 
-*content*<br/>
+*contenu*<br/>
 Texte à marquer comme étant du code.
 
 ## <a name="remarks"></a>Notes

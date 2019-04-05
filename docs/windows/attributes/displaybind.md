@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: 42eedf5d67de71860ecfe5f224914b80f3674a43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b16e809781170d0c5dfe301e6dd73e6a27046835
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493754"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028612"
 ---
 # <a name="displaybind"></a>displaybind
 

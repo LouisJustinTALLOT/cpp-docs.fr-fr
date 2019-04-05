@@ -1,18 +1,18 @@
 ---
-title: "Recordset : déclaration de la classe d'une table (ODBC)"
+title: 'Recordset : Déclaration de la classe d’une Table (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: 28de6ed8dcbf34e2ab2c140fdc17a8cd803501de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476685"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038242"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset : déclaration de la classe d'une table (ODBC)
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset : Déclaration de la classe d’une Table (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -27,6 +27,6 @@ Autres utilisations pour les jeux d’enregistrements :
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : création et fermeture de recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
-[Recordset : déclaration de la classe d’une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
-[Recordset : création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Recordset : Création et fermeture de Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[Recordset : Déclaration de la classe d’une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Recordset : Création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

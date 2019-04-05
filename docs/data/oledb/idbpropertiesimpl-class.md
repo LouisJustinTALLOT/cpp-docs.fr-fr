@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 13c41b97190ff13b87361b6e8344b8f17798708a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 807cdf55a5a2fa6e0cc063c22b1685d8156c41a5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413340"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031337"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl, classe
 
@@ -46,7 +46,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 *T*<br/>
 Votre classe, dérivée de `IDBPropertiesImpl`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -144,5 +144,5 @@ Si le fournisseur est initialisé, cette méthode définit les valeurs des propr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

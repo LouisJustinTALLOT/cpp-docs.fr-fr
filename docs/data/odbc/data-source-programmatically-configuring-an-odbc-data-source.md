@@ -1,5 +1,5 @@
 ---
-title: "Source de données : configuration d'une source de données ODBC par programme"
+title: 'Source de données : Configuration d’une Source de données ODBC par programmation'
 ms.date: 11/04/2016
 f1_keywords:
 - SQLConfigDataSource
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677368"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037952"
 ---
-# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Source de données : configuration d'une source de données ODBC par programme
+# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Source de données : Configuration d’une Source de données ODBC par programmation
 
 Cette rubrique explique comment vous pouvez configurer des noms de source de données Open Database Connectivity (ODBC) par programmation. Cela vous donne une flexibilité pour accéder aux données sans forcer l’utilisateur à utiliser explicitement l’administrateur ODBC ou autres programmes pour spécifier les noms de sources de données.
 
@@ -41,7 +41,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
 
 Notez que la source de données est en réalité un répertoire (C:\EXCELDIR) ; ce répertoire doit exister. Le pilote Excel utilise les répertoires comme ses sources de données et les fichiers comme des tables individuelles (une table par fichier .xls).
 
-Pour plus d’informations sur la création de tables, consultez [Source de données : création d’une Table dans une Source de données ODBC par programmation](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
+Pour plus d’informations sur la création de tables, consultez [Source de données : Création d’une Table dans une Source de données ODBC par programmation](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
 
 Les informations suivantes décrivent les paramètres qui doivent être transmis à la `::SQLConfigDataSource` fonction API ODBC. Pour utiliser `::SQLConfigDataSource`, vous devez inclure le fichier d’en-tête Odbcinst.h et utiliser la bibliothèque d’importation Odbcinst.lib. En outre, Odbccp32.dll doit se trouver dans le chemin d’accès au moment de l’exécution (ou Odbcinst.dll pour les plateformes 16 bits).
 
@@ -94,7 +94,7 @@ Une façon de trouver les noms de clés et valeurs pour le *lpszAttributes* para
 
    - Pour 32 bits, recherchez la clé **HKEY_CURRENT_USER\Software\ODBC\ODBC. Sources de données INI\ODBC** dans le volet gauche.
 
-      Le volet droit répertorie les entrées au format : « pub : REG_SZ :*<data source name>*», où *<data source name>* est une source de données qui a déjà été configurée avec les paramètres souhaités pour le pilote que vous avez l’intention à utiliser. Sélectionnez la source de données, par exemple, SQL Server. Les éléments qui suivent la chaîne « pub : » sont, dans l’ordre, le nom de clé et la valeur à utiliser dans votre *lpszAttributes* paramètre.
+      Le volet droit répertorie les entrées au format : « pub : REG_SZ :*<data source name>*», où *<data source name>* est une source de données qui a déjà été configurée avec les paramètres souhaités pour le pilote que vous souhaitez utiliser. Sélectionnez la source de données, par exemple, SQL Server. Les éléments qui suivent la chaîne « pub : » sont, dans l’ordre, le nom de clé et la valeur à utiliser dans votre *lpszAttributes* paramètre.
 
    - Pour les plateformes 16 bits, recherchez la section dans le fichier Odbc.ini marqué par [*\<nom de source de données >*].
 

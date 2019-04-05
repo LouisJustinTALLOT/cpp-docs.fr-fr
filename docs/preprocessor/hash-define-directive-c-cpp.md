@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: dec555de64a3ebd166bdff5558957f09e1c2755e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653750"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039497"
 ---
 # <a name="define-directive-cc"></a>#define, directive (C/C++)
 
@@ -23,7 +23,7 @@ Le **#define** crée un *macro*, qui est l’association d’un identificateur o
 
 ## <a name="syntax"></a>Syntaxe
 
-`#define` *identificateur* *chaîne de jeton*<sub>opt</sub>
+`#define` *identifier* *token-string*<sub>opt</sub>
 
 `#define` *identificateur* `(` *identificateur*<sub>opt</sub> `,` *...*  `,` *identificateur*<sub>opt</sub> `)` *chaîne de jeton*<sub>opt</sub>
 
@@ -37,11 +37,11 @@ Un `#define` sans un *chaîne de jeton* supprime les occurrences de *identificat
 
 La deuxième forme de syntaxe définit une macro de type fonction avec des paramètres. Cette forme accepte la liste facultative des paramètres qui doivent apparaître entre parenthèses. Une fois la macro définie, chaque occurrence suivante de *identificateur*( *identificateur*<sub>opt</sub>,..., *identificateur* <sub>opt</sub> ) est remplacé par une version de la *chaîne de jeton* argument qui a des arguments réels sont remplacés par des paramètres formels.
 
-Les noms de paramètres formels apparaissent dans *chaîne de jeton* pour marquer les emplacements où les valeurs réelles sont substituées. Chaque nom de paramètre peut apparaître plusieurs fois dans *chaîne de jeton*, et les noms peuvent apparaître dans n’importe quel ordre. Le nombre d’arguments de l’appel doit correspondre au nombre de paramètres de la définition de macro. L'utilisation répandue des parenthèses garantit que les arguments réels complexes sont interprétés correctement.
+Les noms de paramètres formels apparaissent dans *chaîne de jeton* pour marquer les emplacements où les valeurs réelles sont substituées. Chaque nom de paramètre peut apparaître plusieurs fois dans *chaîne de jeton*, et les noms peuvent apparaître dans n’importe quel ordre. Le nombre d'arguments de l'appel doit correspondre au nombre de paramètres de la définition de macro. L'utilisation répandue des parenthèses garantit que les arguments réels complexes sont interprétés correctement.
 
 Les paramètres formels de la liste sont séparés par des virgules. Chaque nom contenu dans la liste doit être unique et la liste doit être placée entre parenthèses. Aucun espace ne peut séparer *identificateur* et la parenthèse ouvrante. Utilisez la concaténation de ligne : placer une barre oblique inverse (`\`) immédiatement avant le caractère de saut de ligne, pour les longues directives sur plusieurs lignes de code source. La portée d’un nom de paramètre formel s’étend vers la nouvelle ligne se termine *chaîne de jeton*.
 
-Lorsqu’une macro a été définie dans la deuxième forme de syntaxe, les instances textuelles suivantes suivies d’une liste d’arguments indiquent un appel de macro. Les arguments réels qui suivent une instance de *identificateur* dans le fichier source sont mis en correspondance avec des paramètres formels correspondants dans la définition de macro. Chaque paramètre formel dans *chaîne de jeton* qui n’est pas précédé par un enchaînement (`#`), de charizing (`#@`), ou de collage de jeton (`##`) (opérateur), ou pas suivi par un `##` opérateur, est remplacé par l’argument réel correspondant. Toutes les macros figurant dans l’argument réel sont développées avant que la directive ne remplace le paramètre formel. (Les opérateurs sont décrits dans [opérateurs de préprocesseur](../preprocessor/preprocessor-operators.md).)
+Lorsqu’une macro a été définie dans la deuxième forme de syntaxe, les instances textuelles suivantes suivies d’une liste d’arguments indiquent un appel de macro. Les arguments réels qui suivent une instance de *identificateur* dans le fichier source sont mis en correspondance avec des paramètres formels correspondants dans la définition de macro. Chaque paramètre formel dans *chaîne de jeton* qui n’est pas précédé par un enchaînement (`#`), de charizing (`#@`), ou de collage de jeton (`##`) (opérateur), ou pas suivi par un `##` opérateur, est remplacé par l’argument réel correspondant. Toutes les macros figurant dans l'argument réel sont développées avant que la directive ne remplace le paramètre formel. (Les opérateurs sont décrits dans [opérateurs de préprocesseur](../preprocessor/preprocessor-operators.md).)
 
 Les exemples suivants de macros comportant des arguments illustrent la deuxième forme de la **#define** syntaxe :
 

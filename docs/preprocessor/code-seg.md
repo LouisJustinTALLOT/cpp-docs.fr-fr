@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597701"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041239"
 ---
 # <a name="codeseg"></a>code_seg
 Spécifie le segment de texte dans lequel les fonctions sont stockées dans un fichier .obj.
@@ -32,15 +32,15 @@ Spécifie le segment de texte dans lequel les fonctions sont stockées dans un f
 **pop**<br/>
 (Facultatif) Supprime un enregistrement à partir du haut de la pile interne du compilateur.
 
-*identifier*<br/>
+*'identificateur'*<br/>
 (Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.
 
 *identificateur* permet à plusieurs enregistrements à dépiler avec un seul **pop** commande.
 
-«*segment-name*»<br/>
+"*segment-name*"<br/>
 (Facultatif) Le nom d’un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom de segment de texte active.
 
-«*segment-classe*»<br/>
+"*segment-class*"<br/>
 (Facultatif) Ignoré, mais inclus pour la compatibilité avec les versions antérieures à la version 2.0 de C++.
 
 ## <a name="remarks"></a>Notes

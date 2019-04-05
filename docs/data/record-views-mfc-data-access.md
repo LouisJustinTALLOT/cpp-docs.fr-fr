@@ -8,12 +8,12 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-ms.openlocfilehash: 155a7e4de6272f13d12ab2a64cba190a184f62cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588485"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040197"
 ---
 # <a name="record-views--mfc-data-access"></a>Vues d'enregistrements (Accès aux données MFC)
 
@@ -23,7 +23,7 @@ Pour prendre en charge les applications d’accès aux données de formulaire, l
 
 ## <a name="form-uses"></a>Utilisations des formulaires
 
-Les formulaires sont utiles pour diverses tâches d'accès aux données :
+Les formulaires sont utiles pour diverses tâches d’accès aux données :
 
 - Saisie de données
 
@@ -37,17 +37,17 @@ Le contenu de ces rubriques s'applique aux classes ODBC et DAO. Utilisez `CRecor
 
 Les rubriques traitées ici sont les suivantes :
 
-- [Fonctionnalités des Classes d’affichage de l’enregistrement](../data/features-of-record-view-classes-mfc-data-access.md)
+- [Fonctionnalités des classes d’affichage des enregistrements](../data/features-of-record-view-classes-mfc-data-access.md)
 
-- [Échange de données pour les vues d’enregistrements](../data/data-exchange-for-record-views-mfc-data-access.md)
+- [Échange de données pour les vues des enregistrements](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [Votre rôle dans l’utilisation d’une vue d’enregistrement](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [Votre rôle dans l'utilisation d'une vue de l'enregistrement](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
-- [Conception et création d’une vue d’enregistrement](../data/designing-and-creating-a-record-view-mfc-data-access.md)
+- [Conception et création d'une vue de l'enregistrement](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
-- [À l’aide d’une vue d’enregistrement](../data/using-a-record-view-mfc-data-access.md)
+- [Utilisation d'une vue de l'enregistrement](../data/using-a-record-view-mfc-data-access.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Accès aux données de programmation (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[Programmation de l'accès aux données (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

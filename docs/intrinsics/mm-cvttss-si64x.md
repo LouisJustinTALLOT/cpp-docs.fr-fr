@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 2097ec50eca68cbe5735d30e772644552ab0df3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: cfdea6ded622cbcbe42bd555edb3029fabad7823
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329018"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023709"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 
@@ -30,7 +30,7 @@ __int64 _mm_cvttss_si64x(
 
 #### <a name="parameters"></a>Paramètres
 
-*valeur*<br/>
+*par défaut*<br/>
 [in] Un `__m128` structure contenant les valeurs à virgule flottante simple précision.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -90,4 +90,4 @@ int main()
 ## <a name="see-also"></a>Voir aussi
 
 [__m128](../cpp/m128.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)

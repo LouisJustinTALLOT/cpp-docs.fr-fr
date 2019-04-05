@@ -6,12 +6,12 @@ helpviewer_keywords:
 - record scrolling [C++]
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-ms.openlocfilehash: 0e35baf561693b90b661ac1fe73844961570b29e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66944221910dbd23d78a78fc951030efbee86bd0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460773"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038513"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Gestionnaires de commandes pour le défilement des enregistrements (Accès aux données MFC)
 
@@ -32,4 +32,4 @@ Le `OnMove` fonction membre fournit par défaut gestion des commandes pour les q
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+[Prise en charge de la navigation dans une vue de l'enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

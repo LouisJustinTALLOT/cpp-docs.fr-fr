@@ -26,12 +26,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: ca22f16cf22cabc4c508df053d49d862fef70bce
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b42ecf6c03dd1023d1ba150d579f77c4bae8998a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414614"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029169"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
 
@@ -54,7 +54,7 @@ Votre classe, dérivée de `IRowsetInfoImpl`.
 *PropClass*<br/>
 Une classe de propriété définis par l’utilisateur par défaut est *T*.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** altdb.h
 
@@ -126,5 +126,5 @@ Utilisez cette méthode avec [IGetDataSourceImpl](../../data/oledb/igetdatasourc
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

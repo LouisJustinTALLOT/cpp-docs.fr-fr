@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-ms.openlocfilehash: 139efb7a34baacb2bb6ad424d13f2d337eb12af6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61d3f3e39362db27d1e3abc00fa3cb9ea82b86e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661654"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028397"
 ---
-# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Source de données : création d'une table par programme dans une source de données ODBC
+# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Source de données : Création d’une Table dans une Source de données ODBC par programmation
 
 Cette rubrique explique comment créer une table pour vos données source, à l’aide de la `ExecuteSQL` fonction membre de classe `CDatabase`, en passant la fonction de chaîne qui contient un **CREATE TABLE** instruction SQL.
 
-Pour obtenir des informations générales sur les sources de données ODBC dans MFC, consultez [Source de données (ODBC)](../../data/odbc/data-source-odbc.md). La rubrique [Source de données : configuration d’une Source de données ODBC par programmation](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) décrit la création de sources de données.
+Pour obtenir des informations générales sur les sources de données ODBC dans MFC, consultez [Source de données (ODBC)](../../data/odbc/data-source-odbc.md). La rubrique [Source de données : Configuration d’une Source de données ODBC par programmation](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) décrit la création de sources de données.
 
 Lorsque vous avez établi la source de données, vous pouvez facilement créer des tables à l’aide de la `ExecuteSQL` fonction membre et le **CREATE TABLE** instruction SQL. Par exemple, si vous aviez un `CDatabase` objet appelé `myDB`, vous pouvez utiliser le code MFC suivant pour créer une table :
 

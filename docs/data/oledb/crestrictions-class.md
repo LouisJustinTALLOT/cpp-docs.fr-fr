@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 3ade541e5418799f525a08d3fc868f07d2bdfe6a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412820"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040617"
 ---
 # <a name="crestrictions-class"></a>CRestrictions, classe
 
@@ -43,7 +43,7 @@ Le nombre de colonnes de restriction pour l’ensemble de lignes de schéma.
 *pguid*<br/>
 Un pointeur vers le GUID pour le schéma.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbsch.h
 
@@ -96,6 +96,6 @@ Consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classes de jeu de lignes du schéma et classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
