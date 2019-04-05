@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 7fc1215fb1b286423d6c50337bf5d94cac3298e2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273626"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58773851"
 ---
 # <a name="cpanedivider-class"></a>Cpanedivider, classe
 
@@ -159,7 +159,7 @@ class CPaneDivider : public CBasePane
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Spécifie la largeur par défaut en pixels de tous les diviseurs de volet dans l’application.|
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Contient un pointeur vers les informations de classe runtime concernant un `CPaneDivider`-objet dérivé.|
@@ -176,7 +176,7 @@ Il existe deux types de diviseurs de volet :
 
 ## <a name="example"></a>Exemple
 
-L'exemple suivant montre comment obtenir un objet `CPaneDivider` à partir d'un objet `CWorkspaceBar`. Cet extrait de code fait partie de la [exemple de démonstration des onglets MDI](../../visual-cpp-samples.md).
+L'exemple suivant montre comment obtenir un objet `CPaneDivider` à partir d'un objet `CWorkspaceBar`. Cet extrait de code fait partie de la [exemple de démonstration des onglets MDI](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]
 
@@ -186,7 +186,7 @@ L'exemple suivant montre comment obtenir un objet `CPaneDivider` à partir d'un 
 
 [CBasePane](../../mfc/reference/cbasepane-class.md) [CPaneDivider](../../mfc/reference/cpanedivider-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxPaneDivider.h
 
@@ -735,7 +735,7 @@ void StoreRecentTabRelatedInfo(
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CPaneContainerManager, classe](../../mfc/reference/cpanecontainermanager-class.md)<br/>
-[CPaneContainer, classe](../../mfc/reference/cpanecontainer-class.md)<br/>
-[CDockingManager, classe](../../mfc/reference/cdockingmanager-class.md)<br/>
-[CBasePane, classe](../../mfc/reference/cbasepane-class.md)
+[Cpanecontainermanager, classe](../../mfc/reference/cpanecontainermanager-class.md)<br/>
+[Cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md)<br/>
+[Cdockingmanager, classe](../../mfc/reference/cdockingmanager-class.md)<br/>
+[Cbasepane, classe](../../mfc/reference/cbasepane-class.md)
