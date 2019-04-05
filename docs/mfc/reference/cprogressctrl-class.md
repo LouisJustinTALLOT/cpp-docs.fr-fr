@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418761"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778947"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl (classe)
 
@@ -107,7 +107,7 @@ Pour plus d’informations sur l’utilisation de `CProgressCtrl`, consultez [co
 
 `CProgressCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 
@@ -604,6 +604,6 @@ L’incrément de l’étape est définie par le `CProgressCtrl::SetStep` foncti
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC exemple CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC exemple CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

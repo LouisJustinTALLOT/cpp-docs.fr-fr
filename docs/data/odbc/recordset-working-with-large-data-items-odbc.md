@@ -1,5 +1,5 @@
 ---
-title: "Recordset : utilisation d'éléments de données volumineux (ODBC)"
+title: 'Recordset : Utilisation des éléments de données volumineux (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BLOB (binary large object), recordsets
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: 8ef32621821d731d9137a446bea220564cb7f92f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460370"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033042"
 ---
-# <a name="recordset-working-with-large-data-items-odbc"></a>Recordset : utilisation d'éléments de données volumineux (ODBC)
+# <a name="recordset-working-with-large-data-items-odbc"></a>Recordset : Utilisation des éléments de données volumineux (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC et les classes DAO MFC.
 
 > [!NOTE]
->  Si vous utilisez les classes DAO MFC, gérez vos éléments de données volumineux avec la classe [CByteArray](../../mfc/reference/cbytearray-class.md) au lieu de la classe [CLongBinary](../../mfc/reference/clongbinary-class.md). Si vous utilisez les classes ODBC MFC avec l’extraction de lignes en bloc, utilisez `CLongBinary` plutôt que `CByteArray`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Si vous utilisez les classes DAO MFC, gérez vos éléments de données volumineux avec la classe [CByteArray](../../mfc/reference/cbytearray-class.md) au lieu de la classe [CLongBinary](../../mfc/reference/clongbinary-class.md). Si vous utilisez les classes ODBC MFC avec l’extraction de lignes en bloc, utilisez `CLongBinary` plutôt que `CByteArray`. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Supposons que votre base de données peut stocker de grands fragments de données, telles que les bitmaps (photos des employés, cartes, images de produits, les objets OLE et ainsi de suite). Ce type de données est souvent appelé un objet binaire volumineux (ou BLOB), car :
 
@@ -62,5 +62,5 @@ Un [CLongBinary](../../mfc/reference/clongbinary-class.md) objet est un interpr�
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : calculs de totaux et autres résultats de regroupement (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[Recordset : Calculs de totaux et autres résultats de regroupement (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)

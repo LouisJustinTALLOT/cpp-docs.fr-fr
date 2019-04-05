@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
 ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780221"
 ---
 # <a name="cmfccolormenubutton-class"></a>Cmfccolormenubutton, classe
@@ -208,7 +208,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Spécifie une nouvelle couleur automatique.
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] Spécifie si le bouton est automatique ou non.
 
 ### <a name="remarks"></a>Notes
@@ -230,7 +230,7 @@ void EnableDocumentColors(
 *lpszLabel*<br/>
 [in] Spécifie le texte du bouton.
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] Valeur TRUE pour afficher les couleurs de document spécifique ou FALSE pour afficher les couleurs système.
 
 ### <a name="remarks"></a>Notes
@@ -256,7 +256,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Spécifiez TRUE pour afficher le `CMFCColorDialog` boîte de dialogue, ou FALSE pour afficher la boîte de dialogue de couleur système standard.
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] Spécifiez TRUE pour afficher le bouton « autre » ; Sinon, FALSE. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [in] L’ID de ressource d’un bouton de menu de couleur.
 
-*color*<br/>
+*couleur*<br/>
 [in] Une valeur de couleur RVB.
 
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName
@@ -521,7 +521,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Paramètres
 
-*color*<br/>
+*couleur*<br/>
 [in] La valeur RVB de la couleur, dont le nom change.
 
 *strName*<br/>
@@ -548,7 +548,7 @@ void SetColumnsNumber(int nColumns);
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCColorBar, classe](../../mfc/reference/cmfccolorbar-class.md)<br/>
-[CMFCToolBar, classe](../../mfc/reference/cmfctoolbar-class.md)<br/>
-[CMFCToolBarsCustomizeDialog, classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)<br/>
-[CMFCColorButton, classe](../../mfc/reference/cmfccolorbutton-class.md)
+[Cmfccolorbar, classe](../../mfc/reference/cmfccolorbar-class.md)<br/>
+[Cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md)<br/>
+[Cmfctoolbarscustomizedialog, classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)<br/>
+[Cmfccolorbutton, classe](../../mfc/reference/cmfccolorbutton-class.md)

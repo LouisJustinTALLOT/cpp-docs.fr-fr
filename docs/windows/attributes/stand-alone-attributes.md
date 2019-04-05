@@ -5,12 +5,12 @@ helpviewer_keywords:
 - standalone attributes
 - attributes [C++/CLI], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-ms.openlocfilehash: 1183d2b171a25b3b2d1aef14c19f81be65effc6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7dd1f35add3b23dbd81e32a1600481eec79fe7d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640820"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033055"
 ---
 # <a name="stand-alone-attributes"></a>Attributs autonomes
 
@@ -21,12 +21,12 @@ Un attribut autonome ne fonctionne pas sur un mot clé C++, mais plutôt d’une
 |Attribut|Description|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier d’en-tête généré.|
-|[custom](custom-cpp.md)|Vous permet de définir votre propre attribut.|
+|[personnalisé](custom-cpp.md)|Vous permet de définir votre propre attribut.|
 |[db_command](db-command.md)|Crée une commande OLE DB.|
 |[emitidl](emitidl.md)|Détermine si tous les attributs IDL suivantes seront traitées et placés dans le fichier .idl généré.|
 |[idl_module](idl-module.md)|Spécifie un point d’entrée dans une DLL.|
 |[idl_quote](idl-quote.md)|Vous permet d’utiliser des constructions IDL qui ne sont pas pris en charge dans la version actuelle de Visual C++ et les passer au fichier .idl généré.|
-|[import](import.md)|Spécifie un autre fichier .idl et .h .odl contenant les définitions que vous souhaitez référencer à partir de votre fichier .idl principal.|
+|[d'importation](import.md)|Spécifie un autre fichier .idl et .h .odl contenant les définitions que vous souhaitez référencer à partir de votre fichier .idl principal.|
 |[importidl](importidl.md)|Insère le fichier .idl spécifié dans le fichier .idl généré|
 |[importlib](importlib.md)|Rend disponibles les types qui ont déjà été compilés dans une autre bibliothèque de types pour la bibliothèque de types en cours de création.|
 |[include](include-cpp.md)|Spécifie un ou plusieurs fichiers d’en-tête à inclure dans le fichier .idl généré.|

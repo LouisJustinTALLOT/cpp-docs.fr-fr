@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SQL [C++], calling ODBC API functions
 - ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-ms.openlocfilehash: 97aa0f6318a47a93b0079a81dea772b900b5484b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a539d911bbf4f4d9582da0ebedaeffaa0d8fa7b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441767"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030152"
 ---
 # <a name="access-to-odbc-and-sql"></a>Accès à ODBC et SQL
 
@@ -22,7 +22,7 @@ La bibliothèque Microsoft Foundation Class encapsule de nombreux appels d’API
 
 De même, les classes de base de données vous évitent d’avoir à s’apparente beaucoup avec [SQL](../../data/odbc/sql.md), mais vous pouvez utiliser SQL directement si vous le souhaitez. Vous pouvez personnaliser des objets recordset en passant une instruction SQL personnalisée (ou en définissant des parties de l’instruction par défaut) lorsque vous ouvrez le jeu d’enregistrements. Vous pouvez également effectuer des appels SQL directement à l’aide de la [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) fonction membre de classe [CDatabase](../../mfc/reference/cdatabase-class.md).
 
-Pour plus d’informations, consultez [ODBC : appel direct de fonctions API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) et [SQL : appels SQL directs (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
+Pour plus d’informations, consultez [ODBC : Appel ODBC API directement les fonctions](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) et [SQL : Appels SQL directs (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

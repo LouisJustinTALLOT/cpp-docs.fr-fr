@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299073"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774181"
 ---
 # <a name="cdocument-class"></a>CDocument (classe)
 
@@ -252,7 +252,7 @@ Pour plus d’informations sur `CDocument`, consultez [sérialisation](../../mfc
 
 `CDocument`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -1070,7 +1070,7 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>Paramètres
 
-*Guid*<br/>
+*GUID*<br/>
 Spécifie le GUID d’un segment à supprimer.
 
 *Pid*<br/>
@@ -1119,7 +1119,7 @@ Pointe vers le nom du document qui était en cours d’enregistrement ou chargem
 *e*<br/>
 Points à l’exception qui a été levée. Peut être NULL.
 
-*bSaving*<br/>
+*benregistrement des*<br/>
 Indicateur qui indique quelle opération était en cours ; différent de zéro si le document a été enregistré, 0 si le document a été chargé.
 
 *nIDPDefault*<br/>
@@ -1254,11 +1254,11 @@ Cette fonction appelle le [CView::OnUpdate](../../mfc/reference/cview-class.md#o
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Exemple MFC SNAPVW](../../visual-cpp-samples.md)<br/>
-[Exemple MFC NPP](../../visual-cpp-samples.md)<br/>
-[CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)<br/>
+[Exemple MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC NPP](../../overview/visual-cpp-samples.md)<br/>
+[CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)<br/>
-[CView, classe](../../mfc/reference/cview-class.md)<br/>
-[CDocTemplate, classe](../../mfc/reference/cdoctemplate-class.md)
+[CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)<br/>
+[CView (classe)](../../mfc/reference/cview-class.md)<br/>
+[CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)

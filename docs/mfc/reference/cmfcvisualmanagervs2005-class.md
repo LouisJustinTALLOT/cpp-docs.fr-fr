@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 212ef69350fbc85e6e0cc76bd505b2a895e75c8e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4d1ef0c9087e876f3e8f43430b58fc80f3923ba6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279963"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773461"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005, classe
 
@@ -86,7 +86,7 @@ Tous les membres de cette classe sont des fonctions virtuelles qui sont dérivé
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le Gestionnaire visuel VS 2005. Cet extrait de code fait partie de la [exemple de démonstration alerte Desktop](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le Gestionnaire visuel VS 2005. Cet extrait de code fait partie de la [exemple de démonstration alerte Desktop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]
 
@@ -104,7 +104,7 @@ L’exemple suivant montre comment utiliser le Gestionnaire visuel VS 2005. Cet 
 
 [CMFCVisualManagerVS2005](../../mfc/reference/cmfcvisualmanagervs2005-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxvisualmanagervs2005.h
 
@@ -389,7 +389,7 @@ virtual void OnUpdateSystemColors();
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCVisualManager, classe](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
+[Cmfcvisualmanager, classe](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
 [CMFCVisualManagerOfficeXP, classe](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>
 [CMFCVisualManagerWindows, classe](../../mfc/reference/cmfcvisualmanagerwindows-class.md)<br/>
 [CMFCVisualManagerOffice2003, classe](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)

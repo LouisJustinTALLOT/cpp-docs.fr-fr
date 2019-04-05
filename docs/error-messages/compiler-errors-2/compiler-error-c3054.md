@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3054
 ms.assetid: 6f4b7ac5-0d12-474b-b611-76ff26ee41ac
-ms.openlocfilehash: c45a59f136b989190a46fd9fbe00fdd0e4b89527
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dd6450d661700d9b2f7f94e625abd9ecc64ed08
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470126"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58772993"
 ---
 # <a name="compiler-error-c3054"></a>Erreur du compilateur C3054
 
 '#pragma omp parallel' n'est pas pris en charge actuellement dans une classe ou fonction générique
 
-Pour plus d’informations, consultez [génériques](../../windows/generics-cpp-component-extensions.md) et [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md).
+Pour plus d’informations, consultez [génériques](../../extensions/generics-cpp-component-extensions.md) et [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md).
 
 ## <a name="example"></a>Exemple
 

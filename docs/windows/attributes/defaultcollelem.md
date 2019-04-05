@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: 1120415e8babdc5df422fffb292a1ec9246a2165
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be4ea7097bd811444fca050525338931867998d0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487488"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023332"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 

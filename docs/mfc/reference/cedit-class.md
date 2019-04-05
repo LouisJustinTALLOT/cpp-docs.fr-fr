@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416999"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773747"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Construit un `CEdit` objet de contrôle.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Détermine si une opération de contrôle d’édition peut être annulée.|
 |[CEdit::CharFromPos](#charfrompos)|Récupère les index de ligne et de caractère pour le caractère le plus proche à une position spécifiée.|
@@ -966,7 +966,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nChar*<br/>
+*NChar*<br/>
 Index de base zéro du caractère spécifié.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Paramètres
 
-*nMax*<br/>
+*nombre maximal*<br/>
 La nouvelle limite de texte en caractères.
 
 ### <a name="remarks"></a>Notes
@@ -1449,14 +1449,14 @@ Pour plus d’informations, consultez [EM_UNDO](/windows/desktop/Controls/em-und
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
-[MFC exemple CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[Exemple MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC exemple CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](cwnd-class.md)<br/>
 [CButton, classe](cbutton-class.md)<br/>
-[CComboBox, classe](ccombobox-class.md)<br/>
-[CListBox, classe](clistbox-class.md)<br/>
+[CComboBox (classe)](ccombobox-class.md)<br/>
+[CListBox (classe)](clistbox-class.md)<br/>
 [CScrollBar, classe](cscrollbar-class.md)<br/>
-[CStatic, classe](cstatic-class.md)<br/>
-[CDialog, classe](cdialog-class.md)
+[Cstatic, classe](cstatic-class.md)<br/>
+[CDialog (classe)](cdialog-class.md)

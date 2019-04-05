@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289908"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774332"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets : Notifications de socket
 
@@ -43,7 +43,7 @@ Pendant une opération de réception ou envoi de données, un `CSocket` objet de
 > [!NOTE]
 >  Dans `CSocket`, le `OnConnect` fonction de notification n’est jamais appelée. Pour les connexions, vous appelez `Connect`, qui retournera l’issue de la connexion (avec succès ou erreur). Gestion des notifications de connexion est un détail d’implémentation MFC.
 
-Pour plus d’informations sur chaque fonction de notification, consultez la fonction sous classe `CAsyncSocket` dans le *référence MFC*. Pour le code source et des informations sur les exemples MFC, consultez [exemples MFC](../visual-cpp-samples.md).
+Pour plus d’informations sur chaque fonction de notification, consultez la fonction sous classe `CAsyncSocket` dans le *référence MFC*. Pour le code source et des informations sur les exemples MFC, consultez [exemples MFC](../overview/visual-cpp-samples.md).
 
 Pour plus d'informations, voir :
 

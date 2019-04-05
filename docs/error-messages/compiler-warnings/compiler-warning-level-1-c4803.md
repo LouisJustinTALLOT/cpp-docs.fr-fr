@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-ms.openlocfilehash: 3915307ac2bcc6a923c93382cfefa618ce01fe52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8f5fe9d55a44193325a2fcfe9ef7675a2b3b89
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563213"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774878"
 ---
 # <a name="compiler-warning-level-1-c4803"></a>Avertissement du compilateur (niveau 1) C4803
 
@@ -19,7 +19,7 @@ ms.locfileid: "50563213"
 
 Méthodes d’événements doivent avoir la même classe de stockage que la déclaration d’événement. Le compilateur ajuste les méthodes d’événement afin que les classes de stockage sont les mêmes.
 
-Cet avertissement peut se produire si vous avez une classe qui implémente un événement à partir d’une interface. Le compilateur ne génère pas implicitement une méthode raise pour un événement dans une interface. Lorsque vous implémentez cette interface dans une classe, le compilateur génère implicitement une méthode raise et cette méthode ne sera pas virtuelle, par conséquent, l’avertissement. Pour plus d’informations sur les événements, consultez [événement](../../windows/event-cpp-component-extensions.md).
+Cet avertissement peut se produire si vous avez une classe qui implémente un événement à partir d’une interface. Le compilateur ne génère pas implicitement une méthode raise pour un événement dans une interface. Lorsque vous implémentez cette interface dans une classe, le compilateur génère implicitement une méthode raise et cette méthode ne sera pas virtuelle, par conséquent, l’avertissement. Pour plus d’informations sur les événements, consultez [événement](../../extensions/event-cpp-component-extensions.md).
 
 Consultez [avertissement](../../preprocessor/warning.md) pragma pour plus d’informations sur la façon de désactiver un avertissement.
 

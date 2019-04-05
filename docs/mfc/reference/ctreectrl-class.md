@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418930"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58782002"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -293,7 +293,7 @@ Pour plus d’informations sur l’utilisation de `CTreeCtrl`, consultez :
 
 `CTreeCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 
@@ -1739,7 +1739,7 @@ BOOL SetCheck(
 *hItem*<br/>
 HTREEITEM pour recevoir le changement d’état de vérification.
 
-*fCheck*<br/>
+*Consultez*<br/>
 Indique si l’élément de contrôle d’arborescence doit être activée ou désactivée. Par défaut, `SetCheck` définit l’élément à vérifier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2341,7 +2341,7 @@ Le *lParam1* et *lParam2* paramètres correspondent à la `lParam` membre de la 
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC exemple CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC exemple CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CImageList, classe](../../mfc/reference/cimagelist-class.md)
+[CImageList (classe)](../../mfc/reference/cimagelist-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6018
 ms.assetid: f6dd40d1-a119-4d8b-b39e-97350ea23349
-ms.openlocfilehash: e0d229b4fd8c1a4f8e067c0e59a278344fd4e113
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b36e2184e5be131645fb4dd58a361fdb9a31da63
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531913"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774971"
 ---
 # <a name="c-runtime-error-r6018"></a>Erreur Runtime C R6018
 
@@ -32,4 +32,4 @@ Le programme a rencontré une erreur inattendue lors d’une opération de gesti
 
 Cette erreur se produit généralement quand le programme modifie par inadvertance les données du tas de l’exécution. Cependant, il peut également être dû à une erreur interne dans le runtime ou le code de système d’exploitation.
 
-Pour résoudre ce problème, recherchez les bogues d’altération du tas dans votre code. Pour plus d’informations et des exemples, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Ensuite, vérifiez que vous utilisez les derniers redistribuables pour votre déploiement d’application. Pour plus d’informations, consultez [déploiement dans Visual C++](../../ide/deployment-in-visual-cpp.md).
+Pour résoudre ce problème, recherchez les bogues d’altération du tas dans votre code. Pour plus d’informations et des exemples, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Ensuite, vérifiez que vous utilisez les derniers redistribuables pour votre déploiement d’application. Pour plus d’informations, consultez [déploiement dans Visual C++](../../windows/deployment-in-visual-cpp.md).

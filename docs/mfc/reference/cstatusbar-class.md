@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: cb52f1138ba7ff01c6fbf2f7ec13d5f39e9422d8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413392"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777335"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar (classe)
 
@@ -122,7 +122,7 @@ Pour plus d’informations sur l’utilisation de `CStatusBar`, consultez l’ar
 
 `CStatusBar`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxext.h
 
@@ -506,9 +506,9 @@ Après avoir appelé `SetPaneText`, vous devez ajouter un gestionnaire de mise �
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
-[MFC exemple DLGCBR32](../../visual-cpp-samples.md)<br/>
-[CControlBar, classe](../../mfc/reference/ccontrolbar-class.md)<br/>
+[Exemple MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[MFC exemple DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CStatusBarCtrl, classe](../../mfc/reference/cstatusbarctrl-class.md)<br/>
-[CControlBar, classe](../../mfc/reference/ccontrolbar-class.md)
+[CStatusBarCtrl (classe)](../../mfc/reference/cstatusbarctrl-class.md)<br/>
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
