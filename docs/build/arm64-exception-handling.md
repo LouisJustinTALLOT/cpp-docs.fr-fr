@@ -1,12 +1,12 @@
 ---
 title: La gestion des exceptions ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 43e43beae5ee02f9ef4537da08a1c9915056b777
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870791"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031725"
 ---
 # <a name="arm64-exception-handling"></a>La gestion des exceptions ARM64
 
@@ -219,15 +219,15 @@ Ces données sont divisées en quatre sections :
 
    e. **Nombre d’épilogue** est un champ de 5 bits qui a deux significations, selon l’état de **E** bits :
 
-      1. Si **E** est définie sur 0 : elle spécifie le nombre du nombre total d’étendues d’exception décrites dans la section 2. Si plus de 31 portées existent dans la fonction, puis le **Code mots** champ doit être défini sur 0 pour indiquer qu’un mot d’extension est nécessaire.
+      1. Si **E** est définie sur 0 : elle spécifie le nombre du nombre total de portées d’épilogue décrit dans la section 2. Si plus de 31 portées existent dans la fonction, puis le **Code mots** champ doit être défini sur 0 pour indiquer qu’un mot d’extension est nécessaire.
 
       2. Si **E** est définie sur 1, ce champ spécifie l’index du premier code de déroulement qui décrit l’et épilogue uniquement.
 
-   f. **Les mots de code** est un champ de 5 bits qui spécifie le nombre de mots de 32 bits nécessaires pour contenir tous les codes de déroulement à la section 4. Si plus de 31 mots sont nécessaires (par exemple, plus de 124 dérouler les octets de code), puis ce champ doit être défini sur 0 pour indiquer qu’un mot d’extension est nécessaire.
+   f. **Les mots de code** est un champ de 5 bits qui spécifie le nombre de mots de 32 bits nécessaires pour contenir tous les codes de déroulement dans la section 3. Si plus de 31 mots sont nécessaires (par exemple, plus de 124 dérouler les octets de code), puis ce champ doit être défini sur 0 pour indiquer qu’un mot d’extension est nécessaire.
 
    g. **Étendue épilogue nombre** et **mots de Code étendu** sont des champs de 16 bits et 8 bits, respectivement, qui fournissent davantage d’espace pour l’encodage d’un nombre anormalement élevé d’épilogues ou un nombre exceptionnellement élevé de mots de code de déroulement. Le mot d’extension qui contient ces champs est présent uniquement si les deux le **épilogue nombre** et **Code mots** champs dans le premier mot d’en-tête sont définies sur 0.
 
-1. Une fois les données d’exception, si **épilogue nombre** n’est pas égal à zéro, est une liste d’informations sur les portées d’épilogue, compressés dans un mot et stockées par ordre croissant de décalage de départ. Chaque portée contient les bits suivants :
+1. Après l’en-tête et les décrit ci-dessus, si l’en-tête étendu facultatif **épilogue nombre** n’est pas égal à zéro, est une liste d’informations sur les portées d’épilogue, compressés dans un mot et stockées par ordre croissant de décalage de départ. Chaque portée contient les bits suivants :
 
    a. **Décalage de début d’épilogue** est un champ de 18 bits qui décrit le décalage en octets, divisé par 4, de l’épilogue par rapport au début de la fonction
 
@@ -237,7 +237,7 @@ Ces données sont divisées en quatre sections :
 
 1. Une fois que la liste des portées d’épilogue figure un tableau d’octets qui contient les codes de déroulement, décrits en détail dans une section ultérieure. Ce tableau est rempli à la fin jusqu'à la limite du mot complet le plus proche. Les octets sont stockés dans un ordre Little-Endian, ce qui permet de les récupérer directement en mode Little-Endian.
 
-1. Enfin, après les octets de code de déroulement (et si le **X** bit dans l’en-tête a été défini sur 1) est fourni les informations de gestionnaire d’exception. Il s’agit d’un seul **RVA de gestionnaire d’Exception** en fournissant l’adresse du Gestionnaire d’exceptions lui-même, immédiatement suivi d’une quantité de longueur variable de données requises par le Gestionnaire d’exceptions.
+1. Enfin, après les octets de code de déroulement, si le **X** bit dans l’en-tête a été défini sur 1, est fourni les informations de gestionnaire d’exception. Il s’agit d’un seul **RVA de gestionnaire d’Exception** en fournissant l’adresse du Gestionnaire d’exceptions lui-même, immédiatement suivi d’une quantité de longueur variable de données requises par le Gestionnaire d’exceptions.
 
 L’enregistrement .xdata ci-dessus est conçu tel qu’il soit possible d’extraire les 8 premiers octets et de celui calculer la taille totale de l’enregistrement (moins la longueur des données d’exception de taille variable qui suit). L’extrait de code suivant calcule la taille d’enregistrement :
 

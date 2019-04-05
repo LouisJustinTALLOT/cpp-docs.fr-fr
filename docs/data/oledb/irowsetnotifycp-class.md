@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: e3c85092b4abf074107eadb73ca0d589742c6ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a3ab63206ce7ac53ff996ecf1bb64bdaa0b79fcb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420854"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031684"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP, classe
 
@@ -61,7 +61,7 @@ Un pointeur d’interface ID (`IID*`) pour un `IRowsetNotify` interface point de
 *DynamicUnkArray*<br/>
 Tableau de type [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), qui est un tableau alloué dynamiquement de `IUnknown` interfaces de récepteur de pointeurs vers le client.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -77,7 +77,7 @@ Tableau de type [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-cl
 
 ## <a name="remarks"></a>Notes
 
-`IRowsetNotifyCP` implémente des fonctions pour informer les écouteurs sur le point de connexion de diffusion `IID_IRowsetNotify` des modifications apportées au contenu de l’ensemble de lignes.
+`IRowsetNotifyCP` Implémente des fonctions pour informer les écouteurs sur le point de connexion de diffusion `IID_IRowsetNotify` des modifications apportées au contenu de l’ensemble de lignes.
 
 Notez que vous devez également implémenter et inscrire `IRowsetNotify` sur le consommateur (également appelé « sink ») à l’aide de [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) afin que le consommateur peut gérer les notifications. Consultez [réception des Notifications](../../data/oledb/receiving-notifications.md) sur l’implémentation de l’interface de point de connexion sur le consommateur.
 
@@ -141,10 +141,10 @@ Consultez [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms7
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [Notifications (COM)](/windows/desktop/com/notifications)<br/>
 [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
 [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>
 [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)<br/>
-[Création d’un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md)
+[Création d'un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md)

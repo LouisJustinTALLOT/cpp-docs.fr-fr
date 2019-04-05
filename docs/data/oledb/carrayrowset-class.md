@@ -43,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0a867f80f3be685b3c45c8645d6441732acf5851
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330981"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040236"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset, classe
 
@@ -85,7 +85,7 @@ Le type de classe d’accesseur que vous souhaitez que l’ensemble de lignes à
 
 |||
 |-|-|
-|[opérateur&#91;&#93;](#operator)|Accède à un élément de l’ensemble de lignes.|
+|[Operator&#91;&#93;](#operator)|Accède à un élément de l’ensemble de lignes.|
 
 ### <a name="data-members"></a>Membres de données
 
@@ -156,6 +156,6 @@ ULONG m_nRowsRead;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset, classe](../../data/oledb/crowset-class.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: 3cd1b259270ff8c76ac80ec66000f3c8177140fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624404"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036138"
 ---
 # <a name="import-attributes-c"></a>Attributs #import (C++)
 Fournit des liens vers les attributs utilisés avec la `#import` directive.
@@ -28,7 +28,7 @@ Les attributs suivants sont disponibles pour la `#import` directive.
 |[high_property_prefixes](../preprocessor/high-property-prefixes.md)|Spécifie d'autres préfixes pour trois méthodes de propriété.|
 |[implementation_only](../preprocessor/implementation-only.md)|Supprime la génération du fichier d'en-tête .tlh (fichier d'en-tête principal).|
 |[include()](../preprocessor/include-parens.md)|Désactive l'exclusion automatique.|
-|[inject_statement](../preprocessor/inject-statement.md)|Insère son argument en tant que texte source dans l'en-tête de bibliothèque de types.|
+|[inject_statement](../preprocessor/inject-statement.md)|Insère son argument en tant que texte source dans l’en-tête de bibliothèque de types.|
 |[named_guids](../preprocessor/named-guids.md)|Indique au compilateur pour définir et initialiser des variables GUID dans l’ancien style sous la forme `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, et `DIID_MyDispInterface`.|
 |[no_auto_exclude](../preprocessor/no-auto-exclude.md)|Désactive l'exclusion automatique.|
 |[no_dual_interfaces](../preprocessor/no-dual-interfaces.md)|Modifie la façon dont le compilateur génère des fonctions wrapper pour les méthodes d'interface double.|
@@ -51,4 +51,4 @@ Les attributs suivants sont disponibles pour la `#import` directive.
 
 ## <a name="see-also"></a>Voir aussi
 
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[#import, directive](../preprocessor/hash-import-directive-cpp.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: 53dd22368aee5e0de9eca1349eb4d7dd3ed1c570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: facd8c78e775945924d77b09f9dc754bdc301ddd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485005"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038817"
 ---
 # <a name="compiler-error-c3492"></a>Erreur du compilateur C3492
 
-'var' : vous ne pouvez pas capturer un membre d’union anonyme
+'var' : vous ne pouvez pas capturer un membre d’union anonyme
 
 Vous ne pouvez pas capturer un membre d’une union sans nom.
 

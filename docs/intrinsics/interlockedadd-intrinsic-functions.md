@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 473d113ff9af3b009075dfef657082034b1bbcb6
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626904"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040953"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd, fonctions intrinsèques
 
@@ -81,14 +81,14 @@ __int64 _InterlockedAdd64_rel(
 *Terme*<br/>
 [in, out] Pointeur vers l’entier à ajouter remplacé par le résultat de l’addition.
 
-*Valeur*<br/>
+*Value*<br/>
 [in] Valeur à ajouter.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Ces deux fonctions renvoient le résultat de l'addition.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
@@ -171,5 +171,5 @@ Return value: ffff00ffffffff
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

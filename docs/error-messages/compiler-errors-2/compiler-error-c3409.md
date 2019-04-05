@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 24f107e0c1f74f95afc521c8a4c888a26a35c13a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330084"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033759"
 ---
 # <a name="compiler-error-c3409"></a>Erreur du compilateur C3409
 
@@ -19,7 +19,7 @@ ms.locfileid: "51330084"
 
 ## <a name="remarks"></a>Notes
 
-Les crochets étaient interprétés par le compilateur comme un [attribut](../../windows/cpp-attributes-reference.md) bloc, mais aucun attribut n’a été trouvé.
+Les crochets étaient interprétés par le compilateur comme un [attribut](../../windows/attributes-alphabetical-reference.md) bloc, mais aucun attribut n’a été trouvé.
 
 Le compilateur peut générer cette erreur lorsque vous utilisez des crochets dans le cadre de la définition d’une expression lambda. Cette erreur se produit lorsque le compilateur ne peut pas déterminer si les crochets font partie de la définition d’une expression lambda ou d’un bloc d’attributs. Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../../cpp/lambda-expressions-in-cpp.md).
 
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[attribute](../../windows/cpp-attributes-reference.md)<br/>
+[Attribut](../../windows/attributes-alphabetical-reference.md)<br/>
 [Expressions lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Syntaxe d’expression lambda](../../cpp/lambda-expression-syntax.md)

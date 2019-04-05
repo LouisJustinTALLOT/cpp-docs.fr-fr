@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-ms.openlocfilehash: 9bc083b78cd0c3bd39241de2815580c9eca6a207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654439"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026651"
 ---
 # <a name="implementationonly"></a>implementation_only
-**Spécifique à C++**
+**Section spécifique à C++**
 
 Supprime la génération du fichier d'en-tête .tlh (fichier d'en-tête principal).
 
@@ -30,14 +30,14 @@ Ce fichier contient toutes les déclarations utilisées pour exposer le contenu 
 
 Lorsque cet attribut est spécifié, le contenu de l'en-tête .tli se trouve dans le même espace de noms que celui utilisé normalement dans l'en-tête .tlh. En outre, les fonctions membres ne sont pas déclarées comme inline.
 
-Le **implementation_only** attribut est destiné à être utilisé conjointement avec le [no_implementation](../preprocessor/no-implementation.md) attribut sous la forme d’un moyen de conserver les implémentations hors du fichier d’en-tête précompilé (PCH). Une instruction `#import` avec l'attribut `no_implementation` est placée dans la région source utilisée pour créer le PCH. Le PCH résultant est utilisé par plusieurs fichiers sources. Un `#import` instruction avec le **implementation_only** attribut est ensuite utilisé en dehors de la zone PCH. Vous ne devez utiliser cette instruction qu'une seule fois dans l'un des fichiers sources. Cela permet de générer toutes les fonctions membres de wrapper requises sans recompilation supplémentaire pour chaque fichier source.
+Le **implementation_only** attribut est destiné à être utilisé conjointement avec le [no_implementation](../preprocessor/no-implementation.md) attribut sous la forme d’un moyen de conserver les implémentations hors du fichier d’en-tête précompilé (PCH). Une instruction `#import` avec l’attribut `no_implementation` est placée dans la région source utilisée pour créer le PCH. Le PCH résultant est utilisé par plusieurs fichiers sources. Un `#import` instruction avec le **implementation_only** attribut est ensuite utilisé en dehors de la zone PCH. Vous ne devez utiliser cette instruction qu'une seule fois dans l'un des fichiers sources. Cela permet de générer toutes les fonctions membres de wrapper requises sans recompilation supplémentaire pour chaque fichier source.
 
 > [!NOTE]
 > Le **implementation_only** attribut dans une `#import` instruction doit être utilisé conjointement avec un autre `#import` instruction, de la même bibliothèque de types, avec le `no_implementation` attribut. Sinon, des erreurs du compilateur sont générées. Il s’agit, car les définitions de classe wrapper générées par le `#import` instruction avec le `no_implementation` attribut sont requis pour compiler les implémentations générées par le **implementation_only** attribut.
 
-**FIN spécifique à C++**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directive #import](../preprocessor/hash-import-directive-cpp.md)
+[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import, directive](../preprocessor/hash-import-directive-cpp.md)

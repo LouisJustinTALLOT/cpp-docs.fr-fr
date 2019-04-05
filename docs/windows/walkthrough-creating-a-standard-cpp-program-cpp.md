@@ -9,12 +9,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 78d19a277f8bedcdbd098a662c69d6fc622a7cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647466"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030619"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procédure pas à pas : Création d’un programme C++ Standard (C++)
 
@@ -73,10 +73,10 @@ Pour compléter cette procédure pas à pas, vous devez comprendre les notions d
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-**Précédent :** [Console des Applications dans Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
-**Étape suivante :** [procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**Précédent :** [Applications console dans Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
+**Suivant :** [Procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>
+[Référence du langage C++](../cpp/cpp-language-reference.md)<br/>
+[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

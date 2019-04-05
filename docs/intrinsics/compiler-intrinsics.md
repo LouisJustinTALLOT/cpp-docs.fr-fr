@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: f66c6247aba92a1528489dcf689239c9341b7d2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560015"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029276"
 ---
 # <a name="compiler-intrinsics"></a>compilateur, intrinsèques
 
@@ -20,7 +20,7 @@ La plupart des fonctions sont contenues dans des bibliothèques, mais certaines 
 
 ## <a name="remarks"></a>Notes
 
-Si une fonction est intrinsèque, le code de cette fonction est généralement inséré inline, ce qui évite la surcharge liée à un appel de fonction et permet d'exécuter des instructions machine hautement efficaces pour cette fonction. Une intrinsèque est souvent plus rapide que l'assembly inline équivalent, car l'optimiseur a une connaissance intégrée du comportement de nombreuses intrinsèques. Certaines optimisations peuvent ainsi être disponibles, alors qu'elles ne le sont pas quand un assembly inline est utilisé. De plus, l'optimiseur peut développer l'intrinsèque différemment, aligner les mémoires tampons différemment ou apporter d'autres ajustements en fonction du contexte et des arguments de l'appel.
+Si une fonction est intrinsèque, le code de cette fonction est généralement inséré inline, ce qui évite la surcharge liée à un appel de fonction et permet d'exécuter des instructions machine hautement efficaces pour cette fonction. Une intrinsèque est souvent plus rapide que l'assembly inline équivalent, car l'optimiseur a une connaissance intégrée du comportement de nombreuses intrinsèques. Certaines optimisations peuvent ainsi être disponibles, alors qu'elles ne le sont pas quand un assembly inline est utilisé. De plus, l’optimiseur peut développer l’intrinsèque différemment, aligner les mémoires tampons différemment ou apporter d’autres ajustements en fonction du contexte et des arguments de l’appel.
 
 L'utilisation d'intrinsèques affecte la portabilité du code, car les intrinsèques disponibles dans Visual C++ peuvent ne pas être disponibles si le code est compilé avec d'autres compilateurs et certaines intrinsèques qui peuvent être disponibles pour certaines architectures cibles ne sont pas disponibles pour toutes les architectures. Toutefois, les intrinsèques sont généralement plus portables que les assemblys inline. Les intrinsèques sont nécessaires sur les architectures 64 bits où les assemblys inline ne sont pas pris en charge.
 
@@ -34,19 +34,19 @@ Un fichier d’en-tête, \<intrin.h >, est disponible qui déclare des prototype
 
 Les sections suivantes répertorient toutes les intrinsèques qui sont disponibles sur différentes architectures. Pour plus d'informations sur le fonctionnement des intrinsèques sur votre processeur cible spécifique, consultez la documentation de référence du fabricant.
 
-- [ARM, fonctions intrinsèques](../intrinsics/arm-intrinsics.md)
+- [Fonctions ARM intrinsèques](../intrinsics/arm-intrinsics.md)
 
-- [x86, liste de fonctions intrinsèques](../intrinsics/x86-intrinsics-list.md)
+- [Liste d'intrinsèques x86](../intrinsics/x86-intrinsics-list.md)
 
-- [x64 (amd64), liste de fonctions intrinsèques](../intrinsics/x64-amd64-intrinsics-list.md)
+- [Liste d'intrinsèques x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
 
-- [Fonctions intrinsèques disponibles sur toutes les architectures](../intrinsics/intrinsics-available-on-all-architectures.md)
+- [Fonctions intrinsèques disponibles sur toutes les Architectures](../intrinsics/intrinsics-available-on-all-architectures.md)
 
-- [Liste alphabétique de fonctions intrinsèques](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
+- [Liste alphabétique des fonctions intrinsèques](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’assembleur ARM](../assembler/arm/arm-assembler-reference.md)<br/>
-[Informations de référence sur Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Référence de l'assembleur ARM](../assembler/arm/arm-assembler-reference.md)<br/>
+[Référence de Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
-[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)
+[Informations de référence sur la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)

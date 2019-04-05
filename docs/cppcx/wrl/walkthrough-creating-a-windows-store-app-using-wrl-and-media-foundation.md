@@ -3,12 +3,12 @@ title: 'Procédure pas à pas : Création d’une application UWP à l’aide d
 ms.date: 09/17/2018
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e6d240152c3740b59c34ae8e0f5aa818ce8be638
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784431"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036034"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Procédure pas à pas : Création d’une application UWP à l’aide de WRL et Media Foundation
 

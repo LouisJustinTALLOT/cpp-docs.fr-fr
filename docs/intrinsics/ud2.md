@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: dd876f26349c39e0af0d2e0f100fb4e13efa50f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666542"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029406"
 ---
 # <a name="ud2"></a>__ud2
 
@@ -30,7 +30,7 @@ void __ud2();
 
 Le processeur génère une exception de l’opcode non valide si vous exécutez une instruction non définie.
 
-Le `__ud2` fonction est équivalente à la `UD2` instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : référence de jeu d’instructions, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+Le `__ud2` fonction est équivalente à la `UD2` instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez dans le document, « manuel du développeur de logiciels Architecture Intel, Volume 2 : Instruction Set Reference, » à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -84,4 +84,4 @@ After __ud2().  Return code = 1.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)

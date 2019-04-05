@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: 1ed107b78ea5638d93a773e19de13b4c1fe1036c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648407"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038198"
 ---
 # <a name="case-c"></a>cas (C++)
 
@@ -25,7 +25,7 @@ Utilisé avec le [switch_type](switch-type.md) d’attribut dans un **union**.
 
 #### <a name="parameters"></a>Paramètres
 
-*valeur*<br/>
+*par défaut*<br/>
 Une valeur d’entrée possible pour lequel vous souhaitez fournir un traitement. Le type de **valeur** peut être un des types suivants :
 
 - `int`

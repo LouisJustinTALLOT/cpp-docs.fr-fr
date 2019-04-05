@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: bb28d76b0ec459b5fd63f6a00dedff723274e90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825875"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035596"
 ---
 # <a name="create-a-c-makefile-project"></a>Créer un projet makefile de C++
 
@@ -22,7 +22,7 @@ Si vous avez un projet makefile existant, ces choix vous sont proposés si vous 
 
 - Créer un projet makefile dans Visual Studio qui utilise votre fichier makefile existant pour configurer un fichier .vcxproj que Visual Studio utilisera pour IntelliSense. (Vous n’aurez pas toutes les fonctionnalités de l’IDE que vous obtenez avec un projet MSBuild natif.) Consultez [Pour créer un projet Makefile](#create_a_makefile_project) ci-dessous.
 - Utilisez l’Assistant **Créer un projet à partir de fichiers de code existants** pour créer un projet MSBuild natif à partir de votre code source. Le makefile d’origine ne sera pas utilisé après cela. Pour plus d'informations, voir [Procédure : créer un projet C++ à partir de code existant](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 et versions ultérieures** : Utilisez le **ouvrir le dossier** fonctionnalité pour modifier et générer un projet makefile en tant que-est sans l’intervention du système MSBuild. Pour plus d’informations, consultez [Open Folder projects pour C++](../open-folder-projects-cpp.md).
+- **Visual Studio 2017 et versions ultérieures** : Utilisez le **ouvrir le dossier** fonctionnalité pour modifier et générer un projet makefile en tant que-est sans l’intervention du système MSBuild. Pour plus d’informations, consultez [Projets Dossier ouvert pour C++](../open-folder-projects-cpp.md).
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Pour créer un projet makefile avec le modèle de projet makefile
 
@@ -86,8 +86,8 @@ La prochaine fois que vous ouvrez votre projet Makefile dans l’environnement d
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation de la fonctionnalité IntelliSense](/visualstudio/ide/using-intellisense)<br>
-[NMAKE, référence](nmake-reference.md)<br>
+[Using IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[Référence NMAKE](nmake-reference.md)<br>
 [Guide pratique pour Créer un projet C++ à partir du Code existant](../how-to-create-a-cpp-project-from-existing-code.md)
 [des caractères spéciaux dans un Makefile](special-characters-in-a-makefile.md)<br/>
-[Contenu d’un makefile](contents-of-a-makefile.md)<br/>
+[Contenu d'un makefile](contents-of-a-makefile.md)<br/>

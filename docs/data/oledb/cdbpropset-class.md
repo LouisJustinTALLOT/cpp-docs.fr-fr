@@ -33,12 +33,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 01b9012a2b32c22b86968b1ea0895bdc9ceabb13
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417721"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034234"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet, classe
 
@@ -50,7 +50,7 @@ Hérite de la `DBPROPSET` structurer et ajoute un constructeur qui initialise le
 class CDBPropSet : public tagDBPROPSET
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -68,7 +68,7 @@ class CDBPropSet : public tagDBPROPSET
 
 |||
 |-|-|
-|[operator =](#op_equal)|Assigne le contenu d’une propriété définie sur un autre.|
+|[opérateur =](#op_equal)|Assigne le contenu d’une propriété définie sur un autre.|
 
 ## <a name="remarks"></a>Notes
 
@@ -109,7 +109,7 @@ bool AddProperty(DWORD dwPropertyID,
 *bValue*<br/>
 [in] Un `BYTE` ou une valeur booléenne utilisée pour initialiser la valeur de propriété pour le `DBPROP` structure ajouté au jeu de propriétés.
 
-*nValue*<br/>
+*%n%nValeur*<br/>
 [in] Valeur entière utilisée pour initialiser la valeur de propriété pour le `DBPROP` structure ajouté au jeu de propriétés.
 
 *fltValue*<br/>
@@ -178,7 +178,7 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet, classe](../../data/oledb/cdbpropidset-class.md)<br/>
 [Structure DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))

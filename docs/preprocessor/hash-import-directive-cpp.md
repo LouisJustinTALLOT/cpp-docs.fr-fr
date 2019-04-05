@@ -12,16 +12,16 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564952"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031983"
 ---
 # <a name="import-directive-c"></a>#import, directive (C++)
 
-**Spécifique à C++**
+**Section spécifique à C++**
 
 Utilisé pour incorporer les informations d'une bibliothèque de types. Le contenu de la bibliothèque de types est converti en classes C++, qui décrivent principalement les interfaces COM.
 
@@ -65,7 +65,7 @@ Spécifie la bibliothèque de types à importer. *nom de fichier* peut prendre l
 
 - Tout autre format de fichier qui peut être reconnu par le **LoadTypeLib** API.
 
-*Attributs*<br/>
+*attributs*<br/>
 Un ou plusieurs [attributs #import](#_predir_the_23import_directive_import_attributes). Sépare les attributs par un espace ou une virgule. Exemple :
 
 ```cpp
@@ -148,7 +148,7 @@ Le fichier d'en-tête principal de bibliothèque de types se compose de sept sec
 
 - Définition de GUID facultative ancienne : Contient les initialisations des constantes GUID nommées. Il s’agit des noms au format `CLSID_CoClass` et `IID_Interface`, semblables à ceux générés par le compilateur MIDL.
 
-- Instruction `#include` pour l'en-tête de bibliothèque de types secondaires.
+- `#include` instruction de l’en-tête de bibliothèque de type secondaire.
 
 - Réutilisable de pied de page : Inclut actuellement `#pragma pack(pop)`.
 
@@ -189,7 +189,7 @@ Vous devez déterminer quel de la dépendance commentaires ne sont pas fournis p
 
 Pour plus d’informations, consultez [attributs #import](../preprocessor/hash-import-attributes-cpp.md).
 
-**FIN spécifique à C++**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 

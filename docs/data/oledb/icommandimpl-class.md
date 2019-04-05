@@ -52,12 +52,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424845"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026790"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl, classe
 
@@ -78,7 +78,7 @@ Votre classe, dérivée de `ICommandImpl`.
 *CommandBase*<br/>
 Une interface de commande. La valeur par défaut est `ICommand`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -91,7 +91,7 @@ Une interface de commande. La valeur par défaut est `ICommand`.
 |[Annuler](#cancel)|Annule l’exécution de la commande actuelle.|
 |[CancelExecution](#cancelexecution)|Annule l’exécution de la commande actuelle.|
 |[CreateRowset](#createrowset)|Crée un objet d’ensemble de lignes.|
-|[Execute](#execute)|Exécute la commande.|
+|[Exécuter](#execute)|Exécute la commande.|
 |[GetDBSession](#getdbsession)|Retourne un pointeur d’interface à la session qui a créé la commande.|
 |[ICommandImpl](#icommandimpl)|Constructeur.|
 
@@ -277,5 +277,5 @@ Le `Execute` méthode de votre classe de commande peut définir cette variable s
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

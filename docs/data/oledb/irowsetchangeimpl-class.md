@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 452bd28e3ea061ecc30ef802290242e4cb830792
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328595"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036797"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl Class
 
@@ -103,7 +103,7 @@ L’implémentation de modèles OLE DB prend en charge toutes les méthodes de b
 > [!IMPORTANT]
 >  Il est fortement recommandé que vous lire la documentation suivante avant de tenter d’implémenter votre fournisseur :
 
-- [Création d’un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md)
+- [Création d'un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md)
 
 - Chapitre 6 de la *de référence du programmeur OLE DB*
 
@@ -184,5 +184,5 @@ Une valeur HRESULT standard.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

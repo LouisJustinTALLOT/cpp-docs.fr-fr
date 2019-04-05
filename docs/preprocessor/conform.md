@@ -9,21 +9,21 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 6589fe23359eecd654b23380747fbd3213c54dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432901"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026576"
 ---
 # <a name="conform"></a>conform
-**Spécifique à C++**
+**Section spécifique à C++**
 
 Spécifie le comportement au moment de l’exécution de la [/Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) option du compilateur.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma conformes (** *nom* [**, afficher** ] [**,** { **sur** | **hors** }] [[**,** { **push** | **pop** }] [**,** *identificateur* ]] **)**
+> **#pragma conform(** *name* [**, show** ] [**,** { **on** | **off** } ] [ [**,** { **push** | **pop** } ] [**,** *identifier* ] ] **)**
 
 ### <a name="parameters"></a>Paramètres
 
@@ -33,7 +33,7 @@ Spécifie le nom de l'option du compilateur à modifier. Valide uniquement *nom*
 **Show**<br/>
 (Facultatif) Provoque le paramètre actuel de *nom* (true ou false) à afficher au moyen d’un message d’avertissement pendant la compilation. Par exemple, `#pragma conform(forScope, show)`.
 
-**sur**, **désactivé**<br/>
+**on**, **off**<br/>
 (Facultatif) Paramètre *nom* à **sur** permet la [/Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) option du compilateur. La valeur par défaut est **hors**.
 
 **push**<br/>
@@ -42,7 +42,7 @@ Spécifie le nom de l'option du compilateur à modifier. Valide uniquement *nom*
 **pop**<br/>
 (Facultatif) Définit la valeur de *nom* à la valeur en haut de la pile interne du compilateur, puis dépile la pile. Si l’identificateur est spécifié avec **pop**, la pile est alors dépilée jusqu'à ce que qu’il trouve l’enregistrement avec *identificateur*, qui sera également dépilé ; la valeur actuelle pour *nom* dans l’enregistrement suivant sur la pile devient la nouvelle valeur pour *nom*. Si vous spécifiez **pop** avec un *identificateur* qui ne se trouve pas dans un enregistrement sur la pile, le **pop** est ignoré.
 
-*identifier*<br/>
+*'identificateur'*<br/>
 (Facultatif) Peut être inclus avec un **push** ou **pop** commande. Si *identificateur* est utilisé, puis un **sur** ou **hors** spécificateur peut également être utilisé.
 
 ## <a name="example"></a>Exemple

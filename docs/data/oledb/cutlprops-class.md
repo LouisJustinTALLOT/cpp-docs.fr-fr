@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3f1af90bcf454a3651dd8de65bbee7cb6b5960ca
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423051"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037618"
 ---
 # <a name="cutlprops-class"></a>CUtlProps, classe
 
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 *T*<br/>
 La classe qui contient le `BEGIN_PROPSET_MAP`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -228,5 +228,5 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

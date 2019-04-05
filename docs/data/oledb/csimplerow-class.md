@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414020"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023839"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow, classe
 
@@ -52,7 +52,7 @@ Fournit une implémentation par défaut pour le handle de ligne, qui est utilis�
 class CSimpleRow
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -63,7 +63,7 @@ class CSimpleRow
 |||
 |-|-|
 |[AddRefRow](#addrefrow)|Ajoute un décompte de références à un handle de ligne existant.|
-|[Compare](#compare)|Compare deux lignes pour voir s’ils font référence à la même instance de ligne.|
+|[Comparer](#compare)|Compare deux lignes pour voir s’ils font référence à la même instance de ligne.|
 |[CSimpleRow](#csimplerow)|Constructeur.|
 |[ReleaseRow](#releaserow)|Libère des lignes.|
 
@@ -158,6 +158,6 @@ KeyType m_iRowset;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetImpl, classe](../../data/oledb/irowsetimpl-class.md)

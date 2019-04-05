@@ -7,20 +7,20 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 23a455eef5645aa027a9fdb97baaea948500cd6c
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 79b225fb45c05a0b324f441654e63c6ea9f4918f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265059"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030905"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Utilisation des modèles du fournisseur OLE DB
 
 Pour savoir comment utiliser les modèles de fournisseur OLE DB, consultez les rubriques suivantes :
 
-- [Ajout d’une interface à votre fournisseur](../../data/oledb/adding-an-interface-to-your-provider.md)
+- [Ajout d'une interface à votre fournisseur](../../data/oledb/adding-an-interface-to-your-provider.md)
 
-- [Référencement d’une propriété dans votre fournisseur](../../data/oledb/referencing-a-property-in-your-provider.md)
+- [Référencement d'une propriété dans votre fournisseur](../../data/oledb/referencing-a-property-in-your-provider.md)
 
 - [Définition de propriétés dans votre fournisseur](../../data/oledb/setting-properties-in-your-provider.md)
 
@@ -37,4 +37,4 @@ Pour savoir comment utiliser les modèles de fournisseur OLE DB, consultez les r
 ## <a name="see-also"></a>Voir aussi
 
 [Référence des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

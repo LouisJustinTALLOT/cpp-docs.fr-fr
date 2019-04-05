@@ -16,12 +16,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: b9d6c9aab2b12859462abfa2a842754128e72306
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416655"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034100"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl, classe
 
@@ -43,7 +43,7 @@ Votre classe dérivée
 *PropClass*<br/>
 Votre classe de propriétés.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -98,5 +98,5 @@ Consultez [ICommandProperties::SetProperties](/previous-versions/windows/desktop
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

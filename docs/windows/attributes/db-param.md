@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 2de051b099da5f179a7634cddfb359d85f4b1f83
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328790"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038094"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -28,7 +28,7 @@ Associe la variable de membre spécifié avec un paramètre d’entrée ou de so
 *ordinal*<br/>
 Le numéro de colonne (ordinal DBCOLUMNINFO) correspondant à un champ dans l’ensemble de lignes à laquelle lier des données.
 
-*paramtype*<br/>
+*ParamType*<br/>
 (Facultatif) Le type à définir pour le paramètre. Fournisseurs prennent en charge uniquement les types de d’e/s de paramètres qui sont pris en charge par la source de données sous-jacente. Le type est une combinaison d’une ou plusieurs valeurs DBPARAMIOENUM :
 
 - DBPARAMIO_INPUT un paramètre d’entrée.
@@ -43,7 +43,7 @@ Le numéro de colonne (ordinal DBCOLUMNINFO) correspondant à un champ dans l’
 *precision*<br/>
 (Facultatif) La précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bPrecision` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*scale*<br/>
+*mise à l'échelle*<br/>
 (Facultatif) La mise à l’échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>

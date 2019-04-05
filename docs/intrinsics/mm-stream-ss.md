@@ -7,12 +7,12 @@ helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 089f8d5501c18b679a3d5878bb30762d2dcc1e04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438907"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031195"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss
 
@@ -39,9 +39,9 @@ void _mm_stream_ss(
 
 ## <a name="return-value"></a>Valeur de retour
 
-Aucun
+Aucun.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
@@ -97,4 +97,4 @@ Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reprodu
 [_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)<br/>
 [_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)<br/>
 [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)

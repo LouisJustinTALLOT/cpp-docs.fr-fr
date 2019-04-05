@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : récupération globale d’enregistrements (ODBC)'
+title: 'Recordset : Extraction globale d’enregistrements en bloc (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 55a89a66b36d12e6341b85d7dfa655b299638fcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628200"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027764"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset : récupération globale d’enregistrements (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset : Extraction globale d’enregistrements en bloc (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -137,7 +137,7 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 > [!NOTE]
 >  Vous devez appeler la `Close` fonction membre avant votre dérivée `CRecordset` classe est hors de portée. Cela garantit que toute mémoire allouée par l’infrastructure sont libérées. Il est conseillé de toujours appeler explicitement `Close`, indépendamment de si vous avez implémenté l’extraction de lignes en bloc.
 
-Pour plus d’informations sur l’échange de champs d’enregistrements (RFX), consultez [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Pour plus d’informations sur l’utilisation de paramètres, consultez [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) et [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Pour plus d’informations sur l’échange de champs d’enregistrements (RFX), consultez [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Pour plus d’informations sur l’utilisation de paramètres, consultez [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) et [jeu d’enregistrements : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

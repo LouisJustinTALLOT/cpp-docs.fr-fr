@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_vmload intrinsic
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-ms.openlocfilehash: 31f60096b60db7d8b135c686af87464060e0401a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 282f1c005c7eb59b2c590c70b38233c88c664e07
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584767"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031152"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 
@@ -36,7 +36,7 @@ void __svm_vmload(
 
 ## <a name="remarks"></a>Notes
 
-La fonction `__svm_vmload` est équivalente à l’instruction machine `VMLOAD` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez dans le document, « manuelle Volume AMD64 Architecture pour le programmeur 2 : programmation du système, « 24593, révision 3.11, de numéro de document sur le [corporation d’AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+La fonction `__svm_vmload` est équivalente à l’instruction machine `VMLOAD` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez dans le document, « manuelle Volume AMD64 Architecture pour le programmeur 2 : Système de programmation, » document nombre 24593, révision 3.11, sur le [corporation d’AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -50,6 +50,6 @@ La fonction `__svm_vmload` est équivalente à l’instruction machine `VMLOAD` 
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
 [__svm_vmsave](../intrinsics/svm-vmsave.md)

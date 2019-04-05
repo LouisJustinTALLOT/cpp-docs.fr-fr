@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB, record views
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-ms.openlocfilehash: 631e78e1a397ec360b1f3b2d94d7340e96925e23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83f4d64252ab5c2b80d62419ea448c1ffd0cdd69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582710"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025864"
 ---
 # <a name="using-ole-db-record-views"></a>Utilisation des vues de l'enregistrement OLE DB
 
@@ -34,4 +34,4 @@ Vous pouvez utiliser des fonctions DDX avec `COleDbRecordView` pour obtenir des 
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation des accesseurs](../../data/oledb/using-accessors.md)<br/>
-[COleDBRecordView, classe](../../mfc/reference/coledbrecordview-class.md)<br/>
+[COleDBRecordView (classe)](../../mfc/reference/coledbrecordview-class.md)<br/>

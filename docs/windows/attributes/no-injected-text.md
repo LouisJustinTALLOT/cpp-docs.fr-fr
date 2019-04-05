@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: af4bb4b07439c0a5dacfa0d4956db564d2dccefe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618115"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038367"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -25,7 +25,7 @@ Empêche le compilateur d’injecter du code à la suite d’utilisation de l’
 
 ### <a name="parameters"></a>Paramètres
 
-*Valeur booléenne*<br/>
+*boolean*<br/>
 (Facultatif) **true** si vous ne souhaitez aucun code injecté, **false** pour permettre au code à injecter. **true** est la valeur par défaut.
 
 ## <a name="remarks"></a>Notes

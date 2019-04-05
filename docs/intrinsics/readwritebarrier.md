@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ReadWriteBarrier intrinsic
 - _ReadWriteBarrier intrinsic
 ms.assetid: dd9f58b5-8bb6-494e-bb0f-9fe184f3908d
-ms.openlocfilehash: a279017e57c8bf828b302940463bd0b3504f085d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9da26b685be90bd349d6bfe56c4ad980541d09c0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626159"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026751"
 ---
 # <a name="readwritebarrier"></a>_ReadWriteBarrier
 
@@ -47,5 +47,5 @@ L'intrinsèque `_ReadWriteBarrier` limite les optimisations du compilateur qui p
 
 [_ReadBarrier](../intrinsics/readbarrier.md)<br/>
 [_WriteBarrier](../intrinsics/writebarrier.md)<br/>
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)

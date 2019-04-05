@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: c5954aefaff2cdacb1aa1712f8b4bda93c9e434e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420373"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039817"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl, classe
 
@@ -84,7 +84,7 @@ Le mécanisme de mappage pour gérer les relations de signet des données.
 *BookmarkMapClass*<br/>
 L’unité de stockage pour tous les handles de ligne détenus par le signet.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête**: atldb.h
 
@@ -94,10 +94,10 @@ L’unité de stockage pour tous les handles de ligne détenus par le signet.
 
 |||
 |-|-|
-|[Compare](#compare)|Compare deux signets.|
+|[Comparer](#compare)|Compare deux signets.|
 |[GetRowsAt](#getrowsat)|Extrait les lignes en commençant à la ligne spécifiée par un décalage à partir d’un signet.|
 |[GetRowsByBookmark](#getrowsbybookmark)|Extrait les lignes qui correspondent aux signets spécifiés.|
-|[hachage](#hash)|Retourne des valeurs pour les signets spécifiés de hachage.|
+|[Hash](#hash)|Retourne des valeurs pour les signets spécifiés de hachage.|
 
 ### <a name="data-members"></a>Membres de données
 
@@ -235,7 +235,7 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
 [prise en charge de fournisseur pour les signets](../../data/oledb/provider-support-for-bookmarks.md)<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 3d4f778f560b55f22c1c54185bea79af07949ceb
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f0dfb90b0ea79e115f459968558e48ae9827e40
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422748"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029091"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl, classe
 
@@ -37,7 +37,7 @@ class IOpenRowsetImpl : public IOpenRowset
 *SessionClass*<br/>
 Votre classe, dérivée de `IOpenRowsetImpl`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -108,5 +108,5 @@ Cette méthode est introuvable dans ATLDB. H. Lorsque vous créez un fournisseur
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

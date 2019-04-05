@@ -20,12 +20,12 @@ helpviewer_keywords:
 - OnRowChange method
 - OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-ms.openlocfilehash: 8ad3fe7a79d4847c4583f79229e4cf4aad616fa8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 552fcdcee99f1bfe78a28c6ea41a89557f1682f4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417344"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026066"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl, classe
 
@@ -37,7 +37,7 @@ Implémente et enregistre [IRowsetNotify](/previous-versions/windows/desktop/ms7
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -142,7 +142,7 @@ Cette méthode encapsule le [IRowsetNotify::OnRowsetChange](/previous-versions/w
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))
 [IRowsetNotifyCP, classe](../../data/oledb/irowsetnotifycp-class.md)

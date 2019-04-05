@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: 6f3048e60c10efed05fc5bccc3c61949351f7bf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a433522b78424c48c4afe754f7b8337e3952dc8e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504700"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037340"
 ---
 # <a name="vararg"></a>vararg
 

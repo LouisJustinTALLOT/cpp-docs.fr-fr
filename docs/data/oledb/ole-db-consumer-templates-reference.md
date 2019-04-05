@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-ms.openlocfilehash: a476fefa4338e73bf6eaf70fa16a5328a427b56d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649239"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032269"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Référence des modèles du consommateur OLE DB
 
@@ -86,7 +86,7 @@ Utilisé pour extraire et manipuler les lignes en bloc en récupérant plusieurs
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
 Peut être utilisé comme argument de modèle si la commande ne renvoie pas un ensemble de lignes.
 
-[cRestrictions](../../data/oledb/crestrictions-class.md)<br/>
+[CRestrictions](../../data/oledb/crestrictions-class.md)<br/>
 Permet de spécifier des restrictions pour les ensembles de lignes de schéma.
 
 [CRowset](../../data/oledb/crowset-class.md)<br/>
@@ -143,4 +143,4 @@ Permet de récupérer les informations d’erreur OLE DB.
 ## <a name="see-also"></a>Voir aussi
 
 [Référence des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[Modèles OLE DB](../../data/oledb/ole-db-templates.md)
+[modèles OLE DB](../../data/oledb/ole-db-templates.md)

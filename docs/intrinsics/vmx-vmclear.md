@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMCLEAR instruction
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-ms.openlocfilehash: 469621eb828691b5475b453e8be0b8473b3594a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17e3e5c91a58894b25fc6b2a72f7d0056fa88119
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586340"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036535"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 
@@ -36,7 +36,7 @@ unsigned char __vmx_vmclear(
 
 ## <a name="return-value"></a>Valeur de retour
 
-|Valeur|Signification|
+|Value|Signification|
 |-----------|-------------|
 |0|L’opération a réussi.|
 |1|L’opération a échoué avec l’état étendu disponible dans le `VM-instruction error field` de la VMCS actuelle.|
@@ -48,11 +48,11 @@ Une application peut effectuer une opération VM-enter à l’aide du [__vmx_vml
 
 La fonction `__vmx_vmclear` est équivalente à l’instruction machine `VMCLEAR` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel Virtualization Technical Specification pour l’IA-32 Intel Architecture, » numéro de document est C97063-002, à la [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Intrinsèque|Architecture|
 |---------------|------------------|
-|`__vmx_vmclear`|x64|
+|`__vmx_vmclear`|X64|
 
 **Fichier d’en-tête** \<intrin.h >
 
@@ -60,6 +60,6 @@ La fonction `__vmx_vmclear` est équivalente à l’instruction machine `VMCLEAR
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>
 [__vmx_vmresume](../intrinsics/vmx-vmresume.md)

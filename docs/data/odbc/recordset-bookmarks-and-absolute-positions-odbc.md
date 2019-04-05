@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : signets et positions absolues (ODBC)'
+title: 'Recordset : Signets et Positions absolues (ODBC)'
 ms.date: 11/04/2016
 f1_keywords:
 - SetAbsolutePosition
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: 826c1c0124eb261c97fff8f1e2fa01c8becb073a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500935"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023787"
 ---
-# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Recordset : signets et positions absolues (ODBC)
+# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Recordset : Signets et Positions absolues (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -80,7 +80,7 @@ Pour déplacer le pointeur d’enregistrement actuel à l’aide de la position 
 > [!NOTE]
 >  La position absolue d’un enregistrement est potentiellement non fiable. Si l’utilisateur supprime des enregistrements du jeu d’enregistrements, la position ordinale d’enregistrements change. Les signets sont la méthode recommandée pour déplacer l’enregistrement actif. Pour plus d’informations, consultez [signets dans ODBC MFC](#_core_bookmarks_in_mfc_odbc).
 
-Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez [jeu d’enregistrements : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

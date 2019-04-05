@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 10732d5ba3251185dc7027e3449486af3037f763
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627472"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041307"
 ---
 # <a name="maxis"></a>max_is
 
@@ -25,7 +25,7 @@ Désigne la valeur maximale pour un index de tableau valide.
 
 ### <a name="parameters"></a>Paramètres
 
-*Expression*<br/>
+*expression*<br/>
 Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.
 
 ## <a name="remarks"></a>Notes

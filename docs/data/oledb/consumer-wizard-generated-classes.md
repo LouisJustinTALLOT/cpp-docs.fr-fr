@@ -10,12 +10,12 @@ helpviewer_keywords:
 - consumer wizard-generated classes and methods
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 2ebc2094ba7f12087de51119a134e2ef65ef92d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7cd1fbe69186a2fcdbf25f1b2aa12727c98065da
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641136"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036417"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classes de consommateur générées par l’Assistant
 
@@ -186,4 +186,4 @@ Pour plus d’informations sur l’affichage de code injecté, consultez [Débog
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d’un consommateur OLE DB en utilisant l’Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Création d'un consommateur OLE DB en utilisant l'Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
