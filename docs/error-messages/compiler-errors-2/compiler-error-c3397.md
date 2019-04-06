@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3397
 ms.assetid: a8536e87-79c4-4ed7-bd96-42704d06391f
-ms.openlocfilehash: 3f0b8207f9d6c74ac40510c5acff509f583f95f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6ca48eb53cf1c6d661a201fa8c4d2539669b9bf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434591"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58772850"
 ---
 # <a name="compiler-error-c3397"></a>Erreur du compilateur C3397
 
 L'initialisation d'agrégats n'est pas autorisée dans les arguments par défaut
 
-Un tableau a été déclaré de manière incorrecte.  Consultez [tableaux](../../windows/arrays-cpp-component-extensions.md) pour plus d’informations.
+Un tableau a été déclaré de manière incorrecte.  Consultez [tableaux](../../extensions/arrays-cpp-component-extensions.md) pour plus d’informations.
 
 ## <a name="example"></a>Exemple
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 7ceb0b93f37133ccbbf89ed659f74b632e45bcb1
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: e0e2c873452884275e97663ae2d9d6df2f790ffd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328933"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024840"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -39,7 +39,7 @@ Numéro de colonne ordinal (`DBCOLUMNINFO` ordinale) ou nom de colonne (chaîne 
 *precision*<br/>
 (Facultatif) La précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de la `bPrecision` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*scale*<br/>
+*mise à l'échelle*<br/>
 (Facultatif) La mise à l’échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>

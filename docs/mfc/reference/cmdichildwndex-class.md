@@ -113,10 +113,10 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
 ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781755"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx, classe
@@ -547,7 +547,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Pointeur vers le volet adjacent.
 
-*bAfter*<br/>
+*exécuteront-ils*<br/>
 [in] Si la valeur est TRUE, *pControlBar* est insérée après *pTarget*. Si la valeur est FALSE, *pControlBar* est inséré avant *pTarget*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1152,7 +1152,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 Spécifie s’il faut activer (TRUE) ou désactiver (FALSE) la sélection automatique d’une partie de la zone du client d’une fenêtre à afficher.
 
 ### <a name="remarks"></a>Notes
@@ -1187,6 +1187,6 @@ virtual void ActivateTopLevelFrame();
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMDIChildWnd, classe](../../mfc/reference/cmdichildwnd-class.md)<br/>
-[CMFCWindowsManagerDialog, classe](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)<br/>
+[CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md)<br/>
+[Cmfcwindowsmanagerdialog, classe](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)<br/>
 [CMDIFrameWndEx, classe](../../mfc/reference/cmdiframewndex-class.md)

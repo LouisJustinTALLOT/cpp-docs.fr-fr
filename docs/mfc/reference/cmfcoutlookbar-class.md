@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304078"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775255"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar, classe
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Notes
 
-Pour obtenir un exemple d’une barre Outlook, consultez le [exemple OutlookDemo : Application de OutlookDemo MFC](../../visual-cpp-samples.md).
+Pour obtenir un exemple d’une barre Outlook, consultez le [exemple OutlookDemo : Application de OutlookDemo MFC](../../overview/visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implémentation de la barre Outlook
 
@@ -181,7 +181,7 @@ Utilisez [CMFCOutlookBar::SetMode2003](#setmode2003) pour activer le mode d’Ou
 
 [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxoutlookbar.h
 
@@ -294,7 +294,7 @@ Consultez [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex)
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `Create` méthode de la `CMFCOutlookBar` classe. Cet extrait de code fait partie de la [Outlook plusieurs vues, exemple](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `Create` méthode de la `CMFCOutlookBar` classe. Cet extrait de code fait partie de la [Outlook plusieurs vues, exemple](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]
@@ -578,5 +578,5 @@ Par défaut, ce mode est désactivé.
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CBaseTabbedPane, classe](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBarTabCtrl, classe](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
-[CMFCOutlookBarPane, classe](../../mfc/reference/cmfcoutlookbarpane-class.md)
+[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[Cmfcoutlookbarpane, classe](../../mfc/reference/cmfcoutlookbarpane-class.md)

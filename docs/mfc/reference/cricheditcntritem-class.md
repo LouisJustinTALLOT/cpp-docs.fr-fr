@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268484"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773838"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem, classe
 
@@ -49,7 +49,7 @@ Un « contrôle RichEdit » est une fenêtre dans laquelle l’utilisateur peu
 
 Ce contrôle commun de Windows (et par conséquent le [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) et les classes associées) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT versions 3.51 et ultérieures.
 
-Pour obtenir un exemple d’utilisation des éléments de conteneur d’édition enrichi dans une application MFC, consultez le [WORDPAD](../../visual-cpp-samples.md) exemple d’application.
+Pour obtenir un exemple d’utilisation des éléments de conteneur d’édition enrichi dans une application MFC, consultez le [WORDPAD](../../overview/visual-cpp-samples.md) exemple d’application.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -63,7 +63,7 @@ Pour obtenir un exemple d’utilisation des éléments de conteneur d’édition
 
 `CRichEditCntrItem`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrich.h
 
@@ -110,8 +110,8 @@ Pour plus d’informations, consultez [DVASPECT](/windows/desktop/api/wtypes/ne-
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Exemple MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem, classe](../../mfc/reference/coleclientitem-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CRichEditDoc, classe](../../mfc/reference/cricheditdoc-class.md)<br/>
-[CRichEditView, classe](../../mfc/reference/cricheditview-class.md)
+[CRichEditDoc (classe)](../../mfc/reference/cricheditdoc-class.md)<br/>
+[CRichEditView (classe)](../../mfc/reference/cricheditview-class.md)

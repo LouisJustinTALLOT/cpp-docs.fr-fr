@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
-ms.openlocfilehash: 498aefae4dfe8fd13184b9da1685494d533575dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2570ee9abb148b919242de7786cd6fa91765286f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556427"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773578"
 ---
 # <a name="compiler-error-c3764"></a>Erreur du compilateur C3764
 
 'fonction_substitution' : ne peut pas substituer la méthode de classe de base 'fonction_classe_base'
 
-Le compilateur a détecté une substitution incorrecte. Par exemple, la fonction de la classe de base n’était pas `virtual`. Pour plus d’informations, consultez [remplacer](../../windows/override-cpp-component-extensions.md).
+Le compilateur a détecté une substitution incorrecte. Par exemple, la fonction de la classe de base n’était pas `virtual`. Pour plus d’informations, consultez [remplacer](../../extensions/override-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: 49d101ea56cd868e18489b6c74724a2d106c9265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536654"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781898"
 ---
 # <a name="compiler-warning-c4693"></a>Avertissement du compilateur C4693
 
 > 'classe' : une classe abstraite sealed ne peut pas avoir de membres d’instance 'test'
 
-Si un type est marqué [sealed](../../windows/sealed-cpp-component-extensions.md) et [abstraite](../../windows/abstract-cpp-component-extensions.md), il peut comporter uniquement des membres statiques.
+Si un type est marqué [sealed](../../extensions/sealed-cpp-component-extensions.md) et [abstraite](../../extensions/abstract-cpp-component-extensions.md), il peut comporter uniquement des membres statiques.
 
 Cet avertissement est automatiquement promu en une erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma warning](../../preprocessor/warning.md).
 

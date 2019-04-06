@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 4ac6b72095620a3e857f2877d776e91b273e8f33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566645"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035089"
 ---
 # <a name="retval"></a>retval
 
@@ -42,7 +42,7 @@ Consultez l’exemple de [peut être liée](bindable.md) pour un exemple d’uti
 |**S'applique à**|Paramètre d’interface, méthode d’interface|
 |**Renouvelable**|Non|
 |**Attributs requis**|**out**|
-|**Attributs non valides**|**in**|
+|**Attributs non valides**|**dans**|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

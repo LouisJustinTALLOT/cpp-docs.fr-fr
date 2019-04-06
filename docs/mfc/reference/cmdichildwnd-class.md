@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304988"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774579"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd (classe)
 
@@ -105,7 +105,7 @@ Pour plus d’informations sur `CMDIChildWnd`, consultez [Frame Windows](../../m
 
 `CMDIChildWnd`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -287,10 +287,10 @@ Appelez cette fonction pour définir les ressources de menu et d’accélérateu
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
-[Exemple MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Exemple MFC SNAPVW](../../visual-cpp-samples.md)<br/>
-[CFrameWnd, classe](../../mfc/reference/cframewnd-class.md)<br/>
+[Exemple MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
-[CMDIFrameWnd, classe](../../mfc/reference/cmdiframewnd-class.md)
+[CMDIFrameWnd (classe)](../../mfc/reference/cmdiframewnd-class.md)

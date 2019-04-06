@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556640"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027203"
 ---
 # <a name="interface-attributes"></a>Attributs d'interface
 
@@ -19,10 +19,10 @@ Les attributs suivants s’appliquent à la [interface (ou __interface)](../../c
 |Attribut|Description|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Spécifie l’UUID qui indique au compilateur MIDL pour définir des versions synchrones et asynchrones d’une interface COM.|
-|[custom](custom-cpp.md)|Vous permet de définir vos propres attributs.|
+|[personnalisé](custom-cpp.md)|Vous permet de définir vos propres attributs.|
 |[dispinterface](dispinterface.md)|Place une interface dans le fichier .idl comme interface de dispatch.|
 |[dual](dual.md)|Place une interface dans le fichier .idl comme une interface double.|
-|[export](export.md)|Provoque une structure de données à placer dans le fichier .idl.|
+|[exporter](export.md)|Provoque une structure de données à placer dans le fichier .idl.|
 |[helpcontext](helpcontext.md)|Spécifie un ID de contexte qui vous permet de l’utilisateur afficher des informations sur cet élément dans le fichier d’aide.|
 |[helpfile](helpfile.md)|Définit le nom du fichier d’aide pour une bibliothèque de types.|
 |[helpstring](helpstring.md)|Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique.|
@@ -30,7 +30,7 @@ Les attributs suivants s’appliquent à la [interface (ou __interface)](../../c
 |[helpstringdll](helpstringdll.md)|Spécifie le nom de la DLL à utiliser pour effectuer la recherche de chaîne de document (localisation).|
 |[hidden](hidden.md)|Indique que l’élément existe, mais ne doit pas être affiché dans un navigateur orienté utilisateur.|
 |[library_block](library-block.md)|Place une construction à l’intérieur du bloc de bibliothèque du fichier .idl.|
-|[local](local-cpp.md)|Vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête lorsqu’il est utilisé dans l’en-tête de l’interface. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.|
+|[locaux](local-cpp.md)|Vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête lorsqu’il est utilisé dans l’en-tête de l’interface. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.|
 |[nonextensible](nonextensible.md)|Spécifie que le `IDispatch` implémentation inclut uniquement les propriétés et méthodes répertoriées dans la description de l’interface et ne peut pas être étendus avec des membres supplémentaires en cours d’exécution. Cet attribut est valide uniquement sur un [double](dual.md) interface.|
 |[odl](odl.md)|Identifie une interface en tant qu’objet Description Language (ODL) interface.|
 |[object](object-cpp.md)|Identifie une interface personnalisée.|

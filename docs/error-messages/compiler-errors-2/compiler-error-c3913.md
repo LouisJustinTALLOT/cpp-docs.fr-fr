@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3913
 ms.assetid: a678bfce-9524-470d-9f23-7d08ecb972c8
-ms.openlocfilehash: bf83be5e95109c9e7fa0516cde780ca6907416ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a38f7bffd56f025510e092ad37b5f810cb11a9b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516380"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776516"
 ---
 # <a name="compiler-error-c3913"></a>Erreur du compilateur C3913
 
@@ -19,7 +19,7 @@ propriété par défaut doit être indexée.
 
 Une propriété par défaut a été définie de manière incorrecte.
 
-Pour plus d'informations, consultez [property](../../windows/property-cpp-component-extensions.md).
+Pour plus d'informations, consultez [property](../../extensions/property-cpp-component-extensions.md).
 
 L’exemple suivant génère l’erreur C3913 :
 

@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289973"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773071"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Cmfcribbonbaseelement, classe
 
@@ -394,7 +394,7 @@ En fonction de sa taille, un élément de ruban affiche une image de petite ou g
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonBaseElement` . L’exemple montre comment obtenir un `CMFCRibbonBaseElement` de l’objet à partir d’un `CMFCRibbonStatusBar` classe, définir la description de l’élément de ruban, définir le texte, définir une touche d’accès et définir le texte d’info-bulle pour l’élément de ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonBaseElement` . L’exemple montre comment obtenir un `CMFCRibbonBaseElement` de l’objet à partir d’un `CMFCRibbonStatusBar` classe, définir la description de l’élément de ruban, définir le texte, définir une touche d’accès et définir le texte d’info-bulle pour l’élément de ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]
@@ -405,7 +405,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxbaseribbonelement.h
 
@@ -1820,7 +1820,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-*nChar*<br/>
+*NChar*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 La fenêtre parente de l’élément ruban.
 
-*data*<br/>
+*Données*<br/>
 Les données d’accessibilité de l’élément ruban.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260632"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776503"
 ---
 # <a name="ctooltipmanager-class"></a>Ctooltipmanager, classe
 
@@ -43,7 +43,7 @@ class CTooltipManager : public CObject
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|Supprime un contrôle d'info-bulle.|
 |[CTooltipManager::SetTooltipParams](#settooltipparams)|Personnalise l'apparence visuelle du contrôle d'info-bulle pour les types de contrôles Windows spécifiés.|
 |[CTooltipManager::SetTooltipText](#settooltiptext)|Définit le texte et la description d'un contrôle d'info-bulle.|
-|[CTooltipManager::UpdateTooltips](#updatetooltips)||
+|[CTooltipManager::SetTooltipText](#updatetooltips)||
 
 ## <a name="remarks"></a>Notes
 
@@ -55,7 +55,7 @@ Utilisez [CMFCToolTipCtrl, classe](../../mfc/reference/cmfctooltipctrl-class.md)
 
 [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtooltipmanager.h
 
@@ -156,7 +156,7 @@ Lorsque vous appelez cette méthode, tous les propriétaires d’info-bulle exis
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `SetTooltipParams` méthode de la `CTooltipManager` classe. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `SetTooltipParams` méthode de la `CTooltipManager` classe. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 
@@ -209,4 +209,4 @@ void UpdateTooltips();
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolTipCtrl, classe](../../mfc/reference/cmfctooltipctrl-class.md)<br/>
-[CMFCToolTipInfo, classe](../../mfc/reference/cmfctooltipinfo-class.md)
+[CMFCToolTipInfo Class](../../mfc/reference/cmfctooltipinfo-class.md)

@@ -4,12 +4,12 @@ ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326639"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025128"
 ---
 # <a name="creating-a-simple-consumer"></a>Création d'un consommateur simple
 
@@ -56,7 +56,7 @@ Ensuite, utilisez le **Assistant Consommateur OLE DB ATL** pour ajouter un objet
    1. Sur le **connexion** onglet, spécifiez les informations requises, telles que le nom du serveur, nom d’utilisateur et mot de passe pour votre source de données et de la base de données sur le serveur.
 
       > [!NOTE]
-      > Il existe un problème de sécurité avec le **autoriser l’enregistrement du mot de passe** fonctionnalité de la **propriétés des liaisons de données** boîte de dialogue. Dans **Entrez des informations pour vous connecter au serveur**, il existe deux boutons radio : **utilisez Windows NT la sécurité intégrée** et **utiliser un nom d’utilisateur spécifique et un mot de passe**.
+      > Il existe un problème de sécurité avec le **autoriser l’enregistrement du mot de passe** fonctionnalité de la **propriétés des liaisons de données** boîte de dialogue. Dans **Entrez des informations pour vous connecter au serveur**, il existe deux cases d’option : **Utilisez Windows NT de la sécurité intégrée** et **utiliser un nom d’utilisateur spécifique et un mot de passe**.
 
       > [!NOTE]
       > Si vous sélectionnez **utiliser un nom d’utilisateur spécifique et un mot de passe**, vous avez la possibilité d’enregistrer le mot de passe (à l’aide de la **autoriser l’enregistrement du mot de passe** case à cocher) ; Toutefois, cette option n’est pas sécurisée. Il est recommandé de sélectionner **utilisez Windows NT la sécurité intégrée**; cette option utilise Windows NT pour vérifier votre identité.
@@ -100,4 +100,4 @@ L’Assistant génère une classe de commande et une classe d’enregistrement u
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d’un consommateur OLE DB en utilisant l’Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Création d'un consommateur OLE DB en utilisant l'Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

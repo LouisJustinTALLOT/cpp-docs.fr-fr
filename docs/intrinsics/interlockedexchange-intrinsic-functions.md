@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328517"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021493"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange, fonctions intrinsèques
 
@@ -144,10 +144,10 @@ __int64 _InterlockedExchange64_rel(
 
 #### <a name="parameters"></a>Paramètres
 
-*Target*<br/>
+*une cible*<br/>
 [in, out] Pointeur vers la valeur à échanger. La fonction affecte à cette variable la valeur `Value` et retourne sa valeur précédente.
 
-*Valeur*<br/>
+*Value*<br/>
 [in] Valeur à échanger avec la valeur vers laquelle pointe `Target`.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -184,6 +184,6 @@ Pour obtenir un exemple montrant comment utiliser `_InterlockedExchange`, consul
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

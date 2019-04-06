@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hdrstop pragma
 - pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
-ms.openlocfilehash: 5dc47e4b2ec264182d26925df60bf3ee29871b65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1590b5916a8d9c00b6e988bacc7cd857c29d6775
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497074"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035213"
 ---
 # <a name="hdrstop"></a>hdrstop
 Vous permet de mieux contrôler les noms des fichiers de précompilation et l'emplacement auquel l'état de compilation est enregistré.

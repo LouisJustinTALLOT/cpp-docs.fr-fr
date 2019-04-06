@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 8edc860db453c4ee9e0dd3fdacb18bbde662accb
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562963"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037728"
 ---
 # <a name="working-with-resource-files"></a>Utilisation des fichiers de ressources
 
@@ -41,15 +41,15 @@ Pour globaliser et localiser les ressources dans les applications gérées, cons
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 Décrit les fichiers de ressources et comment ils sont utilisés dans les applications de bureau Windows. Fournit également des liens vers des articles qui expliquent comment utiliser des fichiers de ressources.
 
-[Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
 Décrit les symboles et fournit des informations sur l'utilisation de la boîte de dialogue **Symboles des ressources** pour gérer les symboles dans vos projets.
 
-[Éditeurs de ressources](../windows/resource-editors.md)<br/>
+[éditeurs de ressources](../windows/resource-editors.md)<br/>
 Décrit les éditeurs de ressources fournis dans Visual Studio et les types de ressources que vous pouvez modifier avec chaque éditeur. Fournit également des liens vers des informations détaillées sur l’utilisation de chaque éditeur.
 
 ## <a name="related-sections"></a>Rubriques connexes
 
-[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 Fournit des liens vers la documentation Visual C++.
 
 [Nous contacter](/visualstudio/ide/talk-to-us)<br/>

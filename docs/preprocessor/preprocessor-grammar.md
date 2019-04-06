@@ -6,50 +6,50 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614186"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032412"
 ---
 # <a name="preprocessor-grammar"></a>Syntaxe du préprocesseur
 
 *ligne de contrôle*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identificateur* *chaîne de jeton*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identificateur</em>**(** *identificateur*<sub>opt</sub> **,** ... **,** *identificateur*<sub>opt</sub> **)** *chaîne de jeton*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **»** *path-spec* **»**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *spécification de chemin d’accès* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *séquence de chiffres***»** *filename* **»**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identificateur*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *chaîne de jeton*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *chaîne de jeton*
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifier* *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifier</em>**(** *identifier*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
 
 *constant-expression* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**défini (** *identificateur* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**défini** *identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**defined(** *identifier* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**defined** *identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;toute autre expression constante
 
 *conditionnel* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*If-partie* *elif-parts*<sub>opt</sub> *partie « else »*<sub>opt</sub> *endif en ligne*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
 
 *If-partie* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*If ligne* *texte*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
 
 *If-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *expression constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identificateur*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identificateur*
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
 
 *elif-parts* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-ligne* *texte*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-ligne* *texte*
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
 
 *elif-ligne* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *expression constante*
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
 
 *partie « else »* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ligne Else* *texte*
+&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
 
 *ligne Else* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#else**

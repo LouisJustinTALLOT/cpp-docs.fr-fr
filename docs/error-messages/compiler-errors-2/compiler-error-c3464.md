@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3464
 ms.assetid: 0ede05dc-4486-4921-8e8c-78ab5a2e09c5
-ms.openlocfilehash: d1645571ce3102687d5054e066ec1dc7d633b3aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b21810d6df1fbfaf5ea94d9515487b16d00af548
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503123"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775294"
 ---
 # <a name="compiler-error-c3464"></a>Erreur du compilateur C3464
 
@@ -19,7 +19,7 @@ ms.locfileid: "50503123"
 
 Le transfert de type ne fonctionne pas sur les types imbriqués.
 
-Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 

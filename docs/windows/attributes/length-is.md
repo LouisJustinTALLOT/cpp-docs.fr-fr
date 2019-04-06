@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 54206dd82a550924169bf7bcccd4f70f9e5a657c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489557"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039908"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -25,7 +25,7 @@ Spécifie le nombre d’éléments de tableau doit être transmis.
 
 ### <a name="parameters"></a>Paramètres
 
-*Expression*<br/>
+*expression*<br/>
 Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisés.
 
 ## <a name="remarks"></a>Notes

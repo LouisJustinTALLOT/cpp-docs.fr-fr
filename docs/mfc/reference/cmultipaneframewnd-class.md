@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-ms.openlocfilehash: bb420021ec5b9839091c42b5eae6e1d5b9f7f977
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c23d76e8f3ea54fe34e7956ad5b4e7dc9780def
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281237"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773058"
 ---
 # <a name="cmultipaneframewnd-class"></a>Cmultipaneframewnd, classe
 
@@ -155,7 +155,7 @@ Pour plus d’informations sur la dérivation d’une classe à partir de la `CP
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment récupérer un pointeur vers un `CMultiPaneFrameWnd` objet. Cet extrait de code fait partie de la [exemple de définir la taille du volet](../../visual-cpp-samples.md).
+L’exemple suivant montre comment récupérer un pointeur vers un `CMultiPaneFrameWnd` objet. Cet extrait de code fait partie de la [exemple de définir la taille du volet](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]
 
@@ -171,7 +171,7 @@ L’exemple suivant montre comment récupérer un pointeur vers un `CMultiPaneFr
 
 [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxMultiPaneFrameWnd.h
 
@@ -640,4 +640,4 @@ virtual void StoreRecentTabRelatedInfo(
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CPaneFrameWnd, classe](../../mfc/reference/cpaneframewnd-class.md)
+[Cpaneframewnd, classe](../../mfc/reference/cpaneframewnd-class.md)

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293483"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780000"
 ---
 # <a name="cmfccolorbutton-class"></a>Cmfccolorbutton, classe
 
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`m_bAltColorDlg`|Valeur booléenne. Si la valeur est TRUE, l’infrastructure affiche le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue de couleur lorsque le *autres* bouton est activé, ou si la valeur est FALSE, le système de boîte de dialogue couleur. La valeur par défaut est TRUE. Pour plus d’informations, consultez [CMFCColorButton::EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Valeur booléenne. Si la valeur est TRUE, le framework définit le focus sur le menu de couleur lorsque le menu s’affiche, ou si la valeur est FALSE, ne change pas le focus. La valeur par défaut est TRUE.|
@@ -126,12 +126,12 @@ Le `CMFCColorButton` objet informe le parent que le passage d’une couleur en l
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment configurer un bouton de couleur à l’aide de différentes méthodes de la `CMFCColorButton` classe. Les méthodes de définir la couleur du bouton couleur et son nombre de colonnes et activer l’automatique et les autres boutons. Cet exemple fait partie de la [exemple de démonstration de barre d’état](../../visual-cpp-samples.md).
+L’exemple suivant montre comment configurer un bouton de couleur à l’aide de différentes méthodes de la `CMFCColorButton` classe. Les méthodes de définir la couleur du bouton couleur et son nombre de colonnes et activer l’automatique et les autres boutons. Cet exemple fait partie de la [exemple de démonstration de barre d’état](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcolorbutton.h
 
@@ -162,7 +162,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Une valeur RVB qui spécifie l’automatique couleur du bouton par défaut.
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] Spécifie si le bouton automatique est activé ou désactivé.
 
 ### <a name="remarks"></a>Notes
@@ -186,7 +186,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Spécifie si le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue ou la boîte de dialogue de couleur système est ouvert lorsque l’utilisateur clique sur le bouton.
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] Spécifie si le bouton « autre » est activé ou désactivé.
 
 ### <a name="remarks"></a>Notes
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*color*<br/>
+*couleur*<br/>
 [in] Une valeur RVB.
 
 ### <a name="remarks"></a>Notes
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Paramètres
 
-*color*<br/>
+*couleur*<br/>
 [in] La valeur de couleur RVB.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*color*<br/>
+*couleur*<br/>
 [in] Une couleur sélectionnée par l’utilisateur.
 
 ### <a name="remarks"></a>Notes
@@ -476,11 +476,11 @@ Le `UpdateColor` fonction modifie la couleur du bouton actuellement sélectionn�
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCButton, classe](../../mfc/reference/cmfcbutton-class.md)<br/>
-[CMFCColorBar, classe](../../mfc/reference/cmfccolorbar-class.md)<br/>
+[Cmfcbutton, classe](../../mfc/reference/cmfcbutton-class.md)<br/>
+[Cmfccolorbar, classe](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[CPalette, classe](../../mfc/reference/cpalette-class.md)<br/>
-[CArray, classe](../../mfc/reference/carray-class.md)<br/>
-[CList, classe](../../mfc/reference/clist-class.md)<br/>
+[CPalette (classe)](../../mfc/reference/cpalette-class.md)<br/>
+[CArray (classe)](../../mfc/reference/carray-class.md)<br/>
+[CList (classe)](../../mfc/reference/clist-class.md)<br/>
 [CString](../../atl-mfc-shared/reference/cstringt-class.md)

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259514"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773721"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
 
@@ -194,7 +194,7 @@ Un « contrôle RichEdit » est une fenêtre dans laquelle l’utilisateur peu
 
 Ce contrôle commun de Windows (et par conséquent le [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) et les classes associées) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT versions 3.51 et ultérieures.
 
-Pour obtenir un exemple d’utilisation d’une vue RichEdit dans une application MFC, consultez le [WORDPAD](../../visual-cpp-samples.md) exemple d’application.
+Pour obtenir un exemple d’utilisation d’une vue RichEdit dans une application MFC, consultez le [WORDPAD](../../overview/visual-cpp-samples.md) exemple d’application.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -210,7 +210,7 @@ Pour obtenir un exemple d’utilisation d’une vue RichEdit dans une applicatio
 
 `CRichEditView`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrich.h
 
@@ -298,7 +298,7 @@ Indique si la recherche respecte la casse.
 *bWord*<br/>
 Indique si la recherche doit correspondre à des mots entiers uniquement, pas les parties de mots.
 
-*bNext*<br/>
+*bsuivant*<br/>
 Indique la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -336,7 +336,7 @@ Indique si la recherche respecte la casse.
 *bWord*<br/>
 Indique si la recherche doit correspondre à des mots entiers uniquement, pas les parties de mots.
 
-*bNext*<br/>
+*bsuivant*<br/>
 Indique la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -786,7 +786,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Chaîne à rechercher.
 
-*bNext*<br/>
+*bsuivant*<br/>
 La direction à rechercher : TRUE indique que le bas ; FALSE, le haut.
 
 *bCase*<br/>
@@ -932,7 +932,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 Texte à remplacer.
 
-*bNext*<br/>
+*bsuivant*<br/>
 Indique la direction de la recherche : La valeur TRUE est arrêté ; FALSE, le haut.
 
 *bCase*<br/>
@@ -1284,8 +1284,8 @@ Remplacement de cette fonction pour modifier la façon dont la vue RichEdit rép
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Exemple MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView, classe](../../mfc/reference/cctrlview-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CRichEditDoc, classe](../../mfc/reference/cricheditdoc-class.md)<br/>
+[CRichEditDoc (classe)](../../mfc/reference/cricheditdoc-class.md)<br/>
 [CRichEditCntrItem, classe](../../mfc/reference/cricheditcntritem-class.md)

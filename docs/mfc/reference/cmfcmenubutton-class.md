@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298202"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777361"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton, classe
 
@@ -56,7 +56,7 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Spécifie s’il faut afficher le menu contextuel du système par défaut ou utilisez [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Spécifie si le menu contextuel s’affiche en dessous ou à droite du bouton.|
@@ -72,7 +72,7 @@ Lorsque vous créez un `CMFCMenuButton`, vous devez passer un handle pour le men
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment définir le handle du menu attaché au bouton, redimensionner le bouton en fonction de sa taille de texte et image et définir le menu contextuel qui s’affiche par l’infrastructure. Cet extrait de code fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment définir le handle du menu attaché au bouton, redimensionner le bouton en fonction de sa taille de texte et image et définir le menu contextuel qui s’affiche par l’infrastructure. Cet extrait de code fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]
@@ -91,7 +91,7 @@ L’exemple suivant montre comment définir le handle du menu attaché au bouton
 
 [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmenubutton.h
 
@@ -211,4 +211,4 @@ La nouvelle taille du bouton est calculée en fonction de flèche, l’image et 
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCButton, classe](../../mfc/reference/cmfcbutton-class.md)
+[Cmfcbutton, classe](../../mfc/reference/cmfcbutton-class.md)

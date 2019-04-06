@@ -1,17 +1,17 @@
 ---
-title: 'Transaction : exécution d’une transaction dans un recordset (ODBC)'
+title: 'Transaction : Exécution d’une Transaction dans un Recordset (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: df7c28ebfbb68f3e0163368247b90ff69058726d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659582"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035239"
 ---
-# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transaction : exécution d’une transaction dans un recordset (ODBC)
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transaction : Exécution d’une Transaction dans un Recordset (ODBC)
 
 Cette rubrique explique comment effectuer une transaction dans un jeu d’enregistrements.
 
@@ -22,7 +22,7 @@ Cette rubrique explique comment effectuer une transaction dans un jeu d’enregi
 
 1. Appelez le `CDatabase` l’objet `BeginTrans` fonction membre.
 
-1. Si vous n’avez pas implémenté l’extraction de lignes en bloc, appelez le `AddNew/Update`, `Edit/Update`, et `Delete` les fonctions membres d’un ou plusieurs objets de jeu d’enregistrements de la même base de données aussi souvent que nécessaire. Pour plus d’informations, consultez [Recordset : ajout de la mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si vous avez implémenté l’extraction de lignes en bloc, vous devez écrire vos propres fonctions pour mettre à jour la source de données.
+1. Si vous n’avez pas implémenté l’extraction de lignes en bloc, appelez le `AddNew/Update`, `Edit/Update`, et `Delete` les fonctions membres d’un ou plusieurs objets de jeu d’enregistrements de la même base de données aussi souvent que nécessaire. Pour plus d’informations, consultez [jeu d’enregistrements : Ajout, la mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si vous avez implémenté l’extraction de lignes en bloc, vous devez écrire vos propres fonctions pour mettre à jour la source de données.
 
 1. Enfin, appelez le `CDatabase` l’objet `CommitTrans` fonction membre. Si une erreur se produit dans une des mises à jour ou si vous décidez d’annuler les modifications, appelez sa `Rollback` fonction membre.
 
@@ -84,6 +84,6 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ## <a name="see-also"></a>Voir aussi
 
 [Transaction (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[Transaction : répercussions des transactions sur les mises à jour (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
+[Transaction : Répercussions des Transactions sur les mises à jour (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
 [CDatabase, classe](../../mfc/reference/cdatabase-class.md)<br/>
 [CRecordset, classe](../../mfc/reference/crecordset-class.md)

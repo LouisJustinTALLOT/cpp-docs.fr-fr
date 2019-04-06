@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305066"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779025"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Cmfcpropertygridproperty, classe
 
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Chaîne de format pour une valeur de type double.|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Chaîne de format pour une valeur de type float.|
@@ -297,7 +297,7 @@ Un objet de propriété peut représenter des types de données tels que des cha
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un `CMFCPropertyGridProperty` objet. L’exemple montre également comment utiliser différentes méthodes de la `CMFCPropertyGridProperty` classe pour ajouter une option, ajouter un sous-élément, permettre à une propriété et afficher une propriété. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment construire un `CMFCPropertyGridProperty` objet. L’exemple montre également comment utiliser différentes méthodes de la `CMFCPropertyGridProperty` classe pour ajouter une option, ajouter un sous-élément, permettre à une propriété et afficher une propriété. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 
@@ -307,7 +307,7 @@ L’exemple suivant montre comment construire un `CMFCPropertyGridProperty` obje
 
 [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpropertygridctrl.h
 
@@ -545,7 +545,7 @@ void Enable(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] TRUE pour activer la propriété ; FALSE pour désactiver la propriété. Propriétés désactivées ne répondent pas à la souris ou du clavier. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -563,13 +563,13 @@ void EnableSpinControl(
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] TRUE pour activer le contrôle de bouton toupie (spin) ; FALSE pour désactiver le contrôle de bouton toupie (spin). La valeur par défaut est TRUE.
 
 *nMin*<br/>
 [in] La valeur minimale du contrôle de bouton toupie (spin). La valeur par défaut est 0.
 
-*nMax*<br/>
+*nombre maximal*<br/>
 [in] La valeur maximale du contrôle de bouton toupie (spin). La valeur par défaut est 0.
 
 ### <a name="remarks"></a>Notes
@@ -801,7 +801,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 
 Pointeur vers un objet de propriété qui est un élément enfant de cette propriété.
 
-ou
+- ou -
 
 En mode de vente au détail, NULL si le *nIndex* paramètre n’est pas valide. En mode débogage, cette méthode déclare.
 
@@ -1541,7 +1541,7 @@ virtual BOOL PushChar(UINT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-*nChar*<br/>
+*NChar*<br/>
 [in] Un caractère.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1714,4 +1714,4 @@ void Show(
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCPropertyGridCtrl, classe](../../mfc/reference/cmfcpropertygridctrl-class.md)
+[Classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)

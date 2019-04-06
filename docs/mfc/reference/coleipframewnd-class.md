@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 307bf991853264fcf03dfc5b22eed8e91a3e7aa8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301400"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779610"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd, classe
 
@@ -62,7 +62,7 @@ Pour plus d’informations sur l’utilisation de `COleIPFrameWnd`, consultez l�
 
 `COleIPFrameWnd`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxole.h
 
@@ -132,7 +132,7 @@ Diffère de la disposition des barres de contrôle dans la fenêtre du conteneur
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[CFrameWnd, classe](../../mfc/reference/cframewnd-class.md)<br/>
+[Exemple MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CFrameWnd, classe](../../mfc/reference/cframewnd-class.md)
+[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)

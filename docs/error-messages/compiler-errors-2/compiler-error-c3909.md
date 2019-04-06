@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3909
 ms.assetid: 0a443132-e53f-42dc-a58b-f086da3e7bfd
-ms.openlocfilehash: 435288ba657bd22ba29c6681014ae15baa051cec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95de97a27fc42e98247675b1b48325593ff3c21e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636460"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778206"
 ---
 # <a name="compiler-error-c3909"></a>Erreur du compilateur C3909
 
@@ -19,7 +19,7 @@ aWinRT ou déclaration d’événement managé doit se produire dans un type man
 
 Un événement Windows Runtime ou managé a été déclaré dans un type natif. Pour corriger cette erreur, déclarez les événements dans des types Windows Runtime ou managés.
 
-Pour plus d’informations, consultez [événement](../../windows/event-cpp-component-extensions.md).
+Pour plus d’informations, consultez [événement](../../extensions/event-cpp-component-extensions.md).
 
 L'exemple suivant génère l'erreur C3909 et montre comment la corriger :
 

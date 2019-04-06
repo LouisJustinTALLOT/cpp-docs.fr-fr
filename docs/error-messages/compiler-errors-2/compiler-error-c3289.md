@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3289
 ms.assetid: 3c1c623b-7fcf-43ab-a89a-8722532a8d29
-ms.openlocfilehash: 0ebb56023694b1713bfe88379d07fc621da4d43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d234ad4b7c48a66352e52d3517dfd675f27b002c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622649"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781560"
 ---
 # <a name="compiler-error-c3289"></a>Erreur du compilateur C3289
 
 'property' : une propriété triviale ne peut pas être indexée
 
-Une propriété n’a pas été correctement déclarée. Les accesseurs doivent être définis pour une propriété indexée. Pour plus d'informations, voir [property](../../windows/property-cpp-component-extensions.md) .
+Une propriété n’a pas été correctement déclarée. Les accesseurs doivent être définis pour une propriété indexée. Pour plus d'informations, voir [property](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Exemple
 

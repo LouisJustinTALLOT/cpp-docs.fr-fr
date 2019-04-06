@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282446"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776529"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (classe)
 
@@ -127,7 +127,7 @@ Pour plus d’informations sur `CMDIFrameWnd`, consultez [Frame Windows](../../m
 
 `CMDIFrameWnd`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -194,7 +194,7 @@ CMDIChildWnd* CreateNewChild(
 *pClass*<br/>
 La classe d’exécution de la fenêtre enfant doit être créé.
 
-*nResource*<br/>
+*Nressource*<br/>
 ID de ressources partagées associées à la fenêtre enfant.
 
 *hMenu*<br/>
@@ -459,10 +459,10 @@ Consultez l’exemple de [CMDIFrameWnd::MDICascade](#mdicascade).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
-[Exemple MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Exemple MFC SNAPVW](../../visual-cpp-samples.md)<br/>
-[CFrameWnd, classe](../../mfc/reference/cframewnd-class.md)<br/>
+[Exemple MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
-[CMDIChildWnd, classe](../../mfc/reference/cmdichildwnd-class.md)
+[CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md)

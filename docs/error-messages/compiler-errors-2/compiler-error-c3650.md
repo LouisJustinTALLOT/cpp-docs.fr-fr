@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
-ms.openlocfilehash: 52d30f3ddee8b25ea54e799cfcb984bdffa80726
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54543225144ed0187f6c1e68e7236d886c026860
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508869"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777114"
 ---
 # <a name="compiler-error-c3650"></a>Erreur du compilateur C3650
 
@@ -19,7 +19,7 @@ ms.locfileid: "50508869"
 
 Une tentative a été effectuée pour effectuer une substitution explicite sur un membre qui n’était pas virtuel.
 
-Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).
+Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 L’exemple suivant génère l’erreur C3650 :
 

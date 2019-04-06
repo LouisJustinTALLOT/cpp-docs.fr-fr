@@ -1,5 +1,5 @@
 ---
-title: 'Record Field Exchange : fonctionnement de RFX'
+title: 'Record Field Exchange : Fonctionnement de RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record editing [C++], using RFX
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-ms.openlocfilehash: efc08736f1b61bc634b819fc62545d886134cd35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534704"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032675"
 ---
-# <a name="record-field-exchange-how-rfx-works"></a>Record Field Exchange : fonctionnement de RFX
+# <a name="record-field-exchange-how-rfx-works"></a>Record Field Exchange : Fonctionnement de RFX
 
 Cette rubrique explique le processus RFX. Il s’agit d’une avancée couverture de la rubrique :
 
@@ -26,7 +26,7 @@ Cette rubrique explique le processus RFX. Il s’agit d’une avancée couvertur
 - [Le processus RFX](#_core_the_record_field_exchange_process)
 
 > [!NOTE]
->  Cette rubrique s’applique aux classes dérivées de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, RFX en bloc (RFX en bloc) est implémentée. RFX en bloc est similaire à RFX. Pour comprendre les différences, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Cette rubrique s’applique aux classes dérivées de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, RFX en bloc (RFX en bloc) est implémentée. RFX en bloc est similaire à RFX. Pour comprendre les différences, consultez [jeu d’enregistrements : Extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_rfx_and_the_recordset"></a> RFX et le jeu d’enregistrements
 
@@ -34,15 +34,15 @@ Membres de données de champ de l’objet recordset, ensemble, constituent un m�
 
 L’infrastructure de sauvegarde le tampon d’édition à certaines étapes, il peut restaurer son contenu si nécessaire. RFX sauvegarde de la mémoire tampon d’édition avant d’ajouter un nouvel enregistrement et avant de modifier un enregistrement existant. Il restaure la mémoire tampon d’édition dans certains cas, par exemple, après un `Update` appel suivant `AddNew`. La mémoire tampon d’édition n’est pas restauré si vous quittez un tampon d’édition qui vient d’être modifié par, par exemple, un autre enregistrement avant d’appeler `Update`.
 
-En dehors de l’échange de données entre la source de données et les membres de données de champ du jeu d’enregistrements, RFX gère les paramètres de liaison. Lorsque le jeu d’enregistrements est ouvert, aucun membre de données de paramètre est liés dans l’ordre de la « ? » des espaces réservés dans l’instruction SQL qui `CRecordset::Open` construit. Pour plus d’informations, consultez [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+En dehors de l’échange de données entre la source de données et les membres de données de champ du jeu d’enregistrements, RFX gère les paramètres de liaison. Lorsque le jeu d’enregistrements est ouvert, aucun membre de données de paramètre est liés dans l’ordre de la « ? » des espaces réservés dans l’instruction SQL qui `CRecordset::Open` construit. Pour plus d’informations, consultez [jeu d’enregistrements : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 La substitution de la classe de recordset `DoFieldExchange` fait tout le travail, déplacement des données dans les deux sens. Comme l’échange de données de boîtes de dialogue (DDX), RFX a besoin d’informations sur les membres de données de votre classe. L’Assistant fournit les informations nécessaires en écrivant une implémentation spécifique au jeu d’enregistrements de `DoFieldExchange` pour vous, selon les données de champ membre noms et types de données que vous spécifiez avec l’Assistant.
 
 ##  <a name="_core_the_record_field_exchange_process"></a> Processus d’échange champ enregistrement
 
-Cette section décrit la séquence des événements RFX lorsqu’un objet de jeu d’enregistrements est ouvert et que vous ajoutez, mettez à jour et supprimer des enregistrements. La table [séquence d’opérations RFX lors de l’ouverture d’un Recordset](#_core_sequence_of_rfx_operations_during_recordset_open) et la table [séquence des opérations RFX lors du défilement](#_core_sequence_of_rfx_operations_during_scrolling) dans cette rubrique montrent le processus en tant que processus RFX un `Move` commande dans le jeu d’enregistrements et gère une mise à jour. Lors de ces processus, [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) est appelée pour effectuer de nombreuses opérations différentes. Le `m_nOperation` membre de données de la [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objet détermine l’opération demandée. Il peut s’avérer utile de lire [Recordset : sélection d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) et [Recordset : mise à jour des enregistrements par les Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) avant de lire ce document.
+Cette section décrit la séquence des événements RFX lorsqu’un objet de jeu d’enregistrements est ouvert et que vous ajoutez, mettez à jour et supprimer des enregistrements. La table [séquence d’opérations RFX lors de l’ouverture d’un Recordset](#_core_sequence_of_rfx_operations_during_recordset_open) et la table [séquence des opérations RFX lors du défilement](#_core_sequence_of_rfx_operations_during_scrolling) dans cette rubrique montrent le processus en tant que processus RFX un `Move` commande dans le jeu d’enregistrements et gère une mise à jour. Lors de ces processus, [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) est appelée pour effectuer de nombreuses opérations différentes. Le `m_nOperation` membre de données de la [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objet détermine l’opération demandée. Il peut s’avérer utile de lire [jeu d’enregistrements : La sélection de jeux d’enregistrements d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) et [jeu d’enregistrements : Comment enregistrements par les Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) avant de lire ce document.
 
-###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX : La liaison initiale des colonnes et paramètres
+###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX : Liaison initiale des colonnes et des paramètres
 
 Les activités RFX suivantes se produisent, dans l’ordre indiqué, lorsque vous appelez un objet recordset [Open](../../mfc/reference/crecordset-class.md#open) fonction membre :
 
@@ -68,7 +68,7 @@ Le tableau suivant montre la séquence des opérations RFX lorsque vous ouvrez u
 
 Jeux d’enregistrements utilisent l’exécution préparée d’ODBC pour permettre le lancement rapide d’une nouvelle requête avec la même instruction SQL. Pour plus d’informations sur l’exécution préparée, consultez le SDK ODBC *de référence du programmeur* dans MSDN Library.
 
-###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX : le défilement
+###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX : Défilement
 
 Lorsque vous passez d’un enregistrement à un autre, le framework appelle `DoFieldExchange` pour remplacer les valeurs précédemment stockées dans les membres de données de champ avec des valeurs pour le nouvel enregistrement.
 
@@ -124,6 +124,6 @@ Lorsque vous supprimez un enregistrement, RFX définit tous les champs sur la va
 
 [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [MFC ODBC, consommation](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
-[Macros, fonctions globales et Variables globales](../../mfc/reference/mfc-macros-and-globals.md)<br/>
+[Macros, fonctions globales et variables globales](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CFieldExchange, classe](../../mfc/reference/cfieldexchange-class.md)<br/>
 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)

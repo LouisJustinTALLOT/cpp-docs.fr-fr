@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 7e0c55981b895540d490e2e38f43eb68abf48e32
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 887b771ee76034256c77aa3d038da96696eca6ed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294653"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774589"
 ---
 # <a name="cpanecontainermanager-class"></a>Cpanecontainermanager, classe
 
@@ -189,7 +189,7 @@ Le `CPaneContainerManager` classe stocke un pointeur vers la racine d’une arbo
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment obtenir une référence à un `CPaneContainerManager` objet. Cet extrait de code fait partie de la [exemple de définir la taille du volet](../../visual-cpp-samples.md).
+L’exemple suivant montre comment obtenir une référence à un `CPaneContainerManager` objet. Cet extrait de code fait partie de la [exemple de définir la taille du volet](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]
 
@@ -199,7 +199,7 @@ L’exemple suivant montre comment obtenir une référence à un `CPaneContainer
 
 [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpanecontainermanager.h
 
@@ -880,6 +880,6 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
-[CPaneContainer, classe](../../mfc/reference/cpanecontainer-class.md)<br/>
-[CPaneDivider, classe](../../mfc/reference/cpanedivider-class.md)
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
+[Cpanecontainer, classe](../../mfc/reference/cpanecontainer-class.md)<br/>
+[Cpanedivider, classe](../../mfc/reference/cpanedivider-class.md)

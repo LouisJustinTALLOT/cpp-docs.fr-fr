@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: 6ce5b9860cd75619f26a3585981af5807c33535a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606672"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773773"
 ---
 # <a name="compiler-error-c3114"></a>Erreur du compilateur C3114
 
@@ -19,7 +19,7 @@ ms.locfileid: "50606672"
 
 Pour un membre de données de classe attribut soit un argument nommé valide, elle ne doit pas être marquée comme `static`, `const`, ou `literal`. Si une propriété, la propriété ne doit pas être `static` et doit avoir get et accesseurs set.
 
-Pour plus d’informations, consultez [propriété](../../windows/property-cpp-component-extensions.md) et [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Pour plus d’informations, consultez [propriété](../../extensions/property-cpp-component-extensions.md) et [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 

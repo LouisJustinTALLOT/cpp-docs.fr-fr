@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - HandleTraits namespace
 ms.assetid: 2fb5c6d1-bfc2-4e09-91eb-31705064ffb3
-ms.openlocfilehash: 55e1dfea2d4075a5a37b9654a70e9ce74383ea53
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 6ed8156b6a0e71d40d1579fc9a33912f698e1773
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784614"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030383"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits, espace de noms
 
@@ -30,15 +30,15 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 
 |Nom|Description|
 |----------|-----------------|
-|[CriticalSectionTraits, structure](criticalsectiontraits-structure.md)|Spécialise une `CriticalSection` objet pour prendre en charge une section critique non valide ou une fonction d’annulation d’une section critique.|
-|[EventTraits, structure](eventtraits-structure.md)|Définit les caractéristiques d’un `Event` handle de classe.|
-|[FileHandleTraits, structure](filehandletraits-structure.md)|Définit les caractéristiques d’un descripteur de fichier.|
-|[HANDLENullTraits, structure](handlenulltraits-structure.md)|Définit les caractéristiques communes d’un handle non initialisé.|
-|[HANDLETraits, structure](handletraits-structure.md)|Définit les caractéristiques communes d’une poignée.|
-|[MutexTraits, structure](mutextraits-structure.md)|Définit les caractéristiques communes de la [Mutex](mutex-class.md) classe.|
-|[SemaphoreTraits, structure](semaphoretraits-structure.md)|Définit les caractéristiques communes d’un objet sémaphore.|
-|[SRWLockExclusiveTraits, structure](srwlockexclusivetraits-structure.md)|Décrit les caractéristiques communes de la `SRWLock` classe en mode de verrou exclusif.|
-|[SRWLockSharedTraits, structure](srwlocksharedtraits-structure.md)|Décrit les caractéristiques communes de la `SRWLock` classe en mode de verrou partagé.|
+|[CriticalSectionTraits (structure)](criticalsectiontraits-structure.md)|Spécialise une `CriticalSection` objet pour prendre en charge une section critique non valide ou une fonction d’annulation d’une section critique.|
+|[EventTraits (structure)](eventtraits-structure.md)|Définit les caractéristiques d’un `Event` handle de classe.|
+|[FileHandleTraits (structure)](filehandletraits-structure.md)|Définit les caractéristiques d’un descripteur de fichier.|
+|[HANDLENullTraits (structure)](handlenulltraits-structure.md)|Définit les caractéristiques communes d’un handle non initialisé.|
+|[HANDLETraits (structure)](handletraits-structure.md)|Définit les caractéristiques communes d’une poignée.|
+|[MutexTraits (structure)](mutextraits-structure.md)|Définit les caractéristiques communes de la [Mutex](mutex-class.md) classe.|
+|[SemaphoreTraits (structure)](semaphoretraits-structure.md)|Définit les caractéristiques communes d’un objet sémaphore.|
+|[SRWLockExclusiveTraits (structure)](srwlockexclusivetraits-structure.md)|Décrit les caractéristiques communes de la `SRWLock` classe en mode de verrou exclusif.|
+|[SRWLockSharedTraits (structure)](srwlocksharedtraits-structure.md)|Décrit les caractéristiques communes de la `SRWLock` classe en mode de verrou partagé.|
 
 ## <a name="requirements"></a>Configuration requise
 

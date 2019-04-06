@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290454"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779038"
 ---
 # <a name="cusertool-class"></a>Cusertool, classe
 
@@ -70,7 +70,7 @@ class CUserTool : public CObject
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CUserTool::m_strArguments](#m_strarguments)|Les arguments de ligne de commande pour l’outil utilisateur.|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Le répertoire initial pour l’outil utilisateur.|
@@ -82,7 +82,7 @@ Pour plus d’informations sur l’activation des outils de l’utilisateur dans
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment créer un outil à partir d’un `CUserToolsManager` de l’objet, définissez le `m_strLabel` variable de membre et définissez l’application qui exécute l’outil utilisateur. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).
+L’exemple suivant montre comment créer un outil à partir d’un `CUserToolsManager` de l’objet, définissez le `m_strLabel` variable de membre et définissez l’application qui exécute l’outil utilisateur. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 
@@ -92,7 +92,7 @@ L’exemple suivant montre comment créer un outil à partir d’un `CUserToolsM
 
 [CUserTool](../../mfc/reference/cusertool-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxusertool.h
 
@@ -268,4 +268,4 @@ Appelez cette méthode pour charger l’icône à afficher sur l’élément de 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx, classe](../../mfc/reference/cwinappex-class.md)<br/>
-[CUserToolsManager, classe](../../mfc/reference/cusertoolsmanager-class.md)
+[Cusertoolsmanager, classe](../../mfc/reference/cusertoolsmanager-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483328"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778284"
 ---
 # <a name="compiler-error-c2144"></a>Erreur du compilateur C2144
 
@@ -23,7 +23,7 @@ Cette erreur peut résulter d’une accolade fermante manquante, une parenthèse
 
 C2144 peut également se produire lorsque vous tentez de créer une macro à partir d’un mot clé CLR qui contient un caractère espace blanc.
 
-Vous pouvez également voir C2144 si vous essayez d’effectuer le transfert de type. Consultez [transfert de Type (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md) pour plus d’informations.
+Vous pouvez également voir C2144 si vous essayez d’effectuer le transfert de type. Consultez [transfert de Type (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md) pour plus d’informations.
 
 ## <a name="examples"></a>Exemples
 

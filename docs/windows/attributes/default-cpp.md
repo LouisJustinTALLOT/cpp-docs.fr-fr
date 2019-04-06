@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 1c9c8cd9a6bf0d6ea34db5d62d7767874b4dd4b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560613"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024580"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -32,7 +32,7 @@ Interface par défaut qui sera accessible aux environnements de script qui crée
 
 Si aucune interface par défaut n’est spécifiée, la première occurrence d’une interface non source est utilisée par défaut.
 
-*Interface2*<br/>
+*interface2*<br/>
 (Facultatif) L’interface source par défaut. Vous devez aussi spécifier cette interface avec l’attribut [source](source-cpp.md) .
 
 Si aucune interface source par défaut n’est spécifiée, la première interface source est utilisée par défaut.

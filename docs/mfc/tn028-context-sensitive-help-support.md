@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5689e314c2ba94068619a066e5f458e06819b2b7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288283"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773474"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028 : Prise en charge de l’aide contextuelle
 
@@ -68,7 +68,7 @@ La touche F1 est généralement traduite en une commande avec un ID de ID_HELP p
 
 Quelle que soit la façon dont la commande ID_HELP est générée, il est acheminé comme une commande normale jusqu'à ce qu’il atteigne un gestionnaire de commandes. Pour plus d’informations sur l’architecture de routage des commandes MFC, consultez [Note technique 21](../mfc/tn021-command-and-message-routing.md). Si l’application est activée, la commande ID_HELP sera gérée par [CWinApp::OnHelp](../mfc/reference/cwinapp-class.md#onhelp). L'objet d'application reçoit le message d'aide puis achemine la commande correctement. Cela est nécessaire car le routage des commandes par défaut n'est pas adéquat pour déterminer le contexte le plus spécifique.
 
-`CWinApp::OnHelp` tente de lancer WinHelp dans l'ordre suivant :
+`CWinApp::OnHelp` tente de lancer WinHelp dans l’ordre suivant :
 
 1. Recherche un appel `AfxMessageBox` actif à l'aide d'un ID d'aide Si une boîte de message est actuellement active, WinHelp s'exécute avec le contexte adapté à ce message.
 
@@ -107,7 +107,7 @@ Pendant l'exécution de cette boucle, toutes les entrées du clavier sont inacti
 
 S’il existe notamment les conversions ou des actions en tenant placer dans le `PreTranslateMessage` fonction qui ne doit pas avoir lieu en mode d’aide MAJ + F1, vous devez vérifier le *m_bHelpMode* membre `CWinApp` avant d’effectuer ces opérations. L'implémentation de `CDialog` pour `PreTranslateMessage` vérifie cela avant d'appeler `IsDialogMessage`, par exemple. Cela désactive les touches de "navigation dans les boîtes de dialogue" pour les boîtes de dialogue non modales en mode Maj+F1. En outre, `CWinApp::OnIdle` est tout de même appelé pendant cette boucle.
 
-Si l’utilisateur choisit une commande dans le menu, elle est gérée en tant qu’aide sur cette commande (via WM_COMMANDHELP, voir ci-dessous). Si l'utilisateur clique sur une zone visible de la fenêtre d'applications, il est déterminé s'il s'agit d'un clic non client ou d'un clic client. `OnContextHelp` gère le mappage des clics non clients aux clics clients. Dans le cas d’un clic client, il envoie ensuite un WM_HELPHITTEST dans la fenêtre de l’utilisateur a cliqué. Si cette fenêtre retourne une valeur différente de zéro, cette valeur est utilisée comme contexte d'aide. Si elle retourne la valeur zéro, `OnContextHelp` essaie la fenêtre parente (et en cas d'échec, ainsi de suite). Si un contexte d’aide ne peut pas être déterminé, la valeur par défaut consiste à envoyer une commande ID_DEFAULT_HELP à la fenêtre principale, qui (est ensuite en général) mappée à `CWinApp::OnHelpIndex`.
+Si l’utilisateur choisit une commande dans le menu, elle est gérée en tant qu’aide sur cette commande (via WM_COMMANDHELP, voir ci-dessous). Si l'utilisateur clique sur une zone visible de la fenêtre d'applications, il est déterminé s'il s'agit d'un clic non client ou d'un clic client. `OnContextHelp` gère le mappage d’une zone non cliente clique sur automatiquement aux clics clients. Dans le cas d’un clic client, il envoie ensuite un WM_HELPHITTEST dans la fenêtre de l’utilisateur a cliqué. Si cette fenêtre retourne une valeur différente de zéro, cette valeur est utilisée comme contexte d'aide. Si elle retourne la valeur zéro, `OnContextHelp` essaie la fenêtre parente (et en cas d'échec, ainsi de suite). Si un contexte d’aide ne peut pas être déterminé, la valeur par défaut consiste à envoyer une commande ID_DEFAULT_HELP à la fenêtre principale, qui (est ensuite en général) mappée à `CWinApp::OnHelpIndex`.
 
 ## <a name="wmhelphittest"></a>WM_HELPHITTEST
 
@@ -148,7 +148,7 @@ HID_MY_COMMAND    0x10096
 
 Ce format est compatible avec la fonctionnalité d'aide du compilateur, qui mappe les ID de contexte (les nombres à droite) aux noms d'élément (les symboles à gauche).
 
-Le code source de MAKEHM est disponible dans l’exemple d’utilitaires de programmation MFC [MAKEHM](../visual-cpp-samples.md).
+Le code source de MAKEHM est disponible dans l’exemple d’utilitaires de programmation MFC [MAKEHM](../overview/visual-cpp-samples.md).
 
 ## <a name="adding-help-support-after-running-the-mfc-application-wizard"></a>Ajout de la prise en charge de l'Aide après exécution de l'Assistant Application MFC
 

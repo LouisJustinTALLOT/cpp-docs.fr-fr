@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: edfeb18053f3ae4fa8c45211833e0ceaa037cf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595570"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037115"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -25,7 +25,7 @@ Vous permet d’utiliser des constructions IDL qui ne sont pas pris en charge da
 
 ### <a name="parameters"></a>Paramètres
 
-*texte*<br/>
+*ASCII*<br/>
 Le nom d’attribut que vous avez l’intention le compilateur Visual C++ à passer au fichier .idl généré sans retourner une erreur du compilateur.
 
 ## <a name="remarks"></a>Notes

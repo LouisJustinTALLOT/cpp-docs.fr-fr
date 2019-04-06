@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
-ms.openlocfilehash: ca9e2d272a5e9ab8fd69094bc1633dbd6ea2c3e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 463e210e5a1ac5eb6d197062ed8921f9bbae4ad2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624693"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037881"
 ---
 # <a name="compiler-error-c3498"></a>Erreur du compilateur C3498
 
@@ -21,7 +21,7 @@ Vous ne pouvez pas capturer une variable dotée d'un type managé ou d'un type W
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
-- Transmettez la variable managée ou de Windows Runtime dans la liste des paramètres de l’expression lambda.
+- Transmettez la variable managée ou de Windows Runtime dans la liste des paramètres de l'expression lambda.
 
 ## <a name="example"></a>Exemple
 

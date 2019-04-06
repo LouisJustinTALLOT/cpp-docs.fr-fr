@@ -21,12 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520420"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028089"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Directives #if, #elif, #else et #endif (C/C++)
 
@@ -41,19 +41,19 @@ Le **#if** directive, avec le **#elif**, **#else**, et **#endif** directives de 
 &nbsp;&nbsp;&nbsp;&nbsp;*texte de la ligne d’if*
 
 *If-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***expression constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***identificateur*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***identificateur*
+&nbsp;&nbsp;&nbsp;&nbsp;**#if**  *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef**  *identifier*
 
 *elif-parts* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-texte*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-line text*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif-parts elif-texte*
 
 *elif-ligne* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***expression constante*
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
 
 *partie « else »* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*texte de ligne Else*
+&nbsp;&nbsp;&nbsp;&nbsp;*else-line text*
 
 *ligne Else* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#else**
@@ -65,7 +65,7 @@ Chaque **#if** directive dans un fichier source doit correspondre à une fermetu
 
 Le **#if**, **#elif**, **#else**, et **#endif** peuvent imbriquer des directives dans les parties de texte des autres **#if**directives. Chaque imbriqués **#else**, **#elif**, ou **#endif** directive appartient à la précédente la plus proche **#if** directive.
 
-Toutes les directives de compilation conditionnelle, tel que **#if** et **#ifdef**, doit correspondre à la fermeture **#endif** directives avant la fin du fichier ; sinon, une erreur message est généré. Lorsque les directives de compilation conditionnelle sont contenues dans les fichiers Include, elles doivent satisfaire aux mêmes conditions : il ne doit y avoir aucune directive de compilation conditionnelle sans correspondance à la fin du fichier Include.
+Toutes les directives de compilation conditionnelle, tel que **#if** et **#ifdef**, doit correspondre à la fermeture **#endif** directives avant la fin du fichier ; sinon, une erreur message est généré. Lorsque les directives de compilation conditionnelle sont contenues dans les fichiers include, elles doivent satisfaire aux mêmes conditions : Il ne doit y avoir aucune directive de compilation conditionnelle sans correspondance à la fin du fichier include.
 
 Remplacement de macro est effectué dans la partie de la ligne de commande qui suit une **#elif** commande, donc un appel de macro peut être utilisé dans le *expression constante*.
 
@@ -97,7 +97,7 @@ L’opérateur de préprocesseur **défini** peut être utilisé dans les expres
 
 defined( `identifier` )
 
-defined `identifier`
+définir `identifier`
 
 Cette expression constante est considéré comme true (différent de zéro) si le *identificateur* est actuellement défini ; sinon, la condition est false (0). Un identificateur défini comme du texte vide est considéré comme défini. Le **défini** directive peut être utilisée dans un **#if** et un **#elif** directive mais nulle part ailleurs.
 
@@ -174,7 +174,7 @@ Le code précédent vérifie si la constante symbolique `EXAMPLE_H` est définie
 
 ## <a name="hasinclude"></a>__has_include
 
-**Visual Studio 2017 15.3 et versions ultérieures**: détermine si un en-tête de bibliothèque est disponible pour être inclus :
+**Visual Studio 2017 15.3 et versions ultérieures :**  Détermine si un en-tête de bibliothèque est disponible pour être inclus :
 
 ```cpp
 #ifdef __has_include

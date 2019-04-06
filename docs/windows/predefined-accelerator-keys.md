@@ -10,12 +10,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 99867f146ca80d8b48c9be9deb59044207b33af1
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: bb407538f254df5f187ff91b85a8eaa753a52287
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210495"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027510"
 ---
 # <a name="accelerator-keys-c"></a>Touches accélérateur (C++)
 
@@ -81,7 +81,7 @@ Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent
 
 Bien souvent, vous souhaitez qu'un élément de menu et une combinaison de touches du clavier permettent d'exécuter la même commande de programme. Vous effectuez cette action en attribuant le même identificateur de ressource (ID) à l’élément de menu et à une entrée dans la table d’accélérateurs de votre application. Vous modifiez ensuite la légende de l'élément de menu pour afficher le nom de l'accélérateur. Pour plus d’informations sur les éléments de menu et les touches d’accès rapide, consultez [commandes de Menu](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

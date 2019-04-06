@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: c6bdbb18c2d1b40423457b4cf07d0a747138b99b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8b92ddad9d3a6de41cf6914dee268f6e54b5d420
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266196"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776061"
 ---
 # <a name="cmenutearoffmanager-class"></a>Cmenutearoffmanager, classe
 
@@ -70,7 +70,7 @@ Pour utiliser les menus volants dans votre application, vous devez disposer un `
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment créer et initialiser un `CMenuTearOffManager` objet en appelant le `CWinAppEX::EnableTearOffMenus` (méthode). Cet extrait de code fait partie de l’ [exemple Word Pad](../../visual-cpp-samples.md).
+L’exemple suivant montre comment créer et initialiser un `CMenuTearOffManager` objet en appelant le `CWinAppEX::EnableTearOffMenus` (méthode). Cet extrait de code fait partie de l’ [exemple Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]
 
@@ -80,7 +80,7 @@ L’exemple suivant montre comment créer et initialiser un `CMenuTearOffManager
 
 `CMenuTearOffManager`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmenutearoffmanager.h
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 93ded20bde98cc4e7b0fc15fd8332195d38f2543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451985"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023371"
 ---
 # <a name="checkstack"></a>check_stack
 Indique au compilateur de désactiver les tests de pile si `off` (ou `-`) est spécifié, ou pour activer les tests de pile si `on` (ou `+`) est spécifié.
@@ -28,7 +28,7 @@ Indique au compilateur de désactiver les tests de pile si `off` (ou `-`) est sp
 
 ## <a name="remarks"></a>Notes
 
-Si aucun argument n'est fourni, les tests de pile sont traités en fonction de la valeur par défaut. Ce pragma est appliqué à la première fonction définie après détection du pragma. Les tests de pile ne font partie ni des macros, ni des fonctions générées inline.
+Si aucun argument n’est fourni, les tests de pile sont traités en fonction de la valeur par défaut. Ce pragma est appliqué à la première fonction définie après détection du pragma. Les tests de pile ne font partie ni des macros, ni des fonctions générées inline.
 
 Si vous ne fournissez pas d’argument pour le **check_stack** pragma, contrôle de pile rétablit le comportement spécifié sur la ligne de commande. Pour plus d’informations, consultez [référence du compilateur](../build/reference/compiler-options.md). L’interaction entre le `#pragma check_stack` et [/GS](../build/reference/gs-control-stack-checking-calls.md) option est résumée dans le tableau suivant.
 
@@ -37,9 +37,9 @@ Si vous ne fournissez pas d’argument pour le **check_stack** pragma, contrôle
 |Syntaxe|Compilé avec<br /><br /> Option /Gs ?|Action|
 |------------|------------------------------------|------------|
 |`#pragma check_stack( )` ou<br /><br /> `#pragma check_stack`|Oui|Désactive la vérification de la pile pour les fonctions qui suivent|
-|`#pragma check_stack( )` ou<br /><br /> `#pragma check_stack`|Aucune|Active la vérification de la pile pour les fonctions qui suivent|
-|`#pragma check_stack(on)`<br /><br /> Ou `#pragma check_stack +`|Oui ou non|Active la vérification de la pile pour les fonctions qui suivent|
-|`#pragma check_stack(off)`<br /><br /> Ou `#pragma check_stack -`|Oui ou non|Désactive la vérification de la pile pour les fonctions qui suivent|
+|`#pragma check_stack( )` ou<br /><br /> `#pragma check_stack`|Non|Active la vérification de la pile pour les fonctions qui suivent|
+|`#pragma check_stack(on)`<br /><br /> ou `#pragma check_stack +`|Oui ou non|Active la vérification de la pile pour les fonctions qui suivent|
+|`#pragma check_stack(off)`<br /><br /> ou `#pragma check_stack -`|Oui ou non|Désactive la vérification de la pile pour les fonctions qui suivent|
 
 ## <a name="see-also"></a>Voir aussi
 

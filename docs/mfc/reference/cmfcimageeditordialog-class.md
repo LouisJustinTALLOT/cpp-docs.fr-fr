@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 57b1df49616967841a433a36a504beed0b900cde
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97f16fa00b2e90fd9c43bf9b6792b4eafe7d7b88
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278533"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780443"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog, classe
 
@@ -65,7 +65,7 @@ Une façon d’utiliser un `CMFCImageEditorDialog` objet consiste à passer un `
 
 [CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afximageeditordialog.h
 
@@ -99,7 +99,7 @@ Pour modifier une image, passez un pointeur de l’image vers le `CMFCImageEdito
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un objet de la `CMFCImageEditorDialog` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment construire un objet de la `CMFCImageEditorDialog` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]
@@ -108,4 +108,4 @@ L’exemple suivant montre comment construire un objet de la `CMFCImageEditorDia
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBar, classe](../../mfc/reference/cmfctoolbar-class.md)
+[Cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md)

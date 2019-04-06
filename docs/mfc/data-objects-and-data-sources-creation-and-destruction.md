@@ -15,22 +15,22 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304433"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775242"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objets de données et Sources de données : Création et Destruction
 
 Comme expliqué dans l’article [objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md), objets de données et sources de données représentent les deux côtés d’un transfert de données. Cet article explique la création et la destruction des objets et sources pour effectuer les transferts de données correctement, notamment :
 
-- [Création d’objets de données](#_core_creating_data_objects)
+- [Création des objets de données](#_core_creating_data_objects)
 
 - [Destruction des objets de données](#_core_destroying_data_objects)
 
-- [Création de sources de données](#_core_creating_data_sources)
+- [Création des sources de données](#_core_creating_data_sources)
 
 - [Destruction des sources de données](#_core_destroying_data_sources)
 
@@ -68,7 +68,7 @@ Les sources de données sont créées lorsqu'une application doit copier des don
 
 1. S’il s’agit une **couper** opération ou `DoDragDrop` retourne **DROPEFFECT_MOVE**, les données sélectionnées à l’étape 1 sont supprimées du document.
 
-Ce scénario est implémenté par les exemples OLE MFC [OCLIENT](../visual-cpp-samples.md) et [HIERSVR](../visual-cpp-samples.md). Recherchez la source de la classe dérivée de `CView` de chaque application pour toutes les fonctions sauf `GetClipboardData` et `OnGetClipboardData`. Ces deux fonctions figurent dans les implémentations des classes dérivées de `COleClientItem` ou `COleServerItem`. Ces exemples de programmes montrent bien la manière d'implémenter ces concepts.
+Ce scénario est implémenté par les exemples OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) et [HIERSVR](../overview/visual-cpp-samples.md). Recherchez la source de la classe dérivée de `CView` de chaque application pour toutes les fonctions sauf `GetClipboardData` et `OnGetClipboardData`. Ces deux fonctions figurent dans les implémentations des classes dérivées de `COleClientItem` ou `COleServerItem`. Ces exemples de programmes montrent bien la manière d'implémenter ces concepts.
 
 Une autre situation dans laquelle vous pouvez créer un objet `COleDataSource` se produit si vous modifiez le comportement par défaut d’une opération Glisser-déposer. Pour plus d’informations, consultez le [glisser -déplacer : Personnalisation](../mfc/drag-and-drop-customizing.md) article.
 

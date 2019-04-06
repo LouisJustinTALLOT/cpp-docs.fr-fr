@@ -3,12 +3,12 @@ title: Configurer des sessions de débogage CMake dans Visual Studio
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356164"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035346"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurer des sessions de débogage CMake
 
@@ -42,7 +42,7 @@ Dès que vous enregistrez le **launch.vs.json** fichier, une entrée est créée
 
 ## <a name="support-for-cmakesettings-variables"></a>Prise en charge des variables CMakeSettings
 
- **Launch.VS.JSON** prend en charge les variables qui sont déclarées dans **CMakeSettings.json** (voir ci-dessous) et qui sont applicables à la configuration actuellement sélectionnée. Ce fichier a également une clé nommée `currentDir`, qui définit le répertoire actuel de l’application de lancement :
+ **Launch.VS.JSON** prend en charge les variables qui sont déclarées dans **CMakeSettings.json** (voir ci-dessous) et qui sont applicables à la configuration actuellement sélectionnée. Il a également une clé nommée `currentDir`, qui définit le répertoire actuel de l’application de lancement pour un projet local :
 
 ```json
 {
@@ -59,12 +59,19 @@ Quand vous exécutez l’application, la valeur de `currentDir` ressemble à
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
+
+La clé 'cwd' définit le répertoire actuel de l’application de lancement pour un projet à distance. La valeur par défaut est '${debugInfo.defaultWorkingDirectory}' qui prend la valeur 
+
+```cmd
+/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
+```
+
 ## <a name="see-also"></a>Voir aussi
 
 [Projets CMake dans Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Configurer un projet CMake Linux](../linux/cmake-linux-project.md)<br/>
-[Se connecter à votre ordinateur Linux distant](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Personnaliser les paramètres de génération CMake](customize-cmake-settings.md)<br/>
+[Se connecter à un ordinateur Linux distant](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Personnaliser des paramètres de génération CMake](customize-cmake-settings.md)<br/>
 [Configurer des sessions de débogage CMake](configure-cmake-debugging-sessions.md)<br/>
 [Déployer, exécuter et déboguer un projet Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Informations de référence sur la configuration prédéfinie de CMake](cmake-predefined-configuration-reference.md)<br/>

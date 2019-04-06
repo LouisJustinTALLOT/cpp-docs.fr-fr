@@ -8,12 +8,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: af0e4d7267fab92c867431ab70f4d8a0240a79d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cfb9d2bb9d6ddd2d430c2c031f3c8a51946391b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666113"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032964"
 ---
 # <a name="component"></a>component
 Contrôle la collecte des informations de consultation ou les informations sur les dépendances à partir des fichiers sources.
@@ -73,7 +73,7 @@ Pour empêcher le préprocesseur de développer *nom* (par exemple, l’extensio
 
 ### <a name="minimal-rebuild"></a>Régénération minimale
 
-La fonctionnalité de régénération minimale Visual C++ exige que le compilateur crée et stocke des informations sur les dépendances de classe C++, ce qui occupe de l’espace sur le disque. Pour économiser l’espace disque, vous pouvez utiliser `#pragma component( minrebuild, off )` chaque fois que vous n’avez pas besoin collecter des informations de dépendance, par exemple, dans les fichiers d’en-tête qui ne changent pas. Insérer `#pragma component(minrebuild, on)` une fois que les classes qui ne changent pas pour activer la collection de dépendances de le rallumer.
+La fonctionnalité de régénération minimale Visual C++ exige que le compilateur crée et stocke des informations sur les dépendances de classe C++, ce qui occupe de l'espace sur le disque. Pour économiser l’espace disque, vous pouvez utiliser `#pragma component( minrebuild, off )` chaque fois que vous n’avez pas besoin collecter des informations de dépendance, par exemple, dans les fichiers d’en-tête qui ne changent pas. Insérer `#pragma component(minrebuild, on)` une fois que les classes qui ne changent pas pour activer la collection de dépendances de le rallumer.
 
 ### <a name="reduce-type-information"></a>Réduction des informations de type
 

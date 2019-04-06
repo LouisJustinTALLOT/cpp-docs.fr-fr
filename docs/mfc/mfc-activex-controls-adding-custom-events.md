@@ -15,12 +15,12 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: 626aae04e0b19dc951814e4741cad3729acd3b72
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263011"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781001"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Contrôles ActiveX MFC : Ajout d’événements personnalisés
 
@@ -92,7 +92,7 @@ Maintenant que vous avez ajouté l’événement personnalisé ClickIn à l’ai
 
 1. Double-cliquez sur la nouvelle fonction de gestionnaire dans Affichage de classes pour accéder au code de gestionnaire de messages dans l’implémentation (. Fichier CPP) de votre contrôle ActiveX.
 
-Le code suivant exemple appelle la `InCircle` chaque clic sur le bouton gauche de la souris dans la fenêtre de contrôle de la fonction. Cet exemple peut être trouvé dans la fonction gestionnaire WM_LBUTTONDOWN, `OnLButtonDown`, dans le [CERC exemple](../visual-cpp-samples.md) abstraite.
+Le code suivant exemple appelle la `InCircle` chaque clic sur le bouton gauche de la souris dans la fenêtre de contrôle de la fonction. Cet exemple peut être trouvé dans la fonction gestionnaire WM_LBUTTONDOWN, `OnLButtonDown`, dans le [CERC exemple](../overview/visual-cpp-samples.md) abstraite.
 
 [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]
 
@@ -135,4 +135,4 @@ La procédure suivante ajoute un personnalisé, cliquez sur événement.
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Contrôles ActiveX MFC : Méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
-[COleControl, classe](../mfc/reference/colecontrol-class.md)
+[COleControl (classe)](../mfc/reference/colecontrol-class.md)

@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296005"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781976"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 
@@ -284,10 +284,10 @@ Le tableau suivant répertorie les quatre types de propriété de sélection :
 
 |Classe|Description|
 |-----------|-----------------|
-|[CMFCPropertyGridProperty, classe](../../mfc/reference/cmfcpropertygridproperty-class.md)|Une propriété à usage général qui est utilisée pour spécifier la valeur des chaînes, valeurs booléennes, dates et ainsi de suite.|
-|[CMFCPropertyGridColorProperty, classe](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Une propriété qui est utilisée pour sélectionner une valeur de couleur.|
-|[CMFCPropertyGridFileProperty, classe](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Une propriété qui est utilisée pour sélectionner un fichier.|
-|[CMFCPropertyGridFontProperty, classe](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Une propriété qui est utilisée pour sélectionner une police.|
+|[Cmfcpropertygridproperty, classe](../../mfc/reference/cmfcpropertygridproperty-class.md)|Une propriété à usage général qui est utilisée pour spécifier la valeur des chaînes, valeurs booléennes, dates et ainsi de suite.|
+|[Cmfcpropertygridcolorproperty, classe](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Une propriété qui est utilisée pour sélectionner une valeur de couleur.|
+|[Cmfcpropertygridfileproperty, classe](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Une propriété qui est utilisée pour sélectionner un fichier.|
+|[Cmfcpropertygridfontproperty, classe](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Une propriété qui est utilisée pour sélectionner une police.|
 
 ## <a name="illustrations"></a>Illustrations
 
@@ -297,7 +297,7 @@ Les illustrations suivantes décrivent un contrôle de grille de propriétés qu
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment configurer un objet de contrôle de grille de propriété à l’aide de différentes méthodes de la `CMFCPropertyGridCtrl` classe. L’exemple montre comment activer le contrôle header, la zone de description et définir l’apparence du contrôle de grille de propriété. L’exemple montre également comment définir le mode alphabétique pour le contrôle dans lequel le contrôle trie toutes les propriétés qu’il contient par leur nom de propriété et comment définir les couleurs personnalisées pour différents éléments de la propriété du contrôle de grille. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment configurer un objet de contrôle de grille de propriété à l’aide de différentes méthodes de la `CMFCPropertyGridCtrl` classe. L’exemple montre comment activer le contrôle header, la zone de description et définir l’apparence du contrôle de grille de propriété. L’exemple montre également comment définir le mode alphabétique pour le contrôle dans lequel le contrôle trie toutes les propriétés qu’il contient par leur nom de propriété et comment définir les couleurs personnalisées pour différents éléments de la propriété du contrôle de grille. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -315,7 +315,7 @@ L’exemple suivant montre comment configurer un objet de contrôle de grille de
 
 [CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpropertygridctrl.h
 
@@ -480,7 +480,7 @@ Pour créer un contrôle de grille de propriétés, le premier appel [CMFCProper
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `Create` méthode dans `CMFCPropertyGridCtrl` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `Create` méthode dans `CMFCPropertyGridCtrl` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 
@@ -558,7 +558,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] TRUE pour activer la zone de description ; FALSE pour désactiver la zone de description. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -578,7 +578,7 @@ void EnableHeaderCtrl(
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] TRUE pour activer le contrôle header ; FALSE pour désactiver le contrôle header. La valeur par défaut est TRUE.
 
 *lpszLeftColumn*<br/>
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*color*<br/>
+*couleur*<br/>
 [in] Une valeur de couleur RVB.
 
 ### <a name="remarks"></a>Notes

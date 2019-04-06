@@ -1,5 +1,5 @@
 ---
-title: "Recordset : lancement d'une nouvelle requête sur un recordset (ODBC)"
+title: 'Recordset : Actualisation d’un jeu d’enregistrements (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, requerying
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482742"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024593"
 ---
-# <a name="recordset-requerying-a-recordset-odbc"></a>Recordset : lancement d'une nouvelle requête sur un recordset (ODBC)
+# <a name="recordset-requerying-a-recordset-odbc"></a>Recordset : Actualisation d’un jeu d’enregistrements (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -29,7 +29,7 @@ Les principales raisons pour l’actualisation d’un jeu d’enregistrements so
 
 ##  <a name="_core_bringing_the_recordset_up_to_date"></a> Mise à jour le jeu d’enregistrements
 
-Souvent, vous devez actualiser votre objet de jeu d’enregistrements pour le mettre à jour. Dans un environnement de base de données multi-utilisateur, d’autres utilisateurs peuvent apporter des modifications aux données pendant la durée de vie de votre jeu d’enregistrements. Pour plus d’informations sur quand votre recordset reflète les modifications apportées par d’autres utilisateurs et quand les recordsets des autres utilisateurs reflètent vos modifications, consultez [Recordset : mise à jour des enregistrements par les Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) et [Dynaset](../../data/odbc/dynaset.md).
+Souvent, vous devez actualiser votre objet de jeu d’enregistrements pour le mettre à jour. Dans un environnement de base de données multi-utilisateur, d’autres utilisateurs peuvent apporter des modifications aux données pendant la durée de vie de votre jeu d’enregistrements. Pour plus d’informations sur quand votre recordset reflète les modifications apportées par d’autres utilisateurs et quand les recordsets des autres utilisateurs reflètent vos modifications, consultez [jeu d’enregistrements : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) et [Dynaset](../../data/odbc/dynaset.md).
 
 ##  <a name="_core_requerying_based_on_new_parameters"></a> Réexécutez la requête basée sur les nouveaux paramètres
 
@@ -48,7 +48,7 @@ Une autre utilisation fréquente et il est tout aussi important, utilisez de [Re
 
 Vous pouvez également fermer et rouvrir le jeu d’enregistrements d’origine. Dans les deux cas, le nouveau jeu d’enregistrements représente l’état actuel de la source de données.
 
-Pour obtenir un exemple, consultez [vues d’enregistrements : remplissage d’une zone de liste à partir d’un Second Recordset](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+Pour obtenir un exemple, consultez [vues d’enregistrements : Remplissage d’une zone de liste à partir d’un Second Recordset](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
 
 > [!TIP]
 >  Pour optimiser les `Requery` performances, évitez de modifier le jeu d’enregistrements [filtre](../../data/odbc/recordset-filtering-records-odbc.md) ou [tri](../../data/odbc/recordset-sorting-records-odbc.md). Modifier uniquement la valeur du paramètre avant d’appeler `Requery`.
@@ -58,5 +58,5 @@ Si le `Requery` appeler échoue, vous pouvez réessayer l’appel ; sinon, votr
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : liaison dynamique de colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
-[Recordset : création et fermeture de recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+[Recordset : Liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[Recordset : Création et fermeture de Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

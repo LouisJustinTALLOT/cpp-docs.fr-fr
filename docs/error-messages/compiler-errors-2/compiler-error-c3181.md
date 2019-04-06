@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: b37b28b4332b46aaaf803f58090a72c25e83f47f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc848d4108ed4a1a7b6646647a1bbb1ec8dcadf7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587757"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781807"
 ---
 # <a name="compiler-error-c3181"></a>Erreur du compilateur C3181
 
 'type' : opérande non valide pour l’opérateur
 
-Un paramètre non valide a été passé à la [typeid](../../windows/typeid-cpp-component-extensions.md) opérateur. Le paramètre doit être un type managé.
+Un paramètre non valide a été passé à la [typeid](../../extensions/typeid-cpp-component-extensions.md) opérateur. Le paramètre doit être un type managé.
 
 Notez que le compilateur utilise des alias pour les types natifs qui mappent aux types dans le common language runtime.
 

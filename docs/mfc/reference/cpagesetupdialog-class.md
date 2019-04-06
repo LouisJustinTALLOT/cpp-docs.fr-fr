@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 9a8940aa23b23281a6de6ce7e75bb1e43341b14a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277883"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778089"
 ---
 # <a name="cpagesetupdialog-class"></a>Cpagesetupdialog, classe
 
@@ -103,7 +103,7 @@ Si `DoModal` retourne IDOK, vous pouvez utiliser plusieurs `CPageSetupDialog`de 
 
 `CPageSetupDialog`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdlgs.h
 
@@ -405,6 +405,6 @@ Remplacez cette fonction pour personnaliser le dessin de l’image. Si vous subs
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC WORDPAD](../../visual-cpp-samples.md)<br/>
-[CCommonDialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
+[Exemple MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
+[Ccommondialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266053"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781794"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap (classe)
 
@@ -40,7 +40,7 @@ Classe de base de la classe map de pointeurs typés ; doit être une classe de 
 *KEY*<br/>
 Classe de l’objet utilisé comme clé pour la carte.
 
-*VALEUR*<br/>
+*VALUE*<br/>
 Classe de l’objet stocké dans la classe map.
 
 ## <a name="members"></a>Membres
@@ -74,7 +74,7 @@ Pour plus d’informations sur l’utilisation de `CTypedPtrMap`, consultez les 
 
 `CTypedPtrMap`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtempl.h
 
@@ -100,7 +100,7 @@ Paramètre de modèle qui spécifie le type des clés de la carte.
 *rKey*<br/>
 Spécifie la clé retournée de l’élément récupéré.
 
-*VALEUR*<br/>
+*VALUE*<br/>
 Paramètre de modèle qui spécifie le type des valeurs de la carte.
 
 *rValue*<br/>
@@ -127,10 +127,10 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *BASE_CLASS*<br/>
 Paramètre de modèle en spécifiant la classe de base de la classe de cette carte.
 
-*key*<br/>
+*clé*<br/>
 La clé de l’élément à rechercher.
 
-*VALEUR*<br/>
+*VALUE*<br/>
 Paramètre de modèle qui spécifie le type des valeurs stockées dans ce mappage.
 
 *rValue*<br/>
@@ -154,13 +154,13 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Paramètres
 
-*VALEUR*<br/>
+*VALUE*<br/>
 Paramètre de modèle qui spécifie le type des valeurs stockées dans ce mappage.
 
 *BASE_CLASS*<br/>
 Paramètre de modèle en spécifiant la classe de base de la classe de cette carte.
 
-*key*<br/>
+*clé*<br/>
 La clé de l’élément recherché ou la création de la carte.
 
 ### <a name="remarks"></a>Notes
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *KEY*<br/>
 Paramètre de modèle qui spécifie le type des clés de la carte.
 
-*key*<br/>
+*clé*<br/>
 Clé de l’élément à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -204,7 +204,7 @@ void SetAt(KEY key, VALUE newValue);
 *KEY*<br/>
 Paramètre de modèle qui spécifie le type des clés de la carte.
 
-*key*<br/>
+*clé*<br/>
 Spécifie la valeur de clé de la newValue.
 
 *newValue*<br/>
@@ -216,7 +216,7 @@ Pour plus de remarques, consultez [CMapStringToOb::SetAt](../../mfc/reference/cm
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Exemple MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CMapPtrToPtr, classe](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [CMapPtrToWord, classe](../../mfc/reference/cmapptrtoword-class.md)<br/>

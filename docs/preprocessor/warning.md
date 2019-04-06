@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631719"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037748"
 ---
 # <a name="warning-pragma"></a>Warning (pragma)
 Active la modification sélective du comportement des messages d'avertissement du compilateur.
@@ -37,8 +37,8 @@ Les paramètres spécificateur-avertissement suivants sont disponibles.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Applique le niveau donné du ou des avertissements spécifiés. Cela active également un avertissement spécifié qui est désactivé par défaut.|
 |*default*|Réinitialise le comportement d'avertissement à sa valeur par défaut. Cela active également un avertissement spécifié qui est désactivé par défaut. L'avertissement est généré à son niveau par défaut, documenté.<br /><br /> Pour plus d'informations, consultez [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*disable*|Ne publie pas le ou les messages d'avertissement spécifiés.|
-|*Erreur*|Signale les avertissements spécifiés comme des erreurs.|
+|*désactiver*|Ne publie pas le ou les messages d'avertissement spécifiés.|
+|*erreur*|Signale les avertissements spécifiés comme des erreurs.|
 |*once*|Affiche le ou les messages spécifiés une seule fois.|
 |*supprimer*|Exécute un push de l'état actuel du pragma sur la pile, désactive l'avertissement spécifié pour la ligne suivante, puis dépile la pile d'avertissement afin que l'état pragma soit réinitialisé.|
 

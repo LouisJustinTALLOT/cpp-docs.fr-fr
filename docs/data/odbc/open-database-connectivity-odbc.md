@@ -6,12 +6,12 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523349"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030087"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 
@@ -62,15 +62,15 @@ Ces tâches sont basées sur la bibliothèque MFC [ODBC](odbc-basics.md) classes
 
 - [Installer et bien démarrer avec ODBC](installing-and-getting-started-with-odbc.md)
 
-- [Conception et création d’une application de base de données ODBC](design-and-create-an-odbc-database-application.md)
+- [Conception et création d'une application de base de données ODBC](design-and-create-an-odbc-database-application.md)
 
 - [Utilisation des formulaires de base de données (mode Enregistrement) avec ODBC](use-database-forms-record-views-with-odbc.md)
 
-- [Utilisation d’ODBC pour travailler avec d’autres utilisateurs](use-odbc-to-work-with-other-users.md)
+- [Utilisation de ODBC pour travailler avec d'autres utilisateurs](use-odbc-to-work-with-other-users.md)
 
 - [Utilisation de connexions de base de données ODBC](work-with-odbc-database-connections.md)
 
-- [Utilisation d’ODBC et de pilotes](work-with-odbc-and-drivers.md)
+- [Utilisation d'ODBC et de pilotes](work-with-odbc-and-drivers.md)
 
 - [Utilisation de la bibliothèque de curseurs ODBC](use-the-odbc-cursor-library.md)
 
@@ -78,4 +78,4 @@ Ces tâches sont basées sur la bibliothèque MFC [ODBC](odbc-basics.md) classes
 
 ## <a name="see-also"></a>Voir aussi
 
-[Accès aux données de programmation (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Programmation de l'accès aux données (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

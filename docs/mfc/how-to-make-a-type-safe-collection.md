@@ -10,24 +10,24 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295186"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781521"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Procédure : Définir une Collection de Type sécurisé
 
 Cet article explique comment créer des collections de types cohérents pour vos propres types de données. Les rubriques traitées ici sont les suivantes :
 
-- [À l’aide des classes basées sur le modèle de sécurité de type](#_core_using_template.2d.based_classes_for_type_safety)
+- [Utilisation des classes basées sur un modèle pour la cohérence des types](#_core_using_template.2d.based_classes_for_type_safety)
 
-- [Implémentation de fonctions d’assistance](#_core_implementing_helper_functions)
+- [Implémentation des fonctions d'assistance](#_core_implementing_helper_functions)
 
-- [À l’aide des classes de collection](#_core_using_nontemplate_collection_classes)
+- [Utilisation des classes de collections non typées](#_core_using_nontemplate_collection_classes)
 
-La bibliothèque MFC fournit les collections de type sécurisé prédéfinies basées sur des modèles C++. Étant donné qu'il s'agit de modèles, ces classes offrent une cohérence des types et simplifient l'utilisation sans conversion de type, ainsi que bien d'autres tâches liées à l'utilisation d'une classe non basée sur un modèle. L’exemple MFC [collecter](../visual-cpp-samples.md) illustre l’utilisation de classes de collection basées sur le modèle dans une application MFC. En général, utilisez ces classes lorsque vous entrez un nouveau code de collections.
+La bibliothèque MFC fournit les collections de type sécurisé prédéfinies basées sur des modèles C++. Étant donné qu'il s'agit de modèles, ces classes offrent une cohérence des types et simplifient l'utilisation sans conversion de type, ainsi que bien d'autres tâches liées à l'utilisation d'une classe non basée sur un modèle. L’exemple MFC [collecter](../overview/visual-cpp-samples.md) illustre l’utilisation de classes de collection basées sur le modèle dans une application MFC. En général, utilisez ces classes lorsque vous entrez un nouveau code de collections.
 
 ##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> À l’aide des Classes basées sur le modèle de sécurité de Type
 

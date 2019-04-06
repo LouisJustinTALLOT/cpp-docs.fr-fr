@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: 88a9c49b55dca9d98976924127efff67c479a96a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276964"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773786"
 ---
 # <a name="cmfcmaskededit-class"></a>Cmfcmaskededit, classe
 
@@ -88,7 +88,7 @@ Si vous n’appelez pas une ou plusieurs méthodes pour initialiser le masque, l
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment définir un masque (par exemple, un numéro de téléphone) à l’aide de la `EnableMask` méthode pour créer le masque pour modifier le contrôle, le texte masqué le `SetValidChars` pour spécifier une chaîne de caractères valides que l’utilisateur peut entrer et (méthode)`SetWindowText` contrôle d’édition de méthode pour afficher une invite de commandes dans le texte masqué. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment définir un masque (par exemple, un numéro de téléphone) à l’aide de la `EnableMask` méthode pour créer le masque pour modifier le contrôle, le texte masqué le `SetValidChars` pour spécifier une chaîne de caractères valides que l’utilisateur peut entrer et (méthode)`SetWindowText` contrôle d’édition de méthode pour afficher une invite de commandes dans le texte masqué. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#12](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]
@@ -105,7 +105,7 @@ L’exemple suivant montre comment définir un masque (par exemple, un numéro d
 
 [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmaskededit.h
 
@@ -131,7 +131,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] TRUE pour spécifier que le [CMFCMaskedEdit::GetWindowText](#getwindowtext) méthode récupérer masquées uniquement des caractères ; FALSE pour indiquer que la méthode récupérer l’intégralité du texte. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -191,7 +191,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] TRUE pour sélectionner uniquement des groupes ; Pour sélectionner l’intégralité du texte, la valeur est FALSE. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -225,7 +225,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] TRUE pour valider l’utilisateur d’entrée par rapport à seulement masquées caractères ; FALSE pour valider le masque entier. La valeur par défaut est TRUE.
 
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText
@@ -340,4 +340,4 @@ Cette méthode redéfinit [CWnd::SetWindowText](../../mfc/reference/cwnd-class.m
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CEdit, classe](../../mfc/reference/cedit-class.md)
+[CEdit Class](../../mfc/reference/cedit-class.md)

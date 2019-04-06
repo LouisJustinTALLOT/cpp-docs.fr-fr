@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: e64ea6701c5e3ec594c705e8995b5ba605ab0b79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301192"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779675"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Types multidocuments, vues et fenêtres frame
 
@@ -28,11 +28,11 @@ La relation standard entre un document, sa vue et sa fenêtre frame est décrite
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 
-- [Multiple document types](#_core_multiple_document_types)
+- [Types multidocuments](#_core_multiple_document_types)
 
-- [Multiple views](#_core_multiple_views)
+- [Vues multiples](#_core_multiple_views)
 
-- [Multiple frame windows](#_core_multiple_frame_windows)
+- [Fenêtres frame multiples](#_core_multiple_frame_windows)
 
 - [Fenêtres fractionnées](#_core_splitter_windows)
 
@@ -67,9 +67,9 @@ La figure suivante, divisée en plusieurs parties (a, b et c), présente les tro
 ![Plusieurs&#45;afficher les interfaces utilisateur](../mfc/media/vc37a71.gif "plusieurs&#45;afficher des interfaces utilisateur") <br/>
 Interfaces utilisateur à plusieurs vues
 
-Pour proposer ces modèles, l’infrastructure implémente la commande Nouvelle fenêtre et fournit la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), comme indiqué dans [Fenêtres fractionnées](#_core_splitter_windows). Vous pouvez implémenter d’autres modèles en utilisant ceux-ci comme point de départ. Pour obtenir des exemples de programmes qui illustrent différentes configurations de vues, de fenêtres frame et de fenêtres fractionnées, consultez [Exemples MFC](../visual-cpp-samples.md).
+Pour proposer ces modèles, l’infrastructure implémente la commande Nouvelle fenêtre et fournit la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), comme indiqué dans [Fenêtres fractionnées](#_core_splitter_windows). Vous pouvez implémenter d’autres modèles en utilisant ceux-ci comme point de départ. Pour obtenir des exemples de programmes qui illustrent différentes configurations de vues, de fenêtres frame et de fenêtres fractionnées, consultez [Exemples MFC](../overview/visual-cpp-samples.md).
 
-Pour plus d’informations sur `UpdateAllViews`, consultez la classe [CView](../mfc/reference/cview-class.md) dans *Référence MFC* et [Exemple Scribble](../visual-cpp-samples.md).
+Pour plus d’informations sur `UpdateAllViews`, consultez la classe [CView](../mfc/reference/cview-class.md) dans *Référence MFC* et [Exemple Scribble](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_multiple_frame_windows"></a> Multiple Frame Windows
 
@@ -79,11 +79,11 @@ Vous pouvez utiliser la commande Nouvelle fenêtre du menu Fenêtre pour que les
 
 Dans une fenêtre fractionnée, la fenêtre est, ou peut être, divisée en deux volets ou plus qu’il est possible de faire défiler. Un contrôle splitter (ou « curseur de fractionnement ») dans le frame de fenêtre à côté des barres de défilement permet à l’utilisateur d’ajuster les tailles relatives des volets. Chaque volet est une vue du même document. Dans les fenêtres fractionnées « dynamiques », les vues sont de la même classe, comme indiqué dans la partie b de la figure Interfaces utilisateur à plusieurs vues. Dans les fenêtres fractionnées « statiques », les vues peuvent être de différentes classes. La classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)prend en charge les fenêtres fractionnées des deux types.
 
-Les fenêtres fractionnées dynamiques, avec des vues de la même classe, permettent aux utilisateurs de fractionner une fenêtre en plusieurs volets à volonté et de faire défiler les différents volets pour afficher différentes parties du document. L’utilisateur peut également supprimer le fractionnement de la fenêtre pour supprimer les vues supplémentaires. Les fenêtres fractionnées ajoutées à l’ [exemple Scribble](../visual-cpp-samples.md) illustrent ce propos. Cette rubrique décrit la technique de création de fenêtres fractionnées dynamiques. Une fenêtre fractionnée dynamique est illustrée dans la partie b de la figure Interfaces utilisateur à plusieurs vues.
+Les fenêtres fractionnées dynamiques, avec des vues de la même classe, permettent aux utilisateurs de fractionner une fenêtre en plusieurs volets à volonté et de faire défiler les différents volets pour afficher différentes parties du document. L’utilisateur peut également supprimer le fractionnement de la fenêtre pour supprimer les vues supplémentaires. Les fenêtres fractionnées ajoutées à l’ [exemple Scribble](../overview/visual-cpp-samples.md) illustrent ce propos. Cette rubrique décrit la technique de création de fenêtres fractionnées dynamiques. Une fenêtre fractionnée dynamique est illustrée dans la partie b de la figure Interfaces utilisateur à plusieurs vues.
 
 Les fenêtres fractionnées statiques, avec des vues de différentes classes, commencent avec la fenêtre fractionnée en plusieurs volets, chacune avec un objectif différent. Par exemple, dans l’éditeur de bitmaps Visual C++, la fenêtre image affiche deux volets côte à côte. Le volet gauche affiche une image grandeur réelle de la bitmap. Le volet de droite affiche une image avec zoomée ou agrandie de la même bitmap. Les volets sont séparés par une « barre de fractionnement » que l’utilisateur peut faire glisser pour modifier les tailles relatives des volets. Une fenêtre fractionnée statique est illustrée dans la partie c de la figure Interfaces utilisateur à plusieurs vues.
 
-Pour plus d’informations, consultez la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) dans *Référence MFC* et [Exemples MFC](../visual-cpp-samples.md).
+Pour plus d’informations, consultez la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) dans *Référence MFC* et [Exemples MFC](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Voir aussi
 

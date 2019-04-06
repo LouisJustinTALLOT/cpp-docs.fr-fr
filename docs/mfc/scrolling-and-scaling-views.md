@@ -8,18 +8,18 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283707"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777575"
 ---
 # <a name="scrolling-and-scaling-views"></a>Défilement et mise à l'échelle des vues
 
 MFC prend en charge les vues qui défilent et des vues qui sont automatiquement mis à l’échelle à la taille de la fenêtre frame qui les affiche. Classe `CScrollView` prend en charge les deux types de vues.
 
-Pour plus d’informations sur le défilement et mise à l’échelle, consultez la classe [CScrollView](../mfc/reference/cscrollview-class.md) dans le *référence MFC*. Pour obtenir un exemple de défilement, consultez le [exemple Scribble](../visual-cpp-samples.md).
+Pour plus d’informations sur le défilement et mise à l’échelle, consultez la classe [CScrollView](../mfc/reference/cscrollview-class.md) dans le *référence MFC*. Pour obtenir un exemple de défilement, consultez le [exemple Scribble](../overview/visual-cpp-samples.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 
@@ -35,7 +35,7 @@ Souvent, la taille d’un document est supérieure à la taille de qu'affichage 
 
 N’importe quelle vue peut gérer les messages de barre de défilement dans son `OnHScroll` et `OnVScroll` fonctions membres. Vous pouvez soit implémenter barre de défilement la gestion des messages dans ces fonctions, fait tout le travail vous-même, ou vous pouvez utiliser la `CScrollView` classe pour gérer le défilement pour vous.
 
-`CScrollView` effectue les actions suivantes :
+`CScrollView` effectue les opérations suivantes :
 
 - Gère les tailles de fenêtre et de la fenêtre d’affichage et les modes de mappage
 
