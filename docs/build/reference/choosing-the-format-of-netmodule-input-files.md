@@ -13,7 +13,7 @@ ms.locfileid: "57807323"
 
 Un fichier .obj MSIL (compilé avec [/CLR](clr-common-language-runtime-compilation.md)) peut également être utilisé comme un fichier .netmodule.  les fichiers .obj contiennent des métadonnées et des symboles natifs.  fichiers .netmodule contiennent uniquement des métadonnées.
 
-Vous pouvez passer d’un fichier .obj MSIL à tout autre compilateur Visual Studio via l’option de compilateur /addmodule (mais n’oubliez pas que le fichier .obj devient partie intégrante de l’assembly résultant et doit être livré avec l’assembly).  Par exemple, Visual c# et Visual Basic ont l’option de compilateur /addmodule.
+Vous pouvez passer d’un fichier .obj MSIL à tout autre compilateur Visual Studio via l’option de compilateur /addmodule (mais n’oubliez pas que le fichier .obj devient partie intégrante de l’assembly résultant et doit être livré avec l’assembly).  Par exemple, Visual C# et Visual Basic ont l’option de compilateur /addmodule.
 
 > [!NOTE]
 >  Dans la plupart des cas, vous devrez passer à l’éditeur de liens le fichier .obj de la compilation qui a créé le module .net.  Passage d’un fichier de module MSIL .dll ou .netmodule à l’éditeur de liens peut entraîner l’erreur LNK1107.

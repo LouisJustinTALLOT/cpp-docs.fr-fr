@@ -18,7 +18,7 @@ ms.locfileid: "57817373"
 Les Assistants application Visual C++ ne créent pas de projets vérifiables.
 
 > [!IMPORTANT]
-> Déconseillé de Visual Studio 2015 et Visual Studio 2017 ne prend pas en charge la **/CLR : pure** et **/CLR : safe** la création de projets vérifiables. Si vous avez besoin du code vérifiable, nous vous recommandons de que vous traduisez votre code en c#.
+> Déconseillé de Visual Studio 2015 et Visual Studio 2017 ne prend pas en charge la **/CLR : pure** et **/CLR : safe** la création de projets vérifiables. Si vous avez besoin du code vérifiable, nous vous recommandons de que vous traduisez votre code en C#.
 
 Toutefois, si vous utilisez une version antérieure de l’ensemble d’outils du compilateur Visual C++ qui prend en charge **/CLR : pure** et **/CLR : safe**, projets peuvent être convertis pour être vérifiable. Cette rubrique décrit comment définir des propriétés du projet et modifier les fichiers sources du projet pour transformer vos projets Visual C++ pour produire des applications vérifiables.
 

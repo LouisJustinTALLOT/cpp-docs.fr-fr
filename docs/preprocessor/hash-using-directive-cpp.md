@@ -47,7 +47,7 @@ Si *fichier* ne contient pas d’assembly (si *fichier* est un module) et si vou
 
 Une alternative à utiliser **#using** est la [/FU](../build/reference/fu-name-forced-hash-using-file.md) option du compilateur.
 
-assemblys .exe passés à **#using** doit être compilée à l’aide d’un des compilateurs .NET Visual Studio (Visual Basic ou Visual c#, par exemple).  Toute tentative d'importation des métadonnées à partir d'un assembly .exe compilé avec `/clr` provoque une exception de chargement du fichier.
+assemblys .exe passés à **#using** doit être compilée à l’aide d’un des compilateurs .NET Visual Studio (Visual Basic ou Visual C#, par exemple).  Toute tentative d'importation des métadonnées à partir d'un assembly .exe compilé avec `/clr` provoque une exception de chargement du fichier.
 
 > [!NOTE]
 > Un composant qui est référencé avec **#using** peut être exécuté avec une version différente du fichier importé au moment de la compilation, à l’origine d’une application cliente à donner des résultats inattendus.

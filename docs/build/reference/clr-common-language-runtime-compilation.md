@@ -43,7 +43,7 @@ Un ou plusieurs des commutateurs suivants, séparés par des virgules.
 
 - **safe**
 
-   **/ CLR : safe est déconseillé**. L’option est supprimée dans Visual Studio 2017. Nous vous recommandons de porter le code qui doit être MSIL sécurisé en c#.
+   **/ CLR : safe est déconseillé**. L’option est supprimée dans Visual Studio 2017. Nous vous recommandons de porter le code qui doit être MSIL sécurisé en C#.
 
 - **noAssembly**
 
