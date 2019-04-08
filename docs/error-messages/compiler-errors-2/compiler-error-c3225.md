@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant crée un composant à l’aide de c#. Notez que la contrainte spécifie que le type générique peut uniquement être instancié avec un type valeur.
+L’exemple suivant crée un composant à l’aide de C#. Notez que la contrainte spécifie que le type générique peut uniquement être instancié avec un type valeur.
 
 ```
 // C3225_b.cs
@@ -54,7 +54,7 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Exemple
 
-Cet exemple utilise le langage c#-composant créé et viole la contrainte MyList ne peut être instancié avec un type valeur autre que <xref:System.Nullable>. L’exemple suivant génère C3225.
+Cet exemple utilise le langage C#-composant créé et viole la contrainte MyList ne peut être instancié avec un type valeur autre que <xref:System.Nullable>. L’exemple suivant génère C3225.
 
 ```
 // C3225_c.cpp
