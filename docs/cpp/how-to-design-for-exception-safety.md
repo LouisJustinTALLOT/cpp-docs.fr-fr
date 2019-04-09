@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237196"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Procédure : Conception pour la sécurité de l’Exception
 
@@ -23,7 +23,7 @@ Peu importe comment une fonction gère une exception, afin de garantir qu'elle s
 
 ### <a name="keep-resource-classes-simple"></a>Conservez les classes de ressources simples
 
-Lorsque vous encapsulez la gestion manuelle des ressources dans des classes, utilisez une classe qui ne fait rien d'autre que gérer chaque ressource ; sinon, vous pouvez créer des fuites. Utilisez [intelligente des pointeurs](../cpp/smart-pointers-modern-cpp.md) lorsque cela est possible, comme indiqué dans l’exemple suivant. Cet exemple est intentionnellement artificiel et simpliste afin de mettre en évidence les différences lorsque `shared_ptr` est utilisé.
+Lorsque vous encapsulez la gestion manuelle des ressources dans les classes, utiliser une classe qui ne fait rien sauf la gestion d’une seule ressource. En conservant la classe simple, vous réduisez le risque d’introduire les fuites de ressources. Utilisez [intelligente des pointeurs](../cpp/smart-pointers-modern-cpp.md) lorsque cela est possible, comme indiqué dans l’exemple suivant. Cet exemple est intentionnellement artificiel et simpliste afin de mettre en évidence les différences lorsque `shared_ptr` est utilisé.
 
 ```cpp
 // old-style new/delete version
@@ -107,7 +107,7 @@ La garantie de base est la plus faible des trois. Toutefois, elle peut être le 
 
 ## <a name="exception-safe-classes"></a>Classes protégées contre les exceptions
 
-Une classe peut garantir sa propre protection contre les exception, même lorsqu'elle est consommée par des fonctions potentiellement dangereuses, en évitant d'elle-même d'être partiellement construite ou partiellement détruite. Si un constructeur de classe s'arrête avant la fin, l'objet n'est pas créé et son destructeur ne sera jamais appelé. Bien que les variables automatiques qui sont initialisées avant l'exception auront leurs destructeurs appelés, la mémoire ou les ressources allouées dynamiquement qui ne sont pas gérées par un pointeur intelligent ou une variable automatique similaire seront inutilisables.
+Une classe peut garantir sa propre protection contre les exception, même lorsqu’elle est consommée par des fonctions potentiellement dangereuses, en évitant d’elle-même d’être partiellement construite ou partiellement détruite. Si un constructeur de classe s'arrête avant la fin, l'objet n'est pas créé et son destructeur ne sera jamais appelé. Bien que les variables automatiques qui sont initialisées avant l'exception auront leurs destructeurs appelés, la mémoire ou les ressources allouées dynamiquement qui ne sont pas gérées par un pointeur intelligent ou une variable automatique similaire seront inutilisables.
 
 Les types intégrés sont tous sans échec, et les types de la bibliothèque standard prennent en charge la garantie de base au minimum. Suivez ces indications pour tout type défini par l'utilisateur qui doit être protégé contre les exceptions :
 
@@ -121,5 +121,5 @@ Les types intégrés sont tous sans échec, et les types de la bibliothèque sta
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion des erreurs et des exceptions (C++ moderne)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Guide pratique pour Interface entre le Code exceptionnel et Non exceptionnel](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Gestion des erreurs et des exceptions (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Procédure : Interface entre le Code exceptionnel et Non exceptionnel](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
