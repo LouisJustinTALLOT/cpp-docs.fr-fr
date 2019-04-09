@@ -1,6 +1,6 @@
 ---
 title: /Zp (Alignement des membres de la structure)
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237162"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Alignement des membres de la structure)
 
@@ -28,7 +28,7 @@ Contrôle la façon dont les membres d’une structure sont compressés en mémo
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous spécifiez le **/Zp**_n_ option, chaque membre de structure après le premier est enregistré sur la taille du type du membre ou *n*-limites d’octets (où *n* est 1, 2, 4, 8 ou 16), plus petite étant retenue.
+Le **/Zp**_n_ option indique au compilateur où stocker chaque membre de structure. Le compilateur stocke des membres après le premier sur une limite qui est la plus petite de la taille du type du membre, ou un *n*-limite d’octets.
 
 Les valeurs de compression disponibles sont décrites dans le tableau suivant :
 
@@ -37,13 +37,13 @@ Les valeurs de compression disponibles sont décrites dans le tableau suivant :
 |1|Compresse les structures sur des limites de 1 octets. Identique à **/Zp**.|
 |2|Compresse les structures sur des limites de 2 octets.|
 |4|Compresse les structures sur des limites de 4 octets.|
-|8|Compresse les structures sur des limites de 8 octets (par défaut).|
-|16| Compresse les structures sur des limites de 16 octets.|
+|8|Compresse les structures sur des limites de 8 octets (valeur par défaut pour x86, ARM et ARM64).|
+|16| Compresse les structures sur des limites de 16 octets (valeur par défaut pour x64).|
 
-Vous ne devez pas utiliser cette option, sauf si vous avez des exigences spécifiques d’alignement.
+N’utilisez pas cette option, sauf si vous avez des exigences spécifiques d’alignement.
 
 > [!WARNING]
-> Supposons que les en-têtes de C++ dans le Kit de développement logiciel Windows **/Zp8** de livraison. Mémoire corruption peut se produire si le **/Zp** paramètre est modifié lors de l’utilisation des en-têtes Windows SDK.
+> En-têtes de C++ dans le Kit de développement Windows et de supposent **/Zp8** de livraison en interne. Mémoire corruption peut se produire si le **/Zp** paramètre est modifié dans les en-têtes Windows SDK. Les en-têtes ne sont pas affectés par les **/Zp** option que vous définissez sur la ligne de commande.
 
 Vous pouvez également utiliser [pack](../../preprocessor/pack.md) à la compression de structure de contrôle. Pour plus d'informations sur l'alignement, consultez :
 
@@ -59,7 +59,7 @@ Vous pouvez également utiliser [pack](../../preprocessor/pack.md) à la compres
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **C/C++** > **génération de Code** page de propriétés.
+1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **génération de Code** page de propriétés.
 
 1. Modifier le **alignement des membres de Struct** propriété.
 
@@ -69,5 +69,5 @@ Vous pouvez également utiliser [pack](../../preprocessor/pack.md) à la compres
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur MSVC](compiler-options.md)
-- [Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Options du compilateur MSVC](compiler-options.md) \
+[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

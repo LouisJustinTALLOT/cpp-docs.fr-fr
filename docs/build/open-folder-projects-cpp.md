@@ -4,12 +4,12 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 380a96bcb1a119b2b6d4104d60936217d1350fbb
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356086"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237131"
 ---
 # <a name="open-folder-projects-for-c"></a>Projets Dossier ouvert pour C++
 
@@ -64,7 +64,7 @@ Vous pouvez automatiser les scripts de génération ou d’autres opérations ex
 
 ![Ouvrir un dossier, Configurer les tâches](media/open-folder-config-tasks.png)
 
-Cela crée (ou en ouvre) le **tasks.vs.json** fichier dans le dossier .vs, ce qui crée de Visual Studio dans votre dossier projet racine. Vous pouvez définir une tâche arbitraire dans ce fichier, puis l’appeler à partir du menu contextuel de **l’Explorateur de solutions**. L’exemple suivant montre un fichier tasks.vs.json qui définit une tâche unique. `taskName` définit le nom qui apparaît dans le menu contextuel. `appliesTo` définit les fichiers sur lesquels la commande peut être exécutée. La propriété `command` fait référence à la variable d’environnement COMSPEC qui identifie le chemin de la console (cmd.exe sur Windows). Vous pouvez également référencer des variables d’environnement déclarées dans CppProperties.json ou CMakeSettings.json. La propriété `args` spécifie la ligne de commande à appeler. La macro `${file}` extrait le fichier sélectionné dans **l’Explorateur de solutions**. L’exemple suivant affiche le nom du fichier .cpp actuellement sélectionné.
+Cela crée (ou en ouvre) le **tasks.vs.json** fichier dans le dossier .vs, ce qui crée de Visual Studio dans votre dossier projet racine. Vous pouvez définir une tâche arbitraire dans ce fichier, puis l’appeler à partir du menu contextuel de **l’Explorateur de solutions**. L’exemple suivant montre un fichier tasks.vs.json qui définit une tâche unique. `taskName` définit le nom qui apparaît dans le menu contextuel. `appliesTo` définit les fichiers de la commande peut être effectuée sur. La propriété `command` fait référence à la variable d’environnement COMSPEC qui identifie le chemin de la console (cmd.exe sur Windows). Vous pouvez également référencer des variables d’environnement déclarées dans CppProperties.json ou CMakeSettings.json. La propriété `args` spécifie la ligne de commande à appeler. La macro `${file}` extrait le fichier sélectionné dans **l’Explorateur de solutions**. L’exemple suivant affiche le nom du fichier .cpp actuellement sélectionné.
 
 ```json
 {
@@ -107,7 +107,3 @@ Pour spécifier des arguments supplémentaires, ajoutez-les simplement au tablea
 ```
 
 Quand vous enregistrez ce fichier, la nouvelle configuration apparaît dans le menu déroulant Cible de débogage. Vous pouvez la sélectionner pour démarrer le débogueur. Vous pouvez créer autant de configurations Debug que vous le souhaitez, pour n’importe quel nombre d’exécutables. Si vous appuyez sur **F5** maintenant, le débogueur démarre et atteint tout point d’arrêt déjà défini. Toutes les fenêtres et fonctionnalités du débogueur que vous connaissez bien sont désormais disponibles.
-
-## <a name="see-also"></a>Voir aussi
-
-
