@@ -1,19 +1,19 @@
 ---
 title: expressions lambda de constexpr en C++
-ms.date: 07/19/2017
+ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: 937fae7da0f20e81ac5450d597af7a822219d654
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424181"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>expressions lambda de constexpr en C++
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : une expression lambda peut être déclarée comme **constexpr** ou utilisé dans une expression de l’obtention de surfaces lors de l’initialisation de chaque membre de données qu’elle capture ou introduit est autorisée dans une expression constante.
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Une expression lambda peut être déclarée comme **constexpr** ou utilisées dans une expression constante lors de l’initialisation de chaque membre de données qu’elle capture ou introduit est autorisée dans une expression constante.
 
 ```cpp
     int y = 32;
@@ -53,7 +53,7 @@ Si une expression lambda est implicitement ou explicitement **constexpr**et vous
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Objets de fonction dans la bibliothèque standard C++](../standard-library/function-objects-in-the-stl.md)<br/>
-[Appel de fonction ](../cpp/function-call-cpp.md)<br/>
+[Référence du langage C++](../cpp/cpp-language-reference.md)<br/>
+[Objets de fonction dans la bibliothèque C++ Standard](../standard-library/function-objects-in-the-stl.md)<br/>
+[Appel de fonction](../cpp/function-call-cpp.md)<br/>
 [for_each](../standard-library/algorithm-functions.md#for_each)
