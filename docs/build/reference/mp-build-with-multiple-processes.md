@@ -1,6 +1,6 @@
 ---
 title: /MP (Générer avec plusieurs processus)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808454"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424142"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Générer avec plusieurs processus)
 
@@ -51,7 +51,7 @@ Le tableau suivant répertorie les options du compilateur et les fonctionnalité
 |--------------------------------|-----------------|
 |Directive du préprocesseur[#import](../../preprocessor/hash-import-directive-cpp.md) |Convertit les types d’une bibliothèque de types en classes C++, puis écrit ces classes dans un fichier d’en-tête.|
 |[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copie la sortie du préprocesseur vers la sortie standard (**stdout**).|
-|[/Gm](gm-enable-minimal-rebuild.md)|Active une régénération incrémentielle.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Obsolète. Active une régénération incrémentielle.|
 |[/showIncludes](showincludes-list-include-files.md)|Écrit une liste des fichiers include dans l’erreur standard (**stderr**).|
 |[/Yc](yc-create-precompiled-header-file.md)|Écrit un fichier d’en-tête précompilé.|
 
@@ -125,12 +125,8 @@ L’indication pour décider s’il faut utiliser MSBuild ou **/MP** technologie
 
 - Si le nombre de projets et des fichiers par projet est équilibré, utilisez les deux MSBuild et **/MP**. Définissez d’abord l’option **/maxcpucount** sur le nombre de projets à générer et l’option **/MP** sur le nombre de processeurs de votre ordinateur. Mesurez les performances, puis ajustez les paramètres pour obtenir les meilleurs résultats. Répétez ce cycle jusqu’à ce que le temps total de la génération soit satisfaisant.
 
-#### <a name="the-gm-compiler-option"></a>L’option de compilateur /Gm
-
-Par défaut, la génération d’un projet active l’option de compilateur **/Gm** (générations incrémentielles) pour les versions debug, et la désactive les versions Release. Par conséquent, l’option de compilateur **/MP** est automatiquement désactivée dans les versions debug, car elle est en conflit avec la valeur par défaut de l’option de compilateur **/Gm** .
-
 ## <a name="see-also"></a>Voir aussi
 
-[directive #import](../../preprocessor/hash-import-directive-cpp.md)<br/>
-[Informations de référence sur la ligne de commande](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (génération PDB plus rapide)](zf.md)<br/>
+[#import, directive](../../preprocessor/hash-import-directive-cpp.md)<br/>
+[Référence de la ligne de commande](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
+[/ZF (génération PDB plus rapide)](zf.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: /ZW (compilation Windows Runtime)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: a16482cf8d21651db9486ab19c347a4ccadf5279
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809429"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424038"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (compilation Windows Runtime)
 
@@ -44,11 +44,11 @@ Lorsque vous spécifiez le **/ZW** option, le compilateur prend en charge ces fo
 
 - Le comptage de références d’objets Windows Runtime et automatique l’abandon d’un objet lorsque son décompte de références atteint zéro.
 
-Étant donné que l’éditeur de liens incrémentielle ne prend pas en charge les métadonnées Windows incluses dans les fichiers .obj à l’aide de la **/ZW** option, le [/Gm (activer la régénération minimale)](gm-enable-minimal-rebuild.md) option n’est pas compatible avec **/ZW** .
+Étant donné que l’éditeur de liens incrémentielle ne prend pas en charge les métadonnées Windows incluses dans les fichiers .obj à l’aide de la **/ZW** option déconseillées [/Gm (activer la régénération minimale)](gm-enable-minimal-rebuild.md) option n’est pas compatible avec **/ZW**.
 
 Pour plus d’informations, consultez [référence du langage Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 ## <a name="see-also"></a>Voir aussi
 

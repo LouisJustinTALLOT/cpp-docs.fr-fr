@@ -1,6 +1,6 @@
 ---
 title: Types de fichiers créés pour les projets Visual C++
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 helpviewer_keywords:
 - header files [C++], Visual Studio projects
 - ActiveX controls [C++], Help files
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: b0f780b122b147d633d5d7cd949da805d267f757
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59033373"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424091"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Types de fichiers créés pour les projets C++ de Visual Studio
 
-Cette rubrique décrit tous les types de fichiers qui sont associés à des projets Visual Studio pour les applications de bureau classiques. Les fichiers réellement inclus dans votre projet varient en fonction du type de projet et des options que vous sélectionnez quand vous utilisez un Assistant.
+Plusieurs types de fichiers sont associés à des projets Visual Studio pour les applications de bureau classiques. Les fichiers réellement inclus dans votre projet varient en fonction du type de projet et des options que vous sélectionnez quand vous utilisez un Assistant.
 
 - [Fichiers projet et solution](project-and-solution-files.md)
 
@@ -41,9 +41,9 @@ Cette rubrique décrit tous les types de fichiers qui sont associés à des proj
 
 - [Fichiers hint](hint-files.md)
 
-Lorsque vous créez un projet Visual Studio, vous pouvez créer une nouvelle solution ou ajouter un projet à une solution. Les applications élaborées sont généralement développées avec plusieurs projets dans une même solution.
+Lorsque vous créez un projet Visual Studio, vous pouvez le créer dans une nouvelle solution, ou vous pouvez ajouter un projet à une solution existante. Les applications élaborées sont généralement développées avec plusieurs projets dans une même solution.
 
-En règle générale, les projets produisent un EXE ou une DLL. Les projets peuvent être interdépendantes ; pendant le processus de génération, l’environnement Visual Studio vérifie les dépendances au sein et entre les projets. Chaque projet contient du code source de base et, selon son type projet, un projet peut contenir divers autres fichiers correspondant aux différents aspects du projet. Le contenu de ces fichiers est indiqué par l'extension de fichier. L'environnement de développement Visual Studio tient compte des extensions de fichiers pour traiter le contenu des fichiers pendant la génération.
+En règle générale, les projets produisent un EXE ou une DLL. Les projets peuvent être interdépendantes ; pendant le processus de génération, l’environnement Visual Studio vérifie les dépendances au sein et entre les projets. Chaque projet possède généralement du code source principal. Selon le type de projet, elle peut avoir de nombreux autres fichiers contenant divers aspects du projet. Le contenu de ces fichiers est indiqué par l'extension de fichier. L'environnement de développement Visual Studio tient compte des extensions de fichiers pour traiter le contenu des fichiers pendant la génération.
 
 Le tableau suivant présente les fichiers courants dans un projet Visual Studio et les identifie avec leur extension de fichier.
 
@@ -63,11 +63,11 @@ Le tableau suivant présente les fichiers courants dans un projet Visual Studio 
 |.htm, .html, .xsp, .asp, .htc, .hta, .xml|Ressource|Fichiers web communs.|
 |.HxC|Projet|Fichier projet d'aide.|
 |.ico|Ressource|Fichier graphique de bitmap d'icône.|
-|.idb|Compilation|Fichier d'état contenant des informations de dépendance entre les fichiers sources et les définitions de classe, qui peuvent être utilisés par le compilateur durant la régénération minimale et la compilation incrémentielle. Utilisez l'option de compilateur [/Fd](fd-program-database-file-name.md) pour spécifier le nom du fichier .idb. Pour plus d'informations, consultez [/Gm (Activer la régénération minimale)](gm-enable-minimal-rebuild.md) .|
+|.idb|Compilation|Le fichier d’état, qui contient les informations de dépendance entre les fichiers sources et les définitions de classe. Il peut être utilisé par le compilateur pendant la compilation incrémentielle. Utilisez l'option de compilateur [/Fd](fd-program-database-file-name.md) pour spécifier le nom du fichier .idb.|
 |.idl|Compilation|Fichier de langage de définition d'interface. Pour plus d’informations, consultez [Fichier IDL (Interface Definition Language)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) dans le SDK Windows.|
-|.ilk|Liaison|Fichier de liaison incrémentielle. Pour plus d'informations, consultez [/INCREMENTAL](incremental-link-incrementally.md) .|
-|.map|Liaison|Fichier texte contenant des informations sur l'éditeur de liens. Utilisez l'option de compilateur [/Fm](fm-name-mapfile.md) pour nommer le fichier .map. Pour plus d'informations, consultez [/MAP](map-generate-mapfile.md) .|
-|.mfcribbon-ms|Ressource|Fichier de ressources contenant le code XML qui définit boutons, contrôles et attributs du ruban. Pour plus d'informations, consultez [Ribbon Designer (MFC)](../../mfc/ribbon-designer-mfc.md).|
+|.ilk|Liaison|Fichier de liaison incrémentielle. Pour plus d’informations, consultez [/INCREMENTAL](incremental-link-incrementally.md).|
+|.map|Liaison|Fichier texte contenant des informations sur l'éditeur de liens. Utilisez l'option de compilateur [/Fm](fm-name-mapfile.md) pour nommer le fichier .map. Pour plus d’informations, consultez [/mapper](map-generate-mapfile.md).|
+|.mfcribbon-ms|Ressource|Un fichier de ressources qui contient le code XML qui définit les boutons MFC, les contrôles et les attributs dans le ruban. Pour plus d'informations, consultez [Ribbon Designer](../../mfc/ribbon-designer-mfc.md).|
 |.obj, .o||Fichiers objets, compilés mais sans liens.|
 |.pch|Débogage|Fichier d'en-tête précompilé.|
 |.rc, .rc2|Ressource|[Fichiers de script de ressources](../../windows/working-with-resource-files.md) pour générer des ressources.|
@@ -78,18 +78,18 @@ Le tableau suivant présente les fichiers courants dans un projet Visual Studio 
 |.vap|Projet|Fichier projet Visual Studio Analyzer.|
 |.vbg|Solution|Fichier de groupe de projets compatible.|
 |.vbp, .vip, .vbproj|Projet|Fichier projet Visual Basic.|
-|.vcxitems|Projet|Projet d’éléments partagés permettant de partager des fichiers de code entre plusieurs projets C++. Consultez [fichiers projet et Solution](project-and-solution-files.md) pour plus d’informations.|
-|.vcxproj|Projet|Le fichier de projet Visual Studio. Consultez [fichiers projet et Solution](project-and-solution-files.md) pour plus d’informations.|
-|.vcxproj.filters|Projet|Quand vous ajoutez un fichier à un projet via l'Explorateur de solutions, le fichier de filtres détermine à quel emplacement le fichier est ajouté dans l'arborescence de l'Explorateur de solutions, en fonction de son extension de nom de fichier.|
+|.vcxitems|Projet|Projet d’éléments partagés permettant de partager des fichiers de code entre plusieurs projets C++. Pour plus d’informations, consultez [fichiers projet et Solution](project-and-solution-files.md).|
+|.vcxproj|Projet|Le fichier de projet Visual Studio. Pour plus d’informations, consultez [fichiers projet et Solution](project-and-solution-files.md).|
+|.vcxproj.filters|Projet|Utilisé lorsque vous utilisez l’Explorateur de solutions pour ajouter un fichier à un projet. Le fichier de filtres définit l’emplacement dans l’arborescence de l’Explorateur de solutions pour ajouter le fichier, en fonction de son extension de nom de fichier.|
 |.vdproj|Projet|Fichier projet de déploiement Visual Studio.|
 |.vmx|Projet|Fichier projet de macro.|
 |.vup|Projet|Fichier projet d'utilitaire.|
 
 Pour plus d'informations sur les autres fichiers associés à Visual Studio, consultez [Types de fichiers et extensions de fichiers dans Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
 
-Les fichiers projet sont organisés en dossiers dans l'Explorateur de solutions. Visual Studio crée un dossier pour les fichiers sources, les fichiers d’en-tête et les fichiers de ressources, mais vous pouvez réorganiser ces dossiers ou créer de nouveaux. Vous pouvez utiliser des dossiers pour organiser explicitement des clusters logiques de fichiers au sein de la hiérarchie d'un projet. Par exemple, vous pouvez créer des dossiers dans le but d'y déposer tous les fichiers sources de votre interface utilisateur, les spécifications, la documentation ou des suites de tests. Tous les noms de dossiers de fichiers doivent être uniques.
+Les fichiers projet sont organisés en dossiers dans l'Explorateur de solutions. Visual Studio crée un dossier pour les fichiers sources, les fichiers d’en-tête et les fichiers de ressources, mais vous pouvez réorganiser ces dossiers ou créer de nouveaux. Vous pouvez utiliser des dossiers pour organiser explicitement des clusters logiques de fichiers au sein de la hiérarchie d'un projet. Par exemple, vous pouvez créer des dossiers pour qu’il contienne tous les fichiers de source de votre interface utilisateur. Ou, des dossiers de spécifications, la documentation ou les suites de tests. Tous les noms de dossiers de fichiers doivent être uniques.
 
-Quand vous ajoutez un élément à un projet, vous l'ajoutez à toutes les configurations de ce projet, que cet élément puisse ou non être généré. Par exemple, si vous avez un projet nommé MonProjet et que vous y ajoutez un élément, cet élément est ajouté aux configurations de projet Debug et Release.
+Lorsque vous ajoutez un élément à un projet, vous ajoutez l’élément à toutes les configurations de ce projet. L’élément est ajouté s’il s’agit pouvant être générée ou non. Par exemple, si vous avez un projet nommé MonProjet et que vous y ajoutez un élément, cet élément est ajouté aux configurations de projet Debug et Release.
 
 ## <a name="see-also"></a>Voir aussi
 

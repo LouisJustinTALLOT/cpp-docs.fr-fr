@@ -1,6 +1,6 @@
 ---
 title: /Z7, /Zi, /ZI (Format des informations de débogage)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816319"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424077"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Format des informations de débogage)
 
@@ -52,7 +52,7 @@ Le **/Z7** option produit des fichiers objets qui contiennent également des inf
 
 Pour les serveurs de distribution des versions debug des bibliothèques tierces, il est l’avantage de ne pas avoir un fichier PDB. Toutefois, les fichiers objets pour tous les en-têtes précompilés sont nécessaires pendant la phase de liaison de bibliothèque et pour le débogage. Si type uniquement des informations (et aucun code) dans le fichier d’objet .pch, vous devez également utiliser le [/Yl (injecter une référence PCH pour une bibliothèque de débogage)](yl-inject-pch-reference-for-debug-library.md) option, qui est activée par défaut, lorsque vous générez la bibliothèque.
 
-Le [/Gm (activer la régénération minimale)](gm-enable-minimal-rebuild.md) option n’est pas disponible lorsque **/Z7** est spécifié.
+Déconseillées [/Gm (activer la régénération minimale)](gm-enable-minimal-rebuild.md) option n’est pas disponible lorsque **/Z7** est spécifié.
 
 ### <a name="zi"></a>/ZI
 
