@@ -1,31 +1,31 @@
 ---
 title: Avertissement des outils Éditeur de liens LNK4217
-ms.date: 11/04/2016
+ms.date: 04/09/2019
 f1_keywords:
 - LNK4217
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: 12766241832d39f0b47ed85036c0ebeb0447fc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fcb806afa064a4f6d9c9c0680c617662a3b9a21
+ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448046"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59477390"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Avertissement des outils Éditeur de liens LNK4217
 
-symbole 'symbole' importé dans la fonction 'fonction' défini localement
+> symbole '*symbole*'définie dans'*filename_1.obj*'est importé par'*filename_2.obj*« dans la fonction'*fonction*'
 
-[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) a été spécifié pour un symbole, même si le symbole est défini localement. Supprimer le `__declspec` modificateur pour résoudre cet avertissement.
+[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) a été spécifié pour un symbole, même si le symbole est défini dans un fichier objet dans la même image. Supprimer le `__declspec(dllimport)` modificateur pour résoudre cet avertissement.
 
-`symbol` est le nom du symbole qui est défini dans l’image. `function` est la fonction qui importe le symbole.
+*symbole* est le nom du symbole qui est défini dans l’image. *fonction* est la fonction qui importe le symbole.
 
-Cet avertissement n’apparaît pas lorsque vous compilez en utilisant l’option [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+Cet avertissement n’apparaît pas quand vous compilez à l’aide de la [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) option.
 
 LNK4217 peut également se produire si vous tentez de relier deux modules, quand au lieu de cela, vous devez compiler le deuxième module avec la bibliothèque d’importation du premier module.
 
-```
+```cpp
 // LNK4217.cpp
 // compile with: /LD
 #include "windows.h"
@@ -34,11 +34,11 @@ __declspec(dllexport) void func(unsigned short*) {}
 
 Puis,
 
-```
+```cpp
 // LNK4217b.cpp
 // compile with: /c
 #include "windows.h"
 __declspec(dllexport) void func(unsigned short*) {}
 ```
 
-Tentative de liaison de ces deux modules donnera LNK4217, compilez le deuxième exemple avec la bibliothèque d’importation du premier exemple à résoudre.
+Toute tentative lier ces deux modules entraîne de LNK4217. Compilez le deuxième exemple avec la bibliothèque d’importation du premier exemple à résoudre.
