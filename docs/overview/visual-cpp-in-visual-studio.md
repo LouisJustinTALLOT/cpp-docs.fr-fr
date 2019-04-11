@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 7ef43491c35ec4f57f7a691851e584e6aad58ef3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782276"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898711"
 ---
 # <a name="c-in-visual-studio"></a>C++ dans Visual Studio
 
@@ -26,14 +26,14 @@ Microsoft Visual C++, généralement abrégé en Visual C++ ou MSVC, est le nom 
 
 ## <a name="whats-new-and-conformance-history"></a>Nouveautés et historique de la conformité
 
-[Nouveautés de C++ dans Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Découvrez les nouveautés dans Visual Studio 2017.
+[Nouveautés de C++ dans Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+Découvrez les nouveautés dans Visual Studio.
 
 [Nouveautés de C++ de Visual Studio 2003 à 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Découvrez ce qui était nouveau dans C++ pour chaque version de Visual Studio de 2003 à 2015.
 
-[Améliorations de la conformité de C++ dans Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
-Découvrez les améliorations de la conformité de C++ dans Visual Studio 2017.
+[Améliorations de la conformité de C++ dans Visual Studio](cpp-conformance-improvements.md)<br/>
+Découvrez les améliorations de la conformité de C++ dans Visual Studio.
 
 [Conformité du langage Visual C++](visual-cpp-language-conformance.md)<br/>
 Liste des états de conformité par fonctionnalité dans le compilateur MSVC C++.
@@ -63,15 +63,15 @@ En savoir plus sur les techniques de programmation C++ basées sur C++11 et C++1
 [C++ standard](http://isocpp.org/)<br/>
 Découvrez C++, obtenez une vue d’ensemble du langage C++ moderne et bénéficiez de liens vers des ouvrages, des articles, des entretiens et des événements.
 
-[Découvrir Visual C++](../build/vscpp-step-1-create.md)<br/>
+[Apprendre Visual C++](../build/vscpp-step-1-create.md)<br/>
 Commencez à vous familiariser avec le langage C++.
 
-[Exemples Visual C++](visual-cpp-samples.md)<br/>
+[Exemples Visual C++](visual-cpp-samples.md)<br/>
 Informations sur les exemples.
 
 ## <a name="c-development-tools"></a>Outils de développement C++
 
-[Présentation du développement C++ dans Visual Studio](overview-of-cpp-development.md)<br/>
+[Vue d’ensemble du développement C++ dans Visual Studio](overview-of-cpp-development.md)<br/>
 Comment utiliser l’IDE Visual Studio pour créer des projets, modifier du code, établir des liaisons à des bibliothèques, compiler, déboguer, créer des tests unitaires, effectuer une analyse statique, déployer et bien plus encore.
 
 [Projets et systèmes de build](../build/projects-and-build-systems-cpp.md)<br/>
@@ -91,10 +91,10 @@ Créer des tests unitaires à l’aide du Framework de tests unitaires Microsoft
 
 ## <a name="write-applications-in-c"></a>Écrire des applications en C++
 
-[Applications universelles Windows](../windows/universal-windows-apps-cpp.md)<br/>
+[Applications de la plateforme Windows universelle](../windows/universal-windows-apps-cpp.md)<br/>
 Recherchez des guides et du contenu de référence dans le Centre de développement Windows. Pour plus d’informations sur le développement d’applications UWP, consultez [Présentation de la plateforme Windows universelle](/windows/uwp/get-started/universal-application-platform-guide) et [Créer votre première application UWP en C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
-[Applications de bureau (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
+[Applications de poste de travail (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
 Découvrez comment créer des applications de bureau C++ natives traditionnelles pour Windows.
 
 [Programmation .NET avec C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
@@ -103,16 +103,16 @@ Découvrez comment créer des DLL qui permettent une interopérabilité entre le
 [Programmation Linux](../linux/index.md)<br/>
 Utilisez l’IDE de Visual Studio pour coder et déployer sur une machine Linux distante pour une compilation avec GCC.
 
-[DLL dans Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[DLL en Visual C++](../build/dlls-in-visual-cpp.md)<br/>
 Découvrez comment utiliser Win32, ATL et MFC pour créer des DLL de bureau Windows, et obtenez des informations sur la façon de compiler et d’enregistrer votre DLL.
 
 [Programmation parallèle](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 Apprenez à utiliser la bibliothèque de modèles parallèles, C++ AMP, OpenMP et d’autres fonctionnalités associées au multithreading dans Windows.
 
-[Bonnes pratiques de sécurité](../security/security-best-practices-for-cpp.md)<br/>
+[Meilleures pratiques de sécurité (Kit de développement Platform SDK)](../security/security-best-practices-for-cpp.md)<br/>
 Apprenez à protéger des applications contre un code malveillant et une utilisation non autorisée.
 
-[Cloud et programmation Web](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
+[Programmation cloud et web](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
 En C++, vous disposez de plusieurs options de connexion web et cloud.
 
 [Accès aux données](../data/data-access-in-cpp.md)<br/>
@@ -123,9 +123,9 @@ En savoir plus sur l’utilisation de différents formats et encodages de texte 
 
 ## <a name="languages-reference"></a>Informations de référence sur les langages
 
-[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)
+[Référence du langage C++](../cpp/cpp-language-reference.md)
 
-[Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Référence du préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
 
 [Informations de référence sur le langage C](../c-language/c-language-reference.md)
 
@@ -135,10 +135,10 @@ En savoir plus sur l’utilisation de différents formats et encodages de texte 
 
 Les sections suivantes fournissent des informations sur les différentes bibliothèques C et C++ incluses dans Visual Studio.
 
-[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Informations de référence sur la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Inclut des solutions alternatives optimisées en matière de sécurité pour les fonctions connues pour poser des problèmes de sécurité.
 
-[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>
+[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
 Bibliothèque C++ standard.
 
 [Bibliothèque ATL (Active Template Library)](../atl/atl-com-desktop-components.md)<br/>
@@ -147,7 +147,7 @@ Prise en charge des composants et des applications COM.
 [Bibliothèques MFC (Microsoft Foundation Class)](../mfc/mfc-desktop-applications.md)<br/>
 Prise en charge pour la création d’applications de bureau dotées d’interfaces utilisateur traditionnelles ou Office.
 
-[Bibliothèque de modèles parallèles (PPL)](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[Bibliothèque de modèles parallèles](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 Algorithmes asynchrones et parallèles qui s’exécutent sur le processeur.
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
@@ -177,5 +177,5 @@ Découvrez comment obtenir de l’aide, consigner des bogues et envoyer des sugg
 ## <a name="see-also"></a>Voir aussi
 
 - [Informations de référence sur le langage C](../c-language/c-language-reference.md)
-- [Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)
+- [Informations de référence sur la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)
 - [Fonctions intrinsèques du compilateur et langage assembleur](../intrinsics/compiler-intrinsics-and-assembly-language.md)
