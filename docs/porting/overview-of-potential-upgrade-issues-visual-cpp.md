@@ -2,12 +2,12 @@
 title: Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 16918a70d4ce56a7415c3a807485e72c085d1194
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775035"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898828"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 
@@ -111,7 +111,7 @@ Par exemple, le commutateur `/Zc:forScope` a été introduit aux origines de MSV
 
 Un argument non const passé à un paramètre const est un exemple d’erreur de compilateur courante que vous pouvez rencontrer lors de la mise à niveau. Les versions antérieures du compilateur ne signalaient pas toujours cela comme une erreur. Pour plus d’informations, consultez [Conversions plus strictes du compilateur](porting-guide-spy-increment.md#stricter_conversions).
 
-Pour plus d’informations sur les améliorations apportées à la conformité, consultez [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md) et [Améliorations de la conformité de C++ dans Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+Pour plus d’informations sur les améliorations apportées à la conformité, consultez [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md) et [Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md).
 
 ## <a name="errors-involving-stdinth-integral-types"></a>Erreurs impliquant les types intégraux \<stdint.h>
 
@@ -127,7 +127,7 @@ L’option de compilateur [/showIncludes](../build/reference/showincludes-list-i
 
 De nombreuses modifications ont été apportées au Runtime C au fil des années. De nombreuses versions sécurisées de fonctions ont été ajoutées et certaines ont été supprimées. En outre, comme décrit précédemment dans cet article, l’implémentation Microsoft de la bibliothèque CRT a été refactorisée dans Visual Studio 2015 en nouveaux fichiers binaires et fichiers .lib associés.
 
-Si une erreur implique une fonction CRT, effectuez des recherches dans [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md) ou [Améliorations de la conformité de C++ dans Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md) pour voir si ces rubriques contiennent des informations supplémentaires. S’il s’agit de l’erreur « LNK2019 : Symbole externe non résolu », vérifiez que la fonction n’a pas été supprimée. Sinon, si vous êtes sûr que la fonction existe toujours et si le code appelant est correct, vérifiez que le projet utilise `/NODEFAULTLIB`. Si tel est le cas, vous devez mettre à jour la liste des bibliothèques afin que le projet utilise les nouvelles bibliothèques Universal CRT. Pour plus d’informations, consultez la section ci-dessus sur les dépendances de bibliothèque.
+Si une erreur implique une fonction CRT, effectuez des recherches dans [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md) ou [Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md) pour voir si ces rubriques contiennent des informations supplémentaires. S’il s’agit de l’erreur « LNK2019 : Symbole externe non résolu », vérifiez que la fonction n’a pas été supprimée. Sinon, si vous êtes sûr que la fonction existe toujours et si le code appelant est correct, vérifiez que le projet utilise `/NODEFAULTLIB`. Si tel est le cas, vous devez mettre à jour la liste des bibliothèques afin que le projet utilise les nouvelles bibliothèques Universal CRT. Pour plus d’informations, consultez la section ci-dessus sur les dépendances de bibliothèque.
 
 Si l’erreur implique `printf` ou `scanf`, vérifiez que vous ne définissez pas de manière privée une fonction sans inclure stdio.h. Dans ce cas, supprimez les définitions privées ou établissez une liaison à legacy\_stdio\_definitions.lib. Vous pouvez le définir dans la boîte de dialogue **Pages de propriétés** sous **Propriétés de configuration** > **Éditeur de liens** > **Entrée**, dans la propriété **Dépendances supplémentaires**. Si vous établissez une liaison avec le SDK Windows 8.1 ou version antérieure, ajoutez legacy\_stdio\_definitions.lib.
 
@@ -161,7 +161,7 @@ Pour plus d’informations, consultez [Mise à jour de la version cible de Windo
 
 ## <a name="atl--mfc"></a>ATL / MFC
 
-ATL et MFC sont des API relativement stables, mais qui sont parfois modifiées. Pour plus d’informations, consultez [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md), [Nouveautés de Visual C++ dans Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) et [Améliorations de la conformité de C++ dans Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+ATL et MFC sont des API relativement stables, mais qui sont parfois modifiées. Pour plus d’informations, consultez [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md), [Nouveautés de Visual C++ dans Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) et [Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md).
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK2005 : _DllMain@12 déjà défini dans MSVCRTD.lib
 
@@ -182,4 +182,4 @@ Pour plus d’informations, consultez [Portage de MBCS vers Unicode](porting-gui
 ## <a name="see-also"></a>Voir aussi
 
 [Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Améliorations de la conformité de C++ dans Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)
+[Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md)

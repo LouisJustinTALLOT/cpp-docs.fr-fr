@@ -2,12 +2,12 @@
 title: Guide du portage et de la mise à niveau de Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: d1ee00ab1e869e37a5bf19809df964f1e4085819
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767676"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898789"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guide du portage et de la mise à niveau de Visual C++
 
@@ -76,15 +76,15 @@ Ou bien, vous avez peut-être maintenant de nouvelles exigences à respecter, ou
 |Titre|Description|
 |-----------|-----------------|
 |[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Explique comment utiliser des projets créés dans les versions antérieures de Visual C++.|
-|[Nouveautés du compilateur C++ dans Visual Studio 2017 RC](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Modifications dans l’IDE et les outils entre Visual Studio 2015 et Visual Studio 2017|
-|[Améliorations de la conformité de C++ dans Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)|Améliorations de la conformité aux normes entre Visual Studio 2015 et Visual Studio 2017|
+|[Nouveautés du compilateur C++ dans Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Modifications de l’IDE et des outils par rapport à la version actuelle de Visual Studio|
+|[Améliorations de la conformité de C++ dans Visual Studio](../overview/cpp-conformance-improvements.md)|Améliorations de la conformité aux standards entre Visual Studio 2015 et Visual Studio|
 |[Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md)|Liste de toutes les modifications apportées aux bibliothèques Visual C++ et outils de génération entre Visual Studio 2003 et 2015 qui pourraient vous contraindre à modifier votre code.|
 |[Nouveautés de Visual C++ entre 2003 et 2015](visual-cpp-what-s-new-2003-through-2015.md)|Toutes les informations relatives aux « nouveautés » pour Visual C++ de Visual Studio 2003 à Visual Studio 2015.|
 |[Portage de bibliothèques tierces](porting-third-party-libraries.md)|Mode d’utilisation de l’outil en ligne de commande **vcpkg** pour transférer d’anciennes bibliothèques open source vers des versions compilées avec des ensembles d’outils Visual C++ plus récents.|
 |[Portage et mise à niveau : Exemples et études de cas](porting-and-upgrading-examples-and-case-studies.md)|Dans cette section, nous avons déplacé et mis à niveau plusieurs exemples et applications, puis présenté nos expériences et résultats. Cela vous donnera une idée de ce qu'impliquent les processus de déplacement et de mise à niveau. Nous donnons des conseils et astuces à suivre pendant toute la mise à niveau, et indiquons des solutions pour corriger certaines erreurs courantes.|
-|[Portage vers la plateforme universelle Windows](porting-to-the-universal-windows-platform-cpp.md)|Contient des informations sur le déplacement de code vers Windows 10|
+|[Portage vers la plateforme Windows universelle](porting-to-the-universal-windows-platform-cpp.md)|Contient des informations sur le déplacement de code vers Windows 10|
 |[Introduction à Visual C++ pour les utilisateurs UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fournit des informations aux utilisateurs UNIX qui débutent avec Visual C++ et souhaitent être plus productifs.|
-|[Portage d’UNIX vers Win32](porting-from-unix-to-win32.md)|Présente les différentes options pour migrer des applications UNIX vers Windows.|
+|[Portage d'UNIX vers Win32](porting-from-unix-to-win32.md)|Présente les différentes options pour migrer des applications UNIX vers Windows.|
 
 ## <a name="see-also"></a>Voir aussi
 
