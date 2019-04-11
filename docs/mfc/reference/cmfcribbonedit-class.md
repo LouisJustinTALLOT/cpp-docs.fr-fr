@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292187"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "58780481"
 ---
 # <a name="cmfcribbonedit-class"></a>Cmfcribbonedit, classe
 
@@ -140,11 +140,11 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un `CMFCRibbonEdit` de l’objet, afficher les boutons de sélection numérique en regard du contrôle d’édition et définir le texte du contrôle d’édition. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).
+L’exemple suivant montre comment construire un `CMFCRibbonEdit` de l’objet, afficher les boutons de sélection numérique en regard du contrôle d’édition et définir le texte du contrôle d’édition. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxRibbonEdit.h
 
@@ -286,7 +286,7 @@ void EnableSpinButtons(
 *nMin*<br/>
 [in] La valeur minimale du bouton toupie (spin).
 
-*nMax*<br/>
+*nombre maximal*<br/>
 [in] La valeur maximale du bouton toupie (spin).
 
 ### <a name="remarks"></a>Notes
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bEnable*<br/>
+*bActivez*<br/>
 [in] TRUE pour activer le contrôle ; FALSE pour désactiver le contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Pointeur vers la fenêtre parente pour le `CMFCRibbonEdit` objet.
 
-*data*<br/>
+*Données*<br/>
 Les données d’accessibilité pour le `CMFCRibbonEdit` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -754,5 +754,5 @@ Le `CMFCRibbonEdit` contrôle a deux largeurs en fonction de son mode d’affich
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonButton, classe](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
-[CMFCRibbonBar, classe](../../mfc/reference/cmfcribbonbar-class.md)
+[Cmfcribbonbutton, classe](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
+[Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
