@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3912
 ms.assetid: 674e050c-11fb-4db1-8bdf-a3e95b41161d
-ms.openlocfilehash: c6eb207342f44655d54e49d4cf0cd2410f7095da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd66196c35715304577b8f6785261be8bdcdafec
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562030"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773396"
 ---
 # <a name="compiler-error-c3912"></a>Erreur du compilateur C3912
 
@@ -19,7 +19,7 @@ ms.locfileid: "50562030"
 
 Un événement a été déclaré mais n’était pas du type approprié.
 
-Pour plus d’informations, consultez [événement](../../windows/event-cpp-component-extensions.md).
+Pour plus d’informations, consultez [événement](../../extensions/event-cpp-component-extensions.md).
 
 L’exemple suivant génère l’erreur C3912 :
 

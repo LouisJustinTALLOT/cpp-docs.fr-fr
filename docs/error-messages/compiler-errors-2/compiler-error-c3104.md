@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 71a5943f65f4bd490ecb02824fef7a96741709f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540321"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770627"
 ---
 # <a name="compiler-error-c3104"></a>Erreur du compilateur C3104
 
@@ -19,7 +19,7 @@ argument d’attribut non conforme
 
 Vous avez spécifié un argument non valide pour un attribut.
 
-Consultez [Types de paramètre d’attribut](../../windows/attribute-parameter-types-cpp-component-extensions.md) pour plus d’informations.
+Consultez [Types de paramètre d’attribut](../../extensions/attribute-parameter-types-cpp-component-extensions.md) pour plus d’informations.
 
 Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : lors du passage de tableaux managés à des attributs personnalisés, le type du tableau n’est plus déduit à partir de la liste d’initialisation d’agrégats. Le compilateur requiert désormais vous permettent de spécifier le type de tableau ainsi que la liste d’initialiseurs.
 

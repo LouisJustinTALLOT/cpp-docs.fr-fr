@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 65c2c22c93dc3acb50fc4627c3710a3f0c86aeb0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 95dcbbc2b445e2ff67979b90816daed0fb0c0fba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303961"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767715"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Cmfcpropertygridcolorproperty, classe
 
@@ -69,7 +69,7 @@ La classe `CMFCPropertyGridColorProperty` prend en charge une propriété de cou
 
 ## <a name="example"></a>Exemple
 
-L'exemple suivant montre comment construire un objet de la classe `CMFCPropertyGridColorProperty` et configurer cet objet à l'aide de différentes méthodes de la classe `CMFCPropertyGridColorProperty`. Le code explique comment activer les boutons automatique et autre et comment définir la couleur et le nombre de colonnes. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L'exemple suivant montre comment construire un objet de la classe `CMFCPropertyGridColorProperty` et configurer cet objet à l'aide de différentes méthodes de la classe `CMFCPropertyGridColorProperty`. Le code explique comment activer les boutons automatique et autre et comment définir la couleur et le nombre de colonnes. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]
 
@@ -81,7 +81,7 @@ L'exemple suivant montre comment construire un objet de la classe `CMFCPropertyG
 
 [CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpropertygridctrl.h
 

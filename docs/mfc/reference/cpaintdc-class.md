@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 5dbe08eae911433c256d3f8dd1f60dea2db9478c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: df1db8a3e65d35f247df7d070119c66b02208815
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274425"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772057"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (classe)
 
@@ -45,7 +45,7 @@ class CPaintDC : public CDC
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CPaintDC::m_hWnd](#m_hwnd)|Le HWND à laquelle cet `CPaintDC` objet est attaché.|
 
@@ -65,7 +65,7 @@ Pour plus d’informations sur l’utilisation de `CPaintDC`, consultez [context
 
 `CPaintDC`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -128,6 +128,6 @@ Notez que vous pouvez accéder au handle de contexte de périphérique via le `P
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
+[Exemple MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [CDC, classe](../../mfc/reference/cdc-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

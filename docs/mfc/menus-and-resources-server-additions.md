@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281948"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767197"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menus et ressources : Ajouts de serveurs
 
 Cet article décrit les modifications qui doivent être apportées aux menus et aux autres ressources dans une application serveur (composant) d’édition visuelle. Une application serveur requiert de nombreux ajouts à la structure de menus et d’autres ressources, car elle peut être démarrée dans un des trois modes : autonome, incorporé, ou en place. Comme décrit dans la [Menus et ressources (OLE)](../mfc/menus-and-resources-ole.md) l’article, il existe un maximum de quatre ensembles de menus. Les quatre sont utilisés pour une application de serveur complet MDI, tandis que seulement trois sont utilisées pour un mini-serveur. L’Assistant application crée la disposition du menu nécessaire pour le type de serveur souhaité. Une personnalisation peut être nécessaire.
 
-Si vous n’utilisez pas l’Assistant application, vous souhaiterez examiner HIERSVR. RC, le script de ressources pour l’exemple d’application MFC [HIERSVR](../visual-cpp-samples.md), pour voir comment ces modifications sont implémentées.
+Si vous n’utilisez pas l’Assistant application, vous souhaiterez examiner HIERSVR. RC, le script de ressources pour l’exemple d’application MFC [HIERSVR](../overview/visual-cpp-samples.md), pour voir comment ces modifications sont implémentées.
 
 Les sujets abordés dans cet article sont les suivantes :
 
@@ -56,7 +56,7 @@ Deux nouvelles ressources de table d’accélérateur doivent être ajoutés pou
 
 La seconde table est presque une copie exacte de la table d’accélérateurs de la vue. Toutes les différences correspondent aux modifications apportées dans le menu entièrement ouvert mentionné dans [ajouts au Menu du serveur](#_core_server_menu_additions).
 
-Pour obtenir un exemple de ces modifications de table d’accélérateurs, comparez les tables d’accélérateurs IDR_HIERSVRTYPE_SRVR_IP et IDR_HIERSVRTYPE_SRVR_EMB avec IDR_MAINFRAME dans HIERSVR. Fichier RC inclus dans l’exemple OLE MFC [HIERSVR](../visual-cpp-samples.md). Les accélérateurs fichier et fenêtre sont manquants dans le tableau sur place et des copies exactes de ces derniers sont dans le tableau incorporé.
+Pour obtenir un exemple de ces modifications de table d’accélérateurs, comparez les tables d’accélérateurs IDR_HIERSVRTYPE_SRVR_IP et IDR_HIERSVRTYPE_SRVR_EMB avec IDR_MAINFRAME dans HIERSVR. Fichier RC inclus dans l’exemple OLE MFC [HIERSVR](../overview/visual-cpp-samples.md). Les accélérateurs fichier et fenêtre sont manquants dans le tableau sur place et des copies exactes de ces derniers sont dans le tableau incorporé.
 
 ##  <a name="_core_string_table_additions_for_server_applications"></a> Ajouts de Table de chaînes pour les Applications serveur
 

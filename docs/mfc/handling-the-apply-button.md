@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279443"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770835"
 ---
 # <a name="handling-the-apply-button"></a>Gestion du bouton Appliquer
 
@@ -30,7 +30,7 @@ Vous devez appeler [CPropertyPage::SetModified](../mfc/reference/cpropertypage-c
 
 Pour implémenter l'effet du bouton Appliquer, la feuille de propriétés doit indiquer son propriétaire, ou un autre objet externe dans l'application, pour appliquer les paramètres aux pages de propriétés. En même temps, la feuille de propriétés doit désactiver le bouton Appliquer en appelant `CPropertyPage::SetModified( FALSE )` pour toutes les pages qui appliqué leurs modifications à l’objet externe.
 
-Pour obtenir un exemple de ce processus, consultez l’exemple général MFC [PROPDLG](../visual-cpp-samples.md).
+Pour obtenir un exemple de ce processus, consultez l’exemple général MFC [PROPDLG](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Voir aussi
 

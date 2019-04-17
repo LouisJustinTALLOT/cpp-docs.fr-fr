@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1922c2f2d804c2a93d30dc0708b2d3ae037414d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259748"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768703"
 ---
 # <a name="coledocument-class"></a>COleDocument, classe
 
@@ -131,7 +131,7 @@ Pour utiliser `COleDocument`, dérivez une classe à partir de celui-ci et ajout
 
 `COleDocument`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxole.h
 
@@ -544,7 +544,7 @@ Ainsi, l’infrastructure pour inviter l’utilisateur à enregistrer le documen
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC conteneur](../../visual-cpp-samples.md)<br/>
-[Exemple MFC MFCBIND](../../visual-cpp-samples.md)<br/>
+[Exemple MFC conteneur](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [CDocument, classe](../../mfc/reference/cdocument-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

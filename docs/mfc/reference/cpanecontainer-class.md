@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: 099f1cccd178068f9b96bda6193b5ee9df3b66c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fab7415a71d8029952a840b83aae0f066c09084c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274958"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775359"
 ---
 # <a name="cpanecontainer-class"></a>Cpanecontainer, classe
 
@@ -214,7 +214,7 @@ class CPaneContainer : public CObject
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire une instance de la `CPaneContainer` classe. Cet extrait de code fait partie de la [exemple de définir la taille du volet](../../visual-cpp-samples.md).
+L’exemple suivant montre comment construire une instance de la `CPaneContainer` classe. Cet extrait de code fait partie de la [exemple de définir la taille du volet](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]
@@ -225,7 +225,7 @@ L’exemple suivant montre comment construire une instance de la `CPaneContainer
 
 [CPaneContainer](../../mfc/reference/cpanecontainer-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpanecontainer.h
 

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260385"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771309"
 ---
 # <a name="cdockingmanager-class"></a>Cdockingmanager, classe
 
@@ -258,7 +258,7 @@ class CDockingManager : public CObject
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Spécifie si le Gestionnaire d’ancrage masque les volets en mode de conteneur OLE.|
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Spécifie le mode d’ancrage global.|
@@ -292,7 +292,7 @@ Les conseils suivants s’appliquent à `CDockingManager` objets :
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CDockingManager` classe permettant de configurer un `CDockingManager` objet. L’exemple montre comment afficher un bouton supplémentaire qui ouvre un menu contextuel sur les légendes de tous les volets d’ancrage et comment définir le mode d’ancrage de l’objet. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la `CDockingManager` classe permettant de configurer un `CDockingManager` objet. L’exemple montre comment afficher un bouton supplémentaire qui ouvre un menu contextuel sur les légendes de tous les volets d’ancrage et comment définir le mode d’ancrage de l’objet. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 
@@ -302,7 +302,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la `CDocki
 
 [CDockingManager](../../mfc/reference/cdockingmanager-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxDockingManager.h
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2748
 ms.assetid: b63ac78b-a200-499c-afea-15af1a1e819e
-ms.openlocfilehash: a85ee151d9a4d62cc4b95248d669ff924365a95a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 251492b736ba3325ed263a9a8754fc8fa480c664
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655635"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771875"
 ---
 # <a name="compiler-error-c2748"></a>Erreur du compilateur C2748
 
 La création de tableau managé ou WinRT doit posséder une taille de tableau ou un initialiseur de tableau
 
-Un tableau managé ou WinRT était incorrect. Pour plus d'informations, consultez [tableau](../../windows/arrays-cpp-component-extensions.md).
+Un tableau managé ou WinRT était incorrect. Pour plus d'informations, consultez [tableau](../../extensions/arrays-cpp-component-extensions.md).
 
 L'exemple suivant génère l'erreur C2748 et montre comment la corriger :
 

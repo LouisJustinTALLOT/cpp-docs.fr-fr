@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3384
 ms.assetid: c9f92c6a-62a9-4333-b2b1-bc55c7f288b6
-ms.openlocfilehash: 0c9804666bfd73f98541f95434b9cebf5185d2ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1b7e1a69035df358cf84ad791f611928dab8b5a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566814"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773630"
 ---
 # <a name="compiler-error-c3384"></a>Erreur du compilateur C3384
 
@@ -19,7 +19,7 @@ ms.locfileid: "50566814"
 
 Vous ne pouvez pas contraindre un type générique à `value class` et `ref class`à la fois.
 
-Consultez [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) pour plus d’informations.
+Consultez [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) pour plus d’informations.
 
 ## <a name="example"></a>Exemple
 

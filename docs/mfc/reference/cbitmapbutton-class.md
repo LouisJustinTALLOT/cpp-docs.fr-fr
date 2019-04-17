@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: c800b40fcf2bb3008b35614390e4aafcb43a54f5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 45e0214cafb80c3e00a7e888a3170040f46113f1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296759"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770276"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton, classe
 
@@ -108,7 +108,7 @@ Pour plus d’informations sur `CBitmapButton`, consultez [contrôles](../../mfc
 
 `CBitmapButton`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxext.h
 
@@ -224,6 +224,6 @@ void SizeToContent();
 
 ## <a name="see-also"></a>Voir aussi
 
-[CTRLTEST MFC, exemple](../../visual-cpp-samples.md)<br/>
+[CTRLTEST MFC, exemple](../../overview/visual-cpp-samples.md)<br/>
 [CButton, classe](../../mfc/reference/cbutton-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

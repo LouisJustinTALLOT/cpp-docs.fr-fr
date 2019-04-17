@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cc3af7649d30a153b67cd8269e595c11018833f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295134"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769786"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc (classe)
 
@@ -55,7 +55,7 @@ Un « contrôle RichEdit » est une fenêtre dans laquelle l’utilisateur peu
 
 Ce contrôle commun de Windows (et par conséquent le [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) et les classes associées) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT versions 3.51 et ultérieures.
 
-Pour obtenir un exemple d’utilisation d’un document RichEdit dans une application MFC, consultez le [WORDPAD](../../visual-cpp-samples.md) exemple d’application.
+Pour obtenir un exemple d’utilisation d’un document RichEdit dans une application MFC, consultez le [WORDPAD](../../overview/visual-cpp-samples.md) exemple d’application.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -73,7 +73,7 @@ Pour obtenir un exemple d’utilisation d’un document RichEdit dans une applic
 
 `CRichEditDoc`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrich.h
 
@@ -146,7 +146,7 @@ BOOL m_bRTF;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Exemple MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleServerDoc, classe](../../mfc/reference/coleserverdoc-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditView, classe](../../mfc/reference/cricheditview-class.md)<br/>

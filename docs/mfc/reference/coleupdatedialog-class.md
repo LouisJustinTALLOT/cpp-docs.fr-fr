@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 74607a2a145025533c660ae68f20ffb8e59d3fad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b8e580130b025f07b8f85a624b7f5a224a00e49e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281731"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771101"
 ---
 # <a name="coleupdatedialog-class"></a>Coleupdatedialog, classe
 
@@ -63,7 +63,7 @@ Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, cons
 
 `COleUpdateDialog`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxodlgs.h
 
@@ -121,7 +121,7 @@ Tous les liens et/ou des incorporations sont mis à jour, sauf si l’utilisateu
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Exemple MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleLinksDialog, classe](../../mfc/reference/colelinksdialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleLinksDialog, classe](../../mfc/reference/colelinksdialog-class.md)

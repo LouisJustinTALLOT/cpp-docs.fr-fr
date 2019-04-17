@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283421"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771498"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 
@@ -568,7 +568,7 @@ Pour plus d’informations sur le développement d’une infrastructure de contr
 
 `COleControl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxctl.h
 
@@ -4209,8 +4209,8 @@ Appelez cette fonction pour distribuer des messages spécifiques via la table de
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC exemple CIRC3](../../visual-cpp-samples.md)<br/>
-[Exemple MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[MFC exemple CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [COlePropertyPage, classe](../../mfc/reference/colepropertypage-class.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>

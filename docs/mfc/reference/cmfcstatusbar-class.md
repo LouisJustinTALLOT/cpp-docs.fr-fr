@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326749"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775957"
 ---
 # <a name="cmfcstatusbar-class"></a>Cmfcstatusbar, classe
 
@@ -138,26 +138,26 @@ class CMFCStatusBar : public CPane
 
 ## <a name="remarks"></a>Notes
 
-Le diagramme suivant illustre une figure de la barre d’état à partir de [exemple de démonstration de barre d’état](../../visual-cpp-samples.md) application.
+Le diagramme suivant illustre une figure de la barre d’état à partir de [exemple de démonstration de barre d’état](../../overview/visual-cpp-samples.md) application.
 
 ![Exemple de CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "exemple de CMFCStatusBar")
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre les variables locales que l’application utilise pour appeler les différentes méthodes la `CMFCStatusBar` classe. Ces variables sont déclarées dans StatusBarDemoView.h. Frame principal est déclaré dans MainFrm.h, le document est déclaré dans StatusBarDemoDoc.h, et la vue est déclarée dans StatusBarDemoView.h. Cet extrait de code fait partie de la [exemple de démonstration de barre d’état](../../visual-cpp-samples.md).
+L’exemple suivant montre les variables locales que l’application utilise pour appeler les différentes méthodes la `CMFCStatusBar` classe. Ces variables sont déclarées dans StatusBarDemoView.h. Frame principal est déclaré dans MainFrm.h, le document est déclaré dans StatusBarDemoDoc.h, et la vue est déclarée dans StatusBarDemoView.h. Cet extrait de code fait partie de la [exemple de démonstration de barre d’état](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment obtenir une référence à `CMFCStatusBar` objet en introduisant le `GetStatusBar` méthode dans MainFrm.h, puis en appelant cette méthode à partir de la `GetStatusBar` dans StatusBarDemoView.h (méthode). Cet extrait de code fait partie de la [exemple de démonstration de barre d’état](../../visual-cpp-samples.md).
+L’exemple suivant montre comment obtenir une référence à `CMFCStatusBar` objet en introduisant le `GetStatusBar` méthode dans MainFrm.h, puis en appelant cette méthode à partir de la `GetStatusBar` dans StatusBarDemoView.h (méthode). Cet extrait de code fait partie de la [exemple de démonstration de barre d’état](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment appeler les différentes méthodes la `CMFCStatusBar` classe dans StatusBarDemoView.cpp. Les constantes sont déclarées dans MainFrm.h. L’exemple montre comment définir l’icône de définir le texte d’info-bulle du volet de barre d’état, afficher une barre de progression dans le volet spécifié, affecter une animation vers le volet spécifié, définir le texte et la largeur du volet de barre d’état et définir l’indicateur de progression actuelle du progr. barre ESS pour le volet de barre d’état. Cet extrait de code fait partie de la [exemple de démonstration de barre d’état](../../visual-cpp-samples.md).
+L’exemple suivant montre comment appeler les différentes méthodes la `CMFCStatusBar` classe dans StatusBarDemoView.cpp. Les constantes sont déclarées dans MainFrm.h. L’exemple montre comment définir l’icône de définir le texte d’info-bulle du volet de barre d’état, afficher une barre de progression dans le volet spécifié, affecter une animation vers le volet spécifié, définir le texte et la largeur du volet de barre d’état et définir l’indicateur de progression actuelle du progr. barre ESS pour le volet de barre d’état. Cet extrait de code fait partie de la [exemple de démonstration de barre d’état](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]
@@ -180,7 +180,7 @@ L’exemple suivant montre comment appeler les différentes méthodes la `CMFCSt
 
 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxstatusbar.h
 

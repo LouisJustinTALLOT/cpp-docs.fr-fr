@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39309408c6d1fc6cbb4223eda22c511865f14498
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286463"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772512"
 ---
 # <a name="tn031-control-bars"></a>TN031 : Barres de contrôles
 
@@ -136,7 +136,7 @@ Tous les boutons de bitmap dans la barre d’outils proviennent d’une seule bi
 
 Chaque bouton doit avoir la même taille. La valeur par défaut est la taille standard de 24x22 pixels. Chaque image/glyphe doit avoir la même taille et doit être côte à côte dans la bitmap. La taille d’image/glyphe par défaut est de 16x15 pixels. Ainsi, pour une barre d’outils avec 10 boutons (de taille standard), vous avez besoin d’une bitmap de 160 pixels de large sur 15 pixels de haut.
 
-Chaque bouton a une seule et unique image/glyphe. Les différents états et styles des boutons (par exemple enfoncé, activé, désactivé et indéterminé) sont générés par un algorithme à partir de cette image/glyphe. En théorie, vous pouvez utiliser n’importe quelle bitmap ou DIB en couleur. L’algorithme permettant de générer les différents états des boutons fonctionne mieux si l’image d’origine est en nuances de gris. Pour obtenir des exemples, consultez les boutons de barres d’outils standard et les images clipart de boutons de barres d’outils fournis dans l’exemple général MFC [CLIPART](../visual-cpp-samples.md) .
+Chaque bouton a une seule et unique image/glyphe. Les différents états et styles des boutons (par exemple enfoncé, activé, désactivé et indéterminé) sont générés par un algorithme à partir de cette image/glyphe. En théorie, vous pouvez utiliser n’importe quelle bitmap ou DIB en couleur. L’algorithme permettant de générer les différents états des boutons fonctionne mieux si l’image d’origine est en nuances de gris. Pour obtenir des exemples, consultez les boutons de barres d’outils standard et les images clipart de boutons de barres d’outils fournis dans l’exemple général MFC [CLIPART](../overview/visual-cpp-samples.md) .
 
 Les couleurs utilisées dans la barre d’outils sont également conformes à la recommandation du Guide de conception d’application d’interface Windows. Ces couleurs ne sont pas codées en dur. Elles sont modifiées de manière dynamique en réponse à la personnalisation par l’utilisateur dans le Panneau de configuration.
 

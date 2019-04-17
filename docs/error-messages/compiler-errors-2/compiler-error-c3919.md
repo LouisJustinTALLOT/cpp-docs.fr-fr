@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3919
 ms.assetid: 5f8eddda-d751-478b-930d-e18f7191ddfb
-ms.openlocfilehash: 0fe7e61c28ad2688a6d97b4164c2b5cfa81a37b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05ac2fc9258a078f352b6012e64e86fe4b70c3f0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474865"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771472"
 ---
 # <a name="compiler-error-c3919"></a>Erreur du compilateur C3919
 
@@ -19,7 +19,7 @@ ms.locfileid: "50474865"
 
 Une méthode d’accesseur événement n’a pas été correctement déclarée.
 
-Pour plus d’informations sur les événements, consultez [événement](../../windows/event-cpp-component-extensions.md).
+Pour plus d’informations sur les événements, consultez [événement](../../extensions/event-cpp-component-extensions.md).
 
 L’exemple suivant génère l’erreur C3919 :
 

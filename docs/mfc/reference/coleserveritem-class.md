@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c4c026975e9884ac2a0e6aaef31e799c2b5b09bf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270551"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777374"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem, classe
 
@@ -167,7 +167,7 @@ Pour plus d’informations sur les serveurs et les rubriques connexes, consultez
 
 `COleServerItem`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxole.h
 
@@ -997,7 +997,7 @@ Le nom doit être unique au sein du document. Lorsqu’une application serveur e
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Exemple MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CDocItem, classe](../../mfc/reference/cdocitem-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleClientItem, classe](../../mfc/reference/coleclientitem-class.md)<br/>

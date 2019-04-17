@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303168"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772070"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Cmfctoolbarcomboboxbutton, classe
 
@@ -136,7 +136,7 @@ Pour plus d’informations, consultez [Procédure pas à pas : Placement de con
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCToolBarComboBoxButton` . L’exemple montre comment activer les cases à modifier et de la liste déroulante, définissez des cases à la position verticale de la zone de liste déroulante dans l’application, définir la hauteur de la zone de liste lorsqu’il est déplacé vers le bas, définir l’apparence de style à deux dimensions de boutons de zone de liste modifiable dans l’application et définir le texte dans la zone d’édition de la liste déroulante bouton de zone. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCToolBarComboBoxButton` . L’exemple montre comment activer les cases à modifier et de la liste déroulante, définissez des cases à la position verticale de la zone de liste déroulante dans l’application, définir la hauteur de la zone de liste lorsqu’il est déplacé vers le bas, définir l’apparence de style à deux dimensions de boutons de zone de liste modifiable dans l’application et définir le texte dans la zone d’édition de la liste déroulante bouton de zone. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]
@@ -149,7 +149,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtoolbarcomboboxbutton.h
 

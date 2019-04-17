@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-ms.openlocfilehash: f84c0da7530a774ebe2b33aea0bddc5b0bf0fe17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 795b20cba41eeca8cc1a32e312edf065b718f364
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326346"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768484"
 ---
 # <a name="ccreatecontext-structure"></a>Ccreatecontext, Structure
 
@@ -56,9 +56,9 @@ Voici quelques recommandations générales :
 
 En règle générale, si vous utilisez les valeurs par défaut de framework, vous pouvez ignorer `CCreateContext`. Si vous essayez de modifications plus complexes, le code source de Microsoft Foundation Class Library ou les exemples de programmes, tels que VIEWEX, vous guide. Si vous n’oubliez pas un paramètre obligatoire, une assertion de framework vous indique ce que vous avez oublié.
 
-Pour plus d’informations sur `CCreateContext`, consultez l’exemple MFC [VIEWEX](../../visual-cpp-samples.md).
+Pour plus d’informations sur `CCreateContext`, consultez l’exemple MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxext.h
 

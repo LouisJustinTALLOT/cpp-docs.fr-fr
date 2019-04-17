@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326593"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772088"
 ---
 # <a name="ctabview-class"></a>Ctabview, classe
 
@@ -65,7 +65,7 @@ Cette classe rend plus facile de mettre une vue à onglets dans une application 
 
 Par exemple, vous pouvez avoir un document qui peut être représenté de différentes façons : en tant qu’une feuille de calcul, un graphique, d’un formulaire modifiable et ainsi de suite. Vous pouvez créer des vues individuelles tracer les données en fonction des besoins, les insérer dans votre `CTabView`-objet dérivé et les onglets sans aucun codage supplémentaire.
 
-[TabbedView, exemple : Application avec affichage MFC avec onglet](../../visual-cpp-samples.md) illustre l’utilisation de `CTabView`.
+[TabbedView, exemple : Application avec affichage MFC avec onglet](../../overview/visual-cpp-samples.md) illustre l’utilisation de `CTabView`.
 
 ## <a name="example"></a>Exemple
 
@@ -73,7 +73,7 @@ L’exemple suivant montre comment `CTabView` est utilisé dans l’exemple Tabb
 
 [!code-cpp[NVC_MFC_TabbedView#1](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxTabView.h
 

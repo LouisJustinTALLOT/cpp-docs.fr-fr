@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-ms.openlocfilehash: e400c181f987a83588f8aedc63ecdedb82be310f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d05a861a2baedb86482503b6860098f12c41bd78
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568676"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767169"
 ---
 # <a name="compiler-error-c3399"></a>Erreur du compilateur C3399
 
@@ -19,7 +19,7 @@ ms.locfileid: "50568676"
 
 Quand vous spécifiez la contrainte `gcnew()` , vous indiquez que le type de contrainte aura un constructeur sans paramètre. Il est donc incorrect d’essayer d’instancier ce type et de passer un paramètre.
 
-Consultez [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) pour plus d’informations.
+Consultez [contraintes sur les paramètres de Type générique (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) pour plus d’informations.
 
 ## <a name="example"></a>Exemple
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: 892e9e56b6df5bc0a3dc0aa9cf3786e36b5311c7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01b6937ee597766922597fda5664c78f75be6b67
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302635"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772161"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Cmfcribbonapplicationbutton, classe
 
@@ -45,7 +45,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonApplicationButton` . L’exemple montre comment affecter une image pour le bouton d’application et comment définir son info-bulle. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonApplicationButton` . L’exemple montre comment affecter une image pour le bouton d’application et comment définir son info-bulle. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]
@@ -60,7 +60,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxRibbonBar.h
 

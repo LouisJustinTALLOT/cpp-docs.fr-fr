@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c649dd979b28e2b545a797c5453a2ec9aa6d0dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273060"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768040"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox, classe
 
@@ -108,7 +108,7 @@ Vous pouvez créer une zone de liste de vérification à partir d’un modèle d
 
 `CCheckListBox`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -379,7 +379,7 @@ Pour plus d’informations sur ces styles, consultez [Styles de boutons](../../m
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC TSTCON](../../visual-cpp-samples.md)<br/>
+[Exemple MFC TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox, classe](../../mfc/reference/clistbox-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CListBox, classe](../../mfc/reference/clistbox-class.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 04136b3550675f0e50f905047fee551e27da7069
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271864"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768106"
 ---
 # <a name="cfont-class"></a>CFont (classe)
 
@@ -78,7 +78,7 @@ Pour plus d’informations sur `CFont`, consultez [objets graphiques](../../mfc/
 
 `CFont`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -359,6 +359,6 @@ Pour plus d’informations sur l’utilisation des objets graphiques, consultez 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Exemple MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject, classe](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

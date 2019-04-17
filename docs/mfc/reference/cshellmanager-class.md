@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ec2abf243e7f3865609f81fa4f3bf81e1b4c3d92
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269381"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769972"
 ---
 # <a name="cshellmanager-class"></a>Cshellmanager, classe
 
@@ -80,7 +80,7 @@ Vous ne devez pas créer un `CShellManager` objet manuellement. Il sera créé a
 
 [CShellManager](../../mfc/reference/cshellmanager-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxshellmanager.h
 
@@ -128,7 +128,7 @@ Lorsque vous appelez cette méthode, l’application crée et affiche une boîte
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment récupérer une référence à un `CShellManager` objet à l’aide de la `CWinAppEx::GetShellManager` (méthode) et comment utiliser le `BrowseForFolder` (méthode). Cet extrait de code fait partie de la [exemple Explorer](../../visual-cpp-samples.md).
+L’exemple suivant montre comment récupérer une référence à un `CShellManager` objet à l’aide de la `CWinAppEx::GetShellManager` (méthode) et comment utiliser le `BrowseForFolder` (méthode). Cet extrait de code fait partie de la [exemple Explorer](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 

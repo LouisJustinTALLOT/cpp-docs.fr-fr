@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292274"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776009"
 ---
 # <a name="cmfcpopupmenu-class"></a>Cmfcpopupmenu, classe
 
@@ -278,7 +278,7 @@ Normalement, MFC crée automatiquement des menus contextuels. Si vous souhaitez 
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment configurer un objet de menu contextuel. L’exemple montre comment définir le logo et le son du menu contextuel, définir la vitesse d’animation et le type, dessiner les ombres de menu lorsque le menu contextuel s’affiche en dehors du cadre principal, définissez la largeur maximale et définir l’alignement du menu de droite du menu contextuel. Cet extrait de code fait partie de la [exemple des Pages personnalisées](../../visual-cpp-samples.md).
+L’exemple suivant montre comment configurer un objet de menu contextuel. L’exemple montre comment définir le logo et le son du menu contextuel, définir la vitesse d’animation et le type, dessiner les ombres de menu lorsque le menu contextuel s’affiche en dehors du cadre principal, définissez la largeur maximale et définir l’alignement du menu de droite du menu contextuel. Cet extrait de code fait partie de la [exemple des Pages personnalisées](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -296,7 +296,7 @@ L’exemple suivant montre comment configurer un objet de menu contextuel. L’e
 
 `CMFCPopupMenu`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpopupmenu.h
 
@@ -451,7 +451,7 @@ Si *bOwnMessage* a la valeur TRUE, l’infrastructure achemine les messages de m
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `Create` méthode de la `CMFCPopuMenu` classe. Cet extrait de code fait partie de la [exemple des Pages personnalisées](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `Create` méthode de la `CMFCPopuMenu` classe. Cet extrait de code fait partie de la [exemple des Pages personnalisées](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: c8a3a5d9b8b007887dfb31f7459c0269377b38fd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a002badf9c20ca7b2d1a129eca069e586893f3c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294159"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767234"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Modification des styles d'une fenêtre créée par MFC
 
@@ -50,7 +50,7 @@ Pour modifier les attributs de fenêtre par défaut utilisés par une applicatio
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 
-Le [CTRLBARS](../visual-cpp-samples.md) exemple d’application illustre cette technique pour les attributs de la fenêtre variables. Selon les changements par votre application dans `PreCreateWindow`, il peut être nécessaire d’appeler l’implémentation de classe de base de la fonction.
+Le [CTRLBARS](../overview/visual-cpp-samples.md) exemple d’application illustre cette technique pour les attributs de la fenêtre variables. Selon les changements par votre application dans `PreCreateWindow`, il peut être nécessaire d’appeler l’implémentation de classe de base de la fonction.
 
 La section suivante traite le cas SDI et [cas MDI](#_core_the_mdi_case).
 

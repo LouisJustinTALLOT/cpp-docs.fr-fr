@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b23aa9e30c130cea8c84290b62cc19794376d4c1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288881"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773435"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Cmfcoutlookbarpane, classe
 
@@ -111,7 +111,7 @@ Pour obtenir un exemple d’une barre Outlook, consultez l’exemple de projet O
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCOutlookBarPane` classe. L’exemple montre comment créer un volet de barre Outlook, activer le mode de défilement, activez l’ancrage et définir la couleur d’arrière-plan de la barre Outlook. Cet extrait de code fait partie de la [Outlook plusieurs vues, exemple](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCOutlookBarPane` classe. L’exemple montre comment créer un volet de barre Outlook, activer le mode de défilement, activez l’ancrage et définir la couleur d’arrière-plan de la barre Outlook. Cet extrait de code fait partie de la [Outlook plusieurs vues, exemple](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]
@@ -134,7 +134,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCOu
 
 [CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxoutlookbarpane.h
 

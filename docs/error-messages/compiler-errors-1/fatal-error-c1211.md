@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1211
 ms.assetid: df0ca70d-ec6e-4400-926a-b877e2599978
-ms.openlocfilehash: 01b9dbc63ec4dee7335579c4805d34b4ff7214fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f39ab027d8d81762ae1cf8f38405f3e21524da2e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534392"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781937"
 ---
 # <a name="fatal-error-c1211"></a>Erreur irrécupérable C1211
 
@@ -23,4 +23,4 @@ Certaines fonctionnalités du compilateur risquent de ne pas fonctionner sur une
 
 Pour résoudre l’erreur C1211, installez le common language runtime fourni avec le compilateur que vous utilisez.
 
-Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).

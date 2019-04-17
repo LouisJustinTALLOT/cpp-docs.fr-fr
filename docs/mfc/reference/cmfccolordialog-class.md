@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: d94c223ed1e0b236ae8565d13a9f2c9652b6eb84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270299"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772749"
 ---
 # <a name="cmfccolordialog-class"></a>Cmfccolordialog, classe
 
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`m_bIsMyPalette`|TRUE si la boîte de dialogue de sélection de couleur utilise sa propre palette de couleurs, ou FALSE si la boîte de dialogue utilise une palette est spécifiée dans le `CMFCColorDialog` constructeur.|
 |`m_bPickerMode`|TRUE si l’utilisateur sélectionne une couleur à partir de la boîte de dialogue de sélection ; Sinon, FALSE.|
@@ -100,11 +100,11 @@ Vous pouvez construire un `CMFCColorDialog` de l’objet sur la pile, puis appel
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment configurer une boîte de dialogue couleur à l’aide de différentes méthodes de la `CMFCColorDialog` classe. L’exemple montre comment définir actuel et les nouvelles couleurs de la boîte de dialogue et comment définir les composants rouges, vert et bleus de la couleur sélectionnée sur les pages de deux propriétés de la boîte de dialogue couleur. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment configurer une boîte de dialogue couleur à l’aide de différentes méthodes de la `CMFCColorDialog` classe. L’exemple montre comment définir actuel et les nouvelles couleurs de la boîte de dialogue et comment définir les composants rouges, vert et bleus de la couleur sélectionnée sur les pages de deux propriétés de la boîte de dialogue couleur. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcolordialog.h
 

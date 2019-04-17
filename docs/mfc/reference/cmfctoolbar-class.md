@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283135"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775625"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar, classe
 
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Spécifie s’il faut mettre à l’échelle ou pas les images de barre d’outils en mode PPP élevé.|
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Spécifie le rapport entre la dimension (hauteur ou largeur) des images de grande taille et la dimension d’images régulières.|
@@ -525,12 +525,12 @@ Pour insérer un bouton spécial, par exemple une zone de liste déroulante ou d
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCToolBar` . L’exemple montre comment définir le texte de l’étiquette de la fenêtre de la barre d’outils, les bordures, définir le style du volet et activer le **ajouter ou supprimer des boutons** bouton qui apparaît sur la fin de la barre d’outils. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCToolBar` . L’exemple montre comment définir le texte de l’étiquette de la fenêtre de la barre d’outils, les bordures, définir le style du volet et activer le **ajouter ou supprimer des boutons** bouton qui apparaît sur la fin de la barre d’outils. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtoolbar.h
 
@@ -1031,7 +1031,7 @@ Appelez cette méthode au lieu de [CMFCToolBar::Create](#create) lorsque vous so
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `CreateEx` méthode de la `CMFCToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `CreateEx` méthode de la `CMFCToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -1799,7 +1799,7 @@ Le `CRect` objet vers lequel *lpRect* points est définie sur 0 si un bouton à 
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `GetItemRect` méthode de la `CMFCToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `GetItemRect` méthode de la `CMFCToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
@@ -2737,7 +2737,7 @@ L’infrastructure appelle cette méthode lors de l’initialisation pour charge
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `LoadToolBar` méthode dans la `CMFCToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `LoadToolBar` méthode dans la `CMFCToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -3079,7 +3079,7 @@ Appelez cette méthode lorsque vous souhaitez ajouter des boutons de barre d’o
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `ReplaceButton` méthode dans la `CMFCToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `ReplaceButton` méthode dans la `CMFCToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration d’IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]

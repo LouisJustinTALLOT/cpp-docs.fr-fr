@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288778"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769483"
 ---
 # <a name="ribbon-designer-mfc"></a>Concepteur de ruban (MFC)
 
@@ -107,7 +107,7 @@ Les rubriques suivantes expliquent comment utiliser les fonctionnalités du Conc
 
 - **Panneau de configuration :** Zone de la barre du ruban qui affiche un groupe de contrôles connexes. Chaque catégorie du ruban contient un ou plusieurs volets de ruban.
 
-- **Éléments de ruban :** Contrôle dans les panneaux, par exemple, boutons et des zones de liste déroulante. Pour connaître les différents contrôles qui peuvent être hébergés sur un ruban, consultez [exemple RibbonGadgets : Application de Gadgets de ruban](../visual-cpp-samples.md).
+- **Éléments de ruban :** Contrôle dans les panneaux, par exemple, boutons et des zones de liste déroulante. Pour connaître les différents contrôles qui peuvent être hébergés sur un ruban, consultez [exemple RibbonGadgets : Application de Gadgets de ruban](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Voir aussi
 

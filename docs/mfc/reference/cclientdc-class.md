@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-ms.openlocfilehash: 1c506e1fe3d36b9f356f8ef250e0310a10a917cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a67af5d7d82b8bd7d0490d4ae6f9535bf3283ea2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284110"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766766"
 ---
 # <a name="cclientdc-class"></a>CClientDC (classe)
 
@@ -37,7 +37,7 @@ class CClientDC : public CDC
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CClientDC::m_hWnd](#m_hwnd)|Le HWND de la fenêtre pour lequel ce `CClientDC` est valide.|
 
@@ -55,7 +55,7 @@ Pour plus d’informations sur `CClientDC`, consultez [contextes de périphériq
 
 `CClientDC`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -100,7 +100,7 @@ HWND m_hWnd;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
+[Exemple MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [CDC, classe](../../mfc/reference/cdc-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CDC, classe](../../mfc/reference/cdc-class.md)

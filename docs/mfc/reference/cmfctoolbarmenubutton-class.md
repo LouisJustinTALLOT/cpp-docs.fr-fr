@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7733969a0218dacf481ac82c764911c61ecabbbf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281519"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769145"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Cmfctoolbarmenubutton, classe
 
@@ -171,7 +171,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Si la valeur est TRUE, le framework appelle toujours [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) qu’un bouton est dessiné.|
 
@@ -183,7 +183,7 @@ Une classe personnalisée dérivée de la `CMFCToolbarMenuButton` classe doit ut
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment configurer un `CMFCToolBarMenuButton` objet. Le code illustre comment spécifier que le menu déroulant est en mode de palette et spécifiez l’ID de la barre détachable est créée lorsque l’utilisateur fait glisser le bouton de menu sur une barre de menus. Cet extrait de code fait partie de l’ [exemple Word Pad](../../visual-cpp-samples.md).
+L’exemple suivant montre comment configurer un `CMFCToolBarMenuButton` objet. Le code illustre comment spécifier que le menu déroulant est en mode de palette et spécifiez l’ID de la barre détachable est créée lorsque l’utilisateur fait glisser le bouton de menu sur une barre de menus. Cet extrait de code fait partie de l’ [exemple Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]
 
@@ -195,7 +195,7 @@ L’exemple suivant montre comment configurer un `CMFCToolBarMenuButton` objet. 
 
 [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtoolbarmenubutton.h
 
@@ -241,7 +241,7 @@ Si *uiID* n’est valide ID de commande, le bouton exécute cette commande lorsq
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un objet de la `CMFCToolBarMenuButton` classe. Cet extrait de code fait partie de l’ [exemple Word Pad](../../visual-cpp-samples.md).
+L’exemple suivant montre comment construire un objet de la `CMFCToolBarMenuButton` classe. Cet extrait de code fait partie de l’ [exemple Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9233e83a08fde87c15be5cc1c42a2f1dd3b56511
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286021"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767988"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList (classe)
 
@@ -99,7 +99,7 @@ Cet exemple crée une instance de `CTypedPtrList`, ajoute un objet, sérialise l
 
 `CTypedPtrList`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtempl.h
 
@@ -379,7 +379,7 @@ Pour plus de remarques, consultez [CObList::SetAt](../../mfc/reference/coblist-c
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Exemple MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CPtrList, classe](../../mfc/reference/cptrlist-class.md)<br/>
 [CObList, classe](../../mfc/reference/coblist-class.md)

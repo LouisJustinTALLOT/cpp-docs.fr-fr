@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9d4100037c5a6cd2eeef1a50fb2d5a46b2cb6505
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260749"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772721"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (classe)
 
@@ -111,7 +111,7 @@ Pour plus d’informations sur l’établissement d’une feuille de propriété
 
 `CPropertyPage`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdlgs.h
 
@@ -574,10 +574,10 @@ Le framework conserve la piste dont les pages sont « modifiées », autrement
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC exemple CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[MFC exemple CMNCTRL2](../../visual-cpp-samples.md)<br/>
-[Exemple MFC PROPDLG](../../visual-cpp-samples.md)<br/>
-[Exemple MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC exemple CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC exemple CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CDialog, classe](../../mfc/reference/cdialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CPropertySheet, classe](../../mfc/reference/cpropertysheet-class.md)<br/>

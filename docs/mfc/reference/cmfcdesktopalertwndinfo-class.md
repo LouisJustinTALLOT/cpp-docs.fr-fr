@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301634"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768287"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Cmfcdesktopalertwndinfo, classe
 
@@ -47,7 +47,7 @@ class CMFCDesktopAlertWndInfo
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Handle vers l’icône qui s’affiche.|
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|L’ID de commande associé à un lien dans la fenêtre Bureau de l’alerte.|
@@ -68,7 +68,7 @@ Si la boîte de dialogue par défaut n’est pas suffisante, vous pouvez créer 
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser les différents membres dans la `CMFCDesktopAlertWndInfo` classe. L’exemple montre comment définir le handle de l’icône qui s’affiche, le texte qui s’affiche dans la fenêtre d’alerte de bureau, le lien qui s’affiche dans la fenêtre d’alerte de bureau et l’ID de commande qui est associé à un lien dans la fenêtre Bureau de l’alerte. Cet exemple fait partie de la [exemple de démonstration alerte Desktop](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser les différents membres dans la `CMFCDesktopAlertWndInfo` classe. L’exemple montre comment définir le handle de l’icône qui s’affiche, le texte qui s’affiche dans la fenêtre d’alerte de bureau, le lien qui s’affiche dans la fenêtre d’alerte de bureau et l’ID de commande qui est associé à un lien dans la fenêtre Bureau de l’alerte. Cet exemple fait partie de la [exemple de démonstration alerte Desktop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 
@@ -76,7 +76,7 @@ L’exemple suivant montre comment utiliser les différents membres dans la `CMF
 
 [CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxDesktopAlertDialog.h
 

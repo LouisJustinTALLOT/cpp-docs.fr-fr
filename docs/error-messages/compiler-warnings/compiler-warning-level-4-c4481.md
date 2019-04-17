@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4481
 ms.assetid: 7bfd4e0c-b452-4e6c-b7c4-ac5cc93fe4ea
-ms.openlocfilehash: f88a61a40a789c31e80875d785b95136ac69253c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe96ff50f4081e3c9dbe3c7eb68da156a69c96ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466935"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776360"
 ---
 # <a name="compiler-warning-level-4-c4481"></a>Avertissement du compilateur (niveau 4) C4481
 
@@ -21,7 +21,7 @@ Un mot clé a été utilisé qui n’est pas dans la norme C++, par exemple, un 
 
 - [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [Spécificateurs de substitution](../../windows/override-specifiers-cpp-component-extensions.md)
+- [Spécificateurs de substitution](../../extensions/override-specifiers-cpp-component-extensions.md)
 
 ## <a name="example"></a>Exemple
 

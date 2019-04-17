@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305092"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771350"
 ---
 # <a name="cdialog-class"></a>CDialog (classe)
 
@@ -135,7 +135,7 @@ Pour plus d’informations sur `CDialog`, consultez [boîtes de dialogue](../../
 
 `CDialog`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -558,7 +558,7 @@ Spécifie l’ID de l’aide contextuelle.
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC exemple DLGCBR32](../../visual-cpp-samples.md)<br/>
-[Exemple MFC DLGTEMPL](../../visual-cpp-samples.md)<br/>
+[MFC exemple DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC DLGTEMPL](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef0e4856a844503f8d13b7b6ed37318b76b6af69
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288786"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772148"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procédure pas à pas : À l’aide de nouveaux contrôles d’environnement MFC
 
@@ -166,7 +166,7 @@ Cette procédure pas à pas suppose que vous avez configuré Visual Studio à ut
 
 - L’Assistant a créé une barre Outlook avec à la fois un **dossiers** volet et un **calendrier** volet. Il n’y probablement pas judicieux d’avoir un **calendrier** volet dans une **Explorer** fenêtre, donc supprimer maintenant ce volet.
 
-- Le `CMFCShellListCtrl` prend en charge l’affichage des fichiers dans des modes différents, tels que **grandes icônes**, **petites icônes**, **liste**, et **détails**. Mettre à jour votre application pour implémenter cette fonctionnalité. Conseil : consultez [exemples Visual C++](../visual-cpp-samples.md).
+- Le `CMFCShellListCtrl` prend en charge l’affichage des fichiers dans des modes différents, tels que **grandes icônes**, **petites icônes**, **liste**, et **détails**. Mettre à jour votre application pour implémenter cette fonctionnalité. Conseil : consultez [exemples Visual C++](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Voir aussi
 

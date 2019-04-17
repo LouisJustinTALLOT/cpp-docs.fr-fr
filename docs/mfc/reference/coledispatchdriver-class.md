@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274573"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774774"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver, classe
 
@@ -95,7 +95,7 @@ Pour plus d’informations sur l’utilisation de `COleDispatchDriver`, consulte
 
 `COleDispatchDriver`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdisp.h
 
@@ -408,7 +408,7 @@ Un seul paramètre de type spécifié par *vtProp*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
-[Exemple MFC ACDUAL](../../visual-cpp-samples.md)<br/>
+[Exemple MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC ACDUAL](../../overview/visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)

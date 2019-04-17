@@ -21,7 +21,7 @@ ms.locfileid: "53248518"
 
 Vous avez spécifié une option du compilateur qui sera supprimée dans une prochaine version du compilateur. S’il existe une suggestion de remplacement pour *option*, cet avertissement est suivi d’avertissement [D9036](../../error-messages/tool-errors/command-line-warning-d9036.md).
 
-L’option spécifiée fonctionne toujours, mais vous devez mettre à jour votre configuration de build maintenant. Par conséquent, votre projet est plus probable continuer à créer lorsque vous mettez à niveau le compilateur.
+L’option spécifiée fonctionne toujours, mais vous devez mettre à jour votre configuration de build maintenant. Par conséquent, le build votre projet va probablement se poursuivre lorsque vous mettez à niveau le compilateur.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297487"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772122"
 ---
 # <a name="tn014-custom-controls"></a>TN014 : Contrôles personnalisés
 
 Cette note décrit la prise en charge MFC pour les contrôles personnalisés et de dessin automatique. Il décrit le sous-classement dynamique, également et décrit la relation entre [CWnd](../mfc/reference/cwnd-class.md) objets et `HWND`s.
 
-L'exemple d'application CTRLTEST MFC montre comment utiliser de nombreux contrôles personnalisés. Consultez le code source pour l’exemple général MFC [CTRLTEST](../visual-cpp-samples.md) et aide en ligne.
+L'exemple d'application CTRLTEST MFC montre comment utiliser de nombreux contrôles personnalisés. Consultez le code source pour l’exemple général MFC [CTRLTEST](../overview/visual-cpp-samples.md) et aide en ligne.
 
 ## <a name="owner-draw-controlsmenus"></a>Contrôles/menus en mode owner-draw
 
@@ -104,7 +104,7 @@ Pour les zones de liste et les zones de liste déroulante de dessin automatique,
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>Exemples de contrôles et de menus de dessin automatique
 
-L’exemple général MFC [CTRLTEST](../visual-cpp-samples.md) fournit des exemples d’un menu de dessin automatique et une zone de liste de dessin automatique.
+L’exemple général MFC [CTRLTEST](../overview/visual-cpp-samples.md) fournit des exemples d’un menu de dessin automatique et une zone de liste de dessin automatique.
 
 L'exemple le plus typique d'un bouton de dessin automatique est un bouton bitmap. Un bouton bitmap est un bouton qui affiche une, deux ou trois images bitmap pour les différents états. Un exemple est fourni dans la classe MFC [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
 
@@ -130,7 +130,7 @@ Vous pouvez obtenir le sous-classement dynamique en utilisant les méthodes [CWn
 
 Les deux routines joignent un objet `CWnd` au `HWND` existant. `SubclassWindow` prend le `HWND` directement. `SubclassDlgItem` est une fonction d'assistance qui accepte un ID de contrôle et la fenêtre parente. `SubclassDlgItem` est conçu pour joindre des objets C++ aux contrôles de la boîte de dialogue créée à partir d'un modèle de boîte de dialogue.
 
-Consultez le [CTRLTEST](../visual-cpp-samples.md) exemple pour plusieurs exemples d’utilisation `SubclassWindow` et `SubclassDlgItem`.
+Consultez le [CTRLTEST](../overview/visual-cpp-samples.md) exemple pour plusieurs exemples d’utilisation `SubclassWindow` et `SubclassDlgItem`.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3253
 ms.assetid: da40be26-0f78-4730-8727-ad11cddf8869
-ms.openlocfilehash: 997d23fa5736e31b3824459f928a58eddde56e15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d161dfab8dff48a1ddd5a8a5036c0bb4d5549aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605079"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773383"
 ---
 # <a name="compiler-error-c3253"></a>Erreur du compilateur C3253
 
 'fonction' : erreur de substitution explicite
 
-Une substitution explicite a été spécifiée correctement. Par exemple, vous ne pouvez pas spécifier une implémentation pour une substitution que vous spécifiez également comme pure. Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).
+Une substitution explicite a été spécifiée correctement. Par exemple, vous ne pouvez pas spécifier une implémentation pour une substitution que vous spécifiez également comme pure. Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 L’exemple suivant génère l’erreur C3253 :
 

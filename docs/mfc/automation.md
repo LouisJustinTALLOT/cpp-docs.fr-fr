@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265560"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767728"
 ---
 # <a name="automation"></a>Automation
 
@@ -55,17 +55,17 @@ Le type **VARIANT** est encapsulé dans la classe [COleVariant](../mfc/reference
 
 ## <a name="automation-samples"></a>Exemples d'utilisation Automation
 
-- [AUTOCLIK](../visual-cpp-samples.md) Utilisez cet exemple pour apprendre les techniques d'Automation et en guise de base pour découvrir Automation à distance.
+- [AUTOCLIK](../overview/visual-cpp-samples.md) Utilisez cet exemple pour apprendre les techniques d'Automation et en guise de base pour découvrir Automation à distance.
 
-- [ACDUAL](../visual-cpp-samples.md) Ajoute des interfaces doubles à une application de serveur Automation.
+- [ACDUAL](../overview/visual-cpp-samples.md) Ajoute des interfaces doubles à une application de serveur Automation.
 
-- [CALCDRIV](../visual-cpp-samples.md) Application cliente Automation gérant MFCCALC.
+- [CALCDRIV](../overview/visual-cpp-samples.md) Application cliente Automation gérant MFCCALC.
 
-- [INPROC](../visual-cpp-samples.md) Illustre une application serveur Automation en fonctionnement.
+- [INPROC](../overview/visual-cpp-samples.md) Illustre une application serveur Automation en fonctionnement.
 
-- [IPDRIVE](../visual-cpp-samples.md) Application Automation gérant INPROC.
+- [IPDRIVE](../overview/visual-cpp-samples.md) Application Automation gérant INPROC.
 
-- [MFCCALC](../visual-cpp-samples.md) Illustre une application cliente Automation.
+- [MFCCALC](../overview/visual-cpp-samples.md) Illustre une application cliente Automation.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 

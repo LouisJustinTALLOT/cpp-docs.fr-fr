@@ -9,12 +9,12 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280216"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766845"
 ---
 # <a name="clipboard-adding-other-formats"></a>Presse-papiers : Ajout d’autres Formats
 
@@ -36,7 +36,7 @@ Pour ajouter d’autres formats à ceux placés dans le Presse-papiers, vous dev
 
 1. Ajoutez des formats standard en appelant `COleDataSource::CacheGlobalData` pour chaque format standard que vous souhaitez prendre en charge.
 
-Cette technique est utilisée dans le programme d’exemple OLE MFC [HIERSVR](../visual-cpp-samples.md) (examiner le `OnGetClipboardData` fonction membre de la **CServerItem** classe). La seule différence dans cet exemple est que l’étape trois n’est pas implémentée, car HIERSVR prend en charge aucun autre format standard.
+Cette technique est utilisée dans le programme d’exemple OLE MFC [HIERSVR](../overview/visual-cpp-samples.md) (examiner le `OnGetClipboardData` fonction membre de la **CServerItem** classe). La seule différence dans cet exemple est que l’étape trois n’est pas implémentée, car HIERSVR prend en charge aucun autre format standard.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 

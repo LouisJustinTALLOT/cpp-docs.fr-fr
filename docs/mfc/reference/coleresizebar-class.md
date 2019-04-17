@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 631276a065652ec991c4c1b5264e87b7244fb7b9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275946"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769150"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar, classe
 
@@ -61,7 +61,7 @@ Pour plus d’informations, consultez l’article [Activation](../../mfc/activat
 
 `COleResizeBar`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxole.h
 
@@ -105,7 +105,7 @@ Différent de zéro si la barre de redimensionnement a été créée ; sinon 0.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[Exemple MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar, classe](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc, classe](../../mfc/reference/coleserverdoc-class.md)
