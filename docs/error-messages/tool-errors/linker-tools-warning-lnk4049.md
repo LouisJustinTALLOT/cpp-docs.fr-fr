@@ -1,23 +1,25 @@
 ---
 title: Avertissement des outils Éditeur de liens LNK4049
-ms.date: 04/09/2019
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4049
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: 357bf5a981dddadfd79d2d6981ccc9c478909097
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477351"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674251"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>Avertissement des outils Éditeur de liens LNK4049
 
 > symbole '*symbole*'définie dans'*filename.obj*' est importé
 
-Le symbole a été exporté à partir d’et importé dans le programme.
+[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) a été spécifiée pour *symbole* même si le symbole est défini dans le fichier objet *filename.obj* dans la même image. Supprimer le `__declspec(dllimport)` modificateur pour résoudre cet avertissement.
+
+## <a name="remarks"></a>Notes
 
 Cet avertissement est généré par l’éditeur de liens lorsque vous définissez un symbole dans un fichier objet et faire référence à l’aide de la `__declspec(dllimport)` modificateur de déclaration dans un autre.
 
