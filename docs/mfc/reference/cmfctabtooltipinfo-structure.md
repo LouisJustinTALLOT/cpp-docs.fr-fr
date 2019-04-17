@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: 1e10e74729a1a4bde90ca22abdcc1a75b41c95db
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87c8820bc33f3a344933faa797a9fc60d2422b13
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260815"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773162"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo Structure
 
@@ -27,7 +27,7 @@ struct CMFCTabToolTipInfo
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Spécifie l’index du contrôle onglet.|
 |[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Pointeur vers le contrôle onglet.|
@@ -39,7 +39,7 @@ Un pointeur vers un `CMFCTabToolTipInfo` structure est passée en tant que param
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `CMFCTabToolTipInfo` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../visual-cpp-samples.md).
+L’exemple suivant montre comment `CMFCTabToolTipInfo` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -47,7 +47,7 @@ L’exemple suivant montre comment `CMFCTabToolTipInfo` est utilisé dans le [ex
 
 [CMFCTabToolTipInfo](../../mfc/reference/cmfctabtooltipinfo-structure.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxbasetabctrl.h
 
@@ -65,7 +65,7 @@ Index de l’onglet sur laquelle l’utilisateur pointe.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `m_nTabIndex` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../visual-cpp-samples.md).
+L’exemple suivant montre comment `m_nTabIndex` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -79,7 +79,7 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `m_pTabWnd` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../visual-cpp-samples.md).
+L’exemple suivant montre comment `m_pTabWnd` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -97,7 +97,7 @@ Si la chaîne est vide, l’info-bulle n’est pas affichée.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `m_strText` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../visual-cpp-samples.md).
+L’exemple suivant montre comment `m_strText` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 

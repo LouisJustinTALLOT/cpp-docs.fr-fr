@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 03f9e5e0cac9cc71080bfe97d6a3115fd3cc99b5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418995"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781651"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (classe)
 
@@ -141,7 +141,7 @@ N’importe quel autre `Window Styles` sont interdites et vous ne devez pas acti
 
 Échange de données entre un `CPropertySheet` objet et un objet externe est similaire à échanger des données avec un `CDialog` objet. La différence importante est que les paramètres d’une feuille de propriétés sont généralement des variables de membre de la `CPropertyPage` objets plutôt que du `CPropertySheet` objet lui-même.
 
-Vous pouvez créer un type de boîte de dialogue d’onglet appelé Assistant, ce qui se compose d’une feuille de propriétés avec une séquence de pages de propriétés qui guident les utilisateurs à travers les étapes d’une opération, telles que la configuration d’un appareil ou un bulletin d’informations. Dans une boîte de dialogue type d’Assistant onglet, les pages de propriétés n’ont pas de tabulations, et uniquement une page de propriété est visible à la fois. En outre, au lieu d’avoir **OK** et **appliquer maintenant** boutons, une boîte de dialogue type d’Assistant onglet a un **retour** bouton, un **suivant** ou  **Terminer** bouton, un **Annuler** bouton et un **aide** bouton.
+Vous pouvez créer un type de boîte de dialogue d’onglet appelé Assistant, ce qui se compose d’une feuille de propriétés avec une séquence de pages de propriétés qui guident les utilisateurs à travers les étapes d’une opération, telles que la configuration d’un appareil ou un bulletin d’informations. Dans une boîte de dialogue type d’Assistant onglet, les pages de propriétés n’ont pas de tabulations, et uniquement une page de propriété est visible à la fois. En outre, au lieu d’avoir **OK** et **appliquer maintenant** boutons, une boîte de dialogue type d’Assistant onglet a un **retour** bouton, un **suivant** ou **Terminer** bouton, un **Annuler** bouton et un **aide** bouton.
 
 Pour créer une boîte de dialogue de type de l’Assistant, suivez les mêmes étapes que vous suivriez pour créer une feuille de propriétés standard, mais appelle [SetWizardMode](#setwizardmode) avant d’appeler [DoModal](#domodal). Pour activer les boutons de l’Assistant, appelez [SetWizardButtons](#setwizardbuttons), à l’aide des indicateurs pour personnaliser leur fonction et leur apparence. Pour activer la **Terminer** bouton, appelez [SetFinishText](#setfinishtext) une fois que l’utilisateur a entrepris aucune action sur la dernière page de l’Assistant.
 
@@ -157,7 +157,7 @@ Pour plus d’informations sur l’utilisation `CPropertySheet` objets, consulte
 
 `CPropertySheet`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdlgs.h
 
@@ -830,9 +830,9 @@ Appelez `SetWizardMode` avant d’appeler [DoModal](#domodal). Après avoir appe
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC exemple CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[MFC exemple CMNCTRL2](../../visual-cpp-samples.md)<br/>
-[Exemple MFC PROPDLG](../../visual-cpp-samples.md)<br/>
-[Exemple MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC exemple CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC exemple CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

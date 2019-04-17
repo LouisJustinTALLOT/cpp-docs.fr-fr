@@ -17,12 +17,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-ms.openlocfilehash: ce3b373bab67ba49a1f7aa41f2a9456ae7199028
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 55c43c47b93cd21d86293706fc7c3eb5145c39fd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267808"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773175"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implémentation de la barre d'outils MFC
 
@@ -84,7 +84,7 @@ Cette nouvelle implémentation entraîne moins de code MFC pour les barres d’o
 > [!TIP]
 >  Si vous avez beaucoup investi dans l’ancienne implémentation MFC de `CToolBar`, que la prise en charge est toujours disponible. Consultez l’article [à l’aide de vos anciennes barres d’outils](../mfc/using-your-old-toolbars.md).
 
-Consultez également l’exemple général MFC [DOCKTOOL](../visual-cpp-samples.md).
+Consultez également l’exemple général MFC [DOCKTOOL](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_the_toolbar_bitmap"></a> La Bitmap de barre d’outils
 

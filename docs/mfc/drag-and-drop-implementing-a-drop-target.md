@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-ms.openlocfilehash: da04fa7fa84e7e5014d574583c9c95992db10f88
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46501193569d7f3098e23c67c68c76ce20a82ea3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281943"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766675"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Glisser -déplacer : Implémentation d’une cible de dépôt
 
@@ -33,7 +33,7 @@ Cet article explique comment rendre votre application une cible de dépôt. Impl
     |`OnDrop`|La gestion des données en cours de suppression dans la fenêtre spécifiée.|
     |`OnScrollBy`|Comportement spécial lorsque le défilement est nécessaire dans la fenêtre cible.|
 
-Consultez le fichier MAINVIEW. Cpp qui fait partie de l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md) pour obtenir un exemple du fonctionnement conjoint des ces fonctions.
+Consultez le fichier MAINVIEW. Cpp qui fait partie de l’exemple OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) pour obtenir un exemple du fonctionnement conjoint des ces fonctions.
 
 Pour plus d'informations, voir :
 

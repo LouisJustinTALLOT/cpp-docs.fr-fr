@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294669"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768132"
 ---
 # <a name="docking-and-floating-toolbars"></a>Ancrer et rendre flottantes les barres d'outils
 
@@ -50,7 +50,7 @@ Autres sujets abordés dans cet article sont les suivantes :
 
 - [Positions de retour à la ligne de paramètre pour une barre d’outils de style fixe](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-Consultez l’exemple général MFC [DOCKTOOL](../visual-cpp-samples.md) pour obtenir des exemples.
+Consultez l’exemple général MFC [DOCKTOOL](../overview/visual-cpp-samples.md) pour obtenir des exemples.
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Activation de l’ancrage dans une fenêtre Frame
 
@@ -104,7 +104,7 @@ Pour une barre d’outils avec le style de taille fixé, désignez la barre d’
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-L’exemple général MFC [DOCKTOOL](../visual-cpp-samples.md) montre comment utiliser les fonctions membres de classes [CControlBar](../mfc/reference/ccontrolbar-class.md) et [CToolBar](../mfc/reference/ctoolbar-class.md) pour gérer la disposition dynamique d’une barre d’outils. Consultez le fichier EDITBAR. CPP dans DOCKTOOL.
+L’exemple général MFC [DOCKTOOL](../overview/visual-cpp-samples.md) montre comment utiliser les fonctions membres de classes [CControlBar](../mfc/reference/ccontrolbar-class.md) et [CToolBar](../mfc/reference/ctoolbar-class.md) pour gérer la disposition dynamique d’une barre d’outils. Consultez le fichier EDITBAR. CPP dans DOCKTOOL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 

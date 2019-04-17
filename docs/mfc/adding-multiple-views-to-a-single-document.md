@@ -7,19 +7,19 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: b665f090fc680221be70f170452d756dd5f68dc5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 593c59c73b58b4364c9d652ce8eb415c17af496c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284279"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767585"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Ajout de plusieurs vues à un seul document
 
 Dans une application d’interface monodocument (SDI) créée avec la bibliothèque Microsoft Foundation classes (MFC), chaque type de document est associé à un seul type de vue. Dans certains cas, il est souhaitable d’avoir la possibilité de basculer l’affichage actuel d’un document avec une nouvelle vue.
 
 > [!TIP]
->  Pour obtenir des procédures supplémentaires sur l’implémentation de plusieurs vues pour un seul document, consultez [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) et [collecter](../visual-cpp-samples.md) exemple MFC.
+>  Pour obtenir des procédures supplémentaires sur l’implémentation de plusieurs vues pour un seul document, consultez [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) et [collecter](../overview/visual-cpp-samples.md) exemple MFC.
 
 Vous pouvez implémenter cette fonctionnalité en ajoutant une nouvelle `CView`-dérivée de classe et du code supplémentaire pour les vues de commutation dynamiquement à une application MFC existante.
 

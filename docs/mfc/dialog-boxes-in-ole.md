@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa3d87e2cc17e297c3e6387920c6d527d8ddbe39
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270889"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767650"
 ---
 # <a name="dialog-boxes-in-ole"></a>Boîtes de dialogue dans OLE
 
@@ -31,7 +31,7 @@ Cette boîte de dialogue permet à l’utilisateur contrôler le format utilisé
 Cette boîte de dialogue permet à l’utilisateur sélectionner l’icône qui s’affiche pour représenter l’élément lié ou incorporé. Afficher cette boîte de dialogue lorsque l’utilisateur choisit de changer d’icône dans le menu Edition ou clique sur le bouton Changer d’icône dans le collage spécial ou convertir les boîtes de dialogue. Affichez-la également lorsque l’utilisateur ouvre la boîte de dialogue Insérer un objet et choisit afficher sous forme d’icône. Utilisez le [classe COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) classe pour afficher cette boîte de dialogue.
 
 *Convert*<br/>
-Cette boîte de dialogue permet à l’utilisateur modifier le type d’un élément incorporé ou lié. Par exemple, si vous avez incorporé un métafichier dans un document composé et que vous souhaitez utiliser une autre application pour modifier le métafichier incorporé plus tard, vous pouvez utiliser la boîte de dialogue Convertir. Cette boîte de dialogue s’affiche généralement en cliquant sur *type d’élément* objet dans le menu Edition, puis, dans le menu en cascade, puis sur Convertir. Utilisez le [classe COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) classe pour afficher cette boîte de dialogue. Pour obtenir un exemple, exécutez l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md).
+Cette boîte de dialogue permet à l’utilisateur modifier le type d’un élément incorporé ou lié. Par exemple, si vous avez incorporé un métafichier dans un document composé et que vous souhaitez utiliser une autre application pour modifier le métafichier incorporé plus tard, vous pouvez utiliser la boîte de dialogue Convertir. Cette boîte de dialogue s’affiche généralement en cliquant sur *type d’élément* objet dans le menu Edition, puis, dans le menu en cascade, puis sur Convertir. Utilisez le [classe COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) classe pour afficher cette boîte de dialogue. Pour obtenir un exemple, exécutez l’exemple OLE MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
 *Modifier les liens ou les liens de la mise à jour*<br/>
 La boîte de dialogue Modifier les liens permet à l’utilisateur modifier les informations sur la source d’un objet lié. La boîte de dialogue Mise à jour vérifie les sources de tous les éléments liés dans la boîte de dialogue et affiche la boîte de dialogue Modifier les liens si nécessaire. Afficher la boîte de dialogue Modifier les liens quand l’utilisateur choisit les liens dans le menu Edition. La boîte de dialogue Mise à jour s’affiche généralement lors de la première ouverture d’un document composé. Utilisez le [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) ou [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) class, selon quelle boîte de dialogue que vous souhaitez afficher.

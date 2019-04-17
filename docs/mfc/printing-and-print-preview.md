@@ -8,12 +8,12 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-ms.openlocfilehash: 4ca6663aefce219fad4d2e3be74215d2a78206a8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70740922ec7f2030d14eebee72144a373550aacc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263661"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768885"
 ---
 # <a name="printing-and-print-preview"></a>Impression et aperçu avant impression
 
@@ -29,7 +29,7 @@ Cette série d’articles explique comment l’impression est implémentée dans
 
 - [Architecture de l’aperçu avant impression](../mfc/print-preview-architecture.md)
 
-- [Exemple](../visual-cpp-samples.md)
+- [Exemple](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Voir aussi
 

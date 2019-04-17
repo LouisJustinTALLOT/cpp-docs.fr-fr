@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3288
 ms.assetid: ed08a540-9751-46e1-9cbe-c51d6a49ffab
-ms.openlocfilehash: 30a88d1047f8395fc8e3042cf2a1da88e6e5c2d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d076dabe0df91cefb90be5ec9e90f371331a51f1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608414"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771005"
 ---
 # <a name="compiler-error-c3288"></a>Erreur du compilateur C3288
 
 'type' : déréférencement non conforme d’un type de handle
 
-Le compilateur a détecté un déréférencement non conforme d’un type de handle. Vous pouvez déréférencer un type de handle et l’assigner à une référence. Pour plus d’informations, consultez [opérateur de référence de suivi](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+Le compilateur a détecté un déréférencement non conforme d’un type de handle. Vous pouvez déréférencer un type de handle et l’assigner à une référence. Pour plus d’informations, consultez [opérateur de référence de suivi](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 

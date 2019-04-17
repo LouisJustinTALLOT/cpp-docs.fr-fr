@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275231"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776386"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Cmfctoolbarbutton, classe
 
@@ -260,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Spécifie si une image est affichée sur le bouton.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Spécifie si une étiquette de texte est affichée sur le bouton.|
@@ -287,7 +287,7 @@ Le `CMFCToolBarButton` classe est la classe de base pour les autres classes de b
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment configurer un `CMFCToolBarButton` objet à l’aide de différentes méthodes de la `CMFCToolBarButton` classe. L’exemple illustre comment activer la souris et l’entrée au clavier, définissez l’index d’image du bouton, le rectangle englobant du bouton et que le bouton soit visible. Cet extrait de code fait partie de la [exemple de contrôle d’onglet](../../visual-cpp-samples.md).
+L’exemple suivant montre comment configurer un `CMFCToolBarButton` objet à l’aide de différentes méthodes de la `CMFCToolBarButton` classe. L’exemple illustre comment activer la souris et l’entrée au clavier, définissez l’index d’image du bouton, le rectangle englobant du bouton et que le bouton soit visible. Cet extrait de code fait partie de la [exemple de contrôle d’onglet](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]
@@ -298,7 +298,7 @@ L’exemple suivant montre comment configurer un `CMFCToolBarButton` objet à l�
 
 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtoolbarbutton.h
 
@@ -925,7 +925,7 @@ BOOL m_bWholeText;
 
 ### <a name="remarks"></a>Notes
 
-Si ce membre de données est défini sur TRUE, l’infrastructure affiche l’étiquette de texte intégral en agrandissant le bouton. Sinon, le framework tronque et ajoute les points de suspension ( **...** ) à l’étiquette de texte.
+Si ce membre de données est défini sur TRUE, l’infrastructure affiche l’étiquette de texte intégral en agrandissant le bouton. Sinon, le framework tronque et ajoute les points de suspension ( **...**) à l’étiquette de texte.
 
 ##  <a name="m_bwrap"></a>  CMFCToolBarButton::m_bWrap
 

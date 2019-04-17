@@ -3,12 +3,12 @@ title: Concepts MFC
 ms.date: 1/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 58ab83fc195e199a63c53586983d26103950569b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633375"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766506"
 ---
 # <a name="mfc-concepts"></a>Concepts MFC
 
@@ -55,7 +55,7 @@ Explique comment ajouter la prise en charge Internet à vos applications.
 Explique comment utiliser la prise en charge MFC et ATL pour les jeux de caractères multioctets et Unicode.
 
 [MFC COM](../mfc/mfc-com.md)<br/>
-Décrit un sous-ensemble de MFC, conçu pour prendre en charge COM, alors que la plupart de la bibliothèque ATL (Active Template) est conçu pour la programmation COM.
+Décrit un sous-ensemble de MFC, conçu pour prendre en charge COM, alors que la plupart de la bibliothèque ATL (Active Template) est conçu pour la programmation COM..
 
 [Multithreading à l’aide de C++ et de MFC](../parallel/multithreading-with-cpp-and-mfc.md)<br/>
 Décrit les processus et les threads et présente l’approche MFC en matière de multithreading.
@@ -66,5 +66,5 @@ Aborde l’implémentation MFC de Windows Sockets.
 [Référence MFC](../mfc/mfc-desktop-applications.md)<br/>
 Fournit une documentation de référence pour la bibliothèque MFC, un ensemble de classes constituant une infrastructure d'application, qui constitue l'infrastructure d'une application écrite pour l'API Windows.
 
-[Exemples MFC](../visual-cpp-samples.md)<br/>
+[Exemples MFC](../overview/visual-cpp-samples.md)<br/>
 Fournit des liens vers des exemples qui montrent comment utiliser MFC dans les applications de bureau, des DLL, les applications de base de données, contrôles, des applications Web et bien plus encore.

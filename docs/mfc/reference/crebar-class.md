@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 4216898e85ebbec748598e10ebb31ce5510f7908
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5a87f70816e9342c7aa203a53d13699659cebb28
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267782"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767260"
 ---
 # <a name="crebar-class"></a>CReBar (classe)
 
@@ -66,7 +66,7 @@ Un objet rebar se comporte comme un objet de barre d’outils. Un contrôle reba
 
 `CReBar`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxext.h
 
@@ -175,6 +175,6 @@ Pour plus d’informations sur l’utilisation de `CReBarCtrl` pour personnalise
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC, exemple MFCIE](../../visual-cpp-samples.md)<br/>
+[MFC, exemple MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar, classe](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

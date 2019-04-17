@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 39868ed27a0dfb8756b4829ea7c378c798bd2ff3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc9bc76b328359d4c8ec7796de7dfaa7d3a9cf2c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304208"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772835"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog, classe
 
@@ -105,7 +105,7 @@ Pour plus d’informations sur l’utilisation de `CColorDialog`, consultez [des
 
 `CColorDialog`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdlgs.h
 
@@ -268,7 +268,7 @@ Cette fonction est appelée dans un gestionnaire de messages ou `OnColorOK`. La 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
-[Exemple MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
+[Exemple MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

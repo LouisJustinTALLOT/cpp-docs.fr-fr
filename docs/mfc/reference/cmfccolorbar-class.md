@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283252"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771405"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar, classe
 
@@ -144,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`m_bInternal`|Un champ booléen qui détermine si les événements de souris sont traités. En règle générale, les événements de souris sont traitées lorsque ce champ a la valeur TRUE et le mode de personnalisation a la valeur FALSE.|
 |`m_bIsEnabled`|Valeur booléenne qui indique si un contrôle est activé.|
@@ -202,7 +202,7 @@ Lorsque l’utilisateur clique sur un bouton de contrôle de barre de couleur, l
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment configurer une barre de couleurs à l’aide de différentes méthodes de la `CMFCColorBar` classe. Les méthodes de définir les marges horizontales et verticales, activer l’autre bouton, créer une fenêtre de contrôle de barre de couleurs et définit la couleur actuellement sélectionnée. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment configurer une barre de couleurs à l’aide de différentes méthodes de la `CMFCColorBar` classe. Les méthodes de définir les marges horizontales et verticales, activer l’autre bouton, créer une fenêtre de contrôle de barre de couleurs et définit la couleur actuellement sélectionnée. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]
@@ -227,7 +227,7 @@ L’exemple suivant montre comment configurer une barre de couleurs à l’aide 
 
 [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcolorbar.h
 
@@ -344,7 +344,7 @@ L’étiquette pour le bouton automatique standard est **automatique**.
 *lpszOtherColor*<br/>
 [in] L’étiquette de texte de la *autres* bouton, qui affiche plus choix de couleurs, ou NULL.
 
-L’étiquette du bouton autre standard est **couleurs supplémentaires...** .
+L’étiquette du bouton autre standard est **couleurs supplémentaires...**.
 
 *lpszDocColors*<br/>
 [in] L’étiquette de texte du bouton de couleurs de document. La palette de couleurs de document répertorie toutes les couleurs que le document utilise actuellement.
@@ -544,7 +544,7 @@ void EnableOtherButton(
 *lpszLabel*<br/>
 [in] L’étiquette de texte de la *autres* bouton, qui affiche plus choix de couleurs, ou NULL.
 
-L’étiquette standard pour ce bouton est **couleurs supplémentaires...** .
+L’étiquette standard pour ce bouton est **couleurs supplémentaires...**.
 
 *bAltColorDlg*<br/>
 [in] True pour afficher le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue ; FALSE pour afficher la norme [CColorDialog](../../mfc/reference/ccolordialog-class.md) boîte de dialogue. La valeur par défaut est TRUE.

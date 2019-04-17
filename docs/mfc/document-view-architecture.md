@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: ec933d29474695c1b94b72e712d68a9b3a08bd4e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1b1f80f44fdc66a3174ea75c15e139f98a4520b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326580"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775541"
 ---
 # <a name="documentview-architecture"></a>Architecture document/vue
 
@@ -80,7 +80,7 @@ Documents, leurs vues associées et les fenêtres frames les vues qui sont cré�
 
 - [À l’aide des classes de base de données sans document ni vue](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-- [Exemples](../visual-cpp-samples.md)
+- [Exemples](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Voir aussi
 

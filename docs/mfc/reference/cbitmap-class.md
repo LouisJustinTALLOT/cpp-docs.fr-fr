@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296723"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769899"
 ---
 # <a name="cbitmap-class"></a>CBitmap (classe)
 
@@ -97,7 +97,7 @@ Pour plus d’informations sur l’utilisation des objets graphiques tels que `C
 
 `CBitmap`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -521,6 +521,6 @@ L’interface GDI n’utilise pas ces valeurs, à l’exception to les retourner
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
+[Exemple MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject, classe](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

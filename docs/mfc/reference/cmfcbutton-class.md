@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269810"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768212"
 ---
 # <a name="cmfcbutton-class"></a>Cmfcbutton, classe
 
@@ -154,7 +154,7 @@ class CMFCButton : public CButton
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Spécifie l’alignement du texte du bouton.|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Spécifie s’il faut utiliser des thèmes Windows XP.|
@@ -180,7 +180,7 @@ Pour gérer les messages de notification dans une application de boîte de dialo
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment configurer les propriétés du bouton à l’aide de différentes méthodes de la `CMFCButton` classe. L’exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment configurer les propriétés du bouton à l’aide de différentes méthodes de la `CMFCButton` classe. L’exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -199,7 +199,7 @@ L’exemple suivant montre comment configurer les propriétés du bouton à l’
 
 [CMFCButton](../../mfc/reference/cmfcbutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxbutton.h
 
@@ -542,7 +542,7 @@ Le `CMFCButton` constructeur initialise ce membre en BUTTONSTYLE_3D.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment définir les valeurs de la `m_nFlatStyle` variable de membre dans la `CMFCButton` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment définir les valeurs de la `m_nFlatStyle` variable de membre dans la `CMFCButton` classe. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
@@ -867,7 +867,7 @@ void SetImage(
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser les différentes versions de la `SetImage` méthode dans la `CMFCButton` classe. L’exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser les différentes versions de la `SetImage` méthode dans la `CMFCButton` classe. L’exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -891,7 +891,7 @@ Utilisez cette méthode pour associer une image de curseur, tels que le curseur 
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `SetMouseCursor` méthode dans la `CMFCButton` classe. L’exemple fait partie du code dans le [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser le `SetMouseCursor` méthode dans la `CMFCButton` classe. L’exemple fait partie du code dans le [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]

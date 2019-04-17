@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1d44638779f9b5caf052106ac172110d309b69f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302869"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770887"
 ---
 # <a name="ccmdui-class"></a>CCmdUI, classe
 
@@ -91,7 +91,7 @@ Pour plus d’informations sur l’utilisation de cette classe, consultez [comme
 
 `CCmdUI`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -231,6 +231,6 @@ Pointeur vers une chaîne de texte.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MDI](../../visual-cpp-samples.md)<br/>
+[Exemple MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)

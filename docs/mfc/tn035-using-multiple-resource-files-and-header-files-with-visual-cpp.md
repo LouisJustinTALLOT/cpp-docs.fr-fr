@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279914"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772762"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035 : À l’aide de plusieurs fichiers de ressources et les fichiers d’en-tête avec Visual C++
 
@@ -177,7 +177,7 @@ Visual C++ et le compilateur de ressources prennent en charge plusieurs fichiers
 
 - Si vous souhaitez effectuer la maintenance d'une ressource avec un éditeur de texte sous forme lisible, vous devez la conserver dans un fichier .RC distinct de celui modifié par Visual C++.
 
-- Si vous devez conserver une ressource définie par l'utilisateur sous forme binaire ou texte interprétable par un autre éditeur de données spécialisé, vous devez la conserver dans un fichier .RC distinct afin que Visual C++ ne modifie pas le format en données hexadécimales. La barre d’outils. Ressources de fichiers WAV (son) dans l’exemple de Concepts avancés MFC [SPEAKN](../visual-cpp-samples.md) sont un bon exemple.
+- Si vous devez conserver une ressource définie par l'utilisateur sous forme binaire ou texte interprétable par un autre éditeur de données spécialisé, vous devez la conserver dans un fichier .RC distinct afin que Visual C++ ne modifie pas le format en données hexadécimales. La barre d’outils. Ressources de fichiers WAV (son) dans l’exemple de Concepts avancés MFC [SPEAKN](../overview/visual-cpp-samples.md) sont un bon exemple.
 
 Vous pouvez inclure (avec #include) un SECOND.RC dans les directives de compilation dans la boîte de dialogue Set Includes :
 

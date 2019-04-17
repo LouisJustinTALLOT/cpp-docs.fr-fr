@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271422"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767884"
 ---
 # <a name="containers-implementing-a-container"></a>Conteneurs : Implémentation d’un conteneur
 
@@ -36,7 +36,7 @@ Ces fonctionnalités sont fournies automatiquement lorsque vous utilisez l'Assis
 
 1. Implémenter un gestionnaire de messages `OnSize` pour indiquer à un élément incorporé OLE qu'il doit modifier son rectangle pour refléter les modifications de taille de la vue conteneur.
 
-Étant donné que l’implémentation de ces fonctionnalités varie excessivement d’une application à l’autre, l’application ne fournit qu’une implémentation de base. Vous devrez vraisemblablement personnaliser ces fonctions pour que l'application fonctionne correctement. Pour obtenir un exemple de cela, consultez le [conteneur](../visual-cpp-samples.md) exemple.
+Étant donné que l’implémentation de ces fonctionnalités varie excessivement d’une application à l’autre, l’application ne fournit qu’une implémentation de base. Vous devrez vraisemblablement personnaliser ces fonctions pour que l'application fonctionne correctement. Pour obtenir un exemple de cela, consultez le [conteneur](../overview/visual-cpp-samples.md) exemple.
 
 #### <a name="to-handle-embedded-and-linked-items"></a>Pour traiter des éléments incorporés et liés
 
@@ -44,7 +44,7 @@ Ces fonctionnalités sont fournies automatiquement lorsque vous utilisez l'Assis
 
 1. Substituer `OnChange`, `OnChangeItemPosition`, et `OnGetItemPosition`. Ces fonctions gèrent le dimensionnement, le positionnement et la modification d'éléments liés et incorporés.
 
-L’Assistant application dérivera la classe pour vous, mais vous aurez probablement besoin de substituer `OnChange` et les autres fonctions répertoriées à l’étape 2 dans la procédure précédente. Les implémentations squelette doivent être personnalisées pour la plupart des applications, car ces fonctions sont implémentées de manière différente d'une application à l'autre. Pour obtenir des exemples de cela, consultez les exemples MFC [DRAWCLI](../visual-cpp-samples.md) et [conteneur](../visual-cpp-samples.md).
+L’Assistant application dérivera la classe pour vous, mais vous aurez probablement besoin de substituer `OnChange` et les autres fonctions répertoriées à l’étape 2 dans la procédure précédente. Les implémentations squelette doivent être personnalisées pour la plupart des applications, car ces fonctions sont implémentées de manière différente d'une application à l'autre. Pour obtenir des exemples de cela, consultez les exemples MFC [DRAWCLI](../overview/visual-cpp-samples.md) et [conteneur](../overview/visual-cpp-samples.md).
 
 Vous devez ajouter plusieurs éléments à la structure du menu de l'application conteneur pour prendre en charge OLE. Pour plus d’informations, consultez [Menus et ressources : Ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).
 

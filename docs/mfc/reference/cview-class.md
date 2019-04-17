@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305014"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775307"
 ---
 # <a name="cview-class"></a>CView (classe)
 
@@ -159,7 +159,7 @@ Le `CView` classe a également une classe d’implémentation dérivée nommée 
 
 `CView`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -351,7 +351,7 @@ Une valeur à partir de la DROPEFFECT type énuméré, ce qui indique le type de
 
 - DROPEFFECT_MOVE pour MK_ALT crée une copie de l’objet déplacé et supprimer l’objet d’origine. Il s’agit généralement l’effet de dépôt par défaut, lorsque la vue peut accepter cet objet de données.
 
-Pour plus d’informations, consultez l’exemple de Concepts avancés MFC [OCLIENT](../../visual-cpp-samples.md).
+Pour plus d’informations, consultez l’exemple de Concepts avancés MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Notes
 
@@ -405,7 +405,7 @@ Une valeur à partir de la DROPEFFECT type énuméré, ce qui indique le type de
 
 - DROPEFFECT_MOVE pour MK_ALT crée une copie de l’objet déplacé et supprimer l’objet d’origine. Il s’agit généralement l’effet de dépôt par défaut, lorsque la vue peut accepter l’objet de données.
 
-Pour plus d’informations, consultez l’exemple de Concepts avancés MFC [OCLIENT](../../visual-cpp-samples.md).
+Pour plus d’informations, consultez l’exemple de Concepts avancés MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Notes
 
@@ -445,7 +445,7 @@ Une valeur à partir de la DROPEFFECT type énuméré, ce qui indique le type de
 
 - DROPEFFECT_SCROLL indique qu’une opération glisser de défilement est sur le point de se produire ou se produit dans la vue cible.
 
-Pour plus d’informations, consultez l’exemple de Concepts avancés MFC [OCLIENT](../../visual-cpp-samples.md).
+Pour plus d’informations, consultez l’exemple de Concepts avancés MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Notes
 
@@ -640,7 +640,7 @@ virtual void OnInitialUpdate();
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut de cette fonction appelle le [OnUpdate](#onupdate) fonction membre sans aucune information d’indicateur (autrement dit, en utilisant les valeurs par défaut de 0 pour le *lHint* paramètre et NULL pour le  *pHint* paramètre). Remplacez cette fonction pour effectuer toute initialisation à usage unique qui requiert des informations sur le document. Par exemple, si votre application comporte des documents de taille fixe, vous pouvez utiliser cette fonction pour initialiser les limites de défilement de l’affichage en fonction de la taille du document. Si votre application prend en charge les documents de taille variable, utilisez [OnUpdate](#onupdate) pour mettre à jour le défilement limite chaque fois que les modifications de document.
+L’implémentation par défaut de cette fonction appelle le [OnUpdate](#onupdate) fonction membre sans aucune information d’indicateur (autrement dit, en utilisant les valeurs par défaut de 0 pour le *lHint* paramètre et NULL pour le *pHint* paramètre). Remplacez cette fonction pour effectuer toute initialisation à usage unique qui requiert des informations sur le document. Par exemple, si votre application comporte des documents de taille fixe, vous pouvez utiliser cette fonction pour initialiser les limites de défilement de l’affichage en fonction de la taille du document. Si votre application prend en charge les documents de taille variable, utilisez [OnUpdate](#onupdate) pour mettre à jour le défilement limite chaque fois que les modifications de document.
 
 ##  <a name="onpreparedc"></a>  CView::OnPrepareDC
 
@@ -871,7 +871,7 @@ Si *lHint* est égal à 0 et *pHint* est NULL, le document a envoyé une notific
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[Exemple MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: a1dd85ed7bf80f5307bf0bd07ef5ef74875c8562
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43832f6c9b02c43fbe4a05cbea3add8783150113
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258942"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767663"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Cmfctoolbarfontsizecombobox, classe
 
@@ -57,7 +57,7 @@ Lorsque l’utilisateur sélectionne une nouvelle police dans un `CMFCToolBarFon
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCToolBarFontSizeComboBox` classe permettant de configurer un `CMFCToolBarFontSizeComboBox` objet. L’exemple illustre comment récupérer la taille de police, en twips, dans la zone de texte, remplir la zone de liste déroulante de taille de police avec toutes les tailles valides de la police donnée et spécifier la taille de police en twips. Cet extrait de code fait partie de l’ [exemple Word Pad](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCToolBarFontSizeComboBox` classe permettant de configurer un `CMFCToolBarFontSizeComboBox` objet. L’exemple illustre comment récupérer la taille de police, en twips, dans la zone de texte, remplir la zone de liste déroulante de taille de police avec toutes les tailles valides de la police donnée et spécifier la taille de police en twips. Cet extrait de code fait partie de l’ [exemple Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 
@@ -71,7 +71,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCTo
 
 [CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtoolbarfontcombobox.h
 

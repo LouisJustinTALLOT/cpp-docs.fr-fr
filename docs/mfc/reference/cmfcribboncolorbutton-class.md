@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: a7901619110652423a2ab00d8088d6b9213fe202
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ceb686a9aca4ac126c4d61dd45975c65a9376ce9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266274"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769965"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton (classe)
 
@@ -92,7 +92,7 @@ Le bouton de couleur du ruban affiche une barre de couleurs quand un utilisateur
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonColorButton` . L’exemple montre comment construire un objet `CMFCRibbonColorButton` , définir l’image de grande taille, activez le bouton **Automatique** , activer le bouton **Autres** , définir le nombre de colonnes, définir la taille de tous les éléments de couleur qui apparaissent sur la barre de couleurs, ajouter un groupe de couleurs à la zone de couleur normale et spécifier une liste de valeurs RVB à afficher dans la zone de couleur du document. Cet extrait de code fait partie de l’ [exemple Draw Client](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonColorButton` . L’exemple montre comment construire un objet `CMFCRibbonColorButton` , définir l’image de grande taille, activez le bouton **Automatique** , activer le bouton **Autres** , définir le nombre de colonnes, définir la taille de tous les éléments de couleur qui apparaissent sur la barre de couleurs, ajouter un groupe de couleurs à la zone de couleur normale et spécifier une liste de valeurs RVB à afficher dans la zone de couleur du document. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#3](../../mfc/reference/codesnippet/cpp/cmfcribboncolorbutton-class_1.cpp)]
 
@@ -108,7 +108,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxribboncolorbutton.h
 

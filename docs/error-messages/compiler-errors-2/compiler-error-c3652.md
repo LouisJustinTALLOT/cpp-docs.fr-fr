@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3652
 ms.assetid: 15d68737-177e-41f1-80e0-7c3e2afdf0fc
-ms.openlocfilehash: acdb8f7687639e2b35e36ea9ebf514292f4631fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 350edcf409cf2a890a8f83147ce0ae13e9992694
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470328"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767949"
 ---
 # <a name="compiler-error-c3652"></a>Erreur du compilateur C3652
 
 'override' : une fonction de substitution explicite doit être virtuelle
 
-Une fonction qui effectue une substitution explicite doit être virtuelle. Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).
+Une fonction qui effectue une substitution explicite doit être virtuelle. Pour plus d’informations, consultez [substitutions explicites](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 L’exemple suivant génère l’erreur C3652 :
 

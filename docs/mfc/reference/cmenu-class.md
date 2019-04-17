@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293860"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770848"
 ---
 # <a name="cmenu-class"></a>CMenu (classe)
 
@@ -179,7 +179,7 @@ Vous pouvez utiliser la [LoadMenuIndirect](#loadmenuindirect) fonction membre po
 
 `CMenu`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -561,7 +561,7 @@ Consultez [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) pour 
 
 ### <a name="example"></a>Exemple
 
-Le code suivant présente de la bibliothèque MFC [CTRLTEST](../../visual-cpp-samples.md) exemple :
+Le code suivant présente de la bibliothèque MFC [CTRLTEST](../../overview/visual-cpp-samples.md) exemple :
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
@@ -1094,7 +1094,7 @@ Consultez [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)
 
 ### <a name="example"></a>Exemple
 
-Le code suivant présente de la bibliothèque MFC [CTRLTEST](../../visual-cpp-samples.md) exemple :
+Le code suivant présente de la bibliothèque MFC [CTRLTEST](../../overview/visual-cpp-samples.md) exemple :
 
 [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]
 
@@ -1484,8 +1484,8 @@ Un menu contextuel flottante peut apparaître n’importe où sur l’écran. Po
 
 ## <a name="see-also"></a>Voir aussi
 
-[CTRLTEST MFC, exemple](../../visual-cpp-samples.md)<br/>
-[Exemple MFC DYNAMENU](../../visual-cpp-samples.md)<br/>
+[CTRLTEST MFC, exemple](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC DYNAMENU](../../overview/visual-cpp-samples.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)

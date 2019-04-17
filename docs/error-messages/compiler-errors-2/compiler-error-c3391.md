@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-ms.openlocfilehash: cac397e4588c493fb8c47932feb97a5f12cf2583
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32ba1ca63a3a6fafa3290946a976e6845385126f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578215"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772590"
 ---
 # <a name="compiler-error-c3391"></a>Erreur du compilateur C3391
 
 'arg_type' : argument de type non valide pour le paramètre générique 'param' du générique 'type_générique', doit être un type valeur non nullable
 
-Un type générique a été instancié de manière incorrecte. Vérifiez la définition du type. Pour plus d’informations, consultez <xref:System.Nullable> et [génériques](../../windows/generics-cpp-component-extensions.md).
+Un type générique a été instancié de manière incorrecte. Vérifiez la définition du type. Pour plus d’informations, consultez <xref:System.Nullable> et [génériques](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259579"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775684"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (classe)
 
@@ -104,7 +104,7 @@ Pour plus d’informations sur l’utilisation de `CRectTracker`, consultez l’
 
 `CRectTracker`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxext.h
 
@@ -481,8 +481,8 @@ Le suivi est effectué avec une sélection élastique-bande-type à partir du ha
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC, exemple de mise hors tension](../../visual-cpp-samples.md)<br/>
-[Exemple MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MFC, exemple de mise hors tension](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleResizeBar, classe](../../mfc/reference/coleresizebar-class.md)<br/>
 [CRect, classe](../../atl-mfc-shared/reference/crect-class.md)

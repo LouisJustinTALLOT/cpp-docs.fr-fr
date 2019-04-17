@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-ms.openlocfilehash: fe85119761d2b56ca72c8efff00664c62d4767bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4d1361734f38d903e2171839b95888863126974a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299528"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771695"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate, classe
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur l’utilisation de `CSingleDocTemplate`, consulte
 
 `CSingleDocTemplate`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -117,7 +117,7 @@ Allouer dynamiquement un `CSingleDocTemplate` de l’objet et transmettez-le à 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[Exemple MFC DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
 [CDocTemplate, classe](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate, classe](../../mfc/reference/cdoctemplate-class.md)<br/>

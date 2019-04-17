@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271904"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769691"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Spécifie si l’animation de masquage automatique du volet ancrable est désactivée.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Détermine le comportement du volet lorsque le volet est en mode de masquage automatique.|
@@ -290,7 +290,7 @@ Les conseils suivants s’appliquent à `CDockablePane` objets :
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment configurer un `CDockablePane` objet à l’aide de différentes méthodes de la `CDockablePane` classe. L’exemple illustre comment activer la fonction Masquer automatiquement toutes les fonctionnalités pour le volet ancrable, activer la légende ou la barre de redimensionnement, activer le mode de masquage automatique, afficher le volet et animer un volet qui est en mode de masquage automatique. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).
+L’exemple suivant montre comment configurer un `CDockablePane` objet à l’aide de différentes méthodes de la `CDockablePane` classe. L’exemple illustre comment activer la fonction Masquer automatiquement toutes les fonctionnalités pour le volet ancrable, activer la légende ou la barre de redimensionnement, activer le mode de masquage automatique, afficher le volet et animer un volet qui est en mode de masquage automatique. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]
@@ -309,7 +309,7 @@ L’exemple suivant montre comment configurer un `CDockablePane` objet à l’ai
 
 [CDockablePane](../../mfc/reference/cdockablepane-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxDockablePane.h
 

@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289865"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768549"
 ---
 # <a name="cfile-class"></a>CFile (classe)
 
@@ -128,7 +128,7 @@ class CFile : public CObject
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CFile::m_pTM](#m_ptm)|Pointeur vers `CAtlTransactionManager` objet.|
 
@@ -150,7 +150,7 @@ Pour plus d’informations sur l’utilisation de `CFile`, consultez les article
 
 `CFile`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -213,7 +213,7 @@ Les cinq tableaux suivants répertorient les options possibles pour le *nOpenFla
 
 Choisissez une seule des options suivantes pour le mode d'accès aux fichiers. Le mode d'accès aux fichiers par défaut est `CFile::modeRead`, c'est-à-dire en lecture seule.
 
-|Valeur|Description|
+|Value|Description|
 |-----------|-----------------|
 |`CFile::modeRead`|Demande l'accès en lecture uniquement.|
 |`CFile::modeWrite`|Demande l'accès en écriture uniquement.|
@@ -221,7 +221,7 @@ Choisissez une seule des options suivantes pour le mode d'accès aux fichiers. L
 
 Choisissez l'une des options suivantes pour le mode caractère.
 
-|Valeur|Description|
+|Value|Description|
 |-----------|-----------------|
 |`CFile::typeBinary`|Définit le mode binaire (utilisé dans les classes dérivées uniquement).|
 |`CFile::typeText`|Définit le mode texte avec un traitement spécial pour les paires de sauts de ligne de transport (utilisé dans les classes dérivées uniquement).|
@@ -229,7 +229,7 @@ Choisissez l'une des options suivantes pour le mode caractère.
 
 Choisissez une seule des options suivantes pour le mode de partage de fichiers. Le mode de partage de fichiers par défaut est `CFile::shareExclusive`, c'est-à-dire exclusif.
 
-|Valeur|Description|
+|Value|Description|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|Aucune restriction de partage.|
 |`CFile::shareDenyRead`|Refuse l'accès en lecture à tous les autres.|
@@ -238,14 +238,14 @@ Choisissez une seule des options suivantes pour le mode de partage de fichiers. 
 
 Choisissez la première ou les deux options suivantes pour le mode de création de fichiers. Le mode de création par défaut est `CFile::modeNoTruncate`, c'est-à-dire ouvrir l'existant.
 
-|Valeur|Description|
+|Value|Description|
 |-----------|-----------------|
 |`CFile::modeCreate`|Crée un nouveau fichier si aucun fichier n’existe. Si le fichier existe déjà, il est remplacé et initialement définie sur une longueur nulle.|
 |`CFile::modeNoTruncate`|Crée un fichier s'il n'en existe aucun. Sinon, si le fichier existe déjà, il est attaché à l'objet `CFile`.|
 
 Choisissez les options de mise en cache de fichiers suivantes d'après leur description. Par défaut, le système utilise un modèle de mise en cache à usage général qui n'est pas disponible en tant qu'option.
 
-|Valeur|Description|
+|Value|Description|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|Le système n'utilise pas de cache intermédiaire pour le fichier. Cette option annule les deux options suivantes.|
 |`CFile::osRandomAccess`|Le cache de fichiers est optimisé pour l'accès aléatoire. N'utilisez pas cette option et l'option d'analyse séquentielle.|
@@ -254,7 +254,7 @@ Choisissez les options de mise en cache de fichiers suivantes d'après leur desc
 
 Choisissez l'option de sécurité suivante pour empêcher l'héritage du handle de fichier. Par défaut, tous les nouveaux processus enfants peuvent utiliser le handle de fichier.
 
-|Valeur|Description|
+|Value|Description|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|Empêche les processus enfants d'utiliser le handle de fichier.|
 
@@ -600,10 +600,10 @@ Le tableau suivant décrit les résultats possibles de `Open`.
 
 |`pError`|Erreur rencontrée|Valeur de retour|CFileException contenu|
 |--------------|------------------------|------------------|----------------------------|
-|NULL|Aucune|true|N/A|
-|PTR pour `CFileException`|Aucune|true|inchangé|
-|NULL|Oui|false|N/A|
-|PTR pour `CFileException`|Oui|false|initialisé pour décrire l’erreur|
+|NULL|Non|TRUE|N/A|
+|PTR pour `CFileException`|Non|TRUE|inchangé|
+|NULL|Oui|FALSE|N/A|
+|PTR pour `CFileException`|Oui|FALSE|initialisé pour décrire l’erreur|
 
 ### <a name="example"></a>Exemple
 
@@ -918,7 +918,7 @@ En outre, reportez-vous aux exemples de [CFile::CFile](#cfile) et [CFile::Open](
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
+[Exemple MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CStdioFile, classe](../../mfc/reference/cstdiofile-class.md)<br/>

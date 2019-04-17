@@ -16,16 +16,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277051"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773253"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Contrôles ActiveX MFC : Sous-classement d’un contrôle Windows
 
-Cet article explique le processus de sous-classement d'un contrôle Windows commun pour créer un contrôle ActiveX. Le sous-classement d'un contrôle Windows existant est un moyen rapide de développer un contrôle ActiveX. Le nouveau contrôle a les fonctionnalités du contrôle Windows sous-classé, telles que la peinture et la réponse aux clics de souris. Exemple de contrôles ActiveX MFC [bouton](../visual-cpp-samples.md) est un exemple de sous-classement d’un contrôle Windows.
+Cet article explique le processus de sous-classement d'un contrôle Windows commun pour créer un contrôle ActiveX. Le sous-classement d'un contrôle Windows existant est un moyen rapide de développer un contrôle ActiveX. Le nouveau contrôle a les fonctionnalités du contrôle Windows sous-classé, telles que la peinture et la réponse aux clics de souris. Exemple de contrôles ActiveX MFC [bouton](../overview/visual-cpp-samples.md) est un exemple de sous-classement d’un contrôle Windows.
 
 >[!IMPORTANT]
 > ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
@@ -93,7 +93,7 @@ Pour ajouter un gestionnaire de messages pour un message de fenêtre réfléchi 
 
 - Également dans le. Fichier CPP, implémenter la `OnOcmCommand` fonction membre pour traiter le message réfléchi. Le *wParam* et *lParam* paramètres sont les mêmes que celles du message de fenêtre d’origine.
 
-Pour un exemple de messages réfléchis sont traités, reportez-vous à l’exemple de contrôles ActiveX MFC [bouton](../visual-cpp-samples.md). Il montre un `OnOcmCommand` gestionnaire qui détecte le code de notification BN_CLICKED et répond en déclenchant (envoyant) un `Click` événement.
+Pour un exemple de messages réfléchis sont traités, reportez-vous à l’exemple de contrôles ActiveX MFC [bouton](../overview/visual-cpp-samples.md). Il montre un `OnOcmCommand` gestionnaire qui détecte le code de notification BN_CLICKED et répond en déclenchant (envoyant) un `Click` événement.
 
 ## <a name="see-also"></a>Voir aussi
 

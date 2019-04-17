@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273281"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770676"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl, classe
 
@@ -88,7 +88,7 @@ Le `CMFCEditBrowseCtrl` classe prend en charge les modes suivants.
 
    Une boîte de dialogue de sélection de dossier standard s’affiche lorsque l’utilisateur clique sur le bouton Parcourir.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Comment : Spécifier un contrôle d’édition Parcourir
+## <a name="how-to-specify-an-edit-browse-control"></a>Guide pratique : Spécifier un contrôle d’édition Parcourir
 
 Procédez comme suit pour incorporer un contrôle d’édition Parcourir dans votre application :
 
@@ -120,12 +120,12 @@ Procédez comme suit pour incorporer un contrôle d’édition Parcourir dans vo
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser deux méthodes dans le `CMFCEditBrowseCtrl` classe : `EnableFolderBrowseButton` et `EnableFileBrowseButton`. Cet exemple fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser deux méthodes dans le `CMFCEditBrowseCtrl` classe : `EnableFolderBrowseButton` et `EnableFileBrowseButton`. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxeditbrowsectrl.h
 

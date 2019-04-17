@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258396"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775489"
 ---
 # <a name="toolbar-fundamentals"></a>Notions de base de barre d'outils
 
@@ -62,7 +62,7 @@ Création de la barre d’outils se produit dans `CMainFrame::OnCreate`. MFC app
 1. Appelle des fonctions permettant d’ancrage flottante et info-bulles. Pour plus d’informations sur ces appels, consultez l’article [ancrées et flottantes les barres d’outils](../mfc/docking-and-floating-toolbars.md).
 
 > [!NOTE]
->  L’exemple général MFC [DOCKTOOL](../visual-cpp-samples.md) comprend des illustrations des anciennes et nouvelles barres d’outils MFC. Les barres d’outils qui utilisent `COldToolbar` exiger des appels à l’étape 2 `LoadBitmap` (au lieu de `LoadToolBar`) et `SetButtons`. Les nouvelles barres d’outils exiger des appels `LoadToolBar`.
+>  L’exemple général MFC [DOCKTOOL](../overview/visual-cpp-samples.md) comprend des illustrations des anciennes et nouvelles barres d’outils MFC. Les barres d’outils qui utilisent `COldToolbar` exiger des appels à l’étape 2 `LoadBitmap` (au lieu de `LoadToolBar`) et `SetButtons`. Les nouvelles barres d’outils exiger des appels `LoadToolBar`.
 
 L’ancrage, flottante et appels de conseils d’outil sont facultatifs. Vous pouvez supprimer ces lignes à partir de `OnCreate` si vous préférez. Le résultat est une barre d’outils qui reste fixe, Impossible de float ou RE- et ne peut pas afficher les info-bulles.
 

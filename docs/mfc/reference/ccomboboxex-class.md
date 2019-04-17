@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 44943803fdb422ccbf77302e7c81f23c34cc7433
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c3fd57510a38d597b827f80ab98a0be280ad31e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420757"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767767"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (classe)
 
@@ -120,7 +120,7 @@ Pour une explication détaillée, conceptuelle, consultez [à l’aide de CCombo
 
 `CComboBoxEx`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 
@@ -470,7 +470,7 @@ Cette fonction membre émule la fonctionnalité de la [CBEM_SETWINDOWTHEME](/win
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC, exemple MFCIE](../../visual-cpp-samples.md)<br/>
+[MFC, exemple MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CComboBox, classe](../../mfc/reference/ccombobox-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CComboBox, classe](../../mfc/reference/ccombobox-class.md)

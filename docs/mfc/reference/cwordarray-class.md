@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 9b2888c82ad9522925ffbd53923d3988863f56ca
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 945a77436f41f4981392e583c831723e667f867c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565358"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770573"
 ---
 # <a name="cwordarray-class"></a>CWordArray, classe
 
@@ -546,6 +546,6 @@ Cette fonction permet l’affichage pour mettre à jour son affichage afin de re
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Exemple MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

@@ -59,12 +59,12 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279350"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775829"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022 : Implémentation de commandes standard
 
@@ -221,7 +221,7 @@ Pour chaque ID de commande, il existe une chaîne d’invite ligne message stand
 
    Actuellement, il n’existe aucune implémentation standard de cette commande. Vous devez implémenter cela pour chaque `CView`-classe dérivée.
 
-   Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande. Consultez l’exemple MFC didacticiel [SCRIBBLE](../visual-cpp-samples.md) pour un exemple d’implémentation.
+   Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande. Consultez l’exemple MFC didacticiel [SCRIBBLE](../overview/visual-cpp-samples.md) pour un exemple d’implémentation.
 
 - ID_EDIT_COPY copie la sélection actuelle dans le Presse-papiers.
 
@@ -438,7 +438,7 @@ Pour chaque ID de commande, il existe une chaîne d’invite ligne message stand
 
    Toutes les applications clientes OLE doivent implémenter cette commande. AppWizard, avec l’option OLE, créera une implémentation squelette de `OnInsertObject` dans votre classe d’affichage d’avoir à effectuer.
 
-   Consultez l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md) exemple pour une implémentation complète de cette commande.
+   Consultez l’exemple OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) exemple pour une implémentation complète de cette commande.
 
 - ID_OLE_EDIT_LINKS modifie les liaisons OLE
 

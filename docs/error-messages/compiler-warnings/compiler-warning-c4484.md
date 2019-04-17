@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 71a3d903ba32fecac4b2d8bfc3e0a93f19d0f4ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473168"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766793"
 ---
 # <a name="compiler-warning-c4484"></a>Avertissement du compilateur C4484
 
@@ -23,9 +23,9 @@ Pour plus d'informations, voir :
 
 - [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [override](../../windows/override-cpp-component-extensions.md)
+- [override](../../extensions/override-cpp-component-extensions.md)
 
-- [New (nouvel emplacement dans vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+- [new (nouvel emplacement dans vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 C4484 est toujours émis en tant qu’erreur. Utilisez le [avertissement](../../preprocessor/warning.md) pragma pour supprimer l’erreur C4484.
 

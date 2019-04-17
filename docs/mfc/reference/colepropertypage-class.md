@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271253"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776984"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage, classe
 
@@ -103,7 +103,7 @@ Pour plus d’informations sur l’utilisation de `COlePropertyPage`, consultez 
 
 `COlePropertyPage`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxctl.h
 
@@ -385,8 +385,8 @@ Pointeur vers une chaîne contenant le nom de la page de propriétés.
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC exemple CIRC3](../../visual-cpp-samples.md)<br/>
-[Exemple MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[MFC exemple CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [CDialog, classe](../../mfc/reference/cdialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CDialog, classe](../../mfc/reference/cdialog-class.md)

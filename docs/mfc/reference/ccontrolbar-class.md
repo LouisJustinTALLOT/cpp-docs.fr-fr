@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291624"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773240"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -119,7 +119,7 @@ Pour plus d’informations sur `CControlBar`, consultez :
 
 `CControlBar`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxext.h
 
@@ -189,10 +189,10 @@ Si *bStretch* a la valeur TRUE, étirer la dimension le long de l’orientation,
 
 |bStretch|bHorz|Étirement|Orientation|Ancrage de la station d’accueil/non|
 |--------------|-----------|----------------|-----------------|--------------------------|
-|true|true|Étirement horizontal|Orienté horizontalement|Pas d’ancrage|
-|true|false|Étirement vertical|Orienté verticalement|Pas d’ancrage|
-|false|true|Aucun étirement disponibles|Orienté horizontalement|Ancrage|
-|false|false|Aucun étirement disponibles|Orienté verticalement|Ancrage|
+|TRUE|TRUE|Étirement horizontal|Orienté horizontalement|Pas d’ancrage|
+|TRUE|FALSE|Étirement vertical|Orienté verticalement|Pas d’ancrage|
+|FALSE|TRUE|Aucun étirement disponibles|Orienté horizontalement|Ancrage|
+|FALSE|FALSE|Aucun étirement disponibles|Orienté verticalement|Ancrage|
 
 ##  <a name="calcinsiderect"></a>  CControlBar::CalcInsideRect
 
@@ -543,7 +543,7 @@ Pointeur vers un objet `CWnd` .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
+[Exemple MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar, classe](../../mfc/reference/ctoolbar-class.md)<br/>

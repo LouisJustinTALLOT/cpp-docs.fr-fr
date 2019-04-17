@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 58f9efb19988be8487ec87ce0c63d90ee1a97911
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305170"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769834"
 ---
 # <a name="cmap-class"></a>CMap (classe)
 
@@ -73,7 +73,7 @@ Type de données utilisé pour *valeur* arguments ; généralement une référe
 
 ### <a name="public-structures"></a>Structures publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMap::CPair](#cpair)|Une structure imbriquée contenant une valeur de clé et la valeur de l’objet associé.|
 
@@ -130,7 +130,7 @@ Dérivation de classe Map est similaire à la dérivation de la liste. Consultez
 
 `CMap`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtempl.h
 
@@ -538,6 +538,6 @@ Tout d’abord, la clé est recherchée. Si la clé est trouvée, la valeur corr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Exemple MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [CObject, classe](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

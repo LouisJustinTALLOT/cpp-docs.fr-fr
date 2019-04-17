@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742468"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769860"
 ---
 # <a name="security-best-practices-for-c"></a>Meilleures pratiques de sécurité pour C++
 
@@ -46,13 +46,13 @@ La bibliothèque Runtime C (CRT) a été étendue afin d'inclure des versions s
 
 ## <a name="safeint-library"></a>Bibliothèque SafeInt
 
-[Bibliothèque SafeInt](../windows/safeint-library.md) permet d’empêcher les dépassements de capacité entière et autres erreurs exploitables pouvant survenir lorsque l’application effectue des opérations mathématiques. Le `SafeInt` library inclut le [classe SafeInt](../windows/safeint-class.md), le [SafeIntException, classe](../windows/safeintexception-class.md)et plusieurs [SafeInt, fonctions](../windows/safeint-functions.md).
+[Bibliothèque SafeInt](../safeint/safeint-library.md) permet d’empêcher les dépassements de capacité entière et autres erreurs exploitables pouvant survenir lorsque l’application effectue des opérations mathématiques. Le `SafeInt` library inclut le [classe SafeInt](../safeint/safeint-class.md), le [SafeIntException, classe](../safeint/safeintexception-class.md)et plusieurs [SafeInt, fonctions](../safeint/safeint-functions.md).
 
 La classe `SafeInt` protège contre les dépassements sur les entiers et les tentatives de division par zéro. Vous pouvez l'utiliser pour gérer les comparaisons entre des valeurs de types différents. Il fournit deux stratégies de gestion des erreurs. Dans la stratégie par défaut, la classe `SafeInt` lève une exception de classe `SafeIntException` pour signaler la raison pour laquelle une opération mathématique ne peut pas être exécutée. Dans la seconde stratégie, la classe `SafeInt` arrête l'exécution du programme. Vous pouvez également définir une stratégie personnalisée.
 
 Chaque fonction `SafeInt` protège une opération mathématique d'une erreur exploitable. Vous pouvez utiliser deux types différents de paramètres sans les convertir en un même type. Pour protéger plusieurs opérations mathématiques, utilisez la classe `SafeInt`.
 
-## <a name="checked-iterators"></a>Itérateurs vérifiés
+## <a name="checked-iterators"></a>Checked Iterators
 
 Un itérateur vérifié met en place des limites de conteneur. Par défaut, quand un itérateur vérifié est hors limites, il génère une exception et arrête l'exécution du programme. Un itérateur vérifié fournit d’autres niveaux de réponse qui dépendent des valeurs qui sont assignées au préprocesseur définit comme  **\_SECURE\_SCL\_lève** et  **\_ITÉRATEUR\_déboguer\_niveau**. Par exemple, au niveau  **\_ITÉRATEUR\_déboguer\_LEVEL = 2**, un itérateur vérifié fournit de nombreuses vérifications d’exactitude en mode débogage, qui sont accessibles à l’aide des assertions. Pour plus d’informations, consultez [itérateurs vérifiés](../standard-library/checked-iterators.md) et [ \_ITÉRATEUR\_déboguer\_niveau](../standard-library/iterator-debug-level.md).
 

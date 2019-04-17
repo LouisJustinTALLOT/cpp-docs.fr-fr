@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3466
 ms.assetid: 69a877d9-a749-474b-bfc3-8d3fd53ba8fd
-ms.openlocfilehash: d24980760ee86551946876e8af5c370af2753276
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6eae1c44d8dae9118258c83c5919947803f49215
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527372"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771251"
 ---
 # <a name="compiler-error-c3466"></a>Erreur du compilateur C3466
 
@@ -19,7 +19,7 @@ ms.locfileid: "50527372"
 
 Vous ne pouvez pas utiliser transfert de type sur une spécialisation d’une classe générique.
 
-Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Pour plus d’informations, consultez [transfert de Type (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: b6fd633a39f7038be45a8776c9b4673138cc34b5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2a856c8067394e33976ba8ccdaa34be81ee11091
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274945"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771043"
 ---
 # <a name="cprintdialog-class"></a>Cprintdialog, classe
 
@@ -138,7 +138,7 @@ Pour plus d’informations sur l’utilisation de `CPrintDialog`, consultez [des
 
 `CPrintDialog`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdlgs.h
 
@@ -508,7 +508,7 @@ Appelez cette fonction après l’appel `DoModal` pour déterminer s’il faut i
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Exemple MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CPrintInfo, structure](../../mfc/reference/cprintinfo-structure.md)
