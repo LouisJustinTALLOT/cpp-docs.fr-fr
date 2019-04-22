@@ -1,1 +1,0 @@
-Extensions de composant Visual C++
