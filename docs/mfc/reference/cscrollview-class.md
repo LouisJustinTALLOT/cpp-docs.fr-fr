@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
 ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774151"
 ---
 # <a name="cscrollview-class"></a>CScrollView, classe
@@ -377,7 +377,7 @@ Vous devez définir le mode de mappage à un des modes de mappage de Windows à 
 ## <a name="see-also"></a>Voir aussi
 
 [Exemple MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
-[CView (classe)](../../mfc/reference/cview-class.md)<br/>
+[CView, classe](../../mfc/reference/cview-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CView (classe)](../../mfc/reference/cview-class.md)<br/>
+[CView, classe](../../mfc/reference/cview-class.md)<br/>
 [CSplitterWnd, classe](../../mfc/reference/csplitterwnd-class.md)

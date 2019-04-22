@@ -109,10 +109,10 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778518"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bLa*<br/>
+*bExtended*<br/>
 Spécifie si la zone de liste modifiable doit utiliser l’interface de l’étendue de l’utilisateur ou l’interface utilisateur par défaut. La valeur TRUE sélectionne l’interface utilisateur améliorée ; la valeur FALSE sélectionne l’interface utilisateur standard.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1562,8 +1562,8 @@ Cette fonction membre n’a aucun effet sur une zone de liste modifiable créée
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [CButton, classe](../../mfc/reference/cbutton-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
-[CListBox (classe)](../../mfc/reference/clistbox-class.md)<br/>
+[CEdit, classe](../../mfc/reference/cedit-class.md)<br/>
+[CListBox, classe](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar, classe](../../mfc/reference/cscrollbar-class.md)<br/>
-[Cstatic, classe](../../mfc/reference/cstatic-class.md)<br/>
-[CDialog (classe)](../../mfc/reference/cdialog-class.md)
+[CStatic, classe](../../mfc/reference/cstatic-class.md)<br/>
+[CDialog, classe](../../mfc/reference/cdialog-class.md)

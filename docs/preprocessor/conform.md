@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
 ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026576"
 ---
 # <a name="conform"></a>conform
-**Section spécifique à C++**
+**Spécifique à C++**
 
 Spécifie le comportement au moment de l’exécution de la [/Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) option du compilateur.
 
@@ -30,7 +30,7 @@ Spécifie le comportement au moment de l’exécution de la [/Zc : forScope](..
 *name*<br/>
 Spécifie le nom de l'option du compilateur à modifier. Valide uniquement *nom* est `forScope`.
 
-**Show**<br/>
+**show**<br/>
 (Facultatif) Provoque le paramètre actuel de *nom* (true ou false) à afficher au moyen d’un message d’avertissement pendant la compilation. Par exemple, `#pragma conform(forScope, show)`.
 
 **on**, **off**<br/>
@@ -42,7 +42,7 @@ Spécifie le nom de l'option du compilateur à modifier. Valide uniquement *nom*
 **pop**<br/>
 (Facultatif) Définit la valeur de *nom* à la valeur en haut de la pile interne du compilateur, puis dépile la pile. Si l’identificateur est spécifié avec **pop**, la pile est alors dépilée jusqu'à ce que qu’il trouve l’enregistrement avec *identificateur*, qui sera également dépilé ; la valeur actuelle pour *nom* dans l’enregistrement suivant sur la pile devient la nouvelle valeur pour *nom*. Si vous spécifiez **pop** avec un *identificateur* qui ne se trouve pas dans un enregistrement sur la pile, le **pop** est ignoré.
 
-*'identificateur'*<br/>
+*identifier*<br/>
 (Facultatif) Peut être inclus avec un **push** ou **pop** commande. Si *identificateur* est utilisé, puis un **sur** ou **hors** spécificateur peut également être utilisé.
 
 ## <a name="example"></a>Exemple

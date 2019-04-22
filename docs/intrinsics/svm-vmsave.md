@@ -8,10 +8,10 @@ helpviewer_keywords:
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
 ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023410"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
@@ -50,6 +50,6 @@ La fonction `__svm_vmsave` est équivalente à l’instruction machine `VMSAVE` 
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
 [__svm_vmload](../intrinsics/svm-vmload.md)

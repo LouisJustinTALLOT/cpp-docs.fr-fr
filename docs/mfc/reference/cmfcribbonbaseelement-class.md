@@ -233,10 +233,10 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773071"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Cmfcribbonbaseelement, classe
@@ -1820,7 +1820,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Ce paramètre n’est pas utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 La fenêtre parente de l’élément ruban.
 
-*Données*<br/>
+*data*<br/>
 Les données d’accessibilité de l’élément ruban.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1963,10 +1963,10 @@ Le tableau suivant résume la logique de cette méthode.
 
 |*bCompactMode*|Taille actuelle de l’élément Ruban|Nouvelle taille d’élément de ruban|
 |--------------------|---------------------------------|-----------------------------|
-|true|Compact|Aucune modification.|
-|true|Intermediate|Compact s’il est possible.|
-|true|Grand|Intermédiaire s’il est possible.|
-|false|Compact|Intermédiaire s’il est possible ; sinon volumineux.|
+|TRUE|Compact|Aucune modification.|
+|TRUE|Intermediate|Compact s’il est possible.|
+|TRUE|Grand|Intermédiaire s’il est possible.|
+|FALSE|Compact|Intermédiaire s’il est possible ; sinon volumineux.|
 
 ##  <a name="setdata"></a>  CMFCRibbonBaseElement::SetData
 

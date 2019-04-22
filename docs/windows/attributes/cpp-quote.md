@@ -1,5 +1,5 @@
 ---
-title: cpp_quote (attribut de COM C++)
+title: cpp_quote (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.cpp_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
 ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024677"
 ---
 # <a name="cppquote"></a>cpp_quote
@@ -25,12 +25,12 @@ ms.locfileid: "59024677"
 
 ### <a name="parameters"></a>Paramètres
 
-*instruction*<br/>
+*statement*<br/>
 Une instruction C.
 
 ## <a name="remarks"></a>Notes
 
-Le **cpp_quote** attribut C++ est utile si vous souhaitez placer une directive de préprocesseur dans un fichier .idl.
+Le **cpp_quote** C++ attribut est utile si vous souhaitez placer une directive de préprocesseur dans un fichier .idl.
 
 Vous pouvez également utiliser **cpp_quote** et générer un fichier .h dans le cadre de la compilation MIDL. Par exemple, si vous avez un fichier d’en-tête C++ qui utilise des attributs IDL du C++, mais ne pouvez pas utiliser ce fichier pour une tâche, puis vous pouvez compiler pour créer un fichier .h générés par MIDL, dont vous devez être en mesure d’utiliser.
 

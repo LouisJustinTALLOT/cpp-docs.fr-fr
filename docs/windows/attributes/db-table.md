@@ -1,5 +1,5 @@
 ---
-title: db_table (attribut de COM C++)
+title: db_table (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_table
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
 ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023865"
 ---
 # <a name="dbtable"></a>db_table

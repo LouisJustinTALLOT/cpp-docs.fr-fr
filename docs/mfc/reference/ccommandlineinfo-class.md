@@ -298,7 +298,7 @@ Indique si c’est le dernier paramètre ou indicateur sur la ligne de commande.
 
 ### <a name="remarks"></a>Notes
 
-[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) appels `ParseParam` qu’une seule fois pour chaque paramètre ou un indicateur sur la ligne de commande, en passant l’argument de *pszParam*. Si le premier caractère du paramètre est un « **-**'ou' **/**», il est supprimé et *bFlag* est définie sur TRUE. Lors de l’analyse le paramètre final, *bLast* est définie sur TRUE.
+[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) appels `ParseParam` qu’une seule fois pour chaque paramètre ou un indicateur sur la ligne de commande, en passant l’argument de *pszParam*. Si le premier caractère du paramètre est un « **-**'ou' **/** », il est supprimé et *bFlag* est définie sur TRUE. Lors de l’analyse le paramètre final, *bLast* est définie sur TRUE.
 
 L’implémentation par défaut de cette fonction reconnaît les indicateurs suivants : `/p`, `/pt`, `/dde`, `/Automation`, et `/Embedding`, comme illustré dans le tableau suivant :
 

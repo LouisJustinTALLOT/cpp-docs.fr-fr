@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
 ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024346"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL : SQL et les Types de données C++ (ODBC)
@@ -28,10 +28,10 @@ Le tableau suivant mappe les types de données ANSI SQL aux types de données C+
 |**DECIMAL**|`CString` 1|
 |**SMALLINT**|**int**|
 |**RÉEL**|**float**|
-|**INTEGER**|**long**|
+|**ENTIER**|**long**|
 |**FLOAT**|**double**|
 |**DOUBLE**|**double**|
-|**NUMÉRIQUE**|`CString` 1|
+|**NUMERIC**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
 |**BIT**|**BOOL**|
@@ -41,8 +41,8 @@ Le tableau suivant mappe les types de données ANSI SQL aux types de données C+
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |**DATE**|`CTime`, `CString`|
-|**TIME**|`CTime`, `CString`|
-|**TIMESTAMP**|`CTime`, `CString`|
+|**HEURE**|`CTime`, `CString`|
+|**HORODATAGE**|`CTime`, `CString`|
 
 1. ANSI **décimal** et **numérique** mapper à `CString` car **SQL_C_CHAR** est le type de transfert ODBC par défaut.
 

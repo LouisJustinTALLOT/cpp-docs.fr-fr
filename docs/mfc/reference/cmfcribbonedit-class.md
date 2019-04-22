@@ -74,10 +74,10 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780481"
 ---
 # <a name="cmfcribbonedit-class"></a>Cmfcribbonedit, classe
@@ -286,7 +286,7 @@ void EnableSpinButtons(
 *nMin*<br/>
 [in] La valeur minimale du bouton toupie (spin).
 
-*nombre maximal*<br/>
+*nMax*<br/>
 [in] La valeur maximale du bouton toupie (spin).
 
 ### <a name="remarks"></a>Notes
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le contrôle ; FALSE pour désactiver le contrôle.
 
 ### <a name="remarks"></a>Notes
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Pointeur vers la fenêtre parente pour le `CMFCRibbonEdit` objet.
 
-*Données*<br/>
+*data*<br/>
 Les données d’accessibilité pour le `CMFCRibbonEdit` objet.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -754,5 +754,5 @@ Le `CMFCRibbonEdit` contrôle a deux largeurs en fonction de son mode d’affich
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[Cmfcribbonbutton, classe](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
-[Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
+[CMFCRibbonButton, classe](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
+[CMFCRibbonBar, classe](../../mfc/reference/cmfcribbonbar-class.md)

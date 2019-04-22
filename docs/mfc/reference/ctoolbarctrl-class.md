@@ -183,10 +183,10 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781261"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
@@ -579,7 +579,7 @@ BOOL CheckButton(
 *nID*<br/>
 Identificateur du bouton pour activer ou désactiver la commande.
 
-*bvérifier*<br/>
+*bCheck*<br/>
 True pour cocher le bouton, FALSE afin de le supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Identificateur du bouton pour activer ou désactiver la commande.
 
-*bActivez*<br/>
+*bEnable*<br/>
 TRUE pour activer le bouton ; FALSE pour désactiver le bouton.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1587,7 +1587,7 @@ ID d’une image bitmap qui contient les images à charger. Pour spécifier votr
 |IDB_VIEW_LARGE_COLOR|Afficher les bitmaps de grande taille|
 |IDB_VIEW_SMALL_COLOR|Affichage des bitmaps de petite taille|
 
-*HINST*<br/>
+*hinst*<br/>
 Handle d’instance de programme à l’application appelante. Ce paramètre peut être HINST_COMMCTRL pour charger une liste d’images standard.
 
 ### <a name="remarks"></a>Notes
@@ -2390,4 +2390,4 @@ Cette fonction membre émule la fonctionnalité de la [TB_SETWINDOWTHEME](/windo
 [MFC, exemple MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CToolBar (classe)](../../mfc/reference/ctoolbar-class.md)
+[CToolBar, classe](../../mfc/reference/ctoolbar-class.md)

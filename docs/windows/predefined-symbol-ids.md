@@ -6,10 +6,10 @@ helpviewer_keywords:
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
 ms.openlocfilehash: 5acaf9d470ce3d1cccad65bc8235cacfd7a56427
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024541"
 ---
 # <a name="predefined-symbol-ids"></a>ID de symbole prédéfinis
@@ -35,6 +35,6 @@ Win32, MFC ou ATL
 
 ## <a name="see-also"></a>Voir aussi
 
-[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
-[Procédure : Créer des symboles](../windows/creating-new-symbols.md)<br/>
-[Procédure : Gérer les symboles](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[Guide pratique pour Créer des symboles](../windows/creating-new-symbols.md)<br/>
+[Guide pratique pour Gérer des symboles](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>

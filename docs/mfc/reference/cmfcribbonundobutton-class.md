@@ -17,10 +17,10 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
 ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776464"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Cmfcribbonundobutton, classe
@@ -161,5 +161,5 @@ Renvoie toujours TRUE.
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[Cmfcribbongallery, classe](../../mfc/reference/cmfcribbongallery-class.md)<br/>
-[Cmfcribbonbutton, classe](../../mfc/reference/cmfcribbonbutton-class.md)
+[CMFCRibbonGallery, classe](../../mfc/reference/cmfcribbongallery-class.md)<br/>
+[CMFCRibbonButton, classe](../../mfc/reference/cmfcribbonbutton-class.md)

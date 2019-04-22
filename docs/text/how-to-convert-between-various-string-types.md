@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778323"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Procédure : Effectuer une conversion entre différents Types de chaînes
@@ -804,12 +804,12 @@ Hello, World! (basic_string)
 
 [Macros de Conversion de chaîne MFC et ATL](../atl/reference/string-conversion-macros.md)<br/>
 [Opérations CString relatives aux chaînes de style C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[Procédure : Convertir une chaîne Standard en System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[Procédure : Convertir System::String en chaîne Standard](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[Procédure : Convertir System::String en wchar_t * ou char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[Guide pratique pour convertir une chaîne standard en System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[Guide pratique pour convertir System::String en chaîne standard](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[Guide pratique pour Convertir System::String en wchar_t * ou char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [Programmation avec CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>
 [strcpy_s, wcscpy_s, _mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)<br/>
 [strcat_s, wcscat_s, _mbscat_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)<br/>
-[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)
+[pin_ptr (C++-CLI)](../extensions/pin-ptr-cpp-cli.md)

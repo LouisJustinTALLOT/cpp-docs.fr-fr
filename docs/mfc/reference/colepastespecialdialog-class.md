@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776906"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog, classe
@@ -131,7 +131,7 @@ Chaîne qui décrit le format à l’utilisateur.
 *lpszResult*<br/>
 Chaîne qui décrit le résultat si ce format est choisi dans la boîte de dialogue.
 
-*indicateurs*<br/>
+*flags*<br/>
 L’autre liaison et incorporation options disponibles pour ce format. Cet indicateur est une combinaison au niveau du bit d’un ou plusieurs des valeurs différentes dans le OLEUIPASTEFLAG type énuméré.
 
 *cf*<br/>
@@ -146,7 +146,7 @@ L’ID de la chaîne qui identifie ce format. Le format de cette chaîne est de 
 *bEnableIcon*<br/>
 Indicateur qui détermine si la case à cocher Afficher comme icône est activée quand ce format est sélectionné dans la zone de liste.
 
-*clignotement (blink)*<br/>
+*bLink*<br/>
 Indicateur qui détermine si la case d’option Coller la liaison est activée quand ce format est sélectionné dans la zone de liste.
 
 ### <a name="remarks"></a>Notes

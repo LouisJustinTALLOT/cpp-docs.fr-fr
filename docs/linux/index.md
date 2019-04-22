@@ -1,9 +1,14 @@
 ---
 layout: LandingPage
-title: "Documentation sur le développement Linux avec\_C++"
+title: Documentation sur le développement Linux avec C++
 description: Créez et déboguez des applications exécutées sur Linux.
+ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58779766"
 ---
-
 # <a name="linux-development-with-c-documentation"></a>Documentation sur le développement Linux avec C++
 
 Utilisez Visual Studio 2017 pour créer et déboguer des applications exécutées sur Linux.

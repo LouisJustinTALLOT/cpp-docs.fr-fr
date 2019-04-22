@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
 ms.openlocfilehash: ac57bac1d132c581ee12048b89d13ed1d1fdb7da
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026342"
 ---
 # <a name="writemsr"></a>__writemsr
@@ -32,10 +32,10 @@ void __writemsr(
 
 #### <a name="parameters"></a>Paramètres
 
-*Registre*<br/>
+*S’inscrire*<br/>
 [in] Le Registre spécifiques du modèle.
 
-*Value*<br/>
+*Valeur*<br/>
 [in] Valeur à écrire.
 
 ## <a name="requirements"></a>Configuration requise
@@ -54,4 +54,4 @@ Cette fonction peut uniquement être utilisée en mode noyau, et cette routine e
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

@@ -79,10 +79,10 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780390"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery, classe
@@ -328,7 +328,7 @@ void EnableMenuResize(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le redimensionnement du menu ; Sinon, FALSE.
 
 *bVertcalOnly*<br/>
@@ -348,7 +348,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour spécifier que la barre latérale est activée ; Sinon, FALSE.
 
 ### <a name="remarks"></a>Notes
@@ -691,7 +691,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] La fenêtre parente de la fenêtre de la galerie du ruban.
 
-*Données*<br/>
+*data*<br/>
 [out] Un `CAccessibilityData` objet qui reçoit les données d’accessibilité à partir de la galerie du ruban.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -820,5 +820,5 @@ Pour déterminer l’élément spécifique qu’un utilisateur sélectionnés à
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[Cmfcribbonbutton, classe](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
-[Cmfcribbongallerymenubutton, classe](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
+[CMFCRibbonButton, classe](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
+[CMFCRibbonGalleryMenuButton, classe](../../mfc/reference/cmfcribbongallerymenubutton-class.md)

@@ -1,5 +1,5 @@
 ---
-title: event_receiver (attribut de COM C++)
+title: event_receiver (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -13,10 +13,10 @@ helpviewer_keywords:
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
 ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023293"
 ---
 # <a name="eventreceiver"></a>event_receiver
@@ -54,7 +54,7 @@ Spécifiez *layout_dependent* uniquement si `type` = **com**. *layout_dependent*
 
 ## <a name="remarks"></a>Notes
 
-Le **event_receiver** attribut C++ indique que la classe ou structure à laquelle il est appliqué est un récepteur d’événements, l’utilisation du modèle d’événement unifié de Visual C++.
+Le **event_receiver** C++ attribut spécifie que la classe ou structure à laquelle il est appliqué est un récepteur d’événements, à l’aide de l’élément visuel C++ modèle d’événement unifié.
 
 **event_receiver** est utilisé avec le [event_source](event-source.md) attribut et la [__hook](../../cpp/hook.md) et [__unhook](../../cpp/unhook.md) mots clés. Utilisez `event_source` pour créer des sources d’événements. Utilisez **__hook** dans les méthodes d’un récepteur d’événements à associer (« raccordement ») des méthodes de récepteur d’événements pour les événements de source d’événements. Utilisez **__unhook** pour dissocier les.
 

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
 ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766935"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Procédure : Marshaler des rappels et délégués à l’aide de l’interopérabilité C++
@@ -27,7 +27,7 @@ Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.m
 
 L’exemple suivant montre comment configurer une API non managée pour déclencher un délégué managé. Un délégué managé est créé et l’une des méthodes d’interopérabilité, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, est utilisée pour récupérer le point d’entrée sous-jacent pour le délégué. Cette adresse est ensuite passée à la fonction non managée qui l’appelle aucune connaissance du fait qu’elle est implémentée comme une fonction managée.
 
-Remarquez qu’il est possible, mais pas nécessaire, d’épingler le délégué à l’aide de [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md) empêcher d’être réadressé ou supprimé par le garbage collector. Protection contre les garbage collection prématuré est nécessaire, mais l’épinglage offre une protection plus que nécessaire, car il empêche la collection, mais empêche également le réadressage.
+Remarquez qu’il est possible, mais pas nécessaire, d’épingler le délégué à l’aide de [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) empêcher d’être réadressé ou supprimé par le garbage collector. Protection contre les garbage collection prématuré est nécessaire, mais l’épinglage offre une protection plus que nécessaire, car il empêche la collection, mais empêche également le réadressage.
 
 Si un délégué est réadressé par un garbage collection, il n’affecte pas du rappel managé sous-jacent, par conséquent, <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> est utilisé pour ajouter une référence au délégué, ce qui permet de réadressage du délégué, mais empêche la suppression. L’utilisation de GCHandle au lieu de pin_ptr de réduit le risque de fragmentation du tas managé.
 

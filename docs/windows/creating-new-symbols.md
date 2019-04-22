@@ -20,10 +20,10 @@ helpviewer_keywords:
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
 ms.openlocfilehash: 8bb73c1a9e8d253492a7068c444dd7ddea8417da
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026355"
 ---
 # <a name="how-to-create-symbols-c"></a>Procédure : Créer des symboles (C++)
@@ -39,14 +39,14 @@ La boîte de dialogue contient les propriétés suivantes :
 
 |Propriété|Description|
 |--------------------------|------------------------------------------|
-|**Nom**|Affiche le nom du symbole.<br/><br/>Pour plus d’informations, consultez [restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md).|
-|**Value**|Affiche la valeur numérique du symbole.<br/><br/>Pour plus d’informations, consultez [Restrictions de valeur de symbole](../windows/symbol-value-restrictions.md).|
-|**En cours d'utilisation**|En cas de sélection, indique que le symbole est utilisé par une ou plusieurs ressources.<br/><br/>L’ou les ressources sont répertoriées dans le **utilisé par** boîte.|
+|**Name**|Affiche le nom du symbole.<br/><br/>Pour plus d’informations, consultez [restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md).|
+|**Valeur**|Affiche la valeur numérique du symbole.<br/><br/>Pour plus d’informations, consultez [Restrictions de valeur de symbole](../windows/symbol-value-restrictions.md).|
+|**En cours d’utilisation**|En cas de sélection, indique que le symbole est utilisé par une ou plusieurs ressources.<br/><br/>L’ou les ressources sont répertoriées dans le **utilisé par** boîte.|
 |**Afficher les symboles en lecture seule**|En cas de sélection, affiche les ressources en lecture seule.<br/><br/>Par défaut, le **symboles des ressources** boîte de dialogue affiche uniquement les ressources modifiables dans votre fichier de script de ressources, mais avec cette option est sélectionnée, les ressources modifiables s’affichent en gras et les ressources en lecture seule s’affichent en texte brut.|
 |**Utilisé par**|Affiche la ou les ressources à l'aide du symbole sélectionné dans la liste des symboles.<br/><br/>Pour passer à l’éditeur pour une ressource donnée, sélectionnez la ressource dans le **utilisé par** et sélectionnez **afficher l’utilisation**.|
 |**Nouveau**|Ouvre le **nouveau symbole** boîte de dialogue qui vous permet de définir le nom et, si nécessaire, une valeur pour un nouvel identificateur de ressource symbolique.|
-|**Modification**|Ouvre le **modifier le symbole** boîte de dialogue qui vous permet de modifier le nom ou la valeur d’un symbole.<br/><br/>Si le symbole est destiné à un contrôle ou une ressource en cours d'utilisation, il ne peut être modifié qu'à partir de l'éditeur de ressources correspondant. Pour plus d’informations, consultez [gérer les symboles](../windows/changing-unassigned-symbols.md).|
-|**Afficher l'utilisation**|Ouvre la ressource qui contient le symbole dans l'éditeur de ressources correspondant.|
+|**Changement**|Ouvre le **modifier le symbole** boîte de dialogue qui vous permet de modifier le nom ou la valeur d’un symbole.<br/><br/>Si le symbole est destiné à un contrôle ou une ressource en cours d'utilisation, il ne peut être modifié qu'à partir de l'éditeur de ressources correspondant. Pour plus d’informations, consultez [gérer les symboles](../windows/changing-unassigned-symbols.md).|
+|**Afficher l’utilisation**|Ouvre la ressource qui contient le symbole dans l'éditeur de ressources correspondant.|
 
 ## <a name="create-symbols"></a>Créer des symboles
 
@@ -88,6 +88,6 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
-[Procédure : Gérer les symboles](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[Guide pratique pour Gérer des symboles](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
 [ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)<br/>

@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778453"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] L’ID du contrôle onglet.
 
-*emplacement*<br/>
+*location*<br/>
 [in] L’emplacement des onglets. La valeur par défaut est LOCATION_BOTTOM. Pour plus d'informations, consultez la section Notes.
 
 *bCloseBtn*<br/>
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] True pour afficher le bouton Fermer sous l’onglet actif ; FALSE pour afficher le bouton Fermer dans le coin supérieur droit de la zone d’onglet. La valeur par défaut est TRUE.
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer les étiquettes de l’onglet modifiable ; FALSE pour désactiver les étiquettes de l’onglet modifiable.
 
 ### <a name="remarks"></a>Notes
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour afficher un menu contextuel des étiquettes de fenêtre à onglets ; FALSE pour afficher des boutons de défilement vers l’avant et vers l’arrière. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Paramètres
 
-*bAnnuler*<br/>
+*bCancel*<br/>
 [in] TRUE pour abandonner l’opération de redimensionnement en cours ; FALSE pour effectuer des opération de redimensionnement en cours. Dans les deux cas, le framework s’arrête de dessiner le rectangle de redimensionnement.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar
@@ -1139,6 +1139,6 @@ Cette méthode affecte uniquement un contrôle onglet qui affiche les onglets pl
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
-[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
-[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CDockablePane, classe](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane, classe](../../mfc/reference/cdockablepane-class.md)<br/>
+[CMFCBaseTabCtrl, classe](../../mfc/reference/cmfcbasetabctrl-class.md)

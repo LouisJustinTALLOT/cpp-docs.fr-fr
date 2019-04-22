@@ -8,10 +8,10 @@ helpviewer_keywords:
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
 ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025096"
 ---
 # <a name="attribute-programming-faq"></a>Programmation par attributs (FAQ)
@@ -80,12 +80,12 @@ Toutefois, les attributs suivants ont des paramètres uniques non nommés :
 
 ||||
 |-|-|-|
-|[call_as](call-as.md)|[casse](case-cpp.md)|[cpp_quote](cpp-quote.md)|
+|[call_as](call-as.md)|[case](case-cpp.md)|[cpp_quote](cpp-quote.md)|
 |[default](default-cpp.md)|[defaultvalue](defaultvalue.md)|[defaultvtable](defaultvtable.md)|
 |[emitidl](emitidl.md)|[entry](entry.md)|[first_is](first-is.md)|
 |[helpcontext](helpcontext.md)|[helpfile](helpfile.md)|[helpstring](helpstring.md)|
 |[helpstringcontext](helpstringcontext.md)|[helpstringdll](helpstringdll.md)|[ID](id.md)|
-|[iid_is](iid-is.md)|[d'importation](import.md)|[importlib](importlib.md)|
+|[iid_is](iid-is.md)|[import](import.md)|[importlib](importlib.md)|
 |[include](include-cpp.md)|[includelib](includelib-cpp.md)|[last_is](last-is.md)|
 |[length_is](length-is.md)|[max_is](max-is.md)|[no_injected_text](no-injected-text.md)|
 |[pointer_default](pointer-default.md)|[pragma](pragma.md)|[restricted](restricted.md)|
@@ -244,4 +244,4 @@ Non, à l’aide des attributs sur une classe dérivée d’une classe qui utili
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs de C++ pour COM et .NET](cpp-attributes-com-net.md)
+[Attributs C++ pour COM et .NET](cpp-attributes-com-net.md)
