@@ -9,10 +9,10 @@ helpviewer_keywords:
 - sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
 ms.openlocfilehash: 020c044cc0b3b96df102a5ab6625c945f1033f67
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781339"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Ordre des opérations pour la création de contrôles ActiveX
@@ -32,6 +32,6 @@ Le tableau suivant indique votre rôle et l’infrastructure dans la création d
 ## <a name="see-also"></a>Voir aussi
 
 [Génération à partir du Framework](../mfc/building-on-the-framework.md)<br/>
-[Ordre des opérations pour la génération d'applications MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
-[Ordre des opérations pour la création d'applications OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
-[Ordre des opérations pour la création d'applications de base de données](../mfc/sequence-of-operations-for-creating-database-applications.md)
+[Ordre des opérations pour la génération d’applications MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
+[Ordre des opérations pour la création d’applications OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
+[Ordre des opérations pour la création d’applications de base de données](../mfc/sequence-of-operations-for-creating-database-applications.md)

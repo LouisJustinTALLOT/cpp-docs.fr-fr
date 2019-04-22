@@ -10,10 +10,10 @@ helpviewer_keywords:
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
 ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767923"
 ---
 # <a name="subscript-operator-"></a>Opérateur d’indice]
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="positive-and-negative-subscripts"></a>Indices positifs et négatifs
 
-Le premier élément d'un tableau est l'élément 0. La plage d’un tableau C++ est comprise entre *tableau*[0] à *tableau*[*taille* - 1]. Toutefois, C++ prend en charge les indices positifs et négatifs. Les indices négatifs doivent rester dans les limites du tableau. Sinon, les résultats sont imprévisibles. Le code suivant montre des indices de tableau positifs et négatifs :
+Le premier élément d'un tableau est l'élément 0. La plage d’un C++ tableau provient *tableau*[0] à *tableau*[*taille* - 1]. Toutefois, C++ prend en charge les indices positifs et négatifs. Les indices négatifs doivent rester dans les limites du tableau. Sinon, les résultats sont imprévisibles. Le code suivant montre des indices de tableau positifs et négatifs :
 
 ```cpp
 #include <iostream>

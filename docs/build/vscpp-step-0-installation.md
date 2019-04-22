@@ -1,5 +1,5 @@
 ---
-title: Installer la prise en charge C++ dans Visual Studio
+title: Installer la prise en charge de C++ dans Visual Studio
 description: Installer la prise en charge de Visual Studio pour Visual C++
 ms.custom: mvc
 ms.date: 04/02/2019
@@ -7,13 +7,13 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 2c2bed4063194bdc3c0f3fbc405be6bf9a4031e7
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870778"
 ---
-# <a name="install-c-support-in-visual-studio"></a>Installer la prise en charge C++ dans Visual Studio
+# <a name="install-c-support-in-visual-studio"></a>Installer la prise en charge de C++ dans Visual Studio
 
 Si vous n’avez pas téléchargé et installé Visual Studio et les outils Visual C++ encore, voici comment commencer.
 
@@ -146,7 +146,7 @@ Pour plus d’informations sur l’espace disque et la configuration requise du 
 1. Téléchargez le programme d’installation de Visual Studio 2017 la plus récente pour Windows.
 
    > [!div class="nextstepaction"]
-   > [Installez Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+   > [Installer Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
    > L’édition Community est destinée aux développeurs individuels, à l’apprentissage en classe, à la recherche académique et au développement open source. Pour les autres utilisations, installez [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ou [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).

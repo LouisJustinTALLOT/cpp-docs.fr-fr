@@ -48,12 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 840a7e63bb9b98cfb46ea36e30b3439168688c87
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328310"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59021467"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Fonctions intrinsèques _InterlockedCompareExchangePointer
 

@@ -92,10 +92,10 @@ helpviewer_keywords:
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
 ms.openlocfilehash: 47b03a542933c6223e098bc9d8fa8d45bf5e047b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024450"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl, classe
@@ -446,6 +446,6 @@ Handles de ligne sont supprimés en appelant `ReleaseRows`. Consultez le [vue d�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [CSimpleRow, classe](../../data/oledb/csimplerow-class.md)

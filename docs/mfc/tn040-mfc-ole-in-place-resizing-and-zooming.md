@@ -10,10 +10,10 @@ helpviewer_keywords:
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
 ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775281"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040 : MFC/OLE sur Place redimensionnement et zoom
@@ -42,7 +42,7 @@ Le facteur de zoom actuel peut être déterminé en appelant `COleServerDoc::Get
 
 Pour obtenir un exemple de zoom correct, consultez l’exemple OLE MFC [HIERSVR](../overview/visual-cpp-samples.md). Le zoom dans HIERSVR est compliqué du fait qu'il affiche le texte, et le texte, en général, n'évolue pas de façon linéaire (conseils, conventions typographiques, largeurs et hauteurs de conception compliquent la question). Toujours, HIERSVR est une référence sensée pour implémenter le zoom correctement, tout comme le tutoriel MFC [SCRIBBLE](../overview/visual-cpp-samples.md) (étape 7).
 
-`COleServerDoc::GetZoomFactor` Détermine le facteur de zoom selon un nombre de mesures différentes disponibles à partir du conteneur ou à partir de l’implémentation de votre `COleServerItem` et `COleServerDoc` classes. En bref, le facteur de zoom courant est déterminé par la formule suivante :
+`COleServerDoc::GetZoomFactor` détermine le facteur de zoom d'après plusieurs mesures disponibles dans le conteneur ou dans l'implémentation de vos classes `COleServerItem` et `COleServerDoc`. En bref, le facteur de zoom courant est déterminé par la formule suivante :
 
 ```
 Position Rectangle (PR) / Container Extent (CE)
@@ -52,7 +52,7 @@ La valeur POSITION RECTANGLE est déterminée par le conteneur. Elle est retourn
 
 La valeur CONTAINER EXTENT est légèrement plus complexe à calculer. Si le conteneur a appelé `COleServerItem::OnSetExtent` (par un appel à `COleClientItem::SetExtent`), alors la valeur CONTAINER EXTENT est convertie en pixels basée sur le nombre de pixels par pouce logique. Si le conteneur n'a pas appelé SetExtent (ce qui est généralement le cas), alors la valeur CONTAINER EXTENT est la taille retournée par `COleServerItem::OnGetExtent`. Par conséquent, si le conteneur n’a pas appelé SetExtent, le framework suppose que si elle le faisait le conteneur aurait appelé avec 100 % de l’extension naturelle (la valeur retournée par `COleServerItem::GetExtent`). Autrement dit, le framework suppose que le conteneur affiche 100 % (ni plus, ni moins) de l'élément.
 
-Il est important de noter que même si `COleServerItem::OnSetExtent` et `COleServerItem::OnGetExtent` ont des noms semblables, ils ne manipulent pas le même attribut de l'élément. `OnSetExtent` est appelée pour indiquer au serveur quelle proportion de l’objet est visible dans le conteneur (quel que soit le facteur de zoom) et `OnGetExtent` est appelée par le conteneur pour déterminer la taille idéale de l’objet.
+Il est important de noter que même si `COleServerItem::OnSetExtent` et `COleServerItem::OnGetExtent` ont des noms semblables, ils ne manipulent pas le même attribut de l'élément. `OnSetExtent` est appelé pour indiquer au serveur quelle quantité de l'objet est visible dans le conteneur (quel que soit le facteur de zoom) et `OnGetExtent` est appelé par le conteneur afin de déterminer la taille idéale de l'objet.
 
 En consultant chacune des interfaces API en jeu, vous pouvez obtenir une image plus claire :
 

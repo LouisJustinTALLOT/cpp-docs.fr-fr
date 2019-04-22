@@ -1,5 +1,5 @@
 ---
-title: db_column (attribut de COM C++)
+title: db_column (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_column
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
 ms.openlocfilehash: e0e2c873452884275e97663ae2d9d6df2f790ffd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024840"
 ---
 # <a name="dbcolumn"></a>db_column
@@ -39,7 +39,7 @@ Numéro de colonne ordinal (`DBCOLUMNINFO` ordinale) ou nom de colonne (chaîne 
 *precision*<br/>
 (Facultatif) La précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de la `bPrecision` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*mise à l'échelle*<br/>
+*scale*<br/>
 (Facultatif) La mise à l’échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>

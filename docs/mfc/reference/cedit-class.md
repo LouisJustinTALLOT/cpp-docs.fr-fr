@@ -95,10 +95,10 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773747"
 ---
 # <a name="cedit-class"></a>CEdit Class
@@ -966,7 +966,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*NChar*<br/>
+*nChar*<br/>
 Index de base zéro du caractère spécifié.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre maximal*<br/>
+*nMax*<br/>
 La nouvelle limite de texte en caractères.
 
 ### <a name="remarks"></a>Notes
@@ -1455,8 +1455,8 @@ Pour plus d’informations, consultez [EM_UNDO](/windows/desktop/Controls/em-und
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](cwnd-class.md)<br/>
 [CButton, classe](cbutton-class.md)<br/>
-[CComboBox (classe)](ccombobox-class.md)<br/>
-[CListBox (classe)](clistbox-class.md)<br/>
+[CComboBox, classe](ccombobox-class.md)<br/>
+[CListBox, classe](clistbox-class.md)<br/>
 [CScrollBar, classe](cscrollbar-class.md)<br/>
-[Cstatic, classe](cstatic-class.md)<br/>
-[CDialog (classe)](cdialog-class.md)
+[CStatic, classe](cstatic-class.md)<br/>
+[CDialog, classe](cdialog-class.md)

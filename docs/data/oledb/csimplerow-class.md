@@ -36,10 +36,10 @@ helpviewer_keywords:
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
 ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023839"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow, classe
@@ -63,7 +63,7 @@ class CSimpleRow
 |||
 |-|-|
 |[AddRefRow](#addrefrow)|Ajoute un décompte de références à un handle de ligne existant.|
-|[Comparer](#compare)|Compare deux lignes pour voir s’ils font référence à la même instance de ligne.|
+|[Compare](#compare)|Compare deux lignes pour voir s’ils font référence à la même instance de ligne.|
 |[CSimpleRow](#csimplerow)|Constructeur.|
 |[ReleaseRow](#releaserow)|Libère des lignes.|
 
@@ -158,6 +158,6 @@ KeyType m_iRowset;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetImpl, classe](../../data/oledb/irowsetimpl-class.md)

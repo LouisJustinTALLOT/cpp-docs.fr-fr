@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
 ms.openlocfilehash: 5c1a4e7df424499f400dbd70d675956deef6bc5d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58784352"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Bibliothèque de modèles Windows Runtime C++ (WRL)
@@ -71,7 +71,7 @@ Montre comment utiliser le [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msx
 Utilise le `HttpRequest` classe qui est définie dans [procédure pas à pas : Connexion à l’aide des tâches et des requêtes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) dans le contexte d’une application UWP complète.
 
 [Création d’un composant Windows DLL d’exécution avec l’exemple C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
-Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour créer un composant DLL in-process et le consommer à partir de C++ / c++ / CX, JavaScript et C#.
+Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour créer un composant DLL in-process et le consommer à partir de C++ / c++ / CX, JavaScript et c#.
 
 [Exemple de jeu marble maze DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Montre comment utiliser la bibliothèque de modèles C++ Windows Runtime pour gérer la durée de vie des composants COM tels que DirectX et Media Foundation dans le contexte d’un jeu 3D complet.

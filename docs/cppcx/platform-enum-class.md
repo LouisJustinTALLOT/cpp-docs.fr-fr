@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
 ms.openlocfilehash: 67870a0fcc685c420c7d24510e90c6f4ef9b72a9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780273"
 ---
 # <a name="platformenum-class"></a>Platform::Enum, classe
@@ -44,4 +44,4 @@ Utilisez le mot clé [classe enum publique](../extensions/enum-class-cpp-compone
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)

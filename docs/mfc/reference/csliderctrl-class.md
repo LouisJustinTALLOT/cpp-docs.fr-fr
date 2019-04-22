@@ -75,10 +75,10 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
 ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776633"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (classe)
@@ -388,7 +388,7 @@ void GetRange(
 *nMin*<br/>
 Référence à un entier qui reçoit la position minimale.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Référence à un entier qui reçoit la position maximale.
 
 ### <a name="remarks"></a>Notes
@@ -434,7 +434,7 @@ void GetSelection(
 *nMin*<br/>
 Référence à un entier qui reçoit la position de départ de la sélection actuelle.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Référence à un entier qui reçoit la position de fin de la sélection actuelle.
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -633,7 +633,7 @@ void SetRange(
 *nMin*<br/>
 Position minimale pour le curseur.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Position maximale pour le curseur.
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Position maximale pour le curseur.
 
 *bRedraw*<br/>
@@ -690,7 +690,7 @@ void SetSelection(
 *nMin*<br/>
 Position de départ pour le curseur.
 
-*nombre maximal*<br/>
+*nMax*<br/>
 Position de fin pour le curseur.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -804,4 +804,4 @@ Cette fonction membre implémente le comportement du message Win32 [TBM_SETTOOLT
 [MFC exemple CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CProgressCtrl (classe)](../../mfc/reference/cprogressctrl-class.md)
+[CProgressCtrl, classe](../../mfc/reference/cprogressctrl-class.md)

@@ -3,10 +3,10 @@ title: Vue d'ensemble de la programmation Windows en C++
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
 ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772902"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
@@ -96,20 +96,20 @@ Visual Studio inclut un débogueur puissant pour le code natif, des outils d’a
 ## <a name="in-this-section"></a>Dans cette section
 |Titre|Description|
 |-----------|-----------------|
-|[Procédure pas à pas : Création d’un programme C++ Standard](walkthrough-creating-a-standard-cpp-program-cpp.md)| Créez une application de console Windows.|
-|[Procédure pas à pas : Création d’Applications de bureau Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Créer une simple application de bureau Windows.|
+|[Procédure pas à pas : Création d’un programme C++ standard](walkthrough-creating-a-standard-cpp-program-cpp.md)| Créez une application de console Windows.|
+|[Procédure pas à pas : création d’applications de bureau Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Créer une simple application de bureau Windows.|
 |[Assistant Windows Desktop](windows-desktop-wizard.md)|Utilisez l’Assistant pour créer des projets de Windows.|
 |[Bibliothèque ATL (Active Template Library)](../atl/TOC.md)|Utilisez la bibliothèque ATL pour créer des composants COM en C++.|
 |[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|Utiliser MFC pour créer de petites ou grandes applications Windows avec les contrôles et les boîtes de dialogue|
-|[Classes partagées de ATL et MFC](../atl-mfc-shared/TOC.md)|Utilisez les classes telles que CString qui sont partagées dans ATL et MFC.|
+|[Classes partagées ATL et  MFC](../atl-mfc-shared/TOC.md)|Utilisez les classes telles que CString qui sont partagées dans ATL et MFC.|
 |[Accès aux données](../data/data-access-in-cpp.md)| OLE DB et ODBC|
 |[Texte et chaînes](../text/text-and-strings-in-visual-cpp.md)|Différents types de chaînes sur Windows.|
-|[Ressources pour la création d'un jeu à l'aide de DirectX](resources-for-creating-a-game-using-directx.md)
-|[Procédure : Utiliser Windows 10 SDK dans une Application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|SDK Windows|
+|[Ressources pour la création d’un jeu à l’aide de DirectX](resources-for-creating-a-game-using-directx.md)
+|[Guide pratique pour utiliser le kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|SDK Windows|
 |[Utilisation des fichiers de ressources](working-with-resource-files.md)|Comment ajouter des images, des icônes, des tables de chaînes et d’autres ressources pour une application de bureau.|
-|[Ressources pour la création d'un jeu à l'aide de DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Liens vers du contenu pour la création de jeux en C++.|
-|[Procédure : Utiliser Windows 10 SDK dans une Application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
-|[Déploiement d’Applications de bureau natives](deploying-native-desktop-applications-visual-cpp.md)|Déployer des applications natives sur Windows.|
+|[Ressources pour la création d’un jeu à l’aide de DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Liens vers du contenu pour la création de jeux en C++.|
+|[Guide pratique pour utiliser le kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
+|[Déploiement des applications de bureau natives](deploying-native-desktop-applications-visual-cpp.md)|Déployer des applications natives sur Windows.|
 
 
 ## <a name="related-articles"></a>Articles connexes
@@ -117,8 +117,8 @@ Visual Studio inclut un débogueur puissant pour le code natif, des outils d’a
 |Titre|Description|
 |-----------|-----------------|
 |[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Rubrique parente pour le contenu destiné aux développeurs Visual C++.|
-[Développement .NET avec C++ / c++ / CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Créer des wrappers pour les bibliothèques C++ natives qui permettent de communication avec les applications et composants .NET.|
-|[Extensions de composant pour .NET et UWP](../extensions/component-extensions-for-runtime-platforms.md)|Référence pour les éléments de syntaxe partagés par C / c++ / CX et c++ / CLI.|
+[Développement .NET avec C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Créer des wrappers pour les bibliothèques C++ natives qui permettent de communication avec les applications et composants .NET.|
+|[Extensions de composants pour .NET et UWP](../extensions/component-extensions-for-runtime-platforms.md)|Référence pour les éléments de syntaxe partagés par C / c++ / CX et c++ / CLI.|
 |[Applications de plateforme Windows universelle (C++)](universal-windows-apps-cpp.md)|Écrire des applications UWP à l’aide de C++ / c++ / CX ou la bibliothèque de modèles Windows Runtime (WRL).|
-|[Attributs de C++ pour COM et .NET](attributes/cpp-attributes-com-net.md)|Attributs non standards pour la programmation Windows uniquement à l’aide de .NET ou COM.|
+|[Attributs C++ pour COM et .NET](attributes/cpp-attributes-com-net.md)|Attributs non standards pour la programmation Windows uniquement à l’aide de .NET ou COM.|
 

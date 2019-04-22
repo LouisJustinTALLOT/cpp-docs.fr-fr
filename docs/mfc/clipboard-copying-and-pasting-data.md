@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
 ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776100"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : Copier et coller des données
@@ -59,11 +59,11 @@ Pour gérer l’option Collage spécial dans le menu Edition, consultez la rubri
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 
-- [Ajout d'autres formats](../mfc/clipboard-adding-other-formats.md)
+- [Ajout d’autres formats](../mfc/clipboard-adding-other-formats.md)
 
-- [Objets de données et sources de données OLE et transfert de données uniforme](../mfc/data-objects-and-data-sources-ole.md)
+- [Transferts de données uniformes et sources de données et les objets de données OLE](../mfc/data-objects-and-data-sources-ole.md)
 
-- [OLE (glisser-déposer)](../mfc/drag-and-drop-ole.md)
+- [Glisser-déplacer OLE](../mfc/drag-and-drop-ole.md)
 
 - [OLE](../mfc/ole-background.md)
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
 ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024736"
 ---
 # <a name="creating-an-updatable-provider"></a>Création d'un fournisseur actualisable
@@ -436,4 +436,4 @@ Ce code spécifie, entre autres choses, que la colonne prend en charge une valeu
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d'un fournisseur OLE DB](creating-an-ole-db-provider.md)
+[Création d’un fournisseur OLE DB](creating-an-ole-db-provider.md)

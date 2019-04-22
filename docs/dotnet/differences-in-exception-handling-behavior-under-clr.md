@@ -6,10 +6,10 @@ helpviewer_keywords:
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
 ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772736"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Différences du comportement de gestion des exceptions dans /CLR
@@ -18,7 +18,7 @@ ms.locfileid: "58772736"
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> Saut hors d’un bloc Finally
 
-Dans le code C/C++ natif, saut hors d’un __**enfin** bloc à l’aide de la gestion structurée des exceptions (SEH) est autorisée bien qu’il génère un avertissement.  Sous [/CLR](../build/reference/clr-common-language-runtime-compilation.md), saut hors un **enfin** bloc provoque une erreur :
+En C natif /C++ code, le saut hors d’un __**enfin** bloc à l’aide de la gestion structurée des exceptions (SEH) est autorisée bien qu’il génère un avertissement.  Sous [/CLR](../build/reference/clr-common-language-runtime-compilation.md), saut hors un **enfin** bloc provoque une erreur :
 
 ```cpp
 // clr_exception_handling_4.cpp

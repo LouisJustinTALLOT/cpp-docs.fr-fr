@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
 ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775970"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Procédure : Caractères d’accès d’un System::String
@@ -22,7 +22,7 @@ Vous pouvez accéder aux caractères d’un <xref:System.String> objet pour les 
 
 `PtrToStringChars` Retourne un <xref:System.Char>, qui est un pointeur intérieur (également appelé un `byref`). Par conséquent, il est soumise au garbage collection. Vous n’êtes pas obligé d’épingler ce pointeur à moins que vous allez passer à une fonction native.
 
-Prenons le code suivant.  L’épinglage n’est pas nécessaire car `ppchar` est un pointeur intérieur, et si le garbage collector déplace la chaîne qu’il pointe vers, il met également à jour `ppchar`. Sans un [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md), le code fonctionnera, et pas la baisse de performances potentiels ont provoqué par l’épinglage.
+Prenons le code suivant.  L’épinglage n’est pas nécessaire car `ppchar` est un pointeur intérieur, et si le garbage collector déplace la chaîne qu’il pointe vers, il met également à jour `ppchar`. Sans un [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), le code fonctionnera, et pas la baisse de performances potentiels ont provoqué par l’épinglage.
 
 Si vous transmettez `ppchar` à une fonction native, il doit être un pointeur épingle ; le garbage collector ne sera pas en mesure de mettre à jour tous les pointeurs sur le frame de pile non géré.
 

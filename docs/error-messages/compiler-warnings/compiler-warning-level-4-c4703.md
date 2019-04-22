@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C4703
 ms.assetid: 5dad454e-69e3-4931-9168-050a861c05f8
 ms.openlocfilehash: 6115db7611de521d66df3b1f555349891d72cc03
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025795"
 ---
 # <a name="compiler-warning-level-4-c4703"></a>Avertissement du compilateur (niveau 4) C4703
@@ -72,5 +72,5 @@ void main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Avertissement du compilateur (niveau 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)<br/>
+[Avertissement du compilateur (niveau 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)<br/>
 [Avertissements, /sdl et amélioration de la détection des variables non initialisée](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)

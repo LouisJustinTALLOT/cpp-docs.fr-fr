@@ -876,7 +876,7 @@ Le tableau suivant présente les types de base de données possibles et leurs sp
 |Importation de HTML|« Importation HTML ; »|« `drive`:\\\ *chemin d’accès*\ *filename*»|
 |Exportation HTML|« Export HTML ; »|« `drive`:\\\ *chemin d’accès*»|
 |Texte|« Text » ;|« lecteur :\\\path »|
-|ODBC|« ODBC ; Base de données = `database`; UID = *utilisateur*; PWD = *mot de passe*; DSN = *datasourcename ;* LOGINTIMEOUT = *secondes ;*» (Il peut s’agir d’une chaîne de connexion complète pour tous les serveurs ; il est juste un exemple. Il est très important de ne pas avoir des espaces entre les paramètres.)|Aucun.|
+|ODBC|« ODBC ; Base de données = `database`; UID = *utilisateur*; PWD = *mot de passe*; DSN = *datasourcename ;* LOGINTIMEOUT = *secondes ;* » (Il peut s’agir d’une chaîne de connexion complète pour tous les serveurs ; il est juste un exemple. Il est très important de ne pas avoir des espaces entre les paramètres.)|Aucun.|
 |Exchange|« Exchange ;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [Profil = *profil*;]<br /><br /> [PWD = *mot de passe*;]<br /><br /> [DATABASE= `database`;]"|*« lecteur*:\\\ *chemin d’accès*\\\ *filename*. MDB »|
 
 > [!NOTE]

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - event handling [C++], Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
 ms.openlocfilehash: 93bfcc93c680618ea3a51eabd145548a4f47563a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772330"
 ---
 # <a name="event-handling-in-native-c"></a>Gestion des événements en mode natif C++
 
-Dans Gestion des événements C++ native, vous configurez un récepteur d’événements source et les événements à l’aide de la [event_source](../windows/attributes/event-source.md) et [event_receiver](../windows/attributes/event-receiver.md) des attributs, respectivement, en spécifiant `type` = `native`. Ces attributs permettent aux classes auxquelles ils sont appliqués de déclencher et de gérer des événements dans un contexte natif non COM.
+En mode natif C++ la gestion des événements, vous avez configuré un récepteur d’événements source et les événements à l’aide de la [event_source](../windows/attributes/event-source.md) et [event_receiver](../windows/attributes/event-receiver.md) des attributs, respectivement, en spécifiant `type` =`native`. Ces attributs permettent aux classes auxquelles ils sont appliqués de déclencher et de gérer des événements dans un contexte natif non COM.
 
 ## <a name="declaring-events"></a>Déclaration d'événements
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ssm instruction
 ms.assetid: 8bee669b-6bd8-4e25-9383-bb7d57295b4d
 ms.openlocfilehash: e1ece6d6f4040b81b55d8400407d46f165b56b53
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024515"
 ---
 # <a name="enable"></a>_enable
@@ -38,7 +38,7 @@ void _enable(void);
 
 ## <a name="remarks"></a>Notes
 
-`_enable` Indique le processeur définisse l’indicateur d’interruption. Sur les systèmes x86, cette fonction génère l'instruction de définition de l'indicateur d'interruption (`sti`).
+`_enable` fait en sorte que le processeur définisse l'indicateur d'interruption. Sur les systèmes x86, cette fonction génère l'instruction de définition de l'indicateur d'interruption (`sti`).
 
 Cette fonction est disponible uniquement en mode noyau. Si vous l'utilisez en mode utilisateur, une exception Instruction privilégiée est levée.
 
@@ -46,4 +46,4 @@ Cette fonction est disponible uniquement en mode noyau. Si vous l'utilisez en mo
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

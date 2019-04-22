@@ -7,10 +7,10 @@ helpviewer_keywords:
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
 ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026194"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Liste alphabétique des fonctions intrinsèques
@@ -79,7 +79,7 @@ Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Mi
 
 [_interlockedbittestandset, fonctions intrinsèques](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
-[Fonctions intrinsèques _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
+[_InterlockedCompareExchange, fonctions intrinsèques](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 
@@ -275,4 +275,4 @@ Les sections suivantes décrivent les fonctions intrinsèques spécifiques à Mi
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

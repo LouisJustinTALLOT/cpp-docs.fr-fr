@@ -18,10 +18,10 @@ helpviewer_keywords:
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024632"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC : À l’aide des Classes de base de données sans document ni vue
@@ -54,7 +54,7 @@ L’Assistant Application MFC propose plusieurs options **sélectionnez prise en
 
 |Option|Vue|Document|
 |------------|----------|--------------|
-|**Aucun.**|Dérivée de `CView`.|Ne fournit aucun support de base de données. Il s'agit de l'option par défaut.<br /><br /> Si vous sélectionnez le **support de l’architecture Document/vue** option sur le [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md) page, vous obtenez prise en charge complète pour le document, y compris la sérialisation et **New** , **Open**, **enregistrer**, et **enregistrer en tant que** commandes sur le **fichier** menu. Consultez [Applications sans Document](#_core_applications_with_no_document).|
+|**Aucun**|Dérivée de `CView`.|Ne fournit aucun support de base de données. Il s'agit de l'option par défaut.<br /><br /> Si vous sélectionnez le **support de l’architecture Document/vue** option sur le [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md) page, vous obtenez prise en charge complète pour le document, y compris la sérialisation et **New** , **Open**, **enregistrer**, et **enregistrer en tant que** commandes sur le **fichier** menu. Consultez [Applications sans Document](#_core_applications_with_no_document).|
 |**Fichiers d’en-tête**|Dérivée de `CView`.|Fournit le niveau de prise en charge de la base de données de base pour votre application.<br /><br /> Inclut Afxdb.h. Ajoute des bibliothèques de liens, mais ne crée pas de classes spécifiques à la base de données. Vous pouvez créer ultérieurement des jeux d’enregistrements et les utiliser pour examiner et mettre à jour des enregistrements.|
 |**Vue de base de données sans prise en charge de fichier**|Dérivé de `CRecordView`|Fournit la prise en charge du document, mais aucune prise en charge de la sérialisation. Le document peut stocker le jeu d’enregistrements et coordonner plusieurs vues ; ne prend pas en charge la sérialisation ou la **New**, **Open**, **enregistrer**, et **Enregistrer sous** commandes. Consultez [Applications avec des Documents minimaux](#_core_applications_with_minimal_documents). Si vous incluez une vue de base de données, vous devez spécifier la source de données.<br /><br /> Inclut les fichiers d’en-tête de base de données, des bibliothèques de liens, une vue d’enregistrement et un jeu d’enregistrements. (Disponible uniquement pour les applications avec le **support de l’architecture Document/vue** option est sélectionnée sur la [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md) page.)|
 |**Vue de base de données avec prise en charge de fichier**|Dérivé de `CRecordView`|Prend en charge le document complet, y compris la sérialisation et liées aux documents **fichier** commandes de menu. Applications de base de données opèrent généralement par enregistrement plutôt que sur un fichier par fichier et n’avez pas besoin sérialisation. Toutefois, vous pouvez avoir une utilisation spéciale pour la sérialisation. Consultez [Applications avec des Documents minimaux](#_core_applications_with_minimal_documents). Si vous incluez une vue de base de données, vous devez spécifier la source de données.<br /><br /> Inclut les fichiers d’en-tête de base de données, des bibliothèques de liens, une vue d’enregistrement et un jeu d’enregistrements. (Disponible uniquement pour les applications avec le **support de l’architecture Document/vue** option est sélectionnée sur la [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md) page.)|

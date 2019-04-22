@@ -9,17 +9,17 @@ f1_keywords:
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
 ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023904"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Messages du vectoriseur et du paralléliseur
 
 Vous pouvez utiliser les options du compilateur Visual C++ [/qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) et [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour définir le [parallélisation et vectorisation automatiques](../../parallel/auto-parallelization-and-auto-vectorization.md) à des codes de motif de sortie et messages d’information concernant son activité. Cet article explique les code motifs et les messages.
 
-- [Messages d'information](#BKMK_InformationalMessages)
+- [Messages d’information](#BKMK_InformationalMessages)
 
 - [5xx](#BKMK_ReasonCode50x)
 
@@ -985,6 +985,6 @@ void code_1505(int *A, int *B)
 [Parallélisation et vectorisation automatiques](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [Programmation parallèle en Code natif](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
 [#pragma loop()](../../preprocessor/loop.md)<br/>
-[/Q (Opérations de bas niveau), options](../../build/reference/q-options-low-level-operations.md)<br/>
+[/Q, options (Opérations de bas niveau)](../../build/reference/q-options-low-level-operations.md)<br/>
 [/Qpar-report (Niveau de rapport du paralléliseur automatique)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec-report (Niveau de rapport du vectoriseur automatique)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

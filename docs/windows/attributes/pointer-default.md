@@ -1,5 +1,5 @@
 ---
-title: pointer_default (attribut de COM C++)
+title: pointer_default (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pointer_default
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
 ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022664"
 ---
 # <a name="pointerdefault"></a>pointer_default
@@ -25,12 +25,12 @@ Spécifie l’attribut de pointeur par défaut pour tous les pointeurs, à l’e
 
 ### <a name="parameters"></a>Paramètres
 
-*par défaut*<br/>
+*value*<br/>
 Une valeur qui décrit le type de pointeur : **ptr**, **ref**, ou **unique**.
 
 ## <a name="remarks"></a>Notes
 
-Le **pointer_default** attribut C++ a les mêmes fonctionnalités que le [pointer_default](/windows/desktop/Midl/pointer-default) attribut MIDL.
+Le **pointer_default** C++ attribut a les mêmes fonctionnalités que le [pointer_default](/windows/desktop/Midl/pointer-default) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 
@@ -52,4 +52,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs d'interface](interface-attributes.md)
+[Attributs d’interface](interface-attributes.md)

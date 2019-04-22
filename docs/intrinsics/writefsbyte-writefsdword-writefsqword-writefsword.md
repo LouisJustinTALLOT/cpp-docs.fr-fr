@@ -17,10 +17,10 @@ helpviewer_keywords:
 - writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
 ms.openlocfilehash: 6461ef730760298e3159e4ac70dbbdf7bd827092
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025773"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
@@ -52,7 +52,7 @@ void __writefsqword(
 
 #### <a name="parameters"></a>Paramètres
 
-*Décalage*<br/>
+*Offset*<br/>
 [in] Le décalage entre le début du FS à écrire dans.
 
 *Données*<br/>
@@ -78,4 +78,4 @@ Ces routines sont disponibles uniquement sous forme de fonctions intrinsèques.
 ## <a name="see-also"></a>Voir aussi
 
 [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

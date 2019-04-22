@@ -7,10 +7,10 @@ helpviewer_keywords:
 - nullptr keyword [C++]
 ms.assetid: e9d80ea6-2506-4eb5-b47b-2349df085832
 ms.openlocfilehash: 57be8d71f1dac4f347ea6567c02a385719bb7306
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781079"
 ---
 # <a name="nullptr"></a>nullptr

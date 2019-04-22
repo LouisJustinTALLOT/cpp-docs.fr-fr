@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774181"
 ---
 # <a name="cdocument-class"></a>CDocument (classe)
@@ -1070,7 +1070,7 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>Paramètres
 
-*GUID*<br/>
+*Guid*<br/>
 Spécifie le GUID d’un segment à supprimer.
 
 *Pid*<br/>
@@ -1119,7 +1119,7 @@ Pointe vers le nom du document qui était en cours d’enregistrement ou chargem
 *e*<br/>
 Points à l’exception qui a été levée. Peut être NULL.
 
-*benregistrement des*<br/>
+*bSaving*<br/>
 Indicateur qui indique quelle opération était en cours ; différent de zéro si le document a été enregistré, 0 si le document a été chargé.
 
 *nIDPDefault*<br/>
@@ -1257,8 +1257,8 @@ Cette fonction appelle le [CView::OnUpdate](../../mfc/reference/cview-class.md#o
 [Exemple MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [Exemple MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Exemple MFC NPP](../../overview/visual-cpp-samples.md)<br/>
-[CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)<br/>
+[CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)<br/>
-[CView (classe)](../../mfc/reference/cview-class.md)<br/>
-[CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)
+[CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)<br/>
+[CView, classe](../../mfc/reference/cview-class.md)<br/>
+[CDocTemplate, classe](../../mfc/reference/cdoctemplate-class.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
 ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780871"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Procédure : Marshaler des chaînes COM à l’aide d’interopérabilité C++
@@ -28,7 +28,7 @@ Exemple de code suit le [managed, unmanaged](../preprocessor/managed-unmanaged.m
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment un BSTR (format de chaîne utilisé dans la programmation COM) peut être passé à partir d’une fonction managée à une fonction non managée. L’appel de fonction utilise managé <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> pour obtenir l’adresse d’une représentation BSTR du contenu d’un System.String .NET. Ce pointeur est épinglé à l’aide de [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md) pour vous assurer que son adresse physique n’est pas modifiée pendant un cycle de garbage collection pendant que la fonction non managée s’exécute. Le garbage collector est pas autorisé à déplacer la mémoire jusqu'à ce que le [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md) est hors de portée.
+L’exemple suivant montre comment un BSTR (format de chaîne utilisé dans la programmation COM) peut être passé à partir d’une fonction managée à une fonction non managée. L’appel de fonction utilise managé <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> pour obtenir l’adresse d’une représentation BSTR du contenu d’un System.String .NET. Ce pointeur est épinglé à l’aide de [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) pour vous assurer que son adresse physique n’est pas modifiée pendant un cycle de garbage collection pendant que la fonction non managée s’exécute. Le garbage collector est pas autorisé à déplacer la mémoire jusqu'à ce que le [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) est hors de portée.
 
 ```
 // MarshalBSTR1.cpp

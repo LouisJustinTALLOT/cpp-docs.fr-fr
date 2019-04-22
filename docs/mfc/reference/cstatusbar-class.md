@@ -37,10 +37,10 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
 ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777335"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar (classe)
@@ -508,7 +508,7 @@ Après avoir appelé `SetPaneText`, vous devez ajouter un gestionnaire de mise �
 
 [Exemple MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [MFC exemple DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
+[CControlBar, classe](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CStatusBarCtrl (classe)](../../mfc/reference/cstatusbarctrl-class.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
+[CStatusBarCtrl, classe](../../mfc/reference/cstatusbarctrl-class.md)<br/>
+[CControlBar, classe](../../mfc/reference/ccontrolbar-class.md)

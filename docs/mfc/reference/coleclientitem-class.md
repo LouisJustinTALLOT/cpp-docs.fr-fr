@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773981"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem, classe

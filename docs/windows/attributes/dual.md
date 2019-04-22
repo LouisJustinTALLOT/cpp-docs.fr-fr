@@ -7,10 +7,10 @@ helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
 ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023956"
 ---
 # <a name="dual"></a>dual
@@ -70,7 +70,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs par utilisation](attributes-by-usage.md)<br/>
-[personnalisé](custom-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

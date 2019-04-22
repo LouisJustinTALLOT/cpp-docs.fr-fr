@@ -8,10 +8,10 @@ helpviewer_keywords:
 - __vmx_off intrinsic
 ms.assetid: 78a32d46-9291-406c-b982-a550855aff18
 ms.openlocfilehash: 4a01752bd510f9aa8cb159c23e691c9d244145e2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023852"
 ---
 # <a name="vmxoff"></a>__vmx_off
@@ -42,4 +42,4 @@ La fonction `__vmx_off` est équivalente à l’instruction machine `VMXOFF` . C
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

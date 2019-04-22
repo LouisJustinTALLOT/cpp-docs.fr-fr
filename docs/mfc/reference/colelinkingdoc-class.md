@@ -17,10 +17,10 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
 ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773552"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc, classe
@@ -196,4 +196,4 @@ Vous devez appeler cette fonction lors de la fermeture d’un fichier nommé, ma
 [Exemple MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument, classe](../../mfc/reference/coledocument-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)
+[CDocTemplate, classe](../../mfc/reference/cdoctemplate-class.md)
