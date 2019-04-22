@@ -9,10 +9,10 @@ helpviewer_keywords:
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
 ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041239"
 ---
 # <a name="codeseg"></a>code_seg
@@ -32,7 +32,7 @@ Spécifie le segment de texte dans lequel les fonctions sont stockées dans un f
 **pop**<br/>
 (Facultatif) Supprime un enregistrement à partir du haut de la pile interne du compilateur.
 
-*'identificateur'*<br/>
+*identifier*<br/>
 (Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.
 
 *identificateur* permet à plusieurs enregistrements à dépiler avec un seul **pop** commande.

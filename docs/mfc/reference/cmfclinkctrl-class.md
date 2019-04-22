@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
 ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776425"
 ---
 # <a name="cmfclinkctrl-class"></a>Cmfclinkctrl, classe
@@ -159,4 +159,4 @@ Un [CSize](../../atl-mfc-shared/reference/csize-class.md) objet qui contient la 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CLinkCtrl, classe](../../mfc/reference/clinkctrl-class.md)<br/>
-[Cmfcbutton, classe](../../mfc/reference/cmfcbutton-class.md)
+[CMFCButton, classe](../../mfc/reference/cmfcbutton-class.md)

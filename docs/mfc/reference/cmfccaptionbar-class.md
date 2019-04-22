@@ -67,10 +67,10 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
 ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781872"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar, classe
@@ -233,7 +233,7 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] True pour activer le bouton, FALSE pour désactiver le bouton.
 
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem*<br/>
+*elem*<br/>
 [in] Un élément de barre de légende pour lequel récupérer l’alignement.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -412,7 +412,7 @@ virtual void OnDrawButton(
 *strButton*<br/>
 [in] Étiquette de texte du bouton.
 
-*case d’option bActivé*<br/>
+*bEnabled*<br/>
 [in] TRUE si le bouton est activé ; FALSE sinon.
 
 ### <a name="remarks"></a>Notes

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
 ms.openlocfilehash: e2ac8e9079b1d30dca077363bbb6cef35960902e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768950"
 ---
 # <a name="casting-operators"></a>Opérateurs de casting
@@ -25,7 +25,7 @@ Il existe plusieurs opérateurs de cast spécifiques au langage C++. Ces opérat
 
 - [reinterpret_cast](../cpp/reinterpret-cast-operator.md) utilisé pour la réinterprétation simple des bits.
 
-- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) utilisée en C / c++ / CLI pour produire du code MSIL vérifiable.
+- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) utilisé dans C++/CLI pour produire du code MSIL vérifiable.
 
 Utilisez **const_cast** et **reinterpret_cast** en dernier recours, car ces opérateurs présentent les mêmes risques que les casts de style ancien. Ils sont néanmoins encore nécessaires pour remplacer complètement les casts de style ancien.
 

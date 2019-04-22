@@ -4,10 +4,10 @@ ms.date: 1/09/2018
 f1_keywords:
 - Concepts
 ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766506"
 ---
 # <a name="mfc-concepts"></a>Concepts MFC
@@ -55,7 +55,7 @@ Explique comment ajouter la prise en charge Internet à vos applications.
 Explique comment utiliser la prise en charge MFC et ATL pour les jeux de caractères multioctets et Unicode.
 
 [MFC COM](../mfc/mfc-com.md)<br/>
-Décrit un sous-ensemble de MFC, conçu pour prendre en charge COM, alors que la plupart de la bibliothèque ATL (Active Template) est conçu pour la programmation COM..
+Décrit un sous-ensemble de MFC, conçu pour prendre en charge COM, alors que la plupart de la bibliothèque ATL (Active Template) est conçu pour la programmation COM.
 
 [Multithreading à l’aide de C++ et de MFC](../parallel/multithreading-with-cpp-and-mfc.md)<br/>
 Décrit les processus et les threads et présente l’approche MFC en matière de multithreading.

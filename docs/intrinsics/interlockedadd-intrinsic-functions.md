@@ -27,10 +27,10 @@ helpviewer_keywords:
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
 ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040953"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd, fonctions intrinsèques
@@ -78,10 +78,10 @@ __int64 _InterlockedAdd64_rel(
 
 #### <a name="parameters"></a>Paramètres
 
-*Terme*<br/>
+*Addend*<br/>
 [in, out] Pointeur vers l’entier à ajouter remplacé par le résultat de l’addition.
 
-*Value*<br/>
+*Valeur*<br/>
 [in] Valeur à ajouter.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -171,5 +171,5 @@ Return value: ffff00ffffffff
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

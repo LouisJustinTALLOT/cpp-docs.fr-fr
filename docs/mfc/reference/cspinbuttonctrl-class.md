@@ -33,10 +33,10 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
 ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776347"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>Paramètres
 
-*inférieur*<br/>
+*lower*<br/>
 Référence à un entier qui reçoit la limite inférieure pour le contrôle.
 
-*supérieur*<br/>
+*upper*<br/>
 Référence à un entier qui reçoit la limite supérieure pour le contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -402,4 +402,4 @@ La fonction membre `SetRange32` définit la plage de 32 bits pour le contrôle d
 [MFC exemple CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CSliderCtrl (classe)](../../mfc/reference/csliderctrl-class.md)
+[CSliderCtrl, classe](../../mfc/reference/csliderctrl-class.md)

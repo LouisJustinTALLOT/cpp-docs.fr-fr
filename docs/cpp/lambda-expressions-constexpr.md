@@ -5,10 +5,10 @@ helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
 ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424181"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>expressions lambda de constexpr en C++
@@ -53,7 +53,7 @@ Si une expression lambda est implicitement ou explicitement **constexpr**et vous
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence du langage C++](../cpp/cpp-language-reference.md)<br/>
-[Objets de fonction dans la bibliothèque C++ Standard](../standard-library/function-objects-in-the-stl.md)<br/>
-[Appel de fonction](../cpp/function-call-cpp.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
+[Objets de fonction dans la bibliothèque standard C++](../standard-library/function-objects-in-the-stl.md)<br/>
+[Appel de fonction ](../cpp/function-call-cpp.md)<br/>
 [for_each](../standard-library/algorithm-functions.md#for_each)
