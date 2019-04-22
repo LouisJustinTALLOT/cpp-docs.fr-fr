@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Utiliser safe_cast dans C++ / c++ / CLI'
+title: 'Procédure : Utiliser safe_cast dans C++/CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
 ms.openlocfilehash: 66faadba9530bc7f3c12513277582e405e1b1b34
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781833"
 ---
-# <a name="how-to-use-safecast-in-ccli"></a>Procédure : Utiliser safe_cast dans C++ / c++ / CLI
+# <a name="how-to-use-safecast-in-ccli"></a>Procédure : Utiliser safe_cast dans C++/CLI
 
-Cet article explique comment utiliser safe_cast dans C++ / c++ / applications de l’interface CLI. Pour plus d’informations sur safe_cast dans C++ / c++ / CX, consultez [safe_cast](../extensions/safe-cast-cpp-component-extensions.md).
+Cet article explique comment utiliser safe_cast dans C++les applications /CLI. Pour plus d’informations sur safe_cast dans C++/CX, consultez [safe_cast](../extensions/safe-cast-cpp-component-extensions.md).
 
 ## <a name="upcasting"></a>Upcast
 

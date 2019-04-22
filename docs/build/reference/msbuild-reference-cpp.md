@@ -4,10 +4,10 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
 ms.openlocfilehash: b6ec6b5d276cb7104cf61c229476596d2a2a7684
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024697"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>Référence MSBuild pour les projets C++
@@ -18,7 +18,7 @@ Si pour une raison quelconque, vous souhaitez utiliser MSBuild directement à pa
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Éléments internes de MSBuild pour les projets C++](msbuild-visual-cpp-overview.md)<br/>
+[Composants internes MSBuild pour les projets C++](msbuild-visual-cpp-overview.md)<br/>
 Informations sur la façon dont les propriétés et cibles sont stockées et consommées.
 
 [Macros courantes pour les propriétés et les commandes de build](common-macros-for-build-commands-and-properties.md)<br/>
@@ -30,7 +30,7 @@ Décrit les différents types de fichiers créé par Visual Studio pour différe
 [Modèles de projet Visual Studio C++](visual-cpp-project-types.md)<br>
 Décrit les types de projet MSBuild qui sont disponibles pour C++.
 
-[Modèles d’élément nouveau C++](using-visual-cpp-add-new-item-templates.md)<br>
+[Modèle de nouvel élément C++](using-visual-cpp-add-new-item-templates.md)<br>
 Décrit les fichiers sources et autres éléments que vous pouvez ajouter à un projet Visual Studio.
 
 [Fichiers d’en-tête précompilés](../creating-precompiled-header-files.md) comment utiliser les fichiers d’en-tête précompilé et comment créer vos propres précompilé accélérer les temps de génération de code.
@@ -40,4 +40,4 @@ Documentation de référence pour les propriétés de projet qui sont définies 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence à la génération C/C++](c-cpp-building-reference.md)
+[Référence de la génération C/C++](c-cpp-building-reference.md)

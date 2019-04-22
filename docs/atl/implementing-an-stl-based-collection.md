@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
 ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779246"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implémentation d’une Collection de basée sur la bibliothèque Standard C++

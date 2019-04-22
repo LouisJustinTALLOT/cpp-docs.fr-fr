@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
 ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774579"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd (classe)
@@ -290,7 +290,7 @@ Appelez cette fonction pour définir les ressources de menu et d’accélérateu
 [Exemple MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Exemple MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [Exemple MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
-[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)<br/>
+[CFrameWnd, classe](../../mfc/reference/cframewnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
-[CMDIFrameWnd (classe)](../../mfc/reference/cmdiframewnd-class.md)
+[CMDIFrameWnd, classe](../../mfc/reference/cmdiframewnd-class.md)

@@ -1,5 +1,5 @@
 ---
-title: v1_enum (attribut de COM C++)
+title: v1_enum (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
 ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024561"
 ---
 # <a name="v1enum"></a>v1_enum
@@ -25,7 +25,7 @@ Indique que le type énuméré spécifié être transmis en tant qu’une entit�
 
 ## <a name="remarks"></a>Notes
 
-Le **v1_enum** attribut C++ a les mêmes fonctionnalités que le [v1_enum](/windows/desktop/Midl/v1-enum) attribut MIDL.
+Le **v1_enum** C++ attribut a les mêmes fonctionnalités que le [v1_enum](/windows/desktop/Midl/v1-enum) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

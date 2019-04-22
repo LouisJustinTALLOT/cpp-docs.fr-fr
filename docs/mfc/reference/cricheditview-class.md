@@ -101,10 +101,10 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773721"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
@@ -298,7 +298,7 @@ Indique si la recherche respecte la casse.
 *bWord*<br/>
 Indique si la recherche doit correspondre à des mots entiers uniquement, pas les parties de mots.
 
-*bsuivant*<br/>
+*bNext*<br/>
 Indique la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -336,7 +336,7 @@ Indique si la recherche respecte la casse.
 *bWord*<br/>
 Indique si la recherche doit correspondre à des mots entiers uniquement, pas les parties de mots.
 
-*bsuivant*<br/>
+*bNext*<br/>
 Indique la direction de la recherche. Si la valeur est TRUE, le sens de la recherche est vers la fin de la mémoire tampon. Si la valeur est FALSE, le sens de la recherche est vers le début de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -786,7 +786,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Chaîne à rechercher.
 
-*bsuivant*<br/>
+*bNext*<br/>
 La direction à rechercher : TRUE indique que le bas ; FALSE, le haut.
 
 *bCase*<br/>
@@ -932,7 +932,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 Texte à remplacer.
 
-*bsuivant*<br/>
+*bNext*<br/>
 Indique la direction de la recherche : La valeur TRUE est arrêté ; FALSE, le haut.
 
 *bCase*<br/>
@@ -1287,5 +1287,5 @@ Remplacement de cette fonction pour modifier la façon dont la vue RichEdit rép
 [Exemple MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView, classe](../../mfc/reference/cctrlview-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CRichEditDoc (classe)](../../mfc/reference/cricheditdoc-class.md)<br/>
+[CRichEditDoc, classe](../../mfc/reference/cricheditdoc-class.md)<br/>
 [CRichEditCntrItem, classe](../../mfc/reference/cricheditcntritem-class.md)

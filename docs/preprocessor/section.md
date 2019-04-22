@@ -9,10 +9,10 @@ helpviewer_keywords:
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
 ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023241"
 ---
 # <a name="section"></a>section
@@ -38,9 +38,9 @@ Une fois qu'une section est définie, elle reste valide pour le reste de la comp
 |Attribut|Description|
 |-|-|
 |**read**|Permet les opérations de lecture sur les données.|
-|**écriture**|Permet les opérations d'écriture sur les données.|
-|**exécuter**|Permet d'exécuter le code.|
-|**partagés**|Partage la section entre tous les processus qui chargent l'image.|
+|**write**|Permet les opérations d'écriture sur les données.|
+|**execute**|Permet d'exécuter le code.|
+|**shared**|Partage la section entre tous les processus qui chargent l'image.|
 |**nopage**|Marque la section comme non paginable ; utile pour les pilotes de périphériques Win32.|
 |**nocache**|Marque la section comme ne pouvant pas être mise en cache ; utile pour les pilotes de périphériques Win32.|
 |**discard**|Marque la section comme ne pouvant pas être supprimée ; utile pour les pilotes de périphériques Win32.|

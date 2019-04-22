@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
 ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779753"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl, classe
@@ -101,7 +101,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Valeur booléenne qui spécifie s’il faut activer le menu contextuel.
 
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags
@@ -294,5 +294,5 @@ Utilisez la méthode [CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist) pour r
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CTreeCtrl Class](../../mfc/reference/ctreectrl-class.md)<br/>
+[CTreeCtrl, classe](../../mfc/reference/ctreectrl-class.md)<br/>
 [CMFCShellListCtrl, classe](../../mfc/reference/cmfcshelllistctrl-class.md)

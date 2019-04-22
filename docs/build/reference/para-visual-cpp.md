@@ -9,10 +9,10 @@ helpviewer_keywords:
 - para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
 ms.openlocfilehash: d8de55344eef7634d8a9a55a32b8ff5beb8852d4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021428"
 ---
 # <a name="ltparagt"></a>&lt;para&gt;
@@ -27,7 +27,7 @@ La balise \<para> est prévue pour une utilisation à l’intérieur d’une bal
 
 #### <a name="parameters"></a>Paramètres
 
-*contenu*<br/>
+*content*<br/>
 Texte du paragraphe.
 
 ## <a name="remarks"></a>Notes

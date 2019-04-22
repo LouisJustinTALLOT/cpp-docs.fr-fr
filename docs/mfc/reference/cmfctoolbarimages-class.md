@@ -141,10 +141,10 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776412"
 ---
 # <a name="cmfctoolbarimages-class"></a>Cmfctoolbarimages, classe
@@ -473,7 +473,7 @@ BOOL Draw(
 *x*<br/>
 [in] Coordonnée X du côté gauche du rectangle dans lequel l’image doit être dessiné.
 
-*o*<br/>
+*y*<br/>
 [in] Coordonnée Y du coin supérieur du rectangle dans lequel l’image doit être dessiné.
 
 *iImageIndex*<br/>
@@ -482,7 +482,7 @@ BOOL Draw(
 *bHilite*<br/>
 [in] TRUE si l’image doit être mis en surbrillance ; Sinon, FALSE.
 
-*bDésactiver*<br/>
+*bDisabled*<br/>
 [in] TRUE si l’image doit être dessiné dans le style désactivé ; Sinon, FALSE.
 
 *bIndeterminate*<br/>
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Paramètres
 
-*%n%nValeur*<br/>
+*nValue*<br/>
 [in] La nouvelle valeur du canal alpha.
 
 ### <a name="remarks"></a>Notes
@@ -1385,6 +1385,6 @@ TRUE si le redimensionnement réussit ; Sinon, FALSE.
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
-[Cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md)<br/>
-[Cmfctoolbarbutton, classe](../../mfc/reference/cmfctoolbarbutton-class.md)
+[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[CMFCToolBar, classe](../../mfc/reference/cmfctoolbar-class.md)<br/>
+[CMFCToolBarButton, classe](../../mfc/reference/cmfctoolbarbutton-class.md)
