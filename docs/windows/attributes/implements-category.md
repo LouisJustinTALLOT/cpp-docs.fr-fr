@@ -1,5 +1,5 @@
 ---
-title: implements_category (attribut de COM C++)
+title: implements_category (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements_category
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
 ms.openlocfilehash: beca804fae8d6e82b4664102b39d76a23e66ca59
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041401"
 ---
 # <a name="implementscategory"></a>implements_category
@@ -30,7 +30,7 @@ L’ID de la catégorie implémentée.
 
 ## <a name="remarks"></a>Notes
 
-Le **implements_category** attribut C++ Spécifie les catégories de composant implémentés par la classe cible. Pour cela, la création d’un mappage de catégorie et en ajoutant des entrées distinctes spécifiées par le **implements_category** attribut. Pour plus d’informations, consultez [quelles sont les catégories de composants et comment faire leur travail ?](https://msdn.microsoft.com/library/windows/desktop/ms694322).
+Le **implements_category** C++ attribut spécifie les catégories de composant implémentés par la classe cible. Pour cela, la création d’un mappage de catégorie et en ajoutant des entrées distinctes spécifiées par le **implements_category** attribut. Pour plus d’informations, consultez [quelles sont les catégories de composants et comment faire leur travail ?](https://msdn.microsoft.com/library/windows/desktop/ms694322).
 
 Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.
 

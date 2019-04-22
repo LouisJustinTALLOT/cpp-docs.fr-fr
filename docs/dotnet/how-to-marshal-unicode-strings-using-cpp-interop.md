@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
 ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777673"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Procédure : Marshaler des chaînes Unicode à l’aide d’interopérabilité C++
@@ -30,7 +30,7 @@ Cette rubrique montre comment les chaînes Unicode peuvent être passé d’une 
 
 ## <a name="example"></a>Exemple
 
-Pour transmettre une chaîne Unicode d’une fonction managée à une fonction non managée, la fonction PtrToStringChars (déclarée dans Vcclr.h) peut être utilisée pour accéder à la mémoire où la chaîne managée est stockée. Étant donné que cette adresse doit être passée à une fonction native, il est important que la mémoire soit épinglée avec [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md) pour empêcher que les données de chaîne ne soient déplacées, devrait un cycle de garbage collection se produire lors de la fonction non managée s’exécute.
+Pour transmettre une chaîne Unicode d’une fonction managée à une fonction non managée, la fonction PtrToStringChars (déclarée dans Vcclr.h) peut être utilisée pour accéder à la mémoire où la chaîne managée est stockée. Étant donné que cette adresse doit être passée à une fonction native, il est important que la mémoire soit épinglée avec [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) pour empêcher que les données de chaîne ne soient déplacées, devrait un cycle de garbage collection se produire lors de la fonction non managée s’exécute.
 
 ```
 // MarshalUnicode1.cpp

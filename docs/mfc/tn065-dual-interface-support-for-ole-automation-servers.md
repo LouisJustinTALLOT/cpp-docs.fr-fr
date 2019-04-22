@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
 ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776672"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065 : Prise en charge de l’Interface double pour les serveurs Automation OLE
@@ -203,7 +203,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 
 ## <a name="passing-dual-interface-pointers"></a>Passage des pointeurs d'interface double
 
-Le passage du pointeur d'interface double n'est pas simple, surtout si vous devez appeler `CCmdTarget::FromIDispatch`. `FromIDispatch` fonctionne uniquement sur MFC `IDispatch` pointeurs. Une méthode pour contourner ce point consiste à rechercher l'installation du pointeur `IDispatch` d'origine mis en place par MFC et de passer le pointeur aux fonctions qui en ont besoin. Exemple :
+Le passage du pointeur d'interface double n'est pas simple, surtout si vous devez appeler `CCmdTarget::FromIDispatch`. `FromIDispatch` fonctionne uniquement sur les pointeurs `IDispatch` de MFC. Une méthode pour contourner ce point consiste à rechercher l'installation du pointeur `IDispatch` d'origine mis en place par MFC et de passer le pointeur aux fonctions qui en ont besoin. Exemple :
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -310,7 +310,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` prend soin de retourner le code d’erreur approprié lorsqu’une exception se produit. `CATCH_ALL_DUAL` Convertit une exception MFC dans à l’aide des informations de gestion des erreurs OLE Automation le `ICreateErrorInfo` interface. (Un exemple `CATCH_ALL_DUAL` macro se trouve dans le fichier MFCDUAL. H dans le [ACDUAL](../overview/visual-cpp-samples.md) exemple. La fonction utilisée pour gérer les exceptions, `DualHandleException`, se trouve dans le fichier MFCDUAL.CPP.) `CATCH_ALL_DUAL` détermine le code d'erreur à retourner en fonction du type d'exception qui s'est produite :
+`CATCH_ALL_DUAL` prend soin de retourner un code d'erreur approprié lorsqu'une exception se produit. `CATCH_ALL_DUAL` Convertit une exception MFC dans à l’aide des informations de gestion des erreurs OLE Automation le `ICreateErrorInfo` interface. (Un exemple `CATCH_ALL_DUAL` macro se trouve dans le fichier MFCDUAL. H dans le [ACDUAL](../overview/visual-cpp-samples.md) exemple. La fonction utilisée pour gérer les exceptions, `DualHandleException`, se trouve dans le fichier MFCDUAL.CPP.) `CATCH_ALL_DUAL` détermine le code d'erreur à retourner en fonction du type d'exception qui s'est produite :
 
 - [COleDispatchException](../mfc/reference/coledispatchexception-class.md) : dans ce cas, `HRESULT` est construit en utilisant le code suivant :
 

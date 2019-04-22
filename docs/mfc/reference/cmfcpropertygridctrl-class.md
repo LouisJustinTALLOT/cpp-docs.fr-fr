@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781976"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
@@ -284,10 +284,10 @@ Le tableau suivant répertorie les quatre types de propriété de sélection :
 
 |Classe|Description|
 |-----------|-----------------|
-|[Cmfcpropertygridproperty, classe](../../mfc/reference/cmfcpropertygridproperty-class.md)|Une propriété à usage général qui est utilisée pour spécifier la valeur des chaînes, valeurs booléennes, dates et ainsi de suite.|
-|[Cmfcpropertygridcolorproperty, classe](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Une propriété qui est utilisée pour sélectionner une valeur de couleur.|
-|[Cmfcpropertygridfileproperty, classe](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Une propriété qui est utilisée pour sélectionner un fichier.|
-|[Cmfcpropertygridfontproperty, classe](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Une propriété qui est utilisée pour sélectionner une police.|
+|[CMFCPropertyGridProperty, classe](../../mfc/reference/cmfcpropertygridproperty-class.md)|Une propriété à usage général qui est utilisée pour spécifier la valeur des chaînes, valeurs booléennes, dates et ainsi de suite.|
+|[CMFCPropertyGridColorProperty, classe](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Une propriété qui est utilisée pour sélectionner une valeur de couleur.|
+|[CMFCPropertyGridFileProperty, classe](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Une propriété qui est utilisée pour sélectionner un fichier.|
+|[CMFCPropertyGridFontProperty, classe](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Une propriété qui est utilisée pour sélectionner une police.|
 
 ## <a name="illustrations"></a>Illustrations
 
@@ -558,7 +558,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer la zone de description ; FALSE pour désactiver la zone de description. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
@@ -578,7 +578,7 @@ void EnableHeaderCtrl(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le contrôle header ; FALSE pour désactiver le contrôle header. La valeur par défaut est TRUE.
 
 *lpszLeftColumn*<br/>
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Paramètres
 
-*couleur*<br/>
+*color*<br/>
 [in] Une valeur de couleur RVB.
 
 ### <a name="remarks"></a>Notes

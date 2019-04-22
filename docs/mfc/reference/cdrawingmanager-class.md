@@ -57,10 +57,10 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781690"
 ---
 # <a name="cdrawingmanager-class"></a>Cdrawingmanager, classe
@@ -927,7 +927,7 @@ static void __stdcall SetAlphaPixel(
 *x*<br/>
 [in] La coordonnée horizontale du pixel de couleur.
 
-*o*<br/>
+*y*<br/>
 [in] Coordonnée verticale du pixel de couleur.
 
 *percent*<br/>
@@ -971,8 +971,8 @@ static void __stdcall SetPixel(
 |*cx*|[in] La largeur totale de l’image bitmap.|
 |*cy*|[in] La hauteur totale de l’image bitmap.|
 |*x*|[in] Coordonnée x du pixel de la bitmap à modifier.|
-|*o*|[in] Coordonnée y du pixel de la bitmap à modifier.|
-|*couleur*|[in] La nouvelle couleur du pixel identifié par les coordonnées fournies.|
+|*y*|[in] Coordonnée y du pixel de la bitmap à modifier.|
+|*color*|[in] La nouvelle couleur du pixel identifié par les coordonnées fournies.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 

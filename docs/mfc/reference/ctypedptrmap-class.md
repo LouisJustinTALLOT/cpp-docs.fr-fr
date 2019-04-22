@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781794"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap (classe)
@@ -40,7 +40,7 @@ Classe de base de la classe map de pointeurs typés ; doit être une classe de 
 *KEY*<br/>
 Classe de l’objet utilisé comme clé pour la carte.
 
-*VALUE*<br/>
+*VALEUR*<br/>
 Classe de l’objet stocké dans la classe map.
 
 ## <a name="members"></a>Membres
@@ -100,7 +100,7 @@ Paramètre de modèle qui spécifie le type des clés de la carte.
 *rKey*<br/>
 Spécifie la clé retournée de l’élément récupéré.
 
-*VALUE*<br/>
+*VALEUR*<br/>
 Paramètre de modèle qui spécifie le type des valeurs de la carte.
 
 *rValue*<br/>
@@ -127,10 +127,10 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *BASE_CLASS*<br/>
 Paramètre de modèle en spécifiant la classe de base de la classe de cette carte.
 
-*clé*<br/>
+*key*<br/>
 La clé de l’élément à rechercher.
 
-*VALUE*<br/>
+*VALEUR*<br/>
 Paramètre de modèle qui spécifie le type des valeurs stockées dans ce mappage.
 
 *rValue*<br/>
@@ -154,13 +154,13 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Paramètres
 
-*VALUE*<br/>
+*VALEUR*<br/>
 Paramètre de modèle qui spécifie le type des valeurs stockées dans ce mappage.
 
 *BASE_CLASS*<br/>
 Paramètre de modèle en spécifiant la classe de base de la classe de cette carte.
 
-*clé*<br/>
+*key*<br/>
 La clé de l’élément recherché ou la création de la carte.
 
 ### <a name="remarks"></a>Notes
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *KEY*<br/>
 Paramètre de modèle qui spécifie le type des clés de la carte.
 
-*clé*<br/>
+*key*<br/>
 Clé de l’élément à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -204,7 +204,7 @@ void SetAt(KEY key, VALUE newValue);
 *KEY*<br/>
 Paramètre de modèle qui spécifie le type des clés de la carte.
 
-*clé*<br/>
+*key*<br/>
 Spécifie la valeur de clé de la newValue.
 
 *newValue*<br/>
