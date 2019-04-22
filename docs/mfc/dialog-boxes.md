@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
 ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778492"
 ---
 # <a name="dialog-boxes"></a>Boîtes de dialogue
@@ -33,7 +33,7 @@ La plupart des boîtes de dialogue sont modales, ce qui oblige l’utilisateur f
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 
-- [Exemple : Affichage d’une boîte de dialogue via une commande de Menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [Exemple : Affichage d’une boîte de dialogue via une commande de Menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [Composants de boîte de dialogue dans le framework](../mfc/dialog-box-components-in-the-framework.md)
 
@@ -67,4 +67,4 @@ La plupart des boîtes de dialogue sont modales, ce qui oblige l’utilisateur f
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éléments de l'interface utilisateur](../mfc/user-interface-elements-mfc.md)
+[Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)

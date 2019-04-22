@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
 ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775255"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar, classe
@@ -578,5 +578,5 @@ Par défaut, ce mode est désactivé.
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CBaseTabbedPane, classe](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
-[Cmfcoutlookbarpane, classe](../../mfc/reference/cmfcoutlookbarpane-class.md)
+[CMFCOutlookBarTabCtrl, classe](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[CMFCOutlookBarPane, classe](../../mfc/reference/cmfcoutlookbarpane-class.md)

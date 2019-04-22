@@ -23,10 +23,10 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
 ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781859"
 ---
 # <a name="colepropertiesdialog-class"></a>Colepropertiesdialog, classe
@@ -265,4 +265,4 @@ L'implémentation par défaut n'exécute aucune opération. Vous devez substitue
 [COleDialog, classe](../../mfc/reference/coledialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog, classe](../../mfc/reference/coledialog-class.md)<br/>
-[CPropertyPage (classe)](../../mfc/reference/cpropertypage-class.md)
+[CPropertyPage, classe](../../mfc/reference/cpropertypage-class.md)

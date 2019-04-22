@@ -6,10 +6,10 @@ f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
 ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041388"
 ---
 # <a name="callback-function-wrl"></a>Fonction de rappel (WRL)
@@ -227,13 +227,13 @@ Paramètre de modèle qui spécifie le type du huitième argument de la méthode
 *TArg9*<br/>
 Paramètre de modèle qui spécifie le type du neuvième argument de la méthode de rappel.
 
-*rappel*<br/>
+*callback*<br/>
 Objet qui représente l'objet de rappel et sa fonction membre.
 
 *object*<br/>
 Objet dont la fonction membre est appelée lorsqu'un événement se produit.
 
-*méthode*<br/>
+*method*<br/>
 Fonction membre à appeler lorsqu'un événement se produit.
 
 ## <a name="return-value"></a>Valeur de retour

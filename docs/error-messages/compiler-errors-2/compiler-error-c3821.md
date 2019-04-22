@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
 ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778245"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777924"
 ---
 # <a name="compiler-error-c3821"></a>Erreur du compilateur C3821
 

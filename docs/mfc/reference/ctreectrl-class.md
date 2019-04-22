@@ -163,10 +163,10 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
 ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58782002"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
@@ -1739,7 +1739,7 @@ BOOL SetCheck(
 *hItem*<br/>
 HTREEITEM pour recevoir le changement d’état de vérification.
 
-*Consultez*<br/>
+*fCheck*<br/>
 Indique si l’élément de contrôle d’arborescence doit être activée ou désactivée. Par défaut, `SetCheck` définit l’élément à vérifier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2344,4 +2344,4 @@ Le *lParam1* et *lParam2* paramètres correspondent à la `lParam` membre de la 
 [MFC exemple CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CImageList (classe)](../../mfc/reference/cimagelist-class.md)
+[CImageList, classe](../../mfc/reference/cimagelist-class.md)

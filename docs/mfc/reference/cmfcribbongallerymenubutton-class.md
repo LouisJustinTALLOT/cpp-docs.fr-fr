@@ -19,10 +19,10 @@ helpviewer_keywords:
 - CMFCRibbonGalleryMenuButton [MFC], IsEmptyMenuAllowed
 ms.assetid: 4d459d9b-8b1a-4371-92f6-dc4ce6cc42c8
 ms.openlocfilehash: b63eab7c1e4d03a9103795892603b819eb7d02f3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777140"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Cmfcribbongallerymenubutton, classe
@@ -200,5 +200,5 @@ virtual BOOL IsEmptyMenuAllowed() const;
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[Cmfctoolbarmenubutton, classe](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
-[Cmfcribbongallery, classe](../../mfc/reference/cmfcribbongallery-class.md)
+[CMFCToolBarMenuButton, classe](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
+[CMFCRibbonGallery, classe](../../mfc/reference/cmfcribbongallery-class.md)

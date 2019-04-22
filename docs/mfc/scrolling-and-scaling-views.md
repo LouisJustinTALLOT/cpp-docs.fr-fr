@@ -9,10 +9,10 @@ helpviewer_keywords:
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777575"
 ---
 # <a name="scrolling-and-scaling-views"></a>Défilement et mise à l'échelle des vues
@@ -35,7 +35,7 @@ Souvent, la taille d’un document est supérieure à la taille de qu'affichage 
 
 N’importe quelle vue peut gérer les messages de barre de défilement dans son `OnHScroll` et `OnVScroll` fonctions membres. Vous pouvez soit implémenter barre de défilement la gestion des messages dans ces fonctions, fait tout le travail vous-même, ou vous pouvez utiliser la `CScrollView` classe pour gérer le défilement pour vous.
 
-`CScrollView` effectue les opérations suivantes :
+`CScrollView` effectue les actions suivantes :
 
 - Gère les tailles de fenêtre et de la fenêtre d’affichage et les modes de mappage
 

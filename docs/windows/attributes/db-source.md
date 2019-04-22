@@ -1,5 +1,5 @@
 ---
-title: db_source (attribut de COM C++)
+title: db_source (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_source
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
 ms.openlocfilehash: 884cab78d64c20bef00958f0cc0319281fd69921
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026329"
 ---
 # <a name="dbsource"></a>db_source

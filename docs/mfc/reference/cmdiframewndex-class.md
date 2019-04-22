@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778557"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx, classe
@@ -641,7 +641,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] TRUE pour activer le chargement de l’état d’ancrage, FALSE pour désactiver le chargement de l’état d’ancrage.
 
 ### <a name="remarks"></a>Notes
@@ -658,7 +658,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Si la valeur est TRUE, la fonctionnalité de groupes avec onglet MDI est activée ; Si la valeur est FALSE, la fonctionnalité de groupes avec onglet MDI est désactivée.
 
 *params*<br/>
@@ -707,7 +707,7 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 Spécifie si les onglets sont activées.
 
 *bIcons*<br/>
@@ -783,7 +783,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*bActivez*<br/>
+*bEnable*<br/>
 [in] Si la valeur est TRUE, la gestion automatique du menu de volet est activée ; Si la valeur est FALSE, la gestion automatique est désactivée.
 
 *uiCustomizeCmd*<br/>
@@ -1047,7 +1047,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Pointeur vers le volet avant ou après lequel insérer le volet.
 
-*exécuteront-ils*<br/>
+*bAfter*<br/>
 [in] Si la valeur est TRUE, *pControlBar* est insérée après *pTarget*. Si la valeur est FALSE, *pControlBar* est inséré avant *pTarget*.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1238,7 +1238,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bsuivant*<br/>
+*bNext*<br/>
 [in] Si la valeur est TRUE, déplacez l’onglet au groupe d’onglets suivant. Si la valeur est FALSE, déplacez-le vers le groupe d’onglets précédent.
 
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Paramètres
 
-*Menu*<br/>
+*menu*<br/>
 [in] Une référence à un [CMenu (classe)](../../mfc/reference/cmenu-class.md) objet à modifier.
 
 *uiViewUserToolbarCmdFirst*<br/>
