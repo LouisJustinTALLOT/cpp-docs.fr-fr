@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
 ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780676"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777132"
 ---
 # <a name="compiler-error-c2440"></a>Erreur du compilateur C2440
 
@@ -194,7 +194,7 @@ L’erreur C2440 peut également se produire en raison de modifications dans la 
 
 ## <a name="example"></a>Exemple
 
-Le compilateur Visual C++ n’autorise plus le [const_cast, opérateur](../../cpp/const-cast-operator.md) pour effectuer un cast aval lorsque code source qui utilise **/CLR** programmation est compilée.
+L’élément visuel C++ compilateur n’autorise plus le [const_cast, opérateur](../../cpp/const-cast-operator.md) pour effectuer un cast aval lorsque code source qui utilise **/CLR** programmation est compilée.
 
 Pour résoudre cette erreur C2440, utilisez l’opérateur de cast correct. Pour plus d’informations, consultez [opérateurs de Casting](../../cpp/casting-operators.md).
 

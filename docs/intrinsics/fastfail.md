@@ -3,10 +3,10 @@ title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
 ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041499"
 ---
 # <a name="fastfail"></a>__fastfail
@@ -51,7 +51,7 @@ Les demandes de basculement rapide en mode utilisateur apparaissent comme une ex
 
 La prise en charge du mécanisme de basculement rapide natif est apparue dans Windows 8. Les systèmes d'exploitation Windows qui ne prennent pas en charge l'instruction de basculement rapide en mode natif traitent généralement une demande de basculement rapide comme une violation d'accès ou comme une vérification d'erreur `UNEXPECTED_KERNEL_MODE_TRAP`. Dans ces cas-là, le programme est tout de même arrêté, mais pas nécessairement au rapidement.
 
-`__fastfail` est uniquement disponible comme intrinsèque.
+`__fastfail` est uniquement disponible en tant qu'intrinsèque.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -65,4 +65,4 @@ La prise en charge du mécanisme de basculement rapide natif est apparue dans Wi
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

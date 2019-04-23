@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
 ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424142"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Générer avec plusieurs processus)
@@ -127,6 +127,6 @@ L’indication pour décider s’il faut utiliser MSBuild ou **/MP** technologie
 
 ## <a name="see-also"></a>Voir aussi
 
-[#import, directive](../../preprocessor/hash-import-directive-cpp.md)<br/>
-[Référence de la ligne de commande](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/ZF (génération PDB plus rapide)](zf.md)<br/>
+[directive #import](../../preprocessor/hash-import-directive-cpp.md)<br/>
+[Informations de référence sur la ligne de commande](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
+[/Zf (génération PDB plus rapide)](zf.md)<br/>

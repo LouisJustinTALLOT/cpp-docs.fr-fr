@@ -15,10 +15,10 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
 ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424091"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Types de fichiers créés pour les projets C++ de Visual Studio
@@ -29,7 +29,7 @@ Plusieurs types de fichiers sont associés à des projets Visual Studio pour les
 
 - [Projets CLR](files-created-for-clr-projects.md)
 
-- [Fichiers d'en-tête et fichiers sources de contrôle ou de programme ATL](atl-program-or-control-source-and-header-files.md)
+- [Fichiers d’en-tête et fichiers sources de contrôle ou de programme ATL](atl-program-or-control-source-and-header-files.md)
 
 - [Fichiers d'en-tête et fichiers sources de contrôle ou de programme MFC](mfc-program-or-control-source-and-header-files.md)
 
@@ -37,7 +37,7 @@ Plusieurs types de fichiers sont associés à des projets Visual Studio pour les
 
 - [Fichiers de ressources](resource-files-cpp.md)
 
-- [Fichiers d'aide (WinHelp)](help-files-winhelp.md)
+- [Fichiers d’aide (WinHelp)](help-files-winhelp.md)
 
 - [Fichiers hint](hint-files.md)
 
