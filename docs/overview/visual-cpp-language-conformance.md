@@ -6,10 +6,10 @@ ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898802"
 ---
 # <a name="visual-c-language-conformance"></a>Conformité du langage Visual C++
@@ -25,13 +25,13 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 
 |Domaine de fonctionnalités| |
 |----|---|
-|__Fonctionnalités principales du langage C++03/11__|__Prise en charge__|
+|__Fonctionnalités du langage principal C++03/11__|__Prise en charge__|
 |&nbsp;&nbsp;Tout le reste|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;Recherche de noms en deux phases|VS 2017 15.7 <sup>[B](#note_B)</sup>|
 |&nbsp;&nbsp;[N2634 SFINAE sur les expressions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 Préprocesseur C99](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|Partiel <sup>[D](#note_D)</sup>|
 |&nbsp;&nbsp;[N1988 Types entiers étendus](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf)|N/A <sup>[E](#note_E)</sup>|
-|__Fonctionnalités principales du langage C++14__|__Prise en charge__|
+|__Fonctionnalités du langage principal C++14__|__Prise en charge__|
 |&nbsp;&nbsp;[N3323 Formulation optimisée pour les conversions contextuelles](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 Littéraux binaires](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3638 Types de retour auto et decltype(auto)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
@@ -44,7 +44,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 |&nbsp;&nbsp;[N3652 Fonctions constexpr étendues](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017|
 |&nbsp;&nbsp;[N3653 NSDMI pour agrégats](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)|VS 2017|
 |&nbsp;&nbsp;[N3664 Prévention/fusion des allocations](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3664.html)|N/A <sup>[F](#note_F)</sup>|
-|__Fonctionnalités principales du langage C++17__|__Prise en charge__|
+|__C++17 Fonctionnalités du langage principal C++17__|__Prise en charge__|
 |&nbsp;&nbsp;[N4086 Suppression des trigraphes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3922 Nouvelles règles pour auto avec braced-init-lists](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4051 typename dans les paramètres template template](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -88,7 +88,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 
 |Domaine de fonctionnalités| |
 |----|---|
-|__Fonctionnalités principales du langage C++17 (Rapports des anomalies)__|__Prise en charge__|
+|__Fonctionnalités du langage principal C++17 (rapport de défauts)__|__Prise en charge__|
 |&nbsp;&nbsp;[P0702R1 Résolution de la déduction d’argument de modèle de classe pour les ctors de la liste d’initialiseurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0588R1 Simplification de la capture lambda implicite](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Non|
 |&nbsp;&nbsp;[CWG 1581 : Quand les fonctions membres constexpr sont-elles définies ?](https://wg21.cmeerw.net/cwg/issue1581)|Non|
@@ -98,7 +98,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 
 |Domaine de fonctionnalités| |
 |----|---|
-|__Fonctionnalités principales du langage C++20__|__Prise en charge__|
+|__Fonctionnalités du langage principal C++20__|__Prise en charge__|
 |&nbsp;&nbsp;[P0306R4 Ajout de &#95;&#95;VA_OPT&#95;&#95; pour l’omission de virgule et la suppression de virgule](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0306r4.html)|Non|
 |&nbsp;&nbsp;[P0329R4 Initialisation désignée](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|Non|
 |&nbsp;&nbsp;[P0409R2 Autorisation de capture lambda [=, this]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|Non|
@@ -313,10 +313,10 @@ Actuellement, les éléments suivants ne sont pas parallélisés :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence du langage C++](../cpp/cpp-language-reference.md)<br/>
-[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
+[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>
 [Améliorations de la conformité de C++ dans Visual Studio](cpp-conformance-improvements.md)<br/>
 [Nouveautés de Visual C++ dans Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Historique des modifications de Visual C++ entre 2003 et 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Nouveautés de Visual C++ entre 2003 et 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
-[Blog de l’équipe Visual C++](https://blogs.msdn.microsoft.com/vcblog/)
+[Blog de l’équipe Visual C++](https://blogs.msdn.microsoft.com/vcblog/)
