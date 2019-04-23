@@ -7,10 +7,10 @@ helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
 ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029912"
 ---
 # <a name="importidl"></a>importidl
@@ -30,7 +30,7 @@ Identifie le nom du fichier .idl que vous souhaitez fusionner avec le fichier .i
 
 ## <a name="remarks"></a>Notes
 
-Le **importidl** attribut C++ place la section en dehors du bloc de bibliothèque (dans *idl_file*) dans le fichier .idl généré de votre programme et de la section de la bibliothèque (dans *idl_file*) dans la bibliothèque de section de votre programme généré le fichier .idl.
+Le **importidl** C++ attribut place la section en dehors du bloc de bibliothèque (dans *idl_file*) dans le fichier .idl généré de votre programme et de la section de la bibliothèque (dans *idl_file*) dans la section de la bibliothèque de votre fichier de programme .idl généré.
 
 Vous pouvez souhaiter utiliser **importidl**, par exemple, si vous souhaitez utiliser un fichier .idl codé manuellement avec votre fichier .idl généré.
 
@@ -60,7 +60,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 
 [Attributs de compilateur](compiler-attributes.md)<br/>
 [Attributs autonomes](stand-alone-attributes.md)<br/>
-[d'importation](import.md)<br/>
+[import](import.md)<br/>
 [importlib](importlib.md)<br/>
 [include](include-cpp.md)<br/>
 [includelib](includelib-cpp.md)

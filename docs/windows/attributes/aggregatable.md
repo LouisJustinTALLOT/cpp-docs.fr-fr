@@ -7,10 +7,10 @@ helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
 ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029289"
 ---
 # <a name="aggregatable"></a>aggregatable
@@ -25,7 +25,7 @@ Indique que la classe prend en charge l’agrégation.
 
 ### <a name="parameters"></a>Paramètres
 
-*par défaut*<br/>
+*value*<br/>
 (Facultatif) Un paramètre pour indiquer quand l’objet COM peut être agrégée :
 
 - `never` L’objet COM ne peut pas être agrégée.
@@ -84,4 +84,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agrégation](/windows/desktop/com/aggregation)
+[Aggregation](/windows/desktop/com/aggregation)

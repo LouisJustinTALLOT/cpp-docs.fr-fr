@@ -9,10 +9,10 @@ helpviewer_keywords:
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
 ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029620"
 ---
 # <a name="constseg"></a>const_seg
@@ -32,7 +32,7 @@ Spécifie le segment où [const](../cpp/const-cpp.md) variables sont stockées d
 **pop**<br/>
 (Facultatif) Supprime un enregistrement à partir du haut de la pile interne du compilateur.
 
-*'identificateur'*<br/>
+*identifier*<br/>
 (Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilé.
 
 À l’aide de *identificateur* permet à plusieurs enregistrements à dépiler avec une seule **pop** commande.
@@ -51,7 +51,7 @@ Les fichiers OBJ peuvent être affichés avec le [dumpbin](../build/reference/du
 
 La définition d'un objet qui requiert une initialisation dynamique dans un `const_seg` entraîne un comportement non défini.
 
-`#pragma const_seg` sans paramètres réinitialise le segment sur .rdata.
+`#pragma const_seg` sans paramètre réinitialise le segment sur .rdata.
 
 ## <a name="example"></a>Exemple
 

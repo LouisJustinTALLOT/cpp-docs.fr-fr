@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
 ms.openlocfilehash: 1d84e9306dcd468153f38cc0c3085b43388e1dbd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029419"
 ---
 # <a name="assume"></a>__assume
@@ -43,7 +43,7 @@ Si l'instruction `__assume` est écrite sous la forme d'une contradiction (expre
 > [!WARNING]
 >  Un programme ne doit pas contenir d'instruction `__assume` non valide sur un chemin d'accès accessible. Si le compilateur peut atteindre une instruction `__assume` non valide, le programme peut provoquer un comportement imprévisible et potentiellement dangereux.
 
-`__assume` n’est pas une véritable intrinsèque. Vous n'êtes pas obligé de la déclarer en tant que fonction et vous ne pouvez pas l'utiliser dans une directive `#pragma intrinsic`. Bien qu'aucun code ne soit généré, le code généré par l'optimiseur est affecté.
+`__assume` n'est pas une véritable intrinsèque. Vous n'êtes pas obligé de la déclarer en tant que fonction et vous ne pouvez pas l'utiliser dans une directive `#pragma intrinsic`. Bien qu'aucun code ne soit généré, le code généré par l'optimiseur est affecté.
 
 Utilisez `__assume` dans un [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) uniquement lorsque l’assertion n’est pas récupérable. N'utilisez pas `__assume` dans une méthode assert pour laquelle vous avez du code de récupération d'erreur ultérieur, car le compilateur peut optimiser le code de gestion des erreurs.
 
@@ -118,5 +118,5 @@ Malheureusement, cette utilisation d'`assert` empêche le compilateur d'effectue
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)

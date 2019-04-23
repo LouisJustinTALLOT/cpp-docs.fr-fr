@@ -239,10 +239,10 @@ helpviewer_keywords:
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
 ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032321"
 ---
 # <a name="crowset-class"></a>CRowset, classe
@@ -273,7 +273,7 @@ Classe d’accesseur. La valeur par défaut est `CAccessorBase`.
 |-|-|
 |[AddRefRows](#addrefrows)|Incrémente le décompte de références associé à la ligne actuelle.|
 |[Fermer](#close)|Libère les lignes et en cours `IRowset` interface.|
-|[Comparer](#compare)|Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
+|[Compare](#compare)|Compare deux crée des signets à l’aide de [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Crée un `CRowset` de l’objet et l’associe (éventuellement) une `IRowset` interface fournie en tant que paramètre.|
 |[Supprimer](#delete)|Supprime des lignes de l’ensemble de lignes à l’aide [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Recherche la ligne correspondante suivante après le signet spécifié.|
@@ -292,8 +292,8 @@ Classe d’accesseur. La valeur par défaut est `CAccessorBase`.
 |[MoveToRatio](#movetoratio)|Extrait les lignes à partir d’un emplacement de fractions de seconde dans l’ensemble de lignes.|
 |[ReleaseRows](#releaserows)|Appels [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) pour libérer le handle de ligne actuelle.|
 |[SetData](#setdata)|Définit les valeurs de données dans une ou plusieurs colonnes d’une ligne en utilisant [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
-|[Annuler](#undo)|Annule toutes les modifications apportées à une ligne depuis la dernière extraction ou [mise à jour](../../data/oledb/crowset-update.md).|
-|[Mise à jour](#update)|Transmet les modifications apportées à la ligne en cours depuis la dernière extraction ou de la mise à jour en attente.|
+|[Annulation](#undo)|Annule toutes les modifications apportées à une ligne depuis la dernière extraction ou [mise à jour](../../data/oledb/crowset-update.md).|
+|[Mettre à jour](#update)|Transmet les modifications apportées à la ligne en cours depuis la dernière extraction ou de la mise à jour en attente.|
 |[UpdateAll](#updateall)|Transmet les modifications apportées à toutes les lignes depuis la dernière extraction ou de la mise à jour en attente.|
 
 ## <a name="remarks"></a>Notes
@@ -348,10 +348,10 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 #### <a name="parameters"></a>Paramètres
 
-*Signet1*<br/>
+*Bookmark1*<br/>
 [in] Le premier signet à comparer.
 
-*Signet2*<br/>
+*Bookmark2*<br/>
 [in] Le deuxième signet à comparer.
 
 *pComparison*<br/>
@@ -741,7 +741,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Paramètres
 
-*signet*<br/>
+*bookmark*<br/>
 [in] Un signet est l’emplacement à partir duquel vous souhaitez extraire des données.
 
 *lSkip*<br/>
@@ -940,5 +940,5 @@ Une valeur HRESULT standard.
 [Exemple DBVIEWER](../../overview/visual-cpp-samples.md)<br/>
 [Exemple multiRead](../../overview/visual-cpp-samples.md)<br/>
 [Attributs multiRead](../../overview/visual-cpp-samples.md)<br/>
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

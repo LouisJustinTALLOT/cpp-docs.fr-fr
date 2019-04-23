@@ -1,5 +1,5 @@
 ---
-title: wire_marshal (attribut de COM C++)
+title: wire_marshal (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
 ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029860"
 ---
 # <a name="wiremarshal"></a>wire_marshal
@@ -25,7 +25,7 @@ Spécifie un type de données qui sera utilisé pour la transmission au lieu d�
 
 ## <a name="remarks"></a>Notes
 
-Le **wire_marshal** attribut C++ a les mêmes fonctionnalités que le [wire_marshal](/windows/desktop/Midl/wire-marshal) attribut MIDL.
+Le **wire_marshal** C++ attribut a les mêmes fonctionnalités que le [wire_marshal](/windows/desktop/Midl/wire-marshal) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

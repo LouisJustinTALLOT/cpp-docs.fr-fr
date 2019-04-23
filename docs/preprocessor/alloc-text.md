@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
 ms.openlocfilehash: 399e8956a511f289b480e66db7f03cac0a6c7c20
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031361"
 ---
 # <a name="alloctext"></a>alloc_text
@@ -28,7 +28,7 @@ textsection
 
 ## <a name="remarks"></a>Notes
 
-Le **alloc_text** pragma ne gère pas les fonctions membres C++ ni les fonctions surchargées. Il n’est applicable uniquement aux fonctions déclarées avec liaison C : autrement dit, les fonctions déclarées avec le **extern « C »** spécification de liaison. Si vous tentez d'utiliser ce pragma sur une fonction avec une liaison C++, une erreur de compilateur est générée.
+Le **alloc_text** pragma ne gère pas C++ fonctions membres ou les fonctions surchargées. Il n’est applicable uniquement aux fonctions déclarées avec liaison C : autrement dit, les fonctions déclarées avec le **extern « C »** spécification de liaison. Si vous tentez d'utiliser ce pragma sur une fonction avec une liaison C++, une erreur de compilateur est générée.
 
 Depuis la fonction en utilisant adressage `__based` n’est pas compatible, en spécifiant les emplacements de section nécessite l’utilisation de la **alloc_text** pragma. Le nom spécifié par *textsection* doit être placée entre guillemets doubles.
 

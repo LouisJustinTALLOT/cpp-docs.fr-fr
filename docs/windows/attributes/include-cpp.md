@@ -7,10 +7,10 @@ helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
 ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033695"
 ---
 # <a name="include-c"></a>include (C++)
@@ -62,7 +62,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs autonomes](stand-alone-attributes.md)<br/>
-[d'importation](import.md)<br/>
+[import](import.md)<br/>
 [importidl](importidl.md)<br/>
 [includelib](includelib-cpp.md)<br/>
 [importlib](importlib.md)

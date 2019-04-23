@@ -7,10 +7,10 @@ helpviewer_keywords:
 - navigation [C++], in record view
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
 ms.openlocfilehash: 88c76d31ae542d35476473888ad6282e3693405f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029509"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Prise en charge de Navigation dans une vue de l'enregistrement (Accès aux données MFC)
@@ -23,5 +23,5 @@ Cette rubrique explique comment prendre en charge le déplacement d’un enregis
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d'enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

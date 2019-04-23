@@ -7,15 +7,15 @@ helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
 ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034087"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 
-**Section spécifique à C++**
+**Spécifique à C++**
 
 Indique que la bibliothèque de types est écrite dans le fichier .tlh et que le code généré par attributs est conservé.
 
@@ -46,9 +46,9 @@ Peut avoir l'une des deux valeurs suivantes :
 
 ## <a name="remarks"></a>Notes
 
-**FIN de la section spécifique à C++**
+**FIN spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import, directive](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

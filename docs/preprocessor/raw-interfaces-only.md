@@ -7,14 +7,14 @@ helpviewer_keywords:
 - raw_interfaces_only attribute
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
 ms.openlocfilehash: 48133b85ccb5ddb8de8e6cb614d41cde22dac66b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028258"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**Section spécifique à C++**
+**Spécifique à C++**
 
 Supprime la génération de fonctions de wrapper de la gestion des erreurs et [propriété](../cpp/property-cpp.md) déclarations qui utilisent ces fonctions wrapper.
 
@@ -30,9 +30,9 @@ Le **raw_interfaces_only** attribut provoque également le préfixe par défaut 
 
 Cet attribut vous permet d'exposer uniquement le contenu de bas niveau de la bibliothèque de types.
 
-**FIN de la section spécifique à C++**
+**FIN spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import, directive](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
 ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030619"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procédure pas à pas : Création d’un programme C++ Standard (C++)
@@ -22,7 +22,7 @@ Vous pouvez utiliser Visual C++ dans l’environnement de développement intégr
 
 Vous pouvez taper votre propre programme C++ ou utiliser un des exemples de programmes. L’exemple de programme dans cette procédure pas à pas est une application console. Cette application utilise le `set` conteneur dans la bibliothèque C++ Standard.
 
-Visual C++ suit la norme C++ 2003, avec les exceptions majeures : recherche de nom à deux étapes, spécifications d’exception et exportation. En outre, Visual C++ prend en charge plusieurs fonctionnalités C ++ 0 x, par exemple, les expressions lambda, auto, static_assert, références rvalue et les modèles extern.
+Visual C++ suit la norme C++ 2003, avec les exceptions majeures : recherche de nom à deux étapes, spécifications d’exception et exportation. En outre, Visual C++ prend en charge plusieurs fonctionnalités C ++ 0 x, pour l’exemple, les expressions lambda, auto, static_assert, références rvalue et les modèles extern.
 
 > [!NOTE]
 > Si la conformité avec la norme est obligatoire, utilisez la `/Za` option du compilateur pour désactiver les extensions Microsoft à la norme. Pour plus d’informations, consultez [/Za, /Ze (désactiver les Extensions de langage)](../build/reference/za-ze-disable-language-extensions.md).
@@ -78,5 +78,5 @@ Pour compléter cette procédure pas à pas, vous devez comprendre les notions d
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence du langage C++](../cpp/cpp-language-reference.md)<br/>
-[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
+[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>

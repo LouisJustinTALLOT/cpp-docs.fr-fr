@@ -24,10 +24,10 @@ helpviewer_keywords:
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
 ms.openlocfilehash: dc5a823951e07af96efceec52d2aa23552c2d002
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029484"
 ---
 # <a name="dialog-editor-c"></a>Éditeur de boîtes de dialogue (C++)
@@ -126,8 +126,8 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[éditeurs de ressources](../windows/resource-editors.md)<br/>
-[Procédure : Créer une boîte de dialogue](../windows/creating-a-new-dialog-box.md)<br/>
+[Éditeurs de ressources](../windows/resource-editors.md)<br/>
+[Guide pratique pour créer une boîte de dialogue](../windows/creating-a-new-dialog-box.md)<br/>
 [Contrôles de boîte de dialogue](../windows/controls-in-dialog-boxes.md)<br/>
 <!--
 [Controls](../mfc/controls-mfc.md)<br/>

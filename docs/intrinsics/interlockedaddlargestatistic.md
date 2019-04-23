@@ -9,10 +9,10 @@ helpviewer_keywords:
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
 ms.openlocfilehash: 6f9d599a8d7668c6c8a37846275e8338002589d1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033412"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
@@ -32,10 +32,10 @@ long _InterlockedAddLargeStatistic(
 
 #### <a name="parameters"></a>Paramètres
 
-*Terme*<br/>
+*Addend*<br/>
 [in, out] Pointeur vers le premier opérande pour l’opération d’ajout. La valeur indiquée est remplacée par le résultat de l’addition.
 
-*Value*<br/>
+*Valeur*<br/>
 [in] Le deuxième opérande ; valeur à ajouter à la première opérande.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -60,5 +60,5 @@ Cette fonction se comporte comme une barrière en lecture-écriture. Pour plus d
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

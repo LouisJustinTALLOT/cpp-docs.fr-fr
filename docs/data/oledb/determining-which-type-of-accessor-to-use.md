@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
 ms.openlocfilehash: 98234852d0577e581135980d6b8e525aeead5dc2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031861"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Détermination du type d’accesseur à utiliser

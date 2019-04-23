@@ -9,10 +9,10 @@ helpviewer_keywords:
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035116"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset : Liaison dynamique des colonnes de données (ODBC)
@@ -91,8 +91,8 @@ Les quatre listes que vous avez besoin pour travailler avec figurent dans le tab
 
 |||
 |-|-|
-|**Colonnes de Table en cours**| (Liste 1 dans l’illustration) Une liste des colonnes figurant dans la table sur la source de données. Cette liste peut correspondre à la liste des colonnes actuellement liées du recordset.|
-|**Lié aux colonnes de recordsets**| (Liste 2 dans l’illustration) Liste des colonnes liées dans votre jeu d’enregistrements. Ces colonnes disposent déjà d’instructions RFX votre `DoFieldExchange` (fonction).|
+|**Current-Table-Columns**| (Liste 1 dans l’illustration) Une liste des colonnes figurant dans la table sur la source de données. Cette liste peut correspondre à la liste des colonnes actuellement liées du recordset.|
+|**Bound-Recordset-Columns**| (Liste 2 dans l’illustration) Liste des colonnes liées dans votre jeu d’enregistrements. Ces colonnes disposent déjà d’instructions RFX votre `DoFieldExchange` (fonction).|
 |**Colonnes-To-Bind-Dynamically**| (Liste 3 dans l’illustration) Une liste de colonnes dans la table mais pas dans le jeu d’enregistrements. Ce sont les colonnes que vous souhaitez lier dynamiquement.|
 |**Valeurs de colonne dynamique**| (Liste 4 dans l’illustration) Une liste contenant un stockage pour les valeurs extraites des colonnes que vous liez dynamiquement. Éléments de cette liste correspondent à celles des colonnes-to-Bind-Dynamically, un à un.|
 

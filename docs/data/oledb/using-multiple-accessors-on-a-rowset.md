@@ -8,10 +8,10 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
 ms.openlocfilehash: d1ab314edeebedef4cff14cd5364a7ca16c74769
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033305"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilisation de plusieurs accesseurs dans un jeu de lignes
@@ -24,7 +24,7 @@ Il existe trois principaux scénarios dans lesquels vous devez utiliser plusieur
 
   - L’accesseur 1 contient toutes les colonnes à l’exception de la clé primaire.
 
-- **Performances.** Dans ce scénario, une ou plusieurs colonnes ont une grande quantité de données, par exemple, aux fichiers de graphiques, audio ou vidéo. Chaque fois que vous passez à une ligne, sans doute ne voulez-vous extraire la colonne avec le fichier de données volumineux, car cela risque de ralentir les performances de votre application.
+- **Performances** Dans ce scénario, une ou plusieurs colonnes ont une grande quantité de données, par exemple, aux fichiers de graphiques, audio ou vidéo. Chaque fois que vous passez à une ligne, sans doute ne voulez-vous extraire la colonne avec le fichier de données volumineux, car cela risque de ralentir les performances de votre application.
 
   Vous pouvez définir des accesseurs distincts dans lequel le premier accesseur contient toutes les colonnes sauf celui avec des données volumineuses, et il récupère des données à partir de ces colonnes automatiquement ; l’accesseur premier est l’accesseur automatique. Le deuxième accesseur extrait uniquement la colonne contenant les données volumineuses, mais il ne récupérer automatiquement des données à partir de cette colonne. Vous pouvez avoir des autres méthodes de mise à jour ou extraire les données volumineuses à la demande.
 

@@ -1932,10 +1932,10 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027626"
 ---
 # <a name="arm-intrinsics"></a>Fonctions ARM intrinsèques
@@ -2158,7 +2158,7 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
 *Emplacement*<br/>
 L'adresse d'un emplacement mémoire où lire ou dans lequel écrire.
 
-*Value*<br/>
+*Valeur*<br/>
 Valeur à écrire à l’emplacement de mémoire spécifié (intrinsèques store uniquement).
 
 #### <a name="return-value-load-intrinsics-only"></a>Valeur de retour (intrinsèques de chargement uniquement)
@@ -2208,7 +2208,7 @@ Nombre de coprocesseurs dans la plage 0 à 15.
 *opcode1*<br/>
 Opcode spécifique au coprocesseur dans la plage de 0 à 7
 
-*CRN*<br/>
+*crn*<br/>
 Numéro du registre du coprocesseur, dans la plage de 0 à 15, qui spécifie le premier opérande pour l'instruction.
 
 *crm*<br/>
@@ -2225,7 +2225,7 @@ Valeur qui est lue auprès du coprocesseur.
 
 Les valeurs de tous les cinq paramètres de cette intrinsèque doivent être des expressions de constante qui sont connues au moment de la compilation.
 
-`_MoveFromCoprocessor` utilise l’instruction MRC ; `_MoveFromCoprocessor2` utilise MRC2. Les paramètres correspondent aux champs de bits qui sont codés directement dans l'argument word de l'instruction. L'interprétation des paramètres dépend du coprocesseur. Pour plus d'informations, consultez le manuel du coprocesseur en question.
+`_MoveFromCoprocessor` utilise l'instruction MRC ; `_MoveFromCoprocessor2` utilise MRC2. Les paramètres correspondent aux champs de bits qui sont codés directement dans l'argument word de l'instruction. L'interprétation des paramètres dépend du coprocesseur. Pour plus d'informations, consultez le manuel du coprocesseur en question.
 
 ###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
 
@@ -2250,7 +2250,7 @@ Opcode spécifique au coprocesseur dans la plage de 0 à 15
 *crm*<br/>
 Nombre de registres de coprocesseur, dans la plage 0 à 15, qui spécifie une source ou un opérande de destination supplémentaire.
 
-**Retourne une valeur**
+**Retourne la valeur**
 
 Valeur qui est lue auprès du coprocesseur.
 
@@ -2258,7 +2258,7 @@ Valeur qui est lue auprès du coprocesseur.
 
 Les valeurs de tous les trois paramètres de cette intrinsèque doivent être des expressions de constante qui sont connues au moment de la compilation.
 
-`_MoveFromCoprocessor64` utilise l’instruction MRRC. Les paramètres correspondent aux champs de bits qui sont codés directement dans l'argument word de l'instruction. L'interprétation des paramètres dépend du coprocesseur. Pour plus d'informations, consultez le manuel du coprocesseur en question.
+`_MoveFromCoprocessor64` utilise l'instruction MRRC. Les paramètres correspondent aux champs de bits qui sont codés directement dans l'argument word de l'instruction. L'interprétation des paramètres dépend du coprocesseur. Pour plus d'informations, consultez le manuel du coprocesseur en question.
 
 ###  <a name="MoveToCo"></a> _MoveToCoprocessor, _MoveToCoprocessor2
 
@@ -2286,7 +2286,7 @@ void _MoveToCoprocessor2(
 
 #### <a name="parameters"></a>Paramètres
 
-*par défaut*<br/>
+*value*<br/>
 Valeur à écrire dans le coprocesseur.
 
 *coproc*<br/>
@@ -2295,7 +2295,7 @@ Nombre de coprocesseurs dans la plage 0 à 15.
 *opcode1*<br/>
 Opcode spécifique au coprocesseur dans la plage de 0 à 7
 
-*CRN*<br/>
+*crn*<br/>
 Numéro du registre du coprocesseur, dans la plage de 0 à 15, qui spécifie le premier opérande pour l'instruction.
 
 *crm*<br/>
@@ -2312,7 +2312,7 @@ Aucun
 
 Les valeurs des paramètres `coproc`, `opcode1`, `crn`, `crm` et `opcode2` de cette intrinsèque doivent être des expressions de constante qui sont connues au moment de la compilation.
 
-`_MoveToCoprocessor` utilise l’instruction MCR ; `_MoveToCoprocessor2` utilise MCR2. Les paramètres correspondent aux champs de bits qui sont codés directement dans l'argument word de l'instruction. L'interprétation des paramètres dépend du coprocesseur. Pour plus d'informations, consultez le manuel du coprocesseur en question.
+`_MoveToCoprocessor` utilise l'instruction MCR ; `_MoveToCoprocessor2` utilise MCR2. Les paramètres correspondent aux champs de bits qui sont codés directement dans l'argument word de l'instruction. L'interprétation des paramètres dépend du coprocesseur. Pour plus d'informations, consultez le manuel du coprocesseur en question.
 
 ###  <a name="MoveToCo64"></a> _MoveToCoprocessor64
 
@@ -2346,7 +2346,7 @@ Aucun
 
 Les valeurs des paramètres `coproc`, `opcode1` et `crm` de cette intrinsèque doivent être des expressions de constante qui sont connues au moment de la compilation.
 
-`_MoveFromCoprocessor64` utilise l’instruction MCRR. Les paramètres correspondent aux champs de bits qui sont codés directement dans l'argument word de l'instruction. L'interprétation des paramètres dépend du coprocesseur. Pour plus d'informations, consultez le manuel du coprocesseur en question.
+`_MoveFromCoprocessor64` utilise l'instruction MCRR. Les paramètres correspondent aux champs de bits qui sont codés directement dans l'argument word de l'instruction. L'interprétation des paramètres dépend du coprocesseur. Pour plus d'informations, consultez le manuel du coprocesseur en question.
 
 ##  <a name="I"></a> Prise en charge ARM des intrinsèques d’autres Architectures
 
@@ -2577,6 +2577,6 @@ Les intrinsèques brutes à blocage et test au niveau des bits sont communes à 
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
-[Référence de l'assembleur ARM](../assembler/arm/arm-assembler-reference.md)<br/>
-[Référence du langage C++](../cpp/cpp-language-reference.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[Référence de l’assembleur ARM](../assembler/arm/arm-assembler-reference.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)

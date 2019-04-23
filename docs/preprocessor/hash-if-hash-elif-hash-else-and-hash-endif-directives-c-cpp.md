@@ -22,10 +22,10 @@ helpviewer_keywords:
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
 ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028089"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Directives #if, #elif, #else et #endif (C/C++)
@@ -97,7 +97,7 @@ L’opérateur de préprocesseur **défini** peut être utilisé dans les expres
 
 defined( `identifier` )
 
-définir `identifier`
+defined `identifier`
 
 Cette expression constante est considéré comme true (différent de zéro) si le *identificateur* est actuellement défini ; sinon, la condition est false (0). Un identificateur défini comme du texte vide est considéré comme défini. Le **défini** directive peut être utilisée dans un **#if** et un **#elif** directive mais nulle part ailleurs.
 

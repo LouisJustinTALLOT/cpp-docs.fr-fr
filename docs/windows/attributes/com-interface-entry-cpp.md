@@ -1,5 +1,5 @@
 ---
-title: COM_INTERFACE_ENTRY (attribut de COM C++)
+title: COM_INTERFACE_ENTRY (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
 ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030405"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
@@ -31,7 +31,7 @@ Chaîne contenant le texte de l’entrée. Pour obtenir la liste des valeurs pos
 
 ## <a name="remarks"></a>Notes
 
-Le **com_interface_entry** attribut C++ insère le contenu ondes ultracourtes d’une chaîne de caractères dans la table d’interface COM de l’objet cible. Si l’attribut est appliqué une fois à l’objet cible, l’entrée est insérée au début de la carte d’interface existante. Si l’attribut est appliqué à plusieurs reprises pour le même objet cible, les entrées sont insérées au début de la carte d’interface dans l’ordre de que leur réception.
+Le **com_interface_entry** C++ attribut insère le contenu ondes ultracourtes d’une chaîne de caractères dans la table d’interface COM de l’objet cible. Si l’attribut est appliqué une fois à l’objet cible, l’entrée est insérée au début de la carte d’interface existante. Si l’attribut est appliqué à plusieurs reprises pour le même objet cible, les entrées sont insérées au début de la carte d’interface dans l’ordre de que leur réception.
 
 Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.
 

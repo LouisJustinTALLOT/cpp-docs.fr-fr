@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
 ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032431"
 ---
 # <a name="stosq"></a>__stosq
@@ -33,7 +33,7 @@ void __stosb(
 
 #### <a name="parameters"></a>Paramètres
 
-*dest*<br/>
+*Dest*<br/>
 [out] La destination de l’opération.
 
 *Données*<br/>
@@ -86,4 +86,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

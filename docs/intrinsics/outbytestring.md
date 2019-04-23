@@ -9,10 +9,10 @@ helpviewer_keywords:
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
 ms.openlocfilehash: 41064dda6a1a0b9ad4c15f98c3f3081f08ef8db6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032191"
 ---
 # <a name="outbytestring"></a>__outbytestring
@@ -36,7 +36,7 @@ void __outbytestring(
 *Port*<br/>
 [in] Le port pour envoyer les données.
 
-*Mémoire tampon*<br/>
+*Buffer*<br/>
 [in] Les données seront envoyés le port spécifié.
 
 *Nombre*<br/>
@@ -58,4 +58,4 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

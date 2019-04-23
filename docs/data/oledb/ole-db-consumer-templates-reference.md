@@ -13,10 +13,10 @@ helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
 ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032269"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Référence des modèles du consommateur OLE DB
@@ -143,4 +143,4 @@ Permet de récupérer les informations d’erreur OLE DB.
 ## <a name="see-also"></a>Voir aussi
 
 [Référence des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[modèles OLE DB](../../data/oledb/ole-db-templates.md)
+[Modèles OLE DB](../../data/oledb/ole-db-templates.md)

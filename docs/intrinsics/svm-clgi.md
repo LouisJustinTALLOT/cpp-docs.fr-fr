@@ -8,10 +8,10 @@ helpviewer_keywords:
 - __svm_clgi intrinsic
 ms.assetid: 6640f5ab-9472-46f9-a042-e15c4f1ff858
 ms.openlocfilehash: fe25141499a19a265e2ac3ec746664ecd6cc9a2e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028689"
 ---
 # <a name="svmclgi"></a>__svm_clgi
@@ -44,5 +44,5 @@ Cette fonction prend en charge l’interaction du moniteur de machines virtuelle
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_stgi](../intrinsics/svm-stgi.md)

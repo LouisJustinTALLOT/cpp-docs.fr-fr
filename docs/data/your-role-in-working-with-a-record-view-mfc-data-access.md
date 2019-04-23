@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
 ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033003"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Votre rôle dans l'utilisation d'une vue de l'enregistrement (Accès aux données MFC)
@@ -33,5 +33,5 @@ La programmation basée sur formulaire n'est qu'une approche parmi d'autres de l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d'enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

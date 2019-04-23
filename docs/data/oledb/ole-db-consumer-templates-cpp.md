@@ -8,10 +8,10 @@ helpviewer_keywords:
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
 ms.openlocfilehash: d2697c955d2063bb075e06536b083c0b138aa4ac
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031957"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modèles du consommateur OLE DB (C++)
@@ -60,5 +60,5 @@ Pour plus d’informations, consultez les rubriques suivantes :
 
 [Programmation OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Accès aux données](../data-access-in-cpp.md)<br/>
-[Documentation du Kit de développement logiciel (SDK) OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[Documentation du Kit de développement OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
 [Pilote Microsoft OLE DB pour SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)

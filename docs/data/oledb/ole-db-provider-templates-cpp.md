@@ -8,10 +8,10 @@ helpviewer_keywords:
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
 ms.openlocfilehash: 793aa08630ec92f99c33c2a4f3688e78630a6c58
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027473"
 ---
 # <a name="ole-db-provider-templates-c"></a>Modèles du fournisseur OLE DB (C++)
@@ -63,12 +63,12 @@ Pour plus d'informations, voir :
 
 - [L’Architecture de modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
 
-- [Création d'un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+- [Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
 
 - [Programmation OLE DB](../../data/oledb/ole-db-programming.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 [Accès aux données](../data-access-in-cpp.md)<br/>
-[Documentation du Kit de développement logiciel (SDK) OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[Documentation du Kit de développement OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
 [Informations de référence du programmeur OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>

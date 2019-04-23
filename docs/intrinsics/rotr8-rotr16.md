@@ -9,10 +9,10 @@ helpviewer_keywords:
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
 ms.openlocfilehash: 27c3a9d914d04ecdffb7fa74dc3c8f79a442445c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028741"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
@@ -36,10 +36,10 @@ unsigned short _rotr16(
 
 #### <a name="parameters"></a>Paramètres
 
-*par défaut*<br/>
+*value*<br/>
 [in] Valeur à faire pivoter.
 
-*déplacement*<br/>
+*shift*<br/>
 [in] Le nombre de bits de rotation.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -104,4 +104,4 @@ Rotating unsigned short 0x12 right by 10 bits gives 0x480
 ## <a name="see-also"></a>Voir aussi
 
 [_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)<br/>
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

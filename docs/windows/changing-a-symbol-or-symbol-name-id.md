@@ -36,10 +36,10 @@ helpviewer_keywords:
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
 ms.openlocfilehash: ebf10ade734d321c5a83644110d3511e4b6c827a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033993"
 ---
 # <a name="how-to-manage-symbols"></a>Procédure : Gérer les symboles
@@ -214,6 +214,6 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
-[Procédure : Créer des symboles](../windows/creating-new-symbols.md)<br/>
+[Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[Guide pratique pour Créer des symboles](../windows/creating-new-symbols.md)<br/>
 [ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)<br/>

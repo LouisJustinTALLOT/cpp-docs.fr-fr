@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
 ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029549"
 ---
 # <a name="parameter-attributes"></a>Attributs de paramètres
@@ -18,17 +18,17 @@ Les attributs suivants s’appliquent aux paramètres d’une méthode dans une 
 
 |Attribut|Description|
 |---------------|-----------------|
-|[personnalisé](custom-cpp.md)|Vous permet de définir votre propre attribut.|
+|[custom](custom-cpp.md)|Vous permet de définir votre propre attribut.|
 |[defaultvalue](defaultvalue.md)|Permet de spécifier une valeur par défaut pour un paramètre facultatif typé.|
 |[first_is](first-is.md)|Spécifie l’index du premier élément de tableau doit être transmis.|
 |[iid_is](iid-is.md)|Spécifie l’index du premier élément de tableau doit être transmis.|
 |[immediatebind](immediatebind.md)|Indique que la base de données est immédiatement avertie de toutes les modifications apportées à une propriété d’un objet lié aux données.|
-|[dans](in-cpp.md)|Indique qu’un paramètre est à passer à la procédure appelée à partir de la procédure appelante.|
+|[in](in-cpp.md)|Indique qu’un paramètre est à passer à la procédure appelée à partir de la procédure appelante.|
 |[last_is](last-is.md)|Spécifie l’index du dernier élément de tableau doit être transmis.|
 |[lcid](lcid.md)|Vous permet de passer un identificateur de paramètres régionaux à une fonction.|
 |[length_is](length-is.md)|Spécifie le nombre d’éléments de tableau doit être transmis.|
 |[max_is](max-is.md)|Désigne la valeur maximale pour un index de tableau valide.|
-|[facultatifs](optional-cpp.md)|Spécifie un paramètre facultatif pour une fonction membre.|
+|[optional](optional-cpp.md)|Spécifie un paramètre facultatif pour une fonction membre.|
 |[out](out-cpp.md)|Identifie des paramètres pointeurs qui sont retournés de la procédure appelée à la procédure appelante (du serveur au client).|
 |[range](range-cpp.md)|Spécifie une plage de valeurs autorisées pour les arguments ou les champs dont les valeurs sont définies au moment de l’exécution.|
 |[ref](ref-cpp.md)|Identifie un pointeur de référence.|

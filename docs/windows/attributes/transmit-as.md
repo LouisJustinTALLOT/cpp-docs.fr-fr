@@ -1,5 +1,5 @@
 ---
-title: transmit_as (attribut de COM C++)
+title: transmit_as (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
 ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032098"
 ---
 # <a name="transmitas"></a>transmit_as
@@ -30,7 +30,7 @@ Spécifie le type de données transmises entre le client et le serveur.
 
 ## <a name="remarks"></a>Notes
 
-Le **transmit_as** attribut C++ a les mêmes fonctionnalités que le [transmit_as](/windows/desktop/Midl/transmit-as) attribut MIDL.
+Le **transmit_as** C++ attribut a les mêmes fonctionnalités que le [transmit_as](/windows/desktop/Midl/transmit-as) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 
@@ -81,4 +81,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[exporter](export.md)
+[export](export.md)

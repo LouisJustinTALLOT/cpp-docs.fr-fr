@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
 ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026277"
 ---
 # <a name="menu-commands-c"></a>Commandes de menu (C++)
@@ -35,13 +35,13 @@ Les informations ci-dessous sont organisées en fonction de la **Menu** proprié
 |**Activé**|Si **True**, la commande de menu est initialement activée. Type : **Bool**. Par défaut : **False**.|
 |**Activé**|Si la valeur est **False**, l'élément de menu est désactivé.|
 |**Grisé**|Si **True**, la commande de menu est initialement grisée et inactive. Type : **Bool**. Par défaut : **False**.|
-|**Help**|Aligne l'élément de menu à droite. Par défaut : **False**.<br/><br/>Par exemple, la commande de menu **? (Aide)** est toujours sur la droite dans toutes les applications Windows. Si vous affectez cette propriété à un élément de menu, celui-ci s'affiche à l'extrémité droite et à la fin du menu. S'applique aux éléments de niveau supérieur.|
-|**Id**|Symbole défini dans le fichier d'en-tête. Type : **Symbole**, **entier**, ou **chaîne entre guillemets**.<br/><br/>Vous pouvez utiliser n'importe quel symbole couramment disponible dans les éditeurs, même si la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) ne fournit pas de liste déroulante pour sélectionner des éléments.|
+|**Aide**|Aligne l'élément de menu à droite. Par défaut : **False**.<br/><br/>Par exemple, la commande de menu **? (Aide)** est toujours sur la droite dans toutes les applications Windows. Si vous affectez cette propriété à un élément de menu, celui-ci s'affiche à l'extrémité droite et à la fin du menu. S'applique aux éléments de niveau supérieur.|
+|**ID**|Symbole défini dans le fichier d'en-tête. Type : **Symbole**, **entier**, ou **chaîne entre guillemets**.<br/><br/>Vous pouvez utiliser n'importe quel symbole couramment disponible dans les éditeurs, même si la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) ne fournit pas de liste déroulante pour sélectionner des éléments.|
 |**Fenêtre contextuelle**|Si **True**, la commande de menu est un menu contextuel. Type : **Bool**. Par défaut : **True** pour les menus de niveau supérieur dans une barre de menus, sinon **False**.|
 |**Invite**|Contient le texte qui s'affiche dans la barre d'état quand cette commande de menu est mise en surbrillance. Le texte est placé dans la table de chaînes avec le même identificateur que la commande de menu.<br/><br/>Cette propriété est disponible pour tous les types de projet, mais les fonctionnalités d'exécution sont spécifiques à MFC.|
 |**Justification de droite à gauche**|Aligne à droite la commande de menu dans la barre de menus au moment de l'exécution. Type : **Bool**. Par défaut : **False**.|
 |**Ordre de droite à gauche**|Permet d'afficher les commandes de menu de droite à gauche quand l'interface est localisée dans une langue qui se lit de droite à gauche, par exemple l'hébreu ou l'arabe.|
-|**Séparateur**|Si **True**, la commande de menu est un séparateur. Type : **Bool**. Par défaut : **False**.|
+|**Separator**|Si **True**, la commande de menu est un séparateur. Type : **Bool**. Par défaut : **False**.|
 
 ## <a name="associate-menu-commands"></a>Associer des commandes de Menu
 

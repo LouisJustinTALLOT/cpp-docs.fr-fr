@@ -63,10 +63,10 @@ helpviewer_keywords:
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
 ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034142"
 ---
 # <a name="how-to-work-with-color"></a>Procédure : Utiliser des couleurs
@@ -108,12 +108,12 @@ Le **sélecteur de couleurs personnalisées** boîte de dialogue vous permet de 
 |**Affichage de la couleur de dégradé**|Modifie les valeurs de la couleur sélectionnée.<br/><br/>Positionner la croix sur la couleur que vous souhaitez modifier et déplacez le curseur vers le haut ou vers le bas pour modifier la luminosité ou les valeurs RVB de la couleur.|
 |**Barre de luminosité**|Définit la luminosité de la couleur que vous sélectionnez dans la **affichage des dégradés de couleur** boîte.<br/><br/>Sélectionnez et faites glisser la flèche blanche de la barre de luminosité supérieure ou vers le bas à moindre coût. Le **couleur** zone affiche la couleur que vous avez sélectionné et l’effet de la luminosité que vous définissez.|
 |**Color**|Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.|
-|**Teinte**|Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.|
-|**Sam**|Spécifie la valeur de saturation de la couleur que vous définissez. Saturation correspond à la quantité de couleur dans une teinte spécifiée. Les valeurs comprises entre 0 et 240.|
+|**HUE**|Répertorie la teinte (valeur de roue de couleur) de la couleur que vous définissez. Les valeurs comprises entre 0 et 240, où 0 est rouge, 60 est jaune, 120 est vert, 180 est cyan, 200 est magenta et 240 est bleu.|
+|**Sat**|Spécifie la valeur de saturation de la couleur que vous définissez. Saturation correspond à la quantité de couleur dans une teinte spécifiée. Les valeurs comprises entre 0 et 240.|
 |**Lum**|Répertorie la luminosité de la couleur que vous définissez. Les valeurs comprises entre 0 et 240.|
 |**Rouge**|Spécifie la valeur rouge de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.|
 |**Vert**|Spécifie la valeur verte de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.|
-|**Bleu**|Spécifie la valeur bleue de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.|
+|**Blue**|Spécifie la valeur bleue de la couleur que vous définissez. Les valeurs comprises entre 0 et 255.|
 
 Vous pouvez enregistrer et charger un **couleurs** palette qui contient des couleurs personnalisées. Par défaut, le **couleurs** palette plus récemment utilisée est automatiquement chargé lorsque vous démarrez Visual Studio.
 
@@ -126,7 +126,7 @@ Utiliser le **charger les couleurs de Palette** boîte de dialogue pour charger 
 |-----------------|-----------------|
 |**Regarder dans**|Spécifie l’emplacement où vous souhaitez localiser un fichier ou dossier.<br/><br/>Sélectionnez la flèche pour choisir un autre emplacement, ou sélectionnez l’icône de dossier dans la barre d’outils pour déplacer les niveaux.|
 |**Nom de fichier**|Offre un espace vous permettant de taper le nom du fichier que vous souhaitez ouvrir.<br/><br/>Pour trouver rapidement un fichier que vous avez déjà ouvert, sélectionnez le nom de fichier dans la liste déroulante, si elle est disponible.<br/><br/>Si vous recherchez un fichier, vous pouvez utiliser des astérisques (*) comme caractères génériques. Par exemple, vous pouvez taper \*.\* pour afficher la liste de tous les fichiers. Vous pouvez également taper le chemin d’accès complet d’un fichier, par exemple, *Documents\MyColorPalette.PAL C:\My* ou  *\\\NetworkServer\MyFolder\MyColorPalette.pal*.|
-|**Type de fichiers**|Répertorie les types de fichiers à afficher.<br/><br/>Palette (* .pal) est le type de fichier par défaut pour les palettes de couleurs.|
+|**Types de fichiers**|Répertorie les types de fichiers à afficher.<br/><br/>Palette (* .pal) est le type de fichier par défaut pour les palettes de couleurs.|
 
 ## <a name="how-to"></a>Comment
 
@@ -227,8 +227,8 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur d'images pour les icônes](../windows/image-editor-for-icons.md)<br/>
-[Procédure : Créez une icône ou une autre Image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Procédure : Modifier une Image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Procédure : Utiliser un outil de dessin](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)<br/>
+[Guide pratique pour créer une icône ou une autre image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Guide pratique pour modifier une image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Guide pratique pour utiliser un outil de dessin](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

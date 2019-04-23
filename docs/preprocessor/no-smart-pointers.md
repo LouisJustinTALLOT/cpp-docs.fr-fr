@@ -7,14 +7,14 @@ helpviewer_keywords:
 - no_smart_pointers attribute
 ms.assetid: d69dd71e-08a8-4446-a3d0-a062dc29cb17
 ms.openlocfilehash: ed4950b9e90ef968fcf0c42e4f0a9775c58ea7ec
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030165"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
-**Section spécifique à C++**
+**Spécifique à C++**
 
 Supprime la création des pointeurs intelligents pour toutes les interfaces dans la bibliothèque de types.
 
@@ -28,9 +28,9 @@ no_smart_pointers
 
 Par défaut, lorsque vous utilisez `#import`, vous obtenez une déclaration de pointeur intelligent pour toutes les interfaces dans la bibliothèque de types. Ces pointeurs intelligents sont de type [_com_ptr_t, classe](../cpp/com-ptr-t-class.md).
 
-**FIN de la section spécifique à C++**
+**FIN spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import, directive](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[directive #import](../preprocessor/hash-import-directive-cpp.md)
