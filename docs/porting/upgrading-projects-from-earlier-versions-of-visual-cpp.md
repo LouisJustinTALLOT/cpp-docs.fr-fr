@@ -6,10 +6,10 @@ helpviewer_keywords:
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
 ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034911"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Mise à niveau de projets à partir de versions antérieures de Visual C++
@@ -35,12 +35,12 @@ Pour plus d’informations sur la façon de mettre à jour les versions de Windo
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Mettre à niveau votre code vers le CRT universel](upgrade-your-code-to-the-universal-crt.md)<br/>
+[Mettre à niveau votre code vers la bibliothèque Universal CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
 [Modification de WINVER et _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
 [Résoudre vos dépendances aux éléments internes de bibliothèque](fix-your-dependencies-on-library-internals.md)<br/>
 [Problèmes de migration de virgule flottante](floating-point-migration-issues.md)<br/>
 [Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](use-native-multi-targeting.md)<br/>
-[Fonctionnalités Visual C++ déconseillées dans la préversion de Visual Studio 2019](features-deprecated-in-visual-studio.md)<br/>
+[Fonctionnalités Visual C++ dépréciées dans la préversion de Visual Studio 2019](features-deprecated-in-visual-studio.md)<br/>
 [Modifications du système de génération](build-system-changes.md)<br/>
 
 ## <a name="see-also"></a>Voir aussi

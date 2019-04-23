@@ -2,11 +2,11 @@
 title: Créer un projet d’application console C++
 moniker-range: '>=vs-2015'
 ms.openlocfilehash: cc725e80d534754e8339bfbb4b670566100002a4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58866901"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778269"
 ---
 ::: moniker range=">=vs-2019"
 

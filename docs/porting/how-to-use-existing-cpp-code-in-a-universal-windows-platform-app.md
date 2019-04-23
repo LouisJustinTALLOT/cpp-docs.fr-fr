@@ -3,10 +3,10 @@ title: 'Procédure : utiliser le code C++ existant dans une application de plat
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
 ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424194"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procédure : utiliser le code C++ existant dans une application de plateforme Windows universelle
@@ -48,7 +48,7 @@ Cette rubrique contient les procédures suivantes :
 
 - [Utilisation d’une bibliothèque statique C++ native dans une application UWP](#BK_StaticLib)
 
-- [Portage d’une bibliothèque C++ sur un composant Windows Runtime](#BK_WinRTComponent)
+- [Portage d’une bibliothèque C++ vers un composant Windows Runtime](#BK_WinRTComponent)
 
 ##  <a name="BK_Win32DLL"></a> Utilisation d’une DLL Win32 dans une application UWP
 
@@ -231,4 +231,4 @@ Si vous souhaitez consommer des API natives dans une bibliothèque statique à p
 
 ## <a name="see-also"></a>Voir aussi
 
-[Portage vers la plateforme Windows universelle](../porting/porting-to-the-universal-windows-platform-cpp.md)
+[Portage vers la plateforme universelle Windows](../porting/porting-to-the-universal-windows-platform-cpp.md)
