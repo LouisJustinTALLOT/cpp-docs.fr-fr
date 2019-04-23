@@ -8,10 +8,10 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
 ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029276"
 ---
 # <a name="compiler-intrinsics"></a>compilateur, intrinsèques
@@ -34,19 +34,19 @@ Un fichier d’en-tête, \<intrin.h >, est disponible qui déclare des prototype
 
 Les sections suivantes répertorient toutes les intrinsèques qui sont disponibles sur différentes architectures. Pour plus d'informations sur le fonctionnement des intrinsèques sur votre processeur cible spécifique, consultez la documentation de référence du fabricant.
 
-- [Fonctions ARM intrinsèques](../intrinsics/arm-intrinsics.md)
+- [ARM, fonctions intrinsèques](../intrinsics/arm-intrinsics.md)
 
-- [Liste d'intrinsèques x86](../intrinsics/x86-intrinsics-list.md)
+- [x86, liste de fonctions intrinsèques](../intrinsics/x86-intrinsics-list.md)
 
-- [Liste d'intrinsèques x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
+- [x64 (amd64), liste de fonctions intrinsèques](../intrinsics/x64-amd64-intrinsics-list.md)
 
-- [Fonctions intrinsèques disponibles sur toutes les Architectures](../intrinsics/intrinsics-available-on-all-architectures.md)
+- [Fonctions intrinsèques disponibles sur toutes les architectures](../intrinsics/intrinsics-available-on-all-architectures.md)
 
-- [Liste alphabétique des fonctions intrinsèques](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
+- [Liste alphabétique de fonctions intrinsèques](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l'assembleur ARM](../assembler/arm/arm-assembler-reference.md)<br/>
-[Référence de Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Référence de l’assembleur ARM](../assembler/arm/arm-assembler-reference.md)<br/>
+[Informations de référence sur Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
-[Informations de référence sur la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)
+[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)

@@ -3,10 +3,10 @@ title: Applications de bureau (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033104"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau (Visual C++)
@@ -29,7 +29,7 @@ Dans Visual Studio 2017 version 15.4 ou ultérieure, vous pouvez créer un proje
 
 - Une application MFC est une application de bureau Windows qui utilisent la [Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md) pour créer l’interface utilisateur. Une application MFC permettre également utiliser des composants COM, ainsi que les CRT et les API de bibliothèque Standard. MFC fournit un simple wrapper orienté objet C++ au fil de la boucle de messages de fenêtre et les API de Windows. MFC est le choix par défaut pour les applications, en particulier les applications de type de l’entreprise, qui ont un grand nombre de contrôles d’interface utilisateur ou des contrôles utilisateur personnalisés. MFC fournit des classes d’assistance pratiques pour la gestion des fenêtres, la sérialisation, manipulation de texte, l’impression et les éléments d’interface utilisateur modernes tels que le ruban. Pour être efficace avec MFC, vous devez connaître avec Win32.
 
-- C++ / c++ / CLI application ou un composant utilise les extensions à la syntaxe C++ (comme autorisé par la spécification C++) pour permettre l’interaction entre .NET et le code C++ natif.  C++ / c++ / application de l’interface CLI peut avoir des composants qui s’exécutent en mode natif et les composants qui s’exécutent sur le .NET Framework avec un accès à la bibliothèque de classes de Base .NET. C++ / c++ / CLI est l’option recommandée lorsque vous avez le code C++ natif qui doit fonctionner avec le code écrit en C# ou Visual Basic. Il s’adresse principalement pour une utilisation dans des DLL .NET plutôt que dans le code d’interface utilisateur. Pour plus d’informations, consultez [programmation .NET avec C++ / c++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+- C++ / c++ / CLI application ou un composant utilise les extensions à la syntaxe C++ (comme autorisé par la spécification C++) pour permettre l’interaction entre .NET et le code C++ natif.  C++ / c++ / application de l’interface CLI peut avoir des composants qui s’exécutent en mode natif et les composants qui s’exécutent sur le .NET Framework avec un accès à la bibliothèque de classes de Base .NET. C++ / c++ / CLI est l’option recommandée lorsque vous avez le code C++ natif qui doit fonctionner avec le code écrit en c# ou Visual Basic. Il s’adresse principalement pour une utilisation dans des DLL .NET plutôt que dans le code d’interface utilisateur. Pour plus d’informations, consultez [programmation .NET avec C++ / c++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 Toute application de bureau en C++ peut utiliser C Runtime (CRT) et la bibliothèque Standard classes et fonctions, des objets COM et les fonctions Windows publiques, appelées collectivement comme l’API Windows. Pour une introduction aux applications de bureau Windows en C++, consultez [prise en main Win32 et C++](/windows/desktop/LearnWin32/learn-to-program-for-windows).
 
@@ -37,14 +37,14 @@ Toute application de bureau en C++ peut utiliser C Runtime (CRT) et la biblioth�
 
 |Titre|Description|
 |-----------|-----------------|
-|[Applications de Console Windows en C++](console-applications-in-visual-cpp.md)|Contient des informations sur les applications console. Une application console Win32 (ou Win64) n’a aucune fenêtre et aucune boucle de message. Elle s'exécute dans la fenêtre de console et l'entrée et la sortie sont gérées via la ligne de commande.|
-|[Procédure pas à pas : Création d’Applications de bureau Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Créer une simple application de bureau Windows.|
+|[Application console Windows en C++](console-applications-in-visual-cpp.md)|Contient des informations sur les applications console. Une application console Win32 (ou Win64) n’a aucune fenêtre et aucune boucle de message. Elle s'exécute dans la fenêtre de console et l'entrée et la sortie sont gérées via la ligne de commande.|
+|[Procédure pas à pas : création d’applications de bureau Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Créer une simple application de bureau Windows.|
 |[Création d’une application de bureau Windows vide](creating-an-empty-windows-desktop-application.md)|Comment créer un projet de bureau Windows qui ne comporte aucun fichier par défaut.|
 |[Ajout de fichiers à des applications Win32 vides](adding-files-to-an-empty-win32-applications.md)|Comment ajouter des fichiers à un projet vide.|
 |[Utilisation des fichiers de ressources](working-with-resource-files.md)|Comment ajouter des images, des icônes, des tables de chaînes et d’autres ressources pour une application de bureau.|
-|[Ressources pour la création d'un jeu à l'aide de DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Liens vers du contenu pour la création de jeux en C++.|
+|[Ressources pour la création d’un jeu à l’aide de DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Liens vers du contenu pour la création de jeux en C++.|
 |[Procédure pas à pas : Création et utilisation d’une bibliothèque statique](walkthrough-creating-and-using-a-static-library-cpp.md)|Comment créer un fichier binaire .lib.|
-|[Procédure : Utiliser Windows 10 SDK dans une Application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
+|[Guide pratique pour utiliser le kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
 
 ## <a name="related-articles"></a>Articles connexes
 
@@ -52,7 +52,7 @@ Toute application de bureau en C++ peut utiliser C Runtime (CRT) et la biblioth�
 |-----------|-----------------|
 |[Développement Windows](/windows/desktop/index)|Contient des informations sur l'API Windows et COM. (Certaines API Windows et DLL tierces sont implémentées comme objets COM.)|
 |[Hilo : Développement d’Applications C++ pour Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Explique comment créer une application de bureau Windows cliente enrichie, qui utilise l’animation Windows et Direct2D pour créer une interface utilisateur de type carrousel.  Ce didacticiel n’a pas été mis à jour depuis Windows 7, mais fournit malgré tout une présentation détaillée de la programmation Win32.|
-|[Vue d'ensemble de la programmation Windows en C++](overview-of-windows-programming-in-cpp.md)|Décrit les principales fonctionnalités de bureau Windows de programmation en C++.|
+|[Vue d’ensemble de la programmation Windows en C++](overview-of-windows-programming-in-cpp.md)|Décrit les principales fonctionnalités de bureau Windows de programmation en C++.|
 
 ## <a name="see-also"></a>Voir aussi
 

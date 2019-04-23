@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, ADO recordsets
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-ms.openlocfilehash: 62e56b818a766bf3b7efddf9243ffd47ad2cb46f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb558bb319bb5ddb61d0383846099d708f99c627
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610598"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59030477"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilisation d'un recordset ADO existant
 

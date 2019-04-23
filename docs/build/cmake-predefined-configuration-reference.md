@@ -5,10 +5,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: cecadaec2e409dfba3b1929e406c36df3e498307
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031445"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Configurations de build CMake prédéfinies
@@ -348,7 +348,7 @@ Ces options vous permettent d’exécuter des commandes sur le système distant 
 
 [Projets CMake dans Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Configurer un projet CMake Linux](../linux/cmake-linux-project.md)<br/>
-[Se connecter à un ordinateur Linux distant](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Se connecter à votre ordinateur Linux distant](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Configurer des sessions de débogage CMake](configure-cmake-debugging-sessions.md)<br/>
 [Déployer, exécuter et déboguer un projet Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Informations de référence sur la configuration prédéfinie de CMake](cmake-predefined-configuration-reference.md)<br/>

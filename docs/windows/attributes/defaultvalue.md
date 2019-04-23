@@ -7,10 +7,10 @@ helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
 ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026316"
 ---
 # <a name="defaultvalue"></a>defaultvalue
@@ -25,7 +25,7 @@ Permet de spécifier une valeur par défaut pour un paramètre facultatif typé.
 
 ### <a name="parameters"></a>Paramètres
 
-*par défaut*<br/>
+*value*<br/>
 La valeur par défaut pour le paramètre.
 
 ## <a name="remarks"></a>Notes
@@ -73,6 +73,6 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs de paramètres](parameter-attributes.md)<br/>
 [out](out-cpp.md)<br/>
 [retval](retval.md)<br/>
-[dans](in-cpp.md)<br/>
+[in](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>
 [unique](unique-cpp.md)

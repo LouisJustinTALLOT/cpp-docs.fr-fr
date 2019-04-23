@@ -5,10 +5,10 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035187"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Informations supplémentaires sur les classes ODBC MFC
@@ -17,7 +17,7 @@ Plus les rubriques suivantes expliquent les concepts et techniques présentés d
 
 - [Prise en charge des bases de données, Assistant Application MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
 
-- [Ajout d'un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
+- [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)
 
 - [Source de données (ODBC)](../../data/odbc/data-source-odbc.md)
 
@@ -37,7 +37,7 @@ Plus les rubriques suivantes expliquent les concepts et techniques présentés d
 
 - [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)
 
-- [Vues des enregistrements](../../data/record-views-mfc-data-access.md)
+- [Vues d’enregistrement](../../data/record-views-mfc-data-access.md)
 
 - [Sérialisation : Visual Studio de sérialisation. Base de données d’entrée/sortie](../../mfc/serialization-serialization-vs-database-input-output.md)
 
@@ -54,4 +54,4 @@ Dans le *référence MFC*, consultez [CDatabase](../../mfc/reference/cdatabase-c
 ## <a name="see-also"></a>Voir aussi
 
 [ODBC et MFC](../../data/odbc/odbc-and-mfc.md)<br/>
-[Programmation de l'accès aux données (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Accès aux données de programmation (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

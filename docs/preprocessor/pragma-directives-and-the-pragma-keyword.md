@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
 ms.openlocfilehash: b6c2ff579c6fafa78cbfd0a2879a71fca2bfaa01
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027439"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Directives pragma et mot clé _Pragma
@@ -59,7 +59,7 @@ Les compilateurs Microsoft C et C++ reconnaissent les pragmas suivants :
 |[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|
 |[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|
 |[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
-|[avertissement](../preprocessor/warning.md)|||
+|[warning](../preprocessor/warning.md)|||
 
 <sup>1</sup> pris en charge uniquement par le compilateur C++.
 
@@ -80,7 +80,7 @@ cl /Zp8 ...
 
 ## <a name="the-pragma-keyword"></a>Mot clé __pragma()
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Le compilateur prend également en charge la **_pragma** mot clé, qui a les mêmes fonctionnalités que le **#pragma** directive, mais peut être utilisé inline dans une définition de macro. Le **#pragma** directive ne peut pas être utilisée dans une définition de macro, car le compilateur interprète le signe dièse ('#') dans la directive pour être le [opérateur d’enchaînement (#)](../preprocessor/stringizing-operator-hash.md).
 
@@ -104,10 +104,10 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Fin de la section spécifique à Microsoft**
+**Fin spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence du préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Pragmas C](../c-language/c-pragmas.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
 ms.openlocfilehash: 6c4055e0f14bced1e5047fc502a4bf274126f804
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031632"
 ---
 # <a name="emitidl"></a>emitidl
@@ -25,7 +25,7 @@ Spécifie si tous les attributs IDL suivantes sont traitées et placées dans le
 
 ### <a name="parameters"></a>Paramètres
 
-*état*<br/>
+*state*<br/>
 Une de ces valeurs possibles : `true`, `false`, `forced`, `restricted`, `push`, ou `pop`.
 
 - Si `true`, les attributs de catégorie IDL rencontrées dans un fichier de code source sont placées dans le fichier .idl généré. Il s’agit du paramètre par défaut **emitidl**.

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - record views, customizing default code
 ms.assetid: 91f2828f-0666-4273-ae28-e4703fd98521
 ms.openlocfilehash: 9d64fc26e1c78bad0431bc9b10dd5117c4866159
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029354"
 ---
 # <a name="using-a-record-view--mfc-data-access"></a>Utilisation d'une vue de l'enregistrement (Accès aux données MFC)
@@ -19,5 +19,5 @@ Cette rubrique explique comment personnaliser le code par défaut pour les vues 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d'enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

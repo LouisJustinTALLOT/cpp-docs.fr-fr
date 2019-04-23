@@ -1,5 +1,5 @@
 ---
-title: last_is (attribut de COM C++)
+title: last_is (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
 ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033279"
 ---
 # <a name="lastis"></a>last_is
@@ -30,7 +30,7 @@ Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont 
 
 ## <a name="remarks"></a>Notes
 
-Le **last_is** attribut C++ a les mêmes fonctionnalités que le [last_is](/windows/desktop/Midl/last-is) attribut MIDL.
+Le **last_is** C++ attribut a les mêmes fonctionnalités que le [last_is](/windows/desktop/Midl/last-is) attribut MIDL.
 
 ## <a name="example"></a>Exemple
 

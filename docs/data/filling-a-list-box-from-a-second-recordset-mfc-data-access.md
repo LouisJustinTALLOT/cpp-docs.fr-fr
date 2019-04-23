@@ -11,10 +11,10 @@ helpviewer_keywords:
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
 ms.openlocfilehash: 9428f8a59dca021a1bd0e00a7970f4d19bab46be
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030486"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Remplissage d'une zone de liste à partir d'un second recordset (Accès aux données MFC)
@@ -70,5 +70,5 @@ La fonction obtient `m_courseSet` à partir du document et l'ouvre. Ensuite, ell
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d'enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

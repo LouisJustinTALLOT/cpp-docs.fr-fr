@@ -31,10 +31,10 @@ helpviewer_keywords:
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
 ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033902"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset, classe
@@ -67,7 +67,7 @@ Une classe rowset.
 
 |||
 |-|-|
-|[Lier](#bind)|Crée des liaisons (utilisée lorsque `bBind` est spécifié en tant que **false** dans [CCommand::Open](../../data/oledb/ccommand-open.md)).|
+|[Bind](#bind)|Crée des liaisons (utilisée lorsque `bBind` est spécifié en tant que **false** dans [CCommand::Open](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Constructeur.|
 |[Fermer](#close)|Ferme l’ensemble de lignes et de tous les accesseurs.|
 |[FreeRecordMemory](#freerecordmemory)|Libère toutes les colonnes dans l’enregistrement actif qui doivent être libérées.|
@@ -156,5 +156,5 @@ Pour plus d’informations, consultez [IColumnsInfo::GetColumnInfo](/previous-ve
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

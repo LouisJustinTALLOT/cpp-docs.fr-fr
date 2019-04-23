@@ -1,5 +1,5 @@
 ---
-title: switch_type (attribut de COM C++)
+title: switch_type (C++ attribut COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
 ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027855"
 ---
 # <a name="switchtype"></a>switch_type
@@ -32,7 +32,7 @@ Le type de commutateur, peut être un type entier, caractère, booléen ou d’�
 
 ## <a name="remarks"></a>Notes
 
-Le **switch_type** attribut C++ a les mêmes fonctionnalités que le [switch_type](/windows/desktop/Midl/switch-type) attribut MIDL.
+Le **switch_type** C++ attribut a les mêmes fonctionnalités que le [switch_type](/windows/desktop/Midl/switch-type) attribut MIDL.
 
 Attributs C++ ne gèrent pas [encapsulé unions](/windows/desktop/Midl/encapsulated-unions). [Unions nonencapsulated](/windows/desktop/Midl/nonencapsulated-unions) sont pris en charge uniquement sous la forme suivante :
 
@@ -74,4 +74,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[exporter](export.md)
+[export](export.md)

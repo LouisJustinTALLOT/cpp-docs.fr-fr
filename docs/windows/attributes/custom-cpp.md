@@ -7,10 +7,10 @@ helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
 ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029432"
 ---
 # <a name="custom-c"></a>custom (C++)
@@ -31,7 +31,7 @@ Définit les métadonnées pour un objet dans la bibliothèque de types.
 *uuid*<br/>
 ID unique.
 
-*par défaut*<br/>
+*value*<br/>
 Une valeur qui peut être placée dans un variant.
 
 ## <a name="remarks"></a>Notes
@@ -61,4 +61,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 [Attributs de paramètres](parameter-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
-[Attributs d'interface](interface-attributes.md)
+[Attributs d’interface](interface-attributes.md)

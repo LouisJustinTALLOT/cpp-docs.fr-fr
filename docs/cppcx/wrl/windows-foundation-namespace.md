@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
 ms.openlocfilehash: cd16a888594e928214ef45cbdddb1e0fdac7c82a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030480"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation, espace de noms
@@ -31,8 +31,8 @@ namespace Windows::Foundation;
 
 |Nom|Description|
 |----------|-----------------|
-|[ActivateInstance (fonction)](activateinstance-function.md)|Enregistre et récupère une instance d’un type spécifié défini dans un ID de classe spécifié.|
-|[GetActivationFactory (fonction)](getactivationfactory-function.md)|Récupère une fabrique d’activation pour le type spécifié par le paramètre de modèle.|
+|[ActivateInstance, fonction](activateinstance-function.md)|Enregistre et récupère une instance d’un type spécifié défini dans un ID de classe spécifié.|
+|[GetActivationFactory, fonction](getactivationfactory-function.md)|Récupère une fabrique d’activation pour le type spécifié par le paramètre de modèle.|
 
 ## <a name="requirements"></a>Configuration requise
 

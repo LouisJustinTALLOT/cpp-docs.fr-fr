@@ -6,10 +6,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
 ms.openlocfilehash: ea4d3119a640c0642664210384c297e011104411
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030815"
 ---
 # <a name="compiler-attributes"></a>Attributs de compilateur
@@ -21,8 +21,8 @@ Attributs de compilateur fournissent de nombreuses fonctionnalités.
 |[emitidl](emitidl.md)|Détermine si tous les attributs IDL suivantes seront traitées et placés dans le fichier .idl généré.|
 |[event_receiver](event-receiver.md)|Crée un récepteur d’événements.|
 |[event_source](event-source.md)|Crée une source d'événement.|
-|[exporter](export.md)|Provoque une structure de données à placer dans le fichier .idl.|
-|[implémente](implements-cpp.md)|Spécifie les interfaces de dispatch obligés d’être membres de la coclasse IDL.|
+|[export](export.md)|Provoque une structure de données à placer dans le fichier .idl.|
+|[implements](implements-cpp.md)|Spécifie les interfaces de dispatch obligés d’être membres de la coclasse IDL.|
 |[importidl](importidl.md)|Insère le fichier .idl spécifié dans le fichier .idl généré.|
 |[importlib](importlib.md)|Rend disponibles les types qui ont déjà été compilés dans une autre bibliothèque de types pour la bibliothèque de types en cours de création.|
 |[includelib](includelib-cpp.md)|Génère un fichier .idl ou .h à inclure dans le fichier .idl généré.|

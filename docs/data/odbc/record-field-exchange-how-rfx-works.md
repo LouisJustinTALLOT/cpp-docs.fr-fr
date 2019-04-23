@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032675"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Record Field Exchange : Fonctionnement de RFX
@@ -90,7 +90,7 @@ Si vous ajoutez un nouvel enregistrement, le jeu d’enregistrements fonctionne 
 
 1. `AddNew` ou `Edit` prépare les champs dans la mémoire tampon d’édition afin que RFX puisse identifier les membres de données de champ modifié.
 
-   Car un nouvel enregistrement n’a pas de valeurs à comparer les nouveaux avec, `AddNew` définit la valeur de chaque membre de données du champ valeur PSEUDO_NULL. Ensuite, lorsque vous appelez `Update`, RFX compare la valeur de chaque membre de données avec la valeur PSEUDO_NULL. S’il existe une différence, le membre de données a été défini. (PSEUDO_NULL n’est pas identique à une colonne d’enregistrement ayant la valeur Null ou de ces le même que la valeur NULL en C++.)
+   Car un nouvel enregistrement n’a pas de valeurs à comparer les nouveaux avec, `AddNew` définit la valeur de chaque membre de données du champ valeur PSEUDO_NULL. Ensuite, lorsque vous appelez `Update`, RFX compare la valeur de chaque membre de données avec la valeur PSEUDO_NULL. S’il existe une différence, le membre de données a été défini. (PSEUDO_NULL n’est pas identique à une colonne d’enregistrement ayant la valeur Null ou de ces identique C++ NULL.)
 
    Contrairement à la `Update` appeler pour `AddNew`, le `Update` appeler pour `Edit` compare les valeurs mises à jour avec les valeurs précédemment stockées plutôt que d’utiliser PSEUDO_NULL. La différence est que `AddNew` n’a aucune valeur précédemment stockée pour la comparaison.
 
@@ -124,6 +124,6 @@ Lorsque vous supprimez un enregistrement, RFX définit tous les champs sur la va
 
 [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [MFC ODBC, consommation](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
-[Macros, fonctions globales et variables globales](../../mfc/reference/mfc-macros-and-globals.md)<br/>
+[Macros, fonctions globales et Variables globales](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CFieldExchange, classe](../../mfc/reference/cfieldexchange-class.md)<br/>
 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)

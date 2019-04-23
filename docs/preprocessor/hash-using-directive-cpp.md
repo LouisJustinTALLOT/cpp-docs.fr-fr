@@ -13,10 +13,10 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
 ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034259"
 ---
 # <a name="using-directive-ccli"></a>#using, Directive (C + c++ / CLI)
@@ -47,7 +47,7 @@ Si *fichier* ne contient pas d’assembly (si *fichier* est un module) et si vou
 
 Une alternative à utiliser **#using** est la [/FU](../build/reference/fu-name-forced-hash-using-file.md) option du compilateur.
 
-assemblys .exe passés à **#using** doit être compilée à l’aide d’un des compilateurs .NET Visual Studio (Visual Basic ou Visual C#, par exemple).  Toute tentative d'importation des métadonnées à partir d'un assembly .exe compilé avec `/clr` provoque une exception de chargement du fichier.
+assemblys .exe passés à **#using** doit être compilée à l’aide d’un des compilateurs .NET Visual Studio (Visual Basic ou Visual c#, par exemple).  Toute tentative d'importation des métadonnées à partir d'un assembly .exe compilé avec `/clr` provoque une exception de chargement du fichier.
 
 > [!NOTE]
 > Un composant qui est référencé avec **#using** peut être exécuté avec une version différente du fichier importé au moment de la compilation, à l’origine d’une application cliente à donner des résultats inattendus.

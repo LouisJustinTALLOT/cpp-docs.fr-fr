@@ -5,10 +5,10 @@ helpviewer_keywords:
 - schema rowsets, defined
 ms.assetid: 0716a065-230c-4c20-bb53-98870e79ea29
 ms.openlocfilehash: c0ec284b4bb366b72eae86f684346f70bfb44239
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028232"
 ---
 # <a name="schema-rowsets"></a>Jeux de lignes du schéma
@@ -19,4 +19,4 @@ Pour plus d’informations sur l’utilisation d’ensembles de lignes de schém
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

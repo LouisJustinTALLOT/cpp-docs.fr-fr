@@ -4,10 +4,10 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
 ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035346"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurer des sessions de débogage CMake
@@ -70,8 +70,8 @@ La clé 'cwd' définit le répertoire actuel de l’application de lancement pou
 
 [Projets CMake dans Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Configurer un projet CMake Linux](../linux/cmake-linux-project.md)<br/>
-[Se connecter à un ordinateur Linux distant](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Personnaliser des paramètres de génération CMake](customize-cmake-settings.md)<br/>
+[Se connecter à votre ordinateur Linux distant](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Personnaliser les paramètres de génération CMake](customize-cmake-settings.md)<br/>
 [Configurer des sessions de débogage CMake](configure-cmake-debugging-sessions.md)<br/>
 [Déployer, exécuter et déboguer un projet Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Informations de référence sur la configuration prédéfinie de CMake](cmake-predefined-configuration-reference.md)<br/>

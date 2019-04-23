@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
 ms.openlocfilehash: 51cb4a97d271d6d41d39d1025e3a5d34b273cdc4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035252"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
@@ -36,7 +36,7 @@ void __outdwordstring(
 *Port*<br/>
 [in] Le port pour envoyer les données.
 
-*Mémoire tampon*<br/>
+*Buffer*<br/>
 [in] Un pointeur vers les données seront envoyés le port spécifié.
 
 *Nombre*<br/>
@@ -58,4 +58,4 @@ Cette routine est disponible uniquement en tant qu'intrinsèque.
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

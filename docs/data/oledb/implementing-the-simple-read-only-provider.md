@@ -5,10 +5,10 @@ helpviewer_keywords:
 - read-only provider
 ms.assetid: 22a8adb5-19da-43b5-9733-0ea72bb8684c
 ms.openlocfilehash: 7e63cd2bea0f0d13f6dc2bfff5c1be46cf0de116
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028728"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>Implémentation d'un fournisseur simple accessible en lecture seule
@@ -21,4 +21,4 @@ L’exemple étendu de cette rubrique montre comment modifier les fichiers cré�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d'un fournisseur simple accessible en lecture seule](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
+[Création d’un fournisseur simple accessible en lecture seule](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>

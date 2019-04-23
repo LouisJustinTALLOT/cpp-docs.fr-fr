@@ -8,10 +8,10 @@ helpviewer_keywords:
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
 ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034668"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Procédure pas à pas : Compiler un C + c++ / CLI programme qui cible le CLR dans Visual Studio
@@ -76,5 +76,5 @@ Ces rubriques partent du principe que vous avez des notions de base du langage C
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence du langage C++](../cpp/cpp-language-reference.md)<br/>
-[Projets et des systèmes de génération](../build/projects-and-build-systems-cpp.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
+[Projets et systèmes de build](../build/projects-and-build-systems-cpp.md)<br/>
