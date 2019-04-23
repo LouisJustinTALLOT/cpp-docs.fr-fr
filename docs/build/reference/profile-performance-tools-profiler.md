@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 23cbccba9a8ec839252d553cc5cbafd37e66bbf9
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810001"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124770"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profileur des outils d'analyse des performances)
 
@@ -56,7 +56,22 @@ Génère un fichier de sortie utilisable avec le profileur Outils d’analyse de
 
 1. Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
+### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Pour définir cette option de l’éditeur de liens dans un projet Visual Studio CMake
+
+**CMake** projet n’a pas un **Pages de propriétés**, les options de l’éditeur de liens peuvent être définies par modification du fichier CMakeLists.txt.
+
+1. Ouvrez le fichier CMakeLists.txt dans le répertoire racine du projet.
+
+1. Ajoutez le code ci-dessous. Pour plus d’informations, consultez [références de CMake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
+
+1. Régénérez votre solution.
+
+```
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
+```
+
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)
+

@@ -2,11 +2,11 @@
 title: Développement UWP en C++
 ms.date: 03/13/2019
 ms.openlocfilehash: c6b92a3b85c08bc2d43ad297c410445ea974822b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784658"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777391"
 ---
 # <a name="uwp-development-with-c"></a>Développement UWP en C++
 

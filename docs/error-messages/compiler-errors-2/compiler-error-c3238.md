@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
 ms.openlocfilehash: d70bb6dac7cb43701b57f3821872e02ab31426dc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58775621"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778616"
 ---
 # <a name="compiler-error-c3238"></a>Erreur du compilateur C3238
 

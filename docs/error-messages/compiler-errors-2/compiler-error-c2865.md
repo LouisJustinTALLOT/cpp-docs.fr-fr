@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2865
 ms.assetid: 973eb6a0-c99a-4d25-b3e5-fe0539794d77
 ms.openlocfilehash: 38b7dd86a57c3cd89811c6489e51fb4271fd7b79
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769613"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777141"
 ---
 # <a name="compiler-error-c2865"></a>Erreur du compilateur C2865
 

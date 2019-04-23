@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: bcf2372f039ccec4b46bf51fb4da9f4175289f14
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58807574"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803927"
 ---
 Les compilateurs Visual Studio et les outils de génération peuvent signaler de nombreux genres d’erreurs et avertissements. Une fois qu’une erreur ou un avertissement est trouvé, les outils de génération peuvent émettre des hypothèses sur l’intention du code et tenter de se poursuivre, afin que davantage de problèmes peut être signalées en même temps. Si les outils suivent une hypothèse incorrecte, les erreurs ou avertissements ultérieurs peuvent ne pas s'appliquer à votre projet. Lors de la résolution de problèmes dans votre projet, démarrez toujours par la première erreur ou le premier avertissement signalé et effectuez régulièrement une régénération. Le d’eux peut rendre les nombreuses autres erreurs disparaître.
 

@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 93e3b8912ddf20bf8e190bb42e8413e6d909bbcc
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703432"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124679"
 ---
 # <a name="isnormal"></a>isnormal
 
-Détermine si une valeur à virgule flottante est une valeur infinie.
+Détermine si une valeur à virgule flottante est une valeur normale.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,7 +27,7 @@ int isnormal(
 template <class FloatingType>
 inline bool isnormal(
    FloatingType x
-) throw(); /* C++-only template function */
+) throw(); /* C++-only function template */
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -37,13 +37,13 @@ Valeur à virgule flottante à tester.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**isnormal** retourne une valeur différente de zéro (**true** dans le code C++) si l’argument *x* est fini et pas subnormal. **isnormal** retourne 0 (**false** dans le code C++) si l’argument est un subnormales, un nombre infini ou une valeur NAN.
+**isnormal** retourne une valeur différente de zéro (**true** dans C++ code) si l’argument *x* est égal à zéro, subnormales, infini, ni une valeur NaN. Sinon, **isnormal** retourne 0 (**false** dans C++ code).
 
 ## <a name="remarks"></a>Notes
 
-**isnormal** est une macro lors de la compilation en tant que C et une fonction de modèle inline, lors de la compilation en C++.
+**isnormal** est une macro lors de la compilation en tant que C et un modèle de fonction inline, lors de la compilation en tant que C++.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------------|-------------------------------|
