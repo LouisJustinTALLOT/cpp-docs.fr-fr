@@ -56,10 +56,10 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
 ms.openlocfilehash: 2cffd5a088c4b3c67441e79bc04bd709be6bf8ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039174"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd, fonctions intrinsèques
@@ -155,10 +155,10 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 
 #### <a name="parameters"></a>Paramètres
 
-*Terme*<br/>
+*Addend*<br/>
 [in, out] La valeur doit être ajouté remplacé par le résultat de l’addition.
 
-*Value*<br/>
+*Valeur*<br/>
 [in] Valeur à ajouter.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -193,6 +193,6 @@ Pour obtenir un exemple montrant comment utiliser `_InterlockedExchangeAdd`, con
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

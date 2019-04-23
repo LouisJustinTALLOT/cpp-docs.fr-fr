@@ -6,10 +6,10 @@ helpviewer_keywords:
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
 ms.openlocfilehash: 0b105cc2039e2aa50c11b796e5474a97d8c5c702
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035687"
 ---
 # <a name="preprocessor-operators"></a>Opérateurs de préprocesseur
@@ -26,4 +26,4 @@ Quatre opérateurs propres au préprocesseur sont utilisés dans le contexte de 
 
 [Directives de préprocesseur](../preprocessor/preprocessor-directives.md)<br/>
 [Macros prédéfinies](../preprocessor/predefined-macros.md)<br/>
-[Référence du préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

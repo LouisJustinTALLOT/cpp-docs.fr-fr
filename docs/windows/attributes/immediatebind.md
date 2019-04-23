@@ -7,10 +7,10 @@ helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
 ms.openlocfilehash: 1844e72ecd1fe7c0f4255426eb48f5c70471e5f5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036206"
 ---
 # <a name="immediatebind"></a>immediatebind

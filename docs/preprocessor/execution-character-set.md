@@ -8,10 +8,10 @@ helpviewer_keywords:
 - pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
 ms.openlocfilehash: bd31e8e91a1bcbfa6ace9b47fa2b13dd945adb20
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039924"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
@@ -43,4 +43,4 @@ Par défaut, Visual Studio utilise la page de codes actuelle en tant que le jeu 
 
 [Directives pragma et \_ \_mot clé (pragma)](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/ EXECUTION-CharSet (définir l’exécution du jeu de caractères)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/ UTF-8 (définir la Source et le fichier exécutable jeux de caractères UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/utf-8 (Définir les jeux de caractères sources et exécutables sur UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

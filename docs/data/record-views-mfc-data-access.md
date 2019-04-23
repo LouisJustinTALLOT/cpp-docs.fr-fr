@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
 ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040197"
 ---
 # <a name="record-views--mfc-data-access"></a>Vues d'enregistrements (Accès aux données MFC)
@@ -37,17 +37,17 @@ Le contenu de ces rubriques s'applique aux classes ODBC et DAO. Utilisez `CRecor
 
 Les rubriques traitées ici sont les suivantes :
 
-- [Fonctionnalités des classes d’affichage des enregistrements](../data/features-of-record-view-classes-mfc-data-access.md)
+- [Fonctionnalités des Classes d’affichage de l’enregistrement](../data/features-of-record-view-classes-mfc-data-access.md)
 
-- [Échange de données pour les vues des enregistrements](../data/data-exchange-for-record-views-mfc-data-access.md)
+- [Échange de données pour les vues d’enregistrements](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [Votre rôle dans l'utilisation d'une vue de l'enregistrement](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [Votre rôle dans l’utilisation d’une vue d’enregistrement](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
-- [Conception et création d'une vue de l'enregistrement](../data/designing-and-creating-a-record-view-mfc-data-access.md)
+- [Conception et création d’une vue d’enregistrement](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
-- [Utilisation d'une vue de l'enregistrement](../data/using-a-record-view-mfc-data-access.md)
+- [À l’aide d’une vue d’enregistrement](../data/using-a-record-view-mfc-data-access.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation de l'accès aux données (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[Accès aux données de programmation (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

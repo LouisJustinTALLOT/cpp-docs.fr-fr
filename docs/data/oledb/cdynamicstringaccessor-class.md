@@ -13,10 +13,10 @@ helpviewer_keywords:
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
 ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035661"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor, classe
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in] Pointeur vers une chaîne de caractères qui contient le nom de colonne.
 
-*Données*<br/>
+*data*<br/>
 [in] Pointeur vers les données de chaîne à écrire dans la colonne spécifiée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -125,10 +125,10 @@ Si _SECURE_ATL est défini comme ayant une valeur différente de zéro, un éche
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor, classe](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor (classe)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor, classe](../../data/oledb/cmanualaccessor-class.md)<br/>
 [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CDynamicStringAccessorA, classe](../../data/oledb/cdynamicstringaccessora-class.md)<br/>

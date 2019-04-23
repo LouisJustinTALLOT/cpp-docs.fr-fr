@@ -53,10 +53,10 @@ helpviewer_keywords:
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
 ms.openlocfilehash: 6c20698e2219cf7c3e1d840e23b5f8113947ae9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037710"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl, classe
@@ -118,8 +118,8 @@ L’unité de stockage pour tous les handles de ligne détenus par le fournisseu
 |[GetOriginalData](#getoriginaldata)|Obtient les données récemment transmises à ou obtenu à partir de la source de données, en ignorant les modifications en attente.|
 |[GetPendingRows](#getpendingrows)|Retourne une liste de lignes avec des modifications en attente.|
 |[GetRowStatus](#getrowstatus)|Retourne l’état des lignes spécifiées.|
-|[Annuler](#undo)|Annule les modifications apportées à la ligne depuis la dernière extraction ou de la mise à jour.|
-|[Mise à jour](#update)|Transmet toutes les modifications apportées à la ligne depuis la dernière extraction ou de la mise à jour.|
+|[Annulation](#undo)|Annule les modifications apportées à la ligne depuis la dernière extraction ou de la mise à jour.|
+|[Mettre à jour](#update)|Transmet toutes les modifications apportées à la ligne depuis la dernière extraction ou de la mise à jour.|
 
 ### <a name="implementation-methods-callback"></a>Méthodes d’implémentation (rappel)
 
@@ -142,7 +142,7 @@ Vous devez tout d’abord lire et comprendre sa documentation [IRowsetChange](/p
 > [!IMPORTANT]
 >  Il est fortement recommandé que vous lire la documentation suivante avant de tenter d’implémenter votre fournisseur :
 
-- [Création d'un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md)
+- [Création d’un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md)
 
 - Chapitre 6 de la *de référence du programmeur OLE DB*
 
@@ -334,6 +334,6 @@ Un pointeur vers les données à mettre en cache. Les données sont de type *sto
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[Création d'un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md)
+[Création d’un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md)

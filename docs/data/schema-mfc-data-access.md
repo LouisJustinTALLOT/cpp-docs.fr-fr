@@ -10,10 +10,10 @@ helpviewer_keywords:
 - structures [C++]
 ms.assetid: 7d17e35f-1ccf-4853-b915-5b8c7a45b9ee
 ms.openlocfilehash: cc333ee987ed0c6cba6cb11730d8f940e49d525d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039031"
 ---
 # <a name="schema--mfc-data-access"></a>Schéma (Accès aux données MFC)
@@ -24,6 +24,6 @@ Vous pouvez également compléter le code généré par l'Assistant pour gérer 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation de l'accès aux données (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[Accès aux données de programmation (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [SQL](../data/odbc/sql.md)<br/>
 [Recordset (ODBC)](../data/odbc/recordset-odbc.md)

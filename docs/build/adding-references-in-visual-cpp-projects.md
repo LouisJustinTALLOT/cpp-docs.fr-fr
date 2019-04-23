@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
 ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038761"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilisation des bibliothèques et composants
@@ -128,7 +128,7 @@ Les propriétés suivantes font partie des références d’assembly COM et .NET
 
    Affiche le nom de l'assembly pour l'assembly référencé.
 
-- **culture**
+- **Culture**
 
    Affiche la culture de la référence sélectionnée.
 
@@ -148,7 +148,7 @@ Les propriétés suivantes font partie des références d’assembly COM et .NET
 
    Affiche l'étiquette de la référence.
 
-- **Nom**
+- **Name**
 
    Affiche le nom de la référence.
 
@@ -167,4 +167,4 @@ Les propriétés suivantes font partie des références d’assembly COM et .NET
 ## <a name="see-also"></a>Voir aussi
 
 [Référence de page de propriété de projet C++](reference/property-pages-visual-cpp.md)<br>
-[Définir le compilateur C++ et générer des propriétés dans Visual Studio](working-with-project-properties.md)
+[Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md)

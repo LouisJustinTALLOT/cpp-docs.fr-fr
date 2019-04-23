@@ -9,10 +9,10 @@ helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
 ms.openlocfilehash: 386afe5362f876cd1489a35839f4f8cfc2381e91
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038211"
 ---
 # <a name="attributes-alphabetical-reference"></a>Référence alphabétique des attributs
@@ -22,18 +22,18 @@ Les attributs suivants sont disponibles dans le compilateur Microsoft C++ :
 |Attribut|Description|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|Indique qu’un contrôle peut être agrégé par un autre contrôle.|
-|[agrégats](aggregates.md)|Indique qu’un contrôle agrège la classe cible.|
+|[aggregates](aggregates.md)|Indique qu’un contrôle agrège la classe cible.|
 |[appobject](appobject.md)|Identifie la coclasse comme un objet de l’application, qui est associé à une application EXE complète et indique que les fonctions et les propriétés de la coclasse sont globalement disponibles dans cette bibliothèque de types.|
 |[async_uuid](async-uuid.md)|Spécifie l’UUID qui indique au compilateur MIDL pour définir des versions synchrones et asynchrones d’une interface COM.|
-|[Attribut](attribute.md)|Vous permet de créer un attribut personnalisé.|
+|[attribute](attribute.md)|Vous permet de créer un attribut personnalisé.|
 |[bindable](bindable.md)|Indique que la propriété prend en charge la liaison de données.|
 |[call_as](call-as.md)|Permet à une fonction non accessibles à distance à mapper à une fonction à distance.|
-|[casse](case-cpp.md)|Utilisé avec le [switch_type](switch-type.md) attribut dans une union.|
+|[case](case-cpp.md)|Utilisé avec le [switch_type](switch-type.md) attribut dans une union.|
 |[coclasse](coclass.md)|Crée un objet COM, ce qui peut implémenter une interface COM.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Ajoute une entrée de l’interface à un mappage COM.|
-|[contrôle](control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|
+|[control](control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|
 |[cpp_quote](cpp-quote.md)|Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier d’en-tête généré.|
-|[personnalisé](custom-cpp.md)|Vous permet de définir vos propres attributs.|
+|[custom](custom-cpp.md)|Vous permet de définir vos propres attributs.|
 |[db_accessor](db-accessor.md)|Lie les colonnes dans un ensemble de lignes et les lie aux mappages d’accesseur correspondant.|
 |[db_column](db-column.md)|Lie une colonne spécifiée à l’ensemble de lignes.|
 |[db_command](db-command.md)|Exécute une commande OLE DB.|
@@ -52,7 +52,7 @@ Les attributs suivants sont disponibles dans le compilateur Microsoft C++ :
 |[entry](entry.md)|Spécifie une fonction exportée ou une constante dans un module en identifiant le point d’entrée dans la DLL.|
 |[event_receiver](event-receiver.md)|Crée un récepteur d’événements.|
 |[event_source](event-source.md)|Crée une source d'événement.|
-|[exporter](export.md)|Provoque une structure de données à placer dans le fichier .idl.|
+|[export](export.md)|Provoque une structure de données à placer dans le fichier .idl.|
 |[first_is](first-is.md)|Spécifie l’index du premier élément de tableau doit être transmis.|
 |[helpcontext](helpcontext.md)|Spécifie un ID de contexte qui vous permet de l’utilisateur afficher des informations sur cet élément dans le fichier d’aide.|
 |[helpfile](helpfile.md)|Définit le nom du fichier d’aide pour une bibliothèque de types.|
@@ -64,12 +64,12 @@ Les attributs suivants sont disponibles dans le compilateur Microsoft C++ :
 |[idl_quote](idl-quote.md)|Vous permet d’utiliser des attributs ou IDL construit qui ne sont pas pris en charge dans la version actuelle de Visual C++.|
 |[iid_is](iid-is.md)|Spécifie l’IID de l’interface COM vers laquelle pointé un pointeur d’interface.|
 |[immediatebind](immediatebind.md)|Indique que la base de données est immédiatement avertie de toutes les modifications apportées à une propriété d’un objet lié aux données.|
-|[implémente](implements-cpp.md)|Spécifie les interfaces de dispatch obligés d’être membres de la coclasse IDL.|
+|[implements](implements-cpp.md)|Spécifie les interfaces de dispatch obligés d’être membres de la coclasse IDL.|
 |[implements_category](implements-category.md)|Spécifie les catégories de composants implémentés pour la classe.|
-|[d'importation](import.md)|Spécifie un autre fichier .idl, .odl ou en-tête contenant les définitions que vous souhaitez référencer à partir de votre fichier .idl principal.|
+|[import](import.md)|Spécifie un autre fichier .idl, .odl ou en-tête contenant les définitions que vous souhaitez référencer à partir de votre fichier .idl principal.|
 |[importidl](importidl.md)|Insère le fichier .idl spécifié dans le fichier .idl généré.|
 |[importlib](importlib.md)|Rend disponibles les types qui ont déjà été compilés dans une autre bibliothèque de types pour la bibliothèque de types en cours de création.|
-|[dans](in-cpp.md)|Indique qu’un paramètre est à passer à la procédure appelée à partir de la procédure appelante.|
+|[in](in-cpp.md)|Indique qu’un paramètre est à passer à la procédure appelée à partir de la procédure appelante.|
 |[include](include-cpp.md)|Spécifie un ou plusieurs fichiers d’en-tête à inclure dans le fichier .idl généré.|
 |[includelib](includelib-cpp.md)|Génère un fichier .idl ou .h à inclure dans le fichier .idl généré.|
 |[last_is](last-is.md)|Spécifie l’index du dernier élément de tableau doit être transmis.|
@@ -77,7 +77,7 @@ Les attributs suivants sont disponibles dans le compilateur Microsoft C++ :
 |[length_is](length-is.md)|Spécifie le nombre d’éléments de tableau doit être transmis.|
 |[library_block](library-block.md)|Place une construction à l’intérieur du bloc de bibliothèque du fichier .idl.|
 |[licensed](licensed.md)|Indique que la coclasse auquel il s’applique est concédé sous licence et doit être instanciée à l’aide de `IClassFactory2`.|
-|[locaux](local-cpp.md)|Vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête lorsqu’il est utilisé dans l’en-tête de l’interface. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.|
+|[local](local-cpp.md)|Vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête lorsqu’il est utilisé dans l’en-tête de l’interface. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.|
 |[max_is](max-is.md)|Désigne la valeur maximale pour un index de tableau valide.|
 |[module](module-cpp.md)|Définit le bloc de bibliothèque dans le fichier .idl.|
 |[ms_union](ms-union.md)|Contrôle l’alignement de représentation sous forme de données de réseau d’unions nonencapsulated.|
@@ -88,7 +88,7 @@ Les attributs suivants sont disponibles dans le compilateur Microsoft C++ :
 |[object](object-cpp.md)|Identifie une interface personnalisée ; synonyme d’attribut personnalisé.|
 |[odl](odl.md)|Identifie une interface en tant qu’objet Description Language (ODL) interface.|
 |[oleautomation](oleautomation.md)|Indique qu’une interface est compatible avec Automation.|
-|[facultatifs](optional-cpp.md)|Spécifie un paramètre facultatif pour une fonction membre.|
+|[optional](optional-cpp.md)|Spécifie un paramètre facultatif pour une fonction membre.|
 |[out](out-cpp.md)|Identifie des paramètres pointeurs qui sont retournés de la procédure appelée à la procédure appelante (du serveur au client).|
 |[pointer_default](pointer-default.md)|Spécifie l’attribut de pointeur par défaut pour tous les pointeurs à l’exception des pointeurs de niveau supérieur qui apparaissent dans les listes de paramètres.|
 |[pragma](pragma.md)|Émet la chaîne spécifiée, sans les caractères guillemet, dans le fichier .idl généré.|
@@ -115,7 +115,7 @@ Les attributs suivants sont disponibles dans le compilateur Microsoft C++ :
 |[switch_is](switch-is.md)|Spécifie l’expression ou l’identificateur agissant comme l’union discriminante qui sélectionne le membre d’union.|
 |[switch_type](switch-type.md)|Identifie le type de la variable utilisée en tant que l’union discriminante.|
 |[synchronize](synchronize.md)|Synchronise l’accès à une méthode.|
-|[threads](threading-cpp.md)|Spécifie le modèle de thread pour un objet COM.|
+|[threading](threading-cpp.md)|Spécifie le modèle de thread pour un objet COM.|
 |[transmit_as](transmit-as.md)|Indique au compilateur d’associer un type présenté, les applications clientes et serveur manipulent, à un type transmis.|
 |[uidefault](uidefault.md)|Indique que le membre d’informations de type est le membre par défaut pour l’affichage dans l’interface utilisateur.|
 |[unique](unique-cpp.md)|Spécifie un pointeur unique.|
@@ -129,6 +129,6 @@ Les attributs suivants sont disponibles dans le compilateur Microsoft C++ :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs de C++ pour COM et .NET](cpp-attributes-com-net.md)<br/>
+[Attributs C++ pour COM et .NET](cpp-attributes-com-net.md)<br/>
 [Attributs par groupe](attributes-by-group.md)<br/>
 [Attributs par utilisation](attributes-by-usage.md)

@@ -44,10 +44,10 @@ helpviewer_keywords:
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
 ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040236"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset, classe
@@ -105,7 +105,7 @@ CArrayRowset(int nMax = 100000);
 
 #### <a name="parameters"></a>Paramètres
 
-*nombre maximal*<br/>
+*nMax*<br/>
 [in] Nombre maximal de lignes dans l’ensemble de lignes.
 
 ## <a name="snapshot"></a> CArrayRowset::Snapshot
@@ -156,6 +156,6 @@ ULONG m_nRowsRead;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset, classe](../../data/oledb/crowset-class.md)

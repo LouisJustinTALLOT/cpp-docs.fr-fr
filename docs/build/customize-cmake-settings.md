@@ -4,10 +4,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
 ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037521"
 ---
 # <a name="customize-cmake-build-settings"></a>Personnaliser des paramètres de génération CMake
@@ -100,16 +100,16 @@ Des paramètres supplémentaires sont disponibles pour les projets Linux CMake. 
 
 ## <a name="environment-variables"></a>Variables d’environnement
 
- `CMakeSettings.json` Il prend également en charge beaucoup de variables d’environnement dans les propriétés mentionnées ci-dessus. La syntaxe à utiliser est `${env.FOO}` pour développer la variable d’environnement %FOO%.
+ `CMakeSettings.json` prend également en charge la consommation de variables d’environnement dans l’une des propriétés mentionnées ci-dessus. La syntaxe à utiliser est `${env.FOO}` pour développer la variable d’environnement %FOO%.
 Vous avez également accès aux macros intégrées dans ce fichier :
 
-- `${workspaceRoot}` – fournit le chemin d’accès complet du dossier d’espace de travail
-- `${workspaceHash}` – hachage de l’emplacement de l’espace de travail ; utile pour la création d’un identificateur unique pour l’espace de travail actuel (par exemple, à utiliser dans les chemins d’accès de dossier)
-- `${projectFile}` : le chemin d’accès complet du fichier CMakeLists.txt racine
-- `${projectDir}` : le chemin d’accès complet du dossier du fichier CMakeLists.txt racine
-- `${thisFile}` : le chemin d’accès complet de le `CMakeSettings.json` fichier
-- `${name}` – le nom de la configuration
-- `${generator}` – le nom du générateur CMake utilisé dans cette configuration
+- `${workspaceRoot}` : Fournit le chemin complet du dossier de l’espace de travail
+- `${workspaceHash}` : Hachage de l’emplacement de l’espace de travail. Utile pour créer un identificateur unique pour l’espace de travail actuel (par exemple, à utiliser dans les chemins de dossier)
+- `${projectFile}` : Chemin complet du fichier racine CMakeLists.txt
+- `${projectDir}` : Chemin complet du dossier du fichier racine CMakeLists.txt
+- `${thisFile}` : Chemin complet du fichier `CMakeSettings.json`
+- `${name}` : Nom de la configuration
+- `${generator}` : Nom du générateur CMake utilisé dans cette configuration
 
 ## <a name="ninja-command-line-arguments"></a>Arguments de ligne de commande Ninja
 
@@ -137,7 +137,7 @@ usage: ninja [options] [targets...]
 
 ## <a name="inherited-environments"></a>Environnements hérités
 
- `CMakeSettings.json` prend en charge héritée des environnements. Cette fonctionnalité vous permet (1) d’hériter les environnements par défaut et (2) de créer des variables d’environnement personnalisées qui sont passées à CMake.exe quand il s’exécute.
+ `CMakeSettings.json` prend en charge les environnements hérités. Cette fonctionnalité vous permet (1) d’hériter les environnements par défaut et (2) de créer des variables d’environnement personnalisées qui sont passées à CMake.exe quand il s’exécute.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -238,7 +238,7 @@ Dans l’exemple suivant, la configuration x86-Debug définit sa propre valeur p
 
 [Projets CMake dans Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Configurer un projet CMake Linux](../linux/cmake-linux-project.md)<br/>
-[Se connecter à un ordinateur Linux distant](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Se connecter à votre ordinateur Linux distant](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Configurer des sessions de débogage CMake](configure-cmake-debugging-sessions.md)<br/>
 [Déployer, exécuter et déboguer un projet Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Informations de référence sur la configuration prédéfinie de CMake](cmake-predefined-configuration-reference.md)<br/>

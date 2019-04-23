@@ -17,10 +17,10 @@ helpviewer_keywords:
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
 ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037787"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Procédure : Utiliser un outil de dessin
@@ -140,8 +140,8 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeur d'images pour les icônes](../windows/image-editor-for-icons.md)<br/>
-[Procédure : Créez une icône ou une autre Image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Procédure : Modifier une Image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Procédure : Utiliser des couleurs](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)<br/>
+[Guide pratique pour créer une icône ou une autre image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Guide pratique pour modifier une image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Guide pratique pour utiliser les couleurs](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

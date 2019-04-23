@@ -81,10 +81,10 @@ helpviewer_keywords:
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
 ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037419"
 ---
 # <a name="how-to-layout-controls-c"></a>Procédure : Contrôles de disposition (C++)
@@ -114,10 +114,10 @@ Le **Guide paramètres** boîte de dialogue a les propriétés suivantes :
 |Propriété|Description|
 |---|---|
 |**Repères de disposition**|Affiche les paramètres pour les repères de disposition.|
-|**Aucun.**|Masque les outils de disposition.|
+|**Aucun**|Masque les outils de disposition.|
 |**Règles et repères**|Lorsque l’option est activée, les règles sont ajoutées aux outils de mise en page et permet guides à placer dans les règles. Les guides par défaut sont les marges.|
-|**Grille**|Crée une grille de disposition. Nouveaux contrôles sont automatiquement alignés sur la grille.|
-|**espacement de la grille**|Affiche les paramètres pour l’espacement de la grille en unités de boîte de dialogue (DLU).|
+|**Grid**|Crée une grille de disposition. Nouveaux contrôles sont automatiquement alignés sur la grille.|
+|**Espacement de la grille**|Affiche les paramètres pour l’espacement de la grille en unités de boîte de dialogue (DLU).|
 |**Largeur : DLU**|Définit la largeur de la grille de disposition en DLU. Une DLU horizontale correspond à la largeur moyenne de la police de la boîte de dialogue divisée par 4.|
 |**Hauteur : DLU**|Définit la hauteur de la grille de disposition dans DLU. Une DLU verticale correspond à la hauteur moyenne de la police de la boîte de dialogue divisée par 8.|
 
@@ -251,7 +251,7 @@ Vous pouvez dimensionner une zone de liste déroulante lorsque vous l’ajoutez 
    |**Centres**|Aligne les contrôles sélectionnés sur leur centre horizontalement.|
    |**Droits**|Aligne les contrôles sélectionnés sur leurs côtés.|
    |**ToPS**|Aligne les contrôles sélectionnés sur leurs bords supérieurs.|
-   |**Milieux**|Aligne les contrôles sélectionnés verticalement sur leur milieu.|
+   |**Middles**|Aligne les contrôles sélectionnés verticalement sur leur milieu.|
    |**Bases**|Aligne les contrôles sélectionnés sur le bord inférieur.|
 
    Veillez à sélectionner le contrôle que vous souhaitez être tout d’abord dominant ou définissez-le comme contrôle dominant avant d’exécuter l’alignement ou de dimensionnement de commande comme la position finale du groupe de contrôles dépend de la position du contrôle dominant.
@@ -260,8 +260,8 @@ Vous pouvez dimensionner une zone de liste déroulante lorsque vous l’ajoutez 
 
    |Espacement|Description|
    |---|---|
-   |**Horizontalement**|Contrôles d’espace uniformément entre le plus à gauche et le plus à droite contrôle sélectionné.|
-   |**Bas**|Contrôles d’espace uniformément entre le premier et le plus bas contrôle sélectionné.|
+   |**Sur**|Contrôles d’espace uniformément entre le plus à gauche et le plus à droite contrôle sélectionné.|
+   |**Vers le bas**|Contrôles d’espace uniformément entre le premier et le plus bas contrôle sélectionné.|
 
 - Pour centrer les contrôles, sélectionnez l’ou les contrôles que vous souhaitez réorganiser. Accédez au menu **Format** > **Centrer dans la boîte de dialogue** et choisissez une des options suivantes :
 
@@ -274,7 +274,7 @@ Vous pouvez dimensionner une zone de liste déroulante lorsque vous l’ajoutez 
 
    |Disposition|Description|
    |---|---|
-   |**Droit**|Aligne le bord droit de la boîte de dialogue de boutons.|
+   |**Droite**|Aligne le bord droit de la boîte de dialogue de boutons.|
    |**Bas**|Aligne le bord inférieur de la boîte de dialogue de boutons.|
 
    Si vous sélectionnez un contrôle autre qu’un bouton de commande, sa position n’est pas affectée.
@@ -286,5 +286,5 @@ Win32
 ## <a name="see-also"></a>Voir aussi
 
 [Gérer les contrôles de boîte de dialogue](controls-in-dialog-boxes.md)<br/>
-[Procédure : Ajouter, modifier, ou supprimer des contrôles](adding-editing-or-deleting-controls.md)<br/>
-[Procédure : Définir les valeurs et contrôler l’accès](defining-mnemonics-access-keys.md)<br/>
+[Guide pratique pour ajouter, modifier, ou supprimer des contrôles](adding-editing-or-deleting-controls.md)<br/>
+[Guide pratique pour définir les valeurs et l’accès au contrôle](defining-mnemonics-access-keys.md)<br/>

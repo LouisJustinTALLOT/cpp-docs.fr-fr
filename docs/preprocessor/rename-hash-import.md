@@ -7,15 +7,15 @@ helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
 ms.openlocfilehash: 0fbed04f040a47b5b389f40eeb15254da4a7940b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037055"
 ---
 # <a name="rename-import"></a>Renommer (\#importer)
 
-**Section spécifique à C++**
+**Spécifique à C++**
 
 Offre une solution de contournement pour les problèmes de collisions de noms.
 
@@ -30,7 +30,7 @@ rename("OldName","NewName")
 *OldName*<br/>
 Ancien nom dans la bibliothèque de types.
 
-*NouveauNom*<br/>
+*NewName*<br/>
 Nom à utiliser au lieu de l'ancien nom.
 
 ## <a name="remarks"></a>Notes
@@ -56,9 +56,9 @@ rename("GetMyParent","GetMyParentX")
 
 Cela provient du fait que le nom `GetMyParent` se produit uniquement dans le fichier d'en-tête de bibliothèque de types résultant.
 
-**FIN de la section spécifique à C++**
+**FIN spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import, directive](../preprocessor/hash-import-directive-cpp.md)
+[attributs #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[directive #import](../preprocessor/hash-import-directive-cpp.md)

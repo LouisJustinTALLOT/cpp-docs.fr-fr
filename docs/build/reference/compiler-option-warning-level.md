@@ -58,10 +58,10 @@ helpviewer_keywords:
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
 ms.openlocfilehash: 7b5c19c95cff3058bb3dcc6640f8ab07cf01edd6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040067"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>wln, / W0, W1, W2, / w3, / W4, W1, W2, / w3, / W4, Wall, WD, / we, Wo, / WV, /WX (niveau d’avertissement)
@@ -116,7 +116,7 @@ Le [documentation sur les erreurs de build](../../error-messages/compiler-errors
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
 
-1. Pour définir le **/W0**, **W1**, **W2**, **w3**, **/W4**, **/Wall**, **/WV**, **/WX** ou **/WX-** options, sélectionnez le **propriétés de Configuration** > **C / C++** > **général** page de propriétés.
+1. Pour définir le **/W0**, **W1**, **W2**, **w3**, **/W4**, **/Wall**, **/WV**, **/WX** ou **/WX-** options, sélectionnez le **propriétés de Configuration** > **C / C++**   >  **Général** page de propriétés.
 
    - Pour définir le **/W0**, **W1**, **W2**, **w3**, **/W4**, ou **/Wall** Options, modifier le **niveau d’avertissement** propriété.
 
@@ -141,4 +141,4 @@ Le [documentation sur les erreurs de build](../../error-messages/compiler-errors
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

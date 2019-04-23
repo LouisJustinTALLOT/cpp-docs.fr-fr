@@ -10,10 +10,10 @@ helpviewer_keywords:
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
 ms.openlocfilehash: 11e36e06adc4fa95cb9aa607704e72f64c812429
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036151"
 ---
 # <a name="phases-of-translation"></a>Phases de traduction
@@ -54,7 +54,7 @@ Toutes les séquences d'échappement et tous les membres du jeu de caractères d
 *Concaténation de chaînes*<br/>
 Tous les littéraux de chaîne adjacents et étendus sont concaténés. Par exemple, `"String " "concatenation"` devient `"String concatenation"` ;
 
-*Traduction*<br/>
+*Translation*<br/>
 Tous les jetons sont analysés syntaxiquement et sémantiquement ; ils sont convertis en code objet.
 
 *Liaison*<br/>

@@ -1,5 +1,5 @@
 ---
-title: avertissement
+title: warning
 ms.date: 11/04/2016
 f1_keywords:
 - warning_CPP
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
 ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037748"
 ---
 # <a name="warning-pragma"></a>Warning (pragma)
@@ -37,10 +37,10 @@ Les paramètres spécificateur-avertissement suivants sont disponibles.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Applique le niveau donné du ou des avertissements spécifiés. Cela active également un avertissement spécifié qui est désactivé par défaut.|
 |*default*|Réinitialise le comportement d'avertissement à sa valeur par défaut. Cela active également un avertissement spécifié qui est désactivé par défaut. L'avertissement est généré à son niveau par défaut, documenté.<br /><br /> Pour plus d'informations, consultez [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*désactiver*|Ne publie pas le ou les messages d'avertissement spécifiés.|
-|*erreur*|Signale les avertissements spécifiés comme des erreurs.|
+|*disable*|Ne publie pas le ou les messages d'avertissement spécifiés.|
+|*error*|Signale les avertissements spécifiés comme des erreurs.|
 |*once*|Affiche le ou les messages spécifiés une seule fois.|
-|*supprimer*|Exécute un push de l'état actuel du pragma sur la pile, désactive l'avertissement spécifié pour la ligne suivante, puis dépile la pile d'avertissement afin que l'état pragma soit réinitialisé.|
+|*suppress*|Exécute un push de l'état actuel du pragma sur la pile, désactive l'avertissement spécifié pour la ligne suivante, puis dépile la pile d'avertissement afin que l'état pragma soit réinitialisé.|
 
 L'instruction de code suivante montre qu'un paramètre `warning-number-list` peut contenir plusieurs numéros d'avertissement, et que plusieurs paramètres `warning-specifier` peuvent être spécifiés dans la même directive pragma.
 

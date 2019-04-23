@@ -34,10 +34,10 @@ helpviewer_keywords:
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041122"
 ---
 # <a name="accelerator-editor-c"></a>Éditeur d’accélérateurs (C++)
@@ -71,14 +71,14 @@ Les éléments suivants sont des entrées valides pour le **modificateur** propr
 
    |Value|Description|
    |-----------|-----------------|
-   |**Aucun.**|Utilisateur appuie sur uniquement le **clé** valeur.<br/><br/>Cette valeur est utilisée plus efficacement avec les valeurs ASCII/ANSI 001 à 026, qui est interprétée comme ^ A à ^ Z (**Ctrl + A** via **Ctrl + Z**).|
+   |**Aucun**|Utilisateur appuie sur uniquement le **clé** valeur.<br/><br/>Cette valeur est utilisée plus efficacement avec les valeurs ASCII/ANSI 001 à 026, qui est interprétée comme ^ A à ^ Z (**Ctrl + A** via **Ctrl + Z**).|
    |**Alt**|L’utilisateur doit appuyer sur **Alt** avant la **clé** valeur.|
    |**Ctrl**|L’utilisateur doit appuyer sur **Ctrl** avant la **clé** valeur, non valide avec le Type ASCII.|
-   |**Shift**|L’utilisateur doit appuyer sur **MAJ** avant la **clé** valeur.|
+   |**Maj**|L’utilisateur doit appuyer sur **MAJ** avant la **clé** valeur.|
    |**Ctrl+Alt**|L’utilisateur doit appuyer sur **Ctrl** et **Alt** avant la **clé** valeur, non valide avec le Type ASCII.|
    |**CTRL + MAJ**|L’utilisateur doit appuyer sur **Ctrl** et **MAJ** avant la **clé** valeur, non valide avec le Type ASCII.|
    |**ALT + MAJ**|L’utilisateur doit appuyer sur **Alt** et **MAJ** avant la **clé** valeur, non valide avec le Type ASCII.|
-   |**Ctrl + Alt + Maj**|L’utilisateur doit appuyer sur **Ctrl**, **Alt**, et **MAJ** avant la **clé** valeur, non valide avec le Type ASCII.|
+   |**Ctrl+Alt+Shift**|L’utilisateur doit appuyer sur **Ctrl**, **Alt**, et **MAJ** avant la **clé** valeur, non valide avec le Type ASCII.|
 
 Le **clé** propriété définit la clé réelle à utiliser comme accélérateur.
 
@@ -192,5 +192,5 @@ Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[éditeurs de ressources](../windows/resource-editors.md)<br/>
+[Éditeurs de ressources](../windows/resource-editors.md)<br/>
 [Touches accélérateur](../windows/predefined-accelerator-keys.md)<br/>

@@ -128,10 +128,10 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040966"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor, classe
@@ -696,7 +696,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in] Pointeur vers une chaîne de caractères contenant le nom de colonne.
 
-*Données*<br/>
+*data*<br/>
 [in] Pointeur vers la mémoire contenant les données.
 
 *nColumn*<br/>
@@ -710,8 +710,8 @@ Pour tous les autres types de données, il est plus simple d’utiliser les vers
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor, classe](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor (classe)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor, classe](../../data/oledb/cmanualaccessor-class.md)

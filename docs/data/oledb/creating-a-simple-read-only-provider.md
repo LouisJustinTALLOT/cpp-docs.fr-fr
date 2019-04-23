@@ -6,10 +6,10 @@ helpviewer_keywords:
 - OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
 ms.openlocfilehash: a80678f6bc512c45c0df2ea5cbfc4708f1252ac0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035359"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Création d'un fournisseur simple accessible en lecture seule
@@ -24,4 +24,4 @@ L’exemple est présenté en deux parties :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d'un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>
+[Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>

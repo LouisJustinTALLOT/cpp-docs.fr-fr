@@ -10,10 +10,10 @@ helpviewer_keywords:
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
 ms.openlocfilehash: e77ca5589ed50a4199921603afec1d9888c6cca5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040210"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
@@ -41,7 +41,7 @@ __m128i _mm_extracti_si64(
 *Source*<br/>
 [in] Un champ de 128 bits avec des données d’entrée dans son 64 bits de poids faible.
 
-*Descripteur*<br/>
+*Descriptor*<br/>
 [in] Un champ de 128 bits qui décrit le champ de bits pour extraire.
 
 *Longueur*<br/>
@@ -115,4 +115,4 @@ Copyright 2007 par avancées Micro Devices, Inc. Tous droits réservés. Reprodu
 ## <a name="see-also"></a>Voir aussi
 
 [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)<br/>
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)
