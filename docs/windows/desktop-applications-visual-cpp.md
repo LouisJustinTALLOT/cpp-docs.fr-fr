@@ -2,12 +2,12 @@
 title: Applications de bureau (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: HT
+ms.openlocfilehash: 4576f77f7806787c4ab2a16cc279107ec9af32e5
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033104"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124900"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau (Visual C++)
 
@@ -19,7 +19,7 @@ Une application de bureau est distincte à partir d’une application de platefo
 
 Dans Windows 10, vous pouvez empaqueter votre application de bureau existante ou d’un objet COM en tant qu’une application UWP et ajouter des fonctionnalités telles que touch UWP ou appeler des API à partir de l’ensemble d’API de Windows moderne. Vous pouvez également ajouter une application UWP à une solution de postes de travail dans Visual Studio et utilisez-les dans un seul package et que vous utilisent les API de Windows pour communiquer entre eux de package.
 
-Dans Visual Studio 2017 version 15.4 ou ultérieure, vous pouvez créer un projet de Package d’Application Windows pour simplifier considérablement le travail d’empaquetage de votre application de bureau existante. Quelques restrictions s’appliquent en ce qui concerne le Registre appelle ou utilise des API de votre application de bureau, mais dans de nombreux cas, vous pouvez créer des chemins de code de remplacement pour obtenir une fonctionnalité similaire lors de l’exécution dans un package d’application. Pour plus d’informations, consultez [Desktop Bridge](/windows-uwp/porting/desktop-to-uwp-root).
+Dans Visual Studio 2017 version 15.4 ou ultérieure, vous pouvez créer un projet de Package d’Application Windows pour simplifier considérablement le travail d’empaquetage de votre application de bureau existante. Quelques restrictions s’appliquent en ce qui concerne le Registre appelle ou utilise des API de votre application de bureau, mais dans de nombreux cas, vous pouvez créer des chemins de code de remplacement pour obtenir une fonctionnalité similaire lors de l’exécution dans un package d’application. Pour plus d’informations, consultez [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
 ### <a name="terminology"></a>Terminologie
 

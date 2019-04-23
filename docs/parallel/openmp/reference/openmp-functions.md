@@ -1,6 +1,6 @@
 ---
-title: OpenMP, fonctions
-ms.date: 10/23/2018
+title: Fonctions OpenMP
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP functions
 - omp_destroy_lock
@@ -50,45 +50,62 @@ helpviewer_keywords:
 - omp_unset_lock OpenMP function
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-ms.openlocfilehash: 0435d75b69ea870db50739933245925d6860cbf9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1bf0e08f3b28368d9aea5438b3036ac8a0283735
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333279"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124978"
 ---
-# <a name="openmp-functions"></a>OpenMP, fonctions
+# <a name="openmp-functions"></a>Fonctions OpenMP
 
 Fournit des liens vers les fonctions utilisées dans l’API OpenMP.
 
-L’implémentation Visual C++ de l’OpenMP standard inclut les fonctions suivantes.
+L’élément visuel C++ implémentation de la norme OpenMP inclut les types suivants de fonctions et données.
+
+L’exécution d’environnement :
 
 |Fonction|Description|
 |--------|-----------|
-|[omp_destroy_lock](#omp-destroy-lock)|Désinitialise un verrou.|
-|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|Désinitialise un verrou pouvant être imbriqué.|
-|[omp_get_dynamic](#omp-get-dynamic)|Retourne une valeur qui indique si le nombre de threads disponibles dans des régions parallèles à venir peut être ajusté par la durée d’exécution.|
-|[omp_get_max_threads](#omp-get-max-threads)|Retourne un entier qui est égal à ou supérieur au nombre de threads qui serait disponible si une région parallèle sans [num_threads](openmp-clauses.md#num-threads) ont été définies à ce stade dans le code.|
-|[omp_get_nested](#omp-get-nested)|Retourne une valeur qui indique si le parallélisme imbriquée est activée.|
-|[omp_get_num_procs](#omp-get-num-procs)|Retourne le nombre de processeurs qui sont disponibles lorsque la fonction est appelée.|
+|[omp_set_num_threads](#omp-set-num-threads)|Définit le nombre de threads dans des régions parallèles à venir, sauf substitution par une [num_threads](openmp-clauses.md#num-threads) clause.|
 |[omp_get_num_threads](#omp-get-num-threads)|Retourne le nombre de threads dans la région parallèle.|
+|[omp_get_max_threads](#omp-get-max-threads)|Retourne un entier qui est égal à ou supérieur au nombre de threads qui serait disponible si une région parallèle sans [num_threads](openmp-clauses.md#num-threads) ont été définies à ce stade dans le code.|
 |[omp_get_thread_num](#omp-get-thread-num)|Retourne le nombre de threads d’exécution du thread au sein de son équipe de thread.|
-|[omp_get_wtick](#omp-get-wtick)|Retourne le nombre de secondes entre les battements d’horloge de processeur.|
-|[omp_get_wtime](#omp-get-wtime)|Retourne qu'une valeur en secondes du temps écoulé à partir d’un moment donné.|
+|[omp_get_num_procs](#omp-get-num-procs)|Retourne le nombre de processeurs qui sont disponibles lorsque la fonction est appelée.|
 |[omp_in_parallel](#omp-in-parallel)|Retourne une valeur différente de zéro si elle est appelée à partir de dans une région parallèle.|
+|[omp_set_dynamic](#omp-set-dynamic)|Indique que le nombre de threads disponibles dans des régions parallèles à venir peut être ajusté par la durée d’exécution.|
+|[omp_get_dynamic](#omp-get-dynamic)|Retourne une valeur qui indique si le nombre de threads disponibles dans des régions parallèles à venir peut être ajusté par la durée d’exécution.|
+|[omp_set_nested](#omp-set-nested)|Active le parallélisme imbriqué.|
+|[omp_get_nested](#omp-get-nested)|Retourne une valeur qui indique si le parallélisme imbriquée est activée.|
+
+Verrou :
+
+|Fonction|Description|
+|--------|-----------|
 |[omp_init_lock](#omp-init-lock)|Initialise un verrou simple.|
 |[omp_init_nest_lock](#omp-init-nest-lock)|Initialise un verrou.|
-|[omp_set_dynamic](#omp-set-dynamic)|Indique que le nombre de threads disponibles dans des régions parallèles à venir peut être ajusté par la durée d’exécution.|
+|[omp_destroy_lock](#omp-destroy-lock)|Désinitialise un verrou.|
+|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|Désinitialise un verrou pouvant être imbriqué.|
 |[omp_set_lock](#omp-set-lock)|Blocs d’exécution de thread jusqu'à ce qu’un verrou est disponible.|
 |[omp_set_nest_lock](#omp-set-nest-lock)|Blocs d’exécution de thread jusqu'à ce qu’un verrou est disponible.|
-|[omp_set_nested](#omp-set-nested)|Active le parallélisme imbriqué.|
-|[omp_set_num_threads](#omp-set-num-threads)|Définit le nombre de threads dans des régions parallèles à venir, sauf substitution par une [num_threads](openmp-clauses.md#num-threads) clause.|
-|[omp_test_lock](#omp-test-lock)|Tente de définir un verrou, mais ne bloque pas l’exécution du thread.|
-|[omp_test_nest_lock](#omp-test-nest-lock)|Tente de définir un verrou pouvant être imbriqué, mais ne bloque pas l’exécution du thread.|
 |[omp_unset_lock](#omp-unset-lock)|Libère un verrou.|
 |[omp_unset_nest_lock](#omp-unset-nest-lock)|Libère un verrou pouvant être imbriqué.|
+|[omp_test_lock](#omp-test-lock)|Tente de définir un verrou, mais ne bloque pas l’exécution du thread.|
+|[omp_test_nest_lock](#omp-test-nest-lock)|Tente de définir un verrou pouvant être imbriqué, mais ne bloque pas l’exécution du thread.|
 
-## <a name="omp-destroy-lock"></a>fonctions omp_destroy_lock
+|Type de données|Description|
+|---------|-----------|
+|`omp_lock_t`|Un type qui contient l’état d’un verrou, si le verrou est disponible ou si un thread détient un verrou.|
+|`omp_nest_lock_t`|Un type qui conserve l’un des éléments suivants d’informations sur un verrou : si le verrou est disponible et que l’identité du thread qui détient le verrou et un nombre d’imbrication.|
+
+Pour les routines de minutage :
+
+|Fonction|Description|
+|--------|-----------|
+|[omp_get_wtime](#omp-get-wtime)|Retourne qu'une valeur en secondes du temps écoulé à partir d’un moment donné.|
+|[omp_get_wtick](#omp-get-wtick)|Retourne le nombre de secondes entre les battements d’horloge de processeur.|
+
+## <a name="omp-destroy-lock"></a>omp_destroy_lock
 
 Désinitialise un verrou.
 
@@ -101,7 +118,7 @@ void omp_destroy_lock(
 ### <a name="parameters"></a>Paramètres
 
 *lock*<br/>
-Une variable de type [omp_lock_t](openmp-data-types.md#omp-lock-t) qui a été initialisée avec [fonctions omp_init_lock](#omp-init-lock).
+Une variable de type `omp_lock_t` qui a été initialisée avec [fonctions omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Notes
 
@@ -124,7 +141,7 @@ void omp_destroy_nest_lock(
 ### <a name="parameters"></a>Paramètres
 
 *lock*<br/>
-Une variable de type [imbriqué omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock).
+Une variable de type `omp_nest_lock_t` qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Notes
 
@@ -170,7 +187,7 @@ Pour plus d’informations, consultez [3.1.3 omp_get_max_threads fonction](../..
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_get_max_threads.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -242,7 +259,7 @@ Pour plus d’informations, consultez [3.1.5 omp_get_num_procs fonction](../../.
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_get_num_procs.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -279,7 +296,7 @@ Pour plus d’informations, consultez [3.1.2 omp_get_num_threads fonction](../..
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_get_num_threads.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -367,7 +384,7 @@ Pour plus d’informations, consultez [3.3.1 omp_get_wtime fonction](../../../pa
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_get_wtime.cpp
 // compile with: /openmp
 #include "omp.h"
@@ -410,7 +427,7 @@ Pour plus d’informations, consultez [3.1.6 omp_in_parallel fonction](../../../
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_in_parallel.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -434,7 +451,7 @@ int main( )
 1
 ```
 
-## <a name="omp-init-lock"></a>fonctions omp_init_lock
+## <a name="omp-init-lock"></a>omp_init_lock
 
 Initialise un verrou simple.
 
@@ -447,7 +464,7 @@ void omp_init_lock(
 ### <a name="parameters"></a>Paramètres
 
 *lock*<br/>
-Une variable de type [omp_lock_t](openmp-data-types.md#omp-lock-t).
+Variable de type `omp_lock_t`.
 
 ### <a name="remarks"></a>Notes
 
@@ -455,7 +472,7 @@ Pour plus d’informations, consultez [3.2.1 fonctions omp_init_lock et omp_init
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_init_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -539,7 +556,7 @@ void omp_init_nest_lock(
 ### <a name="parameters"></a>Paramètres
 
 *lock*<br/>
-Une variable de type [imbriqué omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t).
+Variable de type `omp_nest_lock_t`.
 
 ### <a name="remarks"></a>Notes
 
@@ -549,7 +566,7 @@ Pour plus d’informations, consultez [3.2.1 fonctions omp_init_lock et omp_init
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_init_nest_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -623,8 +640,8 @@ void omp_set_dynamic(
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
-Une valeur qui indique si le nombre de threads disponibles dans des régions parallèles à venir peut être ajusté par le runtime.  Si elle est différente de zéro, que le runtime peut ajuster le nombre de threads, si zéro, le runtime ne sont pas ajuster dynamiquement le nombre de threads.
+*val*<br/>
+Une valeur qui indique si le nombre de threads disponibles dans des régions parallèles à venir peut être ajusté par le runtime. Si elle est différente de zéro, que le runtime peut ajuster le nombre de threads, si zéro, le runtime ne sont pas ajuster dynamiquement le nombre de threads.
 
 ### <a name="remarks"></a>Notes
 
@@ -638,7 +655,7 @@ Pour plus d’informations, consultez [3.1.7 omp_set_dynamic fonction](../../../
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_set_dynamic.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -675,7 +692,7 @@ void omp_set_lock(
 ### <a name="parameters"></a>Paramètres
 
 *lock*<br/>
-Une variable de type [omp_lock_t](openmp-data-types.md#omp-lock-t) qui a été initialisée avec [fonctions omp_init_lock](#omp-init-lock).
+Une variable de type `omp_lock_t` qui a été initialisée avec [fonctions omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Notes
 
@@ -698,7 +715,7 @@ void omp_set_nest_lock(
 ### <a name="parameters"></a>Paramètres
 
 *lock*<br/>
-Une variable de type [imbriqué omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock).
+Une variable de type `omp_nest_lock_t` qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Notes
 
@@ -720,7 +737,7 @@ void omp_set_nested(
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*<br/>
+*val*<br/>
 Une valeur différente de zéro permet de parallélisme imbriqué, alors que zéro désactive le parallélisme imbriqué.
 
 ### <a name="remarks"></a>Notes
@@ -729,7 +746,7 @@ OMP imbriqué parallélisme peut être activé avec `omp_set_nested`, ou en déf
 
 Le paramètre pour `omp_set_nested` remplace le paramètre de la `OMP_NESTED` variable d’environnement.
 
-L’activation de la variable d’environnement peut interrompre un programme opérationnel dans le cas contraire, étant donné que le nombre de threads augmente de façon exponentielle lors de l’imbrication de régions parallèles.  Par exemple, une fonction qui lit de façon récursive six fois avec le nombre de threads OMP défini sur 4 nécessite 4 096 (4 à la puissance de 6) threads. À l’exception avec les applications utilisant des e/S, les performances d’une application généralement se dégradent s’il existe plus de threads que de processeurs.
+L’activation de la variable d’environnement peut interrompre un programme opérationnel dans le cas contraire, étant donné que le nombre de threads augmente de façon exponentielle lors de l’imbrication de régions parallèles. Par exemple, une fonction qui lit de façon récursive six fois avec le nombre de threads OMP défini sur 4 nécessite 4 096 (4 à la puissance de 6) threads. À l’exception avec les applications utilisant des e/S, les performances d’une application généralement se dégradent s’il existe plus de threads que de processeurs.
 
 Utilisez [omp_get_nested](#omp-get-nested) pour afficher le paramètre actuel de `omp_set_nested`.
 
@@ -737,7 +754,7 @@ Pour plus d’informations, consultez [3.1.9 omp_set_nested fonction](../../../p
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_set_nested.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -784,7 +801,7 @@ Pour plus d’informations, consultez [3.1.1 omp_set_num_threads fonction](../..
 
 Consultez [omp_get_num_threads](#omp-get-num-threads) pour obtenir un exemple d’utilisation de `omp_set_num_threads`.
 
-## <a name="omp-test-lock"></a>fonctions omp_test_lock
+## <a name="omp-test-lock"></a>omp_test_lock
 
 Tente de définir un verrou, mais ne bloque pas l’exécution du thread.
 
@@ -797,7 +814,7 @@ int omp_test_lock(
 ### <a name="parameters"></a>Paramètres
 
 *lock*<br/>
-Une variable de type [omp_lock_t](openmp-data-types.md#omp-lock-t) qui a été initialisée avec [fonctions omp_init_lock](#omp-init-lock).
+Une variable de type `omp_lock_t` qui a été initialisée avec [fonctions omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Notes
 
@@ -805,7 +822,7 @@ Pour plus d’informations, consultez [3.2.5 fonctions omp_test_lock et omp_test
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_test_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -870,7 +887,7 @@ int omp_test_nest_lock(
 ### <a name="parameters"></a>Paramètres
 
 *lock*<br/>
-Une variable de type [imbriqué omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock).
+Une variable de type `omp_nest_lock_t` qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Notes
 
@@ -878,7 +895,7 @@ Pour plus d’informations, consultez [3.2.5 fonctions omp_test_lock et omp_test
 
 ### <a name="example"></a>Exemple
 
-```
+```cpp
 // omp_test_nest_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -948,7 +965,7 @@ Thread 2 - released nestable_lock
 Thread 2 - released nestable_lock
 ```
 
-## <a name="omp-unset-lock"></a>fonctions omp_unset_lock
+## <a name="omp-unset-lock"></a>omp_unset_lock
 
 Libère un verrou.
 
@@ -961,7 +978,7 @@ void omp_unset_lock(
 ### <a name="parameters"></a>Paramètres
 
 *lock*<br/>
-Une variable de type [omp_lock_t](openmp-data-types.md#omp-lock-t) qui a été initialisée avec [fonctions omp_init_lock](#omp-init-lock), détenu par le thread et en cours d’exécution dans la fonction.
+Une variable de type `omp_lock_t` qui a été initialisée avec [fonctions omp_init_lock](#omp-init-lock), détenu par le thread et en cours d’exécution dans la fonction.
 
 ### <a name="remarks"></a>Notes
 
@@ -984,7 +1001,7 @@ void omp_unset_nest_lock(
 ### <a name="parameters"></a>Paramètres
 
 *lock*<br/>
-Une variable de type [imbriqué omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t) qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock), détenu par le thread et en cours d’exécution dans la fonction.
+Une variable de type `omp_nest_lock_t` qui a été initialisée avec [omp_init_nest_lock](#omp-init-nest-lock), détenu par le thread et en cours d’exécution dans la fonction.
 
 ### <a name="remarks"></a>Notes
 

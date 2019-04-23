@@ -1,13 +1,13 @@
 ---
 title: Référence de bibliothèque OpenMP
-ms.date: 10/24/2018
+ms.date: 03/20/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: d43ee44157f16c1012667f5529f983036f4dfd8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f4bbeca54bff1fc44a3576362edca9c30926d5a
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491596"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124692"
 ---
 # <a name="openmp-library-reference"></a>Référence de bibliothèque OpenMP
 
@@ -17,10 +17,23 @@ L’implémentation Visual C++ de la norme OpenMP inclut les constructions suiva
 
 |Construction|Description|
 |---------------|-----------------|
-|[Bibliothèques](openmp-libraries.md)|Décrit les fichiers .lib qui composent les bibliothèques d’exécution OpenMP dans Visual C++.|
-|[Types de données](openmp-data-types.md)|Fournit des liens vers les types de données utilisés dans l’API OpenMP.|
-|[Variables d’environnement](openmp-environment-variables.md)|Fournit des liens vers les variables d’environnement utilisées dans l’API OpenMP.|
+|[Directives](openmp-directives.md)|Fournit des liens vers les directives utilisées dans l’API OpenMP.|
+|[Clauses](openmp-directives.md)|Fournit des liens vers les clauses utilisées dans l’API OpenMP.|
 |[Fonctions](openmp-functions.md)|Fournit des liens vers les fonctions utilisées dans l’API OpenMP.|
+|[Variables d’environnement](openmp-environment-variables.md)|Fournit des liens vers les variables d’environnement utilisées dans l’API OpenMP.|
+
+L’élément visuel C++ fonctions de bibliothèque du run-time OpenMP sont contenues dans les bibliothèques suivantes.
+
+|Bibliothèque du run-time OpenMP|Caractéristiques|
+|------------------------------|---------------------|
+|VCOMP.LIB|Lien dynamique, multithread (bibliothèque d’importation pour VCOMP. LIB).|
+|VCOMPD.LIB|Lien dynamique, multithread (bibliothèque d’importation pour VCOMPD. COUVERCLE) (débogage)|
+
+Si _DEBUG est défini dans une compilation et si `#include omp.h` est dans le code source, VCOMPD. LIB sera la valeur par défaut de lib, sinon, VCOMP. LIB sera utilisé.
+
+Vous pouvez utiliser [/NODEFAULTLIB (ignorer les bibliothèques)](../../../build/reference/nodefaultlib-ignore-libraries.md) à supprimer de la bibliothèque par défaut et lier explicitement avec la bibliothèque de votre choix.
+
+Les DLL OpenMP se trouvent dans le répertoire de package redistribuable Visual C++ et doivent être distribués avec les applications qui utilisent OpenMP.
 
 ## <a name="see-also"></a>Voir aussi
 

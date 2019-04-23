@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 73797f3817338c48e8ff11eaaadff71263374fd0
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775424"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124757"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Les projets C/C++ et les systèmes de génération dans Visual Studio
 
@@ -35,7 +35,7 @@ Compilation de C++ base implique trois étapes principales :
 
 ## <a name="the-msvc-toolset"></a>L’ensemble d’outils MSVC
 
-Le compilateur Microsoft C++, l’éditeur de liens, les bibliothèques standard et les utilitaires associés constituent l’ensemble d’outils du compilateur MSCV (également appelé une chaîne d’outils ou des « outils de build »). Ceux-ci sont inclus dans Visual Studio. Vous pouvez également télécharger et utiliser gratuitement l’ensemble d’outils sous forme de package autonome à partir de la [emplacement de téléchargement des outils de génération pour Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
+Microsoft C++ compilateur, éditeur de liens, des bibliothèques standards et d’utilitaires associés constituent l’ensemble d’outils du compilateur MSVC (également appelé une chaîne d’outils ou des « outils de build »). Ceux-ci sont inclus dans Visual Studio. Vous pouvez également télécharger et utiliser gratuitement l’ensemble d’outils sous forme de package autonome à partir de la [emplacement de téléchargement des outils de génération pour Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
 
 Vous pouvez créer des programmes simples en appelant le MSVC du compilateur (cl.exe) directement à partir de la ligne de commande. La commande suivante accepte un fichier de code source unique et appelle cl.exe pour générer un fichier exécutable appelé *hello.exe*: 
 
