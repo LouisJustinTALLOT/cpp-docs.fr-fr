@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 ms.openlocfilehash: 380a96bcb1a119b2b6d4104d60936217d1350fbb
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237131"
 ---
 # <a name="open-folder-projects-for-c"></a>Projets Dossier ouvert pour C++
@@ -64,7 +64,7 @@ Vous pouvez automatiser les scripts de génération ou d’autres opérations ex
 
 ![Ouvrir un dossier, Configurer les tâches](media/open-folder-config-tasks.png)
 
-Cela crée (ou en ouvre) le **tasks.vs.json** fichier dans le dossier .vs, ce qui crée de Visual Studio dans votre dossier projet racine. Vous pouvez définir une tâche arbitraire dans ce fichier, puis l’appeler à partir du menu contextuel de **l’Explorateur de solutions**. L’exemple suivant montre un fichier tasks.vs.json qui définit une tâche unique. `taskName` définit le nom qui apparaît dans le menu contextuel. `appliesTo` définit les fichiers de la commande peut être effectuée sur. La propriété `command` fait référence à la variable d’environnement COMSPEC qui identifie le chemin de la console (cmd.exe sur Windows). Vous pouvez également référencer des variables d’environnement déclarées dans CppProperties.json ou CMakeSettings.json. La propriété `args` spécifie la ligne de commande à appeler. La macro `${file}` extrait le fichier sélectionné dans **l’Explorateur de solutions**. L’exemple suivant affiche le nom du fichier .cpp actuellement sélectionné.
+Cela crée (ou en ouvre) le **tasks.vs.json** fichier dans le dossier .vs, ce qui crée de Visual Studio dans votre dossier projet racine. Vous pouvez définir une tâche arbitraire dans ce fichier, puis l’appeler à partir du menu contextuel de **l’Explorateur de solutions**. L’exemple suivant montre un fichier tasks.vs.json qui définit une tâche unique. `taskName` définit le nom qui apparaît dans le menu contextuel. `appliesTo` définit les fichiers sur lesquels la commande peut être exécutée. La propriété `command` fait référence à la variable d’environnement COMSPEC qui identifie le chemin de la console (cmd.exe sur Windows). Vous pouvez également référencer des variables d’environnement déclarées dans CppProperties.json ou CMakeSettings.json. La propriété `args` spécifie la ligne de commande à appeler. La macro `${file}` extrait le fichier sélectionné dans **l’Explorateur de solutions**. L’exemple suivant affiche le nom du fichier .cpp actuellement sélectionné.
 
 ```json
 {

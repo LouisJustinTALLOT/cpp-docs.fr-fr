@@ -10,10 +10,10 @@ helpviewer_keywords:
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
 ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035541"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Conception et création d'une vue de l'enregistrement (Accès aux données MFC)
@@ -34,14 +34,14 @@ Vous pouvez créer votre classe de vue d’enregistrement avec le [Assistant App
 
 Les rubriques suivantes décrivent d'autres aspects de l'utilisation des vues d'enregistrements :
 
-- [Vues des enregistrements : Prise en charge de la navigation dans une vue de l'enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+- [Vues des enregistrements : Prise en charge de la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
-- [Vues des enregistrements : Utilisation d'une vue de l'enregistrement](../data/using-a-record-view-mfc-data-access.md)
+- [Vues des enregistrements : À l’aide d’une vue d’enregistrement](../data/using-a-record-view-mfc-data-access.md)
 
-- [Vues des enregistrements : Remplissage d'une zone de liste à partir d'un second recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [Vues des enregistrements : Remplissage d’une zone de liste à partir d’un Second Recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d'enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Recordset (ODBC)](../data/odbc/recordset-odbc.md)<br/>
 [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

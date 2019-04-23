@@ -8,10 +8,10 @@ helpviewer_keywords:
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
 ms.openlocfilehash: 40e53b2ebd54fc109b47f3067e5f89ce50b327de
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041057"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
@@ -52,6 +52,6 @@ La fonction `__svm_vmrun` est équivalente à l’instruction machine `VMRUN` . 
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_vmsave](../intrinsics/svm-vmsave.md)<br/>
 [__svm_vmload](../intrinsics/svm-vmload.md)

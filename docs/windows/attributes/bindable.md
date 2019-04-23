@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 08ecd3e242d1e3601f7a5a3ea54c51a679dca97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664150"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037235"
 ---
 # <a name="bindable"></a>bindable
 
@@ -29,11 +29,11 @@ Le **peut être liée** attribut C++ a les mêmes fonctionnalités que le [peut 
 
 Les exemples MFC suivants illustrent l’utilisation de **peut être liée**:
 
-- [Exemples de contrôles : Les contrôles ActiveX basé sur MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Exemples de contrôles : Contrôles ActiveX basé sur MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 - [CERC exemple : Contrôle ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [TESTHELP, exemple : Contrôle ActiveX avec info-bulles et aide](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Exemple TESTHELP : Contrôle ActiveX avec info-bulles et aide](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Exemple
 

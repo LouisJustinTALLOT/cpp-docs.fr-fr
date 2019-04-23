@@ -51,10 +51,10 @@ helpviewer_keywords:
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038152"
 ---
 # <a name="toolbar-editor-c"></a>Éditeur de la barre d’outils (C++)
@@ -90,9 +90,9 @@ Un bouton de barre d’outils a les propriétés suivantes :
 
 |Propriété|Description|
 |--------------|-----------------|
-|**Id**|Définit l’ID du bouton. La liste déroulante fournit courantes **ID** noms.|
-|**Largeur**|Définit la largeur du bouton. valeur recommandée : 16 pixels.|
-|**Hauteur **|Définit la hauteur du bouton. La hauteur d’un bouton change la hauteur de tous les boutons de la barre d’outils. valeur recommandée : 15 pixels.|
+|**ID**|Définit l’ID du bouton. La liste déroulante fournit courantes **ID** noms.|
+|**Width**|Définit la largeur du bouton. valeur recommandée : 16 pixels.|
+|**Height**|Définit la hauteur du bouton. La hauteur d’un bouton change la hauteur de tous les boutons de la barre d’outils. valeur recommandée : 15 pixels.|
 |**Invite**|Définit le message affiché dans la barre d’état. Ajout de *\n* et ajoute un nom d’un **info-bulle** à ce bouton de barre d’outils. Pour plus d’informations, consultez [création d’une info-bulle](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
 
 **Largeur** et **hauteur** s’appliquent à tous les boutons. Une image bitmap qui sert à créer une barre d’outils a une largeur maximale de 2048, ainsi si vous définissez la largeur du bouton *512*, vous ne pouvez avoir quatre boutons et si vous définissez la largeur sur *513*, vous ne pouvez avoir trois boutons.
@@ -203,7 +203,7 @@ MFC ou ATL
 
 ## <a name="see-also"></a>Voir aussi
 
-[éditeurs de ressources](../windows/resource-editors.md)
+[Éditeurs de ressources](../windows/resource-editors.md)
 <!--
 [Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
 [Toolbar Button Properties](../windows/toolbar-button-properties.md)<br/>-->

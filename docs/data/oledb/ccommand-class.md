@@ -50,10 +50,10 @@ helpviewer_keywords:
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
 ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039726"
 ---
 # <a name="ccommand-class"></a>CCommand, classe
@@ -101,7 +101,7 @@ Pour utiliser une commande OLE DB qui peut retourner plusieurs résultats, spéc
 
 |||
 |-|-|
-|[Créer](#create)|Crée une nouvelle commande pour la session spécifiée, puis définit le texte de commande.|
+|[Create](#create)|Crée une nouvelle commande pour la session spécifiée, puis définit le texte de commande.|
 |[CreateCommand](#createcommand)|Crée une nouvelle commande.|
 |[GetParameterInfo](#getparameterinfo)|Obtient une liste de paramètres de la commande, leurs noms et leurs types.|
 |[Préparer](#prepare)|Valide et optimise la commande actuelle.|
@@ -416,5 +416,5 @@ Cette méthode encapsule la méthode OLE DB [ICommandPrepare::Unprepare](/previo
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

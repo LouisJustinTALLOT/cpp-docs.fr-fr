@@ -7,10 +7,10 @@ helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
 ms.openlocfilehash: f6567a7866516c09bca03fa9f3d3aa5aa997b6b4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038068"
 ---
 # <a name="attributes-by-usage"></a>Attributs par utilisation
@@ -22,7 +22,7 @@ Si un attribut précède un élément qui n’est pas dans la portée de l’att
 |Attribut|Description|
 |---------------|-----------------|
 |[Attributs de module](module-attributes.md)|S’applique à la [module](module-cpp.md) attribut.|
-|[Attributs d'interface](interface-attributes.md)|S’applique à la [__interface](../../cpp/interface.md) mot clé C++.|
+|[Attributs d’interface](interface-attributes.md)|S’applique à la [__interface](../../cpp/interface.md) C++ mot clé.|
 |[Attributs de classe](class-attributes.md)|S’applique au mot clé C++.|
 |[Attributs de méthode](method-attributes.md)|S’applique aux méthodes dans une classe, une coclasse ou une interface.|
 |[Attributs de paramètres](parameter-attributes.md)|S’applique aux paramètres d’une méthode dans une classe ou interface.|
@@ -41,15 +41,15 @@ L’attribut suivant peut uniquement être appliqué à la [module](module-cpp.m
 
 ## <a name="interface-attributes"></a>Attributs d'interface
 
-Les attributs suivants s’appliquent à la [interface (ou __interface)](../../cpp/interface.md) mot clé C++.
+Les attributs suivants s’appliquent à la [interface (ou __interface)](../../cpp/interface.md) C++ mot clé.
 
 |Attribut|Description|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Spécifie l’UUID qui indique au compilateur MIDL pour définir des versions synchrones et asynchrones d’une interface COM.|
-|[personnalisé](custom-cpp.md)|Vous permet de définir vos propres attributs.|
+|[custom](custom-cpp.md)|Vous permet de définir vos propres attributs.|
 |[dispinterface](dispinterface.md)|Place une interface dans le fichier .idl comme interface de dispatch.|
 |[dual](dual.md)|Place une interface dans le fichier .idl comme une interface double.|
-|[exporter](export.md)|Provoque une structure de données à placer dans le fichier .idl.|
+|[export](export.md)|Provoque une structure de données à placer dans le fichier .idl.|
 |[helpcontext](helpcontext.md)|Spécifie un ID de contexte qui vous permet de l’utilisateur afficher des informations sur cet élément dans le fichier d’aide.|
 |[helpfile](helpfile.md)|Définit le nom du fichier d’aide pour une bibliothèque de types.|
 |[helpstring](helpstring.md)|Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique.|
@@ -57,7 +57,7 @@ Les attributs suivants s’appliquent à la [interface (ou __interface)](../../c
 |[helpstringdll](helpstringdll.md)|Spécifie le nom de la DLL à utiliser pour effectuer la recherche de chaîne de document (localisation).|
 |[hidden](hidden.md)|Indique que l’élément existe, mais ne doit pas être affiché dans un navigateur orienté utilisateur.|
 |[library_block](library-block.md)|Place une construction à l’intérieur du bloc de bibliothèque du fichier .idl.|
-|[locaux](local-cpp.md)|Vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête lorsqu’il est utilisé dans l’en-tête de l’interface. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.|
+|[local](local-cpp.md)|Vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête lorsqu’il est utilisé dans l’en-tête de l’interface. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.|
 |[nonextensible](nonextensible.md)|Spécifie que le `IDispatch` implémentation inclut uniquement les propriétés et méthodes répertoriées dans la description de l’interface et ne peut pas être étendus avec des membres supplémentaires en cours d’exécution. Cet attribut est valide uniquement sur un [double](dual.md) interface.|
 |[odl](odl.md)|Identifie une interface en tant qu’objet Description Language (ODL) interface.|
 |[object](object-cpp.md)|Identifie une interface personnalisée.|
@@ -79,6 +79,6 @@ Lorsque vous ne spécifiez ne pas le [uuid](uuid-cpp-attributes.md) d’attribut
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs de C++ pour COM et .NET](cpp-attributes-com-net.md)<br/>
+[Attributs C++ pour COM et .NET](cpp-attributes-com-net.md)<br/>
 [Attributs par groupe](attributes-by-group.md)<br/>
 [Référence alphabétique des attributs](attributes-alphabetical-reference.md)

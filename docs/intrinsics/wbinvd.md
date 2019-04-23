@@ -8,10 +8,10 @@ helpviewer_keywords:
 - wbinvd instruction
 ms.assetid: 628d0981-39e5-49e1-bd43-706d123af121
 ms.openlocfilehash: 99c7a452e063dea328e4aa1362aae8783929deb0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039265"
 ---
 # <a name="wbinvd"></a>__wbinvd
@@ -42,4 +42,4 @@ Cette fonction est uniquement disponible en mode noyau avec un niveau de privil�
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

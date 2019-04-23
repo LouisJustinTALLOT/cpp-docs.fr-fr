@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
 ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038036"
 ---
 # <a name="visual-studio-projects---c"></a>Projets Visual Studio - C++
@@ -60,16 +60,16 @@ Dans la liste d’erreurs, vous pouvez appuyer sur **F1** sur une erreur en surb
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Définir le compilateur C++ et générer des propriétés dans Visual Studio](working-with-project-properties.md)<br/>
+[Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md)<br/>
 Comment utiliser les Pages de propriétés et les feuilles de propriétés pour spécifier les paramètres de votre projet.
 
-[Bibliothèques de référence et des composants au moment de la génération](adding-references-in-visual-cpp-projects.md)<br/>
+[Composants et bibliothèques de référence au moment de la création](adding-references-in-visual-cpp-projects.md)<br/>
 Guide pratique pour inclure les composants COM et .NET et les bibliothèques, les DLL, dans un projet.
  
-[Organiser les fichiers de sortie de projet](how-to-organize-project-output-files-for-builds.md)<br/>
+[Organiser des fichiers de sortie de projet](how-to-organize-project-output-files-for-builds.md)<br/>
 Comment personnaliser l’emplacement des fichiers exécutables créé dans le processus de génération.
 
-[Étapes de génération personnalisée et des événements de Build](understanding-custom-build-steps-and-build-events.md)<br/>
+[Étapes de build personnalisée et événements de build](understanding-custom-build-steps-and-build-events.md)<br/>
 Comment ajouter n’importe quelle commande pour le processus de génération à points spécifiés.
 
 [Créer un projet à partir d’un code existant](how-to-create-a-cpp-project-from-existing-code.md)<br/>
@@ -77,4 +77,4 @@ Comment créer un nouveau projet Visual Studio à partir d’une collection libr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Projets et des systèmes de génération](projects-and-build-systems-cpp.md)<br>
+[Projets et systèmes de build](projects-and-build-systems-cpp.md)<br>

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
 ms.openlocfilehash: db9af687c7de560b0012ceea50a7cbfcc7d5de9c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035502"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Pragmas et mots clés de l'optimisation
@@ -37,7 +37,7 @@ Plusieurs mots clés et pragmas que vous utilisez dans votre code C ou C++ affec
 
 - [#pragma optimize](../preprocessor/optimize.md)
 
-- [register, mot clé](../cpp/storage-classes-cpp.md#register)
+- [mot clé Register](../cpp/storage-classes-cpp.md#register)
 
 ## <a name="see-also"></a>Voir aussi
 

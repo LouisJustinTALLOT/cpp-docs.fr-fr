@@ -57,10 +57,10 @@ helpviewer_keywords:
 - _InterlockedOr_HLEAcquire intrinsic
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
 ms.openlocfilehash: 9748099e4224a8c55cd4455a57c8e849531f1c9a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040473"
 ---
 # <a name="interlockedor-intrinsic-functions"></a>_InterlockedOr, fonctions intrinsèques
@@ -172,7 +172,7 @@ __int64 _InterlockedOr64_rel(
 
 #### <a name="parameters"></a>Paramètres
 
-*Value*<br/>
+*Valeur*<br/>
 [in, out] Pointeur vers le premier opérande, à remplacer par le résultat.
 
 *Masque*<br/>
@@ -228,5 +228,5 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
+[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)<br/>
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

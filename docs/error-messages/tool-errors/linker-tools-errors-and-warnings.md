@@ -7,10 +7,10 @@ helpviewer_keywords:
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
 ms.openlocfilehash: 6fe4a37cc3665ac2b7886589018339b77babab2d
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59477416"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>Erreurs et avertissements des outils Éditeur de liens
@@ -123,7 +123,7 @@ LIEN, LIB, DUMPBIN et EDITBIN génèrent ces erreurs et avertissements.
 
 [Erreur des outils Éditeur de liens LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md)
 
-[L’éditeur de liens outils erreur LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
+[Erreur des outils Éditeur de liens LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
 
 [Erreur des outils Éditeur de liens LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
 
@@ -175,7 +175,7 @@ LIEN, LIB, DUMPBIN et EDITBIN génèrent ces erreurs et avertissements.
 
 [Avertissement des outils Éditeur de liens LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
 
-[Avertissement LNK4020 des outils de l’éditeur de liens](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
+[Avertissement des outils Éditeur de liens LNK4020](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
 
 [Avertissement des outils Éditeur de liens LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
 
@@ -259,4 +259,4 @@ LIEN, LIB, DUMPBIN et EDITBIN génèrent ces erreurs et avertissements.
 
 [Avertissement des outils Éditeur de liens LNK4254](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md)
 
-[Avertissement LNK4286 des outils de l’éditeur de liens](../../error-messages/tool-errors/linker-tools-warning-lnk4286.md)
+[Avertissement des outils Éditeur de liens LNK4286](../../error-messages/tool-errors/linker-tools-warning-lnk4286.md)

@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041547"
 ---
 # <a name="image-editor-for-icons-c"></a>Éditeur d’images pour les icônes (C++)
@@ -97,8 +97,8 @@ Le **paramètres de la grille** boîte de dialogue vous permet de spécifier les
 |---|---|
 |**Grille de pixels**|Lorsqu’elle est activée, affiche une grille autour de chaque pixel de la **Éditeur d’images**.<br/><br/>La grille s’affiche uniquement 4 × et résolutions plus élevées.|
 |**Grille mosaïque**|Sélectionné, affiche une grille autour des blocs de pixels dans le **Éditeur d’images**, spécifié par les valeurs d’espacement de grille.|
-|**Largeur**|Spécifie la largeur de chaque bloc.<br/><br/>Cette propriété est utile lors du dessin de bitmaps qui contiennent plusieurs images sont organisées à intervalles réguliers.|
-|**Hauteur **|Spécifie la hauteur de chaque bloc.<br/><br/>Cette propriété est utile lors du dessin de bitmaps qui contiennent plusieurs images sont organisées à intervalles réguliers.|
+|**Width**|Spécifie la largeur de chaque bloc.<br/><br/>Cette propriété est utile lors du dessin de bitmaps qui contiennent plusieurs images sont organisées à intervalles réguliers.|
+|**Height**|Spécifie la hauteur de chaque bloc.<br/><br/>Cette propriété est utile lors du dessin de bitmaps qui contiennent plusieurs images sont organisées à intervalles réguliers.|
 
 ## <a name="toolbar"></a>ToolBar
 
@@ -142,8 +142,8 @@ Pour accéder à cette boîte de dialogue, sélectionnez le **police** situé da
 |Propriété|Description|
 |---|---|
 |**Police**|Répertorie les polices disponibles.|
-|**Style**|Répertorie les styles disponibles pour la police spécifiée.|
-|**Size**|Répertorie les tailles disponibles pour la police spécifiée.|
+|**Style de police**|Répertorie les styles disponibles pour la police spécifiée.|
+|**Taille**|Répertorie les tailles disponibles pour la police spécifiée.|
 |**Exemple**|Montre un exemple de comment le texte s’affiche avec les paramètres de police spécifiée.|
 |**Script**|Répertorie les scripts de langue disponibles pour la police spécifiée.<br/><br/>Lorsque vous sélectionnez un script de langue différente, le jeu de caractères pour cette langue devient disponible pour la création de documents multilingues.|
 
@@ -219,6 +219,6 @@ Aucun.
 
 ## <a name="see-also"></a>Voir aussi
 
-[éditeurs de ressources](../windows/resource-editors.md)<br/>
+[Éditeurs de ressources](../windows/resource-editors.md)<br/>
 
 <!--[Icons](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)-->

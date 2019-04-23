@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
 ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037855"
 ---
 # <a name="sql"></a>SQL
@@ -51,7 +51,7 @@ Les classes de base de données utilisent une partie de SQL connu en tant que le
 |**WHERE**|Pour appliquer un filtre qui restreint la sélection.|
 |**ORDER BY**|Pour appliquer un ordre de tri pour le jeu d’enregistrements.|
 |**INSERT**|Pour ajouter de nouveaux enregistrements à un jeu d’enregistrements.|
-|**SUPPR**|Pour supprimer des enregistrements à partir d’un jeu d’enregistrements.|
+|**SUPPRIMER**|Pour supprimer des enregistrements à partir d’un jeu d’enregistrements.|
 |**UPDATE**|Pour modifier les champs d’un enregistrement.|
 
 En outre, les classes de base de données reconnaissent ODBC **appeler** les instructions, vous pouvez utiliser pour appeler une requête prédéfinie (ou procédure stockée) sur certaines sources de données. Le pilote de base de données ODBC interprète les instructions et les remplace par la commande appropriée pour chaque SGBD.

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
 ms.openlocfilehash: e1d6be9687085361edd9141d8fb471e21b6f6376
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038675"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Référence des modèles du fournisseur OLE DB
@@ -114,4 +114,4 @@ Implémente la norme OLE DB [IErrorRecords](/previous-versions/windows/desktop/m
 ## <a name="see-also"></a>Voir aussi
 
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[modèles OLE DB](../../data/oledb/ole-db-templates.md)
+[Modèles OLE DB](../../data/oledb/ole-db-templates.md)
