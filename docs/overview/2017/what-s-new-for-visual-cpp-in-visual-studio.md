@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899455"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779488"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Nouveautés de C++ dans Visual Studio 2017
 
@@ -118,7 +118,7 @@ Plusieurs autres fonctionnalités C++17 ont été implémentées. Pour plus d'in
 - Correction de certaines opérations `basic_string` qui effectuaient la comparaison avec `npos` au lieu de `max_size()` lors de la vérification du dépassement de la taille maximale.
 - `condition_variable::wait_for(lock, relative_time, predicate)` attendait pendant toute la durée relative dans le cas d’une fausse sortie de veille. Il attend désormais pendant un seul intervalle du temps relatif.
 - `future::get()` invalide désormais `future`, conformément au standard.
-- `iterator_traits<void *>` constituait une erreur matérielle, car il tentait de former `void&` ; il devient désormais une structure vide sans erreur pour permettre l’utilisation de `iterator_traits` dans les conditions SFINAE « is iterator ».
+- `iterator_traits<void *>` constituait une erreur matérielle, car il tentait de former `void&` ; il devient désormais une structure vide sans erreur pour permettre l’utilisation de `iterator_traits` dans les conditions SFINAE « is iterator ».
 - Certains avertissements signalés par Clang **-Wsystem-headers** ont été corrigés.
 - Le problème « la spécification d’exception dans la déclaration ne correspond pas à la déclaration précédente » signalé par Clang **-Wmicrosoft-exception-spec** a également été corrigé.
 - Correction également des avertissements d’ordre mem-initializer-list signalés par Clang et C1XX.
@@ -143,7 +143,7 @@ Plusieurs autres fonctionnalités C++17 ont été implémentées. Pour plus d'in
 - Activation de l’optimisation de la valeur de retour nommée dans `system_category::message()`.
 - `conjunction` et `disjunction` instancient désormais des types N + 1, au lieu de types 2N + 2.
 - `std::function` n’instancie plus le mécanisme de prise en charge des allocateurs pour chaque type-erased pouvant être appelé, améliorant le débit et réduisant la taille des fichiers .obj dans les programmes qui passent beaucoup d’expressions lambda distinctes à `std::function`.
-- `allocator_traits<std::allocator>` contient des opérations `std::allocator` incorporées manuellement, ce qui réduit la taille du code dans le code qui interagit avec `std::allocator` uniquement via `allocator_traits` (autrement dit, dans la plupart du code).
+- `allocator_traits<std::allocator>` contient des opérations `std::allocator` incorporées manuellement, ce qui réduit la taille du code dans le code qui interagit avec `std::allocator` via `allocator_traits` uniquement (autrement dit, dans la plupart du code).
 - L’interface d’allocateur minimale C++11 est désormais gérée directement par l’allocateur appelant de la bibliothèque standard `allocator_traits`, au lieu d’inclure l’allocateur dans une classe interne `_Wrap_alloc`. Ceci réduit la taille du code généré pour la prise en charge de l’allocateur, améliore la capacité de l’optimiseur à traiter les conteneurs de la bibliothèque standard dans certains cas, et fournit une meilleure expérience de débogage (car vous voyez désormais votre type d’allocateur, au lieu de `_Wrap_alloc<your_allocator_type>` dans le débogueur).
 - Suppression de la métaprogrammation pour une `allocator::reference` personnalisée, que les allocateurs ne sont pas autorisés à personnaliser. (Les allocateurs peuvent demander aux conteneurs d’utiliser des pointeurs fantaisistes mais pas des références fantaisistes.)
 - Le serveur frontal du compilateur a appris à désencapsuler les itérateurs de débogage dans des opérations for-loops basées sur plage, pour améliorer les performances des versions de débogage.
@@ -156,7 +156,7 @@ Plusieurs autres fonctionnalités C++17 ont été implémentées. Pour plus d'in
 - Fin de la modification de Expression SFINAE basée sur une fonction en une valeur basée sur `struct` et `void_t`.
 - Désormais, les algorithmes de la bibliothèque standard évitent la post-incrémentation des itérateurs.
 - Correction des avertissements de troncation lors de l’utilisation d’allocateurs 32 bits sur les systèmes 64 bits.
-- `std::vector` L’affectation de déplacement est désormais plus efficace dans le cas non-POCMA non-equal-allocator grâce à la réutilisation du tampon quand c’est possible.
+- L’affectation de déplacement `std::vector` est désormais plus efficace dans le cas non-POCMA non-equal-allocator grâce à la réutilisation du tampon quand c’est possible.
 
 #### <a name="readability-and-other-improvements"></a>Lisibilité et autres améliorations
 
@@ -199,7 +199,7 @@ Plusieurs fonctionnalités de la bibliothèque standard ont été ajoutées, dé
 
 #### <a name="performance-fixes-and-improvements"></a>Correctifs et améliorations des performances
 
-- `basic_string<char16_t>` implique désormais le même `memcmp`, le même `memcpy` et des optimisations similaires engagées par `basic_string<wchar_t>`.
+- `basic_string<char16_t>` implique désormais le même `memcmp`, le même `memcpy` et des optimisations similaires impliquant `basic_string<wchar_t>`.
 - Une limitation de l’optimiseur a été corrigée. Elle empêchait l’exposition inline des pointeurs de fonctions par le travail « éviter de copier les fonctions » dans Visual Studio 2015 Update 3. Les performances de `lower_bound(iter, iter, function pointer)` se sont donc améliorées.
 - Le travail supplémentaire de vérification de l’ordre des entrées `includes`, `set_difference`, `set_symmetric_difference` et `set_union` pour le débogage des itérateurs a été réduit en sortant les itérateurs du wrapper avant de vérifier l’ordre.
 - `std::inplace_merge` ignore maintenant les éléments qui sont déjà en position.
@@ -390,7 +390,7 @@ C++ est fourni sous forme de composant facultatif pour la charge de travail Appl
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nouvelles options pour C++ sur la plateforme Windows universelle (UWP)
 Vous disposez maintenant de nouvelles options pour l’écriture et l’empaquetage d’applications C++ pour la plateforme Windows universelle et le Windows Store : vous pouvez utiliser l’infrastructure Desktop Bridge pour empaqueter votre application de bureau existante ou un objet COM pour le déploiement via le Windows Store ou via vos canaux existants par sideloading. Les nouvelles fonctionnalités de Windows 10 vous permettent d’ajouter une plateforme universelle Windows (UWP) à votre application de bureau de différentes manières. Pour plus d’informations, consultez [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
-**Visual Studio 2017 version 15.5** : Un modèle de **projet de création de packages d’application Windows**  a été ajouté et facilite considérablement l’empaquetage d’applications de bureau à l’aide de Desktop Bridge. Cette fonctionnalité est disponible sous **Fichier | Nouveau | Projet | Installé | Visual C++ | Plateforme Windows universelle**. Pour plus d’informations, consultez [Empaqueter une application à l’aide de Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+**Visual Studio 2017 version 15.5** : Un modèle de **projet de création de packages d’application Windows ** a été ajouté et facilite considérablement l’empaquetage d’applications de bureau à l’aide de Desktop Bridge. Cette fonctionnalité est disponible sous **Fichier | Nouveau | Projet | Installé | Visual C++ | Plateforme Windows universelle**. Pour plus d’informations, consultez [Empaqueter une application à l’aide de Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Lors de l’écriture de nouveau code, vous pouvez désormais utiliser C++/WinRT, une projection de langage C++ standard pour Windows Runtime (WinRT) implémentée uniquement dans les fichiers d’en-tête. Il vous permet à la fois de créer et de consommer des API Windows Runtime à l’aide d’un compilateur C++ conforme aux normes. C++/WinRT est conçu pour offrir aux développeurs C++ un accès idéal à l’API Windows moderne. Pour plus d’informations, consultez [C++/WinRT disponible sur GitHub](https://moderncpp.com/).
 
