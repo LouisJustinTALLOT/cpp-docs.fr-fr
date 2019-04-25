@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
 ms.openlocfilehash: 4abbac977a256ff27f99caaf77393450d3ccf858
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161769"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::AccessDeniedException, classe
 
@@ -29,7 +29,7 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
 
 Si vous rencontrez cette exception, vérifiez que vous avez demandé la fonctionnalité appropriée et que avez effectué les déclarations requises dans le manifeste de package de votre application. Pour plus d'informations, consultez [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 

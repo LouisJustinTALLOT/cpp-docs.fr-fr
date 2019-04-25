@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
 ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161664"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext (énumération)
 
@@ -33,10 +33,10 @@ enum class CallbackContext {};
 
 ### <a name="requirements"></a>Configuration requise
 
-**Minimum de client pris en charge :** Windows 8
+**Prise en charge minimale du client :** Windows 8
 
-**Minimum de serveur pris en charge :** Windows Server 2012
+**Serveur pris en charge minimale :** Windows Server 2012
 
-**Espace de noms :** Platform
+**Espace de noms :** Plateforme
 
 **Métadonnées :** platform.winmd

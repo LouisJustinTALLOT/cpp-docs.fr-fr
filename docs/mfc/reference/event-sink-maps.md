@@ -7,11 +7,11 @@ helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
 ms.openlocfilehash: 8e33636253b269692f87f99980b9da0cd60867ee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322356"
 ---
 # <a name="event-sink-maps"></a>Tables de récepteurs d'événements
 
@@ -53,7 +53,7 @@ Dans le fichier d’implémentation (.cpp) qui définit les fonctions membres po
 
 Pour plus d’informations sur les tables de récepteurs d’événements et des conteneurs de contrôles OLE, consultez l’article [conteneurs de contrôles ActiveX](../../mfc/activex-control-containers.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -71,7 +71,7 @@ Utilisez le declare_eventsink_map (macro) à la fin de votre déclaration de cla
 
 Pour plus d’informations sur les tables de récepteurs d’événements, consultez l’article [conteneurs de contrôles ActiveX](../../mfc/activex-control-containers.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -83,7 +83,7 @@ Met fin à la définition de votre table de récepteur d’événements.
 END_EVENTSINK_MAP()
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -122,7 +122,7 @@ Spécifie une liste contenant un entier court suivi d’une valeur Booléenne.
 
 Pour obtenir la liste de la **VTS_** constantes, consultez [EVENT_CUSTOM](event-maps.md#event_custom).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -174,7 +174,7 @@ Le code ci-dessous est défini dans le fichier d’implémentation de la classe 
 
 [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -212,7 +212,7 @@ Spécifie une liste contenant un entier court suivi d’une valeur Booléenne.
 
 Pour obtenir la liste de la **VTS_** constantes, consultez [EVENT_CUSTOM](event-maps.md#event_custom).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -280,7 +280,7 @@ Pointeur vers une fonction membre qui gère la `OnRequestEdit` notification pour
 *pfnChanged*<br/>
 Pointeur vers une fonction membre qui gère la `OnChanged` notification pour cette propriété. La fonction doit avoir un `BOOL` type de retour et un `UINT` paramètre. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -307,7 +307,7 @@ Pointeur vers une fonction membre qui gère la `OnRequestEdit` notification pour
 *pfnChanged*<br/>
 Pointeur vers une fonction membre qui gère la `OnChanged` notification pour cette propriété. La fonction doit avoir une valeur Booléenne de type de retour et aucun paramètre. La fonction doit retourner TRUE pour indiquer que la notification a été gérée ; Sinon, FALSE.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 

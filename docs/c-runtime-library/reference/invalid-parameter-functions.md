@@ -20,11 +20,11 @@ f1_keywords:
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
 ms.openlocfilehash: e43d5caaeebb6303d209d870c804357117812985
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157537"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -58,10 +58,10 @@ _invoke_watson(
 
 ## <a name="parameters"></a>Paramètres
 
-*Expression*<br/>
+*expression*<br/>
 Chaîne représentant l’expression de paramètre de code source qui n’est pas valide.
 
-*nom de la fonction*<br/>
+*function_name*<br/>
 Nom de la fonction qui a appelé le gestionnaire.
 
 *file_name*<br/>
@@ -70,7 +70,7 @@ Fichier de code source dans lequel le gestionnaire a été appelé.
 *line_number*<br/>
 Numéro de ligne dans le code source où le gestionnaire a été appelé.
 
-*réservé*<br/>
+*reserved*<br/>
 Non utilisé.
 
 ## <a name="return-value"></a>Valeur de retour

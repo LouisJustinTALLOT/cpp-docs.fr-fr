@@ -7,11 +7,11 @@ helpviewer_keywords:
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
 ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322980"
 ---
 # <a name="delegate-and-interface-map-macros"></a>Macros de mappage d’interface et délégué
 
@@ -47,7 +47,7 @@ La classe dans lequel est hébergé le contrôle managé.
 
 Cette macro marque le début d’une liste d’entrées de délégué, qui se compose d’un mappage de délégué. Pour obtenir un exemple d’utilisation de cette macro, consultez [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** msclr\event.h
 
@@ -75,7 +75,7 @@ Pour chaque interface est implémentée, il existe un ou plusieurs appels de mac
 
 Pour plus d’informations sur les cartes d’interface, consultez [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -102,7 +102,7 @@ Pour plus d'informations, voir [Procédure : Ajoutez la commande routage pour l
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 
@@ -130,7 +130,7 @@ Ce délégué inscrit les méthodes de rappel avec un message de commande de mis
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 
@@ -148,7 +148,7 @@ END_DELEGATE_MAP();
 
 Cette macro marque la fin d’une liste d’entrées de délégué, qui se compose d’un mappage de délégué. Pour obtenir un exemple d’utilisation de cette macro, consultez [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** msclr\event.h
 
@@ -166,7 +166,7 @@ END_INTERFACE_MAP( )
 
 Pour plus d’informations sur les cartes d’interface, consultez [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -205,7 +205,7 @@ BEGIN_DELEGATE_MAP(CMyView)
 END_DELEGATE_MAP()
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** msclr\event.h
 
@@ -234,7 +234,7 @@ Il vous permet de mapper un IID à un membre de la classe indiquée par *theClas
 
 Pour plus d’informations sur les cartes d’interface, consultez [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -274,7 +274,7 @@ void CMyView::OnInitialUpdate()
 }
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** msclr\event.h
 

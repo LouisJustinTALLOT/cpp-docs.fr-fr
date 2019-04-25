@@ -10,11 +10,11 @@ helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
 ms.openlocfilehash: 7f7254306253aabc33f46694f3da16734e6efccf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160050"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error, classe
 
@@ -50,7 +50,7 @@ Cette exception est généralement levée en cas d’échec d’un appel vers le
 
 `scheduler_resource_allocation_error`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 

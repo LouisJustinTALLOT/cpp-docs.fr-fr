@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
 ms.openlocfilehash: a5b53ced4e20c920aab8e7ebcda3e3f6f8798ba5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164096"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext, classe
 
@@ -87,7 +87,7 @@ Pour plus d’informations sur `CDumpContext`, consultez [débogage des Applicat
 
 `CDumpContext`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 

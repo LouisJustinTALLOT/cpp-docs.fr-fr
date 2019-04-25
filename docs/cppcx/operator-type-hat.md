@@ -3,11 +3,11 @@ title: Type^, opérateur
 ms.date: 12/30/2016
 ms.assetid: b24ffc83-0780-4f9a-8ee0-f5725db339d1
 ms.openlocfilehash: 180efcac76b7f51291a47ee68508e7444a6c069c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161808"
 ---
 # <a name="operator-type"></a>Type^, opérateur
 
@@ -48,7 +48,7 @@ Type^ tx2 = (Type^)(tn);
 
 Projet de programmes .NET framework `TypeName` en tant que <xref:System.Type>
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 ## <a name="see-also"></a>Voir aussi
 

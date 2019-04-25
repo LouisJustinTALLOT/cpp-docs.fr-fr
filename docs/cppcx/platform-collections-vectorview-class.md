@@ -13,11 +13,11 @@ helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
 ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161379"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView, classe
 
@@ -64,7 +64,7 @@ Le `VectorView` la classe implémente le [Windows::Foundation::Collections::IVec
 
 `VectorView`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** collection.h
 

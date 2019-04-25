@@ -16,11 +16,11 @@ helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
 ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160034"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue, classe
 
@@ -91,7 +91,7 @@ Pour plus d’informations sur la `concurrent_priority_queue` de classe, consult
 
 `concurrent_priority_queue`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concurrent_priority_queue.h
 

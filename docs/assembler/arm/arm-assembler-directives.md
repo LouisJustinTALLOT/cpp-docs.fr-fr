@@ -3,11 +3,11 @@ title: Directive d'assembleur ARM
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
 ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167671"
 ---
 # <a name="arm-assembler-directives"></a>Directive d'assembleur ARM
 
@@ -55,7 +55,7 @@ La plupart du temps, l’assembleur Microsoft ARM utilise le langage d’assembl
 
    Spécifie des exportations à l’aide de cette syntaxe :
 
-   > **Exporter**|**GLOBAL** <em>sym</em>{**[**<em>type</em>**]**}
+   > **EXPORT**|**GLOBAL** <em>sym</em>{**[**<em>type</em>**]**}
 
    *SYM* est le symbole à exporter.  [*type*], si spécifiée, peut être `[DATA]` pour indiquer que le symbole pointe vers les données ou `[FUNC]` pour indiquer que le symbole pointe vers du code. `GLOBAL` est un synonyme de `EXPORT`.
 

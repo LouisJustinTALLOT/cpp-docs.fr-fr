@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
 ms.openlocfilehash: 77357aa2be326ebebaaf5a8614faaf88a0c3c06b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277433"
 ---
 # <a name="cstringelementtraitsi-class"></a>Cstringelementtraitsi, classe
 
@@ -64,7 +64,7 @@ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl
 
 `CStringElementTraitsI`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcoll.h
 

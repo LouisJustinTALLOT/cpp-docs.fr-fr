@@ -7,17 +7,17 @@ helpviewer_keywords:
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
 ms.openlocfilehash: e2da242bf22b8b01a315d5bb09498764b54e1504
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166566"
 ---
 # <a name="using-assembly-language-in-asm-blocks"></a>Utilisation du langage assembleur dans les blocs __asm
 
 **Section spécifique à Microsoft**
 
-L'assembleur inline présente beaucoup de similitudes avec les autres assembleurs. Par exemple, il accepte toute expression autorisée dans MASM. Cette section décrit l’utilisation des fonctionnalités de langage assembleur dans des blocs `__asm`.
+L'assembleur inline présente beaucoup de similitudes avec les autres assembleurs. Par exemple, il accepte toute expression autorisée dans MASM. Cette section décrit l'utilisation des fonctions de langage assembleur dans des blocs `__asm`.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 

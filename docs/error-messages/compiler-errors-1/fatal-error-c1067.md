@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C1067
 ms.assetid: e2c94be6-4573-4571-aac9-73d657fe9f96
 ms.openlocfilehash: f8fe301e25d9ecb5cc67397f9537e0bbd86c0627
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165851"
 ---
 # <a name="fatal-error-c1067"></a>Erreur irrécupérable C1067
 
-limite du compilateur : limite de 64 Ko sur la taille d’un enregistrement de type a été dépassé.
+limite du compilateur : Limite de 64 Ko sur la taille d’un enregistrement de type a été dépassé.
 
 Cette erreur peut se produire si un symbole a un nom décoré dépassant 247 caractères.  Pour résoudre, raccourcissez le nom du symbole.
 

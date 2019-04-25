@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159780"
 ---
 # <a name="forwardlist-class"></a>forward_list, classe
 
@@ -217,9 +217,9 @@ void assign(InputIterator First, InputIterator Last);
 |*first*|Début de la plage de remplacement.|
 |*last*|Fin de la plage de remplacement.|
 |*count*|Nombre d’éléments à assigner.|
-|*Val*|Valeur à assigner à chaque élément.|
+|*val*|Valeur à assigner à chaque élément.|
 |*Type*|Type de la valeur.|
-|* IList'|Initializer_list à copier.|
+|* IList'| Initializer_list à copier.|
 
 ### <a name="remarks"></a>Notes
 
@@ -397,7 +397,7 @@ iterator emplace_after(const_iterator Where, Type&& val);
 |Paramètre|Description|
 |---------------|-----------------|
 |*Where*|Position dans la liste forward_list cible où le nouvel élément est construit.|
-|*Val*|Argument du constructeur.|
+|*val*|Argument du constructeur.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -420,7 +420,7 @@ void emplace_front(Type&& val);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Val*|Élément ajouté au début de la liste forward_list.|
+|*val*|Élément ajouté au début de la liste forward_list.|
 
 ### <a name="remarks"></a>Notes
 
@@ -513,8 +513,8 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Nombre*|Nombre d'éléments dans la liste construite.|
 |*Val*|Valeur des éléments contenus dans la liste construite.|
 |*Droite*|Liste dont la liste construite doit être une copie.|
-|*Premier*|Position du premier élément de la plage d'éléments à copier.|
-|*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
+|*First*|Position du premier élément de la plage d'éléments à copier.|
+|*Last*|Position du premier élément au-delà de la plage d'éléments à copier.|
 |*IList*|Initializer_list à copier.|
 
 ### <a name="remarks"></a>Notes
@@ -577,8 +577,8 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
 |---------------|-----------------|
 |*Where*|Position dans la liste forward_list cible où le premier élément est inséré.|
 |*Nombre*|Nombre d’éléments à insérer.|
-|*Premier*|Début de la plage d’insertion.|
-|*Dernière*|Fin de la plage d’insertion.|
+|*First*|Début de la plage d’insertion.|
+|*Last*|Fin de la plage d’insertion.|
 |*Val*|Élément ajouté à la liste forward_list.|
 |*IList*|Initializer_list à insérer.|
 
@@ -719,7 +719,7 @@ void push_front(Type&& val);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Val*|Élément ajouté au début de la liste forward_list.|
+|*val*|Élément ajouté au début de la liste forward_list.|
 
 ### <a name="remarks"></a>Notes
 
@@ -747,7 +747,7 @@ void remove(const Type& val);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Val*|Valeur qui, si elle est contenue dans un élément, entraîne la suppression de cet élément de la liste.|
+|*val*|Valeur qui, si elle est contenue dans un élément, entraîne la suppression de cet élément de la liste.|
 
 ### <a name="remarks"></a>Notes
 
@@ -768,7 +768,7 @@ void remove_if(Predicate pred);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Pred*|Prédicat unaire qui, s’il est satisfait par un élément, entraîne la suppression de cet élément de la liste.|
+|*pred*|Prédicat unaire qui, s’il est satisfait par un élément, entraîne la suppression de cet élément de la liste.|
 
 ### <a name="remarks"></a>Notes
 
@@ -790,7 +790,7 @@ void resize(size_type _Newsize, const Type& val);
 |Paramètre|Description|
 |---------------|-----------------|
 |*_Newsize*|Nombre d’éléments dans la liste forward_list redimensionnée.|
-|*Val*|Valeur à utiliser pour le remplissage.|
+|*val*|Valeur à utiliser pour le remplissage.|
 
 ### <a name="remarks"></a>Notes
 
@@ -832,7 +832,7 @@ void sort(Predicate pred);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Pred*|Prédicat de tri.|
+|*pred*|Prédicat de tri.|
 
 ### <a name="remarks"></a>Notes
 
@@ -880,10 +880,10 @@ Liste forward_list source qui doit être insérée dans la liste forward_list de
 *Iter*<br/>
 Élément à insérer à partir de la liste forward_list source.
 
-*Premier*<br/>
+*First*<br/>
 Premier élément de la plage à insérer à partir de la liste forward_list source.
 
-*Dernière*<br/>
+*Last*<br/>
 Première position au-delà de la plage à insérer à partir de la liste forward_list source.
 
 ### <a name="remarks"></a>Notes

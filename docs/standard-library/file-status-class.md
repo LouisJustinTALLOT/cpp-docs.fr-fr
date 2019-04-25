@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
 ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160015"
 ---
 # <a name="filestatus-class"></a>file_status, classe
 
@@ -75,7 +75,7 @@ file_status(file_status&&) noexcept = default;
 *ftype*<br/>
 Spécifié `file_type`, valeur par défaut est `file_type::none`.
 
-*Masque*<br/>
+*mask*<br/>
 Fichier spécifié `perms`, valeur par défaut est `perms::unknown`.
 
 *file_status*<br/>
@@ -122,7 +122,7 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>Paramètres
 
-*Masque*<br/>
+*mask*<br/>
 `perms` spécifié.
 
 ## <a name="see-also"></a>Voir aussi

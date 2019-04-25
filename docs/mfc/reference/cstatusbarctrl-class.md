@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
 ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323828"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl (classe)
 
@@ -110,7 +110,7 @@ Pour plus d’informations sur l’utilisation de `CStatusBarCtrl`, consultez [c
 
 `CStatusBarCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 
