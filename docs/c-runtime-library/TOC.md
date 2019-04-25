@@ -52,7 +52,7 @@
 ### [Opérateurs ISO646](iso646-operators.md)
 ### [Jeux de caractères codés sur un octet et multi-octets](single-byte-and-multibyte-character-sets.md)
 ### [Types de données SBCS et MBCS](sbcs-and-mbcs-data-types.md)
-### [Unicode : jeu de caractères larges](unicode-the-wide-character-set.md)
+### [Unicode : Jeu de caractères larges](unicode-the-wide-character-set.md)
 ### [Utilisation de mappages de texte générique](using-generic-text-mappings.md)
 ### [Exemple de programme de texte générique](a-sample-generic-text-program.md)
 ### [Utilisation de types de données TCHAR.H avec _MBCS](using-tchar-h-data-types-with-mbcs.md)
