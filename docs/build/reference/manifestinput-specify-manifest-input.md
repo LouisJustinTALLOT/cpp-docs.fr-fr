@@ -3,11 +3,11 @@ title: /MANIFESTINPUT (Spécifier l'entrée de manifeste)
 ms.date: 11/04/2016
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
 ms.openlocfilehash: bf192664a7a2402b06621167d91dff67ce0741a9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321356"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (Spécifier l'entrée de manifeste)
 
@@ -32,5 +32,5 @@ Cette option ne peut pas être définie directement dans Visual Studio. Au lieu 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

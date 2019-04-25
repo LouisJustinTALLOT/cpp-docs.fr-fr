@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
 ms.openlocfilehash: 6b271adbaf3fe4d2d5c3b41e974bf3036e7b1947
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159338"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset, classe
 
@@ -795,7 +795,7 @@ iterator insert(ValTy&& val);
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Valeur d’un élément à insérer dans le [hash_multiset](../standard-library/hash-multiset-class.md), sauf si le `hash_multiset` contient déjà cet élément ou, plus généralement, un élément dont la clé est ordonnée de façon équivalente.|
+|*val*|Valeur d’un élément à insérer dans le [hash_multiset](../standard-library/hash-multiset-class.md), sauf si le `hash_multiset` contient déjà cet élément ou, plus généralement, un élément dont la clé est ordonnée de façon équivalente.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -847,8 +847,8 @@ iterator insert(
 
 |Paramètre|Description|
 |-|-|
-|*Val*|Valeur d’un élément à insérer dans le [hash_multiset](../standard-library/hash-multiset-class.md), sauf si le `hash_multiset` contient déjà cet élément ou, plus généralement, un élément dont la clé est ordonnée de façon équivalente.|
-|*_WHERE*|Emplacement où commencer à rechercher le point d'insertion correct. (L’insertion peut se produire dans le temps fixe amorti, plutôt que de temps logarithmique, si le point d’insertion suit immédiatement *_Where*.)|
+|*val*|Valeur d’un élément à insérer dans le [hash_multiset](../standard-library/hash-multiset-class.md), sauf si le `hash_multiset` contient déjà cet élément ou, plus généralement, un élément dont la clé est ordonnée de façon équivalente.|
+|*_Where*|Emplacement où commencer à rechercher le point d'insertion correct. (L’insertion peut se produire dans le temps fixe amorti, plutôt que de temps logarithmique, si le point d’insertion suit immédiatement *_Where*.)|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1100,7 +1100,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Paramètres
 
-*_WHERE*<br/>
+*_Where*<br/>
 Position de l'élément à supprimer du hash_multiset.
 
 *first*<br/>
@@ -1414,10 +1414,10 @@ hash_multiset(
 |Paramètre|Description|
 |-|-|
 |*Al*|Classe d’allocateur de stockage à utiliser pour cet objet `hash_multiset`, qui est par défaut `Allocator`.|
-|*Comp.*|Fonction de comparaison de type `const Traits` utilisée pour ordonner les éléments dans le `hash_multiset` (par défaut, `hash_compare`).|
+|*Comp*|Fonction de comparaison de type `const Traits` utilisée pour ordonner les éléments dans le `hash_multiset` (par défaut, `hash_compare`).|
 |*Droite*|`hash_multiset` dont le `hash_multiset` construit doit être une copie.|
-|*Premier*|Position du premier élément de la plage d'éléments à copier.|
-|*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
+|*First*|Position du premier élément de la plage d'éléments à copier.|
+|*Last*|Position du premier élément au-delà de la plage d'éléments à copier.|
 |*IList*|initializer_list qui contient les éléments à copier.|
 
 ### <a name="remarks"></a>Notes
@@ -1484,8 +1484,8 @@ iterator insert(
 |-|-|
 |*Val*|Valeur d’un élément à insérer dans le hash_multiset, sauf s’il contient déjà cet élément (ou, plus généralement, un élément dont la clé est ordonnée de façon équivalente).|
 |*Where*|Emplacement où commencer à rechercher le point d'insertion correct. (L’insertion peut se produire dans le temps fixe amorti, plutôt que dans le temps logarithmique, si le point d’insertion suit immédiatement `_Where`.)|
-|*Premier*|Position du premier élément à copier à partir du hash_multiset.|
-|*Dernière*|Position juste au-delà du dernier élément à copier à partir du hash_multiset.|
+|*First*|Position du premier élément à copier à partir du hash_multiset.|
+|*Last*|Position juste au-delà du dernier élément à copier à partir du hash_multiset.|
 |*IList*|initializer_list qui contient les éléments à copier.|
 
 ### <a name="return-value"></a>Valeur de retour

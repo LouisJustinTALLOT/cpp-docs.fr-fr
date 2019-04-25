@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
 ms.openlocfilehash: 8ad0c1df2f5b6a7b1b48d2db119b04e4b3234f10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323214"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Initialisation et terminaison du moteur de base de données DAO
 
@@ -42,7 +42,7 @@ Dans la plupart des cas, vous n’avez pas besoin d’appeler `AfxDaoInit` , car
 
 Pour plus d’informations et pour obtenir un exemple de l’appel `AfxDaoInit`, consultez [Note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 
@@ -63,7 +63,7 @@ Dans les DLL MFC normales, appelez `AfxDaoTerm` avant le `ExitInstance` (fonctio
 
 Pour plus d’informations, consultez [Note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 

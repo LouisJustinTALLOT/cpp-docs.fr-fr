@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
 ms.openlocfilehash: 02e2f20cc568e8846923f7189da3ea45478fc289
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323867"
 ---
 # <a name="cstatic-class"></a>Cstatic, classe
 
@@ -88,7 +88,7 @@ Si vous créez un `CStatic` de l’objet dans une fenêtre, vous serez peut-êtr
 
 `CStatic`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 

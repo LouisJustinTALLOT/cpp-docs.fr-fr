@@ -26,11 +26,11 @@ helpviewer_keywords:
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
 ms.openlocfilehash: d4e363f7de46de6f875a28a62d4ecdf929decdc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277502"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Csnapinpropertypageimpl, classe
 
@@ -87,7 +87,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 `CSnapInPropertyPageImpl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsnap.h
 

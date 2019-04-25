@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
 ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323958"
 ---
 # <a name="csocket-class"></a>CSocket (classe)
 
@@ -90,7 +90,7 @@ Pour plus d’informations, consultez [Windows des Sockets dans MFC](../../mfc/w
 
 `CSocket`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxsock.h
 

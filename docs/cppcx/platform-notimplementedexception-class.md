@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
 ms.openlocfilehash: 5262aaf85c73e2ff09259fe350e8b5600c68be95
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325388"
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException, classe
 
@@ -29,7 +29,7 @@ public ref class NotImplementedException : COMException,    IException,    IPrin
 
 Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 

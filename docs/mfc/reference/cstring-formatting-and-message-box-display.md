@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 ms.openlocfilehash: fee8ba89605e6425b511407dab62be1f32e94a9d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323789"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Mise en forme de CString et affichage des boîtes de message
 
@@ -28,7 +28,7 @@ Ce groupe de fonctions inclut également une routine globale pour afficher une b
 |[AfxFormatString2](#afxformatstring2)|Chaînes de substituts deux pour le format de caractères « %1 » et « %2 » dans une chaîne contenue dans la table de chaînes.|
 |[AfxMessageBox](#afxmessagebox)|Affiche une boîte de message.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -72,7 +72,7 @@ Cette fonction retourne FALSE si *lpszFullString* est définie sur NULL ou la fo
 
 [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -108,7 +108,7 @@ Si les caractères de format « %1 » apparaissent plusieurs fois dans la cha�
 
 [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -148,7 +148,7 @@ Si le format de caractères « %1 » ou « %2 » apparaître plusieurs fois 
 
 [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 

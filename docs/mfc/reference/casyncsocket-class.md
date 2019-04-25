@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164905"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (classe)
 
@@ -173,7 +173,7 @@ Pour plus d’informations, consultez [Windows Sockets : À l’aide de la clas
 
 `CAsyncSocket`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxsock.h
 

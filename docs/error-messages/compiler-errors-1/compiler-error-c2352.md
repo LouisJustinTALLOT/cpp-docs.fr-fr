@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2352
 ms.assetid: 0efad8cb-659f-4b3e-8f6f-9f8ec44d345c
 ms.openlocfilehash: 387738faa5b55e60cbb9df2185efcb94098011d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388798"
 ---
 # <a name="compiler-error-c2352"></a>Erreur du compilateur C2352
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3275
 ms.assetid: 5752680f-7d3e-4c42-ba9c-845e09d32e7a
 ms.openlocfilehash: 937b6bc4b4268399f21089ddabe388de58d872b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62382136"
 ---
 # <a name="compiler-error-c3275"></a>Erreur du compilateur C3275
 

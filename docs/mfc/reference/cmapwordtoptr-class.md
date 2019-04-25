@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b204d87f-6427-43e1-93e3-a4b1bb41099f
 ms.openlocfilehash: ff869eff90584f2fc259261a35b577f80bab71c6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164057"
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr, classe
 
@@ -107,7 +107,7 @@ Pour plus d’informations sur `CMapWordToPtr`, consultez l’article [Collectio
 
 `CMapWordToPtr`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcoll.h
 

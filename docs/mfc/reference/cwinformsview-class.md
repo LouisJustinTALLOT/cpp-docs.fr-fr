@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323296"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView, classe
 
@@ -43,7 +43,7 @@ class CWinFormsView : public CView;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name||
+|Nom||
 |----------|-|
 |[Contrôle de CWinFormsView::operator ^](#operator_control)|Effectue un cast d’un type en un pointeur vers un contrôle Windows Forms.|
 
@@ -59,7 +59,7 @@ Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l
 > [!NOTE]
 >  CWinFormsView ne prend pas en charge la fenêtre de séparateur MFC ( [CSplitterWnd, classe](../../mfc/reference/csplitterwnd-class.md)). Actuellement uniquement Windows Forms séparateur contrôle est pris en charge.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwinforms.h
 

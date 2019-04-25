@@ -3,11 +3,11 @@ title: Référence de la ligne de commande de l'assembleur ARM
 ms.date: 08/30/2018
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
 ms.openlocfilehash: f49b59a81fbe5f11c0f219d1e1fe83a4ee811c7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162133"
 ---
 # <a name="arm-assembler-command-line-reference"></a>Référence de la ligne de commande de l'assembleur ARM
 
@@ -16,20 +16,20 @@ Cet article fournit des informations de ligne de commande sur l’assembleur Mic
 ## <a name="syntax"></a>Syntaxe
 
 > **armasm** [*options*] *sourcefile* *objectfile*
-> **armasm** [*options *] **-o** *objectfile* *sourcefile*
+> **armasm** [*options*] **-o** *objectfile* *sourcefile*
 
 ### <a name="parameters"></a>Paramètres
 
 *options*<br/>
 Une combinaison de zéro ou plusieurs des opérations suivantes :
 
-- **-erreurs** *nom de fichier*<br/>
+- **-errors** *filename*<br/>
    Rediriger les messages d’erreur et avertissement à *filename*.
 
-- **i -** *dir*[**;** <em>dir</em>]<br/>
+- **-i** *dir*[**;**<em>dir</em>]<br/>
    Ajouter les répertoires spécifiés dans le chemin de recherche include.
 
-- **-prédéfinir** *(directive)*<br/>
+- **-predefine** *directive*<br/>
    Spécifiez une directive définis, SETL ou les jeux de prédéfinir un symbole.<br/>
    Exemple : **armasm.exe-prédéfinir source.asm « COUNT définis 150 »**<br/>
    Pour plus d’informations, consultez le [du compilateur ARM armasm Guide de référence](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
@@ -37,7 +37,7 @@ Une combinaison de zéro ou plusieurs des opérations suivantes :
 - **-nowarn**<br/>
    Désactiver tous les messages d’avertissement.
 
-- **-Ignorer** *avertissement*<br/>
+- **-ignore** *warning*<br/>
    Désactiver l’avertissement spécifié. Pour connaître les valeurs possibles, consultez la section sur les avertissements.
 
 - **-help**<br/>
@@ -63,14 +63,14 @@ Une combinaison de zéro ou plusieurs des opérations suivantes :
 - **-g**<br/>
    Générer des informations de débogage.
 
-- **-errorReport :** *option*<br/>
+- **-errorReport:** *option*<br/>
    Spécifiez comment interne assembleur erreurs sont signalées à Microsoft.  Les valeurs possibles pour *option* sont :<br/>
    **aucun**: ne pas envoyer de rapports.<br/>
    **invite**, inviter l’utilisateur d’envoyer immédiatement des rapports.<br/>
    **file d’attente**: inviter l’utilisateur à envoyer des rapports à la prochaine connexion de l’administrateur. Il s'agit de la valeur par défaut.<br/>
    **envoyer**, envoyer automatiquement des rapports.
 
-*SourceFile*<br/>
+*sourcefile*<br/>
 Le nom du fichier source.
 
 *objectfile*<br/>
