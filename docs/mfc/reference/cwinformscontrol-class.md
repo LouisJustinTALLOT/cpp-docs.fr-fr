@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
 ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323297"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl, classe
 
@@ -71,7 +71,7 @@ Votre code MFC ne doit pas mettre en cache des handles de fenêtre (généraleme
 > [!NOTE]
 >  Intégration de MFC Windows Forms fonctionne uniquement dans les projets qui se lient dynamiquement avec MFC (dans lequel AFXDLL est défini).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwinforms.h
 

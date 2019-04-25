@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
 ms.openlocfilehash: 97b398dd80bb38b1579458ae0b8b65f082458e23
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277163"
 ---
 # <a name="cw2aex-class"></a>CW2AEX classe
 
@@ -88,7 +88,7 @@ Pour une description de ces macros de conversion de texte, consultez [Macros de 
 
 Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlconv.h
 

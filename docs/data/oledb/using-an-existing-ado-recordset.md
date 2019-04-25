@@ -7,11 +7,11 @@ helpviewer_keywords:
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
 ms.openlocfilehash: eb558bb319bb5ddb61d0383846099d708f99c627
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59030477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389006"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilisation d'un recordset ADO existant
 

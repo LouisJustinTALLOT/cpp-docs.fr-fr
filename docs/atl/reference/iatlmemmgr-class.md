@@ -14,11 +14,11 @@ helpviewer_keywords:
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
 ms.openlocfilehash: b9b6ac6dc265378f617e053bc48ac6030425cef4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276248"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr, classe
 
@@ -52,7 +52,7 @@ Cette interface est implémentée par [CComHeap](../../atl/reference/ccomheap-cl
 
 [!code-cpp[NVC_ATL_Utilities#94](../../atl/codesnippet/cpp/iatlmemmgr-class_1.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlmem.h
 

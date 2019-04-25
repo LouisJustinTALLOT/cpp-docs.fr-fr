@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
 ms.openlocfilehash: 55a9ccfc496c95c9e7410cbd5645135ee555ff26
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323383"
 ---
 # <a name="cwindowdc-class"></a>Cwindowdc, classe
 
@@ -37,7 +37,7 @@ class CWindowDC : public CDC
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CWindowDC::m_hWnd](#m_hwnd)|Le HWND à laquelle cet `CWindowDC` est attaché.|
 
@@ -55,7 +55,7 @@ Pour plus d’informations sur l’utilisation de `CWindowDC`, consultez [contex
 
 `CWindowDC`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 En-tête : afxwin.h
 

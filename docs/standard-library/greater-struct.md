@@ -8,11 +8,11 @@ helpviewer_keywords:
 - greater function
 ms.assetid: ebc348e1-edcd-466b-b21a-db95bd8f9079
 ms.openlocfilehash: 7867de3a56893499f8d705e81ac3b34fabcf188c
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159481"
 ---
 # <a name="greater-struct"></a>greater (struct)
 
@@ -110,7 +110,7 @@ Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500 29358)
 Resorted vector v1 = (29358 26500 19169 18467 15724 11478 6334 41)
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

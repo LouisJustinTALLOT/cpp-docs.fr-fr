@@ -17,11 +17,11 @@ helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
 ms.openlocfilehash: 81d4174943543db708090ad654a911980ecf026d
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388928"
 ---
 # <a name="autogcroot-class"></a>auto_gcroot, classe
 
@@ -43,7 +43,7 @@ Le type managé à incorporer.
  
 ### <a name="public-constructors"></a>Constructeurs publics 
  
-|Name|Description| 
+|Nom|Description| 
 |---------|-----------| 
 |[auto_gcroot::auto_gcroot](#auto-gcroot)|Constructeur `auto_gcroot`.| 
 |[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|Le `auto_gcroot` destructeur.
@@ -51,7 +51,7 @@ Le type managé à incorporer.
 
 ### <a name="public-methods"></a>Méthodes publiques 
 
-|Name|Description| 
+|Nom|Description| 
 |---------|-----------| 
 |[auto_gcroot::attach](#attach)|Attacher `auto_gcroot` à un objet.| 
 |[auto_gcroot::get](#get)|Obtient l’objet de relation contenant-contenu.| 
@@ -62,7 +62,7 @@ Le type managé à incorporer.
  
 ### <a name="public-operators"></a>Opérateurs publics
  
-|Name|Description| 
+|Nom|Description| 
 |---------|-----------|
 |[auto_gcroot::operator-&gt;](#operator-arrow)|L’opérateur d’accès au membre.|  
 |[auto_gcroot::operator=](#operator-assign)|Opérateur d'assignation.|
@@ -70,7 +70,7 @@ Le type managé à incorporer.
 |[auto_gcroot::operator&nbsp;bool](#operator-bool)|Opérateur pour l’utilisation de `auto_gcroot` dans une expression conditionnelle.|  
 |[auto_gcroot::operator!](#operator-logical-not)|Opérateur pour l’utilisation de `auto_gcroot` dans une expression conditionnelle.| 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Fichier d’en-tête** \<msclr\auto_gcroot.h >
 
