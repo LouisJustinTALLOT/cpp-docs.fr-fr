@@ -21,11 +21,11 @@ helpviewer_keywords:
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
 ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322720"
 ---
 # <a name="diagnostic-services"></a>Services de diagnostic
 
@@ -133,7 +133,7 @@ void AfxDebugBreak( );
 
 `AfxDebugBreak` n’a aucun effet dans les versions d’une application MFC et doit être supprimée. Cette fonction doit uniquement être utilisée dans les applications MFC. Utilisez la version de l’API Win32, `DebugBreak`, pour provoquer un arrêt dans les applications non-MFC.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxver_.h
 
@@ -169,7 +169,7 @@ Dans la version Release de MFC, ASSERT n’évalue pas l’expression et par con
 
 [!code-cpp[NVC_MFC_Utilities#44](../../mfc/codesnippet/cpp/diagnostic-services_2.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -204,7 +204,7 @@ Cette fonction fonctionne uniquement pour les classes déclarées avec la [DECLA
 > [!NOTE]
 >  Cette fonction est disponible uniquement dans la version Debug des MFC.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -236,7 +236,7 @@ Pour plus d’informations et des exemples, consultez [débogage des Application
 
 [!code-cpp[NVC_MFCCObjectSample#19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -263,7 +263,7 @@ Une fois que vous insérez cette directive, le préprocesseur insérera DEBUG_NE
 > [!NOTE]
 >  Dans les versions précédentes de MFC (4.1 et versions antérieur) que vous deviez placer les `#define` instruction après toutes les instructions qui a appelé la macro IMPLEMENT_DYNCREATE ou IMPLEMENT_SERIAL. Cela n’est plus nécessaire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -285,7 +285,7 @@ Le debug_only (macro) est équivalent à entourant *expression* avec `#ifdef _DE
 
 [!code-cpp[NVC_MFC_Utilities#32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -316,7 +316,7 @@ La macro ENSURE_ARG agit comme la macro Vérifiez.
 ENSURE_VALID appelle la macro ASSERT_VALID (ce qui a un effet uniquement dans les versions Debug). En outre, ENSURE_VALID lève une exception si le pointeur est NULL. Le test de la valeur NULL est effectué dans les configurations Debug et Release.
 
 Si un de ces tests échoue, un message d’alerte s’affiche dans la même manière que l’assertion. La macro lève une exception d’argument non valide si nécessaire.
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -346,7 +346,7 @@ static char THIS_FILE[] = __FILE__;
 // compiler recognizes.
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -367,7 +367,7 @@ Dans la version debug des MFC, cette macro envoie la chaîne spécifiée pour le
 
 Pour plus d’informations, consultez [débogage des Applications MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -400,7 +400,7 @@ Dans la version Release de MFC, vérifiez évalue l’expression, mais ne pas im
 
 [!code-cpp[NVC_MFCDocView#198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -424,7 +424,7 @@ Cette variable est définie uniquement dans la version Debug des MFC. Pour plus 
 
 [!code-cpp[NVC_MFC_Utilities#23](../../mfc/codesnippet/cpp/diagnostic-services_8.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -449,7 +449,7 @@ Un pointeur vers un objet d’une classe dérivée de `CObject`.
 
 Code de votre programme ne doit pas appeler `AfxDump`, mais vous devez plutôt appeler la `Dump` fonction membre de l’objet approprié.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -475,7 +475,7 @@ int  afxMemDF;
 
 [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -502,7 +502,7 @@ Cette fonction peut être utilisée pour vérifier les valeurs de retour d’app
 
 [!code-cpp[NVC_MFCOleContainer#33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -539,7 +539,7 @@ Cette fonction fonctionne uniquement dans la version Debug des MFC.
 
 [!code-cpp[NVC_MFCCObjectSample#26](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -562,7 +562,7 @@ Un pointeur vers un objet d’une classe dérivée de `CObject`.
 
 Code de votre programme ne doit pas appeler `AfxDump`, mais vous devez plutôt appeler la `Dump` fonction membre de l’objet approprié.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -637,7 +637,7 @@ Pour utiliser cette fonction avec succès :
 - Le fichier IMAGEHLP. DLL doit être sur votre chemin d’accès. Si vous n’avez pas cette DLL, la fonction affiche un message d’erreur. Consultez [bibliothèque d’aide Image](/windows/desktop/Debug/image-help-library) pour plus d’informations sur l’ensemble de la fonction fournie par IMAGEHLP.
 
 - Les modules qui ont des trames sur la pile doivent inclure les informations de débogage. Si elles ne contiennent pas les informations de débogage, la fonction va générer une trace de pile, mais la trace sera moins détaillée.
-  ### <a name="requirements"></a>Spécifications
+  ### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -667,7 +667,7 @@ Si votre application charge une autre bibliothèque avant la bibliothèque MFC, 
 > [!NOTE]
 >  Si vous utilisez cette méthode pour désactiver l’image des fuites de mémoire, vous ne recevez pas d’indication des fuites de mémoire valides dans votre application. Vous devez utiliser cette méthode seulement si vous êtes certain que le rapport sur les fuites de mémoire contient des fausses fuites de mémoire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -701,7 +701,7 @@ Pour plus d’informations sur `AfxEnableMemoryTracking`, consultez [débogage d
 
 [!code-cpp[NVC_MFC_Utilities#24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -739,7 +739,7 @@ Il vérifie également la taille spécifiée par rapport à la taille allouée d
 
 [!code-cpp[NVC_MFC_Utilities#27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -779,7 +779,7 @@ L’adresse n’est pas limité aux blocs alloués par **nouveau**.
 
 [!code-cpp[NVC_MFC_Utilities#28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -811,7 +811,7 @@ Dans les versions non debug, différent de zéro si *lpsz* n’est pas NULL ; s
 
 [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -849,7 +849,7 @@ Numéro de séquence de l’allocation de mémoire.
 
 Notez que la convention d’appel de AFXAPI implique que l’appelé doit supprimer les paramètres de la pile.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
@@ -885,7 +885,7 @@ Sérialisable `CObject`-classes dérivées sont des classes dérivées à l’ai
 
 [!code-cpp[NVC_MFCCollections#114](../../mfc/codesnippet/cpp/diagnostic-services_17.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 
