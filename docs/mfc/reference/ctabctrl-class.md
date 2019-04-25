@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
 ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323711"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (classe)
 
@@ -152,7 +152,7 @@ Pour plus d’informations sur l’utilisation de `CTabCtrl`, consultez [contrô
 
 `CTabCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 

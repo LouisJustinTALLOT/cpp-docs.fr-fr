@@ -16,11 +16,11 @@ helpviewer_keywords:
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
 ms.openlocfilehash: 9a01672976703634c06724c9c655605bb433facf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301823"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Opérateurs de multiplication et opérateur modulo
 
@@ -46,7 +46,7 @@ Ces opérateurs binaires ont une associativité de droite à gauche.
 
 Les opérateurs de multiplication prennent des opérandes de types arithmétiques. L’opérateur modulo (**%**) a une exigence plus stricte dans la mesure où ses opérandes doivent être de type intégral. (Pour obtenir le reste d’une division à virgule flottante, utilisez la fonction de l’exécution, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Les conversions abordées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes, et le résultat est du type converti.
 
-L’opérateur de multiplication montre le résultat de la multiplication du premier opérande par le second.
+L'opérateur de multiplication montre le résultat de la multiplication du premier opérande par le second.
 
 L’opérateur de division montre le résultat de la division du premier opérande par le second.
 
@@ -66,11 +66,11 @@ Si les deux opérandes pour une expression de multiplication, de division ou de 
 
 **Section spécifique à Microsoft**
 
-Dans Microsoft C++, le résultat d’une expression de modulo est toujours le même que le signe du premier opérande.
+Dans Microsoft C++, le résultat d'une expression de modulo est toujours le même que le signe du premier opérande.
 
 **FIN de la section spécifique à Microsoft**
 
-Si la division calculée de deux entiers est incorrecte et qu’un seul opérande est négatif, le résultat est le plus grand entier (en amplitude, sans tenir compte du signe) qui est inférieur à la valeur exacte que l’opérateur de division produirait. Par exemple, la valeur calculée de -11 / 3 est-3.666666666. Le résultat de cette division intégrale est -3.
+Si la division calculée de deux entiers est incorrecte et qu'un seul opérande est négatif, le résultat est le plus grand entier (en amplitude, sans tenir compte du signe) qui est inférieur à la valeur exacte que l'opérateur de division produirait. Par exemple, la valeur calculée de -11 / 3 est-3.666666666. Le résultat de cette division intégrale est -3.
 
 La relation entre les opérateurs de multiplication est indiquée par l’identité (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.
 

@@ -139,11 +139,11 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 51b84b8a48365189abf1efa111ae2186af0cab11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159143"
 ---
 # <a name="unorderedmap-class"></a>unordered_map, classe
 
@@ -180,7 +180,7 @@ class unordered_map;
 |[const_pointer](#const_pointer)|Type d'un pointeur constant vers un élément.|
 |[const_reference](#const_reference)|Type d'une référence constante à un élément.|
 |[difference_type](#difference_type)|Type d'une distance signée entre deux éléments.|
-|[hacheur de](#hasher)|Type de la fonction de hachage.|
+|[hasher](#hasher)|Type de la fonction de hachage.|
 |[iterator](#iterator)|Type d'un itérateur pour la séquence contrôlée.|
 |[key_equal](#key_equal)|Type de la fonction de comparaison.|
 |[key_type](#key_type)|Type d'une clé de tri.|
@@ -195,7 +195,7 @@ class unordered_map;
 |-|-|
 |[at](#at)|Recherche un élément avec la clé spécifiée.|
 |[begin](#begin)|Désigne le début de la séquence contrôlée.|
-|[compartiment](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
+|[bucket](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
 |[bucket_count](#bucket_count)|Obtient le nombre de compartiments.|
 |[bucket_size](#bucket_size)|Obtient la taille d'un compartiment.|
 |[cbegin](#cbegin)|Désigne le début de la séquence contrôlée.|
@@ -406,7 +406,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*<br/>
+*keyval*<br/>
 Valeur de clé à mapper.
 
 ### <a name="remarks"></a>Notes
@@ -907,7 +907,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*<br/>
+*keyval*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1171,7 +1171,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*<br/>
+*keyval*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1243,10 +1243,10 @@ size_type erase(const key_type& Key);
 *Where*<br/>
 Position de l’élément à supprimer.
 
-*Premier*<br/>
+*First*<br/>
 Position du premier élément à supprimer.
 
-*Dernière*<br/>
+*Last*<br/>
 Position juste après le dernier élément à supprimer.
 
 *Key*<br/>
@@ -1272,7 +1272,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyVal*<br/>
+*keyval*<br/>
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1475,8 +1475,8 @@ IList);
 |*Val*|Valeur d'un élément à insérer dans la classe unordered_map sauf si elle contient déjà un élément dont la clé est classée de manière équivalente.|
 |*Where*|Emplacement où commencer à rechercher le point d'insertion correct.|
 |*ValTy*|Paramètre de modèle qui spécifie le type d’argument que la classe unordered_map peut utiliser pour construire un élément de [value_type](../standard-library/map-class.md#value_type)et effectue un transfert parfait *Val* en tant qu’argument.|
-|*Premier*|Position du premier élément à copier.|
-|*Dernière*|Position juste au-delà du dernier élément à copier.|
+|*First*|Position du premier élément à copier.|
+|*Last*|Position juste au-delà du dernier élément à copier.|
 |*InputIterator*|Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|[initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.|
 
@@ -2099,7 +2099,7 @@ Ty& operator[](Key&& keyval);
 
 |Paramètre|Description|
 |-|-|
-|*keyVal*|Valeur de clé à rechercher ou à insérer.|
+|*Keyval*|Valeur de clé à rechercher ou à insérer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2628,12 +2628,12 @@ unordered_map(
 |Paramètre|Description|
 |-|-|
 |*Al*|Objet allocateur à stocker.|
-|*Comp.*|Objet de fonction de comparaison à stocker.|
+|*Comp*|Objet de fonction de comparaison à stocker.|
 |*hachage*|Objet de fonction de hachage à stocker.|
 |*Bucket_count*|Nombre minimal de compartiments.|
 |*Droite*|Conteneur à copier.|
-|*Premier*||
-|*Dernière*||
+|*First*||
+|*Last*||
 |*IList*|initializer_list qui contient les éléments à copier.|
 
 ### <a name="remarks"></a>Notes

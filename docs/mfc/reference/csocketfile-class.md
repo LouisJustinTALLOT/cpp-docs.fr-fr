@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
 ms.openlocfilehash: f3fa73320ae34283b0cdac559111a53a879c031c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324049"
 ---
 # <a name="csocketfile-class"></a>CSocketFile, classe
 
@@ -60,7 +60,7 @@ Pour plus d’informations, consultez [Windows des Sockets dans MFC](../../mfc/w
 
 `CSocketFile`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxsock.h
 

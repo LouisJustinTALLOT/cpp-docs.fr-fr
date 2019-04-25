@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2156
 ms.assetid: 136f9c67-2c27-4f61-b7e6-ccd202eca697
 ms.openlocfilehash: e2637a54249c37f3872d87959f2cf6d7bf73481e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62174885"
 ---
 # <a name="compiler-error-c2156"></a>Erreur du compilateur C2156
 

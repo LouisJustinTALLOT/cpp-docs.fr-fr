@@ -33,11 +33,11 @@ helpviewer_keywords:
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
 ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157343"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
 
@@ -83,7 +83,7 @@ Lors de la compilation en C++, le **isnan** macro n’est pas définie et un **i
 
 Le **_isnan** et **_isnanf** fonctions sont spécifiques à Microsoft. Le **_isnanf** fonction est uniquement disponible lors de la compilation pour x64.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------------|-------------------------------|

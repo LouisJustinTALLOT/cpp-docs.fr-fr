@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
 ms.openlocfilehash: 025c25d6c01ab9a28c68574cc2a13e09dbf28388
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161743"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections (espace de noms)
 
@@ -35,7 +35,7 @@ using namespace Platform::Collections;
 
 Cet espace de noms contient les membres ci-dessous.
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[Platform::Collections::BackInsertIterator, classe](../cppcx/platform-collections-backinsertiterator-class.md)|Représente un itérateur qui insère un élément à la fin d'une collection.|
 |[Platform::Collections::InputIterator, classe](../cppcx/platform-collections-inputiterator-class.md)|Représente un itérateur qui insère un élément au début d'une collection.|
@@ -48,13 +48,13 @@ Cet espace de noms contient les membres ci-dessous.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
-[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)
 
 ### <a name="requirements"></a>Configuration requise
 
 **Métadonnées :** platform.winmd
 
-**Espace de noms :** Platform::Collections
+**Espace de noms :** Platform::Collections
 
 **Option du compilateur :** /ZW
 

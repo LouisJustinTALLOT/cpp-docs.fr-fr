@@ -10,11 +10,11 @@ f1_keywords:
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159845"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -31,7 +31,7 @@ using namespace std::experimental::filesystem::v1;
 > [!IMPORTANT]
 > Depuis la version finale de Visual Studio 2017, le \<filesystem > en-tête n’était pas encore une norme C++. Visual C++ 2017 implémente le projet final de la norme, qui se trouve dans [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Cet en-tête prend en charge les systèmes de fichiers des deux grandes classes de systèmes d’exploitation : Microsoft Windows et Posix.
+Cet en-tête prend en charge les systèmes de fichiers pour l’une des deux grandes classes de systèmes d’exploitation : Microsoft Windows et Posix.
 
 Bien que la plupart des fonctionnalités soit communes aux deux systèmes d’exploitation, ce document met l’accent sur les différences. Exemple :
 
@@ -102,7 +102,7 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 
 ## <a name="structs"></a>Structs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[space_info, structure](../standard-library/space-info-structure.md)|Contient des informations sur un volume.|
 
@@ -116,13 +116,13 @@ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navi
 
 ## <a name="enumerations"></a>Énumérations
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) et qui détermine le comportement si un fichier de destination existe déjà.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) et qui détermine le comportement si un fichier de destination existe déjà.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Énumération qui spécifie les options pour les itérateurs de répertoire.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Énumération pour les types de fichiers.|
-|[Perms](../standard-library/filesystem-enumerations.md#perms)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|
+|[perms](../standard-library/filesystem-enumerations.md#perms)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|
 
 ## <a name="see-also"></a>Voir aussi
 

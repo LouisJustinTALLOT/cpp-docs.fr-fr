@@ -8,11 +8,11 @@ helpviewer_keywords:
 - preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
 ms.openlocfilehash: 30b2f9ca8c658b65819709bb2e536b5aaecad676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166670"
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>Utilisation et conservation des registres dans un assembly inline
 

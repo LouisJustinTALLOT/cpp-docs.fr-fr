@@ -47,11 +47,11 @@ helpviewer_keywords:
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
 ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157282"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -112,9 +112,9 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 
 |Routine|Condition de test|Exemple de page de codes 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**, **_ismbcalnum_l**|Alphanumérique|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais ASCII : consultez des exemples pour **_ismbcdigit** et **_ismbcalpha**.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Alphanumérique|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais ASCII : Consultez les exemples pour **_ismbcdigit** et **_ismbcalpha**.|
 |**_ismbcalpha**, **_ismbcalpha_l**|Alphabétique|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais ASCII : 0 x 41 < =*c*< = 0x5A ou 0 x 61 < =*c*< = 0x7A ; ou une lettre katakana : 0xA6 < =*c*< = 0xDF.|
-|**_ismbcdigit**, **_ismbcdigit**|Chiffre|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’un chiffre ASCII : 0 x 30 < =*c*< = 0 x 39.|
+|**_ismbcdigit**, **_ismbcdigit**|Chiffre|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’un chiffre ASCII : 0x30<=*c*<=0x39.|
 
 ## <a name="requirements"></a>Configuration requise
 

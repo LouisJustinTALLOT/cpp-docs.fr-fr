@@ -7,11 +7,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322239"
 ---
 # <a name="event-maps"></a>Tables d'événements
 
@@ -21,7 +21,7 @@ La bibliothèque MFC (Microsoft Foundation Class) offre un modèle de programmat
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-Le `EVENT_STOCK_CLICK` macro indique que le contrôle déclenche un événement chaque fois qu’il détecte une souris cliquez stock. Pour obtenir une liste plus détaillée d’autres événements stock, consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md). Les macros sont également disponibles pour afficher les événements personnalisés.
+Le `EVENT_STOCK_CLICK` macro indique que le contrôle déclenche un événement chaque fois qu’il détecte une souris cliquez stock. Pour obtenir une liste plus détaillée d’autres événements stock, consultez l’article [contrôles ActiveX : Événements](../../mfc/mfc-activex-controls-events.md). Les macros sont également disponibles pour afficher les événements personnalisés.
 
 Bien que les macros de table d'événements sont importantes, elles ne sont généralement pas insérées directement. Ceci est dû au fait que la fenêtre Propriétés crée automatiquement des entrées dans la table des événements de vos fichiers sources lorsque vous l'utilisez pour associer des fonctions de déclenchement d'événement avec des événements. Lorsque vous souhaitez modifier ou ajouter une entrée dans la table des événements, utilisez la fenêtre Propriétés.
 
@@ -63,7 +63,7 @@ DECLARE_EVENT_MAP()
 
 Utilisez le declare_event_map (macro) à la fin de votre déclaration de classe. Puis, dans le fichier .cpp qui définit les fonctions membres pour la classe, utilisez le begin_event_map (macro), les entrées de la macro pour chacun des événements du contrôle et l’end_event_map (macro) pour déclarer la fin de la liste des événements.
 
-Pour plus d’informations sur les tables d’événements, consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md).
+Pour plus d’informations sur les tables d’événements, consultez l’article [contrôles ActiveX : Événements](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -82,14 +82,14 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 *theClass*<br/>
 Spécifie le nom de la classe de contrôle dont l’événement mapper.
 
-*classe de base*<br/>
+*baseClass*<br/>
 Spécifie le nom de la classe de base de *theClass*.
 
 ### <a name="remarks"></a>Notes
 
 Dans le fichier d’implémentation (.cpp) qui définit les fonctions membres pour votre classe, démarrez la table d’événements avec le begin_event_map (macro), puis ajouter des entrées de macro pour chacun de vos événements et terminer la table d’événements avec l’end_event_map (macro).
 
-Pour plus d’informations sur les tables d’événements et le begin_event_map (macro), consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md).
+Pour plus d’informations sur les tables d’événements et le begin_event_map (macro), consultez l’article [contrôles ActiveX : Événements](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Configuration requise
 
@@ -118,7 +118,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="parameters"></a>Paramètres
 
 *pszName*<br/>
-Nom de l'événement.
+Nom de l’événement.
 
 *pfnFire*<br/>
 Le nom de l’événement de fonction de déclenchement.
@@ -188,9 +188,9 @@ EVENT_CUSTOM_ID(
 ### <a name="parameters"></a>Paramètres
 
 *pszName*<br/>
-Nom de l'événement.
+Nom de l’événement.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID de distribution utilisé par le contrôle lors du déclenchement de l’événement.
 
 *pfnFire*<br/>

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
 ms.openlocfilehash: 7766b063eb89a14a94eaa41ebfa17f3e4a1c102e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158576"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex, classe (Bibliothèque standard C++)
 
@@ -117,7 +117,7 @@ bool try_lock();
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="unlock"></a>  mutex::Unlock
+## <a name="unlock"></a>  mutex::unlock
 
 Libère la propriété du `mutex`.
 

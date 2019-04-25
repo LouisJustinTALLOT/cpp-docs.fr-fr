@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1900
 ms.assetid: 3aaa583b-4c1a-45de-aa34-527d806f2cb5
 ms.openlocfilehash: c4622dd4552f7bfcc822a3aab4d5783146d68ac7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165721"
 ---
 # <a name="fatal-error-c1900"></a>Erreur irrécupérable C1900
 

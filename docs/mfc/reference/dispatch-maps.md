@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322512"
 ---
 # <a name="dispatch-maps"></a>Tables de dispatch
 
@@ -69,7 +69,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 *theClass*<br/>
 Spécifie le nom de la classe qui possède cette table de dispatch.
 
-*classe de base*<br/>
+*baseClass*<br/>
 Spécifie le nom de classe de base de *theClass*.
 
 ### <a name="remarks"></a>Notes
@@ -168,9 +168,9 @@ Le `VTS_` constantes et leurs significations sont comme suit :
 |VTS_BOOL|BOOL|
 |VTS_VARIANT|`const VARIANT*` ou `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
-|VTS_PI2|__court\*__|
-|VTS_PI4|__Long\*__|
-|VTS_PR4|__Float\*__|
+|VTS_PI2|__short\*__|
+|VTS_PI4|__long\*__|
+|VTS_PR4|__float\*__|
 |VTS_PR8|__double\*__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
@@ -206,7 +206,7 @@ Nom de la classe.
 *pszName*<br/>
 Nom externe de la propriété.
 
-*Nom de membre*<br/>
+*memberName*<br/>
 Nom de la variable de membre dans lequel la propriété est stockée.
 
 *vtPropType*<br/>
@@ -261,7 +261,7 @@ Nom externe de la propriété.
 *memberGet*<br/>
 Nom de la fonction de membre utilisée pour obtenir la propriété.
 
-*jeu de membres*<br/>
+*memberSet*<br/>
 Nom de la fonction membre permet de définir la propriété.
 
 *vtPropType*<br/>
@@ -298,7 +298,7 @@ Nom de la classe.
 *szExternalName*<br/>
 Nom externe de la propriété.
 
-*Nom de membre*<br/>
+*memberName*<br/>
 Nom de la variable de membre dans lequel la propriété est stockée.
 
 *pfnAfterSet*<br/>

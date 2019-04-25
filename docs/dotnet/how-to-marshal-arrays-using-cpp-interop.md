@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
 ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324920"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Procédure : Marshaler des tableaux à l’aide de C++ Interop
 

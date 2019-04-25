@@ -7,11 +7,11 @@ helpviewer_keywords:
 - reference to value type in native type
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
 ms.openlocfilehash: 3b1dfdc5a519bf51f16b7afbc25d49dc38b8f076
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324959"
 ---
 # <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Procédure : Stocker une référence à un Type dans un Type natif valeur
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
 ms.openlocfilehash: 9a3ca3980a9cdff4e67885b2ad47ffa2385b0774
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321642"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Créer un manifeste d'assembly côte à côte)
 
@@ -59,5 +59,5 @@ Si vous spécifiez /MANIFEST, le nom du fichier manifeste est la même que le no
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

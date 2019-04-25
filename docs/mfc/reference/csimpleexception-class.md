@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
 ms.openlocfilehash: aa36fc0ac0eed5ea760224f9e0a3af1c97e18895
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324088"
 ---
 # <a name="csimpleexception-class"></a>Csimpleexception, classe
 
@@ -65,7 +65,7 @@ Pour plus d’informations, consultez le [CException (classe)](../../mfc/referen
 
 `CSimpleException`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afx.h
 

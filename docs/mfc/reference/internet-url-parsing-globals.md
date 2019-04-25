@@ -8,11 +8,11 @@ helpviewer_keywords:
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
 ms.openlocfilehash: 0831d94f1a6f0293d3605a5e2e9ebde0564baf24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321999"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Programmes d’assistance et objet Globals d’analyse URL Internet
 
@@ -113,7 +113,7 @@ Par exemple, `AfxParseURL` analyse des URL sous la forme *service://server/dir/d
 > [!NOTE]
 >  Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxinet.h
 
@@ -210,7 +210,7 @@ Il analyse une chaîne URL et retourne le type de service et ses composants, mai
 > [!NOTE]
 >  Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxinet.h
 
@@ -266,7 +266,7 @@ La liste suivante inclut les types Internet possibles retournées par `AfxGetInt
 > [!NOTE]
 >  Pour pouvoir appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxinet.h
 
@@ -295,7 +295,7 @@ Vous êtes chargé de déterminer la cause en fonction du code d’erreur de sys
 > [!NOTE]
 >  Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxinet.h
 

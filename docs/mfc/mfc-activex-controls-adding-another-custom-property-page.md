@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
 ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160339"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Contrôles ActiveX MFC : Ajout d’une autre Page de propriétés personnalisées
 

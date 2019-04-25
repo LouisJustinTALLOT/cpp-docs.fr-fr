@@ -14,11 +14,11 @@ helpviewer_keywords:
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
 ms.openlocfilehash: 47a1bb434801c24ab8eee048d9ef8f93793101cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323188"
 ---
 # <a name="database-macros-and-globals"></a>Macros et objet Globals de base de données
 
@@ -55,7 +55,7 @@ void AFXAPI AfxDbInitModule( );
 
 Assurez-vous que cet appel se produit avant tout appel de la classe de base ou de tout code qui accède à la base de données MFC DLL ajouté. La base de données MFC DLL est une extension MFC DLL ; pour une DLL d’extension MFC puisse être raccordée à un `CDynLinkLibrary` chaîne, il doit créer un `CDynLinkLibrary` objet dans le contexte de chaque module qui l’utiliserez. `AfxDbInitModule` crée le `CDynLinkLibrary` de l’objet dans le contexte de votre MFC DLL régulière afin qu’il obtient câblé dans le `CDynLinkLibrary` chaîne de la DLL MFC normale de l’objet.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<afxdll_.h >
 
@@ -86,7 +86,7 @@ Cet exemple utilise `AFX_ODBC_CALL` pour appeler le `SQLColumns` fonction API OD
 
 [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -113,7 +113,7 @@ Une fonction API ODBC. Pour plus d’informations sur les fonctions API ODBC, co
 > [!NOTE]
 >  Les classes ODBC MFC utilisent maintenant un traitement synchrone uniquement. Pour effectuer une opération asynchrone, vous devez appeler la fonction API ODBC `SQLSetConnectOption`. Pour plus d’informations, consultez la rubrique « L’exécution de fonctions de façon asynchrone » dans le SDK Windows.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdb.h
 
@@ -144,7 +144,7 @@ Vous pouvez simplement mettre l’attribution
 
 [!code-cpp[NVC_MFCDatabase#41](../../mfc/codesnippet/cpp/database-macros-and-globals_3.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdb.h
 
@@ -160,7 +160,7 @@ HENV AFXAPI AfxGetHENV();
 
 Handle de l’environnement ODBC en cours d’utilisation par MFC. Peut être `SQL_HENV_NULL` s’il existe aucune [CDatabase](../../mfc/reference/cdatabase-class.md) objets et non [CRecordset](../../mfc/reference/crecordset-class.md) objets en cours d’utilisation.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdb.h
 

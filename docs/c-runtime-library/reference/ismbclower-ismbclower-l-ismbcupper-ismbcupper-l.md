@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
 ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157272"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -85,8 +85,8 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 
 |Routine|Condition de test|Exemple de page de codes 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Caractère alphabétique minuscule|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais minuscule ASCII : 0 x 61 < =*c*< = 0x7A.|
-|**_ismbclower_l**|Caractère alphabétique minuscule|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais minuscule ASCII : 0 x 61 < =*c*< = 0x7A.|
+|**_ismbclower**|Caractère alphabétique minuscule|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais minuscule ASCII : 0x61<=*c*<=0x7A.|
+|**_ismbclower_l**|Caractère alphabétique minuscule|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’une lettre en anglais minuscule ASCII : 0x61<=*c*<=0x7A.|
 |**_ismbcupper**|Caractère alphabétique majuscule|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’un caractère en anglais majuscule ASCII : 0 x 41 < =*c*< = 0x5A.|
 |**_ismbcupper_l**|Caractère alphabétique majuscule|Retourne une valeur différente de zéro si et seulement si *c* est une représentation d’un octet d’un caractère en anglais majuscule ASCII : 0 x 41 < =*c*< = 0x5A.|
 

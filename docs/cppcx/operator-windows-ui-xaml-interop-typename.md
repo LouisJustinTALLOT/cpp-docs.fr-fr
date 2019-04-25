@@ -3,11 +3,11 @@ title: Windows::UI::Xaml::Interop::TypeName, opérateur
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
 ms.openlocfilehash: 5acf17b7c87a71259dba6579d8ee69e0eea86fa5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161587"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Windows::UI::Xaml::Interop::TypeName, opérateur
 
@@ -48,7 +48,7 @@ Type^ tx2 = (Type^)(tn);
 
 Projet de programmes .NET Framework `TypeName` sous la forme [System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 ## <a name="see-also"></a>Voir aussi
 
