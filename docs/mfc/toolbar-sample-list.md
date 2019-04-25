@@ -5,11 +5,11 @@ helpviewer_keywords:
 - sample applications [MFC], toolbars
 ms.assetid: 61310e4e-3df7-47c2-8b10-7c6cb45c5d1b
 ms.openlocfilehash: 528733668cd00c9c1191dbb6b1109f078d000a99
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167736"
 ---
 # <a name="toolbar-sample-list"></a>Exemple de liste de barre d'outils
 

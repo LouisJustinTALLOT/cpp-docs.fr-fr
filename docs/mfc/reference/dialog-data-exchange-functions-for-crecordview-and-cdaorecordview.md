@@ -21,11 +21,11 @@ helpviewer_keywords:
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 ms.openlocfilehash: 2a794d16b2f94bf8ba66b6c0398dec262d8829e5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322551"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Échange de données de boîtes de dialogue pour CRecordView et CDaoRecordView
 
@@ -94,7 +94,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple DDX_Field général. L’exemple serait similaire pour `DDX_FieldCBIndex`.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -142,7 +142,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple DDX_Field général. L’exemple inclut un appel à `DDX_FieldCBString`.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 
@@ -190,7 +190,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple DDX_Field général. Les appels à `DDX_FieldCBStringExact` serait similaire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 
@@ -232,7 +232,7 @@ Lorsque `DDX_FieldCheck` est appelée, *valeur* est défini sur l’état actuel
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 
@@ -280,7 +280,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple DDX_Field général.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 
@@ -328,7 +328,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple DDX_Field général. Les appels à `DDX_FieldLBString` serait similaire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 
@@ -376,7 +376,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple DDX_Field général. Les appels à `DDX_FieldLBStringExact` serait similaire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 
@@ -424,7 +424,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple DDX_Field général. Les appels à `DDX_FieldRadio` serait similaire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 
@@ -472,7 +472,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple DDX_Field général. Les appels à `DDX_FieldScroll` serait similaire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 
@@ -523,7 +523,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple DDX_Field général. Les appels à `DDX_FieldSlider` serait similaire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -669,7 +669,7 @@ Ce qui suit `DoDataExchange` fonctionner pour un [CRecordView](../../mfc/referen
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao.h
 

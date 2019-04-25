@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2150
 ms.assetid: 21e82a10-c1d4-4c0d-9dc6-c5d92ea42a31
 ms.openlocfilehash: a9c6465ef87c12135ad4e6709741f0027d8ea3c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175145"
 ---
 # <a name="compiler-error-c2150"></a>Erreur du compilateur C2150
 

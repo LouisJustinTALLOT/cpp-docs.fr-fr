@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
 ms.openlocfilehash: 8d3f2ed95cfb9e7e885713252171c98834ae5c0a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164135"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator, classe
 
@@ -76,7 +76,7 @@ class CCustomInterpolator;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CCustomInterpolator::m_currentValue](#m_currentvalue)|La valeur interpolée.|
 |[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|Rapidité interpolée.|
@@ -93,7 +93,7 @@ Dérivez une classe de CCustomInterpolator et remplacer toutes les méthodes né
 
 `CCustomInterpolator`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxanimationcontroller.h
 

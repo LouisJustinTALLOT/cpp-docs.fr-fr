@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
 ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168171"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget, classe
 
@@ -63,7 +63,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Pointeur vers un objet ID2D1DCRenderTarget.|
 
@@ -75,7 +75,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

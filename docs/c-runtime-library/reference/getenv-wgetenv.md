@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
 ms.openlocfilehash: 79c685fef8d6a4b966c53bb7d94b423d16971976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157667"
 ---
 # <a name="getenv-wgetenv"></a>getenv, _wgetenv
 
@@ -57,7 +57,7 @@ wchar_t *_wgetenv(
 
 ### <a name="parameters"></a>Paramètres
 
-*nom de variable*<br/>
+*varname*<br/>
 Nom de la variable d'environnement.
 
 ## <a name="return-value"></a>Valeur de retour

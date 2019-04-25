@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::future [C++], wait_for
 - std::future [C++], wait_until
 ms.openlocfilehash: 9ca18e62038d93a50b592868f71223962a22857d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159325"
 ---
 # <a name="future-class"></a>future, classe
 
@@ -55,9 +55,9 @@ Chaque *fournisseur asynchrone* standard retourne un objet dont le type est une 
 |Nom|Description|
 |----------|-----------------|
 |[get](#get)|Récupère le résultat stocké dans l’état asynchrone associé.|
-|[Partager](#share)|Convertit l’objet en `shared_future`.|
+|[share](#share)|Convertit l’objet en `shared_future`.|
 |[valid](#valid)|Spécifie si l’objet n’est pas vide.|
-|[attente](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|
+|[wait](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|
 |[wait_for](#wait_for)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou que le délai spécifié soit écoulé.|
 |[wait_until](#wait_until)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou jusqu’à un point spécifié dans le temps.|
 

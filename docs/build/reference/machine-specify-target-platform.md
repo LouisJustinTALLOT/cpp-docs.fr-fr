@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MACHINE linker option
 ms.assetid: 8d41bf4b-7e53-4ab9-9085-d852b08d31c2
 ms.openlocfilehash: e64aa7b2ca9e50ebdc0760f64a9b25e851b45310
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321720"
 ---
 # <a name="machine-specify-target-platform"></a>/MACHINE (Spécifier la plate-forme cible)
 
@@ -46,5 +46,5 @@ En règle générale, vous n’êtes pas obligé de spécifier l’option /MACHI
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

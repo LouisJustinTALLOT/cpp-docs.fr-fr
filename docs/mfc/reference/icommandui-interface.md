@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322054"
 ---
 # <a name="icommandui-interface"></a>Icommandui, Interface
 
@@ -137,7 +137,7 @@ property String^ Text;
 
 Cette propriété définit le texte de l’élément d’interface utilisateur pour cette commande. La valeur texte est un handle de chaîne de texte.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 

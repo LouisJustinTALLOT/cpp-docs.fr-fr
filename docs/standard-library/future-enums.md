@@ -7,17 +7,17 @@ f1_keywords:
 - future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
 ms.openlocfilehash: 1e487128d4af5c6f9b3f29f5c71e52f616e1807a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159520"
 ---
 # <a name="ltfuturegt-enums"></a>&lt;future&gt;, énumérations
 
 ||||
 |-|-|-|
-|[future_errc](#future_errc)|[future_status](#future_status)|[lancement](#launch)|
+|[future_errc](#future_errc)|[future_status](#future_status)|[launch](#launch)|
 
 ## <a name="future_errc"></a>  future_errc, énumération
 

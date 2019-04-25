@@ -8,11 +8,11 @@ helpviewer_keywords:
 - global functions, event handling
 ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
 ms.openlocfilehash: bb109c63b497420ad6e797cd8e0b366ce4dc0475
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276340"
 ---
 # <a name="event-handling-global-functions"></a>Fonctions globales de gestion des événements
 
@@ -25,7 +25,7 @@ Cette fonction fournit un gestionnaire d’événements.
 |-|-|
 |[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Attend un objet soit signalé, en attendant la distribution des messages de fenêtre en fonction des besoins.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: d4645f4a57ce70c3683972c22e0f99cbce87ca6b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276653"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread, classe
 
@@ -45,7 +45,7 @@ La classe de fournir la fonction de création de thread, tel que [CRTThreadTrait
 
 ### <a name="protected-structures"></a>Structures protégées
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`WorkerClientEntry`||
 
@@ -88,7 +88,7 @@ La classe de fournir la fonction de création de thread, tel que [CRTThreadTrait
 
 1. Pour mettre fin au thread, appelez [CWorkerThread::Shutdown](#shutdown).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlutil.h
 

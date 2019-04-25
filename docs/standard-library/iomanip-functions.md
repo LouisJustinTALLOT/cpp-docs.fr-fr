@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: b5ead8b1000fd6c2708b2450f71da3dc612dc51d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158558"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;, fonctions
 
@@ -53,7 +53,7 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Quantité*<br/>
+*_Amount*<br/>
 Valeur monétaire extraite.
 
 *_Intl*<br/>
@@ -97,7 +97,7 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Quantité*<br/>
+*_Amount*<br/>
 Valeur monétaire à insérer dans le flux.
 
 *_Intl*<br/>
@@ -150,10 +150,10 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *str*<br/>
 Un std::string, un char\*, chaîne de littéral de chaîne brut ou littéral ou une version large d’un de ces (par exemple, std::wstring, wchar_t\*).
 
-*Délimiteur*<br/>
+*delimiter*<br/>
 Caractère spécifié par l'utilisateur ou caractère large à utiliser comme délimiteur de début et de fin de chaîne.
 
-*échappement*<br/>
+*escape*<br/>
 Caractère spécifié par l'utilisateur ou caractère large à utiliser comme caractère d'échappement pour les séquences d'échappement dans la chaîne.
 
 ### <a name="remarks"></a>Notes
@@ -362,7 +362,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*CH*<br/>
+*Ch*<br/>
 Caractère qui sera utilisé pour remplir les espaces dans un affichage aligné à droite.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -425,7 +425,7 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Paramètres
 
-*Large*<br/>
+*Wide*<br/>
 Largeur de la zone d’affichage.
 
 ### <a name="return-value"></a>Valeur de retour

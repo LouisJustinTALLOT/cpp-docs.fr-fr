@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
 ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277251"
 ---
 # <a name="curl-class"></a>CUrl, classe
 
@@ -130,7 +130,7 @@ class CUrl
 
 Pour manipuler le champ UrlPath (par exemple), vous utiliseriez [GetUrlPath](#geturlpath), [GetUrlPathLength](#geturlpathlength), et [SetUrlPath](#seturlpath). Vous utiliseriez [CreateUrl](#createurl) pour créer la chaîne URL complète.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlutil.h
 
@@ -189,7 +189,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 L’URL.
 
 *dwFlags*<br/>
-Spécifier ATL_URL_DECODE ou ATL_URL_ESCAPE pour convertir tous les caractères d’échappement dans *lpszUrl* à leurs valeurs réelles après l’analyse. (Avant Visual C++ 2005, ATL_URL_DECODE convertie tous les caractères d’échappement avant l’analyse.)
+Spécifier ATL_URL_DECODE ou ATL_URL_ESCAPE pour convertir tous les caractères d’échappement dans *lpszUrl* à leurs valeurs réelles après l’analyse. (Avant Visual C++ 2005, ATL_URL_DECODE converti tous les caractères d’échappement avant l’analyse.)
 
 ### <a name="return-value"></a>Valeur de retour
 
