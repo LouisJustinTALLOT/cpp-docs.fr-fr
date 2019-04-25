@@ -12,11 +12,11 @@ helpviewer_keywords:
 - throwing exceptions [MFC], stopping user operations
 ms.assetid: 2156ba6d-2cce-415a-9000-6f02c26fcd7d
 ms.openlocfilehash: 72d8537616792859a2b00a1a5cd880ce5eb452bf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323435"
 ---
 # <a name="cuserexception-class"></a>Cuserexception, classe
 
@@ -50,7 +50,7 @@ Pour plus d’informations sur l’utilisation de `CUserException`, consultez l�
 
 `CUserException`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 

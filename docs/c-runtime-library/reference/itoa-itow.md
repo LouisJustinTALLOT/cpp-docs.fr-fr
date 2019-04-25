@@ -100,11 +100,11 @@ helpviewer_keywords:
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
 ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157368"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -199,7 +199,7 @@ Pour utiliser ces fonctions sans l’avertissement de dépréciation, définisse
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent leurs équivalents plus sûrs. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Les noms Posix **itoa**, **ltoa**, et **ultoa** existent en tant qu’alias pour le **_itoa**, **_ltoa**, et **_ultoa** fonctions. Les noms Posix sont déconseillées, car ils ne suivent pas les conventions de nom (fonction) spécifiques à l’implémentation de ISO C. Par défaut, ces fonctions provoquent avertissement de dépréciation [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Le nom POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez le nom conforme ISO C et C++ :** *nouveau_nom*. Nous vous recommandons de modifier votre code source pour utiliser les versions plus sécurisées de ces fonctions, **_itoa_s**, **_ltoa_s**, ou **_ultoa_s**. Pour plus d’informations, consultez [_itoa_s, _itow_s fonctions](itoa-s-itow-s.md).
+Les noms Posix **itoa**, **ltoa**, et **ultoa** existent en tant qu’alias pour le **_itoa**, **_ltoa**, et **_ultoa** fonctions. Les noms Posix sont déconseillées, car ils ne suivent pas les conventions de nom (fonction) spécifiques à l’implémentation de ISO C. Par défaut, ces fonctions provoquent avertissement de dépréciation [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Le nom POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez l’ISO C et C++ nom conforme :** *nouveau_nom*. Nous vous recommandons de modifier votre code source pour utiliser les versions plus sécurisées de ces fonctions, **_itoa_s**, **_ltoa_s**, ou **_ultoa_s**. Pour plus d’informations, consultez [_itoa_s, _itow_s fonctions](itoa-s-itow-s.md).
 
 Pour la portabilité du code source, vous pouvez conserver les noms Posix dans votre code. Pour utiliser ces fonctions sans l’avertissement de dépréciation, définir à la fois le **_CRT_NONSTDC_NO_WARNINGS** et **_CRT_SECURE_NO_WARNINGS** des macros de préprocesseur avant d’inclure tous les en-têtes CRT. Cela en ajoutant la ligne de commande dans une invite de commandes développeur le **/D_CRT_SECURE_NO_WARNINGS** et **/D_CRT_NONSTDC_NO_WARNINGS** options du compilateur pour le **cl**commande. Sinon, définissez les macros dans vos fichiers sources. Si vous utilisez des en-têtes précompilés, définir les macros en haut de l’en-tête précompilé incluent le fichier, généralement stdafx.h. Pour définir les macros dans votre code source, utilisez **#define** directives avant d’inclure n’importe quel en-tête CRT, comme dans cet exemple :
 
@@ -246,7 +246,7 @@ int main()
 |**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
 |**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

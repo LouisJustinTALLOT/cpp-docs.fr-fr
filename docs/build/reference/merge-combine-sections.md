@@ -13,11 +13,11 @@ helpviewer_keywords:
 - MERGE linker option
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
 ms.openlocfilehash: f0e770425f8068b15522f405ffdcf7cf52999fe0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321213"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (Combiner des sections)
 
@@ -49,5 +49,5 @@ Cette option est utile pour créer des VxD et en remplaçant les noms de section
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)
