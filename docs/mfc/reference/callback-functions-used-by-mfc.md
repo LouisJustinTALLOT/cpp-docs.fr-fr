@@ -10,23 +10,23 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: e3440530dfe30b6667012c76b2904dbb2786c199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152141"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Fonctions de rappel utilisées par MFC
 
 Trois fonctions de rappel apparaissent dans la bibliothèque Microsoft Foundation Class. Ces fonctions de rappel sont passées à [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), et [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Notez que toutes les fonctions de rappel doivent intercepter les exceptions MFC avant de revenir à Windows, étant donné que les exceptions ne peut pas être levées au-delà des limites de rappel. Pour plus d’informations sur les exceptions, consultez l’article [Exceptions](../../mfc/exception-handling-in-mfc.md).
 
-|Name||
+|Nom||
 |----------|-----------------|
 |[Fonction de rappel pour CDC::EnumObjects](#enum_objects)||
 |[Fonction de rappel pour CDC::GrayString](#graystring)||
 |[Fonction de rappel pour CDC::SetAbortProc](#setabortproc)||
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 

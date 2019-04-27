@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
 ms.openlocfilehash: 53381ca6e33321001299ce27bce550c5b2b8f59e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187216"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>Avertissement du compilateur (niveau 1) C4346
 

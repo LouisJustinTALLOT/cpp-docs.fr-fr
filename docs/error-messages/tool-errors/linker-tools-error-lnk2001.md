@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
 ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161015"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Erreur des outils Éditeur de liens LNK2001
 
@@ -49,7 +49,7 @@ Cette erreur peut se produire lorsque vous générez une version d’un projet A
 
 - Supprimer `_ATL_MIN_CRT` dans la liste du préprocesseur définit pour autoriser le code de démarrage du CRT à inclure. Consultez [General Property Page (Project)](../../build/reference/general-property-page-project.md) pour plus d’informations.
 
-- Si possible, supprimez les appels aux fonctions CRT qui nécessitent le code de démarrage du CRT. Au lieu de cela, utilisez leurs équivalents Win32. Par exemple, utilisez `lstrcmp` à la place `strcmp`. Fonctions connues qui requièrent le code de démarrage du CRT sont certaines des fonctions à virgule flottante et chaîne.
+- Si possible, supprimez les appels aux fonctions CRT qui nécessitent le code de démarrage du CRT. Au lieu de cela, utilisez leurs équivalents Win32. Par exemple, utilisez `lstrcmp` à la place de `strcmp`. Fonctions connues qui requièrent le code de démarrage du CRT sont certaines des fonctions à virgule flottante et chaîne.
 
 ### <a name="compilation-and-link-issues"></a>Problèmes de compilation et liaison
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
 ms.openlocfilehash: 5785ed19c6929e19c7d376efa012dd1c059611c7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152096"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo, structure
 
@@ -88,7 +88,7 @@ Les informations récupérées par le [CDaoDatabase::GetTableDefInfo](../../mfc/
 
 Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la table de base a été créée ou mises à jour. Dans un environnement multi-utilisateur, les utilisateurs doivent obtenir ces paramètres directement à partir du serveur de fichiers afin d’éviter des incohérences dans le DateCreated et les paramètres de propriété LastUpdated.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 

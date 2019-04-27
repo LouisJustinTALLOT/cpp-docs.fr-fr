@@ -5,11 +5,11 @@ f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
 ms.openlocfilehash: 155f1868123514dfec89ab448ef22f2da225c4d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155288"
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias et typedefs (C++)
 

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
 ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156953"
 ---
 # <a name="lsearchs"></a>_lsearch_s
 
@@ -60,7 +60,7 @@ Objet à rechercher.
 *base*<br/>
 Pointeur désignant la base du tableau à explorer.
 
-*Nombre*<br/>
+*number*<br/>
 Nombre d'éléments.
 
 *size*<br/>
@@ -80,7 +80,7 @@ Si des paramètres non valides sont passés à la fonction, le gestionnaire de p
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*key*|*base*|*compare*|*Nombre*|*size*|**errno**|
+|*key*|*base*|*compare*|*number*|*size*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
 |**NULL**|any|any|any|any|**EINVAL**|
 |any|**NULL**|any|!= 0|any|**EINVAL**|

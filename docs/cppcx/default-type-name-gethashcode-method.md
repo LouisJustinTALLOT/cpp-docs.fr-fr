@@ -5,11 +5,11 @@ f1_keywords:
 - VCCORLIB/Platform::Object::GetHashCode
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
 ms.openlocfilehash: 427756e8e87162738bd2297f1f6edc5af8d7b194
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176109"
 ---
 # <a name="defaulttypenamegethashcode-method"></a>default::(type_name)::GetHashCode, méthode
 
@@ -25,7 +25,7 @@ public:int GetHashCode();
 
 Code de hachage de cette instance.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 

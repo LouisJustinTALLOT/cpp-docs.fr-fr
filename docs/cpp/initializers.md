@@ -9,11 +9,11 @@ helpviewer_keywords:
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183524"
 ---
 # <a name="initializers"></a>Initialiseurs
 
@@ -282,7 +282,7 @@ L'initialisation directe utilise des accolades ou des parenthèses non vides. Co
 
 - Dans un constructeur, les classes de base et les membres non statiques sont initialisés à l'aide d'une liste d'initialiseurs.
 
-- Dans la copie d'une variable capturée d'une expression lambda.
+- Dans la copie d’une variable capturée d’une expression lambda.
 
 Le code suivant montre des exemples d'initialisation directe :
 
@@ -325,7 +325,7 @@ L'initialisation de liste se produit lorsqu'une variable est initialisée à l'a
 
 - Un argument est passé à une fonction.
 
-- L'un des arguments est compris dans une initialisation directe.
+- L’un des arguments est compris dans une initialisation directe.
 
 - Dans un initialiseur de données membres non statiques.
 

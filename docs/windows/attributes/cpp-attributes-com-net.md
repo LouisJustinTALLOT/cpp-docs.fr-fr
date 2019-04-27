@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148321"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributs de C++ pour COM et .NET
 
@@ -60,7 +60,7 @@ La figure suivante montre la relation entre le compilateur et le fournisseur d�
 > [!NOTE]
 > L’utilisation d’attribut ne modifie pas le contenu du fichier source. Le seul moment où que le code généré d’attribut est visible est au cours de sessions de débogage. En outre, pour chaque fichier source dans le projet, vous pouvez générer un fichier texte qui affiche les résultats de la substitution de l’attribut. Pour plus d’informations sur cette procédure, consultez [/Fx (fusionner le Code injecté)](../../build/reference/fx-merge-injected-code.md) et [débogage de Code injecté](/visualstudio/debugger/how-to-debug-injected-code).
 
-Comme la plupart des constructions C++, les attributs ont un ensemble de caractéristiques qui définit leur utilisation appropriée. Cela est appelé le contexte de l’attribut et est traité dans la table de contexte d’attribut pour chaque rubrique de référence d’attribut. Par exemple, le [coclasse](coclass.md) attribut peut uniquement être appliqué à une classe existante ou une structure, par opposition à la [cpp_quote](cpp-quote.md) attribut, qui peut être inséré n’importe où dans un fichier source C++.
+Comme la plupart des constructions C++, les attributs ont un ensemble de caractéristiques qui définit leur utilisation appropriée. Cela est appelé le contexte de l’attribut et est traité dans la table de contexte d’attribut pour chaque rubrique de référence d’attribut. Par exemple, le [coclasse](coclass.md) attribut peut uniquement être appliqué à une classe existante ou une structure, par opposition à la [cpp_quote](cpp-quote.md) attribut, qui peut être inséré n’importe où dans un C++ fichier source.
 
 ## <a name="building-an-attributed-program"></a>Générer un programmes par attributs
 

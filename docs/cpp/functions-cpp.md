@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154132"
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 
@@ -165,7 +165,7 @@ Déclarer une fonction comme `constexpr` lorsque la valeur qu’il génère peut
 
 ## <a name="function-templates"></a>Modèles de fonctions
 
-Un modèle de fonction est similaire à un modèle de classe ; il génère des fonctions concrètes basées sur les arguments template. Dans de nombreux cas, le modèle est capable de déduire les arguments de type et, par conséquent, il n’est pas nécessaire de les spécifier explicitement.
+Un modèle de fonction est similaire à un modèle de classe ; il génère des fonctions concrètes basées sur les arguments template. Dans de nombreux cas, le modèle est capable de déduire les arguments de type et, par conséquent, il n'est pas nécessaire de les spécifier explicitement.
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -190,13 +190,13 @@ Par défaut, les arguments sont passés à la fonction par valeur, ce qui signif
 void DoSomething(std::string& input){...}
 ```
 
-Lorsqu’une fonction modifie un argument passé par référence, elle modifie l’objet d’origine, pas une copie locale. Pour empêcher une fonction de modifier un tel argument, qualifiez le paramètre comme const& :
+Lorsqu’une fonction modifie un argument passé par référence, elle modifie l’objet d’origine, pas une copie locale. Pour empêcher une fonction de modifier un tel argument, qualifiez le paramètre comme const & :
 
 ```cpp
 void DoSomething(const std::string& input){...}
 ```
 
-**C++ 11 :** pour gérer explicitement les arguments sont passés par référence rvalue ou référence lvalue, utilisez une double perluète sur le paramètre pour indiquer une référence universelle :
+**C++11 :**  Pour gérer explicitement les arguments sont passés par référence rvalue ou référence lvalue, utilisez une double perluète sur le paramètre pour indiquer une référence universelle :
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -214,7 +214,7 @@ Notez que, bien qu’il soit non conforme pour spécifier un **void** argument �
 
 ### <a name="default-arguments"></a>Arguments par défaut
 
-Le ou les derniers paramètres dans une signature de fonction peuvent recevoir un argument par défaut, ce qui signifie que l'appelant peut omettre l'argument lors de l'appel de la fonction, à moins de vouloir spécifier une autre valeur.
+Le ou les derniers paramètres dans une signature de fonction peuvent recevoir un argument par défaut, ce qui signifie que l’appelant peut omettre l’argument lors de l’appel de la fonction, à moins de vouloir spécifier une autre valeur.
 
 ```cpp
 int DoSomething(int num,
@@ -363,7 +363,7 @@ Il existe différentes manières de retourner plusieurs valeurs d’une fonction
     }
     ```
 
-1. **Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : utilisez les liaisons structurées. L’avantage de liaisons structurées est que les variables qui stockent les valeurs de retour sont initialisés en même temps, qu'ils sont déclarés, ce qui, dans certains cas peut être beaucoup plus efficace. Dans cette instruction--`auto[x, y, z] = f();`--les crochets introduire et initialiser des noms qui sont dans la portée pour le bloc de la fonction entière.
+1. **Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Utilisez les liaisons structurées. L’avantage de liaisons structurées est que les variables qui stockent les valeurs de retour sont initialisés en même temps, qu'ils sont déclarés, ce qui, dans certains cas peut être beaucoup plus efficace. Dans cette instruction--`auto[x, y, z] = f();`--les crochets introduire et initialiser des noms qui sont dans la portée pour le bloc de la fonction entière.
 
     ```cpp
     #include <tuple>

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
 ms.openlocfilehash: 88eac06eeb97fce26f321e8beb494b6b9e66be41
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183143"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices (espace de noms)
 
@@ -30,7 +30,7 @@ namespace Platform {
 
 Bien que cet espace de noms est destiné à un usage interne, les navigateurs peuvent afficher les membres suivants de cet espace de noms.
 
-|Name|Note|
+|Nom|Note|
 |----------|------------|
 |CallConvCdecl||
 |CallConvFastcall||
@@ -54,7 +54,7 @@ Bien que cet espace de noms est destiné à un usage interne, les navigateurs pe
 
 `Platform`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Métadonnées :** platform.winmd
 

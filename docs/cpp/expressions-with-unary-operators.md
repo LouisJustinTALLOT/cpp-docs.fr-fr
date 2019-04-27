@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183868"
 ---
 # <a name="expressions-with-unary-operators"></a>Expressions avec opérateurs unaires
 
@@ -37,9 +37,9 @@ Les opérateurs unaires agissent sur un seul opérande dans une expression. Opé
 
 - [opérateur sizeof](../cpp/sizeof-operator.md)
 
-- [__uuidof, opérateur](../cpp/uuidof-operator.md)
+- [__uuidof operator](../cpp/uuidof-operator.md)
 
-- [__alignof, opérateur](../cpp/alignof-operator.md)
+- [__alignof operator](../cpp/alignof-operator.md)
 
 - [New, opérateur](../cpp/new-operator-cpp.md)
 
@@ -51,21 +51,21 @@ Voici les formes possibles des expressions unaires :
 
 - *postfix-expression*
 
-- `++` *expression unaire*
+- `++` *unary-expression*
 
-- `--` *expression unaire*
+- `--` *unary-expression*
 
-- *opérateur-unaire* *expression de cast*
+- *unary-operator* *cast-expression*
 
-- **sizeof** *expression unaire*
+- **sizeof** *unary-expression*
 
-- `sizeof(` *nom de type* `)`
+- `sizeof(` *type-name* `)`
 
-- `decltype(` *Expression* `)`
+- `decltype(` *expression* `)`
 
 - *allocation-expression*
 
-- *expression de désallocation*
+- *deallocation-expression*
 
 N’importe quel *postfix-expression* est considéré comme un *expression unaire*, et parce que toute expression primaire est considérée comme un *postfix-expression*, est toute expression primaire considéré comme un *expression unaire* également. Pour plus d’informations, consultez [Expressions suffixées](../cpp/postfix-expressions.md) et [Expressions primaires](../cpp/primary-expressions.md).
 

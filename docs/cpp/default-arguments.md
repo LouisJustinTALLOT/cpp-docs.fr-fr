@@ -11,15 +11,15 @@ helpviewer_keywords:
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154514"
 ---
 # <a name="default-arguments"></a>Arguments par défaut
 
-Dans de nombreux cas, les fonctions ont des arguments utilisés si rarement qu’une valeur par défaut suffirait. La fonctionnalité d’argument par défaut permet de spécifier uniquement les arguments d’une fonction qui sont significatifs dans un appel donné. Pour illustrer ce concept, prenons l’exemple présenté dans [surcharge de fonction](../cpp/function-overloading.md).
+Dans de nombreux cas, les fonctions ont des arguments utilisés si rarement qu'une valeur par défaut suffirait. La fonctionnalité d’argument par défaut permet de spécifier uniquement les arguments d’une fonction qui sont significatifs dans un appel donné. Pour illustrer ce concept, prenons l’exemple présenté dans [surcharge de fonction](../cpp/function-overloading.md).
 
 ```cpp
 // Prototype three print functions.
@@ -87,7 +87,7 @@ Tenez compte des points suivants lors de l'utilisation des arguments par défaut
     int print( double dvalue = 0.0, int prec );
     ```
 
-- Un argument par défaut ne peut pas être redéfini dans des déclarations ultérieures, même si la redéfinition est identique à celle d'origine. Par conséquent, le code suivant génère une erreur :
+- Un argument par défaut ne peut pas être redéfini dans des déclarations ultérieures, même si la redéfinition est identique à celle d’origine. Par conséquent, le code suivant génère une erreur :
 
     ```cpp
     // Prototype for print function.
@@ -102,7 +102,7 @@ Tenez compte des points suivants lors de l'utilisation des arguments par défaut
     }
     ```
 
-   Le problème avec ce code est que la déclaration de fonction dans la définition redéfinit l’argument par défaut pour `prec`.
+   Le problème avec ce code est que la déclaration de fonction dans la définition redéfinit l'argument par défaut pour `prec`.
 
 - Des arguments par défaut supplémentaires peuvent être ajoutés par des déclarations ultérieures.
 

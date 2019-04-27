@@ -10,15 +10,15 @@ helpviewer_keywords:
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
 ms.openlocfilehash: 1f366af6f4058ffb8356017d59a7c176a978b860
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153851"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Répertorie les fonctions avec des arguments de Variable (C++)
 
-Les déclarations de fonction dans lesquelles le dernier membre d’argument-declaration-list est représenté par les points de suspension (...) peuvent prendre une quantité variable d’arguments. Dans ces cas-là, C++ fournit une vérification du type uniquement pour les arguments déclarés explicitement. Vous pouvez utiliser des listes d’arguments variables lorsque vous devez rendre une fonction si générale que même le nombre et les types des arguments peuvent varier. La famille de fonctions est un exemple de fonctions qui utilisent des listes d’arguments variables. `printf` *argument-declaration-list*
+Les déclarations de fonction dans lesquelles le dernier membre d’argument-declaration-list est représenté par les points de suspension (...) peuvent prendre une quantité variable d’arguments. Dans ces cas-là, C++ fournit une vérification du type uniquement pour les arguments déclarés explicitement. Vous pouvez utiliser des listes d'arguments variables lorsque vous devez rendre une fonction si générale que même le nombre et les types des arguments peuvent varier. La famille de fonctions est un exemple de fonctions qui utilisent des listes d’arguments variables. `printf` *argument-declaration-list*
 
 ## <a name="functions-with-variable-arguments"></a>Fonctions avec des arguments de variables
 
@@ -32,9 +32,9 @@ Microsoft C++ autorise la spécification de l’ellipse comme argument s’il s�
 
 La déclaration d’une fonction qui accepte une quantité variable d’arguments nécessite au moins un argument d’espace réservé, même si elle n’est pas utilisée. Si cet argument d’espace réservé n’est pas fourni, il est impossible d’accéder aux arguments restants.
 
-Lorsque les arguments de type **char** sont passés comme arguments variables, ils sont convertis en type **int**. De même, lorsque les arguments de type **float** sont passés comme arguments variables, ils sont convertis en type **double**. Les arguments d'autres types sont soumis aux promotions intégrales et à virgule flottante classiques. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations.
+Lorsque les arguments de type **char** sont passés comme arguments variables, ils sont convertis en type **int**. De même, lorsque les arguments de type **float** sont passés comme arguments variables, ils sont convertis en type **double**. Les arguments d’autres types sont soumis aux promotions intégrales et à virgule flottante classiques. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations.
 
-Les fonctions qui requièrent des listes de variables sont déclarées avec des points de suspension (...) dans la liste d’arguments. Utiliser les types et les macros sont décrits dans le \<stdarg.h > fichier include pour accéder aux arguments qui sont passés à une liste de variables. Pour plus d’informations sur ces macros, consultez [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). dans la documentation de la bibliothèque Runtime C.
+Les fonctions qui requièrent des listes de variables sont déclarées avec des points de suspension (...) dans la liste d'arguments. Utiliser les types et les macros sont décrits dans le \<stdarg.h > fichier include pour accéder aux arguments qui sont passés à une liste de variables. Pour plus d’informations sur ces macros, consultez [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). dans la documentation de la bibliothèque Runtime C.
 
 L’exemple suivant montre comment les macros fonctionnent avec le type (déclaré dans \<stdarg.h >) :
 
@@ -114,9 +114,9 @@ void ShowVar( char *szTypes, ... ) {
 
 L'exemple ci-dessus illustre les concepts importants suivants :
 
-1. Vous devez établir un marqueur de liste en tant que variable de type `va_list` avant d’accéder à tout argument variable. Dans l'exemple précédent, le marqueur est appelé `vl`.
+1. Vous devez établir un marqueur de liste en tant que variable de type `va_list` avant d'accéder à tout argument variable. Dans l'exemple précédent, le marqueur est appelé `vl`.
 
-1. L’accès aux arguments individuels s’effectue à l’aide de la macro `va_arg`. Vous devez indiquer à la macro `va_arg` le type d’argument à extraire afin qu’elle puisse transférer le nombre correct d’octets de la pile. Si vous spécifiez un type incorrect d'une taille différente de celle fournie par le programme appelant à `va_arg`, les résultats sont imprévisibles.
+1. L'accès aux arguments individuels s'effectue à l'aide de la macro `va_arg`. Vous devez indiquer à la macro `va_arg` le type d’argument à extraire afin qu’elle puisse transférer le nombre correct d’octets de la pile. Si vous spécifiez un type incorrect d'une taille différente de celle fournie par le programme appelant à `va_arg`, les résultats sont imprévisibles.
 
 1. Vous devez effectuer un cast explicite du résultat obtenu à l'aide de la macro `va_arg` vers le type souhaité.
 

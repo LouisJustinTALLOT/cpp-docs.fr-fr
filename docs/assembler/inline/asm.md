@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
 ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167554"
 ---
 # <a name="asm"></a>__asm
 
@@ -28,12 +28,12 @@ Le mot clé `__asm` appelle l'assembleur inline et peut apparaître partout où 
 ## <a name="grammar"></a>Grammaire
 
 *bloc asm*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *instruction d’assembly* **;** <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *liste d’instructions d’assembly* **}** **;** <sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
 
 *liste d’instructions d’assembly*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instruction d’assembly* **;** <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instruction d’assembly* **;** *liste d’instructions d’assembly* **;** <sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
 
 ## <a name="remarks"></a>Notes
 

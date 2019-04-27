@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::ChangedStateException
 ms.assetid: f894beac-9e80-4fac-ac25-89f1dbc0a6a4
 ms.openlocfilehash: 79181702c95f8c666b06bdb26319ccb06e55db0a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161710"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException, classe
 
@@ -31,7 +31,7 @@ Par exemple, cette exception est levée lorsque les méthodes d'un itérateur de
 
 Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 

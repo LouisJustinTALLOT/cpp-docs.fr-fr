@@ -21,11 +21,11 @@ helpviewer_keywords:
 - read function
 ms.assetid: 9e0eead4-d38c-4f65-87f5-f6c12da40ead
 ms.openlocfilehash: c32b300107a699f1a91f4652a69722258790e224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155940"
 ---
 # <a name="read"></a>read
 

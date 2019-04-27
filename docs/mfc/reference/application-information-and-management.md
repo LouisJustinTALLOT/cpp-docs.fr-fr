@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57808389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151278"
 ---
 # <a name="application-information-and-management"></a>Informations sur l'application et gestion
 
@@ -120,7 +120,7 @@ Pour plus d’informations sur `AfxBeginThread`, consultez les articles [Multith
 
 Consultez l’exemple de [CSocket::Attach](../../mfc/reference/csocket-class.md#attach).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -134,7 +134,7 @@ Pointeur vers le global [Gestionnaire de menu de contexte](ccontextmenumanager-c
 CContextMenuManager* afxContextMenuManager;
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcontextmenumanager.h
 
@@ -162,7 +162,7 @@ Doit être appelée depuis le thread à arrêter.
 
 Pour plus d’informations sur `AfxEndThread`, consultez l’article [Multithreading : Arrêt des Threads](../../parallel/multithreading-terminating-threads.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -202,7 +202,7 @@ Les modules sont recherchés dans cet ordre :
 
 1. Modules du système.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -237,7 +237,7 @@ Veillez à utiliser `AfxFreeLibrary` et `AfxLoadLibrary` (au lieu des fonctions 
 
 Consultez l’exemple de [AfxLoadLibrary](#afxloadlibrary).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdll_.h
 
@@ -261,7 +261,7 @@ Si cette méthode retourne la valeur NULL, cela peut indiquer que la fenêtre pr
 
 [!code-cpp[NVC_MFCWindowing#126](../../mfc/reference/codesnippet/cpp/application-information-and-management_1.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -281,7 +281,7 @@ Chaîne se terminant par null qui contient le nom de l’application.
 
 [!code-cpp[NVC_MFCWindowing#127](../../mfc/reference/codesnippet/cpp/application-information-and-management_2.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -305,7 +305,7 @@ HINSTANCE à l’instance actuelle de l’application. Si l’appelé à partir 
 
 [!code-cpp[NVC_MFCWindowing#128](../../mfc/reference/codesnippet/cpp/application-information-and-management_3.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -333,7 +333,7 @@ Si votre application n’est pas un serveur OLE, appel de cette fonction est éq
 
 [!code-cpp[NVC_MFCWindowing#129](../../mfc/reference/codesnippet/cpp/application-information-and-management_4.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -355,7 +355,7 @@ Si vous activez la redirection du Registre, le framework redirige l’accès à 
 
 Pour modifier si l’application redirige l’accès au Registre, utilisez [AfxSetPerUserRegistration](#afxsetperuserregistration).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxstat_.h
 
@@ -375,7 +375,7 @@ Un handle HINSTANCE où les ressources par défaut de l’application sont charg
 
 [!code-cpp[NVC_MFCWindowing#130](../../mfc/reference/codesnippet/cpp/application-information-and-management_5.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -402,7 +402,7 @@ Doit être appelée depuis le thread souhaité.
 
 [!code-cpp[NVC_MFCWindowing#132](../../mfc/reference/codesnippet/cpp/application-information-and-management_6.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -424,7 +424,7 @@ Pour mettre à jour les contrôles RichEdit dans les applications Visual C++ exi
 
 Cette fonction initialise également la bibliothèque de contrôles communs, si la bibliothèque n’a pas déjà été initialisée pour le processus. Si vous utilisez le contrôle RichEdit directement à partir de votre application MFC, vous devez appeler cette fonction pour vous assurer que MFC a correctement initialisé le runtime du contrôle RichEdit. Si vous appelez la méthode Create de [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md), [CRichEditView](../../mfc/reference/cricheditview-class.md), ou [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), vous est généralement pas nécessaire d’appeler cette fonction, mais dans certains cas, il peut être nécessaire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -440,7 +440,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 
 Appelez cette fonction pour charger le RICHED20. DLL et initialiser la version 2.0 de la richesse des contrôle d’édition. Si vous appelez la méthode Create de [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md), [CRichEditView](../../mfc/reference/cricheditview-class.md), ou [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), vous est généralement pas nécessaire d’appeler cette fonction, mais dans certains cas, il peut être nécessaire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -478,7 +478,7 @@ Cette méthode retourne la valeur TRUE si *pWnd* dérive d’une des classes sui
 
 Cette méthode est utile quand vous devez valider le fait qu’un paramètre de fonction ou de méthode est une fenêtre frame étendue.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpriv.h
 
@@ -505,7 +505,7 @@ TRUE si la fenêtre fournie est un objet de la barre d’outils ; Sinon, FALSE.
 
 Cette méthode retourne `TRUE` si *pWnd* dérive `CMFCToolBar`. Cette méthode est utile lorsque vous devez valider qu’un paramètre de fonction ou une méthode est un `CMFCToolBar` objet.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxpriv.h
 
@@ -519,7 +519,7 @@ Pointeur vers le global [Gestionnaire de clavier](ckeyboardmanager-class.md).
 CKeyboardManager* afxKeyboardManager;
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxkeyboardmanager.h
 
@@ -572,7 +572,7 @@ Veillez à utiliser `AfxLoadLibrary` et `AfxFreeLibrary` (au lieu des fonctions 
 [!code-cpp[NVC_MFC_DLLUser#2](../../mfc/reference/codesnippet/cpp/application-information-and-management_8.cpp)]
 [!code-cpp[NVC_MFC_DLLUser#3](../../mfc/reference/codesnippet/cpp/application-information-and-management_9.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdll_.h
 
@@ -586,7 +586,7 @@ Pointeur vers le global [Gestionnaire de menu volante](cmenutearoffmanager-class
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmenutearoffmanager.h
 
@@ -600,7 +600,7 @@ Pointeur vers le global [Gestionnaire de souris](cmousemanager-class.md).
 CMouseManager* afxMouseManager;
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxmousemanager.h
 
@@ -631,7 +631,7 @@ Dans les versions de DLL non-le `AfxRegisterClass` identificateur est défini co
 
 [!code-cpp[NVC_MFC_DLL#3](../../atl-mfc-shared/codesnippet/cpp/application-information-and-management_10.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -682,7 +682,7 @@ La bibliothèque MFC stocke automatiquement plusieurs classes de fenêtre standa
 
 Le nom enregistré pour une classe par `AfxRegisterWndClass` dépend uniquement des paramètres. Si vous appelez `AfxRegisterWndClass` plusieurs fois avec des paramètres identiques, seule une classe lors du premier appel est enregistrée. Les appels suivants à `AfxRegisterWndClass` avec des paramètres identiques retournent simplement le nom de la classe déjà enregistrée.
 
-Si vous appelez `AfxRegisterWndClass` pour plusieurs classes dérivées de CWnd avec des paramètres identiques, au lieu d'obtenir une classe de fenêtre distincte pour chaque classe, chacune partagera la même classe de fenêtre. Cela peut entraîner des problèmes si le style de classe CS_CLASSDC est utilisé. Au lieu de plusieurs classes de fenêtre CS_CLASSDC, vous vous retrouvez avec une classe de fenêtre CS_CLASSDC et toutes les fenêtres C++ qui utilisent ce partage le même contrôleur de domaine de la classe. Pour éviter ce problème, appelez [AfxRegisterClass](#afxregisterclass) pour enregistrer la classe.
+Si vous appelez `AfxRegisterWndClass` pour plusieurs classes dérivées de CWnd avec des paramètres identiques, au lieu d'obtenir une classe de fenêtre distincte pour chaque classe, chacune partagera la même classe de fenêtre. Cela peut entraîner des problèmes si le style de classe CS_CLASSDC est utilisé. Au lieu de plusieurs classes de fenêtre CS_CLASSDC, vous vous retrouvez avec une classe de fenêtre CS_CLASSDC et tous les C++ windows qui utilisent cette classe partagent le même contrôleur de domaine. Pour éviter ce problème, appelez [AfxRegisterClass](#afxregisterclass) pour enregistrer la classe.
 
 Consultez la Note technique [TN001 : Inscription de classe de fenêtre](../../mfc/tn001-window-class-registration.md) pour plus d’informations sur l’inscription de classe de fenêtre et la `AfxRegisterWndClass` (fonction).
 
@@ -690,7 +690,7 @@ Consultez la Note technique [TN001 : Inscription de classe de fenêtre](../../m
 
 [!code-cpp[NVC_MFCWindowing#134](../../mfc/reference/codesnippet/cpp/application-information-and-management_11.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -717,7 +717,7 @@ Si vous activez la redirection du Registre, le framework redirige l’accès à 
 
 L’implémentation par défaut accède au Registre sous HKCR.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxstat_.h
 
@@ -738,7 +738,7 @@ Le handle d’instance ou un module à un. Fichier EXE ou DLL à partir de laque
 
 [!code-cpp[NVC_MFCWindowing#135](../../mfc/reference/codesnippet/cpp/application-information-and-management_12.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 
@@ -752,7 +752,7 @@ Pointeur vers le global [Gestionnaire de shell](cshellmanager-class.md).
 CShellManager* afxShellManager;
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxshellmanager.h
 
@@ -777,7 +777,7 @@ Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
 Lors de l’utilisation de sockets MFC dans les threads secondaires dans une application MFC liée de manière statique, vous devez appeler `AfxSocketInit` dans chaque thread qui utilise des sockets pour initialiser les bibliothèques de socket. Par défaut, `AfxSocketInit` est uniquement appelée dans le thread principal.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxsock.h
 
@@ -791,7 +791,7 @@ Pointeur vers le global [responsable des outils utilisateur](cusertoolsmanager-c
 CUserToolsManager* afxUserToolsManager;
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxusertoolsmanager.h
 
@@ -834,7 +834,7 @@ Si vous appelez `AfxWinInit` vous-même, vous devez déclarer une instance d’u
 
 [!code-cpp[NVC_MFC_AfxWinInit#1](../../mfc/reference/codesnippet/cpp/application-information-and-management_13.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxwin.h
 

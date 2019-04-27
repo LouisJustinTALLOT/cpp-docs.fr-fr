@@ -31,11 +31,11 @@ helpviewer_keywords:
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
 ms.openlocfilehash: c9ff92658163fc20ce21496aba34b22b3661748b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155613"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -80,7 +80,7 @@ Une erreur de plage peut se produire si la grandeur de *x* est trop grande ou tr
 |-----------|------------|
 |x = ±0|±INFINITY|
 |x = entier négatif|NaN|
-|x = - INFINITY|NaN|
+|x = -INFINITY|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |Erreur de domaine|NaN|
@@ -100,7 +100,7 @@ Si x est un nombre naturel, cette fonction retourne la factorielle de (x-1).
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
+|**tgamma**, **tgammaf**,  **tgammal**|\<math.h>|\<cmath>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

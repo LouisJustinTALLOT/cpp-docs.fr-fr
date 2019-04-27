@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
 ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151173"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor, classe
 
@@ -82,7 +82,7 @@ class CAnimationColor : public CAnimationBaseObject;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CAnimationColor::m_bValue](#m_bvalue)|La variable d’animation encapsulée qui représente la composante bleue de la couleur de l’animation.|
 |[CAnimationColor::m_gValue](#m_gvalue)|La variable d’animation encapsulée qui représente la composante verte de la couleur de l’animation.|
@@ -100,7 +100,7 @@ La classe CAnimationColor encapsule trois objets CAnimationVariable et peut repr
 
 `CAnimationColor`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxanimationcontroller.h
 

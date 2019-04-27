@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
 ms.openlocfilehash: 8ed1521cbf768e5b473281e5f9b7c6597cdc4692
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155200"
 ---
 # <a name="comerror-class"></a>_com_error, classe
 
@@ -29,7 +29,7 @@ Un **_com_error** objet représente une condition d’exception détectée par l
 
 |||
 |-|-|
-|[opérateur =](../cpp/com-error-operator-equal.md)|Assigne un existant **_com_error** objet vers un autre.|
+|[operator =](../cpp/com-error-operator-equal.md)|Assigne un existant **_com_error** objet vers un autre.|
 
 ### <a name="extractor-functions"></a>Fonctions d’extracteur
 
@@ -73,4 +73,4 @@ Un **_com_error** objet représente une condition d’exception détectée par l
 ## <a name="see-also"></a>Voir aussi
 
 [Classes du support COM du compilateur](../cpp/compiler-com-support-classes.md)<br/>
-[Interface IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)
+[IErrorInfo Interface](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)

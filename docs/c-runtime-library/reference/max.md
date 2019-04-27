@@ -24,11 +24,11 @@ helpviewer_keywords:
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
 ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156862"
 ---
 # <a name="max"></a>__max
 
@@ -42,7 +42,7 @@ Macro de préprocesseur qui retourne le plus grand de deux valeurs.
 
 ### <a name="parameters"></a>Paramètres
 
-*un*, *b*<br/>
+*a*, *b*<br/>
 Valeurs de tout type numérique à comparer.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -55,7 +55,7 @@ Le **__max** macro compare deux valeurs et retourne la valeur la plus grande. Le
 
 L’argument retourné est évaluée deux fois par la macro. Cela peut entraîner des résultats inattendus si l’argument est une expression qui modifie sa valeur lorsqu’elle est évaluée, tel que `*p++`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Macro|En-tête requis|
 |-------------|---------------------|

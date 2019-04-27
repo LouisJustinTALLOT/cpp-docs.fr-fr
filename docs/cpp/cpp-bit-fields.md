@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
 ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154721"
 ---
 # <a name="c-bit-fields"></a>Champs de bits C++
 
@@ -19,7 +19,7 @@ Les classes et les structures peuvent contenir des membres qui occupent moins d'
 
 ## <a name="syntax"></a>Syntaxe
 
-*déclarateur* **:** *expression constante*
+*declarator* **:** *constant-expression*
 
 ## <a name="remarks"></a>Notes
 

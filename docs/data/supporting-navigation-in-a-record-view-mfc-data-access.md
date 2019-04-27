@@ -7,11 +7,11 @@ helpviewer_keywords:
 - navigation [C++], in record view
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
 ms.openlocfilehash: 88c76d31ae542d35476473888ad6282e3693405f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59029509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161327"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Prise en charge de Navigation dans une vue de l'enregistrement (Accès aux données MFC)
 

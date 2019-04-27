@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
 ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152734"
 ---
 # <a name="platformintptr-value-class"></a>Classe de valeur Platform::IntPtr
 
@@ -36,7 +36,7 @@ IntPtr a les membres suivants :
 |[IntPtr::op_explicit, opérateur](#op-explicit)|Convertit le paramètre spécifié en un IntPtr ou un pointeur en une valeur IntPtr.|
 |[IntPtr::ToInt32](#toint32)|Convertit l'IntPtr actif en un entier 32 bits.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 
@@ -102,4 +102,4 @@ Entier 32 bits.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)
