@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
 ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212411"
 ---
 # <a name="bssseg"></a>bss_seg
 
@@ -36,10 +36,10 @@ Spécifie le segment où les variables non initialisées sont stockées dans le 
 *identifier*<br/>
 (Facultatif) Lorsqu’il est utilisé avec **push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. *identificateur* permet à plusieurs enregistrements à dépiler avec une seule **pop** commande. Lorsqu’il est utilisé avec **pop**, la directive dépile les enregistrements de la pile interne jusqu'à ce que *identificateur* est supprimé ; si *identificateur* est introuvable sur la pile interne, rien n’est dépilés.
 
-*« segment-name »*<br/>
+*"segment-name"*<br/>
 (Facultatif) Le nom d’un segment. Lorsqu’il est utilisé avec **pop**, la pile est dépilée et *segment-name* devient le nom de segment actif.
 
-*« segment-class »*<br/>
+*"segment-class"*<br/>
 (Facultatif) Inclus pour la compatibilité avec C++ antérieures à la version 2.0. Elle est ignorée.
 
 ## <a name="remarks"></a>Notes

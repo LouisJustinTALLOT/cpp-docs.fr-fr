@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CMFCToolBarInfo [MFC], m_uiMenuResID
 ms.assetid: 6dc84482-eaaa-491f-aa5d-dd7a57886b46
 ms.openlocfilehash: b2f8af439a2534f24cdba9b0ccdb12b150db6d0a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217801"
 ---
 # <a name="cmfctoolbarinfo-class"></a>Cmfctoolbarinfo, classe
 
@@ -43,7 +43,7 @@ class CMFCToolBarInfo
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|ID de ressource de la bitmap de barre d’outils qui contient des images de barre d’outils (à froid) régulière.|
 |[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|ID de ressource de la bitmap de barre d’outils qui contient des images de barre d’outils désactivées.|
@@ -62,7 +62,7 @@ Une image bitmap de barre d’outils complète se compose d’images de petite b
 
 [CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtoolbar.h
 

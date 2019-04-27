@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
 ms.openlocfilehash: 92164bf297a44871897b6c6150eb54f8c5ccf3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62220453"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>Avertissement du compilateur (niveau 4) C4571
 
@@ -29,7 +29,7 @@ Vous pouvez résoudre l’erreur C4571 dans une des manières suivantes,
 
 - N’activez pas l’erreur C4571 si vous ne souhaitez pas que vos blocs catch (...) pour intercepter des exceptions structurées, mais que vous souhaitez toujours utiliser les blocs catch (...).  Vous pouvez toujours intercepter des exceptions structurées à l’aide de la gestion des mots clés d’exceptions structurées (**__try**, **__except**, et **__finally**).  Mais n’oubliez pas, lors de la compilation **/EHs** destructeurs sera appelées lorsqu’une exception C++ est levée, pas lorsqu’une exception SEH se produit.
 
-- Remplacez les blocs catch (...) par les blocs catch pour des exceptions C++ spécifiques et si vous le souhaitez, ajouter des exceptions structurée autour de la gestion d’exceptions C++ (**__try**, **__except**, et **_ _finally**).  Consultez [structurée des exceptions (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) pour plus d’informations.
+- Remplacez les blocs catch (...) par les blocs catch pour spécifique C++ exceptions et ajoutez éventuellement des exceptions structurée autour de la C++ gestion des exceptions (**__try**, **__except**, et **__finally**).  Consultez [structurée des exceptions (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) pour plus d’informations.
 
 Consultez [/EH (modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md) pour plus d’informations.
 

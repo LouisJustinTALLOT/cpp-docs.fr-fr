@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CObArray [MFC], SetSize
 ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
 ms.openlocfilehash: 8cc67e62d905710ba5d63bf93c7b8aa1bf50f69c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206123"
 ---
 # <a name="cdwordarray-class"></a>Cdwordarray, classe
 
@@ -114,7 +114,7 @@ Si vous avez besoin de la sortie à partir des éléments individuels dans le ta
 
 Pour plus d’informations sur l’utilisation de `CDWordArray`, consultez l’article [Collections](../../mfc/collections.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcoll.h
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
 ms.openlocfilehash: 9a3dc687f197770f7a11440699163787b1dc48ef
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183366"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Tri partiel des modèles de fonction (C++)
 
@@ -31,7 +31,7 @@ Utilisez le processus suivant pour déterminer si un candidat de modèle de fonc
 
 1. Grâce à ces règles :
 
-   1. Une spécialisation de modèle pour un type spécifique est plus spécialisée qu’une spécialisation acceptant un argument de type générique.
+   1. Une spécialisation de modèle pour un type spécifique est plus spécialisée qu'une spécialisation acceptant un argument de type générique.
 
    1. Un modèle en prenant uniquement __T\*__  est plus spécialisé qu’un prenant uniquement __T__, car un hypothétique tapez __X\*__  est un argument valid pour un __T__ argument de modèle, mais __X__ n’est pas un argument valide pour un __T\*__  argument template.
 

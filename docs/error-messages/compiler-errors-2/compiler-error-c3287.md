@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
 ms.openlocfilehash: ab0b93aa1a74ea79515e24ef2b1e289cf0227dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222675"
 ---
 # <a name="compiler-error-c3287"></a>Erreur du compilateur C3287
 
@@ -19,7 +19,7 @@ le type 'type' (type de retour de GetEnumerator) doit avoir une fonction membre 
 
 Les classes de collection définies par l’utilisateur doivent contenir des définitions pour `MoveNext` et `Current`.
 
-Pour plus d'informations, voir [Comment : itérer au sein d’une collection définie par l’utilisateur en utilisant for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) .
+Voir [Guide pratique pour Collection de Over a User-Defined itération avec pour chaque](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) pour plus d’informations.
 
 ## <a name="example"></a>Exemple
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
 ms.openlocfilehash: d36c924d30bd728fcd54b6cdf6805ade25e20b5c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218400"
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame, classe
 
@@ -58,7 +58,7 @@ class CBaseKeyFrame : public CObject;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CBaseKeyFrame::m_bAdded](#m_badded)|Spécifie si cette image clé a été ajoutée à une table de montage séquentiel.|
 |[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Spécifie si cette image clé doit être ajoutée au storyboard à un offset à partir d’une autre image clé existante, ou à la fin d’une transition.|
@@ -74,7 +74,7 @@ Encapsule la variable UI_ANIMATION_KEYFRAME. Sert de classe de base pour n’imp
 
 `CBaseKeyFrame`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxanimationcontroller.h
 

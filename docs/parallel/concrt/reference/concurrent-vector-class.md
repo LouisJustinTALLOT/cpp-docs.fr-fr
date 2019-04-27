@@ -34,11 +34,11 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224205"
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 
@@ -136,7 +136,7 @@ Pour plus d’informations sur la `concurrent_vector` de classe, consultez [cont
 
 `concurrent_vector`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concurrent_vector.h
 

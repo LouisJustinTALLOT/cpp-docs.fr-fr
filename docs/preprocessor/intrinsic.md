@@ -9,15 +9,15 @@ helpviewer_keywords:
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
 ms.openlocfilehash: 393a73fcf31c7c00b2057862792ff0536cc98ad8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212372"
 ---
 # <a name="intrinsic"></a>intrinsic
 
-Spécifie que les appels aux fonctions spécifiées dans la liste d’arguments du pragma sont intrinsèques.
+Spécifie que les appels aux fonctions spécifiées dans la liste d'arguments du pragma sont intrinsèques.
 
 ## <a name="syntax"></a>Syntaxe
 

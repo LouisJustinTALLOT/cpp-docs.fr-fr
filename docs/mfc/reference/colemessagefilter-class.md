@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
 ms.openlocfilehash: a06891f9413979895175808e109cc4abb7d75e09
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224361"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter, classe
 
@@ -88,7 +88,7 @@ Pour plus d’informations, consultez l’article [serveurs : Implémentation d
 
 `COleMessageFilter`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxole.h
 

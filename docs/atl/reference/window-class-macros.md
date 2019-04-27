@@ -7,11 +7,11 @@ f1_keywords:
 - atlwin/ATL::DECLARE_WND_CLASS_EX
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
 ms.openlocfilehash: c4617a04c199741b97316122456e417a94275e89
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197172"
 ---
 # <a name="window-class-macros"></a>Macros de classe de fenêtre
 
@@ -24,7 +24,7 @@ Ces macros définissent des utilitaires de classe de fenêtre.
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Vous permet de spécifier le nom d’une classe de fenêtre existante sur laquelle une nouvelle classe de fenêtre doit être basée.|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Vous permet de spécifier les paramètres d’une classe.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlwin.h
 

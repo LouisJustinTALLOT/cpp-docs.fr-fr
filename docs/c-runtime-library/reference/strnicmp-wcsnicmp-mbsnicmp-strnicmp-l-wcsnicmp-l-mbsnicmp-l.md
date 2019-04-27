@@ -67,11 +67,11 @@ helpviewer_keywords:
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
 ms.openlocfilehash: 38f5697e0c7fe147a481249888595b7d51cfe93c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209686"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
@@ -120,7 +120,7 @@ int _mbsnicmp_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*string1*, *chaîne2*<br/>
+*string1*, *string2*<br/>
 Chaîne terminée par Null à comparer.
 
 *count*<br/>

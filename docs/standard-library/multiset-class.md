@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
 ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
-ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56418716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205084"
 ---
 # <a name="multiset-class"></a>multiset, classe
 
@@ -205,7 +205,7 @@ Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le pr�
 |-|-|
 |[operator=](#op_eq)|Remplace les éléments d'un `multiset` par une copie d'un autre `multiset`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<set>
 

@@ -61,11 +61,11 @@ helpviewer_keywords:
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
 ms.openlocfilehash: 6b3562dd077b9aa80b9d188e9b2c43282e797af3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209685"
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
@@ -114,7 +114,7 @@ int _mbsnicoll_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*string1*, *chaîne2*<br/>
+*string1*, *string2*<br/>
 Chaînes se terminant par un caractères Null à comparer.
 
 *count*<br/>

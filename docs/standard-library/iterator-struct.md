@@ -8,11 +8,11 @@ helpviewer_keywords:
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
 ms.openlocfilehash: 1dd62a6141e690d3bd4dcad69aa107c126a0f386
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224101"
 ---
 # <a name="iterator-struct"></a>iterator, struct
 

@@ -99,11 +99,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
 ms.openlocfilehash: 2e3cd31ada54d1569cb7e5344ab471108b625558
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222960"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 
@@ -564,7 +564,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> hash_multimap::Count (STL/CLR)
+## <a name="count"></a> hash_multimap::count (STL/CLR)
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -838,7 +838,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="erase"></a> hash_multimap::Erase (STL/CLR)
+## <a name="erase"></a> hash_multimap::erase (STL/CLR)
 
 Supprime les éléments placés aux positions spécifiées.
 
@@ -931,7 +931,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="find"></a> hash_multimap::Find (STL/CLR)
+## <a name="find"></a> hash_multimap::find (STL/CLR)
 
 Recherche un élément qui correspond à une clé spécifiée.
 
@@ -1297,7 +1297,7 @@ Fonction pour les clés de mappage aux compartiments de hachage.
 *last*<br/>
 Fin de la plage à insérer.
 
-*Pred*<br/>
+*pred*<br/>
 Classement de prédicat pour la séquence contrôlée.
 
 *right*<br/>
@@ -1566,7 +1566,7 @@ Fin de la plage à insérer.
 *right*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*val*<br/>
 Valeur de clé à insérer.
 
 *where*<br/>
@@ -2013,7 +2013,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 Valeur de clé à utiliser.
 
-*mappé*<br/>
+*mapped*<br/>
 Valeur mappée à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -2174,7 +2174,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op"></a> hash_multimap::operator = (STL/CLR)
+## <a name="op"></a> hash_multimap::operator= (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -2866,7 +2866,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> hash_multimap::Value_type (STL/CLR)
+## <a name="value_type"></a> hash_multimap::value_type (STL/CLR)
 
 Type d’un élément.
 

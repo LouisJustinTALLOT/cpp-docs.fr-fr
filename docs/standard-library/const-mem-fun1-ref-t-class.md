@@ -7,11 +7,11 @@ helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
 ms.openlocfilehash: 21d53178bf7ed80b5e0b170619e6221826393dab
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212012"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t, classe
 
@@ -52,7 +52,7 @@ La classe de modèle stocke une copie de *Pm*, qui doit être un pointeur vers u
 
 Le constructeur de `const_mem_fun1_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir des exemples d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

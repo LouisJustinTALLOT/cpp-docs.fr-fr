@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
 ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223556"
 ---
 # <a name="numput-class"></a>num_put, classe
 
@@ -148,7 +148,7 @@ Spécifie le flux qui contient des paramètres régionaux avec la facette numpun
 *_Fill*<br/>
 Caractère utilisé pour l’espacement.
 
-*Val*<br/>
+*val*<br/>
 Nombre ou type booléen à envoyer en sortie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -315,11 +315,11 @@ Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l�
 
 Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
-- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0: La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : la durée de vie de l’objet doit être gérée manuellement.
+- 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définies.
+- \> 1: Ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
@@ -390,7 +390,7 @@ Spécifie le flux qui contient des paramètres régionaux avec la facette numpun
 *_Fill*<br/>
 Caractère utilisé pour l’espacement.
 
-*Val*<br/>
+*val*<br/>
 Nombre ou type booléen à envoyer en sortie.
 
 ### <a name="return-value"></a>Valeur de retour

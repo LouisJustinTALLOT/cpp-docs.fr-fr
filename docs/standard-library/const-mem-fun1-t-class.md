@@ -7,11 +7,11 @@ helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
 ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62211973"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t, classe
 
@@ -51,7 +51,7 @@ La classe de modèle stocke une copie de *member_ptr*, qui doit être un pointeu
 
 Le constructeur de `const_mem_fun1_t` est rarement utilisé directement. `mem_fn` est utilisé pour adapter les fonctions membres. Consultez [mem_fn](../standard-library/functional-functions.md#mem_fn) pour obtenir un exemple montrant comment utiliser les adaptateurs de fonction membre.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

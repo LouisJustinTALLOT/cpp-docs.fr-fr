@@ -9,11 +9,11 @@ helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
 ms.openlocfilehash: 3ef34ab7607c444044b6dde17f3db3f73d0d7086
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205653"
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target, classe
 
@@ -39,7 +39,7 @@ class invalid_link_target : public std::exception;
 
 `invalid_link_target`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 

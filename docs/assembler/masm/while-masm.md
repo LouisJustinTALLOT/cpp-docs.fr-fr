@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WHILE directive
 ms.assetid: ff9d908e-7e7f-4983-9f6b-31ff51ef0fad
 ms.openlocfilehash: 23764c1a51008dbcda672c798dfefcb2afb553a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210090"
 ---
 # <a name="while-masm"></a>WHILE (MASM)
 
@@ -20,7 +20,7 @@ Répète l’assembly du bloc *instructions* tant que *expression* conserve la v
 ## <a name="syntax"></a>Syntaxe
 
 > Bien que *expression*<br/>
-> *Instructions*<br/>
+> *statements*<br/>
 > ENDM
 
 ## <a name="see-also"></a>Voir aussi

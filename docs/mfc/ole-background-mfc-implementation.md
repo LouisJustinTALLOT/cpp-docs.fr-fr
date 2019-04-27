@@ -15,11 +15,11 @@ helpviewer_keywords:
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
 ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186727"
 ---
 # <a name="ole-background-mfc-implementation"></a>Arrière-plan OLE : Implémentation MFC
 
@@ -47,4 +47,4 @@ Pour plus d’informations sur la façon dont les classes Microsoft Foundation O
 ## <a name="see-also"></a>Voir aussi
 
 [Arrière-plan OLE](../mfc/ole-background.md)<br/>
-[Arrière-plan OLE : Stratégies d’implémentation](../mfc/ole-background-implementation-strategies.md)
+[Arrière-plan OLE : Stratégies d’implémentation](../mfc/ole-background-implementation-strategies.md)

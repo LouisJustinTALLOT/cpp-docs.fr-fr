@@ -63,11 +63,11 @@ helpviewer_keywords:
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
 ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209746"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -196,7 +196,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 > [!NOTE]
 > **_strncpy_l** et **_wcsncpy_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux ; elles sont uniquement fournies pour **_tcsncpy_l** et ne sont pas destinées à être appelées directement.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

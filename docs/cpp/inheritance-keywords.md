@@ -19,11 +19,11 @@ helpviewer_keywords:
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
 ms.openlocfilehash: 656ee7ed38c24c9f3b8881f84d8e33ca81e3d936
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183490"
 ---
 # <a name="inheritance-keywords"></a>Mots clé d'héritage
 
@@ -37,7 +37,7 @@ class [__virtual_inheritance] class-name;
 
 où :
 
-*nom de la classe*<br/>
+*class-name*<br/>
 est le nom de la variable en cours de déclaration.
 
 C++ vous permet de déclarer un pointeur vers un membre de classe avant la définition de la classe. Exemple :

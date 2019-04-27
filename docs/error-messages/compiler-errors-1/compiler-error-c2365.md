@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2365
 ms.assetid: 35839b0b-4055-4b79-8957-b3a0871bdd02
 ms.openlocfilehash: 9d862fb06041b01c306560264758d13f8f75b491
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230371"
 ---
 # <a name="compiler-error-c2365"></a>Erreur du compilateur C2365
 
-'class member' : redéfinition ; la précédente définition était 'class member'
+'class member' : redéfinition ; la précédente définition était 'class member'
 
 Vous avez essayé de redéfinir un membre de classe.
 

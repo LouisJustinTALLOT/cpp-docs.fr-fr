@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C3293
 ms.assetid: b772cf98-52e0-4e24-be23-1f5d87d999ac
 ms.openlocfilehash: 84d539722474d5f5dfffe1f6fe121bb7349ba131
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222585"
 ---
 # <a name="compiler-error-c3293"></a>Erreur du compilateur C3293
 
-'accessor' : utilisez 'default' pour accéder à la propriété par défaut (indexeur) de la classe 'type'
+'accessor' : utilisez 'default' pour accéder à la propriété par défaut (indexeur) de la classe 'type'
 
-L’accès à une propriété indexée est incorrect.  Consultez [Comment : utilisez les propriétés en C / c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md) pour plus d’informations.
+L’accès à une propriété indexée est incorrect.  Voir [Guide pratique pour Utilisez les propriétés de C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md) pour plus d’informations.
 
-**Visual Studio 2017 et versions ultérieur**: dans Visual Studio 2015 et versions antérieur, le compilateur dans certains cas identifiait à tort une propriété par défaut comme un indexeur par défaut. Il était possible de contourner le problème en utilisant l’identificateur « default » pour accéder à la propriété. La solution de contournement elle-même est devenue problématique dès que default a été introduit comme mot clé dans C++11. Ainsi, dans Visual Studio 2017, les bogues qui nécessitaient la solution de contournement ont été corrigés, et le compilateur génère maintenant une erreur quand l’utilisateur recourt à « default » pour accéder à la propriété par défaut d’une classe.
+**Visual Studio 2017 et versions ultérieures** : Dans Visual Studio 2015 et antérieur, le compilateur identifiait à tort une propriété par défaut en tant qu’indexeur par défaut dans certaines circonstances. Il était possible de contourner le problème en utilisant l’identificateur « default » pour accéder à la propriété. La solution de contournement elle-même est devenue problématique dès que default a été introduit comme mot clé dans C++11. Ainsi, dans Visual Studio 2017, les bogues qui nécessitaient la solution de contournement ont été corrigés, et le compilateur génère maintenant une erreur quand l’utilisateur recourt à « default » pour accéder à la propriété par défaut d’une classe.
 
 ## <a name="example"></a>Exemple
 

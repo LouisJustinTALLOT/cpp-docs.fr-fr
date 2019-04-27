@@ -42,11 +42,11 @@ helpviewer_keywords:
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
 ms.openlocfilehash: dd3f27387fa180c7de9260e7cf8b7f6102915049
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223116"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
@@ -107,7 +107,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 |**_tcsspn**|**strspn**|**_mbsspn**|**wcsspn**|
 |**n/a**|**n/a**|**_mbsspn_l**|**n/a**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

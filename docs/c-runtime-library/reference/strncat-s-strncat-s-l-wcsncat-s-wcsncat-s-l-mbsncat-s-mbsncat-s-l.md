@@ -49,11 +49,11 @@ helpviewer_keywords:
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
 ms.openlocfilehash: 6651bb6ac405ed51945f021e8d1e19f1db05d5e7
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209894"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -223,7 +223,7 @@ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 
 
 **_strncat_s_l** et **_wcsncat_s_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux ; elles sont uniquement fournies pour **_tcsncat_s_l**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

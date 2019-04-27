@@ -8,21 +8,21 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 ms.openlocfilehash: a258a71b8b89643ee98785ee9dfbf30cdf128db7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223064"
 ---
 # <a name="pointers-c"></a>Pointeurs (C++)
 
 Les pointeurs sont déclarés à l'aide de la séquence ci-dessous.
 
-> \[*spécificateurs de classe de stockage*] \[ *qualificateurs cv*] *spécificateurs de type* \[ *ms-modificateur*]  *déclarateur* **;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* **;**
 
 où tout déclarateur de pointeur valide peut être utilisé pour *déclarateur*. La syntaxe d'un déclarateur de pointeur simple est la suivante :
 
-> __\*__ \[*qualificateurs CV*] *identificateur* \[ **=** *expression*]
+> __\*__ \[*cv-qualifiers*] *identifier* \[**=** *expression*]
 
 1. Les spécificateurs de déclaration :
 
@@ -50,7 +50,7 @@ Le déclarateur d'un pointeur vers une fonction ressemble à ceci :
 
 Pour un tableau de pointeurs, la syntaxe ressemble à ceci :
 
-> __\*__ *identificateur* **\[** \[ *expression constante*] **]**
+> __\*__ *identifier* **\[** \[*constant-expression*] **]**
 
 Plusieurs déclarateurs et leurs initialiseurs peuvent apparaître simultanément dans une déclaration unique dans une liste séparée par des virgules suivant le spécificateur de déclaration.
 
