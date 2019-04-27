@@ -15,11 +15,11 @@ helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
 ms.openlocfilehash: 43418da36aa2d87608a9d672e4345d24011be0b3
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153437"
 ---
 # <a name="lock-class"></a>lock, classe
 
@@ -41,14 +41,14 @@ En interne, la classe du verrou utilise <xref:System.Threading.Monitor> pour syn
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |---------|-----------|
 |[lock::lock](#lock)|Construit un `lock` objet, si vous le souhaitez attend pour acquérir le verrou d’indéfiniment, pour une durée spécifiée, ou pas du tout.|
 |[lock::~lock](#tilde-lock)|Résulte une `lock` objet.|
 
 ### <a name="public-methods"></a>Méthodes publiques
 
-|Name|Description|
+|Nom|Description|
 |---------|-----------|
 |[lock::acquire](#acquire)|Acquiert un verrou sur un objet, si vous le souhaitez attend pour acquérir le verrou d’indéfiniment, pour une durée spécifiée, ou pas du tout.|
 |[lock::is_locked](#is-locked)|Indique si un verrou est actuellement.|
@@ -57,13 +57,13 @@ En interne, la classe du verrou utilise <xref:System.Threading.Monitor> pour syn
 
 ### <a name="public-operators"></a>Opérateurs publics
 
-|Name|Description|
+|Nom|Description|
 |---------|-----------|
 |[lock::operator&nbsp;bool](#operator-bool)|Opérateur pour l’utilisation de `lock` dans une expression conditionnelle.|
 |[lock::operator==](#operator-equality)|Opérateur d’égalité.|
 |[lock::operator!=](#operator-inequality)|Opérateur d’inégalité.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Fichier d’en-tête** \<msclr\lock.h >
 

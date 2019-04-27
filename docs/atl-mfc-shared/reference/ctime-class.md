@@ -26,11 +26,11 @@ helpviewer_keywords:
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
 ms.openlocfilehash: df86d35e52ea386d2750a4af7357e66a8d08f79f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62200350"
 ---
 # <a name="ctime-class"></a>Classe de CTime
 
@@ -100,7 +100,7 @@ Pour plus d’informations sur l’utilisation de `CTime`, consultez les article
 > [!NOTE]
 >  Le `CTime` structure a été remplacée par MFC 7.1 à MFC 8.0. Si vous sérialisez un `CTime` structure à l’aide de la **opérateur <<** sous MFC 8.0 ou une version ultérieure, le fichier résultant sera pas lisible sur les versions antérieures de MFC.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atltime.h
 

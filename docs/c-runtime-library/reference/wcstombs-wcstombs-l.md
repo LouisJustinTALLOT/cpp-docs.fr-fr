@@ -31,11 +31,11 @@ helpviewer_keywords:
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
 ms.openlocfilehash: d102cd74061faeb0c41823e6cf5c9a8ef335294f
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188582"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -102,7 +102,7 @@ Si le *mbstr* argument est **NULL**, **wcstombs** retourne la taille en octets d
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
 ms.openlocfilehash: 655c177b8e5b859faf3b6d9c3250bc3ced31b430
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62178936"
 ---
 # <a name="directives-reference"></a>Référence des directives
 
@@ -35,8 +35,8 @@ ms.locfileid: "51327198"
 ||||
 |-|-|-|
 |[ELSE](../../assembler/masm/else-masm.md)|[ELSEIF](../../assembler/masm/elseif-masm.md)|[ELSEIF2](../../assembler/masm/elseif2.md)|
-|[IF](../../assembler/masm/if-masm.md)|[IF2](../../assembler/masm/if2.md)|[APPEL D’OFFRES](../../assembler/masm/ifb.md)/[IFNB](../../assembler/masm/ifnb.md)|
-|[IFDEF](../../assembler/masm/ifdef.md)/[IFNDEF](../../assembler/masm/ifndef.md)|[IFDIF](../../assembler/masm/ifdif.md)/[IFDIF&AMP;#91;&AMP;#91;JE&AMP;#93;&AMP;#93;](../../assembler/masm/ifdif.md)|[IFE](../../assembler/masm/ife.md)|
+|[IF](../../assembler/masm/if-masm.md)|[IF2](../../assembler/masm/if2.md)|[IFB](../../assembler/masm/ifb.md)/[IFNB](../../assembler/masm/ifnb.md)|
+|[IFDEF](../../assembler/masm/ifdef.md)/[IFNDEF](../../assembler/masm/ifndef.md)|[IFDIF](../../assembler/masm/ifdif.md)/[IFDIF&#91;&#91;I&#93;&#93;](../../assembler/masm/ifdif.md)|[IFE](../../assembler/masm/ife.md)|
 |[IFIDN](../../assembler/masm/ifidn.md)/[IFIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/ifidn.md)|||
 
 ### <a name="conditional-control-flow"></a>Flux de contrôle conditionnel
@@ -96,7 +96,7 @@ ms.locfileid: "51327198"
 |-|-|-|
 |[ALIAS](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[COMMENTAIRE](../../assembler/masm/comment-masm.md)|
 |[ECHO](../../assembler/masm/echo.md)|[FIN](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|
-|[INCLURE](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|
+|[INCLUDE](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|
 |[OPTION](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|
 |[.RADIX](../../assembler/masm/dot-radix.md)|[.SAFESEH](../../assembler/masm/dot-safeseh.md)|[XMMWORD](../../assembler/masm/xmmword.md)|
 |[YMMWORD](../../assembler/masm/ymmword.md)|||
@@ -121,7 +121,7 @@ ms.locfileid: "51327198"
 
 ||||
 |-|-|-|
-|[ENDM](../../assembler/masm/endm.md)|[POUR](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|
+|[ENDM](../../assembler/masm/endm.md)|[FOR](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|
 |[GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|
 
 ### <a name="scope"></a>Portée
@@ -160,7 +160,7 @@ ms.locfileid: "51327198"
 ||||
 |-|-|-|
 |[SE TERMINE](../../assembler/masm/ends-masm.md)|[ENREGISTREMENT](../../assembler/masm/record-masm.md)|[STRUCT](../../assembler/masm/struct-masm.md)|
-|[(TYPEDEF)](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||
+|[TYPEDEF](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||
 
 ## <a name="see-also"></a>Voir aussi
 

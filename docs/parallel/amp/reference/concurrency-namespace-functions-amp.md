@@ -14,11 +14,11 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180386"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Fonctions d’accès concurrentiel de l’espace de noms (AMP)
 
@@ -453,7 +453,7 @@ Le type de données des éléments qui sont copiés.
 
 ##  <a name="copy_async"></a>  copy_async
 
-Copie un objet C++ AMP et renvoie un [completion_future](completion-future-class.md) objet qui peut être attendu. Vous ne pouvez pas copier des données lors de l’exécution de code sur un accélérateur.  La forme générale de cette fonction est `copy(src, dest)`.
+Copie un C++ objet AMP et renvoie un [completion_future](completion-future-class.md) objet qui peut être attendu. Vous ne pouvez pas copier des données lors de l’exécution de code sur un accélérateur.  La forme générale de cette fonction est `copy(src, dest)`.
 
 ```
 template <typename value_type, int _Rank>

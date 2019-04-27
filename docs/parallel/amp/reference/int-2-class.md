@@ -29,11 +29,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
 ms.openlocfilehash: 3c5aefbfd1a4b06274fac0f56c1e1e45ef9dc5bd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180256"
 ---
 # <a name="int2-class"></a>int_2, classe
 
@@ -98,7 +98,7 @@ class int_2;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[taille (constante)](#int_2__size)||
 
@@ -119,7 +119,7 @@ class int_2;
 
 `int_2`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp_short_vectors.h
 

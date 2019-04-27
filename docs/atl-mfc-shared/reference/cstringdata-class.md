@@ -20,11 +20,11 @@ helpviewer_keywords:
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
 ms.openlocfilehash: 5977d26cade89f2e70453d5184323958e99e54c4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198133"
 ---
 # <a name="cstringdata-class"></a>CStringData, classe
 
@@ -83,7 +83,7 @@ Ces données se compose de :
    > [!NOTE]
    > La mémoire tampon caractère réel de l’objet string est allouée par le Gestionnaire de chaîne et est ajoutée à la `CStringData` objet.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsimpstr.h
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
 ms.openlocfilehash: 978d33c719b9cb8c2708dc97fa78874534dfd748
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199825"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr, classe
 
@@ -49,7 +49,7 @@ Cette interface gère la mémoire utilisée par les classes de chaîne indépend
 
 Vous pouvez également utiliser cette classe pour implémenter un gestionnaire de mémoire personnalisé pour votre classe de chaîne personnalisée. Pour plus d’informations, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsimpstr.h
 

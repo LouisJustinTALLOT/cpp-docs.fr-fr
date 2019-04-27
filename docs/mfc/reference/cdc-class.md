@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173547"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 
@@ -676,7 +676,7 @@ Pour plus d’informations sur `CDC`, consultez [contextes de périphérique](..
 
 `CDC`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 

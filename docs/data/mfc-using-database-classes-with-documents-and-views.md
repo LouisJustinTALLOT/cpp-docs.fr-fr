@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
 ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182897"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC : À l’aide des Classes de base de données des Documents et vues
 
@@ -63,7 +63,7 @@ De nombreuses applications formulaire simples n’avez pas besoin de documents. 
 
 ##  <a name="_core_other_factors"></a> Autres facteurs
 
-Applications basées sur le formulaire n’ont généralement pas toutes l’utilisation de mécanisme de sérialisation de document de l’infrastructure, vous pouvez donc supprimer, désactiver, ou remplacer le **New** et **Open** commandes sur le **Fichier** menu. Consultez l’article [sérialisation : Visual Studio de sérialisation. Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md).
+Applications basées sur le formulaire n’ont généralement pas toutes l’utilisation de mécanisme de sérialisation de document de l’infrastructure, vous pouvez donc supprimer, désactiver, ou remplacer le **New** et **Open** commandes sur le **Fichier** menu. Consultez l’article [sérialisation : Sérialisation ou Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Vous pourriez également s’utiliser de nombreuses possibilités de l’interface utilisateur que l’infrastructure peut prendre en charge. Par exemple, vous pouvez utiliser plusieurs `CRecordView` objets dans une fenêtre fractionnée, ouvrir plusieurs jeux d’enregistrements dans différentes plusieurs fenêtres enfants de l’interface (multidocument MDI) document et ainsi de suite.
 

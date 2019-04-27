@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
 ms.openlocfilehash: bf1c3f677ac8cd2e3ad91ef694f0637af8a6f578
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180770"
 ---
 # <a name="user-interface-elements-mfc"></a>Éléments de l'interface utilisateur (MFC)
 
@@ -43,7 +43,7 @@ Décrit la gestion des données dans la bibliothèque MFC.
 [Mode formulaire](../mfc/form-views-mfc.md)<br/>
 Décrit comment ajouter la prise en charge des formulaires dans votre application.
 
-[Aide HTML : Aide contextuelle pour vos programmes](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
+[Aide HTML : Aide contextuelle pour vos programmes](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
 Décrit comment ajouter une aide contextuelle pour vos applications à l’aide de HTML Help.
 
 [Groupes avec onglet MDI](../mfc/mdi-tabbed-groups.md)<br/>

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
 ms.openlocfilehash: b5ab433ed08b150e6c344d65657a910542856e77
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197617"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Ipersiststreaminitimpl, classe
 
@@ -67,7 +67,7 @@ Le [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) 
 
 `IPersistStreamInitImpl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '% operator'
 ms.assetid: 7f07018e-b664-4655-aa93-9854eb271bbb
 ms.openlocfilehash: de759c3ac788c5c9c4037a3665c07f8a07a205f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176575"
 ---
 # <a name="operator-"></a>%, opérateur
 
@@ -21,7 +21,7 @@ Traite la valeur de *expression* dans un argument de macro en tant que texte.
 
 ## <a name="syntax"></a>Syntaxe
 
-> % *Expression*
+> % *expression*
 
 ## <a name="see-also"></a>Voir aussi
 

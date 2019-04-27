@@ -35,11 +35,11 @@ helpviewer_keywords:
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
 ms.openlocfilehash: bb3d18e5034be50d69531d2686b6c270ba55a1cb
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157381"
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 
@@ -86,7 +86,7 @@ Le comportement de **isspace** et **_isspace_l** n’est pas défini si *c* n’
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_** **istspace**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -44,11 +44,11 @@ helpviewer_keywords:
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
 ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153799"
 ---
 # <a name="fundamental-types--c"></a>Types fondamentaux (C++)
 
@@ -77,7 +77,7 @@ Le tableau suivant décrit les restrictions relatives aux tailles des types. Ces
 ||**long long**|Supérieur à un unsigned **long**.<br /><br /> Objets de type **longue** peuvent être déclarées comme **long long signé** ou **unsigned long long**. **long long signé** est un synonyme de **longue**.|
 ||**wchar_t**, **__wchar_t**|Une variable de type **wchar_t** désigne un type de caractères larges ou caractères multioctets. Par défaut, **wchar_t** est un type natif, mais vous pouvez utiliser [/Zc :wchar_t-)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) se **wchar_t** un typedef pour **unsigned short**. Le **__wchar_t** type est un synonyme spécifique à Microsoft pour natif **wchar_t** type.<br /><br /> Utilisez le préfixe L avant un caractère ou un littéral de chaîne pour désigner le type caractère large.|
 |Virgule flottante|**float**|Type **float** est flottante plus petit type de point.|
-||**double**|Type **double** est un type à virgule flottante supérieur ou un égal au type **float**, mais inférieur ou égal à la taille du type **long double**.<br /><br /> Spécifique à Microsoft : la représentation sous forme de **long double** et **double** est identique. Toutefois, **long double** et **double** sont des types distincts.|
+||**double**|Type **double** est un type à virgule flottante supérieur ou un égal au type **float**, mais inférieur ou égal à la taille du type **long double**.<br /><br /> Spécifique à Microsoft : La représentation sous forme de **long double** et **double** est identique. Toutefois, **long double** et **double** sont des types distincts.|
 ||**long double**|Type **long double** est un flottante type virgule est supérieur ou égal au type **double**.|
 
 **Section spécifique à Microsoft**
@@ -88,10 +88,10 @@ Le tableau suivant répertorie la quantité de stockage requise pour les types f
 
 |Type|Size|
 |----------|----------|
-|**bool**, **char**, **unsigned char**, **signé char**, **__int8**|1 octet|
+|**bool**, **char**, **unsigned char**, **signed char**, **__int8**|1 octet|
 |**__int16**, **court**, **unsigned short**, **wchar_t**, **__wchar_t**|2 octets|
-|**float**, **__int32**, **int**, **unsigned int**, **long**, **long non signé**|4 octets|
-|**Double**, **__int64**, **long double**, **longue**|8 octets|
+|**float**, **__int32**, **int**, **unsigned int**, **long**, **unsigned long**|4 octets|
+|**double**, **__int64**, **long double**, **long long**|8 octets|
 
 **FIN de la section spécifique à Microsoft**
 

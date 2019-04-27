@@ -12,11 +12,11 @@ helpviewer_keywords:
 - OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
 ms.openlocfilehash: b71eb0e5d46a790b01ec12f12043af783bdfcf27
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58771446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181631"
 ---
 # <a name="trackers"></a>Dispositifs de suivi
 
@@ -24,7 +24,7 @@ Le [CRectTracker](../mfc/reference/crecttracker-class.md) classe fournit une int
 
 L’exemple OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) montre une interface commune à l’aide de dispositifs de suivi et des éléments du client OLE à partir du point de vue d’une application conteneur. Pour une démonstration des différents styles et les capacités d’un objet de mise hors tension, consultez l’exemple général MFC [TRACKER](../overview/visual-cpp-samples.md).
 
-Pour plus d’informations sur l’implémentation de dispositifs de suivi dans votre application OLE, consultez [dispositifs de suivi : Implémentation de dispositifs de suivi dans votre Application OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+Pour plus d’informations sur l’implémentation de dispositifs de suivi dans votre application OLE, consultez [dispositifs de suivi : Implémentation de dispositifs de suivi dans votre application OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -10,11 +10,11 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
 ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182988"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference, classe
 
@@ -52,7 +52,7 @@ class StringReference
 |[StringReference::operator=](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|
 |[StringReference::operator()](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 
@@ -88,8 +88,7 @@ __abi_HSTRING GetHSTRING() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-
-  `__abi_HSTRING` contenant les données de type chaîne.
+`__abi_HSTRING` contenant les données de type chaîne.
 
 ### <a name="remarks"></a>Notes
 
@@ -182,8 +181,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 ### <a name="parameters"></a>Paramètres
 
 *__fstrArg*<br/>
-
-  `StringReference` dont les données sont utilisées pour initialiser la nouvelle instance.
+`StringReference` dont les données sont utilisées pour initialiser la nouvelle instance.
 
 *__strArg*<br/>
 Pointeur vers un tableau de valeurs char16 utilisé pour initialiser la nouvelle instance.

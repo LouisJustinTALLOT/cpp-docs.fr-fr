@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183566"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Surcharge d'opérateurs d'incrémentation et de décrémentation (C++)
 
@@ -22,7 +22,7 @@ Les opérateurs d'incrémentation et de décrémentation appartiennent à une ca
 
 - Décrémentation préfixée et décrémentation suffixée
 
-Lorsque vous écrivez des fonctions d'opérateur surchargées, il peut être utile d'implémenter des versions distinctes des versions préfixées et suffixées de ces opérateurs. Pour faire la distinction entre les deux, la règle suivante est observée : la forme préfixée de l’opérateur est déclarée exactement la même façon que n’importe quel autre opérateur unaire ; la forme suffixée accepte un argument supplémentaire de type **int**.
+Lorsque vous écrivez des fonctions d'opérateur surchargées, il peut être utile d'implémenter des versions distinctes des versions préfixées et suffixées de ces opérateurs. Pour faire la distinction entre les deux, la règle suivante est observée : La forme préfixée de l’opérateur est déclarée exactement la même façon que n’importe quel autre opérateur unaire ; la forme suffixée accepte un argument supplémentaire de type **int**.
 
 > [!NOTE]
 >  Lorsque vous spécifiez un opérateur surchargé pour la forme suffixée de l’opérateur d’incrémentation ou de décrémentation, l’argument supplémentaire doit être de type **int**; spécification de tout autre type génère une erreur.

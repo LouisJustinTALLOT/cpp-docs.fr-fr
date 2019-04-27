@@ -23,17 +23,17 @@ helpviewer_keywords:
 - __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
 ms.openlocfilehash: b765eabcac3f9643c0cae78fefb6ce8231669ffc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183452"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
 
 **Section spécifique à Microsoft**
 
-Prise en charge des fonctionnalités Microsoft C/C++ pour les types d’entiers dimensionnés. Vous pouvez déclarer des 8, 16, 32 ou variables de type entier 64 bits à l’aide de la **__int**<em>n</em> spécificateur, de type où *n* est 8, 16, 32 ou 64.
+Prise en charge des fonctionnalités Microsoft C/C++ pour les types d'entiers dimensionnés. Vous pouvez déclarer des 8, 16, 32 ou variables de type entier 64 bits à l’aide de la **__int**<em>n</em> spécificateur, de type où *n* est 8, 16, 32 ou 64.
 
 L'exemple suivant déclare une variable pour chacun de ces types d'entiers dimensionnés :
 

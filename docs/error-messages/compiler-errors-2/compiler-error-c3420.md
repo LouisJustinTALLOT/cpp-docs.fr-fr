@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C3420
 ms.assetid: 99b53c77-f36b-4574-9199-b53111becccb
 ms.openlocfilehash: 3db109598ce0741ca34a230d8925994543bcb5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182455"
 ---
 # <a name="compiler-error-c3420"></a>Erreur du compilateur C3420
 
-'finalizer' : un finaliseur ne peut pas être virtuel
+'finalizer' : un finaliseur ne peut pas être virtuel
 
 Un finaliseur peut uniquement être appelé de façon non virtuelle depuis son type englobant. Ainsi, il est incorrect de déclarer un finaliseur virtuel.
 
-Pour plus d’informations, consultez [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C++ / c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Pour plus d’informations, consultez [destructeurs et finaliseurs dans Comment : Définir et consommer des classes et structs (C++ / c++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Exemple
 

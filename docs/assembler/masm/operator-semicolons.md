@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator ;;
 ms.assetid: 94320c71-70df-4e71-8c22-e36797294e2b
 ms.openlocfilehash: 10c7395a29b3e9d7792939c3c54e9108a255f1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199065"
 ---
 # <a name="operator-"></a>;;, opérateur
 
@@ -21,7 +21,7 @@ Traite *texte* sous forme de commentaire dans une macro qui s’affiche uniqueme
 
 ## <a name="syntax"></a>Syntaxe
 
-> ;; *texte*
+> ;; *text*
 
 ## <a name="see-also"></a>Voir aussi
 

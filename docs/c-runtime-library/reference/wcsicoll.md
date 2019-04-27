@@ -21,11 +21,11 @@ helpviewer_keywords:
 - wcsicoll function
 ms.assetid: d049022d-cf60-467f-842b-9a508d9aeaff
 ms.openlocfilehash: 6621db86ccfa2c7da38341020c037f6afd21cbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188612"
 ---
 # <a name="wcsicoll"></a>wcsicoll
 

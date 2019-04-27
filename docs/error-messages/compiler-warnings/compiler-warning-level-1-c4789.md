@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
 ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187229"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Avertissement du compilateur (niveau 1) C4789
 
@@ -42,7 +42,7 @@ Visual C++ peut générer cet avertissement pour un chemin d’accès du code qu
 #pragma warning( pop )
 ```
 
-Cet idiome empêche Visual C++ de générer l’avertissement pour ce bloc de code spécifique. `#pragma warning(push)` conserve l'état existant avant que `#pragma warning(disable: 4789)` le modifie. `#pragma warning(pop)` restaure l'état de type push et supprime les effets de `#pragma warning(disable:4789)`. Pour plus d’informations sur la directive de préprocesseur C++ `#pragma`, consultez [avertissement](../../preprocessor/warning.md) et [Directives Pragma et mot clé _pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Cet idiome empêche Visual C++ de générer l’avertissement pour ce bloc de code spécifique. `#pragma warning(push)` conserve l'état existant avant que `#pragma warning(disable: 4789)` le modifie. `#pragma warning(pop)` restaure l'état de type push et supprime les effets de `#pragma warning(disable:4789)`. Pour plus d’informations sur la C++ directive de préprocesseur `#pragma`, consultez [avertissement](../../preprocessor/warning.md) et [Directives Pragma et mot clé _pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Exemple
 
