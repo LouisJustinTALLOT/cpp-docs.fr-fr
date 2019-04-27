@@ -6,11 +6,11 @@ helpviewer_keywords:
 - rebar controls [MFC], image lists
 ms.assetid: 1a5836ac-019a-46aa-8741-b35c3376b839
 ms.openlocfilehash: fa5307c201850fc42439c79a1c638a0707379913
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180492"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Utilisation d'une liste d'images avec un contrôle rebar
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
 ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155574"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
@@ -53,7 +53,7 @@ Retourne 0 si l’opération aboutit et un code d’erreur en cas d’échec.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*pFilePtr*|**Valeur de retour**|**Contenu de***pFilePtr* |
+|*pFilePtr*|**Valeur de retour**|**Contents of**  *pFilePtr*|
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|inchangé|
 

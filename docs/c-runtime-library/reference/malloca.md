@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
 ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156869"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -72,7 +72,7 @@ Toutefois, **_malloca** peut être appelée directement à partir d’une routin
 
 Outre les restrictions ci-dessus, lorsque vous utilisez le [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) option, **_malloca** ne peut pas être utilisé dans **__except** blocs. Pour plus d'informations, consultez [/clr Restrictions](../../build/reference/clr-restrictions.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

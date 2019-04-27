@@ -9,17 +9,17 @@ helpviewer_keywords:
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
 ms.openlocfilehash: 7504439c565d4dfb720bc2fa7e097e3230733423
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153682"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Mode d'évaluation des blocs Catch (C++)
 
 C++ vous permet de lever des exceptions de tout type, bien qu'en général il soit recommandé de lever des types dérivés de std::exception. Une exception C++ peut être interceptée par un **catch** gestionnaire qui spécifie le même type que l’exception levée, ou par un gestionnaire qui peut intercepter tout type d’exception.
 
-Si le type de l'exception levée est une classe, qui possède également une classe (ou des classes) de base, elle peut être interceptée par des gestionnaires qui acceptent les classes de base du type de l'exception, ainsi que des références aux bases du type de l'exception. Notez que lorsqu’une exception est interceptée par une référence, elle est associée à l’objet exception levée réel. Dans le cas contraire, il s’agit d’une copie (similaire à un argument pour une fonction).
+Si le type de l'exception levée est une classe, qui possède également une classe (ou des classes) de base, elle peut être interceptée par des gestionnaires qui acceptent les classes de base du type de l'exception, ainsi que des références aux bases du type de l'exception. Notez que lorsqu'une exception est interceptée par une référence, elle est associée à l'objet exception levée réel. Dans le cas contraire, il s'agit d'une copie (similaire à un argument pour une fonction).
 
 Lorsqu’une exception est levée, elle peut être interceptée par les types suivants de **catch** gestionnaires :
 

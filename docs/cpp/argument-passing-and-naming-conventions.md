@@ -14,11 +14,11 @@ helpviewer_keywords:
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
 ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184398"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Passage des arguments et conventions de dénomination
 
@@ -37,7 +37,7 @@ Pour plus d’informations sur la façon de définir votre propre code de prolog
 
 Pour plus d’informations sur la valeur par défaut conventions d’appel dans le code plateformes cibles x64, consultez [x64 Convention d’appel](../build/x64-calling-convention.md). Pour plus d’informations sur l’appel des problèmes de convention dans le code qui cible les plateformes ARM, consultez [problèmes courants de Visual C++ ARM Migration](../build/common-visual-cpp-arm-migration-issues.md).
 
-Les conventions d’appel suivantes sont prises en charge par le compilateur Visual C/C++.
+Les conventions d'appel suivantes sont prises en charge par le compilateur Visual C/C++.
 
 |Mot clé|Nettoyage de pile|Passage de paramètres|
 |-------------|-------------------|-----------------------|

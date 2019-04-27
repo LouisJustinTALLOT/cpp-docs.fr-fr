@@ -7,11 +7,11 @@ helpviewer_keywords:
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
 ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153423"
 ---
 # <a name="containers-client-item-notifications"></a>Conteneurs : Notifications d’élément client
 
@@ -49,5 +49,5 @@ Si la position ou la taille d'un élément OLE change lors de la modification s
 ## <a name="see-also"></a>Voir aussi
 
 [Conteneurs](../mfc/containers.md)<br/>
-[Conteneurs : États d’élément client](../mfc/containers-client-item-states.md)<br/>
+[Conteneurs : États d’élément client](../mfc/containers-client-item-states.md)<br/>
 [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)

@@ -49,11 +49,11 @@ helpviewer_keywords:
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
 ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156185"
 ---
 # <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -106,7 +106,7 @@ Le **_nextafter** et **_nextafterf** fonctions sont propres à Microsoft. Le **_
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------------|-------------------------------|
-|**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf** , **nexttowardl**|\<math.h>|\<math.h> ou \<cmath>|
+|**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<math.h>|\<math.h> ou \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> ou \<cfloat>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).

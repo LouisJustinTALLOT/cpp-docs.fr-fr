@@ -28,11 +28,11 @@ helpviewer_keywords:
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
 ms.openlocfilehash: 22f76bdbdb21eb5b3cc9a226c111e321ee2fd0ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155514"
 ---
 # <a name="toascii-toascii"></a>toascii, __toascii
 
@@ -66,7 +66,7 @@ Le **__toascii** routine est définie comme une macro, sauf si la macro de prép
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**ToAscii**, **__toascii**|C : \<ctype.h><br /><br /> C++ : \<cctype> ou \<ctype.h>|
+|**toascii**, **__toascii**|C : \<ctype.h><br /><br /> C++ : \<cctype> ou \<ctype.h>|
 
 Le **toascii** macro est une extension POSIX, et **__toascii** est une implémentation spécifique à Microsoft de l’extension POSIX. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

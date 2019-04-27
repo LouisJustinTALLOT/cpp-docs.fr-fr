@@ -7,11 +7,11 @@ helpviewer_keywords:
 - .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
 ms.openlocfilehash: cf9c594d843c937dd2191bee2a7cebadbc615c82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62185265"
 ---
 # <a name="if"></a>.IF
 
@@ -22,9 +22,9 @@ Génère du code qui teste `condition1` (par exemple, AX > 7) et exécute la *in
 > . IF condition1<br/>
 > instructions<br/>
 > [[. ELSEIF condition2<br/>
-> instructions]]<br/>
+> statements]]<br/>
 > [[. ELSE<br/>
-> instructions]]<br/>
+> statements]]<br/>
 > .ENDIF
 
 ## <a name="remarks"></a>Notes

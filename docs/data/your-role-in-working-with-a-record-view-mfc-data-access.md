@@ -6,11 +6,11 @@ helpviewer_keywords:
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
 ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153331"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Votre rôle dans l'utilisation d'une vue de l'enregistrement (Accès aux données MFC)
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
 ms.openlocfilehash: 7d1c86732966d8222582dc6d4527af89963a5cdc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152824"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo, structure
 
@@ -77,7 +77,7 @@ Les objets de relation ne sont pas représentées par une classe MFC. Au lieu de
 
 Les informations récupérées par le [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre est stockée dans un `CDaoRelationInfo` structure. `CDaoRelationInfo` définit également un `Dump` génère de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoRelationInfo` objet.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 

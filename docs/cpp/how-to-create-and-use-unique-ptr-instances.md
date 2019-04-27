@@ -5,15 +5,15 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
 ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153651"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Procédure : Créer et utiliser des Instances unique_ptr
 
-Un [unique_ptr](../standard-library/unique-ptr-class.md) ne partage pas son pointeur. Il ne peut pas être copié vers un autre `unique_ptr`, passé par valeur à une fonction ou utilisés dans n’importe quel algorithme de bibliothèque C++ Standard qui nécessite des clichés. Un `unique_ptr` peut uniquement être déplacé. Cela signifie que la propriété de la ressource mémoire est transférée à un autre `unique_ptr` et que le `unique_ptr` d'origine ne le possède plus. Il est recommandé de restreindre un objet à un seul propriétaire, car la multiplicité des propriétaires ajoute de la complexité à la logique du programme. Par conséquent, lorsque vous avez besoin d’un pointeur intelligent pour un objet ordinaire C++, utilisez `unique_ptr`, et lorsque vous construisez un `unique_ptr`, utilisez le [make_unique](../standard-library/memory-functions.md#make_unique) fonction d’assistance.
+Un [unique_ptr](../standard-library/unique-ptr-class.md) ne partage pas son pointeur. Il ne peut pas être copié vers un autre `unique_ptr`, passé par valeur à une fonction ou utilisés dans n’importe quel algorithme de bibliothèque C++ Standard qui nécessite des clichés. Un `unique_ptr` peut uniquement être déplacé. Cela signifie que la propriété de la ressource mémoire est transférée à un autre `unique_ptr` et que le `unique_ptr` d'origine ne le possède plus. Il est recommandé de restreindre un objet à un seul propriétaire, car la multiplicité des propriétaires ajoute de la complexité à la logique du programme. Par conséquent, lorsque vous avez besoin un pointeur intelligent pour un brut C++ de l’objet, utilisez `unique_ptr`, et lorsque vous construisez un `unique_ptr`, utilisez le [make_unique](../standard-library/memory-functions.md#make_unique) fonction d’assistance.
 
 Le diagramme suivant illustre le transfert de propriété entre deux instances `unique_ptr`.
 

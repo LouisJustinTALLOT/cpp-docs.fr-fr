@@ -27,11 +27,11 @@ helpviewer_keywords:
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
 ms.openlocfilehash: b9178f64dd698ff517ea5b376ed19e97981c511d
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156653"
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
 
@@ -99,7 +99,7 @@ Si le *mbstr* argument est **NULL**, ou si *nombre* est > **INT_MAX**, le Gestio
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

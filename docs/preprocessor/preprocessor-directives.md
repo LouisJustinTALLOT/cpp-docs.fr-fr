@@ -6,15 +6,15 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
 ms.openlocfilehash: 9481e977f2afb3de27a74278893a217fde48044b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179969"
 ---
 # <a name="preprocessor-directives"></a>Directives de préprocesseur
 
-Directives de préprocesseur, telles que `#define` et `#ifdef`, sont généralement utilisés pour rendre les programmes sources faciles à modifier et à compiler dans différents environnements d’exécution. Les directives contenues dans le fichier source indiquent au préprocesseur d'exécuter des actions spécifiques. Par exemple, le préprocesseur peut remplacer des jetons dans le texte, insérer le contenu d'autres fichiers dans le fichier source ou supprimer la compilation d'une partie du fichier en supprimant des sections de texte. Les lignes de préprocesseur sont reconnues et exécutées avant l'expansion macro. Par conséquent, si une macro se développe en quelque chose qui ressemble à une commande de préprocesseur, cette commande n’est pas reconnue par le préprocesseur.
+Directives de préprocesseur, telles que `#define` et `#ifdef`, sont généralement utilisés pour rendre les programmes sources faciles à modifier et à compiler dans différents environnements d’exécution. Les directives contenues dans le fichier source indiquent au préprocesseur d'exécuter des actions spécifiques. Par exemple, le préprocesseur peut remplacer des jetons dans le texte, insérer le contenu d'autres fichiers dans le fichier source ou supprimer la compilation d'une partie du fichier en supprimant des sections de texte. Les lignes de préprocesseur sont reconnues et exécutées avant l'expansion macro. Par conséquent, si une macro se développe en quelque chose qui ressemble à une commande de préprocesseur, cette commande n'est pas reconnue par le préprocesseur.
 
 Les déclarations de préprocesseur utilisent le même jeu de caractères que les instructions de fichier source, sauf que les séquences d'échappement ne sont pas prises en charge. Le jeu de caractères utilisé dans les instructions de préprocesseur est identique au jeu de caractères d'exécution. Le préprocesseur reconnaît aussi les valeurs de caractères négatives.
 

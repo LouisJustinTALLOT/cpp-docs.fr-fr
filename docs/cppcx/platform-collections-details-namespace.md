@@ -6,11 +6,11 @@ f1_keywords:
 - collection/Platform::Collections::Details
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
 ms.openlocfilehash: 7f7885397a56391581f9e3d0fe985311164d0219
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161561"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Platform::Collections::Details, espace de noms
 
@@ -30,7 +30,7 @@ Les membres de cet espace de noms sont définis dans collection.h et ne sont pas
 
 [Platform::Collections, espace de noms](../cppcx/platform-collections-namespace.md)
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** Collection.h
 

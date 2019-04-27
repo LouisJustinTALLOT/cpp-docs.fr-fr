@@ -23,11 +23,11 @@ helpviewer_keywords:
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
 ms.openlocfilehash: e5189ff7cb850acd9c9a1280f47fc9a1270f8b68
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157403"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -79,7 +79,7 @@ Respecter les restrictions suivantes lors de l’utilisation **longjmp**:
 
 Pour plus d’informations, consultez [Utilisation de setjmp et longjmp](../../cpp/using-setjmp-longjmp.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

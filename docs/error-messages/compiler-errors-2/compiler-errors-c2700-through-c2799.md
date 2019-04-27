@@ -1,6 +1,6 @@
 ---
 title: Erreurs du compilateur C2700 à C2799
-ms.date: 11/17/2017
+ms.date: 04/21/2019
 f1_keywords:
 - C2716
 - C2717
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: e29f344e0e45374f85715552f9ecc19ab90a9e7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6f4391008bf9b0a066ba65f27a41697c6097c2e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153209"
 ---
 # <a name="compiler-errors-c2700-through-c2799"></a>Erreurs du compilateur C2700 à C2799
 
@@ -86,7 +86,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2726](compiler-error-c2726.md)|'gcnew' peut uniquement être utilisé pour créer un objet avec le type de gérés/WinRT|
 |Erreur du compilateur C2727|Obsolète.|
 |[Erreur du compilateur C2728](compiler-error-c2728.md)|«*type*' : un tableau natif ne peut pas contenir ce type|
-|C2729 d’erreur du compilateur|Obsolète.|
+|Erreur du compilateur C2729|Obsolète.|
 |[Erreur du compilateur C2730](compiler-error-c2730.md)|«*classe*' : ne peut pas être une classe de base d’elle-même|
 |[Erreur du compilateur C2731](compiler-error-c2731.md)|«*fonction*' : fonction ne peut pas être surchargée.|
 |[Erreur du compilateur C2732](compiler-error-c2732.md)|spécification de liaison contredit les spécifications antérieures pour '*fonction*'|
@@ -94,17 +94,17 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2734](compiler-error-c2734.md)|«*identificateur*' : 'const' objet doit être initialisé si pas 'extern'|
 |[Erreur du compilateur C2735](compiler-error-c2735.md)|«*mot clé*' mot clé n’est pas autorisée dans le spécificateur de type de paramètre formel|
 |[Erreur du compilateur C2736](compiler-error-c2736.md)|«*mot clé*' mot clé n’est pas autorisé dans un cast|
-|C2737 d’erreur du compilateur|«*identificateur*' : 'constexpr' objet doit être initialisé|
+|Erreur du compilateur C2737|«*identificateur*' : 'constexpr' objet doit être initialisé|
 |[Erreur du compilateur C2738](compiler-error-c2738.md)|' opérateur *type*' : est ambigu ou n’est pas un membre de '*classe*'|
 |[Erreur du compilateur C2739](compiler-error-c2739.md)|«*nombre*' : les dimensions de tableau managé/WinRT explicites doivent être compris entre 1 et 32|
-|C2740 d’erreur du compilateur|valeur de l’opérande '*nombre*'est hors limites'*lower_bound* - *upper_bound*'|
-|C2741 d’erreur du compilateur|taille de trame trop grande|
-|C2742 d’erreur du compilateur|Obsolète.|
+|Erreur du compilateur C2740|valeur de l’opérande '*nombre*'est hors limites'*lower_bound* - *upper_bound*'|
+|Erreur du compilateur C2741|taille de trame trop grande|
+|Erreur du compilateur C2742|Obsolète.|
 |[Erreur du compilateur C2743](compiler-error-c2743.md)|«*type*' : ne peut pas intercepter un type natif avec le destructeur __clrcall ou le constructeur de copie|
-|C2744 d’erreur du compilateur|«*opérateur*' n’est pas un opérateur CLR/WinRT valide|
+|Erreur du compilateur C2744|«*opérateur*' n’est pas un opérateur CLR/WinRT valide|
 |[Erreur du compilateur C2745](compiler-error-c2745.md)|«*jeton*' : ce jeton ne peut pas être converti en un identificateur|
-|C2746 d’erreur du compilateur|Obsolète.|
-|C2747 d’erreur du compilateur|Obsolète.|
+|Erreur du compilateur C2746|Obsolète.|
+|Erreur du compilateur C2747|Obsolète.|
 |[Erreur du compilateur C2748](compiler-error-c2748.md)|Création de tableau de gérés/WinRT doit posséder une taille de tableau ou un initialiseur de tableau|
 |[Erreur du compilateur C2749](compiler-error-c2749.md)|«*type*' : peut seulement lever ou intercepter un handle d’une classe managée avec/clr : safe|
 |[Erreur du compilateur C2750](compiler-error-c2750.md)|«*type*' : Impossible d’utiliser 'new' sur la référence de type ; utilisez 'gcnew' à la place|
@@ -116,20 +116,20 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2756](compiler-error-c2756.md)|«*modèle*' : arguments template par défaut ne pas autorisés sur une spécialisation partielle|
 |[Erreur du compilateur C2757](compiler-error-c2757.md)|«*identificateur*' : un symbole avec ce nom existe déjà et donc ce nom ne peut pas être utilisé comme espace de noms|
 |[Erreur du compilateur C2758](compiler-error-c2758.md)|«*membre*' : un membre de type de référence doit être initialisé.|
-|C2759 d’erreur du compilateur|dans assembleur inline signale : *error_message*|
+|Erreur du compilateur C2759|dans assembleur inline signale : *error_message*|
 |[Erreur du compilateur C2760](compiler-error-c2760.md)|Erreur de syntaxe : attendu '*token1*'not'*token2*'|
 |[Erreur du compilateur C2761](compiler-error-c2761.md)|«*fonction*' : redéclaration de fonction membre non autorisée|
 |[Erreur du compilateur C2762](compiler-error-c2762.md)|«*modèle*' : expression non valide comme argument template pour '*paramètre*»|
-|C2763 d’erreur du compilateur|«*modèle*' : utilisation non valide d’un littéral de chaîne comme argument template pour '*paramètre*»|
+|Erreur du compilateur C2763|«*modèle*' : utilisation non valide d’un littéral de chaîne comme argument template pour '*paramètre*»|
 |[Erreur du compilateur C2764](compiler-error-c2764.md)|«*paramètre*' : paramètre de modèle non utilisé ou pouvant être déduit dans la spécialisation partielle '*spécialisation*»|
 |[Erreur du compilateur C2765](compiler-error-c2765.md)|«*fonction*' : une spécialisation explicite d’un modèle de fonction ne peut pas avoir d’arguments par défaut|
 |[Erreur du compilateur C2766](compiler-error-c2766.md)|spécialisation explicite ; «*spécialisation*' a déjà été défini|
 |[Erreur du compilateur C2767](compiler-error-c2767.md)|incompatibilité entre les dimensions de tableau de gérés/WinRT : attendu *nombre* argument (s) - *nombre* fourni|
 |[Erreur du compilateur C2768](compiler-error-c2768.md)|«*fonction*' : utilisation non conforme d’arguments template explicites|
-|C2769 d’erreur du compilateur|Vous ne pouvez pas accolade initialiser un tableau de gérés/WinRT dans une liste d’initialiseurs de base/membre|
+|Erreur du compilateur C2769|Vous ne pouvez pas accolade initialiser un tableau de gérés/WinRT dans une liste d’initialiseurs de base/membre|
 |[Erreur du compilateur C2770](compiler-error-c2770.md)|arguments de modèle/générique d’explicite non valide pour '*modèle*'|
 |[Erreur du compilateur C2771](compiler-error-c2771.md)|#import seulement autorisé au niveau global ou de la portée espace de noms|
-|C2772 d’erreur du compilateur|Obsolète.|
+|Erreur du compilateur C2772|Obsolète.|
 |[Erreur du compilateur C2773](compiler-error-c2773.md)|#import et #using disponible uniquement dans le compilateur C++|
 |[Erreur du compilateur C2774](compiler-error-c2774.md)|«*identificateur*' : aucune méthode 'put' n’est associé à cette propriété|
 |[Erreur du compilateur C2775](compiler-error-c2775.md)|«*identificateur*' : aucune méthode 'get' n’est associé à cette propriété|
@@ -146,14 +146,19 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2786](compiler-error-c2786.md)|«*type*' : opérande non valide pour __uuidof|
 |[Erreur du compilateur C2787](compiler-error-c2787.md)|«*identificateur*' : aucun GUID n’a été associé à cet objet|
 |[Erreur du compilateur C2788](compiler-error-c2788.md)|«*identificateur*' : plusieurs GUID associé à cet objet|
-|C2789 d’erreur du compilateur|«*identificateur*' : un objet de type qualifié const doit être initialisé.|
+|Erreur du compilateur C2789|«*identificateur*' : un objet de type qualifié const doit être initialisé.|
 |[Erreur du compilateur C2790](compiler-error-c2790.md)|'super' : ce mot clé peut uniquement être utilisé dans le corps de fonction membre de classe|
 |[Erreur du compilateur C2791](compiler-error-c2791.md)|utilisation non conforme de 'super' : '*classe*' n’a pas de classes de base|
 |[Erreur du compilateur C2792](compiler-error-c2792.md)|'super' : ce mot clé doit être suivi par ' ::'|
 |[Erreur du compilateur C2793](compiler-error-c2793.md)|«*jeton*' : jeton inattendu après ' ::', identificateur ou mot clé 'operator' attendu|
 |[Erreur du compilateur C2794](compiler-error-c2794.md)|«*identificateur*' : n’est pas un membre de n’importe quelle classe de base directe ou indirecte de '*classe*»|
 |[Erreur du compilateur C2795](compiler-error-c2795.md)|' super ::*identificateur*' n’est pas une fonction membre|
-|C2796 d’erreur du compilateur|'ref new' peut uniquement être utilisé pour créer une instance d’un type WinRT|
+|Erreur du compilateur C2796|'ref new' peut uniquement être utilisé pour créer une instance d’un type WinRT|
 |[Erreur du compilateur C2797](compiler-error-c2797.md)|(Obsolète) «*identificateur*' : l’initialisation de liste à l’intérieur de la liste d’initialiseur membre ou l’initialiseur de membre de données non statiques n’est pas implémentée.|
 |[Erreur du compilateur C2798](compiler-error-c2798.md)|' super ::*identificateur*' est ambigu|
-|C2799 d’erreur du compilateur|«*identificateur*' : un objet de type de classe qualifiée const sans constructeur par défaut fourni par l’utilisateur doit être initialisé.|
+|Erreur du compilateur C2799|«*identificateur*' : un objet de type de classe qualifiée const sans constructeur par défaut fourni par l’utilisateur doit être initialisé.|
+
+## <a name="see-also"></a>Voir aussi
+
+[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erreurs du compilateur C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

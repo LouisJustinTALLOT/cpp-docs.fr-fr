@@ -9,11 +9,11 @@ helpviewer_keywords:
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184599"
 ---
 # <a name="identifiers-c"></a>Identificateurs (C++)
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-La plage des caractères autorisés dans un identificateur est moins restrictive durant la compilation du code C++/CLI. Les identificateurs dans du code compilé en utilisant /clr doivent suivre  la  [Norme ECMA-335 : Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+La plage de caractères autorisés dans un identificateur est moins restrictive lors de la compilation de code C++/CLI. Les identificateurs dans le code compilé à l’aide de /clr doivent suivre [ECMA-335 Standard : Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 **FIN de la section spécifique à Microsoft**
 
@@ -95,7 +95,7 @@ Le premier caractère d'un identificateur doit être un caractère alphabétique
 
 Les identificateurs ne peuvent pas avoir exactement la même orthographe et la même casse que les mots clés. Les identificateurs contenant des mots clés sont autorisés. Par exemple, `Pint` est un identificateur légal, bien qu’il contienne **int**, qui est un mot clé.
 
-Utilisation de deux traits de soulignement à la suite ( **__** ) dans un identificateur ou un seul trait de soulignement suivi par une lettre majuscule, est réservée aux implémentations C++ dans toutes les étendues. Évitez d'utiliser un seul trait de soulignement de début suivi d'une lettre minuscule pour les noms avec une portée de fichier en raison de conflits possibles avec les identificateurs réservés actuels ou futurs.
+Utilisation de deux traits de soulignement à la suite ( **__** ) dans un identificateur ou un seul trait de soulignement suivi par une lettre majuscule, est réservée à C++ implémentations dans toutes les étendues. Évitez d'utiliser un seul trait de soulignement de début suivi d'une lettre minuscule pour les noms avec une portée de fichier en raison de conflits possibles avec les identificateurs réservés actuels ou futurs.
 
 ## <a name="see-also"></a>Voir aussi
 

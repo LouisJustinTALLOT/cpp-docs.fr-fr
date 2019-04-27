@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
 ms.openlocfilehash: 9641af2f184d2edaa82922363dff75783e79f87e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182182"
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition, classe
 
@@ -61,7 +61,7 @@ Pendant une transition constante, la valeur d’une variable d’animation conse
 
 `CConstantTransition`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxanimationcontroller.h
 

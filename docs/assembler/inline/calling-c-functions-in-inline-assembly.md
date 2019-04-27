@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
 ms.openlocfilehash: 4d12321cd90f596c94c2337e100663436d512107
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167178"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Appel des fonctions C dans l'assembly inline
 
@@ -50,7 +50,7 @@ int main( void )
 }
 ```
 
-Les arguments de fonction étant passés sur la pile, il vous suffit d'effectuer un push des arguments nécessaires (pointeurs de chaîne, dans l'exemple précédent) avant d'appeler la fonction. Les arguments font l'objet d'un push dans l'ordre inverse ; ils sont donc dépilés dans l'ordre souhaité. Pour émuler l'instruction C
+Les arguments de fonction étant passés sur la pile, il vous suffit d'effectuer un push des arguments nécessaires (pointeurs de chaîne, dans l'exemple précédent) avant d'appeler la fonction. Les arguments font l’objet d’un push dans l’ordre inverse ; ils sont donc dépilés dans l’ordre souhaité. Pour émuler l'instruction C
 
 ```cpp
 printf( format, hello, world );

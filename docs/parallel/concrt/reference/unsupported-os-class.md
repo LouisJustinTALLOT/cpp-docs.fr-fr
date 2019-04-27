@@ -9,11 +9,11 @@ helpviewer_keywords:
 - unsupported_os class
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
 ms.openlocfilehash: 8277827aa8713ef57731a3e0da0898829b9fa9fe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186363"
 ---
 # <a name="unsupportedos-class"></a>unsupported_os, classe
 
@@ -39,7 +39,7 @@ class unsupported_os : public std::exception;
 
 `unsupported_os`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 

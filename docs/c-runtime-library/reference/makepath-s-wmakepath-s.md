@@ -31,11 +31,11 @@ helpviewer_keywords:
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
 ms.openlocfilehash: 3536569fd3e77a353003e1372d5dc4ee6e4ee3fb
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156926"
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 
@@ -132,7 +132,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 
 Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

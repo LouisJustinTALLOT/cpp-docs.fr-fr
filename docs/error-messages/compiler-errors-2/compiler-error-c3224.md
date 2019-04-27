@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3224
 ms.assetid: 129be22f-8f3e-4fc6-9ccd-d27d8ef91251
 ms.openlocfilehash: dc64ca1aeef66eeb554be1316bf9433145b50cc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62174053"
 ---
 # <a name="compiler-error-c3224"></a>Erreur du compilateur C3224
 
-'type' : aucune classe générique surchargée n’accepte 'nombre' arguments de type générique
+'type' : aucune classe générique surchargée n’accepte 'nombre' arguments de type générique
 
 Le compilateur n’a pas trouvé de surcharge appropriée.
 

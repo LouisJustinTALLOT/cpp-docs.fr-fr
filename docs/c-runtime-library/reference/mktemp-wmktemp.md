@@ -34,11 +34,11 @@ helpviewer_keywords:
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
 ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156510"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 
@@ -90,7 +90,7 @@ Chaque appel réussi à **_mktemp** modifie *nameTemplate*. Dans chaque appel su
 
 et la valeur à cinq chiffres fournie par **_mktemp** est 12345, le premier nom retourné est :
 
-> **fichier fna12345**
+> **fna12345**
 
 Si ce nom est utilisé pour créer le fichier FNA12345 et si ce fichier existe toujours, le nom suivant retourné sur un appel à partir du même processus ou thread avec le même *base* pour *nameTemplate* est :
 
@@ -98,7 +98,7 @@ Si ce nom est utilisé pour créer le fichier FNA12345 et si ce fichier existe t
 
 Si le fichier FNA12345 n'existe pas, le nom suivant retourné est de nouveau :
 
-> **fichier fna12345**
+> **fna12345**
 
 **_mktemp** peut créer un maximum de 26 noms de fichier uniques pour n’importe quelle combinaison donnée de *base* et *nameTemplate* valeurs. Par conséquent, FNZ12345 est le nom de fichier unique **_mktemp** peut créer pour le *base* et *nameTemplate* valeurs utilisées dans cet exemple.
 

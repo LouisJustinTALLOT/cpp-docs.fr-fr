@@ -5,11 +5,11 @@ helpviewer_keywords:
 - operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
 ms.openlocfilehash: 1eceb26a244bc6dd2d5243e54f5e3b8391d88ed1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153760"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Règles générales de surcharge d'opérateur
 
@@ -40,7 +40,7 @@ Les règles suivantes limitent le mode d'implémentation des opérateurs surchar
 
    L'exemple de code précédent déclare l'opérateur Inférieur à comme fonction membre ; toutefois, les opérateurs d'addition sont déclarés comme fonctions globales qui ont un accès ami. Notez que plusieurs implémentations peuvent être fournies pour un opérateur donné. Dans le cas de l'opérateur d'addition précédent, les deux implémentations sont fournies pour faciliter la commutativité. Il est tout aussi probable que des opérateurs qui ajoutent un `Point` à un `Point`, **int** à un `Point`, et ainsi de suite, peut être implémenté.
 
-- Les opérateurs obéissent aux règles de priorité, de regroupement et de nombre d’opérandes dictées par leur utilisation classique avec les types intégrés. Par conséquent, il n’existe aucun moyen d’exprimer le concept « ajouter 2 et 3 à un objet de type `Point`, » attendu 2 à ajouter à la *x* coordonnées et 3 à ajouter à la *y* coordonner.
+- Les opérateurs obéissent aux règles de priorité, de regroupement et de nombre d'opérandes dictées par leur utilisation classique avec les types intégrés. Par conséquent, il n’existe aucun moyen d’exprimer le concept « ajouter 2 et 3 à un objet de type `Point`, » attendu 2 à ajouter à la *x* coordonnées et 3 à ajouter à la *y* coordonner.
 
 - Les opérateurs unaires déclarés comme fonctions membres n’acceptent pas d’argument ; s’ils sont déclarés comme fonctions globales, ils en prennent un.
 
