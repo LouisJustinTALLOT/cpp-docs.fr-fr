@@ -1,16 +1,16 @@
 ---
 title: 'Procédure pas à pas : Création d’un réseau de traitement d’Image'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205839"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Procédure pas à pas : Création d’un réseau de traitement d’Image
 
@@ -132,7 +132,7 @@ Le `loaded_bitmaps` tampon de messages est important car, comme un `unbounded_bu
 
 Si votre application nécessite ce message plusieurs bloque le traitement du message, au lieu de simplement le bloc d’un message qui accepte tout d’abord le message, vous pouvez utiliser un autre type de bloc de message, tel que `overwrite_buffer`. Le `overwrite_buffer` classe contient un message à la fois, mais elle propage ce message à chacun de ses cibles.
 
-L’illustration suivante montre le réseau de traitement d’image :
+L’illustration suivante montre le réseau de traitement des images :
 
 ![Réseau de traitement d’image](../../parallel/concrt/media/concrt_imageproc.png "réseau de traitement d’Image")
 

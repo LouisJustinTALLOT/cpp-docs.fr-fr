@@ -5,11 +5,11 @@ f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
 ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224075"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -67,7 +67,7 @@ Un type mutex est également appelé *type verrouillable*. S’il ne fournit pas
 
 ### <a name="structs"></a>Structures
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[adopt_lock_t, structure](../standard-library/adopt-lock-t-structure.md)|Représente un type utilisé pour définir `adopt_lock`.|
 |[defer_lock_t, structure](../standard-library/defer-lock-t-structure.md)|Représente un type qui définit un objet `defer_lock` permettant de sélectionner l'un des constructeurs surchargés de `unique_lock`.|
@@ -76,7 +76,7 @@ Un type mutex est également appelé *type verrouillable*. S’il ne fournit pas
 
 ### <a name="variables"></a>Variables
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Représente un objet pouvant être passé aux constructeurs pour `lock_guard` et `unique_lock` afin d'indiquer que l'objet mutex qui est également passé au constructeur est verrouillé.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Représente un objet pouvant être passé au constructeur pour `unique_lock`, afin d'indiquer que le constructeur ne doit pas verrouiller l'objet mutex qui lui est également passé.|

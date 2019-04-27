@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
 ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218536"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint, classe
 
@@ -77,7 +77,7 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CAnimationPoint::m_xValue](#m_xvalue)|La variable d’animation encapsulée qui représente X – coordonnées du point d’animation.|
 |[CAnimationPoint::m_yValue](#m_yvalue)|La variable d’animation encapsulée qui représente la coordonnée Y du point de l’animation.|
@@ -94,7 +94,7 @@ La classe CAnimationPoint encapsule deux objets CAnimationVariable et peut repr�
 
 `CAnimationPoint`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxanimationcontroller.h
 

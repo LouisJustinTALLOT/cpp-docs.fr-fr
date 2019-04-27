@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
 ms.openlocfilehash: fbb9e2454aadd33db61c722704e17ce95f3df4c4
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57808324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223372"
 ---
 # <a name="atl-class-overview"></a>Vue d’ensemble de la classe ATL
 
@@ -25,7 +25,7 @@ Classes dans la bibliothèque ATL (Active Template) peuvent être classés comme
 |[Contrôles composites](../atl/composite-controls-classes.md)|[Propriétés et les Pages de propriétés](../atl/properties-and-property-pages-classes.md)|
 |[Points de connexion](../atl/connection-points-classes.md)|[Prise en charge du Registre](../atl/registry-support-classes.md)|
 |[Relation contenant-contenu de contrôle](../atl/control-containment-classes.md)|[Objets en cours d’exécution](../atl/running-objects-classes.md)|
-|[Contrôles : Support général](../atl/controls-general-support-classes.md)|[Sécurité](../atl/security-classes.md)|
+|[Contrôles : Support général](../atl/controls-general-support-classes.md)|[Sécurité](../atl/security-classes.md)|
 |[Transfert de données](../atl/data-transfer-classes.md)|[Prise en charge du fournisseur de service](../atl/service-provider-support-classes.md)|
 |[Types de données](../atl/data-types-classes.md)|[Informations de site](../atl/site-information-classes.md)|
 |[Débogage et Exception](../atl/debugging-and-exceptions-classes.md)|[Texte et chaîne](../atl/string-and-text-classes.md)|

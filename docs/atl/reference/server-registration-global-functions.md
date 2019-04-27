@@ -9,11 +9,11 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
 ms.openlocfilehash: 2088bd938aeac70193165cdbd43bd10203ecc49e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197456"
 ---
 # <a name="server-registration-global-functions"></a>Fonctions globales de serveur d’inscription
 
@@ -30,7 +30,7 @@ Ces fonctions fournissent la prise en charge pour inscrire et désinscrire des o
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Cette fonction est appelée pour révoquer des objets de classe à partir d’un module COM.|
 |[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Cette fonction est appelée pour obtenir l’objet de classe.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
 ms.openlocfilehash: ad98bfa9ff447f08c458427961b427e0f2087e62
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54806005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209267"
 ---
 # <a name="autohandle-class"></a>auto_handle, classe
 
@@ -42,14 +42,14 @@ Le type managé à incorporer.
 
 ### <a name="public-constructors"></a>Constructeurs publics  
 
-|Name|Description|  
+|Nom|Description|  
 |---------|-----------|  
 |[auto_handle::auto_handle](#auto-handle)|Constructeur `auto_handle`.|  
 |[auto_handle::~auto_handle](#tilde-auto-handle)|Le `auto_handle` destructeur.|  
 
 ### <a name="public-methods"></a>Méthodes publiques  
 
-|Name|Description|  
+|Nom|Description|  
 |---------|-----------|  
 |[auto_handle::get](#get)|Obtient l’objet de relation contenant-contenu.|  
 |[auto_handle::release](#release)|Libère l’objet à partir de `auto_handle` gestion.|
@@ -58,7 +58,7 @@ Le type managé à incorporer.
 
 ### <a name="public-operators"></a>Opérateurs publics 
 
-|Name|Description|  
+|Nom|Description|  
 |---------|-----------| 
 |[auto_handle::operator-&gt;](#operator-arrow)|L’opérateur d’accès au membre.|   
 |[auto_handle::operator=](#operator-assign)|Opérateur d'assignation.| 
@@ -66,7 +66,7 @@ Le type managé à incorporer.
 |[auto_handle::operator bool](#operator-bool)|Opérateur pour l’utilisation de `auto_handle` dans une expression conditionnelle.|   
 |[auto_handle::operator!](#operator-logical-not)|Opérateur pour l’utilisation de `auto_handle` dans une expression conditionnelle.|  
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Header file** \<msclr\auto_handle.h>
 
