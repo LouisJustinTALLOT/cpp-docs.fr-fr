@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 ms.openlocfilehash: c0984c15e2bf1682fc902264f47f340d0bd3c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223748"
 ---
 # <a name="numget-class"></a>num_get, classe
 
@@ -179,7 +179,7 @@ Fin de la plage de caractères à partir de laquelle lire le nombre.
 *_State*<br/>
 État auquel failbit (voir [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) est ajouté en cas d’échec.
 
-*Val*<br/>
+*val*<br/>
 Valeur qui a été lue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -426,7 +426,7 @@ Fin de la plage de caractères à partir de laquelle lire le nombre.
 *_State*<br/>
 État auquel failbit (voir [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) est ajouté en cas d’échec.
 
-*Val*<br/>
+*val*<br/>
 Valeur qui a été lue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -580,11 +580,11 @@ Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l�
 
 Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
-- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0: La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : la durée de vie de l’objet doit être gérée manuellement.
+- 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définies.
+- \> 1: Ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 

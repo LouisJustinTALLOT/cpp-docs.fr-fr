@@ -10,17 +10,17 @@ helpviewer_keywords:
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183646"
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
 
 Contrôles création de branches conditionnelles. Les instructions dans le *bloc if* sont exécutés uniquement si la *-expression if* correspond à une valeur différente de zéro (ou la valeur TRUE). Si la valeur de *expression* est différent de zéro, *instruction1* et toutes les autres instructions dans le bloc sont exécutées et l’autre bloc, le cas échéant, est ignoré. Si la valeur de *expression* est égal à zéro, puis le bloc if est ignoré et l’autre bloc, le cas échéant, est exécuté. Sont des expressions qui correspondent à zéro
 
-- true
+- TRUE
 - un pointeur non null,
 - toute valeur arithmétique non nulle, ou
 - type d’un type de classe qui définit une conversion non ambiguë arithmétique, valeur booléenne ou pointeur. (Pour plus d’informations sur les conversions, consultez [Conversions Standard](../cpp/standard-conversions.md).)
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a> Si l’instruction avec un initialiseur
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : un **si** instruction peut également contenir une expression qui déclare et initialise une variable nommée. Utilisez cette forme de l’instruction if lorsque la variable est nécessaire uniquement dans la portée du bloc-if.
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Un **si** instruction peut également contenir une expression qui déclare et initialise une variable nommée. Utilisez cette forme de l’instruction if lorsque la variable est nécessaire uniquement dans la portée du bloc-if.
 
 ## <a name="example"></a>Exemple
 
@@ -165,7 +165,7 @@ Le **else** clause d’une `if...else` instruction est associée à la plus proc
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Si les instructions de constexpr
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : dans les modèles de fonction, vous pouvez utiliser un **si constexpr** instruction pour prendre des décisions de branches de compilation sans avoir recours à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une fonction unique ce paramètre de handles décompression (aucune surcharge de paramètre de zéro n’est nécessaire) :
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Dans les modèles de fonction, vous pouvez utiliser un **si constexpr** instruction pour prendre des décisions de branches de compilation sans avoir recours à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une fonction unique ce paramètre de handles décompression (aucune surcharge de paramètre de zéro n’est nécessaire) :
 
 ```cpp
 template <class T, class... Rest>

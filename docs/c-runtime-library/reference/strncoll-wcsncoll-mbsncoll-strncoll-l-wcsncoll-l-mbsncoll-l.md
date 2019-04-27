@@ -61,11 +61,11 @@ helpviewer_keywords:
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
 ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209773"
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
@@ -114,7 +114,7 @@ int _mbsncoll_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*string1*, *chaîne2*<br/>
+*string1*, *string2*<br/>
 Chaîne terminée par Null à comparer.
 
 *count*<br/>

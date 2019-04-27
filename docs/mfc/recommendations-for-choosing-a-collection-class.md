@@ -17,11 +17,11 @@ helpviewer_keywords:
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
 ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218610"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Recommandations relatives au choix d'une classe de collection
 
@@ -51,9 +51,9 @@ Le tableau suivant, [Fonctionnalités des formes de collection](#_core_collectio
 
 |Forme|Ordered|Indexés|Insérer un élément|Rechercher un élément spécifié|Éléments en double|
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
-|Liste|Oui|Aucune|Rapide|Lente|Oui|
+|Liste|Oui|Non|Rapide|Lente|Oui|
 |Tableau|Oui|Par entier|Lente|Lente|Oui|
-|Carte|Aucune|Par clé|Rapide|Rapide|Non (clés) Oui (valeurs)|
+|Carte|Non|Par clé|Rapide|Rapide|Non (clés) Oui (valeurs)|
 
 Le tableau suivant, [Caractéristiques des classes de collection MFC](#_core_characteristics_of_mfc_collection_classes), résume d’autres caractéristiques importantes de classes de collection MFC spécifiques afin de faciliter la sélection. Votre choix peut différer selon que la classe est basée sur des modèles C++, que ses éléments peuvent être sérialisés par le biais du mécanisme de [sérialisation](../mfc/serialization-in-mfc.md) du document MFC, que ses éléments peuvent être vidés par le biais du mécanisme de vidage de diagnostic du document MFC, ou que la classe est de type sécurisé (autrement dit, si vous pouvez garantir le type des éléments stockés dans une collection et récupérés à partir d’une collection d’après la classe).
 
@@ -61,29 +61,29 @@ Le tableau suivant, [Caractéristiques des classes de collection MFC](#_core_cha
 
 |Classe|Utilise des modèles<br /><br /> C++|Peut être<br /><br /> sérialisée|Peut être<br /><br /> vidée|Est<br /><br /> de type sécurisé|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
-|`CArray`|Oui|Oui 1|Oui 1|Aucune|
+|`CArray`|Oui|Oui 1|Oui 1|Non|
 |`CByteArray`|Non|Oui|Oui|Oui 3|
-|`CDWordArray`|Aucune|Oui|Oui|Oui 3|
-|`CList`|Oui|Oui 1|Oui 1|Aucune|
-|`CMap`|Oui|Oui 1|Oui 1|Aucune|
+|`CDWordArray`|Non|Oui|Oui|Oui 3|
+|`CList`|Oui|Oui 1|Oui 1|Non|
+|`CMap`|Oui|Oui 1|Oui 1|Non|
 |`CMapPtrToPtr`|Non|Non|Oui|Non|
 |`CMapPtrToWord`|Non|Non|Oui|Non|
 |`CMapStringToOb`|Non|Oui|Oui|Non|
 |`CMapStringToPtr`|Non|Non|Oui|Non|
 |`CMapStringToString`|Non|Oui|Oui|Oui 3|
-|`CMapWordToOb`|Aucune|Oui|Oui|Non|
+|`CMapWordToOb`|Non|Oui|Oui|Non|
 |`CMapWordToPtr`|Non|Non|Oui|Non|
 |`CObArray`|Non|Oui|Oui|Non|
 |`CObList`|Non|Oui|Oui|Non|
 |`CPtrArray`|Non|Non|Oui|Non|
 |`CPtrList`|Non|Non|Oui|Non|
 |`CStringArray`|Non|Oui|Oui|Oui 3|
-|`CStringList`|Aucune|Oui|Oui|Oui 3|
+|`CStringList`|Non|Oui|Oui|Oui 3|
 |`CTypedPtrArray`|Oui|Selon le cas 2|Oui|Oui|
 |`CTypedPtrList`|Oui|Selon le cas 2|Oui|Oui|
 |`CTypedPtrMap`|Oui|Selon le cas 2|Oui|Oui|
 |`CUIntArray`|Non|Non|Oui|Oui 3|
-|`CWordArray`|Aucune|Oui|Oui|Oui 3|
+|`CWordArray`|Non|Oui|Oui|Oui 3|
 
 1. Pour sérialiser, vous devez appeler explicitement la fonction `Serialize` de l’objet de collection. Pour vider, vous devez appeler explicitement sa fonction `Dump`. Vous ne pouvez pas utiliser la forme `ar << collObj` pour sérialiser ou la forme `dmp` `<< collObj` pour faire un dump.
 
@@ -95,5 +95,5 @@ Le tableau suivant, [Caractéristiques des classes de collection MFC](#_core_cha
 
 [Collections](../mfc/collections.md)<br/>
 [Classes basées sur un modèle](../mfc/template-based-classes.md)<br/>
-[Guide pratique pour Définir une Collection de Type sécurisé](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[Guide pratique pour Définir une collection de type sécurisé](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Accès à tous les membres d’une collection](../mfc/accessing-all-members-of-a-collection.md)

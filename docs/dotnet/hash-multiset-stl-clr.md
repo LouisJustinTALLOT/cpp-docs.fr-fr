@@ -96,11 +96,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
 ms.openlocfilehash: 8d8e7ab9bcbaf9ea8ce95558c53d5936473f9c8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222973"
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 
@@ -358,7 +358,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_multiset::Clear (STL/CLR)
+## <a name="clear"></a> hash_multiset::clear (STL/CLR)
 
 Supprime tous les éléments.
 
@@ -545,7 +545,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> hash_multiset::Count (STL/CLR)
+## <a name="count"></a> hash_multiset::count (STL/CLR)
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -814,7 +814,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> hash_multiset::Erase (STL/CLR)
+## <a name="erase"></a> hash_multiset::erase (STL/CLR)
 
 Supprime les éléments placés aux positions spécifiées.
 
@@ -1260,7 +1260,7 @@ Fonction pour les clés de mappage aux compartiments de hachage.
 *last*<br/>
 Fin de la plage à insérer.
 
-*Pred*<br/>
+*pred*<br/>
 Classement de prédicat pour la séquence contrôlée.
 
 *right*<br/>
@@ -1526,7 +1526,7 @@ Fin de la plage à insérer.
 *right*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*val*<br/>
 Valeur de clé à insérer.
 
 *where*<br/>
@@ -2079,7 +2079,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op"></a> hash_multiset::operator = (STL/CLR)
+## <a name="op"></a> hash_multiset::operator= (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -2758,7 +2758,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> hash_multiset::Value_type (STL/CLR)
+## <a name="value_type"></a> hash_multiset::value_type (STL/CLR)
 
 Type d’un élément.
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
 ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216419"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Opérateurs de décalage vers la gauche et droit (&gt; &gt; et &lt; &lt;)
 
@@ -26,7 +26,7 @@ Les opérateurs de décalage de bits sont l’opérateur de décalage vers la dr
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression-décalage* `<<` *additive-expression*
+> *shift-expression* `<<` *additive-expression*
 > *shift-expression* `>>` *additive-expression*
 
 ## <a name="remarks"></a>Notes

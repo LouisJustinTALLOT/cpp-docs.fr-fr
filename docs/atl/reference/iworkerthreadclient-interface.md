@@ -10,11 +10,11 @@ helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
 ms.openlocfilehash: 1fa8a5e42d002260076f737d3d33cfa191ff297a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197404"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient Interface
 
@@ -42,7 +42,7 @@ __interface IWorkerThreadClient
 
 Implémentez cette interface lorsque vous avez du code qui doit s’exécuter sur un thread de travail en réponse à un handle ne soit signalé.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlutil.h
 

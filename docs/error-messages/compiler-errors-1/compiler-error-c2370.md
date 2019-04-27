@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2370
 ms.assetid: 03403e8f-f393-47c4-bd25-5c1c7ea7d5cd
 ms.openlocfilehash: 28c337a5cadfaeced39ee6ed73601338941029fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188037"
 ---
 # <a name="compiler-error-c2370"></a>Erreur du compilateur C2370
 
-'identifier' : redéfinition ; classe de stockage différente
+'identifier' : redéfinition ; classe de stockage différente
 
 L’identificateur est déjà déclaré avec une autre classe de stockage.
 

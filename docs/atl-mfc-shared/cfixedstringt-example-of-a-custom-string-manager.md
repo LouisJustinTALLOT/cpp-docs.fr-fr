@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
 ms.openlocfilehash: 2b6da5d4166b220ef63500d0154ab32dc72b40f4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209875"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Exemple d’un gestionnaire de chaînes personnalisé.
 
@@ -57,7 +57,7 @@ L’implémentation de `CFixedStringMgr::GetNilString` retourne la mémoire tamp
 
 Chaque fois que la mémoire tampon fixe n’est pas en cours d’utilisation, `CFixedStringMgr` permet de s’assurer qu’elle est initialisée avec une longueur nulle. Cela vous permet de pouvoir être utilisé en tant que chaîne nulle. En prime, le `nAllocLength` membre de la mémoire tampon fixe est toujours définie sur la taille totale de la mémoire tampon fixe. Cela signifie que `CStringT` peut atteindre la chaîne sans appeler [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate), même pour la chaîne nulle.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** cstringt.h
 
