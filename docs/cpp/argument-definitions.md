@@ -9,11 +9,11 @@ helpviewer_keywords:
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
 ms.openlocfilehash: 92e213b5accbf8fd5f48ac2111a169e585d82a1d
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184440"
 ---
 # <a name="argument-definitions"></a>Définitions d’arguments
 
@@ -24,7 +24,7 @@ int main( int argc, char* argv[], char* envp[]);
 int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 ```
 
-permettent d'analyser facilement les arguments sur la ligne de commande et, éventuellement, d'accéder aux variables d'environnement. Les définitions d’argument sont les suivantes :
+permettent d’analyser facilement les arguments sur la ligne de commande et, éventuellement, d’accéder aux variables d’environnement. Les définitions d’argument sont les suivantes :
 
 *argc*<br/>
 Entier qui contient le nombre d’arguments qui suivent dans *argv*. Le *argc* paramètre est toujours supérieure ou égale à 1.

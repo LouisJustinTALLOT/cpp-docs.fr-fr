@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180433"
 ---
 # <a name="accelerator-class"></a>accelerator, classe
 
@@ -127,7 +127,7 @@ Un accélérateur est une fonctionnalité de matériel qui est optimisée pour l
 
 Vous pouvez construire un `accelerator` objet par l’énumération des périphériques disponibles, ou en obtenant le périphérique par défaut, l’appareil de référence ou le périphérique WARP.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amprt.h
 

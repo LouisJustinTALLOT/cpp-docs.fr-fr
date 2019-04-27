@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
 ms.openlocfilehash: 827690f273852dee8f9461aa9af51f1cf7f4ce6e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180568"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Utilisation d'un contrôle commun en tant que fenêtre enfant
 

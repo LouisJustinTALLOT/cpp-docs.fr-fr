@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3044
 ms.assetid: 9f3e25b2-4676-49ab-97bf-6c88cd0fa377
 ms.openlocfilehash: 0fb63d63ce9bdf0979382887164056dcdb288bd2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187575"
 ---
 # <a name="compiler-error-c3044"></a>Erreur du compilateur C3044
 
-'section' : uniquement autorisé lors d’une imbrication directe sous une directive 'sections' OpenMP
+'section' : uniquement autorisé lors d’une imbrication directe sous une directive 'sections' OpenMP
 
 Le compilateur a rencontré une directive `section` qui n’a pas été utilisée correctement. Pour plus d’informations, consultez [sections](../../parallel/openmp/reference/sections-openmp.md).
 

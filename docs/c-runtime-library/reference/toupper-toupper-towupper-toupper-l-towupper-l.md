@@ -43,11 +43,11 @@ helpviewer_keywords:
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
 ms.openlocfilehash: 6dd564a27ee7f3c2bb095564e5c9423249d6babc
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155496"
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -111,7 +111,7 @@ Dans l’ordre pour **toupper** donne les résultats attendus, [__isascii](isasc
 > [!NOTE]
 > **_toupper_l** et **_towupper_l** n’ont aucune dépendance vis-à-vis de paramètres régionaux et ne sont pas destinés à être appelée directement. Elles sont fournies pour une utilisation interne par **_totupper_l**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

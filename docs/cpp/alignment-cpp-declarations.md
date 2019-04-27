@@ -3,17 +3,17 @@ title: Alignement (déclarations C++)
 ms.date: 11/04/2016
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
 ms.openlocfilehash: 0709ad414af3f167a64d9c89c342690015190287
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155392"
 ---
 # <a name="alignment-c-declarations"></a>Alignement (déclarations C++)
 
 Une des fonctionnalités de bas niveau de C++ est la possibilité de spécifier avec précision l’alignement des objets en mémoire afin d’exploiter au mieux les capacités d’une architecture matérielle spécifique. Par défaut, le compilateur aligne les membres de classe et de struct sur leur valeur de taille : bool et char sont alignés sur les limites d’un octet, short sur deux octets, int sur quatre octets, long longs, doubles et long doubles sur huit octets. Dans la plupart des scénarios, vous n'avez pas à vous préoccuper de l'alignement, car l'alignement par défaut est déjà optimal. Dans certains cas toutefois, vous pouvez améliorer nettement les performances ou consommer beaucoup moins de mémoire en spécifiant un alignement personnalisé pour vos structures de données. Avant Visual Studio 2015, vous pouviez utiliser les mots clés Microsoft spécifiques __alignof et declspec(alignas) pour spécifier un alignement supérieur à la valeur par défaut. À compter de Visual Studio 2015, vous devez utiliser les C ++ 11 mots clés standard [alignof et alignas](../cpp/alignof-and-alignas-cpp.md) pour une portabilité maximale du code. Les nouveaux mots clés se comportant intrinsèquement de la même façon que les extensions Microsoft, la documentation de ces extensions s’applique également aux nouveaux mots clés. Consultez [__alignof, opérateur](../cpp/alignof-operator.md) et [aligner](../cpp/align-cpp.md) pour plus d’informations. La norme C++ ne spécifie pas le comportement de compression pour l’alignement sur les limites inférieures à la valeur par défaut du compilateur pour la plateforme cible, vous devez donc encore utiliser #pragma Microsoft [pack](../preprocessor/pack.md) dans ce cas.
 
-La bibliothèque standard C++ fournit la [aligned_storage, classe](../standard-library/aligned-storage-class.md) pour l’allocation de mémoire pour les structures de données présentant des alignements personnalisés et le [aligned_union, classe](../standard-library/aligned-union-class.md) pour spécifier l’alignement pour les unions avec destructeurs ou des constructeurs non triviaux.
+Le C++ bibliothèque standard fournit le [aligned_storage, classe](../standard-library/aligned-storage-class.md) pour l’allocation de mémoire pour les structures de données présentant des alignements personnalisés et le [aligned_union, classe](../standard-library/aligned-union-class.md) pour spécifier l’alignement pour unions avec des constructeurs non triviaux ou des destructeurs.
 
 ## <a name="about-alignment"></a>Présentation de l'alignement
 

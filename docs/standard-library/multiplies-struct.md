@@ -8,11 +8,11 @@ helpviewer_keywords:
 - multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
 ms.openlocfilehash: 7e91c834d3e56d4c0170c4e2f6b26b73dc925432
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186073"
 ---
 # <a name="multiplies-struct"></a>multiplies (struct)
 
@@ -107,7 +107,7 @@ are: ( 6 24 54 96 150 216 )
 */
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

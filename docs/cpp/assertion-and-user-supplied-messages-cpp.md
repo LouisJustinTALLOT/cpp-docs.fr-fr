@@ -8,15 +8,15 @@ helpviewer_keywords:
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
 ms.openlocfilehash: 913aa199b4acd2ceb6daf7a24d8c50c28234b74a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184359"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Assertion et messages fournis par l'utilisateur (C++)
 
-Les C++ langage prend en charge trois la gestion des erreurs mécanismes qui vous aident à déboguer votre application : le [directive #error](../preprocessor/hash-error-directive-c-cpp.md), le [static_assert](../cpp/static-assert.md) mot clé et le [assert (macro), _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) (macro). Ces trois mécanismes génèrent des messages d'erreur et deux d'entre eux testent également les assertions logicielles. Une assertion logicielle spécifie une condition supposée être vraie en un point particulier de votre programme. Si une assertion au moment de la compilation échoue, le compilateur génère un message de diagnostic et une erreur de compilation. Si une assertion d'exécution échoue, le système d'exploitation génère un message de diagnostic et ferme votre application.
+Le C++ langage prend en charge trois erreur gestion des mécanismes qui vous aident à déboguer votre application : le [directive #error](../preprocessor/hash-error-directive-c-cpp.md), le [static_assert](../cpp/static-assert.md) mot clé et le [assert (macro), _ Assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) (macro). Ces trois mécanismes génèrent des messages d'erreur et deux d'entre eux testent également les assertions logicielles. Une assertion logicielle spécifie une condition supposée être vraie en un point particulier de votre programme. Si une assertion au moment de la compilation échoue, le compilateur génère un message de diagnostic et une erreur de compilation. Si une assertion d'exécution échoue, le système d'exploitation génère un message de diagnostic et ferme votre application.
 
 ## <a name="remarks"></a>Notes
 

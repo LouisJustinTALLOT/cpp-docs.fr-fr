@@ -12,11 +12,11 @@ helpviewer_keywords:
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
 ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188832"
 ---
 # <a name="ieee-floating-point-representation"></a>Représentation à virgule flottante IEEE
 

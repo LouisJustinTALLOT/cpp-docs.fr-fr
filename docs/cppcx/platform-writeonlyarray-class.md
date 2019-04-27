@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
 ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182936"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 
@@ -37,7 +37,7 @@ private ref class WriteOnlyArray<T, 1>
 
 Ces méthodes offrent une accessibilité interne, c'est-à-dire qu'elles ne sont accessibles que dans l'application ou le composant C++.
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[WriteOnlyArray::begin](#begin)|Itérateur qui pointe vers le premier élément du tableau.|
 |[WriteOnlyArray::Data](#data)|Pointeur vers le tampon de données.|
@@ -50,7 +50,7 @@ Ces méthodes offrent une accessibilité interne, c'est-à-dire qu'elles ne sont
 
 `WriteOnlyArray`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : **/ZW**
 

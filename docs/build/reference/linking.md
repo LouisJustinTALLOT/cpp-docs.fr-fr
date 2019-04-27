@@ -3,11 +3,11 @@ title: Référence de l’éditeur de liens MSVC
 ms.date: 12/10/2018
 ms.assetid: bb736587-d13b-4f3c-8982-3cc2c015c59c
 ms.openlocfilehash: 3a9eebef0a264b0131311b5ca96011a4d56264a1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176627"
 ---
 # <a name="linking"></a>Liaison
 

@@ -5,11 +5,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
 ms.openlocfilehash: 8363139efddb2fa64057fdb995ab7bd5dfbcfd9b
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153742"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Procédure : Créer et utiliser des Instances shared_ptr
 
@@ -57,7 +57,7 @@ Vous pouvez passer `shared_ptr` à une autre fonction des façons suivantes :
 
 - Si vous devez donner un accès à la fonction d'assistance au pointeur sous-jacent, et que vous savez que la fonction d'assistance utilise simplement le pointeur et effectue un retour avant celui de la fonction appelante, alors cette fonction ne devra pas partager la propriété du pointeur sous-jacent. Elle doit simplement accéder au pointeur dans la durée de vie du `shared_ptr`de l'appelant. Dans ce cas, il est possible de passer le `shared_ptr` par référence ou de passer le pointeur ou une référence brut(e) à l'objet sous-jacent. Passer de cette façon fournit un léger avantage en termes de performances et peut également vous aider à exprimer votre intention de programmation.
 
-- Parfois, par exemple dans un `std:vector<shared_ptr<T>>`, vous devrez peut-être passer chaque `shared_ptr` à une expression lambda ou un objet fonction nommé. Si l'expression Lambda ou la fonction ne stocke pas le pointeur, passez alors le `shared_ptr` par référence pour éviter d'appeler le constructeur de copie pour chaque élément.
+- Parfois, par exemple dans un `std:vector<shared_ptr<T>>`, vous devrez peut-être passer chaque `shared_ptr` à une expression Lambda ou un objet fonction nommé. Si l'expression Lambda ou la fonction ne stocke pas le pointeur, passez alors le `shared_ptr` par référence pour éviter d'appeler le constructeur de copie pour chaque élément.
 
 ## <a name="example-6"></a>Exemple 6
 

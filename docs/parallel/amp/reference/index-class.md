@@ -1,6 +1,6 @@
 ---
 title: index, classe
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5226440e49aab5766fc7992e0651e2b5ee5d4981
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180232"
 ---
 # <a name="index-class"></a>index, classe
 
@@ -37,14 +37,14 @@ Le rang, ou le nombre de dimensions.
 
 |Nom|Description|
 |----------|-----------------|
-|[index, constructeur](#ctor)|Initialise une nouvelle instance de la classe `index`.|
+|[index, constructeur](#index_ctor)|Initialise une nouvelle instance de la classe `index`.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
 |[operator--](#operator--)|Décrémente chaque élément de la `index` objet.|
-|[operator(mod)=](#operator_mod_eq)|Calcule le modulo (reste) de chaque élément dans le `index` de l’objet lorsque cet élément est divisé par un nombre.|
+|[operator%=](#operator_mod_eq)|Calcule le modulo (reste) de chaque élément dans le `index` de l’objet lorsque cet élément est divisé par un nombre.|
 |[operator*=](#operator_star_eq)|Multiplie chaque élément de la `index` objet par un nombre.|
 |[operator/=](#operator_div_eq)|Divise chaque élément de la `index` objet par un nombre.|
 |[index::operator\[\]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|
@@ -55,7 +55,7 @@ Le rang, ou le nombre de dimensions.
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[rang (constante)](#rank)|Stocke le rang de le `index` objet.|
 
@@ -67,7 +67,7 @@ Le rang, ou le nombre de dimensions.
 
 Le `index` structure représente un vecteur de coordonnées de *N* entiers qui spécifie une position unique dans une *N*-espace 3D. Les valeurs du vecteur sont triés du plus significatif au moins significatif. Vous pouvez récupérer les valeurs des composants à l’aide de [opérateur =](#operator_eq).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp.h
 
@@ -139,7 +139,7 @@ index operator--(
 
 Pour l’opérateur de préfixe, l’objet index (* cela). Pour l’opérateur de suffixe, un nouvel objet index.
 
-## <a name="operator_mod_eq"></a>  operator(mod)=
+## <a name="operator_mod_eq"></a>  operator%=
 
 Calcule le modulo (reste) de chaque élément dans l’objet index lorsque cet élément est divisé par le nombre spécifié.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
 ms.openlocfilehash: 342c8acd95fd45de1a21dc298325de9a7b40b717
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179105"
 ---
 # <a name="comm"></a>COMM
 
@@ -19,7 +19,7 @@ Crée une variable naissantes avec les attributs spécifiés dans *définition*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **COMM** *définition* [, *définition*]...
+> **COMM** *definition* [, *definition*] ...
 
 ## <a name="remarks"></a>Notes
 
@@ -27,7 +27,7 @@ Variables communes sont allouées par l’éditeur de liens et ne peut pas être
 
 Chaque *définition* a la forme suivante :
 
-[*langtype*] [**NEAR** &#124; **FAR**] _étiquette_**:**_type_[**:**_nombre_]
+[*langtype*] [**NEAR** &#124; **FAR**] _label_**:**_type_[**:**_count_]
 
 Le paramètre facultatif *langtype* définit les conventions d’affectation de noms pour le nom qui suit. Ce paramètre remplace n’importe quel langage spécifié par le **. MODÈLE** directive. Le paramètre facultatif **NEAR** ou **FAR** remplacer le modèle actuel de la mémoire. Le *étiquette* est le nom de la variable. Le *type* peut être n’importe quel spécificateur de type ([octets](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), et ainsi de suite) ou un entier spécifiant le nombre d’octets. Le paramètre facultatif *nombre* Spécifie le nombre d’éléments dans l’objet de données déclaré ; la valeur par défaut est un.
 

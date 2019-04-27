@@ -7,11 +7,11 @@ helpviewer_keywords:
 - string conversion, multibyte character strings
 ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
 ms.openlocfilehash: eaf278fc2689f0afa9ab6ff30f1294c36de5d7ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217389"
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows Sockets : Conversion de chaînes
 
@@ -25,15 +25,15 @@ Si vous communiquez entre les applications qui utilisent des chaînes stockées 
 
 Pour plus d'informations, voir :
 
-- [Windows Sockets : À l’aide de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets : Utilisation de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets : Utilisation de Sockets avec des Archives](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets : Utilisation de sockets avec des archives](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets : En arrière-plan](../mfc/windows-sockets-background.md)
+- [Windows Sockets : Arrière-plan](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets : Sockets de Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets : Sockets flux](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets : Sockets datagramme](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets : Sockets datagramme](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Voir aussi
 

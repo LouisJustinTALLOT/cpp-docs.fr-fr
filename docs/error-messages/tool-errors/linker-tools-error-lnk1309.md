@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1309
 ms.assetid: 10146071-883f-4849-97d1-c7468f90efbb
 ms.openlocfilehash: ea675ca835dfc3fe4881e5fabbea746a4442b10a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187441"
 ---
 # <a name="linker-tools-error-lnk1309"></a>Erreur des outils Éditeur de liens LNK1309
 
@@ -25,6 +25,6 @@ Par exemple, l’erreur LNK1309 s’affiche si vous spécifiez **/CLRIMAGETYPE:s
 
 Le **/CLR : pure** et **/CLR : safe** les bibliothèques de prise en charge et les options du compilateur sont déconseillés dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 
-Vous verrez également LNK1309 si vous essayez de générer une application pure CLR de confiance partiel à l’aide de ptrustu [d] .lib. Pour plus d’informations sur la création d’une application partiellement approuvée, consultez [Comment : créer une Application partiellement approuvée en supprimant la dépendance sur la DLL de bibliothèque CRT](../../dotnet/create-a-partially-trusted-application.md).
+Vous verrez également LNK1309 si vous essayez de générer une application pure CLR de confiance partiel à l’aide de ptrustu [d] .lib. Pour plus d’informations sur la création d’une application partiellement approuvée, consultez [Comment : Créer une Application partiellement approuvée en supprimant la dépendance de la DLL de la bibliothèque CRT](../../dotnet/create-a-partially-trusted-application.md).
 
 Pour plus d’informations, consultez [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) et [CLRIMAGETYPE (spécifier Type de CLR Image)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
 ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210812"
 ---
 # <a name="masm-operators-reference"></a>Référence des opérateurs MASM
 
@@ -18,17 +18,17 @@ ms.locfileid: "50430457"
 
 ||||
 |-|-|-|
-|[* (multiplication)](operator-multiply.md)|[+ (addition)](operator-add.md)|[-(soustraction ou nier)](operator-subtract-2.md)|
-|[. (champ)](operator-dot.md)|[/ (division)](operator-subtract-1.md)|[&#91;&#93;(index)](operator-brackets.md)|
+|[* (multiply)](operator-multiply.md)|[+ (add)](operator-add.md)|[-(soustraction ou nier)](operator-subtract-2.md)|
+|[. (champ)](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
 |[MODULO (reste)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Flux de contrôle
 
 ||||
 |-|-|-|
-|[\! (not logique runtime)](operator-logical-not-masm-run-time.md)|[\!= (différent de runtime)](operator-not-equal-masm.md)|[&#124;&#124;(runtime logique ou)](operator-logical-or.md)|
+|[\! (not logique runtime)](operator-logical-not-masm-run-time.md)|[\!= (différent de runtime)](operator-not-equal-masm.md)|[&#124;&#124; (runtime logical or)](operator-logical-or.md)|
 |[& & (runtime logique et)](operator-logical-and-masm-run-time.md)|[< (runtime inférieur à)](operator-less-than-masm-run-time.md)|[\<= (runtime inférieur ou égal à)](operator-less-or-equal-masm-run-time.md)|
-|[== (égal de runtime)](operator-equal-masm-run-time.md)|[> (supérieur à l’exécution)](operator-greater-than-masm-run-time.md)|[> = (runtime supérieur ou égal à)](operator-greater-or-equal-masm-run-time.md)|
+|[== (runtime equal)](operator-equal-masm-run-time.md)|[> (supérieur à l’exécution)](operator-greater-than-masm-run-time.md)|[> = (runtime supérieur ou égal à)](operator-greater-or-equal-masm-run-time.md)|
 |[& (runtime au niveau du bit et)](operator-bitwise-and.md)|||
 |[CARRY ? (runtime carry test)](operator-carry-q.md)|[DÉPASSEMENT DE CAPACITÉ ? (test de dépassement de capacité de runtime)](operator-overflow-q.md)|[PARITÉ ? (test de parité de runtime)](operator-parity-q.md)|
 |[SE CONNECTER ? (test des signes runtime)](operator-sign-q.md)|[ZÉRO ? (test runtime zéro)](operator-zero-q.md)||

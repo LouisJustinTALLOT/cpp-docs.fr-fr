@@ -10,11 +10,11 @@ helpviewer_keywords:
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
 ms.openlocfilehash: 4e6c086f9d2ff4061c6404444a3b4c61dd91fe1c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197113"
 ---
 # <a name="ustringorid-class"></a>_U_stringorid, classe
 
@@ -49,7 +49,7 @@ Cette classe est conçue pour implémenter des wrappers pour l’API de gestion 
 
 La classe définit deux surcharges de constructeur : une accepte un argument LPCTSTR et l’autre accepte un argument UINT. L’argument UINT est converti en un type de ressource compatible avec les fonctions de gestion des ressources de Windows à l’aide de la macro MAKEINTRESOURCE et le résultat stocké dans le membre de données unique de la classe, [m_lpstr](#_u_stringorid__m_lpstr). L’argument au constructeur LPCTSTR est stocké directement, sans conversion.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlwin.h
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
 ms.openlocfilehash: dab4da5fd65fc280d2061256a580a015917d24b6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59029941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179592"
 ---
 # <a name="token-pasting-operator-"></a>Opérateurs de collage de jeton (##)
 

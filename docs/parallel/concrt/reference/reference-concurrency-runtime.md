@@ -454,18 +454,18 @@ helpviewer_keywords:
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
 ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180145"
 ---
 # <a name="reference-concurrency-runtime"></a>Référence (runtime d'accès concurrentiel)
 
 Cette section contient des informations de référence pour le Runtime d’accès concurrentiel.
 
 > [!Note]
-> La norme du langage C++ réserve l’utilisation des identificateurs qui commencent par un caractère de soulignement (_) pour les implémentations telles que les bibliothèques. N'utilisez pas ces noms dans votre code. Le comportement des éléments de code, dont les noms suivent cette convention n'est pas garanti et est susceptible de changer dans les futures mises à jour. Pour ces raisons, ces éléments de code sont omis de la documentation du Runtime d’accès concurrentiel.
+> Le C++ norme du langage réserve l’utilisation des identificateurs qui commencent par un caractère de soulignement (_) pour les implémentations telles que les bibliothèques. N'utilisez pas ces noms dans votre code. Le comportement des éléments de code, dont les noms suivent cette convention n'est pas garanti et est susceptible de changer dans les futures mises à jour. Pour ces raisons, ces éléments de code sont omis de la documentation du Runtime d’accès concurrentiel.
 
 ## <a name="in-this-section"></a>Dans cette section
 
@@ -474,4 +474,4 @@ L’espace de noms d’accès concurrentiel fournit des classes et des fonctions
 
 [espace de noms std](std-namespace.md)
 
-[espace de noms stdx](stdx-namespace.md)
+[stdx namespace](stdx-namespace.md)

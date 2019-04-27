@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::UIntPtr Struct
 ms.assetid: dc4f5176-4c4d-4209-b68e-eb30f2c2465b
 ms.openlocfilehash: 8a49438f610af47831aa856e7bd4c33b90feef65
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182975"
 ---
 # <a name="platformuintptr-value-class"></a>Classe de valeur Platform::UIntPtr
 
@@ -24,7 +24,7 @@ Représente un pointeur non signé dont la taille est appropriée pour la platef
 public value struct UintPtr
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 
@@ -36,4 +36,4 @@ public value struct UintPtr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)

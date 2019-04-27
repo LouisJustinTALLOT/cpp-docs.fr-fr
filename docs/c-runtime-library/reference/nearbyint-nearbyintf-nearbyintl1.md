@@ -31,11 +31,11 @@ helpviewer_keywords:
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
 ms.openlocfilehash: 827286c840c6564c8c3f8b351197b0201509d241
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156198"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -79,7 +79,7 @@ La principale différence entre cette fonction et [Imp](rint-rintf-rintl.md) est
 
 C++ autorisant la surcharge, vous pouvez appeler des surcharges de **nearbyint** qui acceptent et retournent **float** ou **long** **double** paramètres. Dans un programme C, **nearbyint** toujours prend deux valeurs doubles et retourne une valeur double.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

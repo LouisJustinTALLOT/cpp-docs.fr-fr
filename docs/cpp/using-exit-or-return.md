@@ -8,11 +8,11 @@ helpviewer_keywords:
 - return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
 ms.openlocfilehash: d60084c0d07d3eeb3f49a1fea53de04d150a701b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152720"
 ---
 # <a name="using-exit-or-return"></a>Utilisation d'exit ou return
 

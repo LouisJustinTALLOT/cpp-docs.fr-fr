@@ -6,11 +6,11 @@ helpviewer_keywords:
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
 ms.openlocfilehash: 9cd27fb40522a07ce4591b654ee8a6dda53b4f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184463"
 ---
 # <a name="anonymous-class-types"></a>Types de classe anonymes
 
@@ -53,7 +53,7 @@ Les classes anonymes sont soumises à certaines restrictions. (Pour plus d’inf
 
 - Ne peut pas avoir de constructeur ou de destructeur.
 
-- Ne peut pas être passé en tant qu'argument aux fonctions (à moins que la vérification de type soit invalidée en utilisant des points de suspension).
+- Ne peut pas être passé en tant qu’argument aux fonctions (à moins que la vérification de type soit invalidée en utilisant des points de suspension).
 
 - Ne peut pas être retourné comme valeurs de retour à partir des fonctions.
 

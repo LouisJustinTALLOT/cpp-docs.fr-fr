@@ -2,11 +2,11 @@
 title: Vue d’ensemble des conventions ABI de ARM64
 ms.date: 03/27/2019
 ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195501"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI de ARM64
 
@@ -231,7 +231,7 @@ Code qui est généré dynamiquement doit être décrits avec des tables de fonc
 
 ## <a name="cycle-counter"></a>Compteur de cycles
 
-Toutes les UC ARMv8 sont nécessaires pour prendre en charge un compteur de cycles inscrire, d’un Registre 64 bits qui configure de Windows pour être accessible en lecture à tout niveau de l’exception, y compris en mode utilisateur. Il est accessible via la PMCCNTR_EL0 spécial inscrire, à l’aide de l’opcode MSR dans le code de l’assembly, ou le `_ReadStatusReg` intrinsèque dans le code C/C++.
+Toutes les UC ARMv8 sont nécessaires pour prendre en charge un compteur de cycles inscrire, d’un Registre 64 bits qui configure de Windows pour être accessible en lecture à tout niveau de l’exception, y compris en mode utilisateur. Il est accessible via la PMCCNTR_EL0 spécial inscrire, à l’aide de l’opcode MSR dans le code de l’assembly, ou le `_ReadStatusReg` intrinsèque en C /C++ code.
 
 Le compteur de cycles est un vrai compteur de cycles, pas une horloge de mur. La fréquence de comptage varie selon la fréquence du processeur. Si vous pensez que vous devez connaître la fréquence du compteur de cycle, vous ne doivent pas utiliser le compteur de cycles. Au lieu de cela, vous souhaitez mesurer le temps horloge, pour lesquelles vous devez utiliser `QueryPerformanceCounter`.
 

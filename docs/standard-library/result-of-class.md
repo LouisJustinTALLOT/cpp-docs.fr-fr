@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
 ms.openlocfilehash: f60a3ef6528da33fd1117fc940e961e9fe0987df
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62185904"
 ---
 # <a name="resultof-class"></a>result_of, classe
 
@@ -47,7 +47,7 @@ Types de la liste d’arguments pour le type pouvant être appelé à interroger
 
 Utilisez ce modèle pour déterminer au moment de la compilation le type de résultat de `Fn`(`ArgTypes`), où *Fn* est un type pouvant être appelé, référence à la fonction ou référence à un type pouvant être appelé, appelée à l’aide d’une liste des types d’arguments dans  *ArgTypes*. Le membre `type` de la classe de modèle désigne le type de résultat de `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` si l’expression non évaluée `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` est bien formée. Sinon, la classe de modèle n’a aucun membre `type`. Le type *Fn* et tous les types dans le pack de paramètre *ArgTypes* doivent être des types complets, **void**, ou des tableaux de limite inconnue. Déconseillé en faveur de [invoke_result](invoke-result-class.md) dans C ++ 17.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<type_traits>
 
