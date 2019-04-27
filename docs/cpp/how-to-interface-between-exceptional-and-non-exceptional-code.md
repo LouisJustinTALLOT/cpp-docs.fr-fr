@@ -5,11 +5,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
 ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183698"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Procédure : Interface entre le Code exceptionnel et Non exceptionnel
 
@@ -23,7 +23,7 @@ Lorsque vous appelez une fonction non exceptionnelle depuis C++, l'idée est d'e
 
 ### <a name="example"></a>Exemple
 
-L'exemple suivant illustre les fonctions C++ qui utilisent les fonctions Win32 `CreateFile` et `ReadFile` en interne pour ouvrir et lire deux fichiers.  La classe `File` est un wrapper RAII (Resource Acquisition Is Initialization) pour les handles de fichiers. Son constructeur détecte un état "fichier introuvable" et lève une exception pour propager l'erreur en haut de la pile des appels du module C++ (dans cet exemple, la fonction `main()`). Si une exception est levée après qu'un objet `File` est entièrement construit, le destructeur appelle automatiquement `CloseHandle` pour libérer le handle de fichiers. (Si vous préférez, vous pouvez utiliser la classe ALT (Active Template Library) `CHandle` dans le même but, ou `unique_ptr` avec un programme de suppression personnalisé). Les fonctions qui appellent les API Win32 et CRT détectent les erreurs et lèvent des exceptions C++ à l'aide de la fonction définie localement `ThrowLastErrorIf`, qui à son tour utilise la classe `Win32Exception`, dérivée de la classe `runtime_error`. Toutes les fonctions contenues dans cet exemple fournissent une garantie d'exception de type fort ; si une exception est levée à tout moment dans ces fonctions, aucune ressource n'est perdue et aucun état de programme n'est modifié.
+L'exemple suivant illustre les fonctions C++ qui utilisent les fonctions Win32 `CreateFile` et `ReadFile` en interne pour ouvrir et lire deux fichiers.  La classe `File` est un wrapper RAII (Resource Acquisition Is Initialization) pour les handles de fichiers. Son constructeur détecte un état "fichier introuvable" et lève une exception pour propager l'erreur en haut de la pile des appels du module C++ (dans cet exemple, la fonction `main()`). Si une exception est levée après qu’un objet `File` est entièrement construit, le destructeur appelle automatiquement `CloseHandle` pour libérer le handle de fichiers. (Si vous préférez, vous pouvez utiliser la classe ALT (Active Template Library) `CHandle` dans le même but, ou `unique_ptr` avec un programme de suppression personnalisé). Les fonctions qui appellent les API Win32 et CRT détectent les erreurs et lèvent des exceptions C++ à l'aide de la fonction définie localement `ThrowLastErrorIf`, qui à son tour utilise la classe `Win32Exception`, dérivée de la classe `runtime_error`. Toutes les fonctions contenues dans cet exemple fournissent une garantie d'exception de type fort ; si une exception est levée à tout moment dans ces fonctions, aucune ressource n'est perdue et aucun état de programme n'est modifié.
 
 ```cpp
 // compile with: /EHsc
@@ -191,7 +191,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
 }
 ```
 
-Lorsque vous convertissez des exceptions en codes d'erreur, un problème potentiel est que les codes d'erreur ne contiennent pas souvent toutes les informations qu'une exception peut stocker. Pour résoudre ce problème, vous pouvez fournir un **catch** bloc pour chaque type d’exception spécifique qui peut être levée et d’exécuter la journalisation pour enregistrer les détails de l’exception avant qu’il est converti en un code d’erreur. Cette approche peut créer un grand nombre de répétition de code si plusieurs fonctions utilisent toutes le même ensemble de **catch** blocs. Un bon moyen pour éviter la répétition de code consiste à refactoriser ces blocs dans une fonction utilitaire privée qui implémente le **essayez** et **catch** bloque et accepte un objet de fonction qui est appelé dans le **essayez** bloc. Dans chaque fonction publique, passez le code à la fonction utilitaire en tant qu’expression lambda.
+Lorsque vous convertissez des exceptions en codes d'erreur, un problème potentiel est que les codes d'erreur ne contiennent pas souvent toutes les informations qu'une exception peut stocker. Pour résoudre ce problème, vous pouvez fournir un **catch** bloc pour chaque type d’exception spécifique qui peut être levée et d’exécuter la journalisation pour enregistrer les détails de l’exception avant qu’il est converti en un code d’erreur. Cette approche peut créer un grand nombre de répétition de code si plusieurs fonctions utilisent toutes le même ensemble de **catch** blocs. Un bon moyen pour éviter la répétition de code consiste à refactoriser ces blocs dans une fonction utilitaire privée qui implémente le **essayez** et **catch** bloque et accepte un objet de fonction qui est appelé dans le **essayez** bloc. Dans chaque fonction publique, passez le code à la fonction utilitaire en tant qu'expression lambda.
 
 ```cpp
 template<typename Func>
@@ -237,4 +237,4 @@ Pour plus d’informations sur les expressions lambda, consultez [Expressions La
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion des erreurs et des exceptions (C++ moderne)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Guide pratique pour Conception pour la sécurité de l’Exception](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Guide pratique pour concevoir la sécurité des exceptions](../cpp/how-to-design-for-exception-safety.md)<br/>

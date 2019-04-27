@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
 ms.openlocfilehash: afdfb8ca11753d7def9d7da6f431082b1a90c345
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209120"
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Procédure : Créer une Application partiellement approuvée en supprimant la dépendance de la DLL de la bibliothèque CRT
 

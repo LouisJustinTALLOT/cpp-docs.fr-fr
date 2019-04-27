@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::OperationCanceledException
 ms.assetid: 5351bc20-5408-423a-8169-f09acc8a3fbb
 ms.openlocfilehash: f129c49077a5c6bde54c5afb0ede2cfd9adf9db2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184078"
 ---
 # <a name="platformoperationcanceledexception-class"></a>Platform::OperationCanceledException, classe
 
@@ -29,7 +29,7 @@ public ref class OperationCanceledException : COMException,    IException,    IP
 
 Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 

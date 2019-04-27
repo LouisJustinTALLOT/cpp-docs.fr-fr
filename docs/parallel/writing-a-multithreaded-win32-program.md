@@ -15,11 +15,11 @@ helpviewer_keywords:
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
 ms.openlocfilehash: c8536505882ca9a87aec385ca1c42d652ea84ff7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205515"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Écriture d'un programme Win32 multithread
 

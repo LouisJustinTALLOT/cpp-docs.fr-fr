@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
 ms.openlocfilehash: 38f529f46623bc7095879b29fba09427626073ec
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225478"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl, classe
 
@@ -95,7 +95,7 @@ Pour plus d’informations, consultez [contrôle SysLink](/windows/desktop/Contr
 
 `CLinkCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
 ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224088"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -40,7 +40,7 @@ Les itérateurs sont une généralisation des pointeurs qui s’abstrait de leur
 
 Les itérateurs qui ont des exigences supérieures et disposent d'un accès plus performant aux éléments peuvent être utilisés à la place d'itérateurs ayant moins d'exigences. Par exemple, si un itérateur d'avance est appelé, alors un itérateur d'accès aléatoire peut être utilisé à la place.
 
-Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ standard pour prendre en charge diverses situations en mode débogage pour les itérateurs vérifiés et non vérifiés. Pour plus d’informations, consultez [Bibliothèques sécurisées : bibliothèque standard C++](../standard-library/safe-libraries-cpp-standard-library.md).
+Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ standard pour prendre en charge diverses situations en mode débogage pour les itérateurs vérifiés et non vérifiés. Pour plus d’informations, consultez [bibliothèques sécurisées : C++Bibliothèque standard](../standard-library/safe-libraries-cpp-standard-library.md).
 
 ### <a name="functions"></a>Fonctions
 
@@ -55,9 +55,9 @@ Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ stan
 |[end](../standard-library/iterator-functions.md#end)|Récupère un itérateur de l'élément qui suit le dernier élément dans le conteneur spécifié.|
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Crée un itérateur qui peut insérer des éléments à l'avant d'un conteneur spécifié.|
 |[inserter](../standard-library/iterator-functions.md#inserter)|Adaptateur d'itérateur qui ajoute un nouvel élément à un conteneur à un point d'insertion donné.|
-|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Crée un [checked_array_iterator](../standard-library/checked-array-iterator-class.md) qui peut être utilisé par d’autres algorithmes. **Remarque :** Cette fonction est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
+|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Crée un [checked_array_iterator](../standard-library/checked-array-iterator-class.md) qui peut être utilisé par d’autres algorithmes. **Remarque :**  Cette fonction est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
 |[make_move_iterator](../standard-library/iterator-functions.md#make_move_iterator)|Retourne un itérateur de déplacement contenant l'itérateur fourni en tant qu'itérateur de base stocké.|
-|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Crée un [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) qui peut être utilisé par d’autres algorithmes. **Remarque :** Cette fonction est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
+|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Crée un [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) qui peut être utilisé par d’autres algorithmes. **Remarque :**  Cette fonction est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
 |[next](../standard-library/iterator-functions.md#next)|Itère un nombre de fois donné et retourne la nouvelle position de l'itérateur.|
 |[prev](../standard-library/iterator-functions.md#prev)|Itère en sens inverse un nombre de fois donné et retourne la nouvelle position de l'itérateur.|
 
@@ -80,7 +80,7 @@ Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ stan
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments dans un conteneur de type `Container`, auquel elle accède via l’élément protégé `pointer` objet qu’elle stocke appelé conteneur.|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour une `iterator_category` fonction qui représente un itérateur bidirectionnel.|
-|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Classe qui accède à un tableau en utilisant un itérateur vérifié d'accès aléatoire. **Remarque :** Cette classe est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
+|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Classe qui accède à un tableau en utilisant un itérateur vérifié d'accès aléatoire. **Remarque :**  Cette classe est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
 |[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour une `iterator_category` fonction qui représente un itérateur vers l’avant.|
 |[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|Cette classe de modèle décrit un objet itérateur de sortie. Elle insère des éléments dans un conteneur de type `Container`, auquel elle accède via l’élément protégé `pointer` objet qu’elle stocke appelé conteneur.|
 |[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour une `iterator_category` fonction qui représente un itérateur d’entrée.|
@@ -95,7 +95,7 @@ Visual Studio ajoute des extensions aux itérateurs de la bibliothèque C++ stan
 |[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour `iterator_category` (fonction) qui représente un itérateur de sortie.|
 |[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Une classe qui fournit un type de retour pour `iterator_category` fonction représentant un itérateur à accès aléatoire.|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|Cette classe de modèle décrit un objet qui se comporte comme un itérateur d'accès aléatoire, mais en sens inverse.|
-|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Classe qui accède à un tableau en utilisant un itérateur non vérifié d'accès aléatoire. **Remarque :** Cette classe est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
+|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Classe qui accède à un tableau en utilisant un itérateur non vérifié d'accès aléatoire. **Remarque :**  Cette classe est une extension Microsoft de la bibliothèque standard C++. Le code implémenté à l’aide de cette fonction ne peut pas être utilisé dans les environnements de build C++ standard qui ne prennent pas en charge cette extension Microsoft.|
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
 ms.openlocfilehash: d1ab314edeebedef4cff14cd5364a7ca16c74769
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216380"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilisation de plusieurs accesseurs dans un jeu de lignes
 

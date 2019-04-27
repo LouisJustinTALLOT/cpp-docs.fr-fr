@@ -11,15 +11,15 @@ helpviewer_keywords:
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195314"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportation à partir d'une DLL à l'aide de __declspec(dllexport)
 
-Microsoft a introduit **__export** dans la version du compilateur 16 bits de Visual C++ pour permettre au compilateur de générer automatiquement les noms d’exportation et de les placer dans un fichier .lib. Ce fichier .lib peut ensuite être utilisé comme un .lib statique pour relier à l’aide d’une DLL.
+Microsoft a introduit **__export** dans la version de compilateur 16 bits de Visual C++ pour permettre au compilateur de générer automatiquement les noms d’exportation et de les placer dans un fichier .lib. Ce fichier .lib peut ensuite être utilisé comme un .lib statique pour relier à l’aide d’une DLL.
 
 Dans les versions plus récentes du compilateur, vous pouvez exporter des données, des fonctions, des classes ou des fonctions membres de classe à partir d’une DLL à l’aide de la **__declspec (dllexport)** mot clé. **__declspec (dllexport)** ajoute la directive d’exportation au fichier objet, donc vous n’avez pas besoin d’utiliser un fichier .def.
 
@@ -68,7 +68,7 @@ En tant que référence, parcourez le fichier d’en-tête Winbase.h Win32. Il c
 
 - [Déterminer la méthode d’exportation à utiliser](determining-which-exporting-method-to-use.md)
 
-- [Importer dans une application à l’aide de __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une application à l'aide de __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)
 
@@ -76,7 +76,7 @@ En tant que référence, parcourez le fichier d’en-tête Winbase.h Win32. Il c
 
 - [Le mot clé __declspec](../cpp/declspec.md)
 
-- [L’importation et exportation de fonctions inline](importing-and-exporting-inline-functions.md)
+- [Importation et exportation de fonctions inline](importing-and-exporting-inline-functions.md)
 
 - [Importations mutuelles](mutual-imports.md)
 

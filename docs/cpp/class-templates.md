@@ -7,11 +7,11 @@ helpviewer_keywords:
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
 ms.openlocfilehash: 1bf384967af9d6d639e11df882751bbdaf1b0aa6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188393"
 ---
 # <a name="class-templates"></a>Modèles de classe
 
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-Notez que comme avec n’importe quelle fonction membre de classe de modèle, la définition de la fonction membre de constructeur de la classe inclut deux fois la liste d’arguments template.
+Notez que comme avec n'importe quelle fonction membre de classe de modèle, la définition de la fonction membre de constructeur de la classe inclut deux fois la liste d'arguments template.
 
 Les fonctions membres peuvent elles-mêmes être des modèles de fonction, spécifiant des paramètres supplémentaires, comme dans l'exemple suivant.
 

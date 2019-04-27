@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
 ms.openlocfilehash: 95a2e4f2a1f2e3344936af33fb2258b496b1be93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218696"
 ---
 # <a name="cmfctaskspanetask-class"></a>Cmfctaskspanetask, classe
 
@@ -64,7 +64,7 @@ class CMFCTasksPaneTask : public CObject
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Détermine si la fenêtre de la tâche est automatiquement détruite.|
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Détermine si le framework Dessine une étiquette de la tâche en gras.|
@@ -92,7 +92,7 @@ L’illustration suivante montre un groupe de tâches contenant trois tâches :
 
 [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxTasksPane.h
 

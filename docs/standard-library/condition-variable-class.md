@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212378"
 ---
 # <a name="conditionvariable-class"></a>condition_variable, classe
 
@@ -52,7 +52,7 @@ class condition_variable;
 |[native_handle](#native_handle)|Retourne le type spécifique de l’implémentation qui représente le descripteur condition_variable.|
 |[notify_all](#notify_all)|Débloque tous les threads qui attendent l’objet `condition_variable`.|
 |[notify_one](#notify_one)|Débloque un des threads qui attendent l’objet `condition_variable`.|
-|[attente](#wait)|Bloque un thread.|
+|[wait](#wait)|Bloque un thread.|
 |[wait_for](#wait_for)|Bloque un thread et définit un intervalle de temps après lequel le thread est débloqué.|
 |[wait_until](#wait_until)|Bloque un thread et définit un point dans le temps maximal auquel le thread est débloqué.|
 

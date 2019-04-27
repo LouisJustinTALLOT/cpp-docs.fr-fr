@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
 ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216491"
 ---
 # <a name="lambda-expressions-in-c"></a>Expressions lambda en C++
 
@@ -21,7 +21,7 @@ Dans C ++ 11 et versions ultérieures, une expression lambda, souvent appelé un
 
 - [Expressions lambda et les objets de fonction](lambda-expression-syntax.md)
 - [Utilisation des expressions lambda](examples-of-lambda-expressions.md)
-- [expressions lambda de constexpr](lambda-expressions-constexpr.md)
+- [constexpr lambda expressions](lambda-expressions-constexpr.md)
 
 ## <a name="parts-of-a-lambda-expression"></a>Éléments d’une expression lambda
 
@@ -116,7 +116,7 @@ Quand vous utilisez une clause de capture, nous vous conseillons de garder les p
 
 ### <a name="generalized-capture-c-14"></a>Capture généralisée (C++14)
 
-En C++14, vous pouvez introduire et initialiser des variables dans la clause de capture, sans qu'il ne soit nécessaire que ces variables existent dans la portée englobante de la fonction lambda. L'initialisation peut être exprimée comme n'importe quelle expression arbitraire ; le type de la nouvelle variable est déduit du type produit par l'expression. L'un des avantages de cette fonctionnalité est que, en C++14, vous pouvez capturer des variables move-only (par exemple, std::unique_ptr) dans la portée environnante et les utiliser dans une expression lambda.
+En C++14, vous pouvez introduire et initialiser des variables dans la clause de capture, sans qu'il ne soit nécessaire que ces variables existent dans la portée englobante de la fonction lambda. L'initialisation peut être exprimée comme n'importe quelle expression arbitraire ; le type de la nouvelle variable est déduit du type produit par l'expression. L’un des avantages de cette fonctionnalité est que, en C++14, vous pouvez capturer des variables move-only (par exemple, std::unique_ptr) dans la portée environnante et les utiliser dans une expression lambda.
 
 ```cpp
 pNums = make_unique<vector<int>>(nums);
@@ -220,9 +220,9 @@ int main()
 0
 ```
 
-La variable `n` étant capturée par valeur, sa valeur reste `0` après l’appel à l’expression lambda. Le **mutable** spécification permet `n` à modifier dans l’expression lambda.
+La variable `n` étant capturée par valeur, sa valeur reste `0` après l'appel à l'expression lambda. Le **mutable** spécification permet `n` à modifier dans l’expression lambda.
 
-Bien qu’une expression lambda ne puisse capturer que les variables qui ont une durée de stockage automatique, vous pouvez utiliser les variables qui ont une durée de stockage statique dans le corps d’une expression lambda. L'exemple suivant utilise la fonction `generate` et une expression lambda pour assigner une valeur à chaque élément dans un objet `vector`. L’expression lambda modifie la variable statique pour générer la valeur de l’élément suivant.
+Bien qu’une expression lambda ne puisse capturer que les variables qui ont une durée de stockage automatique, vous pouvez utiliser les variables qui ont une durée de stockage statique dans le corps d’une expression lambda. L'exemple suivant utilise la fonction `generate` et une expression lambda pour assigner une valeur à chaque élément dans un objet `vector`. L'expression lambda modifie la variable statique pour générer la valeur de l'élément suivant.
 
 ```cpp
 void fillVector(vector<int>& v)
@@ -240,7 +240,7 @@ void fillVector(vector<int>& v)
 
 Pour plus d’informations, consultez [générer](../standard-library/algorithm-functions.md#generate).
 
-L’exemple de code suivant utilise la fonction de l’exemple précédent et ajoute un exemple d’une expression lambda qui utilise l’algorithme de la bibliothèque Standard C++ `generate_n`. Cette expression lambda affecte un élément d’un objet `vector` à la somme des deux éléments précédents. Le **mutable** mot clé est utilisé afin que le corps de l’expression lambda puisse modifier ses copies des variables externes `x` et `y`, que l’expression lambda capture par valeur. Étant donné que l’expression lambda capture les variables `x` et `y` d’origine par valeur, leurs valeurs restent égales à `1` après l’exécution de l’expression.
+L’exemple de code suivant utilise la fonction de l’exemple précédent et ajoute un exemple d’une expression lambda qui utilise l’algorithme de la bibliothèque Standard C++ `generate_n`. Cette expression lambda affecte un élément d’un objet `vector` à la somme des deux éléments précédents. Le **mutable** mot clé est utilisé afin que le corps de l’expression lambda puisse modifier ses copies des variables externes `x` et `y`, que l’expression lambda capture par valeur. Étant donné que l'expression lambda capture les variables `x` et `y` d'origine par valeur, leurs valeurs restent égales à `1` après l'exécution de l'expression.
 
 ```cpp
 // compile with: /W4 /EHsc

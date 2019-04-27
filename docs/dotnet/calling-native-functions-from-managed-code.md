@@ -10,11 +10,11 @@ helpviewer_keywords:
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
 ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209189"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Appel à des fonctions natives à partir de code managé
 

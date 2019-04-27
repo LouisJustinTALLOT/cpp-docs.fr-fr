@@ -30,11 +30,11 @@ helpviewer_keywords:
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
 ms.openlocfilehash: df0abdd644027f9bab8cd177dfd4d0af4c98df35
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188543"
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 
@@ -72,7 +72,7 @@ Le **wctomb** fonction convertit son *wchar* l’argument de caractère multioct
 
 **wctomb** valide ses paramètres. Si *mbchar* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne -1.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

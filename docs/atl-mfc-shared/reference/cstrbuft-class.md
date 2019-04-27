@@ -14,11 +14,11 @@ helpviewer_keywords:
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
 ms.openlocfilehash: 81c3b429089eab3ba95c178e3fc7cf2bf55783a2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223491"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT Class
 
@@ -73,7 +73,7 @@ Le type de caractère de la `CStrBufT` classe. Il peut s'agir d'une des valeurs 
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CStrBufT::AUTO_LENGTH](#auto_length)|Déterminer automatiquement la nouvelle longueur de la chaîne de version.|
 |[CStrBufT::SET_LENGTH](#set_length)|Définir la longueur de l’objet de chaîne au moment de GetBuffer|
@@ -84,7 +84,7 @@ Cette classe est utilisée comme une classe wrapper pour remplacer les appels à
 
 Conçu principalement comme une classe d’assistance, `CStrBufT` offre un moyen pratique pour un développeur travailler avec la mémoire tampon de caractères d’un objet string sans vous soucier de procédure ou quand appeler `ReleaseBuffer`. Ceci est possible car l’objet de wrapper est hors de portée naturellement dans le cas d’une exception ou de plusieurs chemins de code existant ; à l’origine de son destructeur libérer la ressource de chaîne.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsimpstr.h
 

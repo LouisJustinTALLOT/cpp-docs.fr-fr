@@ -5,11 +5,11 @@ author: mikeblome
 ms.topic: tutorial
 ms.date: 03/05/2019
 ms.openlocfilehash: deb2c91d6d09d8945e5eb57a7ac742c5b1705e83
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196360"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutoriel : Créer des projets multiplateformes C++ dans Visual Studio 
 

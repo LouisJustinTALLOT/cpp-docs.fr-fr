@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
 ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210519"
 ---
 # <a name="proto"></a>PROTO
 
@@ -23,7 +23,7 @@ Prototypes d’une fonction ou procédure. Vous pouvez appeler la fonction proto
 
 ### <a name="parameters"></a>Paramètres
 
-*Étiquette*<br/>
+*label*<br/>
 Le nom de la fonction prototypée.
 
 *distance*<br/>
@@ -36,10 +36,10 @@ Le nom de la fonction prototypée.
 
 - modèles de 16 bits : **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
 
-*Paramètre*<br/>
+*parameter*<br/>
 Le nom facultatif d’un paramètre de fonction.
 
-*Balise*<br/>
+*tag*<br/>
 Le type d’un paramètre de fonction.
 
 Le *paramètre* et *balise* paramètres peuvent apparaître plusieurs fois, une fois pour chaque argument passé.

@@ -50,11 +50,11 @@ helpviewer_keywords:
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
 ms.openlocfilehash: 8f022dec6c161814ade5c6be5aaccfcd239a4af4
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209853"
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -135,7 +135,7 @@ Le comportement de comparaison de **_mbsncmp** et **_mbsncmp_l** est affectée p
 |**_tccmp**|Mappe à la macro ou à la fonction inline|**_mbsncmp**|Mappe à la macro ou à la fonction inline|
 |**non applicable**|**non applicable**|**_mbsncmp_l**|**non applicable**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

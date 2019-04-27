@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2647
 ms.assetid: 1034589e-bc3e-41a6-831f-2a1a4b8a2500
 ms.openlocfilehash: ac69dbb4de23be05d375126947fe003ef75fb85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222783"
 ---
 # <a name="compiler-error-c2647"></a>Erreur du compilateur C2647
 

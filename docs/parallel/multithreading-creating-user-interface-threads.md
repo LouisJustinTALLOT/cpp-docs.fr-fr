@@ -12,11 +12,11 @@ helpviewer_keywords:
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
 ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212907"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading : Création de Threads d’Interface utilisateur MFC
 
@@ -51,9 +51,9 @@ MFC fournit deux versions de `AfxBeginThread` via la surcharge de paramètres :
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [Multithreading : Arrêt des Threads](multithreading-terminating-threads.md)
+- [Multithreading : Arrêt de threads](multithreading-terminating-threads.md)
 
-- [Multithreading : Création de Threads de travail](multithreading-creating-worker-threads.md)
+- [Multithreading : Création de threads de travail](multithreading-creating-worker-threads.md)
 
 - [Processus et Threads](/windows/desktop/ProcThread/processes-and-threads)
 

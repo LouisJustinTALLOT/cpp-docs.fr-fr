@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2626
 ms.assetid: 4c283ad0-251b-4571-bc18-468b9836746f
 ms.openlocfilehash: 434858991c23345e2a6c174c8f323000d42b9b6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222882"
 ---
 # <a name="compiler-error-c2626"></a>Erreur du compilateur C2626
 
@@ -33,7 +33,7 @@ int main() {
 }
 ```
 
-Pour résoudre ce problème, supprimez toutes les balises privées ou protégées :
+Pour résoudre ce problème, supprimez toutes les étiquettes privées ou protégées :
 
 ```
 // C2626b.cpp

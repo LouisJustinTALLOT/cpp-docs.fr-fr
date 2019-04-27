@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
 ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161625"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
 
@@ -95,14 +95,14 @@ Si vous essayez d’utiliser un **vecteur** type dans une valeur de retour publi
 
 |||
 |-|-|
-|Name|Description|
+|Nom|Description|
 |événement [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Se produit lorsque le Vector est modifié.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `Vector`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** collection.h
 

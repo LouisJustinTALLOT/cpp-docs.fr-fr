@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224140"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt;, fonctions
 
@@ -213,7 +213,7 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Paramètres
 
-*suite*<br/>
+*cont*<br/>
 Conteneur.
 
 *array*<br/>
@@ -308,7 +308,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Paramètres
 
-*suite*<br/>
+*cont*<br/>
 Conteneur ou initializer_list.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -341,7 +341,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Paramètres
 
-*suite*<br/>
+*cont*<br/>
 Conteneur ou initializer_list.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -454,7 +454,7 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Paramètres
 
-*suite*<br/>
+*cont*<br/>
 Conteneur.
 
 *array*<br/>
@@ -558,7 +558,7 @@ inserter(
 *_Cont*<br/>
 Conteneur auquel de nouveaux éléments doivent être ajoutés.
 
-*_WHERE*<br/>
+*_Where*<br/>
 Itérateur localisant le point d’insertion.
 
 ### <a name="remarks"></a>Notes
@@ -630,7 +630,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR*<br/>
+*Ptr*<br/>
 Pointeur vers le tableau de destination.
 
 *Taille*<br/>
@@ -740,7 +740,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR*<br/>
+*Ptr*<br/>
 Pointeur vers le tableau de destination.
 
 ### <a name="return-value"></a>Valeur de retour

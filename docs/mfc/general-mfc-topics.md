@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
 ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219728"
 ---
 # <a name="general-mfc-topics"></a>Rubriques MFC générales
 
@@ -33,7 +33,7 @@ L'infrastructure MFC est une approche puissante qui vous permet de vous servir d
 
 [Génération à partir du Framework](../mfc/building-on-the-framework.md)
 
-[CWinApp : La classe d’Application](../mfc/cwinapp-the-application-class.md)
+[CWinApp : Classe d’application](../mfc/cwinapp-the-application-class.md)
 
 [Modèles de document et le processus de création de Document/Vue](../mfc/document-templates-and-the-document-view-creation-process.md)
 

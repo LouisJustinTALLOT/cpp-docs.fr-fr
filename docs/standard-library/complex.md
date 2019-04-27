@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212090"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -40,11 +40,11 @@ L'ensemble de nombres complexes avec les opérations d'addition complexe et de m
 
 - L’inverse additif d’un nombre complexe (*un*, *b*) est (-*un*, -*b*) et l’inverse multiplicatif pour tous les nombres complexes à l’exception (0, 0) est
 
-   (*un*/ (*un*<sup>2</sup> + *b*<sup>2</sup>), -*b*/ (*un*<sup>2</sup> + *b*<sup>2</sup>))
+   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
 En représentant un nombre complexe *z* = (*un*, *b*) sous la forme *z* = *un*  +  *bi*, où *je*<sup>2</sup> = -1, les règles pour l’algèbre de l’ensemble de nombres réels peut être appliquée à l’ensemble de nombres complexes et à leurs composants. Exemple :
 
-   (1 + 2*je*) \* (2 + 3*je*) = 1 \* (2 + 3*je*) + 2*je* \* (2 + 3*i*) = (2 + 3*je*) + (4*je* + 6*je*<sup>2</sup>) = (2-6) + (3 + 4)*je* = -4 + 7*je*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
 
 Le système des nombres complexes est un domaine, mais il n'est pas un domaine ordonné. Il n’existe aucun classement de nombres complexes qu’il existe pour le champ de nombres réels et ses sous-ensembles, donc les inégalités ne peuvent pas être appliquées aux nombres complexes, tels qu’ils sont en nombres réels.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
 ms.openlocfilehash: 83a1089ecaaaa9bd0dd1d928cd3d1869e5017a4a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186863"
 ---
 # <a name="ole-background-implementation-strategies"></a>Arrière-plan OLE : Implementation Strategies
 
@@ -38,6 +38,6 @@ Une fois que vous avez choisi une stratégie, vous devez lire le [conteneurs](..
 ## <a name="see-also"></a>Voir aussi
 
 [Arrière-plan OLE](../mfc/ole-background.md)<br/>
-[Conteneurs : Implémentation d’un conteneur](../mfc/containers-implementing-a-container.md)<br/>
-[serveurs : Implémentation d’un serveur](../mfc/servers-implementing-a-server.md)<br/>
+[Conteneurs : Implémentation d’un conteneur](../mfc/containers-implementing-a-container.md)<br/>
+[Serveurs : Implémentation d’un serveur](../mfc/servers-implementing-a-server.md)<br/>
 [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md)

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
 ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181988"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject, classe
 
@@ -96,7 +96,7 @@ Pour plus d’informations sur `CGdiObject`, consultez [objets graphiques](../..
 
 `CGdiObject`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 

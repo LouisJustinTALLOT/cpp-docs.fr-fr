@@ -7,11 +7,11 @@ helpviewer_keywords:
 - R6024
 ms.assetid: 0fb11c0f-9b81-4cab-81bd-4785742946a5
 ms.openlocfilehash: 89b99a93512603eaf2273a6ff3f434f1ad3b3bb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62214120"
 ---
 # <a name="c-runtime-error-r6024"></a>Erreur Runtime C R6024
 

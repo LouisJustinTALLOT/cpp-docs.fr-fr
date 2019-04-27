@@ -96,11 +96,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
 ms.openlocfilehash: 3cfd4e97af8b5abf163ce88eb81b438ef4737ed5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222895"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 
@@ -539,7 +539,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> hash_set::Count (STL/CLR)
+## <a name="count"></a> hash_set::count (STL/CLR)
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -1254,7 +1254,7 @@ Fonction pour les clés de mappage aux compartiments de hachage.
 *last*<br/>
 Fin de la plage à insérer.
 
-*Pred*<br/>
+*pred*<br/>
 Classement de prédicat pour la séquence contrôlée.
 
 *right*<br/>
@@ -1520,7 +1520,7 @@ Fin de la plage à insérer.
 *right*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*val*<br/>
 Valeur de clé à insérer.
 
 *where*<br/>
@@ -2120,7 +2120,7 @@ int main()
     }
 ```
 
-## <a name="op"></a> hash_set::operator = (STL/CLR)
+## <a name="op"></a> hash_set::operator= (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -2799,7 +2799,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> hash_set::Value_type (STL/CLR)
+## <a name="value_type"></a> hash_set::value_type (STL/CLR)
 
 Type d’un élément.
 

@@ -13,18 +13,17 @@ helpviewer_keywords:
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
 ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62200075"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problèmes courants de migration vers Visual C++ 64 bits
 
 Quand vous utilisez Visual C++ pour créer des applications destinées à s'exécuter sur un système d'exploitation Windows 64 bits, tenez compte des points suivants :
 
-- 
-  `int` et `long` sont des valeurs 32 bits sur les systèmes d'exploitation Windows 64 bits. Pour les programmes que vous prévoyez de compiler pour des plateformes 64 bits, veillez à ne pas assigner de pointeurs à des variables 32 bits. Les pointeurs sont des valeurs 64 bits sur les plateformes 64 bits et vous tronquerez la valeur d'un pointeur si vous l'assignez à une variable 32 bits.
+- `int` et `long` sont des valeurs 32 bits sur les systèmes d'exploitation Windows 64 bits. Pour les programmes que vous prévoyez de compiler pour des plateformes 64 bits, veillez à ne pas assigner de pointeurs à des variables 32 bits. Les pointeurs sont des valeurs 64 bits sur les plateformes 64 bits et vous tronquerez la valeur d'un pointeur si vous l'assignez à une variable 32 bits.
 
 - `size_t`, `time_t`, et `ptrdiff_t` sont des valeurs 64 bits sur les systèmes d’exploitation Windows 64 bits.
 

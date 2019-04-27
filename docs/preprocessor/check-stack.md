@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
 ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212397"
 ---
 # <a name="checkstack"></a>check_stack
 Indique au compilateur de désactiver les tests de pile si `off` (ou `-`) est spécifié, ou pour activer les tests de pile si `on` (ou `+`) est spécifié.

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
 ms.openlocfilehash: 28b3e351030ee83693c0fec5568aacf9b4b77c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62204359"
 ---
 # <a name="dosseg"></a>.DOSSEG
 
-Trie les segments conformément à la convention de segment MS-DOS : CODE tout d’abord, puis les segments n’est pas dans DGROUP et segmente ensuite dans DGROUP.
+Les segments conformément à la convention de segment MS-DOS des commandes : CODE first, puis DGROUP de segments et puis segments dans DGROUP.
 
 ## <a name="syntax"></a>Syntaxe
 

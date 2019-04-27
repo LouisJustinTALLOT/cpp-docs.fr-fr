@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
 ms.openlocfilehash: 1e2e7235dd924467d9d5e0613a704fedf8340ae4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197266"
 ---
 # <a name="property-map-macros"></a>Macros de mappage de propriété
 
@@ -31,7 +31,7 @@ Ces macros définissent les mappages des propriétés et des entrées.
 |[PROP_PAGE](#prop_page)|Insère une page de propriétés CLSID dans le mappage de propriété.|
 |[END_PROP_MAP](#end_prop_map)|Marque la fin de la table de propriétés ATL.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
 ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212825"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading : Création de Threads de travail dans MFC
 
@@ -92,7 +92,7 @@ AfxBeginThread(MyThreadProc, pNewObject);
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [Multithreading : Création de Threads d’Interface utilisateur](multithreading-creating-user-interface-threads.md)
+- [Multithreading : Création de threads d’interface utilisateur](multithreading-creating-user-interface-threads.md)
 
 ## <a name="see-also"></a>Voir aussi
 
