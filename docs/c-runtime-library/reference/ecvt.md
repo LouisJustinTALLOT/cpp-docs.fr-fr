@@ -25,11 +25,11 @@ helpviewer_keywords:
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
 ms.openlocfilehash: 36c9cb2e8cd9eb4dd67bb91e9e4dbd36d8d1fc8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288670"
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -48,7 +48,7 @@ char *_ecvt(
 
 ### <a name="parameters"></a>Paramètres
 
-*valeur*<br/>
+*value*<br/>
 Nombre à convertir.
 
 *count*<br/>
@@ -78,7 +78,7 @@ La différence entre **_ecvt** et **_fcvt** est dans l’interprétation de la *
 
 Cette fonction valide ses paramètres. Si *dec* ou *connexion* est **NULL**, ou *nombre* est 0, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **NULL** est retourné.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

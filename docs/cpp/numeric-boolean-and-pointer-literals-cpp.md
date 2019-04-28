@@ -7,11 +7,11 @@ helpviewer_keywords:
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
 ms.openlocfilehash: f263e9a2ed357cdc80ec29fc5d1b6d58c9e093e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245100"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Littéraux numériques, booléen et pointeur (C++)
 
@@ -71,7 +71,7 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long
 ```
 
-**Séparateurs de chiffres**: vous pouvez utiliser le caractère guillemet unique (apostrophe) pour séparer les valeurs d’emplacement dans un nombre plus important pour les rendre plus facile à lire. Les séparateurs n'ont pas d'effet sur la compilation.
+**Séparateurs de chiffres**: Vous pouvez utiliser le caractère guillemet unique (apostrophe) pour séparer les valeurs d’emplacement dans un nombre plus important pour les rendre plus facile à lire. Les séparateurs n'ont pas d'effet sur la compilation.
 
 ```cpp
 long long i = 24'847'458'121
@@ -81,7 +81,7 @@ long long i = 24'847'458'121
 
 Les littéraux à virgule flottante spécifient des valeurs qui doivent avoir une partie fractionnaire. Ces valeurs contiennent des virgules décimales (**.**) et peuvent contenir des exposants.
 
-Les littéraux à virgule flottante ont une « mantisse », qui spécifie la valeur du nombre, un « exposant, » qui spécifie la grandeur du nombre, et un suffixe facultatif qui spécifie le type du littéral. La mantisse est spécifiée comme une séquence de chiffres suivis d'un point, suivie d'une séquence facultative de chiffres représentant la partie fractionnaire du nombre. Par exemple :
+Les littéraux à virgule flottante ont une « mantisse », qui spécifie la valeur du nombre, un « exposant, » qui spécifie la grandeur du nombre, et un suffixe facultatif qui spécifie le type du littéral. La mantisse est spécifiée comme une séquence de chiffres suivis d'un point, suivie d'une séquence facultative de chiffres représentant la partie fractionnaire du nombre. Exemple :
 
 ```cpp
 18.46

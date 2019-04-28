@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
 ms.openlocfilehash: 89007ea3eb7fd0aef28caadf439195b4090a05d8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237322"
 ---
 # <a name="cmfcribboncombobox-class"></a>Cmfcribboncombobox, classe
 
@@ -61,7 +61,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 
 ### <a name="constructors"></a>Constructeurs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Construit un objet CMFCRibbonComboBox.|
 
@@ -108,7 +108,7 @@ L’exemple suivant montre comment construire un objet de la `CMFCRibbonComboBox
 
 [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxribboncombobox.h
 

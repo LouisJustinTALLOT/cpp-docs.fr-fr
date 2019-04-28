@@ -26,11 +26,11 @@ helpviewer_keywords:
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
 ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238472"
 ---
 # <a name="multipage-documents"></a>Documents multipages
 
@@ -56,7 +56,7 @@ Le [CView](../mfc/reference/cview-class.md) classe définit plusieurs fonctions 
 
 ### <a name="cviews-overridable-functions-for-printing"></a>Les fonctions substituables de CView pour l'impression
 
-|Name|Motif de remplacement|
+|Nom|Motif de remplacement|
 |----------|---------------------------|
 |[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|Pour insérer des valeurs dans la boîte de dialogue Imprimer, notamment la longueur du document|
 |[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|Pour allouer les polices ou d'autres ressources GDI|

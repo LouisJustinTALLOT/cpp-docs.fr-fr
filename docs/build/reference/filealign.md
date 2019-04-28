@@ -10,11 +10,11 @@ helpviewer_keywords:
 - FILEALIGN linker option
 ms.assetid: c1017a35-8d71-4ad9-934b-a3e3ea037fa0
 ms.openlocfilehash: 43cfdd6efb163013d05877e91c8375eb592295a9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271149"
 ---
 # <a name="filealign-align-sections-in-files"></a>/FILEALIGN (Aligner les sections dans les fichiers)
 
@@ -51,5 +51,5 @@ Utilisez [DUMPBIN](dumpbin-reference.md) pour afficher des informations sur les 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

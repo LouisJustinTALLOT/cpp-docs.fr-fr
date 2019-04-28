@@ -5,15 +5,15 @@ helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
 ms.openlocfilehash: 63a866786abc3b1eaa87a06492b43b1c9e354882
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262994"
 ---
 # <a name="html-basics"></a>Éléments fondamentaux relatifs à HTML
 
-La plupart des navigateurs ont la capacité d'examiner la source HTML des pages que vous consultez. Lorsque vous affichez la source, vous pouvez voir plusieurs balises HTML (HyperText Markup Language) entourées de crochets pointus (<>) et entrecoupées avec du texte.
+La plupart des navigateurs ont la capacité d'examiner la source HTML des pages que vous consultez. Lorsque vous affichez la source, vous verrez un nombre HTML (Hypertext markup) de balises de langue, entouré de crochets pointus (<>), entrecoupées avec du texte.
 
 Les étapes ci-dessous utilisent les balises HTML pour générer une page Web. Dans ces étapes, vous saisirez le texte en clair dans un fichier grâce au Bloc-notes, vous apporterez des modifications, enregistrerez le fichier, puis rechargerez la page du navigateur pour afficher vos modifications.
 
@@ -39,7 +39,7 @@ Les étapes ci-dessous utilisent les balises HTML pour générer une page Web. D
 
    Notez que les étiquettes sont affichées par paires et incluses entre crochets pointus. Les étiquettes ne respectent pas la casse, mais la mise en majuscules est souvent utilisée pour distinguer les étiquettes.
 
-   La balise \<HTML > démarre le document et la balise \</HTML > le termine. Les balises de fin (pas toujours requises) sont les mêmes que les balises de début à la seule différence qu'une barre oblique (/) précède la balise. Il ne doit y avoir aucun espace entre le crochet pointu (<) et le début de la balise.
+   La balise \<HTML > démarre le document et la balise \</HTML > le termine. Les balises de fin (pas toujours requises) sont les mêmes que les balises de début à la seule différence qu'une barre oblique (/) précède la balise. Ne doit contenir aucun espace entre le chevron (<) et le début de l’étiquette.
 
 1. Commutateur au bloc-notes et après le \</head > de ligne, tapez :
 

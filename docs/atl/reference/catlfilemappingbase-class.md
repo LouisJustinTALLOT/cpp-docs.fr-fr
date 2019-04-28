@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
 ms.openlocfilehash: d31bc72e485fbb15ed595a7c777c3685a00865c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260342"
 ---
 # <a name="catlfilemappingbase-class"></a>Catlfilemappingbase, classe
 
@@ -70,7 +70,7 @@ Mappage de fichier est l’association du contenu d’un fichier avec une partie
 
 Pour plus d’informations, consultez [fichier mappage](/windows/desktop/Memory/file-mapping) dans le SDK Windows.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlfile.h
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
 ms.openlocfilehash: 400c831eec1c570f26dfc010b4e4c61e7d21b1c4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266840"
 ---
 # <a name="try-except-statement"></a>try-except, instruction
 
@@ -41,11 +41,11 @@ Le **essayez-sauf** instruction est une extension Microsoft C et langages C++ qu
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\_\_Essayez**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;code protégé<br/>
 > }<br/>
-> **\_\_à l’exception** ( *expression* )<br/>
+> **\_\_except** ( *expression* )<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;code du Gestionnaire d’exception<br/>
 > }<br/>

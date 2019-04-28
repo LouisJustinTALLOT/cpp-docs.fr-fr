@@ -6,11 +6,11 @@ helpviewer_keywords:
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
 ms.openlocfilehash: 19fd21da09149e730aac9bd0fb2cde066043e030
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266801"
 ---
 # <a name="temporary-objects"></a>Objets temporaires
 
@@ -37,7 +37,7 @@ Dans certains cas, le compilateur a besoin de créer des objets temporaires. Ces
 
 - Pour stocker le résultat d'un cast en un type défini par l'utilisateur. Lorsqu'un objet d'un type donné est converti explicitement en un type défini par l'utilisateur, ce nouvel objet est construit sous la forme d'un objet temporaire.
 
-Les objets temporaires ont une durée de vie définie par leur point de conception et le point auquel ils sont détruits. Toute expression qui crée plusieurs objet temporaire finalement les détruit dans l'ordre inverse dans lequel ils ont été créés. Les points auxquels la destruction se produit sont présentés dans le tableau suivant.
+Les objets temporaires ont une durée de vie définie par leur point de conception et le point auquel ils sont détruits. Toute expression qui crée plusieurs objet temporaire finalement les détruit dans l’ordre inverse dans lequel ils ont été créés. Les points auxquels la destruction se produit sont présentés dans le tableau suivant.
 
 ### <a name="destruction-points-for-temporary-objects"></a>Points de destruction des objets temporaires
 

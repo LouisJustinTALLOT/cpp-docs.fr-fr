@@ -3,11 +3,11 @@ title: Parallélisation et vectorisation automatiques
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
 ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236697"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Parallélisation et vectorisation automatiques
 
@@ -15,7 +15,7 @@ Le paralléliseur automatique et le vectoriseur automatique sont conçus pour fo
 
 ## <a name="auto-parallelizer"></a>Paralléliseur automatique
 
-Le [/Qpar](../build/reference/qpar-auto-parallelizer.md) permet de commutateur de compilateur *parallélisation automatique* de boucles dans votre code. Quand vous spécifiez cet indicateur sans modifier votre code existant, le compilateur évalue le code pour trouver des boucles susceptibles de tirer un bénéfice de la parallélisation. Comme il peut trouver des boucles qui n'effectuent pas un gros travail et qui ne tireront donc pas de bénéfice de la parallélisation, et comme chaque parallélisation non nécessaire peut provoquer la génération d'un pool de threads, de la synchronisation supplémentaire ou d'autres traitements tendant à ralentir les performances au lieu de les améliorer, le compilateur a une approche prudente dans la sélection des boucles qu'il parallélise. Par exemple, considérez l'exemple suivant dans lequel la limite supérieure de la boucle n'est pas connue au moment de la compilation :
+Le [/Qpar](../build/reference/qpar-auto-parallelizer.md) permet de commutateur de compilateur *parallélisation automatique* de boucles dans votre code. Quand vous spécifiez cet indicateur sans modifier votre code existant, le compilateur évalue le code pour trouver des boucles susceptibles de tirer un bénéfice de la parallélisation. Comme il peut trouver des boucles qui n’effectuent pas un gros travail et qui ne tireront donc pas de bénéfice de la parallélisation, et comme chaque parallélisation non nécessaire peut provoquer la génération d’un pool de threads, de la synchronisation supplémentaire ou d’autres traitements tendant à ralentir les performances au lieu de les améliorer, le compilateur a une approche prudente dans la sélection des boucles qu’il parallélise. Par exemple, considérez l'exemple suivant dans lequel la limite supérieure de la boucle n'est pas connue au moment de la compilation :
 
 ```cpp
 void loop_test(int u) {
@@ -36,7 +36,7 @@ void loop_test(int u) {
 
 Comme avec toutes les [directives pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), la syntaxe alternative `__pragma(loop(hint_parallel(n)))` est également pris en charge.
 
-Il existe quelques boucles que le compilateur ne peut pas paralléliser même si vous voulez qu'il le fasse. Voici un exemple :
+Il existe quelques boucles que le compilateur ne peut pas paralléliser même si vous voulez qu'il le fasse. Voici un exemple :
 
 ```cpp
 #pragma loop(hint_parallel(8))

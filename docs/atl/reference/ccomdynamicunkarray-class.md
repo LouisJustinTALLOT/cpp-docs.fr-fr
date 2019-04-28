@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
 ms.openlocfilehash: 39f137f199db1d7519801c19375baea6cd08db93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259480"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Ccomdynamicunkarray, classe
 
@@ -69,7 +69,7 @@ Consultez [Ajout des Points de connexion à un objet](../../atl/adding-connectio
 > [!NOTE]
 > **Remarque** la classe `CComDynamicUnkArray` est utilisé par le **ajouter une classe** Assistant lors de la création d’un contrôle qui a des Points de connexion. Si vous souhaitez spécifier manuellement le nombre de Points de connexion, modifiez la référence à partir de `CComDynamicUnkArray` à `CComUnkArray<` *n* `>`, où *n* est le nombre de points de connexion Obligatoire.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

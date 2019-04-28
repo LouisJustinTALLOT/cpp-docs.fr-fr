@@ -16,11 +16,11 @@ helpviewer_keywords:
 - IPersistStorageImpl class
 ms.assetid: d652f02c-239c-47c7-9a50-3e9fc3014fff
 ms.openlocfilehash: 3239ed22e37ff694c9f399b05e765d63e97e99ee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276144"
 ---
 # <a name="ipersiststorageimpl-class"></a>Ipersiststorageimpl, classe
 
@@ -69,7 +69,7 @@ L’implémentation de cette classe nécessite classe `T` pour rendre une implé
 
 `IPersistStorageImpl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

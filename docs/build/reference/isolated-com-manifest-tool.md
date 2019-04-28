@@ -8,11 +8,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.ReplacementsFile
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
 ms.openlocfilehash: 2fda169ecf304373d27d699bf313bde124dc399f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269711"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM isolé, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de &lt;NomProjet&gt;
 
@@ -47,4 +47,4 @@ Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pa
 [Applications isolées](/windows/desktop/SbsCs/isolated-applications)<br>
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
 [Outil Manifeste, page de propriétés](manifest-tool-property-pages.md)<br>
-[Définir le compilateur C++ et générer des propriétés dans Visual Studio](../working-with-project-properties.md)
+[Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md)

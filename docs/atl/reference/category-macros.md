@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 9c74b1e8e9fc101ed9b3acd842d38dcdb9eb48f3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247395"
 ---
 # <a name="category-macros"></a>Macros de catégorie
 
@@ -25,7 +25,7 @@ Ces macros définissent les mappages de catégorie.
 |[IMPLEMENTED_CATEGORY](#implemented_category)|Indique les catégories qui sont implémentées par l’objet COM.|
 |[REQUIRED_CATEGORY](#required_category)|Indique les catégories qui sont requises du conteneur par l’objet COM.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

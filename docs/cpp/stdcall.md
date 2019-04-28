@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
 ms.openlocfilehash: b9efac6f729a78db945ff3bd9ab16ebe315b7a5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266957"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -23,11 +23,11 @@ Le **__stdcall** convention d’appel est utilisée pour appeler des fonctions A
 
 ## <a name="syntax"></a>Syntaxe
 
-> *type de retour*  **\_ \_stdcall** *nom de la fonction*[**(** *liste d’arguments* **)** ]
+> *return-type* **\_\_stdcall** *function-name*[**(** *argument-list* **)**]
 
 ## <a name="remarks"></a>Notes
 
-La liste suivante illustre l’implémentation de cette convention d’appel.
+La liste suivante illustre l'implémentation de cette convention d'appel.
 
 |Élément|Implémentation|
 |-------------|--------------------|

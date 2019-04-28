@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
 ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252632"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT, classe
 
@@ -123,7 +123,7 @@ Le type de caractère de la classe string. Il peut s'agir d'une des valeurs suiv
 
 `CSimpleStringT` est la classe de base pour les différentes classes de chaîne pris en charge par Visual C++. Il fournit la prise en charge minimale pour la gestion de mémoire de l’objet string et la manipulation de la mémoire tampon de base. Pour les objets de chaîne plus avancés, consultez [Classe CStringT](../../atl-mfc-shared/reference/cstringt-class.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsimpstr.h
 

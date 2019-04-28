@@ -1,6 +1,6 @@
 ---
 title: Erreurs du compilateur C3200 à C3299
-ms.date: 11/17/2017
+ms.date: 04/21/2019
 f1_keywords:
 - C3220
 - C3221
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - C3281
 - C3294
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-ms.openlocfilehash: e8a9c1db4cba837a5780e51f84035492cd0e9e76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 6965fcde5f7cc93464593e83f787d0a5838398dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281493"
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>Erreurs du compilateur C3200 à C3299
 
@@ -71,8 +71,8 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3217](compiler-error-c3217.md)|«*paramètre*' : paramètre générique ne peut pas être limité dans cette déclaration|
 |[Erreur du compilateur C3218](compiler-error-c3218.md)|«*type*' : type non autorisé comme contrainte|
 |[Erreur du compilateur C3219](compiler-error-c3219.md)|«*paramètre*' : paramètre générique ne peut pas être limité par plusieurs non-interfaces : '*type*»|
-|C3220 d’erreur du compilateur|«*interface*' : interface ne peut pas avoir de progid|
-|C3221 d’erreur du compilateur|«*membre*' : plusieurs 'default' et 'cas' attributs ne pas autorisés sur un membre|
+|Erreur du compilateur C3220|«*interface*' : interface ne peut pas avoir de progid|
+|Erreur du compilateur C3221|«*membre*' : plusieurs 'default' et 'cas' attributs ne pas autorisés sur un membre|
 |[Erreur du compilateur C3222](compiler-error-c3222.md)|«*fonction*' : ne peut pas déclarer des arguments par défaut pour les membres d’un type géré/WinRT ou des fonctions génériques|
 |[Erreur du compilateur C3223](compiler-error-c3223.md)|«*propriété*' : 'typeid' ne peut pas être appliqué à une propriété|
 |[Erreur du compilateur C3224](compiler-error-c3224.md)|«*type*' : prend d’aucune classe générique surchargée ne*nombre*' arguments de type générique|
@@ -96,25 +96,25 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3242](compiler-error-c3242.md)|«*fonction*' : vous pouvez substituer explicitement uniquement les fonctions virtuelles|
 |[Erreur du compilateur C3243](compiler-error-c3243.md)|aucune des fonctions de surcharge a été introduite par '*interface*'|
 |[Erreur du compilateur C3244](compiler-error-c3244.md)|«*membre*' : cette méthode a été introduite par '*interface1*'pas par'*interface2*»|
-|C3245 d’erreur du compilateur|«*fonction*' : utilisation d’un modèle de variable nécessite la liste d’arguments template|
+|Erreur du compilateur C3245|«*fonction*' : utilisation d’un modèle de variable nécessite la liste d’arguments template|
 |[Erreur du compilateur C3246](compiler-error-c3246.md)|'*classe*' : ne peut pas hériter de '*base_class*« comme il a été déclaré comme'*héritage*'|
 |[Erreur du compilateur C3247](compiler-error-c3247.md)|«*coclasse*' : une coclasse ne peut pas hériter d’une autre coclasse*base_class*»|
 |[Erreur du compilateur C3248](compiler-error-c3248.md)|Obsolète. '*fonction*' : fonction déclarée comme 'sealed' ne peut pas être substituée par '*fonction*'|
-|C3249 d’erreur du compilateur|instruction non conforme ou sous-expression pour la fonction 'constexpr'|
-|C3250 d’erreur du compilateur|«*déclaration*' : déclaration n’est pas autorisée dans le corps de la fonction 'constexpr'|
+|Erreur du compilateur C3249|instruction non conforme ou sous-expression pour la fonction 'constexpr'|
+|Erreur du compilateur C3250|«*déclaration*' : déclaration n’est pas autorisée dans le corps de la fonction 'constexpr'|
 |[Erreur du compilateur C3251](compiler-error-c3251.md)|impossible d'appeler une méthode de classe de base sur une instance de type valeur|
 |[Erreur du compilateur C3252](compiler-error-c3252.md)|«*fonction*' : ne peut pas réduire l’accessibilité d’une méthode virtuelle dans un type géré/WinRT|
 |[Erreur du compilateur C3253](compiler-error-c3253.md)|«*fonction*' : erreur de substitution explicite|
 |[Erreur du compilateur C3254](compiler-error-c3254.md)|'*fonction*' : classe contient une substitution explicite '*fonction*», mais ne dérive ne pas d’une interface qui contient la déclaration de fonction|
 |[Erreur du compilateur C3255](compiler-error-c3255.md)|«*type*' : Impossible d’allouer dynamiquement cet objet de type valeur sur un tas natif|
-|C3256 d’erreur du compilateur|«*fonction*' : utilisation de la variable ne produit pas une expression constante|
+|Erreur du compilateur C3256|«*fonction*' : utilisation de la variable ne produit pas une expression constante|
 |Erreur du compilateur C3257|Obsolète.|
-|Erreur C3258 n’erreur du compilateur|Obsolète.|
-|C3259 d’erreur du compilateur|les fonctions 'constexpr' peuvent avoir uniquement une instruction return|
-|C3260 d’erreur du compilateur|«*jeton*' : ignorer les jetons inattendus avant avant le corps d’expression lambda|
-|C3261 d’erreur du compilateur|une fonction qui retourne un tableau géré/WinRT doit avoir des crochets à la fin de la déclaration : '*identificateur*(...) []'|
+|Erreur du compilateur l’erreur C3258 n'|Obsolète.|
+|Erreur du compilateur C3259|les fonctions 'constexpr' peuvent avoir uniquement une instruction return|
+|Erreur du compilateur C3260|«*jeton*' : ignorer les jetons inattendus avant avant le corps d’expression lambda|
+|Erreur du compilateur C3261|une fonction qui retourne un tableau géré/WinRT doit avoir des crochets à la fin de la déclaration : '*identificateur*(...) []'|
 |[Erreur du compilateur C3262](compiler-error-c3262.md)|l’indexation de tableau non valide : *nombre* dimensions spécifiées pour *nombre*-dimensionnel '*type*'|
-|C3263 d’erreur du compilateur|Obsolète.|
+|Erreur du compilateur C3263|Obsolète.|
 |[Erreur du compilateur C3264](compiler-error-c3264.md)|«*identificateur*' : un constructeur de classe ne peut pas avoir un type de retour|
 |[Erreur du compilateur C3265](compiler-error-c3265.md)|Impossible de déclarer '*managed_construct*'in unmanaged'*unmanaged_construct*'|
 |[Erreur du compilateur C3266](compiler-error-c3266.md)|«*fonction*' : un constructeur de classe doit avoir une liste de paramètres 'void'|
@@ -132,7 +132,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3278](compiler-error-c3278.md)|appel de l’interface ou la méthode pure directe '*fonction*' échouera lors de l’exécution|
 |[Erreur du compilateur C3279](compiler-error-c3279.md)|les spécialisations partielles et explicites, ainsi que les instanciations explicites des modèles de classe déclarés dans l'espace de noms cli sont interdites|
 |[Erreur du compilateur C3280](compiler-error-c3280.md)|«*fonction*' : une fonction membre d’un type managé ne peut pas être compilée comme fonction non managée|
-|C3281 d’erreur du compilateur|«*fonction*' : opérateur global ne peut pas avoir de type de gérés/WinRT '*type*» dans la signature|
+|Erreur du compilateur C3281|«*fonction*' : opérateur global ne peut pas avoir de type de gérés/WinRT '*type*» dans la signature|
 |[Erreur du compilateur C3282](compiler-error-c3282.md)|listes de paramètres génériques peuvent apparaître uniquement sur les classes managées/WinRT, des structs ou des fonctions|
 |[Erreur du compilateur C3283](compiler-error-c3283.md)|«*interface*' : une interface ne peut pas avoir un constructeur d’instance|
 |[Erreur du compilateur C3284](compiler-error-c3284.md)|les contraintes pour le paramètre générique '*paramètre*'de la fonction'*déclarateur*'doit correspondre aux contraintes du paramètre générique'*paramètre*'de la fonction'*déclarateur*'|
@@ -151,3 +151,8 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3297](compiler-error-c3297.md)|« *contrainte2*' : ne peut pas utiliser ' *contrainte1*» en tant que contrainte, car ' *contrainte1*' a la contrainte de valeur|
 |[Erreur du compilateur C3298](compiler-error-c3298.md)|« *contrainte1*' : ne peut pas utiliser ' *contrainte2*» en tant que contrainte, car ' *contrainte2*' a la contrainte ref et ' *contrainte1*» a la contrainte de valeur|
 |[Erreur du compilateur C3299](compiler-error-c3299.md)|« *fonction*' : ne peut pas spécifier les contraintes, elles sont héritées de la méthode de base|
+
+## <a name="see-also"></a>Voir aussi
+
+[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erreurs du compilateur C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

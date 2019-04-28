@@ -3,11 +3,11 @@ title: Intégration CLR (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
 ms.openlocfilehash: df0c5e9cfaf9a4148c8d16b68ee04b4e9ce82e6a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257775"
 ---
 # <a name="clr-integration-ccx"></a>Intégration CLR (C++/CX)
 
@@ -71,4 +71,4 @@ IReference\<T > dans le Windows Runtime est mappée à Nullable\<T > dans .NET.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Interopérabilité avec d’autres langages](../cppcx/interoperating-with-other-languages-c-cx.md)
+[Interopérabilité avec d'autres langages](../cppcx/interoperating-with-other-languages-c-cx.md)

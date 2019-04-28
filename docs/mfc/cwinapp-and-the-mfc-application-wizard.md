@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
 ms.openlocfilehash: cb45c8ffae15628b0b99a1ebcd962d88d845f83b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241577"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp et l'Assistant Application MFC
 
@@ -33,6 +33,6 @@ Les implémentations standard et le mappage de message fourni conviennent à de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[CWinApp : La classe d’Application](../mfc/cwinapp-the-application-class.md)<br/>
+[CWinApp : Classe d’application](../mfc/cwinapp-the-application-class.md)<br/>
 [Fonctions membres CWinApp remplaçables](../mfc/overridable-cwinapp-member-functions.md)<br/>
 [Services CWinApp spéciaux](../mfc/special-cwinapp-services.md)

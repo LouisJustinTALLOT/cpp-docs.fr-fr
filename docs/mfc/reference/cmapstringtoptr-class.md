@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 1ac11143-eb0a-4511-a662-2df0d1d9005b
 ms.openlocfilehash: 80e4ec92376559933b4e5a6d271d772da02bca82
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252919"
 ---
 # <a name="cmapstringtoptr-class"></a>CMapStringToPtr, classe
 
@@ -105,7 +105,7 @@ Quand un `CMapStringToPtr` objet est supprimé, ou lorsque ses éléments sont s
 
 `CMapStringToPtr`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcoll.h
 

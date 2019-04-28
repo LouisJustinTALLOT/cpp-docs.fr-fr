@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
 ms.openlocfilehash: c57fda64689a80dfa548977e56b0416641bb4360
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277407"
 ---
 # <a name="cstringrefelementtraits-class"></a>Cstringrefelementtraits, classe
 
@@ -55,7 +55,7 @@ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl
 
 `CStringRefElementTraits`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcoll.h
 
@@ -69,10 +69,10 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Element1*<br/>
+*element1*<br/>
 La première chaîne d’élément.
 
-*élément2*<br/>
+*element2*<br/>
 Le deuxième élément de chaîne.
 
 ### <a name="return-value"></a>Valeur de retour

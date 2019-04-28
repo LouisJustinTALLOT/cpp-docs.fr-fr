@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
 ms.openlocfilehash: abfd3e585c843fcc4ed4ad273c8ed217eaaccb7d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245528"
 ---
 # <a name="cnonstatelessworker-class"></a>Cnonstatelessworker, classe
 
@@ -59,7 +59,7 @@ Cette classe est un thread de travail simple pour une utilisation avec [CThreadP
 
 L’avantage de cette classe est qu’il fournit un moyen pratique pour modifier le modèle d’état pour les classes de thread de travail existantes. `CThreadPool` Crée un travail unique pour la durée de vie du thread, donc si la classe de travail possède un état, il contiendra il entre plusieurs demandes. En encapsulant simplement cette classe dans le `CNonStatelessWorker` modèle avant de l’utiliser avec `CThreadPool`, la durée de vie du processus de travail et de l’état, sa valeur est est limité à une seule requête.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlutil.h
 

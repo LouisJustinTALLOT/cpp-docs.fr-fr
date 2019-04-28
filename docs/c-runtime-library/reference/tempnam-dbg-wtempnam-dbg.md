@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
 ms.openlocfilehash: 804c8ad1f17c6ee1df563cafc69ee7aef494d1cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258134"
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
 
@@ -63,9 +63,9 @@ wchar_t *_wtempnam_dbg(
 ### <a name="parameters"></a>Paramètres
 
 *dir*<br/>
-Chemin d'accès utilisé dans le nom de fichier en l'absence de variable d'environnement TMP ou si TMP n'est pas un répertoire valide.
+Chemin d’accès utilisé dans le nom de fichier en l’absence de variable d’environnement TMP ou si TMP n’est pas un répertoire valide.
 
-*Préfixe*<br/>
+*prefix*<br/>
 La chaîne qui sera ajouté aux noms retournés par **_tempnam**.
 
 *blockType*<br/>
@@ -96,7 +96,7 @@ Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de mani�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttempnam_dbg**|**_tempnam_dbg**|**_tempnam_dbg**|**_wtempnam_dbg**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

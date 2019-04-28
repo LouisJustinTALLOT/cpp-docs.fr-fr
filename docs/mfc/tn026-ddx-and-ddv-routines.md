@@ -1,5 +1,5 @@
 ---
-title: 'TN026 : routines DDX et DDV'
+title: 'TN026 : Routines DDX et DDV'
 ms.date: 06/28/2018
 f1_keywords:
 - DDX
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
 ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305864"
 ---
-# <a name="tn026-ddx-and-ddv-routines"></a>TN026 : routines DDX et DDV
+# <a name="tn026-ddx-and-ddv-routines"></a>TN026 : Routines DDX et DDV
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -87,9 +87,9 @@ Il existe trois autres intéressantes `CDataExchange` membres :
 
 - `m_pDlgWnd`: La fenêtre (généralement une boîte de dialogue) qui contient les contrôles. Cela vise à éviter des appelants des fonctions DDX_ et DDX_ globales de devoir passer 'this' à chaque routine DDX/DDV.
 
-- `PrepareCtrl`, et `PrepareEditCtrl`: prépare un contrôle de boîte de dialogue pour l’échange de données. Stocke le handle de ce contrôle pour définir le focus si une validation échoue. `PrepareCtrl` est utilisé pour les contrôles d’édition non et `PrepareEditCtrl` est utilisé pour les contrôles d’édition.
+- `PrepareCtrl`, et `PrepareEditCtrl`: Prépare un contrôle de boîte de dialogue pour l’échange de données. Stocke le handle de ce contrôle pour définir le focus si une validation échoue. `PrepareCtrl` est utilisé pour les contrôles d’édition non et `PrepareEditCtrl` est utilisé pour les contrôles d’édition.
 
-- `Fail`: Appelée après avoir ajouté une boîte de message d’alerte de l’utilisateur à l’erreur d’entrée. Cette routine restaurez le focus sur le dernier contrôle (le dernier appel à `PrepareCtrl` ou `PrepareEditCtrl`) et lève une exception. Cette fonction membre peut être appelée à partir de routines DDX_ et DDX_.
+- `Fail`: Appelé après avoir ajouté une boîte de message d’alerte de l’utilisateur à l’erreur d’entrée. Cette routine restaurez le focus sur le dernier contrôle (le dernier appel à `PrepareCtrl` ou `PrepareEditCtrl`) et lève une exception. Cette fonction membre peut être appelée à partir de routines DDX_ et DDX_.
 
 ## <a name="user-extensions"></a>Extensions de l’utilisateur
 
@@ -143,21 +143,21 @@ else
 
 ClassWizard prend en charge un sous-ensemble des personnalisations de DDX/DDV en vous permettant d’intégrer vos propres routines DDX_ et DDX_ dans l’interface utilisateur de ClassWizard. Cette opération d’est le seul coût avantageux si vous projetez de réutiliser des routines DDX et DDV particuliers dans un projet ou dans de nombreux projets.
 
-Pour ce faire, les entrées particulières sont effectuées dans DDX. CLW (les versions précédentes de Visual C++ stocké ces informations dans APSTUDIO. INI) ou dans votre projet. Fichier CLW. Les entrées spéciales peuvent être entré dans la section [général Info] de votre projet. Fichier CLW ou dans la section [ExtraDDX] de la DDX. Fichier CLW dans le répertoire de \bin C ++ Visual Studio\Visual \Program Files\Microsoft. Vous devrez peut-être créer le DDX. Fichier CLW s’il n’existe pas déjà. Si vous envisagez d’utiliser les routines DDX_/DDX_ personnalisés uniquement dans un projet donné, ajoutez les entrées à la section [général Info] de votre projet. CLW du fichier à la place. Si vous envisagez d’utiliser les routines sur de nombreux projets, ajoutez les entrées à la section [ExtraDDX] de DDX. CLW.
+Pour ce faire, les entrées particulières sont effectuées dans DDX. CLW (les versions précédentes de Visual C++ stocké ces informations dans APSTUDIO. INI) ou dans votre projet. Fichier CLW. Les entrées spéciales peuvent être entré dans la section [général Info] de votre projet. Fichier CLW ou dans la section [ExtraDDX] de la DDX. Fichier CLW dans le Files\Microsoft Visual Studio\Visual C++répertoire \bin. Vous devrez peut-être créer le DDX. Fichier CLW s’il n’existe pas déjà. Si vous envisagez d’utiliser les routines DDX_/DDX_ personnalisés uniquement dans un projet donné, ajoutez les entrées à la section [général Info] de votre projet. CLW du fichier à la place. Si vous envisagez d’utiliser les routines sur de nombreux projets, ajoutez les entrées à la section [ExtraDDX] de DDX. CLW.
 
 Le format général de ces entrées spéciales est :
 
-> ExtraDDXCount =*n*
+> ExtraDDXCount=*n*
 
 où *n* est le nombre de ExtraDDX ? lignes à suivre, sous la forme
 
-> ExtraDDX ? =*clés*; *vb-clés*; *invite*; *type*; *initialisation*; *DDX_Proc* [ ; *DDV_Proc*; *prompt1*; *arg1* [ ; *prompt2*; *fmt2*]]
+> ExtraDDX?=*keys*; *vb-keys*; *prompt*; *type*; *initValue*; *DDX_Proc* [; *DDV_Proc*; *prompt1*; *arg1* [; *prompt2*; *fmt2*]]
 
 où ? est un nombre 1 - *n* qui indique le type DDX dans la liste qui est défini.
 
 Chaque champ est délimitée par un caractère « ; ». Les champs et leur objectif sont décrits ci-dessous.
 
-- *Clés*
+- *keys*
 
   Une liste de caractères uniques indiquant pour les contrôles de boîte de dialogue ce type de variable est autorisé.
 
@@ -174,7 +174,7 @@ Chaque champ est délimitée par un caractère « ; ». Les champs et leur obj
   n | liste triée
   1 | Si l’insertion DDX doit être ajoutée à la tête de liste (par défaut est d’ajouter à la fin du) il est généralement utilisé pour les routines DDX que transférer la propriété « Contrôle ».
 
-- *clés de VB*
+- *vb-keys*
 
   Ce champ est utilisé uniquement dans le produit de 16 bits pour les contrôles VBX (les contrôles VBX ne sont pas pris en charge dans le produit de 32 bits)
 
@@ -186,17 +186,17 @@ Chaque champ est délimitée par un caractère « ; ». Les champs et leur obj
 
   Identificateur unique pour le type à émettre dans le fichier d’en-tête. Dans notre exemple ci-dessus avec DDX_Time, cela serait défini à CTime.
 
-- *clés de VB*
+- *vb-keys*
 
   Pas utilisé dans cette version et doit toujours être vide
 
-- *Initialisation*
+- *initValue*
 
   Valeur initiale : 0 ou vide. Si elle est vide, aucune ligne d’initialisation n’est écrit dans la section //{{AFX_DATA_INIT du fichier d’implémentation. Une entrée vide doit être utilisée pour les objets C++ (tel que `CString`, `CTime`, et ainsi de suite) qui possèdent des constructeurs qui garantissent l’initialisation correcte.
 
 - *DDX_Proc*
 
-  Identificateur unique pour la procédure DDX_. Le nom de la fonction C++ doit commencer par « DDX_ », mais n’incluez pas « DDX_ » dans le \<DDX_Proc > identificateur. Dans l’exemple ci-dessus, le \<DDX_Proc > identificateur serait le temps. Quand ClassWizard écrit l’appel de fonction pour le fichier d’implémentation dans les {{section AFX_DATA_MAP, il ajoute ce nom à DDX_, par conséquent arrivant à DDX_Time.
+  Identificateur unique pour la procédure DDX_. Le C++ nom de la fonction doit commencer par « DDX_ », mais n’incluez pas « DDX_ » dans le \<DDX_Proc > identificateur. Dans l’exemple ci-dessus, le \<DDX_Proc > identificateur serait le temps. Quand ClassWizard écrit l’appel de fonction pour le fichier d’implémentation dans les {{section AFX_DATA_MAP, il ajoute ce nom à DDX_, par conséquent arrivant à DDX_Time.
 
 - *commentaire*
 
@@ -208,7 +208,7 @@ Chaque champ est délimitée par un caractère « ; ». Les champs et leur obj
 
 - *arg*
 
-  Identificateur unique pour la procédure DDX_. Le nom de la fonction C++ doit commencer par « DDX_ », mais n’incluez pas « DDX_ » dans le \<DDX_Proc > identificateur.
+  Identificateur unique pour la procédure DDX_. Le C++ nom de la fonction doit commencer par « DDX_ », mais n’incluez pas « DDX_ » dans le \<DDX_Proc > identificateur.
 
   *arg* suivie de 1 ou 2 args DDV :
 
@@ -228,7 +228,7 @@ Chaque champ est délimitée par un caractère « ; ». Les champs et leur obj
       |U | long non signé (autrement dit, DWORD)|
       |f | float|
       |F | double|
-      |s | chaîne|
+      |s | string|
 
 ## <a name="see-also"></a>Voir aussi
 

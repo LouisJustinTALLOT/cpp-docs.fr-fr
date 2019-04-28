@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
 ms.openlocfilehash: 613440eceb71f0277f4cc5de2af89fe263772797
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260187"
 ---
 # <a name="ccomautocriticalsection-class"></a>Ccomautocriticalsection, classe
 
@@ -48,7 +48,7 @@ Le `Init` et `Term` méthodes à partir de [CComCriticalSection](../../atl/refer
 
 `CComAutoCriticalSection`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcore.h
 

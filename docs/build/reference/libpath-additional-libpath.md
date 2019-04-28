@@ -13,11 +13,11 @@ helpviewer_keywords:
 - library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
 ms.openlocfilehash: ab586c788825a854e7d3cb3760da6e4e5558de3a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269206"
 ---
 # <a name="libpath-additional-libpath"></a>/LIBPATH (Autre chemin de bibliothèque)
 
@@ -50,5 +50,5 @@ Utilisez l’option /LIBPATH pour substituer le chemin de bibliothèque d’envi
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

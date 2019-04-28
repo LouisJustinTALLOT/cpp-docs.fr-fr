@@ -24,11 +24,11 @@ helpviewer_keywords:
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
 ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252524"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan, classe
 
@@ -85,7 +85,7 @@ Le `CTime` et `CTimeSpan` classes ne sont pas conçues pour la dérivation. Éta
 
 Pour plus d’informations sur l’utilisation de `CTimeSpan`, consultez les articles [Date et heure](../../atl-mfc-shared/date-and-time.md), et [gestion du temps](../../c-runtime-library/time-management.md) dans le *Run-Time Library Reference*.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atltime.h
 

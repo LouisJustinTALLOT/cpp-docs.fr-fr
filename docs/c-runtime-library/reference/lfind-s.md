@@ -28,11 +28,11 @@ helpviewer_keywords:
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
 ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286425"
 ---
 # <a name="lfinds"></a>_lfind_s
 
@@ -59,7 +59,7 @@ Objet à rechercher.
 *base*<br/>
 Pointeur désignant la base de données de recherche.
 
-*Nombre*<br/>
+*number*<br/>
 Nombre d’éléments de tableau.
 
 *size*<br/>

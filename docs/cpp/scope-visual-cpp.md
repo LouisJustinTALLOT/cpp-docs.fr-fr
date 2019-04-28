@@ -11,11 +11,11 @@ helpviewer_keywords:
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
 ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267316"
 ---
 # <a name="scope-c"></a>Portée (C++)
 
@@ -39,7 +39,7 @@ Il existe six types de portée :
 
 ## <a name="hiding-names"></a>Masquage des noms
 
-Vous pouvez masquer un nom en le déclarant dans un bloc englobé. Dans l’illustration suivante, `i` est redéclaré dans le bloc interne, masquant ainsi la variable associée à `i` dans la portée de bloc externe.
+Vous pouvez masquer un nom en le déclarant dans un bloc englobé. Dans l'illustration suivante, `i` est redéclaré dans le bloc interne, masquant ainsi la variable associée à `i` dans la portée de bloc externe.
 
 ![Bloc&#45;masquage de nom d’étendue](../cpp/media/vc38sf1.png "bloc&#45;masquage de nom d’étendue") <br/>
 Portée de bloc et de masquage de nom
@@ -54,7 +54,7 @@ i = 0
 ```
 
 > [!NOTE]
-> L'argument `szWhat` est considéré comme étant dans la portée de la fonction. Par conséquent, il est traité comme s'il avait été déclaré dans le bloc le plus à l'extérieur de la fonction.
+> L’argument `szWhat` est considéré comme étant dans la portée de la fonction. Par conséquent, il est traité comme s'il avait été déclaré dans le bloc le plus à l'extérieur de la fonction.
 
 ## <a name="hiding-class-names"></a>Masquage des noms de classes
 
@@ -92,7 +92,7 @@ int main()
 ```
 
 > [!NOTE]
-> Le nom de classe en tout lieu (`Account`) est appelé, la classe de mot clé doit être utilisée pour le différencier du compte de variable de portée globale. Cette règle ne s’applique pas lorsque le nom de classe apparaît à gauche de l’opérateur de résolution de portée (::). Les noms à gauche de l’opérateur de résolution de portée sont toujours considérés comme des noms de classe.
+> Le nom de classe en tout lieu (`Account`) est appelé, la classe de mot clé doit être utilisée pour le différencier du compte de variable de portée globale. Cette règle ne s’applique pas lorsque le nom de classe apparaît à gauche de l’opérateur de résolution de portée (::). Les noms à gauche de l'opérateur de résolution de portée sont toujours considérés comme des noms de classe.
 
 L’exemple suivant montre comment déclarer un pointeur vers un objet de type `Account` à l’aide de la **classe** mot clé :
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
 ms.openlocfilehash: 791901ab3181ad2c8ac862a970980250693d20f7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62248224"
 ---
 # <a name="atl-property-page-wizard"></a>Assistant Page de propriétés ATL
 
@@ -68,4 +68,4 @@ Fournit des informations sur les fonctionnalités COM pour l’objet.
 
 [Options, Assistant Page de propriétés ATL](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [Chaînes, Assistant Page de propriétés ATL](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
-[Exemple : Implémentation d’une Page de propriétés](../../atl/example-implementing-a-property-page.md)
+[Exemple : Implémentation d’une page de propriétés](../../atl/example-implementing-a-property-page.md)

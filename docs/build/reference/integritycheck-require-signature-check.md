@@ -3,11 +3,11 @@ title: /INTEGRITYCHECK (Exiger la vérification de la signature)
 ms.date: 11/04/2016
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
 ms.openlocfilehash: 446ebe3afc06b8db8cc9f36b289c1e5c3ef5f117
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269750"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (Exiger la vérification de la signature)
 
@@ -37,7 +37,7 @@ Le **/INTEGRITYCHECK** groupes d’options, dans l’en-tête PE du fichier DLL 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)<br/>
 [Forcé l’intégrité signature de fichiers Portable Executable (PE)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
 [Procédure pas à pas de signature du Code en Mode noyau](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 ms.openlocfilehash: 57219ca79dfa46437a8b13d889bb5f0c5a5d6f37
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258986"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel, classe
 
@@ -63,7 +63,7 @@ S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 `CComSingleThreadModel` lui-même définit trois **typedef** noms. `ThreadModelNoCS` références `CComSingleThreadModel`. `AutoCriticalSection` et `CriticalSection` reference, classe [la classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md), qui fournit des méthodes vides associés à obtenir et de libérer de la propriété d’une section critique.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 

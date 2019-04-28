@@ -12,11 +12,11 @@ helpviewer_keywords:
 - calculations, date and time
 ms.assetid: e5c5d3d2-ce1d-409e-875c-98848434e716
 ms.openlocfilehash: 5990f6f5db0270c8d24ff35b5c9bbea5b24e6ed7
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236272"
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>Temps écoulé : Classes à usage général
 

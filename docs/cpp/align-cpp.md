@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
 ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258147"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -24,7 +24,7 @@ Utilisez `__declspec(align(#))` pour contrôler avec précision l'alignement des
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec (align (** *#* **))** *déclarateur*
+> **__declspec( align(** *#* **) )** *declarator*
 
 ## <a name="remarks"></a>Notes
 
@@ -98,7 +98,7 @@ struct CACHE_ALIGN S1 { // cache align all instances of S1
 struct S1 s1;   // s1 is 32-byte cache aligned
 ```
 
-Dans cet exemple, `sizeof(struct S2)` retourne 16, qui est exactement la somme des tailles membres, car il s'agit d'un multiple de la plus grande spécification d'alignement (un multiple de 8).
+Dans cet exemple, `sizeof(struct S2)` retourne 16, qui est exactement la somme des tailles membres, car il s’agit d’un multiple de la plus grande exigence d’alignement (un multiple de 8).
 
 ```cpp
 __declspec(align(8)) struct S2 {
@@ -244,4 +244,4 @@ Le décalage d'un objet est basé sur le décalage de l'objet précédent et du 
 
 [__declspec](../cpp/declspec.md)<br/>
 [Vue d’ensemble des conventions ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
-[x64 conventions des logiciels](../build/x64-software-conventions.md)
+[Conventions des logiciels x64](../build/x64-software-conventions.md)

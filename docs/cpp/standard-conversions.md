@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
 ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267277"
 ---
 # <a name="standard-conversions"></a>Conversions standard
 
@@ -77,7 +77,7 @@ Les promotions de type conservation-valeur et les promotions qui conservent l'en
 
    Ces opérateurs traitent les quantités signées et non signées différemment en effectuant une opération de décalage. Pour les quantités signées, le déplacement de la quantité vers la droite provoque la propagation du bit de signe dans les positions binaires libérées. Pour les quantités non signées, les positions binaires libérées sont vides.
 
-- Argument vers une fonction ou un opérande surchargé d’un opérateur surchargé qui dépend de l’entier non signé du type de l’opérande pour la correspondance d’argument. (Consultez [opérateurs surchargés](../cpp/operator-overloading.md) pour plus d’informations sur la définition des opérateurs surchargés.)
+- Argument vers une fonction ou un opérande surchargé d'un opérateur surchargé qui dépend de l'entier non signé du type de l'opérande pour la correspondance d'argument. (Consultez [opérateurs surchargés](../cpp/operator-overloading.md) pour plus d’informations sur la définition des opérateurs surchargés.)
 
 ## <a name="integral-conversions"></a>Conversions intégrales
 
@@ -85,7 +85,7 @@ Des conversions intégrales sont effectuées entre les types intégraux. Les typ
 
 **Signé en non signé**
 
-Les objets de types intégraux signés peuvent être convertis en types non signés correspondants. Lorsque ces conversions ont lieu, le modèle binaire réel ne change pas. Toutefois, l'interprétation des données change. Prenons le code suivant :
+Les objets de types intégraux signés peuvent être convertis en types non signés correspondants. Lorsque ces conversions ont lieu, le modèle binaire réel ne change pas. Toutefois, l’interprétation des données change. Prenons le code suivant :
 
 ```cpp
 #include <iostream>
@@ -279,7 +279,7 @@ Une expression qui entraîne une fonction qui retourne un type particulier est c
 
 - L’expression est utilisée en tant qu’opérande pour l’opérateur address-of (**&**).
 
-- L’expression est utilisée comme opérande de l’opérateur d’appel de fonction.
+- L'expression est utilisée comme opérande de l'opérateur d'appel de fonction.
 
 ## <a name="reference-conversions"></a>Conversions de références
 
@@ -303,11 +303,11 @@ Un pointeur vers un membre d'une classe de base peut être converti en un pointe
 
 - La classe dérivée n'hérite pratiquement pas de la classe de base.
 
-Lorsque l'opérande gauche est un pointeur vers membre, l'opérande droite doit être de type pointeur vers membre ou une expression constante qui correspond à 0. Cette assignation est valide uniquement dans les cas suivants :
+Lorsque l’opérande gauche est un pointeur vers membre, l’opérande droite doit être de type pointeur vers membre ou une expression constante qui correspond à 0. Cette assignation est valide uniquement dans les cas suivants :
 
-- L'opérande droite est un pointeur vers un membre de la même classe que l'opérande gauche.
+- L’opérande droite est un pointeur vers un membre de la même classe que l’opérande gauche.
 
-- L'opérande gauche est un pointeur vers un membre d'une classe dérivée de façon publique et non ambiguë de la classe de l'opérande droite.
+- L’opérande gauche est un pointeur vers un membre d’une classe dérivée de façon publique et non ambiguë de la classe de l’opérande droite.
 
 ## <a name="integral-constant-conversions"></a>Conversions de constantes intégrales
 

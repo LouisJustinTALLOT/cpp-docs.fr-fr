@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
 ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261258"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistant Consommateur OLEDB ATL
 
@@ -36,11 +36,11 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
 
    - **Connexion** onglet
 
-      Le contenu de cet onglet varie selon le fournisseur sélectionné. Bien qu’il existe de nombreux types de fournisseurs, cette section traite des connexions pour les deux plus courants : données SQL et ODBC. Les autres sont des variations similaires sur les champs décrits ici.
+      Le contenu de cet onglet varie selon le fournisseur sélectionné. Bien qu’il existe de nombreux types de fournisseurs, cette section traite des connexions pour les deux plus courantes : Données SQL et ODBC. Les autres sont des variations similaires sur les champs décrits ici.
 
       Pour les données SQL :
 
-      1. **Sélectionnez ou entrez un nom de serveur :** cliquez sur le menu de liste déroulante pour afficher tous les serveurs de données inscrites sur le réseau, puis sélectionnez un.
+      1. **Sélectionnez ou entrez un nom de serveur :** Cliquez sur le menu de liste déroulante pour afficher tous les serveurs de données inscrites sur le réseau, puis sélectionnez un.
 
       1. **Entrez les informations pour vous connecter au serveur :** Entrez un nom d’utilisateur et le mot de passe pour ouvrir une session le serveur de données.
 
@@ -53,21 +53,21 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
          > Si vous sélectionnez **utiliser un nom d’utilisateur spécifique et un mot de passe**, vous avez la possibilité d’enregistrer le mot de passe (à l’aide de la case à cocher « Autoriser l’enregistrement du mot de passe ») ; Toutefois, cette option n’est pas sécurisée. Il est recommandé de sélectionner **utilisez Windows NT la sécurité intégrée**; cette option est sécurisée, car il chiffre le mot de passe.
          > Il peut y avoir des situations dans lesquelles vous souhaitez sélectionner « Autoriser l’enregistrement du mot de passe ». Par exemple, si vous lancez une bibliothèque avec une solution de base de données privée, vous devez pas accéder directement à la base de données mais à la place utiliser une application de couche intermédiaire pour vérifier que l’utilisateur (via les schémas d’authentification que vous choisissez), puis limiter le tri des données disponible pour l’utilisateur.
 
-      1. **Sélectionnez la base de données sur le serveur :** cliquez sur le menu de liste déroulante pour afficher les inscrits toutes les bases de données sur le serveur de données, puis sélectionnez un.
+      1. **Sélectionnez la base de données sur le serveur :** Cliquez sur le menu de liste déroulante pour afficher les inscrits toutes les bases de données sur le serveur de données, puis sélectionnez un.
 
          \- ou -
 
-         **Attacher un fichier de base de données comme un nom de base de données :** spécifier un fichier à utiliser comme la base de données ; entrez le chemin d’accès explicite.
+         **Attacher un fichier de base de données comme un nom de base de données :** Spécifier un fichier à utiliser comme base de données ; Entrez le chemin d’accès explicite.
 
       Pour les données ODBC :
 
-      1. **Spécifiez la source de données :** vous pouvez utiliser un nom de source de données ou une chaîne de connexion.
+      1. **Spécifiez la source de données :** Vous pouvez utiliser un nom de source de données ou une chaîne de connexion.
 
-         **Nom de source de données utilisation :** cette liste déroulante affiche les sources de données inscrites sur votre ordinateur. Vous pouvez définir des sources de données à l’aide de l’administrateur de sources de données ODBC
+         **Utilisez le nom de source de données :** Cette liste déroulante affiche les sources de données inscrites sur votre ordinateur. Vous pouvez définir des sources de données à l’aide de l’administrateur de sources de données ODBC
 
          \- ou -
 
-         **Utiliser la chaîne de connexion :** Entrez une chaîne de connexion que vous avez déjà obtenu, ou cliquez sur le **Build** bouton ; le **sélectionner une Source de données** boîte de dialogue s’affiche. Sélectionnez une source de données de fichier ou de la machine et cliquez sur **OK**.
+         **Utiliser une chaîne de connexion :** Entrez une chaîne de connexion que vous avez déjà obtenu, ou cliquez sur le **Build** bouton ; le **sélectionner une Source de données** boîte de dialogue s’affiche. Sélectionnez une source de données de fichier ou de la machine et cliquez sur **OK**.
 
          > [!NOTE]
          > Vous pouvez obtenir une chaîne de connexion en affichant les propriétés d’une connexion existante dans **Explorateur de serveurs**, ou vous pouvez créer une connexion en double-cliquant sur **ajouter une connexion** dans **Server Explorer**.
@@ -80,9 +80,9 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
 
    - **Advanced** onglet
 
-      **Paramètres réseau :** spécifier le **au niveau d’emprunt d’identité** (le niveau d’emprunt d’identité que le serveur est autorisé à utiliser lors de l’emprunt d’identité du client ; correspond directement à des niveaux d’emprunt d’identité RPC) et  **Niveau de protection** (le niveau de protection des données envoyées entre le client et le serveur ; correspond directement à des niveaux de protection RPC).
+      **Paramètres de réseau :** Spécifiez le **au niveau d’emprunt d’identité** (le niveau d’emprunt d’identité que le serveur est autorisé à utiliser lors de l’emprunt d’identité du client ; correspond directement à des niveaux d’emprunt d’identité RPC) et **niveau de Protection** () le niveau de protection des données envoyées entre le client et le serveur ; correspond directement à des niveaux de protection RPC).
 
-      **Autre :** dans **Connect timeout**, spécifiez le nombre de secondes d’inactivité autorisée avant un délai d’expiration se produit. Dans **autorisations d’accès**, spécifiez les autorisations d’accès sur la connexion de données.
+      **Autres :** Dans **Connect timeout**, spécifiez le nombre de secondes d’inactivité autorisée avant un délai d’expiration se produit. Dans **autorisations d’accès**, spécifiez les autorisations d’accès sur la connexion de données.
 
       Pour plus d’informations sur les propriétés avancées d’initialisation, reportez-vous à la documentation fournie avec chaque fournisseur OLE DB.
 
@@ -169,7 +169,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
 
    Sélectionnez les cases à cocher pour spécifier les types de mises à jour pour être pris en charge dans le consommateur (la valeur par défaut est none). Chacun des éléments suivants définira [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) et les entrées appropriées pour [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) dans la jeu de propriétés carte.
 
-   - **Modification**
+   - **Changement**
 
       Spécifie que le consommateur prend en charge les mises à jour des données de ligne dans l’ensemble de lignes.
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
 ms.openlocfilehash: 50dc4505c1da8df9efc0c9d0028461ef49c0840e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246298"
 ---
 # <a name="ccomobjectnolock-class"></a>Ccomobjectnolock, classe
 
@@ -63,7 +63,7 @@ ATL utilise `CComObjectNoLock` en interne pour les fabriques de classes. En règ
 
 `CComObjectNoLock`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

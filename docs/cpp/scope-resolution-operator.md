@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
 ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267366"
 ---
 # <a name="scope-resolution-operator-"></a>Opérateur de résolution de portée : ::
 
@@ -36,7 +36,7 @@ enum struct :: identifier
 
 ## <a name="with-classes-and-namespaces"></a>Avec les classes et les espaces de noms
 
-L'exemple suivant montre comment l'opérateur de résolution de portée est utilisé avec les espaces de noms et les classes :
+L’exemple suivant montre comment l’opérateur de résolution de portée est utilisé avec les espaces de noms et les classes :
 
 ```cpp
 namespace NamespaceA{
@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-Vous pouvez utiliser l'opérateur de résolution de portée pour identifier un membre d'un espace de noms ou un espace de noms désignant l'espace de noms du membre dans une directive using. Dans l'exemple ci-dessous, vous pouvez utiliser `NamespaceC` pour qualifier `ClassB`, même si `ClassB` a été déclaré dans l'espace de noms `NamespaceB`, car `NamespaceB` a été désigné dans `NamespaceC` à l'aide d'une directive.
+Vous pouvez utiliser l’opérateur de résolution de portée pour identifier un membre d’un espace de noms ou un espace de noms désignant l’espace de noms du membre dans une directive using. Dans l'exemple ci-dessous, vous pouvez utiliser `NamespaceC` pour qualifier `ClassB`, même si `ClassB` a été déclaré dans l'espace de noms `NamespaceB`, car `NamespaceB` a été désigné dans `NamespaceC` à l'aide d'une directive.
 
 ```cpp
 namespace NamespaceB {

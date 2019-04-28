@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2780
 ms.assetid: 423793d8-a3b2-4f35-85f8-ae1d043e2b69
 ms.openlocfilehash: 9a427bbd79570a2646447d5326e034035306fac6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257450"
 ---
 # <a name="compiler-error-c2780"></a>Erreur du compilateur C2780
 
-’déclaration’ : N arguments attendus - M fournis
+'déclaration' : N arguments attendus - M fournis
 
 Un modèle de fonction a trop peu d’arguments ou trop d’arguments.
 

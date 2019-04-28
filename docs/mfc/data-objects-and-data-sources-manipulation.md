@@ -13,11 +13,11 @@ helpviewer_keywords:
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
 ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241547"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objets de données et Sources de données : Manipulation
 
@@ -37,7 +37,7 @@ Comment les données sont insérées dans une source de données varie selon que
 
 - Appelez `COleDataSource::CacheGlobalData` à plusieurs reprises pour chaque format de Presse-papiers dans lequel vous fournissez des données. Passer le format de Presse-papiers à utiliser, un handle vers la mémoire contenant les données et, éventuellement, un **FORMATETC** décrivant les données de structure.
 
-     ou
+     - ou -
 
 - Si vous souhaitez travailler directement avec **STGMEDIUM** structures, vous appelez `COleDataSource::CacheData` au lieu de `COleDataSource::CacheGlobalData` dans l’option ci-dessus.
 
@@ -47,7 +47,7 @@ Il s’agit d’une rubrique avancée.
 
 - Appelez `COleDataSource::DelayRenderData` à plusieurs reprises pour chaque format de Presse-papiers dans lequel vous fournissez des données. Passer le format de Presse-papiers à utiliser et, éventuellement, un **FORMATETC** décrivant les données de structure. Lorsque les données sont demandées, l’infrastructure appellera `COleDataSource::OnRenderData`, que vous devez substituer.
 
-     ou
+     - ou -
 
 - Si vous utilisez un `CFile` objet pour fournir les données, appelez `COleDataSource::DelayRenderFileData` au lieu de `COleDataSource::DelayRenderData` dans l’option précédente. Lorsque les données sont demandées, l’infrastructure appellera `COleDataSource::OnRenderFileData`, que vous devez substituer.
 

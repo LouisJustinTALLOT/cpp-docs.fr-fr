@@ -7,11 +7,11 @@ helpviewer_keywords:
 - atexit function
 ms.assetid: d28fda17-c3d4-4af6-ba44-f44886bbb237
 ms.openlocfilehash: 06baba59b5765f853f081b34d73be28a187730ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257996"
 ---
 # <a name="using-atexit"></a>Utilisation d'atexit
 
