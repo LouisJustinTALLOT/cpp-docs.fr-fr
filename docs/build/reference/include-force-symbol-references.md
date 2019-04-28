@@ -13,11 +13,11 @@ helpviewer_keywords:
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
 ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269868"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Forcer les références des symboles)
 
@@ -56,5 +56,5 @@ Spécification d’un symbole avec cette option substitue à la suppression de c
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

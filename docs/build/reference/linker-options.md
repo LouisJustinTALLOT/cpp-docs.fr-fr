@@ -10,11 +10,11 @@ helpviewer_keywords:
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
 ms.openlocfilehash: 7ff8ecd6a607aac59fca6d32fa2784e7e3e4268f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301758"
 ---
 # <a name="linker-options"></a>Options de l'éditeur de liens
 
@@ -137,4 +137,4 @@ Pour plus d’informations, consultez [Compiler-Controlled LINK Options](compile
 ## <a name="see-also"></a>Voir aussi
 
 [Référence de la génération C/C++](c-cpp-building-reference.md)<br/>
-[Référence de l’éditeur de liens MSVC](linking.md)
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)

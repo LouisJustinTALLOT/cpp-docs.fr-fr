@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
 ms.openlocfilehash: 617b7b4592c96625b44fbe5c2b93da971a423128
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258531"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap, classe
 
@@ -50,7 +50,7 @@ ATL utilise `CMessageMap` contenu de support de windows et le chaînage de carte
 
 Pour plus d’informations sur les tables des messages, consultez [tables des messages](../../atl/message-maps-atl.md) dans l’article « Classes de fenêtre ATL ».
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlwin.h
 

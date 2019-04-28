@@ -28,11 +28,11 @@ f1_keywords:
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
 ms.openlocfilehash: dcf1eca5b163c8553b43d747d53537ec424a793c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269187"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -97,7 +97,7 @@ Si *endptr* n’est pas **NULL**, un pointeur désignant le caractère qui a arr
 
 **strtold** attend *strSource* pour pointer vers une chaîne au format suivant :
 
-[*espace blanc*] [*connexion*] [*chiffres*] [. *chiffres*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*connexion* ]*chiffres*]
+[*whitespace*] [*sign*] [*digits*] [.*digits*] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]*digits*]
 
 Un *espace blanc* peut se composer d’espaces et tabulations, qui sont ignorés ; *connexion* est soit plus (**+**) ou moins (**-**) ; et *chiffres* représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**d**, **D**, **e** ou **E**) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
 
@@ -106,7 +106,7 @@ Un *espace blanc* peut se composer d’espaces et tabulations, qui sont ignorés
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**strtold**, **_strtold_l**|\<stdlib.h>|
-|**wcstold ne**, **_wcstold_l**|\<stdlib.h> ou \<wchar.h>|
+|**wcstold**, **_wcstold_l**|\<stdlib.h> ou \<wchar.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

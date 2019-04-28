@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
 ms.openlocfilehash: 35c12a58adc846e0db6d7ee23f19984acbcfa861
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276911"
 ---
 # <a name="cwin32heap-class"></a>Classe de CWin32Heap
 
@@ -77,7 +77,7 @@ Consultez l’exemple de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 `CWin32Heap`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlmem.h
 

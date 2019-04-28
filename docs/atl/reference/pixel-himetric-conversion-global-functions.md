@@ -6,11 +6,11 @@ f1_keywords:
 - atlwin/ATL::AtlPixelToHiMetric
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
 ms.openlocfilehash: 43a12985f259603a9b67f22f7a7891bf847c0b0f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276833"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Fonctions globales de Conversion pixel/HIMETRIC
 
@@ -46,7 +46,7 @@ extern void AtlHiMetricToPixel(
 
 [!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlwin.h
 
@@ -72,7 +72,7 @@ extern void AtlPixelToHiMetric(
 
 [!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlwin.h
 

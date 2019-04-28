@@ -34,11 +34,11 @@ helpviewer_keywords:
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
 ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285697"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -68,7 +68,7 @@ void _wmakepath(
 *path*<br/>
 Mémoire tampon du chemin d’accès complet.
 
-*Lecteur*<br/>
+*drive*<br/>
 Contient une lettre (A, B, etc.) correspondant au lecteur souhaité et un signe deux-points de fin facultatif. **_makepath** insère automatiquement le signe deux-points dans le chemin d’accès composite s’il est manquant. Si *lecteur* est **NULL** ou pointe vers une chaîne vide, aucune lettre de lecteur s’affiche dans le service composite *chemin d’accès* chaîne.
 
 *dir*<br/>
@@ -77,7 +77,7 @@ Contient le chemin d’accès des répertoires, sans l’indicateur de lecteur o
 *fname*<br/>
 Contient le nom de fichier de base sans les extensions du nom de fichier. Si *fname* est **NULL** ou pointe vers une chaîne vide, aucun nom de fichier est inséré dans le service composite *chemin d’accès* chaîne.
 
-*Ext*<br/>
+*ext*<br/>
 Contient l’extension de nom de fichier réelle, avec ou sans point initial (.). **_makepath** insère automatiquement la période si elle n’apparaît pas dans *ext*. Si *ext* est **NULL** ou pointe vers une chaîne vide, aucune extension est inséré dans le service composite *chemin d’accès* chaîne.
 
 ## <a name="remarks"></a>Notes

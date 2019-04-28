@@ -9,11 +9,11 @@ helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
 ms.openlocfilehash: 638152d8c49bd20742a586bc665efcdb662b6f3a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276092"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Iaxwinambientdispatchex, Interface
 
@@ -48,7 +48,7 @@ Si vous établissez une liaison à ATL90.dll, **AXHost** charge les informations
 
 Consultez [hébergement ActiveX des contrôles à l’aide de ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour plus d’informations.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 La définition de cette interface est disponible dans plusieurs formes, comme illustré dans le tableau suivant.
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
 ms.openlocfilehash: 8ff29522351b542d0b674bc173040d4468d00f1c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275267"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl, classe
 
@@ -88,7 +88,7 @@ Toutefois, si vous n’avez pas besoin de fournir un énumérateur personnalisé
 
 `IEnumOnSTLImpl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

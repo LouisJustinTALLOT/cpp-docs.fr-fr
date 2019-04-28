@@ -11,11 +11,11 @@ helpviewer_keywords:
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
 ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269984"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (Nommer la bibliothèque d'importation)
 
@@ -54,5 +54,5 @@ LINK ignore /IMPLIB lorsqu’une bibliothèque d’importation n’est pas cré�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

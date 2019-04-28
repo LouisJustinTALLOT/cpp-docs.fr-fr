@@ -1,6 +1,6 @@
 ---
 title: Erreurs du compilateur C2800 à C2899
-ms.date: 11/17/2017
+ms.date: 04/21/2019
 f1_keywords:
 - C2816
 - C2820
@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: MT
+ms.openlocfilehash: a0367d1d465d4460202f4d6d29468e59f6a74657
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281766"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Erreurs du compilateur C2800 à C2899
 
@@ -75,13 +75,13 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2813](compiler-error-c2813.md)|#import n'est pas pris en charge avec /MP|
 |[Erreur du compilateur C2814](compiler-error-c2814.md)|«*membre*' : un type natif ne peut pas être imbriqué dans un type géré/WinRT '*classe*»|
 |[Erreur du compilateur C2815](compiler-error-c2815.md)|'operator delete' : le premier paramètre formel doit être ' void \*», mais «*type*' a été utilisé|
-|C2816 d’erreur du compilateur|Obsolète.|
+|Erreur du compilateur C2816|Obsolète.|
 |[Erreur du compilateur C2817](compiler-error-c2817.md)|type de retour de 'operator delete' doit être 'void'|
 |[Erreur du compilateur C2818](compiler-error-c2818.md)|application de surchargé 'operator ->' est récurrente à travers le type '*classe*'|
 |[Erreur du compilateur C2819](compiler-error-c2819.md)|type '*classe*' n’a pas un membre surchargé 'opérateur de' ->|
-|C2820 d’erreur du compilateur|Obsolète.|
+|Erreur du compilateur C2820|Obsolète.|
 |[Erreur du compilateur C2821](compiler-error-c2821.md)|premier paramètre formel de 'operator new' doit être 'size_t'|
-|C2822 d’erreur du compilateur|déroulement local n’est pas pris en charge sur cette plateforme|
+|Erreur du compilateur C2822|déroulement local n’est pas pris en charge sur cette plateforme|
 |[Erreur du compilateur C2823](compiler-error-c2823.md)|un modèle/générique de typedef n’est pas conforme|
 |[Erreur du compilateur C2824](compiler-error-c2824.md)|type de retour de 'operator new' doit être ' void \*'|
 |[Erreur du compilateur C2825](compiler-error-c2825.md)|«*identificateur*' : doit être une classe ou un espace de noms lorsqu’il est suivi par ' :: »|
@@ -91,28 +91,28 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2829](compiler-error-c2829.md)|' opérateur *opérateur*' ne peut pas avoir une liste de paramètres de variable|
 |[Erreur du compilateur C2830](compiler-error-c2830.md)|uniquement les paramètres de positionnement de 'operator new' peuvent avoir des valeurs par défaut|
 |[Erreur du compilateur C2831](compiler-error-c2831.md)|' opérateur *opérateur*' ne peut pas avoir de paramètres par défaut|
-|C2832 d’erreur du compilateur|«*identificateur*' : un type référence ne peut pas être initialisé par une valeur|
+|Erreur du compilateur C2832|«*identificateur*' : un type référence ne peut pas être initialisé par une valeur|
 |[Erreur du compilateur C2833](compiler-error-c2833.md)|' opérateur *jeton*' n’est pas un opérateur ou type reconnu|
 |[Erreur du compilateur C2834](compiler-error-c2834.md)|' opérateur *opérateur*' doit être globalement qualifié|
 |[Erreur du compilateur C2835](compiler-error-c2835.md)|conversion définie par l’utilisateur '*type*' n’accepte aucun paramètre formel|
-|C2836 d’erreur du compilateur|«*identificateur*' : seul non données membres statiques d’une union peuvent avoir un initialiseur de membre par défaut|
+|Erreur du compilateur C2836|«*identificateur*' : seul non données membres statiques d’une union peuvent avoir un initialiseur de membre par défaut|
 |Erreur du compilateur C2837|«*fonction*' : Impossible d’utiliser des directives OpenMP et #pragma Loop (hint_parallel) système dans la même fonction|
 |[Erreur du compilateur C2838](compiler-error-c2838.md)|«*identificateur*' : nom qualifié non conforme dans une déclaration de membre|
 |[Erreur du compilateur C2839](compiler-error-c2839.md)|type de retour non valide '*type*' pour surchargé 'operator ->'|
 |Erreur du compilateur C2840|argument word de l’instruction est pas une constante|
-|C2841 d’erreur du compilateur|l’argument est pas une constante du Registre|
+|Erreur du compilateur C2841|l’argument est pas une constante du Registre|
 |[Erreur du compilateur C2842](compiler-error-c2842.md)|«*classe*' : un type géré/WinRT ne peut pas définir son propre 'operator new' ou 'operator delete'|
 |[Erreur du compilateur C2843](compiler-error-c2843.md)|«*membre*' : ne peut pas prendre l’adresse d’une donnée membre non static ou une méthode d’un type géré/WinRT|
 |[Erreur du compilateur C2844](compiler-error-c2844.md)|«*identificateur*' : ne peut pas être un membre d’interface '*interface*»|
 |[Erreur du compilateur C2845](compiler-error-c2845.md)|«*type*' : opération arithmétique de pointeur non autorisée sur ce type|
 |[Erreur du compilateur C2846](compiler-error-c2846.md)|«*interface*' : une interface ne peut pas avoir un constructeur|
 |[Erreur du compilateur C2847](compiler-error-c2847.md)|Impossible d’appliquer sizeof à gérés/WinRT type '*classe*'|
-|C2848 d’erreur du compilateur|«*classe*' : un type géré/WinRT ne peut pas être un membre d’une union|
+|Erreur du compilateur C2848|«*classe*' : un type géré/WinRT ne peut pas être un membre d’une union|
 |[Erreur du compilateur C2849](compiler-error-c2849.md)|«*interface*' : une interface ne peut pas avoir un destructeur|
 |[Erreur du compilateur C2850](compiler-error-c2850.md)|«*construire*' : uniquement autorisé au niveau de la portée du fichier ; ne peut pas être dans une construction imbriquée|
-|C2851 d’erreur du compilateur|«*enum*' : un enum WinRT public peut uniquement utiliser 'int' ou 'unsigned int' comme type de base|
-|C2852 d’erreur du compilateur|«*identificateur*' : seuls les membres de données peuvent être initialisées dans une classe|
-|C2853 d’erreur du compilateur|«*identificateur*' : une donnée membre non static ne peut pas avoir un type contenant 'auto'|
+|Erreur du compilateur C2851|«*enum*» : Un enum WinRT public peut uniquement utiliser 'int' ou 'unsigned int' comme type de base|
+|Erreur du compilateur C2852|«*identificateur*' : seuls les membres de données peuvent être initialisées dans une classe|
+|Erreur du compilateur C2853|«*identificateur*' : une donnée membre non static ne peut pas avoir un type contenant 'auto'|
 |[Erreur du compilateur C2854](compiler-error-c2854.md)|Erreur de syntaxe dans #pragma hdrstop|
 |[Erreur du compilateur C2855](compiler-error-c2855.md)|option de ligne de commande '*option*» incohérent avec l’en-tête précompilé|
 |[Erreur du compilateur C2856](compiler-error-c2856.md)|#pragma hdrstop ne peut pas être dans un bloc #if|
@@ -139,23 +139,28 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2877](compiler-error-c2877.md)|«*membre*'n’est pas accessible à partir de'*classe*»|
 |[Erreur du compilateur C2878](compiler-error-c2878.md)|«*identificateur*' : un espace de noms ou une classe de ce nom n’existe pas|
 |[Erreur du compilateur C2879](compiler-error-c2879.md)|«*identificateur*' : seul un espace de noms existant peut être renommé par une définition d’alias d’espace de noms|
-|C2880 d’erreur du compilateur|__swi ou __hvc requiert une constante valide comme premier argument (numéro de SWI)|
+|Erreur du compilateur C2880|__swi ou __hvc requiert une constante valide comme premier argument (numéro de SWI)|
 |[Erreur du compilateur C2881](compiler-error-c2881.md)|«*identificateur*' : est déjà utilisé en tant qu’alias pour '*classe*»|
 |[Erreur du compilateur C2882](compiler-error-c2882.md)|«*identificateur*' : utilisation non conforme de l’identificateur d’espace de noms dans l’expression|
 |[Erreur du compilateur C2883](compiler-error-c2883.md)|'*fonction*' : déclaration de fonction est en conflit avec '*identificateur*' introduit par une déclaration using|
 |[Erreur du compilateur C2884](compiler-error-c2884.md)|«*identificateur*' : introduit par des conflits de déclaration using avec la fonction locale '*fonction*»|
 |[Erreur du compilateur C2885](compiler-error-c2885.md)|«*classe*::*identificateur*' : pas une valide à l’aide de-déclaration de portée sans classe|
 |[Erreur du compilateur C2886](compiler-error-c2886.md)|«*classe*::*identificateur*' : symbole ne peut pas être utilisé dans la déclaration à l’aide d’un membre|
-|C2887 d’erreur du compilateur|__swi ou __hvc ne peut pas avoir plus de cinq arguments (numéro de SWI, r0 - r3)|
+|Erreur du compilateur C2887|__swi ou __hvc ne peut pas avoir plus de cinq arguments (numéro de SWI, r0 - r3)|
 |[Erreur du compilateur C2888](compiler-error-c2888.md)|«*identificateur*' : symbole ne peut pas être défini au sein de l’espace de noms '*espace de noms*»|
-|C2889 d’erreur du compilateur|«*classe*' : un type de classe de gérés/WinRT ne peut pas être une classe de base virtuelle|
+|Erreur du compilateur C2889|«*classe*' : un type de classe de gérés/WinRT ne peut pas être une classe de base virtuelle|
 |[Erreur du compilateur C2890](compiler-error-c2890.md)|«*classe*' : une classe ref peut avoir uniquement une classe de base sans interface|
 |[Erreur du compilateur C2891](compiler-error-c2891.md)|«*paramètre*' : ne peut pas prendre l’adresse d’un paramètre de modèle|
 |[Erreur du compilateur C2892](compiler-error-c2892.md)|classe locale ne doit pas avoir de modèles membres|
 |[Erreur du compilateur C2893](compiler-error-c2893.md)|Échec de la spécialisation du modèle de fonction '*modèle*'|
 |[Erreur du compilateur C2894](compiler-error-c2894.md)|les modèles ne peut pas être déclarés comme ayant une liaison de « C »|
-|C2895 d’erreur du compilateur|«*déclaration*' : Impossible d’instancier explicitement un modèle de fonction qui a été déclaré avec dllimport|
+|Erreur du compilateur C2895|«*déclaration*' : Impossible d’instancier explicitement un modèle de fonction qui a été déclaré avec dllimport|
 |[Erreur du compilateur C2896](compiler-error-c2896.md)|«*function1*' : ne peut pas utiliser de fonction modèle/générique '*function2*' comme argument de fonction|
 |[Erreur du compilateur C2897](compiler-error-c2897.md)|un destructeur/finaliseur ne peut pas être un modèle de fonction|
 |[Erreur du compilateur C2898](compiler-error-c2898.md)|«*déclaration*' : les modèles de fonction membre ne peut pas être virtuels|
 |Erreur du compilateur C2899|Obsolète.|
+
+## <a name="see-also"></a>Voir aussi
+
+[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erreurs du compilateur C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

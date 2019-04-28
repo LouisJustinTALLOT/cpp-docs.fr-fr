@@ -16,11 +16,11 @@ helpviewer_keywords:
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
 ms.openlocfilehash: c8097e013f934c45b8e3860b8377bdb2bdb9d9a0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315233"
 ---
 # <a name="specifying-build-events"></a>Spécification d’événements de build
 

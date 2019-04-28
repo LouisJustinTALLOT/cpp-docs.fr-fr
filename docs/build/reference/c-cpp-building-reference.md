@@ -9,11 +9,11 @@ helpviewer_keywords:
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
 ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294757"
 ---
 # <a name="cc-building-reference"></a>Référence à la génération C/C++
 
@@ -23,10 +23,10 @@ Visual C++ propose deux méthodes de génération d’un programme C/C++. Le moy
 
 [Référence MSBuild pour les projets C++](msbuild-visual-cpp-overview.md)
 
-[Référence du compilateur MSVC](compiling-a-c-cpp-program.md)<br/>
+[Informations de référence sur le compilateur MSVC](compiling-a-c-cpp-program.md)<br/>
 Décrit le compilateur MSVC, qui crée un fichier objet contenant le code machine, les directives de l’éditeur de liens, sections, des références externes et les noms de fonction/donnée.
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 Décrit l’éditeur de liens, qui combine le code à partir des fichiers objet créés par le compilateur et des bibliothèques liées statiquement, résout les références de nom et crée un fichier exécutable.
 
 [Prise en charge Unicode dans le compilateur et l’éditeur de liens](unicode-support-in-the-compiler-and-linker.md)
@@ -48,13 +48,13 @@ Traite de la personnalisation du processus de génération.
 [Génération d’un programme C/C++](../projects-and-build-systems-cpp.md)<br/>
 Fournit des liens vers des rubriques qui décrivent comment générer votre programme à partir de la ligne de commande ou de l'environnement de développement intégré de Visual Studio.
 
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 Décrit la définition des options du compilateur dans l’environnement de développement ou sur la ligne de commande.
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
 Fournit des liens vers des rubriques décrivant l’utilisation des options du compilateur.
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 Décrit la définition des options de l’éditeur de liens à l’intérieur ou en dehors de l’environnement de développement intégré.
 
 [Options de l’éditeur de liens MSVC](linker-options.md)<br/>

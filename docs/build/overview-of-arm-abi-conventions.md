@@ -3,11 +3,11 @@ title: Vue d'ensemble des conventions ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
 ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295231"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Vue d’ensemble des Conventions ABI de ARM32
 
@@ -19,7 +19,7 @@ Windows on ARM est censé toujours s'exécuter sur une architecture ARMv7. Une p
 
 La prise en charge des extensions SIMD avancées (NEON), ce qui englobe à la fois les opérations sur nombres entiers et à virgule flottante, doit aussi être présente sur le matériel. Aucune prise en charge de l'émulation n'est fournie au moment de l'exécution.
 
-Une prise en charge de la division d'entier (UDIV/SDIV) est vivement recommandée mais pas exigée. Les plateformes sans prise en charge de la division d'entier peuvent être pénalisées sur le plan des performances, car ces opérations doivent être interceptées et peut-être corrigées.
+Une prise en charge de la division d'entier (UDIV/SDIV) est vivement recommandée mais pas exigée. Les plateformes sans prise en charge de la division d’entier peuvent être pénalisées sur le plan des performances, car ces opérations doivent être interceptées et peut-être corrigées.
 
 ## <a name="endianness"></a>Endianness
 
@@ -41,7 +41,7 @@ Bien que Windows permette au matériel ARM de gérer les accès d'entiers non al
 
 Le jeu d'instructions pour Windows on ARM est strictement limité à Thumb-2. L'ensemble du code exécuté sur cette plateforme est toujours censé démarrer et rester en mode Thumb. Une tentative de basculement vers le jeu d'instructions ARM hérité a des chances d'aboutir. Dans ce cas, les exceptions ou les interruptions qui se produisent peuvent provoquer une erreur d'application en mode utilisateur ou une vérification d'erreur en mode noyau.
 
-L'une des conséquences indirectes de cette condition est que tous les pointeurs de code doivent avoir le bit inférieur défini. De cette façon, quand ils sont chargés et qu'une branche est créée via BLX ou BX, le processeur reste en mode Thumb et n'essaie pas d'exécuter le code cible en tant qu'instructions ARM 32 bits.
+L’une des conséquences indirectes de cette exigence est que tous les pointeurs de code doivent avoir le bit inférieur défini. De cette façon, quand ils sont chargés et qu’une branche est créée via BLX ou BX, le processeur reste en mode Thumb et n’essaie pas d’exécuter le code cible en tant qu’instructions ARM 32 bits.
 
 ### <a name="it-instructions"></a>Instructions IT
 
@@ -59,7 +59,7 @@ L'utilisation d'instructions IT dans le code Thumb-2 n'est pas autorisée, sauf 
    |LDR, LDR[S]B, LDR[S]H|Chargement à partir de la mémoire|Mais pas les formes littérales LDR|
    |STR, STRB, STRH|Stockage en mémoire||
    |ADD, ADC, RSB, SBC, SUB|Ajout ou soustraction|Mais pas les formes ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-   |CMP, CMN|Comparaison|Rm != PC, Rn != PC|
+   |CMP, CMN|Comparer|Rm != PC, Rn != PC|
    |MUL|Multiplication||
    |ASR, LSL, LSR, ROR|Décalage de bits||
    |AND, BIC, EOR, ORR, TST|Arithmétique au niveau du bit||
@@ -145,7 +145,7 @@ L’initialisation est exécutée une seule fois exactement, avant le début du 
 
 1. Les registres VFP sont marqués comme non alloués.
 
-1. L'adresse NSAA (Next Stacked Argument Address) est définie sur le pointeur de pile (SP) actif.
+1. L’adresse NSAA (Next Stacked Argument Address) est définie sur le pointeur de pile (SP) actif.
 
 1. Si une fonction qui retourne un résultat en mémoire est appelé, l'adresse du résultat est placée dans r0 et le numéro NCRN est défini sur r1.
 
@@ -163,19 +163,19 @@ Pour chaque argument de la liste, la première règle correspondante de la liste
 
 Pour chaque argument de la liste, les règles suivantes sont appliquées tour à tour jusqu’à ce que l’argument ait été alloué :
 
-1. Si l'argument est de type VFP et qu'il y a suffisamment de registres VFP non alloués consécutifs du type approprié, l'argument est alloué à la séquence de registres ayant les numéros les plus petits.
+1. Si l’argument est de type VFP et qu’il y a suffisamment de registres VFP non alloués consécutifs du type approprié, l’argument est alloué à la séquence de registres ayant les numéros les plus petits.
 
-1. Si l'argument est un type VFP, tous les registres non alloués restants sont marqués comme non disponibles. L'adresse NSAA est ajustée vers le haut jusqu'à ce qu'elle soit correctement alignée par rapport au type d'argument et que l'argument soit copié dans la pile à l'adresse NSAA ajustée. L'adresse NSAA est ensuite incrémentée de la taille de l'argument.
+1. Si l'argument est un type VFP, tous les registres non alloués restants sont marqués comme non disponibles. L'adresse NSAA est ajustée vers le haut jusqu'à ce qu'elle soit correctement alignée par rapport au type d'argument et que l'argument soit copié dans la pile à l'adresse NSAA ajustée. L’adresse NSAA est ensuite incrémentée de la taille de l’argument.
 
-1. Si l'argument nécessite un alignement de 8 octets, le numéro NCRN est arrondi au numéro de registre pair supérieur.
+1. Si l’argument nécessite un alignement de 8 octets, le numéro NCRN est arrondi au numéro de registre pair supérieur.
 
-1. Si la taille de l'argument dans les mots de 32 bits n'est pas supérieure à r4 moins le numéro NCRN, l'argument est copié dans les registres principaux, à partir du numéro NCRN, les bits de poids faible occupant les registres ayant les numéros les plus petits. Le numéro NCRN est incrémenté du nombre de registres utilisés.
+1. Si la taille de l’argument dans les mots de 32 bits n’est pas supérieure à r4 moins le numéro NCRN, l’argument est copié dans les registres principaux, à partir du numéro NCRN, les bits de poids faible occupant les registres ayant les numéros les plus petits. Le numéro NCRN est incrémenté du nombre de registres utilisés.
 
-1. Si le numéro NCRN est inférieur à r4 et que l'adresse NSAA est égale au pointeur de pile (SP), l'argument est partagé entre les registres principaux et la pile. La première partie de l'argument est copiée dans les registres principaux, à partir du numéro NCRN, jusqu'à r3 inclus. Le reste de l'argument est copié dans la pile, à partir de l'adresse NSAA. Le numéro NCRN est défini sur r4 et l'adresse NSAA est incrémentée de la taille de l'argument moins le montant passé aux registres.
+1. Si le numéro NCRN est inférieur à r4 et que l'adresse NSAA est égale au pointeur de pile (SP), l'argument est partagé entre les registres principaux et la pile. La première partie de l’argument est copiée dans les registres principaux, à partir du numéro NCRN, jusqu’à r3 inclus. Le reste de l’argument est copié dans la pile, à partir de l’adresse NSAA. Le numéro NCRN est défini sur r4 et l’adresse NSAA est incrémentée de la taille de l’argument moins le montant passé aux registres.
 
-1. Si l'argument nécessite un alignement de 8 octets, l'adresse NSAA est arrondie à l'adresse alignée de 8 octets supérieure.
+1. Si l’argument nécessite un alignement de 8 octets, l’adresse NSAA est arrondie à l’adresse alignée de 8 octets supérieure.
 
-1. L'argument est copié en mémoire à l'adresse NSAA. L'adresse NSAA est incrémentée de la taille de l'argument.
+1. L'argument est copié en mémoire à l'adresse NSAA. L’adresse NSAA est incrémentée de la taille de l’argument.
 
 Les registres VFP ne sont pas utilisés pour les fonctions variadiques, et les règles 1 et 2 de la phase C sont ignorées. Autrement dit, une fonction variadique peut commencer par un push facultatif {r0-r3} pour ajouter les arguments de registre aux autres arguments éventuellement passés par l'appelant, puis accéder à la liste d'arguments entière directement à partir de la pile.
 
@@ -187,7 +187,7 @@ La pile doit toujours rester alignée sur 4 octets et être alignée sur 8 oct
 
 Les fonctions qui doivent utiliser un pointeur de frame (par exemple, les fonctions qui appellent `alloca` ou qui modifient le pointeur de pile dynamiquement) doivent configurer le pointeur de frame dans le registre r11 du prologue des fonctions et le laisser inchangé jusqu'à l'épilogue. Les fonctions qui n'ont pas besoin d'un pointeur de frame doivent effectuer toutes les mises à jour de pile dans le prologue et laisser le pointeur de pile inchangé jusqu'à l'épilogue.
 
-Les fonctions qui allouent 4 Ko ou plus dans la pile doivent s'assurer que chaque page précédant la dernière page fait l'objet d'une interaction tactile dans l'ordre. Cela garantit qu'aucun code ne peut « sauter » les pages de protection qu'utilise Windows pour développer la pile. En règle générale, cette tâche est assurée par l'assistance `__chkstk`, à laquelle est passé le total de l'allocation de pile en octets divisé par 4 dans r4, et qui retourne le montant d'allocation de pile final en octets à r4.
+Les fonctions qui allouent 4 Ko ou plus dans la pile doivent s'assurer que chaque page précédant la dernière page fait l'objet d'une interaction tactile dans l'ordre. Cela garantit qu’aucun code ne peut « sauter » les pages de protection qu’utilise Windows pour développer la pile. En règle générale, cette tâche est assurée par l'assistance `__chkstk`, à laquelle est passé le total de l'allocation de pile en octets divisé par 4 dans r4, et qui retourne le montant d'allocation de pile final en octets à r4.
 
 ### <a name="red-zone"></a>Zone rouge
 

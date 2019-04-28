@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
 ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276781"
 ---
 # <a name="cwintraits-class"></a>CWinTraits, classe
 
@@ -72,7 +72,7 @@ ATL fournit trois spécialisations prédéfinies de ce modèle pour des combinai
 
 Si vous souhaitez vous assurer que certains styles sont définis pour toutes les instances de la classe de fenêtre tout en autorisant d’autres styles à définir sur une base par instance, utilisez [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) à la place.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlwin.h
 

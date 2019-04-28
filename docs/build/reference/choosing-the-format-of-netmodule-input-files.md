@@ -3,17 +3,17 @@ title: Choix du format des fichiers d'entrée .netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
 ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294575"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Choix du format des fichiers d'entrée .netmodule
 
 Un fichier .obj MSIL (compilé avec [/CLR](clr-common-language-runtime-compilation.md)) peut également être utilisé comme un fichier .netmodule.  les fichiers .obj contiennent des métadonnées et des symboles natifs.  fichiers .netmodule contiennent uniquement des métadonnées.
 
-Vous pouvez passer d’un fichier .obj MSIL à tout autre compilateur Visual Studio via l’option de compilateur /addmodule (mais n’oubliez pas que le fichier .obj devient partie intégrante de l’assembly résultant et doit être livré avec l’assembly).  Par exemple, Visual C# et Visual Basic ont l’option de compilateur /addmodule.
+Vous pouvez passer d’un fichier .obj MSIL à tout autre compilateur Visual Studio via l’option de compilateur /addmodule (mais n’oubliez pas que le fichier .obj devient partie intégrante de l’assembly résultant et doit être livré avec l’assembly).  Par exemple, Visual c# et Visual Basic ont l’option de compilateur /addmodule.
 
 > [!NOTE]
 >  Dans la plupart des cas, vous devrez passer à l’éditeur de liens le fichier .obj de la compilation qui a créé le module .net.  Passage d’un fichier de module MSIL .dll ou .netmodule à l’éditeur de liens peut entraîner l’erreur LNK1107.
