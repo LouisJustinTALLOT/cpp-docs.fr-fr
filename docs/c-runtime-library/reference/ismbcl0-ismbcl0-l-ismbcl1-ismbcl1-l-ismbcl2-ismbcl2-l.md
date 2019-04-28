@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
 ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286628"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -108,12 +108,12 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 
 |Routine|Condition de test (page de codes 932 uniquement)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS non-Kanji : 0 x 8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|JIS non-Kanji : 0 x 8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|JIS niveau 1 : 0x889F < =*c*< = 0 x 9872.|
-|**_ismbcl1_l**|JIS niveau 1 : 0x889F < =*c*< = 0 x 9872.|
-|**_ismbcl2**|JIS niveau 2 : 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|JIS niveau 2 : 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl0**|JIS non-Kanji : 0x8140<=*c*<=0x889E.|
+|**_ismbcl0_l**|JIS non-Kanji : 0x8140<=*c*<=0x889E.|
+|**_ismbcl1**|JIS niveau 1 : 0x889F<=*c*<=0x9872.|
+|**_ismbcl1_l**|JIS niveau 1 : 0x889F<=*c*<=0x9872.|
+|**_ismbcl2**|JIS niveau 2 : 0x989F<=*c*<=0xEAA4.|
+|**_ismbcl2_l**|JIS niveau 2 : 0x989F<=*c*<=0xEAA4.|
 
 Les fonctions vérifient que la valeur spécifiée *c* les conditions de test décrites ci-dessus, mais ne vérifient pas que les correspondances *c* est un caractère multioctet valide. Si l’octet de poids faible est compris dans les plages 0x00-0x3F, 0x7F ou 0xFD-0xFF, ces fonctions retournent une valeur différente de zéro, indiquant que le caractère satisfait à la condition de test. Utilisez [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) pour tester si le caractère multioctet est défini.
 

@@ -16,11 +16,11 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
 ms.openlocfilehash: 40dedbe2737a79b7531b8acd47870ce7cb788604
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237583"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout Class
 
@@ -66,7 +66,7 @@ class CMFCDynamicLayout : public CObject
 
 ## <a name="nested-types"></a>Types imbriqués
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[Cmfcdynamiclayout::movesettings, Structure](#movesettings_structure)|Encapsule les données de déplacement des contrôles dans une disposition dynamique.|
 |[Cmfcdynamiclayout::sizesettings, Structure](#sizesettings_structure)|Encapsule les données de changement de taille des contrôles dans une disposition dynamique.|
@@ -79,7 +79,7 @@ class CMFCDynamicLayout : public CObject
 
 [CMFCDynamicLayout](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxlayout.h
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /LARGEADDRESSAWARE linker option
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
 ms.openlocfilehash: 81a560ebf083e2f93d9bb514fc401186291d7f41
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269548"
 ---
 # <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (Gérer les longues adresses)
 
@@ -44,5 +44,5 @@ Si une application a été liée avec cette option, DUMPBIN [/HEADERS](headers.m
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
 ms.openlocfilehash: d6e3168b5c86de5bce3c3b9d3b0fbdea28ae604f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261236"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData Structure
 
@@ -41,7 +41,7 @@ L’ID de thread de l’instance actuelle de la classe.
 `m_pNext`<br/>
 Pointeur vers la prochaine `_AtlCreateWndData` objet.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 

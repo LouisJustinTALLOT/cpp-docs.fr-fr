@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
 ms.openlocfilehash: a51b4460d7fcdf778fce24b6e404b75190f598f6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245831"
 ---
 # <a name="cdefaulthashtraits-class"></a>Cdefaulthashtraits, classe
 
@@ -45,7 +45,7 @@ Cette classe contient une seule fonction statique qui retourne une valeur de hac
 
 Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcoll.h
 

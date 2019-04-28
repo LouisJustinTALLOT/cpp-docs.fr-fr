@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
 ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261063"
 ---
 # <a name="atldrawinfo-structure"></a>Atl_drawinfo, Structure
 
@@ -86,7 +86,7 @@ Une utilisation typique de cette structure serait la récupération d’informat
 
 Cette structure stocke des informations pertinentes permettant de restituer l’apparence d’un objet pour l’appareil cible. Les informations fournies peuvent être utilisées dans un dessin à l’écran, une imprimante ou même un métafichier.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlctl.h
 

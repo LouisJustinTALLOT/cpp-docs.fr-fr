@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CGTHREADS linker option
 ms.assetid: 4b52cfdb-3702-470b-9580-fabeb1417488
 ms.openlocfilehash: b778802d3fffcaafc0cf01ac46ae85c4efbef95c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294666"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (threads du compilateur)
 
@@ -51,4 +51,4 @@ Vous pouvez spécifier plusieurs niveaux de parallélisme pour une build. Le com
 ## <a name="see-also"></a>Voir aussi
 
 [Options de l’éditeur de liens MSVC](linker-options.md)<br/>
-[Référence de l’éditeur de liens MSVC](linking.md)
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)

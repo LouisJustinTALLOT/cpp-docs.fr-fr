@@ -13,11 +13,11 @@ helpviewer_keywords:
 - memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
 ms.openlocfilehash: 90a21b260185bb2202eed66b8e4144eb7183c157
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241275"
 ---
 # <a name="debugging-support-classes"></a>Classes de prise en charge du débogage
 

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246229"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase, classe
 
@@ -84,7 +84,7 @@ Le type d’objet devant être référencé par le pointeur intelligent.
 
 Cette classe fournit la base d’autres pointeurs intelligents qui utilisent les routines de gestion de mémoire COM, tel que [CComQIPtr](../../atl/reference/ccomqiptr-class.md) et [CComPtr](../../atl/reference/ccomptr-class.md). Les classes dérivées ajouter leurs propres constructeurs et des opérateurs, mais s’appuient sur les méthodes fournies par `CComPtrBase`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcomcli.h
 
@@ -237,8 +237,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="parameters"></a>Paramètres
 
 *pOther*<br/>
-
-  `IUnknown *` à comparer.
+`IUnknown *` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 

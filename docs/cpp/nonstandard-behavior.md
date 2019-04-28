@@ -7,11 +7,11 @@ helpviewer_keywords:
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245372"
 ---
 # <a name="nonstandard-behavior"></a>Comportement non standard
 
@@ -21,7 +21,7 @@ La liste des limites du compilateur qui diffèrent de celles définies dans la n
 
 ## <a name="covariant-return-types"></a>Types de retour covariant
 
-Les classes de base virtuelle ne sont pas prises en charge en tant que types de retour covariants lorsque la fonction virtuelle a un nombre d'arguments variable. Ceci n'est pas conforme à la section 10.3, paragraphe 7 de la spécification ISO C++. L’exemple suivant n’est pas compilé, ce qui donne d’erreur du compilateur [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+Les classes de base virtuelle ne sont pas prises en charge en tant que types de retour covariants lorsque la fonction virtuelle a un nombre d’arguments variable. Ceci n'est pas conforme à la section 10.3, paragraphe 7 de la spécification ISO C++. L’exemple suivant n’est pas compilé, ce qui donne d’erreur du compilateur [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
 
 ```cpp
 // CovariantReturn.cpp
@@ -75,7 +75,7 @@ Pour plus d’informations sur les spécifications d’exceptions, consultez [le
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-La norme C++ stipule que [char_traits::eof](../standard-library/char-traits-struct.md#eof) ne doit pas correspondre à un valide `char_type` valeur. Le compilateur Visual C++ applique cette contrainte de type **char**, mais pas pour le type **wchar_t**. Ceci n’est pas conforme à l’exigence du tableau 62 de la section 12.1.1 de la spécification ISO C++. C'est ce qu'illustre l'exemple ci-dessous.
+Le C++ norme [char_traits::eof](../standard-library/char-traits-struct.md#eof) ne doit pas correspondre à un valide `char_type` valeur. L’élément visuel C++ compilateur applique cette contrainte de type **char**, mais pas pour le type **wchar_t**. Ceci n’est pas conforme à l’exigence du tableau 62 de la section 12.1.1 de la spécification ISO C++. C'est ce qu'illustre l'exemple ci-dessous.
 
 ```cpp
 #include <iostream>

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
 ms.openlocfilehash: e21a31b71e681cdffed555c10079c2598967543f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239530"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Contrôles ActiveX MFC : À l’aide de la liaison de données dans un contrôle ActiveX
 

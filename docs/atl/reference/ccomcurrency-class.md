@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
 ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246419"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency, classe
 
@@ -95,7 +95,7 @@ Lorsque vous spécifiez les composantes entière et fractionnaire d’un `CComCu
 
 Les valeurs CY_MIN_FRACTION, CY_MAX_FRACTION et CY_SCALE sont définies dans atlcur.h.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcur.h
 

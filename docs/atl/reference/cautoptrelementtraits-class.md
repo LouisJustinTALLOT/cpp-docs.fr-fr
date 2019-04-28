@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CAutoPtrElementTraits class
 ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
 ms.openlocfilehash: d217441048403b0ff5361f8049b76367174812f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246735"
 ---
 # <a name="cautoptrelementtraits-class"></a>Cautoptrelementtraits, classe
 
@@ -61,7 +61,7 @@ Cette classe fournit des méthodes, les fonctions statiques et les typedefs pour
 
 `CAutoPtrElementTraits`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcoll.h
 

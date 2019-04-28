@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 ms.openlocfilehash: 984d95a1e0adb6835db7ca4bcabcff21f0be7beb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276014"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar, Interface
 
@@ -51,7 +51,7 @@ Consultez la rubrique [à l’aide des paramètres remplaçables (le préprocess
 |[IRegistrar::ResourceRegister](#resourceregister)|Inscrit la ressource.|
 |[IRegistrar::ResourceUnregister](#resourceunregister)|Annule l’inscription de la ressource.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlifase.h
 

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
 ms.openlocfilehash: 561d6cb41ca066f5a2435b4eb1e8710ccaa99ea1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62248938"
 ---
 # <a name="atl-classes-and-structs"></a>ATL, classes et structs
 
 La bibliothèque ATL (Active Template) inclut les classes et structs suivantes. Pour rechercher une classe particulière par catégorie, consultez la [vue d’ensemble de la classe ATL](../../atl/atl-class-overview.md).
 
-|Classe / struct|Description|Fichier d'en-tête|
+|Classe / struct|Description|Fichier d’en-tête|
 |-----------|-----------------|-----------------|
 |[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|Contient des informations utilisées pour le rendu à différentes cibles, comme une imprimante, un métafichier ou un contrôle ActiveX.|atlctl.h|
 |[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|Contient les données d’instance de classe dans le code de fenêtrage dans ATL.|atlbase.h|

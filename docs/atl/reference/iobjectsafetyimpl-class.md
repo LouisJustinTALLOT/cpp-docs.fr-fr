@@ -14,11 +14,11 @@ helpviewer_keywords:
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
 ms.openlocfilehash: e75c52b016fff5bf04fefc86d4289021efc4db8e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277022"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl, classe
 
@@ -75,7 +75,7 @@ Notez que l’utilisation du [IMPLEMENTED_CATEGORY](category-macros.md#implement
 
 `IObjectSafetyImpl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlctl.h
 

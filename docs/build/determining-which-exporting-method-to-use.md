@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
 ms.openlocfilehash: 974c32cef87801599ba0d14fd146e84ad874467f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273735"
 ---
 # <a name="determine-which-exporting-method-to-use"></a>Déterminer la méthode d’exportation à utiliser
 
@@ -48,13 +48,13 @@ L'utilisation de `__declspec(dllexport)` est pratique dans la mesure où vous n'
 
 - [Exporter des fonctions C à utiliser dans des exécutables en langage C ou C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Importer dans une application à l’aide de __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une application à l'aide de __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [L’importation et exportation de fonctions inline](importing-and-exporting-inline-functions.md)
+- [Importation et exportation de fonctions inline](importing-and-exporting-inline-functions.md)
 
 - [Importations mutuelles](mutual-imports.md)
 

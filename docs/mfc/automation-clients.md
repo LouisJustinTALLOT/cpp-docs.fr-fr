@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
 ms.openlocfilehash: 098c41ea981d9d0069130d5439632aa7b0d6cbbd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62254360"
 ---
 # <a name="automation-clients"></a>Clients Automation
 
@@ -40,6 +40,6 @@ Si vous souhaitez gérer des événements dans votre client automation, vous dev
 
 ## <a name="see-also"></a>Voir aussi
 
-[Clients Automation : À l’aide de bibliothèques de types](../mfc/automation-clients-using-type-libraries.md)<br/>
+[Clients Automation : Utilisation de bibliothèques de types](../mfc/automation-clients-using-type-libraries.md)<br/>
 [Automation](../mfc/automation.md)<br/>
 [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md)

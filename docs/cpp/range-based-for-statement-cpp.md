@@ -3,11 +3,11 @@ title: Basé sur une plage, instruction (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244133"
 ---
 # <a name="range-based-for-statement-c"></a>Basé sur une plage, instruction (C++)
 
@@ -24,7 +24,7 @@ for ( for-range-declaration : expression )
 
 Utiliser la plage **pour** instruction pour créer des boucles qui doivent s’exécuter via un « range », ce qui est définie comme tout ce que vous pouvez itérer sur — par exemple, `std::vector`, ou dont la plage de séquence de toute autre bibliothèque Standard C++ est défini par un `begin()` et `end()`. Le nom qui est déclaré dans le `for-range-declaration` partie est locale pour le **pour** instruction et ne peut pas être déclarée de nouveau dans `expression` ou `statement`. Notez que le [automatique](../cpp/auto-cpp.md) mot clé, il est recommandé dans la `for-range-declaration` partie de l’instruction.
 
-**Nouveautés de Visual Studio 2017 :** Range-based pour les boucles ne nécessitent plus que begin() et end() retournent des objets du même type. Ainsi, end() peut retourner un objet sentinel, à l’image de ceux utilisés par les plages définies selon la proposition Ranges-V3. Pour plus d’informations, consultez [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) et la [bibliothèque range-v3 sur GitHub](https://github.com/ericniebler/range-v3).
+**Nouveautés de Visual Studio 2017 :**  Range-based pour les boucles ne nécessitent plus que begin() et end() retournent des objets du même type. Ainsi, end() peut retourner un objet sentinel, à l’image de ceux utilisés par les plages définies selon la proposition Ranges-V3. Pour plus d’informations, consultez [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) et la [bibliothèque range-v3 sur GitHub](https://github.com/ericniebler/range-v3).
 
 Ce code montre comment utiliser basé sur une plage **pour** boucles pour itérer un tableau et un vecteur :
 

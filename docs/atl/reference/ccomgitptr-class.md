@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
 ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246471"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr, classe
 
@@ -76,7 +76,7 @@ Les objets qui agrègent FTM et doivent utiliser des pointeurs d’interface obt
 > [!NOTE]
 >  La fonctionnalité de tableau global d’interface est uniquement disponible sur Windows 95 avec DCOM version 1.1 et versions ultérieures, Windows 98, Windows NT 4.0 avec Service Pack 3 et versions ultérieures et Windows 2000.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
 ms.openlocfilehash: 9643b8b4b4b26b3f7a8a59ed0085601b1a53094d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270722"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (Activer la liaison au niveau des fonctions)
 
@@ -60,4 +60,4 @@ Fonctions inline sont toujours empaquetées si elles sont instanciées en tant q
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
 ms.openlocfilehash: afd9f017bb0fb9a95a0ed4fd135dcbd5ea4ddba2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277940"
 ---
 # <a name="csimplemap-class"></a>CSimpleMap, classe
 
@@ -96,7 +96,7 @@ Les deux `CSimpleMap` et [CSimpleArray](../../atl/reference/csimplearray-class.m
 
 Contrairement à d’autres collections de mappage dans ATL et MFC, cette classe est implémentée avec un simple tableau, et les recherches de recherche nécessitent une recherche linéaire. `CAtlMap` doit être utilisé lorsque le tableau contient un grand nombre d’éléments.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsimpcoll.h
 

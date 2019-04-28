@@ -9,11 +9,11 @@ helpviewer_keywords:
 - x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
 ms.openlocfilehash: 831aade72cd728ec42aee5ef1f320deb7bdf173d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294263"
 ---
 # <a name="compiler-options"></a>Options du compilateur
 
@@ -40,7 +40,7 @@ Pour rechercher une option spécifique, consultez une des listes suivantes :
 
 La rubrique pour chaque option du compilateur explique comment elle peut être définie dans l’environnement de développement. Pour plus d’informations sur la spécification des options en dehors de l’environnement de développement, consultez :
 
-- [Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+- [Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
 
 - [Fichiers de commandes CL](cl-command-files.md)
 

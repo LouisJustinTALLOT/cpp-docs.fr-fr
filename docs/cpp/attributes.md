@@ -3,11 +3,11 @@ title: Attributs en C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
 ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284745"
 ---
 # <a name="attributes-in-c"></a>Attributs en C++
 
@@ -15,7 +15,7 @@ La norme C++ définit un ensemble d’attributs et permet également aux fournis
 
 Dans certains cas, les attributs standard se chevauchent avec les paramètres spécifiques au compilateur declspec. Dans Visual C++, vous pouvez utiliser la `[[deprecated]]` attribut au lieu d’utiliser `declspec(deprecated)` et l’attribut est reconnu par n’importe quel compilateur conforme. Pour tous les autres paramètres declspec tels que dllimport et dllexport, il n’est encore aucun équivalent de l’attribut que vous devez continuer à utiliser la syntaxe de declspec. Attributs n’affectent pas le système de type, et ils ne changent la signification d’un programme. Les compilateurs ignorent les valeurs d’attribut qu'ils ne reconnaissent pas.
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : dans l’étendue d’une liste d’attributs, vous pouvez spécifier l’espace de noms pour tous les noms avec un seul **à l’aide de** introducer :
+**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Dans l’étendue d’une liste d’attributs, vous pouvez spécifier l’espace de noms pour tous les noms avec un seul **à l’aide de** introducer :
 
 ```cpp
 void g() {
@@ -77,10 +77,10 @@ Les attributs représentent une alternative standardisée aux extensions spécif
 
   L’exemple génère ces avertissements :
 
-  - 26494 (type de règle 5 : Initialisez toujours un objet.)
+  - 26494 (tapez règle 5 : Initialisez toujours un objet.)
 
-  - 26485 (limites de la règle 3 : aucun groupe de DÉSINTÉGRATION de pointeur.)
+  - 26485 (3 de règle de limites : Aucun tableau à l’atténuation de pointeur.)
 
-  - 26481 (limites règle 1 : ne pas utiliser l’opération arithmétique de pointeur. Utilisez span à la place.)
+  - 26481 (limites de règle 1 : N’utilisez pas opérations arithmétiques de pointeur. Utilisez span à la place.)
 
   Les deux premiers avertissements sont activés lorsque vous compilez ce code avec l’outil d’analyse du code CppCoreCheck installé et activé. Mais le troisième avertissement ne se déclenche en raison de l’attribut. Vous pouvez supprimer le profil bounds entière en écrivant [[gsl::suppress(bounds)]] sans inclure un numéro de règle spécifique. Les recommandations C++ Core Guidelines sont conçus pour vous aider à écrire du code de meilleure et plus sûr. L’attribut supprimer rend plus facile de désactiver les avertissements lorsqu’ils ne doivent pas figurer.

@@ -1,5 +1,5 @@
 ---
-title: 'TN038 : Implémentation IUnknown MFC-OLE'
+title: 'TN038 : Implémentation de IUnknown MFC / OLE'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.ole
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
 ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305474"
 ---
-# <a name="tn038-mfcole-iunknown-implementation"></a>TN038 : implémentation IUnknown MFC/OLE
+# <a name="tn038-mfcole-iunknown-implementation"></a>TN038 : Implémentation IUnknown MFC/OLE
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -47,7 +47,7 @@ public:
 ```
 
 > [!NOTE]
-> Certains détails nécessaires de la convention d’appel, tels que `__stdcall`, sont omis dans cette illustration.
+> Certains détails nécessaires de la convention d'appel, tels que `__stdcall`, sont omis dans cette illustration.
 
 Le [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) et [version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) fonctions membres de contrôlent la gestion de la mémoire de l’objet. COM utilise un système de comptage de références pour assurer le suivi des objets. Les objets ne sont jamais référencés directement comme en C++. Au lieu de cela, les objets COM sont toujours référencés au moyen d'un pointeur. Pour libérer l’objet lorsque le propriétaire est effectué à l’aide de son, l’objet [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) membre est appelé (par opposition à l’utilisation de la suppression d’opérateur, comme vous pouvez la supprimer pour un objet C++ traditionnel). Le mécanisme de comptage de références autorise la gestion de plusieurs références à un même objet. Une implémentation de [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) et [version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) conserve un décompte de références sur l’objet, l’objet n’est pas supprimé tant que son décompte de références atteint zéro.
 
@@ -240,7 +240,7 @@ Cela représente beaucoup d'explications et beaucoup de code pour un scénario a
 
 ## <a name="mfc-interface-maps"></a>Tables d'interface MFC
 
-MFC/OLE inclut une implémentation de « Tables d'interface » qui s'apparente aux « Tables des messages » et aux « Tables de dispatch » de MFC sur le plan du concept et de l'exécution. Les principales fonctionnalités des Tables d’interface de MFC sont les suivantes :
+MFC/OLE inclut une implémentation de « Tables d'interface » qui s'apparente aux « Tables des messages » et aux « Tables de dispatch » de MFC sur le plan du concept et de l'exécution. Les principales fonctionnalités des Tables d'interface de MFC sont les suivantes :
 
 - Une implémentation standard de [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), intégrée à la `CCmdTarget` classe.
 
@@ -248,7 +248,7 @@ MFC/OLE inclut une implémentation de « Tables d'interface » qui s'apparente
 
 - Implémentation de piloté par les données [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
 
-Par ailleurs, les tables d’interface prennent en charge les fonctionnalités avancées suivantes :
+Par ailleurs, les tables d'interface prennent en charge les fonctionnalités avancées suivantes :
 
 - Prise en charge de la création d'objets COM agrégeables.
 
@@ -345,7 +345,7 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
 }
 ```
 
-L'implémentation pour CEditPrintObj::CPrintObj serait similaire aux définitions ci-dessus de CEditPrintObj::CEditObj. Bien qu'il soit possible de créer une macro qui permettrait de générer automatiquement ces fonctions (comme c'était le cas à un stade plus précoce du développement de MFC/OLE), il devient difficile de définir des points d'arrêt quand une macro génère plus d'une ligne de code. C'est pour cette raison que ce code est développé manuellement.
+L'implémentation pour CEditPrintObj::CPrintObj serait similaire aux définitions ci-dessus de CEditPrintObj::CEditObj. Bien qu'il soit possible de créer une macro qui permettrait de générer automatiquement ces fonctions (comme c'était le cas à un stade plus précoce du développement de MFC/OLE), il devient difficile de définir des points d'arrêt quand une macro génère plus d'une ligne de code. C’est pour cette raison que ce code est développé manuellement.
 
 En utilisant l'implémentation des tables des messages de l'infrastructure, il y a un certain nombre de choses qu'il n'était pas nécessaire de faire :
 
@@ -367,7 +367,7 @@ Par ailleurs, l'infrastructure utilise des tables des messages en interne. Vous 
 
 En plus de prendre en charge les objets COM autonomes, MFC prend aussi en charge l'agrégation. Agrégation proprement dite est un sujet trop complexe pour discuter ici ; reportez-vous à la [agrégation](/windows/desktop/com/aggregation) rubrique pour plus d’informations sur l’agrégation. Dans cette note, nous nous bornerons à décrire la prise en charge de l'agrégation intégrée à l'infrastructure et aux tables d'interface.
 
-Il existe deux façons d'utiliser l'agrégation : soit en utilisant un objet COM qui prenne en charge l'agrégation, soit en implémentant un objet qui puisse être agrégé par un autre. Autrement dit, cela consiste à « utiliser un objet d'agrégation » et à « rendre un objet agrégeable ». MFC prend en charge les deux méthodes.
+Il existe deux façons d’utiliser l’agrégation : (1) en utilisant un objet COM qui prend en charge d’agrégation et (2) implémentant un objet qui peut être agrégé par un autre. Autrement dit, cela consiste à « utiliser un objet d'agrégation » et à « rendre un objet agrégeable ». MFC prend en charge les deux méthodes.
 
 ### <a name="using-an-aggregate-object"></a>Utilisation d'un objet d'agrégation
 
@@ -488,7 +488,7 @@ DWORD ExternalRelease();
 
 #### <a name="remarks"></a>Notes
 
-Appelez cette fonction dans votre implémentation d'IUnknown::Release pour chaque interface que votre classe implémente. La valeur de retour indique le nouveau nombre de références au niveau de l'objet. Si l'objet est agrégée, cette fonction appelle l'« IUnknown de contrôle » au lieu de manipuler le nombre de références locales.
+Appelez cette fonction dans votre implémentation d’IUnknown::Release pour chaque interface que votre classe implémente. La valeur de retour indique le nouveau nombre de références au niveau de l'objet. Si l'objet est agrégée, cette fonction appelle l'« IUnknown de contrôle » au lieu de manipuler le nombre de références locales.
 
 ### <a name="declareinterfacemap--macro-description"></a>Description de la macro DECLARE_INTERFACE_MAP
 
@@ -552,7 +552,7 @@ END_INTERFACE_MAP
 *theClass*<br/>
 Classe dans laquelle la table d'interface doit être définie.
 
-*classe de base*<br/>
+*baseClass*<br/>
 La classe à partir de laquelle *theClass* dérive.
 
 #### <a name="remarks"></a>Notes
@@ -570,7 +570,7 @@ INTERFACE_PART(theClass, iid, localClass)
 *theClass*<br/>
 Nom de la classe qui contient la table d'interface.
 
-*IID*<br/>
+*iid*<br/>
 `IID` qui doit être mappé à la classe incorporée.
 
 *localClass*<br/>

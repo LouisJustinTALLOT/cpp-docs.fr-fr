@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CComAutoDeleteCriticalSection class
 ms.assetid: 2396dbea-1c60-4841-b50e-c4e18af311a3
 ms.openlocfilehash: d479adce489e0329be3a93b55a70aa3e58a0e038
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246655"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>Ccomautodeletecriticalsection, classe
 
@@ -38,7 +38,7 @@ Cette classe présente des méthodes supplémentaires au fil de sa classe de bas
 
 `CComAutoDeleteCriticalSection`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcore.h
 

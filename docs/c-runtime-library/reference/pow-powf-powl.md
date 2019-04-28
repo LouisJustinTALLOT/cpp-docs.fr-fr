@@ -34,11 +34,11 @@ helpviewer_keywords:
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
 ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232232"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -92,7 +92,7 @@ La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette sur
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|
-|**Pow**, **powf**, **powl**|\<math.h>|\<math.h> ou \<cmath>|
+|**pow**, **powf**, **powl**|\<math.h>|\<math.h> ou \<cmath>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

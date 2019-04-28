@@ -41,11 +41,11 @@ helpviewer_keywords:
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
 ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286731"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -93,10 +93,10 @@ Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’
 
 |Routine|Condition de test (page de codes 932 uniquement)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Hiragana de deux octets : 0x829F < =*c*< = 0x82F1.|
-|**_ismbchira_l**|Hiragana de deux octets : 0x829F < =*c*< = 0x82F1.|
-|**_ismbckata**|Deux octets : 0 x 8340 < =*c*< = 0 x 8396.|
-|**_ismbckata_l**|Deux octets : 0 x 8340 < =*c*< = 0 x 8396.|
+|**_ismbchira**|Hiragana sur deux octets : 0x829F<=*c*<=0x82F1.|
+|**_ismbchira_l**|Hiragana sur deux octets : 0x829F<=*c*<=0x82F1.|
+|**_ismbckata**|Katakana sur deux octets : 0x8340<=*c*<=0x8396.|
+|**_ismbckata_l**|Katakana sur deux octets : 0x8340<=*c*<=0x8396.|
 
 **Fin des fonctions spécifiques à la page de codes 932**
 

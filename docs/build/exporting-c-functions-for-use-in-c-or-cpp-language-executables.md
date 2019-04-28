@@ -9,15 +9,15 @@ helpviewer_keywords:
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
 ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273571"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Exportation de fonctions C à utiliser dans des exécutables en langage C ou C++
 
-Si vous disposez de fonctions dans une DLL écrite en C et que vous souhaitez accéder à partir d’un langage C ou un module en C++, vous devez utiliser le **__cplusplus** macro de préprocesseur pour déterminer le langage en cours de compilation et ensuite déclarer ces fonctions avec liaison C si utilisé à partir d’un module en C++. Si vous utilisez cette technique et fournissez les fichiers d’en-tête pour votre DLL, ces fonctions peuvent être utilisées par les utilisateurs de C et C++ sans modification.
+Si vous disposez de fonctions dans une DLL écrite en C que vous souhaitez accéder à partir d’un langage C ou C++ module de langue, vous devez utiliser le **__cplusplus** macro de préprocesseur pour déterminer le langage en cours de compilation et ensuite déclarer ces fonctions avec liaison C si utilisé à partir d’un C++ module language. Si vous utilisez cette technique et fournissez les fichiers d’en-tête pour votre DLL, ces fonctions peuvent être utilisées par les utilisateurs de C et C++ sans modification.
 
 Le code suivant montre un fichier d’en-tête qui peut être utilisé par les applications clientes C et C++ :
 
@@ -54,7 +54,7 @@ extern "C" {
 
 - [Déterminer la méthode d’exportation à utiliser](determining-which-exporting-method-to-use.md)
 
-- [Importer dans une application à l’aide de __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une application à l'aide de __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)
 

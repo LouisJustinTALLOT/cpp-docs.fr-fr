@@ -1,5 +1,5 @@
 ---
-title: "TN030 : personnalisation de l'impression et de l'aperçu avant impression"
+title: 'TN030 : Personnalisation de l’impression et Aperçu avant impression'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.print
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 ms.openlocfilehash: 09938c5cec2812998d5e76e15154754ad3ac3e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305682"
 ---
-# <a name="tn030-customizing-printing-and-print-preview"></a>TN030 : personnalisation de l'impression et de l'aperçu avant impression
+# <a name="tn030-customizing-printing-and-print-preview"></a>TN030 : Personnalisation de l’impression et Aperçu avant impression
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -40,13 +40,13 @@ Pour des bandes manuellement, vous devez re implémenter la boucle d’impressio
 
 En second lieu, vous devez fréquemment appeler `QueryAbort` lors du tracé de la bande. Sinon, la procédure de l’abandon n’est pas appelée et l’utilisateur sera impossible d’annuler le travail d’impression.
 
-## <a name="print-preview-electronic-paper-with-user-interface"></a>Aperçu avant impression : Le livre électronique avec Interface utilisateur
+## <a name="print-preview-electronic-paper-with-user-interface"></a>Aperçu avant impression : Livre électronique avec Interface utilisateur
 
 Aperçu avant impression, par essence, essaie éteindre l’affichage dans une émulation d’une imprimante. Par défaut, la zone cliente de la fenêtre principale est utilisée pour afficher une ou deux pages entièrement dans la fenêtre. L’utilisateur est en mesure de faire un zoom sur une zone de la page pour voir plus de détails. Avec prise en charge supplémentaire, l’utilisateur peut encore être autorisé à modifier le document en mode Aperçu.
 
 ## <a name="customizing-print-preview"></a>Personnalisation de l’aperçu avant impression
 
-Cette note ne traite qu’un aspect de la modification de l’aperçu avant impression : ajout d’une interface utilisateur en mode Aperçu. Autres modifications sont possibles, mais ces modifications sont abordés dans cette discussion.
+Cette note ne traite qu’un aspect de la modification de l’aperçu avant impression : Ajout de l’interface utilisateur en mode Aperçu. Autres modifications sont possibles, mais ces modifications sont abordés dans cette discussion.
 
 ## <a name="to-add-ui-to-the-preview-mode"></a>Pour ajouter une interface utilisateur pour le mode Aperçu
 

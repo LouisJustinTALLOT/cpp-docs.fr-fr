@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236549"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt;, fonctions
 
@@ -52,7 +52,7 @@ Itérateur d’entrée qui traite le premier élément de la plage qui doit êtr
 *last*<br/>
 Itérateur d’entrée qui traite le dernier élément d’une plage qui doit être additionné ou combiné selon une opération binaire spécifiée et dont la position se trouve immédiatement après le dernier élément inclus dans l’accumulation itérée.
 
-*Val*<br/>
+*val*<br/>
 Valeur initiale à laquelle chaque élément est à son tour ajouté ou combiné selon une opération binaire spécifiée.
 
 *binary_op*<br/>
@@ -192,7 +192,7 @@ Itérateur d'entrée qui traite le premier élément d'une plage d'entrée dont 
 *last*<br/>
 Itérateur d'entrée qui traite le dernier élément d'une plage d'entrée dont les éléments doivent être différenciés de leurs prédécesseurs respectifs, ou bien, dont la paire de valeurs doit être utilisée dans le cadre d'une opération par une opération binaire spécifiée.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie qui traite le premier élément d'une plage de destination dans laquelle les différences ou les résultats de l'opération spécifiée doivent être enregistrés.
 
 *binary_op*<br/>
@@ -306,7 +306,7 @@ Itérateur d’entrée qui traite le dernier élément de la première plage don
 *first2*<br/>
 Itérateur d’entrée qui traite le premier élément de la deuxième plage dont le produit interne ou le produit interne généralisé avec la première plage est à calculer.
 
-*Val*<br/>
+*val*<br/>
 Valeur initiale à laquelle ajouter le produit interne ou le produit interne généralisé entre les plages.
 
 *binary_op1*<br/>
@@ -319,7 +319,7 @@ Opération binaire qui remplace l’opération de multiplication des éléments 
 
 La première fonction membre retourne la somme des produits d’éléments et y ajoute la valeur initiale spécifiée. Pour les plages de valeurs *a*i et *b*i, elle retourne :
 
-`val` + ( *un*1 \* *b*1) + ( *un*2 \* *b*2) +... + ( *un*n \* *b*n)
+`val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n )
 
 en remplaçant de manière itérative *val* avec `val` + ( *un*je \* *b*je).
 
@@ -440,7 +440,7 @@ Itérateur d’entrée qui traite le premier élément de la plage à remplir.
 *last*<br/>
 Itérateur d’entrée qui traite le dernier élément de la plage à remplir.
 
-*valeur*<br/>
+*value*<br/>
 Valeur de départ à stocker dans le premier élément et à incrémenter successivement dans les éléments suivants.
 
 ### <a name="remarks"></a>Notes
@@ -514,7 +514,7 @@ Itérateur d'entrée qui traite le premier élément de la plage qui doit être 
 *last*<br/>
 Itérateur d'entrée qui traite le dernier élément d'une plage qui doit être partiellement additionné ou combiné selon une opération binaire spécifiée, et dont la position se trouve immédiatement après le dernier élément inclus dans l'accumulation itérée.
 
-*Résultat*<br/>
+*result*<br/>
 Itérateur de sortie qui traite le premier élément d'une plage de destination dans laquelle les sommes partielles ou les résultats de l'opération spécifiée doivent être enregistrés.
 
 *binary_op*<br/>

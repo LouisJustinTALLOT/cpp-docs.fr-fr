@@ -8,11 +8,11 @@ helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
 ms.openlocfilehash: 6ce3532e99dc1d0ff0151285766aa5d78c2b9e9d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275306"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Idochostuihandlerdispatch, Interface
 
@@ -56,7 +56,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 
 Un hôte peut remplacer les menus, barres d’outils et les menus contextuels utilisés par le moteur de rendu (MSHTML) et de l’analyse HTML de Microsoft en implémentant cette interface.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 La définition de cette interface est disponible en tant que fichier IDL ou C++, comme indiqué ci-dessous.
 

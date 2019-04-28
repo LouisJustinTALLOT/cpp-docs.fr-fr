@@ -8,11 +8,11 @@ helpviewer_keywords:
 - error information, classes
 ms.assetid: ba40c8fb-81fd-4f61-8f47-fa2cb540e274
 ms.openlocfilehash: 19771a182de8863e1bfb63499cd46633f6a837c3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250769"
 ---
 # <a name="error-information-classes"></a>Classes d’informations d’erreur
 

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
 ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232400"
 ---
 # <a name="cdecl"></a>__cdecl
 
 **Section spécifique à Microsoft**
 
-**__cdecl** est la valeur par défaut de convention d’appel pour les programmes C et C++. Étant donné que la pile est nettoyée par l’appelant, il peut faire `vararg` fonctions. Le **__cdecl** convention d’appel crée des exécutables plus grands que [__stdcall](../cpp/stdcall.md), car elle exige de chaque appel de fonction pour inclure du code de nettoyage de pile. La liste suivante illustre l’implémentation de cette convention d’appel.
+**__cdecl** est la valeur par défaut de convention d’appel pour C et C++ programmes. Étant donné que la pile est nettoyée par l’appelant, il peut faire `vararg` fonctions. Le **__cdecl** convention d’appel crée des exécutables plus grands que [__stdcall](../cpp/stdcall.md), car elle exige de chaque appel de fonction pour inclure du code de nettoyage de pile. La liste suivante illustre l'implémentation de cette convention d'appel.
 
 |Élément|Implémentation|
 |-------------|--------------------|

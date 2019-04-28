@@ -7,17 +7,17 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
 ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294146"
 ---
 # <a name="compiling-a-cc-project"></a>Compilation d’un projet C/C++
 
 Les options de compilateur C et C++ peuvent être définies dans l’IDE Visual Studio ou sur la ligne de commande. 
 
-## <a name="in-visual-studio"></a>Dans Visual Studio
+## <a name="in-visual-studio"></a>Dans Visual Studio
 
 Vous pouvez définir les options du compilateur pour chaque projet dans son Visual Studio **Pages de propriétés** boîte de dialogue. Dans le volet gauche, sélectionnez **propriétés de Configuration**, **C/C++** , puis choisissez la catégorie d’option du compilateur. La rubrique relative à chaque option de compilateur explique comment définir cette dernière et où la trouver dans l'environnement de développement. Consultez [Options du compilateur MSVC](compiler-options.md) pour obtenir la liste complète.
 

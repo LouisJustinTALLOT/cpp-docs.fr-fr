@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
 ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246138"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound, classe
 
@@ -54,7 +54,7 @@ Cette classe est un wrapper pour le `SAFEARRAYBOUND` structure utilisée par [CC
 
 **En-tête :** atlsafe.h
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsafe.h
 

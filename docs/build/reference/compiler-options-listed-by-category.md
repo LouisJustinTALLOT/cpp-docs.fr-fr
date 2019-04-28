@@ -5,11 +5,11 @@ helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
 ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294159"
 ---
 # <a name="compiler-options-listed-by-category"></a>Options du compilateur classées par catégorie
 
@@ -105,7 +105,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 |[/u](u-u-undefine-symbols.md)|Supprime toutes les macros prédéfinies.|
 |[/X](x-ignore-standard-include-paths.md)|Ignore le répertoire Include standard.|
 
-## <a name="language"></a>Langage
+## <a name="language"></a>Langue
 
 |Option|Objectif|
 |------------|-------------|
@@ -219,4 +219,4 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 
 [Référence de la génération C/C++](c-cpp-building-reference.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>

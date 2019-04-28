@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
 ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239290"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Contrôles ActiveX MFC : Utilisation d’images dans un contrôle ActiveX
 
@@ -45,7 +45,7 @@ Les classes de contrôles ActiveX fournissent différents composants que vous po
 
 - Une page de propriétés qui permet de manipuler une ou plusieurs propriétés Picture d’un contrôle.
 
-   Cette page de propriétés fait partie d’un groupe de pages de propriétés stock disponibles pour les contrôles ActiveX. Pour plus d’informations sur les pages de propriété des contrôles ActiveX, consultez l’article [contrôles ActiveX MFC : À l’aide des Pages de propriétés Stock](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+   Cette page de propriétés fait partie d’un groupe de pages de propriétés stock disponibles pour les contrôles ActiveX. Pour plus d’informations sur les pages de propriété des contrôles ActiveX, consultez l’article [contrôles ActiveX MFC : Utilisation des pages de propriétés Stock](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implémentation d’une propriété Picture personnalisée dans votre contrôle ActiveX
 
@@ -150,5 +150,5 @@ Une fois les modifications terminées, régénérez votre projet pour incorporer
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Contrôles ActiveX MFC : Utilisation des polices](../mfc/mfc-activex-controls-using-fonts.md)<br/>
-[Contrôles ActiveX MFC : Pages de propriétés](../mfc/mfc-activex-controls-property-pages.md)
+[Contrôles ActiveX MFC : Utilisation de polices](../mfc/mfc-activex-controls-using-fonts.md)<br/>
+[Contrôles ActiveX MFC : Pages de propriétés](../mfc/mfc-activex-controls-property-pages.md)

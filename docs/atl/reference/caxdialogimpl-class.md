@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
 ms.openlocfilehash: d6f08553a9eff421923ef348caee2022849674ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259961"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl, classe
 
@@ -63,7 +63,7 @@ La classe de fenêtre de base pour `CDialogImplBaseT`.
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CAxDialogImpl::m_bModal](#m_bmodal)|Une variable qui existe uniquement en mode de débogage génère et est définie sur true si la boîte de dialogue est modale.|
 
@@ -97,7 +97,7 @@ Pour plus d’informations sur `CAxDialogImpl`, consultez [Forum aux questions d
 
 `CAxDialogImpl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlwin.h
 

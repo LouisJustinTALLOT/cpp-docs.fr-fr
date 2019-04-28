@@ -5,11 +5,11 @@ helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267370"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Règles et limitations concernant les fonctions naked
 
@@ -33,7 +33,7 @@ Les règles et les limitations suivantes s'appliquent aux fonctions naked :
 
 - Le **naked** mot clé est ignoré lors de la compilation avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Pour [__fastcall](../cpp/fastcall.md) fonctions naked, chaque fois qu’il existe une référence dans le code C/C++ à un des arguments de Registre, le code de prologue doit stocker les valeurs de ce Registre à l’emplacement de la pile pour cette variable. Exemple :
+- Pour [__fastcall](../cpp/fastcall.md) des fonctions naked, chaque fois qu’il existe une référence en C /C++ code à un des arguments de Registre, le code de prologue doit stocker les valeurs de ce Registre à l’emplacement de la pile pour cette variable. Exemple :
 
 ```cpp
 // nkdfastcl.cpp

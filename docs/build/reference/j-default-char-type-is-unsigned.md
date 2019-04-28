@@ -14,11 +14,11 @@ helpviewer_keywords:
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
 ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269399"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (Type de caractère par défaut non signé)
 
@@ -56,5 +56,5 @@ ANSI C et C++ ne nécessitent pas une implémentation spécifique de la `char` t
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
-[Définir le compilateur C++ et générer des propriétés dans Visual Studio](../working-with-project-properties.md)
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md)

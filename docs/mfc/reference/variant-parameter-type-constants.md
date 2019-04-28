@@ -36,11 +36,11 @@ helpviewer_keywords:
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
 ms.openlocfilehash: b15a303f69ce13cf3ba3b6c1c0739acdb8a33c7c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309474"
 ---
 # <a name="variant-parameter-type-constants"></a>Constantes de type paramètre variant
 
@@ -81,7 +81,7 @@ Voici une liste de constantes de la classe :
     > [!NOTE]
     >  Les constantes de type variants supplémentaires ont été définis pour tous les types variants, à l’exception VTS_FONT et VTS_PICTURE, qui fournissent un pointeur vers la constante de données variant. Ces constantes sont nommés à l’aide de la VTS_P`constantname` convention. Par exemple, VTS_PCOLOR est un pointeur vers un VTS_COLOR (constante).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdisp.h
 

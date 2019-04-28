@@ -8,11 +8,11 @@ helpviewer_keywords:
 - dates, MFC
 ms.assetid: ecf56dc5-d418-4603-ad3e-af7e205a6403
 ms.openlocfilehash: 32222b4a2a529716db2c414e0281e1b1ba16a0dd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236422"
 ---
 # <a name="date-and-time"></a>Date et heure
 
@@ -26,11 +26,11 @@ MFC prend en charge plusieurs façons de travailler avec des dates et heures. El
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 
-- [Date et heure : Prise en charge SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
+- [Date et heure : Prise en charge de SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
 
-- [Date et heure : Prise en charge Automation](../atl-mfc-shared/date-and-time-automation-support.md)
+- [Date et heure : Prise en charge d’Automation](../atl-mfc-shared/date-and-time-automation-support.md)
 
-- [Date et heure : Prise en charge de la base de données](../atl-mfc-shared/date-and-time-database-support.md)
+- [Date et heure : Prise en charge de la base de données](../atl-mfc-shared/date-and-time-database-support.md)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 ms.openlocfilehash: 480b4c2a6e052e8e0823b97b548fc5d07b55230f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260173"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>Ccomclassfactorysingleton, classe
 
@@ -69,7 +69,7 @@ Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComC
 
 `CComClassFactorySingleton`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309197"
 ---
 # <a name="ribbon-designer-mfc"></a>Concepteur de ruban (MFC)
 
@@ -85,13 +85,13 @@ L'illustration suivante représente les différents composants du Concepteur de 
 
 Les rubriques suivantes expliquent comment utiliser les fonctionnalités du Concepteur de ruban :
 
-- [Guide pratique pour Personnaliser le bouton d’Application](../mfc/how-to-customize-the-application-button.md)
+- [Guide pratique pour Personnaliser le bouton Application](../mfc/how-to-customize-the-application-button.md)
 
 - [Guide pratique pour Personnaliser la barre d’outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
 - [Guide pratique pour Ajouter des contrôles de ruban et des gestionnaires d’événements](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
-- [Guide pratique pour Charger une ressource de ruban à partir d’une Application MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
+- [Guide pratique pour Charger une ressource du ruban à partir d’une application MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
 ## <a name="definitions-of-ribbon-elements"></a>Définition des éléments de ruban
 

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
 ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246558"
 ---
 # <a name="ccombstr-class"></a>CComBSTR, classe
 
@@ -112,7 +112,7 @@ Un [BSTR](/previous-versions/windows/desktop/automat/bstr) est nul après le der
 
 Pour obtenir la liste des précautions à prendre lorsque vous utilisez `CComBSTR`, consultez [programmation avec CComBSTR](../../atl/programming-with-ccombstr-atl.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 

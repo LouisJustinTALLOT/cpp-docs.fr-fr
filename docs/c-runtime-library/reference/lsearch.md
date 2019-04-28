@@ -29,11 +29,11 @@ helpviewer_keywords:
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
 ms.openlocfilehash: 340e8ac382972b15acc52013d5d6a51352db969c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285654"
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -59,7 +59,7 @@ Objet à rechercher.
 *base*<br/>
 Pointeur désignant la base du tableau à explorer.
 
-*Nombre*<br/>
+*number*<br/>
 Nombre d'éléments.
 
 *width*<br/>

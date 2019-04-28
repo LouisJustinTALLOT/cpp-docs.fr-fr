@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
 ms.openlocfilehash: 698912100244189bdec99fa3726a063eb2e907a7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260108"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase, classe
 
@@ -202,7 +202,7 @@ Cette classe fournit des méthodes pour créer et gérer des contrôles ATL. [CC
 
 Pour plus d’informations sur la création d’un contrôle, consultez le [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md). Pour plus d’informations sur l’Assistant Projet ATL, consultez l’article [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlctl.h
 
@@ -1219,9 +1219,9 @@ Le tableau suivant indique comment la `m_spInPlaceSite` type pointeur varie selo
 
 |m_spInPlaceSite Type|m_bWndLess valeur|m_bInPlaceSiteEx Value|
 |---------------------------|-----------------------|-----------------------------|
-|`IOleInPlaceSiteWindowless`|true|TRUE ou FALSE|
-|`IOleInPlaceSiteEx`|false|true|
-|`IOleInPlaceSite`|false|false|
+|`IOleInPlaceSiteWindowless`|TRUE|TRUE ou FALSE|
+|`IOleInPlaceSiteEx`|FALSE|TRUE|
+|`IOleInPlaceSite`|FALSE|FALSE|
 
 ##  <a name="m_spoleadviseholder"></a>  CComControlBase::m_spOleAdviseHolder
 

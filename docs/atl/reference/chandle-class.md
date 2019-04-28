@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
 ms.openlocfilehash: 19e761ea8eb133db55b4d24600f2a1fd01ac3e34
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245632"
 ---
 # <a name="chandle-class"></a>CHandle, classe
 
@@ -66,7 +66,7 @@ Un `CHandle` objet peut être utilisé chaque fois qu’un handle est nécessair
 > [!NOTE]
 >  Certaines fonctions d’API utilise NULL comme un handle non valide ou vide, tandis que d’autres utilisent INVALID_HANDLE_VALUE. `CHandle` utilise uniquement NULL et va traite INVALID_HANDLE_VALUE comme un handle réel. Si vous appelez une API qui peut retourner INVALID_HANDLE_VALUE, vous devez rechercher cette valeur avant d’appeler [CHandle::Attach](#attach) ou en le passant à la `CHandle` constructeur et passer à la place la valeur NULL.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 

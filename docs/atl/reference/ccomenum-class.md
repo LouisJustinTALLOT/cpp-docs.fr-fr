@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
 ms.openlocfilehash: 4d83b06f37c132c0d2325304e2cc155ccb490690
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246393"
 ---
 # <a name="ccomenum-class"></a>CComEnum, classe
 
@@ -74,7 +74,7 @@ Le modèle de thread de la classe. Ce paramètre par défaut est le modèle de t
 
 `CComEnum`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcom.h
 

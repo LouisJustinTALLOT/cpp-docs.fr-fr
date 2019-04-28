@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
 ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301849"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Bibliothèque de modèles parallèles
 
@@ -27,7 +27,7 @@ La bibliothèque PPL offre les fonctionnalités suivantes :
 
 La bibliothèque PPL fournit un modèle de programmation qui ressemble à la bibliothèque C++ Standard. L'exemple suivant illustre de nombreuses fonctionnalités de la bibliothèque PPL. Il calcule plusieurs nombres de Fibonacci en série et en parallèle. Les deux calculs agissent sur un [std::array](../../standard-library/array-class-stl.md) objet. L'exemple affiche également sur la console le temps requis pour effectuer les deux calculs.
 
-La version sérialisée utilise la bibliothèque C++ Standard [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorithme pour parcourir le tableau et stocke les résultats dans un [std::vector](../../standard-library/vector-class.md) objet. La version parallèle effectue la même tâche, mais utilise la bibliothèque PPL [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorithme et stocke les résultats dans un [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) objet. La classe `concurrent_vector` permet à chaque itération de boucle d'ajouter simultanément des éléments sans avoir à synchroniser l'accès en écriture au conteneur.
+La version sérialisée utilise le C++ bibliothèque Standard [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorithme pour parcourir le tableau et stocke les résultats dans un [std::vector](../../standard-library/vector-class.md) objet. La version parallèle effectue la même tâche, mais utilise la bibliothèque PPL [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorithme et stocke les résultats dans un [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) objet. La classe `concurrent_vector` permet à chaque itération de boucle d'ajouter simultanément des éléments sans avoir à synchroniser l'accès en écriture au conteneur.
 
 Comme `parallel_for_each` agit simultanément, la version parallèle de cet exemple doit trier l'objet `concurrent_vector` pour produire les mêmes résultats que la version en série.
 

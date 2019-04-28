@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
 ms.openlocfilehash: e94d92b11a7f200edb1815a0b384d0fc0428001f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277472"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr, classe
 
@@ -56,7 +56,7 @@ Les membres de cette classe qui sont utilisés pour rechercher des adresses rés
 
 Cette classe prend en charge les deux adresses de réseau IPv4 andIPv6.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsocket.h
 
