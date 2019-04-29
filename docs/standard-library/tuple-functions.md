@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 93c11a89f7cdfa3949be2d97e401fad199a17d97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278956"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt;, fonctions
 
@@ -165,7 +165,7 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="tie"></a>  Tie
+## <a name="tie"></a>  tie
 
 Crée un `tuple` à partir des références d’élément.
 

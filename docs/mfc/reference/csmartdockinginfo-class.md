@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
 ms.openlocfilehash: d5f918b591e1db9ff67288a8761f7554698fa761
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324009"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo Class
 
@@ -59,7 +59,7 @@ class CSmartDockingInfo : public CObject
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Spécifie s’il faut utiliser la couleur de thème actuel lorsque l’infrastructure affiche des marqueurs d’ancrage intelligents.|
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Spécifie la couleur d’arrière-plan de base des marqueurs d’ancrage intelligents.|
@@ -101,7 +101,7 @@ L’illustration suivante montre un exemple de marqueurs d’ancrage actifs qui 
 
 [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxDockingManager.h
 

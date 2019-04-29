@@ -38,11 +38,11 @@ helpviewer_keywords:
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
 ms.openlocfilehash: ab5d743c7c6abf7ee3a849a28916ebd32788ef40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274943"
 ---
 # <a name="security-identifier-global-functions"></a>Fonctions globales identificateur de sécurité
 
@@ -86,7 +86,7 @@ Ces fonctions retournent des objets common SID bien connu.
 |[SIDs::Users](#users)|Retourne le SID de DOMAIN_ALIAS_RID_USERS.|
 |[Sids::World](#world)|Retourne le SID de SECURITY_WORLD_RID.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlsecurity.h
 

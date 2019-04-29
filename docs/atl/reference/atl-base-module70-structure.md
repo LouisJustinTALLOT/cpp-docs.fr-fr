@@ -10,11 +10,11 @@ helpviewer_keywords:
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
 ms.openlocfilehash: 4fddd4b3af6155d0663b9c01edfab4fcf4a60426
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260985"
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 Structure
 
@@ -65,7 +65,7 @@ Tableau utilisé pour rechercher des ressources dans toutes les instances de res
 
 [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) est défini comme un typedef de _ATL_BASE_MODULE70.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcore.h
 

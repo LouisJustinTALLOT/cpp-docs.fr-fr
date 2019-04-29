@@ -57,18 +57,18 @@ helpviewer_keywords:
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
 ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286873"
 ---
 # <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
 Détermine si le caractère est un caractère graphique, un caractère d’affichage, un caractère de ponctuation ou un espace.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -136,7 +136,7 @@ Chacune de ces fonctions teste un caractère multioctet fourni pour un état don
 |**_ismbcblank**|Espace ou tabulation horizontale|Retourne une valeur différente de zéro si et seulement si *c* est un espace ou un caractère de tabulation horizontale : *c*= 0 x 20 ou *c*= 0 x 09.|
 |**_ismbcspace**|Espace blanc|Retourne une valeur différente de zéro si et seulement si *c* est un caractère d’espace blanc : *c*= 0 x 20 ou 0 x 09 < =*c*< = 0x0D.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

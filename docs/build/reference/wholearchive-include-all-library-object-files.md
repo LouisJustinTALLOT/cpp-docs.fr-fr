@@ -3,11 +3,11 @@ title: / WHOLEARCHIVE (inclure tous les fichiers d’objet de bibliothèque)
 ms.date: 11/04/2016
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
 ms.openlocfilehash: db99816b18110b424647603196040997044e7fbd
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316429"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (inclure tous les fichiers d’objet de bibliothèque)
 
@@ -35,5 +35,5 @@ L’option /WHOLEARCHIVE a été introduite dans Visual Studio 2015 Update 2.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

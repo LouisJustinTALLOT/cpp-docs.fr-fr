@@ -26,11 +26,11 @@ helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
 ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260052"
 ---
 # <a name="catltransactionmanager-class"></a>Catltransactionmanager, classe
 
@@ -77,7 +77,7 @@ class CAtlTransactionManager;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[m_bFallback](#m_bfallback)|TRUE si la procédure de secours est pris en charge ; FALSE sinon.|
 |[m_hTransaction](#m_htransaction)|Le handle de la transaction.|
@@ -88,7 +88,7 @@ class CAtlTransactionManager;
 
 [ATL::CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atltransactionmanager.h
 

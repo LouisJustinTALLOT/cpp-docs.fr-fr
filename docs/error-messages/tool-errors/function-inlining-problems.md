@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: fec3884dff0dda7140f18fa53e493c12996edcf0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255498"
 ---
 # <a name="function-inlining-problems"></a>Problèmes de fonctions inline
 
@@ -24,7 +24,7 @@ Si vous utilisez des fonctions inline, vous devez :
 
 - Avez incorporation (inlining) dans le fichier d’en-tête.
 
-```
+```cpp
 // LNK2019_function_inline.cpp
 // compile with: /c
 // post-build command: lib LNK2019_function_inline.obj
@@ -39,7 +39,7 @@ void _load_config_used::Test() { printf("in Test\n"); }
 
 Puis,
 
-```
+```cpp
 // LNK2019_function_inline_2.cpp
 // compile with: LNK2019_function_inline.lib
 struct _load_config_used {
@@ -60,7 +60,7 @@ Panachage d’options de compilation en ligne et non en ligne sur les différent
 
 De même, un projet qui utilise la fonction inline mais définit les fonctions dans un fichier .cpp au plutôt que dans l’en-tête de fichier recevront également l’erreur LNK2019. Le fichier d’en-tête est inclus partout semble approprié, mais les fonctions sont uniquement inline lorsque le fichier .cpp passe par le compilateur ; Par conséquent, l’éditeur de liens considère les fonctions comme externes non résolus lorsqu’il est utilisé dans d’autres modules.
 
-```
+```cpp
 // LNK2019_FIP.h
 struct testclass {
    void PublicStatMemFunc1(void);
@@ -69,7 +69,7 @@ struct testclass {
 
 Et puis
 
-```
+```cpp
 // LNK2019_FIP.cpp
 // compile with: /c
 #include "LNK2019_FIP.h"
@@ -78,7 +78,7 @@ inline void testclass::PublicStatMemFunc1(void) {}
 
 Et puis
 
-```
+```cpp
 // LNK2019_FIP_2.cpp
 // compile with: LNK2019_FIP.cpp
 // LNK2019 expected

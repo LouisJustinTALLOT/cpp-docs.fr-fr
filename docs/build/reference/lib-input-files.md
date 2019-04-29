@@ -7,11 +7,11 @@ helpviewer_keywords:
 - input files, LIB
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
 ms.openlocfilehash: 648871464dbc99972b8ca40579046347727e81cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269386"
 ---
 # <a name="lib-input-files"></a>Fichiers d'entrée LIB
 

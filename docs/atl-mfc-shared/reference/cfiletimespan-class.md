@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
 ms.openlocfilehash: 001e6ddc78a41e118949e9b750b78609f3ff9e92
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235300"
 ---
 # <a name="cfiletimespan-class"></a>Cfiletimespan, classe
 
@@ -67,7 +67,7 @@ Cette classe fournit des méthodes pour la gestion des périodes relatives de te
 
 Consultez l’exemple de [CFileTime::Millisecond](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atltime.h
 

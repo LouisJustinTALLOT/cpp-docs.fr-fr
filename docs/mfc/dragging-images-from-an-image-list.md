@@ -8,11 +8,11 @@ helpviewer_keywords:
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
 ms.openlocfilehash: ba56a38cfc5ccf808c7d95f24666fff0313ecc43
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262617"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Faire glisser des images à partir d'une liste d'images
 

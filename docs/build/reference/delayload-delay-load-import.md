@@ -11,11 +11,11 @@ helpviewer_keywords:
 - delayed loading of DLLs, /DELAYLOAD option
 ms.assetid: 39ea0f1e-5c01-450f-9c75-2d9761ff9b28
 ms.openlocfilehash: e92b470b7b5e76b39371f333cbbda150e7f6e8c7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273353"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (Différer le chargement de l'importation)
 
@@ -46,5 +46,5 @@ Le [/retarder](delay-delay-load-import-settings.md) option spécifie la liaison 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

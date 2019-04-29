@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
 ms.openlocfilehash: bf76182242f7b76e3a2c18f85b72674e88afa737
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274774"
 ---
 # <a name="ipropertypage2impl-class"></a>Classe de IPropertyPage2Impl
 
@@ -62,7 +62,7 @@ Lorsque vous créez une page de propriétés, votre classe est généralement d�
 
 `IPropertyPage2Impl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlctl.h
 

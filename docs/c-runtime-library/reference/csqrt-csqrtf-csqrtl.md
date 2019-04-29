@@ -31,11 +31,11 @@ helpviewer_keywords:
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
 ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288834"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
 
@@ -70,20 +70,20 @@ Nombre complexe.
 
 La racine carrée de *z*. Le résultat est dans le demi-plan de droite.
 
-|Entrée|Exception SEH|**_matherr** exception|
+|Entrée|Exception SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|+ QNAN, IND|none|_DOMAIN|
-|- ∞|aucun|_DOMAIN|
+|± QNAN, IND|none|_DOMAIN|
+|- ∞|none|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **csqrt** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **csqrt** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **csqrt** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **csqrt** accepte et retourne toujours un **_Dcomplex** valeur.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**csqrt**, **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex>|
+|**csqrt**,               **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

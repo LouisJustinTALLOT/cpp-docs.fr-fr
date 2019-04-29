@@ -9,11 +9,11 @@ helpviewer_keywords:
 - results, __stdcall call
 ms.assetid: aa70a7cb-ba1d-4aa6-bd0a-ba783da2e642
 ms.openlocfilehash: dcd1f9002362b7726883c6ce4f74fda9ab593544
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268050"
 ---
 # <a name="results-of-calling-example"></a>Exemple de résultats de l'appel
 
@@ -31,7 +31,7 @@ Le **__cdecl** convention d’appel
 Le nom décoré C (**__stdcall**) est `_MyFunc@20`. Le nom décoré C++ est spécifique à l’implémentation.
 
 ![&#95;&#95;STDCALL et conventions d’appel thiscall](../cpp/media/vc37i02.gif "&#95;&#95;stdcall et conventions d’appel thiscall") <br/>
-Conventions d’appel __stdcall et thiscall
+Conventions d'appel __stdcall et thiscall
 
 ## <a name="fastcall"></a>__fastcall
 

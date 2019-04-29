@@ -7,11 +7,11 @@ helpviewer_keywords:
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
 ms.openlocfilehash: c3e620cd760aa04df7d7d2209ef009a606675276
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59028453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62282918"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Référencement d'une propriété dans votre fournisseur
 

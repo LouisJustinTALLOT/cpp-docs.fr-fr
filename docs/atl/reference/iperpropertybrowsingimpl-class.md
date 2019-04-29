@@ -14,11 +14,11 @@ helpviewer_keywords:
 - IPerPropertyBrowsing, ATL implementation
 ms.assetid: 0b1a9be3-d242-4767-be69-663a21e4b728
 ms.openlocfilehash: 54c475e736425718e954b0e954ea2b327d938556
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274917"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>Iperpropertybrowsingimpl, classe
 
@@ -67,7 +67,7 @@ Le [IPerPropertyBrowsing](/windows/desktop/api/ocidl/nn-ocidl-iperpropertybrowsi
 
 `IPerPropertyBrowsingImpl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlctl.h
 

@@ -46,11 +46,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
 ms.openlocfilehash: 865c67b88c37e32ef33fa410ef178b81b7a6ecac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310160"
 ---
 # <a name="record-field-exchange-functions"></a>Fonctions Record Field Exchange (RFX)
 
@@ -151,7 +151,7 @@ Les données dans la source de données de ces types sont mappées vers et à pa
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -183,7 +183,7 @@ La valeur stockée dans le membre de données indiqué, la valeur doit être tra
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -215,7 +215,7 @@ La valeur stockée dans le membre de données indiqué, la valeur doit être tra
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -265,7 +265,7 @@ Le `CTime` version de la fonction impose la surcharge liée à un traitement int
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -297,7 +297,7 @@ La valeur stockée dans le membre de données indiqué, la valeur doit être tra
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -329,7 +329,7 @@ La valeur stockée dans le membre de données indiqué, la valeur doit être tra
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -362,7 +362,7 @@ La valeur stockée dans le membre de données indiqué, la valeur doit être tra
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -394,7 +394,7 @@ La valeur stockée dans le membre de données indiqué, la valeur doit être tra
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -426,7 +426,7 @@ La valeur stockée dans le membre de données indiqué, la valeur doit être tra
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -492,7 +492,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -543,7 +543,7 @@ Pour plus d’informations, consultez les articles [jeu d’enregistrements : E
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -590,7 +590,7 @@ Pour plus d’informations, consultez les articles [jeu d’enregistrements : E
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -637,7 +637,7 @@ Pour plus d’informations, consultez les articles [jeu d’enregistrements : E
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -684,7 +684,7 @@ Pour plus d’informations, consultez les articles [jeu d’enregistrements : E
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -731,7 +731,7 @@ Pour plus d’informations, consultez les articles [jeu d’enregistrements : E
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -763,7 +763,7 @@ La valeur stockée dans le membre de données indiqué, la valeur doit être tra
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -810,7 +810,7 @@ Pour plus d’informations, consultez les articles [jeu d’enregistrements : E
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -857,7 +857,7 @@ Pour plus d’informations, consultez les articles [jeu d’enregistrements : E
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -923,7 +923,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdb.h
 
@@ -970,7 +970,7 @@ Données sont mappées entre le type DAO_BYTES dans DAO et [CByteArray](cbytearr
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -1013,7 +1013,7 @@ Données sont mappées entre DAO_BOOL dans DAO de type et le type BOOL dans le j
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -1056,7 +1056,7 @@ Données sont mappées entre DAO_BYTES dans DAO de type et de type BYTE dans le 
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -1099,7 +1099,7 @@ Données sont mappées entre le type DAO_CURRENCY dans DAO et [COleCurrency](col
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -1145,7 +1145,7 @@ Données sont mappées entre le type DAO_DATE dans DAO et [COleDateTime](../../a
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -1188,7 +1188,7 @@ Données sont mappées entre le type DAO_R8 dans DAO et type **float double** da
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -1231,7 +1231,7 @@ Données sont mappées entre le type DAO_I4 dans DAO et type **long** dans le je
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -1278,7 +1278,7 @@ Une option qui vous permet de tirer parti des mécanisme de double tampon du MFC
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -1324,7 +1324,7 @@ Données sont mappées entre le type DAO_I2 dans DAO et type **court** dans le j
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -1367,7 +1367,7 @@ Données sont mappées entre le type DAO_R4 dans DAO et type **float** dans le j
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 
@@ -1430,7 +1430,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdao.h
 

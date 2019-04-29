@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _SECURE_SCL
 ms.assetid: 4ffbc788-cc12-4c6a-8cd7-490081675086
 ms.openlocfilehash: dcfaee2906136dffbe79a49f089a079104112e78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295745"
 ---
 # <a name="securescl"></a>_SECURE_SCL
 
@@ -41,4 +41,4 @@ Pour plus d’informations sur la façon de désactiver les avertissements conce
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)<br/>
 [Checked Iterators](../standard-library/checked-iterators.md)<br/>
 [Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
-[Bibliothèques sécurisées : bibliothèque standard C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[Bibliothèques sécurisées : Bibliothèque C++ Standard](../standard-library/safe-libraries-cpp-standard-library.md)<br/>

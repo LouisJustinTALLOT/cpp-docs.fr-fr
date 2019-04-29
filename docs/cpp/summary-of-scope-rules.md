@@ -9,11 +9,11 @@ helpviewer_keywords:
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
 ms.openlocfilehash: af708fd72904fb775ff1088948972bec159816c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266905"
 ---
 # <a name="summary-of-scope-rules"></a>Résumé des règles de portée
 
@@ -35,7 +35,7 @@ Un nom d'objet, de fonction ou d'énumérateur est global s'il est placé en deh
 
 ## <a name="qualified-names"></a>Noms qualifiés
 
-Les noms utilisés avec l’opérateur binaire de résolution de portée (`::`) sont appelés des noms qualifiés. Le nom spécifié après l’opérateur binaire de résolution de portée doit être membre de la classe spécifiée à gauche de l’opérateur ou membre d’une ou plusieurs de ses classes de base.
+Les noms utilisés avec l'opérateur binaire de résolution de portée (`::`) sont appelés des noms qualifiés. Le nom spécifié après l'opérateur binaire de résolution de portée doit être membre de la classe spécifiée à gauche de l'opérateur ou membre d'une ou plusieurs de ses classes de base.
 
 Les noms spécifiés après l’opérateur de sélection de membre (**.** ou **->**) doivent être membres du type de classe de l’objet spécifié à gauche de l’opérateur ou membres de ses classes de base. Les noms spécifiés sur la droite de l’opérateur de sélection de membre (**->**) peut également être des objets d’un autre type de classe, à condition que le côté gauche de **->** est un objet de classe et que la classe définit un opérateur de sélection de membre surchargé (**->**) qui prend la valeur en un pointeur vers un autre type de classe. (Cette disposition est décrite plus en détail dans [accès aux membres de classe](../cpp/member-access.md).)
 
@@ -43,7 +43,7 @@ Le compilateur recherche les noms dans l'ordre suivant et s'arrête après avoir
 
 1. Portée de bloc active si le nom est utilisé dans une fonction. Sinon, portée globale.
 
-1. Vers l'extérieur dans chaque portée de bloc englobante, notamment la portée de fonction externe (qui inclut des paramètres de fonction).
+1. Vers l’extérieur dans chaque portée de bloc englobante, notamment la portée de fonction externe (qui inclut des paramètres de fonction).
 
 1. Si le nom est utilisé dans une fonction membre, il est recherché dans la portée de la classe.
 

@@ -33,11 +33,11 @@ helpviewer_keywords:
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
 ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258622"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -67,7 +67,7 @@ Le **tan** fonctions retournent la tangente de *x*. Si *x* est supérieur ou ég
 
 |Entrée|Exception SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|aucun|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 |+ INF|**NON VALIDE**|_DOMAIN|
 
 ## <a name="remarks"></a>Notes

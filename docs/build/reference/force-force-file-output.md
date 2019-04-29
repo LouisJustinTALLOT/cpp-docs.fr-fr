@@ -11,11 +11,11 @@ helpviewer_keywords:
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
 ms.openlocfilehash: af7962a4b3b5805e7e0c4d59752254c8ade17f7b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292469"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Forcer la sortie d'un fichier)
 
@@ -55,5 +55,5 @@ Si un module est compilé avec **/CLR**, **/FORCE** ne crée pas une image.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

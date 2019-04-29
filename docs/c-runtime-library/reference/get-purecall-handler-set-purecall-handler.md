@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
 ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287398"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -66,7 +66,7 @@ Le précédent **_purecall_handler**. Retourne **nullptr** s’il n’y avait au
 
 ## <a name="remarks"></a>Notes
 
-Le **_get_purecall_handler** et **_set_purecall_handler** fonctions sont spécifiques à Microsoft et s’appliquent uniquement au code C++.
+Le **_get_purecall_handler** et **_set_purecall_handler** fonctions sont spécifiques à Microsoft et s’appliquent uniquement aux C++ code.
 
 Un appel à une fonction virtuelle pure est une erreur, car elle n’a pas d’implémentation. Par défaut, le compilateur génère du code pour appeler une fonction de gestionnaire d’erreurs quand une fonction virtuelle pure est appelée, ce qui met fin au programme. Vous pouvez installer votre propre fonction de gestionnaire d’erreurs pour les appels de fonctions virtuelles pures, de façon à les intercepter à des fins de débogage ou de création de rapports. Pour utiliser votre propre gestionnaire d’erreurs, créez une fonction qui a le **_purecall_handler** signature, puis utilisez **_set_purecall_handler** à faire le gestionnaire en cours.
 

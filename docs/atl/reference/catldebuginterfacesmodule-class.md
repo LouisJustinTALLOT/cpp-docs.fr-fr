@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CAtlDebugInterfacesModule class
 ms.assetid: a193b567-8191-4115-a963-a10805972bac
 ms.openlocfilehash: 1a056ccd4f78daaf16a97f0447999a8fbc828b99
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260621"
 ---
 # <a name="catldebuginterfacesmodule-class"></a>Catldebuginterfacesmodule, classe
 
@@ -29,7 +29,7 @@ class CAtlDebugInterfacesModule
 
 `CAtlDebugInterfacesModule` Fournit la prise en charge requis pour les interfaces de débogage. Il est inclus dans les projets qui définit le symbole [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 

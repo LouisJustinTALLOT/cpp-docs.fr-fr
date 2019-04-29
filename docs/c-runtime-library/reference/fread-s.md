@@ -21,11 +21,11 @@ f1_keywords:
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
 ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287809"
 ---
 # <a name="freads"></a>fread_s
 
@@ -48,7 +48,7 @@ size_t fread_s(
 *buffer*<br/>
 Emplacement de stockage des données.
 
-*BufferSize*<br/>
+*bufferSize*<br/>
 Taille de la mémoire tampon de destination en octets.
 
 *elementSize*<br/>
@@ -57,7 +57,7 @@ Taille de l’élément à lire en octets.
 *count*<br/>
 Nombre maximal d’éléments à lire.
 
-*flux de données*<br/>
+*stream*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
 ms.openlocfilehash: b78704ea12365d9e10222d75c6807517f7cdb893
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292833"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Fichier listing)
 
@@ -43,13 +43,13 @@ none<br/>
 Uniquement les langage assembleur sont inclus dans la liste.
 
 **c**<br/>
-Facultatif. Inclut le code machine dans la liste.
+Optionnel. Inclut le code machine dans la liste.
 
 **s**<br/>
 Facultatif. Inclut le code source dans la liste.
 
 **u**<br/>
-Facultatif. Encode le fichier d’annonce au format UTF-8 et inclut un marqueur d’ordre d’octet. Par défaut, le fichier est codé en ANSI. Utilisez `u` pour créer un fichier listing qui s’affiche correctement sur n’importe quel système, ou si vous utilisez Unicode des fichiers de code source en tant qu’entrée pour le compilateur.
+Optionnel. Encode le fichier d’annonce au format UTF-8 et inclut un marqueur d’ordre d’octet. Par défaut, le fichier est codé en ANSI. Utilisez `u` pour créer un fichier listing qui s’affiche correctement sur n’importe quel système, ou si vous utilisez Unicode des fichiers de code source en tant qu’entrée pour le compilateur.
 
 Si les deux **s** et **u** sont spécifiés et si une source de fichier de code utilise un encodage Unicode autre que UTF-8, puis les lignes de code dans le fichier .asm affichent ne peut-être pas correctement.
 
@@ -99,5 +99,5 @@ CL /FAcs HELLO.CPP
 
 [Options du fichier de sortie (/F)](output-file-f-options.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [Spécification du nom de chemin](specifying-the-pathname.md)

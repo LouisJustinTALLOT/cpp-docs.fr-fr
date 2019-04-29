@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
 ms.openlocfilehash: c38c080b0a8dbd9d4b0b76496aa367fa55892f50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279048"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any, classe
 
@@ -49,7 +49,7 @@ class condition_variable_any;
 |----------|-----------------|
 |[notify_all](#notify_all)|Débloque tous les threads qui attendent l’objet `condition_variable_any`.|
 |[notify_one](#notify_one)|Débloque un des threads qui attendent l’objet `condition_variable_any`.|
-|[attente](#wait)|Bloque un thread.|
+|[wait](#wait)|Bloque un thread.|
 |[wait_for](#wait_for)|Bloque un thread et définit un intervalle de temps après lequel le thread est débloqué.|
 |[wait_until](#wait_until)|Bloque un thread et définit un point dans le temps maximal auquel le thread est débloqué.|
 

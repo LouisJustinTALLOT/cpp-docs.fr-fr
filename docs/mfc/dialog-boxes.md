@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
 ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58778492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262630"
 ---
 # <a name="dialog-boxes"></a>Boîtes de dialogue
 
@@ -33,7 +33,7 @@ La plupart des boîtes de dialogue sont modales, ce qui oblige l’utilisateur f
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
 
-- [Exemple : Affichage d’une boîte de dialogue via une commande de Menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [Exemple : Affichage d’une boîte de dialogue via une commande de menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [Composants de boîte de dialogue dans le framework](../mfc/dialog-box-components-in-the-framework.md)
 

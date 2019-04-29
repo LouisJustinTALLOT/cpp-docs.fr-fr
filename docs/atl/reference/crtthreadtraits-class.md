@@ -11,11 +11,11 @@ helpviewer_keywords:
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
 ms.openlocfilehash: e5e13bad907e76968c4d4343e6617903e309e40f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278046"
 ---
 # <a name="crtthreadtraits-class"></a>Crtthreadtraits, classe
 
@@ -50,7 +50,7 @@ Caractéristiques de thread sont utilisés par les classes suivantes :
 
 Si le thread n’utilisera pas les fonctions CRT, utilisez [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) à la place.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlbase.h
 

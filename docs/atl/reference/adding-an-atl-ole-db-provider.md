@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
 ms.openlocfilehash: 01a5ed4ac09c466cefe195cea83f73ba270c21bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260998"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Ajout d’un fournisseur ATL OLE DB
 

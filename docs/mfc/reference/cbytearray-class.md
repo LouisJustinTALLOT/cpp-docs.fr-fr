@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CObArray [MFC], SetSize
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
 ms.openlocfilehash: b1c48e087052308dfb6b27275c5b4997ed9cca7b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279123"
 ---
 # <a name="cbytearray-class"></a>CByteArray, classe
 
@@ -120,7 +120,7 @@ Pour plus d’informations sur l’utilisation de `CByteArray`, consultez l’ar
 
 `CByteArray`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcoll.h
 

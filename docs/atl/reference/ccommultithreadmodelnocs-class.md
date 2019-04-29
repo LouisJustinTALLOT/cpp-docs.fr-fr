@@ -15,11 +15,11 @@ helpviewer_keywords:
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
 ms.openlocfilehash: ef2038a203b6cbfb2564bbe11d508ee43df0fd1b
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259220"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS Class
 
@@ -35,7 +35,7 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|Référence de classe [la classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).|
 |[CComMultiThreadModelNoCS::CriticalSection](#criticalsection)|Référence de classe `CComFakeCriticalSection`.|
@@ -43,7 +43,7 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CComMultiThreadModelNoCS::Decrement](#decrement)|(Statique) Décrémente la valeur de la variable spécifiée de manière thread-safe.|
 |[CComMultiThreadModelNoCS::Increment](#increment)|(Statique) Incrémente la valeur de la variable spécifiée de manière thread-safe.|

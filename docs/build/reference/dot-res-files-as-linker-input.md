@@ -8,11 +8,11 @@ helpviewer_keywords:
 - resource files, linking
 ms.assetid: 9c37ab00-97df-4d9a-91cd-6bf132970683
 ms.openlocfilehash: 68bb9da55faa7e41d743e1f3a45ca4b79f7f2242
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293145"
 ---
 # <a name="res-files-as-linker-input"></a>Fichiers .res en tant qu'entrée de l'Éditeur de liens
 

@@ -1,5 +1,5 @@
 ---
-title: "TN016 : utilisation de l'héritage multiple C++ avec MFC"
+title: 'TN016 : À l’aide de l’héritage Multiple C++ avec MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.inheritance
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
 ms.openlocfilehash: 76dc2e856ca7db783ee542aa2dbb498fd4c1a769
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306127"
 ---
-# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016 : utilisation de l'héritage multiple C++ avec MFC
+# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016 : À l’aide de l’héritage Multiple C++ avec MFC
 
 Cette note décrit l'utilisation de l'héritage multiple avec les classes Microsoft Foundation Class. L'utilisation de l'héritage multiple n'est pas nécessaire avec MFC. L'héritage multiple n'est pas utilisé dans les classes MFC et n'est pas nécessaire pour écrire une bibliothèque de classes.
 
@@ -97,7 +97,7 @@ IMPLEMENT_DYNAMIC(CListWnd, CFrameWnd)
 
 ## <a name="cwnd-and-message-maps"></a>CWnd et tables de messages
 
-Pour que le système de table de messages MFC fonctionne correctement, il existe deux autres conditions requises :
+Pour que le système de table de messages MFC fonctionne correctement, il existe deux autres exigences :
 
 - Il doit n'y avoir qu'une classe de base dérivée de `CWnd`.
 

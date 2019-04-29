@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
 ms.openlocfilehash: 64716d945ffbc6802ec23fb47523464246065192
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258908"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr, classe
 
@@ -60,7 +60,7 @@ ATL utilise `CComQIPtr` et [CComPtr](../../atl/reference/ccomptr-class.md) pour 
 
 `CComQIPtr`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcomcli.h
 

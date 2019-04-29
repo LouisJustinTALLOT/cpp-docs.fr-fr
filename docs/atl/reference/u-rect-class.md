@@ -10,11 +10,11 @@ helpviewer_keywords:
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
 ms.openlocfilehash: 306092a00a1e119263f4563eea181d7d3ee2b4b2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274523"
 ---
 # <a name="urect-class"></a>_U_rect, classe
 
@@ -47,7 +47,7 @@ class _U_RECT
 
 La classe définit deux surcharges de constructeur : une accepte un **RECT &** argument et l’autre accepte un `LPRECT` argument. Le premier constructeur stocke l’adresse de l’argument de référence dans le membre de données unique de la classe, [m_lpRect](#_u_rect__m_lprect). L’argument du constructeur de pointeur est stocké directement, sans conversion.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlwin.h
 

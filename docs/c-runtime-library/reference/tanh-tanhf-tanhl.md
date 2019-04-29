@@ -1,5 +1,5 @@
 ---
-title: TANH, tanhf, tanhl
+title: tanh, tanhf, tanhl
 ms.date: 04/10/2018
 apiname:
 - tanh
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258315"
 ---
-# <a name="tanh-tanhf-tanhl"></a>TANH, tanhf, tanhl
+# <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
 Calcule la tangente hyperbolique.
 
@@ -65,7 +65,7 @@ Le **tanh** fonctions retournent la tangente hyperbolique de *x*. Aucun retour d
 
 |Entrée|Exception SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|aucun|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
 
@@ -75,7 +75,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **t
 
 |Routine|En-tête requis (C)|En-tête requis (C)|
 |-------------|---------------------|-|
-|**TANH**, **tanhf**, **tanhl**|\<math.h>|\<cmath> ou \<math.h>|
+|**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

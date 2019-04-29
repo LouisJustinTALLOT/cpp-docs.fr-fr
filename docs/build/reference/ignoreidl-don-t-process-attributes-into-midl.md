@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
 ms.openlocfilehash: 210778adecd87ffdd5f2702c10106f12bd5a1b79
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291676"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t traiter les attributs dans MIDL)
 
@@ -42,7 +42,7 @@ L’option /IGNOREIDL spécifie que toute [attributs IDL](../../windows/idl-attr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)<br/>
 [/IDLOUT (Nommer les fichiers de sortie MIDL)](idlout-name-midl-output-files.md)<br/>
 [/TLBOUT (Nommer le fichier .TLB)](tlbout-name-dot-tlb-file.md)<br/>
