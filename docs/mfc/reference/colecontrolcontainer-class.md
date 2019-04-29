@@ -73,11 +73,11 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
 ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310434"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer, classe
 
@@ -153,7 +153,7 @@ En général, cette classe est utilisée conjointement avec `COccManager` et `CO
 
 `COleControlContainer`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxocc.h
 

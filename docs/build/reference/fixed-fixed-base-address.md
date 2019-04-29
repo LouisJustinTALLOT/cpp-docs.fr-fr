@@ -11,11 +11,11 @@ helpviewer_keywords:
 - FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
 ms.openlocfilehash: 6cc89df76e48ee258a7c6608aab12573ab11729b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292482"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (Adresse de base fixe)
 
@@ -49,5 +49,5 @@ Spécifiez/FIXED : no pour générer une section de réadressage dans le progra
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

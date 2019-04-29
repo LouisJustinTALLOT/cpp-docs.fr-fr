@@ -31,11 +31,11 @@ helpviewer_keywords:
 - function calls, terminating
 - process termination, calling
 ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339349"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
@@ -67,7 +67,7 @@ Code d’état de sortie.
 
 Le **quitter**, **_Exit** et **_exit** fonctions terminent le processus appelant. Le **quitter** fonction appelle des destructeurs pour les objets locaux de thread, puis appelle, par ordre dernier-in-first-out (LIFO), les fonctions qui sont inscrits par **atexit** et **_onexit**, puis vide toutes les mémoires tampons de fichiers avant de terminer le processus. Le **_Exit** et **_exit** fonctions mettre fin au processus sans détruire les objets locaux de thread ou traitement **atexit** ou **_onexit**fonctions et sans vider les mémoires tampons de flux de données.
 
-Bien que le **quitter**, **_Exit** et **_exit** appels ne retournent pas de valeur, la valeur dans *état* est mis à disposition à l’environnement hôte ou en attente de processus appelant, s’il en existe, une fois que le processus se termine. En règle générale, l’appelant affecte la *état* valeur sur 0 pour indiquer une sortie normale, ou à une autre valeur pour indiquer une erreur. Le *état* valeur n’est disponible pour la commande batch du système d’exploitation **ERRORLEVEL** et est représenté par une des deux constantes : **EXIT_SUCCESS**, qui représente une valeur 0, ou **EXIT_FAILURE**, qui représente une valeur de 1.
+Bien que le **quitter**, **_Exit** et **_exit** appels ne retournent pas de valeur, la valeur dans *état* est mis à disposition à l’environnement hôte ou en attente de processus appelant, s’il en existe, une fois que le processus se termine. En règle générale, l’appelant affecte la *état* valeur sur 0 pour indiquer une sortie normale, ou à une autre valeur pour indiquer une erreur. Le *état* valeur n’est disponible pour la commande batch du système d’exploitation **ERRORLEVEL** et est représenté par une des deux constantes : **EXIT_SUCCESS**, qui représente une valeur égale à 0, ou **EXIT_FAILURE**, qui représente une valeur de 1.
 
 Le **quitter**, **_Exit**, **_exit**, **quick_exit**, **_cexit**, et **_c_exit** fonctions se comportent comme suit.
 
@@ -97,7 +97,7 @@ N’utilisez pas **DLL_PROCESS_ATTACH** pour appeler **quitter** de **DllMain**.
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
-|**quitter**, **_Exit**, **_exit**|\<process.h> ou \<stdlib.h>|
+|**exit**, **_Exit**, **_exit**|\<process.h> ou \<stdlib.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

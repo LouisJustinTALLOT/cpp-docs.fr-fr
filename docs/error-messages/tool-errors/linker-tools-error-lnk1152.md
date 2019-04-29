@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1152
 ms.assetid: 2523b61a-1359-4612-9c16-7d1f705f32e6
 ms.openlocfilehash: 156e9894c078587cd264c344e6d094aeb60d4649
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62254999"
 ---
 # <a name="linker-tools-error-lnk1152"></a>Erreur des outils Éditeur de liens LNK1152
 

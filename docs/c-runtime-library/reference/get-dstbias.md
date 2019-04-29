@@ -28,11 +28,11 @@ helpviewer_keywords:
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
 ms.openlocfilehash: 61807f854dc9c2f7de6f0acd5bbf4668987ce49e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332375"
 ---
 # <a name="getdstbias"></a>_get_dstbias
 
@@ -46,7 +46,7 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Paramètres
 
-*secondes*<br/>
+*seconds*<br/>
 Décalage en secondes de l'heure d'été.
 
 ## <a name="return-value"></a>Valeur de retour

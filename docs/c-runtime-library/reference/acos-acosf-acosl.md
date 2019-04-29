@@ -32,11 +32,11 @@ helpviewer_keywords:
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
 ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335670"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -69,7 +69,7 @@ Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **acos** retourne u
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|aucun|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
@@ -80,7 +80,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **a
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
-|**ACOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Exemple
 

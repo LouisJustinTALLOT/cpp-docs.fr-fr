@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295459"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr, classe
 
@@ -99,7 +99,7 @@ public:
 *Nptr*<br/>
 `rvalue` de type `std::nullptr_t`.
 
-*PTR*<br/>
+*Ptr*<br/>
 `pointer`
 
 *SUPPRESSEUR*<br/>
@@ -117,7 +117,7 @@ Utilisez la fonction d’assistance [make_unique](../standard-library/memory-fun
 
 `unique_ptr` gère de façon unique une ressource. Chaque objet `unique_ptr` stocke un pointeur vers l'objet qu'il possède ou stocke un pointeur null. Une ressource ne peut pas être détenue par plus d’un objet `unique_ptr`. Lorsqu’un objet `unique_ptr` qui possède une ressource particulière est détruit, la ressource est libérée. Un objet `unique_ptr` peut être déplacé, mais pas copié. Pour plus d’informations, consultez [Déclarateur de référence Rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-La ressource est libérée par l'appel à un objet `deleter` stocké de type `Del` qui sait comment les ressources sont allouées pour un `unique_ptr` particulier. La valeur par défaut `deleter` `default_delete<T>` suppose que la ressource désignée par `ptr` est alloué avec `new`, et qu’elle peut être libérée en appelant `delete _Ptr`. (Une spécialisation partielle `unique_ptr<T[]>` gère les objets tableaux alloués à `new[]`, et possède le `deleter` `default_delete<T[]>` par défaut, spécialisé pour appeler delete[] `ptr`.)
+La ressource est libérée par l'appel à un objet `deleter` stocké de type `Del` qui sait comment les ressources sont allouées pour un `unique_ptr` particulier. La valeur par défaut `deleter` `default_delete<T>` suppose que la ressource désignée par `ptr` est alloué avec `new`, et qu’elle peut être libérée en appelant `delete _Ptr`. (Une spécialisation partielle `unique_ptr<T[]>`gère les objets tableaux alloués à `new[]`, et a la valeur par défaut `deleter` `default_delete<T[]>`, spécialisé pour appeler delete [] `ptr`.)
 
 Le pointeur stocké vers une ressource détenue, `stored_ptr`, a le type `pointer`. Il s’agit de `Del::pointer` s’il est défini, ou de `T *` dans le cas contraire. L'objet `deleter` stocké `stored_deleter` n'occupe pas d'espace dans l'objet si le `deleter` est sans état. Notez que `Del` peut être un type référence.
 

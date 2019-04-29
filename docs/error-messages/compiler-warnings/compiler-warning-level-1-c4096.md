@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
 ms.openlocfilehash: 287465e9a3f5681f459f0823a4409b0906309a55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280454"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>Compilateur Warning (level 1) C4096
 

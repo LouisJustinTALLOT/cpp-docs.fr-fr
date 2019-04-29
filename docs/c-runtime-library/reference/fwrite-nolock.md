@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
 ms.openlocfilehash: 1c899e34e19547b30a42135f3f818f220f1bc5b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332661"
 ---
 # <a name="fwritenolock"></a>_fwrite_nolock
 
@@ -57,7 +57,7 @@ Taille de l’élément en octets.
 *count*<br/>
 Nombre maximal d'éléments à écrire.
 
-*flux de données*<br/>
+*stream*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -68,7 +68,7 @@ Identique à [fwrite](fwrite.md).
 
 Cette fonction est une version sans verrouillage de **fwrite**. Il est identique à **fwrite** , à ceci près qu’il n’est pas protégé contre les interférences par d’autres threads. Elle peut être plus rapide, car elle n’entraîne pas la charge liée au verrouillage des autres threads. Utilisez cette fonction uniquement dans les contextes thread-safe, par exemple avec les applications monothread ou lorsque la portée appelante gère déjà l’isolation des threads.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
