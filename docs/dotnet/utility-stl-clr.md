@@ -40,11 +40,11 @@ helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
 ms.openlocfilehash: 1a884a75fbc3ba979402c94c67d2915863a847e9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384463"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -73,7 +73,7 @@ Incluez l’en-tête STL/CLR `<cliext/utility>` pour définir la classe de modè
 |[operator== (pair) (STL/CLR)](#op_eq)|Comparaison égale de la paire.|
 |[operator!= (pair) (STL/CLR)](#op_neq)|Paire différente de comparaison.|
 |[operator< (pair) (STL/CLR)](#op_lt)|Paire de comparaison inférieur.|
-|[opérateur\<= (paire) (STL/CLR)](#op_lteq)|Inférieur ou égal coupler comparaison.|
+|[operator\<= (pair) (STL/CLR)](#op_lteq)|Inférieur ou égal coupler comparaison.|
 |[operator> (pair) (STL/CLR)](#op_gt)|Comparaison de supériorité de la paire.|
 |[operator>= (pair) (STL/CLR)](#op_gteq)|Paire supérieur ou comparaison égale.|
 
@@ -201,7 +201,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="op_as"></a> pair::operator = (STL/CLR)
+## <a name="op_as"></a> pair::operator= (STL/CLR)
 
 Remplace la paire de valeurs stockée.
 
@@ -263,10 +263,10 @@ pair(Value1 val1, Value2 val2);
 *right*<br/>
 Paire à stocker.
 
-*Val1*<br/>
+*val1*<br/>
 Première valeur à stocker.
 
-*Val2*<br/>
+*val2*<br/>
 Deuxième valeur à stocker.
 
 ### <a name="remarks"></a>Notes
@@ -496,7 +496,7 @@ Le type de la seconde valeur encapsulée.
 *first*<br/>
 Première valeur à inclure dans un wrapper.
 
-*seconde*<br/>
+*second*<br/>
 Deuxième valeur à inclure dans un wrapper.
 
 ### <a name="remarks"></a>Notes
@@ -526,7 +526,7 @@ int main()
 [y, 4]
 ```
 
-## <a name="op_neq"></a> opérateur ! = (paire) (STL/CLR)
+## <a name="op_neq"></a> operator!= (pair) (STL/CLR)
 
 Paire différente de comparaison.
 
@@ -688,7 +688,7 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="op_eq"></a> opérateur == (paire) (STL/CLR)
+## <a name="op_eq"></a> operator== (pair) (STL/CLR)
 
 Comparaison égale de la paire.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
 ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59776312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62311316"
 ---
 # <a name="compiler-warning-c4687"></a>Avertissement du compilateur C4687
 

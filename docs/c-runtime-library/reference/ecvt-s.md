@@ -26,11 +26,11 @@ helpviewer_keywords:
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
 ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288247"
 ---
 # <a name="ecvts"></a>_ecvt_s
 
@@ -74,7 +74,7 @@ Nombre de chiffres stockés.
 *_Dec*<br/>
 Position de la virgule décimale stockée.
 
-*_Se*<br/>
+*_Sign*<br/>
 Signe du nombre converti.
 
 ## <a name="return-value"></a>Valeur de retour

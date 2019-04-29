@@ -28,11 +28,11 @@ helpviewer_keywords:
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
 ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341286"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -62,8 +62,8 @@ Le **atanh** fonctions retournent la tangente hyperbolique inverse (arc la tange
 
 |Entrée|Exception SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|aucun|none|
-|*X* ≥ 1 ; *x* ≤ -1|none|none|
+|± QNAN,IND|none|none|
+|*X* ≥ 1; *x* ≤ -1|none|none|
 
 ## <a name="remarks"></a>Notes
 
@@ -73,7 +73,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **a
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**ATANH**, **atanhf**, **atanhl**|\<math.h>|\<cmath> ou \<math.h>|
+|**atanh**, **atanhf**, **atanhl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

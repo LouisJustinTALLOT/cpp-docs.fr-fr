@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
 ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327143"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : Copier et coller des données
 
@@ -69,4 +69,4 @@ Pour gérer l’option Collage spécial dans le menu Edition, consultez la rubri
 
 ## <a name="see-also"></a>Voir aussi
 
-[Presse-papiers : À l’aide du mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+[Presse-papiers : Utilisation du mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - starting points, setting random
 - starting points
 ms.openlocfilehash: 6545d4eba6c17fd55bb2b8cf23fb0319d1c96bee
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57209819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354884"
 ---
 # <a name="srand"></a>srand
 
@@ -57,7 +57,7 @@ Valeur initiale pour la génération de nombres pseudo-aléatoires
 
 Le **srand** fonction définit le point de départ pour la génération d’une série d’entiers pseudo-aléatoires dans le thread actuel. Pour réinitialiser le générateur pour créer la même séquence de résultats, appelez le **srand** de fonction et utilisent le même *seed* argument à nouveau. Toute autre valeur pour *seed* définit le Générateur à un autre point de départ dans la séquence pseudo-aléatoire. **RAND** récupère les nombres pseudo-aléatoires qui sont générés. Appel **rand** avant tout appel à **srand** génère la même séquence que si vous appelez **srand** avec *seed* passé en tant que 1.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

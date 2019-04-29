@@ -33,11 +33,11 @@ helpviewer_keywords:
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
 ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333337"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -115,7 +115,7 @@ Si *mode* est **» a, ccs =**_encodage_**»**, **fopen** tente d’abord d’ouv
 
 La chaîne de caractères *mode* Spécifie le type d’accès demandé pour le fichier, comme suit.
 
-|*mode*|Accès|
+|*mode*|Access|
 |-|-|
 | **"r"** | Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **fopen** appeler échoue. |
 | **"w"** | Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit. |
@@ -182,7 +182,7 @@ Caractères valides pour le *mode* chaîne qui est utilisée dans **fopen** et *
 
 Si vous utilisez **rb** mode, vous n’avez pas porter votre code, et si vous attendez à lire la majeure partie d’un fichier volumineux ou ne souhaitez pas concernées sur les performances du réseau, vous pouvez également envisager si utiliser la mémoire des fichiers Win32 mappés en tant qu’option.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

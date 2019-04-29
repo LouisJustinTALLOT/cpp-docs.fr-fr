@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4945
 ms.assetid: 6d2079ea-dc59-4611-bc68-9a22c06f7587
 ms.openlocfilehash: 62dfbaed28f1afcdedb41d83158dfe4e8e0f61b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384164"
 ---
 # <a name="compiler-warning-level-1-c4945"></a>Avertissement du compilateur (niveau 1) C4945
 

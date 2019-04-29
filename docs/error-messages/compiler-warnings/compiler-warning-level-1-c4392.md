@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4392
 ms.assetid: 817806ad-06a6-4b9e-8355-e25687c782dc
 ms.openlocfilehash: 1dc0c546509b17132358f432f6a781035a314a72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386419"
 ---
 # <a name="compiler-warning-level-1-c4392"></a>Avertissement du compilateur (niveau 1) C4392
 

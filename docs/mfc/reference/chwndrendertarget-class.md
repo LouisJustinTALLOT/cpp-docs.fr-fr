@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
 ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345784"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget, classe
 
@@ -72,7 +72,7 @@ class CHwndRenderTarget : public CRenderTarget;
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Pointeur vers un objet ID2D1HwndRenderTarget.|
 
@@ -84,7 +84,7 @@ class CHwndRenderTarget : public CRenderTarget;
 
 [CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxrendertarget.h
 

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _FCbuild function
 - _LCbuild function
 ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340464"
 ---
 # <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -53,7 +53,7 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 *real*<br/>
 La partie réelle du nombre complexe à construire.
 
-*imaginaire*<br/>
+*imaginary*<br/>
 La partie imaginaire du nombre complexe à construire.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -66,7 +66,7 @@ Le **_Cbuild**, **_FCbuild**, et **_LCbuild** fonctions simplifiant la création
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
 |**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 

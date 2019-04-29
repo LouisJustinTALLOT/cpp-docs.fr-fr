@@ -142,11 +142,11 @@ helpviewer_keywords:
 - upper_bound function [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
 ms.openlocfilehash: 6011aad0ef86bc0e633687a6d8e017e9b12771c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350830"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 
@@ -193,7 +193,7 @@ Définit les fonctions de modèle de conteneur STL/CLR qui exécutent des algori
 |[make_heap (STL/CLR)](#make_heap)|Convertit les éléments d’une plage spécifiée dans un segment de mémoire où le premier élément sur le tas est le plus grand.|
 |[max (STL/CLR)](#max))|Compare deux objets et retourne la plus grande des deux.|
 |[max_element (STL/CLR)](#max_element)|Recherche l’élément le plus grand dans une séquence spécifique de valeurs.|
-|[fusion (STL/CLR)](#merge))|Combine tous les éléments de deux plages sources triées dans une plage de destination unique, triées.|
+|[merge (STL/CLR)](#merge))|Combine tous les éléments de deux plages sources triées dans une plage de destination unique, triées.|
 |[min (STL/CLR)](#min)|Compare deux objets et retourne le plus petit des deux.|
 |[min_element (STL/CLR)](#min_element)|Recherche le plus petit élément dans une séquence spécifique de valeurs.|
 |[mismatch (STL/CLR)](#mismatch)|Compare deux plages, élément par élément et retourne la première position où se trouve une différence.|
@@ -550,7 +550,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `inplace_merge` pour plus d’informations, consultez [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
+Cette fonction comporte comme le C++ fonction de bibliothèque Standard `inplace_merge` pour plus d’informations, consultez [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
 
 ## <a name="iter_swap"></a> iter_swap (STL/CLR)
 

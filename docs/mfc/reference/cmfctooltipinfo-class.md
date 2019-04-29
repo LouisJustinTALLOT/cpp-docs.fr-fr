@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
 ms.openlocfilehash: b38c3a62cca376ef7a19a111fe3a34c923983d1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338218"
 ---
 # <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo Class
 
@@ -59,7 +59,7 @@ class CMFCToolTipInfo
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|Variable booléenne qui indique si l'info-bulle a l'aspect d'une bulle.|
 |[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|Variable booléenne qui indique si les étiquettes d'info-bulle s'affichent en caractères gras.|
@@ -89,7 +89,7 @@ L'exemple suivant montre comment définir les valeurs des différentes variables
 
 [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxtooltipctrl.h
 

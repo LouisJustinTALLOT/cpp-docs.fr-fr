@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
 ms.openlocfilehash: e4944c1cf1114bbd009ebc62b776628ba86b3b4d
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352038"
 ---
 # <a name="application-control"></a>Contrôle d'application
 
@@ -52,7 +52,7 @@ Une application ne doit pas s’arrêter s’il existe des références en suspe
 
 [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxdisp.h
 
@@ -78,7 +78,7 @@ Appelez cette fonction pour accéder à des cours `COleMessageFilter`-dérivés 
 
 [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxwin.h
 
@@ -98,7 +98,7 @@ Différent de zéro si l’utilisateur est dans le contrôle de l’application�
 
 L’utilisateur est dans le contrôle de l’application lorsque l’utilisateur a explicitement ouvert ou créé un nouveau document. L’utilisateur est également dans le contrôle si l’application n’a pas été lancée par le système OLE DLL — en d’autres termes, si l’utilisateur a lancé l’application avec l’interpréteur de commandes du système.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxdisp.h
 
@@ -121,7 +121,7 @@ L’infrastructure appelle cette fonction lorsque l’utilisateur crée ou charg
 
 Appelez cette fonction si d’autres actions dans votre application doivent placer l’utilisateur dans le contrôle de l’application.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxdisp.h
 
@@ -145,7 +145,7 @@ Appelez `AfxOleLockApp` à partir de n’importe quel objet qui expose les inter
 
 [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxdisp.h
 
@@ -167,7 +167,7 @@ Lorsque le nombre d’objets actifs atteint zéro, `AfxOleOnReleaseAllObjects` e
 
 Consultez l’exemple de [AfxOleLockApp](#afxolelockapp).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxdisp.h
 
@@ -208,7 +208,7 @@ Cela peut considérablement accélérer l’affichage des contrôles. Par exempl
 AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -278,7 +278,7 @@ Les symboles sont renseignés comme suit :
 |%4|Nom de type court|
 |%5|Nom de type long|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxdisp.h
 
@@ -324,7 +324,7 @@ Vous devez disposer de l’instruction suivante dans le script de ressources d�
 
 **#include \<afxolecl.rc>**
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxole.h
 
@@ -363,7 +363,7 @@ Un contrôle est verrouillé avec `AfxOleLockControl`, de sorte que créées dyn
 AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 

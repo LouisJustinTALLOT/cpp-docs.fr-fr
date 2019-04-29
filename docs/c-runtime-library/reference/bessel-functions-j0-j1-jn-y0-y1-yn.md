@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
 ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341111"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -92,15 +92,15 @@ Le **_j0**, **_j1**, et **_jn** retournent des routines de Bessel fonctions de p
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|**NON VALIDE**|**_DOMAINE**|
+|± **QNAN**, **IND**|**NON VALIDE**|**_DOMAIN**|
 
 Le **_y0**, **_y1**, et **_yn** retournent des routines de Bessel functions de deuxième espèce : respectivement d’ordre n, 0 et 1.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|**NON VALIDE**|**_DOMAINE**|
+|± **QNAN**, **IND**|**NON VALIDE**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**NON VALIDE**|**_DOMAINE**|
+|&#124;x&#124; < 0.0|**NON VALIDE**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Configuration requise
 

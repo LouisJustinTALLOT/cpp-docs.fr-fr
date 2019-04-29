@@ -31,11 +31,11 @@ helpviewer_keywords:
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
 ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340961"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 
@@ -72,13 +72,13 @@ La tangente hyperbolique inverse de *z*, en radians. Le résultat est illimité 
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **catanh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **catanh** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **catanh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **catanh** accepte et retourne toujours un **_Dcomplex** valeur.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**catanh**, **catanhf**, **catanhl**|\<complex.h>|\<ccomplex>|
+|**catanh**,               **catanhf**, **catanhl**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

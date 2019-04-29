@@ -31,11 +31,11 @@ helpviewer_keywords:
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
 ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339747"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -65,11 +65,11 @@ La partie réelle de *z*.
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **creal** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float** ou **long double** valeurs. Dans un programme C, **creal** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
+Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **creal** acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float**ou **long double** valeurs. Dans un programme C, **creal** prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
 |**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
 
