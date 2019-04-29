@@ -123,11 +123,11 @@ helpviewer_keywords:
 - _ldsin
 - _fdsin
 ms.openlocfilehash: 230d0def145bcb443437b59303b2b36e348da2bb
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333610"
 ---
 # <a name="floating-point-primitives"></a>Primitives à virgule flottante
 
@@ -415,7 +415,7 @@ Décalage du quadrant de 0, 1, 2 ou 3 à utiliser pour produire `sin`, `cos`, `-
 
 Ces primitives à virgule flottante retournent le sinus de *x* décalage par le *quadrant* modulo 4. En effet, elles retournent le sinus, cosinus, - sinus et - cosinus de *x* lorsque *quadrant* modulo 4 est 0, 1, 2 ou 3, respectivement. Ces fonctions ne sont pas utilisées en interne. Pour une portabilité, préférez la [sin, sinf, sinl](sin-sinf-sinl.md), [cos, cosf et cosl](cos-cosf-cosl.md) fonctions.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 En-tête : \<math.h >
 

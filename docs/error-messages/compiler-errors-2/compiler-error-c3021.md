@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3021
 ms.assetid: 0cef6d97-e267-438a-ac8b-0daf5bbbc2cf
 ms.openlocfilehash: 4863947fe2fedf9301fac302820cb69193581222
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386692"
 ---
 # <a name="compiler-error-c3021"></a>Erreur du compilateur C3021
 
-'arg' : argument vide dans la directive OpenMP 'directive'
+'arg' : argument vide dans la directive OpenMP 'directive'
 
 Un argument est requis pour une directive OpenMP.
 

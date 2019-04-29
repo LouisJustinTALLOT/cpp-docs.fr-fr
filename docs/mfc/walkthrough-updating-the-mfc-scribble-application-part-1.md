@@ -10,11 +10,11 @@ helpviewer_keywords:
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
 ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358285"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : La mise à jour de l’Application de Scribble MFC (partie 1)
 
@@ -269,4 +269,4 @@ Vous avez modifié l’exemple Scribble des MFC 1.0 classique pour utiliser le *
 ## <a name="see-also"></a>Voir aussi
 
 [Procédures pas à pas](../mfc/walkthroughs-mfc.md)<br/>
-[Procédure pas à pas : La mise à jour de l’Application de Scribble MFC (partie 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Procédure pas à pas : Mise à jour de l’application Scribble MFC (partie 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
 ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317118"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Structure des fichiers .vcxproj et .props
 
@@ -292,5 +292,5 @@ Pour créer votre propre feuille de propriétés, copiez l’un des fichiers .pr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définir le compilateur C++ et générer des propriétés dans Visual Studio](../working-with-project-properties.md)<br/>
+[Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md)<br/>
 [Fichiers XML de la page de propriétés](property-page-xml-files.md)

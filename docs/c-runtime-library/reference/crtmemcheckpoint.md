@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
 ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339869"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -65,7 +65,7 @@ Si *état* est **NULL**, le Gestionnaire de paramètre non valide est appelé, c
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-**Bibliothèques :** uniquement les versions Debug de la bibliothèque UCRT.
+**Bibliothèques :** Les versions Debug de la bibliothèque UCRT uniquement.
 
 ## <a name="see-also"></a>Voir aussi
 

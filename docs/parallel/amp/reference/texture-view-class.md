@@ -15,11 +15,11 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
 ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351519"
 ---
 # <a name="textureview-class"></a>texture_view, classe
 
@@ -97,7 +97,7 @@ Le rang de le `texture_view`.
 
 `texture_view`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp_graphics.h
 

@@ -1,6 +1,6 @@
 ---
-title: Erreur du compilateurs C2100 through C2199
-ms.date: 11/17/2017
+title: Erreurs du compilateur C2100 à C2199
+ms.date: 04/21/2019
 f1_keywords:
 - C2119
 - C2123
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 3a5a5368700eb1c4c585826021fefc21c25ecedf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360539"
 ---
-# <a name="compiler-errors-c2100-through-c2199"></a>Erreur du compilateurs C2100 through C2199
+# <a name="compiler-errors-c2100-through-c2199"></a>Erreurs du compilateur C2100 à C2199
 
 Les articles de cette section de la documentation expliquent un sous-ensemble des messages d’erreur qui sont générés par le compilateur.
 
@@ -59,15 +59,15 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2116](compiler-error-c2116.md)|listes de paramètres de fonctions différentes|
 |[Erreur du compilateur C2117](compiler-error-c2117.md)|«*identificateur*' : dépassement des limites du tableau|
 |[Erreur du compilateur C2118](compiler-error-c2118.md)|indice négatif|
-|C2119 d’erreur du compilateur|«*identificateur*' : le type de '*type*' ne peut pas être déduit à partir d’un initialiseur vide|
+|Erreur du compilateur C2119|«*identificateur*' : le type de '*type*' ne peut pas être déduit à partir d’un initialiseur vide|
 |[Erreur du compilateur C2120](compiler-error-c2120.md)|'void' non conforme avec tous les types|
 |[Erreur du compilateur C2121](compiler-error-c2121.md)|'#' : caractère non valide : peut résulter d’une expansion macro|
 |[Erreur du compilateur C2122](compiler-error-c2122.md)|«*identificateur*' : paramètre de prototype non conforme de liste de nom dans|
-|C2123 d’erreur du compilateur|«*identificateur*' : modèles d’alias ne peut pas être spécialisés explicitement ou partiellement|
+|Erreur du compilateur C2123|«*identificateur*' : modèles d’alias ne peut pas être spécialisés explicitement ou partiellement|
 |[Erreur du compilateur C2124](compiler-error-c2124.md)|division ou modulo par zéro|
-|C2125 d’erreur du compilateur|'constexpr' n’est pas compatible avec '*jeton*'|
+|Erreur du compilateur C2125|'constexpr' n’est pas compatible avec '*jeton*'|
 |Erreur du compilateur C2126|«*identificateur*' ne peut pas être déclaré avec le spécificateur 'constexpr'|
-|C2127 d’erreur du compilateur|«*identificateur*' : initialisation illégale de l’entité 'constexpr' avec une expression non constante|
+|Erreur du compilateur C2127|«*identificateur*' : initialisation illégale de l’entité 'constexpr' avec une expression non constante|
 |[Erreur du compilateur C2128](compiler-error-c2128.md)|«*fonction*' : alloc_text/same_seg applicable uniquement aux fonctions avec liaison C|
 |[Erreur du compilateur C2129](compiler-error-c2129.md)|fonction static '*identificateur*' déclarée mais non définie|
 |[Erreur du compilateur C2130](compiler-error-c2130.md)|#line attendait une chaîne contenant le nom de fichier, trouvé '*jeton*'|
@@ -76,7 +76,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2133](compiler-error-c2133.md)|«*identificateur*' : taille inconnue|
 |[Erreur du compilateur C2134](compiler-error-c2134.md)|«*fonction*' : appel n’entraîne pas une expression constante|
 |[Erreur du compilateur C2135](compiler-error-c2135.md)|«*opérateur*' : opération de champ de bits non conforme|
-|C2136 d’erreur du compilateur|Création de contrat d’API interdit|
+|Erreur du compilateur C2136|Création de contrat d’API interdit|
 |[Erreur du compilateur C2137](compiler-error-c2137.md)|constante caractère vide|
 |[Erreur du compilateur C2138](compiler-error-c2138.md)|non conforme de définir une énumération sans membre|
 |[Erreur du compilateur C2139](compiler-error-c2139.md)|«*classe*' : une classe non définie n’est pas autorisée comme argument pour un trait de type intrinsèque du compilateur '*caractéristique*»|
@@ -116,7 +116,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2173](compiler-error-c2173.md)|«*fonction*' : le paramètre réel n’est pas un pointeur : paramètre *nombre*, liste de paramètres *nombre*|
 |[Erreur du compilateur C2174](compiler-error-c2174.md)|«*fonction*' : le paramètre réel a le type 'void' : paramètre *nombre*, liste de paramètres *nombre*|
 |[Erreur du compilateur C2175](compiler-error-c2175.md)|«*paramètres régionaux*' : paramètres régionaux non valide|
-|C2176 d’erreur du compilateur|une instruction return ne peut pas apparaître dans le Gestionnaire d’un fonction--bloc try associé à un constructeur|
+|Erreur du compilateur C2176|une instruction return ne peut pas apparaître dans le Gestionnaire d’un fonction--bloc try associé à un constructeur|
 |[Erreur du compilateur C2177](compiler-error-c2177.md)|constante trop grande|
 |[Erreur du compilateur C2178](compiler-error-c2178.md)|«*identificateur*'ne peut pas être déclarée avec'*spécificateur*' spécificateur|
 |[Erreur du compilateur C2179](compiler-error-c2179.md)|«*type*' : un argument d’attribut ne peut pas utiliser les paramètres de type|
@@ -127,9 +127,9 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2184](compiler-error-c2184.md)|«*type*' : type non conforme pour une expression __except|
 |[Erreur du compilateur C2185](compiler-error-c2185.md)|«*identificateur*' : non conforme en fonction d’allocation|
 |[Erreur du compilateur C2186](compiler-error-c2186.md)|«*opérateur*' : opérande de type 'void' non conforme|
-|C2187 d’erreur du compilateur|Erreur de syntaxe : '*jeton*' inattendu ici|
+|Erreur du compilateur C2187|Erreur de syntaxe : '*jeton*' inattendu ici|
 |[Erreur du compilateur C2188](compiler-error-c2188.md)|«*nombre*' : trop grand pour un caractère large|
-|C2189 d’erreur du compilateur|l’attribut 'alignas' ne peut pas être appliqué à un champ de bits, un paramètre de fonction, une déclaration d’exception ou une variable déclarée avec 'register' classe de stockage|
+|Erreur du compilateur C2189|l’attribut 'alignas' ne peut pas être appliqué à un champ de bits, un paramètre de fonction, une déclaration d’exception ou une variable déclarée avec 'register' classe de stockage|
 |[Erreur du compilateur C2190](compiler-error-c2190.md)|première liste de paramètres plu grande que la seconde|
 |[Erreur du compilateur C2191](compiler-error-c2191.md)|seconde liste de paramètres plus longue que la première|
 |[Erreur du compilateur C2192](compiler-error-c2192.md)|paramètre '*nombre*' déclaration différents|
@@ -140,3 +140,8 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2197](compiler-error-c2197.md)|«*fonction*' : trop d’arguments pour un appel|
 |[Erreur du compilateur C2198](compiler-error-c2198.md)|«*fonction*' : trop peu d’arguments pour un appel|
 |[Erreur du compilateur C2199](compiler-error-c2199.md)|Erreur de syntaxe : trouvé '*identificateur* (' avec une portée globale (lieu d’une déclaration ?)|
+
+## <a name="see-also"></a>Voir aussi
+
+[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erreurs du compilateur C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

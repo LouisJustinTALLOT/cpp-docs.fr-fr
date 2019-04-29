@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
 ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317638"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Nommer le fichier .TLB)
 
@@ -56,7 +56,7 @@ Si /TLBOUT n’est pas spécifié, le fichier .tlb obtiendra son nom à partir d
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)<br/>
 [/IGNOREIDL (Ne pas traiter les attributs dans MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
 [/MIDL (Spécifier des options de ligne de commande MIDL)](midl-specify-midl-command-line-options.md)<br/>

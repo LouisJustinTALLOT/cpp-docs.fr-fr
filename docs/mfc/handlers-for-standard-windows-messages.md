@@ -11,11 +11,11 @@ helpviewer_keywords:
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358230"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Gestionnaires pour les messages Windows standard
 
@@ -23,7 +23,7 @@ Par défaut des gestionnaires pour les messages Windows standards (**WM_**) sont
 
 `afx_msg void OnPaint();`
 
-Le **afx_msg** mot clé suggère l’effet du C++ **virtuels** mot clé en caractérisant les gestionnaires des autres `CWnd` fonctions membres. Notez, toutefois, que ces fonctions ne sont pas réellement virtuelles ; elles sont plutôt implémentées dans les tables des messages. Les tables des messages dépendent uniquement des macros de préprocesseur standard, et non des extensions au langage C++. Le **afx_msg** mot clé correspond à un espace blanc après prétraitement.
+Le **afx_msg** mot clé suggère l’effet de la C++ **virtuels** mot clé en caractérisant les gestionnaires des autres `CWnd` fonctions membres. Notez, toutefois, que ces fonctions ne sont pas réellement virtuelles ; elles sont plutôt implémentées dans les tables des messages. Les tables des messages dépendent uniquement des macros de préprocesseur standard, et non des extensions au langage C++. Le **afx_msg** mot clé correspond à un espace blanc après prétraitement.
 
 Pour remplacer un gestionnaire défini dans une classe de base, il vous suffit de définir une fonction avec le même prototype dans votre classe dérivée et de créer une entrée dans la table des messages du gestionnaire. Le gestionnaire "substitue" tout gestionnaire du même nom dans n'importe laquelle des classes de base de vos classes.
 

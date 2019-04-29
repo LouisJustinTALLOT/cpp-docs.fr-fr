@@ -32,11 +32,11 @@ helpviewer_keywords:
 - environment variables, modifying
 ms.assetid: fbf51225-a8da-4b9b-9d7c-0b84ef72df18
 ms.openlocfilehash: f675c2c0a2b12db3cce841dd0db9fa722393f1b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357861"
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
 
@@ -60,10 +60,10 @@ errno_t _wputenv_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*nom de variable*<br/>
+*varname*<br/>
 Nom de la variable d'environnement.
 
-*chaîne_de_valeur*<br/>
+*value_string*<br/>
 Valeur à attribuer à la variable d'environnement.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -72,7 +72,7 @@ Retourne 0 en cas de réussite et un code d'erreur dans le cas contraire.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*nom de variable*|*chaîne_de_valeur*|Valeur de retour|
+|*varname*|*value_string*|Valeur de retour|
 |------------|-------------|------------------|
 |**NULL**|any|**EINVAL**|
 |any|**NULL**|**EINVAL**|

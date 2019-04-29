@@ -28,11 +28,11 @@ helpviewer_keywords:
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
 ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357445"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -69,7 +69,7 @@ Le **arrondir** fonctions retournent une valeur à virgule flottante qui représ
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|none|**_DOMAINE**|
+|± **QNAN**, **IND**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>Notes
 
@@ -79,7 +79,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **a
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**arrondir**, **roundf**, **roundl**|\<math.h>|
+|**round**, **roundf**, **roundl**|\<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

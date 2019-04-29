@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_offset_realloc function
 ms.assetid: e0263533-991e-41b0-acc9-1b8a51ab9ecd
 ms.openlocfilehash: d5f87f9bdfff262826b8d4cc4da86069588cf9db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341455"
 ---
 # <a name="alignedoffsetrealloc"></a>_aligned_offset_realloc
 
@@ -53,7 +53,7 @@ Pointeur de bloc de mémoire actif.
 *size*<br/>
 Taille de l'allocation de mémoire.
 
-*Alignement*<br/>
+*alignment*<br/>
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
 *offset*<br/>

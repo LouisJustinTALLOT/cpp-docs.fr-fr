@@ -13,11 +13,11 @@ helpviewer_keywords:
 - __uptr modifier
 ms.assetid: c7f5f3b2-9106-4a0b-a6de-d1588ab153ed
 ms.openlocfilehash: 957f744ca6c5a7be807c1dc68fcd2b602b72300e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330957"
 ---
 # <a name="sptr-uptr"></a>__sptr, __uptr
 
@@ -25,7 +25,7 @@ ms.locfileid: "50460916"
 
 Utilisez le **__sptr** ou **__uptr** modificateur sur une déclaration de pointeur 32 bits pour spécifier comment le compilateur convertit un pointeur 32 bits en pointeur 64 bits. Un pointeur 32 bits est converti, par exemple, lorsqu'il est assigné à une variable pointeur 64 bits ou est déréférencé sur une plateforme 64 bits.
 
-La documentation Microsoft pour la prise en charge des plateformes 64 bits fait parfois référence au bit le plus significatif d'un pointeur 32 bits comme bit de signe. Par défaut, le compilateur utilise l'extension de signe pour convertir un pointeur 32 bits en pointeur 64 bits. Autrement dit, les 32 bits les moins significatifs du pointeur 64 bits sont définis avec la valeur du pointeur 32 bits et les 32 bits les plus significatifs sont définis avec la valeur du bit de signe du pointeur 32 bits. Cette conversion génère des résultats corrects si le bit de signe est 0, pas si le bit de signe est 1. Par exemple, l'adresse 32 bits 0x7FFFFFFF retourne l'adresse 64 bits équivalente 0x000000007FFFFFFF, mais l'adresse 32 bits 0x80000000 est modifiée incorrectement en 0xFFFFFFFF80000000.
+La documentation Microsoft pour la prise en charge des plateformes 64 bits fait parfois référence au bit le plus significatif d'un pointeur 32 bits comme bit de signe. Par défaut, le compilateur utilise l’extension de signe pour convertir un pointeur 32 bits en pointeur 64 bits. Autrement dit, les 32 bits les moins significatifs du pointeur 64 bits sont définis avec la valeur du pointeur 32 bits et les 32 bits les plus significatifs sont définis avec la valeur du bit de signe du pointeur 32 bits. Cette conversion génère des résultats corrects si le bit de signe est 0, pas si le bit de signe est 1. Par exemple, l'adresse 32 bits 0x7FFFFFFF retourne l'adresse 64 bits équivalente 0x000000007FFFFFFF, mais l'adresse 32 bits 0x80000000 est modifiée incorrectement en 0xFFFFFFFF80000000.
 
 Le **__sptr**, ou pointeur signé, modificateur Spécifie qu’une conversion de pointeur définit les bits les plus significatifs d’un pointeur 64 bits pour le bit de signe du pointeur 32 bits. Le **__uptr**, ou le modificateur de pointeur non signé, spécifie qu’une conversion définit les bits les plus significatifs à zéro. Les déclarations suivantes illustrent la **__sptr** et **__uptr** modificateurs utilisés avec deux pointeurs non qualifiés, deux pointeurs qualifiés avec le [__ptr32](../cpp/ptr32-ptr64.md) type et une fonction paramètre.
 
