@@ -36,11 +36,11 @@ helpviewer_keywords:
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
 ms.openlocfilehash: 568a96caf481fbaf3e80cf60958dc826db49dd86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333967"
 ---
 # <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
 
@@ -59,7 +59,7 @@ wint_t _fgetwc_nolock(
 
 ### <a name="parameters"></a>Paramètres
 
-*flux de données*<br/>
+*stream*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour

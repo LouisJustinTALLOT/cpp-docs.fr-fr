@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
 ms.openlocfilehash: 2cb66ce4cbee0936211e5e991b18f3ae4b8a7fe5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369421"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator, classe
 
@@ -348,7 +348,7 @@ Début de la séquence à mettre en correspondance.
 *last*<br/>
 Fin de la séquence à mettre en correspondance.
 
-*RE*<br/>
+*re*<br/>
 Expression régulière pour les correspondances.
 
 *f*<br/>

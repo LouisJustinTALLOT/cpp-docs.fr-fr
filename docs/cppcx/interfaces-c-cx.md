@@ -3,11 +3,11 @@ title: Interfaces (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
 ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375780"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 
@@ -99,4 +99,4 @@ Voici comment les types de Runtime de Windows peuvent être utilisés pour crée
 
 [Système de type](../cppcx/type-system-c-cx.md)<br/>
 [Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)
+[Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)

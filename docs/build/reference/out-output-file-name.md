@@ -12,11 +12,11 @@ helpviewer_keywords:
 - linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
 ms.openlocfilehash: be5fe929bdcf52be19955a5bc2d7aa093e194f45
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320069"
 ---
 # <a name="out-output-file-name"></a>/OUT (Nom du fichier de sortie)
 
@@ -53,5 +53,5 @@ Cette option le nom de base par défaut pour une bibliothèque de fichier de map
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

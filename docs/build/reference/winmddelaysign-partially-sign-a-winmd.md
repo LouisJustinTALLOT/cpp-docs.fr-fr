@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCLinkerTool.WINMDDelaySign
 ms.assetid: 445cd602-62cb-400a-8e3a-4beb6572724d
 ms.openlocfilehash: 5e6eab3fbc40543b634f03da826d3bd3477b9623
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57421457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316598"
 ---
 # <a name="winmddelaysign-partially-sign-a-winmd"></a>/WINMDDELAYSIGN (signer partiellement un winmd)
 
@@ -35,5 +35,5 @@ Ressemble à la [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) option de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

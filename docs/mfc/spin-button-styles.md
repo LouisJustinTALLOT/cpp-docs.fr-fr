@@ -8,11 +8,11 @@ helpviewer_keywords:
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
 ms.openlocfilehash: d955ba1d76ee4d5648613ddaf6c5f6a652f3d3af
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307170"
 ---
 # <a name="spin-button-styles"></a>Styles de bouton toupie
 

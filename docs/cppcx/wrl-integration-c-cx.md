@@ -3,11 +3,11 @@ title: Intégration WRL (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
 ms.openlocfilehash: a3c8b824d2cd932a7d284804f3f28781654045e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304148"
 ---
 # <a name="wrl-integration-ccx"></a>Intégration WRL (C++/CX)
 
@@ -112,4 +112,4 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Interopérabilité avec d’autres langages](interoperating-with-other-languages-c-cx.md)
+[Interopérabilité avec d'autres langages](interoperating-with-other-languages-c-cx.md)

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
 ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385204"
 ---
 # <a name="task-class-concurrency-runtime"></a>task (Concurrency Runtime), classe
 
@@ -64,12 +64,12 @@ Type de résultat de cette tâche.
 
 |Nom|Description|
 |----------|-----------------|
-|[get](#get)|Surchargé. Retourne le résultat produit par cette tâche. Si la tâche n'est pas dans un état terminal, un appel à `get` attendra que la tâche se termine. Cette méthode ne retourne pas de valeur lorsqu’elle est appelée sur une tâche dont le `result_type` a la valeur `void`.|
+|[get](#get)|Surchargé. Retourne le résultat produit par cette tâche. Si la tâche n’est pas dans un état terminal, un appel à `get` attendra que la tâche se termine. Cette méthode ne retourne pas de valeur lorsqu’elle est appelée sur une tâche dont le `result_type` a la valeur `void`.|
 |[is_apartment_aware](#is_apartment_aware)|Détermine si la tâche désencapsule une interface `IAsyncInfo` Windows Runtime ou descend de cette tâche.|
 |[is_done](#is_done)|Détermine si la tâche est terminée.|
 |[scheduler](#scheduler)|Retourne le planificateur pour cette tâche.|
 |[then](#then)|Surchargé. Ajoute une tâche de continuation à cette tâche.|
-|[wait](#wait)|Attend que cette tâche atteigne un état terminal. Il est possible que `wait` exécute la tâche inline si toutes les dépendances de tâches sont remplies et si elle n'a pas déjà été sélectionnée pour être exécutée par un processus de travail d'arrière-plan.|
+|[wait](#wait)|Attend que cette tâche atteigne un état terminal. Il est possible que `wait` exécute la tâche inline si toutes les dépendances de tâches sont remplies et si elle n’a pas déjà été sélectionnée pour être exécutée par un processus de travail d’arrière-plan.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -87,7 +87,7 @@ Pour plus d’informations, consultez [parallélisme des tâches](../../../paral
 
 `task`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** ppltasks.h
 
@@ -95,7 +95,7 @@ Pour plus d’informations, consultez [parallélisme des tâches](../../../paral
 
 ##  <a name="get"></a> Télécharger
 
-Retourne le résultat produit par cette tâche. Si la tâche n'est pas dans un état terminal, un appel à `get` attendra que la tâche se termine. Cette méthode ne retourne pas de valeur lorsqu’elle est appelée sur une tâche dont le `result_type` a la valeur `void`.
+Retourne le résultat produit par cette tâche. Si la tâche n’est pas dans un état terminal, un appel à `get` attendra que la tâche se termine. Cette méthode ne retourne pas de valeur lorsqu’elle est appelée sur une tâche dont le `result_type` a la valeur `void`.
 
 ```
 _ReturnType get() const;

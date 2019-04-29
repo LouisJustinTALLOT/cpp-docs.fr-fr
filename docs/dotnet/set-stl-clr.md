@@ -96,11 +96,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
 ms.openlocfilehash: 612c0772504043a99f3a2ae9fa7da9c791076d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384645"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
@@ -230,7 +230,7 @@ Effacer ou de suppression d’un élément appelle le destructeur pour sa valeur
 
 ## <a name="members"></a>Membres
 
-## <a name="begin"></a>Set::Begin (STL/CLR)
+## <a name="begin"></a>set::begin (STL/CLR)
 
 Désigne le début de la séquence contrôlée.
 
@@ -278,7 +278,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="clear"></a>Set::Clear (STL/CLR)
+## <a name="clear"></a>set::clear (STL/CLR)
 
 Supprime tous les éléments.
 
@@ -336,7 +336,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a>Set::const_iterator (STL/CLR)
+## <a name="const_iterator"></a>set::const_iterator (STL/CLR)
 
 Type d'un itérateur constant pour la séquence contrôlée.
 
@@ -378,7 +378,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a>Set::const_reference (STL/CLR)
+## <a name="const_reference"></a>set::const_reference (STL/CLR)
 
 Type d'une référence constante à un élément.
 
@@ -423,7 +423,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a>Set::const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a>set::const_reverse_iterator (STL/CLR)
 
 Le type d’un itérateur inverse constant pour la séquence contrôlée...
 
@@ -465,7 +465,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a>Set::Count (STL/CLR)
+## <a name="count"></a>set::count (STL/CLR)
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -518,7 +518,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a>Set::difference_type (STL/CLR)
+## <a name="difference_type"></a>set::difference_type (STL/CLR)
 
 Les types d’une distance signée entre deux éléments.
 
@@ -573,7 +573,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a>Set::Empty (STL/CLR)
+## <a name="empty"></a>set::empty (STL/CLR)
 
 Vérifie l'absence d'éléments.
 
@@ -625,7 +625,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a>Set::end (STL/CLR)
+## <a name="end"></a>set::end (STL/CLR)
 
 Désigne la fin de la séquence contrôlée.
 
@@ -674,7 +674,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a>Set::equal_range (STL/CLR)
+## <a name="equal_range"></a>set::equal_range (STL/CLR)
 
 Recherche une plage qui correspond à une clé spécifiée.
 
@@ -734,7 +734,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a>Set::Erase (STL/CLR)
+## <a name="erase"></a>set::erase (STL/CLR)
 
 Supprime les éléments placés aux positions spécifiées.
 
@@ -818,7 +818,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a>Set::Find (STL/CLR)
+## <a name="find"></a>set::find (STL/CLR)
 
 Recherche un élément qui correspond à une clé spécifiée.
 
@@ -874,7 +874,7 @@ find b = b
 find C = False
 ```
 
-## <a name="generic_container"></a>Set::generic_container (STL/CLR)
+## <a name="generic_container"></a>set::generic_container (STL/CLR)
 
 Le type de l’interface générique pour le conteneur.
 
@@ -938,7 +938,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> Set::generic_iterator (STL/CLR)
+## <a name="generic_iterator"></a> set::generic_iterator (STL/CLR)
 
 Le type d’un itérateur pour une utilisation avec l’interface générique pour le conteneur.
 
@@ -994,7 +994,7 @@ a b c
 a
 ```
 
-## <a name="generic_reverse_iterator"></a> Set::generic_reverse_iterator (STL/CLR)
+## <a name="generic_reverse_iterator"></a> set::generic_reverse_iterator (STL/CLR)
 
 Le type d’un itérateur inverse pour une utilisation avec l’interface générique pour le conteneur.
 
@@ -1129,7 +1129,7 @@ Fin de la plage à insérer.
 *right*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*val*<br/>
 Valeur de clé à insérer.
 
 *where*<br/>
@@ -1483,7 +1483,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="make_value"></a> Set::make_value (STL/CLR)
+## <a name="make_value"></a> set::make_value (STL/CLR)
 
 Construit un objet de valeur.
 
@@ -1529,7 +1529,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> Set::operator = (STL/CLR)
+## <a name="op_as"></a> set::operator= (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -1797,7 +1797,7 @@ Début de la plage à insérer.
 *last*<br/>
 Fin de la plage à insérer.
 
-*Pred*<br/>
+*pred*<br/>
 Classement de prédicat pour la séquence contrôlée.
 
 *right*<br/>
@@ -1993,7 +1993,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> Set::size_type (STL/CLR)
+## <a name="size_type"></a> set::size_type (STL/CLR)
 
 Le type d’une distance signée entre deux éléments.
 
@@ -2305,7 +2305,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> Set::Value_type (STL/CLR)
+## <a name="value_type"></a> set::value_type (STL/CLR)
 
 Type d’un élément.
 
@@ -2350,7 +2350,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> opérateur ! = (set) (STL/CLR)
+## <a name="op_neq"></a> operator!= (set) (STL/CLR)
 
 Liste différent de comparaison.
 
@@ -2490,7 +2490,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> opérateur&lt;= (set) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (set) (STL/CLR)
 
 Liste inférieure ou égale comparaison.
 
@@ -2560,7 +2560,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> opérateur == (set) (STL/CLR)
+## <a name="op_eq"></a> operator== (set) (STL/CLR)
 
 Liste de comparaison égale.
 
@@ -2700,7 +2700,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> opérateur&gt;= (set) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (set) (STL/CLR)
 
 Liste supérieur ou égal à comparaison.
 

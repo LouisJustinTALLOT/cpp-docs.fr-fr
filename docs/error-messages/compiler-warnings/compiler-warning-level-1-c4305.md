@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4305
 ms.openlocfilehash: 3f9116b0e7bdd9ee13c42b48f44da4b090f41ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327468"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Avertissement du compilateur (niveau 1) C4305
 
-> «*contexte*' : troncation de '*type1*'en'*type2*»
+> '*context*' : truncation from '*type1*' to '*type2*'
 
 ## <a name="remarks"></a>Notes
 

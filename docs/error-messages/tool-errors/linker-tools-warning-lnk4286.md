@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4286
 ms.openlocfilehash: 43ed18808ba5ce632dd7dc7095f7bc30e4497ec9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59674225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352435"
 ---
 # <a name="linker-tools-warning-lnk4286"></a>Avertissement des outils Éditeur de liens LNK4286
 

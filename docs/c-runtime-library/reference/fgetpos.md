@@ -23,11 +23,11 @@ helpviewer_keywords:
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333928"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,15 +44,15 @@ int fgetpos(
 
 ### <a name="parameters"></a>Paramètres
 
-*flux de données*<br/>
+*stream*<br/>
 Flux cible.
 
-*points de vente*<br/>
+*pos*<br/>
 Stockage de l’indicateur de position.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **fgetpos** retourne 0. En cas d’échec, elle retourne une valeur différente de zéro et définit **errno** sur une des opérations suivantes (définies dans STDIO des constantes manifestes. (H) : **EBADF**, ce qui signifie que le flux spécifié n’est pas un pointeur de fichier valide ou n’est pas accessible, ou **EINVAL**, ce qui signifie que le *flux* valeur ou la valeur de *pos* est non valide, par exemple si est un pointeur null. Si *flux* ou *pos* est un **NULL** pointeur, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+En cas de réussite, **fgetpos** retourne 0. En cas d’échec, elle retourne une valeur différente de zéro et définit **errno** sur une des opérations suivantes (définies dans STDIO des constantes manifestes. (H) : **EBADF**, ce qui signifie que le flux spécifié n’est pas un pointeur de fichier valide ou n’est pas accessible, ou **EINVAL**, ce qui signifie que le *flux* valeur ou la valeur de *pos*est non valide, par exemple si est un pointeur null. Si *flux* ou *pos* est un **NULL** pointeur, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Notes
 

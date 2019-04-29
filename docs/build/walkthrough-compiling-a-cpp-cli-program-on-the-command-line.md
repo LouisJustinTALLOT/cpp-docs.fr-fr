@@ -3,11 +3,11 @@ title: 'Procédure pas à pas : Compilation de C++ / c++ / CLI des programme su
 ms.date: 09/24/2018
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 ms.openlocfilehash: c90d2c915db7264dc1b4e4807803e063c2a24fc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314167"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Procédure pas à pas : Compilation de C++ / c++ / CLI des programme sur la ligne de commande
 
@@ -61,5 +61,5 @@ Pour activer la compilation pour C / c++ / CLI, vous devez utiliser le [/CLR](re
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Projets et des systèmes de génération](projects-and-build-systems-cpp.md)<br/>
+[Projets et systèmes de build](projects-and-build-systems-cpp.md)<br/>
 [Options du compilateur MSVC](reference/compiler-options.md)

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
 ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335553"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
 
@@ -72,13 +72,13 @@ Le cosinus hyperbolique de *z*, en radians.
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **ccosh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **ccosh** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ccosh** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **ccosh** accepte et retourne toujours un **_Dcomplex** valeur.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**ccosh**, **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex>|
+|**ccosh**,               **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

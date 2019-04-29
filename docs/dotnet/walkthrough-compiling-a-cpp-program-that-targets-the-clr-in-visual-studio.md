@@ -8,11 +8,11 @@ helpviewer_keywords:
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
 ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384398"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Procédure pas à pas : Compiler un C + c++ / CLI programme qui cible le CLR dans Visual Studio
 

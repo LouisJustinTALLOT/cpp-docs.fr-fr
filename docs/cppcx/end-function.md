@@ -7,11 +7,11 @@ helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
 ms.openlocfilehash: c46c601be2b2ed78cf79641a7fcf5324e615a771
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375806"
 ---
 # <a name="end-function"></a>end (fonction)
 
@@ -59,7 +59,7 @@ Les deux premières fonctions de modèle retournent des itérateurs et la troisi
 
 L'objet [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) retourné par `end` est un itérateur de proxy qui stocke des éléments de type `VectorProxy<T>`. Toutefois, l'objet proxy n'est presque jamais visible par le code utilisateur. Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** collection.h
 
@@ -67,4 +67,4 @@ L'objet [Platform::Collections::VectorViewIterator](../cppcx/platform-collection
 
 ## <a name="see-also"></a>Voir aussi
 
-[Windows::Foundation :: Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows::Foundation::Collections, espace de noms](../cppcx/windows-foundation-collections-namespace-c-cx.md)

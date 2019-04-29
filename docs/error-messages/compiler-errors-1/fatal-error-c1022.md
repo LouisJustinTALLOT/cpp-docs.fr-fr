@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1022
 ms.assetid: edada720-dc73-49bc-bd93-a7945a316312
 ms.openlocfilehash: 044ebbbe895677acf74977e56879c292486e18cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383137"
 ---
 # <a name="fatal-error-c1022"></a>Erreur irrécupérable C1022
 

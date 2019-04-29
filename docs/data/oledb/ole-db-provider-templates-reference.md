@@ -7,11 +7,11 @@ helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
 ms.openlocfilehash: e1d6be9687085361edd9141d8fb471e21b6f6376
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62283818"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Référence des modèles du fournisseur OLE DB
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335345"
 ---
 # <a name="countof-macro"></a>_countof Macro
 
@@ -50,7 +50,7 @@ Le nombre d’éléments dans le tableau, exprimé sous la forme un **size_t**.
 
 **_countof** est implémenté comme une macro de préprocesseur de type fonction. La version C++ a un mécanisme de modèle supplémentaire pour détecter au moment de la compilation si un pointeur est passé au lieu d’un tableau déclaré statiquement.
 
-Vérifiez que *tableau* est en fait un tableau, et non un pointeur. En C, **_countof** produit des résultats erronés si *tableau* est un pointeur. En C++, **_countof** ne parvient pas à compiler si *tableau* est un pointeur.  Un tableau passé en tant que paramètre à une fonction *décline vers un autre pointeur*, ce qui signifie que dans la fonction, vous ne pouvez pas utiliser **_countof** pour déterminer l’étendue du tableau.
+Vérifiez que *tableau* est en fait un tableau, et non un pointeur. En C, **_countof** produit des résultats erronés si *tableau* est un pointeur. Dans C++, **_countof** ne parvient pas à compiler si *tableau* est un pointeur.  Un tableau passé en tant que paramètre à une fonction *décline vers un autre pointeur*, ce qui signifie que dans la fonction, vous ne pouvez pas utiliser **_countof** pour déterminer l’étendue du tableau.
 
 ## <a name="requirements"></a>Configuration requise
 

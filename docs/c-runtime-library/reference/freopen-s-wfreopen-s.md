@@ -30,11 +30,11 @@ helpviewer_keywords:
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
 ms.openlocfilehash: 2cdc16f21882c32933868000c6fd1d66accc74b8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332999"
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
 
@@ -68,7 +68,7 @@ Chemin d’accès du nouveau fichier.
 *mode*<br/>
 Type d'accès autorisé.
 
-*flux de données*<br/>
+*stream*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -89,7 +89,7 @@ Si un des *pFile*, *chemin d’accès*, *mode*, ou *flux* sont **NULL**, ou si *
 
 **freopen_s** est généralement utilisé pour rediriger les fichiers pré-ouverts **stdin**, **stdout**, et **stderr** vers les fichiers spécifiés par l’utilisateur. Le nouveau fichier associé *flux* est ouvert avec *mode*, qui est une chaîne de caractères spécifiant le type d’accès demandé pour le fichier, comme suit :
 
-|*mode*|Accès|
+|*mode*|Access|
 |-|-|
 | **"r"** | Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **freopen_s** appeler échoue. |
 | **"w"** | Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit. |

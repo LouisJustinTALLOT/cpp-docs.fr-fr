@@ -6,11 +6,11 @@ helpviewer_keywords:
 - parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
 ms.openlocfilehash: 08f33a75bc5c5391333a2d9368d4ed6563e117c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346260"
 ---
 # <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>Procédure : Utiliser l’annulation pour rompre une boucle parallèle
 

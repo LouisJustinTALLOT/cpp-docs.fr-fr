@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
 ms.openlocfilehash: f269ad990042f51554ec598b0bddbe5a6d7776b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383917"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Méthodes de création d'une barre d'outils
 

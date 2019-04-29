@@ -32,11 +32,11 @@ helpviewer_keywords:
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
 ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355274"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -71,10 +71,10 @@ intptr_t _wspawnl(
 *mode*<br/>
 Mode d'exécution du processus appelant.
 
-*CmdName*<br/>
+*cmdname*<br/>
 Chemin d'accès du fichier à exécuter.
 
-*arg0*, *arg1*,... *argn*<br/>
+*arg0*, *arg1*, ... *argn*<br/>
 Liste des pointeurs vers les arguments. Le *arg0* argument est généralement un pointeur vers *cmdname*. Les arguments *arg1* via *argn* sont des pointeurs vers les chaînes de caractères formant la nouvelle liste d’arguments. Suivant *argn*, il doit y avoir un **NULL** pointeur pour marquer la fin de la liste d’arguments.
 
 ## <a name="return-value"></a>Valeur de retour

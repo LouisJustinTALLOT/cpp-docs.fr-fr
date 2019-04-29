@@ -31,11 +31,11 @@ helpviewer_keywords:
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
 ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335514"
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
@@ -65,13 +65,13 @@ L’arc tangente de *z*, en radians. Le résultat est illimité sur l’axe des 
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **catan** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **catan** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **catan** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **catan** accepte et retourne toujours un **_Dcomplex** valeur.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**catan**, **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
+|**catan**,               **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

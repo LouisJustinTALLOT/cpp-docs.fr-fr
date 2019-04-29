@@ -5,11 +5,11 @@ f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376667"
 ---
 # <a name="atomic-structure"></a>atomic, structure
 
@@ -30,14 +30,14 @@ struct atomic;
 |[atomic](#atomic)|Construit un objet atomique.|
 |**Opérateurs**||
 |[atomic::operator Ty](#op_ty)|Lit et retourne la valeur stockée. ([atomic::load](#load))|
-|[atomic::operator =](#op_eq)|Utilise une valeur spécifiée pour remplacer la valeur stockée. ([atomic::store](#store))|
-|[atomic::operator ++](#op_inc)|Incrémente la valeur stockée. Utilisé uniquement par les spécialisations intégrales et de pointeur.|
-|[atomic::operator +=](#op_add_eq)|Ajoute une valeur spécifiée à la valeur stockée. Utilisé uniquement par les spécialisations intégrales et de pointeur.|
+|[atomic::operator=](#op_eq)|Utilise une valeur spécifiée pour remplacer la valeur stockée. ([atomic::store](#store))|
+|[atomic::operator++](#op_inc)|Incrémente la valeur stockée. Utilisé uniquement par les spécialisations intégrales et de pointeur.|
+|[atomic::operator+=](#op_add_eq)|Ajoute une valeur spécifiée à la valeur stockée. Utilisé uniquement par les spécialisations intégrales et de pointeur.|
 |[atomic::operator--](#op_dec)|Décrémente la valeur stockée. Utilisé uniquement par les spécialisations intégrales et de pointeur.|
 |[atomic::operator-=](#op_sub_eq)|Soustrait une valeur spécifiée de la valeur stockée. Utilisé uniquement par les spécialisations intégrales et de pointeur.|
-|[atomic::operator & =](#op_and_eq)|Effectue une opération de bits et sur une valeur spécifiée et la valeur stockée. Utilisé uniquement par les spécialisations intégrales.|
+|[atomic::operator&=](#op_and_eq)|Effectue une opération de bits et sur une valeur spécifiée et la valeur stockée. Utilisé uniquement par les spécialisations intégrales.|
 |[atomic::operator&#124;=](#op_or_eq)|Effectue une opération de bits ou sur une valeur spécifiée et la valeur stockée. Utilisé uniquement par les spécialisations intégrales.|
-|[atomic::operator ^ =](#op_xor_eq)|Exécute un OR exclusif ou sur une valeur spécifiée et la valeur stockée. Utilisé uniquement par les spécialisations intégrales.|
+|[atomic::operator^=](#op_xor_eq)|Exécute un OR exclusif ou sur une valeur spécifiée et la valeur stockée. Utilisé uniquement par les spécialisations intégrales.|
 |**Fonctions**||
 |[compare_exchange_strong](#compare_exchange_strong)|Effectue une *atomic_compare_and_exchange* opération sur **cela** et retourne le résultat.|
 |[compare_exchange_weak](#compare_exchange_weak)|Effectue un *weak_atomic_compare_and_exchange* opération sur **cela** et retourne le résultat.|
@@ -47,7 +47,7 @@ struct atomic;
 |[fetch_sub](#fetch_sub)|Soustrait une valeur spécifiée de la valeur stockée.|
 |[fetch_xor](#fetch_xor)|Exécute un OR exclusif ou sur une valeur spécifiée et la valeur stockée.|
 |[is_lock_free](#is_lock_free)|Spécifie si les opérations atomiques sur **cela** sont *sans verrouillage*. Un type atomique est *sans verrou* si aucune opération atomique sur ce type utilise un verrou.|
-|[Charge](#load)|Lit et retourne la valeur stockée.|
+|[load](#load)|Lit et retourne la valeur stockée.|
 |[store](#store)|Utilise une valeur spécifiée pour remplacer la valeur stockée.|
 
 ## <a name="remarks"></a>Notes
@@ -60,11 +60,11 @@ Une spécialisation existe pour chaque type intégral sauf **bool**. Chaque spé
 
 ||||
 |-|-|-|
-|**atomique\<char >**|**atomique\<signé char >**|**atomique\<unsigned char >**|
-|**atomique\<char16_t >**|**atomique\<char32_t >**|**atomique\<wchar_t >**|
-|**atomique\<court >**|**atomique\<unsigned short >**|**atomique\<int >**|
-|**atomique\<unsigned int >**|**atomique\<long >**|**atomique\<unsigned long >**|
-|**atomique\<longue >**|**atomique\<unsigned long long >**|
+|**atomic\<char>**|**atomique\<signé char >**|**atomique\<unsigned char >**|
+|**atomic\<char16_t>**|**atomic\<char32_t>**|**atomic\<wchar_t>**|
+|**atomic\<short>**|**atomique\<unsigned short >**|**atomic\<int>**|
+|**atomique\<unsigned int >**|**atomic\<long>**|**atomic\<unsigned long>**|
+|**atomic\<long long>**|**atomic\<unsigned long long>**|
 
 Les spécialisations intégrales sont dérivées des types `atomic_integral` correspondants. Par exemple, **atomique\<unsigned int >** est dérivée de `atomic_uint`.
 
@@ -113,7 +113,7 @@ atomic<Ty>::operator Ty() const noexcept;
 
 Cet opérateur s’applique le `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_eq"></a> atomic::operator =
+## <a name="op_eq"></a> atomic::operator=
 
 Stocke une valeur spécifiée.
 
@@ -150,7 +150,7 @@ Ty atomic<Ty>::operator++() noexcept;
 
 Les deux premiers opérateurs retournent la valeur incrémentée ; les deux derniers opérateurs retournent la valeur avant l’incrémentation. Les opérateurs utilisent le `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_add_eq"></a> atomic::operator +=
+## <a name="op_add_eq"></a> atomic::operator+=
 
 Ajoute une valeur spécifiée à la valeur stockée. Utilisé uniquement par les spécialisations intégrales et de pointeur.
 
@@ -217,7 +217,7 @@ Un *Ty* objet qui contient le résultat de la soustraction.
 
 Cet opérateur utilise le `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_and_eq"></a> atomic::operator & =
+## <a name="op_and_eq"></a> atomic::operator&=
 
 Effectue une opération de bits et sur une valeur spécifiée et la valeur stockée de  **\*cela**. Utilisé uniquement par les spécialisations intégrales.
 
@@ -269,7 +269,7 @@ Le résultat de l’opérateur de bits ou.
 
 Cet opérateur effectue une opération de lecture-modification-écriture pour remplacer la valeur stockée de  **\*cela** avec une opération de bits or *valeur* et la valeur actuelle qui est stockée dans  **\*cela**, aux contraintes de la `memory_order_seq_cst` [memory_order](atomic-enums.md) contraintes.
 
-## <a name="op_xor_eq"></a> atomic::operator ^ =
+## <a name="op_xor_eq"></a> atomic::operator^=
 
 Exécute un OR exclusif ou selon une valeur spécifiée et la valeur stockée de  **\*cela**. Utilisé uniquement par les spécialisations intégrales.
 
@@ -427,7 +427,7 @@ Ty atomic<Ty>::exchange(
 *Valeur*<br/>
 Une valeur de type *Ty*.
 
-*Commande*<br/>
+*Order*<br/>
 `memory_order`
 
 ### <a name="return-value"></a>Valeur de retour
@@ -458,7 +458,7 @@ Ty atomic<Ty>::fetch_add (
 *Valeur*<br/>
 Une valeur de type *Ty*.
 
-*Commande*<br/>
+*Order*<br/>
 `memory_order`
 
 ### <a name="return-value"></a>Valeur de retour
@@ -489,7 +489,7 @@ Ty atomic<Ty>::fetch_and (
 *Valeur*<br/>
 Une valeur de type *Ty*.
 
-*Commande*<br/>
+*Order*<br/>
 `memory_order`
 
 ### <a name="return-value"></a>Valeur de retour
@@ -520,7 +520,7 @@ Ty atomic<Ty>::fetch_or (
 *Valeur*<br/>
 Une valeur de type *Ty*.
 
-*Commande*<br/>
+*Order*<br/>
 `memory_order`
 
 ### <a name="return-value"></a>Valeur de retour
@@ -551,7 +551,7 @@ Ty atomic<Ty>::fetch_sub (
 *Valeur*<br/>
 Une valeur de type *Ty*.
 
-*Commande*<br/>
+*Order*<br/>
 `memory_order`
 
 ### <a name="return-value"></a>Valeur de retour
@@ -582,7 +582,7 @@ Ty atomic<Ty>::fetch_xor (
 *Valeur*<br/>
 Une valeur de type *Ty*.
 
-*Commande*<br/>
+*Order*<br/>
 `memory_order`
 
 ### <a name="return-value"></a>Valeur de retour
@@ -624,14 +624,14 @@ Ty atomic::load(
 
 ### <a name="parameters"></a>Paramètres
 
-*Commande*<br/>
+*Order*<br/>
 `memory_order` *Commande* ne doit pas être `memory_order_release` ou `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Valeur de retour
 
 La valeur récupérée qui est stockée dans  **\*cela**.
 
-## <a name="store"></a> atomic::Store
+## <a name="store"></a> atomic::store
 
 Stocke une valeur spécifiée.
 
@@ -651,7 +651,7 @@ void atomic<Ty>::store(
 *Valeur*<br/>
 Un *Ty* objet.
 
-*Commande*<br/>
+*Order*<br/>
 Un `memory_order` contrainte.
 
 ### <a name="remarks"></a>Notes

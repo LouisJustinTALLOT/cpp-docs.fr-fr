@@ -13,11 +13,11 @@ f1_keywords:
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 ms.openlocfilehash: d3eb49cd1555f23cc83efb0d8d912998295b3c55
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337607"
 ---
 # <a name="concurrency-namespace-enums"></a>énumérations d’espace de noms d’accès concurrentiel
 
@@ -51,7 +51,7 @@ enum agent_status;
 
 Pour plus d’informations, consultez [Agents asynchrones](../../../parallel/concrt/asynchronous-agents.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 
@@ -76,7 +76,7 @@ enum Agents_EventType;
 |`AGENTS_EVENT_START`|Traitement d’un type d’événement qui représente l’ouverture de certains|
 |`AGENTS_EVENT_UNLINK`|Un type d’événement qui représente la dissociation de blocs de messages|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 
@@ -102,7 +102,7 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_UNBLOCK`|Un type d’événement qui représente l’opération de déverrouillage d’un contexte.|
 |`CONCRT_EVENT_YIELD`|Un type d’événement qui représente l’action consistant à un contexte produisant.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h **Namespace :** accès concurrentiel
 
@@ -126,7 +126,7 @@ enum Concrt_TraceFlags;
 |`SchedulerEventFlag`||
 |`VirtualProcessorEventFlag`||
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 
@@ -146,7 +146,7 @@ enum CriticalRegionType;
 |`InsideHyperCriticalRegion`|Indique que le contexte est à l’intérieur d’une zone hyper critique. À l’intérieur d’une zone hyper critique, suspensions synchrones et asynchrones sont masquées dans le planificateur. Si un tel arrêt ou blocage se produisent, le Gestionnaire de ressources attendra que le thread soit exécutable, et il suffit de le reprendre au lieu d’appeler de nouveau le planificateur. Les verrous d’une région de ce type ne doivent jamais être partagés avec du code exécuté en dehors de ces régions. Cela provoque un interblocage imprévisible.|
 |`OutsideCriticalRegion`|Indique que le contexte est en dehors de n’importe quelle région critique.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrtrm.h
 
@@ -180,7 +180,7 @@ enum join_type;
 |`greedy`|Gourmand `join` les blocs de messagerie acceptent immédiatement un message lors de la propagation. Cela est plus efficace, mais avec le risque de verrou vivant, selon la configuration du réseau.|
 |`non_greedy`|Non gourmand `join` les blocs de messagerie reporter des messages et essaye de les consommer après leur arrivée. Ceux-ci sont assurés de fonctionner, mais plus lentement.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** agents.h
 
@@ -201,7 +201,7 @@ enum message_status;
 |`missed`|La cible a essayé d’accepter le message, mais il n’était plus disponible.|
 |`postponed`|La cible a différé le message.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** agents.h
 
@@ -229,7 +229,7 @@ enum PolicyElementKey;
 |`TargetOversubscriptionFactor`|Nombre provisoire de processeurs virtuels par thread matériel. Le facteur de surabonnement cible peut être augmenté par le Gestionnaire de ressources, si nécessaire, pour satisfaire `MaxConcurrency` avec les threads matériels sur l’ordinateur.<br /><br /> Valeurs valides : Entiers positifs<br /><br /> Valeur par défaut : `1`|
 |`WinRTInitialization`||
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 
@@ -248,7 +248,7 @@ enum SchedulerType;
 |`ThreadScheduler`|Indique une requête explicite de threads Win32 normaux.|
 |`UmsThreadDefault`|En mode utilisateur planifiables threads UMS ne sont pas pris en charge dans le Runtime d’accès concurrentiel dans Visual Studio 2013. À l’aide de `UmsThreadDefault` en tant que valeur pour le `SchedulerType` stratégie n’entraîne pas une erreur. Toutefois, un planificateur créé avec cette stratégie par défaut à l’aide de threads Win32.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 
@@ -267,7 +267,7 @@ enum SchedulingProtocolType;
 |`EnhanceForwardProgress`|Le planificateur préfère alterner les groupes de planification après l’exécution de chaque tâche. Contextes non bloqués sont généralement planifiées de manière in-first-out (FIFO). Processeurs virtuels ne mettent pas en cache les contextes non bloqués.|
 |`EnhanceScheduleGroupLocality`|Le planificateur préfère continuer à travailler sur les tâches au sein du groupe de planification actuel avant de passer à un autre groupe de planification. Contextes non bloqués sont mis en cache par processeur virtuel et sont généralement planifiées de manière last-in-first-out (LIFO) par le processeur virtuel qui les débloqué.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 
@@ -309,7 +309,7 @@ enum task_group_status;
 |`completed`|Les tâches mises en file d’attente dans l’objet `task_group` ou `structured_task_group` sont terminées.|
 |`not_complete`|Les tâches mises en file d’attente dans l’objet `task_group` ne sont pas terminées. Notez que cette valeur n'est actuellement pas retournée par le runtime d'accès concurrentiel.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** pplinterface.h
 
@@ -328,7 +328,7 @@ enum WinRTInitializationType;
 |`DoNotInitializeWinRT`|Lorsque l’application est exécutée sur les systèmes d’exploitation avec la version Windows 8 ou une version ultérieure, les threads dans le planificateur ne sera pas initialiser le Runtime de Windows.|
 |`InitializeWinRTAsMTA`|Lorsque l’application est exécutée sur les systèmes d’exploitation avec la version Windows 8 ou une version ultérieure, chaque thread dans le planificateur s’initialiser le Runtime Windows et de le déclarer qu’il fait partie de la cloison multithread.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 

@@ -28,11 +28,11 @@ helpviewer_keywords:
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
 ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341780"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -60,9 +60,9 @@ Valeur à virgule flottante.
 
 Le **asinh** fonctions retournent le sinus hyperbolique inverse (arc le sinus hyperbolique) de *x*. Cette fonction est valide sur le domaine à virgule flottante. Si *x* est une valeur NaN silencieuse, indéfini, ou l’infini, la même valeur est retournée.
 
-|Entrée|Exception SEH|**_matherr** exception|
+|Entrée|Exception SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|aucun|none|
+|± QNAN, IND, INF|none|none|
 
 ## <a name="remarks"></a>Notes
 
@@ -72,7 +72,7 @@ Lorsque vous utilisez C++, vous pouvez appeler des surcharges de **asinh** qui a
 
 |Fonction|En-tête C requis|En-tête C++ requis|
 |--------------|--------------|------------------|
-|**ASINH**, **asinhf**, **asinhl**|\<math.h>|\<cmath > ou \<math.h <|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath > ou \<math.h <|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

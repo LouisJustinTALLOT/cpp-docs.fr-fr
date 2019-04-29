@@ -9,15 +9,15 @@ helpviewer_keywords:
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
 ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371962"
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets : Blocage
 
-Cet article et deux autres articles similaires décrivent plusieurs problèmes de programmation Windows Sockets. Cet article traite du blocage. Les autres problèmes sont décrits dans les articles : [Windows Sockets : L’ordre des octets](../mfc/windows-sockets-byte-ordering.md) et [Windows Sockets : Conversion de chaînes en](../mfc/windows-sockets-converting-strings.md).
+Cet article et deux autres articles similaires décrivent plusieurs problèmes de programmation Windows Sockets. Cet article traite du blocage. Les autres problèmes sont décrits dans les articles : [Windows Sockets : L’ordre des octets](../mfc/windows-sockets-byte-ordering.md) et [Windows Sockets : Conversion de chaînes en](../mfc/windows-sockets-converting-strings.md).
 
 Si vous utilisez ou dériver de la classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md), vous devez gérer ces problèmes vous-même. Si vous utilisez ou dériver de la classe [CSocket](../mfc/reference/csocket-class.md), MFC les gèrera.
 
@@ -40,15 +40,15 @@ Pour plus d'informations sur les blocages, consultez la spécification Windows S
 
 Pour plus d'informations, voir :
 
-- [Windows Sockets : À l’aide de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets : Utilisation de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets : Utilisation de Sockets avec des Archives](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets : Utilisation de sockets avec des archives](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets : En arrière-plan](../mfc/windows-sockets-background.md)
+- [Windows Sockets : Arrière-plan](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets : Sockets de Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets : Sockets flux](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets : Sockets datagramme](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets : Sockets datagramme](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Voir aussi
 

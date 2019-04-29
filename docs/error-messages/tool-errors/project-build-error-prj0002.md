@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PRJ0002
 ms.assetid: 1c820b1f-9a24-4681-80ed-4fcbfd7caa00
 ms.openlocfilehash: d8e13bcc03a02fd9dbc739566a92025a7b97d598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359707"
 ---
 # <a name="project-build-error-prj0002"></a>Erreur de génération de projet PRJ0002
 

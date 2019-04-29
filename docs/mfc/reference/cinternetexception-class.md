@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
 ms.openlocfilehash: dedf8926f02dd36dc8d6ac8ab5ff4056b60dfc91
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345706"
 ---
 # <a name="cinternetexception-class"></a>CInternetException, classe
 
@@ -58,7 +58,7 @@ Pour plus d’informations sur les identificateurs de contexte pour les applicat
 
 `CInternetException`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxinet.h
 

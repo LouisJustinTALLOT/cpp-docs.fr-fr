@@ -3,11 +3,11 @@ title: Événements (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
 ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301537"
 ---
 # <a name="events-ccx"></a>Événements (C++/CX)
 
@@ -63,4 +63,4 @@ L'ordre dans lequel la source d'événements appelle les gestionnaires d'événe
 [Système de type](../cppcx/type-system-c-cx.md)<br/>
 [Délégués](../cppcx/delegates-c-cx.md)<br/>
 [Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)
+[Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)

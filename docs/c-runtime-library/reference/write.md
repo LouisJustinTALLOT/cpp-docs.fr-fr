@@ -24,11 +24,11 @@ helpviewer_keywords:
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
 ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383410"
 ---
 # <a name="write"></a>_write
 
@@ -57,7 +57,7 @@ Nombre d'octets.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **_write** retourne le nombre d’octets réellement écrits. Si l’espace effectif restant sur le disque est inférieure à la taille de la mémoire tampon de la fonction tente d’écrire sur le disque, **_write** échoue et ne pas vidé du contenu de la mémoire tampon sur le disque. Une valeur de retour de -1 indique une erreur. Si des paramètres non valides sont passés, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et **errno** est défini sur une des trois valeurs : **EBADF**, ce qui signifie que le descripteur de fichier n’est pas valide ou le fichier n’est pas ouvert pour écriture ; **ENOSPC**, ce qui signifie que ne comporte pas suffisamment d’espace disponible sur le périphérique de l’opération ; ou **EINVAL**, ce qui signifie que *tampon* était un pointeur null ou qui irrégulière. *nombre* d’octets a été passé à écrire dans un fichier en mode Unicode.
+En cas de réussite, **_write** retourne le nombre d’octets réellement écrits. Si l’espace effectif restant sur le disque est inférieure à la taille de la mémoire tampon de la fonction tente d’écrire sur le disque, **_write** échoue et ne pas vidé du contenu de la mémoire tampon sur le disque. Une valeur de retour de -1 indique une erreur. Si des paramètres non valides sont passés, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et **errno** est définie à une des trois valeurs suivantes : **EBADF**, ce qui signifie que le descripteur de fichier n’est pas valide ou le fichier n’est pas ouvert pour écriture ; **ENOSPC**, ce qui signifie que ne comporte pas suffisamment d’espace disponible sur le périphérique de l’opération ; ou **EINVAL**, ce qui signifie que *tampon* était un pointeur null ou qui irrégulière *nombre* d’octets a été passé à écrire dans un fichier en mode Unicode.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
 ms.openlocfilehash: 9cc7dd32f222e68abb45fe8c518d9f378453b372
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384829"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 
@@ -483,7 +483,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> multimap::Count (STL/CLR)
+## <a name="count"></a> multimap::count (STL/CLR)
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -1165,7 +1165,7 @@ Fin de la plage à insérer.
 *right*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*val*<br/>
 Valeur de clé à insérer.
 
 *where*<br/>
@@ -1538,7 +1538,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 Valeur de clé à utiliser.
 
-*mappé*<br/>
+*mapped*<br/>
 Valeur mappée à rechercher.
 
 ### <a name="remarks"></a>Notes
@@ -1646,7 +1646,7 @@ Début de la plage à insérer.
 *last*<br/>
 Fin de la plage à insérer.
 
-*Pred*<br/>
+*pred*<br/>
 Classement de prédicat pour la séquence contrôlée.
 
 *right*<br/>
@@ -1790,7 +1790,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_as"></a> multimap::operator = (STL/CLR)
+## <a name="op_as"></a> multimap::operator= (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -2408,7 +2408,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> multimap::Value_type (STL/CLR)
+## <a name="value_type"></a> multimap::value_type (STL/CLR)
 
 Type d’un élément.
 
@@ -2452,7 +2452,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_neq"></a> opérateur ! = (multimap) (STL/CLR)
+## <a name="op_neq"></a> operator!= (multimap) (STL/CLR)
 
 Liste différent de comparaison.
 
@@ -2594,7 +2594,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> opérateur&lt;= (multimap) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (multimap) (STL/CLR)
 
 Liste inférieure ou égale comparaison.
 
@@ -2665,7 +2665,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> opérateur == (multimap) (STL/CLR)
+## <a name="op_eq"></a> operator== (multimap) (STL/CLR)
 
 Liste de comparaison égale.
 
@@ -2807,7 +2807,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> opérateur&gt;= (multimap) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (multimap) (STL/CLR)
 
 Liste supérieur ou égal à comparaison.
 

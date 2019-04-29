@@ -10,23 +10,23 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
 ms.openlocfilehash: 5db1af870644d1552aeac813edce0985a31d95b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368680"
 ---
 # <a name="logical-or-operator-"></a>Opérateur OR logique : ||
 
 ## <a name="syntax"></a>Syntaxe
 
-> *ou-expression logique* **||** *-et-expression logique*
+> *logical-or-expression* **||** *logical-and-expression*
 
 ## <a name="remarks"></a>Notes
 
 L’opérateur OR logique (**||**) retourne la valeur booléenne TRUE si un ou les deux opérandes a la valeur TRUE et FALSE sinon. Les opérandes sont convertis implicitement en type **bool** avant l’évaluation et le résultat est de type **bool**. L'opérateur OR logique présente une associativité de gauche à droite.
 
-Les opérandes de l’opérateur OR logique ne sont pas nécessairement du même type, mais ils doivent être de type intégral ou pointeur. Les opérandes sont souvent des expressions relationnelles ou d'égalité.
+Les opérandes de l'opérateur OR logique ne sont pas nécessairement du même type, mais ils doivent être de type intégral ou pointeur. Les opérandes sont souvent des expressions relationnelles ou d’égalité.
 
 Le premier opérande doit être complètement évalué et tous les effets secondaires terminés pour que l’évaluation de l’expression OR logique se poursuive.
 
@@ -36,7 +36,7 @@ Le second opérande est évalué seulement si le premier opérande équivaut à 
 printf( "%d" , (x == w || x == y || x == z) );
 ```
 
-Dans l'exemple ci-dessus, si `x` est égal à `w`, à `y` ou à `z`, le second argument de la fonction `printf` équivaut à true et la valeur 1 est affichée. Dans le cas contraire, il équivaut à false et la valeur 0 est affichée. Dès que l'une des conditions équivaut à true, l'évaluation cesse.
+Dans l’exemple ci-dessus, si `x` est égal à `w`, à `y` ou à `z`, le second argument de la fonction `printf` équivaut à true et la valeur 1 est affichée. Dans le cas contraire, il équivaut à false et la valeur 0 est affichée. Dès que l'une des conditions équivaut à true, l'évaluation cesse.
 
 ## <a name="operator-keyword-for-124124"></a>Mot clé operator pour&#124;&#124;
 

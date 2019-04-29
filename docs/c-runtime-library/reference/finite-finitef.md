@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
 ms.openlocfilehash: d727839521978be66c3dc9ee173ee2ba0a567445
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333714"
 ---
 # <a name="isfinite-finite-finitef"></a>isfinite, _finite, _finitef
 
@@ -77,7 +77,7 @@ Le `isfinite` macro et `_finite` et `_finitef` fonctions retournent une valeur d
 
 `isfinite` est une macro lors de la compilation en tant que C et une fonction de modèle inline, lors de la compilation en C++. Le `_finite` et `_finitef` fonctions sont spécifiques à Microsoft. La fonction `_finitef` n’est disponible que quand elle est compilée pour les plateformes x86, ARM ou ARM64.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------------|-------------------------------|

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 ms.openlocfilehash: aef967b26321f289cb8c7bd0402d7fe8f12b77b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330971"
 ---
 # <a name="specifiers"></a>Spécificateurs
 
@@ -19,11 +19,11 @@ Cette rubrique décrit la *decl-specifiers* composant (spécificateurs de décla
 
 Les espaces réservés et les mots clés de langage suivants sont des spécificateurs de déclaration :
 
-*spécificateur de classe de stockage*
+*storage-class-specifier*
 
-*spécificateur de type*
+*type-specifier*
 
-*spécificateur de fonction*
+*function-specifier*
 
 [friend](friend-cpp.md)
 
@@ -41,7 +41,7 @@ Le tableau suivant présente les quatre déclarations et la liste de chaque déc
 |-----------------|------------------------|------------------|
 |`char *lpszAppName;`|**char**|`*lpszAppName`|
 |`typedef char * LPSTR;`|**char**|`*LPSTR`|
-|`const int func1();`|**int const**|`func1`|
+|`const int func1();`|**const int**|`func1`|
 |`volatile void *pvvObj;`|**void volatile**|`*pvvObj`|
 
 Étant donné que **signé**, **non signé**, **long**, et **court** impliquent tous **int**, un  **typedef** nom suivant une de ces mots clés est prise pour être membre du *declarator-list,* pas de *decl-specifiers*.

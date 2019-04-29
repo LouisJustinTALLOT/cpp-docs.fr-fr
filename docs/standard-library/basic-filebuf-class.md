@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377148"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf, classe
 
@@ -405,7 +405,7 @@ basic_filebuf<Elem, Tr> *open(
 *_Filename*<br/>
 Nom du fichier à ouvrir.
 
-*Mode _De*<br/>
+*_Mode*<br/>
 Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -433,7 +433,7 @@ La fonction membre ouvre le fichier dont le nom est *filename* en appelant [fope
 
 Si **mode & ios_base::binary** est différent de zéro, la fonction ajoute `b` à `strmode` pour ouvrir un flux binaire au lieu d’un flux de texte. Il stocke ensuite la valeur retournée par `fopen` dans le pointeur de fichier `fp`. Si **mode & ios_base::ate** est différent de zéro et que le pointeur de fichier n’est pas null, la fonction appelle `fseek`(**fp**, 0, `SEEK_END`) pour positionner le flux à la fin du fichier. Si cette opération de positionnement échoue, les appels de fonction [fermer](#close)( `fp`) et stocke un pointeur null dans le pointeur de fichier.
 
-Si le pointeur de fichier n’est pas null, la fonction détermine la facette de conversion de fichier : `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)), pour une utilisation par [underflow](#underflow) et [overflow](#overflow).
+Si le pointeur de fichier n’est pas un pointeur null, la fonction détermine la facette de conversion de fichier : `use_facet`< `codecvt`< **Elem**, `char`, **traits_type ::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc](../standard-library/basic-streambuf-class.md#getloc)), pour une utilisation par [dépassement de capacité négatif](#underflow) et [dépassement de capacité](#overflow).
 
 Si le pointeur de fichier est un pointeur null, la fonction membre retourne un pointeur null. Sinon, elle retourne **this**.
 

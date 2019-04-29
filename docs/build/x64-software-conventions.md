@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313826"
 ---
 # <a name="x64-software-conventions"></a>x64 conventions des logiciels
 
@@ -193,7 +193,7 @@ Le tableau suivant explique comment chaque registre est utilisé dans les appels
 
 ||||
 |-|-|-|
-|Registre|État|Utilisez|
+|Registre|Status|Utilisez|
 |RAX|Volatil|Registre des valeurs de retour|
 |RCX|Volatil|Premier argument entier|
 |RDX|Volatil|Deuxième argument entier|
@@ -210,7 +210,7 @@ Le tableau suivant explique comment chaque registre est utilisé dans les appels
 |XMM1, YMM1|Volatil|Deuxième argument FP ; deuxième argument de type vectoriel quand `__vectorcall` est utilisé|
 |XMM2, YMM2|Volatil|Troisième argument FP ; troisième argument de type vectoriel quand `__vectorcall` est utilisé|
 |XMM3, YMM3|Volatil|Quatrième argument FP ; quatrième argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM4, YMM4|Volatil|Doit être conservé si nécessaire par l'appelant ; cinquième argument de type vectoriel quand `__vectorcall` est utilisé|
+|XMM4, YMM4|Volatil|Doit être conservé si nécessaire par l’appelant ; cinquième argument de type vectoriel quand `__vectorcall` est utilisé|
 |XMM5, YMM5|Volatil|Doit être conservé si nécessaire par l'appelant ; sixième argument de type vectoriel quand `__vectorcall` est utilisé|
 |XMM6:XMM15, YMM6:YMM15|Non volatil (XMM), volatil (moitié supérieure de YMM)|Doit être conservé par l’appelé. Les registres YMM doivent être conservés si nécessaire par l'appelant.|
 

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
 ms.openlocfilehash: 7248eb08409b50d855dbb70c7638a856302b345b
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287874"
 ---
 # <a name="fread"></a>fread
 
@@ -74,7 +74,7 @@ Lorsqu’il est utilisé sur un flux en mode texte, si la quantité de données 
 
 Cette fonction verrouille les autres threads. Si vous avez besoin d’une version sans verrouillage, utilisez **_fread_nolock**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

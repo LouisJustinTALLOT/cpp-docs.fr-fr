@@ -25,11 +25,11 @@ helpviewer_keywords:
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
 ms.openlocfilehash: c173832efb866eed133a908b5f2b72266fd3798a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332038"
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -51,7 +51,7 @@ errno_t _get_tzname(
 *pReturnValue*<br/>
 La longueur de chaîne de *NomFuseauhoraire* , y compris une marque de fin null.
 
-*NomFuseauhoraire*<br/>
+*timeZoneName*<br/>
 L’adresse d’une chaîne de caractères pour la représentation du nom du fuseau horaire ou le nom du fuseau horaire d’été (DST), en fonction de *index*.
 
 *sizeInBytes*<br/>
@@ -76,7 +76,7 @@ Si *NomFuseauhoraire* est **NULL**, ou *sizeInBytes* est égal à zéro ou infé
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*pReturnValue*|*NomFuseauhoraire*|*sizeInBytes*|*index*|Valeur de retour|Contenu de *NomFuseauhoraire*|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|Valeur de retour|Contenu de *NomFuseauhoraire*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
 |Taille du nom du fuseau horaire|**NULL**|0|0 ou 1|0|non modifié|
 |Taille du nom du fuseau horaire|any|> 0|0 ou 1|0|Nom du fuseau horaire|

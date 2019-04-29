@@ -3,11 +3,11 @@ title: Options du compilateur et de l'éditeur de liens (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
 ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383358"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Options du compilateur et de l'éditeur de liens (C++/CX)
 
@@ -43,4 +43,4 @@ Quand vous utilisez **/ZW**, le compilateur effectue automatiquement la liaison 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Génération d’applications et bibliothèques](../cppcx/building-apps-and-libraries-c-cx.md)
+[Génération d'applications et de bibliothèques](../cppcx/building-apps-and-libraries-c-cx.md)

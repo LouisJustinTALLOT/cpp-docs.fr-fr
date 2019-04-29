@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305396"
 ---
 # <a name="tn043-rfx-routines"></a>TN043 : Routines RFX
 
@@ -150,7 +150,7 @@ Pour écrire votre propre fonction personnalisée RFX, il est recommandé que vo
 
 `RFX_Text` et `RFX_Binary`: Ces deux fonctions allouer une mémoire tampon statique pour contenir les informations de type chaîne ou binaire et doivent l’inscrire ces mémoires tampons avec ODBC SQLBindCol au lieu de la & valeur de l’inscription. Pour cette raison, ces deux fonctions ont un grand nombre de code spécial.
 
-`RFX_Date`: ODBC retourne des informations de date / heure dans leur propre structure de données TIMESTAMP_STRUCT. Cette fonction alloue dynamiquement un TIMESTAMP_STRUCT comme un « proxy » pour envoyer et recevoir des données de temps de date. Diverses opérations doivent transférer les informations de date et d’heure entre le C++ `CTime` objet et le proxy TIMESTAMP_STRUCT. Cela complique considérablement la cette fonction, mais c’est un bon exemple montrant comment utiliser un proxy pour le transfert de données.
+`RFX_Date`: ODBC retourne des informations de date / heure dans leur propre structure de données TIMESTAMP_STRUCT. Cette fonction alloue dynamiquement un TIMESTAMP_STRUCT comme un « proxy » pour envoyer et recevoir des données de temps de date. Diverses opérations doivent transférer les informations de date / heure entre le C++ `CTime` objet et le proxy TIMESTAMP_STRUCT. Cela complique considérablement la cette fonction, mais c’est un bon exemple montrant comment utiliser un proxy pour le transfert de données.
 
 `RFX_LongBinary`: Il s’agit de la bibliothèque de classes seule fonction RFX qui n’utilise pas de liaison de colonne pour recevoir et envoyer des données. Cette fonction ignore l’opération BindFieldToColumn au lieu de cela, lors de l’opération de correction, alloue le stockage pour contenir les données entrantes SQL_LONGVARCHAR ou SQL_LONGVARBINARY, puis effectue un appel de SQLGetData pour récupérer la valeur dans le stockage alloué. Lorsque vous préparez à renvoyer des valeurs de données à la source de données (telles que les opérations NameValue et valeur), cette fonction utilise les fonctionnalités DATA_AT_EXEC d’ODBC. Consultez [Note technique 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) pour plus d’informations sur l’utilisation des SQL_LONGVARBINARY et SQL_LONGVARCHARs.
 

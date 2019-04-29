@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371475"
 ---
 # <a name="numpunct-class"></a>numpunct, classe
 
@@ -352,11 +352,11 @@ Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l�
 
 Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
-- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0: La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : la durée de vie de l’objet doit être gérée manuellement.
+- 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définies.
+- \> 1: Ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 

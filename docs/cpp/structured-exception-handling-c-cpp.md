@@ -10,11 +10,11 @@ helpviewer_keywords:
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
 ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330568"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -54,7 +54,7 @@ Ces deux types de gestionnaires sont distincts, mais sont étroitement liés via
 
 Le gestionnaire d'exceptions qui reconnaît l'exception peut ne pas être dans la fonction qui s'exécutait quand l'exception s'est produite. Dans certains cas, il peut s'agir d'une fonction beaucoup plus élevée dans la pile. La fonction en cours d'exécution et toutes les autres fonctions sur le frame de pile sont terminées. Pendant ce processus, la pile est « déroulée » ; autrement dit, les variables non statiques locales des fonctions terminées sont effacées de la pile.
 
-Tout en déroulant la pile, le système d'exploitation appelle tous les gestionnaires de terminaisons que vous avez écrits pour chaque fonction. En utilisant un gestionnaire de terminaisons, vous pouvez nettoyer les ressources qui autrement resteraient ouvertes en raison d'un achèvement anormal. Si vous avez entré une section critique, vous pouvez la quitter dans le Gestionnaire de terminaisons. Si le programme doit s’arrêter, vous pouvez effectuer d’autres tâches de gestion interne telles que la fermeture et la suppression des fichiers temporaires.
+Tout en déroulant la pile, le système d'exploitation appelle tous les gestionnaires de terminaisons que vous avez écrits pour chaque fonction. En utilisant un gestionnaire de terminaisons, vous pouvez nettoyer les ressources qui autrement resteraient ouvertes en raison d'un achèvement anormal. Si vous avez entré une section critique, vous pouvez la quitter dans le Gestionnaire de terminaisons. Si le programme doit s'arrêter, vous pouvez effectuer d'autres tâches de gestion interne telles que la fermeture et la suppression des fichiers temporaires.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

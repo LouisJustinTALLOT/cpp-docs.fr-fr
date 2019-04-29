@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353837"
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -81,7 +81,7 @@ size_t _wcsftime_l(
 *strDest*<br/>
 Chaîne de sortie.
 
-*MaxSize*<br/>
+*maxsize*<br/>
 Taille de la *strDest* mémoire tampon, mesurée en caractères (**char** ou **wchar_t**).
 
 *format*<br/>
@@ -162,9 +162,9 @@ Comme dans le **printf** (fonction), le **#** indicateur peut servir de préfixe
 
 |Code du format|Signification|
 |-----------------|-------------|
-|**% #a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X** , **%#z**, **%#Z**, **%#%**|**#** l’indicateur est ignoré.|
-|**%#c**|Durée pendant laquelle date et heure de représentation, appropriée pour les paramètres régionaux. Par exemple : « Mardi 14 mars 1995, 12:41:29 ».|
-|**%#x**|Représentation de date longue appropriée aux paramètres régionaux. Par exemple : « Mardi 14 mars 1995 ».|
+|**%#a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X**, **%#z**, **%#Z**, **%#%**|**#** l’indicateur est ignoré.|
+|**%#c**|Durée pendant laquelle date et heure de représentation, appropriée pour les paramètres régionaux. Exemple : « Mardi, 14 mars 1995, 12:41:29 ».|
+|**%#x**|Représentation de date longue appropriée aux paramètres régionaux. Exemple : « Mardi 14 mars 1995. »|
 |**%#d**, **%#D**, **%#e**, **%#F**, **%#H**, **% #I**, **%#j**, **%#m**, **%#M**, **%#r**, **%#R**, **%#S**, **%#T** , **%#U**, **%#V**, **%#W**, **%#y**, **%#Y**|Supprimer les zéros non significatifs ou des espaces (le cas échéant).|
 
 La semaine de l’ISO 8601 et année semaine basée produites par **%V**, **%g**, et **%G**, utilise une semaine commence le lundi, où la semaine 1 est la semaine qui contient le 4 janvier, est le premier semaine comprenant au moins quatre jours de l’année. Si le premier lundi de l’année est la 2e, 3e et 4e, les jours précédents font partie de la dernière semaine de l’année précédente. Pour ces jours, **%V** est remplacé par 53 et les deux **%g** et **%G** sont remplacés par les chiffres de l’année précédente.

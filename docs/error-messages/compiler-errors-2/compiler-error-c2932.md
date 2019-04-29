@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2932
 ms.assetid: c28e88d9-e654-4367-bfb4-13c780bca9bd
 ms.openlocfilehash: 004767d4adbd87a2a21ec73fa720d6992eb31044
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386068"
 ---
 # <a name="compiler-error-c2932"></a>Erreur du compilateur C2932
 
-'class' : type-class-id redéfini comme donnée membre de 'identifier'
+'class' : type-class-id redéfini comme donnée membre de 'identifier'
 
 Vous ne pouvez pas utiliser une classe générique ou de modèle en tant que membre de données.
 

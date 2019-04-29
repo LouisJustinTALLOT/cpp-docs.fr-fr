@@ -11,11 +11,11 @@ f1_keywords:
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348456"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt;, opérateurs
 
@@ -390,7 +390,7 @@ Type contrôlé par le pointeur partagé.
 *out*<br/>
 Flux de sortie.
 
-*SP*<br/>
+*sp*<br/>
 Pointeur partagé.
 
 ### <a name="remarks"></a>Notes

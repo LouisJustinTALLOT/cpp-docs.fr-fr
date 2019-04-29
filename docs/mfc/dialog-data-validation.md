@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
 ms.openlocfilehash: cef9941cccd49ca61f0a93472636656f7241a61e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383813"
 ---
 # <a name="dialog-data-validation"></a>Validation de données de boîtes de dialogue
 

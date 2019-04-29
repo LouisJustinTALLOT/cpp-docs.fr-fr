@@ -1,5 +1,5 @@
 ---
-title: 'TN062 : réflexion de message pour les contrôles Windows'
+title: 'TN062 : Réflexion de message pour les contrôles Windows'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls.messages
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351841"
 ---
-# <a name="tn062-message-reflection-for-windows-controls"></a>TN062 : réflexion de message pour les contrôles Windows
+# <a name="tn062-message-reflection-for-windows-controls"></a>TN062 : Réflexion de message pour les contrôles Windows
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
 
 Cette note technique décrit la réflexion de message, une nouvelle fonctionnalité dans 4.0 de MFC. Il contient également des instructions pour la création d’un contrôle réutilisable simple qui utilise la réflexion de message.
 
-Cette note technique ne traite pas la réflexion de message tel qu’il s’applique aux contrôles ActiveX (anciennement contrôles OLE). Consultez l’article [contrôles ActiveX : sous-classement d’un contrôle Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Cette note technique ne traite pas la réflexion de message tel qu’il s’applique aux contrôles ActiveX (anciennement contrôles OLE). Consultez l’article [contrôles ActiveX : Sous-classement d’un contrôle Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
 **Quelle est la réflexion de Message**
 
@@ -87,28 +87,28 @@ Les significations des paramètres et valeurs de retour des fonctions sont docum
 
 |Entrée de mappage|Prototype de fonction|
 |---------------|------------------------|
-|**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **() ;**|
-|**ON_NOTIFY_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *résultat* **) ;**|
-|**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**afx_msg void** `memberFxn` **(CCmdUI** <strong>\*</strong> `pCmdUI` **) ;**|
-|**() ON_WM_CTLCOLOR_REFLECT**|**afx_msg HBRUSH CtlColor (CDC** <strong>\*</strong> `pDC` **, UINT** `nCtlColor` **) ;**|
-|**() ON_WM_DRAWITEM_REFLECT**|**afx_msg void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **) ;**|
-|**() ON_WM_MEASUREITEM_REFLECT**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **) ;**|
-|**() ON_WM_DELETEITEM_REFLECT**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **) ;**|
-|**() ON_WM_COMPAREITEM_REFLECT**|**int afx_msg CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **) ;**|
-|**() ON_WM_CHARTOITEM_REFLECT**|**int afx_msg CharToItem (UINT** `nKey` **, UINT** `nIndex` **) ;**|
-|**() ON_WM_VKEYTOITEM_REFLECT**|**int afx_msg VKeyToItem (UINT** `nKey` **, UINT** `nIndex` **) ;**|
-|**() ON_WM_HSCROLL_REFLECT**|**afx_msg void HScroll (UINT** `nSBCode` **, UINT** `nPos` **) ;**|
-|**() ON_WM_VSCROLL_REFLECT**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **) ;**|
-|**() ON_WM_PARENTNOTIFY_REFLECT**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **) ;**|
+|**ON_CONTROL_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|
+|**ON_NOTIFY_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_UPDATE_COMMAND_UI_REFLECT(** `memberFxn` **)**|**afx_msg void** `memberFxn` **( CCmdUI**<strong>\*</strong> `pCmdUI` **);**|
+|**ON_WM_CTLCOLOR_REFLECT( )**|**afx_msg HBRUSH CtlColor (CDC** <strong>\*</strong> `pDC` **, UINT** `nCtlColor` **) ;**|
+|**ON_WM_DRAWITEM_REFLECT( )**|**afx_msg void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **) ;**|
+|**ON_WM_MEASUREITEM_REFLECT( )**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **) ;**|
+|**ON_WM_DELETEITEM_REFLECT( )**|**afx_msg void DeleteItem ( LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
+|**ON_WM_COMPAREITEM_REFLECT( )**|**afx_msg int CompareItem ( LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
+|**ON_WM_CHARTOITEM_REFLECT( )**|**afx_msg int CharToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|
+|**ON_WM_VKEYTOITEM_REFLECT( )**|**afx_msg int VKeyToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|
+|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|
+|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **) ;**|
+|**ON_WM_PARENTNOTIFY_REFLECT( )**|**afx_msg void ParentNotify ( UINT** `message` **, LPARAM** `lParam` **);**|
 
 Les macros ON_NOTIFY_REFLECT et ON_CONTROL_REFLECT ont des variations qui permettent de traiter un message donné plusieurs objets (par exemple, le contrôle et son parent).
 
 |Entrée de mappage|Prototype de fonction|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *résultat* **) ;**|
-|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **() ;**|
+|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_CONTROL_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( );**|
 
-## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Gestion des Messages de réfléchi : Un exemple d’un contrôle réutilisable
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Gestion des Messages réfléchis : Un exemple d’un contrôle réutilisable
 
 Cet exemple simple crée un contrôle réutilisable appelé `CYellowEdit`. Le contrôle fonctionne comme un contrôle d’édition standard, à ceci près qu’il affiche du texte noir sur un arrière-plan jaune. Il est facile d’ajouter des fonctions membres qui permettraient le `CYellowEdit` contrôle pour afficher des couleurs différentes.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
 ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373464"
 ---
 # <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
 
@@ -71,7 +71,7 @@ L’implémentation par défaut retourne le résultat de la comparaison de  *\*p
 
 Le langage C++ définit l’opérateur de comparaison ( `==`) pour les types simples (**char**, **int**, **float**, et ainsi de suite) mais ne définit ne pas un opérateur de comparaison pour les classes et structures. Si vous souhaitez utiliser `CompareElements` ou pour instancier une des classes de collection qui l’utilise, vous devez définir l’opérateur de comparaison ou de surcharge `CompareElements` avec une version qui renvoie les valeurs appropriées.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
    **En-tête :** afxtempl.h
 
@@ -107,7 +107,7 @@ L’implémentation par défaut utilise l’opérateur d’assignation simple ( 
 
 Pour plus d’informations sur l’implémentation de cela et autres fonctions d’assistance, consultez l’article [Collections : Comment définir une Collection de Type sécurisé](../how-to-make-a-type-safe-collection.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxtempl.h
 
@@ -143,7 +143,7 @@ Le `CArray::Dump`, `CList::Dump`, et `CMap::Dump` fonctions appelez cette métho
 
 L'implémentation par défaut n'exécute aucune opération. Si les éléments de votre collection sont dérivés de `CObject`, votre remplacement sera généralement itérer au sein des éléments de la collection, appelant `Dump` pour chaque élément à son tour.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxtempl.h
 
@@ -185,7 +185,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxtempl.h
 
@@ -222,7 +222,7 @@ Pour plus d’informations sur l’implémentation de cela et autres fonctions d
 
 Consultez l’exemple dans l’article [Collections : Comment définir une Collection de Type sécurisé](../how-to-make-a-type-safe-collection.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxtempl.h
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3455
 ms.assetid: 218e5cfe-5391-4eeb-81c2-85c47e3a6cd2
 ms.openlocfilehash: 4451ddbd8d5a7125112ef8e1c58e8843095bffd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62328574"
 ---
 # <a name="compiler-error-c3455"></a>Erreur du compilateur C3455
 
-'attribute' : aucun des constructeurs d’attributs ne correspond aux arguments
+'attribute' : aucun des constructeurs d’attributs ne correspond aux arguments
 
 Une valeur non valide a été utilisée pour déclarer un attribut.  Pour plus d'informations, voir [attribute](../../windows/attributes/attribute.md) .
 

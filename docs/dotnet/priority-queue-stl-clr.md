@@ -52,11 +52,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
 ms.openlocfilehash: ed5e190f0c64aca3876d1cd1f05c9d75224355cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384762"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -575,7 +575,7 @@ int main()
 c a b
 ```
 
-## <a name="op_as"></a> priority_queue::operator = (STL/CLR)
+## <a name="op_as"></a> priority_queue::operator= (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -701,7 +701,7 @@ template<typename InIt>
 
 #### <a name="parameters"></a>Paramètres
 
-*suite*<br/>
+*cont*<br/>
 Conteneur à copier.
 
 *first*<br/>
@@ -710,7 +710,7 @@ Début de la plage à insérer.
 *last*<br/>
 Fin de la plage à insérer.
 
-*Pred*<br/>
+*pred*<br/>
 Classement de prédicat pour la séquence contrôlée.
 
 *right*<br/>
@@ -905,7 +905,7 @@ int main()
 c a b
 ```
 
-## <a name="reference"></a> priority_queue::Reference (STL/CLR)
+## <a name="reference"></a> priority_queue::reference (STL/CLR)
 
 Type d'une référence à un élément.
 
@@ -1107,7 +1107,7 @@ d c b a
 c a b
 ```
 
-## <a name="top"></a> priority_queue::Top (STL/CLR)
+## <a name="top"></a> priority_queue::top (STL/CLR)
 
 Accède à l’élément de priorité la plus élevée.
 
@@ -1323,7 +1323,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="value_type"></a> priority_queue::Value_type (STL/CLR)
+## <a name="value_type"></a> priority_queue::value_type (STL/CLR)
 
 Type d’un élément.
 

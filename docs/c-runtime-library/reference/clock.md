@@ -26,11 +26,11 @@ helpviewer_keywords:
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
 ms.openlocfilehash: 4b58b33b533250447cf964134de9869bddee4498
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347468"
 ---
 # <a name="clock"></a>horloge
 

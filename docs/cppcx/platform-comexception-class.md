@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
 ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383345"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (classe)
 
@@ -55,7 +55,7 @@ La classe COMException a les propriétés ci-dessous.
 
 Les exceptions prédéfinies suivantes sont dérivées de COMException. Elles diffèrent de COMException uniquement au niveau de leur nom, du nom de leur constructeur et de leur valeur HRESULT sous-jacente.
 
-|Name|HRESULT sous-jacent|Description|
+|Nom|HRESULT sous-jacent|Description|
 |----------|------------------------|-----------------|
 |COMException|*hresult défini par l’utilisateur*|Levée lorsqu'un HRESULT non reconnu est retourné d'un appel de méthode COM.|
 |AccessDeniedException|E_ACCESSDENIED|Levée lorsque l'accès est refusé à une ressource ou à une fonctionnalité.|
@@ -71,7 +71,7 @@ Les exceptions prédéfinies suivantes sont dérivées de COMException. Elles di
 |OutOfBoundsException|E_BOUNDS|Levée lorsqu'une opération tente d'accéder aux données en dehors de la plage valide.|
 |OutOfMemoryException|E_OUTOFMEMORY|Levée en cas de mémoire insuffisante pour terminer l'opération.|
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Prise en charge minimale du client :** Windows 8
 
@@ -107,7 +107,7 @@ public:
     property int HResult { int get();}
 ```
 
-## <a name="property-value"></a>Valeur de propriété
+## <a name="property-value"></a>Valeur de la propriété
 
 Valeur HRESULT qui spécifie l'erreur.
 
@@ -125,10 +125,10 @@ Message décrivant l'exception.
 public:property String^ Message {    String^ get();}
 ```
 
-### <a name="property-value"></a>Valeur de propriété
+### <a name="property-value"></a>Valeur de la propriété
 
 Description de l'exception.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)

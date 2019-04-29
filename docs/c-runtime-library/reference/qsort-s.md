@@ -26,11 +26,11 @@ helpviewer_keywords:
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
 ms.openlocfilehash: f3b8bbfeb8079322a174233f3d8048a6d1b51804
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358110"
 ---
 # <a name="qsorts"></a>qsort_s
 
@@ -96,7 +96,7 @@ Si des paramètres non valides sont passés à la fonction, le gestionnaire de p
 
 **qsort_s** a le même comportement que **qsort** mais a le *contexte* paramètre et définit **errno**. En passant un *contexte* paramètre, les fonctions de comparaison peuvent utiliser un pointeur d’objet pour accéder aux fonctionnalités de l’objet ou d’autres informations non accessibles via un pointeur d’élément. L’ajout de la *contexte* paramètre rend **qsort_s** plus sécurisé car *contexte* peut être utilisé pour éviter les bogues de réentrance introduits par des variables statiques et pour rendre les informations disponibles à partagé le *comparer* (fonction).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
 ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167841"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Messages de diagnostic assembleur ARM
 
@@ -78,7 +78,7 @@ Dans le mode ARM, il existe une autre syntaxe pour la spécification de constant
     MOV r0, #4, #1       ; A2513: Rotation must be even
 ```
 
-> A2557 : Le nombre Incorrect d’octets pour l’écriture différée
+> A2557 : Nombre incorrect d’octets pour l’écriture différée
 
 Sur la structure NEON charger et stocker des instructions (`VLDn`, `VSTn`), il existe une autre syntaxe pour la spécification de l’écriture différée pour le Registre de base.  Au lieu de placer un point d’exclamation ( !) après l’adresse, vous pouvez spécifier une valeur immédiate qui indique le décalage à ajouter au Registre de base.  Si vous utilisez cette syntaxe, vous devez spécifier le nombre exact d’octets qui ont été chargés ou enregistrés par l’instruction.
 
@@ -90,7 +90,7 @@ Sur la structure NEON charger et stocker des instructions (`VLDn`, `VSTn`), il e
 
 ## <a name="diagnostic-messages---warnings"></a>Messages de diagnostic - avertissements
 
-> A4228 : Valeur d’alignement dépasse alignement de la zone ; alignement ne pas garanti
+> A4228 : Valeur d’alignement dépasse l’alignement de la zone ; alignement ne pas garanti
 
 L’alignement spécifié dans un `ALIGN` directive est supérieure à l’alignement de la forme `AREA`.  Par conséquent, l’assembleur ne garantit pas que le `ALIGN` directive sera honorée.
 
@@ -104,7 +104,7 @@ AREA |.myarea2|,ALIGN=3
 ALIGN 8           ; OK
 ```
 
-> A4508 : Utilisation de cette constante pivotée est déconseillée.
+> A4508 : L’utilisation de cette constante pivotée est déconseillée.
 
 Dans le mode ARM, il existe une autre syntaxe pour la spécification de constantes.  Au lieu d’écrire `#<const>`, vous pouvez écrire `#<byte>,#<rot>`, qui représente la valeur de constante qui est obtenue en faisant pivoter la valeur `<byte>` droite par `<rot>`.  Dans certains contextes, ARM a déconseillé l’utilisation de ces constantes pivotés. Dans ce cas, utilisez la basic `#<const>` syntaxe à la place.
 
