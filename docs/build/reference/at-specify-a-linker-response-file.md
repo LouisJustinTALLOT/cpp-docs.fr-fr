@@ -11,11 +11,11 @@ helpviewer_keywords:
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
 ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294992"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Spécifier un fichier réponse de l'Éditeur de liens)
 
@@ -44,5 +44,5 @@ Consultez [@ (spécifier un fichier de réponse du compilateur)](at-specify-a-co
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

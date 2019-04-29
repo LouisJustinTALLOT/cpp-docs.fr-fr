@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user interfaces, ATL classes
 ms.assetid: 313dfc95-308a-4118-b919-5a3c3673b865
 ms.openlocfilehash: 4aa508a028eb0a90233b7baa34db9ee78bbe2b83
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274207"
 ---
 # <a name="ui-support-classes"></a>Classes de prise en charge de l’interface utilisateur
 

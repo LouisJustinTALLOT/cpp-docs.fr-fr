@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
 ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300737"
 ---
 # <a name="compiler-error-c2955"></a>Erreur du compilateur C2955
 
-’identificateur’ : l’utilisation d’un modèle de classe ou d’un générique d’alias requiert une liste d’arguments modèles ou génériques
+'identificateur' : l'utilisation d'un modèle de classe ou d'un générique d'alias requiert une liste d'arguments modèles ou génériques
 
-Vous ne pouvez pas utiliser un modèle de classe ni un générique de classe comme identificateur sans une liste d’arguments modèles ou génériques.
+Vous ne pouvez pas utiliser un modèle de classe ni un générique de classe comme identificateur sans une liste d'arguments modèles ou génériques.
 
 Pour plus d’informations, consultez [modèles de classe](../../cpp/class-templates.md).
 
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-**Visual Studio 2017 et versions ultérieur :** le compilateur diagnostique correctement les listes d’arguments de modèle manquantes quand le modèle apparaît dans une liste de paramètres de modèle (par exemple dans le cadre d’un paramètre de modèle sans type ou d’un argument de modèle par défaut). Le code suivant se compile dans Visual Studio 2015, mais génère une erreur dans Visual Studio 2017 :
+**Visual Studio 2017 et versions ultérieur :** Le compilateur diagnostique correctement les listes d’arguments de modèle manquantes quand le modèle apparaît dans une liste de paramètres de modèle (par exemple dans le cadre d’un argument de modèle par défaut ou d’un paramètre de modèle sans type). Le code suivant se compile dans Visual Studio 2015, mais génère une erreur dans Visual Studio 2017 :
 
 ```
 template <class T> class ListNode;

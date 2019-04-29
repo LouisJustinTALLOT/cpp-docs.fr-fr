@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 ms.assetid: a0fc4b34-2cf0-45a7-a642-b8afc4ca19f2
 ms.openlocfilehash: 92a1bfa5ec3bab2814397d51e35e617b7666c706
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315701"
 ---
 # <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/ Zc : threadsafeinit (initialisation statique locale thread-safe)
 
@@ -51,5 +51,5 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [/Zc (Conformité)](zc-conformance.md)<br/>

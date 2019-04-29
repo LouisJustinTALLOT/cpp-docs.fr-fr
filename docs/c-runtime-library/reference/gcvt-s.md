@@ -30,11 +30,11 @@ helpviewer_keywords:
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332292"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -65,7 +65,7 @@ Mémoire tampon pour stocker le résultat de la conversion.
 *sizeInBytes*<br/>
 Taille de la mémoire tampon.
 
-*valeur*<br/>
+*value*<br/>
 Valeur à convertir.
 
 *digits*<br/>
@@ -77,7 +77,7 @@ Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre 
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*sizeInBytes*|*valeur*|*digits*|Retourner|Valeur dans *mémoire tampon*|
+|*buffer*|*sizeInBytes*|*value*|*digits*|Retourner|Valeur dans *mémoire tampon*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|any|any|any|**EINVAL**|Non modifiée.|
 |Pas **NULL** (pointe vers une mémoire valide)|zéro|any|any|**EINVAL**|Non modifiée.|

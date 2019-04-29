@@ -154,11 +154,11 @@ helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
 ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276852"
 ---
 # <a name="cwindow-class"></a>CWindow, classe
 
@@ -374,7 +374,7 @@ class CWindow
 
 Pour plus d’informations sur windows, consultez [Windows](/windows/desktop/winmsg/windows) et les rubriques suivantes dans le SDK Windows. Pour plus d’informations sur l’utilisation des fenêtres dans ATL, consultez l’article [Classes de fenêtre ATL](../../atl/atl-window-classes.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlwin.h
 

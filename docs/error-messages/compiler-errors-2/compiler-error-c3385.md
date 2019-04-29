@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3385
 ms.assetid: 5f1838c1-986e-47db-8dbc-e06976b83cf3
 ms.openlocfilehash: 0cf8f75588339420c688db6e808a62a9fb0ac15c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62328761"
 ---
 # <a name="compiler-error-c3385"></a>Erreur du compilateur C3385
 
-'classe::fonction' : une fonction avec un attribut personnalisé DllImport ne peut pas retourner l’instance d’une classe
+'classe::fonction' : une fonction avec un attribut personnalisé DllImport ne peut pas retourner l’instance d’une classe
 
 Une fonction définie comme étant dans un fichier .dll spécifié avec l’attribut `DllImport` ne peut pas retourner une instance d’une classe.
 

@@ -5,11 +5,11 @@ f1_keywords:
 - ppltasks/stdx::declval
 ms.assetid: 9f57ba7a-e050-4ea6-80c6-8b5a38e958f5
 ms.openlocfilehash: 6fcf1fda59b3716e656ebb4a390fbde8c1201b7a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296135"
 ---
 # <a name="declval-function"></a>declval, fonction
 
@@ -26,7 +26,7 @@ _T&& declval();
 
 ## <a name="return-value"></a>Valeur de retour
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** ppltasks.h
 

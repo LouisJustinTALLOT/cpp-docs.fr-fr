@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
 ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317924"
 ---
 # <a name="stack-stack-allocations"></a>/STACK, allocations de la pile
 
@@ -57,5 +57,5 @@ Une autre consiste à définir la taille de la pile avec le [STACKSIZE](stacksiz
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

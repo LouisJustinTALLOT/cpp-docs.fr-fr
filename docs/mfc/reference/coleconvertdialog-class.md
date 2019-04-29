@@ -23,11 +23,11 @@ helpviewer_keywords:
 - COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
 ms.openlocfilehash: d0d2f83a6340224cf0fd6318e470fcfae103d72b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310407"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog, classe
 
@@ -87,7 +87,7 @@ Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, cons
 
 `COleConvertDialog`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxodlgs.h
 

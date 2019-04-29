@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
 ms.openlocfilehash: b927012f241c30b1beec23ff7e0bbc9e8302d8da
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296603"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Cmfcribbonstatusbar, classe
 
@@ -132,7 +132,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCRibbonStatusBar](../../mfc/reference/cmfcribbonstatusbar-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxribbonstatusbar.h
 

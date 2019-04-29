@@ -6,11 +6,11 @@ f1_keywords:
 - PogoAutoSweepA
 - PogoAutoSweepW
 ms.openlocfilehash: 2d9804e5ce90663d44ac389ab4f71d10290e6470
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295331"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
@@ -40,7 +40,7 @@ Vous pouvez passer le nom du fichier .pgd fusionnée à l’éditeur de liens lo
 
 Le `PgoAutoSweep` fonction tient à jour le paramètre de sécurité des threads spécifiées lorsque la génération instrumentée est créée. Si vous utilisez le paramètre par défaut ou spécifier le **NOEXACT** l’argument de la [/GENPROFILE ou /fastgenprofile.]() option de l’éditeur de liens, les appels à `PgoAutoSweep` ne sont pas thread-safe. Le **EXACT** argument crée un thread-safe et plus précis, mais plus lent, instrumenté exécutable.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

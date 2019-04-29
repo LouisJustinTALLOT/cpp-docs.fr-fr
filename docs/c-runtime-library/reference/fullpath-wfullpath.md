@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
 ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287640"
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -64,7 +64,7 @@ Pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu o
 *relPath*<br/>
 Nom de chemin d’accès relatif.
 
-*MaxLength*<br/>
+*maxLength*<br/>
 Longueur maximale du tampon du nom de chemin d’accès absolu (*absPath*). Cette durée est exprimée en octets pour **_fullpath** mais en caractères larges (**wchar_t**) pour **_wfullpath**.
 
 ## <a name="return-value"></a>Valeur de retour

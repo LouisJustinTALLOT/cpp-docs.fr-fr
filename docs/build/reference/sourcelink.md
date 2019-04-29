@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
 ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317950"
 ---
 # <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (fichier inclure un lien de Source dans le fichier PDB)
 
@@ -44,5 +44,5 @@ Lien de source est un système indépendant du contrôle de code source et de la
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

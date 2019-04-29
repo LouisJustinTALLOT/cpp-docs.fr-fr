@@ -13,11 +13,11 @@ helpviewer_keywords:
 - disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
 ms.openlocfilehash: 83ece0865eb74a4e9e292b78733df9d24602fe1d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57806764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320680"
 ---
 # <a name="od-disable-debug"></a>/Od (Désactiver (Débogage))
 
@@ -51,5 +51,5 @@ Cette option est la valeur par défaut. Étant donné que **/Od** supprime le mo
 
 [/O, options (Optimiser le code)](o-options-optimize-code.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [/Z7, /Zi, /ZI (Format des informations de débogage)](z7-zi-zi-debug-information-format.md)

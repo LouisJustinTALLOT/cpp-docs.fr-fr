@@ -30,11 +30,11 @@ helpviewer_keywords:
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
 ms.openlocfilehash: eac3c036e2f4f271c7bc2d77c8ae82bec28d3617
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331738"
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 
@@ -83,7 +83,7 @@ Mémoire tampon chargée de stocker la valeur de la variable d'environnement.
 *numberOfElements*<br/>
 Taille de *tampon*.
 
-*nom de variable*<br/>
+*varname*<br/>
 Nom de la variable d'environnement.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -92,7 +92,7 @@ Zéro en cas de réussite ; code d'erreur en cas d'échec.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*pReturnValue*|*buffer*|*numberOfElements*|*nom de variable*|Valeur de retour|
+|*pReturnValue*|*buffer*|*numberOfElements*|*varname*|Valeur de retour|
 |--------------------|--------------|------------------------|---------------|------------------|
 |**NULL**|any|any|any|**EINVAL**|
 |any|**NULL**|>0|any|**EINVAL**|

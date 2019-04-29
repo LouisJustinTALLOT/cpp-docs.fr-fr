@@ -9,11 +9,11 @@ helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
 ms.openlocfilehash: c10a7f302b63c33869425c4e5bddb36a15373ea8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262591"
 ---
 # <a name="improperlock-class"></a>improper_lock, classe
 
@@ -43,7 +43,7 @@ En règle générale, cette exception est levée lorsqu’une tentative est fait
 
 `improper_lock`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** concrt.h
 

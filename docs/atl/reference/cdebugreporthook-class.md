@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
 ms.openlocfilehash: a7c5993d1b96daaa73e7fc9509c93e66daed77f3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245914"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook, classe
 
@@ -57,7 +57,7 @@ Utilisation de cette classe vous permet de déboguer interactivement les composa
 
 Notez que les rapports de débogage sont envoyés en utilisant le contexte de sécurité sous-jacente du thread. L’emprunt d’identité est temporairement désactivé afin que les rapports de débogage peuvent être affichés dans les situations où l’emprunt d’identité des utilisateurs de faibles privilèges est en cours, comme dans les applications web.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlutil.h
 

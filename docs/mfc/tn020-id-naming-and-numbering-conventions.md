@@ -9,11 +9,11 @@ helpviewer_keywords:
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
 ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306062"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020 : ID d’affectation de noms et les Conventions de numérotation
 

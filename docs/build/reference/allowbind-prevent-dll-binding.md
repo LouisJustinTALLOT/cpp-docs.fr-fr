@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
 ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57818841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295147"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Éviter la liaison DLL)
 
@@ -45,7 +45,7 @@ Vous pouvez modifier une DLL existante pour la fonctionnalité /ALLOWBIND à le 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)<br/>
 [BindImage (fonction)](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
 [BindImageEx (fonction)](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

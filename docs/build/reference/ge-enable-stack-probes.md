@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Ge compiler option [C++]
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
 ms.openlocfilehash: a785ec041370e0bcbb2ce8b698bfba89235a0a0c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292183"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Activer les tests de pile)
 
@@ -54,4 +54,4 @@ Ce mécanisme est utile si vous réécrivez la fonctionnalité de la sonde de pi
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
