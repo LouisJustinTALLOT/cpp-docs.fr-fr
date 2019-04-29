@@ -17,11 +17,11 @@ helpviewer_keywords:
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
 ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330841"
 ---
 # <a name="string-and-character-literals--c"></a>Littéraux de chaîne et caractère (C++)
 
@@ -106,19 +106,19 @@ Littéraux de caractère sont codés différemment en fonction de leur préfixe.
 
 Il existe trois types de séquence d’échappement : simple, octal et hexadécimal. Les séquences d'échappement peuvent être de l'une des formes suivantes :
 
-|Valeur|Séquence d'échappement|
+|Value|Séquence d'échappement|
 |-----------|---------------------|
 | saut de ligne | \\n |
 | barre oblique inverse | \\\\ |
 | tabulation horizontale | \\t |
 | point d'interrogation | ? ou \\? |
-| tabulation verticale | \\V |
+| tabulation verticale | \\v |
 | guillemet simple | \\' |
-| retour arrière | \\B |
+| retour arrière | \\b |
 | guillemet double | \\" |
-| retour chariot | \\R |
+| retour chariot | \\r |
 | caractère Null | \\0 |
-| saut de page | \\F |
+| saut de page | \\f |
 | octal | \\ooo |
 | alerte (clochette) | \\a |
 | hexadécimal | \\xhhh |
@@ -254,7 +254,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>Littéraux de chaîne bruts (C++11)
 
-Un littéral de chaîne brut est un tableau se terminant par null, de n’importe quel type de caractère, qui contient tout caractère graphique, y compris les guillemets doubles («), barre oblique inverse (\\), ou un caractère de saut de ligne. Les littéraux de chaîne bruts sont souvent utilisés dans les expressions régulières qui utilisent des classes de caractères et dans des chaînes XML et des chaînes HTML. Pour obtenir des exemples, consultez l’article du [FAQ de Bjarne Stroustrup sur C++11](http://www.stroustrup.com/C++11FAQ.html).
+Un littéral de chaîne brut est un tableau se terminant par null, de n’importe quel type de caractère, qui contient tout caractère graphique, y compris les guillemets doubles («), barre oblique inverse (\\), ou un caractère de saut de ligne. Les littéraux de chaîne bruts sont souvent utilisés dans les expressions régulières qui utilisent des classes de caractères et dans des chaînes XML et des chaînes HTML. Pour obtenir des exemples, consultez l’article suivant : [Forum aux questions de Bjarne Stroustrup sur C ++ 11](http://www.stroustrup.com/C++11FAQ.html).
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -328,7 +328,7 @@ La longueur maximale d'un littéral de chaîne est de 65 535 octets. Cette limit
 
 **Section spécifique à Microsoft**
 
-Dans Visual C++, vous pouvez utiliser un littéral de chaîne pour initialiser un pointeur non const **char** ou **wchar_t**. Cela est autorisé en code C99, mais est déconseillé en C++98 et supprimé en C++11. Toute tentative de modification de la chaîne provoque une violation d'accès, comme dans cet exemple :
+Dans Visual C++ vous pouvez utiliser un littéral de chaîne pour initialiser un pointeur non const **char** ou **wchar_t**. Cela est autorisé en code C99, mais est déconseillé en C++98 et supprimé en C++11. Toute tentative de modification de la chaîne provoque une violation d'accès, comme dans cet exemple :
 
 ```cpp
 wchar_t* str = L"hello";
@@ -373,7 +373,7 @@ L'utilisation de codes d'échappement hexadécimaux incorporés pour spécifier 
 "\x05five"
 ```
 
-Le résultat réel est un hexadécimal 5F, qui correspond au code ASCII pour un trait de soulignement, suivi des caractères i, v et e. Pour obtenir le résultat correct, vous pouvez utiliser l'un des éléments suivants :
+Le résultat réel est un hexadécimal 5F, qui correspond au code ASCII pour un trait de soulignement, suivi des caractères i, v et e. Pour obtenir le résultat correct, vous pouvez utiliser l'un des éléments suivants :
 
 ```cpp
 "\005five"     // Use octal literal.

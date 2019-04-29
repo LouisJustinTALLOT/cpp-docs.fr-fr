@@ -32,11 +32,11 @@ helpviewer_keywords:
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
 ms.openlocfilehash: fa390c039a3d663cb79cb311667e568a6a053131
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355157"
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe, _wspawnlpe
 
@@ -73,10 +73,10 @@ intptr_t _wspawnlpe(
 *mode*<br/>
 Mode d'exécution du processus appelant.
 
-*CmdName*<br/>
+*cmdname*<br/>
 Chemin d'accès du fichier à exécuter.
 
-*arg0*, *arg1*,... *argn*<br/>
+*arg0*, *arg1*, ... *argn*<br/>
 Liste des pointeurs vers les arguments. Le *arg0* argument est généralement un pointeur vers *cmdname*. Les arguments *arg1* via *argn* sont des pointeurs vers les chaînes de caractères qui forment la nouvelle liste d’arguments. Suivant *argn*, il doit y avoir un **NULL** pointeur pour marquer la fin de la liste d’arguments.
 
 *envp*<br/>

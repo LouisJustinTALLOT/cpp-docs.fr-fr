@@ -31,11 +31,11 @@ helpviewer_keywords:
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
 ms.openlocfilehash: e61b9ed4222898e3f2340a5e54f6983fb0411c72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341689"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -65,7 +65,7 @@ Le **acosh** fonctions retournent le cosinus hyperbolique inverse (arc le cosinu
 
 |Entrée|Exception SEH|`_matherr` |
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|aucun|none|
+|± QNAN, IND, INF|none|none|
 |*x* < 1|none|none|
 
 ## <a name="remarks"></a>Notes
@@ -76,7 +76,7 @@ Lorsque vous utilisez C++, vous pouvez appeler des surcharges de **acosh** qui a
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**ACOSH**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
+|**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

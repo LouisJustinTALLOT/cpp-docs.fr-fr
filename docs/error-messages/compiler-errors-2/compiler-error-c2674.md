@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2674
 ms.assetid: 7cbd70d8-d992-44d7-a5cb-dd8cf9c759d2
 ms.openlocfilehash: f29371f2987eaae1aa7a56c9f4eb56c332fdf31c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360253"
 ---
 # <a name="compiler-error-c2674"></a>Erreur du compilateur C2674
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
 ms.openlocfilehash: 94ccd071d23479064f007079835134055ed79aa3
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370331"
 ---
 # <a name="plus-struct"></a>plus (struct)
 
@@ -101,7 +101,7 @@ The element-wise sums are: ( -4 -2 0 2 4 6 )
 */
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** \<functional>
 

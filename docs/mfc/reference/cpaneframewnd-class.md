@@ -133,11 +133,11 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
 ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372905"
 ---
 # <a name="cpaneframewnd-class"></a>Cpaneframewnd, classe
 
@@ -229,7 +229,7 @@ class CPaneFrameWnd : public CWnd
 
 ### <a name="data-members"></a>Membres de données
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Spécifie s’il faut inscrire la classe de fenêtre avec le style de classe CS_SAVEBITS.|
 
@@ -253,7 +253,7 @@ Si vous faites dériver une classe de `CPaneFrameWnd`, vous devez indiquer à l'
 
 `CPaneFrameWnd`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxPaneFrameWnd.h
 

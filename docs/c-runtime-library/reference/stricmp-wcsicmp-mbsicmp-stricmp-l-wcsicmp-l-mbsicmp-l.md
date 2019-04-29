@@ -57,11 +57,11 @@ helpviewer_keywords:
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
 ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353833"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
@@ -104,7 +104,7 @@ int _mbsicmp_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*string1*, *chaîne2*<br/>
+*string1*, *string2*<br/>
 Chaîne terminée par Null à comparer.
 
 *locale*<br/>
@@ -124,7 +124,7 @@ En cas d’erreur, **_mbsicmp** retourne **_NLSCMPERROR**, qui est défini dans 
 
 ## <a name="remarks"></a>Notes
 
-Le **_stricmp** fonction ordinale compare *string1* et *string2* après la conversion de chaque caractère en minuscule et retourne une valeur qui indique leur relation. **_stricmp** diffère **_stricoll** car le **_stricmp** comparaison est uniquement affectée par **LC_CTYPE**, qui détermine quels caractères sont supérieures et en minuscules. Le **_stricoll** fonction compare les chaînes d’après les deux le **LC_CTYPE** et **LC_COLLATE** catégories des paramètres régionaux, qui inclut le cas et le classement ordre. Pour plus d’informations sur la **LC_COLLATE** catégorie, consultez [setlocale](setlocale-wsetlocale.md) et [catégories de paramètres régionaux](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans le **_l** suffixe utiliser les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. Les versions avec le suffixe sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux passés en entrée. Si les paramètres régionaux n'ont pas été définis, les paramètres régionaux C sont utilisés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Le **_stricmp** fonction ordinale compare *string1* et *string2* après la conversion de chaque caractère en minuscule et retourne une valeur qui indique leur relation. **_stricmp** diffère **_stricoll** car le **_stricmp** comparaison est uniquement affectée par **LC_CTYPE**, qui détermine quels caractères sont supérieures et en minuscules. Le **_stricoll** fonction compare les chaînes d’après les deux le **LC_CTYPE** et **LC_COLLATE** catégories des paramètres régionaux, qui inclut le cas et le classement commande. Pour plus d’informations sur la **LC_COLLATE** catégorie, consultez [setlocale](setlocale-wsetlocale.md) et [catégories de paramètres régionaux](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans le **_l** suffixe utiliser les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. Les versions avec le suffixe sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux passés en entrée. Si les paramètres régionaux n'ont pas été définis, les paramètres régionaux C sont utilisés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > **_stricmp** équivaut à **_strcmpi**. Ils peuvent être utilisés indifféremment, mais **_stricmp** est la norme préférée.

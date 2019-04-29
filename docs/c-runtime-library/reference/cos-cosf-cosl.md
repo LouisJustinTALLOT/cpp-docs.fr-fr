@@ -1,5 +1,5 @@
 ---
-title: COS, cosf, cosl
+title: cos, cosf, cosl
 ms.date: 04/05/2018
 apiname:
 - cos
@@ -32,13 +32,13 @@ helpviewer_keywords:
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335358"
 ---
-# <a name="cos-cosf-cosl"></a>COS, cosf, cosl
+# <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
 Calcule le cosinus.
 
@@ -66,8 +66,8 @@ Le cosinus de *x*. Si *x* est supérieur ou égal à 263 ou inférieur ou égal 
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|+ QNAN, IND|none|**_DOMAINE**|
-|+ INF|**NON VALIDE**|**_DOMAINE**|
+|± QNAN, IND|none|**_DOMAIN**|
+|+ INF|**NON VALIDE**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Notes
 

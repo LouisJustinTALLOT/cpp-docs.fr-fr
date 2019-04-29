@@ -9,11 +9,11 @@ helpviewer_keywords:
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330477"
 ---
 # <a name="this-pointer"></a>Pointeur this
 
@@ -28,7 +28,7 @@ this->member-identifier
 
 ## <a name="remarks"></a>Notes
 
-D’un objet **cela** pointeur ne fait pas partie de l’objet lui-même ; il n’est pas reflétée dans le résultat d’une **sizeof** instruction sur l’objet. En revanche, lorsqu’une fonction membre non statique est appelée pour un objet, l’adresse de l’objet est passée par le compilateur comme argument masqué à la fonction. Par exemple, l'appel de fonction suivant :
+D’un objet **cela** pointeur ne fait pas partie de l’objet lui-même ; il n’est pas reflétée dans le résultat d’une **sizeof** instruction sur l’objet. En revanche, lorsqu'une fonction membre non statique est appelée pour un objet, l'adresse de l'objet est passée par le compilateur comme argument masqué à la fonction. Par exemple, l'appel de fonction suivant :
 
 ```cpp
 myDate.setMonth( 3 );
@@ -141,7 +141,7 @@ your buffer
 
 ## <a name="type-of-the-this-pointer"></a>Type du pointeur this
 
-Le **cela** type de pointeur peut être modifié dans la déclaration de fonction par le **const** et **volatile** mots clés. Pour déclarer une fonction comme ayant les attributs d’un ou plusieurs de ces mots clés, ajoutez le ou les mots clés après la liste d’arguments de la fonction.
+Le **cela** type de pointeur peut être modifié dans la déclaration de fonction par le **const** et **volatile** mots clés. Pour déclarer une fonction comme ayant les attributs d'un ou plusieurs de ces mots clés, ajoutez le ou les mots clés après la liste d'arguments de la fonction.
 
 Considérez cet exemple :
 

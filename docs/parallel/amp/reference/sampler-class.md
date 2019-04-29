@@ -13,11 +13,11 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
 ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352591"
 ---
 # <a name="sampler-class"></a>sampler, classe
 
@@ -114,7 +114,7 @@ Le mode d’adressage à utiliser dans l’échantillonnage pour toutes les dime
 *_Border_color*<br/>
 La couleur de bordure à utiliser si le mode d’adresse est address_border. La valeur par défaut est `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
-*_Autre*<br/>
+*_Other*<br/>
 [5] constructeur de copie le `sampler` objet à copier dans le nouvel `sampler` instance.
 
 [6] constructeur de déplacement le `sampler` déplacer dans le nouvel objet `sampler` instance.
@@ -179,7 +179,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 
 Le mode de filtre qui est configuré pour l’échantillonneur.
 
-##  <a name="operator_eq"></a> opérateur =
+##  <a name="operator_eq"></a> operator=
 
 Assigne la valeur d’un autre objet d’échantillonnage à un échantillonnage existant.
 
@@ -193,7 +193,7 @@ sampler& operator= (    // [2] move assignment operator
 
 ### <a name="parameters"></a>Paramètres
 
-*_Autre*<br/>
+*_Other*<br/>
 [1] opérateur d’assignation de copie le `sampler` objet à copier dans cette `sampler`.
 
 [2] opérateur d’assignation de déplacement le `sampler` objet à déplacer dans cette `sampler`.

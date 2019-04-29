@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3397
 ms.assetid: a8536e87-79c4-4ed7-bd96-42704d06391f
 ms.openlocfilehash: c6ca48eb53cf1c6d661a201fa8c4d2539669b9bf
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59777417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62328612"
 ---
 # <a name="compiler-error-c3397"></a>Erreur du compilateur C3397
 

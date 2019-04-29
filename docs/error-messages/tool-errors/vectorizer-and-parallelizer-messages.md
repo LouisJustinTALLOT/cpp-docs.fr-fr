@@ -1,6 +1,6 @@
 ---
 title: Messages du vectoriseur et du paralléliseur
-ms.date: 11/04/2016
+ms.date: 04/17/2019
 f1_keywords:
 - C5011
 - C5002
@@ -8,34 +8,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346868"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Messages du vectoriseur et du paralléliseur
 
-Vous pouvez utiliser les options du compilateur Visual C++ [/qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) et [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour définir le [parallélisation et vectorisation automatiques](../../parallel/auto-parallelization-and-auto-vectorization.md) à des codes de motif de sortie et messages d’information concernant son activité. Cet article explique les code motifs et les messages.
+Vous pouvez utiliser Microsoft C++ options du compilateur [/qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) et [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour définir le [parallélisation et vectorisation automatiques](../../parallel/auto-parallelization-and-auto-vectorization.md) raison : sortie codes et messages d’information concernant son activité. Cet article explique les code motifs et les messages.
 
-- [Messages d’information](#BKMK_InformationalMessages)
-
-- [5xx](#BKMK_ReasonCode50x)
-
-- [10xx](#BKMK_ReasonCode100x)
-
-- [11xx](#BKMK_ReasonCode110x)
-
-- [12xx](#BKMK_ReasonCode120x)
-
-- [13xx](#BKMK_ReasonCode130x)
-
-- [14xx](#BKMK_ReasonCode140x)
-
-- [15xx](#BKMK_ReasonCode150x)
-
-##  <a name="BKMK_InformationalMessages"></a> Messages d’information
+## <a name="BKMK_InformationalMessages"></a> Messages d’information
 
 Selon le niveau de rapport que vous spécifiez, l'un des messages d'information suivants apparait pour chaque boucle.
 
@@ -43,27 +27,25 @@ Pour plus d'informations sur les codes motifs, consultez la partie suivante de c
 
 |Message d'information|Description|
 |---------------------------|-----------------|
-|5001|Boucle vectorisée.|
-|5002|Boucle non vectorisée en raison de la « description ».|
-|5011|Boucle parallélisée.|
-|5012|Boucle non parallélisée en raison de la « description ».|
-|5021|Impossible d'associer la boucle au pragma.|
+|5001|`Loop vectorized.`|
+|5002|`Loop not vectorized due to reason '*description*'.`|
+|5011|`Loop parallelized.`|
+|5012|`Loop not parallelized due to reason '*description*'.`|
+|5021|`Unable to associate loop with pragma.`|
 
-## <a name="reason-codes"></a>Codes motifs
+Les sections suivantes répertorient les codes motifs possibles pour le PARALLÉLISEUR et vectoriseur.
 
-Les sections suivantes répertorient les codes motifs possibles pour le paralléliseur et le vectoriseur automatiques.
+## <a name="BKMK_ReasonCode50x"></a> codes de raison 5xx
 
-###  <a name="BKMK_ReasonCode50x"></a> 5xx
-
-Les 5*xx* codes motifs s’appliquent à la PARALLÉLISEUR et vectoriseur automatique.
+Les 5*xx* codes motifs s’appliquent à la fois le PARALLÉLISEUR et le vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
-|500|Il s'agit d'un message générique qui couvre plusieurs cas. Par exemple, la boucle inclut plusieurs sorties, ou l'en-tête de boucle ne se termine pas par une incrémentation de la variable d'induction.|
-|501|La variable d'induction n'est pas locale, ou la limite supérieure n'est pas un invariant de la boucle.|
-|502|La variable d'induction est incrémentée de manière différente que le simple +1.|
-|503|La boucle inclut la gestion des exceptions ou des instructions switch.|
-|504|Le corps de la boucle peut lever une exception qui requiert la destruction de l'objet C++.|
+|500|Un message générique qui couvre plusieurs cas, par exemple, la boucle inclut plusieurs sorties, ou l’en-tête de la boucle ne se termine pas par incrémentation de la variable d’induction.|
+|501|`Induction variable is not local; or upper bound is not loop-invariant.`|
+|502|`Induction variable is stepped in some manner other than a simple +1.`|
+|503|`Loop includes exception-handling or switch statements.`|
+|504|`Loop body may throw an exception that requires destruction of a C++ object.`|
 
 ```cpp
 void code_500(int *A)
@@ -216,23 +198,23 @@ void code_504(int *A) {
 }
 ```
 
-###  <a name="BKMK_ReasonCode100x"></a> 10xx
+## <a name="BKMK_ReasonCode100x"></a> codes de raison 10xx
 
-Les 10*xx* codes motifs s’appliquent au PARALLÉLISEUR automatique.
+Les 10*xx* codes motifs s’appliquent au PARALLÉLISEUR.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
-|1000|Le compilateur a détecté une dépendance de données dans le corps de la boucle.|
-|1001|Le compilateur a détecté un enregistrement d'une variable scalaire dans le corps de la boucle, et ce scalaire est utilisée après la boucle.|
-|1002|Le compilateur a tenté de paralléliser une boucle qui a une boucle interne déjà parallélisée.|
-|1003|Le corps de la boucle contient un appel intrinsèque qui peut lire ou écrire dans la mémoire.|
-|1004|Il existe une réduction scalaire dans le corps de la boucle. La réduction scalaire peut se produire si la boucle a été vectorisée.|
-|1005|Le **no_parallel** pragma a été spécifié.|
-|1006|Cette fonction contient **openmp**. Résoudre ce problème en supprimant tout **openmp** dans cette fonction.|
-|1007|La variable d'induction de boucle ou les limites de la boucle ne sont pas des nombres 32 bits signés (`int` ou `long`). Résolvez ceci en changeant le type de la variable d'induction.|
-|1008|Le compilateur a détecté que cette boucle n'effectue pas suffisamment de travail pour assurer une parallélisation automatique.|
-|1009|Le compilateur a détecté une tentative de parallélisation d'une boucle « do-while ». Le paralléliseur automatique cible uniquement des boucles `for`.|
-|1010|Le compilateur a détecté que la boucle utilise « différent de » (!=) pour sa condition.|
+|1000|`The compiler detected a data dependency in the loop body.`|
+|1001|`The compiler detected a store to a scalar variable in the loop body, and that scalar has a use beyond the loop.`|
+|1002|`The compiler tried to parallelize a loop that has an inner loop that was already parallelized.`|
+|1003|`The loop body contains an intrinsic call that may read or write to memory.`|
+|1004|`There is a scalar reduction in the loop body. Scalar reduction can occur if the loop has been vectorized.`|
+|1005|`The no_parallel pragma was specified.`|
+|1006|`This function contains openmp. Resolve this by removing any openmp in this function.`|
+|1007|`The loop induction variable or the loop bounds are not signed 32-bit numbers (int or long). Resolve this by changing the type of the induction variable.`|
+|1008|`The compiler detected that this loop does not perform enough work to warrant auto-parallelization.`|
+|1009|`The compiler detected an attempt to parallelize a "do-while" loop. The auto-parallelizer only targets "for" loops.`|
+|1010|`The compiler detected that the loop is using "not-equals" (!=) for its condition.`|
 
 ```cpp
 int A[1000];
@@ -425,19 +407,19 @@ void code_1010()
 }
 ```
 
-###  <a name="BKMK_ReasonCode110x"></a> 11xx
+## <a name="BKMK_ReasonCode110x"></a> codes de raison 11xx
 
-Le 11*xx* codes motifs s’appliquent au vectoriseur automatique.
+Le 11*xx* codes motifs s’appliquent au vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
-|1100|La boucle contient le flux de contrôle, par exemple, « if » ou « ? ».|
-|1101|La boucle comporte la conversion du type de données, sans doute implicite, qui ne peut pas être vectorisée.|
-|1102|La boucle comporte des opérations non-arithmétiques, ou autres, non vectorisables.|
-|1103|Le corps de la boucle inclut les opérations de décalage dont la taille peut varier dans la boucle.|
-|1104|Le corps de la boucle inclut des variables scalaires.|
-|1105|La boucle inclut une opération non reconnue de réduction.|
-|1106|Boucle externe non vectorisée.|
+|1100|`Loop contains control flow—for example, "if" or "?".`|
+|1101|`Loop contains datatype conversion—perhaps implicit—that cannot be vectorized.`|
+|1102|`Loop contains non-arithmetic or other non-vectorizable operations.`|
+|1103|`Loop body includes shift operations whose size might vary within the loop.`|
+|1104|`Loop body includes scalar variables.`|
+|1105|`Loop includes a unrecognized reduction operation.`|
+|1106|`Outer loop not vectorized.`|
 
 ```cpp
 void code_1100(int *A, int x)
@@ -573,16 +555,16 @@ void code_1106(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode120x"></a> 12xx
+## <a name="BKMK_ReasonCode120x"></a> codes de raison 12xx
 
-Le 12*xx* codes motifs s’appliquent au vectoriseur automatique.
+Le 12*xx* codes motifs s’appliquent au vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
-|1200|La boucle contient des dépendances de données provenant de la boucle qui empêchent la vectorisation. Il existe de telles interférences entre les différentes itérations de la boucle qu'une vectorisation de celle-ci pourrait produire des réponses fausses. De plus, le vectoriseur automatique ne peut prouver qu'il n'existe pas de telles dépendances de données.|
-|1201|Modifications de base du tableau pendant la boucle.|
-|1202|Le champ d'un struct ne fait pas 32 ou 64 bits.|
-|1203|Le corps de la boucle inclut des accès non contigus dans un tableau.|
+|1200|`Loop contains loop-carried data dependences that prevent vectorization. Different iterations of the loop interfere with each other such that vectorizing the loop would produce wrong answers, and the auto-vectorizer cannot prove to itself that there are no such data dependences.`|
+|1201|`Array base changes during the loop.`|
+|1202|`Field in a struct is not 32 or 64 bits wide.`|
+|1203|`Loop body includes non-contiguous accesses into an array.`|
 
 ```cpp
 void fn();
@@ -648,18 +630,18 @@ void code_1203(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode130x"></a> 13xx
+## <a name="BKMK_ReasonCode130x"></a> codes de raison 13xx
 
-Le 13*xx* codes motifs s’appliquent au vectoriseur automatique.
+Le 13*xx* codes motifs s’appliquent au vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
-|1300|Le corps de la boucle ne contient pas, ou très peu, de calcul.|
-|1301|La longueur de la boucle n'est pas égale à +1.|
-|1302|Boucle est un «-tandis que ».|
-|1303|Il existe trop peu d'itérations de boucle pour que la vectorisation apporte une valeur quelconque.|
-|1304|La boucle inclut des affectations qui sont de différentes tailles.|
-|1305|Pas assez d'informations de type.|
+|1300|`Loop body contains no—or very little—computation.`|
+|1301|`Loop stride is not +1.`|
+|1302|`Loop is a "do-while".`|
+|1303|`Too few loop iterations for vectorization to provide value.`|
+|1304|`Loop includes assignments that are of different sizes.`|
+|1305|`Not enough type information.`|
 
 ```cpp
 void code_1300(int *A, int *B)
@@ -780,18 +762,18 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-###  <a name="BKMK_ReasonCode140x"></a> 14xx
+## <a name="BKMK_ReasonCode140x"></a> codes de raison 14xx
 
-Le 14*xx* raison codes se produisent lorsqu’une option qui n’est pas compatible avec la vectorisation automatique est spécifiée.
+Le 14*xx* raison codes se produisent lorsqu’une option qui n’est pas compatible avec la vectorisation est spécifiée.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
-|1400|**Loop (no_vector) #pragma** est spécifié.|
-|1401|**/Kernel** commutateur est spécifié lors du ciblage x86 ou ARM.|
-|1402|**/ arch : SSE2** ou un commutateur plus élevé n’est pas spécifié lorsque vous ciblez x86.|
-|1403|**/arch:Atom** commutateur n’est spécifié et la boucle inclut des opérations sur des doubles.|
-|1404|**/ O1** ou **/Os** commutateur est spécifié.|
-|1405|La vectorisation est désactivée pour faciliter l'optimisation du passage d'un initialiseur statique à un initialiseur dynamique.|
+|1400|`#pragma loop(no_vector) is specified.`|
+|1401|`/kernel switch is specified when targeting x86 or ARM.`|
+|1402|`/arch:SSE2 or higher switch is not specified when targeting x86.`|
+|1403|`/arch:ATOM switch is specified and the loop includes operations on doubles.`|
+|1404|`/O1 or /Os switch is specified.`|
+|1405|`Vectorization is disabled to aid in dynamic-initializer-to-static-initializer optimization.`|
 
 ```cpp
 void code_1400(int *A)
@@ -852,18 +834,18 @@ void code_1404(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode150x"></a> 15xx
+## <a name="BKMK_ReasonCode150x"></a> codes de raison 15xx
 
-Le bloc de 15*xx* codes motifs s’appliquent aux alias. L'attribution d'alias se produit lorsqu'un emplacement mémoire est accessible par deux noms différents.
+Le 15*xx* codes motifs s’appliquent aux alias. L'attribution d'alias se produit lorsqu'un emplacement mémoire est accessible par deux noms différents.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
-|1500|Alias possible sur des tableaux multidimensionnels.|
-|1501|Alias possible sur des tableaux de struct.|
-|1502|L'alias possible et l'index de tableau sont différents de n + K.|
-|1503|L'alias possible et l'index de tableau ont plusieurs décalages.|
-|1504|L'attribution d'alias nécessiterait trop de vérifications à l'exécution.|
-|1505|L'attribution d'alias est possible, mais les vérifications à l'exécution sont trop complexes.|
+|1500|`Possible aliasing on multi-dimensional arrays.`|
+|1501|`Possible aliasing on arrays-of-structs.`|
+|1502|`Possible aliasing and array index is other than n + K.`|
+|1503|`Possible aliasing and array index has multiple offsets.`|
+|1504|`Possible aliasing; would require too many runtime checks.`|
+|1505|`Possible aliasing, but runtime checks are too complex.`|
 
 ```cpp
 void code_1500(int A[100][100], int B[100][100])
@@ -982,9 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Parallélisation et vectorisation automatiques](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
-[Programmation parallèle en Code natif](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
-[#pragma loop()](../../preprocessor/loop.md)<br/>
-[/Q, options (Opérations de bas niveau)](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar-report (Niveau de rapport du paralléliseur automatique)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md)
+[parallélisation et vectorisation automatiques](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Vectoriseur automatique dans Visual Studio 2012 – vue d’ensemble](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma loop()](../../preprocessor/loop.md) \
+[/Q (opérations de bas niveau), options](../../build/reference/q-options-low-level-operations.md) \
+[/ Qpar-report (rapport du PARALLÉLISEUR automatique niveau)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report (Niveau de rapport du vectoriseur automatique)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

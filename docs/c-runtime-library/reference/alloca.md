@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341598"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -57,7 +57,7 @@ Une exception de dépassement de capacité de pile est générée si l’espace 
 
 **_alloca** alloue *taille* octets à partir de la pile du programme. L’espace alloué est automatiquement libérée lorsque la fonction d’appel s’arrête (pas quand l’allocation transmet simplement hors de portée). Par conséquent, ne passez pas de la valeur de pointeur retournée par **_alloca** en tant qu’argument à [gratuit](free.md).
 
-Il existe des restrictions à l’appel explicite **_alloca** dans un gestionnaire d’exceptions (EH). Les routines EH qui s’exécutent sur des processeurs de classe x86 opèrent dans le cadre de leur propre mémoire : elles effectuent leurs tâches dans un espace mémoire qui n’est pas basé sur l’emplacement actuel du pointeur de pile de la fonction englobante. Les implémentations les plus courantes incluent les expressions de gestion des exceptions structurées Windows NT (SEH) et les expressions de clause catch C++. Par conséquent, appeler explicitement **_alloca** dans un des scénarios suivants entraîne l’échec du programme pendant le retour à la routine EH appelante :
+Il existe des restrictions à l’appel explicite **_alloca** dans un gestionnaire d’exceptions (EH). Les routines EH qui s’exécutent sur des processeurs de classe x86 fonctionnent dans le cadre de leur propre mémoire : Elles effectuent leurs tâches dans l’espace de mémoire qui n’est pas basé sur l’emplacement actuel du pointeur de pile de la fonction englobante. Les implémentations les plus courantes incluent les expressions de gestion des exceptions structurées Windows NT (SEH) et les expressions de clause catch C++. Par conséquent, appeler explicitement **_alloca** dans un des scénarios suivants entraîne l’échec du programme pendant le retour à la routine EH appelante :
 
 - Expression de filtre d’exception SEH Windows NT : `__except ( _alloca() )`
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383579"
 ---
 # <a name="messages-class"></a>messages, classe
 
@@ -152,7 +152,7 @@ virtual string_type do_get(
 *_Catval*<br/>
 Valeur d’identification spécifiant le catalogue de messages dans lequel rechercher.
 
-*_Définir*<br/>
+*_Set*<br/>
 Premier identificateur utilisé pour localiser un message dans un catalogue de messages.
 
 *_Message*<br/>
@@ -222,7 +222,7 @@ string_type get(
 *_Catval*<br/>
 Valeur d’identification spécifiant le catalogue de messages dans lequel rechercher.
 
-*_Définir*<br/>
+*_Set*<br/>
 Premier identificateur utilisé pour localiser un message dans un catalogue de messages.
 
 *_Message*<br/>
@@ -264,11 +264,11 @@ Nom des paramètres régionaux.
 
 Les valeurs possibles pour le *_Refs* paramètre et leur signification sont :
 
-- 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
+- 0: La durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
-- 1 : la durée de vie de l’objet doit être gérée manuellement.
+- 1 : La durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définies.
+- \> 1: Ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 

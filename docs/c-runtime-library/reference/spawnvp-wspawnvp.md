@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
 ms.openlocfilehash: b697eabd7a45eedbf9c892acee570a9e8b818d1b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355131"
 ---
 # <a name="spawnvp-wspawnvp"></a>_spawnvp, _wspawnvp
 
@@ -64,7 +64,7 @@ intptr_t _wspawnvp(
 *mode*<br/>
 Mode d'exécution de l'appel du processus.
 
-*CmdName*<br/>
+*cmdname*<br/>
 Chemin d'accès du fichier à exécuter.
 
 *argv*<br/>

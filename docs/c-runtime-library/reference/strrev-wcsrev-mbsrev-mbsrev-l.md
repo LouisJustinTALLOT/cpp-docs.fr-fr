@@ -48,11 +48,11 @@ helpviewer_keywords:
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
 ms.openlocfilehash: a8794177f4f92a1928ffeaaa1d7e183aa67cf886
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366652"
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
@@ -109,7 +109,7 @@ La valeur de sortie est affectée par la valeur de la **LC_CTYPE** catégorie de
 |**_tcsrev**|**_strrev**|**_mbsrev**|**_wcsrev**|
 |**n/a**|**n/a**|**_mbsrev_l**|**n/a**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

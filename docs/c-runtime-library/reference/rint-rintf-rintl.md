@@ -28,11 +28,11 @@ helpviewer_keywords:
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
 ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357588"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -60,9 +60,9 @@ Valeur à virgule flottante à arrondir.
 
 Le **Imp** fonctions retournent une valeur à virgule flottante qui représente l’entier le plus proche à *x*. Valeurs médianes sont arrondies en fonction du paramètre actuel de mode d’arrondi à virgule flottante, le même que le **nearbyint** fonctions. Contrairement à la **nearbyint** fonctions, le **Imp** peuvent déclencher des fonctions le **FE_INEXACT** exception de virgule flottante si le résultat est différent de la valeur à partir de l’argument. Aucun retour d'erreur.
 
-|Entrée|Exception SEH|**_matherr** exception|
+|Entrée|Exception SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|aucun|aucun|
+|± ∞, QNAN, IND|none|none|
 |Nombres dénormalisés|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>Notes
@@ -73,7 +73,7 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **I
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**Imp**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

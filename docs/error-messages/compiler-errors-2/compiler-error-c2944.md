@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2944
 ms.assetid: f209e668-e72f-442a-a438-8c4ff43a404a
 ms.openlocfilehash: bed23b7d9117d1d1acad80f4f3d81e8b0b9d0252
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366418"
 ---
 # <a name="compiler-error-c2944"></a>Erreur du compilateur C2944
 
-'classe' : type-class-id redéfini comme argument de valeur d’un modèle
+'classe' : type-class-id redéfini comme argument de valeur d’un modèle
 
 Vous ne pouvez pas utiliser une classe générique ou de modèle à la place d’un symbole comme argument de valeur de modèle.
 

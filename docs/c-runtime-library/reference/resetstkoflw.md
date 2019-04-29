@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357536"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -88,7 +88,7 @@ Appelez **_resetstkoflw** pour restaurer la page de garde chaque fois que la ré
 
 À ce stade, la pile n'est pas encore suffisamment déroulée.
 
-Exceptions de dépassement de capacité de pile sont générées en tant qu’exceptions structurées, pas les exceptions C++, par conséquent, **_resetstkoflw** n’est pas utile dans un ordinaire **catch** bloqué, car elle n’intercepte pas une exception de dépassement de capacité de pile. Toutefois, si [_set_se_translator](set-se-translator.md) est utilisé pour implémenter un traducteur d’exceptions structurées qui lève des exceptions C++ (comme dans le deuxième exemple), une exception de dépassement de la capacité de la pile provoque une exception C++ qui peut être gérée par le bloc catch C++.
+Exceptions de dépassement de capacité de pile sont générées en tant qu’exceptions structurées, pas C++ exceptions, de sorte que **_resetstkoflw** n’est pas utile dans un ordinaire **catch** bloqué, car elle n’intercepte pas d’un débordement de pile exception. Toutefois, si [_set_se_translator](set-se-translator.md) est utilisé pour implémenter un traducteur d’exceptions structurées qui lève des exceptions C++ (comme dans le deuxième exemple), une exception de dépassement de la capacité de la pile provoque une exception C++ qui peut être gérée par le bloc catch C++.
 
 Il est déconseillé d’appeler **_resetstkoflw** dans un bloc catch C++ qui est atteint à partir d’une exception levée par la fonction de traduction d’exceptions structurées. Dans ce cas, l'espace de la pile n'est pas libéré et le pointeur de pile n'est pas réinitialisé jusqu'à l'extérieur du bloc catch, même si des destructeurs ont été appelés pour les objets destructibles avant le bloc catch. Cette fonction ne doit pas être appelée jusqu'à ce que l'espace de la pile soit libéré et que le pointeur de pile ait été réinitialisé. Par conséquent, elle doit être appelée uniquement après avoir quitté le bloc catch. Un espace de pile limité doit être utilisé dans le bloc catch, car un dépassement de capacité de la pile qui se produit dans le bloc catch qui tente lui-même de récupérer d'un précédent dépassement de capacité de la pile n'est pas récupérable et peut empêcher le programme de répondre lorsque le dépassement de capacité dans le bloc catch lève une exception qui est elle-même gérée par le même bloc catch.
 
@@ -104,7 +104,7 @@ Gestion structurée des exceptions n’intercepte pas une **STATUS_STACK_OVERFLO
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-**Bibliothèques :** toutes les versions des [fonctionnalités de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliothèques :** Toutes les versions de la [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Exemple
 
@@ -212,7 +212,7 @@ resetting stack overflow
 
 ### <a name="description"></a>Description
 
-L’exemple suivant illustre l’utilisation recommandée de **_resetstkoflw** dans un programme où les exceptions structurées sont converties en exceptions C++.
+L’exemple suivant illustre l’utilisation recommandée de **_resetstkoflw** dans un programme où les exceptions structurées sont converties en C++ exceptions.
 
 ### <a name="code"></a>Code
 

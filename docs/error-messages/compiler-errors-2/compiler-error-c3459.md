@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3459
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
 ms.openlocfilehash: aaad9610ffec3efc73b1ff5650472689a2d2e82a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363737"
 ---
 # <a name="compiler-error-c3459"></a>Erreur du compilateur C3459
 
@@ -19,7 +19,7 @@ ms.locfileid: "50438011"
 
 Un attribut conçu pour être appliqué à une propriété d’indexeur de classe a été utilisé incorrectement.
 
-Pour plus d’informations, consultez [Comment : utilisez les propriétés en C / c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Pour plus d'informations, voir [Procédure : Utilisez les propriétés de C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 

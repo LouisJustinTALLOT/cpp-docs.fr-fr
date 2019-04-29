@@ -31,11 +31,11 @@ helpviewer_keywords:
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
 ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338829"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -77,8 +77,8 @@ En cas de réussite, retourne l’exposant de base 2 de *x*, autrement dit, 2<su
 |Problème|Retourner|
 |-----------|------------|
 |*x* = ±0|1|
-|*x* = - INFINITY|+0|
-|*x* = + infini|+INFINITY|
+|*x* = -INFINITY|+0|
+|*x* = +INFINITY|+INFINITY|
 |*x* = NaN|NaN|
 |Erreur de plage avec dépassement|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|
 |Erreur de plage avec soupassement|Résultat correct, après arrondi|
@@ -91,9 +91,9 @@ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **e
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**EXP**, **expf**, **expl**|\<math.h>|\<cmath>|
+|**exp**, **expf**, **expl**|\<math.h>|\<cmath>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

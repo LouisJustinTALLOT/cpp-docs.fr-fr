@@ -32,11 +32,11 @@ helpviewer_keywords:
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
 ms.openlocfilehash: 1caa949fab71a7ebc7731c91871e460869ca9f5b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355287"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle, _wspawnle
 
@@ -73,10 +73,10 @@ intptr_t _wspawnle(
 *mode*<br/>
 Mode d'exécution du processus appelant.
 
-*CmdName*<br/>
+*cmdname*<br/>
 Chemin d'accès du fichier à exécuter.
 
-*arg0*, *arg1*,... *argn*<br/>
+*arg0*, *arg1*, ... *argn*<br/>
 Liste des pointeurs vers les arguments. Le *arg0* argument est généralement un pointeur vers *cmdname*. Les arguments *arg1* via *argn* sont des pointeurs vers les chaînes de caractères formant la nouvelle liste d’arguments. Suivant *argn*, il doit y avoir un **NULL** pointeur pour marquer la fin de la liste d’arguments.
 
 *envp*<br/>

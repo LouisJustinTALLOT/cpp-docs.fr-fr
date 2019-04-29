@@ -31,11 +31,11 @@ helpviewer_keywords:
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
 ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335450"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10, clog10f, clog10l
 
@@ -73,13 +73,13 @@ Les valeurs de retour possibles sont :
 
 ## <a name="remarks"></a>Notes
 
-Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de **clog10** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **clog10** accepte et retourne toujours un **_Dcomplex** valeur.
+Étant donné que C++ autorisant la surcharge, vous pouvez appeler des surcharges de **clog10** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **clog10** accepte et retourne toujours un **_Dcomplex** valeur.
 
 ## <a name="requirements"></a>Configuration requise
 
-|Routine|En-tête C|En-tête C++|
+|Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**clog10**, **clog10f**, **clogl**|\<complex.h>|\<ccomplex>|
+|**clog10**,               **clog10f**, **clogl**|\<complex.h>|\<ccomplex>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

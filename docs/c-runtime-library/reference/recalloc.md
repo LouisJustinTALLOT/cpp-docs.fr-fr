@@ -24,11 +24,11 @@ helpviewer_keywords:
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
 ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357719"
 ---
 # <a name="recalloc"></a>_recalloc
 
@@ -49,7 +49,7 @@ void *_recalloc(
 *memblock*<br/>
 Pointeur désignant le bloc de mémoire précédemment alloué.
 
-*Nombre*<br/>
+*number*<br/>
 Nombre d'éléments.
 
 *size*<br/>
@@ -85,7 +85,7 @@ Lorsque l’application est liée à une version debug des bibliothèques Runtim
 
 **_recalloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

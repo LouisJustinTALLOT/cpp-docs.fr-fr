@@ -1,18 +1,18 @@
 ---
-title: "Procédure pas à pas : ajout d'une classe CTaskDialog à une application"
+title: 'Procédure pas à pas : Ajout d’une classe CTaskDialog à une Application'
 ms.date: 09/19/2018
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
 ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358250"
 ---
-# <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procédure pas à pas : ajout d'une classe CTaskDialog à une application
+# <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procédure pas à pas : Ajout d’une classe CTaskDialog à une Application
 
 Cette procédure pas à pas présente la [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) et vous montre comment en ajouter une à votre application.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WX linker option
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
 ms.openlocfilehash: b4b29ed364d39c5f105dded703b8530c08db35e6
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57822091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316299"
 ---
 # <a name="wx-treat-linker-warnings-as-errors"></a>/WX (Traiter les avertissements de l'Éditeur de liens comme des erreurs)
 
@@ -45,5 +45,5 @@ Par défaut, **/WX** n’est pas en vigueur. Pour traiter les avertissements de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de l’éditeur de liens MSVC](linking.md)<br/>
+[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)

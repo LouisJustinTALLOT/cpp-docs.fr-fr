@@ -25,11 +25,11 @@ helpviewer_keywords:
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
 ms.openlocfilehash: 0228170e4ab5b55b4b061fa61a412766de77a063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356600"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 
@@ -62,7 +62,7 @@ au début de votre programme, ou créez un lien avec Newmode.obj (consultez [Opt
 
 Cette fonction valide son paramètre. Si *newhandlermode* tout élément autre que 0 ou 1, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, <strong>_set_new_mode</strong> retourne -1 et définit **errno** à `EINVAL`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

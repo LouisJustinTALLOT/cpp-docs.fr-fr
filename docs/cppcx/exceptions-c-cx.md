@@ -3,11 +3,11 @@ title: Exceptions (C++/CX)
 ms.date: 01/18/2018
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
 ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301524"
 ---
 # <a name="exceptions-ccx"></a>Exceptions (C++/CX)
 
@@ -15,7 +15,7 @@ Gestion des erreurs dans C++ / c++ / CX est basée sur les exceptions. Au niveau
 
 ## <a name="exceptions"></a>Exceptions
 
-Dans votre programme C++, vous pouvez lever et intercepter une exception qui provient d’une opération d’exécution de Windows, une exception qui est dérivée de `std::exception`, ou un type défini par l’utilisateur. Vous devez lever une exception Windows Runtime uniquement lorsqu’elle traversera la limite (ABI) de l’interface binaire d’application, par exemple, lorsque le code qui intercepte votre exception est écrit en JavaScript. Lorsqu’une exception non Windows Runtime C++ atteint la limite ABI, elle est convertie en un `Platform::FailureException` exception, ce qui représente un HRESULT E_FAIL. Pour plus d'informations sur l'ABI, consultez [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Dans votre programme C++, vous pouvez lever et intercepter une exception qui provient d’une opération d’exécution de Windows, une exception qui est dérivée de `std::exception`, ou un type défini par l’utilisateur. Vous devez lever une exception Windows Runtime uniquement lorsqu’elle traversera la limite (ABI) de l’interface binaire d’application, par exemple, lorsque le code qui intercepte votre exception est écrit en JavaScript. Quand un non - Windows Runtime C++ exception atteint la limite ABI, elle est convertie en un `Platform::FailureException` exception, ce qui représente un HRESULT E_FAIL. Pour plus d'informations sur l'ABI, consultez [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Vous pouvez déclarer un [Platform::Exception](platform-exception-class.md) en utilisant l’une des deux constructeurs qui acceptent un paramètre HRESULT ou un paramètre HRESULT et un [Platform::String](platform-string-class.md)^ paramètre qui peut être passé à travers le ABI à une application Windows Runtime qui prend en charge. Vous pouvez aussi déclarer une exception à l'aide de l'une des deux surcharges de méthode [Exception::CreateException](platform-exception-class.md#createexception) qui acceptent un paramètre HRESULT ou un paramètre HRESULT et un paramètre `Platform::String^` .
 
@@ -27,7 +27,7 @@ Vous ne pouvez pas dériver votre propre type d'exception de `Platform::Exceptio
 
 Le tableau ci-dessous répertorie les exceptions standard.
 
-|Name|HRESULT sous-jacent|Description|
+|Nom|HRESULT sous-jacent|Description|
 |----------|------------------------|-----------------|
 |COMException|*hresult défini par l’utilisateur*|Levée lorsqu'un HRESULT non reconnu est retourné d'un appel de méthode COM.|
 |AccessDeniedException|E\_ACCESSDENIED|Levée lorsque l'accès est refusé à une ressource ou à une fonctionnalité.|
@@ -104,4 +104,4 @@ C++ / c++ / CX n’utilise pas le `finally` clause.
 ## <a name="see-also"></a>Voir aussi
 
 [Référence du langage Visual C++](visual-c-language-reference-c-cx.md)<br/>
-[Référence des espaces de noms](namespaces-reference-c-cx.md)
+[Référence aux espaces de noms](namespaces-reference-c-cx.md)

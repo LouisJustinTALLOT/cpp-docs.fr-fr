@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369122"
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
 
@@ -95,9 +95,9 @@ Chaque objet `regex_traits` a un objet de type `regex_traits::locale` qui est ut
 |[lookup_collatename](#lookup_collatename)|Mappe une séquence à un élément de classement.|
 |[transform](#transform)|Convertit en séquence ordonnée équivalente.|
 |[transform_primary](#transform_primary)|Convertit en séquence ordonnée équivalente ne respectant pas la casse.|
-|[Traduire](#translate)|Convertit en un élément correspondant équivalent.|
+|[translate](#translate)|Convertit en un élément correspondant équivalent.|
 |[translate_nocase](#translate_nocase)|Convertit en un élément correspondant équivalent ne respectant pas la casse.|
-|[valeur](#value)|Convertit un élément en valeur numérique.|
+|[value](#value)|Convertit un élément en valeur numérique.|
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -221,7 +221,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*Loc*<br/>
+*loc*<br/>
 Objet de paramètres régionaux à stocker.
 
 ### <a name="remarks"></a>Notes
@@ -241,7 +241,7 @@ bool isctype(char_type ch, char_class_type cls) const;
 *ch*<br/>
 Élément à tester.
 
-*CLS*<br/>
+*cls*<br/>
 Classes à tester.
 
 ### <a name="remarks"></a>Notes

@@ -43,11 +43,11 @@ helpviewer_keywords:
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
 ms.openlocfilehash: dae5e04809ac7312097cb418ab5ffd561fdbd1d1
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354221"
 ---
 # <a name="strcmp-wcscmp-mbscmp-mbscmpl"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
@@ -116,7 +116,7 @@ Dans les paramètres régionaux pour lesquels le jeu de caractères et l’ordre
 
 Le **strcmp** fonctions respectent la casse. **\_stricmp**,  **\_wcsicmp**, et  **\_mbsicmp** comparer des chaînes en les convertissant d’abord en minuscules. Deux chaînes qui contiennent des caractères qui se trouvent entre « Z » et « a » dans la table ASCII ('[','\\', ']', ' ^', '_', et '\`') comparent différemment, en fonction de leur casse. Par exemple, les deux chaînes « ABCDE » et « ABCD ^ « comparent différemment selon si la comparaison est en minuscule (« abcde » > « abcd ^ ») et l’autre sens (« ABCDE » < « ABCD ^ ») si la comparaison est en majuscule.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

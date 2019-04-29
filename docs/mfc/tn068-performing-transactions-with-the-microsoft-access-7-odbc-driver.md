@@ -1,5 +1,5 @@
 ---
-title: 'TN068 : exécution de transactions avec le pilote ODBC Microsoft Access 7'
+title: 'TN068 : Exécution de Transactions avec le pilote ODBC Microsoft Access 7'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.data.odbc
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
 ms.openlocfilehash: 3121587f85c4ea19cc92e39569008b597d24ea58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363789"
 ---
-# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068 : exécution de transactions avec le pilote ODBC Microsoft Access 7
+# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068 : Exécution de Transactions avec le pilote ODBC Microsoft Access 7
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.

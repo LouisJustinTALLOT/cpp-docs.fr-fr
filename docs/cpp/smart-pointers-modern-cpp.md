@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331023"
 ---
 # <a name="smart-pointers-modern-c"></a>Pointeurs intelligents (Modern C++)
 
@@ -49,7 +49,7 @@ L'exemple illustre les étapes essentielles suivantes pour utiliser les pointeur
 
 1. Laissez le pointeur intelligent supprimer l'objet.
 
-Les pointeurs intelligents sont conçus pour être aussi efficaces que possible, aussi bien en termes de mémoire que de performances. Par exemple, la seule donnée membre dans `unique_ptr` est le pointeur encapsulé. Cela signifie que `unique_ptr` a exactement la même taille que ce pointeur, soit quatre octets ou huit octets. Accéder au pointeur encapsulé en utilisant les opérateurs de pointeur intelligent surchargé * et -> n'est pas beaucoup plus lent que d'accéder directement aux pointeurs bruts.
+Les pointeurs intelligents sont conçus pour être aussi efficaces que possible, aussi bien en termes de mémoire que de performances. Par exemple, la seule donnée membre dans `unique_ptr` est le pointeur encapsulé. Cela signifie que `unique_ptr` a exactement la même taille que ce pointeur, soit quatre octets ou huit octets. L’accès à du pointeur encapsulé en utilisant le pointeur intelligent surchargé * et -> opérateurs n’est pas beaucoup plus lent que l’accès à des pointeurs bruts directement.
 
 Les pointeurs intelligents ont leurs propres fonctions membres, accessibles à l'aide de la notation par « point ». Par exemple, certains pointeurs intelligents de bibliothèque Standard C++ ont une fonction de membre de réinitialisation qui libère la propriété du pointeur. C'est utile lorsque vous souhaitez libérer la mémoire possédée par le pointeur intelligent avant que celui-ci ne passe hors de portée, comme illustré dans l'exemple suivant.
 

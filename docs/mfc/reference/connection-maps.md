@@ -7,11 +7,11 @@ helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
 ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373295"
 ---
 # <a name="connection-maps"></a>Tables de connexions
 
@@ -62,7 +62,7 @@ Spécifie le nom de la classe locale qui implémente le point de connexion.
 
 Dans le fichier de déclaration (.h) qui définit les fonctions membres pour votre classe, démarrer le point de connexion avec le BEGIN_CONNECTION_PART (macro), puis ajouter le CONNECTION_IID (macro) et toutes les autres fonctions de membres que vous souhaitez implémenter et terminez la connexion point de mappage avec l’END_CONNECTION_PART (macro).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -79,7 +79,7 @@ END_CONNECTION_PART(localClass)
 *localClass*<br/>
 Spécifie le nom de la classe locale qui implémente le point de connexion.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -104,7 +104,7 @@ Le *iid* argument est un ID d’interface utilisé pour identifier l’interface
 
 Spécifie un point de connexion qui appelle le `ISinkInterface` interface.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -120,7 +120,7 @@ DECLARE_CONNECTION_MAP()
 
 Si votre contrôle prend en charge des points supplémentaires, utilisez le declare_connection_map (macro) à la fin de votre déclaration de classe. Puis, dans le fichier .cpp qui définit les fonctions membres pour la classe, utilisez le BEGIN_CONNECTION_MAP (macro), CONNECTION_PART macros pour chacun des points de connexion du contrôle et l’END_CONNECTION_MAP (macro) pour indiquer la fin de la carte de connexion.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -144,7 +144,7 @@ Spécifie le nom de la classe de base de *theClass*.
 
 Dans l’implémentation (. Fichier CPP) qui définit le membre fonctionne pour votre classe, démarrez le mappage de connexions avec le BEGIN_CONNECTION_MAP (macro), puis ajouter des entrées de macro pour chacun de vos points de connexion à l’aide de la [CONNECTION_PART](#connection_part) (macro). Pour finir, terminez le mappage de connexion avec le [END_CONNECTION_MAP](#end_connection_map) (macro).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -156,7 +156,7 @@ Met fin à la définition de votre mappage de connexion.
 END_CONNECTION_MAP()
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -187,7 +187,7 @@ Exemple :
 
 implémente un mappage de connexion, avec un point de connexion, qui appelle le `IID_ISinkInterface` interface.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp.h
 
@@ -229,7 +229,7 @@ Différent de zéro si une connexion a été établie ; sinon 0.
 
 [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxctl.h
 
@@ -271,7 +271,7 @@ Différent de zéro si une connexion a été interrompue ; sinon 0.
 
 [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxctl.h
 

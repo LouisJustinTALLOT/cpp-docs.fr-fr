@@ -24,11 +24,11 @@ helpviewer_keywords:
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
 ms.openlocfilehash: 824edfd8bb96d805a030fb205dee62fa9eb4fd06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341767"
 ---
 # <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
 
@@ -49,7 +49,7 @@ void * _aligned_offset_malloc(
 *size*<br/>
 Taille de l'allocation de mémoire demandée.
 
-*Alignement*<br/>
+*alignment*<br/>
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
 *offset*<br/>

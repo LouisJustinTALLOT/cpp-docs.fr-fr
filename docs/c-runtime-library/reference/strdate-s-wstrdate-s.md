@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
 ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353987"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
@@ -84,7 +84,7 @@ Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un 
 |**NULL**|(indifférent)|**EINVAL**|Non modifiée|
 |Pas **NULL** (pointant vers la mémoire tampon valide)|0|**EINVAL**|Non modifiée|
 |Pas **NULL** (pointant vers la mémoire tampon valide)|0 < *numberOfElements* < 9|**EINVAL**|Chaîne vide|
-|Pas **NULL** (pointant vers la mémoire tampon valide)|*numberOfElements* > = 9|0|Date actuelle au format spécifié dans la section Notes|
+|Pas **NULL** (pointant vers la mémoire tampon valide)|*numberOfElements* >= 9|0|Date actuelle au format spécifié dans la section Notes|
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 

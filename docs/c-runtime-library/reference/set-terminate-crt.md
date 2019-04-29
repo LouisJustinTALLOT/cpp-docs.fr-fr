@@ -24,11 +24,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356444"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -51,7 +51,7 @@ Retourne un pointeur vers la précédente fonction inscrite par **set_terminate*
 
 ## <a name="remarks"></a>Notes
 
-Le **set_terminate** fonction installe *termFunction* que la fonction appelée par **Terminer**. **set_terminate** est utilisé avec la gestion des exceptions C++ et peut être appelée à tout moment dans votre programme avant l’exception est levée. **mettre fin à** appels [abandonner](abort.md) par défaut. Vous pouvez modifier cette valeur par défaut en écrivant votre propre fonction d’arrêt et en appelant **set_terminate** avec le nom de votre fonction comme argument. **mettre fin à** appelle la dernière fonction donnée comme argument à **set_terminate**. Une fois exécutant une tâches de nettoyage, souhaitées *termFunction* doit fermer le programme. Si elle ne se ferme pas (si elle retourne à son appelant), [abandonner](abort.md) est appelée.
+Le **set_terminate** fonction installe *termFunction* que la fonction appelée par **Terminer**. **set_terminate** est utilisé avec C++ gestion des exceptions et peut être appelée à tout moment dans votre programme avant l’exception est levée. **mettre fin à** appels [abandonner](abort.md) par défaut. Vous pouvez modifier cette valeur par défaut en écrivant votre propre fonction d’arrêt et en appelant **set_terminate** avec le nom de votre fonction comme argument. **mettre fin à** appelle la dernière fonction donnée comme argument à **set_terminate**. Une fois exécutant une tâches de nettoyage, souhaitées *termFunction* doit fermer le programme. Si elle ne se ferme pas (si elle retourne à son appelant), [abandonner](abort.md) est appelée.
 
 Dans un environnement multithread, les fonctions d’arrêt sont gérées séparément pour chaque thread. Chaque nouveau thread doit installer sa propre fonction d’arrêt. Par conséquent, chaque thread est responsable de sa propre gestion des arrêts.
 

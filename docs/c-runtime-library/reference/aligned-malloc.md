@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
 ms.openlocfilehash: c89dff7d2159855037fee565f2148a8edb89f07d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341819"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
@@ -48,7 +48,7 @@ void * _aligned_malloc(
 *size*<br/>
 Taille de l'allocation de mémoire demandée.
 
-*Alignement*<br/>
+*alignment*<br/>
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
 ## <a name="return-value"></a>Valeur de retour

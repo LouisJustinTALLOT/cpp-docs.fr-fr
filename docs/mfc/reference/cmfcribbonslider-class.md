@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
 ms.openlocfilehash: 85c646e2fa524268e4559b587f90c5e06971b765
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374075"
 ---
 # <a name="cmfcribbonslider-class"></a>Cmfcribbonslider, classe
 
@@ -93,7 +93,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCRi
 
 [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxribbonslider.h
 

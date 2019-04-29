@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
 ms.openlocfilehash: f4755e04a744d94636b4b37aaf727e0d733008ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346689"
 ---
 # <a name="resource-compiler-error-rc2001"></a>Erreur RC2001 du compilateur de ressources 
 

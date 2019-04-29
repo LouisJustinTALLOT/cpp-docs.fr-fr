@@ -115,11 +115,11 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
 ms.openlocfilehash: 9d0d16062f6808cbeb2d3e73fac9f4bbdfd7e69c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358203"
 ---
 # <a name="cmfcribbonbutton-class"></a>Cmfcribbonbutton, classe
 
@@ -242,7 +242,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxribbonbutton.h
 

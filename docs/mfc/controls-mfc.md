@@ -7,11 +7,11 @@ helpviewer_keywords:
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
 ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297266"
 ---
 # <a name="controls-mfc"></a>Contrôles (MFC)
 
@@ -52,24 +52,24 @@ Le tableau ci-dessous décrit brièvement chacun des contrôles communs Windows,
 |Contrôle|Classe MFC|Description|Nouveautés de Windows 95|
 |-------------|---------------|-----------------|------------------------|
 |[animation](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Affiche les frames successives d’un clip vidéo AVI|Oui|
-|bouton|[CButton](../mfc/reference/cbutton-class.md)|Boutons de commande qui déclenchent une action ; également utilisé pour les cases à cocher, cases d’option et zones de groupe|Aucune|
-|zone de liste déroulante|[CComboBox](../mfc/reference/ccombobox-class.md)|Combinaison d’une zone d’édition et d’une zone de liste|Aucune|
+|bouton|[CButton](../mfc/reference/cbutton-class.md)|Boutons de commande qui déclenchent une action ; également utilisé pour les cases à cocher, cases d’option et zones de groupe|Non|
+|zone de liste déroulante|[CComboBox](../mfc/reference/ccombobox-class.md)|Combinaison d’une zone d’édition et d’une zone de liste|Non|
 |[sélecteur de date et d’heure](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|Permet à l’utilisateur de choisir une valeur de date ou d’heure spécifique|Oui|
-|zone d’édition|[CEdit](../mfc/reference/cedit-class.md)|Zones de saisie de texte|Aucune|
+|zone d’édition|[CEdit](../mfc/reference/cedit-class.md)|Zones de saisie de texte|Non|
 |[zone de liste déroulante étendue](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|Contrôle de zone de liste déroulante avec la capacité à afficher des images|Oui|
 |[en-tête](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Bouton qui s’affiche au-dessus d’une colonne de texte : contrôle la largeur du texte affiché|Oui|
 |[touche d’accès rapide](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Fenêtre qui permet à l’utilisateur de créer une « touche d’accès rapide » pour effectuer une action rapidement|Oui|
 |[liste d’images](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Collection d’images utilisée pour gérer de grands ensembles d’icônes ou de bitmaps (la liste d’images n’est pas vraiment un contrôle ; elle prend en charge les listes utilisées par d’autres contrôles)|Oui|
 |[liste](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Fenêtre qui affiche une liste de texte avec des icônes|Oui|
-|zone de liste|[CListBox](../mfc/reference/clistbox-class.md)|Zone qui contient une liste de chaînes|Aucune|
+|zone de liste|[CListBox](../mfc/reference/clistbox-class.md)|Zone qui contient une liste de chaînes|Non|
 |[calendrier mensuel](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Contrôle qui affiche des informations de date|Oui|
 |[progression](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Fenêtre qui indique la progression d’une opération longue|Oui|
 |[rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Barre d’outils qui peut contenir des fenêtres enfants supplémentaires sous la forme de contrôles|Oui|
 |[édition enrichie](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Fenêtre dans laquelle l’utilisateur peut modifier la mise en forme des caractères et des paragraphes (consultez [Classes associées aux contrôles RichEdit](../mfc/classes-related-to-rich-edit-controls.md))|Oui|
-|barre de défilement|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Barre de défilement utilisée comme contrôle dans une boîte de dialogue (pas dans une fenêtre)|Aucune|
+|barre de défilement|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Barre de défilement utilisée comme contrôle dans une boîte de dialogue (pas dans une fenêtre)|Non|
 |[curseur](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Fenêtre contenant un contrôle Slider avec des graduations facultatives|Oui|
 |[bouton toupie](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Paire de boutons fléchés sur lesquels l’utilisateur peut cliquer pour incrémenter ou décrémenter une valeur|Oui|
-|texte statique|[CStatic](../mfc/reference/cstatic-class.md)|Texte servant à étiqueter d’autres contrôles|Aucune|
+|texte statique|[CStatic](../mfc/reference/cstatic-class.md)|Texte servant à étiqueter d’autres contrôles|Non|
 |[barre d'état](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Fenêtre servant à afficher des informations d’état, semblable à la classe MFC `CStatusBar`|Oui|
 |[onglet](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Analogues aux intercalaires d’un agenda ; utilisé dans les boîtes de dialogue avec onglets ou dans les feuilles de propriétés|Oui|
 |[barre d'outils](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Fenêtre avec des boutons générant des commandes, semblable à la classe MFC `CToolBar`|Oui|

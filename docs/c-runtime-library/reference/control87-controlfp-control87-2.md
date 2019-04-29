@@ -39,11 +39,11 @@ helpviewer_keywords:
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
 ms.openlocfilehash: e2ebfdc80a451ebf02563f78a62dd08618f92bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340415"
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -73,7 +73,7 @@ int __control87_2(
 *new*<br/>
 Nouvelles valeurs en bits du mot de contrôle.
 
-*Masque*<br/>
+*mask*<br/>
 Masque des bits du nouveau mot de contrôle à définir.
 
 *x86_cw*<br/>
@@ -90,7 +90,7 @@ Pour **__control87_2**, la valeur de retour est 1, ce qui indique la réussite.
 
 ## <a name="remarks"></a>Notes
 
-Le **_control87** fonction obtient et définit le mot de contrôle à virgule flottante. Le mot de contrôle à virgule flottante permet au programme de modifier les modes de précision, d’arrondi et d’infini dans le package mathématique à virgule flottante, selon la plateforme. Vous pouvez également utiliser **_control87** pour masquer ou démasquer les exceptions de virgule flottante. Si la valeur de *masque* est égal à 0, **_control87** Obtient le mot de contrôle à virgule flottante. Si *masque* est différent de zéro, une nouvelle valeur pour le mot de contrôle est définie : pour tout bit activé (autrement dit, égal à 1) dans *masque*, le bit correspondant dans *nouvelle* est utilisé pour mettre à jour le contrôle Word. En d’autres termes, **fpcntrl** = ((**fpcntrl** & ~*masque*) &#124; (*nouveau* & *masque*)) où **fpcntrl** est le mot de contrôle à virgule flottante.
+Le **_control87** fonction obtient et définit le mot de contrôle à virgule flottante. Le mot de contrôle à virgule flottante permet au programme de modifier les modes de précision, d’arrondi et d’infini dans le package mathématique à virgule flottante, selon la plateforme. Vous pouvez également utiliser **_control87** pour masquer ou démasquer les exceptions de virgule flottante. Si la valeur de *masque* est égal à 0, **_control87** Obtient le mot de contrôle à virgule flottante. Si *masque* est différent de zéro, une nouvelle valeur pour le mot de contrôle est définie : Pour un bit qui se trouve sur (autrement dit, égal à 1) dans *masque*, le bit correspondant dans *nouveau* est utilisé pour mettre à jour le mot de contrôle. En d’autres termes, **fpcntrl** = ((**fpcntrl** & ~*masque*) &#124; (*nouveau* & *masque*)) où **fpcntrl** est le mot de contrôle à virgule flottante.
 
 > [!NOTE]
 > Par défaut, les bibliothèques d’exécution masquent toutes les exceptions de virgule flottante.

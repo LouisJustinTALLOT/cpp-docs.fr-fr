@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
 ms.openlocfilehash: 371d53257427f2235048807968c82fec1b8bf699
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333429"
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
 
@@ -100,7 +100,7 @@ C++ autorisant la surcharge, vous pouvez appeler des surcharges de fmax qui acce
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**Fmax**, **fmaxf**, **fmaxl**|\<math.h>|\<cmath> ou \<math.h>|
+|**fmax**, **fmaxf**, **fmaxl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

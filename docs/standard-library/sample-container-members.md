@@ -1,17 +1,17 @@
 ---
-title: Exemple de conteneurs, membres
+title: sample container, membres
 ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
 ms.openlocfilehash: 28d726bbf2b756c047523954fd4d5f843ee11d2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386315"
 ---
-# <a name="sample-container-members"></a>Exemple de conteneurs, membres
+# <a name="sample-container-members"></a>sample container, membres
 
 > [!NOTE]
 > Cette rubrique fait partie de la documentation Visual C++ comme exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348209"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor::construct, classe
 
@@ -65,7 +65,7 @@ Trois types sont définis pour les besoins de la démonstration :
 
 ### <a name="constructors"></a>Constructeurs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Construit un objet `scoped_allocator_adaptor`.|
 
@@ -88,7 +88,7 @@ Trois types sont définis pour les besoins de la démonstration :
 
 ### <a name="structs"></a>Structs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[scoped_allocator_adaptor::rebind, struct](#rebind_struct)|Définit le type `Outer::rebind\<Other>::other` comme synonyme de `scoped_allocator_adaptor\<Other, Inner...>`.|
 
@@ -111,7 +111,7 @@ Trois types sont définis pour les besoins de la démonstration :
 
 **Espace de noms :** std
 
-## <a name="allocate"></a>  scoped_allocator_adaptor::Allocate
+## <a name="allocate"></a>  scoped_allocator_adaptor::allocate
 
 Alloue de la mémoire à l’aide de l’allocateur `Outer`.
 
@@ -124,14 +124,14 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 *count*<br/>
 Nombre d’éléments pour lesquels la quantité de stockage appropriée doit être allouée.
 
-*indicateur*<br/>
+*hint*<br/>
 Pointeur pouvant aider l’objet allocateur en recherchant l’adresse d’un objet alloué avant la demande.
 
 ### <a name="return-value"></a>Valeur de retour
 
 La première fonction membre retourne `Outer_traits::allocate(outer_allocator(), count)`. La deuxième fonction membre retourne `Outer_traits::allocate(outer_allocator(), count, hint)`.
 
-## <a name="construct"></a>  scoped_allocator_adaptor::Construct
+## <a name="construct"></a>  scoped_allocator_adaptor::construct
 
 Construit un objet.
 
@@ -169,7 +169,7 @@ Liste d’arguments.
 *first*<br/>
 Objet du premier type dans une paire.
 
-*seconde*<br/>
+*second*<br/>
 Objet du deuxième type dans une paire.
 
 *right*<br/>
@@ -271,7 +271,7 @@ Référence à l’objet stocké de type `outer_allocator_type`.
 
 Définit le type `Outer::rebind\<Other>::other` comme synonyme de `scoped_allocator_adaptor\<Other, Inner...>`.
 
-la reliaison struct {typedef Other_traits::rebind\<autres > Other_alloc ; typedef scoped_allocator_adaptor\<Other_alloc, interne... > autres ;} ;
+la reliaison struct {typedef Other_traits::rebind\<autres > Other_alloc ; typedef scoped_allocator_adaptor\<Other_alloc, interne... > autres ; };
 
 ## <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor, constructeur
 
@@ -297,10 +297,10 @@ scoped_allocator_adaptor(Outer2&& al,
 *right*<br/>
 `scoped_allocator_adaptor` existant.
 
-*Al*<br/>
+*al*<br/>
 Allocateur existant à utiliser comme allocateur externe.
 
-*REST*<br/>
+*rest*<br/>
 Liste des allocateurs à utiliser comme allocateurs internes.
 
 ### <a name="remarks"></a>Notes

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3005
 ms.assetid: 30bad565-e79f-4c3f-82cb-a74bd0baab8f
 ms.openlocfilehash: 1303fd667c92af6fd8d0476da9468b4c7d090e6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350739"
 ---
 # <a name="compiler-error-c3005"></a>Erreur du compilateur C3005
 
-'error_text' : jeton inattendu rencontré dans la directive 'directive' OpenMP
+'error_text' : jeton inattendu rencontré dans la directive 'directive' OpenMP
 
 Une directive OpenMP est incorrecte.
 

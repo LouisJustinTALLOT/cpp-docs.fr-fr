@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
 ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348469"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -67,7 +67,7 @@ Le **_chmod** fonction modifie le paramètre d’autorisation du fichier spécif
 |-|-|
 | **\_S\_IREAD** | Lecture autorisée uniquement. |
 | **\_S\_IWRITE** | Écriture autorisée. (En fait, autorise la lecture et l'écriture.) |
-| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | Lecture et écriture autorisées. |
+| **\_S\_IREAD** &#124; **\_S\_IWRITE** | Lecture et écriture autorisées. |
 
 Quand les deux constantes sont données, elles sont jointes au niveau du bit ou un opérateur (**\|**). Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Notez que tous les fichiers sont toujours accessibles en lecture ; il est impossible d’accorder l’autorisation en écriture seule. Par conséquent, les modes **_S_IWRITE** et **_S_IREAD** \| **_S_IWRITE** sont équivalentes.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
 ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329827"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transaction : Exécution d’une Transaction dans un Recordset (ODBC)
 
@@ -84,6 +84,6 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ## <a name="see-also"></a>Voir aussi
 
 [Transaction (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[Transaction : Répercussions des Transactions sur les mises à jour (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
+[Transaction : Répercussions des transactions sur les mises à jour (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
 [CDatabase, classe](../../mfc/reference/cdatabase-class.md)<br/>
 [CRecordset, classe](../../mfc/reference/crecordset-class.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
 ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368654"
 ---
 # <a name="logical-and-operator-ampamp"></a>Opérateur AND logique : &amp;&amp;
 
@@ -29,7 +29,7 @@ L’opérateur AND logique (**&&**) retourne la valeur booléenne TRUE si les de
 
 Les opérandes de l’opérateur logique AND n’ont pas besoin d’être du même type, mais ils doivent être de type intégral ou de type pointeur. Les opérandes sont souvent des expressions relationnelles ou d’égalité.
 
-Le premier opérande est complètement évalué et tous les effets secondaires sont terminés avant de continuer l’évaluation de l’expression AND logique.
+Le premier opérande est complètement évalué et tous les effets secondaires sont terminés avant de continuer l'évaluation de l'expression AND logique.
 
 Le deuxième opérande est évalué uniquement si le premier opérande a la valeur true (une valeur différente de zéro). Cette évaluation élimine l’évaluation inutile du deuxième opérande lorsque l’expression AND logique est false. Vous pouvez utiliser cette évaluation de court-circuit pour empêcher le déréférencement du pointeur NULL, comme indiqué dans l'exemple suivant :
 
@@ -41,7 +41,7 @@ char *pch = 0;
 
 Si `pch` est null (0), le côté droit de l'expression n'est jamais évalué. Par conséquent, l'assignation via un pointeur null est impossible.
 
-## <a name="operator-keyword-for-"></a>Mot clé Operator pour &&
+## <a name="operator-keyword-for-"></a>Mot clé operator pour & &
 
 Le **et** opérateur est l’équivalent textuel de **&&**. Il existe deux façons d’accéder à la **et** opérateur dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).
 

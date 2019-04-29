@@ -5,11 +5,11 @@ helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
 ms.openlocfilehash: ccf6b74096894c2e48258e6e0a60b807c7c6c5b4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345459"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Procédure pas à pas : Déploiement d’une application Visual C++ à l’aide du package redistribuable Visual C++
 

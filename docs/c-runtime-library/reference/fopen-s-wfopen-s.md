@@ -34,11 +34,11 @@ helpviewer_keywords:
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333324"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -98,7 +98,7 @@ Vérifiez toujours la valeur de retour pour savoir si la fonction a abouti avant
 
 **fopen_s** prend en charge les flux de fichiers Unicode. Pour ouvrir un fichier Unicode nouveau ou existant, passez un *ccs* indicateur qui spécifie l’encodage souhaité à **fopen_s**:
 
-**fopen_s (& fp, « newfile.txt », « rw, ccs =**_encodage_**») ;**
+**fopen_s(&fp, "newfile.txt", "rw, ccs=**_encoding_**");**
 
 Valeurs autorisées de *encodage* sont **UNICODE**, **UTF-8**, et **UTF-16LE**. Si aucune valeur n’est spécifiée il *encodage*, **fopen_s** utilise l’encodage ANSI.
 
@@ -111,7 +111,7 @@ Le tableau suivant récapitule les modes pour différents *ccs* indicateurs qui 
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Encodages utilisés selon l'indicateur ccs et la marque BOM
 
-|indicateur de CCS|Aucune marque BOM (ou nouveau fichier)|Marque BOM : UTF-8|Marque BOM : UTF-16|
+|indicateur de CCS|Aucune marque BOM (ou nouveau fichier)|NOMENCLATURE : UTF-8|NOMENCLATURE : UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -129,7 +129,7 @@ Si *mode* est **» a, ccs =**_encodage_**»**, **fopen_s** tente d’abord d’o
 
 La chaîne de caractères *mode* Spécifie le type d’accès demandé pour le fichier, comme suit.
 
-|*mode*|Accès|
+|*mode*|Access|
 |-|-|
 | **"r"** | Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **fopen_s** appeler échoue. |
 | **"w"** | Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit. |
@@ -168,18 +168,18 @@ Pour plus d’informations sur l’utilisation des modes texte et binaire dans l
 | **R** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque. |
 | **T** | Spécifie un fichier comme temporaire. Si possible, il n'est pas vidé sur disque. |
 | **D** | Spécifie un fichier comme temporaire. Il est supprimé lorsque le dernier pointeur de fichier est fermé. |
-| **CCS =**_encodage_ | Spécifie le codé en jeu de caractères à utiliser (un des **UTF-8**, **UTF-16LE**, ou **UNICODE**) pour ce fichier. Laissez ce paramètre non spécifié si vous souhaitez bénéficier de l'encodage ANSI. |
+| **ccs=**_encoding_ | Spécifie le codé en jeu de caractères à utiliser (un des **UTF-8**, **UTF-16LE**, ou **UNICODE**) pour ce fichier. Laissez ce paramètre non spécifié si vous souhaitez bénéficier de l'encodage ANSI. |
 
 Caractères valides pour le *mode* chaîne utilisée dans **fopen_s** et [_fdopen](fdopen-wfdopen.md) correspondent aux *oflag* arguments utilisés dans [_ Ouvrez](open-wopen.md) et [_sopen](sopen-wsopen.md), comme suit.
 
 |Les caractères de *mode* chaîne|Équivalent *oflag* valeur pour _open/_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (généralement **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
-|**a +**|**_O_RDWR** &#124; **_O_APPEND** (généralement **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
+|**a**|**_O_WRONLY** &#124; **_O_APPEND** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND**)|
+|**a+**|**_O_RDWR** &#124; **_O_APPEND** (usually **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**w**|**_O_WRONLY** (généralement **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**w +**|**_O_RDWR** (généralement **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**r+**|**_O_RDWR**|
+|**w**|**_O_WRONLY** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC**)|
+|**w+**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
 |**c**|Aucun.|
@@ -188,9 +188,9 @@ Caractères valides pour le *mode* chaîne utilisée dans **fopen_s** et [_fdope
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
-|**CCS = UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**_O_UTF8**|
-|**CCS = UTF-16LE**|**_O_UTF16**|
+|**ccs=UNICODE**|**_O_WTEXT**|
+|**ccs=UTF-8**|**_O_UTF8**|
+|**ccs=UTF-16LE**|**_O_UTF16**|
 
 Si vous utilisez **rb** mode, ne devra pas porter votre code et attendez-vous à lire une majeure partie du fichier et/ou ne vous souciez des performances réseau, les fichiers Win32 mappés en mémoire peuvent être également une option.
 

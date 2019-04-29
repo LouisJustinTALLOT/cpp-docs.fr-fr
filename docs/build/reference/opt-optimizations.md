@@ -18,11 +18,11 @@ helpviewer_keywords:
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
 ms.openlocfilehash: fb59b861bc46c93a3f5fa1b6c6b8d1b73ddefc66
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320244"
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimisations)
 
@@ -107,5 +107,5 @@ Le **/OPT** arguments sont souvent configurées pour les projets créés à l’
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence de l’éditeur de liens MSVC](linking.md)
+- [Informations de référence sur l’éditeur de liens MSVC](linking.md)
 - [Options de l’éditeur de liens MSVC](linker-options.md)

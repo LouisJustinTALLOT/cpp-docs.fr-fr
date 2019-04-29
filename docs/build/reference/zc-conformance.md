@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 ms.openlocfilehash: e24dd53f9c805f57ce974a81a4963434f1868095
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316208"
 ---
 # <a name="zc-conformance"></a>/Zc (Conformité)
 
@@ -56,4 +56,4 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
